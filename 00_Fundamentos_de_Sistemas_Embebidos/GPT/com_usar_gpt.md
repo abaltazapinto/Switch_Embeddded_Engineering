@@ -13,7 +13,7 @@ ASk me oral exam questions like a professor.
 ou 
 Create a one page exam cheat from this lecture.
 
-Dica Muito importante
+
 Sempre que terminar a aula faz:
 
 Summarize the entire lecture into:
