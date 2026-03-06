@@ -427,3 +427,593 @@ Se quiseres, posso também explicar:
 3️⃣ **O exemplo mais clássico que sai em exames (Timer interrupt)**
 
 Posso também fazer um **guia visual que faz tudo “clicar” em 5 minutos.**
+
+
+
+Perfeito — **os slides ajudam muito**. Vou resumir **a aula inteira (microcontroladores + interrupções + timers)** usando **apenas o que está nos slides** e explicando o que precisas para realmente perceber a programação numa board AVR.
+
+Fonte:
+
+---
+
+# 🧾 Extracted from the slides
+
+### Arquitetura ATmega128
+
+* CPU RISC 8-bit
+* 133 instruções
+* Até **16 MIPS a 16 MHz**
+* 32 registos auxiliares
+* Registos importantes:
+
+  * STATUS register
+  * Program Counter
+  * Stack Pointer
+
+---
+
+### Memória
+
+**Program memory**
+
+* 128 KB Flash
+* cada endereço = **16 bits word**
+
+**Data memory**
+
+* espaço de **64 KB**
+* endereçamento de **16 bits**
+
+**SRAM interna**
+
+* 4 KB
+
+**EEPROM**
+
+* 4 KB
+* pelo menos **100000 ciclos write/erase**
+
+---
+
+### Periféricos
+
+* 53 pinos I/O
+* 4 timers
+* 2 USART
+* ADC 10-bit
+
+---
+
+### Arquitetura
+
+ATmega128 usa **Harvard architecture**
+
+Significa:
+
+```
+Program memory
+     |
+     | separate bus
+     |
+CPU ---- Data memory
+```
+
+Código e dados **em memórias separadas**.
+
+---
+
+# I/O PORTS
+
+Cada porto tem **3 registos**
+
+| Register | Função                         |
+| -------- | ------------------------------ |
+| DDRx     | define input ou output         |
+| PORTx    | escreve valor ou ativa pull-up |
+| PINx     | lê valor do pino               |
+
+Exemplo:
+
+```
+DDRB |= (1<<PB0)
+```
+
+→ PB0 passa a **output**.
+
+---
+
+### Pull-up resistor
+
+Problema:
+
+se um pino input não tiver nada ligado → **floating**
+
+ruído elétrico pode mudar o valor.
+
+Solução:
+
+```
+pull-up resistor
+```
+
+faz o pino assumir **valor lógico 1**.
+
+---
+
+# Bitwise operations
+
+Usadas constantemente em embedded.
+
+| Operador | Uso        |
+| -------- | ---------- |
+| |        | set bit    |
+| &        | clear bit  |
+| ^        | toggle bit |
+
+Exemplo:
+
+```
+a |= (1 << 2)
+```
+
+→ ativa bit 2.
+
+---
+
+# 🧠 INTERRUPTS
+
+## Objetivo das interrupções
+
+Responder a eventos **sem polling constante**.
+
+Em vez de:
+
+```
+while(1)
+{
+  check_button();
+}
+```
+
+faz:
+
+```
+button interrupt
+```
+
+CPU reage **automaticamente**.
+
+---
+
+## Interrupt sources
+
+ATmega128 tem muitas fontes:
+
+* 8 external interrupts
+* timers
+* USART
+* ADC
+* SPI
+* I2C
+* EEPROM
+
+---
+
+## Interrupt vectors
+
+Cada interrupção tem **um endereço fixo na memória**.
+
+Quando ocorre:
+
+```
+CPU jump → interrupt vector
+```
+
+Esse endereço contém:
+
+```
+jump → ISR
+```
+
+(Interrupt Service Routine)
+
+---
+
+## Se duas interrupções ocorrerem
+
+Prioridade:
+
+```
+menor endereço do vetor
+```
+
+é executado primeiro.
+
+---
+
+# External interrupts
+
+8 interrupções externas.
+
+Mapeamento:
+
+```
+INT3..0 → PORTD
+INT7..4 → PORTE
+```
+
+Podem disparar em:
+
+* rising edge
+* falling edge
+* low level
+
+---
+
+# Configurar interrupção
+
+Passos:
+
+1️⃣ Desativar interrupção
+
+```
+EIMSK
+```
+
+2️⃣ Configurar tipo de trigger
+
+```
+EICRA / EICRB
+```
+
+3️⃣ Limpar flag
+
+```
+EIFR
+```
+
+4️⃣ Ativar interrupção
+
+```
+EIMSK
+```
+
+5️⃣ Ativar global interrupts
+
+```
+sei()
+```
+
+
+
+---
+
+# ISR em C
+
+```c
+#include <avr/interrupt.h>
+
+ISR(INT0_vect)
+{
+}
+```
+
+`ISR()` define a rotina de interrupção.
+
+---
+
+# Problema importante: volatile
+
+Se variável for usada em ISR:
+
+```
+volatile
+```
+
+senão o compilador pode **otimizar errado**.
+
+Exemplo do slide:
+
+```c
+volatile int my_flag = 0;
+
+ISR(INT0_vect){
+ my_flag = 1;
+}
+
+while(!my_flag);
+```
+
+
+
+---
+
+# Timers
+
+ATmega128 tem:
+
+* Timer0 (8 bit)
+* Timer2 (8 bit)
+* Timer1 (16 bit)
+* Timer3 (16 bit)
+
+---
+
+## Timer0 registers
+
+| Register | Função       |
+| -------- | ------------ |
+| TCNT0    | contador     |
+| OCR0     | comparação   |
+| TCCR0    | configuração |
+
+---
+
+## Timer overflow
+
+Quando contador chega ao máximo:
+
+```
+0xFF → 0x00
+```
+
+flag:
+
+```
+TOV0
+```
+
+pode gerar interrupção.
+
+---
+
+# CTC Mode
+
+Timer reset quando:
+
+```
+TCNT0 == OCR0
+```
+
+tempo:
+
+```
+T = Prescaler / CLK * (OCR0 + 1)
+```
+
+
+
+---
+
+# Busy wait delay
+
+```
+_delay_ms()
+```
+
+Problemas:
+
+* CPU fica bloqueado
+* não poupa energia
+* depende de `F_CPU`
+
+---
+
+# ⚠️ Typical exam traps
+
+### 1️⃣ int size
+
+No AVR:
+
+```
+int = 16 bits
+```
+
+não 32.
+
+---
+
+### 2️⃣ double
+
+```
+double = 4 bytes
+```
+
+igual a float.
+
+---
+
+### 3️⃣ Interrupt variables
+
+Devem ser
+
+```
+volatile
+```
+
+---
+
+### 4️⃣ ISR
+
+Deve ser **curta**.
+
+---
+
+### 5️⃣ Nem todas as instruções C são atómicas
+
+exemplo:
+
+```
+counter++
+```
+
+vira várias instruções assembly.
+
+---
+
+# 🌍 Real world examples
+
+### Botão
+
+```
+external interrupt
+```
+
+---
+
+### Comunicação serial
+
+```
+USART interrupt
+```
+
+quando chega um byte.
+
+---
+
+### Sistema tempo real
+
+```
+timer interrupt
+```
+
+executa tarefa a cada:
+
+```
+1 ms
+```
+
+---
+
+# 🧠 Mental model (o mais importante)
+
+Como tudo se liga:
+
+```
+        PROGRAM MEMORY
+              |
+              |
+             CPU
+              |
+      -----------------
+      |       |       |
+    TIMER    I/O    USART
+      |
+      |
+   INTERRUPT
+      |
+      ↓
+      ISR
+```
+
+---
+
+# 🃏 Flashcards
+
+**1**
+
+Q: O que é uma interrupção?
+A: Evento que interrompe o CPU e executa ISR.
+
+---
+
+**2**
+
+Q: O que é ISR?
+A: Interrupt Service Routine.
+
+---
+
+**3**
+
+Q: Quantos timers tem o ATmega128?
+A: 4 timers.
+
+---
+
+**4**
+
+Q: Para que serve DDRx?
+A: Definir input ou output.
+
+---
+
+**5**
+
+Q: Para que serve volatile?
+A: Evitar otimizações erradas em variáveis usadas em interrupções.
+
+---
+
+**6**
+
+Q: O que é CTC mode?
+A: Timer reset quando TCNT == OCR.
+
+---
+
+**7**
+
+Q: Qual o tamanho de int no AVR?
+A: 16 bits.
+
+---
+
+# 🧪 Exercises
+
+### 1️⃣ Conceptual
+
+Qual a vantagem de usar **interrupts em vez de polling**?
+
+---
+
+### 2️⃣ Código
+
+Faz LED PB0 ligar quando botão PD2 é pressionado.
+
+---
+
+### 3️⃣ Debugging
+
+Porque este código não funciona?
+
+```
+int flag = 0;
+
+ISR(INT0_vect){
+ flag = 1;
+}
+
+while(!flag);
+```
+
+---
+
+### 4️⃣ Exam question
+
+Explique o funcionamento de um **interrupt vector** na arquitetura AVR.
+
+---
+
+# ✅ Checklist para dominar esta aula
+
+Se consegues explicar:
+
+* Harvard architecture
+* DDR / PORT / PIN
+* pull-up resistor
+* interrupts
+* ISR
+* volatile
+* timers
+* prescaler
+
+então já dominas **90% da aula**.
+
+---
+
+💡 Se quiseres, posso ainda mostrar:
+
+* **A forma mais fácil de entender programação AVR (com 1 exemplo real)**
+* **o exemplo clássico que sai sempre em exame**
+* **como um programa embedded realmente corre dentro do microcontrolador** (isto costuma ser o momento “aha”).
