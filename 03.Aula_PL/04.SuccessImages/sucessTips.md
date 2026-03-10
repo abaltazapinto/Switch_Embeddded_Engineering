@@ -36,4 +36,8 @@ PS C:\Users\Utilizador\AppData\Local\Arduino15\packages\arduino\tools\avrdude\8.
 
 agora quando arrastei da pasta para o windows powershell ja funcionou !!!
 
+com este comando 
+
+![alt text](image-2.png)
+
 ![alt text](image-1.png)
