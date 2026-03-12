@@ -82,3 +82,76 @@ sitemas que necessitem alta performance. ambiente de software rico.
 
 SSTEMAS OPERATIVOS A SEGUIR
 
+![alt text](image-25.png)
+
+as boards 
+
+![alt text](image-26.png)
+
+o sistema operativo faz e administrar o hardware. 
+
+![alt text](image-27.png)
+
+aritmetica xor e tal..
+
+accumulador onde vai ser colocado o resultado das operacoes. 
+
+![alt text](image-28.png)
+
+![alt text](image-29.png)
+
+program counter e um registo operacial n=que nos diz q=em que sitio da memoria nosencontramos. 
+
+![alt text](image-30.png)
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+
+o endereco onde eu vou querer escrever e aqui os dados vao aparecer imediatamente. 
+
+o que os chips tem que baralha isto tudo , interupts nao afta  a memoria, quando compras novo tem de se ver a memoria cache, e uma copia da memoria principal. 
+programa pode ser interrompido s e for para transicao a seguir. 
+
+![alt text](image-39.png)
+
+Gerar sinais de controlo memory enable , gerir protocolos de acesso a Ram para que seja facilmente perceptibel, as memorias sao um bocadinho mais complicadas do que isto. Ele tambem tem que se decidir a que tipo de memoria vai aceder nao e, ele vai ter de decidir se o meu endereco estiver na gama que aqui est 
+
+![alt text](image-40.png)
+
+ROM OU RAM chip select . .
+
+Os processadores modernos tem cache significa eu quando estou a aceder , hoje  em dia nao  acede a memoria principal diretamente so acede a memoria cache. 
+
+a memoria ddr tem funcionamento diferente em termos de performance e timings. 
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+buffers mais sofisticados, ethernet pode ir ate aos 1024 bytes. 
+
+cpu para cpu mais lento, mas tratadas pelo software de comunicacoes, first in first out in termos de bufferizacao, um barramento com o qual eu vou ligar o CPU . 
+
+![alt text](image-45.png)
+
+tecnologia DMA com processador 486 permitia que os perifericos acedessem a emoria sem qualquer interferencia do processador. 
+
+eventos sinalizados atraves das interrupcoes, error handling deteta se e alguma parte do cirsuito se tem algum erro nas comunicacoes de paridade. comandos elevados, tudo isto aparece no status register. 
+
