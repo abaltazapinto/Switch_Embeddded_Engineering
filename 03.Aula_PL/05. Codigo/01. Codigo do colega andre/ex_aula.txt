@@ -1,0 +1,136 @@
+/*
+ * Exe1.c
+ *
+ * Created: 07/03/2026 09:54:48
+ * Author : DEE
+ */ 
+
+#include "main.h"
+
+ledStatus ledStatus_var = STATUS_INC;
+movStatus flag_mov = STATUS_INC_ENABLE;
+switchObj swObj;
+
+
+uint8_t vec[8] = {D1, D2, D3, D4, D5, D6, D7, D8};
+uint8_t vec_pos = 0x00;
+
+void config_timer(void);
+void update_port_c(void);
+void update_state_machine(void);
+void execute_count_routine(void);
+
+volatile uint16_t count = 0x00;
+
+int main(void)
+{
+    /* Replace with your application code */
+	DDRC = 0b11111111;
+	PORTC = 0xB0;
+	DDRD = 0b11000000;
+	PORTD = 0x00;
+	
+	TCCR0 = 0b00001101;
+	OCR0 = 249;
+	TIMSK = 0b00000010;
+	
+	sei();
+	
+    while (1) 
+    {
+
+    }
+}
+
+void config_timer(void)
+{
+	TCCR0 |= (1 << CS02);
+	TCCR0 &= ~(1 << CS01);
+	TCCR0 &= ~(1 << CS00);
+	OCR0 = 249;
+	TIMSK |= (1 << TOIE0);
+}
+
+ISR(TIMER0_COMP_vect)
+{
+	/*count++;
+	if(count == 1000)
+	{
+		count = 0;
+		PORTD += 0x40;
+	}*/
+	
+	PORTD += 0x40;
+}
+
+
+void update_port_c(void)
+{
+	static uint8_t port_c_var = 0xFF;
+	uint8_t aux = 0x00;
+	
+	if(ledStatus_var == STATUS_INC)
+	{
+		port_c_var &= vec[vec_pos];	
+	}
+	if(ledStatus_var == STATUS_DEC)
+	{
+		aux = (~vec[vec_pos]);
+		port_c_var |= aux;	
+	}
+	
+	PORTC = vec[vec_pos]; //port_c_var;
+}
+
+void update_state_machine(void)
+{
+	if(swObj.varSW6 == 1)
+	{
+		if(flag_mov == STATUS_INC_ENABLE)
+		{
+			flag_mov = STATUS_INC_DISABLE;
+		}
+		else
+		{
+			flag_mov = STATUS_INC_ENABLE;
+		}
+		swObj.varSW6 = 0;
+	}
+	else if(swObj.varSW1 == 1)
+	{
+		ledStatus_var = STATUS_INC;
+	}
+	else if(swObj.varSW2 == 1)
+	{
+		ledStatus_var = STATUS_DEC;
+	}
+}
+
+void execute_count_routine(void)
+{
+	if(count >= MAX_TIME_INC_COUNT && ledStatus_var == STATUS_INC)
+	{
+		if(vec_pos < MAX_VEC_POS)
+		{
+			vec_pos++;
+		}
+		else
+		{
+			flag_mov = STATUS_INC_DISABLE;
+		}
+		count = 0;
+	}
+						
+	else if(count >= MAX_TIME_DEC_COUNT && ledStatus_var == STATUS_DEC)
+	{
+		if(vec_pos > 0)
+		{
+			vec_pos--;
+		}
+		else
+		{
+			flag_mov = STATUS_INC_DISABLE;
+		}
+		count = 0;
+	}
+}
