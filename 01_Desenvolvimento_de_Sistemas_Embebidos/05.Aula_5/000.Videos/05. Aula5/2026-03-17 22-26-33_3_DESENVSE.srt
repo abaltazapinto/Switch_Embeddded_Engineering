@@ -1,0 +1,1080 @@
+1
+00:00:00,000 --> 00:00:11,000
+para estas macros fazem com conversão para o MIT e o porto correspondentes do microcontroller,
+
+2
+00:00:11,000 --> 00:00:16,000
+ou seja, ser o porto-al ou porto-v ou porto-c, ou por e fora, e o respondente de MIT,
+
+3
+00:00:16,000 --> 00:00:27,000
+se alguém quiser 0, 1, 2, 3, 4, 5, 6 ou 7, e isto é possível fazer porque cada um,
+
+4
+00:00:27,000 --> 00:00:38,000
+ou melhor, este programa são torne-se, por que cada, eu recordo que cada registro de configuração
+
+5
+00:00:38,000 --> 00:00:46,000
+dos portos do Timer, está amapiado no endereço de memória da memória principal,
+
+6
+00:00:46,000 --> 00:00:54,000
+portanto, apesar de ser em registres especiais, portanto, estão, fazem parte do mapa de memória
+
+7
+00:00:54,000 --> 00:01:00,000
+principal do microcontroller, e portanto, é possível obter um apontador,
+
+8
+00:01:00,000 --> 00:01:06,000
+isto, usando, portanto, a termologia da linguagem seno,
+
+9
+00:01:06,000 --> 00:01:12,000
+um apontador para esses registros, que basicamente o apontador é o endereço de memória.
+
+10
+00:01:13,000 --> 00:01:17,000
+É isto que esta função faz, este portal de porto-register,
+
+11
+00:01:17,000 --> 00:01:24,000
+e depois de identificar o porto, retorna o endereço para o registro que permite,
+
+12
+00:01:24,000 --> 00:01:32,000
+está-lo ser a seguida, por exemplo, no caso, o porte-a é o porte-a, não é mesmo o registro porte-a.
+
+13
+00:01:32,000 --> 00:01:40,000
+E se sabendo o endereço e se sabendo o bit, depois basta fazer a operação que estamos habituados a fazer,
+
+14
+00:01:40,000 --> 00:01:45,000
+se quisermos por a zero, vamos dizer que a posição de memória,
+
+15
+00:01:45,000 --> 00:01:52,000
+portanto, o valor, na posição de memória, correspondente a esse porto,
+
+16
+00:01:52,000 --> 00:02:01,000
+vai sufrir esta operação, portanto, vamos fazer o endereço da máscara com zero,
+
+17
+00:02:01,000 --> 00:02:05,000
+na posição do bit, que queremos por a zero.
+
+18
+00:02:05,000 --> 00:02:12,000
+Se quisermos por um, é o habitual ou nós, vamos fazer o ou como o bit,
+
+19
+00:02:12,000 --> 00:02:20,000
+portanto, com a palavra que tem o bit exigado ou um,
+
+20
+00:02:20,000 --> 00:02:25,000
+portanto, este o bit vai estar a uma posição correspondente ao pino que queremos,
+
+21
+00:02:25,000 --> 00:02:28,000
+que foi indicada aqui.
+
+22
+00:02:29,000 --> 00:02:36,000
+E agora, isto é um cuidado que se deve ter, principalmente,
+
+23
+00:02:36,000 --> 00:02:43,000
+se devemos usar outros portos ou interrupções externas,
+
+24
+00:02:43,000 --> 00:02:51,000
+tantas interrupções externas ou tipos de interrupções,
+
+25
+00:02:51,000 --> 00:02:57,000
+portanto, usá-te várias interrupções neste altura para ter certeza que isso não vai ser interrompido,
+
+26
+00:02:57,000 --> 00:03:04,000
+e depois, voltar a ativar as interrupções.
+
+27
+00:03:04,000 --> 00:03:09,000
+No fundo, o que se faz aqui, isto é o registro de Estado,
+
+28
+00:03:09,000 --> 00:03:15,000
+o princípio do Estado de Regiça, o principal do microcontro-osor,
+
+29
+00:03:15,000 --> 00:03:21,000
+e, portanto, isso é guardado, em uma variável temporária,
+
+30
+00:03:21,000 --> 00:03:27,000
+depois, solia-se as interrupções e depois restaura-se o registro de Estado.
+
+31
+00:03:27,000 --> 00:03:33,000
+E isto é isto, isto é um clí, o que faz é limpar aquele bit mais significativo do Estado de Regiça.
+
+32
+00:03:33,000 --> 00:03:36,000
+Eu estou sendo mais significativo, espero não estar enanado,
+
+33
+00:03:36,000 --> 00:03:39,000
+é um dos bitos do Estado de Regiça. É o mais significativo,
+
+34
+00:03:39,000 --> 00:03:42,000
+por que se faz a mais cara com o 80?
+
+35
+00:03:42,000 --> 00:03:48,000
+E, portanto, aqui, o que isto vai fazer é por esse bit a zero,
+
+36
+00:03:48,000 --> 00:03:52,000
+e, aqui, volta a se recuperar o valor original para o SREG.
+
+37
+00:03:52,000 --> 00:03:55,000
+E, assim, temos certeza que mesmo que estes que entretanto,
+
+38
+00:03:55,000 --> 00:03:58,000
+alguma isto, são eventualmente diversas alteradas,
+
+39
+00:03:58,000 --> 00:04:05,000
+as flex de outras flex, do bitos, do SREG, do Estado de Regiça,
+
+40
+00:04:05,000 --> 00:04:09,000
+e, depois, volta a ficar, exatamente como estrada.
+
+41
+00:04:09,000 --> 00:04:12,000
+No qual é o mesmo tipo de análise,
+
+42
+00:04:12,000 --> 00:04:16,000
+tanto que podia ser feito aqui neste pinemode,
+
+43
+00:04:16,000 --> 00:04:19,000
+temos aqui, no fundo, os três modos que estudamos,
+
+44
+00:04:19,000 --> 00:04:22,000
+que é colocar o como input,
+
+45
+00:04:22,000 --> 00:04:25,000
+colocar o como input mais ativando o pull-up,
+
+46
+00:04:25,000 --> 00:04:28,000
+que, em que vamos escrever na saída,
+
+47
+00:04:28,000 --> 00:04:31,000
+vamos colocar a saída 1 para ativar-te aqui,
+
+48
+00:04:31,000 --> 00:04:36,000
+a extreção, colocar a saída 1 para que o pull-up fique ativo.
+
+49
+00:04:36,000 --> 00:04:40,000
+E, depois, neste caso, portanto, input de pull-up,
+
+50
+00:04:40,000 --> 00:04:44,000
+caso contrário, o que falta é o output,
+
+51
+00:04:44,000 --> 00:04:53,000
+em que vamos colocar o registro-configuração,
+
+52
+00:04:53,000 --> 00:04:56,000
+para que esta variável redjam-contador
+
+53
+00:04:56,000 --> 00:05:03,000
+para o registro que permite configurar o modo de cada um dos bitos do porto.
+
+54
+00:05:03,000 --> 00:05:05,000
+Portanto, será que,
+
+55
+00:05:05,000 --> 00:05:12,000
+agora, alguém pode ajudar,
+
+56
+00:05:12,000 --> 00:05:18,000
+o qual é o registro, tanto o porto e a a a a a.
+
+57
+00:05:21,000 --> 00:05:24,000
+Vamos soltar.
+
+58
+00:05:25,000 --> 00:05:28,000
+Aqui, muito bem, trabalhar com um apontador,
+
+59
+00:05:28,000 --> 00:05:38,000
+nunca chegam a mencionar os nomes individuais de cada um.
+
+60
+00:05:42,000 --> 00:05:49,000
+E aí, estou usando a direção, pronto.
+
+61
+00:05:49,000 --> 00:05:56,000
+Enquire, tanto, é este que permite indicar saída ao output ou de input.
+
+62
+00:05:59,000 --> 00:06:03,000
+Mais uma vez, eu recordo que,
+
+63
+00:06:03,000 --> 00:06:05,000
+tanto que estas funções são,
+
+64
+00:06:05,000 --> 00:06:06,000
+isto não são funções.
+
+65
+00:06:06,000 --> 00:06:10,000
+Estão macros, que estão defendidos na Voltaque,
+
+66
+00:06:10,000 --> 00:06:12,000
+aqui, que não tiver curiosidade,
+
+67
+00:06:12,000 --> 00:06:15,000
+pode ir a 6.ga, onde...
+
+68
+00:06:15,000 --> 00:06:18,000
+No IDEA, basta colocar aqui no botão direto,
+
+69
+00:06:18,000 --> 00:06:21,000
+que eu permiti ir à definição.
+
+70
+00:06:21,000 --> 00:06:23,000
+E vamos ver que isto é uma forma,
+
+71
+00:06:23,000 --> 00:06:27,000
+a gente que é o calculador de acordo com o membro do pino,
+
+72
+00:06:27,000 --> 00:06:30,000
+consegue calcular a cola ou a a a a a a a a a a a a a a a,
+
+73
+00:06:30,000 --> 00:06:34,000
+e não consegue calcular a cola ou a a a a a a a a a de respectivo registro.
+
+74
+00:06:36,000 --> 00:06:39,000
+Ou seja, o que eu porto whooshing mostrar aqui não é...
+
+75
+00:06:39,000 --> 00:06:42,000
+não é... Não é... Não está a dar um curso rápido como programar a ardo innu,
+
+76
+00:06:42,000 --> 00:06:45,000
+é fazer umcke eamento de potente perceber,
+
+77
+00:06:45,000 --> 00:06:50,000
+que o cable o tech implemented no funcion nestas,
+
+78
+00:06:50,000 --> 00:06:54,000
+este tipo do que... este tipo do código o que...
+
+79
+00:06:54,000 --> 00:06:56,000
+que estamos... &amos a explicar.
+
+80
+00:06:56,000 --> 00:06:59,000
+e que é, portanto, para um ranking rápido,
+
+81
+00:06:59,000 --> 00:07:06,000
+que realmente não é discutir o que é mais rápido de fazer isto, o que é fazer isto, não é?
+
+82
+00:07:10,000 --> 00:07:14,000
+O outro exemplo, não há passada,
+
+83
+00:07:14,000 --> 00:07:19,000
+não cheguei a mostrar a implementação do...
+
+84
+00:07:19,000 --> 00:07:26,000
+Um exemplo de implementação do ISO-ST, o TWI,
+
+85
+00:07:26,000 --> 00:07:31,000
+e, portanto, aqui, com este código,
+
+86
+00:07:31,000 --> 00:07:36,000
+é possível, portanto, fazer a configuração,
+
+87
+00:07:36,000 --> 00:07:42,000
+este set-clock, no fundo, acho que primeiro, também, para a comparação, tem aqui,
+
+88
+00:07:42,000 --> 00:07:45,000
+este posso fechar...
+
+89
+00:07:55,000 --> 00:07:58,000
+Eu tenho acho que tinha aqui...
+
+90
+00:07:59,000 --> 00:08:02,000
+e, por acaso, este botão que já não conseguiu,
+
+91
+00:08:02,000 --> 00:08:06,000
+é clicando diretamente, e ir aos diretórios...
+
+92
+00:08:07,000 --> 00:08:11,000
+se mexer no avesso... não...
+
+93
+00:08:13,000 --> 00:08:17,000
+então, esta vez, o zoom não está funcionando...
+
+94
+00:08:20,000 --> 00:08:23,000
+aqui, sim, aqui, aqui, aqui, aqui é o comparação,
+
+95
+00:08:26,000 --> 00:08:29,000
+eu queria mostrar aqui...
+
+96
+00:08:30,000 --> 00:08:33,000
+no fundo, esta...
+
+97
+00:08:33,000 --> 00:08:36,000
+vamos lá voltar atrás...
+
+98
+00:08:39,000 --> 00:08:42,000
+esta wire é uma classe estática...
+
+99
+00:08:42,000 --> 00:08:45,000
+que é estática, mas isto está de ser mais mais...
+
+100
+00:08:48,000 --> 00:08:53,000
+e que no fundo é um wrapper para um código,
+
+101
+00:08:53,000 --> 00:08:56,000
+e eles fizeram isto bonitinho, tanto como a classe,
+
+102
+00:08:56,000 --> 00:08:58,000
+sem ser mais mais...
+
+103
+00:08:58,000 --> 00:09:00,000
+só nos ver a implementação deste método,
+
+104
+00:09:00,000 --> 00:09:04,000
+o que eles fazem é chamar as funções em cedo,
+
+105
+00:09:04,000 --> 00:09:07,000
+aquele fechero que eu tenho aberto no visual,
+
+106
+00:09:07,000 --> 00:09:10,000
+e, por exemplo, o que este set-clock faz?
+
+107
+00:09:10,000 --> 00:09:14,000
+É implementar esta forma,
+
+108
+00:09:14,000 --> 00:09:17,000
+para que, precisamente,
+
+109
+00:09:17,000 --> 00:09:20,000
+a forma que vimos na aula passada,
+
+110
+00:09:20,000 --> 00:09:23,000
+para calcular o bol de rei,
+
+111
+00:09:23,000 --> 00:09:26,000
+este poderíamos estar recordados aqui,
+
+112
+00:09:26,000 --> 00:09:27,000
+neste...
+
+113
+00:09:27,000 --> 00:09:29,000
+esta minimônica, este BR,
+
+114
+00:09:29,000 --> 00:09:30,000
+para um bol de rei,
+
+115
+00:09:30,000 --> 00:09:32,000
+e o TW é o tour wire,
+
+116
+00:09:32,000 --> 00:09:35,000
+porque antes da mesmo registro do microcontrollador
+
+117
+00:09:35,000 --> 00:09:37,000
+que, ao qual, eu já tribuo em esta,
+
+118
+00:09:37,000 --> 00:09:39,000
+tanto os resultados, este poder este cálculo,
+
+119
+00:09:39,000 --> 00:09:41,000
+que não é mais do que...
+
+120
+00:09:41,000 --> 00:09:43,000
+do que isto que fizemos aqui,
+
+121
+00:09:43,000 --> 00:09:45,000
+não a passada, ok?
+
+122
+00:09:45,000 --> 00:09:47,000
+Só que, tanto fazem,
+
+123
+00:09:47,000 --> 00:09:50,000
+recebem, passam isto como parando pela função,
+
+124
+00:09:50,000 --> 00:09:52,000
+e o cálculo automaticamente,
+
+125
+00:09:52,000 --> 00:09:54,000
+carregado pela função,
+
+126
+00:09:54,000 --> 00:09:56,000
+para o registro do microcontrollador.
+
+127
+00:09:58,000 --> 00:10:01,000
+Depois, tanto,
+
+128
+00:10:01,000 --> 00:10:03,000
+para fazer a transmissão,
+
+129
+00:10:03,000 --> 00:10:05,000
+propriamente, tem que eu vos mencionar,
+
+130
+00:10:05,000 --> 00:10:09,000
+que, portanto,
+
+131
+00:10:11,000 --> 00:10:14,000
+tinha que passar por várias fases,
+
+132
+00:10:14,000 --> 00:10:16,000
+não é da minha mente,
+
+133
+00:10:16,000 --> 00:10:18,000
+portanto, posso recorrer aqui,
+
+134
+00:10:18,000 --> 00:10:20,000
+o exemplo que eu não cheguei a mostrar,
+
+135
+00:10:20,000 --> 00:10:22,000
+era assim que estava aqui,
+
+136
+00:10:22,000 --> 00:10:24,000
+é o início.
+
+137
+00:10:24,000 --> 00:10:26,000
+Só um momento, acho que alguém,
+
+138
+00:10:26,000 --> 00:10:28,000
+seria o que eu queria interpretar,
+
+139
+00:10:28,000 --> 00:10:30,000
+entrar...
+
+140
+00:10:32,000 --> 00:10:34,000
+Não, foi outra coisa.
+
+141
+00:10:35,000 --> 00:10:36,000
+Pensei também,
+
+142
+00:10:36,000 --> 00:10:39,000
+viarem estas sequências de pacote,
+
+143
+00:10:39,000 --> 00:10:41,000
+em que, em alguns casos,
+
+144
+00:10:41,000 --> 00:10:43,000
+por exemplo, isto é o uso,
+
+145
+00:10:44,000 --> 00:10:46,000
+por exemplo,
+
+146
+00:10:46,000 --> 00:10:49,000
+escritas em que se envia
+
+147
+00:10:49,000 --> 00:10:51,000
+um pacote,
+
+148
+00:10:51,000 --> 00:10:53,000
+um pacote,
+
+149
+00:10:53,000 --> 00:10:55,000
+o controlador,
+
+150
+00:10:55,000 --> 00:10:57,000
+um pacote de uma espécie,
+
+151
+00:10:57,000 --> 00:10:59,000
+tem que ficar esperado,
+
+152
+00:10:59,000 --> 00:11:01,000
+o que eu verificava,
+
+153
+00:11:01,000 --> 00:11:03,000
+o acknowledge,
+
+154
+00:11:03,000 --> 00:11:05,000
+que é enviado pelo target,
+
+155
+00:11:05,000 --> 00:11:07,000
+e, portanto, isto,
+
+156
+00:11:07,000 --> 00:11:09,000
+obriga uma certa sequência,
+
+157
+00:11:09,000 --> 00:11:11,000
+que, de tanto, se for nos implementar isto,
+
+158
+00:11:11,000 --> 00:11:13,000
+tudo,
+
+159
+00:11:13,000 --> 00:11:15,000
+diretamente, com os acesso aos registros,
+
+160
+00:11:15,000 --> 00:11:17,000
+ficam coisas,
+
+161
+00:11:17,000 --> 00:11:19,000
+que estão em um exemplo,
+
+162
+00:11:19,000 --> 00:11:21,000
+de um nível,
+
+163
+00:11:21,000 --> 00:11:23,000
+de dois valores,
+
+164
+00:11:23,000 --> 00:11:25,000
+de 8 bytes,
+
+165
+00:11:25,000 --> 00:11:27,000
+em que, primeiro,
+
+166
+00:11:27,000 --> 00:11:29,000
+aliás, tanto, casta o nível,
+
+167
+00:11:29,000 --> 00:11:31,000
+primeiro, do beat start,
+
+168
+00:11:31,000 --> 00:11:33,000
+que consistem de fazer aqui,
+
+169
+00:11:33,000 --> 00:11:35,000
+o portanto,
+
+170
+00:11:35,000 --> 00:11:37,000
+ao ativar este vídeo
+
+171
+00:11:37,000 --> 00:11:39,000
+do TW CR,
+
+172
+00:11:39,000 --> 00:11:41,000
+do control register,
+
+173
+00:11:41,000 --> 00:11:43,000
+tanto, isto enviu
+
+174
+00:11:43,000 --> 00:11:46,000
+o sinal de start,
+
+175
+00:11:46,000 --> 00:11:48,000
+que é aquilo de baixar,
+
+176
+00:11:48,000 --> 00:11:50,000
+tanto, criar o flanco,
+
+177
+00:11:50,000 --> 00:11:52,000
+durante um ciclo de coloque,
+
+178
+00:11:52,000 --> 00:11:54,000
+depois,
+
+179
+00:11:54,000 --> 00:11:56,000
+para, portanto,
+
+180
+00:11:56,000 --> 00:11:58,000
+o código, tem que ficar esperado aqui,
+
+181
+00:11:58,000 --> 00:12:00,000
+que,
+
+182
+00:12:00,000 --> 00:12:02,000
+portanto,
+
+183
+00:12:02,000 --> 00:12:04,000
+sei, que esta flag va a 1,
+
+184
+00:12:04,000 --> 00:12:06,000
+e, depois, verificar,
+
+185
+00:12:06,000 --> 00:12:08,000
+se, no registro de estado,
+
+186
+00:12:08,000 --> 00:12:10,000
+se, portanto,
+
+187
+00:12:10,000 --> 00:12:12,000
+seus vídeos,
+
+188
+00:12:12,000 --> 00:12:14,000
+respondem esta constante,
+
+189
+00:12:14,000 --> 00:12:15,000
+que indica que o start,
+
+190
+00:12:15,000 --> 00:12:17,000
+portanto, já foi transmitido,
+
+191
+00:12:17,000 --> 00:12:19,000
+depois,
+
+192
+00:12:19,000 --> 00:12:21,000
+para enviar os dados,
+
+193
+00:12:21,000 --> 00:12:23,000
+portanto, é cargar o data register,
+
+194
+00:12:23,000 --> 00:12:25,000
+com o valor desejado,
+
+195
+00:12:25,000 --> 00:12:27,000
+portanto, é ver este 0, 0,
+
+196
+00:12:27,000 --> 00:12:29,000
+responda a estes,
+
+197
+00:12:29,000 --> 00:12:31,000
+estes jovens estão aqui,
+
+198
+00:12:31,000 --> 00:12:33,000
+portanto,
+
+199
+00:12:33,000 --> 00:12:35,000
+o dia,
+
+200
+00:12:35,000 --> 00:12:37,000
+para o caso,
+
+201
+00:12:37,000 --> 00:12:39,000
+tu vaso a corresponde,
+
+202
+00:12:39,000 --> 00:12:41,000
+assim, sim,
+
+203
+00:12:41,000 --> 00:12:43,000
+corresponde a este valor,
+
+204
+00:12:43,000 --> 00:12:44,000
+portanto, no fundo,
+
+205
+00:12:44,000 --> 00:12:46,000
+pode passar este 0, 0,
+
+206
+00:12:46,000 --> 00:12:48,000
+volotei da morr,
+
+207
+00:12:48,000 --> 00:12:50,000
+mas, portanto, tendo em conta aqui este vídeo,
+
+208
+00:12:50,000 --> 00:12:52,000
+que indica que queremos fazer uma escrita,
+
+209
+00:12:52,000 --> 00:12:54,000
+vai a 0,
+
+210
+00:12:54,000 --> 00:12:56,000
+tanto, é, está aqui isto,
+
+211
+00:12:56,000 --> 00:12:58,000
+o 0, e isto é o 0,
+
+212
+00:12:58,000 --> 00:13:00,000
+e isto é o 0,
+
+213
+00:13:00,000 --> 00:13:02,000
+e isto é o 0,
+
+214
+00:13:02,000 --> 00:13:04,000
+e isto é o 0,
+
+215
+00:13:04,000 --> 00:13:06,000
+e, depois, para, para fazer,
+
+216
+00:13:06,000 --> 00:13:08,000
+mais uma vez,
+
+217
+00:13:08,000 --> 00:13:10,000
+da área,
+
+218
+00:13:10,000 --> 00:13:12,000
+portanto, a ordem delivia,
+
+219
+00:13:12,000 --> 00:13:14,000
+é o reset,
+
+220
+00:13:14,000 --> 00:13:16,000
+desta flagra,
+
+221
+00:13:16,000 --> 00:13:18,000
+que escrevendo para o A1,
+
+222
+00:13:18,000 --> 00:13:20,000
+e para um litro,
+
+223
+00:13:20,000 --> 00:13:22,000
+para fazer isto, passa a passo,
+
+224
+00:13:22,000 --> 00:13:24,000
+tem uma vez,
+
+225
+00:13:24,000 --> 00:13:26,000
+isto é aqui uma sequência,
+
+226
+00:13:26,000 --> 00:13:28,000
+em cada fase,
+
+227
+00:13:28,000 --> 00:13:32,000
+temos que fazer a verificação da respectiva flagra,
+
+228
+00:13:32,000 --> 00:13:34,000
+do valor desejado,
+
+229
+00:13:34,000 --> 00:13:36,000
+que é suposto a aparecer no registro,
+
+230
+00:13:36,000 --> 00:13:38,000
+neste jovito,
+
+231
+00:13:38,000 --> 00:13:40,000
+do registro estar,
+
+232
+00:13:40,000 --> 00:13:42,000
+o código do ar doino,
+
+233
+00:13:42,000 --> 00:13:44,000
+quando, simplesmente, queremos,
+
+234
+00:13:44,000 --> 00:13:46,000
+até fazer,
+
+235
+00:13:46,000 --> 00:13:48,000
+assimular um dispositivo i2C,
+
+236
+00:13:48,000 --> 00:13:50,000
+ou fazer,
+
+237
+00:13:50,000 --> 00:13:52,000
+o teste do outro sistema com i2C,
+
+238
+00:13:52,000 --> 00:13:54,000
+portanto, torna-se muito,
+
+239
+00:13:54,000 --> 00:13:56,000
+mais simples,
+
+240
+00:13:56,000 --> 00:13:58,000
+escrever,
+
+241
+00:13:58,000 --> 00:14:00,000
+escrever aqui três linhas de código,
+
+242
+00:14:00,000 --> 00:14:02,000
+que fazem exatamente a mesma coisa,
+
+243
+00:14:02,000 --> 00:14:04,000
+para carreir aqui,
+
+244
+00:14:04,000 --> 00:14:06,000
+para este registro de data,
+
+245
+00:14:06,000 --> 00:14:08,000
+para este cristino,
+
+246
+00:14:08,000 --> 00:14:09,000
+para este vetor,
+
+247
+00:14:09,000 --> 00:14:11,000
+para os dados que quer enviar,
+
+248
+00:14:11,000 --> 00:14:13,000
+e faixarmos esta função right,
+
+249
+00:14:13,000 --> 00:14:15,000
+que vale,
+
+250
+00:14:15,000 --> 00:14:17,000
+tanto que é real aos bofais do,
+
+251
+00:14:17,000 --> 00:14:19,000
+da biblioteca,
+
+252
+00:14:19,000 --> 00:14:20,280
+e, e, e este, peus,
+
+253
+00:14:20,280 --> 00:14:21,000
+extra-se,
+
+254
+00:14:21,000 --> 00:14:22,280
+enrique-se de faz todo o trabalho,
+
+255
+00:14:22,280 --> 00:14:24,040
+quero que eu penso que tenha que,
+
+256
+00:14:24,040 --> 00:14:26,040
+para vos mostrar,
+
+257
+00:14:26,040 --> 00:14:28,040
+voltou a só,
+
+258
+00:14:28,040 --> 00:14:28,980
+para ver,
+
+259
+00:14:28,980 --> 00:14:30,340
+em que é a sequência de testes,
+
+260
+00:14:30,340 --> 00:14:32,340
+também vale a aparecer aqui,
+
+261
+00:14:32,340 --> 00:14:36,180
+este ter o read.
+
+262
+00:14:36,180 --> 00:14:38,180
+Para, aqui, uma função right.
+
+263
+00:14:38,180 --> 00:14:53,180
+Aqui, por acaso, até existe um código auxiliar para fazer verificações de time-outs.
+
+264
+00:14:53,180 --> 00:15:02,180
+Por acaso, eu até feito o copy, peixe-se que era mais rápido de gostar agora aqui.
+
+265
+00:15:03,180 --> 00:15:10,180
+Agora, portanto, estamos a falar do intransmission, que faz o right to the front.
+
+266
+00:15:10,180 --> 00:15:20,180
+Então, ao ver que isso, o tall wrapper que eu estava a falar, tendo aqui um metodo de class to wire,
+
+267
+00:15:20,180 --> 00:15:29,180
+que depois, no fundo que faz, é chamar aqui o, esta função do, se chamar, esta função que está no outro fechero.
+
+268
+00:15:33,180 --> 00:15:34,180
+Portanto, aqui.
+
+269
+00:15:38,180 --> 00:15:43,180
+Como podem ver, também existe aqui uma sequência, e que acham os textos da esplera,
+
+270
+00:15:43,180 --> 00:15:47,180
+e portanto, as várias fases, deviam ajudar.
+

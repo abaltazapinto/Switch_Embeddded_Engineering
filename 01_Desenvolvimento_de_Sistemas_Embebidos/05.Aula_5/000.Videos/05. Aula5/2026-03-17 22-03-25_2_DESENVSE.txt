@@ -1,0 +1,315 @@
+Embora possam ser usados os outros, mas a ideia de uma vez que está disponível,
+antes já está mais afinado para usar os produtos, os os pré-equipos produtos.
+E, ao mesmo tempo, este ideia já é evolutal maneira que, portanto,
+também já tem suporte para outras plataformas, que não só os ardoino,
+desde que, tanto que tenha algum nível de que essas plataformas possam ser,
+seja um compatível escoprogramador, por aí fora, que é usado pelo sistema de programação que é usado pelo ideia.
+Tudo isto é ele pan-sorce, tanto que facilita até o aparecimento depois dos colonos,
+que até são mais barras, muitas vezes são pelacas mais baratas do que os que vem lá com a marca ardoino,
+e, portanto, e a nível software também, as licenciações são restrativas, são minimamente restrativas,
+com minimos que estressões já permitem, portanto, utilizar o código em vários tipos de sistemas.
+Para bem este texto, isto vou laterificar o que é mais depois de tirar-lo.
+Eu, aqui, portanto, no âmbito deste curso, acho que, no mínimo ardoino,
+pode ser, no uso público háboles, este curso, um sistema de mardoino,
+pode ser útil para prototipagem rápida, para fazermos um sistema,
+é numa nova placa que seja sopada pelo ardoino, se quisermos aumentar algo rapidamente,
+sem ter que estar a instalar um novo ID, portanto, uma nova toolchain, um novo ID,
+principalmente, um novo ID, cessa placa forse portada pelo ardoino,
+muitas vezes, essa é uma questão de igual a o ID, carregar o botão,
+pode carregar o toolchain para este, ou se chama-se desenvolvimento,
+para este placa, ou para esta arquitetura,
+e, pronto, e o sistema fica, por exemplo, usando o mesmo tipo de programação
+e as bibliotecas que estão disponíveis para outras placas,
+ou para as próprias placas do ardoino.
+As placas desta, portanto, deste ecossistema de este ardoino,
+portanto, estão disponíveis com vários tipos de microcontroladores,
+as mais simples são a exclusão microcontroladores desta família,
+a DR8ubites, que temos estádas estudar,
+pode ser do que o func
+aplicando os modos, senta que estão a sistema multiplicar em a esterinha,
+a capacidade muito complicada, ou muito sofisticada,
+e existem, portanto, vários modeles, serem os temporais,
+e, portanto, estão controladores desta família,
+a DR8ubites, portanto, mas que, com diferentes niveles,
+capacidades de poder computacional,
+ou seja, de frequência de funcionamento até a mooria,
+portanto, a mooria disponível,
+ou seja, para programas, seja para data,
+ou seja, flash e erran.
+Por outro lado, o ardoino já comercializa
+por soedores tanto placas como por soedores mais avançados,
+nomeadamente por soedores 32 bits da arma,
+da arquitetura arme, tanto que,
+como a maioria de vocês já terá o vídeo falar
+ou saberá bem, portanto, a maior arquitetura
+muito usada no mercado, a maior parte
+dos smartphones e tablets usam micropossadores desta arquitetura,
+e portanto, existem microcontroladores
+que têm núcleos, o repaior recordo,
+como microcontrolador,
+é um circuito integrado que tem um micropossador,
+um ou até vaisse, como vamos depois ir a imensionar,
+e depois os módulos periféricos
+para fazer interfaces com, portanto, com o exterior,
+tanto, estáis, mas os vídeos sejam,
+portanto, todas essas interfaces que já fomos,
+já fomos imensionantes,
+ou que já fomos estudantes,
+nas duas semanas antígoles.
+Aqui, portanto, podem ver que esteem,
+também, vários módulos com,
+com diferentes módulos,
+módulos placas com diferentes módulos micropossadores,
+alguns reparem que alguns já têm até a unidade
+de ver o afoto antes,
+que faz bastante diferença
+quando, mesmo em termos depois,
+de precisão dos cálculos,
+quando se quer fazer já,
+processamente, mais avançado,
+usando, portanto, os filotes idavos,
+portanto, valoros de ver,
+cálculos invirtam o afoto antes,
+o filo tem um point, em inglês,
+portanto, em termos de tempo de processamento,
+ter o fazer os cálculos em hardware,
+portanto, no FPU,
+ou em software, é completamente diferente,
+portanto, a eficiência de os cálculos,
+portanto, o hardware é muito superior,
+portanto, faz com os programas,
+esteja muito executable,
+portanto, tem um tempo de liso,
+que são bastante inferior,
+e isso é o portanto,
+o FPU, para outras tarefas,
+basicamente,
+para executar o transporte do programa,
+ou poder fazer com o programa,
+tem um tempo de resposta superior.
+Tem inclusive,
+também, módulos,
+para concorrer com,
+portanto, com outros fabricantes,
+que, entretanto,
+mas já são bastante,
+tem bastante impacto no programa,
+por exemplo, tenho, tenho, tenho, tenho,
+um módio, em que usamos,
+esses microcontroladores,
+este 32,
+portanto, que já são,
+de uma arquitetura,
+também, o respectivo,
+o microcontador,
+é de uma arquitetura indedifrenta,
+para que já era aqui,
+já mencionamos,
+arquitetura, hardware,
+e a redeu bit,
+azar, arquitetura,
+arquitetura,
+um 32 bits,
+mas, também,
+tem o seu próprio conjunto de instituições,
+ou seu próprio conjunto de registros.
+Depois,
+adicionalmente,
+também,
+entra no mercado,
+ou no segmento,
+digamos,
+no segmento de Linux,
+tanto, com o rendo,
+por exemplo,
+no mercado,
+assim,
+mais de,
+de loco,
+digamos,
+o mainstream,
+com o conhecido Raspberry Pi,
+que foi um modelo que foi criado
+de rei isto,
+para,
+para que concorria,
+portanto, para poder usar Linux,
+e, tanto,
+e o Arduino também,
+decidiu criar,
+pelacas ou lançar pelacas para a segmento,
+para que, aqui,
+estamos a falar
+de,
+aqui, já,
+no fundo,
+já não são bem microcontrolladores,
+o termo que normalmente se usa,
+é o cissamon chip,
+porque,
+é para diferenciar os microcontrolladores,
+e uma das principais características,
+até para poder,
+correr um Linux,
+não modificado,
+um Linux puro,
+digamos, assim,
+tem que ter a chamada
+Memory Management Units,
+ou,
+unidades tão memórias,
+que, portanto,
+que é um módulo
+de um micro-opressador
+que permite,
+trabalhar com indereço virtuais,
+com infestamente virtual,
+e é isso,
+portanto,
+é esse mecanismo que permite,
+que,
+assistemos operativos com o Linux,
+ou o Linux,
+ou Windows,
+possam ter vários processos,
+a correr,
+em simultaneamente,
+de módulo,
+segur,
+ou robusto,
+sem que,
+é isso que sou!,
+um programa,
+possa penail-risco,
+ou posso intrare em conflito,
+com a cosa que são,
+dos outros programas,
+e succeededer com t easy,
+até o que é,
+o conceito de procesos fantai sentidos,
+bastante typos,
+também發現es reencontramento.
+Portanto,
+proteste a fazer como uma mini-maquem ornamental
+que permite escutar o programa,
+em uma forma isolada,
+dos festos de estantes processos,
+que estão a seredu近is.
+Em este momento,
+escutados no sistema operativo, portanto aí o principal isolamento é o nível do
+acesso à memória principal, portanto, uma vez que cada processo tem a trabalho com
+endereço virtuais, depois do processador consegue ao fazer a conversão desses endereços
+virtuais, para endereços físicos, garante que cada processo não consegue aceler as
+zonas de memória que não ser utilizada às horas de memória física, que estão a ser
+usadas pelo por outros processos.
+Para bem, isto já me estou aqui a desviar, mas, para dizer que, no caso, os processadores
+de arme, esta letra aqui, que aparece até, permite identificar essa distinção, tanto
+os números, a versão do núcleo ou o cor, quando aparece aqui o I, ou a de application,
+portanto que, tipicamente, indica que é um processador que já tem suporte, já tem MMU,
+esse porto, para si temos o palinho, palinho do que se engerá-lo, ou para sistema que
+queiram tirar partido, se temos partidos queiram tirar partido dessa funcionalidade, enquanto
+se usamos, MMU émos de microcontroller, ainda existe um terceiro segmento que é
+uma espécie de segmento intermedi, que são os R's de real time, que são orientados
+já, para já tem, portanto, não são bem da aplicação, mas tem já algumas funcionalidades
+optimizadas para usar sistemas operativos multitasking para microcontrolladores, nomeadamente
+a proteção, a capacidade de proteção memória, que não é bem a mesma coisa que a memória
+que eu me ensino da MMU, para bem, para aqui, reparem que já estamos a falar de um sistema
+que pode ter até 4 GB, que já é perfeitamente suficiente para correr um sistema lino que
+se base, e até menos, até com menos, e depois outros, portanto, aqui, este já é um
+quase cor, e ainda outra arquitetura que, por acaso, onde é que é olhar para a lista
+de produtos delos e ver que, portanto, identifiquei este aqui que ainda usa um microcontroller
+ainda de outra arquitetura, MIPS, e como podem ver, estamos aqui, estes, todos estes modelos
+que são fabricados para o ar do lino, depois tem um suporte no IDE, o que permite iniciar
+facilmente, facilmente iniciar um protote e todo um sistema, depois que quiserem investir
+e eventualmente até fazer trabalho, já mais certos, reparem que este penda do rumo dos acontecimentos,
+porque o lino que se quando foi criado também, foi quase por brincadeira, e hoje em dia é
+usado em várias aplicações profissionais, e o ar do lino também, poderá caminhar para
+ter sido criado para um público almo, mas não há bem um público almo, para um fim mais
+didático, também, a vontade e hoje é que seja usado um nível mais profissional, isto aqui
+só para, como diz exemplo, de placa, de diferentes linhas, tanto linhas, não, este é
+um KPR, que já é uma ideia, os teixos, que já pantuzam que os possadores, os microcontrodadores
+como o Clio Arme, e depois estes, portanto, estes édas, permitem encaixar este teixo, por
+caso, no caso, o desejável encaixar apliquinhas de expansão, portanto o Shields, para não passar
+e a pessoa que ia fazer a publicidade do lino, porque não sou o acionista, nem sei
+que são contatos em Bolsonaro, mas não tem nenhum ganho nisso, portanto, chama a atenção
+que, agora assim, no mercado, já é mais verdadeiramente, ou totalmente profissional,
+que temos várias empresas que oferecem, placas com tanto o sistema, microcontrodadores
+e estes temas de envolvimento placas, com os meus possadores que eu mencionei ali, portanto
+possadores Arme, principalmente o Arme, somos mais usados, tanto aqui ficham um apanhado
+de empresas que fornecem placas com possadores Arme, parem este, este M32, é muito conhecido
+em TUSA, antiga Philips, a própria Microsoft que faz os AVRs, também faz, também faz
+o microcontrodador, portanto, como o polio Arme, enfim, para fora, portanto, cada uma
+destas tem estes temas, portanto, o Brasil é de microcontrodador, ou seja, com o mesmo
+modelo de programação, que estamos aqui a estudar, mas, portanto, com esses núcleos
+que, mais poderosos, portanto, com frequência, funcionamento também, já estamos a falar
+de centenas de megahertz, eu não sei se se deu a lisa dentro, portanto, aqui não
+perso, oense é aqui, tanto aqui, até estes são frequências altas, mas já, para
+correr olhando, por isso, mas aqui, a comum temos frequências de centenas de megahertz,
+enquanto que aqui estamos a falar de 16, 20, não sei se há algo aqui, se tem algo ainda
+com, como forças primas, nunca será mais de algumas centenas de megahertz, do ponto
+de lista de software, talvez olhando aqui, portanto, a ideia é que o programa em Arduino
+pode, portanto, o programa é mais básico, no fundo só tem que implementar duas funções,
+tem uma função de set up, onde é suposto o programador, inserir o código de inicialização
+dos dispositivos que pretende usar, ao longo do programa, e depois o loop é um basicamente
+que tal como não me diz, é uma função que é chamada relativamente, tanto todo o
+código, quase tipo um PLC, um automato, portanto, colocarmos lá, é executado em
+ciclo, portanto, chegando ao fim, só retornando, volta a ser chamada novamente, portanto,
+assim, enfim, é uma simplificação para para, para tornar isto mais intuitivo, mas
+se for no, ao qual desabiloteca, portanto, a função main está lá, tanto isto é a função
+main que depois existe, embora é uma sono, tem que escrever diretamente, já faz parte
+do loop, ela está lá, portanto, no meio do código que quer compilado, depois para, para
+gerar o fecheiro, que vai ser por o fecheiro vinaire, que vai ser programado, o transferido
+para a memória do programa, do microcontrollador, podem ver que, portanto, aqui na função main,
+existe um init, que está para fazer as iniciações da pop, da pop, eu vivo o teca do Arduino,
+use alguns timos para, programa logo para, para poder ter funções das pausas e temporizações,
+tem depois faz aqui a chamada set up, que é suposto terminar, tanto, já aqui isso possa
+te dar uma função de set up, que nunca termina, portanto, o código também nunca vai fazer a função
+loop, portanto, como é que se tem, é que tenhamos que se perceber essas espécies, mas em
+princípio também uma função set up, é suposto fazer o set up e termina, e a função loop, tal como
+eu expliquei, e está aqui, portanto é um ciclo for, chama a função continuamente, sempre
+a função retorna, tanto o ciclo é repetido, e a função volta a ser chamada, pois, existem
+que funções de colo, que caso estejam definidas, são chamadas, tem uma função que é para
+detectar, acontecimentos, não é tal como o próprio nome diz, nas ligações de série,
+fazemos uma espécie de, ou seja, alguém usou isto, eu confeço que nunca usarei esta função,
+mas basicamente, é para, que caso não sou, que era definir, portanto, uma espécie programação
+ali, pseudo a cíncrona, nas ligações de série, tanto ela, sendo a função definida,
+pois é chamada também continuamente, e depois reparem que, este é o exemplo mais base, que é o linker,
+ou, portanto, que se pode ir buscar aos próprios exemplos que são funções, tanto que são estalados,
+juntamente com o IDS, sem os exérmios, portanto, reparem, temos aqui um setat, que vai configurar,
+aqui, um, tanto, este já, nesta função pinomod, que faz parte das, das funções oficiais
+do Arduino, tanto, e, temos aqui, esta constante led, um build tin, e, tanto, esta,
+palavra chava o topo, uma comentário diz o que isto faz, tanto é, configurar o pino
+que está ligado a um led que faz parte da própria placa, daí, o build tin, para configurar
+algo como o topo. A gente te patece, portanto, para ver se está toda funcionando, era o ultimo,
+porque, como programa, tão simples como este, conseguimos ver o ledzinho lá da placa, pisco ou não.
+Portanto, ou seja, vamos configurar algo como o topo, parem, estamos a falar, este programa,
+tanto, pensem isto, no ar do Arduino, o que, é ser isto que está no ar do Arduino, o que
+tenha um personador, parecido com o microcontroller, assimilhante ao que estivemos a estudar,
+tanto, isto quer dizer que vai ter que haver um lá um daqueles portes, que são configurados
+como o topo, vamos já ver como. Depois, a função loop, o que faz é, tanto, alter, inicialmente,
+ponha, esta, esta saída, faz uma escrita digital, portanto, isto é a função digital
+right, para escrever um valor, numa determinada linha, e, neste caso, aumenta, escrava o valor
+alto, para ativar o led ligado a esse pino, pois faz uma pausa de aqui, portanto, isto é
+1.000 segundos, portanto, estão segundo, e depois faz o contrário colocar 0 e espera
+mais um segundo, isto é, portanto, uma taxa de meio-herde, está a contar um led, um led,
+uma taxa de meio-herde, um segundo a 1 e um segundo a 0. Para bem, estas condições não
+fazem um milagre, portanto, elas, a sua implementa, se for nos buscar, a implementação, uma vez
+que isto é o Pan de Sorts, e as fornece sem o código fonte todo, a sua poda consultar
+o código da UUTECA e ver que o tipo de programação que está aqui usado foi o que, o que, o que,
+o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, eu mostrei aqui
+nas aulas, e que, depois, você, e que, os feitos, que, eu podia fazer, na nova PL, eu, na verdade,
+ele, para estar aqui, aparing o primeiro, primeiro argumento da função digital right,
+Eu usado aqui a identificação do pino e para tornar a programação mais amigável,
+eles definem estas constantes e até permitem indicar o pino o conforme o número do conector.
+Eu, portanto, eu recordo, já houve um claga voce que foi mostrado no motor de este,
+acho que foi este, precisamente portanto, eu recordo de usar de um índice aqui estes jampas
+e que tem os pinos tão, portanto, tem um número associado, será 13 aqui deste lado,
+depois, continuo aqui, 14, 15, 16, 16. Pronto, isso permite que, em vez de andámos a pensar em
+bit0 do porto ver, portanto, para um iniciado, vai ali desde lá o 8 e escreve 8 e está feito,
+já sabe que é este pino que vai ser ativado. O tal é de built-in, por acaso, não sei se aqui
+está presidendo, eu costumo estar para aqui, agora, ao menos nos tal de jendado, ou o tal, mas capário.
+Se alguém está a ver o letra, não está o reset, o estudo do letra,
+em principei, isto aqui, mas não nos tal de jendado.
+O tablo tem que ter aqui umas macros, isto são macros, em que, tanto de acordo com o número do pino,
+ele tem, portanto, a correspondência para o porto do microcontrado, ou seja, conforme a
+demoração que existe na placa, isto é o que é definido pelo guarda do pilar.

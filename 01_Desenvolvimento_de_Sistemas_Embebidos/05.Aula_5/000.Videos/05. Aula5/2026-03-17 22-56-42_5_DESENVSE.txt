@@ -1,0 +1,182 @@
+como eu terei a utilizar uma versão, ou seja, adentro da mesma versão do Fezora,
+a versão do Linux, o release, foi, portanto foi, foi sendo alterado, portanto conforme os
+apadentes que foram sendo fornecidos.
+Em ambientes, em ambientes, quando estamos a falar de Linux para sistemas em devidos,
+tipicamente, não usamos estes distribuições que são de uso mais geral, são até a
+utilização de 10 top, ou temizados de utilização de 10 top, com todo o pessoal, ou
+ou para servidores.
+Normalmente queremos um sistema Linux, ou seja, uma distribuição Linux que tenha apenas
+o conjunto mínimo de software, de forma que os passos, os recazidos, em termos de
+armazenamento, ou seja, o menor possível, bom sistema, bom sistema em ambido, não faz
+sentir isso, instalar num Linux com um bocado elevado ao absurdo, mas por ser tão
+nove, mas não faz sentir isso, ao instalar as páginas mesmo, que, parecendo que não,
+aquilo tudo sumado, o fecheiro de texto, principalmente se não for em comprimidos, acaba por ocupar
+um espaço substancial, e depois, com um conjunto, portanto estamos a falar até de
+um sistema, que, depois, não vai ter interação, como utilizador humana, não ser, numa situação
+de digna-nos, também não faz sentido lá, não faz sentido ter lá todos os utilitários
+que encontramos no sistema Linux típico, daí haver tantas deformas de criar distribuições
+optimizadas para, as sistemas de digna-nos apenas com o que precisamos, portanto, há
+várias maneiras de fazer isso, há as maneiras para quem quer, portanto, fazer tudo, ter
+algum controle total sobre o processo, o chamado procedimento do Linux from scratch, portanto
+que, manualmente, irmos aos receitos dos vários, portanto, as principais peças software
+descarregaram o código fonte, e, com pilar, sempre que para isso, preguem-me, temos que
+ter já o atuo de cheio, ou seja, o compilador, as bibliotecas para ver o sistema álvico que
+desejamos usar para o hardware que desejamos usar, e, portanto, isso possa ser feito manualmente,
+mas é uma pressão matadiosa, hoje em dia, temos fragmentas, hoje em dia, mais uma vez,
+portanto, já existem, já com um bom nível de maturidade, com vários anos de existência,
+temos fragmentas como o build root e o ecto que automatizam essa criação de distribuições
+dedicadas ou optimizadas para uma determinada função, em que tem mesmo, permite-nos escolher
+apenas o software que precisamos para a aplicação em vista.
+Eu já estava, portanto, já agora só, para completar aqui, e, ver se não me esquece,
+isto era o que eu estava a mencionar há pouco, já fui avançando este aspecto, só
+aqui só um detalhe que acho que, tanto, ou seja, quando, o Linux tem um conjunto de funcionalidades,
+que depois as bibliotecas do sistema, ou até, eventualmente, quem tiver interesse pode fazer
+chamadas diretamente, e essas funcionalidades do kernel, e, portanto, são executadas depois
+de ambiente do kernel, e mesmo que tenham que configurar registres especiais de um micropossador,
+e, portanto, isso é feito pelo código de quem criou o sistema operativo, e, portanto,
+em princípio, será feito em uma forma segura, por outro lado, os processos do polizador
+não vão ter acesso, portanto, piquemente, não terão acesso, ou este, ou seja, este tipo
+de programação que nós fazemos no micropontoolador, não se sistema operativo como o Linux, só
+pode ser feito ao nível do kernel, e, por isso, é que nós vamos estudar uma coisa que
+sepamos os modelos do kernel, que é o princípio da Zilar, tanto, é o mecanismo usado
+para implementar os chamados de device drivers, em sistemas Linux, portanto, que depois
+permitem, portanto, implementar o software necessary para um determinado expolitivo funcionário.
+O Linux, que se tem, portanto, tem uma vantagem aqui, uma vez que já existava sempre
+tempo, e tem uma comunidade de todos os alôs muito alargadas, já tem, portanto, e
+vai-se da raiva, para centenas positivos, ou até milhares, expolitivos, portanto, muitas
+vezes, mesmo, portanto, com dispositivos de novos, é uma questão de facilitar, e já
+desculpa, portanto, código já existente, ou simplesmente utilizar código já existente,
+que é genérico, e não temos que estar a fazer tudo a partir do zero.
+O nível, portanto, há pouco que estava a mencionar, é a questão das bibliotecas, mas
+uma aqui, aquilo estou a tentar ilustrar, é questão de um aspecto também importante, quando
+usamos os sistemas operativos, como o Linux é o facto de, portanto, ao desenvolvermos
+código para esses temas, ficamos com a garantia que esse código, tanto o código, o nível
+da aplicação, o nível do utilizador, que corre no espaço polisador, mas como está
+ficamos com a garantia que esse código, depois, vai ser soportado em qualquer sistema,
+que, no qual o Linux possa ser utilizado, a menos obviamente, de ser necessário, novamente,
+recompilar o software, para a arquitetura de portador utilizado, mas o nosso código, apenas
+recorrer a biblioteca de standard, que são sages no Linux, ou que existem em todos os
+sistemas ao voo de 60, o nosso código, fica muito mais fácilmente portável, mas faça
+o que estamos a escrever, portanto, usar a lia, usar diretamente registros de um determinado
+microcontrolador, que depois se usamos para outra arquitetura, para o microcontrolador,
+mas vamos ter que andar a adaptar esse código, portanto, aqui, o uso sistema operativo
+oferece algum nível da bestração muito superior do que, tipo, que a menos está disponível
+nos positivos mais simples, que, portanto, que por ter mais simples, por que estão
+a edificiência, também, que evitam essas abrosagens.
+A nível das bibliotecas, portanto, isso é um aspecto que, também, depois, pode ser
+optimizado, a nível dos temas indivíduos, a maior parte das distribuições de Linux
+do uso geral, usamos o, a biblioteca, também, com a alimentação da biblioteca C,
+tanto assumindo que estamos a fazer desenvolvimento da aplicações em linguagem C, e mesmo reparem
+que mesmo quando usamos outra linguagem, muitas vezes, o por exemplo, estou pensando
+no caso de um interpretador de Python, ou de PHP, ou seja, o logo for, os interpretadores
+estão inscritos em C, portanto, para podermos correr o interpretador, temos até lá
+na mesma biblioteca de C, e, portanto, uma vez mais, quando estamos a falar das sistemas
+indivíduos, muitas vezes, é possível usar implementações mais simples, da biblioteca
+se tender do C, que omitem funções não metusadas, ou parâmetros não muito usados, ou
+que, portanto, são optimizadas para implementações mais cócupo menos passo, ou eventualmente
+que o contrário que até possa ser apostar no desempenho, e tanto fogem de implementação
+de típica, e nos permite escolher um tanto algo que, portanto, em última instância,
+poderá exigir menos recursos do sistema, ou oferecer um desempenho mais adequado para
+a aplicação investência, e, geral, o principal objetivo é diminuir os casitos de entermos
+de utilização de memória, em termos de constituição dos temas Linux,
+tanto, os componentes típicos são aqui, portanto, tem que, vai haver sempre um fecheiro,
+que tem o kernel, portanto, tem o código do núcleo sistema operativo, pode ter, conforme
+a distribuição, pode estar com um diferente fenômeno, mas, quem tiver curiosidade,
+para o típicamente não, na distribuição, como ao luto, ou este ferro, estão na
+pasta barra-bud, e, portanto, é um fecheiro que tem que ser carregado para a memória
+quando o sistema é ligado, alguma forma. Reparem que estamos a falar, típicamente,
+nesta tipo de sistemas, típicamente, o código do sistema operativo, inúmedamente,
+o kernel Linux está num dispositivo de armazenamento, e vai ter que ser carregado para a memória
+principal, um autorinco sistema ligado, não está já lá residente numa fleche, como acontece
+nos programas dos microcontrolladores, até da sua dimensão, e, o facto de poder, queríamos
+ter alguma flexibilidade na sua maior flexibilidade, na sua atualização, tanto, fica num dispositivo
+de armazenamento, e tem que ser carregado na altura do arra-bud. Isso é feito pelo bootloader.
+Ou seja, o bootloader pode fazer parte, típicamente, é um programa auxiliar que é executado
+pelo notura do arra-bud. Isto aqui é algo depois que é muito dependente do típico sistema,
+forma como isso funciona. O caso que olhar mais familiar para todos será os computadores
+pessoais, em que, tantos já existem um software que tem a capacidade nos computadores,
+nos últimos 20 anos, digamos assim, as que já posso falar em 20 anos, já são os
+sistemas UF, e nos computadores mais antigos, eram as vias, mas a mesma sistema de vias
+tradicional ainda é usado em muitas máquinas virtuais, em ambientes de máquina virtual,
+porque sep, perfeitamente, para algumas tipos de sistemas. Mas, pronto, basicamente,
+esses sistemas UF, o que são os firmos, o computador, basicamente, é um programa, este
+sem kick, já está armazenado, diretamente, na memória, na memória principal do computador,
+numa fosh, e que, na altura do arranque, portanto, quando se ligue o computador, eles
+entram logo em funcionamento, para que, portanto, aqui no caso do, estou falando caso PC,
+mas se tiver reflado um Raspberry Pi, também é uma coisa, eu tenho um code que quando se ligue
+o sistema, ele entra logo em execução, independentemente do resto de software que nós temos
+instalado. Aliás, até os próprios, os próprios AVR que se têm, o HTML, também tem
+um bootloader, tem lá uma parte da memória, que tem um mini programa que está optimizado
+para permitir o carregamento dos programes, portanto, a facilidade com o que nós carregamos
+o programa para o RAM, existe porque o micro já tem lá um programa auxiliar que permite
+agirir o carregamento dos programes para a memória flash, pronto, ou seja, com maior
+ou menor nível complexidade, tem que haver logo ali, portanto, um software que facilite
+que é executado logo no RAM, que vai facilitar o carregamento dos sistemas para ter
+o principal, portanto, que são fechers mais pesados e que não faria sentido estar em
+logo o residenso, mais pesados e mais variáveis no tempo, e que, portanto, daí, esta diferença
+entre firmware e software. O firmware é, é, dizer que isso era uma coisa mais firme, não
+é o hardware, peça-se desculpa aqui ao nosso colega que fala nativamente em inglês,
+ao lance, mas, pronto, a ideia é isso que estou atrás e corretamente, mesmo que forma
+simplifica. Tanto como estava a dizer, tanto, a ideia que este firmware é um code
+que, raramente, será alterado, embora tenhamos noção que, por vezes, os computadores
+têm atualizações de firmware para poder suportar novos modos funcionamento ou novos
+funcionalidades, mas são de acontecem espassadamente, e este firmware vai permitir carregar
+o núcleo de sistema operativo. Reparem que estamos a falar de Linux, mas foram
+o sistema Windows, o princípio de funcionamento é o mesmo, o Windows também tem um
+âmfeo cheiro do, portanto, corresponde ao seu kernel, que também tem que ser carregado
+para memória na altura da renda. Agora, este reparem que estou aqui afopado
+as coisas diferentes, o firmware da, permite carregar alguma coisa para memória, e
+esta qualquer coisa, muitas vezes, ou melhor, no limite até pode ser carregado diretamente
+o próprio kernel, ok? Númeramente a norma o F, ou melhor o Linux tem suporte para poder
+ser configurado para permitir o carregamento automático por sistemas que tenham firmoeir
+do tipo UF, e sem qualquer software de bootloader, mas o mais típico para, até para
+fornecer diferentes opções da renda, é haver, então, um programa adicional que assim
+é que é carregado, e que, por sobre este, tem a capacidade de carregar o Linux, passando
+até diferentes parâmetros, conforme o tipo de renda, por exemplo, é possível ter
+um modo de renda normal, e um modo de renda que pode ir conosco, enquanto é possível
+passar, pelo exemplo, desactivar certas ou certas funcionalidades para ter um renda
+mais seguro, ou que não vale ativar funcionalidades de sistema que possam aumentar a probabilidade
+de instabilidade.
+Pronto, esta parte de bootloader, por exemplo, o Raspberry Pi, que, depois vamos usar nas
+aulas práticas, tem o seu próprio bootloader, portanto, pelo menos no 13 e no 4, o sistema
+da renda até está imbebido no seu sistema do GPU, que, por sua vez, carrega um
+aulas cheirinhos que estão na partidição da renda do dispositivo de cada armazenamento,
+seja, o cartão SD, seja, o disco USB, que também tem suporte para rende por USB, e, depois,
+esse bootloader, nesse bootloader, que podemos, portanto, tem um fechero de configuração
+em que, depois, podemos até decidir diferentes parâmetros da renda.
+Para bem, durante outros os 6 que faz parte de um organismo, num sistema típico de
+Linux, embora seja opcional, são os cheiros dos discos de RAM, portanto, este initer
+é o initer RAM FES, tanto, isto é a abreviatura do initial RAM disk, e este também é
+algo do general RAM file system, isto para eu não tenho ali um slide, onde, um slide
+é um de ilustro, a forma como cada um deus, é criada, e, por isso, que estão criados
+manejos diferentes, e o sistema de fechero que é usado em cada um deus, também é diferente,
+e este é o sistema que é mais moderno e que é mais usado atualmente, isto basicamente
+é um fechero que é carregado, portanto, que simula o disco, ou seja, o seu conteúdo
+tem o mesmo formato, que, tanto organização que é feito nas partições dos positivos
+de um disco rígido, ou de um SSD, tanto, está formatado, da mesma maneira, e, na altura
+do arranque, o panto os botlodas têm, ou temos a possibilidade de indicar algum botlodas,
+se queremos usar essa initer RD, ou o initer RAM FES, ou não, e este basicamente, estes
+físicos de RAM permitem fazer um escutar, já alguns programas, no arranque, sem ter o
+sistema operativo ainda completamente funcional, e são, típicamente, os dados para carregar
+modulos para o sistema operativo que conforme o sistema que se está usado, ou seja, podemos
+ter um sistema, um núcleo, apenas com as funcionalidades mínimas, e depois de acordo,
+como os diferentes sistemas que, mais específicos, que vamos utilizar, criar o initer RAM FES,
+a medida, ou com a capacidade de tatar qual é o sistema que está a ser usado, e em função
+disso carregar para memória apenas os módulos do sistema operativo que são necessários
+para que o sistema torfalar até, por exemplo, os sistemas de fecheiros, os módulos
+de hardware básicos, que são necessários, por exemplo, os drivers para reconhecer o próprio
+dispositivo do armazenamento principal, uma coisa tão simples como essa, portanto, existem
+várias interfaces para dispositivos do armazenamento, e podemos querer só carregar aquilo para o
+sistema específico para não ter os outros módulos, ou seja, portanto, as esses fecheiros
+auxiliares estão neste RAM FES, que são os sistemas que têm um sistema de inscrivido
+toais, que têm um sistema de fecheiros muito simplificado, que é esse portado pelo Linux,
+Nativo, portanto, quer facilmente se portar pelo Linux sem ocupar metamemore, e depois, com
+base nisso, carregam como podem carregar módulos mais pesados, caso seja necessários para
+completar o arranque do sistema.
+Finalmente, temos o sistema de fecheiros principal, que nos sistemas Linux, portanto, é identificado
+em termos portanto, organização da hova-separação dos direitos pela barra, e portanto, e que
+tem que existir em todos os sistemas Linux, tem que existir esse sistema de fecheiros,
+e que estará associado a um dispositivo do armazenamento ou até, não há alguns casos, mas
+específico, até, na verdade, nem precisa ser um dispositivo do armazenamento, posso
+ser um desco montado através, um sistema de fecheiros montado através da rede, tipo,
+uma coisa tipo, sim de cliente, mas pronto isso.

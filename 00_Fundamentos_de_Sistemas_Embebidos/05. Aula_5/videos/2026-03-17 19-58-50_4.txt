@@ -1,0 +1,58 @@
+não pode ser feito e é travado desta forma, ok? Ele só tem acesso a uma parte daquilo
+que está a ser executado dentro do CPU e portanto não consegue atacar as outras coisas
+que estão a ser executadas para lá, ok? Não confundam isto com a execução em modo
+root, ok? Portanto nós em modo root também estamos a executar as funções como em user
+mode, ok? A única diferença é que temos mais uma série de programinhas também em user mode,
+ok? Que conseguem fazer coisas mais sofisticadas, mas é a nível do sistema operativo, ok? Ou se é
+uma execução hardware, só pode ser feito através daquilo que nós chamamos de system call,
+chamadas ao sistema, ok? Consequências disto, em kernel space todo o código vai partilhar com
+mesmo espaço de endereçamento dentro da memória do processador, ok? O que é que isto tem como
+sequência básica que é se alguma coisa estiver mal feita a nível do kernel, crasha mesmo o
+sistema todo, ok? Crashou o sistema todo e todos os outros processos do utilizador que estejam a
+funcionar naquele momento também vão cair da mesma forma que o erro que aconteceu, ok? Portanto o erro
+não são cometidos dentro do próprio kernel, ok? Da mesma forma se um processo em kernel mode
+escrever para um endereço errado, ok? Pode estar a corromper aquilo que o outro processo está a fazer,
+ok? Portanto kernel mode é possível, por exemplo, a Linux é possível correr alguns processos de tempo
+real mais duro, ou seja, de grande performance em kernel mode, mas corremos sempre este risco muito
+grande que é, estamos a fazer tudo em kernel mode, ok? Quando há um crash, há um crash total,
+é muito difícil de recuperar, ok? Portanto, o que é que é esta separação entre user space
+e kernel space, user mode e kernel mode também, ok? Pronto, a razão principal é uma razão de
+segurança, ok? Portanto, a minha aplicação não pode aceder a dados sensíveis, não é? Portanto,
+por exemplo, se eu pudesse mudar, alterar uma tabela de interrupções de acesso ao disco,
+eu podia mudar e colocar lá dentro uma rotina de interrupção que apagava o disco, ok? Por exemplo,
+ok? Outra questão também é a estabilidade do próprio sistema, portanto, o crash em user mode
+é contido, não afeta as outras aplicações, apenas aquela que está a correr neste momento.
+E depois há uma questão também de controle, modo a controlar o acesso ao hardware, ok? Por exemplo,
+fazer arbitragem, quem é que vai primeiro ao terminar o hardware, impedir que dois
+programas ao mesmo tempo acedam ao mesmo hardware, como se poderia fazer, por exemplo,
+em Windows nos tempos iniciais, ok? Pronto, só uma figurinha para mostrar estes conceitos todos, ok?
+Este é um exemplo do Windows, não é? O sistema operativo do Windows é muito complexo, não é?
+São um pouco mais complexos até que o Linux e bem mais difícil também de explicar e de perceber,
+porque parte do código também não está tão bem documentado como o Linux, não é? Mas,
+temos aqui o hardware, temos aqui uma chamada hardware abstraction layer que tenta, no fundo,
+tornar todo o hardware semelhante, ou seja, a forma de aceder ao hardware ser igual quase
+em qualquer sistema, ok? Dentro também, isto aqui dentro do chamado kernel mode, ok? Temos
+aqui alguns drivers para o kernel, ok? Drivers para o sistema de fecheios, ok? Temos aqui o
+kernel do sistema operativo também, ok? E depois, através de uma chamada API, ok? Nós podemos,
+a partir do user mode, recorrendo ao tal sistema de interrupções, ok? E o que é que faz o sistema
+de interrupções? Quando eu fechamo uma interrupção, ela não vai correr em user mode. As interrupções
+ficam sempre em kernel mode, não é? Portanto, eu posso chamar rotinas do sistema operativo,
+porque a partir do momento em que ele passa para kernel mode, ele mudou-me a forma de funcionar.
+Mas só ocorrem as rotinas do sistema operativo, ok? E só gerando uma interrupção aqui por software,
+que é 0x80, se não me engano, ok? Que é a interrupção que depois é chamada para acedermos ao
+sistema operativo, ok? Esta interrupção, 0x80, tal como eu disse, é uma interrupção de software,
+ok? Deixe-me passar aqui para um exemplo. Por exemplo, isto, se for uma interrupção para sinalizar o fim
+do meu programa, a única coisa que vou passar é dentro de um registro do processador um número que
+me diz como é que o meu programa terminou, ok? Se for um fork, portanto, é uma rotina do sistema operativo
+que me permite criar mais um novo processo, eu envio neste endereço erbx uma estrutura com os dados
+do processo que eu quero criar, ok? Se for uma função de leitura, não é? No fundo, eu vou dizer aqui
+o ficheiro, ok? Qual é o buffer em que eu quero colocar os dados lidos no disco, portanto, onde eu quero
+escrever os dados, qual é o comprimento desses dados a escrever, ok? Se for uma escrita, é a mesma
+coisa, ok? Portanto, o descritor do ficheiro e depois o caraté, o caraté, a zona de memória que está,
+estão, têm os dados que eu quero escrever no meu disco, ok? E o respectivo comprimento, ok? Pronto,
+isto é só para dar um exemplo de como é que isto funciona. Isto, dificilmente vocês vão utilizar
+as system calls na vossa vida, porque está tudo já muito bem empacotado dentro de librarias que
+colocam muitos níveis acima destas dessas funções que aqui estão e portanto,
+escusam de andar a trabalhar aqui com apontadores, ter erros nos apontadores e por aí faz, ok?
+Vamos fazer aqui um intervalozinho, 10 minutitos, está bem? E já começamos novamente a seguir,
+está bem?

@@ -1,0 +1,316 @@
+start	end	text
+0	8000	Embora possam ser usados os outros, mas a ideia de uma vez que está disponível,
+8000	18000	antes já está mais afinado para usar os produtos, os os pré-equipos produtos.
+19000	26000	E, ao mesmo tempo, este ideia já é evolutal maneira que, portanto,
+26000	34000	também já tem suporte para outras plataformas, que não só os ardoino,
+34000	39000	desde que, tanto que tenha algum nível de que essas plataformas possam ser,
+39000	47000	seja um compatível escoprogramador, por aí fora, que é usado pelo sistema de programação que é usado pelo ideia.
+49000	55000	Tudo isto é ele pan-sorce, tanto que facilita até o aparecimento depois dos colonos,
+55000	61000	que até são mais barras, muitas vezes são pelacas mais baratas do que os que vem lá com a marca ardoino,
+61000	70000	e, portanto, e a nível software também, as licenciações são restrativas, são minimamente restrativas,
+71000	81000	com minimos que estressões já permitem, portanto, utilizar o código em vários tipos de sistemas.
+84000	89000	Para bem este texto, isto vou laterificar o que é mais depois de tirar-lo.
+90000	96000	Eu, aqui, portanto, no âmbito deste curso, acho que, no mínimo ardoino,
+96000	101000	pode ser, no uso público háboles, este curso, um sistema de mardoino,
+101000	105000	pode ser útil para prototipagem rápida, para fazermos um sistema,
+105000	110000	é numa nova placa que seja sopada pelo ardoino, se quisermos aumentar algo rapidamente,
+110000	116000	sem ter que estar a instalar um novo ID, portanto, uma nova toolchain, um novo ID,
+117000	123000	principalmente, um novo ID, cessa placa forse portada pelo ardoino,
+123000	126000	muitas vezes, essa é uma questão de igual a o ID, carregar o botão,
+126000	130000	pode carregar o toolchain para este, ou se chama-se desenvolvimento,
+130000	136000	para este placa, ou para esta arquitetura,
+136000	144000	e, pronto, e o sistema fica, por exemplo, usando o mesmo tipo de programação
+144000	150000	e as bibliotecas que estão disponíveis para outras placas,
+150000	153000	ou para as próprias placas do ardoino.
+160000	167000	As placas desta, portanto, deste ecossistema de este ardoino,
+167000	171000	portanto, estão disponíveis com vários tipos de microcontroladores,
+171000	175000	as mais simples são a exclusão microcontroladores desta família,
+175000	178000	a DR8ubites, que temos estádas estudar,
+178000	190520	pode ser do que o func
+190520	196520	aplicando os modos, senta que estão a sistema multiplicar em a esterinha,
+196520	200520	a capacidade muito complicada, ou muito sofisticada,
+200520	204520	e existem, portanto, vários modeles, serem os temporais,
+204520	207520	e, portanto, estão controladores desta família,
+207520	211520	a DR8ubites, portanto, mas que, com diferentes niveles,
+211520	218520	capacidades de poder computacional,
+218520	222520	ou seja, de frequência de funcionamento até a mooria,
+222520	224520	portanto, a mooria disponível,
+224520	226520	ou seja, para programas, seja para data,
+226520	230520	ou seja, flash e erran.
+230520	233520	Por outro lado, o ardoino já comercializa
+233520	237520	por soedores tanto placas como por soedores mais avançados,
+237520	241520	nomeadamente por soedores 32 bits da arma,
+242520	245520	da arquitetura arme, tanto que,
+245520	249520	como a maioria de vocês já terá o vídeo falar
+249520	253520	ou saberá bem, portanto, a maior arquitetura
+253520	255520	muito usada no mercado, a maior parte
+255520	263520	dos smartphones e tablets usam micropossadores desta arquitetura,
+263520	268520	e portanto, existem microcontroladores
+268520	270520	que têm núcleos, o repaior recordo,
+270520	271520	como microcontrolador,
+271520	274520	é um circuito integrado que tem um micropossador,
+274520	279520	um ou até vaisse, como vamos depois ir a imensionar,
+279520	282520	e depois os módulos periféricos
+282520	286520	para fazer interfaces com, portanto, com o exterior,
+286520	289520	tanto, estáis, mas os vídeos sejam,
+289520	292520	portanto, todas essas interfaces que já fomos,
+292520	294520	já fomos imensionantes,
+294520	296520	ou que já fomos estudantes,
+296520	299520	nas duas semanas antígoles.
+299520	302520	Aqui, portanto, podem ver que esteem,
+302520	305520	também, vários módulos com,
+305520	308520	com diferentes módulos,
+308520	315520	módulos placas com diferentes módulos micropossadores,
+315520	319520	alguns reparem que alguns já têm até a unidade
+319520	321520	de ver o afoto antes,
+321520	323520	que faz bastante diferença
+323520	325520	quando, mesmo em termos depois,
+325520	327520	de precisão dos cálculos,
+327520	329520	quando se quer fazer já,
+329520	331520	processamente, mais avançado,
+331520	334520	usando, portanto, os filotes idavos,
+334520	336520	portanto, valoros de ver,
+336520	338520	cálculos invirtam o afoto antes,
+338520	340520	o filo tem um point, em inglês,
+340520	344520	portanto, em termos de tempo de processamento,
+344520	347520	ter o fazer os cálculos em hardware,
+347520	349520	portanto, no FPU,
+349520	352520	ou em software, é completamente diferente,
+352520	354520	portanto, a eficiência de os cálculos,
+354520	356520	portanto, o hardware é muito superior,
+356520	358520	portanto, faz com os programas,
+358520	359520	esteja muito executable,
+359520	360520	portanto, tem um tempo de liso,
+360520	362520	que são bastante inferior,
+362520	363520	e isso é o portanto,
+363520	364520	o FPU, para outras tarefas,
+364520	365520	basicamente,
+365520	368520	para executar o transporte do programa,
+368520	370520	ou poder fazer com o programa,
+370520	372520	tem um tempo de resposta superior.
+376520	378520	Tem inclusive,
+378520	380520	também, módulos,
+380520	382520	para concorrer com,
+382520	383520	portanto, com outros fabricantes,
+383520	384520	que, entretanto,
+384520	387520	mas já são bastante,
+387520	389520	tem bastante impacto no programa,
+389520	390520	por exemplo, tenho, tenho, tenho, tenho,
+390520	392520	um módio, em que usamos,
+392520	394520	esses microcontroladores,
+394520	395520	este 32,
+395520	397520	portanto, que já são,
+397520	398520	de uma arquitetura,
+398520	399520	também, o respectivo,
+399520	400520	o microcontador,
+400520	402520	é de uma arquitetura indedifrenta,
+402520	403520	para que já era aqui,
+403520	404520	já mencionamos,
+404520	405520	arquitetura, hardware,
+405520	406520	e a redeu bit,
+406520	407520	azar, arquitetura,
+407520	408520	arquitetura,
+408520	409520	um 32 bits,
+409520	410520	mas, também,
+410520	412520	tem o seu próprio conjunto de instituições,
+412520	415520	ou seu próprio conjunto de registros.
+420520	421520	Depois,
+421520	423520	adicionalmente,
+423520	424520	também,
+424520	425520	entra no mercado,
+425520	427520	ou no segmento,
+427520	428520	digamos,
+428520	430520	no segmento de Linux,
+430520	433520	tanto, com o rendo,
+433520	434520	por exemplo,
+434520	435520	no mercado,
+435520	436520	assim,
+436520	438520	mais de,
+438520	439520	de loco,
+439520	440520	digamos,
+440520	441520	o mainstream,
+441520	444520	com o conhecido Raspberry Pi,
+444520	446520	que foi um modelo que foi criado
+446520	448520	de rei isto,
+448520	450520	para,
+450520	451520	para que concorria,
+451520	453520	portanto, para poder usar Linux,
+453520	455520	e, tanto,
+455520	457520	e o Arduino também,
+457520	459520	decidiu criar,
+459520	462520	pelacas ou lançar pelacas para a segmento,
+462520	464520	para que, aqui,
+464520	466520	estamos a falar
+466520	467520	de,
+467520	468520	aqui, já,
+468520	469520	no fundo,
+469520	471520	já não são bem microcontrolladores,
+471520	472520	o termo que normalmente se usa,
+472520	474520	é o cissamon chip,
+474520	475520	porque,
+475520	477520	é para diferenciar os microcontrolladores,
+477520	480520	e uma das principais características,
+480520	481520	até para poder,
+481520	483520	correr um Linux,
+483520	484520	não modificado,
+484520	485520	um Linux puro,
+485520	486520	digamos, assim,
+486520	488520	tem que ter a chamada
+488520	490520	Memory Management Units,
+490520	491520	ou,
+491520	493520	unidades tão memórias,
+493520	494520	que, portanto,
+494520	495520	que é um módulo
+495520	496520	de um micro-opressador
+496520	497520	que permite,
+497520	500520	trabalhar com indereço virtuais,
+500520	504520	com infestamente virtual,
+504520	505520	e é isso,
+505520	506520	portanto,
+506520	507520	é esse mecanismo que permite,
+507520	508520	que,
+508520	509520	assistemos operativos com o Linux,
+509520	510520	ou o Linux,
+510520	511520	ou Windows,
+511520	514520	possam ter vários processos,
+514520	515520	a correr,
+515520	517520	em simultaneamente,
+517520	518520	de módulo,
+518520	519520	segur,
+519520	520520	ou robusto,
+520520	521520	sem que,
+522520	524520	é isso que sou!,
+524520	525520	um programa,
+525520	527520	possa penail-risco,
+527520	530520	ou posso intrare em conflito,
+530520	531520	com a cosa que são,
+531520	532520	dos outros programas,
+532520	533520	e succeededer com t easy,
+533520	534520	até o que é,
+534520	537520	o conceito de procesos fantai sentidos,
+537520	538520	bastante typos,
+538520	540520	também發現es reencontramento.
+540520	541520	Portanto,
+541520	542520	proteste a fazer como uma mini-maquem ornamental
+542520	545520	que permite escutar o programa,
+545520	547520	em uma forma isolada,
+547520	548520	dos festos de estantes processos,
+548520	549520	que estão a seredu近is.
+549520	550520	Em este momento,
+550520	558760	escutados no sistema operativo, portanto aí o principal isolamento é o nível do
+558760	563840	acesso à memória principal, portanto, uma vez que cada processo tem a trabalho com
+563840	570840	endereço virtuais, depois do processador consegue ao fazer a conversão desses endereços
+570840	578080	virtuais, para endereços físicos, garante que cada processo não consegue aceler as
+578080	583060	zonas de memória que não ser utilizada às horas de memória física, que estão a ser
+583060	585220	usadas pelo por outros processos.
+585220	592960	Para bem, isto já me estou aqui a desviar, mas, para dizer que, no caso, os processadores
+592960	600000	de arme, esta letra aqui, que aparece até, permite identificar essa distinção, tanto
+600000	607720	os números, a versão do núcleo ou o cor, quando aparece aqui o I, ou a de application,
+607720	613240	portanto que, tipicamente, indica que é um processador que já tem suporte, já tem MMU,
+613240	618240	esse porto, para si temos o palinho, palinho do que se engerá-lo, ou para sistema que
+618240	625480	queiram tirar partido, se temos partidos queiram tirar partido dessa funcionalidade, enquanto
+625480	632720	se usamos, MMU émos de microcontroller, ainda existe um terceiro segmento que é
+632720	640320	uma espécie de segmento intermedi, que são os R's de real time, que são orientados
+640320	648600	já, para já tem, portanto, não são bem da aplicação, mas tem já algumas funcionalidades
+648600	659360	optimizadas para usar sistemas operativos multitasking para microcontrolladores, nomeadamente
+659360	668760	a proteção, a capacidade de proteção memória, que não é bem a mesma coisa que a memória
+668760	674160	que eu me ensino da MMU, para bem, para aqui, reparem que já estamos a falar de um sistema
+674160	680360	que pode ter até 4 GB, que já é perfeitamente suficiente para correr um sistema lino que
+680360	689680	se base, e até menos, até com menos, e depois outros, portanto, aqui, este já é um
+689680	701800	quase cor, e ainda outra arquitetura que, por acaso, onde é que é olhar para a lista
+701800	708560	de produtos delos e ver que, portanto, identifiquei este aqui que ainda usa um microcontroller
+708560	715080	ainda de outra arquitetura, MIPS, e como podem ver, estamos aqui, estes, todos estes modelos
+715080	723920	que são fabricados para o ar do lino, depois tem um suporte no IDE, o que permite iniciar
+723920	730440	facilmente, facilmente iniciar um protote e todo um sistema, depois que quiserem investir
+731400	738720	e eventualmente até fazer trabalho, já mais certos, reparem que este penda do rumo dos acontecimentos,
+738720	743720	porque o lino que se quando foi criado também, foi quase por brincadeira, e hoje em dia é
+743720	750400	usado em várias aplicações profissionais, e o ar do lino também, poderá caminhar para
+750640	761840	ter sido criado para um público almo, mas não há bem um público almo, para um fim mais
+761840	771160	didático, também, a vontade e hoje é que seja usado um nível mais profissional, isto aqui
+771160	778680	só para, como diz exemplo, de placa, de diferentes linhas, tanto linhas, não, este é
+778680	785160	um KPR, que já é uma ideia, os teixos, que já pantuzam que os possadores, os microcontrodadores
+785160	793360	como o Clio Arme, e depois estes, portanto, estes édas, permitem encaixar este teixo, por
+793360	802480	caso, no caso, o desejável encaixar apliquinhas de expansão, portanto o Shields, para não passar
+802480	810400	e a pessoa que ia fazer a publicidade do lino, porque não sou o acionista, nem sei
+810400	815000	que são contatos em Bolsonaro, mas não tem nenhum ganho nisso, portanto, chama a atenção
+815000	821000	que, agora assim, no mercado, já é mais verdadeiramente, ou totalmente profissional,
+821000	827520	que temos várias empresas que oferecem, placas com tanto o sistema, microcontrodadores
+827520	832960	e estes temas de envolvimento placas, com os meus possadores que eu mencionei ali, portanto
+832960	838960	possadores Arme, principalmente o Arme, somos mais usados, tanto aqui ficham um apanhado
+838960	846680	de empresas que fornecem placas com possadores Arme, parem este, este M32, é muito conhecido
+846680	856160	em TUSA, antiga Philips, a própria Microsoft que faz os AVRs, também faz, também faz
+856160	861240	o microcontrodador, portanto, como o polio Arme, enfim, para fora, portanto, cada uma
+861240	870720	destas tem estes temas, portanto, o Brasil é de microcontrodador, ou seja, com o mesmo
+870720	876440	modelo de programação, que estamos aqui a estudar, mas, portanto, com esses núcleos
+876440	880880	que, mais poderosos, portanto, com frequência, funcionamento também, já estamos a falar
+880880	888320	de centenas de megahertz, eu não sei se se deu a lisa dentro, portanto, aqui não
+888320	892800	perso, oense é aqui, tanto aqui, até estes são frequências altas, mas já, para
+892800	899840	correr olhando, por isso, mas aqui, a comum temos frequências de centenas de megahertz,
+899840	908160	enquanto que aqui estamos a falar de 16, 20, não sei se há algo aqui, se tem algo ainda
+908160	923160	com, como forças primas, nunca será mais de algumas centenas de megahertz, do ponto
+923160	936240	de lista de software, talvez olhando aqui, portanto, a ideia é que o programa em Arduino
+936240	941880	pode, portanto, o programa é mais básico, no fundo só tem que implementar duas funções,
+941880	948400	tem uma função de set up, onde é suposto o programador, inserir o código de inicialização
+948400	955720	dos dispositivos que pretende usar, ao longo do programa, e depois o loop é um basicamente
+955720	959640	que tal como não me diz, é uma função que é chamada relativamente, tanto todo o
+959640	966320	código, quase tipo um PLC, um automato, portanto, colocarmos lá, é executado em
+966320	974680	ciclo, portanto, chegando ao fim, só retornando, volta a ser chamada novamente, portanto,
+974680	982600	assim, enfim, é uma simplificação para para, para tornar isto mais intuitivo, mas
+982600	988560	se for no, ao qual desabiloteca, portanto, a função main está lá, tanto isto é a função
+988560	992720	main que depois existe, embora é uma sono, tem que escrever diretamente, já faz parte
+992720	1000000	do loop, ela está lá, portanto, no meio do código que quer compilado, depois para, para
+1000000	1006200	gerar o fecheiro, que vai ser por o fecheiro vinaire, que vai ser programado, o transferido
+1006200	1013440	para a memória do programa, do microcontrollador, podem ver que, portanto, aqui na função main,
+1013440	1020680	existe um init, que está para fazer as iniciações da pop, da pop, eu vivo o teca do Arduino,
+1020680	1030480	use alguns timos para, programa logo para, para poder ter funções das pausas e temporizações,
+1031480	1038400	tem depois faz aqui a chamada set up, que é suposto terminar, tanto, já aqui isso possa
+1038400	1042920	te dar uma função de set up, que nunca termina, portanto, o código também nunca vai fazer a função
+1042920	1048400	loop, portanto, como é que se tem, é que tenhamos que se perceber essas espécies, mas em
+1048400	1055760	princípio também uma função set up, é suposto fazer o set up e termina, e a função loop, tal como
+1055760	1061200	eu expliquei, e está aqui, portanto é um ciclo for, chama a função continuamente, sempre
+1061200	1070800	a função retorna, tanto o ciclo é repetido, e a função volta a ser chamada, pois, existem
+1070800	1079200	que funções de colo, que caso estejam definidas, são chamadas, tem uma função que é para
+1079200	1085400	detectar, acontecimentos, não é tal como o próprio nome diz, nas ligações de série,
+1085400	1091120	fazemos uma espécie de, ou seja, alguém usou isto, eu confeço que nunca usarei esta função,
+1091120	1100160	mas basicamente, é para, que caso não sou, que era definir, portanto, uma espécie programação
+1100160	1105760	ali, pseudo a cíncrona, nas ligações de série, tanto ela, sendo a função definida,
+1105760	1122640	pois é chamada também continuamente, e depois reparem que, este é o exemplo mais base, que é o linker,
+1122640	1129600	ou, portanto, que se pode ir buscar aos próprios exemplos que são funções, tanto que são estalados,
+1129600	1137040	juntamente com o IDS, sem os exérmios, portanto, reparem, temos aqui um setat, que vai configurar,
+1137040	1144160	aqui, um, tanto, este já, nesta função pinomod, que faz parte das, das funções oficiais
+1144160	1150240	do Arduino, tanto, e, temos aqui, esta constante led, um build tin, e, tanto, esta,
+1150240	1156760	palavra chava o topo, uma comentário diz o que isto faz, tanto é, configurar o pino
+1156760	1162840	que está ligado a um led que faz parte da própria placa, daí, o build tin, para configurar
+1162840	1167680	algo como o topo. A gente te patece, portanto, para ver se está toda funcionando, era o ultimo,
+1167680	1174680	porque, como programa, tão simples como este, conseguimos ver o ledzinho lá da placa, pisco ou não.
+1174680	1182640	Portanto, ou seja, vamos configurar algo como o topo, parem, estamos a falar, este programa,
+1182640	1188040	tanto, pensem isto, no ar do Arduino, o que, é ser isto que está no ar do Arduino, o que
+1188040	1192680	tenha um personador, parecido com o microcontroller, assimilhante ao que estivemos a estudar,
+1192680	1196840	tanto, isto quer dizer que vai ter que haver um lá um daqueles portes, que são configurados
+1196840	1205200	como o topo, vamos já ver como. Depois, a função loop, o que faz é, tanto, alter, inicialmente,
+1205200	1210800	ponha, esta, esta saída, faz uma escrita digital, portanto, isto é a função digital
+1210800	1217880	right, para escrever um valor, numa determinada linha, e, neste caso, aumenta, escrava o valor
+1217880	1227040	alto, para ativar o led ligado a esse pino, pois faz uma pausa de aqui, portanto, isto é
+1227040	1234560	1.000 segundos, portanto, estão segundo, e depois faz o contrário colocar 0 e espera
+1234560	1240920	mais um segundo, isto é, portanto, uma taxa de meio-herde, está a contar um led, um led,
+1240920	1246120	uma taxa de meio-herde, um segundo a 1 e um segundo a 0. Para bem, estas condições não
+1246120	1253320	fazem um milagre, portanto, elas, a sua implementa, se for nos buscar, a implementação, uma vez
+1253320	1258760	que isto é o Pan de Sorts, e as fornece sem o código fonte todo, a sua poda consultar
+1258760	1264280	o código da UUTECA e ver que o tipo de programação que está aqui usado foi o que, o que, o que,
+1264280	1267280	o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, o que, eu mostrei aqui
+1267280	1273720	nas aulas, e que, depois, você, e que, os feitos, que, eu podia fazer, na nova PL, eu, na verdade,
+1273720	1281560	ele, para estar aqui, aparing o primeiro, primeiro argumento da função digital right,
+1281560	1290280	Eu usado aqui a identificação do pino e para tornar a programação mais amigável,
+1290280	1298920	eles definem estas constantes e até permitem indicar o pino o conforme o número do conector.
+1298920	1304680	Eu, portanto, eu recordo, já houve um claga voce que foi mostrado no motor de este,
+1304680	1310640	acho que foi este, precisamente portanto, eu recordo de usar de um índice aqui estes jampas
+1310640	1316720	e que tem os pinos tão, portanto, tem um número associado, será 13 aqui deste lado,
+1316720	1324960	depois, continuo aqui, 14, 15, 16, 16. Pronto, isso permite que, em vez de andámos a pensar em
+1324960	1333840	bit0 do porto ver, portanto, para um iniciado, vai ali desde lá o 8 e escreve 8 e está feito,
+1333840	1339280	já sabe que é este pino que vai ser ativado. O tal é de built-in, por acaso, não sei se aqui
+1339280	1348080	está presidendo, eu costumo estar para aqui, agora, ao menos nos tal de jendado, ou o tal, mas capário.
+1351280	1358360	Se alguém está a ver o letra, não está o reset, o estudo do letra,
+1358360	1362160	em principei, isto aqui, mas não nos tal de jendado.
+1362160	1373840	O tablo tem que ter aqui umas macros, isto são macros, em que, tanto de acordo com o número do pino,
+1373840	1381480	ele tem, portanto, a correspondência para o porto do microcontrado, ou seja, conforme a
+1381480	1385640	demoração que existe na placa, isto é o que é definido pelo guarda do pilar.

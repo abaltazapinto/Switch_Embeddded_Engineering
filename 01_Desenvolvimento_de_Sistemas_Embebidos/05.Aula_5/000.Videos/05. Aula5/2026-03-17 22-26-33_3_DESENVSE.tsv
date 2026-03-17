@@ -1,0 +1,271 @@
+start	end	text
+0	11000	para estas macros fazem com conversão para o MIT e o porto correspondentes do microcontroller,
+11000	16000	ou seja, ser o porto-al ou porto-v ou porto-c, ou por e fora, e o respondente de MIT,
+16000	27000	se alguém quiser 0, 1, 2, 3, 4, 5, 6 ou 7, e isto é possível fazer porque cada um,
+27000	38000	ou melhor, este programa são torne-se, por que cada, eu recordo que cada registro de configuração
+38000	46000	dos portos do Timer, está amapiado no endereço de memória da memória principal,
+46000	54000	portanto, apesar de ser em registres especiais, portanto, estão, fazem parte do mapa de memória
+54000	60000	principal do microcontroller, e portanto, é possível obter um apontador,
+60000	66000	isto, usando, portanto, a termologia da linguagem seno,
+66000	72000	um apontador para esses registros, que basicamente o apontador é o endereço de memória.
+73000	77000	É isto que esta função faz, este portal de porto-register,
+77000	84000	e depois de identificar o porto, retorna o endereço para o registro que permite,
+84000	92000	está-lo ser a seguida, por exemplo, no caso, o porte-a é o porte-a, não é mesmo o registro porte-a.
+92000	100000	E se sabendo o endereço e se sabendo o bit, depois basta fazer a operação que estamos habituados a fazer,
+100000	105000	se quisermos por a zero, vamos dizer que a posição de memória,
+105000	112000	portanto, o valor, na posição de memória, correspondente a esse porto,
+112000	121000	vai sufrir esta operação, portanto, vamos fazer o endereço da máscara com zero,
+121000	125000	na posição do bit, que queremos por a zero.
+125000	132000	Se quisermos por um, é o habitual ou nós, vamos fazer o ou como o bit,
+132000	140000	portanto, com a palavra que tem o bit exigado ou um,
+140000	145000	portanto, este o bit vai estar a uma posição correspondente ao pino que queremos,
+145000	148000	que foi indicada aqui.
+149000	156000	E agora, isto é um cuidado que se deve ter, principalmente,
+156000	163000	se devemos usar outros portos ou interrupções externas,
+163000	171000	tantas interrupções externas ou tipos de interrupções,
+171000	177000	portanto, usá-te várias interrupções neste altura para ter certeza que isso não vai ser interrompido,
+177000	184000	e depois, voltar a ativar as interrupções.
+184000	189000	No fundo, o que se faz aqui, isto é o registro de Estado,
+189000	195000	o princípio do Estado de Regiça, o principal do microcontro-osor,
+195000	201000	e, portanto, isso é guardado, em uma variável temporária,
+201000	207000	depois, solia-se as interrupções e depois restaura-se o registro de Estado.
+207000	213000	E isto é isto, isto é um clí, o que faz é limpar aquele bit mais significativo do Estado de Regiça.
+213000	216000	Eu estou sendo mais significativo, espero não estar enanado,
+216000	219000	é um dos bitos do Estado de Regiça. É o mais significativo,
+219000	222000	por que se faz a mais cara com o 80?
+222000	228000	E, portanto, aqui, o que isto vai fazer é por esse bit a zero,
+228000	232000	e, aqui, volta a se recuperar o valor original para o SREG.
+232000	235000	E, assim, temos certeza que mesmo que estes que entretanto,
+235000	238000	alguma isto, são eventualmente diversas alteradas,
+238000	245000	as flex de outras flex, do bitos, do SREG, do Estado de Regiça,
+245000	249000	e, depois, volta a ficar, exatamente como estrada.
+249000	252000	No qual é o mesmo tipo de análise,
+252000	256000	tanto que podia ser feito aqui neste pinemode,
+256000	259000	temos aqui, no fundo, os três modos que estudamos,
+259000	262000	que é colocar o como input,
+262000	265000	colocar o como input mais ativando o pull-up,
+265000	268000	que, em que vamos escrever na saída,
+268000	271000	vamos colocar a saída 1 para ativar-te aqui,
+271000	276000	a extreção, colocar a saída 1 para que o pull-up fique ativo.
+276000	280000	E, depois, neste caso, portanto, input de pull-up,
+280000	284000	caso contrário, o que falta é o output,
+284000	293000	em que vamos colocar o registro-configuração,
+293000	296000	para que esta variável redjam-contador
+296000	303000	para o registro que permite configurar o modo de cada um dos bitos do porto.
+303000	305000	Portanto, será que,
+305000	312000	agora, alguém pode ajudar,
+312000	318000	o qual é o registro, tanto o porto e a a a a a.
+321000	324000	Vamos soltar.
+325000	328000	Aqui, muito bem, trabalhar com um apontador,
+328000	338000	nunca chegam a mencionar os nomes individuais de cada um.
+342000	349000	E aí, estou usando a direção, pronto.
+349000	356000	Enquire, tanto, é este que permite indicar saída ao output ou de input.
+359000	363000	Mais uma vez, eu recordo que,
+363000	365000	tanto que estas funções são,
+365000	366000	isto não são funções.
+366000	370000	Estão macros, que estão defendidos na Voltaque,
+370000	372000	aqui, que não tiver curiosidade,
+372000	375000	pode ir a 6.ga, onde...
+375000	378000	No IDEA, basta colocar aqui no botão direto,
+378000	381000	que eu permiti ir à definição.
+381000	383000	E vamos ver que isto é uma forma,
+383000	387000	a gente que é o calculador de acordo com o membro do pino,
+387000	390000	consegue calcular a cola ou a a a a a a a a a a a a a a a,
+390000	394000	e não consegue calcular a cola ou a a a a a a a a a de respectivo registro.
+396000	399000	Ou seja, o que eu porto whooshing mostrar aqui não é...
+399000	402000	não é... Não é... Não está a dar um curso rápido como programar a ardo innu,
+402000	405000	é fazer umcke eamento de potente perceber,
+405000	410000	que o cable o tech implemented no funcion nestas,
+410000	414000	este tipo do que... este tipo do código o que...
+414000	416000	que estamos... &amos a explicar.
+416000	419000	e que é, portanto, para um ranking rápido,
+419000	426000	que realmente não é discutir o que é mais rápido de fazer isto, o que é fazer isto, não é?
+430000	434000	O outro exemplo, não há passada,
+434000	439000	não cheguei a mostrar a implementação do...
+439000	446000	Um exemplo de implementação do ISO-ST, o TWI,
+446000	451000	e, portanto, aqui, com este código,
+451000	456000	é possível, portanto, fazer a configuração,
+456000	462000	este set-clock, no fundo, acho que primeiro, também, para a comparação, tem aqui,
+462000	465000	este posso fechar...
+475000	478000	Eu tenho acho que tinha aqui...
+479000	482000	e, por acaso, este botão que já não conseguiu,
+482000	486000	é clicando diretamente, e ir aos diretórios...
+487000	491000	se mexer no avesso... não...
+493000	497000	então, esta vez, o zoom não está funcionando...
+500000	503000	aqui, sim, aqui, aqui, aqui, aqui é o comparação,
+506000	509000	eu queria mostrar aqui...
+510000	513000	no fundo, esta...
+513000	516000	vamos lá voltar atrás...
+519000	522000	esta wire é uma classe estática...
+522000	525000	que é estática, mas isto está de ser mais mais...
+528000	533000	e que no fundo é um wrapper para um código,
+533000	536000	e eles fizeram isto bonitinho, tanto como a classe,
+536000	538000	sem ser mais mais...
+538000	540000	só nos ver a implementação deste método,
+540000	544000	o que eles fazem é chamar as funções em cedo,
+544000	547000	aquele fechero que eu tenho aberto no visual,
+547000	550000	e, por exemplo, o que este set-clock faz?
+550000	554000	É implementar esta forma,
+554000	557000	para que, precisamente,
+557000	560000	a forma que vimos na aula passada,
+560000	563000	para calcular o bol de rei,
+563000	566000	este poderíamos estar recordados aqui,
+566000	567000	neste...
+567000	569000	esta minimônica, este BR,
+569000	570000	para um bol de rei,
+570000	572000	e o TW é o tour wire,
+572000	575000	porque antes da mesmo registro do microcontrollador
+575000	577000	que, ao qual, eu já tribuo em esta,
+577000	579000	tanto os resultados, este poder este cálculo,
+579000	581000	que não é mais do que...
+581000	583000	do que isto que fizemos aqui,
+583000	585000	não a passada, ok?
+585000	587000	Só que, tanto fazem,
+587000	590000	recebem, passam isto como parando pela função,
+590000	592000	e o cálculo automaticamente,
+592000	594000	carregado pela função,
+594000	596000	para o registro do microcontrollador.
+598000	601000	Depois, tanto,
+601000	603000	para fazer a transmissão,
+603000	605000	propriamente, tem que eu vos mencionar,
+605000	609000	que, portanto,
+611000	614000	tinha que passar por várias fases,
+614000	616000	não é da minha mente,
+616000	618000	portanto, posso recorrer aqui,
+618000	620000	o exemplo que eu não cheguei a mostrar,
+620000	622000	era assim que estava aqui,
+622000	624000	é o início.
+624000	626000	Só um momento, acho que alguém,
+626000	628000	seria o que eu queria interpretar,
+628000	630000	entrar...
+632000	634000	Não, foi outra coisa.
+635000	636000	Pensei também,
+636000	639000	viarem estas sequências de pacote,
+639000	641000	em que, em alguns casos,
+641000	643000	por exemplo, isto é o uso,
+644000	646000	por exemplo,
+646000	649000	escritas em que se envia
+649000	651000	um pacote,
+651000	653000	um pacote,
+653000	655000	o controlador,
+655000	657000	um pacote de uma espécie,
+657000	659000	tem que ficar esperado,
+659000	661000	o que eu verificava,
+661000	663000	o acknowledge,
+663000	665000	que é enviado pelo target,
+665000	667000	e, portanto, isto,
+667000	669000	obriga uma certa sequência,
+669000	671000	que, de tanto, se for nos implementar isto,
+671000	673000	tudo,
+673000	675000	diretamente, com os acesso aos registros,
+675000	677000	ficam coisas,
+677000	679000	que estão em um exemplo,
+679000	681000	de um nível,
+681000	683000	de dois valores,
+683000	685000	de 8 bytes,
+685000	687000	em que, primeiro,
+687000	689000	aliás, tanto, casta o nível,
+689000	691000	primeiro, do beat start,
+691000	693000	que consistem de fazer aqui,
+693000	695000	o portanto,
+695000	697000	ao ativar este vídeo
+697000	699000	do TW CR,
+699000	701000	do control register,
+701000	703000	tanto, isto enviu
+703000	706000	o sinal de start,
+706000	708000	que é aquilo de baixar,
+708000	710000	tanto, criar o flanco,
+710000	712000	durante um ciclo de coloque,
+712000	714000	depois,
+714000	716000	para, portanto,
+716000	718000	o código, tem que ficar esperado aqui,
+718000	720000	que,
+720000	722000	portanto,
+722000	724000	sei, que esta flag va a 1,
+724000	726000	e, depois, verificar,
+726000	728000	se, no registro de estado,
+728000	730000	se, portanto,
+730000	732000	seus vídeos,
+732000	734000	respondem esta constante,
+734000	735000	que indica que o start,
+735000	737000	portanto, já foi transmitido,
+737000	739000	depois,
+739000	741000	para enviar os dados,
+741000	743000	portanto, é cargar o data register,
+743000	745000	com o valor desejado,
+745000	747000	portanto, é ver este 0, 0,
+747000	749000	responda a estes,
+749000	751000	estes jovens estão aqui,
+751000	753000	portanto,
+753000	755000	o dia,
+755000	757000	para o caso,
+757000	759000	tu vaso a corresponde,
+759000	761000	assim, sim,
+761000	763000	corresponde a este valor,
+763000	764000	portanto, no fundo,
+764000	766000	pode passar este 0, 0,
+766000	768000	volotei da morr,
+768000	770000	mas, portanto, tendo em conta aqui este vídeo,
+770000	772000	que indica que queremos fazer uma escrita,
+772000	774000	vai a 0,
+774000	776000	tanto, é, está aqui isto,
+776000	778000	o 0, e isto é o 0,
+778000	780000	e isto é o 0,
+780000	782000	e isto é o 0,
+782000	784000	e isto é o 0,
+784000	786000	e, depois, para, para fazer,
+786000	788000	mais uma vez,
+788000	790000	da área,
+790000	792000	portanto, a ordem delivia,
+792000	794000	é o reset,
+794000	796000	desta flagra,
+796000	798000	que escrevendo para o A1,
+798000	800000	e para um litro,
+800000	802000	para fazer isto, passa a passo,
+802000	804000	tem uma vez,
+804000	806000	isto é aqui uma sequência,
+806000	808000	em cada fase,
+808000	812000	temos que fazer a verificação da respectiva flagra,
+812000	814000	do valor desejado,
+814000	816000	que é suposto a aparecer no registro,
+816000	818000	neste jovito,
+818000	820000	do registro estar,
+820000	822000	o código do ar doino,
+822000	824000	quando, simplesmente, queremos,
+824000	826000	até fazer,
+826000	828000	assimular um dispositivo i2C,
+828000	830000	ou fazer,
+830000	832000	o teste do outro sistema com i2C,
+832000	834000	portanto, torna-se muito,
+834000	836000	mais simples,
+836000	838000	escrever,
+838000	840000	escrever aqui três linhas de código,
+840000	842000	que fazem exatamente a mesma coisa,
+842000	844000	para carreir aqui,
+844000	846000	para este registro de data,
+846000	848000	para este cristino,
+848000	849000	para este vetor,
+849000	851000	para os dados que quer enviar,
+851000	853000	e faixarmos esta função right,
+853000	855000	que vale,
+855000	857000	tanto que é real aos bofais do,
+857000	859000	da biblioteca,
+859000	860280	e, e, e este, peus,
+860280	861000	extra-se,
+861000	862280	enrique-se de faz todo o trabalho,
+862280	864040	quero que eu penso que tenha que,
+864040	866040	para vos mostrar,
+866040	868040	voltou a só,
+868040	868980	para ver,
+868980	870340	em que é a sequência de testes,
+870340	872340	também vale a aparecer aqui,
+872340	876180	este ter o read.
+876180	878180	Para, aqui, uma função right.
+878180	893180	Aqui, por acaso, até existe um código auxiliar para fazer verificações de time-outs.
+893180	902180	Por acaso, eu até feito o copy, peixe-se que era mais rápido de gostar agora aqui.
+903180	910180	Agora, portanto, estamos a falar do intransmission, que faz o right to the front.
+910180	920180	Então, ao ver que isso, o tall wrapper que eu estava a falar, tendo aqui um metodo de class to wire,
+920180	929180	que depois, no fundo que faz, é chamar aqui o, esta função do, se chamar, esta função que está no outro fechero.
+933180	934180	Portanto, aqui.
+938180	943180	Como podem ver, também existe aqui uma sequência, e que acham os textos da esplera,
+943180	947180	e portanto, as várias fases, deviam ajudar.

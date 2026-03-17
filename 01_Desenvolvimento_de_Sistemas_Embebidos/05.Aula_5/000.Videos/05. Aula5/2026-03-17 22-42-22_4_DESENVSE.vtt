@@ -1,0 +1,392 @@
+WEBVTT
+
+00:00.000 --> 00:08.240
+Ciclaugro é um ciclofor para iriviar dos dedos, nunca serem em várias, mas que também
+
+00:08.240 --> 00:16.340
+fazem as peras e o teste do registro de Estado.
+
+00:30.000 --> 00:50.000
+Contendo o ano, temos agora a terminar esta secção desta diagrama de blocos de 32,
+
+00:51.000 --> 00:56.000
+para chamar a tensão que já existem microcontroladores, aliás, já existem há vários anos,
+
+00:56.000 --> 01:04.000
+portanto, que existem microcontroladores com mais do que um microcontrolador, ou seja, com mais do que um núcleo,
+
+01:04.000 --> 01:17.000
+e este é o teste 32, é um microcontrolador do Alcore, e portanto, pois que tem outros periphericos,
+
+01:17.000 --> 01:26.000
+portanto, hoje aqui, a definição do Acrônio para alguns algumas interfaces que não apareceram no H&R,
+
+01:26.000 --> 01:35.000
+portanto, este temos uma específica para, ou o que o noturo foi criado, especificamente para audio,
+
+01:36.000 --> 01:44.000
+a parte, aqui, uma interface sdm para dc, como se fossepós sdk, mas para outros tipos que permitem usar,
+
+01:44.000 --> 01:50.000
+uma interface semelhante, para os tipos de dispositivos que não, os cartões de memória,
+
+01:50.000 --> 01:59.000
+aqui, uma interface que, no fundo, portanto, é um barramento, é implementação de aspetendedores do Cetanar de Can,
+
+02:00.000 --> 02:07.000
+e outros que estão, portanto, sinais para em favor mais, portanto, tem aqui mais alguns conjuntos,
+
+02:07.000 --> 02:14.000
+algumas interfaces que não existem neste Java, este Java é erros mais simples, até os testes de censors,
+
+02:14.000 --> 02:19.000
+que são sensores, são entradas que conseguem detectar alterações de capacidade,
+
+02:19.000 --> 02:26.000
+em que permitem que uma sou assinária, tanto se detectar a interação do toque de uma pessoa.
+
+02:26.000 --> 02:30.000
+Mas isto, para o aspecto que eu queria mencionar em relação aos microcontrolladores,
+
+02:30.000 --> 02:37.000
+é que, a partir do momento em que entramos em sistemas em microcontrolladores com mais do que um núcleo,
+
+02:37.000 --> 02:45.000
+aqui, das duas uma, ou estamos a falar de casos, depois de programas, como organização muito simples,
+
+02:45.000 --> 02:52.000
+em que se consegue, separar muito bem cada uma das funções e tratamento de dados,
+
+02:52.000 --> 02:59.000
+que são feitos em cada núcleo e que, no fundo, estamos a usar aquilo quase como se fossem dois microcontrolladores isolados,
+
+02:59.000 --> 03:06.000
+ou então, quando queremos realmente tirar todo o partido do ocor, portanto, o facto de saber ali,
+
+03:06.000 --> 03:12.000
+dois microprocedores, que reparem partilham a mesma ROM e a mesma RAM,
+
+03:12.000 --> 03:21.000
+tanto, é uma arquitetura de memória partilhada, e, portanto, o mais adequado,
+
+03:21.000 --> 03:26.000
+mas, portanto, que, realmente, se quisermos tirar isto, e para se chamar mais completos,
+
+03:26.000 --> 03:33.000
+já é usar sistemas operativos específicos para microcontrolladores, por exemplo, o Arduino,
+
+03:33.000 --> 03:39.000
+no suporte que tem, para os 32, os automaticamente, um, faz parte da multaqueda,
+
+03:39.000 --> 03:45.000
+das multaquias dela, instala logo, um sistema operativo para quisesse para microcontrolladores,
+
+03:45.000 --> 03:49.000
+que é o frito dos que vocês vão depois usar ou estudar,
+
+03:49.000 --> 03:55.000
+no outro modo, o mais afinal dos próximos 3 meses, aqui, portanto, para não estar a roubar portagonismo
+
+03:55.000 --> 04:01.000
+também ao último modo, não vamos abordar isto, mas, depois vão estudar este sistema operativo,
+
+04:01.000 --> 04:11.000
+penso no outro modo, que, parem que não é só que estão descalonamento,
+
+04:11.000 --> 04:20.000
+é, depois, para quem já estudou sistemas de programação, em sistemas Linux,
+
+04:20.000 --> 04:24.000
+ou, se temos operativo multiprocesso, em geral, se todo o conceito de semáforos,
+
+04:24.000 --> 04:28.000
+de multaquias, e sabe que, a partir do momento em que temos várias multitarefas,
+
+04:28.000 --> 04:34.000
+começam a surgir potenciais confolitos, necessito recursos, principalmente,
+
+04:34.000 --> 04:41.000
+portanto, se estas tarefas partilharem variáveis, ou quisessem partilharem,
+
+04:41.000 --> 04:49.000
+a priori acesso aos vários módulos que estão disponíveis no microcontrollador,
+
+04:49.000 --> 04:53.000
+portanto, tem que haver, depois, maneiras de derbiterar este s6,
+
+04:53.000 --> 04:58.000
+através desses mecanismos auxiliais, que mostramá frasios no texto.
+
+04:59.000 --> 05:06.000
+E também, portanto, é um topo que vão falar no módulo de sistemas operativos.
+
+05:09.000 --> 05:10.000
+Agora vai.
+
+05:13.000 --> 05:21.000
+Agora, relativamente este módulo, tirando o que eu sugeli para a próxima aula,
+
+05:21.000 --> 05:28.000
+portanto, eu vou começar, agora, a fazer a transição para o mundo Linux,
+
+05:28.000 --> 05:34.000
+ou para o ambiente Linux, portanto, no fundo, vamos saltar daqui,
+
+05:34.000 --> 05:39.000
+se fizermos a analogia aqui, como o mapa de produtos do Arduino,
+
+05:39.000 --> 05:43.000
+vamos saltar aqui dos microcontrolladores, diretamente aqui para estes temas,
+
+05:43.000 --> 05:46.000
+com suporte, para Linux, ok?
+
+05:47.000 --> 05:52.000
+Sendo que, tantos mais uma vez, chama a tensão que o princípio de funcionamento
+
+05:52.000 --> 05:58.000
+desses sistemas de 32 bits, tem a entrada a questão dos multicore,
+
+05:58.000 --> 06:02.000
+acaba por não ser muito diferente de estes, portanto, os princípios de funcionamento
+
+06:02.000 --> 06:05.000
+são uns menos, a questão é que temos quantidades,
+
+06:05.000 --> 06:09.000
+de tipo de amêntem, quantidades de memória superior,
+
+06:09.000 --> 06:16.000
+e taxas de eficúências de pessoas também bastante superior,
+
+06:16.000 --> 06:22.000
+o que permite certas aplicações, principalmente aplicações de que envolvam
+
+06:22.000 --> 06:27.000
+comunicações incriptadas, por exemplo, estão fora do alcance de estes microcontrolladores,
+
+06:27.000 --> 06:31.000
+tem que ser já com estas famílias, ligamos assim.
+
+06:32.000 --> 06:40.000
+Para bem, então, eu hoje não fiz intervalmas também,
+
+06:40.000 --> 06:46.000
+é esta hora também, acho que não faz muito sentido.
+
+06:51.000 --> 06:58.000
+Bom, então, ou seja, eu vou terminar agora aqui a sessão com uma introdução ligera
+
+06:59.000 --> 07:06.000
+aos sistemas Linux, acho que e este,
+
+07:06.000 --> 07:09.000
+porque este slide, penso que estão em português,
+
+07:09.000 --> 07:13.000
+eu ainda não, enfim, usei a lei do nosso forte,
+
+07:13.000 --> 07:16.000
+porque ainda não os traz eventualmente,
+
+07:16.000 --> 07:18.000
+pois posso trazer o suprę inglês,
+
+07:18.000 --> 07:22.000
+então, até aqui, vamos lá ver.
+
+07:30.000 --> 07:33.000
+Eu vou polisar o que é o minuto,
+
+07:33.000 --> 07:37.000
+para refrescar a garganta, que só fica com a garganta séquica.
+
+07:45.000 --> 07:47.000
+É só o minutinho.
+
+07:48.000 --> 07:50.000
+Então, vamos lá ver.
+
+08:49.000 --> 09:03.000
+Eu não tenho aqui nenhum slide com aquela conversa clássica do que é um sistema operativo,
+
+09:03.000 --> 09:08.000
+portanto, eu começo lá aqui, por me ensinar,
+
+09:09.000 --> 09:12.000
+podemos ter uma espécie de separação,
+
+09:13.000 --> 09:17.000
+para que um sistema operativo é composto por várias partes,
+
+09:17.000 --> 09:21.000
+como tanto que a gente já teve unidades correlais que precisamos operativos sabe,
+
+09:21.000 --> 09:26.000
+mas eu sei que, portanto, aqui meia doze de alguns que poderão não ter atido,
+
+09:26.000 --> 09:33.000
+essas bases, assim, vamos para um ponto de vista mais formal ou acadêmico.
+
+09:34.000 --> 09:36.000
+Portanto, o sistema operativo,
+
+09:39.000 --> 09:42.000
+tentamos, se pensamos, ponto de vista de utilizador,
+
+09:42.000 --> 09:48.000
+tem um conjunto de utilitários que facilitam a utilização da máquina,
+
+09:48.000 --> 09:53.000
+depois também tem as próprias bibliotecas do sistema operativo
+
+09:53.000 --> 10:00.000
+que facilitam o desenvolvimento de software para esses temas,
+
+10:01.000 --> 10:04.000
+ou para os sistemas deportados pelo sistema operativo,
+
+10:05.000 --> 10:08.000
+e a mais, no seu sério,
+
+10:09.000 --> 10:14.000
+no meu caso, o sistema operativo está no fundo o seu coração,
+
+10:14.000 --> 10:19.000
+que, emquanto é usado o termo o carno ao sistema operativo,
+
+10:19.000 --> 10:27.000
+tem forneço os serviços principais do sistema operativo, nomeadamente,
+
+10:28.000 --> 10:32.000
+estão dos três principais recursos de um sistema computacional,
+
+10:32.000 --> 10:35.000
+estão dos processadores, estão da memória,
+
+10:35.000 --> 10:43.000
+e estão do acesso aos vários positivos de entrada e saída.
+
+10:45.000 --> 10:48.000
+Reparem, portanto, temos aqui,
+
+10:48.000 --> 10:51.000
+a tal representação das bibliotecas,
+
+10:51.000 --> 10:55.000
+portanto, aqui não estou representada as aplicações e utilitários
+
+10:56.000 --> 10:58.000
+dos sistemas operativos,
+
+10:58.000 --> 11:03.000
+mas, portanto, mesmo em termos de modo funcimento por sador,
+
+11:04.000 --> 11:12.000
+existe aqui uma separação de risa entre o ambiente em que os programas,
+
+11:12.000 --> 11:16.000
+ou com textos programas do utilizador são escutados,
+
+11:16.000 --> 11:23.000
+e o com texto em que o código do núcleo escutado é escutado.
+
+11:25.000 --> 11:34.000
+Basicamente, os processadores que são criados de forma optimizada
+
+11:34.000 --> 11:38.000
+para estes termos operativos, como os exemplos que mostrei a pouco,
+
+11:40.000 --> 11:44.000
+permitem criar diferentes níveis de privilégio
+
+11:44.000 --> 11:48.000
+para a execução dos...
+
+11:49.000 --> 11:51.000
+para o modo funcimento do processador,
+
+11:51.000 --> 11:55.000
+ou seja, para os programas que estão a ser escutados em cada instante,
+
+11:55.000 --> 11:57.000
+e depois o código sustema operativo,
+
+11:57.000 --> 12:01.000
+tem capacidade de mudar estes níveis de privilégio,
+
+12:01.000 --> 12:04.000
+conforme o que está a ser escutado,
+
+12:04.000 --> 12:09.000
+ou até atribuir ao próprio e portanto aos próprios gendares de memória,
+
+12:09.000 --> 12:12.000
+onde estamos os programas níveis de privilégio diferentes.
+
+12:12.000 --> 12:17.000
+Isso faz com que eles sejam escutados de acordo com estes níveis de privilégio.
+
+12:17.000 --> 12:25.000
+Portanto, o Linux no fundo é...
+
+12:25.000 --> 12:28.000
+Quando não só falam sejam operativos Linux,
+
+12:28.000 --> 12:33.000
+como ter um abuso de linguagem, o Linux é só um núcleo sejam operativo.
+
+12:33.000 --> 12:39.000
+Para ter um João sistema operativo completo, que são tipicamente chamadas,
+
+12:39.000 --> 12:45.000
+distribuições de no Linux é preciso de um conjunto de software,
+
+12:45.000 --> 12:49.000
+adicional, além do kernel.
+
+12:49.000 --> 12:54.000
+Portanto, o código fonte do Linux pode ser descarregado.
+
+12:54.000 --> 12:59.000
+Portanto, como vocês sabem, é open source e livre.
+
+12:59.000 --> 13:03.000
+Desculpa, por aqui é coicaniste.
+
+13:03.000 --> 13:09.000
+A maior parte das distribuições,
+
+13:09.000 --> 13:16.000
+depois fazem aplicamos, portanto, arremendo os seus próprios ou as suas próprias,
+
+13:16.000 --> 13:23.000
+ou até as afinações, ou a versão base do kernel,
+
+13:23.000 --> 13:31.000
+e junto todo o restante software necessário para criar um sejam operativo.
+
+13:31.000 --> 13:37.000
+Para que eu que façam mensão algumas distribuições conhecidas de Linux,
+
+13:37.000 --> 13:41.000
+o FeGOR ou o BUNTO,
+
+13:41.000 --> 13:50.000
+cada uma delas, portanto, além de, portanto, existem várias versões do FeGOR e do BUNTO,
+
+13:50.000 --> 14:01.000
+basicamente, cada uma delas pode estar a trabalhar com uma versão diferente do kernel, ok?
+
+14:02.000 --> 14:06.000
+Eu dou aqui um exemplo, que é que este o FeGOR,
+
+14:06.000 --> 14:09.000
+hoje já vem no 43 ou coisa de jane,
+
+14:09.000 --> 14:14.000
+portanto, foi lançado com o Linux 6.2, mas, depois, a certa altura,
+
+14:14.000 --> 14:19.000
+até é open apagareites que fizeram com a versão do Linux, ou seja, do Linux.
+

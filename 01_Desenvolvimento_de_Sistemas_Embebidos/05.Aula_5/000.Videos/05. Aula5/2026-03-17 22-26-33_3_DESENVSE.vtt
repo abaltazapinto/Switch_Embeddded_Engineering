@@ -1,0 +1,812 @@
+WEBVTT
+
+00:00.000 --> 00:11.000
+para estas macros fazem com conversão para o MIT e o porto correspondentes do microcontroller,
+
+00:11.000 --> 00:16.000
+ou seja, ser o porto-al ou porto-v ou porto-c, ou por e fora, e o respondente de MIT,
+
+00:16.000 --> 00:27.000
+se alguém quiser 0, 1, 2, 3, 4, 5, 6 ou 7, e isto é possível fazer porque cada um,
+
+00:27.000 --> 00:38.000
+ou melhor, este programa são torne-se, por que cada, eu recordo que cada registro de configuração
+
+00:38.000 --> 00:46.000
+dos portos do Timer, está amapiado no endereço de memória da memória principal,
+
+00:46.000 --> 00:54.000
+portanto, apesar de ser em registres especiais, portanto, estão, fazem parte do mapa de memória
+
+00:54.000 --> 01:00.000
+principal do microcontroller, e portanto, é possível obter um apontador,
+
+01:00.000 --> 01:06.000
+isto, usando, portanto, a termologia da linguagem seno,
+
+01:06.000 --> 01:12.000
+um apontador para esses registros, que basicamente o apontador é o endereço de memória.
+
+01:13.000 --> 01:17.000
+É isto que esta função faz, este portal de porto-register,
+
+01:17.000 --> 01:24.000
+e depois de identificar o porto, retorna o endereço para o registro que permite,
+
+01:24.000 --> 01:32.000
+está-lo ser a seguida, por exemplo, no caso, o porte-a é o porte-a, não é mesmo o registro porte-a.
+
+01:32.000 --> 01:40.000
+E se sabendo o endereço e se sabendo o bit, depois basta fazer a operação que estamos habituados a fazer,
+
+01:40.000 --> 01:45.000
+se quisermos por a zero, vamos dizer que a posição de memória,
+
+01:45.000 --> 01:52.000
+portanto, o valor, na posição de memória, correspondente a esse porto,
+
+01:52.000 --> 02:01.000
+vai sufrir esta operação, portanto, vamos fazer o endereço da máscara com zero,
+
+02:01.000 --> 02:05.000
+na posição do bit, que queremos por a zero.
+
+02:05.000 --> 02:12.000
+Se quisermos por um, é o habitual ou nós, vamos fazer o ou como o bit,
+
+02:12.000 --> 02:20.000
+portanto, com a palavra que tem o bit exigado ou um,
+
+02:20.000 --> 02:25.000
+portanto, este o bit vai estar a uma posição correspondente ao pino que queremos,
+
+02:25.000 --> 02:28.000
+que foi indicada aqui.
+
+02:29.000 --> 02:36.000
+E agora, isto é um cuidado que se deve ter, principalmente,
+
+02:36.000 --> 02:43.000
+se devemos usar outros portos ou interrupções externas,
+
+02:43.000 --> 02:51.000
+tantas interrupções externas ou tipos de interrupções,
+
+02:51.000 --> 02:57.000
+portanto, usá-te várias interrupções neste altura para ter certeza que isso não vai ser interrompido,
+
+02:57.000 --> 03:04.000
+e depois, voltar a ativar as interrupções.
+
+03:04.000 --> 03:09.000
+No fundo, o que se faz aqui, isto é o registro de Estado,
+
+03:09.000 --> 03:15.000
+o princípio do Estado de Regiça, o principal do microcontro-osor,
+
+03:15.000 --> 03:21.000
+e, portanto, isso é guardado, em uma variável temporária,
+
+03:21.000 --> 03:27.000
+depois, solia-se as interrupções e depois restaura-se o registro de Estado.
+
+03:27.000 --> 03:33.000
+E isto é isto, isto é um clí, o que faz é limpar aquele bit mais significativo do Estado de Regiça.
+
+03:33.000 --> 03:36.000
+Eu estou sendo mais significativo, espero não estar enanado,
+
+03:36.000 --> 03:39.000
+é um dos bitos do Estado de Regiça. É o mais significativo,
+
+03:39.000 --> 03:42.000
+por que se faz a mais cara com o 80?
+
+03:42.000 --> 03:48.000
+E, portanto, aqui, o que isto vai fazer é por esse bit a zero,
+
+03:48.000 --> 03:52.000
+e, aqui, volta a se recuperar o valor original para o SREG.
+
+03:52.000 --> 03:55.000
+E, assim, temos certeza que mesmo que estes que entretanto,
+
+03:55.000 --> 03:58.000
+alguma isto, são eventualmente diversas alteradas,
+
+03:58.000 --> 04:05.000
+as flex de outras flex, do bitos, do SREG, do Estado de Regiça,
+
+04:05.000 --> 04:09.000
+e, depois, volta a ficar, exatamente como estrada.
+
+04:09.000 --> 04:12.000
+No qual é o mesmo tipo de análise,
+
+04:12.000 --> 04:16.000
+tanto que podia ser feito aqui neste pinemode,
+
+04:16.000 --> 04:19.000
+temos aqui, no fundo, os três modos que estudamos,
+
+04:19.000 --> 04:22.000
+que é colocar o como input,
+
+04:22.000 --> 04:25.000
+colocar o como input mais ativando o pull-up,
+
+04:25.000 --> 04:28.000
+que, em que vamos escrever na saída,
+
+04:28.000 --> 04:31.000
+vamos colocar a saída 1 para ativar-te aqui,
+
+04:31.000 --> 04:36.000
+a extreção, colocar a saída 1 para que o pull-up fique ativo.
+
+04:36.000 --> 04:40.000
+E, depois, neste caso, portanto, input de pull-up,
+
+04:40.000 --> 04:44.000
+caso contrário, o que falta é o output,
+
+04:44.000 --> 04:53.000
+em que vamos colocar o registro-configuração,
+
+04:53.000 --> 04:56.000
+para que esta variável redjam-contador
+
+04:56.000 --> 05:03.000
+para o registro que permite configurar o modo de cada um dos bitos do porto.
+
+05:03.000 --> 05:05.000
+Portanto, será que,
+
+05:05.000 --> 05:12.000
+agora, alguém pode ajudar,
+
+05:12.000 --> 05:18.000
+o qual é o registro, tanto o porto e a a a a a.
+
+05:21.000 --> 05:24.000
+Vamos soltar.
+
+05:25.000 --> 05:28.000
+Aqui, muito bem, trabalhar com um apontador,
+
+05:28.000 --> 05:38.000
+nunca chegam a mencionar os nomes individuais de cada um.
+
+05:42.000 --> 05:49.000
+E aí, estou usando a direção, pronto.
+
+05:49.000 --> 05:56.000
+Enquire, tanto, é este que permite indicar saída ao output ou de input.
+
+05:59.000 --> 06:03.000
+Mais uma vez, eu recordo que,
+
+06:03.000 --> 06:05.000
+tanto que estas funções são,
+
+06:05.000 --> 06:06.000
+isto não são funções.
+
+06:06.000 --> 06:10.000
+Estão macros, que estão defendidos na Voltaque,
+
+06:10.000 --> 06:12.000
+aqui, que não tiver curiosidade,
+
+06:12.000 --> 06:15.000
+pode ir a 6.ga, onde...
+
+06:15.000 --> 06:18.000
+No IDEA, basta colocar aqui no botão direto,
+
+06:18.000 --> 06:21.000
+que eu permiti ir à definição.
+
+06:21.000 --> 06:23.000
+E vamos ver que isto é uma forma,
+
+06:23.000 --> 06:27.000
+a gente que é o calculador de acordo com o membro do pino,
+
+06:27.000 --> 06:30.000
+consegue calcular a cola ou a a a a a a a a a a a a a a a,
+
+06:30.000 --> 06:34.000
+e não consegue calcular a cola ou a a a a a a a a a de respectivo registro.
+
+06:36.000 --> 06:39.000
+Ou seja, o que eu porto whooshing mostrar aqui não é...
+
+06:39.000 --> 06:42.000
+não é... Não é... Não está a dar um curso rápido como programar a ardo innu,
+
+06:42.000 --> 06:45.000
+é fazer umcke eamento de potente perceber,
+
+06:45.000 --> 06:50.000
+que o cable o tech implemented no funcion nestas,
+
+06:50.000 --> 06:54.000
+este tipo do que... este tipo do código o que...
+
+06:54.000 --> 06:56.000
+que estamos... &amos a explicar.
+
+06:56.000 --> 06:59.000
+e que é, portanto, para um ranking rápido,
+
+06:59.000 --> 07:06.000
+que realmente não é discutir o que é mais rápido de fazer isto, o que é fazer isto, não é?
+
+07:10.000 --> 07:14.000
+O outro exemplo, não há passada,
+
+07:14.000 --> 07:19.000
+não cheguei a mostrar a implementação do...
+
+07:19.000 --> 07:26.000
+Um exemplo de implementação do ISO-ST, o TWI,
+
+07:26.000 --> 07:31.000
+e, portanto, aqui, com este código,
+
+07:31.000 --> 07:36.000
+é possível, portanto, fazer a configuração,
+
+07:36.000 --> 07:42.000
+este set-clock, no fundo, acho que primeiro, também, para a comparação, tem aqui,
+
+07:42.000 --> 07:45.000
+este posso fechar...
+
+07:55.000 --> 07:58.000
+Eu tenho acho que tinha aqui...
+
+07:59.000 --> 08:02.000
+e, por acaso, este botão que já não conseguiu,
+
+08:02.000 --> 08:06.000
+é clicando diretamente, e ir aos diretórios...
+
+08:07.000 --> 08:11.000
+se mexer no avesso... não...
+
+08:13.000 --> 08:17.000
+então, esta vez, o zoom não está funcionando...
+
+08:20.000 --> 08:23.000
+aqui, sim, aqui, aqui, aqui, aqui é o comparação,
+
+08:26.000 --> 08:29.000
+eu queria mostrar aqui...
+
+08:30.000 --> 08:33.000
+no fundo, esta...
+
+08:33.000 --> 08:36.000
+vamos lá voltar atrás...
+
+08:39.000 --> 08:42.000
+esta wire é uma classe estática...
+
+08:42.000 --> 08:45.000
+que é estática, mas isto está de ser mais mais...
+
+08:48.000 --> 08:53.000
+e que no fundo é um wrapper para um código,
+
+08:53.000 --> 08:56.000
+e eles fizeram isto bonitinho, tanto como a classe,
+
+08:56.000 --> 08:58.000
+sem ser mais mais...
+
+08:58.000 --> 09:00.000
+só nos ver a implementação deste método,
+
+09:00.000 --> 09:04.000
+o que eles fazem é chamar as funções em cedo,
+
+09:04.000 --> 09:07.000
+aquele fechero que eu tenho aberto no visual,
+
+09:07.000 --> 09:10.000
+e, por exemplo, o que este set-clock faz?
+
+09:10.000 --> 09:14.000
+É implementar esta forma,
+
+09:14.000 --> 09:17.000
+para que, precisamente,
+
+09:17.000 --> 09:20.000
+a forma que vimos na aula passada,
+
+09:20.000 --> 09:23.000
+para calcular o bol de rei,
+
+09:23.000 --> 09:26.000
+este poderíamos estar recordados aqui,
+
+09:26.000 --> 09:27.000
+neste...
+
+09:27.000 --> 09:29.000
+esta minimônica, este BR,
+
+09:29.000 --> 09:30.000
+para um bol de rei,
+
+09:30.000 --> 09:32.000
+e o TW é o tour wire,
+
+09:32.000 --> 09:35.000
+porque antes da mesmo registro do microcontrollador
+
+09:35.000 --> 09:37.000
+que, ao qual, eu já tribuo em esta,
+
+09:37.000 --> 09:39.000
+tanto os resultados, este poder este cálculo,
+
+09:39.000 --> 09:41.000
+que não é mais do que...
+
+09:41.000 --> 09:43.000
+do que isto que fizemos aqui,
+
+09:43.000 --> 09:45.000
+não a passada, ok?
+
+09:45.000 --> 09:47.000
+Só que, tanto fazem,
+
+09:47.000 --> 09:50.000
+recebem, passam isto como parando pela função,
+
+09:50.000 --> 09:52.000
+e o cálculo automaticamente,
+
+09:52.000 --> 09:54.000
+carregado pela função,
+
+09:54.000 --> 09:56.000
+para o registro do microcontrollador.
+
+09:58.000 --> 10:01.000
+Depois, tanto,
+
+10:01.000 --> 10:03.000
+para fazer a transmissão,
+
+10:03.000 --> 10:05.000
+propriamente, tem que eu vos mencionar,
+
+10:05.000 --> 10:09.000
+que, portanto,
+
+10:11.000 --> 10:14.000
+tinha que passar por várias fases,
+
+10:14.000 --> 10:16.000
+não é da minha mente,
+
+10:16.000 --> 10:18.000
+portanto, posso recorrer aqui,
+
+10:18.000 --> 10:20.000
+o exemplo que eu não cheguei a mostrar,
+
+10:20.000 --> 10:22.000
+era assim que estava aqui,
+
+10:22.000 --> 10:24.000
+é o início.
+
+10:24.000 --> 10:26.000
+Só um momento, acho que alguém,
+
+10:26.000 --> 10:28.000
+seria o que eu queria interpretar,
+
+10:28.000 --> 10:30.000
+entrar...
+
+10:32.000 --> 10:34.000
+Não, foi outra coisa.
+
+10:35.000 --> 10:36.000
+Pensei também,
+
+10:36.000 --> 10:39.000
+viarem estas sequências de pacote,
+
+10:39.000 --> 10:41.000
+em que, em alguns casos,
+
+10:41.000 --> 10:43.000
+por exemplo, isto é o uso,
+
+10:44.000 --> 10:46.000
+por exemplo,
+
+10:46.000 --> 10:49.000
+escritas em que se envia
+
+10:49.000 --> 10:51.000
+um pacote,
+
+10:51.000 --> 10:53.000
+um pacote,
+
+10:53.000 --> 10:55.000
+o controlador,
+
+10:55.000 --> 10:57.000
+um pacote de uma espécie,
+
+10:57.000 --> 10:59.000
+tem que ficar esperado,
+
+10:59.000 --> 11:01.000
+o que eu verificava,
+
+11:01.000 --> 11:03.000
+o acknowledge,
+
+11:03.000 --> 11:05.000
+que é enviado pelo target,
+
+11:05.000 --> 11:07.000
+e, portanto, isto,
+
+11:07.000 --> 11:09.000
+obriga uma certa sequência,
+
+11:09.000 --> 11:11.000
+que, de tanto, se for nos implementar isto,
+
+11:11.000 --> 11:13.000
+tudo,
+
+11:13.000 --> 11:15.000
+diretamente, com os acesso aos registros,
+
+11:15.000 --> 11:17.000
+ficam coisas,
+
+11:17.000 --> 11:19.000
+que estão em um exemplo,
+
+11:19.000 --> 11:21.000
+de um nível,
+
+11:21.000 --> 11:23.000
+de dois valores,
+
+11:23.000 --> 11:25.000
+de 8 bytes,
+
+11:25.000 --> 11:27.000
+em que, primeiro,
+
+11:27.000 --> 11:29.000
+aliás, tanto, casta o nível,
+
+11:29.000 --> 11:31.000
+primeiro, do beat start,
+
+11:31.000 --> 11:33.000
+que consistem de fazer aqui,
+
+11:33.000 --> 11:35.000
+o portanto,
+
+11:35.000 --> 11:37.000
+ao ativar este vídeo
+
+11:37.000 --> 11:39.000
+do TW CR,
+
+11:39.000 --> 11:41.000
+do control register,
+
+11:41.000 --> 11:43.000
+tanto, isto enviu
+
+11:43.000 --> 11:46.000
+o sinal de start,
+
+11:46.000 --> 11:48.000
+que é aquilo de baixar,
+
+11:48.000 --> 11:50.000
+tanto, criar o flanco,
+
+11:50.000 --> 11:52.000
+durante um ciclo de coloque,
+
+11:52.000 --> 11:54.000
+depois,
+
+11:54.000 --> 11:56.000
+para, portanto,
+
+11:56.000 --> 11:58.000
+o código, tem que ficar esperado aqui,
+
+11:58.000 --> 12:00.000
+que,
+
+12:00.000 --> 12:02.000
+portanto,
+
+12:02.000 --> 12:04.000
+sei, que esta flag va a 1,
+
+12:04.000 --> 12:06.000
+e, depois, verificar,
+
+12:06.000 --> 12:08.000
+se, no registro de estado,
+
+12:08.000 --> 12:10.000
+se, portanto,
+
+12:10.000 --> 12:12.000
+seus vídeos,
+
+12:12.000 --> 12:14.000
+respondem esta constante,
+
+12:14.000 --> 12:15.000
+que indica que o start,
+
+12:15.000 --> 12:17.000
+portanto, já foi transmitido,
+
+12:17.000 --> 12:19.000
+depois,
+
+12:19.000 --> 12:21.000
+para enviar os dados,
+
+12:21.000 --> 12:23.000
+portanto, é cargar o data register,
+
+12:23.000 --> 12:25.000
+com o valor desejado,
+
+12:25.000 --> 12:27.000
+portanto, é ver este 0, 0,
+
+12:27.000 --> 12:29.000
+responda a estes,
+
+12:29.000 --> 12:31.000
+estes jovens estão aqui,
+
+12:31.000 --> 12:33.000
+portanto,
+
+12:33.000 --> 12:35.000
+o dia,
+
+12:35.000 --> 12:37.000
+para o caso,
+
+12:37.000 --> 12:39.000
+tu vaso a corresponde,
+
+12:39.000 --> 12:41.000
+assim, sim,
+
+12:41.000 --> 12:43.000
+corresponde a este valor,
+
+12:43.000 --> 12:44.000
+portanto, no fundo,
+
+12:44.000 --> 12:46.000
+pode passar este 0, 0,
+
+12:46.000 --> 12:48.000
+volotei da morr,
+
+12:48.000 --> 12:50.000
+mas, portanto, tendo em conta aqui este vídeo,
+
+12:50.000 --> 12:52.000
+que indica que queremos fazer uma escrita,
+
+12:52.000 --> 12:54.000
+vai a 0,
+
+12:54.000 --> 12:56.000
+tanto, é, está aqui isto,
+
+12:56.000 --> 12:58.000
+o 0, e isto é o 0,
+
+12:58.000 --> 13:00.000
+e isto é o 0,
+
+13:00.000 --> 13:02.000
+e isto é o 0,
+
+13:02.000 --> 13:04.000
+e isto é o 0,
+
+13:04.000 --> 13:06.000
+e, depois, para, para fazer,
+
+13:06.000 --> 13:08.000
+mais uma vez,
+
+13:08.000 --> 13:10.000
+da área,
+
+13:10.000 --> 13:12.000
+portanto, a ordem delivia,
+
+13:12.000 --> 13:14.000
+é o reset,
+
+13:14.000 --> 13:16.000
+desta flagra,
+
+13:16.000 --> 13:18.000
+que escrevendo para o A1,
+
+13:18.000 --> 13:20.000
+e para um litro,
+
+13:20.000 --> 13:22.000
+para fazer isto, passa a passo,
+
+13:22.000 --> 13:24.000
+tem uma vez,
+
+13:24.000 --> 13:26.000
+isto é aqui uma sequência,
+
+13:26.000 --> 13:28.000
+em cada fase,
+
+13:28.000 --> 13:32.000
+temos que fazer a verificação da respectiva flagra,
+
+13:32.000 --> 13:34.000
+do valor desejado,
+
+13:34.000 --> 13:36.000
+que é suposto a aparecer no registro,
+
+13:36.000 --> 13:38.000
+neste jovito,
+
+13:38.000 --> 13:40.000
+do registro estar,
+
+13:40.000 --> 13:42.000
+o código do ar doino,
+
+13:42.000 --> 13:44.000
+quando, simplesmente, queremos,
+
+13:44.000 --> 13:46.000
+até fazer,
+
+13:46.000 --> 13:48.000
+assimular um dispositivo i2C,
+
+13:48.000 --> 13:50.000
+ou fazer,
+
+13:50.000 --> 13:52.000
+o teste do outro sistema com i2C,
+
+13:52.000 --> 13:54.000
+portanto, torna-se muito,
+
+13:54.000 --> 13:56.000
+mais simples,
+
+13:56.000 --> 13:58.000
+escrever,
+
+13:58.000 --> 14:00.000
+escrever aqui três linhas de código,
+
+14:00.000 --> 14:02.000
+que fazem exatamente a mesma coisa,
+
+14:02.000 --> 14:04.000
+para carreir aqui,
+
+14:04.000 --> 14:06.000
+para este registro de data,
+
+14:06.000 --> 14:08.000
+para este cristino,
+
+14:08.000 --> 14:09.000
+para este vetor,
+
+14:09.000 --> 14:11.000
+para os dados que quer enviar,
+
+14:11.000 --> 14:13.000
+e faixarmos esta função right,
+
+14:13.000 --> 14:15.000
+que vale,
+
+14:15.000 --> 14:17.000
+tanto que é real aos bofais do,
+
+14:17.000 --> 14:19.000
+da biblioteca,
+
+14:19.000 --> 14:20.280
+e, e, e este, peus,
+
+14:20.280 --> 14:21.000
+extra-se,
+
+14:21.000 --> 14:22.280
+enrique-se de faz todo o trabalho,
+
+14:22.280 --> 14:24.040
+quero que eu penso que tenha que,
+
+14:24.040 --> 14:26.040
+para vos mostrar,
+
+14:26.040 --> 14:28.040
+voltou a só,
+
+14:28.040 --> 14:28.980
+para ver,
+
+14:28.980 --> 14:30.340
+em que é a sequência de testes,
+
+14:30.340 --> 14:32.340
+também vale a aparecer aqui,
+
+14:32.340 --> 14:36.180
+este ter o read.
+
+14:36.180 --> 14:38.180
+Para, aqui, uma função right.
+
+14:38.180 --> 14:53.180
+Aqui, por acaso, até existe um código auxiliar para fazer verificações de time-outs.
+
+14:53.180 --> 15:02.180
+Por acaso, eu até feito o copy, peixe-se que era mais rápido de gostar agora aqui.
+
+15:03.180 --> 15:10.180
+Agora, portanto, estamos a falar do intransmission, que faz o right to the front.
+
+15:10.180 --> 15:20.180
+Então, ao ver que isso, o tall wrapper que eu estava a falar, tendo aqui um metodo de class to wire,
+
+15:20.180 --> 15:29.180
+que depois, no fundo que faz, é chamar aqui o, esta função do, se chamar, esta função que está no outro fechero.
+
+15:33.180 --> 15:34.180
+Portanto, aqui.
+
+15:38.180 --> 15:43.180
+Como podem ver, também existe aqui uma sequência, e que acham os textos da esplera,
+
+15:43.180 --> 15:47.180
+e portanto, as várias fases, deviam ajudar.
+

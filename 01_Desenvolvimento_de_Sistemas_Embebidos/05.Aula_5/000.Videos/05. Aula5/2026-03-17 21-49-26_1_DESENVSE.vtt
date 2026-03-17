@@ -1,0 +1,665 @@
+WEBVTT
+
+00:00.000 --> 00:06.360
+Ou seja, na altura, eu e meu colega estábamos a tentar seguir pelas setas, e isso causou
+
+00:06.360 --> 00:12.120
+lá alguma confusão, porque, ou seja, parecia que aquilo era para ligar como nas setas,
+
+00:12.120 --> 00:18.200
+mas depois de que eles já não se aplicavam a outra exercício, pronto, isso adicionava
+
+00:18.200 --> 00:28.640
+a parte, por exemplo, tinha tentado fazer o código em casa, e pronto, fizemos pelo debug,
+
+00:28.640 --> 00:36.560
+mas depois de aquilo montava lá a bater muito certo, ou seja, pela configuração do registro,
+
+00:36.560 --> 00:45.120
+ou pela configuração do próprio hardware, pronto, se puderem, ou seja, só partilhar o esquema
+
+00:45.120 --> 00:49.920
+ou alguma coisa que facilita ali nas ligações, pelo menos se tivermos a certeza que as
+
+00:49.920 --> 00:55.000
+ligações estão bem, a partida procura pela solução já fica mais voltada para a parte
+
+00:55.000 --> 00:59.720
+dos registros, pronto, acho que ou bem alguma confusão, acho, não sei se era se fuísse
+
+00:59.720 --> 01:00.720
+ou eu?
+
+01:00.720 --> 01:10.200
+E eu vou, se simpado, pode intervire, eu não sei se era para tentar deixar a nota para
+
+01:10.200 --> 01:14.520
+não me esquecer disso, para você estar a dizer que concorda com o seu colega, não é?
+
+01:14.520 --> 01:20.880
+Sim, eu vou ali um vez dizer, sei se a gente que parecia que as portas depois que estavam
+
+01:20.880 --> 01:27.760
+indicadas no inunciado não eram propriamentais que eram para ser usadas, mas pronto, essencialmente
+
+01:27.760 --> 01:30.440
+era isso, concorda com o assunto?
+
+01:30.440 --> 01:37.280
+Já agora, eu também reparei no inunciado do último exercício a Fichazouis, ela
+
+01:37.280 --> 01:45.600
+mencionava para fazer, para resolver em assemble, mas eu creio que isso ficou por acidente,
+
+01:45.600 --> 01:53.160
+nós que circulamos esse exercício de outros cursos, que fazemos, e ficou lá, penso eu
+
+01:53.160 --> 01:59.000
+posso confirmar como a colega, mas nós combinamos, pronto, por tanto aqui o espírito das
+
+01:59.000 --> 02:04.600
+aulas e a ideia era não fazer, nos estamos a exigir que fizemos assim programação em
+
+02:04.600 --> 02:09.280
+assemble, se alguém quiser fazer, obviamente posso fazer, e uma colega estará, estará
+
+02:09.280 --> 02:17.320
+perfeitamente apto para vos ajudar e para tirar dúvidas, mas não vemos isso como obrigatório,
+
+02:17.320 --> 02:24.000
+eu, pessoalmente, eu considero que o assemble, portanto, não possam tão simples como
+
+02:24.000 --> 02:30.720
+este, não esquece de ficar, trabalhar com o assemble, eu não sei que quisessemos, que não
+
+02:30.720 --> 02:39.160
+gostá-semos do vosotras, o compilador de C, e quisessemos fazer algo diferente,
+
+02:39.160 --> 02:44.920
+já, portanto, ter a capacidade de analisar código a assemble e portanto fazer o, fazer
+
+02:44.920 --> 02:52.840
+o, no fundo, o reverse engineering, fazer o disassemble de código máquina, para a assemble,
+
+02:52.840 --> 02:58.960
+e portanto, que isso, portanto, as herramientas fazem, e depois, ser capaz de perceber o código
+
+02:58.960 --> 03:05.800
+que o compilador gerou, é uma competência que pode dar jeito em certas situações, principalmente
+
+03:05.800 --> 03:13.080
+quando está a lidar com o hardware recente, hardware, e toolchains e biblioteques para efora, às
+
+03:13.080 --> 03:20.440
+vezes, para descobrirmos os bugs, temos que ir, portanto, ao código máquina, e tanto
+
+03:20.440 --> 03:24.560
+ir para não usar o código máquina, o código assembly ajuda muito porque é um apiamento quase
+
+03:24.560 --> 03:34.680
+direto, portanto, fiquem essa nota de qualquer maneira, no âmbito deste modo, portanto,
+
+03:34.680 --> 03:39.680
+não filhamos planemente, achamos que não fazia sentido estarmos aqui, a dar ao hoje da
+
+03:39.680 --> 03:46.680
+assemble, e portanto, essa nota que aparece no inunciado da ficha 2, acho que é o último,
+
+03:46.680 --> 03:52.680
+o último exercício de todos, penso que será para ignorar, é para fazer em ser, na mesma.
+
+03:56.680 --> 04:03.920
+O outro, o outro aspecto, e agora, e agora que já estão aqui quase todos, mas depois também
+
+04:03.920 --> 04:09.920
+posso enviar por email para não haver dúvidas, ou para todos esterem impostos a responder,
+
+04:09.920 --> 04:20.920
+era, portanto, aqui, é uma distão de calendários áuas, e olha, por tanto, já tinha tido, já
+
+04:20.920 --> 04:26.920
+tenho noção de calendário áuas, já tenho fio por marcar aqui estas sessões do que crieis,
+
+04:26.920 --> 04:33.420
+sessões do time, mas na altura não analisa bem aqui, é questão da quinta semana, não sei se
+
+04:33.420 --> 04:41.420
+vocês já repararam, que no dia, vamos lá ver, no dia 31 de maço, temos uma aula, certo?
+
+04:41.420 --> 04:50.420
+Temos tanto este, também com o professor Lino Ferreira, portanto, as setoras está marcado para
+
+04:50.420 --> 04:57.420
+dia 31 de maço. Depois, no dia 2 da Vibril, uma vez que aqui na função pública, pronto, as vezes
+
+04:57.420 --> 05:04.420
+a tarde já afriado, o ex-app fecha e por aí fora, portanto, decidimos não ter a sessão,
+
+05:04.420 --> 05:12.420
+ok? Isso também, por isso é que vocês não têm lá nada marcado no time. Depois, a aula
+
+05:12.420 --> 05:18.420
+seguinte, para compensar esta que não tem de 2 da Vibril, está marcado para 9 da Vibril,
+
+05:18.420 --> 05:25.420
+sendo que, depois de 1 da Vibril, será a última peio deste último model, desde perdão,
+
+05:26.420 --> 05:34.420
+se vocês estão a seguir por algum calendário, a minha questão é se haveria disponibilidade
+
+05:34.420 --> 05:43.420
+da nossa parte e aqui terá que ser de todos, para fazer disponibilidade e até interesse,
+
+05:43.420 --> 05:49.420
+para mudar esta aula do dia 31 de maço para a 7 da Vibril, portanto, a dia era uma semana.
+
+05:50.420 --> 05:57.420
+Tanto, em vez de termos ali um llato de uma semana entre as duas teóricas,
+
+05:57.420 --> 06:04.420
+ficavam aqui com quase como uma espécie de miniférias deste model, e depois,
+
+06:05.420 --> 06:16.420
+esse aula, portanto, no fundo das aulas da quinta semana, seriam ambas na semana de 6 da Vibril.
+
+06:19.420 --> 06:24.420
+Com a eventual possibilidade da aula, portanto, assumindo que o professor ali na forreira
+
+06:24.420 --> 06:28.420
+não tem interesse em fazer nenhuma coisa, que acho que não tem ainda, não é pronta ainda,
+
+06:28.420 --> 06:33.420
+mas pronto no ano. Caso, portanto, foi só este modelo a mudar até,
+
+06:33.420 --> 06:39.420
+poderíamos ter aula no horário das 7 horas, porque aí, na esta altura,
+
+06:39.420 --> 06:43.420
+não estou a ter aula dos outros cursos, portanto, são no resto das licenciaturas
+
+06:43.420 --> 06:50.420
+e mostrados aqui do exacto, são as férias da paz, portanto, tenho possibilidade
+
+06:50.420 --> 06:56.420
+a dar as danovo horas como há 21 e meia hora, que forma mais conveniente para todos.
+
+06:57.420 --> 07:04.420
+Assim, já num primeiro vantamento, alguém teria, portanto, o listo entra em conflito
+
+07:04.420 --> 07:07.420
+com a agenda de alguém, esta eventual alteração.
+
+07:10.420 --> 07:11.420
+Portanto, ok.
+
+07:14.420 --> 07:20.420
+De qualquer maneira, eu vou dar objectilidade, então, de pensar em melhor a hora nisso,
+
+07:21.420 --> 07:26.420
+portanto, a minha proposta seria, então, de adiar, aula de 30 no março,
+
+07:26.420 --> 07:30.420
+para 7 de abril, e que a aula fosse às 7 horas.
+
+07:32.420 --> 07:36.420
+Souver alguém que, portanto, vou esperar amanhã,
+
+07:36.420 --> 07:41.420
+tanto, se lembrar de algum inconveniente ou de alguma impossibilidade,
+
+07:41.420 --> 07:45.420
+podia que me avisasse por anel, senão na próxima quinta feira.
+
+07:45.420 --> 07:49.420
+Eu concretizo, portanto, faço o pedido da alteração
+
+07:50.420 --> 07:53.420
+e fiquem tão à aula adiada uma semana.
+
+07:53.420 --> 07:59.420
+Portanto, ficam sem aulas deste módulo, na semana de 30 de março,
+
+07:59.420 --> 08:02.420
+e a semana, a semana que post-inaliza o coprasco,
+
+08:02.420 --> 08:06.420
+e, depois, é uma semana completa na sexta semana.
+
+08:09.420 --> 08:12.420
+Agora, pronto, isto eram os pontos prévios.
+
+08:14.420 --> 08:16.420
+Vamos, então, aqui,
+
+08:17.420 --> 08:21.420
+passar um assunto que queria falar.
+
+08:21.420 --> 08:26.420
+Panto, o Atemega, o Atemega 128,
+
+08:26.420 --> 08:31.420
+não tem lá mais alguns periphericos que podíamos analisar o tálico,
+
+08:31.420 --> 08:36.420
+como tem uma outra invinda de fazer, mas se lhe deixar isso
+
+08:36.420 --> 08:43.420
+para as secondas de nuptus, ou caso seja útil para algum exercício.
+
+08:43.420 --> 08:48.420
+Primeiramente, o módulo da SPI,
+
+08:48.420 --> 08:50.420
+que já agora fosse...
+
+08:50.420 --> 08:57.420
+Por acaso, ainda hoje, a discussão com o último post-tor aqui
+
+08:57.420 --> 08:59.420
+que está dará hoje, na pós-graduação,
+
+08:59.420 --> 09:03.420
+portanto, os anos meus estados, nos planos das unidades,
+
+09:03.420 --> 09:08.420
+os dos módulos, e eu fiquei com a ideia com vocês hoje,
+
+09:08.420 --> 09:12.420
+portanto, em fundamentos, que falaram
+
+09:12.420 --> 09:15.420
+o que é um falar da SPI e de I2T,
+
+09:15.420 --> 09:17.420
+não sei se chegou a concretizar,
+
+09:17.420 --> 09:19.420
+já agora, por curiosidade,
+
+09:19.420 --> 09:24.420
+um tempo para falar como o pessoal dos dois lembra.
+
+09:24.420 --> 09:26.420
+Já tinha um falo.
+
+09:30.420 --> 09:33.420
+Eu estou a falar da minha desde o módulo.
+
+09:33.420 --> 09:38.420
+Ou seja, então, vocês falaram em ambos os módulos de I2T?
+
+09:38.420 --> 09:42.420
+Porque aqui, portanto, eu recordo que, na semana passada, na quinta-feira,
+
+09:42.420 --> 09:45.420
+a segunda parte aula foi I2T,
+
+09:45.420 --> 09:48.420
+E 2T ou 2Wire, que é a mesma coisa.
+
+09:48.420 --> 09:50.420
+Então estou confundendo com a esta aula.
+
+09:50.420 --> 09:53.420
+Pronto, ok. Não é que eu vi lá,
+
+09:53.420 --> 09:57.420
+mas eu sei que eu tenho a ideia que as aulas do...
+
+09:57.420 --> 09:59.420
+De fundamentos são sempre,
+
+09:59.420 --> 10:01.420
+tanto, é dar a relação panorama geral
+
+10:01.420 --> 10:05.420
+de cada tecnologia, que, provavelmente, nunca chegam a entrar a entades,
+
+10:05.420 --> 10:07.420
+portanto, assim, tão fininhas,
+
+10:07.420 --> 10:11.420
+tão mil dinhas, como eu entro aqui.
+
+10:11.420 --> 10:14.420
+Mas era só para, às vezes, não estar aqui,
+
+10:14.420 --> 10:17.420
+se já tivesse em ouvido a descrição da SPI,
+
+10:17.420 --> 10:19.420
+pois quando fosse a dar esta parte,
+
+10:19.420 --> 10:20.420
+já nem passava direta,
+
+10:20.420 --> 10:24.420
+para a explicação mais de orientar a programação.
+
+10:24.420 --> 10:32.420
+Mas também não faz mal repetir ou ouvir em outra coisa,
+
+10:32.420 --> 10:34.420
+por outra perspectiva.
+
+10:34.420 --> 10:36.420
+Relativamente aqui é o slide,
+
+10:36.420 --> 10:38.420
+que já estou a mostrar.
+
+10:38.420 --> 10:42.420
+Portanto, isto era o encontro que estava a dizer aqui,
+
+10:42.420 --> 10:43.420
+né, aqui há alguns...
+
+10:43.420 --> 10:47.420
+As para alguns móvelos do ATMAX 128,
+
+10:47.420 --> 10:49.420
+que podíamos mostrar, mas hoje decidi
+
+10:49.420 --> 10:51.420
+falar, reservar aqui algum tempo para falar,
+
+10:51.420 --> 10:57.420
+de um topico que, certo, do qual certamente,
+
+10:57.420 --> 10:58.420
+ouviram falar,
+
+10:58.420 --> 11:00.420
+ou muitos de vocês já ouviram falar,
+
+11:00.420 --> 11:02.420
+que é o Arduino.
+
+11:03.420 --> 11:06.420
+Portanto, nesta primeira fase do móvel,
+
+11:06.420 --> 11:08.420
+preferirmos esta abordagem,
+
+11:08.420 --> 11:10.420
+para vocês perceberem, realmente,
+
+11:10.420 --> 11:12.420
+o que está em causa quando,
+
+11:12.420 --> 11:14.420
+depois mais tarde,
+
+11:14.420 --> 11:16.420
+quando usam o mesmo um sistema operativo,
+
+11:16.420 --> 11:19.420
+e que, portanto,
+
+11:19.420 --> 11:21.420
+vão ver que é possível,
+
+11:21.420 --> 11:23.420
+mesmo em microcontroladores,
+
+11:23.420 --> 11:26.420
+existem sistemas operativos multitaref,
+
+11:26.420 --> 11:28.420
+que podem ser aplicados,
+
+11:28.420 --> 11:30.420
+podem ser utilizados,
+
+11:30.420 --> 11:32.420
+e que, e que, já atrás de mim,
+
+11:32.420 --> 11:34.420
+há algumas bibliotecas que podem ser,
+
+11:34.420 --> 11:36.420
+da forma, apestrair,
+
+11:36.420 --> 11:38.420
+ou seja, esconderos,
+
+11:38.420 --> 11:40.420
+de estar a lhes de interação com o hardware.
+
+11:41.420 --> 11:43.420
+Mas, portanto,
+
+11:43.420 --> 11:45.420
+até para dar valor a esses,
+
+11:45.420 --> 11:47.420
+portanto, é esses sistemas,
+
+11:47.420 --> 11:49.420
+é útil, nós achamos que é útil,
+
+11:49.420 --> 11:50.420
+que todo a gente percebe,
+
+11:50.420 --> 11:51.420
+o que está em causa,
+
+11:51.420 --> 11:53.420
+quando não só faz um simples acesso,
+
+11:53.420 --> 11:54.420
+uma porta, um porto,
+
+11:54.420 --> 11:56.420
+ou quando o configuramento rerupção,
+
+11:56.420 --> 11:58.420
+ou quando o configuram o timer,
+
+11:58.420 --> 11:59.420
+ou um pedaluamento,
+
+11:59.420 --> 12:02.420
+para perceber o que é que o software do sistema,
+
+12:02.420 --> 12:04.420
+faz,
+
+12:04.420 --> 12:05.420
+portanto,
+
+12:05.420 --> 12:07.420
+quando não temos que nos fazer,
+
+12:07.420 --> 12:09.420
+o Arduino é uma plataforma,
+
+12:09.420 --> 12:10.420
+em que, portanto,
+
+12:10.420 --> 12:12.420
+que foi criado inicialmente,
+
+12:12.420 --> 12:14.420
+para,
+
+12:14.420 --> 12:16.420
+para iniciantes de estas áreas,
+
+12:16.420 --> 12:18.420
+ou até para,
+
+12:18.420 --> 12:20.420
+promover,
+
+12:20.420 --> 12:23.420
+portanto,
+
+12:23.420 --> 12:25.420
+utilização de estas tecnologias,
+
+12:25.420 --> 12:28.420
+nos estudantes,
+
+12:28.420 --> 12:31.420
+e, mas que, certa forma,
+
+12:31.420 --> 12:33.420
+também, já acaba por evoluir,
+
+12:33.420 --> 12:34.420
+já,
+
+12:34.420 --> 12:35.420
+quase para um, ou pelo menos,
+
+12:35.420 --> 12:36.420
+eu estento,
+
+12:36.420 --> 12:37.420
+uma nível empresarial,
+
+12:37.420 --> 12:39.420
+evolui para um segmento profissional.
+
+12:39.420 --> 12:40.420
+E, portanto,
+
+12:40.420 --> 12:42.420
+a abordagem do Arduino,
+
+12:42.420 --> 12:43.420
+a abordagem principal,
+
+12:43.420 --> 12:44.420
+é da simplificação,
+
+12:44.420 --> 12:46.420
+e da abstração,
+
+12:46.420 --> 12:47.420
+portanto,
+
+12:47.420 --> 12:49.420
+esconderos os detalhes,
+
+12:49.420 --> 12:51.420
+de implementação de forma
+
+12:51.420 --> 12:52.420
+que,
+
+12:52.420 --> 12:53.420
+alguém quer,
+
+12:53.420 --> 12:54.420
+criar um,
+
+12:54.420 --> 12:56.420
+um sistema rapidamente,
+
+12:56.420 --> 12:57.420
+e, sem ter que estar,
+
+12:57.420 --> 12:58.420
+estudar toda a arquitetura
+
+12:58.420 --> 12:59.420
+do microcontrollador,
+
+12:59.420 --> 13:01.420
+conseguia fazer.
+
+13:01.420 --> 13:04.420
+Antes de mais, portanto,
+
+13:04.420 --> 13:06.420
+como esclarecer uma coisa,
+
+13:06.420 --> 13:07.420
+tanto,
+
+13:07.420 --> 13:09.420
+quando se fala da Arduino,
+
+13:09.420 --> 13:12.420
+o fundo ecossistema do Arduino
+
+13:12.420 --> 13:13.420
+é composto,
+
+13:13.420 --> 13:15.420
+pelas placas,
+
+13:15.420 --> 13:17.420
+que, portanto,
+
+13:17.420 --> 13:19.420
+que são comercializadas pela
+
+13:19.420 --> 13:20.420
+empresa,
+
+13:20.420 --> 13:23.420
+portanto, ou seja,
+
+13:23.420 --> 13:24.420
+com o microcontrollador,
+
+13:24.420 --> 13:25.420
+e depois placas,
+
+13:25.420 --> 13:27.420
+que dispensamos,
+
+13:27.420 --> 13:28.420
+chamados Shields,
+
+13:28.420 --> 13:30.420
+que, portanto,
+
+13:30.420 --> 13:31.420
+permitem adicionar módulos,
+
+13:31.420 --> 13:32.420
+adicionais,
+
+13:32.420 --> 13:35.420
+ou o microcontrollador base.
+
+13:37.420 --> 13:39.420
+Mas, além do hardware,
+
+13:39.420 --> 13:41.420
+existe a solução software,
+
+13:41.420 --> 13:42.420
+que, no fundo,
+
+13:42.420 --> 13:43.420
+uma...
+
+13:43.420 --> 13:44.420
+uma biblioteca,
+
+13:44.420 --> 13:45.420
+ou quase,
+
+13:45.420 --> 13:46.420
+podemos dizer,
+
+13:46.420 --> 13:48.420
+uma mini framework,
+
+13:48.420 --> 13:49.420
+que facilita
+
+13:49.420 --> 13:51.420
+os envolvimentos dos programas.
+
+13:53.420 --> 13:55.420
+Portanto, o Arduino também
+
+13:55.420 --> 13:57.420
+tem o seu próprio IDE.
+

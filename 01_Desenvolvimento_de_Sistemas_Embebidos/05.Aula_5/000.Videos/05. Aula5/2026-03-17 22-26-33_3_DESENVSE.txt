@@ -1,0 +1,270 @@
+para estas macros fazem com conversão para o MIT e o porto correspondentes do microcontroller,
+ou seja, ser o porto-al ou porto-v ou porto-c, ou por e fora, e o respondente de MIT,
+se alguém quiser 0, 1, 2, 3, 4, 5, 6 ou 7, e isto é possível fazer porque cada um,
+ou melhor, este programa são torne-se, por que cada, eu recordo que cada registro de configuração
+dos portos do Timer, está amapiado no endereço de memória da memória principal,
+portanto, apesar de ser em registres especiais, portanto, estão, fazem parte do mapa de memória
+principal do microcontroller, e portanto, é possível obter um apontador,
+isto, usando, portanto, a termologia da linguagem seno,
+um apontador para esses registros, que basicamente o apontador é o endereço de memória.
+É isto que esta função faz, este portal de porto-register,
+e depois de identificar o porto, retorna o endereço para o registro que permite,
+está-lo ser a seguida, por exemplo, no caso, o porte-a é o porte-a, não é mesmo o registro porte-a.
+E se sabendo o endereço e se sabendo o bit, depois basta fazer a operação que estamos habituados a fazer,
+se quisermos por a zero, vamos dizer que a posição de memória,
+portanto, o valor, na posição de memória, correspondente a esse porto,
+vai sufrir esta operação, portanto, vamos fazer o endereço da máscara com zero,
+na posição do bit, que queremos por a zero.
+Se quisermos por um, é o habitual ou nós, vamos fazer o ou como o bit,
+portanto, com a palavra que tem o bit exigado ou um,
+portanto, este o bit vai estar a uma posição correspondente ao pino que queremos,
+que foi indicada aqui.
+E agora, isto é um cuidado que se deve ter, principalmente,
+se devemos usar outros portos ou interrupções externas,
+tantas interrupções externas ou tipos de interrupções,
+portanto, usá-te várias interrupções neste altura para ter certeza que isso não vai ser interrompido,
+e depois, voltar a ativar as interrupções.
+No fundo, o que se faz aqui, isto é o registro de Estado,
+o princípio do Estado de Regiça, o principal do microcontro-osor,
+e, portanto, isso é guardado, em uma variável temporária,
+depois, solia-se as interrupções e depois restaura-se o registro de Estado.
+E isto é isto, isto é um clí, o que faz é limpar aquele bit mais significativo do Estado de Regiça.
+Eu estou sendo mais significativo, espero não estar enanado,
+é um dos bitos do Estado de Regiça. É o mais significativo,
+por que se faz a mais cara com o 80?
+E, portanto, aqui, o que isto vai fazer é por esse bit a zero,
+e, aqui, volta a se recuperar o valor original para o SREG.
+E, assim, temos certeza que mesmo que estes que entretanto,
+alguma isto, são eventualmente diversas alteradas,
+as flex de outras flex, do bitos, do SREG, do Estado de Regiça,
+e, depois, volta a ficar, exatamente como estrada.
+No qual é o mesmo tipo de análise,
+tanto que podia ser feito aqui neste pinemode,
+temos aqui, no fundo, os três modos que estudamos,
+que é colocar o como input,
+colocar o como input mais ativando o pull-up,
+que, em que vamos escrever na saída,
+vamos colocar a saída 1 para ativar-te aqui,
+a extreção, colocar a saída 1 para que o pull-up fique ativo.
+E, depois, neste caso, portanto, input de pull-up,
+caso contrário, o que falta é o output,
+em que vamos colocar o registro-configuração,
+para que esta variável redjam-contador
+para o registro que permite configurar o modo de cada um dos bitos do porto.
+Portanto, será que,
+agora, alguém pode ajudar,
+o qual é o registro, tanto o porto e a a a a a.
+Vamos soltar.
+Aqui, muito bem, trabalhar com um apontador,
+nunca chegam a mencionar os nomes individuais de cada um.
+E aí, estou usando a direção, pronto.
+Enquire, tanto, é este que permite indicar saída ao output ou de input.
+Mais uma vez, eu recordo que,
+tanto que estas funções são,
+isto não são funções.
+Estão macros, que estão defendidos na Voltaque,
+aqui, que não tiver curiosidade,
+pode ir a 6.ga, onde...
+No IDEA, basta colocar aqui no botão direto,
+que eu permiti ir à definição.
+E vamos ver que isto é uma forma,
+a gente que é o calculador de acordo com o membro do pino,
+consegue calcular a cola ou a a a a a a a a a a a a a a a,
+e não consegue calcular a cola ou a a a a a a a a a de respectivo registro.
+Ou seja, o que eu porto whooshing mostrar aqui não é...
+não é... Não é... Não está a dar um curso rápido como programar a ardo innu,
+é fazer umcke eamento de potente perceber,
+que o cable o tech implemented no funcion nestas,
+este tipo do que... este tipo do código o que...
+que estamos... &amos a explicar.
+e que é, portanto, para um ranking rápido,
+que realmente não é discutir o que é mais rápido de fazer isto, o que é fazer isto, não é?
+O outro exemplo, não há passada,
+não cheguei a mostrar a implementação do...
+Um exemplo de implementação do ISO-ST, o TWI,
+e, portanto, aqui, com este código,
+é possível, portanto, fazer a configuração,
+este set-clock, no fundo, acho que primeiro, também, para a comparação, tem aqui,
+este posso fechar...
+Eu tenho acho que tinha aqui...
+e, por acaso, este botão que já não conseguiu,
+é clicando diretamente, e ir aos diretórios...
+se mexer no avesso... não...
+então, esta vez, o zoom não está funcionando...
+aqui, sim, aqui, aqui, aqui, aqui é o comparação,
+eu queria mostrar aqui...
+no fundo, esta...
+vamos lá voltar atrás...
+esta wire é uma classe estática...
+que é estática, mas isto está de ser mais mais...
+e que no fundo é um wrapper para um código,
+e eles fizeram isto bonitinho, tanto como a classe,
+sem ser mais mais...
+só nos ver a implementação deste método,
+o que eles fazem é chamar as funções em cedo,
+aquele fechero que eu tenho aberto no visual,
+e, por exemplo, o que este set-clock faz?
+É implementar esta forma,
+para que, precisamente,
+a forma que vimos na aula passada,
+para calcular o bol de rei,
+este poderíamos estar recordados aqui,
+neste...
+esta minimônica, este BR,
+para um bol de rei,
+e o TW é o tour wire,
+porque antes da mesmo registro do microcontrollador
+que, ao qual, eu já tribuo em esta,
+tanto os resultados, este poder este cálculo,
+que não é mais do que...
+do que isto que fizemos aqui,
+não a passada, ok?
+Só que, tanto fazem,
+recebem, passam isto como parando pela função,
+e o cálculo automaticamente,
+carregado pela função,
+para o registro do microcontrollador.
+Depois, tanto,
+para fazer a transmissão,
+propriamente, tem que eu vos mencionar,
+que, portanto,
+tinha que passar por várias fases,
+não é da minha mente,
+portanto, posso recorrer aqui,
+o exemplo que eu não cheguei a mostrar,
+era assim que estava aqui,
+é o início.
+Só um momento, acho que alguém,
+seria o que eu queria interpretar,
+entrar...
+Não, foi outra coisa.
+Pensei também,
+viarem estas sequências de pacote,
+em que, em alguns casos,
+por exemplo, isto é o uso,
+por exemplo,
+escritas em que se envia
+um pacote,
+um pacote,
+o controlador,
+um pacote de uma espécie,
+tem que ficar esperado,
+o que eu verificava,
+o acknowledge,
+que é enviado pelo target,
+e, portanto, isto,
+obriga uma certa sequência,
+que, de tanto, se for nos implementar isto,
+tudo,
+diretamente, com os acesso aos registros,
+ficam coisas,
+que estão em um exemplo,
+de um nível,
+de dois valores,
+de 8 bytes,
+em que, primeiro,
+aliás, tanto, casta o nível,
+primeiro, do beat start,
+que consistem de fazer aqui,
+o portanto,
+ao ativar este vídeo
+do TW CR,
+do control register,
+tanto, isto enviu
+o sinal de start,
+que é aquilo de baixar,
+tanto, criar o flanco,
+durante um ciclo de coloque,
+depois,
+para, portanto,
+o código, tem que ficar esperado aqui,
+que,
+portanto,
+sei, que esta flag va a 1,
+e, depois, verificar,
+se, no registro de estado,
+se, portanto,
+seus vídeos,
+respondem esta constante,
+que indica que o start,
+portanto, já foi transmitido,
+depois,
+para enviar os dados,
+portanto, é cargar o data register,
+com o valor desejado,
+portanto, é ver este 0, 0,
+responda a estes,
+estes jovens estão aqui,
+portanto,
+o dia,
+para o caso,
+tu vaso a corresponde,
+assim, sim,
+corresponde a este valor,
+portanto, no fundo,
+pode passar este 0, 0,
+volotei da morr,
+mas, portanto, tendo em conta aqui este vídeo,
+que indica que queremos fazer uma escrita,
+vai a 0,
+tanto, é, está aqui isto,
+o 0, e isto é o 0,
+e isto é o 0,
+e isto é o 0,
+e isto é o 0,
+e, depois, para, para fazer,
+mais uma vez,
+da área,
+portanto, a ordem delivia,
+é o reset,
+desta flagra,
+que escrevendo para o A1,
+e para um litro,
+para fazer isto, passa a passo,
+tem uma vez,
+isto é aqui uma sequência,
+em cada fase,
+temos que fazer a verificação da respectiva flagra,
+do valor desejado,
+que é suposto a aparecer no registro,
+neste jovito,
+do registro estar,
+o código do ar doino,
+quando, simplesmente, queremos,
+até fazer,
+assimular um dispositivo i2C,
+ou fazer,
+o teste do outro sistema com i2C,
+portanto, torna-se muito,
+mais simples,
+escrever,
+escrever aqui três linhas de código,
+que fazem exatamente a mesma coisa,
+para carreir aqui,
+para este registro de data,
+para este cristino,
+para este vetor,
+para os dados que quer enviar,
+e faixarmos esta função right,
+que vale,
+tanto que é real aos bofais do,
+da biblioteca,
+e, e, e este, peus,
+extra-se,
+enrique-se de faz todo o trabalho,
+quero que eu penso que tenha que,
+para vos mostrar,
+voltou a só,
+para ver,
+em que é a sequência de testes,
+também vale a aparecer aqui,
+este ter o read.
+Para, aqui, uma função right.
+Aqui, por acaso, até existe um código auxiliar para fazer verificações de time-outs.
+Por acaso, eu até feito o copy, peixe-se que era mais rápido de gostar agora aqui.
+Agora, portanto, estamos a falar do intransmission, que faz o right to the front.
+Então, ao ver que isso, o tall wrapper que eu estava a falar, tendo aqui um metodo de class to wire,
+que depois, no fundo que faz, é chamar aqui o, esta função do, se chamar, esta função que está no outro fechero.
+Portanto, aqui.
+Como podem ver, também existe aqui uma sequência, e que acham os textos da esplera,
+e portanto, as várias fases, deviam ajudar.

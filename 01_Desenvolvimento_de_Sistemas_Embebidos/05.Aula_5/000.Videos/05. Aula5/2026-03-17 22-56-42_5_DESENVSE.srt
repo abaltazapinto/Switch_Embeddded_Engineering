@@ -1,0 +1,728 @@
+1
+00:00:00,000 --> 00:00:05,820
+como eu terei a utilizar uma versão, ou seja, adentro da mesma versão do Fezora,
+
+2
+00:00:05,820 --> 00:00:15,880
+a versão do Linux, o release, foi, portanto foi, foi sendo alterado, portanto conforme os
+
+3
+00:00:15,880 --> 00:00:17,760
+apadentes que foram sendo fornecidos.
+
+4
+00:00:17,760 --> 00:00:30,140
+Em ambientes, em ambientes, quando estamos a falar de Linux para sistemas em devidos,
+
+5
+00:00:30,140 --> 00:00:37,220
+tipicamente, não usamos estes distribuições que são de uso mais geral, são até a
+
+6
+00:00:37,220 --> 00:00:45,880
+utilização de 10 top, ou temizados de utilização de 10 top, com todo o pessoal, ou
+
+7
+00:00:45,880 --> 00:00:49,300
+ou para servidores.
+
+8
+00:00:49,300 --> 00:00:57,320
+Normalmente queremos um sistema Linux, ou seja, uma distribuição Linux que tenha apenas
+
+9
+00:00:57,320 --> 00:01:04,160
+o conjunto mínimo de software, de forma que os passos, os recazidos, em termos de
+
+10
+00:01:04,160 --> 00:01:10,440
+armazenamento, ou seja, o menor possível, bom sistema, bom sistema em ambido, não faz
+
+11
+00:01:10,440 --> 00:01:19,220
+sentir isso, instalar num Linux com um bocado elevado ao absurdo, mas por ser tão
+
+12
+00:01:19,220 --> 00:01:23,960
+nove, mas não faz sentir isso, ao instalar as páginas mesmo, que, parecendo que não,
+
+13
+00:01:23,960 --> 00:01:30,120
+aquilo tudo sumado, o fecheiro de texto, principalmente se não for em comprimidos, acaba por ocupar
+
+14
+00:01:30,120 --> 00:01:34,720
+um espaço substancial, e depois, com um conjunto, portanto estamos a falar até de
+
+15
+00:01:34,720 --> 00:01:42,520
+um sistema, que, depois, não vai ter interação, como utilizador humana, não ser, numa situação
+
+16
+00:01:42,520 --> 00:01:47,880
+de digna-nos, também não faz sentido lá, não faz sentido ter lá todos os utilitários
+
+17
+00:01:47,880 --> 00:01:57,600
+que encontramos no sistema Linux típico, daí haver tantas deformas de criar distribuições
+
+18
+00:01:57,600 --> 00:02:06,080
+optimizadas para, as sistemas de digna-nos apenas com o que precisamos, portanto, há
+
+19
+00:02:06,080 --> 00:02:15,280
+várias maneiras de fazer isso, há as maneiras para quem quer, portanto, fazer tudo, ter
+
+20
+00:02:15,280 --> 00:02:20,720
+algum controle total sobre o processo, o chamado procedimento do Linux from scratch, portanto
+
+21
+00:02:20,720 --> 00:02:30,600
+que, manualmente, irmos aos receitos dos vários, portanto, as principais peças software
+
+22
+00:02:30,600 --> 00:02:39,040
+descarregaram o código fonte, e, com pilar, sempre que para isso, preguem-me, temos que
+
+23
+00:02:39,040 --> 00:02:44,360
+ter já o atuo de cheio, ou seja, o compilador, as bibliotecas para ver o sistema álvico que
+
+24
+00:02:44,360 --> 00:02:51,360
+desejamos usar para o hardware que desejamos usar, e, portanto, isso possa ser feito manualmente,
+
+25
+00:02:51,360 --> 00:02:57,040
+mas é uma pressão matadiosa, hoje em dia, temos fragmentas, hoje em dia, mais uma vez,
+
+26
+00:02:57,040 --> 00:03:02,560
+portanto, já existem, já com um bom nível de maturidade, com vários anos de existência,
+
+27
+00:03:02,560 --> 00:03:11,080
+temos fragmentas como o build root e o ecto que automatizam essa criação de distribuições
+
+28
+00:03:11,080 --> 00:03:16,400
+dedicadas ou optimizadas para uma determinada função, em que tem mesmo, permite-nos escolher
+
+29
+00:03:16,400 --> 00:03:21,320
+apenas o software que precisamos para a aplicação em vista.
+
+30
+00:03:21,320 --> 00:03:36,920
+Eu já estava, portanto, já agora só, para completar aqui, e, ver se não me esquece,
+
+31
+00:03:36,920 --> 00:03:42,680
+isto era o que eu estava a mencionar há pouco, já fui avançando este aspecto, só
+
+32
+00:03:42,680 --> 00:03:58,320
+aqui só um detalhe que acho que, tanto, ou seja, quando, o Linux tem um conjunto de funcionalidades,
+
+33
+00:03:58,320 --> 00:04:05,920
+que depois as bibliotecas do sistema, ou até, eventualmente, quem tiver interesse pode fazer
+
+34
+00:04:05,920 --> 00:04:12,320
+chamadas diretamente, e essas funcionalidades do kernel, e, portanto, são executadas depois
+
+35
+00:04:12,320 --> 00:04:20,120
+de ambiente do kernel, e mesmo que tenham que configurar registres especiais de um micropossador,
+
+36
+00:04:20,120 --> 00:04:27,960
+e, portanto, isso é feito pelo código de quem criou o sistema operativo, e, portanto,
+
+37
+00:04:27,960 --> 00:04:33,160
+em princípio, será feito em uma forma segura, por outro lado, os processos do polizador
+
+38
+00:04:33,160 --> 00:04:39,920
+não vão ter acesso, portanto, piquemente, não terão acesso, ou este, ou seja, este tipo
+
+39
+00:04:39,920 --> 00:04:46,120
+de programação que nós fazemos no micropontoolador, não se sistema operativo como o Linux, só
+
+40
+00:04:46,120 --> 00:04:50,360
+pode ser feito ao nível do kernel, e, por isso, é que nós vamos estudar uma coisa que
+
+41
+00:04:50,360 --> 00:04:56,600
+sepamos os modelos do kernel, que é o princípio da Zilar, tanto, é o mecanismo usado
+
+42
+00:04:56,600 --> 00:05:02,280
+para implementar os chamados de device drivers, em sistemas Linux, portanto, que depois
+
+43
+00:05:02,280 --> 00:05:08,720
+permitem, portanto, implementar o software necessary para um determinado expolitivo funcionário.
+
+44
+00:05:08,720 --> 00:05:13,440
+O Linux, que se tem, portanto, tem uma vantagem aqui, uma vez que já existava sempre
+
+45
+00:05:13,440 --> 00:05:20,000
+tempo, e tem uma comunidade de todos os alôs muito alargadas, já tem, portanto, e
+
+46
+00:05:20,000 --> 00:05:29,640
+vai-se da raiva, para centenas positivos, ou até milhares, expolitivos, portanto, muitas
+
+47
+00:05:29,640 --> 00:05:35,360
+vezes, mesmo, portanto, com dispositivos de novos, é uma questão de facilitar, e já
+
+48
+00:05:35,360 --> 00:05:40,960
+desculpa, portanto, código já existente, ou simplesmente utilizar código já existente,
+
+49
+00:05:40,960 --> 00:05:45,560
+que é genérico, e não temos que estar a fazer tudo a partir do zero.
+
+50
+00:05:45,560 --> 00:06:02,160
+O nível, portanto, há pouco que estava a mencionar, é a questão das bibliotecas, mas
+
+51
+00:06:02,160 --> 00:06:10,080
+uma aqui, aquilo estou a tentar ilustrar, é questão de um aspecto também importante, quando
+
+52
+00:06:10,080 --> 00:06:17,520
+usamos os sistemas operativos, como o Linux é o facto de, portanto, ao desenvolvermos
+
+53
+00:06:17,520 --> 00:06:25,160
+código para esses temas, ficamos com a garantia que esse código, tanto o código, o nível
+
+54
+00:06:25,160 --> 00:06:34,040
+da aplicação, o nível do utilizador, que corre no espaço polisador, mas como está
+
+55
+00:06:34,040 --> 00:06:40,320
+ficamos com a garantia que esse código, depois, vai ser soportado em qualquer sistema,
+
+56
+00:06:40,320 --> 00:06:46,440
+que, no qual o Linux possa ser utilizado, a menos obviamente, de ser necessário, novamente,
+
+57
+00:06:46,440 --> 00:06:54,520
+recompilar o software, para a arquitetura de portador utilizado, mas o nosso código, apenas
+
+58
+00:06:54,520 --> 00:07:01,840
+recorrer a biblioteca de standard, que são sages no Linux, ou que existem em todos os
+
+59
+00:07:01,840 --> 00:07:11,760
+sistemas ao voo de 60, o nosso código, fica muito mais fácilmente portável, mas faça
+
+60
+00:07:11,760 --> 00:07:19,960
+o que estamos a escrever, portanto, usar a lia, usar diretamente registros de um determinado
+
+61
+00:07:19,960 --> 00:07:27,880
+microcontrolador, que depois se usamos para outra arquitetura, para o microcontrolador,
+
+62
+00:07:27,880 --> 00:07:33,480
+mas vamos ter que andar a adaptar esse código, portanto, aqui, o uso sistema operativo
+
+63
+00:07:33,480 --> 00:07:37,920
+oferece algum nível da bestração muito superior do que, tipo, que a menos está disponível
+
+64
+00:07:37,920 --> 00:07:43,200
+nos positivos mais simples, que, portanto, que por ter mais simples, por que estão
+
+65
+00:07:43,200 --> 00:07:49,120
+a edificiência, também, que evitam essas abrosagens.
+
+66
+00:07:49,120 --> 00:07:59,360
+A nível das bibliotecas, portanto, isso é um aspecto que, também, depois, pode ser
+
+67
+00:07:59,360 --> 00:08:08,520
+optimizado, a nível dos temas indivíduos, a maior parte das distribuições de Linux
+
+68
+00:08:08,520 --> 00:08:17,400
+do uso geral, usamos o, a biblioteca, também, com a alimentação da biblioteca C,
+
+69
+00:08:17,400 --> 00:08:25,440
+tanto assumindo que estamos a fazer desenvolvimento da aplicações em linguagem C, e mesmo reparem
+
+70
+00:08:25,440 --> 00:08:30,480
+que mesmo quando usamos outra linguagem, muitas vezes, o por exemplo, estou pensando
+
+71
+00:08:30,480 --> 00:08:39,120
+no caso de um interpretador de Python, ou de PHP, ou seja, o logo for, os interpretadores
+
+72
+00:08:39,120 --> 00:08:44,600
+estão inscritos em C, portanto, para podermos correr o interpretador, temos até lá
+
+73
+00:08:44,600 --> 00:08:54,440
+na mesma biblioteca de C, e, portanto, uma vez mais, quando estamos a falar das sistemas
+
+74
+00:08:54,440 --> 00:09:03,080
+indivíduos, muitas vezes, é possível usar implementações mais simples, da biblioteca
+
+75
+00:09:03,080 --> 00:09:14,120
+se tender do C, que omitem funções não metusadas, ou parâmetros não muito usados, ou
+
+76
+00:09:14,120 --> 00:09:24,080
+que, portanto, são optimizadas para implementações mais cócupo menos passo, ou eventualmente
+
+77
+00:09:24,080 --> 00:09:35,500
+que o contrário que até possa ser apostar no desempenho, e tanto fogem de implementação
+
+78
+00:09:35,500 --> 00:09:43,000
+de típica, e nos permite escolher um tanto algo que, portanto, em última instância,
+
+79
+00:09:43,000 --> 00:09:50,120
+poderá exigir menos recursos do sistema, ou oferecer um desempenho mais adequado para
+
+80
+00:09:50,120 --> 00:09:57,680
+a aplicação investência, e, geral, o principal objetivo é diminuir os casitos de entermos
+
+81
+00:09:57,680 --> 00:10:19,840
+de utilização de memória, em termos de constituição dos temas Linux,
+
+82
+00:10:19,840 --> 00:10:30,400
+tanto, os componentes típicos são aqui, portanto, tem que, vai haver sempre um fecheiro,
+
+83
+00:10:30,400 --> 00:10:40,400
+que tem o kernel, portanto, tem o código do núcleo sistema operativo, pode ter, conforme
+
+84
+00:10:40,400 --> 00:10:45,080
+a distribuição, pode estar com um diferente fenômeno, mas, quem tiver curiosidade,
+
+85
+00:10:45,080 --> 00:10:50,300
+para o típicamente não, na distribuição, como ao luto, ou este ferro, estão na
+
+86
+00:10:50,300 --> 00:10:58,040
+pasta barra-bud, e, portanto, é um fecheiro que tem que ser carregado para a memória
+
+87
+00:10:58,040 --> 00:11:03,680
+quando o sistema é ligado, alguma forma. Reparem que estamos a falar, típicamente,
+
+88
+00:11:03,680 --> 00:11:11,200
+nesta tipo de sistemas, típicamente, o código do sistema operativo, inúmedamente,
+
+89
+00:11:11,200 --> 00:11:18,360
+o kernel Linux está num dispositivo de armazenamento, e vai ter que ser carregado para a memória
+
+90
+00:11:18,360 --> 00:11:23,020
+principal, um autorinco sistema ligado, não está já lá residente numa fleche, como acontece
+
+91
+00:11:23,020 --> 00:11:31,560
+nos programas dos microcontrolladores, até da sua dimensão, e, o facto de poder, queríamos
+
+92
+00:11:31,560 --> 00:11:41,280
+ter alguma flexibilidade na sua maior flexibilidade, na sua atualização, tanto, fica num dispositivo
+
+93
+00:11:41,280 --> 00:11:45,880
+de armazenamento, e tem que ser carregado na altura do arra-bud. Isso é feito pelo bootloader.
+
+94
+00:11:45,880 --> 00:11:58,320
+Ou seja, o bootloader pode fazer parte, típicamente, é um programa auxiliar que é executado
+
+95
+00:11:58,320 --> 00:12:03,840
+pelo notura do arra-bud. Isto aqui é algo depois que é muito dependente do típico sistema,
+
+96
+00:12:03,840 --> 00:12:11,240
+forma como isso funciona. O caso que olhar mais familiar para todos será os computadores
+
+97
+00:12:11,240 --> 00:12:18,120
+pessoais, em que, tantos já existem um software que tem a capacidade nos computadores,
+
+98
+00:12:18,120 --> 00:12:27,020
+nos últimos 20 anos, digamos assim, as que já posso falar em 20 anos, já são os
+
+99
+00:12:27,020 --> 00:12:32,140
+sistemas UF, e nos computadores mais antigos, eram as vias, mas a mesma sistema de vias
+
+100
+00:12:32,140 --> 00:12:38,700
+tradicional ainda é usado em muitas máquinas virtuais, em ambientes de máquina virtual,
+
+101
+00:12:38,700 --> 00:12:44,960
+porque sep, perfeitamente, para algumas tipos de sistemas. Mas, pronto, basicamente,
+
+102
+00:12:44,960 --> 00:12:55,060
+esses sistemas UF, o que são os firmos, o computador, basicamente, é um programa, este
+
+103
+00:12:55,060 --> 00:13:01,140
+sem kick, já está armazenado, diretamente, na memória, na memória principal do computador,
+
+104
+00:13:01,140 --> 00:13:08,620
+numa fosh, e que, na altura do arranque, portanto, quando se ligue o computador, eles
+
+105
+00:13:08,620 --> 00:13:15,540
+entram logo em funcionamento, para que, portanto, aqui no caso do, estou falando caso PC,
+
+106
+00:13:15,540 --> 00:13:21,260
+mas se tiver reflado um Raspberry Pi, também é uma coisa, eu tenho um code que quando se ligue
+
+107
+00:13:21,260 --> 00:13:26,060
+o sistema, ele entra logo em execução, independentemente do resto de software que nós temos
+
+108
+00:13:26,060 --> 00:13:33,380
+instalado. Aliás, até os próprios, os próprios AVR que se têm, o HTML, também tem
+
+109
+00:13:33,380 --> 00:13:38,740
+um bootloader, tem lá uma parte da memória, que tem um mini programa que está optimizado
+
+110
+00:13:38,740 --> 00:13:46,580
+para permitir o carregamento dos programes, portanto, a facilidade com o que nós carregamos
+
+111
+00:13:46,580 --> 00:13:56,380
+o programa para o RAM, existe porque o micro já tem lá um programa auxiliar que permite
+
+112
+00:13:56,380 --> 00:14:04,380
+agirir o carregamento dos programes para a memória flash, pronto, ou seja, com maior
+
+113
+00:14:04,380 --> 00:14:11,500
+ou menor nível complexidade, tem que haver logo ali, portanto, um software que facilite
+
+114
+00:14:11,500 --> 00:14:16,900
+que é executado logo no RAM, que vai facilitar o carregamento dos sistemas para ter
+
+115
+00:14:16,900 --> 00:14:21,300
+o principal, portanto, que são fechers mais pesados e que não faria sentido estar em
+
+116
+00:14:21,300 --> 00:14:28,700
+logo o residenso, mais pesados e mais variáveis no tempo, e que, portanto, daí, esta diferença
+
+117
+00:14:28,700 --> 00:14:35,140
+entre firmware e software. O firmware é, é, dizer que isso era uma coisa mais firme, não
+
+118
+00:14:35,140 --> 00:14:46,580
+é o hardware, peça-se desculpa aqui ao nosso colega que fala nativamente em inglês,
+
+119
+00:14:46,580 --> 00:14:53,780
+ao lance, mas, pronto, a ideia é isso que estou atrás e corretamente, mesmo que forma
+
+120
+00:14:53,780 --> 00:15:05,020
+simplifica. Tanto como estava a dizer, tanto, a ideia que este firmware é um code
+
+121
+00:15:05,020 --> 00:15:09,820
+que, raramente, será alterado, embora tenhamos noção que, por vezes, os computadores
+
+122
+00:15:09,820 --> 00:15:14,860
+têm atualizações de firmware para poder suportar novos modos funcionamento ou novos
+
+123
+00:15:14,860 --> 00:15:24,100
+funcionalidades, mas são de acontecem espassadamente, e este firmware vai permitir carregar
+
+124
+00:15:24,100 --> 00:15:30,780
+o núcleo de sistema operativo. Reparem que estamos a falar de Linux, mas foram
+
+125
+00:15:30,780 --> 00:15:34,840
+o sistema Windows, o princípio de funcionamento é o mesmo, o Windows também tem um
+
+126
+00:15:34,840 --> 00:15:39,900
+âmfeo cheiro do, portanto, corresponde ao seu kernel, que também tem que ser carregado
+
+127
+00:15:39,900 --> 00:15:49,800
+para memória na altura da renda. Agora, este reparem que estou aqui afopado
+
+128
+00:15:49,800 --> 00:15:57,140
+as coisas diferentes, o firmware da, permite carregar alguma coisa para memória, e
+
+129
+00:15:57,140 --> 00:16:03,020
+esta qualquer coisa, muitas vezes, ou melhor, no limite até pode ser carregado diretamente
+
+130
+00:16:03,020 --> 00:16:13,700
+o próprio kernel, ok? Númeramente a norma o F, ou melhor o Linux tem suporte para poder
+
+131
+00:16:13,700 --> 00:16:20,300
+ser configurado para permitir o carregamento automático por sistemas que tenham firmoeir
+
+132
+00:16:20,300 --> 00:16:29,940
+do tipo UF, e sem qualquer software de bootloader, mas o mais típico para, até para
+
+133
+00:16:29,940 --> 00:16:36,420
+fornecer diferentes opções da renda, é haver, então, um programa adicional que assim
+
+134
+00:16:36,420 --> 00:16:43,900
+é que é carregado, e que, por sobre este, tem a capacidade de carregar o Linux, passando
+
+135
+00:16:43,900 --> 00:16:50,220
+até diferentes parâmetros, conforme o tipo de renda, por exemplo, é possível ter
+
+136
+00:16:50,220 --> 00:16:56,300
+um modo de renda normal, e um modo de renda que pode ir conosco, enquanto é possível
+
+137
+00:16:56,300 --> 00:17:04,420
+passar, pelo exemplo, desactivar certas ou certas funcionalidades para ter um renda
+
+138
+00:17:04,420 --> 00:17:12,340
+mais seguro, ou que não vale ativar funcionalidades de sistema que possam aumentar a probabilidade
+
+139
+00:17:12,340 --> 00:17:14,340
+de instabilidade.
+
+140
+00:17:14,340 --> 00:17:22,300
+Pronto, esta parte de bootloader, por exemplo, o Raspberry Pi, que, depois vamos usar nas
+
+141
+00:17:22,300 --> 00:17:29,700
+aulas práticas, tem o seu próprio bootloader, portanto, pelo menos no 13 e no 4, o sistema
+
+142
+00:17:29,700 --> 00:17:38,440
+da renda até está imbebido no seu sistema do GPU, que, por sua vez, carrega um
+
+143
+00:17:38,440 --> 00:17:42,920
+aulas cheirinhos que estão na partidição da renda do dispositivo de cada armazenamento,
+
+144
+00:17:42,920 --> 00:17:52,360
+seja, o cartão SD, seja, o disco USB, que também tem suporte para rende por USB, e, depois,
+
+145
+00:17:52,360 --> 00:17:59,440
+esse bootloader, nesse bootloader, que podemos, portanto, tem um fechero de configuração
+
+146
+00:17:59,440 --> 00:18:04,680
+em que, depois, podemos até decidir diferentes parâmetros da renda.
+
+147
+00:18:04,680 --> 00:18:17,440
+Para bem, durante outros os 6 que faz parte de um organismo, num sistema típico de
+
+148
+00:18:17,440 --> 00:18:27,720
+Linux, embora seja opcional, são os cheiros dos discos de RAM, portanto, este initer
+
+149
+00:18:27,720 --> 00:18:34,640
+é o initer RAM FES, tanto, isto é a abreviatura do initial RAM disk, e este também é
+
+150
+00:18:34,640 --> 00:18:41,840
+algo do general RAM file system, isto para eu não tenho ali um slide, onde, um slide
+
+151
+00:18:41,840 --> 00:18:46,400
+é um de ilustro, a forma como cada um deus, é criada, e, por isso, que estão criados
+
+152
+00:18:46,400 --> 00:18:52,240
+manejos diferentes, e o sistema de fechero que é usado em cada um deus, também é diferente,
+
+153
+00:18:52,240 --> 00:18:58,360
+e este é o sistema que é mais moderno e que é mais usado atualmente, isto basicamente
+
+154
+00:18:58,360 --> 00:19:08,640
+é um fechero que é carregado, portanto, que simula o disco, ou seja, o seu conteúdo
+
+155
+00:19:08,640 --> 00:19:19,680
+tem o mesmo formato, que, tanto organização que é feito nas partições dos positivos
+
+156
+00:19:19,680 --> 00:19:26,880
+de um disco rígido, ou de um SSD, tanto, está formatado, da mesma maneira, e, na altura
+
+157
+00:19:26,880 --> 00:19:33,120
+do arranque, o panto os botlodas têm, ou temos a possibilidade de indicar algum botlodas,
+
+158
+00:19:33,120 --> 00:19:45,240
+se queremos usar essa initer RD, ou o initer RAM FES, ou não, e este basicamente, estes
+
+159
+00:19:45,240 --> 00:19:54,440
+físicos de RAM permitem fazer um escutar, já alguns programas, no arranque, sem ter o
+
+160
+00:19:54,440 --> 00:20:00,560
+sistema operativo ainda completamente funcional, e são, típicamente, os dados para carregar
+
+161
+00:20:00,560 --> 00:20:08,360
+modulos para o sistema operativo que conforme o sistema que se está usado, ou seja, podemos
+
+162
+00:20:08,360 --> 00:20:16,640
+ter um sistema, um núcleo, apenas com as funcionalidades mínimas, e depois de acordo,
+
+163
+00:20:16,640 --> 00:20:26,600
+como os diferentes sistemas que, mais específicos, que vamos utilizar, criar o initer RAM FES,
+
+164
+00:20:26,600 --> 00:20:31,800
+a medida, ou com a capacidade de tatar qual é o sistema que está a ser usado, e em função
+
+165
+00:20:31,800 --> 00:20:37,680
+disso carregar para memória apenas os módulos do sistema operativo que são necessários
+
+166
+00:20:37,680 --> 00:20:46,040
+para que o sistema torfalar até, por exemplo, os sistemas de fecheiros, os módulos
+
+167
+00:20:46,040 --> 00:20:54,240
+de hardware básicos, que são necessários, por exemplo, os drivers para reconhecer o próprio
+
+168
+00:20:54,240 --> 00:21:00,360
+dispositivo do armazenamento principal, uma coisa tão simples como essa, portanto, existem
+
+169
+00:21:00,360 --> 00:21:06,080
+várias interfaces para dispositivos do armazenamento, e podemos querer só carregar aquilo para o
+
+170
+00:21:06,080 --> 00:21:18,320
+sistema específico para não ter os outros módulos, ou seja, portanto, as esses fecheiros
+
+171
+00:21:18,320 --> 00:21:25,080
+auxiliares estão neste RAM FES, que são os sistemas que têm um sistema de inscrivido
+
+172
+00:21:25,080 --> 00:21:30,320
+toais, que têm um sistema de fecheiros muito simplificado, que é esse portado pelo Linux,
+
+173
+00:21:30,320 --> 00:21:35,880
+Nativo, portanto, quer facilmente se portar pelo Linux sem ocupar metamemore, e depois, com
+
+174
+00:21:35,880 --> 00:21:40,560
+base nisso, carregam como podem carregar módulos mais pesados, caso seja necessários para
+
+175
+00:21:40,560 --> 00:21:44,640
+completar o arranque do sistema.
+
+176
+00:21:44,640 --> 00:21:53,560
+Finalmente, temos o sistema de fecheiros principal, que nos sistemas Linux, portanto, é identificado
+
+177
+00:21:53,560 --> 00:22:08,040
+em termos portanto, organização da hova-separação dos direitos pela barra, e portanto, e que
+
+178
+00:22:08,040 --> 00:22:13,560
+tem que existir em todos os sistemas Linux, tem que existir esse sistema de fecheiros,
+
+179
+00:22:13,560 --> 00:22:22,480
+e que estará associado a um dispositivo do armazenamento ou até, não há alguns casos, mas
+
+180
+00:22:22,480 --> 00:22:25,960
+específico, até, na verdade, nem precisa ser um dispositivo do armazenamento, posso
+
+181
+00:22:25,960 --> 00:22:32,880
+ser um desco montado através, um sistema de fecheiros montado através da rede, tipo,
+
+182
+00:22:32,880 --> 00:22:36,400
+uma coisa tipo, sim de cliente, mas pronto isso.
+

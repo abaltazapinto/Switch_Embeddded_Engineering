@@ -1,0 +1,183 @@
+start	end	text
+0	5820	como eu terei a utilizar uma versão, ou seja, adentro da mesma versão do Fezora,
+5820	15880	a versão do Linux, o release, foi, portanto foi, foi sendo alterado, portanto conforme os
+15880	17760	apadentes que foram sendo fornecidos.
+17760	30140	Em ambientes, em ambientes, quando estamos a falar de Linux para sistemas em devidos,
+30140	37220	tipicamente, não usamos estes distribuições que são de uso mais geral, são até a
+37220	45880	utilização de 10 top, ou temizados de utilização de 10 top, com todo o pessoal, ou
+45880	49300	ou para servidores.
+49300	57320	Normalmente queremos um sistema Linux, ou seja, uma distribuição Linux que tenha apenas
+57320	64160	o conjunto mínimo de software, de forma que os passos, os recazidos, em termos de
+64160	70440	armazenamento, ou seja, o menor possível, bom sistema, bom sistema em ambido, não faz
+70440	79220	sentir isso, instalar num Linux com um bocado elevado ao absurdo, mas por ser tão
+79220	83960	nove, mas não faz sentir isso, ao instalar as páginas mesmo, que, parecendo que não,
+83960	90120	aquilo tudo sumado, o fecheiro de texto, principalmente se não for em comprimidos, acaba por ocupar
+90120	94720	um espaço substancial, e depois, com um conjunto, portanto estamos a falar até de
+94720	102520	um sistema, que, depois, não vai ter interação, como utilizador humana, não ser, numa situação
+102520	107880	de digna-nos, também não faz sentido lá, não faz sentido ter lá todos os utilitários
+107880	117600	que encontramos no sistema Linux típico, daí haver tantas deformas de criar distribuições
+117600	126080	optimizadas para, as sistemas de digna-nos apenas com o que precisamos, portanto, há
+126080	135280	várias maneiras de fazer isso, há as maneiras para quem quer, portanto, fazer tudo, ter
+135280	140720	algum controle total sobre o processo, o chamado procedimento do Linux from scratch, portanto
+140720	150600	que, manualmente, irmos aos receitos dos vários, portanto, as principais peças software
+150600	159040	descarregaram o código fonte, e, com pilar, sempre que para isso, preguem-me, temos que
+159040	164360	ter já o atuo de cheio, ou seja, o compilador, as bibliotecas para ver o sistema álvico que
+164360	171360	desejamos usar para o hardware que desejamos usar, e, portanto, isso possa ser feito manualmente,
+171360	177040	mas é uma pressão matadiosa, hoje em dia, temos fragmentas, hoje em dia, mais uma vez,
+177040	182560	portanto, já existem, já com um bom nível de maturidade, com vários anos de existência,
+182560	191080	temos fragmentas como o build root e o ecto que automatizam essa criação de distribuições
+191080	196400	dedicadas ou optimizadas para uma determinada função, em que tem mesmo, permite-nos escolher
+196400	201320	apenas o software que precisamos para a aplicação em vista.
+201320	216920	Eu já estava, portanto, já agora só, para completar aqui, e, ver se não me esquece,
+216920	222680	isto era o que eu estava a mencionar há pouco, já fui avançando este aspecto, só
+222680	238320	aqui só um detalhe que acho que, tanto, ou seja, quando, o Linux tem um conjunto de funcionalidades,
+238320	245920	que depois as bibliotecas do sistema, ou até, eventualmente, quem tiver interesse pode fazer
+245920	252320	chamadas diretamente, e essas funcionalidades do kernel, e, portanto, são executadas depois
+252320	260120	de ambiente do kernel, e mesmo que tenham que configurar registres especiais de um micropossador,
+260120	267960	e, portanto, isso é feito pelo código de quem criou o sistema operativo, e, portanto,
+267960	273160	em princípio, será feito em uma forma segura, por outro lado, os processos do polizador
+273160	279920	não vão ter acesso, portanto, piquemente, não terão acesso, ou este, ou seja, este tipo
+279920	286120	de programação que nós fazemos no micropontoolador, não se sistema operativo como o Linux, só
+286120	290360	pode ser feito ao nível do kernel, e, por isso, é que nós vamos estudar uma coisa que
+290360	296600	sepamos os modelos do kernel, que é o princípio da Zilar, tanto, é o mecanismo usado
+296600	302280	para implementar os chamados de device drivers, em sistemas Linux, portanto, que depois
+302280	308720	permitem, portanto, implementar o software necessary para um determinado expolitivo funcionário.
+308720	313440	O Linux, que se tem, portanto, tem uma vantagem aqui, uma vez que já existava sempre
+313440	320000	tempo, e tem uma comunidade de todos os alôs muito alargadas, já tem, portanto, e
+320000	329640	vai-se da raiva, para centenas positivos, ou até milhares, expolitivos, portanto, muitas
+329640	335360	vezes, mesmo, portanto, com dispositivos de novos, é uma questão de facilitar, e já
+335360	340960	desculpa, portanto, código já existente, ou simplesmente utilizar código já existente,
+340960	345560	que é genérico, e não temos que estar a fazer tudo a partir do zero.
+345560	362160	O nível, portanto, há pouco que estava a mencionar, é a questão das bibliotecas, mas
+362160	370080	uma aqui, aquilo estou a tentar ilustrar, é questão de um aspecto também importante, quando
+370080	377520	usamos os sistemas operativos, como o Linux é o facto de, portanto, ao desenvolvermos
+377520	385160	código para esses temas, ficamos com a garantia que esse código, tanto o código, o nível
+385160	394040	da aplicação, o nível do utilizador, que corre no espaço polisador, mas como está
+394040	400320	ficamos com a garantia que esse código, depois, vai ser soportado em qualquer sistema,
+400320	406440	que, no qual o Linux possa ser utilizado, a menos obviamente, de ser necessário, novamente,
+406440	414520	recompilar o software, para a arquitetura de portador utilizado, mas o nosso código, apenas
+414520	421840	recorrer a biblioteca de standard, que são sages no Linux, ou que existem em todos os
+421840	431760	sistemas ao voo de 60, o nosso código, fica muito mais fácilmente portável, mas faça
+431760	439960	o que estamos a escrever, portanto, usar a lia, usar diretamente registros de um determinado
+439960	447880	microcontrolador, que depois se usamos para outra arquitetura, para o microcontrolador,
+447880	453480	mas vamos ter que andar a adaptar esse código, portanto, aqui, o uso sistema operativo
+453480	457920	oferece algum nível da bestração muito superior do que, tipo, que a menos está disponível
+457920	463200	nos positivos mais simples, que, portanto, que por ter mais simples, por que estão
+463200	469120	a edificiência, também, que evitam essas abrosagens.
+469120	479360	A nível das bibliotecas, portanto, isso é um aspecto que, também, depois, pode ser
+479360	488520	optimizado, a nível dos temas indivíduos, a maior parte das distribuições de Linux
+488520	497400	do uso geral, usamos o, a biblioteca, também, com a alimentação da biblioteca C,
+497400	505440	tanto assumindo que estamos a fazer desenvolvimento da aplicações em linguagem C, e mesmo reparem
+505440	510480	que mesmo quando usamos outra linguagem, muitas vezes, o por exemplo, estou pensando
+510480	519120	no caso de um interpretador de Python, ou de PHP, ou seja, o logo for, os interpretadores
+519120	524600	estão inscritos em C, portanto, para podermos correr o interpretador, temos até lá
+524600	534440	na mesma biblioteca de C, e, portanto, uma vez mais, quando estamos a falar das sistemas
+534440	543080	indivíduos, muitas vezes, é possível usar implementações mais simples, da biblioteca
+543080	554120	se tender do C, que omitem funções não metusadas, ou parâmetros não muito usados, ou
+554120	564080	que, portanto, são optimizadas para implementações mais cócupo menos passo, ou eventualmente
+564080	575500	que o contrário que até possa ser apostar no desempenho, e tanto fogem de implementação
+575500	583000	de típica, e nos permite escolher um tanto algo que, portanto, em última instância,
+583000	590120	poderá exigir menos recursos do sistema, ou oferecer um desempenho mais adequado para
+590120	597680	a aplicação investência, e, geral, o principal objetivo é diminuir os casitos de entermos
+597680	619840	de utilização de memória, em termos de constituição dos temas Linux,
+619840	630400	tanto, os componentes típicos são aqui, portanto, tem que, vai haver sempre um fecheiro,
+630400	640400	que tem o kernel, portanto, tem o código do núcleo sistema operativo, pode ter, conforme
+640400	645080	a distribuição, pode estar com um diferente fenômeno, mas, quem tiver curiosidade,
+645080	650300	para o típicamente não, na distribuição, como ao luto, ou este ferro, estão na
+650300	658040	pasta barra-bud, e, portanto, é um fecheiro que tem que ser carregado para a memória
+658040	663680	quando o sistema é ligado, alguma forma. Reparem que estamos a falar, típicamente,
+663680	671200	nesta tipo de sistemas, típicamente, o código do sistema operativo, inúmedamente,
+671200	678360	o kernel Linux está num dispositivo de armazenamento, e vai ter que ser carregado para a memória
+678360	683020	principal, um autorinco sistema ligado, não está já lá residente numa fleche, como acontece
+683020	691560	nos programas dos microcontrolladores, até da sua dimensão, e, o facto de poder, queríamos
+691560	701280	ter alguma flexibilidade na sua maior flexibilidade, na sua atualização, tanto, fica num dispositivo
+701280	705880	de armazenamento, e tem que ser carregado na altura do arra-bud. Isso é feito pelo bootloader.
+705880	718320	Ou seja, o bootloader pode fazer parte, típicamente, é um programa auxiliar que é executado
+718320	723840	pelo notura do arra-bud. Isto aqui é algo depois que é muito dependente do típico sistema,
+723840	731240	forma como isso funciona. O caso que olhar mais familiar para todos será os computadores
+731240	738120	pessoais, em que, tantos já existem um software que tem a capacidade nos computadores,
+738120	747020	nos últimos 20 anos, digamos assim, as que já posso falar em 20 anos, já são os
+747020	752140	sistemas UF, e nos computadores mais antigos, eram as vias, mas a mesma sistema de vias
+752140	758700	tradicional ainda é usado em muitas máquinas virtuais, em ambientes de máquina virtual,
+758700	764960	porque sep, perfeitamente, para algumas tipos de sistemas. Mas, pronto, basicamente,
+764960	775060	esses sistemas UF, o que são os firmos, o computador, basicamente, é um programa, este
+775060	781140	sem kick, já está armazenado, diretamente, na memória, na memória principal do computador,
+781140	788620	numa fosh, e que, na altura do arranque, portanto, quando se ligue o computador, eles
+788620	795540	entram logo em funcionamento, para que, portanto, aqui no caso do, estou falando caso PC,
+795540	801260	mas se tiver reflado um Raspberry Pi, também é uma coisa, eu tenho um code que quando se ligue
+801260	806060	o sistema, ele entra logo em execução, independentemente do resto de software que nós temos
+806060	813380	instalado. Aliás, até os próprios, os próprios AVR que se têm, o HTML, também tem
+813380	818740	um bootloader, tem lá uma parte da memória, que tem um mini programa que está optimizado
+818740	826580	para permitir o carregamento dos programes, portanto, a facilidade com o que nós carregamos
+826580	836380	o programa para o RAM, existe porque o micro já tem lá um programa auxiliar que permite
+836380	844380	agirir o carregamento dos programes para a memória flash, pronto, ou seja, com maior
+844380	851500	ou menor nível complexidade, tem que haver logo ali, portanto, um software que facilite
+851500	856900	que é executado logo no RAM, que vai facilitar o carregamento dos sistemas para ter
+856900	861300	o principal, portanto, que são fechers mais pesados e que não faria sentido estar em
+861300	868700	logo o residenso, mais pesados e mais variáveis no tempo, e que, portanto, daí, esta diferença
+868700	875140	entre firmware e software. O firmware é, é, dizer que isso era uma coisa mais firme, não
+875140	886580	é o hardware, peça-se desculpa aqui ao nosso colega que fala nativamente em inglês,
+886580	893780	ao lance, mas, pronto, a ideia é isso que estou atrás e corretamente, mesmo que forma
+893780	905020	simplifica. Tanto como estava a dizer, tanto, a ideia que este firmware é um code
+905020	909820	que, raramente, será alterado, embora tenhamos noção que, por vezes, os computadores
+909820	914860	têm atualizações de firmware para poder suportar novos modos funcionamento ou novos
+914860	924100	funcionalidades, mas são de acontecem espassadamente, e este firmware vai permitir carregar
+924100	930780	o núcleo de sistema operativo. Reparem que estamos a falar de Linux, mas foram
+930780	934840	o sistema Windows, o princípio de funcionamento é o mesmo, o Windows também tem um
+934840	939900	âmfeo cheiro do, portanto, corresponde ao seu kernel, que também tem que ser carregado
+939900	949800	para memória na altura da renda. Agora, este reparem que estou aqui afopado
+949800	957140	as coisas diferentes, o firmware da, permite carregar alguma coisa para memória, e
+957140	963020	esta qualquer coisa, muitas vezes, ou melhor, no limite até pode ser carregado diretamente
+963020	973700	o próprio kernel, ok? Númeramente a norma o F, ou melhor o Linux tem suporte para poder
+973700	980300	ser configurado para permitir o carregamento automático por sistemas que tenham firmoeir
+980300	989940	do tipo UF, e sem qualquer software de bootloader, mas o mais típico para, até para
+989940	996420	fornecer diferentes opções da renda, é haver, então, um programa adicional que assim
+996420	1003900	é que é carregado, e que, por sobre este, tem a capacidade de carregar o Linux, passando
+1003900	1010220	até diferentes parâmetros, conforme o tipo de renda, por exemplo, é possível ter
+1010220	1016300	um modo de renda normal, e um modo de renda que pode ir conosco, enquanto é possível
+1016300	1024420	passar, pelo exemplo, desactivar certas ou certas funcionalidades para ter um renda
+1024420	1032340	mais seguro, ou que não vale ativar funcionalidades de sistema que possam aumentar a probabilidade
+1032340	1034340	de instabilidade.
+1034340	1042300	Pronto, esta parte de bootloader, por exemplo, o Raspberry Pi, que, depois vamos usar nas
+1042300	1049700	aulas práticas, tem o seu próprio bootloader, portanto, pelo menos no 13 e no 4, o sistema
+1049700	1058440	da renda até está imbebido no seu sistema do GPU, que, por sua vez, carrega um
+1058440	1062920	aulas cheirinhos que estão na partidição da renda do dispositivo de cada armazenamento,
+1062920	1072360	seja, o cartão SD, seja, o disco USB, que também tem suporte para rende por USB, e, depois,
+1072360	1079440	esse bootloader, nesse bootloader, que podemos, portanto, tem um fechero de configuração
+1079440	1084680	em que, depois, podemos até decidir diferentes parâmetros da renda.
+1084680	1097440	Para bem, durante outros os 6 que faz parte de um organismo, num sistema típico de
+1097440	1107720	Linux, embora seja opcional, são os cheiros dos discos de RAM, portanto, este initer
+1107720	1114640	é o initer RAM FES, tanto, isto é a abreviatura do initial RAM disk, e este também é
+1114640	1121840	algo do general RAM file system, isto para eu não tenho ali um slide, onde, um slide
+1121840	1126400	é um de ilustro, a forma como cada um deus, é criada, e, por isso, que estão criados
+1126400	1132240	manejos diferentes, e o sistema de fechero que é usado em cada um deus, também é diferente,
+1132240	1138360	e este é o sistema que é mais moderno e que é mais usado atualmente, isto basicamente
+1138360	1148640	é um fechero que é carregado, portanto, que simula o disco, ou seja, o seu conteúdo
+1148640	1159680	tem o mesmo formato, que, tanto organização que é feito nas partições dos positivos
+1159680	1166880	de um disco rígido, ou de um SSD, tanto, está formatado, da mesma maneira, e, na altura
+1166880	1173120	do arranque, o panto os botlodas têm, ou temos a possibilidade de indicar algum botlodas,
+1173120	1185240	se queremos usar essa initer RD, ou o initer RAM FES, ou não, e este basicamente, estes
+1185240	1194440	físicos de RAM permitem fazer um escutar, já alguns programas, no arranque, sem ter o
+1194440	1200560	sistema operativo ainda completamente funcional, e são, típicamente, os dados para carregar
+1200560	1208360	modulos para o sistema operativo que conforme o sistema que se está usado, ou seja, podemos
+1208360	1216640	ter um sistema, um núcleo, apenas com as funcionalidades mínimas, e depois de acordo,
+1216640	1226600	como os diferentes sistemas que, mais específicos, que vamos utilizar, criar o initer RAM FES,
+1226600	1231800	a medida, ou com a capacidade de tatar qual é o sistema que está a ser usado, e em função
+1231800	1237680	disso carregar para memória apenas os módulos do sistema operativo que são necessários
+1237680	1246040	para que o sistema torfalar até, por exemplo, os sistemas de fecheiros, os módulos
+1246040	1254240	de hardware básicos, que são necessários, por exemplo, os drivers para reconhecer o próprio
+1254240	1260360	dispositivo do armazenamento principal, uma coisa tão simples como essa, portanto, existem
+1260360	1266080	várias interfaces para dispositivos do armazenamento, e podemos querer só carregar aquilo para o
+1266080	1278320	sistema específico para não ter os outros módulos, ou seja, portanto, as esses fecheiros
+1278320	1285080	auxiliares estão neste RAM FES, que são os sistemas que têm um sistema de inscrivido
+1285080	1290320	toais, que têm um sistema de fecheiros muito simplificado, que é esse portado pelo Linux,
+1290320	1295880	Nativo, portanto, quer facilmente se portar pelo Linux sem ocupar metamemore, e depois, com
+1295880	1300560	base nisso, carregam como podem carregar módulos mais pesados, caso seja necessários para
+1300560	1304640	completar o arranque do sistema.
+1304640	1313560	Finalmente, temos o sistema de fecheiros principal, que nos sistemas Linux, portanto, é identificado
+1313560	1328040	em termos portanto, organização da hova-separação dos direitos pela barra, e portanto, e que
+1328040	1333560	tem que existir em todos os sistemas Linux, tem que existir esse sistema de fecheiros,
+1333560	1342480	e que estará associado a um dispositivo do armazenamento ou até, não há alguns casos, mas
+1342480	1345960	específico, até, na verdade, nem precisa ser um dispositivo do armazenamento, posso
+1345960	1352880	ser um desco montado através, um sistema de fecheiros montado através da rede, tipo,
+1352880	1356400	uma coisa tipo, sim de cliente, mas pronto isso.
