@@ -132,3 +132,117 @@ O TCP ja nao vai tao longe , podem haver varios flavors desta interface com a pr
 ![alt text](image-30.png)
 
 Process scheduling. 
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
+num sistema que estja aberto na sabemos o que vai entrar la para dentro. 
+
+e ha tanta capacidade de processamento para coisas banais. 
+![alt text](image-34.png)
+
+muitas coisas em sistemas embebidos, de x xem ex tempo o sitema e lancado vai ,,..
+
+![alt text](image-35.png)
+
+o escalonador, entra nesta [passagem de ready para running , 
+
+quando esta interrupcao e programada periodicamente.....
+
+![alt text](image-36.png)
+
+ha 3 tiiops de escalonadores , shotrt term scheduler corre com extrema frequencia... 
+
+o medium term scheduler, aliviar a carga do processador, 
+
+long term scheduler eu escalonei para ser a noite programacao embates , controlar a carga do sistema de forma a nao sobrcarregar spo sitema. 
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+
+podemos tambem querer maximar o uqe e o numero de trablalhos, tepo de espera ... 
+
+![alt text](image-39.png)
+
+FCFC first come first serve
+
+
+![alt text](image-40.png)
+
+temos de distinguir CPU bound e 
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+![alt text](image-45.png)
+
+![alt text](image-46.png)
+
+![alt text](image-47.png)
+
+![alt text](image-48.png)
+
+![alt text](image-49.png)
+
+![alt text](image-50.png)
+
+![alt text](image-51.png)
+
+![alt text](image-52.png)
+
+![alt text](image-53.png)
+
+![alt text](image-54.png)
+
+algoritmo dos mais utiliuzado em algoritmos de tempor real , matematicamente olhando para estes tempos de execucao, 
+
+![alt text](image-55.png)
+
+
+![alt text](image-56.png)
+
+outro algoritmo usado em sitemas normais e o ROUND-robin
+
+10 - 100 ms 
+
+![alt text](image-57.png)
+
+temos aqui os processos time quantum de 20 
+
+![alt text](image-58.png)
+
+![alt text](image-59.png)
+
+overhead de comutacao de processo pode ser grande o ideal ter um time quantum extremamente pequeno. 
+
+![alt text](image-60.png)
+
+algoritmo multi nivel por filas...
+
+Posso fazer mais do que isso ,, usar politicas de escalonamento diferente
+
+![alt text](image-61.png)
+
+![alt text](image-62.png)
+
+![alt text](image-63.png)
+
+![alt text](image-64.png)
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
