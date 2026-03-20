@@ -1,0 +1,564 @@
+1
+00:00:00,000 --> 00:00:11,680
+neles, portanto, com a confirmar os pedidos para dar uma, pelo menos dar algumas dicas
+
+2
+00:00:11,680 --> 00:00:21,400
+para atacar estes exercícios do segundo conjunto de trabalhos. E pronto, e estive aqui até
+
+3
+00:00:21,400 --> 00:00:25,920
+para não estar, como mudou três vezes, a escrever, que o código em tempo real tentei
+
+4
+00:00:25,920 --> 00:00:43,440
+já deixar. Como eu estava a dizer, para não estar aqui a estar a escrever em tempo
+
+5
+00:00:43,440 --> 00:00:54,400
+real, tenho aqui já alguns bocados de código que vamos então analisar. Relativamente a
+
+6
+00:00:54,400 --> 00:00:58,640
+questão que pelo menos um de vocês colocou, não sei se foi email a pessoa, depois por
+
+7
+00:00:58,640 --> 00:01:06,120
+email, acerca do esquema de ligações. Eu sinceramente não percebi a questão. Depois
+
+8
+00:01:06,120 --> 00:01:14,080
+de olhar para os enunciados, eu ia pedir que me explicasse melhor qual era, qual é
+
+9
+00:01:14,080 --> 00:01:19,920
+a dificuldade, tanto questão em contrário ou inconsistência, porque é assim, se de
+
+10
+00:01:19,920 --> 00:01:23,880
+facto alguma inconsistência, e provavelmente nos diagramas que eu tenho também também
+
+11
+00:01:23,880 --> 00:01:30,200
+estará errado. Por isso é que eu gostava de perceber ao certo em qual dos trabalhos
+
+12
+00:01:30,200 --> 00:01:37,560
+ou das ligações é que acham que há alguma coisa que não bate certo, que o enunciado
+
+13
+00:01:37,560 --> 00:01:46,160
+até para, se for caso disso, ou deixarmos mais claro ou corrigirmos. Relativamente a
+
+14
+00:01:46,160 --> 00:01:59,960
+pessoa que enviou a questão por email. Podia explicar melhor então qual foi a dificuldade
+
+15
+00:01:59,960 --> 00:02:21,000
+que encontrou. Se tentar ver aqui quem é que foi, já não me recordo. Acho que está
+
+16
+00:02:21,000 --> 00:02:37,240
+bem, se entretanto surgir a questão podem... Eu peço desculpa, estava aqui com alguma dificuldade
+
+17
+00:02:37,240 --> 00:02:44,760
+no... Eu também não estava olhando para o chat para ver se... Sim, diga. Eu tinha tocado
+
+18
+00:02:44,760 --> 00:02:52,560
+nesse assunto na última aula. Pronto, basicamente aqui, ou seja, era só para percebermos o que
+
+19
+00:02:52,560 --> 00:03:03,360
+é que está ligado em cada porto, naquela borda de expansão. Ou seja, está a falar
+
+20
+00:03:03,360 --> 00:03:17,960
+de aqui. Este é o trabalho 1, não é? Pronto. Vocês têm aqui as ligações. Sinceramente não sei se as que vocês têm lá são exatamente
+
+21
+00:03:17,960 --> 00:03:30,360
+assim. Se todos os modelos são assim, não devem ficar uma a uma. Portanto, elas estão aqui sinalizados os portos que estão ligados a cada connetor e os connetores
+
+22
+00:03:30,360 --> 00:03:44,760
+também que acham de uma maneira, não é? Sim, aí o ponto era que algumas coisas são partilhadas aí na borda de expansão e a dúvida aqui estava a ser porque para conseguir fazer debug, não é?
+
+23
+00:03:44,760 --> 00:03:57,360
+Estávamos a tentar basicamente utilizar aí um switch que depois estava partilhado com os LEDs e coisas do género, então só se tivessem aí um... Ou seja, se tivesse aí uma...
+
+24
+00:03:57,360 --> 00:04:12,360
+Um switch partilhado com os LEDs. Sim, eu tenho ideia que era isso. Tenho ideia que eram alguns desses switches, não é? E eles estão partilhados aí com os LEDs, com esses displays de 7 segmentos que têm aí em cima e então...
+
+25
+00:04:12,360 --> 00:04:24,360
+Ok, eu acho que então... Ou seja, isto aqui não foi propriamente um problema do... Ou seja, não foi o problema do exercício, foi para fazer debug no exercício.
+
+26
+00:04:24,360 --> 00:04:49,360
+Pronto, acabamos a entrar em conflito aí com o que os IOs permitem fazer. Se nós tivéssemos, por exemplo, esse esquema, creio que a partida deve ser já representativo daí dessa borda de expansão, nós conseguíamos ter noção de porque é que não dava e pronto, e não fazer isso, não é?
+
+27
+00:04:49,360 --> 00:05:04,360
+Pronto, então posso disponibilizar isto embora. Eu não tinha ideia, eu dei uma vista de olhos a isto e não tinha ideia disto a ver aqui...
+
+28
+00:05:04,360 --> 00:05:15,360
+Eu até posso tentar dizer o que é que foi, eu vou ter aqui anotado, depois eu só quero tentar encontrar.
+
+29
+00:05:15,360 --> 00:05:19,360
+Esta numeração do 0, 1, 2...
+
+30
+00:05:19,360 --> 00:05:32,360
+Ah, basicamente acho que é porque os switches são partilhados com multiplexer, penso eu. Acho que é isso. O mesmo porto, acho eu. Acho que foi assim uma coisa qualquer.
+
+31
+00:05:32,360 --> 00:05:48,360
+Ora bem, as linhas para ativar os segmentos estão aqui neste P2, que depois vai ligar todo a um... agora de facto está aqui onde é que estão estes P0s?
+
+32
+00:05:48,360 --> 00:06:13,360
+Ora bem, estes P0s, onde é que eles vão ligar? Estes são os switches, portanto o 0, 1, 2, 3, 4, 5...
+
+33
+00:06:13,360 --> 00:06:26,360
+O 6 e 7 estão aqui, são para ativar, para fazer a multiplexagem.
+
+34
+00:06:26,360 --> 00:06:37,360
+Depois este aqui, o 1 é só LEDs, isto é só para LEDs, esta conectora é exclusiva para os LEDs, está aqui 0 a 7, tem aqui o buffer, para ativar os LEDs.
+
+35
+00:06:38,360 --> 00:06:56,360
+O 2 é dos segmentos, que também é usado exclusivamente para os segmentos e para o ponto D, não é? Para os segmentos e para o ponto.
+
+36
+00:06:56,360 --> 00:07:08,360
+Portanto, a única coisa em que realmente pode haver alguma mistura é de facto nos dois pinos, depois aqui, vamos lá ver.
+
+37
+00:07:08,360 --> 00:07:27,360
+Eu penso que o erro que estava a acontecer era, por exemplo, eu estava a tentar ler o estado do pino de input que está conectado num dos switches, ou seja, num daqueles botões da borda de expansão.
+
+38
+00:07:27,360 --> 00:07:46,360
+E isso não era possível fazer, porque nós estávamos a escrever naqueles displays de 7 segmentos, e como isso é partilhado, basicamente o estado deles estava a mudar.
+
+39
+00:07:46,360 --> 00:08:08,360
+Ou seja, nós estávamos aí exatamente nessa borda verde que está aí em cima, nós estávamos a escrever aí, na altura, estávamos a escrever o número 13 em todos eles, por exemplo, e ao mesmo tempo eu estava a tentar ler aí, por exemplo, o switch 2, ou uma coisa assim.
+
+40
+00:08:08,360 --> 00:08:16,360
+Mas para ler os switches eles estavam ligados ao D, portanto tinha que ler do porto D.
+
+41
+00:08:17,360 --> 00:08:19,360
+Tinha que ler...
+
+42
+00:08:20,360 --> 00:08:42,360
+Se seguiu as recomendações que estão aqui, o flat cable era supostar ligado aqui a este conector que está ligado ao porto Z, enquanto que os leds estão no porto A e os segmentos estão no porto Z, portanto está tudo independente.
+
+43
+00:08:43,360 --> 00:08:54,360
+A única coisa é que, de facto, há aqui, portanto, tal como eu estava a dizer há pouco, se não estou a enganhar, há aqui dois pinos que são usados para selecionar o display.
+
+44
+00:08:55,360 --> 00:09:07,360
+Portanto, o que são estes que estão aqui, que vem junto, de facto, o P07, também no mesmo conector dos switches.
+
+45
+00:09:08,360 --> 00:09:16,360
+Portanto, está aqui, repare, P0, 0 a P05, são os interruptores que estão aqui.
+
+46
+00:09:17,360 --> 00:09:26,360
+Depois, o 6 e o 7 estão, são para selecionar o display que vai ser ativado.
+
+47
+00:09:27,360 --> 00:09:31,360
+E portanto, de facto, quando...
+
+48
+00:09:32,360 --> 00:09:43,360
+Desculpem lá que eu sempre que tenho que selecionar aqui isto, que vai ali à janelinha de controle.
+
+49
+00:09:44,360 --> 00:09:46,360
+Tua.
+
+50
+00:09:55,360 --> 00:10:07,360
+Ou seja, os dois bits mais significativos, ou seja, o 7 do porto Z, de facto, deveriam ser os que vocês estavam a usar para selecionar o display, não era isso?
+
+51
+00:10:08,360 --> 00:10:16,360
+Penso que sim, deve ter sido assim. Eu agora não consigo dizer em concreto qual é que estava a ser o problema.
+
+52
+00:10:17,360 --> 00:10:24,360
+Mas até já agora eu gostaria de colocar outra questão, que é, toda esta dúvida surgiu, porquê?
+
+53
+00:10:24,360 --> 00:10:41,360
+Porquê? Porque estávamos a tentar resolver o exercício e no meio disso, como nós estávamos com alguma dificuldade para fazer debug, nós resolvemos, ou seja, colocar aí uma...
+
+54
+00:10:42,360 --> 00:10:50,360
+Ou seja, tentar ler um pino ou comutar uma saída qualquer, só para garantir que o que estávamos a fazer estava a chegar àquele ponto.
+
+55
+00:10:50,360 --> 00:11:10,360
+A minha questão é, neste microcontrolador, por exemplo, quando nós utilizamos, por exemplo, um microcontrolador de um STM32 ou uma coisa qualquer do género, nós colocamos aquilo em debug, colocamos um breakpoint e nós conseguimos perceber qual é o valor das variáveis naquele momento da execução.
+
+56
+00:11:12,360 --> 00:11:13,360
+Certo.
+
+57
+00:11:14,360 --> 00:11:17,360
+Neste microcontrolador é possível fazer alguma coisa semelhante?
+
+58
+00:11:17,360 --> 00:11:27,360
+Por exemplo, a minha questão começou do tipo, por exemplo, como é que eu sei que o meu input está a ser leído corretamente?
+
+59
+00:11:28,360 --> 00:11:36,360
+Por exemplo, neste caso, se ele fosse leído eu poderia dar, por exemplo, dar toggle a um output e ia conseguir pelo menos descobrir se ele chegou àquela parte do código.
+
+60
+00:11:36,360 --> 00:11:54,360
+Mas, por exemplo, isto agora, por exemplo, com o avançar aqui dos conteúdos, por exemplo, no caso de um ADC, por exemplo, ele vai ter a ler vários valores, por exemplo, como é que eu consigo perceber que valor está a assumir aquela variável?
+
+61
+00:11:55,360 --> 00:12:06,360
+Pronto. Isso é uma dúvida só porque depois com a complexidade dos exercícios pode ficar difícil de nós conseguirmos, ou seja, fazer debug ao programa e coisas do género.
+
+62
+00:12:07,360 --> 00:12:18,360
+Respondendo à sua questão, estas bordas penso que não tem possibilidade de ligação para o sistema debug.
+
+63
+00:12:19,360 --> 00:12:32,360
+Mesmo os arduinos que estive a falar na semana passada, só os mais recentes é que eles adicionaram essa possibilidade de usar o próprio IDE para fazer o debug exatamente da maneira que você está a fazer, ou seja, em tempo real poder fazer breakpoints.
+
+64
+00:12:32,360 --> 00:12:39,360
+Nem todos os modelos têm esse suporte, portanto depende da montagem do microcontrolador.
+
+65
+00:12:40,360 --> 00:12:58,360
+Mas, ou seja, quando as pessoas implementam o código aqui para este tipo de microcontroladores, ou seja, o debug, penso eu, passa por usar o Mowart, por exemplo, para conseguir perceber se são valores.
+
+66
+00:12:58,360 --> 00:13:06,360
+Sim, obviamente é uma forma muito mais primitiva, isso é quase o equivalente ao debug printf na programação de 395.
+
+67
+00:13:07,360 --> 00:13:10,360
+Sim, foi a única coisa que eu me lembrei assim que pudesse resultar.
+
+68
+00:13:11,360 --> 00:13:17,360
+Sim, é uma maneira, desde que depois não tenha efeitos colaterais no resto do programa, sim, é uma solução em fazer isso.
+
+69
+00:13:17,360 --> 00:13:40,360
+É guardar, portanto, estar ali a criar variáveis, fazer cópias dos valores para variáveis temporárias, ter uma maneira de preparar uma lógica, uma rotina da Mowart para receber comandos de debug e ler as variáveis correspondentes.
+
+70
+00:13:40,360 --> 00:13:49,360
+Sim, é criar um esquema de debug à medida no próprio programa, que é diferente de um debug puro, não é?
+
+71
+00:13:50,360 --> 00:13:53,360
+Com ferramentas de debug mesmo dedicadas, mas sim, é uma solução.
+
+72
+00:13:54,360 --> 00:14:04,360
+Mas como eu disse, isto depende, portanto tem também a ver com o custo do sistema, porque isto que estamos a usar é um sistema de baixo custo.
+
+73
+00:14:05,360 --> 00:14:24,360
+E também, não é só questão de ser baixo custo, já é um bocado antigo, agora nos sistemas deficientes, independentemente do microcontrolador, começa de facto a ter esse suporte por essa possibilidade, que obviamente também tem que ser suportado pelo IDE.
+
+74
+00:14:24,360 --> 00:14:44,360
+A própria microchip tem aquelas opções para usar equipamentos deles que permitem fazer isso, depois isso varia de placa de desenvolvimento para placa de desenvolvimento.
+
+75
+00:14:44,360 --> 00:15:04,360
+Ora bem, voltando então aqui agora, deixe-me só ver, já consegui abastar isto, então é que a gente...
+
+76
+00:15:14,360 --> 00:15:21,360
+Relativamente ao controlo do motor, eu não sei se o meu colega chegou a explicar alguma coisa na semana passada.
+
+77
+00:15:24,360 --> 00:15:26,360
+Explicou PWM.
+
+78
+00:15:27,360 --> 00:15:31,360
+Sim, só como é que calculavam o estado de frequência do PWM.
+
+79
+00:15:31,360 --> 00:15:43,360
+Ok, mas então, ou seja, vamos lá ver, aqui o enunciado, vamos olhar para isto.
+
+80
+00:15:43,360 --> 00:16:10,360
+Então, tem aqui estas linhas, ou seja, então esta explicação de usar o PV5, PV7 e PV6, ele explicou este PV7 no fundo.
+
+81
+00:16:10,360 --> 00:16:25,360
+No fundo, quando se tiver a 1, o ponto de vista do motor são tudo entradas, ou seja, vão ser saídas, têm que estar ligadas a saídas do micro.
+
+82
+00:16:25,360 --> 00:16:49,360
+E portanto, este sinal aqui que está designado por PWM e outros sítios, acho que já vi como ENABLE, portanto, no fundo, está ligada a uma linha do driver do motor que ativa a aplicação de tensão quando está a 1 ou quando está a 0, desativa.
+
+83
+00:16:49,360 --> 00:16:53,360
+Portanto, não deixa de ser aplicada qualquer tensão.
+
+84
+00:16:53,360 --> 00:17:07,360
+Depois, este DIR0 e o DIR1, isto tem aqui quatro combinações, mas basicamente duas delas correspondem ao motor estar parado.
+
+85
+00:17:07,360 --> 00:17:18,360
+Na realidade, até corresponde a estar numa espécie de modo de frenagem, se a linha de PWM também estiver a 1.
+
+86
+00:17:18,360 --> 00:17:34,360
+Mas, independentemente disso, basicamente para estar a rodar numa direção, esta linha tem que estar a 1 e esta tem que estar a 0, e depois quando queremos que rode na direção contrária.
+
+87
+00:17:34,360 --> 00:17:39,360
+Ao contrário, tem que estar esta a 0 e esta a 1, ok?
+
+88
+00:17:39,360 --> 00:17:51,360
+Ou seja, para o motor estar a rodar, a linha de PWM tem que estar a 1 e uma destas tem que estar sempre a 0 e a outra a 1.
+
+89
+00:17:51,360 --> 00:17:54,360
+Isto porquê?
+
+90
+00:17:54,360 --> 00:18:11,360
+Só para quem quiser ficar com uma ideia de como é que isto funciona, isto basicamente tem aqui esta linha A e esta linha B, no fundo,
+
+91
+00:18:11,360 --> 00:18:24,360
+que nós ali, do ponto de vista de software, estamos a chamar DIR0 e DIR1, no fundo vai controlar uma tensão que vai ser aplicada num dos terminais do motor.
+
+92
+00:18:24,360 --> 00:18:30,360
+Portanto, o A é num dos terminais, que aqui está a representar deste lado, e o B será o deste.
+
+93
+00:18:30,360 --> 00:18:50,360
+Portanto, isto aqui, podem pensar nisto como um buffer que é um amplificador de sinal que pega neste sinal aqui de baixa potência e aplica aqui um sinal de maior potência que permite disponibilizar uma maior potência ao motor.
+
+94
+00:18:50,360 --> 00:19:04,360
+Portanto, conforme, se este estiver a 1, se pusermos aqui um 1 e aqui um 0, no fundo vamos criar aqui, vamos ter aqui, por exemplo, 5V e aqui 0V,
+
+95
+00:19:04,360 --> 00:19:11,360
+e portanto temos aqui uma diferença de potencial que vai fazer com que o motor roube num sentido.
+
+96
+00:19:11,360 --> 00:19:20,360
+Quando se faz a tal troca de pôr agora esta 1 e esta 0, a diferença de potencial já vai aparecer no sentido contrário.
+
+97
+00:19:20,360 --> 00:19:31,360
+Este vai estar, por exemplo, a 5V e esta aqui a 0V, e portanto o motor vai rodar no sentido contrário, é assim que conseguimos alterar o sentido de rotação do motor,
+
+98
+00:19:31,360 --> 00:19:40,360
+tendo que andar lá a trocar fisicamente os fios, no fundo isto funciona como um interruptor eletrónico.
+
+99
+00:19:40,360 --> 00:19:52,360
+Depois, a parte do PWM liga aqui esta linha que controla se está a ser aplicada tensão ou não.
+
+100
+00:19:52,360 --> 00:20:04,360
+Portanto, nós até podemos pôr isto a 1 e a 0 para tentar aplicar uma tensão, que se este aqui não estiver também a 1, estes amplificadores estão desligados.
+
+101
+00:20:04,360 --> 00:20:17,360
+Isto é o ENABLE destes amplificadores que, basicamente, no nosso caso vamos usar para controlar o PWM.
+
+102
+00:20:17,360 --> 00:20:23,360
+Quando está a 1 está a ser aplicada uma tensão, quando está a 0 não há diferença de potencial no motor.
+
+103
+00:20:23,360 --> 00:20:26,360
+Pode colocar, Daniel.
+
+104
+00:20:26,360 --> 00:20:35,360
+Tem que ser uma curiosidade, como está a descrever, os controladores, os drivers para motores a passo também funcionam de maneira muito semelhante.
+
+105
+00:20:35,360 --> 00:20:42,360
+Eles funcionam assim também, porque têm mais ou menos os mesmos terminais para motores a passo.
+
+106
+00:20:42,360 --> 00:21:02,360
+Têm mais polos, portanto, vai controlar, para fazer dar o passo, vai ativar ali os polos em sequência para, portanto, aquilo realizar de forma discreta, em posições discretas.
+
+107
+00:21:02,360 --> 00:21:05,360
+Neste caso nem é preciso PWM, não é?
+
+108
+00:21:05,360 --> 00:21:08,360
+É uma questão de controles.
+
+109
+00:21:08,360 --> 00:21:23,360
+Exato. Ali, no caso do motor passo a passo, o que se controla é qual as combinações de enrolamentos que ficam com tensão aplicada, não se varia a tensão média.
+
+110
+00:21:23,360 --> 00:21:31,360
+Aqui não, aqui no fundo estamos a fazer uma variação da tensão média para, com isso, variar a velocidade de rotação.
+
+111
+00:21:31,360 --> 00:21:41,360
+Quando falei de PWM acho que exemplifiquei com o brilho de um LED ou de uma lâmpada qualquer.
+
+112
+00:21:41,360 --> 00:21:52,360
+Aqui é a mesma coisa, portanto, no limite, se isto estiver aqui, se isto estiver sempre desligado, nunca há tensão aplicada ao motor e ele não rode.
+
+113
+00:21:52,360 --> 00:22:04,360
+Se durante metade do tempo ele estiver um e outra metade do tempo estiver a zero, em termos médios é como se estivéssemos a aplicar metade de tensão ao motor.
+
+114
+00:22:04,360 --> 00:22:14,360
+E, portanto, depois aqui temos um princípio semelhante àquele que alguns de vocês poderão ter visto na comutação dos displays.
+
+115
+00:22:14,360 --> 00:22:24,360
+Que é o seguinte, se isto não for feito, portanto, se a frequência do PWM for demasiado baixa,
+
+116
+00:22:24,360 --> 00:22:33,360
+no limite nós poderíamos conseguir ver o motor aos soluços, tipo para arranca, se pudéssemos, por absurdo, uma frequência de um LED,
+
+117
+00:22:33,360 --> 00:22:38,360
+se conseguisse ver o motor ali fazer soluços, conforme parava e arrancava.
+
+118
+00:22:39,360 --> 00:22:51,360
+É por isso que quando estamos a falar da ativação do motor, com frequências já mais altas, de algumas centenas de hertz,
+
+119
+00:22:51,360 --> 00:23:05,360
+para que não se note, portanto, ou seja, a própria, as próprias características elétricas e mecânicas do motor sirvam como um filtro dessas frequências.
+
+120
+00:23:05,360 --> 00:23:16,360
+Portanto, o que façam no fundo realmente em termos de movimento mecânico que corresponda ao valor médio da tensão que está a ser aplicada.
+
+121
+00:23:16,360 --> 00:23:30,360
+Porque se a frequência for muito baixa, não existe efeito de filtragem e uma pessoa nota quando é que está a andar e quando já salvai por inércia,
+
+122
+00:23:30,360 --> 00:23:33,360
+não é manter a velocidade e já perder a velocidade devido ao atrito.
+
+123
+00:23:35,360 --> 00:23:45,360
+Ora bem, então isto aqui era para esclarecer, porque eu fiquei na dúvida se isto teria ficado percebido no enunciado.
+
+124
+00:23:46,360 --> 00:23:51,360
+Agora voltando aqui, vamos uma hora a olhar.
+
+125
+00:23:55,360 --> 00:24:00,360
+Esta função main principal também já tinha um avançado por aqui.
+
+126
+00:24:01,360 --> 00:24:07,360
+A ideia é que o programa deve ter três modos, não é?
+
+127
+00:24:07,360 --> 00:24:19,360
+Nos exercícios iniciais, se só falo em modo de controlo através dos interruptores ou o controlo através da porta série.
+
+128
+00:24:19,360 --> 00:24:35,360
+Sinceramente, isto é só para fazer, para ter aqui mais uns testes no código, porque nem sei qual foi a motivação que o professor das práticas nos deu para haver esta separação.
+
+129
+00:24:35,360 --> 00:24:40,360
+Portanto, seria perfeitamente possível controlar quer pelos switches, quer pela porta série.
+
+130
+00:24:40,360 --> 00:24:54,360
+Embora, desta maneira, até da Ásua, que se nós quisermos praticamente, não, teremos, quase que tivemos o limite, quase que nem seria preciso usar interrupções da porta série,
+
+131
+00:24:54,360 --> 00:24:57,360
+poderíamos deixar isto aqui no próprio loop.
+
+132
+00:24:57,360 --> 00:25:10,360
+E depois já o exercício final de fazer o controlo do PWM usando apenas o potenciômetro.
+
+133
+00:25:10,360 --> 00:25:27,360
+Neste caso temos aqueles botões que dão para aumentar ou diminuir de 5 em 5, ou o parar, e qual é o outro, aqueles que colocam logo a 25 e a 75%.
+
+134
+00:25:27,360 --> 00:25:39,360
+Depois, pela porta série, é possível obter o mesmo comportamento enviando caracteres, e depois já no caso analógico, a ideia é controlar continuamente usando a posição do potenciômetro.
+
+135
+00:25:39,360 --> 00:25:47,360
+E aqui terá que haver o código para ler o ADC e fazer a conversão da escala.
+
+136
+00:25:49,360 --> 00:26:01,360
+Um aspecto que é comum a todos os modos é o de verificar o pino ou o botão da direção,
+
+137
+00:26:01,360 --> 00:26:16,360
+que se não me enganei, analisar o enunciado será o bit 5 do Porto A, e portanto temos que verificar quando é que ele é carregado, e quando se carrega, mudar a rotação do motor.
+
+138
+00:26:16,360 --> 00:26:26,360
+Ora bem, isto vai ao encontro do que tinham discutido na aula prática, que eu sinceramente não queria estar agora aqui entrar em contradição com a pessoa das aulas práticas,
+
+139
+00:26:26,360 --> 00:26:35,360
+e de fato não tive a oportunidade de confirmar com ele alguns dados, ele é que foi aquele autor dos exercícios.
+
+140
+00:26:38,360 --> 00:26:44,360
+Ok, esta função muda a rotação, portanto o que é que ela tem que fazer?
+
+141
+00:26:44,360 --> 00:27:01,360
+Ela tem que alterar o valor daqueles dois bits, portanto se eles estiverem num estado 0,1, tem que passar ao 0,1 e vice-versa, se estiver num 0,1 tem que passar ao 0,1.
+
