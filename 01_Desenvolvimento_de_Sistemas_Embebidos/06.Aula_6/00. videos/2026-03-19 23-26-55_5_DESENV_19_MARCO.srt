@@ -1,0 +1,148 @@
+1
+00:00:00,000 --> 00:00:12,880
+o 512, não é que era o outro. Não, perdão, o 256. No outro se repara, passa de 64 para
+
+2
+00:00:12,880 --> 00:00:26,320
+lá o 156, portanto, falta o 128 e depois o outro devia... E o 32, é o 32, depois estava
+
+3
+00:00:26,320 --> 00:00:32,360
+aqui, olha só para cima, é o 32, portanto, falta o 32, o 128, dedicaram dessas opções
+
+4
+00:00:32,360 --> 00:00:40,640
+de pre-scaler no timer 2. É por isso que você provavelmente, ou seja, você provavelmente
+
+5
+00:00:40,640 --> 00:00:48,920
+ao colocar o... você ao colocar este bit, portanto, você estava a pôr 101, não é?
+
+6
+00:00:49,160 --> 00:00:59,400
+101, e a possibilidade por 1024 ia ficar muito menos do que 500 Hz.
+
+7
+00:00:59,400 --> 00:01:03,560
+Eu ia perguntar porque como não tinha dado a recopilação nisso...
+
+8
+00:01:03,560 --> 00:01:11,880
+O 128 ia ficar quase 50... isso ia notar, já ia notar ali o motor a soluçar um bocadinho,
+
+9
+00:01:11,960 --> 00:01:22,800
+assim contas um bocado ao olho ia ficar 50 ou 60 Hz de PWM. Portanto, para o setado para
+
+10
+00:01:22,800 --> 00:01:35,000
+128 seria 1.024, portanto, ao setado é que para 128 dava o quê? 480? É isso, ia ficar com PWM de 60 Hz.
+
+11
+00:01:36,000 --> 00:01:42,560
+Podem experimentar isso depois, pode ter piada para verem em que momento qual é o impacto que tem no
+
+12
+00:01:42,560 --> 00:01:48,040
+motor, na suavidade do funcionamento do motor e no ruído que ele faz.
+
+13
+00:01:56,520 --> 00:02:04,360
+Ora bem, estamos quase no fim, mas eu a pouco ia falar do AD, só queria, portanto, recordar
+
+14
+00:02:04,440 --> 00:02:11,720
+as notas que eu deixei para o AD, foi nesta, foi o da segunda semana, está no da segunda semana.
+
+15
+00:02:17,240 --> 00:02:26,520
+Ah não, está no low comparator. É, eu pus aqui este exemplo de código, não é o que vocês querem usar.
+
+16
+00:02:26,520 --> 00:02:41,800
+Por quê? Porque isto, vamos lá pensar, ali nós queremos fazer 4 conversões, podemos fazer a conversão
+
+17
+00:02:41,800 --> 00:02:51,520
+sem ser contínua e fazer um ciclo para executar, pois isto é uma leitura, no fundo é fazer uma coisa
+
+18
+00:02:52,000 --> 00:03:00,800
+repetir isto 4 vezes. Portanto, usar a ordem de início de conversão, ficar à espera que a flag vá a 1,
+
+19
+00:03:00,800 --> 00:03:06,800
+e depois o que vamos fazer é, como pedes são modos 8 bits, vocês não vão usar este modo,
+
+20
+00:03:06,800 --> 00:03:13,920
+a que está aqui, vão usar precisamente o do left adjust, que eu menciono por aqui.
+
+21
+00:03:14,800 --> 00:03:25,280
+O que eu recomendo, e é isso, o enunciado foi feito por vocês para fazerem isso, é que, portanto,
+
+22
+00:03:25,280 --> 00:03:35,520
+é este caso que eu na altura mencionei. Portanto, põe um bit, este AD left adjust register a 1,
+
+23
+00:03:35,600 --> 00:03:46,240
+portanto, é na configuração do registro de controlo, vou pôr, está aqui, peço desculpa,
+
+24
+00:03:46,240 --> 00:03:55,440
+não é de controlo, é no AD mux, no AD mux põe este AD left a 1, e depois, para fazer a leitura
+
+25
+00:03:55,440 --> 00:04:09,000
+dos lados, basta ler só o ADCH, o registro ADCH, ok? Ou seja, deixem-me pôr aqui,
+
+26
+00:04:10,040 --> 00:04:18,000
+acho que a ideia está voltando ali, acho que está de correto, ADCH e o AD left ali no AD mux,
+
+27
+00:04:18,000 --> 00:04:25,760
+deixem-me lá ver o que é que já temos aqui para o AD mux, então o AD mux, para já, depois aqui,
+
+28
+00:04:25,760 --> 00:04:33,040
+tem que ver selecionar o caráter correto, mas aquele bit do AD left, que é um deixo aqui,
+
+29
+00:04:33,040 --> 00:04:40,560
+vou pôr-lo, põe-o no a1, e depois aqui, quando forem a fazer a leitura, basta ler então este,
+
+30
+00:04:41,120 --> 00:04:49,840
+tiram esta linha do VIL e leem só o ADCH, basta fazer isto e depois a retornar, já não existe nada,
+
+31
+00:04:49,840 --> 00:04:56,520
+portanto no cálculo do valor, usam diretamente o VH, não têm que fazer esta conta, este cálculo,
+
+32
+00:04:56,520 --> 00:05:02,840
+porque já têm aqui um valor de 8 bits, e portanto, tal como é pedido lá, portanto, vão ter que ler
+
+33
+00:05:02,840 --> 00:05:11,040
+o canal quatro vezes e fazer, portanto, fazendo o sumatório, acumulam sempre o valor e a quarta vez,
+
+34
+00:05:11,040 --> 00:05:18,920
+quando terminam a quarta vez, dividem por 4 e têm um valor filtrado. Portanto, com algum,
+
+35
+00:05:18,920 --> 00:05:24,280
+portanto, pegando este exemplo de código e adaptando ali o bit do AD left, fazendo esta
+
+36
+00:05:24,280 --> 00:05:38,920
+escolhendo o canal, já agora, qual é o canal? É o AD, portanto, o ADC zero, portanto, o canal zero,
+
+37
+00:05:38,920 --> 00:05:50,600
+portanto, se é o canal zero, é ter ali aqui o A0, aqui está. Então, aqui uma escolha no ADMUX,
+

@@ -1,0 +1,157 @@
+aqui de estado, este pedaço do AMTX State, que estava a 1, agora vai passar a 2, que
+vai apontar para ficar no fundo indicar o caráter seguinte.
+Quando este caráter for enviado, a rotina de interrupções vai ser chamada novamente
+e portanto, como esta variável foi incrementada, já vai analisar o caráter seguinte e continua
+assim até chegar ao fim da string.
+Recapitulado, a vantagem disto é que se for uma string muito longa, não precisamos
+ficar aqui bloqueados num ciclo envial, portanto esta é a função só vai ser chamada na altura
+em que fica, em que o micro está pronto para enviar um novo caráter e portanto não tem
+que haver esperas.
+Eu não faço aqui nenhum ciclo while, nem faço delays, nem nada, portanto é puramente
+assíncrono.
+Ora bem, questões?
+Força, força.
+Apesar, por acaso mesmo nesta última questão que falou, um brake não faz o mesmo efeito
+ou não é tão apropriado neste caso?
+Está a falar de um brake ou onde?
+Deixe-me lá ver se estamos a falar da mesma coisa, está a falar desta instrução aqui?
+Não, não, na do return.
+Mas o brake que você está a falar é desta instrução, não é?
+Sim, sim, a fazer a semelhança.
+E você está a fazer aqui o brake em vez de fazer o return?
+Eu estou a dizer isto porque foi o que eu tinha feito inicialmente e lá está muito
+sabido, muito bem sinalizado.
+Sim, mas isso já me tem dado erro de compilação, porque este som de brake só pode ser usada
+ou dentro dos switches, portanto aqui destas estruturas de control, switch, portanto para
+fazer o brake de cada um dos casos, portanto o brake é para terminar, no fundo termina
+o switch, porque senão não pode fazer aqui o brake e ele continua a passar os casos todos.
+Exato, passa os casos todos, que é o truque que usamos aqui quando queremos para dois
+casos ou mais aplicar a mesma ação, pôrmos os casos todos que existem todos os seguidos
+E ele, portanto, certo, passa sempre para o seguinte, para o seguinte, por acaso, agora
+eu não queria pensar isto, portanto, se for p, ele vem para aqui e vai para o seguinte.
+Peço desculpa que isto aqui é do avançado agora, agora estamos aqui a dar uma dúvida
+existencial se isto está certo.
+Depois, mas se não for o p, eu já não vai fazer isto.
+Pois isto não, eu penso que isto está errado, eu peço desculpa que isto não faz o que eu queria,
+o que eu queria que fizesse, ninguém me corrigiu, mas aqui teríamos que fazer.
+Agora é também só testando, mas respondendo já agora, sem expressar que agora estou aqui,
+estava pensando outra coisa, o case, a instrução brake só pode ser usada dentro da instrução
+switch ou em ciclos while ou for, portanto, em ciclos control, você não pode usar o brake
+para terminar uma função, ok, isso não é sequer válido e com a certeza que se for isso que está,
+portanto, se tentar pôr lá a meio de uma função, vai dizer a recompilação.
+Sim, eu tive a recompilação, só que depois também não tinha certeza se era,
+não é sintaxa, só será na palavra mesmo.
+Ora bem, mais alguma questão que queiram colocar?
+Por acaso eu estou a olhar aqui para o relógio, não vou começar a dar matéria nova aqui,
+agora nos 20 minutos que faltam.
+Por outro lado aqui, portanto, também não queria estar a resolver o exercício todo,
+o que é que falta aqui a ver? É do PWM, o PWM, o PWM o que é que temos de ter?
+Portanto, temos aqui, portanto, eu falo a fazer uma precisão de 8 bits e uma média de 4 leituras.
+Portanto, aqui uma vez mais, para conseguirem fazer o acumulador das 4 leituras,
+devem declarar uma variável de 16 bits, portanto, fazer um, eu não sei se repararam nisso por menor,
+isto aqui parece trivial, mas temos de ter atenção a uma coisa,
+eu para fazer a multiplicação por 155, declarei a variável temporária como sendo uma variável de 16 bits,
+portanto, para ter bits suficientes para representar, para poder armazenar o resultado da multiplicação do valor do PWM por 155,
+porque uma variável de 8 bits, portanto, em teres sem sinal de 8 bits, só permite valores de 0 até 255.
+Se vocês tiverem um PWM de 100 e multiplicarem por 255, vai dar, portanto, vai dar 25.500 que já não pode ser representado,
+vai dar ali umas voltas e o resultado vai ser igual, portanto, para armazenar o resultado dos cálculos,
+temos de ter sempre atenção a isso, portanto, ver qual é o valor máximo que pode resultar do nosso cálculo.
+No cálculo aqui, portanto, o PWM no máximo tem o valor de 100, quero multiplicar por 155, portanto, dá 25.500 até,
+portanto, a variável de 16 bits serve perfeitamente, ok?
+Portanto, 16 bits dá para, é 2 do antado, dá algum valor máximo, no caso sem sinal, dá até 2 do antado a 16 menos 1, que é 65.535,
+ou seja, 25.000 serve perfeitamente, o cálculo pode ser perfeitamente representado com 16 bits.
+Aqui neste caso, portanto, isto é bem a propósito de, às vezes, portanto, não estou matente a declarar ou escolher os tipos de dados das variáveis,
+aqui, como queremos somar 4 valores de 8 bits, sendo que eles podem estar, portanto, ter o valor máximo, portanto, se o potenciómetro estiver no máximo também,
+portanto, isto vai ter que ser declarado também como um valor, a variável também como 16 bits, para poder somar 4 valores de 8 bits.
+E depois, no final, é que dividem por 4, ou seja, primeiro fazem o sumatório e depois é que dividem tudo, porque aqui não se esqueçam de não trabalhar com floats,
+estão a trabalhar com inteiros e, portanto, se fizerem esse, se dividirem cada um dos valores por 4 logo à partida, estão logo a perder a informação,
+a divisão por 4, no fundo, é deitar fora 2 bits, e uma coisa é fazer isso, depois já termos somado tudo, outra coisa é fazer isso individualmente.
+Acho que tive aqui uma questão, pode...
+Sim, sim, pode, pode, pode.
+Isso é outra questão que eu tinha, pronto, é só um pormenor, que eu fiquei um bocado na dúvida, acerca da apresentação no display, da apresentagem,
+porque eu pelo menos tinha interpretado que o sinal do sentido da rotação que era apresentado no segundo display, então no caso...
+No segundo, certo, é suposto que lá apareceu o sinal, eu não sei se é no...
+O menos.
+Não seria no... onde é que está a dizer? Eu não sei, eu reparei nisso, mas se tiver a 100%, já no segundo...
+Era essa a minha questão.
+É isso que está a perguntar.
+Sim, sim, eu pensei que se calhar a 100% ficasse só a mostrar 00, pronto, foi assim que eu tentei pensar no problema, mas...
+Aqui para já vamos... pela figura, este é o display 2, não é? Ou melhor, na figura, ele está colocando aqui...
+Sim, aqui no detalhe do funcionamento do primeiro exercício, na primeira frase diz mesmo que é o display 2.
+Pois está aqui. Não, mas a minha dúvida é como é que está a contar os displays.
+Isto é 1, 2, 3, 4 ou isto é tipo 0, 1, 2? Como é que vocês faziam ali na fichão a identificação dos displays? Alguém está recordado disso?
+Eu achei que fosse 0, 2 ou 3, mas não sei se está especificado. Eu pensei só assim porque era a maneira que estava no...
+Por causa de ser a identificação em binário, não é?
+Não, acho que aqui poderá haver alguma flexibilidade, até se alguém quiser fazer algo mais bonito, contando o número de algarismos.
+E colocar o menos na posição mais adequada, porque eu diria que, por exemplo, se tiver lá 5%, ou se tiver menos de 5%, o menos deveria estar aqui, não é?
+E se tivesse lá menos de 100%, o menos deveria estar aqui.
+Para mim isso é que faria sentido, eu não percebo muito bem porque é ali disso para colocar sempre no relógio.
+Pois a minha questão era só se mudava no display ou se tentávamos limitar para 95%, porque achei que se calhar também ter a 100% podia ser muito stress para o motor?
+Não, não é a diferença de 95% para 100% que causa transtornos.
+Por acaso não tinha reparado nesse... Eu por acaso tinha reparado aqui na questão de representar o sinal.
+E mesmo ali há pouco, eu depois daquilo como o Ansonia Dint, mas por acaso foi algo que depois não tive tempo de adaptar a solução.
+Porque a minha ideia até era por deixar o próprio sinal na representação, porque mesmo quando estamos a transmitir eu não deixo de ver o que é pedido ou certo.
+Onde é que está o cronopédio do motor?
+Ok, pois aqui é só o valor, neste comando B eu assumi que seria só o valor absoluto, sem preocupações de sinal.
+Embora também pudesse ser interessante ver o positivo ou negativo para indicar o sentido atual.
+Por que o sinal é tão grande?
+Eu penso que aqui este aspecto do display, eu para não estar aqui a dizer uma coisa e depois o professor Luís Lima pedir outra nova prática, eu prefiro que esta é a questão de clareção como eu.
+E portanto, porque é que ele pediu especificamente no 2 e isso não faria sentido a posição do menos ser flutuante?
+Porque senão realmente é como você diz, isso teria a limitar de 0 a 95, não é?
+Outra questão que eu tenho foi quando estive a tentar fazer a interrupção para o modo PWM, eu não sabia muito bem qual seria a mais adequada e tentei fazer primeiro para a fase PWM.
+Eu não sei se isso tem diferença.
+Está a falar do timer 2, não é?
+Sim, sim, do timer 2, sim.
+Mas porque é que você sente necessidade? Eu não sei se você está a falar de interrupção, mas ativa mesmo uma interrupção do timer?
+Não, foi isto.
+Estás a configurar o timer?
+Sim, a configurar o timer.
+Eu usei o fase PWM porque achei que não era necessário, porque a ideia que eu tinha era com outro modo que seria mais preciso, não é?
+Sim, o phase correct é um sinal mais regular e que teoricamente é menos propenso a gerar o ruído no motor.
+E mesmo nas comutações, quando se muda o valor do OCR a meio de um ciclo, este aqui só faz a alteração de PWM no início do ciclo seguinte, enquanto no outro pode criar umas confusões na altura em que está a fazer essa transição.
+Esta pergunta também era mais porque eu não sabia muito bem o que ponderar para escolher entre um e outro.
+Uma das vantagens do phase correct é que a taxa de frequência máxima vai ser sempre metade da do phase PWM, é por isso que o outro se chama phase PWM.
+Em situações em que realmente é necessário ter uma taxa alta para não se notar o efeito das comutações, o phase PWM pode ser mais adequado.
+Neste caso concreto, dos dois modos, o que dá um valor mais próximo de frequência desejada ou o que permite uma frequência mais próxima desejada é mesmo o phase correct.
+Por isso é que eu deixei aqui como primeira escolha, em que aqui eu consigo um valor muito próximo dos 500 Hz se escolher o pre-scaler 64, enquanto que no outro a frequência mais próxima que eu consigo é 1 kHz.
+Não é grave, é funcionada mesmo, mas isto aliado ao que o fabricante diz, de dizer que este modo é mais adequado para o controle dos motores foi o critério que eu usei para fazer o phase correct.
+Mas provavelmente em termos práticos, a não ser que andassem ali com o analisador de espectro e a variar muito frequentemente o valor do phase PWM, provavelmente não vão notar a diferença entre um e outro.
+Poderão às vezes notar algum ruído no motor, ali no ruído do motor há pessoas que têm uma baixa sensibilidade para, quer dizer, 500 Hz nem é uma frequência muito alta qualquer pessoa consegue ouvir.
+500 Hz e 1 kHz são frequências da gama, quase da voz, não é?
+Portanto, quando muito poderão de facto notar ali na frequência base, quando o motor está a reluzar, o ruído que ele faz vai ser ligeiramente mais agudo que o outro, eventualmente poderão notar isso.
+Portanto 1 kHz ficar um bocadinho mais agudo do que, não quer dizer que o motor esteja ainda mais rápido, mas lá está, os harmônicos criados pelas comutações podem-se ainda ouvir e as frequências têm efeito nisso.
+E já agora, esse é outro dos motivos também, vocês podiam perguntar, se isto aqui é a ideia de filtrar as comutações, porque é que não se põe a 10 kHz ou 100 kHz?
+Portanto, há sempre um compromisso, quando começamos a entrar em frequências mais altas, depois também as interferências que aquilo causa, as interferências eletromagnéticas também começam a ser mais altas, quanto maior a frequência de comutação,
+maior são as correntes induzidas noutras partes do circuito, ou seja, as interferências elétricas, e portanto, se não for necessário usar uma frequência muito alta, devemos evitar.
+Além de que, portanto, na parte eletrónica também o consumo acaba por ser proporcional, ou melhor, tem um maior componente que é proporcional às frequências das comutações,
+quanto mais transições houve, sempre que há uma transição, há ali um carregar e descarregar de capacitâncias na parte eletrónica, e isso faz, portanto, causa a libertação do calor e, portanto, primeiro consome energia,
+e que depois, por sua vez, é libertada na forma de calor e que contribui até para o aquecimento dos circuitos, dos componentes eletrónicos, portanto, mais um motivo para não usarmos uma frequência muito alta se não for desejado.
+Mas aqui, reparem-me, estou a falar de passar por algum dobro, estou a passar, se me perguntassem porque é que não usamos a 10kHz ou 100kHz, a explicação é essa.
+Outra questão que eu tinha ainda sobre estas contas, pronto, no caso nós estávamos a fazer as contas para uma fase PWM, eu acabei por usar o pre-scaler que não dava 1kHz e dava 480Hz, ou seja, abaixo do que estava sugerido, mas que eu achei que era o valor mais próximo.
+Pensei que não houvesse problema.
+Mas é para o timer 2?
+Acho que havia a data sheet errada.
+Não se esqueça que o timer 2 não tem os mesmos pre-scalers que o timer 1, pode ter sido esse o erro.
+Deve ter confundido.
+É que você, se calhar, estava a ver a tabela, eu até posso mostrar aqui.
+Você provavelmente estava a pensar que podia usar o 128, não é?
+Pois foi isso, eu pensei que estava a usar o 128.
+Estas opções são para o timer 0.
+O timer 2...
+Ora, deixa-me ver se eu escrevi isso aqui.
+Eu quando ia a esta aula não cheguei a falar do timer 2, mas depois deixei aqui...
+Pois, mas não deixei nada.
+Pois, não deixei.
+Não, eu não falei do timer 2.
+Mas já agora é um detalhe, mas que já foi suficiente, por exemplo, para você perder tempo.
+Uma das diferenças, ou a principal diferença entre o...
+Eu não queria dizer a única, porque não sei se agora me está a escapar alguma coisa,
+mas a principal diferença entre o timer 2 e o timer 0 é que o timer 2 tem um modem que permite
+receber impulsos de um dos pinos do microcontrolador.
+Portanto, pode ser ligado a um gerador de...
+Uma onda quadrada que serve de relógio externo, que é o que está aqui dito.
+E a seleção desse modo é feita através destes bits que são também usados para a seleção do pre-scaler.
+E por causa disso, para poder codificar aqui estas duas possibilidades,
+houve duas opções de pre-scaler que desapareceram, que foi precisamente essa do 128,
+desapareceram, e isto é da arquitetura, não foi agora de repente,
+foi quando projetaram o micro, decidiram abdicar do pre-scaler de 128 e...
