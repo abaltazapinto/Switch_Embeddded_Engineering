@@ -1,0 +1,45 @@
+Então fica xxxxx0.0
+Este xx eu tenho que usar em unidade porque eu quero que seja 0.0
+Então eu faço uma máscara com 0x03
+que é 0x1
+Ao fazer isto aqui dá 0 e 1 dá 0, 1 e 1 dá 0, x e 0 dá 0, 0 e 1 dá 0
+Então, vou ficar aqui com os arquivos.
+Este é o que diz que é a posição do ensaio que tem este.
+Esta posição sai em 3, este 3 entra no vetor do segmento.
+Vou buscar a posição 3 que tem isto.
+Escrevo no porto C e aparece um 3.
+Ok, mas com o vetor do segmento eu posso pular mesmo 0, 1, 2, 3?
+Não, com o vetor do segmento faz-te pular.
+Estás na tabela do exercício anterior, na ficha de teloma de tabela.
+Tem lá as bolas em hexadecimal, não é só que queres pular dentro das seleções.
+Depois aqui, nós queremos é que tenha o contador.
+Vem 1, 2, 3, 4, 5, vem 1, 2, 3, 4, 5.
+Vai incrementando nos displays.
+Então, podemos pôr a variável contador.
+Depois nós andamos aqui com divisões.
+Se usarmos, então a função é Springtap.
+A função é Springtap.
+Eu imprimo dentro de um vetor, como um buffer ou uma screen.
+Um valor formatado em decimal.
+Veja as variáveis.
+Esta função tem que display dizer uma porcentagem dele.
+Entrada por porcentagem dele, vira o Cnt.
+Vai imprimir o valor da variável Cnt.
+Estas formatados em decimal.
+E o buffer, ou um vetor disponível.
+Só que eu quando imprimo isto.
+Vamos imaginar que o valor do contador é 1.034.
+O que ele vai colocar dentro desta variável, desta display, é 0x31, 0x32, 0x33 e 0x34.
+Depois tenho igual a 0.
+Por isso é que eu pus aqui os 5.
+Do 1 para os 0x31, tenho 3 a mais.
+Do 2 para os 0x32, tenho 3 a mais.
+Do 3 tenho 3 e do 4 tenho 3.
+Então, se eu pegar este valor, e se eu fizer este teste por integrecer.
+E for buscar o valor que está nesta variável.
+O que vai acontecer é que o que eu vou ler é 0x31.
+Se superar 0x30, fica 1.
+1 é a primeira posição e isto vai para o seguimento.
+Esta posição, esta é 0, esta é 1.
+Então eu quero ver que é 1 e 1.0.
+Tranquilos, mas eu acho que eu entendi a ideia.
