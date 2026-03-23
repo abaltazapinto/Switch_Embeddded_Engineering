@@ -1,0 +1,196 @@
+o sistema se comporta como deve ser em termos temporais,
+mas obviamente temos mais alta performance,
+eventualmente temos maior reliability em alguns casos,
+principalmente se tivermos aqui um sistema distribuído,
+podemos ter aqui uma economia de escala nos componentes e periféricos também,
+mas a principal vantagem é realmente a performance,
+vocês se lembram de falar nisto,
+basicamente desde que os processadores, especialmente os X86,
+foram introduzidos no mercado, se aqui for a performance,
+e aqui ao longo do tempo, durante muito tempo,
+esta performance foi exponencial, até perto dos anos 2000 e qualquer coisa,
+2003, por exemplo,
+em que de repente começa a haver aqui uma inflexão,
+isto deixa de continuar a ser exponencial e começa a linearizar cada vez mais.
+Portanto, a única forma de continuar a aumentar
+a velocidade de processamento foi colocar os sistemas multicost,
+porque os nossos sistemas monocosts estavam basicamente em termos físicos,
+no limite que se podia ir em termos de velocidade do relógio,
+portanto, há algum tempo conseguimos fazer aqui uma curva um bocadinho melhor
+do que esta que seria esperada se tivéssemos aqui um core,
+e aqui vamos ter encores em termos de performance do mesmo sistema ao longo do tempo.
+Portanto, isto foi uma grande revolução que se deu logo nos anos 2000 por volta disto.
+O que é que o sistema multiprocessador tem?
+O software é mais complexo, muito mais complexo do que no sistema monocore,
+em que só corre um processo de cada vez, uma coisa de cada vez.
+Nós podemos ter realmente 2, 3, 4, 5 processos a correr em paralelo real entre si,
+e depois temos eventualmente atrasos nas comunicações entre os processadores,
+principalmente em sistemas que forem distribuídos.
+Só para vocês terem aqui uma ideia,
+nós podemos ter basicamente dois tipos de sistemas operativos,
+que é o funcionamento assimétrico e o funcionamento simétrico.
+Imaginem que temos aqui mais processadores,
+significa que eu nestes processadores posso ter mais threads a executar por aqui fora.
+Se eu tiver a correr num sistema assimétrico,
+aquilo que eu faço é todas as system calls ao sistema operativo só vão correr no processador A.
+Todos os peripheries estão ligados aqui a este processador,
+o RATO, tudo isto está aqui ligado e ele vai controlando todos os outros.
+Isto permitiu ao próprio sistema operativo fazer uma transição relativamente fácil
+para sistemas multiprocessadores quando eles começaram a aparecer,
+porque não era preciso fazer muitas alterações ao sistema operativo
+porque continuava a correr no processador apenas as threads que corriam em processadores diferentes.
+O que acontece aqui é que se eu tiver muitos processadores,
+eles vão estar a executar muitas chamadas ao sistema operativo.
+A consequência disso é que este processador A pode se tornar o bottleneck do próprio sistema
+e impedir a própria performance do sistema.
+O sistema não avança porque a utilização deste core ou deste processador aqui é muito elevada.
+Ao longo dos anos os sistemas operativos foram evoluindo para este mecanismo chamado
+simétrico em que o sistema operativo pode correr em qualquer processador.
+Eu o chamo e ele tem que executar.
+Inicialmente havia uma coisa chamada Big Kernel Lock,
+isto é quando estamos a executar uma função do sistema operativo,
+para determinados módulos do próprio sistema operativo.
+Ele bloqueava a execução em qualquer em qualquer sítio.
+Depois este Big Kernel Lock foi cada vez sendo mais reduzido e passamos a ter locks em pequenas partes.
+Olá Monique, está tudo bem querida?
+Eu peço desculpa de não me tirar de mim, eu estava assim e tive um estresse.
+É isso que nós conseguimos com termos esse sistema operativo no modo simétrico ou assimétrico.
+Há muitos sistemas por aí que funcionam no modo semi-assimétrico, por exemplo a Playstation.
+Normalmente tem um sistema em que há um processador genérico que controla depois os outros 7 cores
+que são mais parecidos com GPUs do que o processador que faz o seu controlo.
+Há mais coisas, alguns processadores pensam para o telemóvel que usa uma arquitetura chamada Big Little.
+Se o telemóvel estiver a fazer muito pouca coisa ou estiver praticamente desligado,
+temos um processador pequenino que gasta muito pouco a funcionar e a manter as funções vitais
+do telemóvel em execução.
+E quando nós temos aplicações gráficas ou coisa parecida, nós vamos meter um processador maior
+a fazer a execução e a gastar mais energia obviamente no meu telemóvel.
+Portanto, há aqui várias arquiteturas a nível de multiprocessadores.
+O sistema em si pode ser basicamente muito complexo.
+Por exemplo, só para termos aqui uma ideia em termos de acesso à memória,
+se nós tivemos aqui um sistema multiprocessador em que os processadores estão no barramento,
+estão pendurados por vários processadores mesmo independentes,
+eles vão estar a aceder à memória, podemos pôr aqui mais processadores.
+E o que é que vai acontecer? É que se eles estão todos ao mesmo tempo a funcionar e aceder à memória,
+vai haver contenção no acesso à memória.
+Vai haver muitas colisões ao tentar aceder à memória,
+significa que este tipo de arquitetura é muito limitada a nível da escalabilidade.
+Nós conseguimos aguentar 2, 3, 4, 2, 3, normalmente 2, 4, 8 processadores,
+no máximo dos máximos, e a partir daí a performance começa a ser muito maior.
+Com o aparecimento das caixas, resolvemos metade ou reduzimos para em 90% os acessos ao barramento.
+Portanto, o CPU, quando quer aceder alguma coisa, vai aqui à sua caixa e faz as operações.
+Se, por exemplo, escrever, temos aqui um problema adicional,
+ele escreveu nesta caixa e este processo também tem a mesma caixa,
+esta alteração que ele fez vai ter que se propagar para esta caixa
+e depois também propagar-se para a respectiva posição na memória principal.
+Portanto, há aqui uma série de algoritmos complexos nos acessos à memória.
+Podemos também, por vezes, isto é muito normal, por exemplo, em sistemas que tenham GPUs,
+que é, cada corte tem a sua memória caixa, mas também tem memória privada,
+onde nós podemos aceder e colocar aqui os nossos dados.
+Portanto, ainda conseguimos limitar mais o acesso à memória principal.
+Isto é o caso, por exemplo, de uma arquitetura relativamente sofisticada,
+até já está um bocadinho antiga esta, que é de uma máquina que nós tivemos conosco,
+que era um Cal-Ray, que é um processador paralelo essencialmente para sistemas imbibidos também,
+mas este é mais um processador do que um microcontrolador, neste caso,
+em que os cores, salvo o error, eram 512, estavam organizados em clusters de 32, cada um.
+Cada um destes clusters tinha depois uma memória privada para comum a todos estes clusters,
+se eu quisesse executar alguma coisa, colocaria os meus dados nesta memória
+e mandava os processadores do meu cluster executar essas operações.
+E depois tinha toda a outra parte exterior, isto seria a memória principal,
+ou memória cache do processador, também aqui dentro,
+e depois dentro do próprio processador existem várias ferramentas
+que permitem aos processadores comunicarem entre eles.
+Isto tem o defeito de que a arquitetura do próprio processador é muito complexa,
+os programas têm que ser compilados para sabendo como é que está desenhado o próprio processador,
+como é este cluster, onde é que nós vamos colocar o nosso processo a funcionar,
+portanto, há aqui mais uma série de complicações quando se utiliza uma arquitetura deste género,
+que para alguns casos pode ser muito boa, para casos assim genéricos normalmente não vale a pena.
+Isto leva-nos aqui a falar no conceito que é a lei de Amandale,
+que no fundo é uma fórmula que identifica os ganhos de performance ao adicionarmos mais cores para a minha aplicação.
+O que é que nós assumimos aqui?
+Que a minha aplicação tem uma parte que é séria,
+tem uma parte que eu só consigo executar no processador de cada vez,
+mas que depois tem aqui várias partes que, por exemplo, podem ser executadas em paralelo.
+Esta é a parte do S, é a parte que eu vou executar em sério,
+e este N é o número de cores que eu vou ter para executar o programa em paralelo.
+A fórmula que este senhor chegou é esta que está aqui, é a seguida que eu vou ter,
+e se vocês repararem aqui na fórmula,
+eu se tiver por exemplo um programa que tem uma parte paralela de 95% e se tiver 4 processadores,
+parem, eu só estou a conseguir 1,8 vezes mais rápido o meu programa nesta circunstância.
+Mesmo se tivesse 32, vai ser 32 vezes mais rápido a intuição, mas não.
+Isso é cerca de 12,8 vezes mais rápido o programa nesta situação.
+Aqui há algumas pessoas que contestam um bocadinho esta fórmula,
+mas é só para ver que esta parte de paralelizar as coisas e usar os multicores tem as suas limitações.
+Resolve parte dos problemas, mas não vai resolver todas,
+porque se houver uma parte do código que só possa ser executada em um processador,
+mesmo que ela seja muito pequena, como estamos a ver em 55%,
+ela vai resultar numa penalização muito grande para o meu sistema em si.
+Finalmente, eu a partir daqui tenho os slides que ainda não estão todos traduzidos,
+estava a traduzi-los, mas não acabe isto.
+O que é que nós vamos ter em cima disto tudo?
+O hardware, que tivemos aqui a ver até agora,
+mas em cima do hardware para fazermos alguma coisa com isto, temos que ter o sistema operativo.
+Sem sistema operativo nós não temos nada que se possa utilizar.
+O sistema operativo faz uma gestão dos recursos que estão para baixo,
+faz a gestão do acesso ao hardware,
+faz o escalonamento entre vários processos que estejam a ocorrer no meu computador,
+organiza-se por um conjunto de módulos funcionais e um conjunto também de camadas entre si,
+mas a parte mais distante são os mesmos módulos,
+e cada módulo no fundo é um conjunto de funcionalidades.
+Ao mesmo tempo, aquilo que nós queremos é ter um ambiente que seja fiável para executarmos as nossas aplicações.
+Em geral, temos um conjunto de módulos deste género que aqui está,
+um módulo dedicado à gestão de processos,
+a gestão dos nossos programas que são colocados em execução.
+A parte de gestão da memória, quando dizemos,
+eu quero colocar espaço para um vetor de 1KB,
+tenho que saber na memória que parte da memória está livre para eu alocar esse 1KB.
+Tenho que saber também, a certa altura do meu programa,
+se eu já não estou a utilizar esse 1KB, tenho que ir lá limpar e retirá-lo da memória,
+para a memória não ficar cheia.
+Portanto, este módulo de gestão de memória tem que fazer essas operações todas,
+para além de lidar com a complicação toda da memória dos PCs,
+que tem segmentação, paginação, tudo ao mesmo tempo,
+e que torna a coisa muito, muito complicada.
+Trata também da parte de gestão de ficheiros,
+portanto, de conseguir aceder a ficheiros, saber onde é que os ficheiros estão no disco,
+todos os protocolos têm a ver com a parte de ficheiros,
+as partes de input-output, com o rato, teclado, por aí fora,
+a gestão da memória secundária, que basicamente estes dois modos juntam-se em cima do outro,
+a parte também de gestão da rede,
+isto era uma parte que inicialmente nos temas operativos não existia,
+mas que a nova parte independente do sistema operativo
+tinha que se instalar à parte da parte de gestão de rede,
+acho que pouco depois, a partir do momento em que se liberalizou a internet,
+isto passou a ser uma parte integrante do próprio sistema operativo.
+Temos a parte de proteção do sistema, aquilo que eu já vos falei,
+e depois temos, em cima disto de tudo,
+o interpretador de comandos, que basicamente, isto,
+faz parte do kernel do sistema operativo,
+o interpretador de comandos já vai conferir em user mode,
+e portanto já não é propriamente uma parte do kernel,
+mas é uma parte integrante do sistema operativo em si.
+Se tem aqui para o... salvo a vista para o Onyx,
+os módulos em geral, o hardware, o sistema operativo,
+os serviços que tem, as chamadas ao sistema,
+que é o que permite depois nós comunicarmos com estes módulos que aqui estão,
+e depois eventualmente o sistema operativo pode ter as interfaces com utilizador,
+tanto na linha de comandos, as graphical user interfaces,
+por exemplo, o Linux tem uma coisa que é relativamente boa,
+que é o Linux estar completamente desligado da interface gráfica,
+já o Windows não é bem, já há uma integração muito grande entre a interface gráfica,
+porque também só existe uma, aquela que é fornecida pela Microsoft,
+e o próprio sistema operativo, e permite fazer coisas até em termos de escalonamento
+dos processos interessantes para o bom funcionamento do sistema.
+Portanto, como é que o utilizador interage com o sistema operativo?
+Já vimos hoje, através das tais chamadas ao sistema.
+Quando nós fazemos uma chamada ao sistema, o meu sistema faça a funcionar em kernel mode,
+na inscrição deste detalhe.
+Eu acho que vou ficar por aqui, deixem-me ver aqui.
+Sim, vamos ficar por aqui, porque este é um conceito importante que tem a ver com os processos,
+o que é que é um processo, porquê é que serve um processo,
+e vou deixar isto para falarmos então na próxima aula, tá bem?
+Ok, pronto, já vocês devem ter recebido uma mensagem,
+não sei se ainda continua a ver alguém que tem problemas para aceder ao módulo.
+Parece que não.
+Pronto, então toda a gente deve ter recebido a mensagem que eu mandei hoje à tarde,
+portanto para que estão lá já alguns dos slides, que menos esta aula ainda não está completa,
+e portanto podem já ir vendo as coisas, qualquer questão, tenham a vontade para...

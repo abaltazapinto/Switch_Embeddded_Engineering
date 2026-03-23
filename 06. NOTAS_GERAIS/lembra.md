@@ -20,3 +20,7 @@ AULAS Calendario
 3 Periodo 9 de Junho | 11 de Julho
 4 Periodo 8 de Setembro | 10 de Outubro
 
+entregar os ktrabalho de PL para o professor, N numero - evanilson.zip PGSDE...|
+
+ate dia 24 de Marco as 11 da noite terei de submeter todos os ficheiros das aulas.
+

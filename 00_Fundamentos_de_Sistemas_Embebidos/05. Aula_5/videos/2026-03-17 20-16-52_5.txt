@@ -1,0 +1,165 @@
+proteção, que é a proteção de input-output. Aqui é muito simples.
+Se houver instruções de código-máquina para fazer inputs e outputs,
+isso são mais ou menos, podem ser instruções privilegiadas,
+e se forem privilegiadas, um programa que esteja a coer em user mode não as pode executar.
+Se nós estivermos a executar, vocês já usaram os Arduino, certo?
+Esse software não segue totalmente aquilo que eu estou aqui a dizer, atenção.
+Aquilo também nem sequer é bem um sistema operativo, portanto não tem esse problema.
+Mas, se nós tivermos aqui um programa a coer em user mode, e se tivermos um processador
+suficientemente sofisticado, o utilizador não pode ligar aqueles pinos de input-output
+que vocês veem lá nos Arduinos, não podem ser ligados, e eventualmente também
+os acessos aos dispositivos de input-output, USBs e por aí fora,
+que têm que ser feitos também através de acessos a posições específicas de memória,
+também têm que passar pelo próprio sistema operativo, e portanto não passam pelo...
+tem que ser mediado a exposição operativa, que vai ele próprio saber se o meu programa
+pode executar, pode aceder a determinados dispositivos de input-output.
+Outra coisa que é importante, é parte da proteção de memória, ok?
+Eu vou aqui falar, mas atenção que falar de proteção de memória e falar de memória
+é uma coisa muito, muito complicada, muito complicada e muito chato, ok?
+Só para vocês perceberem um bocadinho da história, por exemplo, para os sistemas como o X86,
+o X86 foi projetado inicialmente com 1 MB de memória, não é 1 GB, é 1 MB, ok?
+Era ao máximo que era possível ser interessado por um X86.
+Mas na altura, os senhores da IBM disseram, epa, 640K é mais que suficiente
+para nós utilizarmos a memória, epa, ninguém vai fazer programas maiores do que 200K, não é?
+E, portanto, o que se fez na altura foi limitar a memória aos 640K, não é?
+Depois, mais para a frente, e depois fizeram uma coisa estúpida que foi colocar a ROM
+na parte mais alta da memória e não na parte mais baixa, ok?
+Que vai dificultar as coisas.
+Mais para a frente, os 640K deixaram de servir, as pessoas começaram a utilizar o 1 MB,
+mas aquilo tinha ali uma série de problemas, era preciso fazer ali uma série de truques
+para aceder à parte superior da memória, ok?
+E, portanto, a coisa nunca funcionou muito bem.
+A partir daí vieram os pêntimos, conseguimos aceder a muito mais memória, 4 MB, 8 MB e por aí fora, não é?
+Sempre a subir, não é?
+Até que, a certa altura, decidiram abandonar aquele primeiro MB da memória do PC.
+Está praticamente abandonado, não é?
+A causa da salgalhada é tanta ali que, pronto, todos os desenhadores do Windows e por aí fora
+deixaram melhor abandonar esse primeiro MB da memória e colocar tudo a partir do 1 MB de memória, ok?
+Cada programa na minha memória vai ter uma zona de memória, não é?
+Que lhes está atribuída.
+Imaginemos que temos uma memória linear, cada programa, o P1, tem aqui o P2, pronto.
+Se, por alguma razão, este programa tentar aceder a alguma zona fora da sua memória,
+o sistema operativo e o hardware não o pode deixar.
+Como é que fazemos isso?
+É através de uma definição deste base register e limit register,
+em que este base register vai ser, para o meu programa estar executado, este início,
+o limite, no fundo, é o fim desta zona de memória.
+Portanto, se eu tentar aceder fora da minha zona de memória, isto vai gerar uma excessão, ok?
+Portanto, no fundo temos aqui uma cadeia de verificações muito simples, feita em hardware,
+que também é extremamente rápido, ok?
+Aqui eu verifico se o meu endereço é maior ou igual à minha base, ok?
+Se sim, ele vai continuar, se não, significa que ele tentou aceder a esta zona daqui, não é?
+A zona que está aqui para cima, ok?
+Portanto, se sim, ele vai verificar se o meu endereço que eu quero aceder é menor que a base mais o limite,
+portanto, se está nesta gama de endereços, aqui, e ok, nesta circunstância deixa o meu programa aceder à memória.
+Caso contrário, no fundo, vai gerar aqui uma interrupção por software,
+que me vai dizer que eu tentei aceder fora da minha zona de memória.
+Portanto, aquelas interrupções que muitos de vocês já programaram, famosas,
+core-damped, no fundo, dizem-me que eu saí da zona de memória que me estava reservado, ok?
+Chama atenção, estou a falar aqui da memória de uma forma muito luviana, ok?
+As memórias têm mecanismos de segmentação e de paginação que tornam todo este processo muito mais complexo de gerir
+e que levam também a outro tipo de gestão da memória conforme se está a usar paginação ou segmentação na própria memória.
+Mas, pronto, eu vou tentar, acho que não vou entrar nessa matéria, ok?
+Finalmente, acho que sim, exatamente, temos a parte da proteção do CPU que normalmente é feita através do timer, ok?
+Portanto, nós vamos ter um timer que descer o sistema e esse timer normalmente aparece no próprio CPU,
+também aparece com o nome de Watchdog, ok?
+E que é, por exemplo, a interrupção do próprio timer do sistema operativo para nos contarmos o tempo, ok?
+E este timer vai permitir detectar coisas como eu tenho um programa do utilizador que está parado no ciclo infinito, ok?
+Alguém se enganou a programar aquilo e o programa não avança, nem anda para frente, nem anda para trás
+e, portanto, significa que esse timer não é feito um reset desse timer continuamente
+e então o meu sistema pode reparar desse erro e tentar reiniciar-se ou coisa parecida, ok?
+Portanto, desde que haja uma interrupção do timer cheio de sistema e haja um reset desse timer,
+se não houver um reset do timer vai haver uma interrupção e essa interrupção vai levar a que o sistema entre numa situação de erro, ok?
+Relativamente ao armazenamento dos dados, ok?
+Portanto, nós temos normalmente uma memória principal e uma memória secundária, não é?
+Memória principal relativamente rápida, pronto, pode ser assistida diretamente pela CPU, ok?
+É endereçada facilmente, etc.
+Uma memória secundária que normalmente é não-volátil, onde nós temos os discos magnéticos, CD-ROMs, DVDs, ok?
+Fitas magnéticas, a um ano atrás ou dois descobri que ainda se utilizavam muitas fitas magnéticas
+para guardar coisas de uma forma definitiva que eram dos meios mais baratos de fazer pelos vistos, ok?
+Portanto, o que é que nós temos aqui que nos complica isto tudo, ok?
+Vamos ter na memória principal e antes da memória principal uma memória cache.
+Esta memória cache normalmente, em 99% das coisas hoje em dia, está dentro do próprio processador, não é?
+É uma memória que é extremamente rápida em termos do seu funcionamento, não é?
+E evitamos ter isto que é, quando nós acedemos à memória exterior, ela está longe do meu processador,
+quando eu digo longe é a uns centímetros, não é?
+Mas a uns centímetros, quando estamos a trabalhar com velocidades de gigahertz, é uma distância muito grande, ok?
+Portanto, a memória cache está a uns nanometros do processador, ok?
+Significa que a latência é muito menor no acesso à memória cache, ok?
+Esta tabela tem aqui umas comparações dessas, dessa velocidade, não é?
+Nós temos ainda vários níveis de caches diferentes, que são basicamente L1 a mais rápida e que está mais próximo do processador,
+também será a mais pequena, L2 é uma intermédia e L3 também um bocadinho mais lenta e a RAM, ok?
+Se vocês olharem para aqui, se nós quisermos aceder a esta memória cache mais rápida, nós demoramos um ou dois ciclos de relógio.
+Se quisermos aceder à RAM, nós podemos precisar de 300 ciclos de relógio para ir buscar os dados que estão na RAM, ok?
+Portanto, a cache resolve-nos parte do problema, porque ela vai copiar para dentro do próprio processador uma parte da memória,
+normalmente aquilo que se copia para dentro do processador são as chamadas linhas de cache, ok?
+Podem ser apenas alguns bytes, e faz-se isso porque 90 e qualquer coisa por cento do programa,
+ou seja, a probabilidade de nós executarmos a instrução que está na linha seguinte é cerca de 90 e tal por cento, ok?
+É o princípio da localização do código.
+E então o nosso programa consegue correr muito mais rapidamente acedendo à memória cache do que ir aceder à RAM, ok?
+Entre a memória cache e a memória principal vai ter que existir uma coisa chamada MMU, Memory Management Unit,
+que vai tratar de ir buscar as coisas à memória principal quando não existem na cache, ok?
+Portanto, nós temos dois tipos de acesso à memória cache, não é?
+Este é o rápido, portanto sempre eu pedo um conjunto de qualquer dados, quero aceder a qualquer coisa lá dentro, não é?
+A cache faz um check para verificar, ok, os meus dados estão na cache ou estão fora da minha cache, ok?
+Se existem há um cache hit e os dados são devolvidos imediatamente ao CPU, portanto estamos aqui a falar de latências muito baixas, ok?
+E não temos qualquer acesso à base exterior, lembram-se ao Cado falar nisso a propósito também da cache.
+Podemos ter azar e os dados ou o código que queremos aceder não existirem na cache,
+mas aqui há de há-se um cache miss, ok?
+Quando isto acontece, o meu programa, se eu tiver vários processos a ocorrer ao mesmo tempo,
+ele não vai ficar à espera que se vá buscar os dados à memória principal e os coloquei na memória cache, ok?
+Normalmente aquilo que acontece é, ok, o Memory Management Unit é programado para ir buscar esses blocos à memória principal,
+o meu processo é comutado por outro processo que esteja pronto para continuar a sua execução, ok?
+Portanto, este request é enviado para o controlador de memória, vai buscar os dados à RAM, faz isto em paralelo com a execução do processador normal,
+vai buscar esses dados à RAM, quando os dados estiverem ali, depois o meu processo vai voltar novamente a ser executado, não é?
+E, portanto, já vai conseguir aceder às instruções ou às posições de memória que crie, porque elas já estão na cache, não é?
+Portanto, obviamente, isto aqui vai ter uma latência superior, não é?
+Vai ter que utilizar o barramento do processador, não é?
+E tem aqui um conjunto de passos mais, um conjunto de passos maior, portanto, demora mais tempo, basicamente, ok?
+Mas isto poupa-nos muito, em termos de performance, muita velocidade para o computador, ok?
+Portanto, a cache transfere pequenos blocos de dados, por vezes 64 bytes, por exemplo,
+é otimizada para aquele princípio da localização dos programas, tanto em nível temporal como espacial, ok?
+A RAM, ok, é utilizada quase como lixo, não é?
+Transferir grandes pedaços de memória, ok?
+E tem, ao mesmo tempo, uma latência muito grande no acesso, ok?
+Qual é o impacto que as caches vão ter nos nossos sistemas indebidos, não é?
+Pronto, primeiro, tem impactos positivos e tem impactos negativos,
+dependendo das aplicações que nós estamos a executar neste momento, não é?
+O que é que me acontece?
+Obviamente, os meus programas podem, em média, correr de forma mais rápida,
+mas, portanto, a performance pode aumentar, mas o determinismo do programa,
+portanto, a variação com que as várias coisas correm, é muito maior.
+Eu posso ter cache misses, podem os meus dados estar na cache, não é?
+Portanto, aqui leva-nos a isto que é imprevisível.
+O que é que vai acontecer aqui é imprevisível, não é?
+Portanto, uma das coisas que vocês vão ver isso mais para frente, não é?
+Estou-vos a observar aqui só uns acheios de outras cadeiras, não só na minha, não é?
+Quando nós queremos calcular o tempo de execução de um processo, de uma rotina qualquer, não é?
+No fundo, aquilo que eu tenho de saber é sumar os ciclos de relógio de cada rotina,
+de cada instrução de código-máquina, não é?
+No fundo, se eu conseguir fazer essa soma, eu tenho o quanto tempo é que o programa demora a executar, não é?
+Mas eu tenho que ser pessimista nestas contas, não é?
+E portanto, se eu for pessimista, eu vou assumir sempre que vou ter o slow pass, não é?
+Portanto, vou ter um cache miss.
+Significa o quê? Que o meu sistema, que tinha uma alta performance,
+afinal, vai estar previsto recorrer com a pior performance possível, que pode ser quase 90% mais lento, não é?
+Em termos daquilo que eu estou a assumir, 90% mais lento que aquilo que realmente é em média, ok?
+Mas eu quero garantir que o sistema nunca tem problemas, nunca tem problemas com as temporizações, por vezes é preciso fazer isso, ok?
+Portanto, isto leva a que, por vezes, até em alguns sistemas imbebidos, se desliga a cache, ok?
+Se deixa de haver esta improvisibilidade temporal, já desligamos a cache, vai tudo buscar a memória.
+Os sistemas não podem precisar de uma performance muito elevada a nível do próprio processamento, ok?
+Para complicar tudo isto com os sistemas imbebidos, ainda temos os multicores, ok?
+Quando nós temos sistemas multicore, que hoje em dia é quase impossível, nós compramos um processador que tenha um core apenas,
+mesmo o Arduino que vocês estão a utilizar, salvo erro, não sei qual, estão a usar os...
+É o Arduino Uno ou é a questão das bordes que vocês estão a utilizar?
+Acho que é o Uno.
+Estão a usar o Uno?
+Não tenho a certeza desse.
+O que eu...
+Pois, por acaso não tenho a certeza, mas eu penso que também tem dois processadores lá dentro, tem dois cores lá dentro.
+Acho.
+Não tenho a certeza absoluta, ok?
+Os outros que eu uso nas minhas aulas, que eu não me estou a lembrar do nome, assim, esses têm dois processadores lá dentro, não é?
+Pronto, e como eu estava a dizer, os multicores ainda trazem mais uma camada de confusão e de...
+a parte do sistema de tempo real, ok?
+É muito mais difícil...

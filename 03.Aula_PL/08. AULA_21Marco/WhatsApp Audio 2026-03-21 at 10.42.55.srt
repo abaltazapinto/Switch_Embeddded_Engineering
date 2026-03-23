@@ -1,0 +1,180 @@
+1
+00:00:00,000 --> 00:00:07,780
+Então fica xxxxx0.0
+
+2
+00:00:07,780 --> 00:00:12,040
+Este xx eu tenho que usar em unidade porque eu quero que seja 0.0
+
+3
+00:00:12,040 --> 00:00:15,020
+Então eu faço uma máscara com 0x03
+
+4
+00:00:15,020 --> 00:00:19,060
+que é 0x1
+
+5
+00:00:19,060 --> 00:00:28,240
+Ao fazer isto aqui dá 0 e 1 dá 0, 1 e 1 dá 0, x e 0 dá 0, 0 e 1 dá 0
+
+6
+00:00:28,240 --> 00:00:37,240
+Então, vou ficar aqui com os arquivos.
+
+7
+00:00:37,240 --> 00:00:43,240
+Este é o que diz que é a posição do ensaio que tem este.
+
+8
+00:00:43,240 --> 00:00:49,240
+Esta posição sai em 3, este 3 entra no vetor do segmento.
+
+9
+00:00:49,240 --> 00:00:53,240
+Vou buscar a posição 3 que tem isto.
+
+10
+00:00:54,240 --> 00:00:58,240
+Escrevo no porto C e aparece um 3.
+
+11
+00:00:58,240 --> 00:01:07,240
+Ok, mas com o vetor do segmento eu posso pular mesmo 0, 1, 2, 3?
+
+12
+00:01:07,240 --> 00:01:09,240
+Não, com o vetor do segmento faz-te pular.
+
+13
+00:01:09,240 --> 00:01:14,240
+Estás na tabela do exercício anterior, na ficha de teloma de tabela.
+
+14
+00:01:14,240 --> 00:01:18,240
+Tem lá as bolas em hexadecimal, não é só que queres pular dentro das seleções.
+
+15
+00:01:19,240 --> 00:01:23,240
+Depois aqui, nós queremos é que tenha o contador.
+
+16
+00:01:23,240 --> 00:01:26,240
+Vem 1, 2, 3, 4, 5, vem 1, 2, 3, 4, 5.
+
+17
+00:01:26,240 --> 00:01:29,240
+Vai incrementando nos displays.
+
+18
+00:01:29,240 --> 00:01:34,240
+Então, podemos pôr a variável contador.
+
+19
+00:01:34,240 --> 00:01:38,240
+Depois nós andamos aqui com divisões.
+
+20
+00:01:38,240 --> 00:01:41,240
+Se usarmos, então a função é Springtap.
+
+21
+00:01:41,240 --> 00:01:42,240
+A função é Springtap.
+
+22
+00:01:42,240 --> 00:01:46,240
+Eu imprimo dentro de um vetor, como um buffer ou uma screen.
+
+23
+00:01:46,240 --> 00:01:48,240
+Um valor formatado em decimal.
+
+24
+00:01:48,240 --> 00:01:50,240
+Veja as variáveis.
+
+25
+00:01:50,240 --> 00:01:54,240
+Esta função tem que display dizer uma porcentagem dele.
+
+26
+00:01:54,240 --> 00:01:57,240
+Entrada por porcentagem dele, vira o Cnt.
+
+27
+00:01:57,240 --> 00:02:01,240
+Vai imprimir o valor da variável Cnt.
+
+28
+00:02:01,240 --> 00:02:03,240
+Estas formatados em decimal.
+
+29
+00:02:03,240 --> 00:02:07,240
+E o buffer, ou um vetor disponível.
+
+30
+00:02:07,240 --> 00:02:09,240
+Só que eu quando imprimo isto.
+
+31
+00:02:09,240 --> 00:02:14,240
+Vamos imaginar que o valor do contador é 1.034.
+
+32
+00:02:14,240 --> 00:02:27,240
+O que ele vai colocar dentro desta variável, desta display, é 0x31, 0x32, 0x33 e 0x34.
+
+33
+00:02:27,240 --> 00:02:29,240
+Depois tenho igual a 0.
+
+34
+00:02:29,240 --> 00:02:32,240
+Por isso é que eu pus aqui os 5.
+
+35
+00:02:33,240 --> 00:02:36,240
+Do 1 para os 0x31, tenho 3 a mais.
+
+36
+00:02:36,240 --> 00:02:39,240
+Do 2 para os 0x32, tenho 3 a mais.
+
+37
+00:02:39,240 --> 00:02:42,240
+Do 3 tenho 3 e do 4 tenho 3.
+
+38
+00:02:42,240 --> 00:02:48,240
+Então, se eu pegar este valor, e se eu fizer este teste por integrecer.
+
+39
+00:02:48,240 --> 00:02:52,240
+E for buscar o valor que está nesta variável.
+
+40
+00:02:52,240 --> 00:02:57,240
+O que vai acontecer é que o que eu vou ler é 0x31.
+
+41
+00:02:57,240 --> 00:03:01,240
+Se superar 0x30, fica 1.
+
+42
+00:03:01,240 --> 00:03:05,240
+1 é a primeira posição e isto vai para o seguimento.
+
+43
+00:03:05,240 --> 00:03:09,240
+Esta posição, esta é 0, esta é 1.
+
+44
+00:03:09,240 --> 00:03:12,240
+Então eu quero ver que é 1 e 1.0.
+
+45
+00:03:18,240 --> 00:03:21,240
+Tranquilos, mas eu acho que eu entendi a ideia.
+

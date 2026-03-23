@@ -1,0 +1,784 @@
+1
+00:00:00,000 --> 00:00:04,320
+o sistema se comporta como deve ser em termos temporais,
+
+2
+00:00:06,960 --> 00:00:10,800
+mas obviamente temos mais alta performance,
+
+3
+00:00:11,400 --> 00:00:15,760
+eventualmente temos maior reliability em alguns casos,
+
+4
+00:00:18,800 --> 00:00:22,000
+principalmente se tivermos aqui um sistema distribuído,
+
+5
+00:00:23,480 --> 00:00:28,280
+podemos ter aqui uma economia de escala nos componentes e periféricos também,
+
+6
+00:00:28,560 --> 00:00:32,720
+mas a principal vantagem é realmente a performance,
+
+7
+00:00:32,720 --> 00:00:36,360
+vocês se lembram de falar nisto,
+
+8
+00:00:36,360 --> 00:00:41,960
+basicamente desde que os processadores, especialmente os X86,
+
+9
+00:00:42,680 --> 00:00:45,680
+foram introduzidos no mercado, se aqui for a performance,
+
+10
+00:00:45,680 --> 00:00:48,720
+e aqui ao longo do tempo, durante muito tempo,
+
+11
+00:00:50,160 --> 00:00:55,880
+esta performance foi exponencial, até perto dos anos 2000 e qualquer coisa,
+
+12
+00:00:56,360 --> 00:00:58,360
+2003, por exemplo,
+
+13
+00:00:59,120 --> 00:01:03,080
+em que de repente começa a haver aqui uma inflexão,
+
+14
+00:01:03,080 --> 00:01:11,720
+isto deixa de continuar a ser exponencial e começa a linearizar cada vez mais.
+
+15
+00:01:12,400 --> 00:01:15,680
+Portanto, a única forma de continuar a aumentar
+
+16
+00:01:18,760 --> 00:01:23,240
+a velocidade de processamento foi colocar os sistemas multicost,
+
+17
+00:01:23,240 --> 00:01:28,120
+porque os nossos sistemas monocosts estavam basicamente em termos físicos,
+
+18
+00:01:28,120 --> 00:01:32,120
+no limite que se podia ir em termos de velocidade do relógio,
+
+19
+00:01:32,120 --> 00:01:39,320
+portanto, há algum tempo conseguimos fazer aqui uma curva um bocadinho melhor
+
+20
+00:01:39,320 --> 00:01:43,320
+do que esta que seria esperada se tivéssemos aqui um core,
+
+21
+00:01:44,520 --> 00:01:51,320
+e aqui vamos ter encores em termos de performance do mesmo sistema ao longo do tempo.
+
+22
+00:01:51,400 --> 00:01:57,400
+Portanto, isto foi uma grande revolução que se deu logo nos anos 2000 por volta disto.
+
+23
+00:01:59,400 --> 00:02:02,400
+O que é que o sistema multiprocessador tem?
+
+24
+00:02:03,600 --> 00:02:10,400
+O software é mais complexo, muito mais complexo do que no sistema monocore,
+
+25
+00:02:10,400 --> 00:02:14,400
+em que só corre um processo de cada vez, uma coisa de cada vez.
+
+26
+00:02:14,480 --> 00:02:24,480
+Nós podemos ter realmente 2, 3, 4, 5 processos a correr em paralelo real entre si,
+
+27
+00:02:24,480 --> 00:02:33,480
+e depois temos eventualmente atrasos nas comunicações entre os processadores,
+
+28
+00:02:33,480 --> 00:02:36,480
+principalmente em sistemas que forem distribuídos.
+
+29
+00:02:37,480 --> 00:02:39,480
+Só para vocês terem aqui uma ideia,
+
+30
+00:02:39,560 --> 00:02:44,560
+nós podemos ter basicamente dois tipos de sistemas operativos,
+
+31
+00:02:46,560 --> 00:02:50,560
+que é o funcionamento assimétrico e o funcionamento simétrico.
+
+32
+00:02:50,560 --> 00:02:53,560
+Imaginem que temos aqui mais processadores,
+
+33
+00:02:53,560 --> 00:03:00,560
+significa que eu nestes processadores posso ter mais threads a executar por aqui fora.
+
+34
+00:03:03,560 --> 00:03:05,560
+Se eu tiver a correr num sistema assimétrico,
+
+35
+00:03:05,640 --> 00:03:12,640
+aquilo que eu faço é todas as system calls ao sistema operativo só vão correr no processador A.
+
+36
+00:03:12,640 --> 00:03:17,640
+Todos os peripheries estão ligados aqui a este processador,
+
+37
+00:03:17,640 --> 00:03:22,640
+o RATO, tudo isto está aqui ligado e ele vai controlando todos os outros.
+
+38
+00:03:24,640 --> 00:03:30,640
+Isto permitiu ao próprio sistema operativo fazer uma transição relativamente fácil
+
+39
+00:03:30,720 --> 00:03:37,720
+para sistemas multiprocessadores quando eles começaram a aparecer,
+
+40
+00:03:37,720 --> 00:03:40,720
+porque não era preciso fazer muitas alterações ao sistema operativo
+
+41
+00:03:40,720 --> 00:03:48,720
+porque continuava a correr no processador apenas as threads que corriam em processadores diferentes.
+
+42
+00:03:49,720 --> 00:03:53,720
+O que acontece aqui é que se eu tiver muitos processadores,
+
+43
+00:03:53,720 --> 00:03:57,720
+eles vão estar a executar muitas chamadas ao sistema operativo.
+
+44
+00:03:57,800 --> 00:04:04,800
+A consequência disso é que este processador A pode se tornar o bottleneck do próprio sistema
+
+45
+00:04:04,800 --> 00:04:09,800
+e impedir a própria performance do sistema.
+
+46
+00:04:09,800 --> 00:04:18,800
+O sistema não avança porque a utilização deste core ou deste processador aqui é muito elevada.
+
+47
+00:04:18,880 --> 00:04:28,880
+Ao longo dos anos os sistemas operativos foram evoluindo para este mecanismo chamado
+
+48
+00:04:28,880 --> 00:04:33,880
+simétrico em que o sistema operativo pode correr em qualquer processador.
+
+49
+00:04:33,880 --> 00:04:37,880
+Eu o chamo e ele tem que executar.
+
+50
+00:04:37,880 --> 00:04:42,880
+Inicialmente havia uma coisa chamada Big Kernel Lock,
+
+51
+00:04:42,880 --> 00:04:47,880
+isto é quando estamos a executar uma função do sistema operativo,
+
+52
+00:04:47,960 --> 00:04:52,960
+para determinados módulos do próprio sistema operativo.
+
+53
+00:04:52,960 --> 00:05:00,960
+Ele bloqueava a execução em qualquer em qualquer sítio.
+
+54
+00:05:00,960 --> 00:05:11,960
+Depois este Big Kernel Lock foi cada vez sendo mais reduzido e passamos a ter locks em pequenas partes.
+
+55
+00:05:12,040 --> 00:05:15,040
+Olá Monique, está tudo bem querida?
+
+56
+00:05:15,040 --> 00:05:20,040
+Eu peço desculpa de não me tirar de mim, eu estava assim e tive um estresse.
+
+57
+00:05:28,040 --> 00:05:34,040
+É isso que nós conseguimos com termos esse sistema operativo no modo simétrico ou assimétrico.
+
+58
+00:05:34,120 --> 00:05:45,120
+Há muitos sistemas por aí que funcionam no modo semi-assimétrico, por exemplo a Playstation.
+
+59
+00:05:45,120 --> 00:05:59,120
+Normalmente tem um sistema em que há um processador genérico que controla depois os outros 7 cores
+
+60
+00:05:59,200 --> 00:06:06,200
+que são mais parecidos com GPUs do que o processador que faz o seu controlo.
+
+61
+00:06:06,200 --> 00:06:14,200
+Há mais coisas, alguns processadores pensam para o telemóvel que usa uma arquitetura chamada Big Little.
+
+62
+00:06:14,200 --> 00:06:20,200
+Se o telemóvel estiver a fazer muito pouca coisa ou estiver praticamente desligado,
+
+63
+00:06:20,200 --> 00:06:27,200
+temos um processador pequenino que gasta muito pouco a funcionar e a manter as funções vitais
+
+64
+00:06:27,280 --> 00:06:30,280
+do telemóvel em execução.
+
+65
+00:06:30,280 --> 00:06:37,280
+E quando nós temos aplicações gráficas ou coisa parecida, nós vamos meter um processador maior
+
+66
+00:06:37,280 --> 00:06:44,280
+a fazer a execução e a gastar mais energia obviamente no meu telemóvel.
+
+67
+00:06:44,280 --> 00:06:49,280
+Portanto, há aqui várias arquiteturas a nível de multiprocessadores.
+
+68
+00:06:49,360 --> 00:06:57,360
+O sistema em si pode ser basicamente muito complexo.
+
+69
+00:06:57,360 --> 00:07:00,360
+Por exemplo, só para termos aqui uma ideia em termos de acesso à memória,
+
+70
+00:07:00,360 --> 00:07:06,360
+se nós tivemos aqui um sistema multiprocessador em que os processadores estão no barramento,
+
+71
+00:07:06,360 --> 00:07:09,360
+estão pendurados por vários processadores mesmo independentes,
+
+72
+00:07:09,360 --> 00:07:17,360
+eles vão estar a aceder à memória, podemos pôr aqui mais processadores.
+
+73
+00:07:17,440 --> 00:07:22,440
+E o que é que vai acontecer? É que se eles estão todos ao mesmo tempo a funcionar e aceder à memória,
+
+74
+00:07:22,440 --> 00:07:26,440
+vai haver contenção no acesso à memória.
+
+75
+00:07:26,440 --> 00:07:29,440
+Vai haver muitas colisões ao tentar aceder à memória,
+
+76
+00:07:29,440 --> 00:07:37,440
+significa que este tipo de arquitetura é muito limitada a nível da escalabilidade.
+
+77
+00:07:37,440 --> 00:07:44,440
+Nós conseguimos aguentar 2, 3, 4, 2, 3, normalmente 2, 4, 8 processadores,
+
+78
+00:07:44,520 --> 00:07:50,520
+no máximo dos máximos, e a partir daí a performance começa a ser muito maior.
+
+79
+00:07:50,520 --> 00:08:01,520
+Com o aparecimento das caixas, resolvemos metade ou reduzimos para em 90% os acessos ao barramento.
+
+80
+00:08:01,520 --> 00:08:09,520
+Portanto, o CPU, quando quer aceder alguma coisa, vai aqui à sua caixa e faz as operações.
+
+81
+00:08:09,600 --> 00:08:13,600
+Se, por exemplo, escrever, temos aqui um problema adicional,
+
+82
+00:08:13,600 --> 00:08:17,600
+ele escreveu nesta caixa e este processo também tem a mesma caixa,
+
+83
+00:08:17,600 --> 00:08:22,600
+esta alteração que ele fez vai ter que se propagar para esta caixa
+
+84
+00:08:22,600 --> 00:08:30,600
+e depois também propagar-se para a respectiva posição na memória principal.
+
+85
+00:08:30,600 --> 00:08:37,600
+Portanto, há aqui uma série de algoritmos complexos nos acessos à memória.
+
+86
+00:08:37,680 --> 00:08:45,680
+Podemos também, por vezes, isto é muito normal, por exemplo, em sistemas que tenham GPUs,
+
+87
+00:08:45,680 --> 00:08:52,680
+que é, cada corte tem a sua memória caixa, mas também tem memória privada,
+
+88
+00:08:52,680 --> 00:08:58,680
+onde nós podemos aceder e colocar aqui os nossos dados.
+
+89
+00:08:58,680 --> 00:09:05,680
+Portanto, ainda conseguimos limitar mais o acesso à memória principal.
+
+90
+00:09:05,760 --> 00:09:12,760
+Isto é o caso, por exemplo, de uma arquitetura relativamente sofisticada,
+
+91
+00:09:12,760 --> 00:09:20,760
+até já está um bocadinho antiga esta, que é de uma máquina que nós tivemos conosco,
+
+92
+00:09:20,760 --> 00:09:27,760
+que era um Cal-Ray, que é um processador paralelo essencialmente para sistemas imbibidos também,
+
+93
+00:09:27,760 --> 00:09:33,760
+mas este é mais um processador do que um microcontrolador, neste caso,
+
+94
+00:09:33,840 --> 00:09:48,840
+em que os cores, salvo o error, eram 512, estavam organizados em clusters de 32, cada um.
+
+95
+00:09:48,840 --> 00:09:58,840
+Cada um destes clusters tinha depois uma memória privada para comum a todos estes clusters,
+
+96
+00:09:58,920 --> 00:10:04,920
+se eu quisesse executar alguma coisa, colocaria os meus dados nesta memória
+
+97
+00:10:04,920 --> 00:10:10,920
+e mandava os processadores do meu cluster executar essas operações.
+
+98
+00:10:10,920 --> 00:10:16,920
+E depois tinha toda a outra parte exterior, isto seria a memória principal,
+
+99
+00:10:16,920 --> 00:10:23,920
+ou memória cache do processador, também aqui dentro,
+
+100
+00:10:24,000 --> 00:10:33,000
+e depois dentro do próprio processador existem várias ferramentas
+
+101
+00:10:33,000 --> 00:10:37,000
+que permitem aos processadores comunicarem entre eles.
+
+102
+00:10:37,000 --> 00:10:48,000
+Isto tem o defeito de que a arquitetura do próprio processador é muito complexa,
+
+103
+00:10:48,080 --> 00:10:56,080
+os programas têm que ser compilados para sabendo como é que está desenhado o próprio processador,
+
+104
+00:10:56,080 --> 00:11:01,080
+como é este cluster, onde é que nós vamos colocar o nosso processo a funcionar,
+
+105
+00:11:01,080 --> 00:11:08,080
+portanto, há aqui mais uma série de complicações quando se utiliza uma arquitetura deste género,
+
+106
+00:11:08,080 --> 00:11:16,080
+que para alguns casos pode ser muito boa, para casos assim genéricos normalmente não vale a pena.
+
+107
+00:11:16,160 --> 00:11:29,160
+Isto leva-nos aqui a falar no conceito que é a lei de Amandale,
+
+108
+00:11:29,160 --> 00:11:40,160
+que no fundo é uma fórmula que identifica os ganhos de performance ao adicionarmos mais cores para a minha aplicação.
+
+109
+00:11:40,240 --> 00:11:43,240
+O que é que nós assumimos aqui?
+
+110
+00:11:43,240 --> 00:11:47,240
+Que a minha aplicação tem uma parte que é séria,
+
+111
+00:11:47,240 --> 00:11:53,240
+tem uma parte que eu só consigo executar no processador de cada vez,
+
+112
+00:11:53,240 --> 00:12:00,240
+mas que depois tem aqui várias partes que, por exemplo, podem ser executadas em paralelo.
+
+113
+00:12:00,320 --> 00:12:11,320
+Esta é a parte do S, é a parte que eu vou executar em sério,
+
+114
+00:12:11,320 --> 00:12:19,320
+e este N é o número de cores que eu vou ter para executar o programa em paralelo.
+
+115
+00:12:19,320 --> 00:12:26,320
+A fórmula que este senhor chegou é esta que está aqui, é a seguida que eu vou ter,
+
+116
+00:12:26,400 --> 00:12:31,400
+e se vocês repararem aqui na fórmula,
+
+117
+00:12:31,400 --> 00:12:49,400
+eu se tiver por exemplo um programa que tem uma parte paralela de 95% e se tiver 4 processadores,
+
+118
+00:12:49,480 --> 00:12:58,480
+parem, eu só estou a conseguir 1,8 vezes mais rápido o meu programa nesta circunstância.
+
+119
+00:12:58,480 --> 00:13:04,480
+Mesmo se tivesse 32, vai ser 32 vezes mais rápido a intuição, mas não.
+
+120
+00:13:04,480 --> 00:13:12,480
+Isso é cerca de 12,8 vezes mais rápido o programa nesta situação.
+
+121
+00:13:12,480 --> 00:13:17,480
+Aqui há algumas pessoas que contestam um bocadinho esta fórmula,
+
+122
+00:13:17,560 --> 00:13:33,560
+mas é só para ver que esta parte de paralelizar as coisas e usar os multicores tem as suas limitações.
+
+123
+00:13:33,560 --> 00:13:40,560
+Resolve parte dos problemas, mas não vai resolver todas,
+
+124
+00:13:40,560 --> 00:13:45,560
+porque se houver uma parte do código que só possa ser executada em um processador,
+
+125
+00:13:45,640 --> 00:13:50,640
+mesmo que ela seja muito pequena, como estamos a ver em 55%,
+
+126
+00:13:50,640 --> 00:13:57,640
+ela vai resultar numa penalização muito grande para o meu sistema em si.
+
+127
+00:13:59,640 --> 00:14:04,640
+Finalmente, eu a partir daqui tenho os slides que ainda não estão todos traduzidos,
+
+128
+00:14:04,640 --> 00:14:08,640
+estava a traduzi-los, mas não acabe isto.
+
+129
+00:14:08,640 --> 00:14:11,640
+O que é que nós vamos ter em cima disto tudo?
+
+130
+00:14:11,720 --> 00:14:15,720
+O hardware, que tivemos aqui a ver até agora,
+
+131
+00:14:15,720 --> 00:14:22,720
+mas em cima do hardware para fazermos alguma coisa com isto, temos que ter o sistema operativo.
+
+132
+00:14:22,720 --> 00:14:30,720
+Sem sistema operativo nós não temos nada que se possa utilizar.
+
+133
+00:14:30,720 --> 00:14:35,720
+O sistema operativo faz uma gestão dos recursos que estão para baixo,
+
+134
+00:14:35,720 --> 00:14:39,720
+faz a gestão do acesso ao hardware,
+
+135
+00:14:39,800 --> 00:14:44,800
+faz o escalonamento entre vários processos que estejam a ocorrer no meu computador,
+
+136
+00:14:44,800 --> 00:14:53,800
+organiza-se por um conjunto de módulos funcionais e um conjunto também de camadas entre si,
+
+137
+00:14:53,800 --> 00:14:57,800
+mas a parte mais distante são os mesmos módulos,
+
+138
+00:14:57,800 --> 00:15:04,800
+e cada módulo no fundo é um conjunto de funcionalidades.
+
+139
+00:15:04,880 --> 00:15:12,880
+Ao mesmo tempo, aquilo que nós queremos é ter um ambiente que seja fiável para executarmos as nossas aplicações.
+
+140
+00:15:12,880 --> 00:15:16,880
+Em geral, temos um conjunto de módulos deste género que aqui está,
+
+141
+00:15:16,880 --> 00:15:20,880
+um módulo dedicado à gestão de processos,
+
+142
+00:15:20,880 --> 00:15:24,880
+a gestão dos nossos programas que são colocados em execução.
+
+143
+00:15:24,880 --> 00:15:28,880
+A parte de gestão da memória, quando dizemos,
+
+144
+00:15:28,960 --> 00:15:35,960
+eu quero colocar espaço para um vetor de 1KB,
+
+145
+00:15:35,960 --> 00:15:43,960
+tenho que saber na memória que parte da memória está livre para eu alocar esse 1KB.
+
+146
+00:15:43,960 --> 00:15:46,960
+Tenho que saber também, a certa altura do meu programa,
+
+147
+00:15:46,960 --> 00:15:51,960
+se eu já não estou a utilizar esse 1KB, tenho que ir lá limpar e retirá-lo da memória,
+
+148
+00:15:51,960 --> 00:15:53,960
+para a memória não ficar cheia.
+
+149
+00:15:54,040 --> 00:15:59,040
+Portanto, este módulo de gestão de memória tem que fazer essas operações todas,
+
+150
+00:15:59,040 --> 00:16:06,040
+para além de lidar com a complicação toda da memória dos PCs,
+
+151
+00:16:06,040 --> 00:16:10,040
+que tem segmentação, paginação, tudo ao mesmo tempo,
+
+152
+00:16:10,040 --> 00:16:13,040
+e que torna a coisa muito, muito complicada.
+
+153
+00:16:15,040 --> 00:16:18,040
+Trata também da parte de gestão de ficheiros,
+
+154
+00:16:18,040 --> 00:16:23,040
+portanto, de conseguir aceder a ficheiros, saber onde é que os ficheiros estão no disco,
+
+155
+00:16:23,120 --> 00:16:27,120
+todos os protocolos têm a ver com a parte de ficheiros,
+
+156
+00:16:27,120 --> 00:16:32,120
+as partes de input-output, com o rato, teclado, por aí fora,
+
+157
+00:16:34,120 --> 00:16:39,120
+a gestão da memória secundária, que basicamente estes dois modos juntam-se em cima do outro,
+
+158
+00:16:40,120 --> 00:16:44,120
+a parte também de gestão da rede,
+
+159
+00:16:44,120 --> 00:16:49,120
+isto era uma parte que inicialmente nos temas operativos não existia,
+
+160
+00:16:49,200 --> 00:16:56,200
+mas que a nova parte independente do sistema operativo
+
+161
+00:16:56,200 --> 00:17:00,200
+tinha que se instalar à parte da parte de gestão de rede,
+
+162
+00:17:00,200 --> 00:17:04,200
+acho que pouco depois, a partir do momento em que se liberalizou a internet,
+
+163
+00:17:04,200 --> 00:17:09,200
+isto passou a ser uma parte integrante do próprio sistema operativo.
+
+164
+00:17:10,200 --> 00:17:13,200
+Temos a parte de proteção do sistema, aquilo que eu já vos falei,
+
+165
+00:17:13,200 --> 00:17:16,200
+e depois temos, em cima disto de tudo,
+
+166
+00:17:16,280 --> 00:17:21,280
+o interpretador de comandos, que basicamente, isto,
+
+167
+00:17:21,280 --> 00:17:24,280
+faz parte do kernel do sistema operativo,
+
+168
+00:17:24,280 --> 00:17:28,280
+o interpretador de comandos já vai conferir em user mode,
+
+169
+00:17:28,280 --> 00:17:31,280
+e portanto já não é propriamente uma parte do kernel,
+
+170
+00:17:31,280 --> 00:17:35,280
+mas é uma parte integrante do sistema operativo em si.
+
+171
+00:17:35,280 --> 00:17:40,280
+Se tem aqui para o... salvo a vista para o Onyx,
+
+172
+00:17:40,360 --> 00:17:47,360
+os módulos em geral, o hardware, o sistema operativo,
+
+173
+00:17:47,360 --> 00:17:51,360
+os serviços que tem, as chamadas ao sistema,
+
+174
+00:17:51,360 --> 00:17:56,360
+que é o que permite depois nós comunicarmos com estes módulos que aqui estão,
+
+175
+00:17:56,360 --> 00:18:02,360
+e depois eventualmente o sistema operativo pode ter as interfaces com utilizador,
+
+176
+00:18:02,360 --> 00:18:08,360
+tanto na linha de comandos, as graphical user interfaces,
+
+177
+00:18:08,440 --> 00:18:12,440
+por exemplo, o Linux tem uma coisa que é relativamente boa,
+
+178
+00:18:12,440 --> 00:18:18,440
+que é o Linux estar completamente desligado da interface gráfica,
+
+179
+00:18:18,440 --> 00:18:23,440
+já o Windows não é bem, já há uma integração muito grande entre a interface gráfica,
+
+180
+00:18:23,440 --> 00:18:28,440
+porque também só existe uma, aquela que é fornecida pela Microsoft,
+
+181
+00:18:28,440 --> 00:18:33,440
+e o próprio sistema operativo, e permite fazer coisas até em termos de escalonamento
+
+182
+00:18:33,520 --> 00:18:38,520
+dos processos interessantes para o bom funcionamento do sistema.
+
+183
+00:18:45,520 --> 00:18:49,520
+Portanto, como é que o utilizador interage com o sistema operativo?
+
+184
+00:18:49,520 --> 00:18:54,520
+Já vimos hoje, através das tais chamadas ao sistema.
+
+185
+00:18:54,520 --> 00:19:01,520
+Quando nós fazemos uma chamada ao sistema, o meu sistema faça a funcionar em kernel mode,
+
+186
+00:19:01,600 --> 00:19:04,600
+na inscrição deste detalhe.
+
+187
+00:19:08,600 --> 00:19:11,600
+Eu acho que vou ficar por aqui, deixem-me ver aqui.
+
+188
+00:19:11,600 --> 00:19:18,600
+Sim, vamos ficar por aqui, porque este é um conceito importante que tem a ver com os processos,
+
+189
+00:19:18,600 --> 00:19:22,600
+o que é que é um processo, porquê é que serve um processo,
+
+190
+00:19:22,600 --> 00:19:27,600
+e vou deixar isto para falarmos então na próxima aula, tá bem?
+
+191
+00:19:27,680 --> 00:19:31,680
+Ok, pronto, já vocês devem ter recebido uma mensagem,
+
+192
+00:19:31,680 --> 00:19:36,680
+não sei se ainda continua a ver alguém que tem problemas para aceder ao módulo.
+
+193
+00:19:44,680 --> 00:19:45,680
+Parece que não.
+
+194
+00:19:46,680 --> 00:19:51,680
+Pronto, então toda a gente deve ter recebido a mensagem que eu mandei hoje à tarde,
+
+195
+00:19:51,760 --> 00:20:02,760
+portanto para que estão lá já alguns dos slides, que menos esta aula ainda não está completa,
+
+196
+00:20:04,760 --> 00:20:12,760
+e portanto podem já ir vendo as coisas, qualquer questão, tenham a vontade para...
+

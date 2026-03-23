@@ -1,0 +1,660 @@
+1
+00:00:00,000 --> 00:00:06,000
+proteção, que é a proteção de input-output. Aqui é muito simples.
+
+2
+00:00:06,000 --> 00:00:12,000
+Se houver instruções de código-máquina para fazer inputs e outputs,
+
+3
+00:00:12,000 --> 00:00:17,000
+isso são mais ou menos, podem ser instruções privilegiadas,
+
+4
+00:00:17,000 --> 00:00:24,000
+e se forem privilegiadas, um programa que esteja a coer em user mode não as pode executar.
+
+5
+00:00:25,000 --> 00:00:31,000
+Se nós estivermos a executar, vocês já usaram os Arduino, certo?
+
+6
+00:00:31,000 --> 00:00:38,000
+Esse software não segue totalmente aquilo que eu estou aqui a dizer, atenção.
+
+7
+00:00:38,000 --> 00:00:48,000
+Aquilo também nem sequer é bem um sistema operativo, portanto não tem esse problema.
+
+8
+00:00:48,000 --> 00:00:55,000
+Mas, se nós tivermos aqui um programa a coer em user mode, e se tivermos um processador
+
+9
+00:00:55,000 --> 00:01:02,000
+suficientemente sofisticado, o utilizador não pode ligar aqueles pinos de input-output
+
+10
+00:01:02,000 --> 00:01:09,000
+que vocês veem lá nos Arduinos, não podem ser ligados, e eventualmente também
+
+11
+00:01:09,000 --> 00:01:14,000
+os acessos aos dispositivos de input-output, USBs e por aí fora,
+
+12
+00:01:14,000 --> 00:01:20,000
+que têm que ser feitos também através de acessos a posições específicas de memória,
+
+13
+00:01:20,000 --> 00:01:30,000
+também têm que passar pelo próprio sistema operativo, e portanto não passam pelo...
+
+14
+00:01:30,000 --> 00:01:37,000
+tem que ser mediado a exposição operativa, que vai ele próprio saber se o meu programa
+
+15
+00:01:37,000 --> 00:01:42,000
+pode executar, pode aceder a determinados dispositivos de input-output.
+
+16
+00:01:44,000 --> 00:01:49,000
+Outra coisa que é importante, é parte da proteção de memória, ok?
+
+17
+00:01:49,000 --> 00:01:55,000
+Eu vou aqui falar, mas atenção que falar de proteção de memória e falar de memória
+
+18
+00:01:55,000 --> 00:02:02,000
+é uma coisa muito, muito complicada, muito complicada e muito chato, ok?
+
+19
+00:02:02,000 --> 00:02:09,000
+Só para vocês perceberem um bocadinho da história, por exemplo, para os sistemas como o X86,
+
+20
+00:02:09,000 --> 00:02:16,000
+o X86 foi projetado inicialmente com 1 MB de memória, não é 1 GB, é 1 MB, ok?
+
+21
+00:02:16,000 --> 00:02:20,000
+Era ao máximo que era possível ser interessado por um X86.
+
+22
+00:02:20,000 --> 00:02:27,000
+Mas na altura, os senhores da IBM disseram, epa, 640K é mais que suficiente
+
+23
+00:02:27,000 --> 00:02:38,000
+para nós utilizarmos a memória, epa, ninguém vai fazer programas maiores do que 200K, não é?
+
+24
+00:02:38,000 --> 00:02:46,000
+E, portanto, o que se fez na altura foi limitar a memória aos 640K, não é?
+
+25
+00:02:46,000 --> 00:02:51,000
+Depois, mais para a frente, e depois fizeram uma coisa estúpida que foi colocar a ROM
+
+26
+00:02:51,000 --> 00:02:55,000
+na parte mais alta da memória e não na parte mais baixa, ok?
+
+27
+00:02:55,000 --> 00:02:57,000
+Que vai dificultar as coisas.
+
+28
+00:02:57,000 --> 00:03:04,000
+Mais para a frente, os 640K deixaram de servir, as pessoas começaram a utilizar o 1 MB,
+
+29
+00:03:04,000 --> 00:03:08,000
+mas aquilo tinha ali uma série de problemas, era preciso fazer ali uma série de truques
+
+30
+00:03:08,000 --> 00:03:13,000
+para aceder à parte superior da memória, ok?
+
+31
+00:03:13,000 --> 00:03:19,000
+E, portanto, a coisa nunca funcionou muito bem.
+
+32
+00:03:19,000 --> 00:03:30,000
+A partir daí vieram os pêntimos, conseguimos aceder a muito mais memória, 4 MB, 8 MB e por aí fora, não é?
+
+33
+00:03:30,000 --> 00:03:32,000
+Sempre a subir, não é?
+
+34
+00:03:32,000 --> 00:03:38,000
+Até que, a certa altura, decidiram abandonar aquele primeiro MB da memória do PC.
+
+35
+00:03:38,000 --> 00:03:41,000
+Está praticamente abandonado, não é?
+
+36
+00:03:41,000 --> 00:03:49,000
+A causa da salgalhada é tanta ali que, pronto, todos os desenhadores do Windows e por aí fora
+
+37
+00:03:49,000 --> 00:03:57,000
+deixaram melhor abandonar esse primeiro MB da memória e colocar tudo a partir do 1 MB de memória, ok?
+
+38
+00:03:58,000 --> 00:04:08,000
+Cada programa na minha memória vai ter uma zona de memória, não é?
+
+39
+00:04:08,000 --> 00:04:10,000
+Que lhes está atribuída.
+
+40
+00:04:10,000 --> 00:04:19,000
+Imaginemos que temos uma memória linear, cada programa, o P1, tem aqui o P2, pronto.
+
+41
+00:04:19,000 --> 00:04:29,000
+Se, por alguma razão, este programa tentar aceder a alguma zona fora da sua memória,
+
+42
+00:04:29,000 --> 00:04:33,000
+o sistema operativo e o hardware não o pode deixar.
+
+43
+00:04:33,000 --> 00:04:35,000
+Como é que fazemos isso?
+
+44
+00:04:35,000 --> 00:04:41,000
+É através de uma definição deste base register e limit register,
+
+45
+00:04:41,000 --> 00:04:47,000
+em que este base register vai ser, para o meu programa estar executado, este início,
+
+46
+00:04:47,000 --> 00:04:53,000
+o limite, no fundo, é o fim desta zona de memória.
+
+47
+00:04:53,000 --> 00:05:02,000
+Portanto, se eu tentar aceder fora da minha zona de memória, isto vai gerar uma excessão, ok?
+
+48
+00:05:02,000 --> 00:05:07,000
+Portanto, no fundo temos aqui uma cadeia de verificações muito simples, feita em hardware,
+
+49
+00:05:07,000 --> 00:05:10,000
+que também é extremamente rápido, ok?
+
+50
+00:05:10,000 --> 00:05:15,000
+Aqui eu verifico se o meu endereço é maior ou igual à minha base, ok?
+
+51
+00:05:15,000 --> 00:05:23,000
+Se sim, ele vai continuar, se não, significa que ele tentou aceder a esta zona daqui, não é?
+
+52
+00:05:23,000 --> 00:05:26,000
+A zona que está aqui para cima, ok?
+
+53
+00:05:26,000 --> 00:05:34,000
+Portanto, se sim, ele vai verificar se o meu endereço que eu quero aceder é menor que a base mais o limite,
+
+54
+00:05:35,000 --> 00:05:45,000
+portanto, se está nesta gama de endereços, aqui, e ok, nesta circunstância deixa o meu programa aceder à memória.
+
+55
+00:05:45,000 --> 00:05:49,000
+Caso contrário, no fundo, vai gerar aqui uma interrupção por software,
+
+56
+00:05:49,000 --> 00:05:53,000
+que me vai dizer que eu tentei aceder fora da minha zona de memória.
+
+57
+00:05:53,000 --> 00:05:58,000
+Portanto, aquelas interrupções que muitos de vocês já programaram, famosas,
+
+58
+00:05:59,000 --> 00:06:09,000
+core-damped, no fundo, dizem-me que eu saí da zona de memória que me estava reservado, ok?
+
+59
+00:06:09,000 --> 00:06:16,000
+Chama atenção, estou a falar aqui da memória de uma forma muito luviana, ok?
+
+60
+00:06:16,000 --> 00:06:26,000
+As memórias têm mecanismos de segmentação e de paginação que tornam todo este processo muito mais complexo de gerir
+
+61
+00:06:26,000 --> 00:06:36,000
+e que levam também a outro tipo de gestão da memória conforme se está a usar paginação ou segmentação na própria memória.
+
+62
+00:06:36,000 --> 00:06:40,000
+Mas, pronto, eu vou tentar, acho que não vou entrar nessa matéria, ok?
+
+63
+00:06:40,000 --> 00:06:52,000
+Finalmente, acho que sim, exatamente, temos a parte da proteção do CPU que normalmente é feita através do timer, ok?
+
+64
+00:06:52,000 --> 00:07:02,000
+Portanto, nós vamos ter um timer que descer o sistema e esse timer normalmente aparece no próprio CPU,
+
+65
+00:07:02,000 --> 00:07:06,000
+também aparece com o nome de Watchdog, ok?
+
+66
+00:07:06,000 --> 00:07:19,000
+E que é, por exemplo, a interrupção do próprio timer do sistema operativo para nos contarmos o tempo, ok?
+
+67
+00:07:19,000 --> 00:07:32,000
+E este timer vai permitir detectar coisas como eu tenho um programa do utilizador que está parado no ciclo infinito, ok?
+
+68
+00:07:32,000 --> 00:07:37,000
+Alguém se enganou a programar aquilo e o programa não avança, nem anda para frente, nem anda para trás
+
+69
+00:07:37,000 --> 00:07:44,000
+e, portanto, significa que esse timer não é feito um reset desse timer continuamente
+
+70
+00:07:44,000 --> 00:07:55,000
+e então o meu sistema pode reparar desse erro e tentar reiniciar-se ou coisa parecida, ok?
+
+71
+00:07:55,000 --> 00:08:02,000
+Portanto, desde que haja uma interrupção do timer cheio de sistema e haja um reset desse timer,
+
+72
+00:08:02,000 --> 00:08:13,000
+se não houver um reset do timer vai haver uma interrupção e essa interrupção vai levar a que o sistema entre numa situação de erro, ok?
+
+73
+00:08:13,000 --> 00:08:17,000
+Relativamente ao armazenamento dos dados, ok?
+
+74
+00:08:17,000 --> 00:08:25,000
+Portanto, nós temos normalmente uma memória principal e uma memória secundária, não é?
+
+75
+00:08:25,000 --> 00:08:32,000
+Memória principal relativamente rápida, pronto, pode ser assistida diretamente pela CPU, ok?
+
+76
+00:08:32,000 --> 00:08:35,000
+É endereçada facilmente, etc.
+
+77
+00:08:35,000 --> 00:08:43,000
+Uma memória secundária que normalmente é não-volátil, onde nós temos os discos magnéticos, CD-ROMs, DVDs, ok?
+
+78
+00:08:43,000 --> 00:08:51,000
+Fitas magnéticas, a um ano atrás ou dois descobri que ainda se utilizavam muitas fitas magnéticas
+
+79
+00:08:51,000 --> 00:08:59,000
+para guardar coisas de uma forma definitiva que eram dos meios mais baratos de fazer pelos vistos, ok?
+
+80
+00:08:59,000 --> 00:09:07,000
+Portanto, o que é que nós temos aqui que nos complica isto tudo, ok?
+
+81
+00:09:07,000 --> 00:09:15,000
+Vamos ter na memória principal e antes da memória principal uma memória cache.
+
+82
+00:09:15,000 --> 00:09:25,000
+Esta memória cache normalmente, em 99% das coisas hoje em dia, está dentro do próprio processador, não é?
+
+83
+00:09:25,000 --> 00:09:33,000
+É uma memória que é extremamente rápida em termos do seu funcionamento, não é?
+
+84
+00:09:33,000 --> 00:09:39,000
+E evitamos ter isto que é, quando nós acedemos à memória exterior, ela está longe do meu processador,
+
+85
+00:09:39,000 --> 00:09:42,000
+quando eu digo longe é a uns centímetros, não é?
+
+86
+00:09:42,000 --> 00:09:52,000
+Mas a uns centímetros, quando estamos a trabalhar com velocidades de gigahertz, é uma distância muito grande, ok?
+
+87
+00:09:52,000 --> 00:09:59,000
+Portanto, a memória cache está a uns nanometros do processador, ok?
+
+88
+00:09:59,000 --> 00:10:06,000
+Significa que a latência é muito menor no acesso à memória cache, ok?
+
+89
+00:10:06,000 --> 00:10:15,000
+Esta tabela tem aqui umas comparações dessas, dessa velocidade, não é?
+
+90
+00:10:15,000 --> 00:10:26,000
+Nós temos ainda vários níveis de caches diferentes, que são basicamente L1 a mais rápida e que está mais próximo do processador,
+
+91
+00:10:26,000 --> 00:10:34,000
+também será a mais pequena, L2 é uma intermédia e L3 também um bocadinho mais lenta e a RAM, ok?
+
+92
+00:10:34,000 --> 00:10:41,000
+Se vocês olharem para aqui, se nós quisermos aceder a esta memória cache mais rápida, nós demoramos um ou dois ciclos de relógio.
+
+93
+00:10:41,000 --> 00:10:49,000
+Se quisermos aceder à RAM, nós podemos precisar de 300 ciclos de relógio para ir buscar os dados que estão na RAM, ok?
+
+94
+00:10:49,000 --> 00:11:01,000
+Portanto, a cache resolve-nos parte do problema, porque ela vai copiar para dentro do próprio processador uma parte da memória,
+
+95
+00:11:01,000 --> 00:11:07,000
+normalmente aquilo que se copia para dentro do processador são as chamadas linhas de cache, ok?
+
+96
+00:11:07,000 --> 00:11:18,000
+Podem ser apenas alguns bytes, e faz-se isso porque 90 e qualquer coisa por cento do programa,
+
+97
+00:11:18,000 --> 00:11:27,000
+ou seja, a probabilidade de nós executarmos a instrução que está na linha seguinte é cerca de 90 e tal por cento, ok?
+
+98
+00:11:27,000 --> 00:11:31,000
+É o princípio da localização do código.
+
+99
+00:11:31,000 --> 00:11:43,000
+E então o nosso programa consegue correr muito mais rapidamente acedendo à memória cache do que ir aceder à RAM, ok?
+
+100
+00:11:43,000 --> 00:11:52,000
+Entre a memória cache e a memória principal vai ter que existir uma coisa chamada MMU, Memory Management Unit,
+
+101
+00:11:52,000 --> 00:12:00,000
+que vai tratar de ir buscar as coisas à memória principal quando não existem na cache, ok?
+
+102
+00:12:00,000 --> 00:12:08,000
+Portanto, nós temos dois tipos de acesso à memória cache, não é?
+
+103
+00:12:08,000 --> 00:12:16,000
+Este é o rápido, portanto sempre eu pedo um conjunto de qualquer dados, quero aceder a qualquer coisa lá dentro, não é?
+
+104
+00:12:16,000 --> 00:12:25,000
+A cache faz um check para verificar, ok, os meus dados estão na cache ou estão fora da minha cache, ok?
+
+105
+00:12:25,000 --> 00:12:36,000
+Se existem há um cache hit e os dados são devolvidos imediatamente ao CPU, portanto estamos aqui a falar de latências muito baixas, ok?
+
+106
+00:12:36,000 --> 00:12:44,000
+E não temos qualquer acesso à base exterior, lembram-se ao Cado falar nisso a propósito também da cache.
+
+107
+00:12:44,000 --> 00:12:53,000
+Podemos ter azar e os dados ou o código que queremos aceder não existirem na cache,
+
+108
+00:12:53,000 --> 00:12:56,000
+mas aqui há de há-se um cache miss, ok?
+
+109
+00:12:56,000 --> 00:13:06,000
+Quando isto acontece, o meu programa, se eu tiver vários processos a ocorrer ao mesmo tempo,
+
+110
+00:13:06,000 --> 00:13:15,000
+ele não vai ficar à espera que se vá buscar os dados à memória principal e os coloquei na memória cache, ok?
+
+111
+00:13:15,000 --> 00:13:26,000
+Normalmente aquilo que acontece é, ok, o Memory Management Unit é programado para ir buscar esses blocos à memória principal,
+
+112
+00:13:26,000 --> 00:13:37,000
+o meu processo é comutado por outro processo que esteja pronto para continuar a sua execução, ok?
+
+113
+00:13:37,000 --> 00:13:47,000
+Portanto, este request é enviado para o controlador de memória, vai buscar os dados à RAM, faz isto em paralelo com a execução do processador normal,
+
+114
+00:13:47,000 --> 00:13:56,000
+vai buscar esses dados à RAM, quando os dados estiverem ali, depois o meu processo vai voltar novamente a ser executado, não é?
+
+115
+00:13:56,000 --> 00:14:06,000
+E, portanto, já vai conseguir aceder às instruções ou às posições de memória que crie, porque elas já estão na cache, não é?
+
+116
+00:14:06,000 --> 00:14:10,000
+Portanto, obviamente, isto aqui vai ter uma latência superior, não é?
+
+117
+00:14:10,000 --> 00:14:14,000
+Vai ter que utilizar o barramento do processador, não é?
+
+118
+00:14:14,000 --> 00:14:24,000
+E tem aqui um conjunto de passos mais, um conjunto de passos maior, portanto, demora mais tempo, basicamente, ok?
+
+119
+00:14:24,000 --> 00:14:34,000
+Mas isto poupa-nos muito, em termos de performance, muita velocidade para o computador, ok?
+
+120
+00:14:37,000 --> 00:14:43,000
+Portanto, a cache transfere pequenos blocos de dados, por vezes 64 bytes, por exemplo,
+
+121
+00:14:43,000 --> 00:14:52,000
+é otimizada para aquele princípio da localização dos programas, tanto em nível temporal como espacial, ok?
+
+122
+00:14:53,000 --> 00:14:59,000
+A RAM, ok, é utilizada quase como lixo, não é?
+
+123
+00:14:59,000 --> 00:15:02,000
+Transferir grandes pedaços de memória, ok?
+
+124
+00:15:02,000 --> 00:15:06,000
+E tem, ao mesmo tempo, uma latência muito grande no acesso, ok?
+
+125
+00:15:07,000 --> 00:15:11,000
+Qual é o impacto que as caches vão ter nos nossos sistemas indebidos, não é?
+
+126
+00:15:12,000 --> 00:15:18,000
+Pronto, primeiro, tem impactos positivos e tem impactos negativos,
+
+127
+00:15:18,000 --> 00:15:23,000
+dependendo das aplicações que nós estamos a executar neste momento, não é?
+
+128
+00:15:24,000 --> 00:15:26,000
+O que é que me acontece?
+
+129
+00:15:26,000 --> 00:15:31,000
+Obviamente, os meus programas podem, em média, correr de forma mais rápida,
+
+130
+00:15:31,000 --> 00:15:38,000
+mas, portanto, a performance pode aumentar, mas o determinismo do programa,
+
+131
+00:15:38,000 --> 00:15:43,000
+portanto, a variação com que as várias coisas correm, é muito maior.
+
+132
+00:15:43,000 --> 00:15:50,000
+Eu posso ter cache misses, podem os meus dados estar na cache, não é?
+
+133
+00:15:50,000 --> 00:15:55,000
+Portanto, aqui leva-nos a isto que é imprevisível.
+
+134
+00:15:55,000 --> 00:15:59,000
+O que é que vai acontecer aqui é imprevisível, não é?
+
+135
+00:15:59,000 --> 00:16:03,000
+Portanto, uma das coisas que vocês vão ver isso mais para frente, não é?
+
+136
+00:16:03,000 --> 00:16:09,000
+Estou-vos a observar aqui só uns acheios de outras cadeiras, não só na minha, não é?
+
+137
+00:16:09,000 --> 00:16:15,000
+Quando nós queremos calcular o tempo de execução de um processo, de uma rotina qualquer, não é?
+
+138
+00:16:15,000 --> 00:16:22,000
+No fundo, aquilo que eu tenho de saber é sumar os ciclos de relógio de cada rotina,
+
+139
+00:16:22,000 --> 00:16:24,000
+de cada instrução de código-máquina, não é?
+
+140
+00:16:24,000 --> 00:16:32,000
+No fundo, se eu conseguir fazer essa soma, eu tenho o quanto tempo é que o programa demora a executar, não é?
+
+141
+00:16:32,000 --> 00:16:40,000
+Mas eu tenho que ser pessimista nestas contas, não é?
+
+142
+00:16:40,000 --> 00:16:47,000
+E portanto, se eu for pessimista, eu vou assumir sempre que vou ter o slow pass, não é?
+
+143
+00:16:47,000 --> 00:16:49,000
+Portanto, vou ter um cache miss.
+
+144
+00:16:49,000 --> 00:16:55,000
+Significa o quê? Que o meu sistema, que tinha uma alta performance,
+
+145
+00:16:55,000 --> 00:17:07,000
+afinal, vai estar previsto recorrer com a pior performance possível, que pode ser quase 90% mais lento, não é?
+
+146
+00:17:07,000 --> 00:17:15,000
+Em termos daquilo que eu estou a assumir, 90% mais lento que aquilo que realmente é em média, ok?
+
+147
+00:17:15,000 --> 00:17:23,000
+Mas eu quero garantir que o sistema nunca tem problemas, nunca tem problemas com as temporizações, por vezes é preciso fazer isso, ok?
+
+148
+00:17:23,000 --> 00:17:32,000
+Portanto, isto leva a que, por vezes, até em alguns sistemas imbebidos, se desliga a cache, ok?
+
+149
+00:17:32,000 --> 00:17:38,000
+Se deixa de haver esta improvisibilidade temporal, já desligamos a cache, vai tudo buscar a memória.
+
+150
+00:17:38,000 --> 00:17:46,000
+Os sistemas não podem precisar de uma performance muito elevada a nível do próprio processamento, ok?
+
+151
+00:17:46,000 --> 00:17:52,000
+Para complicar tudo isto com os sistemas imbebidos, ainda temos os multicores, ok?
+
+152
+00:17:52,000 --> 00:18:02,000
+Quando nós temos sistemas multicore, que hoje em dia é quase impossível, nós compramos um processador que tenha um core apenas,
+
+153
+00:18:02,000 --> 00:18:11,000
+mesmo o Arduino que vocês estão a utilizar, salvo erro, não sei qual, estão a usar os...
+
+154
+00:18:11,000 --> 00:18:20,000
+É o Arduino Uno ou é a questão das bordes que vocês estão a utilizar?
+
+155
+00:18:20,000 --> 00:18:22,000
+Acho que é o Uno.
+
+156
+00:18:22,000 --> 00:18:24,000
+Estão a usar o Uno?
+
+157
+00:18:24,000 --> 00:18:28,000
+Não tenho a certeza desse.
+
+158
+00:18:28,000 --> 00:18:30,000
+O que eu...
+
+159
+00:18:30,000 --> 00:18:37,000
+Pois, por acaso não tenho a certeza, mas eu penso que também tem dois processadores lá dentro, tem dois cores lá dentro.
+
+160
+00:18:37,000 --> 00:18:38,000
+Acho.
+
+161
+00:18:38,000 --> 00:18:40,000
+Não tenho a certeza absoluta, ok?
+
+162
+00:18:40,000 --> 00:18:47,000
+Os outros que eu uso nas minhas aulas, que eu não me estou a lembrar do nome, assim, esses têm dois processadores lá dentro, não é?
+
+163
+00:18:47,000 --> 00:18:55,000
+Pronto, e como eu estava a dizer, os multicores ainda trazem mais uma camada de confusão e de...
+
+164
+00:18:55,000 --> 00:18:58,000
+a parte do sistema de tempo real, ok?
+
+165
+00:18:58,000 --> 00:19:00,000
+É muito mais difícil...
+
