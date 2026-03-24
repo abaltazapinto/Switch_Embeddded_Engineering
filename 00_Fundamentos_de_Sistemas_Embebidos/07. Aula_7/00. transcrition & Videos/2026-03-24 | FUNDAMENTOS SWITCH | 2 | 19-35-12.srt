@@ -1,0 +1,604 @@
+1
+00:00:00,000 --> 00:00:12,560
+de cobre, ou um fio de fibra óptica, ou as próprias comunicações num meio sem fios.
+
+2
+00:00:12,560 --> 00:00:21,200
+A largura de banda que eu vou focar, a tal de emitir os meus dados, é fundamental para isto.
+
+3
+00:00:21,200 --> 00:00:26,400
+Isso calculou-se através deste teorema de Scheran que aqui está.
+
+4
+00:00:26,480 --> 00:00:31,680
+Eu acho que tenho ali mais um slide onde já vou explicar isto com mais cuidado.
+
+5
+00:00:31,680 --> 00:00:35,280
+Mas basicamente o que é que isto quer dizer? Quanto maior para a largura de banda,
+
+6
+00:00:35,280 --> 00:00:40,000
+maior vai ser o data rate que aqui está.
+
+7
+00:00:44,000 --> 00:00:49,520
+Por outro lado, portanto, a largura de banda também é importante que se ela for muito estreita,
+
+8
+00:00:49,520 --> 00:00:53,520
+muito pequenina, isto vai levar a uma destrução muito grande do sinal.
+
+9
+00:00:57,360 --> 00:01:06,560
+E a sua reconstrução na recessão pode não ser a melhor, pode ser muito mal, ou muito sujeito a erros.
+
+10
+00:01:08,560 --> 00:01:11,680
+Há também a questão da alocação de espectro.
+
+11
+00:01:11,680 --> 00:01:20,880
+Se vocês olharem para a alocação de espectro, vocês veem facilmente centenas de coisas
+
+12
+00:01:20,880 --> 00:01:24,000
+que estão alocadas ao espectro eletromagnético.
+
+13
+00:01:24,080 --> 00:01:35,440
+Desde um espacozinho para o rádio, mais um espaço para a televisão, espaços para satélites,
+
+14
+00:01:35,440 --> 00:01:45,840
+diferentes tipos de satélites, comunicações com navios, comunicações com aviões, por exemplo,
+
+15
+00:01:45,840 --> 00:01:50,080
+outros tipos de comunicações, por exemplo, com comboios e assim.
+
+16
+00:01:50,800 --> 00:01:56,400
+A banda de cidadão, em que qualquer pessoa pode comunicar, utilizando aquela determinada
+
+17
+00:01:56,400 --> 00:01:58,160
+gama de frequências.
+
+18
+00:01:58,160 --> 00:02:06,000
+Um espectro minúsculo, que é onde nós temos a capacidade de comunicar através do wi-fi,
+
+19
+00:02:06,000 --> 00:02:17,120
+de 112 a 11, e depois quem é que fica com o resto do espectro são os militares.
+
+20
+00:02:17,600 --> 00:02:24,800
+Esse cara tem para aí 70% do espectro eletromagnético reservado para comunicações militares.
+
+21
+00:02:28,640 --> 00:02:36,960
+Relativamente só mais ao teorema de Shannon, isto define o máximo de data weight, a máxima
+
+22
+00:02:36,960 --> 00:02:39,920
+taxa de transferência de dados.
+
+23
+00:02:39,920 --> 00:02:41,120
+E depende de quê?
+
+24
+00:02:41,120 --> 00:02:47,200
+Depende da largura de banda do canal, e depende do nível entre o sinal e o ruído.
+
+25
+00:02:47,200 --> 00:02:54,720
+No fundo, se nós tivéssemos aqui uma potência de sinal e uma potência de ruído, o SNR
+
+26
+00:02:54,720 --> 00:03:00,080
+não é igual a isto, ao sinal, a potência do sinal sobre a potência do ruído.
+
+27
+00:03:00,080 --> 00:03:03,120
+Aproximadamente é uma coisa deste jeito.
+
+28
+00:03:03,120 --> 00:03:10,240
+A sua capacidade, então, é B, vezes o logaritmo da base 2, 1 mais SNR.
+
+29
+00:03:10,240 --> 00:03:13,760
+O que é que isto quer dizer?
+
+30
+00:03:13,760 --> 00:03:17,760
+Quanto maior a largura de banda, maior o data weight.
+
+31
+00:03:19,120 --> 00:03:33,360
+Quanto maior o SNR, portanto, menor a interferência de ruído no canal, e portanto, mais dados
+
+32
+00:03:33,360 --> 00:03:35,360
+podem ser transmitidos.
+
+33
+00:03:35,360 --> 00:03:46,720
+O que aquele logaritmo quer dizer é que mesmo que eu incremento muitíssimo a relação
+
+34
+00:03:46,720 --> 00:03:53,520
+entre o sinal e o ruído, não vai fazer uma diferença tão grande como aumentar a largura
+
+35
+00:03:53,520 --> 00:03:54,240
+de banda.
+
+36
+00:03:54,240 --> 00:04:01,200
+Se eu duplicar a largura de banda, eu duplico realmente a largura de banda do canal, mas
+
+37
+00:04:02,080 --> 00:04:08,800
+duplicar o signal to noise ratio não duplica a largura de banda do canal naquele lugar.
+
+38
+00:04:14,800 --> 00:04:23,920
+Isto é claro que é um limite teórico, a maior parte dos sistemas nunca vai chegar
+
+39
+00:04:23,920 --> 00:04:27,040
+àquele valor, aquele valor máximo teórico.
+
+40
+00:04:27,280 --> 00:04:33,040
+Portanto, vai haver sempre problemas na modulação dos sinais, mas vamos ver mais à frente
+
+41
+00:04:33,040 --> 00:04:36,320
+o que é que é isto, o que é que é a modulação dos sinais.
+
+42
+00:04:36,320 --> 00:04:47,280
+Há sempre limitações do hardware, que tem ruído, tem incapacidades, e depois há interferência
+
+43
+00:04:47,280 --> 00:04:48,960
+de todas as outras fontes.
+
+44
+00:04:49,440 --> 00:04:58,080
+Temos dois cabos ao lado um do outro, e temos interferências entre os dois cabos, o resultado
+
+45
+00:04:58,080 --> 00:05:05,280
+dessas interferências é que o sinal de um cabo vai aparecer também no sinal do outro.
+
+46
+00:05:05,280 --> 00:05:17,120
+Claro que vai ser muito mais pequenino, mas isso vai provocar realmente algumas alterações.
+
+47
+00:05:17,520 --> 00:05:23,360
+Nós também vamos ver mais à frente quando falamos de comunicações sem fios, estes
+
+48
+00:05:23,360 --> 00:05:24,800
+conceitos que aqui estão.
+
+49
+00:05:26,880 --> 00:05:32,320
+Entrando então, deixando esta parte teórica, que vamos ter que voltar a visitar isto aqui
+
+50
+00:05:32,320 --> 00:05:39,920
+mais para frente, ou pelo menos aplicá-la, e começamos novamente pelo modelosí.
+
+51
+00:05:40,160 --> 00:05:48,000
+Muitos de vocês devem ter falado no modelosí, em que basicamente foi uma coisa inventada
+
+52
+00:05:48,000 --> 00:05:54,320
+já nos anos, não inventada propriamente, discutida como mecanismo para modelizar redes
+
+53
+00:05:54,320 --> 00:06:02,720
+de comunicações, nos anos 90, e que estrutura basicamente os protocolos de comunicações
+
+54
+00:06:02,720 --> 00:06:05,680
+em sete camadas diferentes.
+
+55
+00:06:06,640 --> 00:06:17,120
+Portanto, nós temos uma camada física, onde temos toda a parte do hardware, de amplificadores,
+
+56
+00:06:17,120 --> 00:06:26,640
+de sinal, o meio físico em si, então define tudo isto, se as comunicações vão ser tabuladas
+
+57
+00:06:26,640 --> 00:06:32,240
+ou não, isto depois aplica-se a qualquer rede, como vamos ver mais para frente, isto
+
+58
+00:06:32,240 --> 00:06:35,520
+é um modelo de referência apenas, não é um modelo real.
+
+59
+00:06:36,720 --> 00:06:43,120
+Temos depois a camada de ligação de dados, que no fundo vai definir qual é o formato
+
+60
+00:06:43,120 --> 00:06:48,720
+dos dados, como é que se vão estabelecer as ligações entre dois nós.
+
+61
+00:06:49,600 --> 00:06:57,520
+Camada de rede, tem muito a ver, se nós tivermos muitos nós ligados uns aos outros, como
+
+62
+00:06:57,600 --> 00:07:03,440
+é que uma mensagem deste nó vai parar a este que está aqui deste lado, ele pode ir
+
+63
+00:07:03,440 --> 00:07:10,800
+por este caminho, pode ir por aqui, portanto, neste caso simples, tem pelo menos dois caminhos,
+
+64
+00:07:10,800 --> 00:07:17,440
+isto tem a ver, a network layer vai tratar de fazer este encaminhamento.
+
+65
+00:07:18,800 --> 00:07:25,440
+Camada de transporte, trata da transmissão de pacotes, mas não quero saber como é
+
+66
+00:07:25,440 --> 00:07:30,080
+que eles chegam ao destino, isto é a camada de baixo que vai tratar do assunto.
+
+67
+00:07:30,960 --> 00:07:40,480
+Camada de sessão, basicamente vai manter as conexões entre os dois nós, vamos chamar
+
+68
+00:07:40,480 --> 00:07:49,600
+um e o dois, quanto o nó 1 e o nó 2, e vai tratar de manter aqui a conexão aberta, etc.
+
+69
+00:07:50,560 --> 00:07:57,200
+Camada 7, camada de apresentação, tem a ver essencialmente com a encriptação,
+
+70
+00:07:57,200 --> 00:08:00,640
+com o formato dos dados, etc.
+
+71
+00:08:00,640 --> 00:08:06,640
+O que é que vai acontecer a este modelo, isto é um modelo por camadas, o que é que
+
+72
+00:08:06,640 --> 00:08:14,240
+isso quer dizer, quer dizer que as camadas vão aceder à camada inferior, e a camada
+
+73
+00:08:14,320 --> 00:08:22,160
+inferior só pode comunicar com a camada superior, portanto não podemos saltar camadas, nós
+
+74
+00:08:22,160 --> 00:08:28,640
+não podemos mandar coisas da data link layer e passar imediatamente para a camada de transporte.
+
+75
+00:08:28,640 --> 00:08:37,920
+Da session layer só podemos comunicar aqui para baixo, isto é proibido, e também não
+
+76
+00:08:38,000 --> 00:08:45,440
+podemos fazer isto, isto também é proibido neste tipo de comunicações, só podemos
+
+77
+00:08:45,440 --> 00:08:49,520
+comunicar ou com a camada de baixo ou com a camada de cima, mas não.
+
+78
+00:08:49,520 --> 00:08:55,520
+Pronto, esta comunicação é feita por umas abstrações horrorosas que eles chamam Service
+
+79
+00:08:55,520 --> 00:09:03,840
+Access Points, e que basicamente não são mais do que chamadas a funções para executar
+
+80
+00:09:04,560 --> 00:09:12,880
+um determinado serviço, aqui o fundamental é que a camada só comunica com a camada de baixo.
+
+81
+00:09:18,880 --> 00:09:28,400
+Pronto, isto nos anos 90 tentou-se fazer as implementações deste protocolo, foram feitas
+
+82
+00:09:28,400 --> 00:09:32,960
+algumas implementações, eu cheguei na altura até a trabalhar com isto, era um bocado
+
+83
+00:09:33,840 --> 00:09:43,920
+mas já muito horrorosas na altura, difíceis de perceber e trabalhar, muito complexas,
+
+84
+00:09:43,920 --> 00:09:54,720
+sem grande certificação, portanto o que acabou por acontecer é que as pessoas tinham
+
+85
+00:09:54,720 --> 00:10:02,880
+um outro protocolo já na altura, chamada TCPIP, e portanto em geral na indústria o protocolo
+
+86
+00:10:02,880 --> 00:10:09,600
+OZI, tal como foi definido na altura por uma série de pessoas que trabalhavam na área,
+
+87
+00:10:09,600 --> 00:10:18,480
+não foi nunca implementado na prática, nunca foi muito utilizado, mas este modelo passou
+
+88
+00:10:18,480 --> 00:10:25,280
+a ser um modelo de referência que estrutura todas as explicações sobre redes de computadores,
+
+89
+00:10:25,520 --> 00:10:35,760
+todas as redes estão referenciadas a este modelo e principalmente a este conjunto de camadas.
+
+90
+00:10:35,760 --> 00:10:42,560
+Isto é fundamental, este conjunto de camadas que aqui está, e perceber este conjunto de camadas.
+
+91
+00:10:42,560 --> 00:10:48,560
+As únicas que são mais esquisitas aqui no meio e que normalmente não têm muita representação,
+
+92
+00:10:48,640 --> 00:10:55,920
+estas duas aqui, a camada de sessão e a camada de apresentação, são aquelas que são menos
+
+93
+00:10:55,920 --> 00:11:03,600
+utilizadas aqui no meio, as outras todas que aqui estão, e a camada da aplicação, obviamente,
+
+94
+00:11:03,600 --> 00:11:08,960
+porque é aquela que representa a aplicação que estamos a correr, são as que estão presentes
+
+95
+00:11:08,960 --> 00:11:14,640
+aí em todo o lado. Isto passou a ser um modelo de referência e todas as implementações desapareceram,
+
+96
+00:11:14,880 --> 00:11:20,800
+nunca mais iremos falar em implementações do protocolo OZI. O protocolo que venceu,
+
+97
+00:11:20,800 --> 00:11:30,720
+como todos os seus produtos, é o protocolo chamado TCPIP, é um protocolo de comunicações,
+
+98
+00:11:30,720 --> 00:11:43,360
+já começado nos anos 80, nos primórdios da internet, que é bastante robusto, é bastante
+
+99
+00:11:43,360 --> 00:11:54,800
+importante na troca de dados entre dispositivos, este é um protocolo que já trata do enderçamento,
+
+100
+00:11:54,800 --> 00:12:04,240
+trata do routing, trata de suportar comunicações end-to-end, e portanto toda a gente utiliza o
+
+101
+00:12:04,240 --> 00:12:13,920
+protocolo TCPIP. Usando o modelo OZI como referência, reparem, o TCP também basicamente
+
+102
+00:12:13,920 --> 00:12:23,280
+tem uma camada de transporte, está aqui, tem uma camada de rede, network layer, pode ser um
+
+103
+00:12:23,280 --> 00:12:35,040
+modelo diferente, que é o IP, internet protocol layer, e depois o modelo TCPIP, já nem define,
+
+104
+00:12:35,040 --> 00:12:44,880
+só define estas coisas aqui. Quando muito, a partir daqui, isto já vai ser dependente das
+
+105
+00:12:44,880 --> 00:12:50,880
+tecnologias que nós estamos a utilizar, portanto a data link layer e a physical layer, é dependente das
+
+106
+00:12:50,960 --> 00:13:01,120
+tecnologias que vocês podem utilizar, TCPIP sobre Ethernet, TCPIP sobre I-Fi, TCPIP sobre GSM,
+
+107
+00:13:01,120 --> 00:13:08,960
+etc, pode ser tudo isto, pode ser aqui utilizar. E depois temos as aplicações, as aplicações,
+
+108
+00:13:08,960 --> 00:13:18,160
+tem aqui este exemplo, é basicamente mais detalhado, HTTP, SMTP, RTP, DNS, para todas as outras
+
+109
+00:13:18,240 --> 00:13:26,080
+aplicações do protocolo, aparecem aqui nesta camada de aplicação, eventualmente aqui também
+
+110
+00:13:26,080 --> 00:13:34,160
+as aplicações do utilizador. Como eu estava ali, eu queria falar, temos de trabalhar sobre Ethernet,
+
+111
+00:13:34,160 --> 00:13:42,320
+sobre Token Ring, também uma rede que está praticamente morta, e estas duas, também normalmente,
+
+112
+00:13:42,400 --> 00:13:50,560
+um utilizador habitual, também não os utiliza muito, ATM e Frame Relay, normalmente aparecem
+
+113
+00:13:50,560 --> 00:13:56,800
+a partir dos contas do ECM. Pronto, estes protocolos continuam aqui, TCP e UDP, vamos falar aqui mais
+
+114
+00:13:56,800 --> 00:14:05,040
+para frente, um bocadinho, e depois tem aqui os protocolos de mais baixo nível, o ARP para resolução
+
+115
+00:14:05,680 --> 00:14:20,320
+e o IGMP e o ICMP para sinalização entre as camadas. A camada IP, esta Internet Layer,
+
+116
+00:14:20,320 --> 00:14:30,640
+que no fundo é o Internet Protocol. Temos duas versões deste protocolo.
+
+117
+00:14:31,520 --> 00:14:49,280
+O IP versão 4 é o mais antigo, o mais compatível com tudo, aqui 80% do tráfico da rede global é baseado
+
+118
+00:14:49,280 --> 00:15:01,680
+na tecnologia. O IPv6 já foi lançado nos anos 90, na altura em que eu estava a terminar o meu curso,
+
+119
+00:15:01,680 --> 00:15:07,360
+já nessa altura tinha os professores que me mostravam o cabo da cabeça, isto é que vai ser o futuro,
+
+120
+00:15:07,360 --> 00:15:16,480
+IPv6, o IPv4 vai desaparecer, ninguém vai utilizar isto, nunca mais. Se vocês olharem à vossa volta,
+
+121
+00:15:16,960 --> 00:15:26,640
+aquilo que chega ao utilizador, 99% das vezes é o IPv4. Eventualmente, se vocês quiserem muito,
+
+122
+00:15:26,640 --> 00:15:33,760
+conseguem utilizar o protocolo IPv6, e também já vamos ver aqui as diferenças entre eles.
+
+123
+00:15:35,280 --> 00:15:42,960
+Portanto, principais diferenças, a principal motivação tinha a ver com isto. O IPv4 só
+
+124
+00:15:42,960 --> 00:15:56,080
+transmitia 32 bits para o endereço, isto dá um número relativamente pequeno de nós nas redes,
+
+125
+00:15:56,080 --> 00:16:07,520
+endereçáveis, tão pequeno que já, em número de nós, já ultrapassamos largamente aquilo que o IPv4
+
+126
+00:16:07,520 --> 00:16:16,320
+nos permitia. Só que, ao longo dos últimos anos, foram-se arrejando-se milhões de soluções,
+
+127
+00:16:16,320 --> 00:16:27,680
+relativamente complexas e assim, para continuar a utilizar esta solução do IPv4.
+
+128
+00:16:27,680 --> 00:16:42,560
+Pronto, temos também o IPv6, com 138 bits para endereçamentos, supostamente, dá um número
+
+129
+00:16:42,560 --> 00:16:50,160
+gigantesco de combinações possíveis, não só para a selecção, mas que nos permitem suportar todos
+
+130
+00:16:50,160 --> 00:16:59,040
+os termos IoT, IP neste mundo e noutros. O número de valores possíveis é muito, muito grande.
+
+131
+00:17:02,480 --> 00:17:12,160
+Portanto, nós estamos a tentar, aos poucos, muito devagarinho, mesmo muito devagarinho, ir mudando
+
+132
+00:17:12,400 --> 00:17:17,280
+a tecnologia IPv4 para a tecnologia IPv6.
+
+133
+00:17:17,280 --> 00:17:27,360
+Professor, só uma curiosidade. Existe alguma razão para essa resistência de mudança para o IPv6?
+
+134
+00:17:27,360 --> 00:17:39,760
+Essencialmente há uma questão de compatibilidade com aquilo que existe. Se nós usarmos o IPv6 em todo
+
+135
+00:17:40,400 --> 00:17:52,320
+o mundo, o que vai acontecer aqui é que algumas aplicações vão deixar de funcionar e, portanto,
+
+136
+00:17:52,320 --> 00:17:58,800
+não se utiliza o IPv6. Principalmente, a razão principal é que nós temos uma infraestrutura toda
+
+137
+00:17:59,040 --> 00:18:01,200
+voltada para o IPv4.
+
+138
+00:18:01,200 --> 00:18:09,520
+Sim, mas quer dizer, estamos a falar de uma, como se chama a tecnologia, um protocolo, que foi inventado nos
+
+139
+00:18:09,520 --> 00:18:17,760
+anos 90, 30 anos, eu diria que é mais do que tempo suficiente para fazer a mudança de geração de sistemas.
+
+140
+00:18:18,000 --> 00:18:29,360
+Mas nunca foi feito, nunca se achou que valesse a pena, não é? Portanto, há muito IPv6 sobre o backbone
+
+141
+00:18:29,360 --> 00:18:39,120
+da internet, ou seja, normalmente isso não tem chegado aos utilizadores, ou seja, todos os switches,
+
+142
+00:18:39,120 --> 00:18:47,440
+todos os ativos de rede e por aí fora só funcionam em IPv4, a maior parte deles. Mas as coisas vão
+
+143
+00:18:47,440 --> 00:18:53,360
+funcionando, agora não sei quando é que isso acontecerá, já na altura, está a ver, já fiz o meu curso,
+
+144
+00:18:53,360 --> 00:18:59,040
+já me estateavam com isso, isto agora já não interessa para nada, é IPv4, toda a gente vai mudar para IPv6
+
+145
+00:18:59,040 --> 00:19:03,920
+e 30 anos depois continuamos na mesma, ok? Quase 40 já neste momento.
+
+146
+00:19:17,440 --> 00:19:28,640
+O IPv, o endereçamento, portanto, é baseado em duas partes. Aqui o que nós chamamos o endereço da rede em si,
+
+147
+00:19:28,640 --> 00:19:39,040
+eu aqui só vou falar, vou só falar em IPv4, o endereço da rede e o endereço da máquina dentro da rede,
+
+148
+00:19:39,600 --> 00:19:46,240
+no fundo, a rede, imaginem que é a rede do ISEB, ok? É o número que identifica a rede do ISEB.
+
+149
+00:19:47,040 --> 00:19:54,320
+E depois temos um outro número que vai identificar o OCD, ok? Qual é a vantagem disto? É que se,
+
+150
+00:19:54,320 --> 00:20:02,000
+quando eu fizer o encaminhamento no meio da minha rede, eu não preciso de usar os 32 bits do meu endereço,
+
+151
+00:20:02,000 --> 00:20:08,400
+só preciso de usar os bits do endereço que estão destinados ao endereço do rede.
+

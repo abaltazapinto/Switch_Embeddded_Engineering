@@ -1,0 +1,928 @@
+1
+00:00:00,000 --> 00:00:07,860
+agora estão nas camadas superiores. Portanto, o que nós temos? Basicamente o
+
+2
+00:00:07,860 --> 00:00:13,320
+fundamental é o cliente que inicializa a comunicação com o cliente e o servidor
+
+3
+00:00:13,320 --> 00:00:21,000
+que ouve e vai responder. O que é que eu estava a dizer nas comunicações com o
+
+4
+00:00:21,000 --> 00:00:28,000
+NO-IOT? Imaginamos que temos aqui o NO-IOT, que tem um termómetro e está a
+
+5
+00:00:28,000 --> 00:00:33,000
+fazer uma temperatura num sítio qualquer. O que acontece? Em termos de
+
+6
+00:00:33,000 --> 00:00:37,000
+interação, a primeira coisa que eu vou fazer é estabelecer a ligação com ele,
+
+7
+00:00:37,000 --> 00:00:44,000
+no modelo cliente-servidor, e pedir-lhe para transmitir dados periodicamente.
+
+8
+00:00:44,000 --> 00:00:51,000
+Significa que ele agora, se fiz em x tempo, imaginemos 5 em 5 segundos, vai
+
+9
+00:00:51,000 --> 00:00:57,000
+fazer uma transmissão da sua temperatura. Isto continua a ser o modelo cliente-servidor,
+
+10
+00:00:57,000 --> 00:01:07,000
+mas este servidor periodicamente vai enviar dados. Vamos ver, por exemplo,
+
+11
+00:01:07,000 --> 00:01:14,000
+deste tipo de coisas há modelos mais interessantes de comunicação que são
+
+12
+00:01:14,000 --> 00:01:25,000
+mais fáceis de perceber e de montar. Portanto, o cliente inicializa os pedidos,
+
+13
+00:01:25,000 --> 00:01:31,000
+espera pelas respostas. Nós vamos ter aqui, por exemplo, os browsers,
+
+14
+00:01:31,000 --> 00:01:37,000
+aplicações móveis, dispositivos IoT imbebidos, eventualmente, podem não ser
+
+15
+00:01:37,000 --> 00:01:43,000
+sempre clientes, podem ser servidores também, a maior parte das vezes até são
+
+16
+00:01:43,000 --> 00:01:51,000
+servidores. Do lado do servidor, o que é que nós vamos ter? Vamos providenciar
+
+17
+00:01:51,000 --> 00:01:57,000
+os serviços e dados, e os dados podem ser dados de sensores, podem ser dados
+
+18
+00:01:57,000 --> 00:02:03,000
+HTTP, de uma interface gráfica, de outra coisa qualquer. Os servidores normalmente
+
+19
+00:02:03,000 --> 00:02:09,000
+têm capacidade de atender vários clientes ao mesmo tempo. É um bocadinho
+
+20
+00:02:09,000 --> 00:02:13,000
+complicado fazer isso, por exemplo, com o Ardlin, aqueles Ardlin que vocês estão a
+
+21
+00:02:13,000 --> 00:02:19,000
+utilizar nas vossas aulas práticas, é um bocadinho complicado. O servidor é
+
+22
+00:02:19,000 --> 00:02:26,000
+executado continuamente e está sempre num estado de escutar, está sempre à espera
+
+23
+00:02:26,000 --> 00:02:30,000
+para servir, está sempre à espera que alguém se ligue a ele, para ele começar a
+
+24
+00:02:30,000 --> 00:02:38,000
+fazer a sua função. Alguns exemplos, um servidor web, uma base de dados, e uma
+
+25
+00:02:38,000 --> 00:02:44,000
+coisa que vamos falar mais para a frente, que é um MQTT Broker. É um mecanismo
+
+26
+00:02:44,000 --> 00:02:50,000
+que implementa outro mecanismo até de comunicação, chamado produtor consumidor,
+
+27
+00:02:50,000 --> 00:02:59,000
+muito mais interessante para aplicações IoT, mas não é tão usado, porque as
+
+28
+00:02:59,000 --> 00:03:05,000
+pessoas foram habituadas a utilizar muito estes protocolos baseados em cliente
+
+29
+00:03:05,000 --> 00:03:11,000
+servidor, mas os protocolos produtor consumidor para este tipo de aplicações de
+
+30
+00:03:11,000 --> 00:03:17,000
+IoT, quanto a mim, são muito mais interessantes para as aplicações de
+
+31
+00:03:17,000 --> 00:03:19,000
+transmissão de dados.
+
+32
+00:03:19,000 --> 00:03:23,000
+Professor, só uma pergunta antes de avançar.
+
+33
+00:03:23,000 --> 00:03:24,000
+Sim.
+
+34
+00:03:24,000 --> 00:03:33,000
+O professor colocou alguns exemplos no servidor dos servidores, o MQTT Broker, mas
+
+35
+00:03:33,000 --> 00:03:38,000
+aqui estamos a falar do protocolo em que o cliente tem que fazer um pedido ao
+
+36
+00:03:38,000 --> 00:03:43,000
+servidor, o servidor tem uma resposta. O MQTT Broker, ele como servidor pode mandar
+
+37
+00:03:43,000 --> 00:03:47,000
+diretamente, nem que seja através do WebSockets, pode mandar simplesmente uma
+
+38
+00:03:47,000 --> 00:03:53,000
+resposta para o cliente desde que ele esteja subscrito a um determinado tópico.
+
+39
+00:03:53,000 --> 00:03:54,000
+Exatamente.
+
+40
+00:03:54,000 --> 00:03:58,000
+Ele enquadra-se mesmo nesta dualidade?
+
+41
+00:03:58,000 --> 00:04:03,000
+Sim, porque aqui o que define o que é que é o servidor é quem é que é o primeiro
+
+42
+00:04:03,000 --> 00:04:13,000
+a fazer a ligação. Para ele subscrever a um tópico do MQTT, teve que o cliente
+
+43
+00:04:13,000 --> 00:04:18,000
+fazer a primeira ligação ao servidor. É por aí que se vê o que é que é o
+
+44
+00:04:18,000 --> 00:04:24,000
+servidor. Eu sei que depois é contra-intuitivo, nomeadamente daquele isento que eu
+
+45
+00:04:24,000 --> 00:04:29,000
+estava aqui a mostrar em cima, que o cliente não está continuamente, realmente não
+
+46
+00:04:29,000 --> 00:04:38,000
+há um request, não é? Mas o modelo pode funcionar assim e com sensores EOT que enviam
+
+47
+00:04:38,000 --> 00:04:44,000
+dados, isto realmente não é a melhor forma de funcionar.
+
+48
+00:04:44,000 --> 00:04:49,000
+As WebSockets funcionam, já funcionam de maneira diferente e o servidor pode mandar
+
+49
+00:04:49,000 --> 00:04:52,000
+diretamente ao cliente, não é?
+
+50
+00:04:52,000 --> 00:04:58,000
+Sim, na maior parte dos protocolos o servidor pode mandar diretamente ao cliente.
+
+51
+00:04:58,000 --> 00:05:04,000
+Agora, quem faz a primeira ligação é o cliente, está bem? Isso é que define quem é o cliente
+
+52
+00:05:04,000 --> 00:05:11,000
+e quem é o servidor. É só essa questão. O servidor está executa, há uma ligação
+
+53
+00:05:11,000 --> 00:05:15,000
+do cliente e a partir daí os papéis podem se inverter, não é?
+
+54
+00:05:15,000 --> 00:05:16,000
+Ok.
+
+55
+00:05:17,000 --> 00:05:23,000
+Depois há outros modelos, nomeadamente RESTs e assim, em que há sempre uma pergunta
+
+56
+00:05:23,000 --> 00:05:25,000
+e uma resposta, não é?
+
+57
+00:05:25,000 --> 00:05:29,000
+Pois eu estava a confundir com esses modelos da APIs, RESTful API.
+
+58
+00:05:29,000 --> 00:05:35,000
+Ok. E portanto, de serem stateless e por aí fora, essas coisas já são um bocadinho
+
+59
+00:05:35,000 --> 00:05:40,000
+mais diferentes, principalmente nesta área também de EOT.
+
+60
+00:05:40,000 --> 00:05:46,000
+Depois é muito difícil cumprir com aquelas aplicações que sejam de acordo com os princípios
+
+61
+00:05:46,000 --> 00:05:54,000
+do REST, está bem? Eu já trabalhei em vários projetos nesta área e para mim continuo a
+
+62
+00:05:54,000 --> 00:06:02,000
+achar que coisas baseadas em MQTT ou algo do género são as que funcionam melhor para
+
+63
+00:06:02,000 --> 00:06:09,000
+os, para sensores de EOT, ok? Quem pôr dos dados é a melhor solução. Nós também
+
+64
+00:06:09,000 --> 00:06:15,000
+vamos falar nisso, não é? Mais para frente. Portanto, vantagens e desvantagens destas
+
+65
+00:06:15,000 --> 00:06:19,000
+coisas. Às vezes elas são um bocadinho contraditórias entre si, como vamos lá ver,
+
+66
+00:06:19,000 --> 00:06:27,000
+ok? Portanto, temos primeiro, em termos de controle centralizado, temos só o NOC,
+
+67
+00:06:27,000 --> 00:06:34,000
+que controla tudo, não é? Isso permite facilmente também fazer alguma partilha de
+
+68
+00:06:34,000 --> 00:06:45,000
+recursos. Há escalabilidade, ok? Mas isto precisa de alguns melhoramentos ao servidor.
+
+69
+00:06:45,000 --> 00:06:50,000
+No fundo, nós vamos ter uma infraestrutura, que é aquilo que se faz na maior parte dos
+
+70
+00:06:50,000 --> 00:06:55,000
+servidores web, em que há um NOC que recebe e que depois distribui a carga por vários
+
+71
+00:06:55,000 --> 00:07:01,000
+servidores reais, não é? Portanto, vão haver vários servidores que estão a funcionar ao mesmo
+
+72
+00:07:01,000 --> 00:07:07,000
+tempo para a mesma coisa, ok? Só assim é que nós conseguimos fazer, não sei, um milhão
+
+73
+00:07:07,000 --> 00:07:15,000
+de queries por segundo à Google, ok? Uma máquina normal não conseguiria sozinha responder
+
+74
+00:07:15,000 --> 00:07:22,000
+a um milhão de queries, mas se tiverem mil ou dez mil máquinas a funcionar ao mesmo
+
+75
+00:07:22,000 --> 00:07:27,000
+tempo, se querer, conseguem fazer isso, ok? Em termos de segurança, também temos aqui
+
+76
+00:07:27,000 --> 00:07:35,000
+um ponto único, que é o servidor, a segurança vem um bocadinho mais fácil, ok? Manutenção
+
+77
+00:07:35,000 --> 00:07:42,000
+também permite-nos depois fazer a manutenção apenas no servidor, mudar coisas no servidor
+
+78
+00:07:42,000 --> 00:07:50,000
+e continuar a funcionar, ok? Robustez, ok? Desde que tenha um desenho apropriado, também
+
+79
+00:07:50,000 --> 00:07:59,000
+funciona, mas tal como no caso anterior que eu falei da escalabilidade, a robustez do
+
+80
+00:07:59,000 --> 00:08:08,000
+sistema só funciona se existirem réplicas do sistema que eu quero tornar mais robusto, ok?
+
+81
+00:08:08,000 --> 00:08:16,000
+Por outro lado, se eu tiver um servidor que não pode ser replicado, ok? Então esse servidor
+
+82
+00:08:16,000 --> 00:08:21,000
+pode ser um bottleneck do sistema, porque se eu tiver muitos pedidos a chegarem ao mesmo
+
+83
+00:08:21,000 --> 00:08:29,000
+tempo a este servidor, ele entope, não funciona, ok? Vocês seguirem por aí algumas
+
+84
+00:08:29,000 --> 00:08:42,000
+aplicações de, por exemplo, de tempo a terminar de acesso a estações meteorológicas,
+
+85
+00:08:42,000 --> 00:08:50,000
+em que temos várias pessoas no mundo a aceder a uma determinada estação meteorológica, ok?
+
+86
+00:08:50,000 --> 00:08:56,000
+Isto só não funciona bem se todos ao mesmo tempo tentarem aceder a estação meteorológica,
+
+87
+00:08:56,000 --> 00:09:05,000
+não é? Portanto, é um protocolo que, havendo limitações do lado da estação, de ter só lá
+
+88
+00:09:05,000 --> 00:09:13,000
+os servidores em quenino, ele não aguenta, ok? Aguenta 30, 40 segundos no máximo, se for mais
+
+89
+00:09:13,000 --> 00:09:21,000
+do que isso, ele caixa, ok? Pode não crachar, mas não aguenta, não faz essas conexões todas.
+
+90
+00:09:21,000 --> 00:09:26,000
+Por outro lado, temos aqui um single point of failure, não é? Se aquilo falhar, falhou o sistema
+
+91
+00:09:27,000 --> 00:09:37,000
+tudo fica, tudo fica ligado. Aquilo que eu chamo coupling entre o cliente e o servidor, isto é,
+
+92
+00:09:37,000 --> 00:09:42,000
+o cliente tem que saber exatamente onde é que está o servidor, qual é o endereço do servidor,
+
+93
+00:09:42,000 --> 00:09:49,000
+qual é o serviço que o servidor vai ter, ok? E, portanto, isto implica um conhecimento
+
+94
+00:09:49,000 --> 00:09:59,000
+dentro do cliente e o servidor, ok? E, portanto, não é, por vezes, muito, muito interessante
+
+95
+00:09:59,000 --> 00:10:07,000
+este conhecimento. Por exemplo, no caso dos sensores de opt-in daquele protocolo MQTT, por exemplo,
+
+96
+00:10:07,000 --> 00:10:16,000
+o sensor manda os dados para o MQTT Broker, depois o MQTT Broker distribui para quem estiver
+
+97
+00:10:16,000 --> 00:10:24,000
+interessado em saber a temperatura, imaginemos, no molho norte do Porto de Leixões, ok?
+
+98
+00:10:26,000 --> 00:10:34,000
+Isto também tem problemas de escalabilidade, alguns, sou relativamente àquela questão que eu falei, não é?
+
+99
+00:10:34,000 --> 00:10:45,000
+Embora, reparem, é mais fácil de gerir, mas também pode ser um problema em termos de risco de segurança,
+
+100
+00:10:45,000 --> 00:10:50,000
+às vezes, em termos de segurança é um bocado difícil perceber qual é que é o maior risco, não é?
+
+101
+00:10:50,000 --> 00:11:00,000
+Se está centralizado, se está distribuído, mas se conseguir entrar num sistema que é centralizado,
+
+102
+00:11:00,000 --> 00:11:04,000
+já não há nada a fazer ao próprio sistema, ok?
+
+103
+00:11:05,000 --> 00:11:14,000
+Em termos de comunicação de TCP e IP, o servidor vai ter um porto fixo, ok?
+
+104
+00:11:14,000 --> 00:11:22,000
+Um porto é, basicamente, um número que dentro do próprio computador vai identificar a aplicação, ok?
+
+105
+00:11:22,000 --> 00:11:30,000
+Portanto, nós temos, para o computador, temos o endereço IP, imaginemos que isto aqui é o 193,
+
+106
+00:11:30,000 --> 00:11:37,000
+nós temos aqui na imagem seguinte, mas imaginemos que este é o 193.0.1, ok?
+
+107
+00:11:37,000 --> 00:11:45,000
+Este servidor que o cliente tem que conhecer é o 193.005, ok?
+
+108
+00:11:45,000 --> 00:11:54,000
+Mas a minha aplicação está ligada aqui a um porto, imaginemos que é o porto 100, ok?
+
+109
+00:11:54,000 --> 00:12:04,000
+Este que é o, ah, desculpa, está aqui o porto, está aqui, deixa eu apagar isto,
+
+110
+00:12:07,000 --> 00:12:14,000
+o porto está aqui, e o servidor está num porto fixo.
+
+111
+00:12:14,000 --> 00:12:21,000
+Este pode estar num porto dinâmico, qualquer porto no service, porque é este que vai iniciar a comunicação, não é?
+
+112
+00:12:21,000 --> 00:12:29,000
+Porém, que ele vai enviar a mensagem com o seu endereço, o seu porto original,
+
+113
+00:12:29,000 --> 00:12:37,000
+que é o que identifica a aplicação dentro da minha máquina, e o endereço destino e o porto de destino,
+
+114
+00:12:37,000 --> 00:12:43,000
+que é aquilo com quem ele vai, com quem ele vai comunicar, ok?
+
+115
+00:12:44,000 --> 00:12:49,000
+Portanto, aqui introduzimos aqui o concessor, o conceito de port numbers,
+
+116
+00:12:49,000 --> 00:12:57,000
+também muito utilizado nas comunicações de TCPIP para identificar as aplicações do outro lado, ok?
+
+117
+00:12:57,000 --> 00:13:06,000
+Quanto ao protocolo, o protocolo ODP é o mais simples dos dois, não é orientado à conexão, isto é,
+
+118
+00:13:07,000 --> 00:13:11,000
+ele pura e simplesmente faz isto que aparece aqui, ok?
+
+119
+00:13:11,000 --> 00:13:16,000
+Aqui vai uma mensagem, deste, desta fonte para este estilo, ok?
+
+120
+00:13:16,000 --> 00:13:23,000
+Mais nada, e a mensagem vai poder a rede toda e há de chegar ao outro lado, ok?
+
+121
+00:13:23,000 --> 00:13:32,000
+Portanto, não há qualquer garantia de que a mensagem entregue, ela pode se perder no caminho, pode ficar a algures, não é?
+
+122
+00:13:32,000 --> 00:13:41,000
+Não há qualquer garantia da ordem dos frames, das mensagens que são enviadas, elas podem ser encaminhadas por caminhos diferentes
+
+123
+00:13:41,000 --> 00:13:46,000
+e a ordem com que chegam vai ser diferente da ordem com que foram transmitidas, portanto,
+
+124
+00:13:46,000 --> 00:13:55,000
+em termos de fardo para o programador, aqui o fardo é muito maior, porque tem que tratar destas coisas todas, ok?
+
+125
+00:13:55,000 --> 00:13:58,000
+Não tem aquilo que se chama flow control,
+
+126
+00:13:58,000 --> 00:14:04,000
+flow control é, se estamos a enviar muita informação para o receptor,
+
+127
+00:14:04,000 --> 00:14:10,000
+podemos levar a que o receptor não consiga processar essa informação toda e entre em crash, não é?
+
+128
+00:14:10,000 --> 00:14:17,000
+Portanto, os protocolos, este protocolo não faz nada disto, o TCP e IP já vão ver o que faz, ok?
+
+129
+00:14:17,000 --> 00:14:22,000
+Cada mensagem é tratada individualmente pela rede fora, ok?
+
+130
+00:14:23,000 --> 00:14:33,000
+Acho que não há aqui mais nada de importante onde a coisa era interessante há uns anos atrás
+
+131
+00:14:33,000 --> 00:14:43,000
+e em algumas redes específicas utilizadas em seus embedos é permitir o broadcast de mensagens, ok?
+
+132
+00:14:43,000 --> 00:14:49,000
+Dentro de uma rede enviamos uma mensagem e essa mensagem vai ser transmitida para todos os nós, ok?
+
+133
+00:14:49,000 --> 00:14:54,000
+O que acontece é que hoje em dia, em 99% das redes,
+
+134
+00:14:56,000 --> 00:15:03,000
+esta feature de se permitir o broadcast de frames não existe, não é possível,
+
+135
+00:15:03,000 --> 00:15:11,000
+não se faz broadcast de frames, mas o DP supostamente suporta o broadcast de frames, ok?
+
+136
+00:15:11,000 --> 00:15:19,000
+Portanto, todo o envio e recepção é injurido por filas FIFO,
+
+137
+00:15:19,000 --> 00:15:22,000
+são filas first in first out, não tem nada especial, ok?
+
+138
+00:15:22,000 --> 00:15:28,000
+A primeira mensagem que chega é a primeira que vai ser recebida, ok?
+
+139
+00:15:30,000 --> 00:15:38,000
+Toda a comunicação para enviar os datagramas, portanto, as mensagens e receber as mensagens
+
+140
+00:15:38,000 --> 00:15:44,000
+é feita através de chamadas ao sistema, se vocês lembrarem nós falamos também na aula anterior
+
+141
+00:15:44,000 --> 00:15:48,000
+sobre sistemas operativos, que é a forma nós comunicamos com os sistemas operativos
+
+142
+00:15:48,000 --> 00:15:53,000
+e, neste caso, com os device drivers utilizados nas comunicações, ok?
+
+143
+00:15:54,000 --> 00:16:04,000
+Portanto, a principal coisa que há aqui não há garantia que o datagrama, que uma mensagem chegue ao seu destino, ok?
+
+144
+00:16:04,000 --> 00:16:13,000
+Não há feedback do destino a dizer se o sob sucesso não entrega ou não,
+
+145
+00:16:13,000 --> 00:16:18,000
+portanto, nós mandamos esquecer o que foi, não é? Ok?
+
+146
+00:16:20,000 --> 00:16:28,000
+Portanto, é responsabilidade do programador implementar aquilo que necessita para fazer esta gestão, ok?
+
+147
+00:16:29,000 --> 00:16:36,000
+Pode fazer isso, obviamente, ou então pode utilizar o protocolo TCP, que já tem essas features todas, não é?
+
+148
+00:16:36,000 --> 00:16:47,000
+Pronto, há aqui algumas técnicas que podem ser usadas para conseguir ter essas garantias da entrega dos pacotes, ok?
+
+149
+00:16:47,000 --> 00:16:54,000
+Nomeadamente implementar timeouts, basicamente é um timer que se não receber uma resposta
+
+150
+00:16:54,000 --> 00:17:02,000
+ele vai simplesmente retransmitir, por exemplo, novamente, usar mecanismos de threads e de processos, ok?
+
+151
+00:17:02,000 --> 00:17:04,000
+Etc.
+
+152
+00:17:04,000 --> 00:17:08,000
+Vou entrar aqui em detalhes sobre isto, ok?
+
+153
+00:17:08,000 --> 00:17:22,000
+Pronto, os dados normalmente passam em datagramas de grande tamanho, não é aqui muito relevante, ok?
+
+154
+00:17:22,000 --> 00:17:29,000
+Eu estou a passar um bocadinho à frente, menos disso, porque estes slides são adaptados numa cadeira e que eu vou um bocadinho mais,
+
+155
+00:17:29,000 --> 00:17:36,000
+é um bocadinho mais de detalhes, já tirei daqui alguns, mas não dá para tirar tudo, ok?
+
+156
+00:17:36,000 --> 00:17:40,000
+Pronto, o protocolo TCPP, o que é que tem?
+
+157
+00:17:40,000 --> 00:17:50,000
+Tem uma garantia de qualidade de serviço, chamada QoS, muito superior ao ODP, ok?
+
+158
+00:17:50,000 --> 00:18:02,000
+A primeira coisa que se faz, e isso é transparente para o utilizador, é estabelecer um canal de comunicação entre o cliente e o servidor,
+
+159
+00:18:02,000 --> 00:18:10,000
+e daí temos estabelecido um canal de comunicações bidirecionais e um conjunto de protocolos que vão estar ali a funcionar,
+
+160
+00:18:10,000 --> 00:18:17,000
+e esses protocolos são muito robustos, ok?
+
+161
+00:18:17,000 --> 00:18:28,000
+Permitem garantir que a mensagem que eu estou a enviar chegue ao meu destino, permitem-se ordenar as mensagens no destino,
+
+162
+00:18:28,000 --> 00:18:36,000
+Desculpem, esqueci de desligar isto.
+
+163
+00:18:36,000 --> 00:18:50,000
+Pronto, permitem saber estas coisas, controlar todos estes problemas que podem existir nas ligações, ok?
+
+164
+00:18:50,000 --> 00:18:57,000
+Tem também aquela outra feature que eu falei, de controle do fluxo, ok?
+
+165
+00:18:57,000 --> 00:19:06,000
+Isto permite-me saber, e vocês já devem ter reparado nisso, por exemplo, vão fazer um download de um fecheiro, ok?
+
+166
+00:19:06,000 --> 00:19:14,000
+O que acontece? Já devem ter reparado que o fecheiro começa a uma velocidade relativamente baixa,
+
+167
+00:19:14,000 --> 00:19:26,000
+essa velocidade vai subir, certo? E depois estabiliza, ok? Até terminarem o download desse fecheiro, ok?
+
+168
+00:19:26,000 --> 00:19:36,000
+Isto é o chamado controle do fluxo, em que ele na primeira fase está a testar a ligação e ver, ok, posso aumentar o envio de dados?
+
+169
+00:19:36,000 --> 00:19:47,000
+Sim, então aumenta, manda mais, ok, podes aumentar mais, podes mais, ok, oops, aqui já estamos no máximo, já estou a perder pacotes, ok?
+
+170
+00:19:47,000 --> 00:20:00,000
+Reduz um bocadinho, ele reduz um bocadinho e isto vai acertar e depois fica mais ou menos numa determinada constância de envio de dados, ok?
+
+171
+00:20:00,000 --> 00:20:12,000
+E depois, ao longo do tempo em que está mais ou menos estável, como há variações também na qualidade das ligações, a tal qualidade de serviço,
+
+172
+00:20:12,000 --> 00:20:27,000
+ele vai se adaptando também ligeiramente, um bocadinho mais devagar nessa fase, de modo a, pronto, tirar partido de mais largura de banda que possa aparecer no meu sistema, ok?
+
+173
+00:20:31,000 --> 00:20:38,000
+Portanto, quando eu estava a falar de qualidade de serviço, estamos a falar de várias coisas, não é?
+
+174
+00:20:40,000 --> 00:20:45,000
+O que é que a definição basicamente pode ser vista como isto?
+
+175
+00:20:45,000 --> 00:20:59,000
+Que a qualidade de serviço é suportada por um conjunto de tecnologias que me asseguram que um determinado fluxo de dados, ok, sobre uma rede,
+
+176
+00:20:59,000 --> 00:21:10,000
+vai chegar ao outro lado com um determinado conjunto de performance que tem a ver com aquilo que eu quero para o tipo de aplicação, ok?
+
+177
+00:21:11,000 --> 00:21:22,000
+Pronto, isto é importante para determinados tipos de tráfico, por exemplo, voz, eu quero que a minha voz chegue rapidamente ao outro lado,
+
+178
+00:21:22,000 --> 00:21:28,000
+para não estarem, por exemplo, a ver um vídeo e a minha boca não está sincronizada com aquilo que eu falo, não é?
+
+179
+00:21:29,000 --> 00:21:35,000
+Vídeo é a mesma coisa, mas é um problema um bocadinho mais complexo no caso do vídeo.
+
+180
+00:21:36,000 --> 00:21:44,000
+Dados, ok? E outras coisas que eu posso estar a enviar, por exemplo, dados de sensores e assim, ok?
+
+181
+00:21:45,000 --> 00:21:55,000
+E depois, se eu estiver em redes de tempo real, a qualidade de serviço tem muito a ver com alguns parâmetros, como por exemplo a parte de delay,
+
+182
+00:21:55,000 --> 00:22:01,000
+portanto o atraso desde que eu envio o pacote até que ele é recebido do outro lado, ok?
+
+183
+00:22:02,000 --> 00:22:10,000
+Podemos ter aqui problemas de jitter também, que é uma variação neste atraso, não é? No atraso dos pacotes, ok?
+
+184
+00:22:11,000 --> 00:22:15,000
+Pode ter a ver também com a perda de pacotes, ok?
+
+185
+00:22:16,000 --> 00:22:24,000
+Portanto, eu posso definir aqui a minha métrica para a qualidade de serviço como a perda de pacotes, ok?
+
+186
+00:22:25,000 --> 00:22:30,000
+Ou a quantidade de dados que eu consigo transmitir de um lado para o outro, ok?
+
+187
+00:22:31,000 --> 00:22:43,000
+Portanto, posso ter aqui várias coisas, várias métricas para definir o que é a qualidade de serviço. Posso ter outras, ok?
+
+188
+00:22:44,000 --> 00:22:51,000
+Como é que isto se resolve, não é? Através de prioridades ao tráfego, não é?
+
+189
+00:22:52,000 --> 00:23:03,000
+Se eu tenho um tráfego que é mais de tempo real, por exemplo, quando chegar aos suítos, eu vou favorecer esse tráfego, que é de mais tempo real, não é?
+
+190
+00:23:04,000 --> 00:23:11,000
+O tráfego de voz, o tráfego de vídeo, etc. Posso fazer essas mudanças todas, não é?
+
+191
+00:23:12,000 --> 00:23:20,000
+Aquilo que se chama traffic shaping, no fundo, é do lado de quem está a enviar os dados,
+
+192
+00:23:21,000 --> 00:23:27,000
+permitir, por exemplo, que só possam ser enviadas 5 mensagens por segundo, imaginemos, ok?
+
+193
+00:23:28,000 --> 00:23:30,000
+É muito aquilo que fazem os traffic shapers, não é?
+
+194
+00:23:31,000 --> 00:23:35,000
+Depois há coisas mais sofisticadas que podem ser feitas por estas ferramentas, não é?
+
+195
+00:23:36,000 --> 00:23:52,000
+Mecanismos de policiamento de tráfego para verificar se realmente eu estou a enviar o tráfego de acordo com as especificações que me são permitidas, ok?
+
+196
+00:23:53,000 --> 00:23:58,000
+Por exemplo, se posso especificar que só posso enviar 10 mensagens por segundo, ou 10 kbps,
+
+197
+00:23:58,000 --> 00:24:05,000
+e se, por exemplo, se passar esse valor, eu posso cortar o acesso à rede por causa disso, não é?
+
+198
+00:24:06,000 --> 00:24:12,000
+Ou posso usar aquilo que são tecnologias mais antigas, chamadas de resource reservation, ok?
+
+199
+00:24:13,000 --> 00:24:21,000
+Quando vocês, de antes, tinham uma linha de telefone, ela era realmente uma linha de telefone entre dois telefones diferentes, não é?
+
+200
+00:24:22,000 --> 00:24:28,000
+No fundo, estabelecia-se um circuito completamente analógico entre dois telefones diferentes.
+
+201
+00:24:29,000 --> 00:24:38,000
+Isso resultou durante muito tempo, por exemplo, para o acesso à internet, e assim que era feito na altura pelo telefone, ok?
+
+202
+00:24:38,000 --> 00:24:55,000
+A transmissão robusta tem por base os mecanismos que estão por baixo, por exemplo, este secret redundancy check,
+
+203
+00:24:55,000 --> 00:25:09,000
+ou seja, cada mensagem que eu transmito eu vou verificar no seu destino se ela chegou corretamente através de um conjunto de bytes, não é?
+
+204
+00:25:10,000 --> 00:25:16,000
+Ou de bits, por exemplo, no caso das comunicações sérias é apenas um bit, ok?
+
+205
+00:25:17,000 --> 00:25:20,000
+Que me dizem, ok, sim, a mensagem chegou correta.
+
+206
+00:25:20,000 --> 00:25:27,000
+No fundo, aquilo é, só fazem-se umas contas, umas somas, umas subtrações e umas multiplicações lá pelo meio, ok?
+
+207
+00:25:28,000 --> 00:25:36,000
+Que nos permitem saber se a frame que eu transmiti é a mesma que a frame que eu estou a receber, ok?
+
+208
+00:25:37,000 --> 00:25:47,000
+Uma forma muito simples de fazer isso, muito fácil de entender, é ter um bit para contar se o número de bits na minha mensagem é par ou impar, ok?
+
+209
+00:25:47,000 --> 00:25:56,000
+Se houver uma troca de um bit ao ser transmitido, eu consigo saber se esse bit está alterado, ok?
+
+210
+00:25:57,000 --> 00:26:06,000
+Posso também ter pés códigos muito mais sofisticados que são capazes até de corrigir esse tal bit que está variado.
+
+211
+00:26:07,000 --> 00:26:25,000
+O próprio TCP tem lá dentro um campo chamado checksum, que faz uma tal soma dos vários do conteúdo da mensagem, não é?
+
+212
+00:26:26,000 --> 00:26:30,000
+E que me permite depois verificar se os pacotes estão corretos ou não, ok?
+
+213
+00:26:31,000 --> 00:26:37,000
+Mas em termos de comunicações, como é que eu faço a transmissão robusta dos dados?
+
+214
+00:26:38,000 --> 00:26:52,000
+É através da transmissão de mensagens de acknowledgement, porque eu mando uma mensagem, ela, quando chega ao meu destino, vai transmitir um acknowledgement para o meu nome, ok?
+
+215
+00:26:53,000 --> 00:26:57,000
+Estevesse melhor com o exemplo do que está aqui.
+
+216
+00:26:58,000 --> 00:27:05,000
+Normalmente, vamos ficar, acho que depois vou ficar por aqui, normalmente, eu transmito uma frame, ok?
+
+217
+00:27:06,000 --> 00:27:10,000
+Ela chega ao meu receptor e eu transmito um acknowledgement de volta, ok?
+
+218
+00:27:12,000 --> 00:27:15,000
+O que é que me pode acontecer? Pode-me acontecer mil e uma coisas.
+
+219
+00:27:15,000 --> 00:27:24,000
+Eu transmito uma frame, mas ela perdeu-se num router ou qualquer coisa assim do gênero, e, portanto, ela não chega ao receptor, ok?
+
+220
+00:27:25,000 --> 00:27:31,000
+Do lado do sender, eu tenho que ter um timer que me dá um time-out.
+
+221
+00:27:32,000 --> 00:27:41,000
+Se realmente houver um time-out, esses timers se esgotarem, eu vou transmitir uma nova frame, a mesma frame, e que é igual lá de cima,
+
+222
+00:27:41,000 --> 00:27:53,000
+com a informação que eu queria transmitir, se ele receber, já vai transmitir agora um acknowledgement, e esse acknowledgement tem que chegar antes do time-out ao outro lado, ok?
+
+223
+00:27:54,000 --> 00:28:03,000
+Aqui temos outro caso mais complicado, que começam a ser cada vez mais complicados, que é, a frame foi enviada,
+
+224
+00:28:04,000 --> 00:28:09,000
+e ele transmitiu o acknowledgement, mas o acknowledgement perdeu-se aqui pelo meio, ok?
+
+225
+00:28:10,000 --> 00:28:21,000
+Este vai transmitir a frame, e este vai transmitir novamente o tecnólogo, portanto, ele agora já sabe que esta frame está correta porque recebeu este tecnólogo,
+
+226
+00:28:22,000 --> 00:28:33,000
+mas este aqui, reparem, vai receber duas mensagens iguais, e vai ter que dar já uma forma de descartar uma destas mensagens, ok?
+
+227
+00:28:34,000 --> 00:28:43,000
+É a mesma coisa que aparece aqui em baixo, ele envia uma frame, mas para o meu time-out, eventualmente estava mal calculado ou assim,
+
+228
+00:28:44,000 --> 00:28:49,000
+o meu acknowledgement chega já depois do time-out, ok?
+
+229
+00:28:50,000 --> 00:29:02,000
+E entretanto, como já tinha esgotado este time-out, há uma nova frame que é transmitida, e ela é também enviada, ok?
+
+230
+00:29:02,000 --> 00:29:13,000
+E é recebida do meu lado, portanto, também temos que ter o mesmo problema que aqui está, que é fazer o descarto,
+
+231
+00:29:14,000 --> 00:29:20,000
+temos que manter a frame durante mais um bocadinho, e depois deitá-la fora, ok?
+
+232
+00:29:21,000 --> 00:29:25,000
+Pronto, acho que por hoje ficar por aqui, continuamos.
+

@@ -1,0 +1,616 @@
+1
+00:00:00,000 --> 00:00:07,600
+varia significativamente conforme a classe de endereço que eu tenho.
+
+2
+00:00:07,600 --> 00:00:13,800
+O endereço de rede representa-se mais desta forma que aqui está,
+
+3
+00:00:13,800 --> 00:00:17,800
+portanto, o primeiro número do primeiro octeto ou do primeiro byte,
+
+4
+00:00:17,800 --> 00:00:24,800
+como vocês quiserem chamar, um ponto, o valor do segundo octeto,
+
+5
+00:00:24,800 --> 00:00:35,800
+do terceiro e do quarto, portanto, os tais 32 bits são só sumar estes 4 bytes.
+
+6
+00:00:35,800 --> 00:00:44,800
+Voltando, continuando a tocar com o endereço de rede, nós vamos ter 5 classes na prática,
+
+7
+00:00:44,800 --> 00:00:52,800
+são apenas 3, aquelas que nós vamos usar mais frequentemente, que é a classe A, B e C.
+
+8
+00:00:52,800 --> 00:00:56,800
+Em que é que elas diferem entre si? É na quantidade de bytes que são utilizados,
+
+9
+00:00:56,800 --> 00:01:04,800
+ou octetos, conforme a pessoa, os bytes, não sei se vocês têm ideia dessa história,
+
+10
+00:01:04,800 --> 00:01:11,800
+mas era uma palavra que tinha sido inventada pela IBM, estava registrada pela IBM,
+
+11
+00:01:11,800 --> 00:01:19,800
+mas a IBM nunca se chateou muito que as pessoas utilizassem o byte, mas pronto,
+
+12
+00:01:19,800 --> 00:01:26,800
+a certa altura, não se fala de utilizar bytes, se pertence a IBM, vamos usar octetos,
+
+13
+00:01:26,800 --> 00:01:33,800
+principalmente os franceses, a maior parte não usam bytes, usam octeto.
+
+14
+00:01:33,800 --> 00:01:39,800
+Portanto, o que é que temos? Então a classe A usa só 1 byte para o endereço da rede,
+
+15
+00:01:39,800 --> 00:01:45,800
+mas depois usa 3 bytes para o endereço do bolso, o bolso é a minha máquina, o meu PC,
+
+16
+00:01:45,800 --> 00:01:52,800
+portanto conseguimos ter aqui muitos milhares de máquinas dentro da própria rede.
+
+17
+00:01:52,800 --> 00:02:01,800
+Se for classe B, usamos 2 bytes para o host, portanto está para 65 mil máquinas dentro da mesma rede,
+
+18
+00:02:01,800 --> 00:02:07,800
+já é simpático, mas a classe C, que é aquela que é mais utilizada,
+
+19
+00:02:07,800 --> 00:02:12,800
+usa 3 bytes para o endereço da rede e 1 byte para o endereço do host.
+
+20
+00:02:13,800 --> 00:02:21,800
+Portanto, teoricamente, isto permitiria 256 hosts, na realidade só permite 254 hosts,
+
+21
+00:02:21,800 --> 00:02:24,800
+porque há ali dois valores que se retiram.
+
+22
+00:02:24,800 --> 00:02:30,800
+Pronto, depois há a classe D para endereço multicast, por exemplo,
+
+23
+00:02:30,800 --> 00:02:36,800
+transmitir informação para 4 ou 5 computadores ao mesmo tempo, isto também é muito útil,
+
+24
+00:02:36,800 --> 00:02:42,800
+e a classe A que está reservada para fazer testes e enviar mensagens em caso de texto.
+
+25
+00:02:44,800 --> 00:02:46,800
+Como é que se distinguem depois das classes?
+
+26
+00:02:46,800 --> 00:02:52,800
+Basicamente é pelos primeiros bits do endereço.
+
+27
+00:02:52,800 --> 00:03:01,800
+Na classe A, o primeiro bit vai ser 0, portanto a classe A permite-nos endereçar
+
+28
+00:03:01,800 --> 00:03:11,800
+0 até 127 redes diferentes, só que o 0 e o 127 são reservados,
+
+29
+00:03:11,800 --> 00:03:17,800
+como endereço da rede, endereço de look back, e portanto também não podem ser utilizados,
+
+30
+00:03:17,800 --> 00:03:21,800
+portanto temos 127 menos 2, 125 redes diferentes.
+
+31
+00:03:21,800 --> 00:03:32,800
+O que eu vos disse há bocado, 127.0.0 é basicamente o endereço de look back,
+
+32
+00:03:32,800 --> 00:03:39,800
+portanto permite-me, dentro da minha máquina, enviar mensagens para mim próprio,
+
+33
+00:03:39,800 --> 00:03:45,800
+porque é muito útil para testar, por exemplo, uma máquina ou um programa qualquer.
+
+34
+00:03:46,800 --> 00:03:53,800
+A classe B, lá está, tem 2 endereços de redes, 2 bytes para a rede, 2 bytes para o host,
+
+35
+00:03:53,800 --> 00:04:00,800
+para suportar redes mais ou menos grandes de máquinas.
+
+36
+00:04:03,800 --> 00:04:11,800
+Aqui a diferença é que os 2 primeiros bits têm sempre este valor, 1, 0,
+
+37
+00:04:11,800 --> 00:04:17,800
+e os restantes são aqueles que nós quisemos, isto é o que identifica que estamos a falar da classe B.
+
+38
+00:04:22,800 --> 00:04:28,800
+Para a classe C, então, estamos a utilizar 3 bytes,
+
+39
+00:04:29,800 --> 00:04:35,800
+podemos endereçar uma grande quantidade de redes diferentes,
+
+40
+00:04:35,800 --> 00:04:40,800
+uma grande quantidade de empresas, de universidades, etc.,
+
+41
+00:04:40,800 --> 00:04:48,800
+mas depois só podemos utilizar 256 máquinas em cada um desses sites.
+
+42
+00:04:49,800 --> 00:04:55,800
+A classe C, o endereço começa sempre por 1, 1, 0,
+
+43
+00:04:55,800 --> 00:05:02,800
+é isto o valor que nós colocamos no próprio endereço.
+
+44
+00:05:02,800 --> 00:05:08,800
+Portanto, varia entre um intervalo 192 a 223,
+
+45
+00:05:08,800 --> 00:05:14,800
+são os números que nos vão aparecer no formato decimal para definir a rede.
+
+46
+00:05:14,800 --> 00:05:21,800
+Isto é a classe D, tem ali também um preâmbulo especial para indicar que é a classe D,
+
+47
+00:05:21,800 --> 00:05:24,800
+para nós descobrirmos que é a classe D,
+
+48
+00:05:24,800 --> 00:05:29,800
+e a classe E tem os 4 primeiros bits a 1,
+
+49
+00:05:29,800 --> 00:05:34,800
+isto é reservado para a investigação, para testes da própria rede.
+
+50
+00:05:34,800 --> 00:05:41,800
+Se tem aqui umas tabelinhas, resumem basicamente os valores que nós falamos anteriormente,
+
+51
+00:05:41,800 --> 00:05:47,800
+a classe A vai de 1 até 126, a B é 126 a 191,
+
+52
+00:05:47,800 --> 00:05:54,800
+e por aí fora vamos variando o valor,
+
+53
+00:05:54,800 --> 00:05:59,800
+isto é o valor, atenção, do primeiro octet, do primeiro byte do sistema.
+
+54
+00:06:02,800 --> 00:06:07,800
+Portanto, para a classe A só conseguimos suportar 126 redes,
+
+55
+00:06:07,800 --> 00:06:11,800
+mas cada rede pode ter mais de 16 milhões de hosts.
+
+56
+00:06:11,800 --> 00:06:19,800
+A classe B, 16 mil redes diferentes, cada uma delas com 65.535 máquinas lá dentro.
+
+57
+00:06:19,800 --> 00:06:27,800
+A classe C consegue ter 2 milhões de redes diferentes, mas cada rede só tem 256 máquinas.
+
+58
+00:06:27,800 --> 00:06:35,800
+Como devem imaginar, este número é o principal problema da rede, do IPv4,
+
+59
+00:06:35,800 --> 00:06:44,800
+porque é muito pequenino, não dá lá muito jeito, não chega para as nossas necessidades.
+
+60
+00:06:49,800 --> 00:06:58,800
+Falando um bocadinho aqui do routing e do switching, que é uma das funcionalidades desta camada,
+
+61
+00:06:59,800 --> 00:07:05,800
+nós temos que pegar num determinado pacote, por exemplo,
+
+62
+00:07:05,800 --> 00:07:11,800
+e estamos a entubligar daqui até a Google nos Estados Unidos,
+
+63
+00:07:11,800 --> 00:07:18,800
+e temos que encaminhar, o profilado vai fazer uma query ao Google,
+
+64
+00:07:18,800 --> 00:07:24,800
+de alguma coisa que eu ando à procura, e ele vai ter que ser encaminhado pela rede fora.
+
+65
+00:07:24,800 --> 00:07:28,800
+Para chegar aos Estados Unidos, ele tem que dar muitos saltos,
+
+66
+00:07:28,800 --> 00:07:30,800
+imaginemos que estamos dentro do exemplo,
+
+67
+00:07:30,800 --> 00:07:36,800
+se estivermos dentro do departamento de transmissão informática,
+
+68
+00:07:36,800 --> 00:07:42,800
+provavelmente ele vai ter que ir ao access point, se estivermos a comunicar por wi-fi,
+
+69
+00:07:42,800 --> 00:07:49,800
+deste access point vai talvez a um switch, a um router que exista ao nível do nosso departamento,
+
+70
+00:07:49,800 --> 00:07:54,800
+deste router o switch vai para o router geral do ISEP,
+
+71
+00:07:54,800 --> 00:08:00,800
+do router geral do ISEP vai para o router do IPP, que por sua vez liga a FCCN,
+
+72
+00:08:00,800 --> 00:08:06,800
+a FCCN é que depois liga a internet em geral do país,
+
+73
+00:08:06,800 --> 00:08:13,800
+nomeadamente vai encontrar, vai procurar um caminho para chegar aos Estados Unidos,
+
+74
+00:08:14,800 --> 00:08:18,800
+vai encontrar lá um cable qualquer de fibra óptica por onde vai conseguir,
+
+75
+00:08:18,800 --> 00:08:27,800
+tem um router também, por onde vai conseguir comunicar com a costa oeste dos Estados Unidos,
+
+76
+00:08:27,800 --> 00:08:31,800
+que manda para lá, quando lá chega tem que descobrir,
+
+77
+00:08:31,800 --> 00:08:35,800
+ok, eu quero ir para a Google, a Google está na Califórnia,
+
+78
+00:08:35,800 --> 00:08:39,800
+a Califórnia tem que encontrar mais outro router,
+
+79
+00:08:39,800 --> 00:08:43,800
+são estas funcionalidades que os routers têm que ter,
+
+80
+00:08:43,800 --> 00:08:49,800
+têm que saber para onde é que vão enviar as mensagens quando elas chegam,
+
+81
+00:08:49,800 --> 00:08:57,800
+no fundo o router é como se fosse uma rotunda,
+
+82
+00:08:57,800 --> 00:09:03,800
+e a decisão que ele tem que ter é por onde é que vai sair o carro quando for para sair,
+
+83
+00:09:03,800 --> 00:09:07,800
+porque saída é que vai ser feita,
+
+84
+00:09:07,800 --> 00:09:11,800
+e outra coisa que ele pode também ter é qual é que é a melhor saída,
+
+85
+00:09:11,800 --> 00:09:15,800
+se eu quero ir para os Estados Unidos não vou dar a volta pela Rússia,
+
+86
+00:09:15,800 --> 00:09:21,800
+eu vou o mais direto possível, mas às vezes se a minha ligação entre Portugal e os Estados Unidos estiver congestionada,
+
+87
+00:09:21,800 --> 00:09:26,800
+ou se calhar mais vale, ir a Paris e ligar-me a outro cabo em Inglaterra,
+
+88
+00:09:26,800 --> 00:09:31,800
+que depois atravessa o Atlântico em direção aos Estados Unidos,
+
+89
+00:09:31,800 --> 00:09:37,800
+então podemos ter várias soluções, isto só de routing,
+
+90
+00:09:37,800 --> 00:09:43,800
+já é um tema só por si para uma, duas, três aulas sobre o assunto,
+
+91
+00:09:43,800 --> 00:09:52,800
+uma das características principais dos routers é que eles podem ter protocolos de comunicação diferentes,
+
+92
+00:09:52,800 --> 00:09:58,800
+podemos ter um router que está ligado a internet de um lado,
+
+93
+00:09:58,800 --> 00:10:06,800
+e do outro lado estar a comunicar por frame relay, ou outra coisa qual for,
+
+94
+00:10:06,800 --> 00:10:12,800
+com outra rede, algo no mundo,
+
+95
+00:10:12,800 --> 00:10:19,800
+portanto, aqui os protocolos são normalmente diferentes.
+
+96
+00:10:19,800 --> 00:10:25,800
+Os switches, que é normalmente aquilo que nós temos em nossa casa,
+
+97
+00:10:25,800 --> 00:10:29,800
+são máquinas um bocadinho mais simples,
+
+98
+00:10:29,800 --> 00:10:34,800
+embora hoje em dia a distinção às vezes entre routers e switches e gateways
+
+99
+00:10:34,800 --> 00:10:41,800
+começa a ser muito teno, porque há muitas funções que eram normalmente dos routers
+
+100
+00:10:41,800 --> 00:10:47,800
+que são implementadas pelos switches, normalmente são camada dois,
+
+101
+00:10:47,800 --> 00:10:54,800
+não vão até a camada de rede, não fazem routing, não tratam de routing do sistema,
+
+102
+00:10:54,800 --> 00:11:00,800
+usam normalmente o endereçamento com base em endereços Mac,
+
+103
+00:11:00,800 --> 00:11:05,800
+portanto, é para as comunicações locais dentro da minha rede,
+
+104
+00:11:05,800 --> 00:11:11,800
+os routers, como nós já vimos, são sempre de três camadas pelo menos,
+
+105
+00:11:11,800 --> 00:11:14,800
+têm várias interfaces diferentes,
+
+106
+00:11:14,800 --> 00:11:21,800
+eles podem ligar não apenas entre duas redes, mas entre três, quatro, cinco redes diferentes,
+
+107
+00:11:21,800 --> 00:11:28,800
+e muitas vezes também vão adaptar diferentes protocolos de comunicações.
+
+108
+00:11:30,800 --> 00:11:35,800
+Para eles decidirem basicamente para onde é que vai o pacote,
+
+109
+00:11:35,800 --> 00:11:45,800
+há várias soluções, essas soluções são dinâmicas hoje em dia,
+
+110
+00:11:45,800 --> 00:11:50,800
+adaptativas ao estado atual das conexões,
+
+111
+00:11:50,800 --> 00:11:55,800
+se há constinamentos, se não há, etc.
+
+112
+00:11:55,800 --> 00:12:00,800
+Normalmente o que é que nós temos? Vamos esquecer aqui a máscara,
+
+113
+00:12:00,800 --> 00:12:06,800
+o que é que nós temos aqui no pacote? Qual é o seu destino?
+
+114
+00:12:06,800 --> 00:12:13,800
+O seu destino vai aparecer numa tabela chamada tabela de routing,
+
+115
+00:12:14,800 --> 00:12:27,800
+se houver um match entre o endereço destino e este endereço que aparece aqui,
+
+116
+00:12:27,800 --> 00:12:31,800
+como eu disse, vamos esquecer esta parte aqui da máscara,
+
+117
+00:12:31,800 --> 00:12:33,800
+fazemos conta que ela não existe aqui,
+
+118
+00:12:33,800 --> 00:12:36,800
+se eles forem iguais, se nascem em um endereço,
+
+119
+00:12:36,800 --> 00:12:39,800
+ele já sabe por onde é que vai sair a mensagem.
+
+120
+00:12:39,800 --> 00:12:45,800
+No fundo, se vocês já viram o router, ele tem vários cabos a chegar,
+
+121
+00:12:45,800 --> 00:12:50,800
+e cada um dos cabos é o porto, este é o porto 1, 2, 3,
+
+122
+00:12:50,800 --> 00:12:57,800
+portanto eu disse, por exemplo, que do porto 1 deve enviar a mensagem para o porto 3.
+
+123
+00:12:58,800 --> 00:13:02,800
+Como é que se chegam estas tabelas de routing? É parte complicada,
+
+124
+00:13:02,800 --> 00:13:05,800
+obviamente podemos fazer isto à mão,
+
+125
+00:13:05,800 --> 00:13:09,800
+de staticamente configurar estas tabelas de routing,
+
+126
+00:13:09,800 --> 00:13:16,800
+hoje em dia isto é muito pouco prático, porque as redes mudam, reconfiguram-se,
+
+127
+00:13:16,800 --> 00:13:21,800
+e se nós tivermos que andar à mão a alterar constantemente estas tabelas de routing,
+
+128
+00:13:21,800 --> 00:13:26,800
+isto é meio caminho andado para cober mal.
+
+129
+00:13:26,800 --> 00:13:34,800
+Portanto, a solução normalmente é nós utilizarmos este mecanismo de routing dinâmico,
+
+130
+00:13:34,800 --> 00:13:41,800
+em que o próprio router vai perguntando, vai verificando qual é o estado das ligações,
+
+131
+00:13:41,800 --> 00:13:48,800
+se tem ligação com os nós, e dinamicamente vai construindo estas tabelas de routing.
+
+132
+00:13:48,800 --> 00:13:51,800
+Principalmente, o que vai acontecer?
+
+133
+00:13:51,800 --> 00:13:57,800
+Estas tabelas de routing vão aparecer e vão ser preenchidas quando ele precisar,
+
+134
+00:13:57,800 --> 00:14:01,800
+porque alguém fez um request, eu quero ir para a Google,
+
+135
+00:14:02,800 --> 00:14:07,800
+para a Google é por aqui, porque eu, entretanto, estive a perguntar aos meus vizinhos,
+
+136
+00:14:07,800 --> 00:14:13,800
+e a minha tabela de routing é atualizada com este valor.
+
+137
+00:14:13,800 --> 00:14:17,800
+Portanto, a próxima vez que eu quiser fazer uma query para a Google,
+
+138
+00:14:17,800 --> 00:14:22,800
+já vai ser muito mais rápida, porque o router já não precisa andar a fazer perguntas
+
+139
+00:14:22,800 --> 00:14:30,800
+para saber por onde é que está a Google, por aí simplesmente vai apanhar logo imediatamente
+
+140
+00:14:30,800 --> 00:14:39,800
+em milissegundos, ou em microsegundos, vai apanhar o porto saído e enviar as coisas por lá.
+
+141
+00:14:39,800 --> 00:14:46,800
+Portanto, isto, por vezes, tem um problema quando se inicializa,
+
+142
+00:14:46,800 --> 00:14:52,800
+tem que haver aqui há algum tempo até que estas tabelas estejam como deve ser,
+
+143
+00:14:53,800 --> 00:14:59,800
+mas é muito interessante, pronto, no suporte de outras coisas também,
+
+144
+00:14:59,800 --> 00:15:02,800
+como plurância a falhas, balanceamento de carga,
+
+145
+00:15:02,800 --> 00:15:09,800
+portanto, se houver uma rede que quebra, o que acontece é que eu posso utilizar
+
+146
+00:15:09,800 --> 00:15:12,800
+um caminho diferente para chegar ao mesmo destino,
+
+147
+00:15:12,800 --> 00:15:18,800
+eu posso também, se tiver dois caminhos diferentes para chegar ao mesmo destino,
+
+148
+00:15:18,800 --> 00:15:24,800
+posso encaminhar os pacotes, ou por um caminho, ou por outro caminho, desde que cheguem aqui ao meu destino,
+
+149
+00:15:24,800 --> 00:15:32,800
+pode ir pelo menos, se eu preciso. Portanto, tudo isto é possível com o routing,
+
+150
+00:15:32,800 --> 00:15:38,800
+e em mais detalhes não entra bem. Pronto, vamos fazer um intervalo,
+
+151
+00:15:38,800 --> 00:15:45,800
+agora, antes de entrar nos protocolos, vou falar aqui brevemente sobre o protocolo TCP e o DP.
+
+152
+00:15:48,800 --> 00:15:50,800
+Dez minutinhos, pode ser.
+
+153
+00:15:53,800 --> 00:15:56,800
+Ok. Ok, por certo. Obrigado.
+
+154
+00:15:57,800 --> 00:16:01,800
+Pronto. Até já, então, com certeza.
+
