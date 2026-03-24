@@ -14,3 +14,37 @@ rasperru PI que usam LINUX
 
 .so que exitem nos sistemas linux..
 
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
+
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+quando queremos usar um pino como saida. 
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+GPIO on linux o sitema operativo ja da suporte. 
+
+linux ja tem os device drivers... device driver em rust para linux...
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
