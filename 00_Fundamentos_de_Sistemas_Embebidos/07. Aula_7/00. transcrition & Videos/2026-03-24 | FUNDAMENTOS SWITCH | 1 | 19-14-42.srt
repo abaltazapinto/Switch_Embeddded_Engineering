@@ -1,0 +1,716 @@
+1
+00:00:00,000 --> 00:00:10,000
+Começando por falar-me de alguma teoria que é importante para se perceber um bocadinho sobre redes de comunicação.
+
+2
+00:00:10,000 --> 00:00:20,000
+Há uns dias ele perguntava aos meus alunos de redes, que estavam a fazer um projeto de redes de comunicação,
+
+3
+00:00:20,000 --> 00:00:29,000
+decidiram qual era o comprimento dos cabos, onde é que punham a entrada dos cabos, onde é que punham os suites e por aí fora,
+
+4
+00:00:29,000 --> 00:00:39,000
+mas eles reconheciam a questão fundamental, que é porque é que o comprimento dos cabos é limitado.
+
+5
+00:00:39,000 --> 00:00:45,000
+A maior parte das pessoas a quem eu fiz a questão não me sabia por isso simplesmente responder.
+
+6
+00:00:45,000 --> 00:00:55,000
+Por isso, a minha teoria sobre a educação é que tudo assenta em conhecimentos bases e fundamentais.
+
+7
+00:00:55,000 --> 00:01:04,000
+Eu vou tentar dar aqui uma introdução àquilo que se chama teoria de Fourier e toda a teoria de Fourier,
+
+8
+00:01:04,000 --> 00:01:13,000
+que isto basicamente dava quase umas sete ou oito aulas sobre este assunto, muito facilmente.
+
+9
+00:01:13,000 --> 00:01:23,000
+Penso que alguns de vocês em outra tecnologia falaram bastante sobre este tipo de coisa, de artifício matemático,
+
+10
+00:01:23,000 --> 00:01:29,000
+mas que é fundamental para a nossa disciplina e para o nosso dia a dia.
+
+11
+00:01:29,000 --> 00:01:35,000
+Tudo isto que hoje em dia temos, qualquer computador, qualquer sistema de comunicação,
+
+12
+00:01:35,000 --> 00:01:47,000
+deriva de um matemático chamado Fourier para alguns no século 18 ou 19, não tenho a certeza sinceramente,
+
+13
+00:01:48,000 --> 00:01:57,000
+em que ele descobriu uma coisa muito simples, mas que não é nada intuitiva,
+
+14
+00:01:57,000 --> 00:02:07,000
+é que qualquer sinal, qualquer função pode ser representado como um somatório de sinusóidos.
+
+15
+00:02:07,000 --> 00:02:14,000
+É esquisito, é, mas é possível. Essas funções só têm que ter uma coisa, têm que ser periódicas,
+
+16
+00:02:14,000 --> 00:02:22,000
+também têm que se repetir no tempo continuamente com um determinado período.
+
+17
+00:02:22,000 --> 00:02:27,000
+Mas nós podemos aproximar isto a sinais não periódicos, considerando que eles são periódicos,
+
+18
+00:02:27,000 --> 00:02:30,000
+é uma coisa estranha, mas é possível.
+
+19
+00:02:30,000 --> 00:02:35,000
+Portanto, o que é que nós temos então?
+
+20
+00:02:35,000 --> 00:02:44,000
+Temos qualquer função no tempo que vai ser representada por um valor fixo,
+
+21
+00:02:44,000 --> 00:02:49,000
+portanto o valor que está acima do zero no gráfico,
+
+22
+00:02:49,000 --> 00:02:56,000
+e depois por um somatório infinito, deixemos ao melhor aqui o ponteiro,
+
+23
+00:02:56,000 --> 00:03:01,000
+um somatório infinito de senos e cossenos,
+
+24
+00:03:02,000 --> 00:03:11,000
+cada um deles com a sua amplitude e cada um deles com uma determinada frequência.
+
+25
+00:03:11,000 --> 00:03:15,000
+Portanto, se vocês se lembrarem destas coisas dos senos e dos cossenos,
+
+26
+00:03:15,000 --> 00:03:21,000
+o WT está em radianos, é a velocidade com que ele vai rodando,
+
+27
+00:03:22,000 --> 00:03:31,000
+e esta velocidade é um múltiplo da frequência fundamental do sinal que nós estamos a medir,
+
+28
+00:03:31,000 --> 00:03:35,000
+ou que estamos a medir, ou que estamos, neste caso, a transformar.
+
+29
+00:03:35,000 --> 00:03:40,000
+Pronto, tentando ser um bocadinho mais intuitivos.
+
+30
+00:03:40,000 --> 00:03:44,000
+Estou a ver umas imagens que eu tirei de um estado de CPT para me fazer,
+
+31
+00:03:44,000 --> 00:03:48,000
+e ele não me fez lá isto muito bem, mas está ali tudo que é preciso.
+
+32
+00:03:48,000 --> 00:03:54,000
+Imaginamos então aqui que temos uma onda quadrada, com este formato,
+
+33
+00:03:54,000 --> 00:04:01,000
+basicamente ela vem daqui,
+
+34
+00:04:09,000 --> 00:04:15,000
+eu acredito, Leonardo e Ai, eu acredito perfeitamente,
+
+35
+00:04:15,000 --> 00:04:18,000
+e sei que também para a parte matemática ele também não é nada bom,
+
+36
+00:04:18,000 --> 00:04:21,000
+o chato CPT, mas era o que estava à mão,
+
+37
+00:04:21,000 --> 00:04:26,000
+e era aquele que eu tenho conta com tócanos infinitos,
+
+38
+00:04:26,000 --> 00:04:31,000
+portanto, se não, eu sou também só a te subscrever a IAESP,
+
+39
+00:04:31,000 --> 00:04:35,000
+também fica de pau parado, mas obrigado pela dica.
+
+40
+00:04:35,000 --> 00:04:37,000
+Leonardo, não é?
+
+41
+00:04:37,000 --> 00:04:41,000
+Acho que havia outro que é o GTPAI, ou qualquer coisa assim,
+
+42
+00:04:41,000 --> 00:04:45,000
+e ainda outros.
+
+43
+00:04:45,000 --> 00:04:50,000
+Pronto, temos aqui uma onda quadrada, certo?
+
+44
+00:04:50,000 --> 00:04:57,000
+E se ela for representada por três harmólicos, isto é, três ondas sinusoidais,
+
+45
+00:04:57,000 --> 00:05:04,000
+ela vai ficar com este aspeto que estou aqui a ver nesta onda vermelha.
+
+46
+00:05:04,000 --> 00:05:09,000
+Tem aqui a onda com mais alguns buraquinhos.
+
+47
+00:05:09,000 --> 00:05:13,000
+Mas se nós representarmos com cinco harmónicos,
+
+48
+00:05:13,000 --> 00:05:20,000
+já vai aparecer neste formato que aqui está,
+
+49
+00:05:20,000 --> 00:05:27,000
+um bocadinho mais suave, mais parecido com a onda quadrada.
+
+50
+00:05:27,000 --> 00:05:32,000
+No fundo temos aqui uma onda que é a fundamental,
+
+51
+00:05:32,000 --> 00:05:36,000
+que seria uma onda sinusoidal, assim deste gênio,
+
+52
+00:05:36,000 --> 00:05:40,000
+esta seria a tal frequência fundamental desta onda.
+
+53
+00:05:40,000 --> 00:05:45,000
+Isto era se representássemos onda quadrada como apenas uma sinusoida.
+
+54
+00:05:45,000 --> 00:05:49,000
+Isto depois de sumarmos muitas sinusoides, o que vai acontecer,
+
+55
+00:05:49,000 --> 00:05:55,000
+se nós sumarmos, por exemplo, duas sinusoides, isto pode ficar assim, uma coisa deste género.
+
+56
+00:06:00,000 --> 00:06:03,000
+E cada vez que formos sumando mais,
+
+57
+00:06:03,000 --> 00:06:09,000
+ela vai se aproximando cada vez mais desta onda quadrada que nós temos aqui,
+
+58
+00:06:09,000 --> 00:06:14,000
+com mais algumas oscilações, vai se aproximando cada vez mais desta onda quadrada,
+
+59
+00:06:14,000 --> 00:06:18,000
+o número infinito de ondas quadradas para este caso em particular,
+
+60
+00:06:18,000 --> 00:06:24,000
+que é uma onda quadrada, portanto não é lá muito simpática para estas coisas,
+
+61
+00:06:24,000 --> 00:06:28,000
+vai resultar numa coisa assim.
+
+62
+00:06:28,000 --> 00:06:35,000
+Isto aplica-se a qualquer sinal.
+
+63
+00:06:35,000 --> 00:06:41,000
+Normalmente os harmónicos são a frequência fundamental,
+
+64
+00:06:41,000 --> 00:06:45,000
+duas vezes a frequência fundamental, três vezes a frequência fundamental,
+
+65
+00:06:45,000 --> 00:06:53,000
+e por aí para vai aumentando a frequência.
+
+66
+00:06:53,000 --> 00:06:57,000
+Se vocês também repararem aqui nos coeficientes, este coeficiente aqui
+
+67
+00:06:57,000 --> 00:07:04,000
+mais ou menos será um para uma onda quadrada, este já será um terço, este já será um quinto,
+
+68
+00:07:04,000 --> 00:07:11,000
+ou seja, cada vez os componentes de mais alta frequência, mais longínquos,
+
+69
+00:07:11,000 --> 00:07:16,000
+têm também um tamanho menor.
+
+70
+00:07:16,000 --> 00:07:23,000
+Isto é o que nos diz o Teorema de Fourier sobre qualquer tipo de sinal.
+
+71
+00:07:23,000 --> 00:07:31,000
+Portanto, o que é que isto tem? Quer dizer que o meu sinal pode ser representado no domínio do tempo,
+
+72
+00:07:31,000 --> 00:07:36,000
+é aquilo que vocês conhecem até agora, temos um sinal em função do tempo,
+
+73
+00:07:36,000 --> 00:07:43,000
+e aquilo que nós conseguimos medir, conseguimos por lá um osciloscópio ou outra coisa qualquer,
+
+74
+00:07:43,000 --> 00:07:49,000
+como um conversor digital analógico ou analógico digital para fazer esta medição,
+
+75
+00:07:49,000 --> 00:07:52,000
+e temos o sinal no tempo.
+
+76
+00:07:52,000 --> 00:07:56,000
+Mas também podemos representar no domínio da frequência,
+
+77
+00:07:56,000 --> 00:08:01,000
+indicando apenas quais são as frequências que este sinal tem.
+
+78
+00:08:01,000 --> 00:08:07,000
+Por exemplo, se nós consideramos aqui um sinal sinusoidal,
+
+79
+00:08:08,000 --> 00:08:18,000
+a representação a nível da frequência é apenas uma barra assim,
+
+80
+00:08:18,000 --> 00:08:24,000
+em que tem aqui a frequência deste sinal. Imaginemos que aqui eram uns 20 milissegundos.
+
+81
+00:08:24,000 --> 00:08:30,000
+Portanto, aqui serão 50 hertz em baixo,
+
+82
+00:08:31,000 --> 00:08:38,000
+esperemos aqui, isto será, portanto, a frequência, isto será a amplitude do sinal,
+
+83
+00:08:38,000 --> 00:08:47,000
+e esta amplitude, vamos chamar aqui o valor A,
+
+84
+00:08:47,000 --> 00:08:53,000
+que é igual basicamente à amplitude máxima do sinal.
+
+85
+00:08:54,000 --> 00:09:01,000
+Isto para uma sinusoid pura, que é a coisa mais fácil de fazer.
+
+86
+00:09:01,000 --> 00:09:05,000
+Há aquela representação no tempo e abaixo está a representação da frequência,
+
+87
+00:09:05,000 --> 00:09:16,000
+assumindo sempre que o sinal é periódico. Isto é que se vai continuar a fazer da mesma forma que aqui está.
+
+88
+00:09:16,000 --> 00:09:21,000
+Portanto, esta transformada de folia converte entre estes dois domínios.
+
+89
+00:09:21,000 --> 00:09:29,000
+O caso geral, eu não vou entrar aqui em detalhes, isto é basicamente um integral em função do tempo
+
+90
+00:09:29,000 --> 00:09:34,000
+multiplicado por um exponencial, já nem me lembro,
+
+91
+00:09:34,000 --> 00:09:42,000
+mas isto não é um exponencial, isto é no domínio dos números imaginários.
+
+92
+00:09:42,000 --> 00:09:47,000
+Prontos, mas eu não vou entrar mais tarde, nem vou entrar em matemática,
+
+93
+00:09:47,000 --> 00:09:54,000
+então é só para vocês terem uma noção daquilo que nós estamos a falar quando se fala em largura de banda,
+
+94
+00:09:54,000 --> 00:10:01,000
+largura de banda do sinal, a gama de frequências ocupada pelo sinal, etc.
+
+95
+00:10:01,000 --> 00:10:12,000
+Por exemplo, se nós tivermos um sinal de FM, nós vamos ter um espectro mais ou menos deste género que aqui está,
+
+96
+00:10:12,000 --> 00:10:19,000
+em que temos à volta da frequência que estamos a transmitir, imaginemos que é a rádio comercial,
+
+97
+00:10:19,000 --> 00:10:28,000
+se não me engana que é o 96.7 MHz, esta será a frequência aqui do meio deste sinal.
+
+98
+00:10:28,000 --> 00:10:37,000
+Ele depois espalha-se para os lados, indicando as diferentes frequências que o sinal tem,
+
+99
+00:10:37,000 --> 00:10:42,000
+se parem que ele tem tendência, os sinais a ficarem mais ou menos assim numa curvinha,
+
+100
+00:10:42,000 --> 00:10:47,000
+aquilo que é bem comportado, a ficarem assim mais ou menos numa curvinha,
+
+101
+00:10:47,000 --> 00:10:56,000
+mas relativamente limitada em termos para os lados, na gama de frequências,
+
+102
+00:10:56,000 --> 00:11:00,000
+é isso que se quer com um sinal deste género.
+
+103
+00:11:00,000 --> 00:11:13,000
+Por exemplo, uma outra onda quadrada é representada na frequência também deste tipo que aqui está,
+
+104
+00:11:13,000 --> 00:11:28,000
+temos vários componentes das várias ondas que depois sumariam e depois conseguiríamos obter uma aproximação deste sinal que aqui está.
+
+105
+00:11:28,000 --> 00:11:35,000
+Tivemos por exemplo aqui duas sinusoides que estão a ser somadas mais ruído,
+
+106
+00:11:35,000 --> 00:11:45,000
+estamos a somar uma pequena quantidade de ruído e há algumas sinusoides e duas sinusoides, uma com a outra,
+
+107
+00:11:45,000 --> 00:11:49,000
+reparem que tem aqui as duas frequências deste sinal que aqui está,
+
+108
+00:11:49,000 --> 00:11:56,000
+depois de nós fazermos a transformada de Fourier, obtemos aqui dois pontos,
+
+109
+00:11:56,000 --> 00:12:03,000
+que são as tais duas sinusoides que aqui estão e estes pontinhos que nós vemos por aqui fora,
+
+110
+00:12:03,000 --> 00:12:18,000
+por aqui, por aqui, isto basicamente é o ruído, se for um ruído branco isto vai se espalhar por aqui fora.
+
+111
+00:12:19,000 --> 00:12:27,000
+Nós podemos aplicar isto também ao som, se vocês quiserem experimentar este site,
+
+112
+00:12:27,000 --> 00:12:35,000
+tem ali alguns sons com alguma piada, embora depois a apresentação não seja muito parecida com aquela que nós falamos até agora,
+
+113
+00:12:35,000 --> 00:12:45,000
+mas depois é fácil de perceber que eles fazem análise do som também dos passarinhos, das orcas e outras coisas que tal.
+
+114
+00:12:45,000 --> 00:12:56,000
+Já agora, por exemplo, estas análises com som que nós vimos aqui, se vocês aplicarem por exemplo ao motor do vosso carro,
+
+115
+00:12:56,000 --> 00:13:04,000
+normalmente ele vai aparecer um conjunto de frequências que é a frequência com que ele está a ter explosões no motor.
+
+116
+00:13:04,000 --> 00:13:08,000
+Como assim eventualmente começarem a aparecer frequências mais aqui para o lado,
+
+117
+00:13:08,000 --> 00:13:15,000
+se calhar isso quer dizer que há ali qualquer coisa que não está muito boa no próprio motor e que está a falhar,
+
+118
+00:13:15,000 --> 00:13:22,000
+isto muitas vezes, este tipo de análise tanto de vibração do motor como de sons e por aí fora,
+
+119
+00:13:22,000 --> 00:13:26,000
+é usado muitas vezes na manutenção de máquinas industriais.
+
+120
+00:13:26,000 --> 00:13:35,000
+E mais uma vez, a base para automatizar isto depois, por exemplo, é este tipo de transformada de Fourier,
+
+121
+00:13:35,000 --> 00:13:43,000
+que se faz para vocês com meio desenho de linhas de código em Python,
+
+122
+00:13:43,000 --> 00:13:50,000
+aplicam meio desenho de linhas de código em Python e têm esta coisa que eu acabei de mostrar aqui.
+
+123
+00:13:51,000 --> 00:13:58,000
+Portanto, isto é relevante então, nós vimos para o processamento de áudio, para a compreensão de imagem,
+
+124
+00:13:58,000 --> 00:14:03,000
+a compreensão de imagem também se desenha muito nestas teorias, a filtragem de sinais,
+
+125
+00:14:03,000 --> 00:14:16,000
+quando os sinais, principalmente aqueles que são sinais sem fios, têm que ser filtrados.
+
+126
+00:14:16,000 --> 00:14:24,000
+Portanto, quando vocês estão a receber uma rádio FM, por exemplo, a rádio de nascença,
+
+127
+00:14:24,000 --> 00:14:27,000
+só querem saber realmente o que é que é a rádio de nascença.
+
+128
+00:14:27,000 --> 00:14:35,000
+O que se faz com o filtro é limpar as restantes frequências dos outros sinais de rádio
+
+129
+00:14:35,000 --> 00:14:40,000
+e ficar só com a rádio de nascença, e podemos então depois ouvir a rádio de nascença a partir daqui.
+
+130
+00:14:40,000 --> 00:14:45,000
+Isto é uma das aplicações dos filtros, entre as minhas e outras.
+
+131
+00:14:45,000 --> 00:14:51,000
+Nos próprios mecanismos de comunicação, na parte de modulação e desmodulação.
+
+132
+00:14:51,000 --> 00:14:55,000
+Análise de largura de banda também.
+
+133
+00:14:56,000 --> 00:15:03,000
+Sistema de imbitos também, na análise de sinais vindos dos sensores.
+
+134
+00:15:03,000 --> 00:15:11,000
+Fazer FTTs, portanto, que são as transformadas de Fourier nos microcomputadores.
+
+135
+00:15:11,000 --> 00:15:19,000
+Aplicar filtragem digital aos sinais que estão a receber, por exemplo, se vocês estiverem a medir temperatura.
+
+136
+00:15:19,000 --> 00:15:25,000
+Por vezes, os sensores de temperatura são muito sensíveis ao ruído.
+
+137
+00:15:25,000 --> 00:15:33,000
+E no final, às vezes não soa, olha para lá e a temperatura está sempre a oscilar muito,
+
+138
+00:15:33,000 --> 00:15:37,000
+o ruído tem muita influência na temperatura.
+
+139
+00:15:37,000 --> 00:15:43,000
+Na temperatura, isto é, na medição da temperatura, não é propriamente na medição da temperatura,
+
+140
+00:15:43,000 --> 00:15:46,000
+que isso fisicamente mantém esse estado.
+
+141
+00:15:46,000 --> 00:15:52,000
+Portanto, aí pode ser necessário aplicar-lhe um filtro e retirar aquilo que não nos interessa.
+
+142
+00:15:52,000 --> 00:16:01,000
+Muitas vezes, em quase todas as instalações, uma das principais influências que nós temos de ruído
+
+143
+00:16:01,000 --> 00:16:08,000
+é o ruído ambiente da corrente alternada que passa aqui à nossa volta de todo lado.
+
+144
+00:16:08,000 --> 00:16:18,000
+E aí são umas ondas de 50 Hz que temos que retirar, temos que ter um filtro para retirar essa componente de 50 Hz,
+
+145
+00:16:18,000 --> 00:16:28,000
+pelo menos, que é aquilo que passa para quase todos os sistemas de processamento sinal.
+
+146
+00:16:29,000 --> 00:16:36,000
+Pronto, isto. O que é que é a largura de banda de um sinal?
+
+147
+00:16:36,000 --> 00:16:41,000
+Pronto, basicamente isto é a definição que aqui está, que é o conjunto de frequências
+
+148
+00:16:41,000 --> 00:16:51,000
+sobre o qual o sinal tem uma energia ou potência significativa.
+
+149
+00:16:51,000 --> 00:16:57,000
+A questão principal é o que é que nós interpretamos aqui como potência significativa.
+
+150
+00:16:57,000 --> 00:17:05,000
+Vamos ver, há várias formas de pensar o problema.
+
+151
+00:17:05,000 --> 00:17:13,000
+Porquê? Porque muitos destes sinais, em termos de frequências, eles espalham-se infinitamente pelo número de frequências.
+
+152
+00:17:13,000 --> 00:17:19,000
+Basta ser um sinal um bocadinho mais esquisito e já não há nada a fazer, já se espalha.
+
+153
+00:17:19,000 --> 00:17:27,000
+Basta ter uma reta, uma descida, o sinal digital já se espalha por todas as frequências possíveis do espectro.
+
+154
+00:17:27,000 --> 00:17:33,000
+Claro que as mais pequeninas, as mais distantes, são muito, muito pequenas.
+
+155
+00:17:33,000 --> 00:17:39,000
+E, portanto, o que acontece na maior parte das vezes é que essas frequências mais altas e muitas das mais baixas,
+
+156
+00:17:39,000 --> 00:17:43,000
+também as podemos retirar do sinal.
+
+157
+00:17:43,000 --> 00:17:51,000
+Portanto, basicamente, a largura de banda do sinal será o intervalo entre a frequência mínima e a frequência máxima do mesmo.
+
+158
+00:17:51,000 --> 00:17:57,000
+Isto é, a largura de banda vai ser deste valor que aqui está.
+
+159
+00:18:00,000 --> 00:18:07,000
+A largura de banda pode ser definida basicamente como exemplo em três formas.
+
+160
+00:18:07,000 --> 00:18:15,000
+Largura de banda absoluta, portanto, é a gama total de frequências em que o sinal existe.
+
+161
+00:18:15,000 --> 00:18:21,000
+Na maior parte dos casos isto é impraticável.
+
+162
+00:18:21,000 --> 00:18:33,000
+Portanto, é preciso ir para outras definições, definições efetivas, que basicamente é definir um range,
+
+163
+00:18:33,000 --> 00:18:39,000
+onde nós vamos concentrar, por exemplo, 95% da potência do meu sinal.
+
+164
+00:18:39,000 --> 00:18:49,000
+Um daqueles ranges que é muito normal é tentar chegar a uma atuação dita de 3 dBs.
+
+165
+00:18:49,000 --> 00:19:00,000
+E, portanto, é um valor que é standard, que é bastante comum em termos de engenharia.
+
+166
+00:19:01,000 --> 00:19:07,000
+Só alguns exemplos aqui da frequência de alguns sinais.
+
+167
+00:19:07,000 --> 00:19:13,000
+Por exemplo, a audição humana vai normalmente entre os 20 Hz e os 20 kHz,
+
+168
+00:19:13,000 --> 00:19:19,000
+e depois ao longo da vida isto vai diminuindo esta gama cada vez mais.
+
+169
+00:19:19,000 --> 00:19:24,000
+E muitas pessoas ouvem mais para um lado do que para outros.
+
+170
+00:19:24,000 --> 00:19:27,000
+Isto não é igual para toda a gente.
+
+171
+00:19:27,000 --> 00:19:33,000
+Basicamente isto é uma largura de banda aproximadamente igual a 20 kHz menos 20.
+
+172
+00:19:33,000 --> 00:19:39,000
+Nós podemos aproximar perfeitamente por 20 kHz, qualquer que seja.
+
+173
+00:19:39,000 --> 00:19:47,000
+Um sinal em FM, por exemplo, tem cerca de 200 kHz também,
+
+174
+00:19:47,000 --> 00:19:56,000
+ou seja, podemos passar informação a cerca de 200 kbps se usássemos um sinal FM,
+
+175
+00:19:56,000 --> 00:19:58,000
+direticamente também.
+
+176
+00:19:58,000 --> 00:20:04,000
+E depois, por exemplo, para o Wi-Fi nós vamos ter aqui também vários valores
+
+177
+00:20:04,000 --> 00:20:13,000
+conforme o sítio temos que ter canais de 20 MHz, 40, 80 ou 160.
+
+178
+00:20:13,000 --> 00:20:19,000
+Porquê que esta largura de banda é importante então?
+
+179
+00:20:19,000 --> 00:20:28,000
+Porque a largura de banda vai definir qual é o data rate máximo que eu posso atingir num determinado canal.
+
