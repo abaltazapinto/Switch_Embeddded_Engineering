@@ -1,0 +1,524 @@
+1
+00:00:00,000 --> 00:00:11,600
+com o sinal de maior, para redirecionar o output do comando echo para este fecheiro que no fundo representa a porta a sério.
+
+2
+00:00:11,600 --> 00:00:20,000
+Isto na prática é um fecheiro especial que faz com que qualquer operação da IOU que seja feita por ele
+
+3
+00:00:20,000 --> 00:00:26,000
+chame uma função específica de callback que está definida nos tais módulos do kernel
+
+4
+00:00:26,000 --> 00:00:40,000
+e que, portanto, vai pegar nos dados que são enviados pelo programa do utilizador e depois manipulá-los a nível do kernel.
+
+5
+00:00:40,000 --> 00:00:48,000
+Este tipo de configuração que aqui está na linha de comando, quando queremos integrar tudo num programa em C,
+
+6
+00:00:48,000 --> 00:00:56,000
+isto é um programa que foi feito com as funcionalidades do sistema.
+
+7
+00:00:56,000 --> 00:01:04,000
+Portanto, num sistema como o Linux, tudo que é feito por comandos, em teoria, podemos fazer também nos nossos programas
+
+8
+00:01:04,000 --> 00:01:12,000
+porque estes programas usam funcionalidades das bibliotecas do sistema ou chamadas ao sistema.
+
+9
+00:01:12,000 --> 00:01:22,000
+Portanto, no limite, mesmo que não houvesse comentação, podíamos ir ver o código fonte destes programas e ver como é que eles fazem.
+
+10
+00:01:22,000 --> 00:01:30,000
+Mas aqui, no caso da configuração da porta a sério, é algo que já está estabelecido há muito, muito tempo.
+
+11
+00:01:30,000 --> 00:01:40,000
+Portanto, a maneira de fazer isso em C é usando a gluteca term ios, que tem lá...
+
+12
+00:01:40,000 --> 00:01:50,000
+Usa assim uns comando, umas funções e, principalmente, umas estruturas com uma parametrização não completamente trivial
+
+13
+00:01:50,000 --> 00:02:02,000
+Em contas, as opções que temos para configurar também acaba por depois do código ficar bastante denso,
+
+14
+00:02:02,000 --> 00:02:14,000
+mas basicamente também já existem exemplos como os valores, portanto, configurações típicas que podem ser usados
+
+15
+00:02:14,000 --> 00:02:24,000
+Nesta página, por exemplo, está documentada. Portanto, isso nem sequer é a página oficial do projeto, mas, por acaso, considera que estava...
+
+16
+00:02:24,000 --> 00:02:30,000
+Que tinha uma documentação bastante interessante ou bastante clara.
+
+17
+00:02:30,000 --> 00:02:48,000
+Ora bem, pronto. Relativamente a esta parte aqui, portanto, isto são exemplos de outros que agora depois na aula de prática vamos concretizar
+
+18
+00:02:48,000 --> 00:02:58,000
+Com exercícios, portanto, levando cada uma destas abordagens um bocadinho mais longe.
+
+19
+00:02:58,000 --> 00:03:18,000
+Queria agora, vou então agora falar aqui um bocadinho da questão do Linux e dos módulos de kernel e de algumas questões que se colocam realmente quando queremos transpor algum deste código
+
+20
+00:03:18,000 --> 00:03:40,000
+Portanto, para o nível do kernel. O primeiro aspecto a terem em conta é que o Linux é um sistema operativo, portanto, não tanto os comandos que nós usamos na linha de comando,
+
+21
+00:03:40,000 --> 00:03:52,000
+mas sim o próprio núcleo que é carregado para memória e que depois tem as funcionalidades que permitem que esses comandos possam ser implementados.
+
+22
+00:03:52,000 --> 00:04:06,000
+Mas o Linux em si é um sistema altamente configurável que, portanto, no limite tem todas as funcionalidades, permite termos sistemas com todas as funcionalidades de um computador desktop típico,
+
+23
+00:04:06,000 --> 00:04:14,000
+até poder ser configurado apenas com algumas funcionalidades que sejam necessárias para a aplicação.
+
+24
+00:04:14,000 --> 00:04:24,000
+No limite até existe, por exemplo, hoje em dia cada vez faz menos sentido, mas até é possível ter um sistema Linux sem qualquer suporte para rede,
+
+25
+00:04:24,000 --> 00:04:44,000
+portanto, eliminar da configuração do Linux e depois na sua build não haver nenhum código, portanto, ao fazer a compilação não haver nenhum código relativo a protocolos de rede,
+
+26
+00:04:44,000 --> 00:05:04,000
+o que faz com que, portanto, o sistema, portanto, em situações onde esteja ali a lutar pela memória principal, pelo espaço de memória, portanto, pode fazer alguma diferença.
+
+27
+00:05:04,000 --> 00:05:18,000
+Caso contrário, também não faz sentido andar com otimizar demasiado, porque às vezes também se pode, sem querer, tirar alguma coisa que é importante, ou que seja importante.
+
+28
+00:05:18,000 --> 00:05:28,000
+Ou seja, mesmo em, tenho aqui alguns exemplos de funcionalidades, sistemas de fecheiros.
+
+29
+00:05:28,000 --> 00:05:42,000
+No sistema, quando estamos fazendo sistemas de uso mais geral, baseado em Linux, interessa-nos que ele, quando começou a apanhar lá uma PN, que ele detecte tudo e mais alguma coisa que tenha suporte para sistemas de fecheiros do formato de fecheiros.
+
+30
+00:05:42,000 --> 00:05:56,000
+Os sistemas de fecheiros é forma como o disco é formatado, conforme é formatado em Linux ou Windows, portanto, os fecheiros são organizados de maneira diferente no dispositivo de armazenamento,
+
+31
+00:05:56,000 --> 00:06:11,000
+e tanto isso agora, tanto em Linux, como em Windows, existem diferentes tipos de sistemas, já acho que já falamos disso anteriormente numa sessão com a questão do formato MTFS, FAT32 em Windows,
+
+32
+00:06:11,000 --> 00:06:37,000
+os formatos X3, X4, BTRFS em Linux. E onde eu quero chegar é o seguinte, se nós, todos estes sistemas de fecheiros, para poder haver suporte, temos que ter o código correspondente no núcleo sistema operativo.
+
+33
+00:06:37,000 --> 00:06:49,000
+E quanto mais sistemas de fecheiros foram suportados, mais memória então, depois o kernel vai precisar para ser carregado em memória.
+
+34
+00:06:49,000 --> 00:07:12,000
+Outro aspecto são os periferéricos, que, portanto, reparem que, embora em teoria seja possível, não faz sentido nenhum carregar para memória um sistema que, portanto, um software, um núcleo sistema operativo que seja capaz de lidar com todas as câmaras
+
+35
+00:07:12,000 --> 00:07:31,000
+existentes, quem diz câmaras, diz outros dispositivos, existentes no mercado, porque certeza que nunca vamos ligar todas em simultâneo, nem sequer seria possível, e portanto não faz sentido carregar esses, portanto, o respectivo software ao que estou por memória.
+
+36
+00:07:31,000 --> 00:07:47,000
+Isso aplica-se a todas as vertentes. É por isso que o Linux, desde sempre, tem a possibilidade de colocar algumas destas funcionalidades como módulos.
+
+37
+00:07:47,000 --> 00:08:10,000
+Eu agora estou-me a lembrar, portanto, foi já na semana passada, quando já falei, fiz uma introdução ao Linux, eu mencionei o exemplo do caso da Rank, em que, portanto, aplicar precisamente aos sistemas de fecheiros, em que, em vez de ter o suporte para cada tipo de sistemas de fecheiros existente no núcleo sistema operativo,
+
+38
+00:08:10,000 --> 00:08:32,000
+eles podem ser compilados, a parte que o suporte para cada um deles pode ser carregado, a parte com módulos independentes, e depois, na altura do Rank, portanto, o nosso sistema até pode estar configurado para carregar apenas aquilo que é necessário para o sistema de fecheiros que é usado no sistema em que estão.
+
+39
+00:08:41,000 --> 00:08:59,000
+Ora bem, temos aqui um exemplo do ecrã de configuração do Linux, só para ficarem aqui com um panorama geral das opções que é possível configurar.
+
+40
+00:08:59,000 --> 00:09:23,000
+Este aqui, por acaso, não lembro-me desse aspeto, este exemplo, por acaso, é para a arquitetura x86, como está aqui, como se pode ver aqui por este comentário, mas o que, portanto, qual é o impacto disto, tudo que seja a ver com configuração de processador,
+
+41
+00:09:23,000 --> 00:09:50,000
+é específico para este, ou seja, conforme a arquitetura que é escolhida, o maior impacto é precisamente aqui no processador, nos drivers de firmware, e depois, em alguns dispositivos que, portanto, que o script de configuração já sabe que só são específicos para cada arquitetura,
+
+42
+00:09:50,000 --> 00:09:54,000
+e só os mostra conforme a arquitetura que é selecionada.
+
+43
+00:09:54,000 --> 00:10:13,000
+Qualquer maneira, depois temos aqui os tais parâmetros que podemos selecionar mais opções ou menos opções conforme necessário, está aqui o caso networking support que eu mencionei,
+
+44
+00:10:13,000 --> 00:10:27,000
+portanto, vamos supor que temos um sistema que sabemos que nunca vai ser ligado a uma rede IPv6, podemos desativar o suporte IPv6, é menos lá uns kilobytes que vão para o núcleo,
+
+45
+00:10:27,000 --> 00:10:43,000
+ou até, vamos supor que não queremos mesmo que seja ligada a rede IPv6, se desativar no kernel de certeza que já será muito difícil fazer isso, portanto, ter esse tipo de conectividade.
+
+46
+00:10:43,000 --> 00:10:58,000
+Aqui nos device drivers aparece o suporte para todos os tipos de dispositivos, desde controladores USB, depois dispositivos USB, dispositivos de armazenamento, dispositivos multimédia,
+
+47
+00:10:58,000 --> 00:11:18,000
+dispositivos, portanto, controladores gráficos, está tudo aqui nos device drivers, os file systems que eu mencionei, opções de segurança, aqui depois já há alguns que vão sendo selecionados automaticamente conforme selecionam outras opções.
+
+48
+00:11:18,000 --> 00:11:39,000
+Neste exemplo, como eu estava a dizer, isto é configurar, é um exemplo de configuração para um computador com processadores Intel, um computador tracional de desktop, e portanto tem aqui opções que são específicas,
+
+49
+00:11:39,000 --> 00:12:03,000
+portanto no Raspberry Pi, pelo menos nos mais antigos, não aparece nomeadamente o suporte para o herramienta PCI, e pronto, para um sistema como o Raspberry Pi logo a partida não estaria selecionado.
+
+50
+00:12:03,000 --> 00:12:23,000
+Apesar que aqui faça um parênteses, até corresponde relativamente a uma questão que também surgiu na semana passada, relativamente ao Raspberry Pi 5, o Raspberry Pi 5 já tem uma diferença de arquitetura,
+
+51
+00:12:23,000 --> 00:12:46,000
+portanto já usa mesmo o PCI Express para ligar um circuito integrado adicional onde estão os módulos de imputo, portanto os GPIOs e os seus respectivos controladores, portanto estão num dispositivo à parte,
+
+52
+00:12:46,000 --> 00:13:08,000
+que depois comunica com o portador principal, o system on chip, através de uma ligação PCI Express, portanto mesmo em termos de funcionamento, ou seja, de arquitetura do sistema, arquitetura de hardware é bastante diferente dos anteriores,
+
+53
+00:13:08,000 --> 00:13:27,000
+portanto já até tem o data sheet, portanto à parte só para esse módulo que chamam o RP1, que funciona como o hub de dispositivos, é quase, ou seja, já transformar o Raspberry Pi 5 quase como os PCs que tem o processador,
+
+54
+00:13:27,000 --> 00:13:47,000
+e depois tem um circuito integrado adicional que na gíria dos PCs se costuma chamar o chipset, que tem as ligações para os controladores de vários dispositivos, não deixa de ser irónico observar que no caso dos PCs,
+
+55
+00:13:47,000 --> 00:14:07,000
+já começam a ver PCs, principalmente portáteis, em que o processador já nem sequer usa o tal integrado chipset, tem as funções todas no processador principal, portanto que funciona ali como um pacote que tem no mesmo módulo,
+
+56
+00:14:07,000 --> 00:14:20,000
+ou se quiserem, eu quero evitar usar o termo circuito integrado porque aquilo no fundo são vários circuitos integrados ali no mesmo pacote, embora seja uma única PC, portanto interligados entre si,
+
+57
+00:14:20,000 --> 00:14:35,000
+ou seja, nos PCs grande porte já começam a ter tudo numa única PC, aqui no Raspberry Pi 5 decidiram dividirem em dois circuitos integrados.
+
+58
+00:14:35,000 --> 00:15:01,000
+Portanto, veem aqui várias opções que depois, dependendo do sistema, que não precisam de estar ativas ou não precisam haver suporte e portanto fazem com que o sistema possa ficar mais compacto,
+
+59
+00:15:01,000 --> 00:15:16,000
+ainda relativamente a esta questão do PCI, eu há pouco falei da questão dos cheiros de DTB naquele comando DT overlay e agora queria fazer portanto a relação com este aspecto da configuração do kernel,
+
+60
+00:15:16,000 --> 00:15:38,000
+os cheiros de DTB são precisos precisamente porque estes dispositivos, portanto, estas placas que são tipicamente usadas para sistemas embedded, mesmo estas que suportam Linux, tipicamente não usam o PCI express, nem o PCI,
+
+61
+00:15:38,000 --> 00:15:54,000
+que são, qual é o impacto disso? O impacto é que nos sistemas que usam PCI ou PCI express, esses standards obrigam que os dispositivos se possam identificar automaticamente,
+
+62
+00:15:54,000 --> 00:16:11,000
+ou seja, permitem fazer uma coisa que em tempos, quando foi introduzida até se chamava o plug and play, em que, portanto, qualquer placa que mesmo que de origem não esteja lá, quando é adicionada ao abarramento PCI ou PCI express,
+
+63
+00:16:11,000 --> 00:16:31,000
+hoje em dia nos computadores grande portos, portanto, os PCI express, PCI express foi lançado no início do século, em 2000 e pouco, 2004, por volta desta altura, e para substituir o anterior PCI,
+
+64
+00:16:31,000 --> 00:16:44,000
+e desde essa altura, portanto, tem sido sempre melhorado, tem sido lançadas novas revisões, com suporte para taxas de transferência cada vez mais elevadas.
+
+65
+00:16:44,000 --> 00:17:06,000
+Mas um aspecto que é comum, que já veio até do próprio PCI dos anos 90, dos computadores dos anos 90, era precisamente a possibilidade dos dispositivos se identificarem e de indicarem os recursos que precisam de usar para mapear os seus registros,
+
+66
+00:17:06,000 --> 00:17:23,000
+ou seja, esta coisa que no caso do Raspberry Pi, eu tenho que andar ali a ver no data sheet, qual é o endereço base, onde vou ler os registros, ou ver o mapa de memória para perceber onde é que tenho que ir exatamente escrever,
+
+67
+00:17:23,000 --> 00:17:37,000
+no caso do PCI, dos sistemas baseados em PCI e PCI express, cada dispositivo diz, olha, eu tenho x registros, tenho um registro de estado, um registro, três registros de controlo,
+
+68
+00:17:37,000 --> 00:17:52,000
+preciso aqui de umas gamas de memória para otimizar as transferências de dados, para servir de buffer, e o sistema, portanto, o próprio sistema operativo que recebe essa informação,
+
+69
+00:17:52,000 --> 00:18:07,000
+ou que o próprio faz a sondagem dessa informação, depois decide em que endereços é que, portanto, dinamicamente, já que o sistema a funcionar, dinamicamente em que endereços é que coloca cada um dos dispositivos.
+
+70
+00:18:07,000 --> 00:18:19,000
+É isso que, portanto, é esse mecanismo que permite que os computadores pessoais e os servidores que usam o PCI express, portanto, as máquinas que usam o PCI express sejam bastante reconfiguráveis,
+
+71
+00:18:19,000 --> 00:18:38,000
+e que possam facilmente ter novos, portanto, ter placas de expansão, ou adicionar novas placas de expansão, porque sempre que o sistema reinicia, ele faz a sondagem dos barramentos e detecta todos os dispositivos que estão ligados aos movimentos PCI ou PCI express.
+
+72
+00:18:49,000 --> 00:19:02,000
+Portanto, há pouco temos aqui, reparem, a possibilidade de aqui até ter o suporte para GPO no próprio kernel, que é uma opção.
+
+73
+00:19:02,000 --> 00:19:21,000
+No fundo, o que o IonPy faz, e portanto, aquela abrangência que eu expliquei, de aceder diretamente à memória, faz é ignorar as configurações do kernel e ir escrever diretamente, embora o próprio kernel também já ofereça funcionalidades para trabalhar com o GPIO.
+
+74
+00:19:21,000 --> 00:19:41,000
+Pronto, depois estou daqui até esta parte do suporte para multimédia, suporte para gráficos, suporte para placas de expansão, é tudo, portanto, se nós não usarmos estas funcionalidades no nosso sistema embebido, não há necessidade de os ter selecionados no kernel.
+
+75
+00:19:41,000 --> 00:19:52,000
+Ou seja, o que é que isto permite, ou mesmo aqui o suporte para os mais diversos tipos de controlador USB, só faz sentido selecionar os que são necessários para o sistema.
+
+76
+00:19:52,000 --> 00:20:10,000
+É óbvio que depois cada fabricante já cria um fecheiro de configuração otimizado, ou pelo menos com os defaults para o seu sistema, que vai executar Linux.
+
+77
+00:20:10,000 --> 00:20:22,000
+Mas isso, como eu disse, não quer dizer que, portanto, normalmente criam uma configuração genérica, com os suportes mais típicos, mas para casos especiais, podemos mesmo assim ainda ir alterá-la.
+
+78
+00:20:22,000 --> 00:20:42,000
+Tenho aqui o exemplo dos tais sistemas de fecheiros, estão a ver aqui a quantidade de sistemas de fecheiros, também não são centenas, mas aqui uma dúzia de sistemas de fecheiros que são suportados por esta versão do Linux, já é uma versão relativamente antiga.
+
+79
+00:20:42,000 --> 00:20:57,000
+Não atualizei este slide, isto é, este 5.10 era uma versão que chegou a ser usada pelo Raspberry Pi até há três anos.
+
+80
+00:20:57,000 --> 00:21:12,000
+Portanto, há uma altura inicialmente que o Raspberry Pi não atualizava muito as versões do kernel, nos últimos anos tem se mantido mais a par com as novas versões que vão sendo lançadas, ganham mais dinâmica nesse aspecto.
+
+81
+00:21:12,000 --> 00:21:37,000
+Vamos ver aqui o exemplo do suporte para os sistemas de fecheiros da Microsoft, já vai aqui a ver se encontrava a marcação de uma opção como módulo, como aqui mas não tem aqui.
+
+82
+00:21:37,000 --> 00:22:04,000
+Por acaso, neste teclado de configuração não fica muito claro, mas basicamente, aqui nesta fase de configuração podemos selecionar quando queremos que uma determinada funcionalidade faça parte da imagem ou do fecheiro principal do kernel,
+
+83
+00:22:04,000 --> 00:22:24,000
+e seja logo carregada para a memória no arranque, ela é marcada com um visto. Se quisermos que uma determinada funcionalidade fique disponível como módulo carregável, existe aqui uma marcação especial, que aqui nesta interface é este menos, noutras é uma bolinha,
+
+84
+00:22:24,000 --> 00:22:37,000
+portanto isto depois, dependendo da versão também do Linux e do modo como se lança esta interface, aqui esta simbologia é ligeiramente diferente, por isso é que agora até estava a hesitar.
+
+85
+00:22:37,000 --> 00:23:06,000
+Isto depois eram os cheiros com a extensão .ko, que ficam guardados na pasta barra livre do sistema final, para poderem ser carregados com apadeço, e aqui aparece o tal comando que eu mencionei há pouco que permite o carregamento desses módulos.
+
+86
+00:23:06,000 --> 00:23:33,000
+Relativamente a isto, depois há que ter atenção a uma coisa, estes módulos são fecheiros que ficam num diretório aparte, que só são carregados a pedido, mas são fecheiros que sobam funcionar naquela versão específica do kernel e com aquela configuração.
+
+87
+00:23:33,000 --> 00:23:54,000
+Portanto, como eu disse, esta versão aqui é o 5.10, a que é usada na versão atual do Raspberry POS é o 6.12, se forem ao site careno.org, já lá o set, qualquer coisa, penso eu que já estou lá, não morifiquei, já foi anunciado.
+
+88
+00:23:54,000 --> 00:24:14,000
+E são os relivs, se usarmos o termo em inglês, mas para a mesma versão é possível ter diferentes configurações, e só o facto de alterarmos a configuração já faz com que os módulos que possam ter sido compilados para essa configuração.
+
+89
+00:24:14,000 --> 00:24:43,000
+E que entretanto tenha havido uma alteração da configuração já não vão funcionar, por isso é que mesmo às vezes quando instalamos software terceiros e depois fazemos atualizações ao sistema, torna-se necessário ir recompilar os módulos para a versão atual e configuração atual do kernel.
+
+90
+00:24:44,000 --> 00:25:07,000
+Eu faço aqui mesmo um outro comando, mas isto por acaso até devia ter apagado aqui para as nossas aulas, não interessa, para casos específicos quando o módulo, não vai aparecer, mas este módulo é usado quando queremos carregar um módulo terceiro.
+
+91
+00:25:07,000 --> 00:25:30,000
+É um módulo que não faz parte da árvore de módulos oficial do kernel, que não está lá instalado e registrado na lista de módulos oficiais do kernel, portanto tem que ser carregado manualmente com este comando.
+
+92
+00:25:30,000 --> 00:25:59,000
+Portanto, este comando mode probe acaba por ser o mais completo e permite, da forma geral, até podermos ter um sistema Linux com vários kernels instalados para podermos manter uma versão anterior do kernel como segurança,
+
+93
+00:25:59,000 --> 00:26:19,000
+ou seja, mais estável quando estamos a experimentar uma nova versão e quando se faz o módulo probe ele vai automaticamente ao diretório que contém, correspondente à versão atual do kernel, a base de dados de módulos e carrega o módulo para a versão correta.
+
+94
+00:26:19,000 --> 00:26:26,000
+Portanto, isto quando são coisas feitas como os procedimentos da distribuição com que estamos a trabalhar.
+
+95
+00:26:26,000 --> 00:26:55,000
+Isto também já mostrei ali há pouco. Este modelo é esse módulo quando andamos aqui a carregar módulos manualmente ou algum módulo que não temos certeza que tenha sido carregado, podemos usar para obter a listagem de todos os módulos que estão carregados para ver se o módulo desejado está presente.
+
+96
+00:26:55,000 --> 00:26:59,000
+Portanto, eu obtenho a lista de módulos que estão atualmente carregados.
+
+97
+00:26:59,000 --> 00:27:20,000
+Aqui é um exemplo de uma listagem desse diretório do Librebarre Modules em que, portanto, o que é que eu quero ilustrar com isto?
+
+98
+00:27:20,000 --> 00:27:38,000
+É que quando deixamos o kernel ser configurado com os defaults, corremos o risco de ele mesmo não ficando no fecheiro principal, na imagem principal do kernel que é carregado para memória no arranque,
+
+99
+00:27:38,000 --> 00:27:44,000
+podemos ficar no próprio dispositivo de armazenamento com uma quantidade de módulos que nunca vão ser usados.
+
+100
+00:27:44,000 --> 00:27:59,000
+Portanto, mesmo não sendo carregados para a memória principal, muitas vezes podemos ter o cuidado de só selecionar os módulos que são necessários para não estar a desperdiçar espaço no dispositivo de armazenamento.
+
+101
+00:27:59,000 --> 00:28:11,000
+Mas aqui também já não é tão preocupante, porque nós também depois é impossível identificar os módulos que não são necessários e apagá-los diretamente, mesmo sem estar a mexer na configuração do kernel.
+
+102
+00:28:11,000 --> 00:28:17,000
+Há sempre essa opção, assim, um bocado mais aldrabona, mas que funciona.
+
+103
+00:28:17,000 --> 00:28:37,000
+Ativamente, a estrutura agora, portanto, do ponto de vista de programação, a estrutura dos módulos de kernel, portanto, aqui vamos ver o código em C.
+
+104
+00:28:37,000 --> 00:28:51,000
+Atualmente já começa a haver suporte, como eu disse, para escrever módulos de kernel com a linguagem Rust, para o caso de haver aqui alguém adepto dessa linguagem.
+
+105
+00:28:51,000 --> 00:29:02,000
+Mas confesso que não tenho, como não sou utilizador dessa linguagem por enquanto, não tenho acompanhado esse desenvolvimento do ponto de vista experimental.
+
+106
+00:29:02,000 --> 00:29:15,000
+Sei que tenho ganho maturidade, portanto, o suporte para usar essa linguagem para a programação do kernel, mas o tradicional e o que ainda tem mais suporte, o suporte mais estável é programação em C.
+
+107
+00:29:15,000 --> 00:29:30,000
+E essa é a linguagem que eu vou continuar a usar. Portanto, já agora este LKM são os tais módulos carregáveis que eu tenho vindo a mencionar, o loadable kernel module.
+
+108
+00:29:30,000 --> 00:29:44,000
+Esses módulos têm um conjunto de funções mínimas que é obrigatório, nomeadamente uma função de init e uma função de cleanup.
+
+109
+00:29:44,000 --> 00:29:58,000
+Na API das pressões do kernel mais recentes, isto já começa a não ser, eu penso que já não me recordo se dá uma mensagem de deprecated ou se já falha mesmo.
+
+110
+00:29:58,000 --> 00:30:15,000
+Acho que para já só geram um warning, pelo menos nas últimas versões que eu experimentei, da 6.2 ou a pouco antes dessa, só geravam um aviso, depois verificámos isso na prática.
+
+111
+00:30:15,000 --> 00:30:29,000
+Mas, portanto, a alternativa que é recomendada é usar umas macros em que se define, portanto, damos o nome que quisermos, uma função de arranque e uma função de determinação,
+
+112
+00:30:29,000 --> 00:30:39,000
+portanto, que é a função de limpeza para libertar os recursos que tenham sido usados pelo módulo antes de ser descarregado.
+
+113
+00:30:39,000 --> 00:30:44,000
+Portanto, existem umas macros para definir esse módulo init e o módulo exit.
+
+114
+00:30:44,000 --> 00:30:51,000
+Portanto, isto vai ser a função que é executada automaticamente quando o módulo é carregado.
+
+115
+00:30:51,000 --> 00:31:00,000
+E esta é, portanto, ou seja, em resposta àquele, ao carregamento através deste mode probe, quando é carregado manualmente,
+
+116
+00:31:00,000 --> 00:31:09,000
+ou no caso de fazer parte do, portanto, estar ligado estaticamente à imagem principal do kernel,
+
+117
+00:31:09,000 --> 00:31:22,000
+portanto, é executado na altura do arranque à medida que, portanto, o kernel detecta os dispositivos correspondentes.
+
+118
+00:31:22,000 --> 00:31:40,000
+Portanto, quando estamos a falar de módulos de kernel para fazer o controlo do funcionamento de dispositivos,
+
+119
+00:31:40,000 --> 00:31:55,000
+tipicamente vamos querer depois ter uma forma de permitir aos programas utilizador de enviar dados e de alterar configurações a partir do espaço utilizador.
+
+120
+00:31:55,000 --> 00:32:12,000
+O que é que é? Vamos logo ao espaço utilizador. Portanto, a zona de segurança, chamemos assim, em que tudo que seja programa lançado pelos utilizadores é executado.
+
+121
+00:32:12,000 --> 00:32:25,000
+Portanto, basicamente, também como já mencionei na semana passada, portanto, corresponde a um modo de funcionamento do processador menos privilegiado
+
+122
+00:32:25,000 --> 00:32:36,000
+que impede os programas do utilizador de aceder diretamente a certos recursos, por exemplo, diretamente à memória física.
+
+123
+00:32:36,000 --> 00:32:47,000
+Tudo isso fica barrado. Para quê? Precisamente para evitar que um programa do utilizador possa pôr em causa a estabilidade do sistema operativo.
+
+124
+00:32:47,000 --> 00:32:58,000
+Portanto, é preciso um esforço muito grande e é preciso que o programa esteja a funcionar em modo administrador para pôr em causa a estabilidade de um sistema deste gênero.
+
+125
+00:32:58,000 --> 00:33:12,000
+Então, uma forma de estabelecer essa ponte é através daqueles eixos de dispositivo do gênero que eu mencionei há pouco para a porta séria, portanto,
+
+126
+00:33:12,000 --> 00:33:26,000
+para a porta séria, portanto, o que está associada ao ART, portanto, ao dispositivo ART, que naquele caso era o barra DEV, barra TTY, não é S0.
+
+127
+00:33:26,000 --> 00:33:37,000
+Esses cheios positivos são criados pelo, têm que ser criados pelo módulo, pelo código do módulo de kernel.
+
+128
+00:33:37,000 --> 00:33:47,000
+Existem dois tipos principais, mas nós aqui, portanto, vamos trabalhar com o que é, tipicamente, mais usado para os dispositivos de entrada e saída de dados,
+
+129
+00:33:47,000 --> 00:34:00,000
+que são os, portanto, os dispositivos orientados ao caráter. Outra alternativa é os orientados ao bloco, mas que são, tipicamente,
+
+130
+00:34:00,000 --> 00:34:14,000
+são mais usados para aceder a dispositivos de armazenamento, que são vistos como dispositivos que têm um conjunto pré-definido de blocos
+
+131
+00:34:14,000 --> 00:34:25,000
+e que depois permitem o acesso aleatório a esses blocos, que são os setores de dispositivos de armazenamento, portanto, que está mais adequado.
+

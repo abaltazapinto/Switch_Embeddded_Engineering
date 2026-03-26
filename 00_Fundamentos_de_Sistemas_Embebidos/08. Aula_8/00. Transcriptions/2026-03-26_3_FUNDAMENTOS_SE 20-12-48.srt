@@ -1,0 +1,488 @@
+1
+00:00:00,000 --> 00:00:07,000
+muda para outro. Ao ser muito barato, também tem assim alguns problemas, não é?
+
+2
+00:00:07,000 --> 00:00:11,000
+Provavelmente a melhor de todas, não é?
+
+3
+00:00:12,000 --> 00:00:21,000
+Normalmente requer uma largura de banda maior do que outras técnicas de modulação do mesmo género, não é?
+
+4
+00:00:21,000 --> 00:00:27,000
+Se vocês depois quiserem podem procurar, que são os amplitude shift king, face shift king, não é?
+
+5
+00:00:27,000 --> 00:00:40,000
+A amplitude tem a ver com mudanças na amplitude da transmissão, face shift king muda a fase, tem a ver com as ondas e a forma como ela é transmitida, não é?
+
+6
+00:00:41,000 --> 00:00:48,000
+Também não vou entrar aqui em detalhes sobre cada um deles, não faz parte do nosso programa, ok?
+
+7
+00:00:49,000 --> 00:01:01,000
+Pronto, e portanto tem esse problema, tem alguma sensibilidade chamada frequency offset, ok?
+
+8
+00:01:01,000 --> 00:01:16,000
+Portanto que há variações na frequência, nomeadamente até podem ter a ver com a temperatura, com a não precisão dos osciladores utilizados, não é?
+
+9
+00:01:16,000 --> 00:01:33,000
+Ok? E outros fatos ambientais, isto pode levar a distroféus no próprio sinal, a degradação e a erros na interpretação daquilo que são zeros e daquilo que são os uns, ok?
+
+10
+00:01:34,000 --> 00:01:46,000
+São muito suscetíveis também a interferência, portanto os outros sinais do exterior interferem fortemente sobre sinais em FSK, não é?
+
+11
+00:01:46,000 --> 00:01:59,000
+E crosstalk, isto tem a ver com sinais parecidos, não é? Também em FSK, a serem transmitidos ao mesmo tempo em canais relativamente próximos, ok?
+
+12
+00:01:59,000 --> 00:02:09,000
+Portanto os canais têm que ter uma largura de banda superior, uma separação muito grande entre a frequência do zero e a frequência do um, isto traz alguns problemas, ok?
+
+13
+00:02:10,000 --> 00:02:21,000
+Têm alguns problemas de sincronização, não é? Imaginem que vocês querem transmitir um zero, não é? A descrição do sinal está aqui em cima.
+
+14
+00:02:21,000 --> 00:02:29,000
+Se quiserem transmitir 8 zeros, não é? Basicamente é este sinal que vão ter.
+
+15
+00:02:29,000 --> 00:02:49,000
+Ora bem, isto de passar algum tempo, pode haver os temporizadores do receptor e do transmissor ficarem desalinhados e ele deixa de conseguir interpretar o que é um zero e o que é um um, porque ele tem que fazer o que?
+
+16
+00:02:49,000 --> 00:03:02,000
+Quando faz a recepção tem que mostrar o sinal aqui em algum ponto, não é? Mas se os seus relógios não estiverem corretos, ele pode chegar a certa altura, não é?
+
+17
+00:03:02,000 --> 00:03:10,000
+Reparem que cada vez está mais aqui para o lado esquerdo e fazer a mostragem aqui neste sítio, ok?
+
+18
+00:03:11,000 --> 00:03:17,000
+E isto dá imediatamente a geneira, ok? Como é que eles fazem normalmente?
+
+19
+00:03:17,000 --> 00:03:36,000
+É resincornizar os relógios cada vez que há uma transição entre um zero e um um, não é? E nesta altura, esta mudança e estes problemas com os relógios deixam de ser tão notórios, ok?
+
+20
+00:03:36,000 --> 00:03:51,000
+Pronto, ok. Pronto, há quem diga que as outras técnicas devido aos mecanismos que se utilizem possam ser mais complexos que outros sistemas semelhantes a isto, ok?
+
+21
+00:03:51,000 --> 00:03:59,000
+Pronto, e os sistemas semelhantes são aqueles que eu falei, amplitude shift key, phase shift key, ok?
+
+22
+00:03:59,000 --> 00:04:11,000
+Temos também quadratura amplitude modulation, ok? Aqui há uma combinação de ISK e do PSK, portanto isto...
+
+23
+00:04:11,000 --> 00:04:19,000
+O problema é que a partir de certa altura nós já não conseguimos reconhecer o sinal original no sinal que está a ser transmitido, ok?
+
+24
+00:04:19,000 --> 00:04:33,000
+Temos também continuous phase shift key, portanto são mais umas variações destes sinais, cada um destes sinais, se vocês forem procurar a literatura ainda encontram muito, muito mais do que isto, ok?
+
+25
+00:04:33,000 --> 00:04:53,000
+Mas pronto, são os notórios. Depois temos o code division multiple access, portanto isto é um mecanismo fundamental, este foi um mecanismo inventado na Segunda Guerra Mundial
+
+26
+00:04:53,000 --> 00:05:03,000
+para conseguir transmitir a informação de uma forma bastante segura, ok?
+
+27
+00:05:03,000 --> 00:05:11,000
+O que é que nós fazemos aqui a isto? Nós temos um sinal que queremos transmitir, este sinal que está aqui em cima, ok?
+
+28
+00:05:11,000 --> 00:05:19,000
+Temos um código pseudo aleatório que o transmissor e o receptor têm de saber, não é?
+
+29
+00:05:19,000 --> 00:05:35,000
+E depois fazemos um short entre este... sabem o que é um short, certo? Portanto é uma aplicação lógica, entre estes dois sinais, ok? E obtemos este sinal que aqui está, ok?
+
+30
+00:05:35,000 --> 00:05:51,000
+A seguir, no receptor só tem que recuperar novamente este sinal, fazer novamente um short e obtemos o sinal original que tinha sido transmitido anteriormente, ok?
+
+31
+00:05:51,000 --> 00:06:04,000
+Portanto, estas variaçãozinhas permitem-nos reconstruir o meu sinal e permitem fazer uma coisa que é ter muitas pessoas a falar mais ou menos na mesma banda, muito próximo, não é?
+
+32
+00:06:04,000 --> 00:06:12,000
+E conseguimos que eles continuem a entender, não é? Não sei se vocês já experimentaram por vezes estar numa conversa com muitas pessoas,
+
+33
+00:06:12,000 --> 00:06:22,000
+Imaginem que um está a falar português ou que está a falar inglês ou que está a falar russo, não é? E facilmente conseguem sintonizar na pessoa com quem estão a falar, não é?
+
+34
+00:06:22,000 --> 00:06:32,000
+Se estão a falar com uma pessoa em português, o que está a falar em russo e o que está a falar em inglês não vai ter muita interferência na vossa conversa, ok? E vice-versa, ok?
+
+35
+00:06:32,000 --> 00:06:57,000
+É isto que se consegue fazer com estes códigos que estão aqui, que é uma das bases, por exemplo, do 8211, das comunicações também para o GSM, 5G, 4G, por aí fora, é uma das bases a este tipo de código, ok?
+
+36
+00:06:57,000 --> 00:07:19,000
+Portanto, estes códigos são únicos, não é? Tem que ser conhecidos pelos dois, ok? E são bastante imunes também a interferências de outros sinais, de ruídos e por aí fora, ok?
+
+37
+00:07:19,000 --> 00:07:29,000
+Conseguem aumentar também a capacidade e eficiência na transmissão destes sinais quando comparados com outras técnicas semelhantes, ok?
+
+38
+00:07:29,000 --> 00:07:37,000
+Portanto, voltando aqui ao nosso sistema, nós só chegamos aqui, ok?
+
+39
+00:07:37,000 --> 00:07:49,000
+O amplificador não vale a pena, estamos a falar muito, mas é basicamente um circuito eletrónico, não é?
+
+40
+00:07:49,000 --> 00:07:58,000
+Que vai aumentar a potência do sinal e prepará-lo para ser transmitido por uma antena, ok?
+
+41
+00:07:58,000 --> 00:08:06,000
+As antenas, como eu vos disse, têm uma engenharia muito complexa, muito mais complexa do que aquilo que se julga, não é?
+
+42
+00:08:06,000 --> 00:08:09,000
+Basta olhar para estas três antenas diferentes que aqui estão.
+
+43
+00:08:09,000 --> 00:08:19,000
+Esta é normalmente o tipo de antena que nós temos em circuitos como o Raspberry Pi, como os Arduinos, ok?
+
+44
+00:08:19,000 --> 00:08:29,000
+Estas são típicas dos sistemas de televisão antigos, portanto muitos de vocês já nunca viram estas antenas, ok?
+
+45
+00:08:29,000 --> 00:08:32,000
+Ou viram já na sua fase sinal.
+
+46
+00:08:32,000 --> 00:08:37,000
+Isto, por exemplo, são antenas direcionais utilizadas pelo GSC, ok?
+
+47
+00:08:37,000 --> 00:08:45,000
+Estas também são direcionais, aqui em cima, portanto, têm que estar viradas numa determinada direção, ok?
+
+48
+00:08:45,000 --> 00:08:58,000
+O que é que elas fazem? É basicamente converter o sinal, uma corrente, numa onda eletromagnética, ok?
+
+49
+00:08:58,000 --> 00:09:07,000
+Eu aqui, não sei se revido explícito, mas a antena é esta coisinha que aqui está, com estes recortes que aqui estão,
+
+50
+00:09:07,000 --> 00:09:17,000
+que têm umas determinadas dimensões de acordo com a frequência e a largura de banda que vai ser utilizada aqui, não é?
+
+51
+00:09:17,000 --> 00:09:27,000
+Isto também, se repararem, tem aqui também o sistema que nós podemos pôr, uma antenazinha e o circuito fica substancialmente melhor
+
+52
+00:09:27,000 --> 00:09:37,000
+em termos de range, por exemplo, de alcance e qualidade na sua transmissão, ok?
+
+53
+00:09:37,000 --> 00:09:43,000
+Portanto, começamos então com o mesmo primeiro tipo de antena, chamado omnidirecional,
+
+54
+00:09:43,000 --> 00:09:51,000
+que paga os sinais em quase todas as direções de um plano 2D, está bem?
+
+55
+00:09:51,000 --> 00:10:02,000
+O que é que ela faz? Reparem, ela tem que ter aqui dimensões que são proporcionais ao comprimento de onda daquilo que ela vai transmitir,
+
+56
+00:10:02,000 --> 00:10:09,000
+portanto, meio comprimento de onda, não é? Tem que ser o tamanho deste condutor que se encontra aqui.
+
+57
+00:10:09,000 --> 00:10:19,000
+Este é o cabo que traz o sinal e isto é para um lado, isto é para o outro, não é no fundo aquilo que vai ser transmitido pela antena.
+
+58
+00:10:19,000 --> 00:10:27,000
+Esta antena, quando vista de cima, transmite em todas as direções, está aqui inteira, ela transmite em todas as direções,
+
+59
+00:10:27,000 --> 00:10:41,000
+quando visto de lado, em 3D, forma-se basicamente aqui uma... como se ela projetasse na horizontal, quase,
+
+60
+00:10:41,000 --> 00:10:49,000
+como se ela tivesse a projetar assim. Não é bem assim, mas é assim aquela agulha, mas uma agulha muito mais alongada.
+
+61
+00:10:50,000 --> 00:11:00,000
+Esta antena é o chamado dipol, ou seja, o que é que acontece aqui quando nós estamos a transmitir com uma antena destas numa zona muito limitada,
+
+62
+00:11:00,000 --> 00:11:15,000
+nós não queremos que o sinal vá para cima nem para baixo, porque isto vai bater no chão, aqui vai passar pelo teto, vai para a atmosfera e perde-se,
+
+63
+00:11:15,000 --> 00:11:26,000
+portanto, o que nos interessa é tentar focar naquilo que deve ser a direção onde, possivelmente, se encontrará a antena receptor.
+
+64
+00:11:27,000 --> 00:11:40,000
+Portanto, uma antena que se encontra aqui não vai captar as comunicações. Se ela se encontrar aqui, esta zona já vai conseguir receber aquilo que quer.
+
+65
+00:11:41,000 --> 00:11:52,000
+Vocês também já viram nos vossos routers do IFI aquilo que se chama antenas MIMO, Multiple Input, Multiple Output.
+
+66
+00:11:52,000 --> 00:12:06,000
+Isto é, aparentemente, é um bocadinho mais esquisito. O que nós fazemos é ter várias antenas diferentes e o sinal vai ser captado pelas diferentes antenas
+
+67
+00:12:06,000 --> 00:12:20,000
+e cada sinal destes vai ter características ligeiramente diferentes. O que os circuitos depois lá dentro fazem é combinar estes sinais todos não só
+
+68
+00:12:20,000 --> 00:12:26,000
+e vamos ter depois um sinal que é uma combinação dos sinais das quatro antenas, basicamente.
+
+69
+00:12:26,000 --> 00:12:44,000
+Esta tecnologia é um bocado superior à que existia, como manter apenas, tem uma maior resistividade, resiste mais à perda do sinal,
+
+70
+00:12:44,000 --> 00:12:58,000
+tem uma área de cobertura maior, também uma capacidade maior, portanto a quantidade de bits que são transmitidos por segundo e de terminais, data rate.
+
+71
+00:12:58,000 --> 00:13:14,000
+Em termos de espectro também é mais eficiente, quando transmite não espalha tanto sinal e apesar de serem quatro antenas, tem uma redução também do consumo de energia.
+
+72
+00:13:14,000 --> 00:13:23,000
+Mas notem, por exemplo, quando isto é utilizado em Wi-Fi, o consumo de energia é sempre o mesmo, porque o consumo de energia do Wi-Fi por exemplo está limitado,
+
+73
+00:13:23,000 --> 00:13:34,000
+salvo o erro a um lote, eu juquei esse valor, portanto é uma energia muito fraca, isto tem um objetivo simples que é que quando vocês estão a transmitir,
+
+74
+00:13:34,000 --> 00:13:48,000
+a potência da vossa transmissão não pode afetar o vizinho de cima, nem o de baixo, nem o da frente, tem que estar limitada para que a área de cobertura da vossa transmissão também seja muito baixa.
+
+75
+00:13:48,000 --> 00:14:00,000
+Temos depois também as chamadas antenas direcionais, que são basicamente aqueles dipólogos que nós vimos anteriormente colocados numa haste,
+
+76
+00:14:00,000 --> 00:14:16,000
+também com uma determinada distância, com um determinado comprimento destes dipólogos, isto vai permitir focar o raio, focar a nossa transmissão,
+
+77
+00:14:16,000 --> 00:14:29,000
+e nós estamos a transmitir, no fundo, quase como se fosse em frente, se for visto a pouca distância, e de cima também estamos a transmitir como se fosse em frente,
+
+78
+00:14:29,000 --> 00:14:40,000
+claro que vai haver aqui alguma dispersão, mas a potência do sinal vai estar concentrada numa determinada área.
+
+79
+00:14:40,000 --> 00:14:48,000
+Se vimos o outro, quando a gente transmita de uma outra antena, a potência tem que se dissipar por esta área toda.
+
+80
+00:14:48,000 --> 00:15:02,000
+Se nós conseguimos concentrar a potência numa área mais pequenina, imaginemos que nós aqui tínhamos uma potência de 1, se isto correspondesse a um décimo,
+
+81
+00:15:02,000 --> 00:15:10,000
+nós temos aqui um décimo da potência nesta antena. Com esta antena conseguimos ter aqui uma potência de 1, mas numa área muito mais pequena,
+
+82
+00:15:10,000 --> 00:15:21,000
+e, portanto, conseguimos transmitir a distâncias muito maiores, e até com menos riscos da nossa transmissão ser apanhada por outras pessoas,
+
+83
+00:15:21,000 --> 00:15:35,000
+menos interferência aqui, etc. Isto é normal nas antenas de televisão, não sei se algum de vocês já experimentou captar a emissão com uma antena,
+
+84
+00:15:35,000 --> 00:15:47,000
+é preciso procurar a direção em que está o transmissor de televisão. Se estiverem no Porto, por exemplo, têm que apontar a antena para o Monte da Virgem,
+
+85
+00:15:47,000 --> 00:15:56,000
+e se apontando lá para o Monte da Virgem conseguem depois captar a transmissão de televisão.
+
+86
+00:15:57,000 --> 00:16:18,000
+Têm depois aquelas chamadas antenas direcionais, são vários dipolos colocados num determinado plano, isto permite-me depois transmitir um feixe eletromagnético numa determinada direção.
+
+87
+00:16:19,000 --> 00:16:30,000
+Se vocês viram as fotografias recentemente dos radares americanos que foram destruídos no Golf e assim, muitos deles são planos,
+
+88
+00:16:30,000 --> 00:16:47,000
+a maior parte também dos radares têm esta configuração plana, de modo a que quando há uma transmissão ele saiba que está a apanhar ou a transmitir numa determinada direção,
+
+89
+00:16:47,000 --> 00:16:56,000
+onde ele está a tentar detectar o avião e depois a antena vai rodando. São este tipo de antenas que são utilizadas.
+
+90
+00:16:56,000 --> 00:17:09,000
+Este tipo de antenas são chamadas sectorizadas, são utilizadas no GSM e o que elas fazem é a partir da torre, se por exemplo tivemos três antenas destas,
+
+91
+00:17:09,000 --> 00:17:21,000
+elas têm esta forma que aqui está, são semicípulos mais ou menos, e permitem transmitir para determinados setores.
+
+92
+00:17:21,000 --> 00:17:32,000
+Se cada uma delas tem um determinado setor, portanto significa que cada uma delas vai estar a transmitir numa gama de frequências diferente,
+
+93
+00:17:32,000 --> 00:17:51,000
+portanto desta forma que não haja interferência dentre elas. Pode acontecer em muitas situações, por exemplo se tivermos um sistema numa zona que tem uma rua,
+
+94
+00:17:51,000 --> 00:18:05,000
+podemos colocar este sistema com uma antena destas, de modo a que ele cubra a rua de Santa Catarina, que é uma rua que tem muita gente,
+
+95
+00:18:05,000 --> 00:18:15,000
+portanto seja uma antena dirigida só para a rua de Santa Catarina para aguentar com 200 ou 300 chamadas ao mesmo tempo.
+
+96
+00:18:16,000 --> 00:18:28,000
+Portanto isto consegue-nos em termos espaciais, conseguimos fazer aqui muitas brincadeiras com a especificação e com a direção com que estas antenas são colocadas,
+
+97
+00:18:28,000 --> 00:18:45,000
+se tiverem por exemplo num festival de música, há umas antenas móveis e podem ser colocadas lá no local, de modo a cobrirem uma determinada área do cinto e terem maior abertura nas comunicações,
+
+98
+00:18:45,000 --> 00:18:58,000
+portanto há aqui muitas coisas que se podem fazer com estas antenas. Estas antenas parabólicas são as antenas que são essencialmente utilizadas para transmissões a grande distância,
+
+99
+00:18:58,000 --> 00:19:16,000
+o que é que isto tem? Têm um disco grande, este disco no fundo vai permitir receber o feixe que não chega, com central aqui num só ponto,
+
+100
+00:19:16,000 --> 00:19:28,000
+que é o setor, portanto nós podemos ter por vezes, já olharmos as antenas parabólicas, uma antena com 20 metros quadrados, 20 metros de raio,
+
+101
+00:19:28,000 --> 00:19:46,000
+a olhar para um satélite ou para um lugar qualquer e consegue receber uma transmissão de alguma coisa que está a 600 mil km de distância, com a qualidade da vida,
+
+102
+00:19:46,000 --> 00:19:59,000
+porque pega naquela área toda da antena e no fundo é como ter o sinal que está naquela antena e amplifica-la e coloca-lhe um bocadinho pequenininho que é onde está o setor.
+
+103
+00:19:59,000 --> 00:20:17,000
+Muitas vezes estes setores ainda têm aqui um refletor e este sinal depois é refletido e há aqui um buraquinho no meio da antena e é refletido por aqui para ser ainda mais concentrado do que a que está.
+
+104
+00:20:17,000 --> 00:20:27,000
+Estas antenas são para coisas muito mais específicas e principalmente comunicações direcionais.
+
+105
+00:20:27,000 --> 00:20:47,000
+São as antenas que você vê, já vos falei, que são muito usadas em IoT e outros circuitos do género, Wi-Fi, tem desenhos curiosos, não só fico a pensar como é que isto funciona, mas que é certo é que funciona razoavelmente bem.
+
+106
+00:20:48,000 --> 00:21:11,000
+Portanto, estamos na antena, estamos agora à propagação dos sinais, o que é que vai acontecer com a propagação dos sinais? Primeiro, se vocês virem aqui estes espéis vermelhos, conforme se vão afastando da fonte,
+
+107
+00:21:11,000 --> 00:21:28,000
+aqui temos uma distância R desta fonte, temos aqui estes feitos vermelhos todos que estão aqui a ver, mas a partir daqui, a 2R da distância, já temos 4 quadrados,
+
+108
+00:21:28,000 --> 00:21:43,000
+significa que a potência do sinal a duas vezes esta distância já está diminuída por 4, se nós considerarmos aqui que é só um quadrado destes, e aqui ela já foi dividida por 6.
+
+109
+00:21:43,000 --> 00:21:55,000
+E assim para aí fora, isto vai se propagando e as perdas são mesmo muito, muito grandes ao longo da distância.
+
+110
+00:21:55,000 --> 00:22:10,000
+Mais do que isso, há outras perdas mais complicadas, por exemplo aqui chamada pass loss, se vocês tiverem a usar uma antena grande com GSM e tiver uma montanha à frente, o que acontece é que aqui tem boa rececção,
+
+111
+00:22:10,000 --> 00:22:25,000
+no cimo da montanha também tem boa rececção, mas do outro lado da montanha, reparem isto tudo, aquela móvel não vê nada, e depois os outros conseguem ver mais alguma coisa, a partir do momento é que a distância também é muito grande,
+
+112
+00:22:25,000 --> 00:22:44,000
+também deixam-me de capturar. Há outras influências também, por exemplo, da superfície da água que leva a que os finais ao refletirem aqui vão para o outro lado e não atijam tão facilmente este telefone que está aqui ao fundo,
+
+113
+00:22:44,000 --> 00:23:00,000
+mas este fica com muito boa qualidade. Se tivermos um edifício, a mesma coisa, este é influenciado fortemente pelo edifício, os sinais passam por cima e conseguem atingir estes nórgicos ao outro lado do edifício,
+
+114
+00:23:00,000 --> 00:23:12,000
+a mesma forma se tivermos casas ou árvores pelo meio isto reduz também a potência do sinal, substancialmente.
+
+115
+00:23:12,000 --> 00:23:34,000
+Aqui está outros sinais, outro efeito que é o efeito da reflexão na ionosfera, para alguns sinais, por um conjunto de frequências específicas chamadas de ondas longas, eu consigo transmitir o sinal e ele ao bater na camada da ionosfera é refletido,
+
+116
+00:23:34,000 --> 00:24:01,000
+mas isto é só para alguns tipos, as ondas longas, as outras passam por aqui fora e continuam de contente, por isso é que se consegue, apesar da curvatura da terra, comunicar entre dois pontos diferentes na terra, mas isto às vezes não é certo, às vezes estas reflexões não ocorrem sempre da mesma forma.
+
+117
+00:24:01,000 --> 00:24:25,000
+Depois temos aqui também outros efeitos estranhos, temos aqui um access point que está transmitido e temos aqui o meu nó, o que acontece? Há aqui um caminho direto com o meu computador, mas pode haver outro caminho que vai bater na parede e vem para trás.
+
+118
+00:24:25,000 --> 00:24:39,000
+Isto significa que este sinal, quando chegar aqui, vai chegar mais tarde e vai chegar também mais atenuado do que este sinal que vem deste lado.
+
+119
+00:24:39,000 --> 00:25:05,000
+No fundo, ele vai receber dois sinais, imaginemos, para simplificar, que são ondas quadradas mas que não são, que é transmitido e vai receber uma coisa igual, mas quando esteve conforme a frequência, o sinal que ele vai receber vai estar ligeiramente desfasado
+
+120
+00:25:06,000 --> 00:25:14,000
+em relação ao sinal original, aqui com esta diferenciazinha entre os dois.
+
+121
+00:25:14,000 --> 00:25:26,000
+Podemos ter também outras características que é o sinal, por exemplo, bater numa parede e depois ser refletido em muitas direções diferentes, se chamar de scapping.
+
+122
+00:25:26,000 --> 00:25:36,000
+Há outro nome que dá muito jeito para a transmissão dos sinais, que é a chamada diferação, que é ele ao passar aqui por uma abertura...
+

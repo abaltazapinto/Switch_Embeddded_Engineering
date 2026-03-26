@@ -1,0 +1,728 @@
+1
+00:00:00,000 --> 00:00:03,000
+do sistema operativo Linux.
+
+2
+00:00:03,000 --> 00:00:05,000
+Portanto, vamos começar por aí.
+
+3
+00:00:07,000 --> 00:00:09,000
+Deixem-me só...
+
+4
+00:00:09,000 --> 00:00:11,000
+Pronto, ok.
+
+5
+00:00:14,000 --> 00:00:16,000
+E nossa leitura.
+
+6
+00:00:16,000 --> 00:00:41,000
+Quando estamos a trabalhar na Shell, temos alguns utilitários que nos permitem diretamente
+
+7
+00:00:41,000 --> 00:00:49,000
+fazer o set e a própria configuração de pinos.
+
+8
+00:00:49,000 --> 00:00:56,000
+Este utilitar pin control, por exemplo, para coisas rápidas, até para scripts de Shell,
+
+9
+00:00:56,000 --> 00:01:01,000
+ou para fazer ensaios rápidos, permite fazer isso.
+
+10
+00:01:01,000 --> 00:01:10,000
+Tradicionalmente havia um conjunto de fecheiros, até uma certa versão do Linux,
+
+11
+00:01:10,000 --> 00:01:18,000
+havia um conjunto de fecheiros no barra CIS, que podiam ser configurados para dar acesso a estas configurações,
+
+12
+00:01:18,000 --> 00:01:26,000
+mas nas últimas versões do kernel essas funcionalidades foram bastante alteradas.
+
+13
+00:01:26,000 --> 00:01:36,000
+Nomeadamente uma opção que havia de exportar, fazer o export, um determinado pino para o que pudermos usar,
+
+14
+00:01:36,000 --> 00:01:41,000
+portanto isso apareceu nas versões mais recentes do Linux.
+
+15
+00:01:41,000 --> 00:01:44,000
+Hoje vamos falar um bocadinho de versões do Linux, mas a verdade é que é um bocado,
+
+16
+00:01:44,000 --> 00:01:48,000
+mas atualmente o sistema operativo.
+
+17
+00:01:48,000 --> 00:01:54,000
+Portanto, a última versão do Raspberry POS,
+
+18
+00:01:54,000 --> 00:02:06,000
+a última versão estável, a versão 6.12, que nem sequer é a versão mais recente do Linux,
+
+19
+00:02:06,000 --> 00:02:17,000
+o Linux há tempos saltou do 6.19 para a versão 7,
+
+20
+00:02:17,000 --> 00:02:29,000
+e é ao que temos de ter atenção, porque mesmo documentação,
+
+21
+00:02:29,000 --> 00:02:40,000
+que há uns anos atrás, nestas histórias do Linux, rapidamente fica desatualizada.
+
+22
+00:02:40,000 --> 00:02:54,000
+Esta biblioteca, o WiringPy, é um exemplo disso, embora não tenha a ver com o desenvolvimento Linux,
+
+23
+00:02:54,000 --> 00:03:01,000
+propriamente dito, portanto isto foi uma biblioteca que foi desenvolvida,
+
+24
+00:03:01,000 --> 00:03:12,000
+ou melhor, que foi criada para facilitar o acesso aos pins de GPIO das placas do Raspberry Pi,
+
+25
+00:03:12,000 --> 00:03:23,000
+e que houve até uma altura em que o seu autor deu o projeto como fechado ou parado,
+
+26
+00:03:23,000 --> 00:03:29,000
+e recomendou às pessoas, aos utilizadores, para arranjar soluções alternativas,
+
+27
+00:03:29,000 --> 00:03:34,000
+mas a verdade é que, após pouco tempo, houve quem pegasse no projeto e o continuasse a manter,
+
+28
+00:03:34,000 --> 00:03:42,000
+e a atualizar para as funções mais recentes, inclusive do Raspberry Pi 5.
+
+29
+00:03:42,000 --> 00:03:50,000
+Como podem ver, isto é baseado na biblioteca Wiring, que também é usada pelo Arduino,
+
+30
+00:03:50,000 --> 00:04:00,000
+o que também serve de base àquele software do Arduino, do qual mostrei também um exemplo simples.
+
+31
+00:04:00,000 --> 00:04:09,000
+Aqui neste caso, portanto, temos aqui esta função PinMode, que permite configurar o modo de funcionamento
+
+32
+00:04:09,000 --> 00:04:16,000
+ou a função de um dado pinno de GPIO pelo seu número, portanto, depois fazemos esta configuração,
+
+33
+00:04:16,000 --> 00:04:24,000
+e depois aqui o tradicional exemplo de colocar o LED a piscar, portanto, o LED, ou melhor,
+
+34
+00:04:24,000 --> 00:04:31,000
+alternar o estado da saída para, se ligarmos lá um LED, podermos ver acender e apagar.
+
+35
+00:04:31,000 --> 00:04:43,000
+Aqui neste exemplo de código, podemos ver aqui em comentário as opções que eu suporto nesta biblioteca,
+
+36
+00:04:43,000 --> 00:04:51,000
+portanto, colocar como input, output, como PWM output e como a gerador de sinal de relógio.
+
+37
+00:04:51,000 --> 00:05:02,000
+Depois, também temos aqui a configuração dos pull-ups e pull-downs, que eu mostrei no diagrama da última aula,
+
+38
+00:05:02,000 --> 00:05:09,000
+portanto, para quando o pinno está flutuante como entrada, portanto, quando está configurado como entrada
+
+39
+00:05:09,000 --> 00:05:19,000
+e não tem nada ligado, ou seja, está flutuante, para forçar um nível, ou seja, portanto, a 1 se for o pull-up,
+
+40
+00:05:19,000 --> 00:05:27,000
+ou a 0 se for o pull-down, portanto, aí esta é a opção de app e down.
+
+41
+00:05:28,000 --> 00:05:36,000
+Portanto, tal como temos um digital read, também temos um digital read para ler o pinno.
+
+42
+00:05:36,000 --> 00:05:47,000
+Isto são exemplos, é uma biblioteca que pode ser usada em programas C e aliás, tem também depois as versões para outras linguagens,
+
+43
+00:05:47,000 --> 00:05:54,000
+agora não estou recordando, está lá na página do GitHub, pelo menos para Python, acho que também tem.
+
+44
+00:05:55,000 --> 00:06:10,000
+Embora, sinceramente, acho que para sistemas que se pretendam um certo desempenho e mesmo sem estar a desperdiçar recursos,
+
+45
+00:06:10,000 --> 00:06:16,000
+eu penso que a programação em C é sempre mais reconciliada, é óbvio que o Python, para quem está mais habituado a programar,
+
+46
+00:06:16,000 --> 00:06:26,000
+portanto, em Python, permite resultados mais rápidos, sem dúvida, para fazer um protótipo, mas, pronto,
+
+47
+00:06:26,000 --> 00:06:31,000
+em termos de mobilização de recursos, ainda é difícil abater o C.
+
+48
+00:06:31,000 --> 00:06:43,000
+Curiosamente, portanto, se olharmos para o código font-wiring-pyc, que é até um bom objeto de estudo,
+
+49
+00:06:43,000 --> 00:06:52,000
+encontramos precisamente as funções, ou a sequência de código que mostrei na aula passada.
+
+50
+00:06:52,000 --> 00:06:58,000
+Portanto, não sei se estão recordados que eu terminei a sessão da aula passada, precisamente a mostrar aqui,
+
+51
+00:06:58,000 --> 00:07:08,000
+deixe-me lá ver se, portanto, este exemplo, tanto a explicar de que forma é que podemos aceder aos registros
+
+52
+00:07:08,000 --> 00:07:19,000
+do GPIO, que permitem configurar o GPIO e depois também, portanto, controlar o seu estado, ler o seu estado,
+
+53
+00:07:20,000 --> 00:07:27,000
+tanto a aceder aos registros de cada módulo, e, portanto, expliquei que, portanto,
+
+54
+00:07:27,000 --> 00:07:35,000
+poderíamos abrir este fecheiro, barra dev, barra meme, para aceder aos espaços da memória principal, a memória física.
+
+55
+00:07:35,000 --> 00:07:43,000
+Reparem que, mais uma vez, também, não sei se frisa isso, os endereços, portanto, a memória principal não é só RAM,
+
+56
+00:07:43,000 --> 00:07:50,000
+há endereços que ficam reservados, precisamente, para aceder a estes registros e que não servem, portanto,
+
+57
+00:07:50,000 --> 00:07:57,000
+estão no mesmo espaço e interessamento, mas são registros especiais que servem para configurar e para controlar
+
+58
+00:07:57,000 --> 00:08:07,000
+o funcionamento dos inputs e outputs e dos PWMs e dos UARTs e por aí de fora.
+
+59
+00:08:08,000 --> 00:08:18,000
+E, através desta função, então é possível mapear a área de memória física correspondente a esses registros
+
+60
+00:08:18,000 --> 00:08:31,000
+até para uma variável, que agora já corrigi este código, portanto, para uma variável do programa que depois facilite
+
+61
+00:08:31,000 --> 00:08:42,000
+o acesso aos registros. Neste caso, o que eu fiz foi criar aqui uma estrutura que tenha uns campos alusivos ao nome dos registros,
+
+62
+00:08:42,000 --> 00:08:46,000
+ou até podermos pôr exatamente os mesmos nomes que estão no data sheet.
+
+63
+00:08:46,000 --> 00:08:59,000
+E, portanto, onde eu queria chegar é que a biblioteca, o IMPI, segue precisamente essa abordagem.
+
+64
+00:08:59,000 --> 00:09:11,000
+Portanto, este código faz exatamente aquilo que está no exemplo que usei, que também é a forma que eu costumo pedir aos alunos
+
+65
+00:09:11,000 --> 00:09:19,000
+para poderem testar diferentes configurações do GPIO.
+
+66
+00:09:19,000 --> 00:09:28,000
+Aqui no caso a biblioteca, o IMPI, não temos que estar ao usar, portanto, ao fazer este IMPI setup, ele faz aquele código todo aborrecido
+
+67
+00:09:28,000 --> 00:09:40,000
+e, portanto, depois detecta o modelo e, de acordo com o modelo, escolhe o endereço base correspondente,
+
+68
+00:09:40,000 --> 00:09:47,000
+porque o endereço base dos registros varia de Raspberry Pi, portanto, da versão para a versão.
+
+69
+00:09:47,000 --> 00:09:58,000
+Como só que não é o mesmo, tem um mapa de memória relativamente diferente e, portanto, é preciso adaptar este endereço base,
+
+70
+00:09:58,000 --> 00:10:14,000
+que aqui omitiu o código que determina qual é o endereço base e, portanto, como eu disse, varia de placa para placa.
+
+71
+00:10:17,000 --> 00:10:40,000
+Portanto, tem aqui as instruções, mas está aqui o link, quem tiver curiosidade pode descarregar e até compilar e usar.
+
+72
+00:10:40,000 --> 00:10:53,000
+Agora, mais uma vez relacionado com esta questão, eventualmente, eu já reparei que há aqui alguns alunos,
+
+73
+00:10:53,000 --> 00:11:01,000
+ou pelo menos um aluno que já tem experiência com o Raspberry Pi, em versões mais antigas do Raspberry Pi OS,
+
+74
+00:11:02,000 --> 00:11:07,000
+esta biblioteca fazia parte da linha instalada com o sistema operativo.
+
+75
+00:11:07,000 --> 00:11:11,000
+Eu penso que foi, e aqui não andei a seguir a história desta biblioteca,
+
+76
+00:11:11,000 --> 00:11:19,000
+eu penso que foi precisamente desde a altura em que deixou de ser oficialmente mantida pelo seu autor original que ela deixou de ser incluída.
+
+77
+00:11:19,000 --> 00:11:32,000
+Portanto, pelo menos nesta versão, eu tive o cuidado de verificar se isto esteve nos repositórios e não está disponível nos repositórios oficiais.
+
+78
+00:11:32,000 --> 00:11:42,000
+Portanto, é necessário seguir as instruções do GitHub, que consistem nomeadamente em descarregar o código fonte,
+
+79
+00:11:42,000 --> 00:11:51,000
+portanto, a geração da biblioteca, ou seja, compilar o código e gerar a biblioteca correspondente,
+
+80
+00:11:51,000 --> 00:12:05,000
+que são os fecheiros .sl, um conjunto de fecheiros .sl que depois tem que ser incluídos, que tem que ser copiados para os diretórios adequados do sistema,
+
+81
+00:12:06,000 --> 00:12:16,000
+portanto, isto é feito, o próprio script de build cria este fecheiro,
+
+82
+00:12:16,000 --> 00:12:25,000
+este pacote de software com a extensão deb, que depois pode ser instalado usando o próprio utilitar de instalação do Ubuntu,
+
+83
+00:12:25,000 --> 00:12:35,000
+eu estou a usar aqui neste exemplo os dois a distribuição oficial do Raspberry Pi OS, que é baseado no Debian,
+
+84
+00:12:35,000 --> 00:12:42,000
+que é o mesmo que serve para o Ubuntu, até estava a dizer o Ubuntu, mas pronto, em rigor é o Debian.
+
+85
+00:12:42,000 --> 00:12:48,000
+Portanto, este pacote de software pode ser instalado simplesmente com o app install,
+
+86
+00:12:48,000 --> 00:12:54,000
+portanto, em vez de descarregar, de ir procurar os repositórios, faz instalação local.
+
+87
+00:12:54,000 --> 00:13:14,000
+Outra questão que surgiu na aula passada das funções disponíveis, eu quis confirmar este aspecto,
+
+88
+00:13:14,000 --> 00:13:24,000
+portanto, isto é feito, este comando é executado no próprio Raspberry Pi 4,
+
+89
+00:13:24,000 --> 00:13:32,000
+portanto, ele faz a listagem de todos os pinos e das funções que estão disponíveis para cada pino,
+
+90
+00:13:32,000 --> 00:13:37,000
+isto confirmo vai ao encontro do que eu mostrei na terça-feira no datasheet,
+
+91
+00:13:38,000 --> 00:13:45,000
+nomeadamente, portanto, até tenho aqui o exemplo de como configurar,
+
+92
+00:13:45,000 --> 00:13:55,000
+eu penso já agora, eu não me recordo do nome da pessoa que estava a tentar usar vários controladores de 2C, o Daniel,
+
+93
+00:13:55,000 --> 00:13:58,000
+portanto, você estava a dizer que só conseguia usar dois, já era isso?
+
+94
+00:13:59,000 --> 00:14:02,000
+É como a verdade, eu só pensava que tinha essa solução.
+
+95
+00:14:02,000 --> 00:14:09,000
+Aquele que nem sei se por default já não está, ele por default já agora...
+
+96
+00:14:09,000 --> 00:14:11,000
+Está inativo, não? Está inativo.
+
+97
+00:14:11,000 --> 00:14:13,000
+Ou seja, temos que ativá-lo mesmo assim.
+
+98
+00:14:13,000 --> 00:14:14,000
+Exatamente, sim.
+
+99
+00:14:14,000 --> 00:14:26,000
+Mas eu experimentei com este, só por curiosidade, ativei o terceiro controlador, o controlador de 2C número 3,
+
+100
+00:14:26,000 --> 00:14:30,000
+portanto, são contabilizadas para onde é que está o 0.
+
+101
+00:14:30,000 --> 00:14:32,000
+Portanto, o GPU é o 0, tem o 0, que está aqui.
+
+102
+00:14:32,000 --> 00:14:39,000
+Este aqui nem sequer podemos mexer, portanto, que é um que é reservado para comunicar com as placas,
+
+103
+00:14:39,000 --> 00:14:44,000
+penso que já tinha mencionado esse aspecto, eu penso que o que está disponível é o 1,
+
+104
+00:14:44,000 --> 00:14:53,000
+que é aqui nestes pinos, já agora não custa nada, tem aquela diagrama que dá jeito para estas coisas,
+
+105
+00:14:53,000 --> 00:15:02,000
+exato, é dos pinos 2 e 3, que isto é o que existe em todas as versões do Raspberry Pi, o que está disponível.
+
+106
+00:15:08,000 --> 00:15:15,000
+Aqui, portanto, isto não é direto, pronto, de facto não é só chegar lá,
+
+107
+00:15:15,000 --> 00:15:20,000
+portanto, há aqui um conjunto que passa, eu pus aqui a listagem toda, mas vamos ver só este caso.
+
+108
+00:15:23,000 --> 00:15:30,000
+Aqui entra, eu vou usar este exemplo para fazer o aponte precisamente para a matéria seguinte,
+
+109
+00:15:30,000 --> 00:15:36,000
+que depois vamos usar ali de slides, para os módulos de kernel, mas isto é um exemplo,
+
+110
+00:15:36,000 --> 00:15:42,000
+portanto, temos que fazer aqui o carregamento de alguns módulos de kernel e depois vamos ver o que é que são os módulos de kernel.
+
+111
+00:15:42,000 --> 00:15:48,000
+Uma coisa que dá jeito para trabalhar com o I2C e instalar este pacote, o I2C Tools,
+
+112
+00:15:53,000 --> 00:15:59,000
+o módulo que já está instalado, portanto, logo no arranque que fica instalado, que é este I2C qualquer coisa,
+
+113
+00:15:59,000 --> 00:16:22,000
+que é precisamente para aquele I2C0 dos pinos 0 e 1, portanto, lá está para as placas de expansão do I2C,
+
+114
+00:16:23,000 --> 00:16:38,000
+e portanto, para aceder ao I2C, vamos ter que carregar estes módulos, para aceder através dos 6 de positivo,
+
+115
+00:16:38,000 --> 00:16:48,000
+portanto, vamos ter que carregar este I2C DEV e este I2C BCM2835, portanto, este módulo de Probe é um comando de Linux
+
+116
+00:16:48,000 --> 00:17:00,000
+que carrega um módulo que vai ser, portanto, embutido no kernel, vai ser carregado ou encaixado no núcleo do sistema operativo
+
+117
+00:17:00,000 --> 00:17:10,000
+e que, como tal, depois vai ter permissões especiais para aceder aos registros e fazer a interação com os GPIOs,
+
+118
+00:17:11,000 --> 00:17:15,000
+neste caso, portanto, para trabalhar especificamente com o I2C.
+
+119
+00:17:19,000 --> 00:17:30,000
+Além disso, é preciso carregar os chamados DTBs, os Device Tribulops, que basicamente são os cheiros,
+
+120
+00:17:30,000 --> 00:17:38,000
+que também estão relacionados com o kernel do Linux, que servem para indicar a organização do, portanto,
+
+121
+00:17:38,000 --> 00:17:42,000
+os dispositivos pretendidos e a configuração pretendida.
+
+122
+00:17:47,000 --> 00:17:55,000
+Isto é um comando que pode ser executado na linha de comandos, portanto, na Shell, mas que também é possível configurar
+
+123
+00:17:55,000 --> 00:18:05,000
+naqueles cheiros de arranque que existem na partição de arranque, portanto, do dispositivo, do cartão de memória
+
+124
+00:18:05,000 --> 00:18:10,000
+ou do disco externo, que também se pode usar como dispositivos de arranque.
+
+125
+00:18:13,000 --> 00:18:24,000
+Portanto, aqui, ou seja, isto vai carregar um ficheiro que automaticamente faz um mapa alternativo da configuração do sistema
+
+126
+00:18:24,000 --> 00:18:35,000
+nomeadamente a fazer o mapeamento de um controlador de I2C correspondente ao forramento 3, que é o, portanto,
+
+127
+00:18:35,000 --> 00:18:46,000
+que basicamente é o I2C número 3, e acolhe a associação dos sinais aqui do I2C aos pinos desejados,
+
+128
+00:18:46,000 --> 00:18:52,000
+neste caso estou a fazer o mapeamento para os pinos 4 e 5, que eram aqueles que eu tinha marcado aqui amarelo,
+
+129
+00:18:52,000 --> 00:18:59,000
+que são os que, obviamente, se tentarmos fazer um mapeamento que não é válido, aquilo não vai funcionar.
+
+130
+00:18:59,000 --> 00:19:09,000
+Aos momentos, hei fazer um errado, não sei se falha logo ou se posto que simplesmente fica, ignora silenciosamente o comando.
+
+131
+00:19:09,000 --> 00:19:17,000
+Mas neste caso, estes são, portanto, são pinos válidos para a função desejada, portanto, neste de enviar os dados,
+
+132
+00:19:17,000 --> 00:19:25,000
+isto de enviar o clock, não é de enviar, portanto, a linha de dados e a linha de clock, portanto, é certo de enviar como receber, não é?
+
+133
+00:19:25,000 --> 00:19:38,000
+Isto é um bus, portanto, com uma linha de dados. E a partir daí, os módulos detectam logo que queremos usar este controlador,
+
+134
+00:19:38,000 --> 00:19:46,000
+os módulos que foram previamente configurados e criam automaticamente um fecheirinho de, portanto, um fecheiro especial,
+
+135
+00:19:46,000 --> 00:19:52,000
+que nos vai permitir comunicar com o, através do I2C.
+
+136
+00:19:56,000 --> 00:20:03,000
+Eu adicionei aqui, para futura referência, alguns comandos que também podem ser úteis,
+
+137
+00:20:03,000 --> 00:20:09,000
+por exemplo, aqui este menu L serve para listar todos os overlays que já foram carregados,
+
+138
+00:20:09,000 --> 00:20:20,000
+que no fundo servem para mudar a configuração default do sistema e caso uma socaire eliminar um destes overlays,
+
+139
+00:20:20,000 --> 00:20:27,000
+podemos removê-lo com esta opção menu R e através do seu número que aparece aqui na lista.
+
+140
+00:20:28,000 --> 00:20:39,000
+Pare que, do ponto de vista interno do kernel, estes módulos são classificados como Platform Devices, portanto,
+
+141
+00:20:39,000 --> 00:20:49,000
+dispositivos de plataforma, portanto, que só são carregados até através de, portanto, quando são especificados nos tais fecheiros de DTB.
+
+142
+00:20:50,000 --> 00:21:02,000
+O Raspberry Pi OS tem um fecheiro DTB com as configurações default, que é carregado pelo bootloader na altura do arranque
+
+143
+00:21:02,000 --> 00:21:14,000
+e mais depois permite fazer alterações através deste mecanismo dos overlays, ok?
+
+144
+00:21:14,000 --> 00:21:20,000
+É assim que uma metodologia para alterar estas configurações.
+
+145
+00:21:20,000 --> 00:21:27,000
+Então isto é o que acabei de dizer.
+
+146
+00:21:27,000 --> 00:21:42,000
+A coisa que depois vamos fazer na aula é, portanto, usar um microcontroledor, vamos programar o microcontroledor como um target E2C.
+
+147
+00:21:42,000 --> 00:21:56,000
+Para podermos depois até definir um conjunto, um protocolo de aplicação um pouco mais elaborado aqui,
+
+148
+00:21:56,000 --> 00:22:06,000
+isto é o caso mais simples para permitir fazer um teste tipo ECO, em que, portanto, o que é que fazemos? Configuro.
+
+149
+00:22:07,000 --> 00:22:16,000
+Já agora peço desculpa que não introduzi aqui, isto aqui foi mais uma vez usando a linguagem, isto foi feito para um Arduino, ok?
+
+150
+00:22:16,000 --> 00:22:28,000
+Para um Arduino, quer dizer, com o software do Arduino. Na prática, não usei o Arduino Uno, pelo motivo que está aqui mencionado e que eu vou já explicar.
+
+151
+00:22:28,000 --> 00:22:45,000
+Primeiro vamos olhar para o código, basicamente esta aqui faz, esta primeira linha, faz a inicialização do controlador de E2C e, portanto, ao atribuir-lhe o endereço,
+
+152
+00:22:45,000 --> 00:22:53,000
+portanto, o software vai assumir que fica em modo de target, portanto, se quiser, em modo slave.
+
+153
+00:22:53,000 --> 00:23:12,000
+Depois uma possível maneira de lidar com as escritas de leitura, já através de interrupção e isso pode ser feito, portanto, o atendimento às interrupções da recepção e da transmissão.
+
+154
+00:23:12,000 --> 00:23:31,000
+Portanto, aqui, ou seja, um interrupt handler para cada tipo de pedido, de leitura ou de escrita, eu peço suportar fazer recepção e envio, mas no fundo é pedidos de leitura e de escrita.
+
+155
+00:23:31,000 --> 00:23:50,000
+E, portanto, em cada caso, reparem aqui neste caso, de fazer, portanto, em que é enviado um byte para o dispositivo, ele vai, ou seja, em que o master faz uma escrita,
+
+156
+00:23:50,000 --> 00:24:08,000
+ele aqui deste lado vai fazer a leitura do byte enviado, ou até vários, portanto, se o controlador estiver a enviar vários dados na mesma sequência,
+
+157
+00:24:08,000 --> 00:24:24,000
+portanto, daqui a ler 1 a 1 e, pronto, e poderia ser guardado num vetor aqui, portanto, neste código, a única coisa que ele vai fazer é guardar o último, portanto, o último que for lido.
+
+158
+00:24:24,000 --> 00:24:38,000
+Depois, caso seja feita, enviada um pedido de leitura, o código vai usar a função, o método de escrita, portanto, o método write, para enviar o byte previamente lido.
+
+159
+00:24:38,000 --> 00:24:57,000
+Ou seja, isto permite-nos ver depois em ambiente teste se realmente o byte que enviamos para o dispositivo, se realmente foi lido e se o conseguimos ver de volta, é uma forma elementar de fazer o teste, uma espécie quase de deco.
+
+160
+00:24:57,000 --> 00:25:13,000
+Agora, portanto, é que eu estava a dizer há pouco, isto não foi feito, não vamos usar o Arduino Uno, nem outro kit que vos ajudaram nas três primeiras semanas,
+
+161
+00:25:13,000 --> 00:25:28,000
+porque aquilo usa níveis de 5 volts e o Raspberry Pi, portanto, a documentação do Raspberry Pi é bastante insistente em dizer que não é tolerante a mais de 3 volts,
+
+162
+00:25:28,000 --> 00:25:45,000
+e portanto, para evitar, portanto, usar estas placas, portanto, vamos ajudar outro micro, que é também suportado pelo Arduino IDE, e portanto, para podermos fazer as ligações diretas,
+
+163
+00:25:45,000 --> 00:26:07,000
+sem ter que estar a usar os adaptadores de níveis de tensão, que no caso o I2C tem que ser bidireccionais, ou teriam que ser, a mesma linha tanto serve para o controlador enviar como para ler,
+
+164
+00:26:07,000 --> 00:26:34,000
+ou seja, pode estar em umas alturas, em pôr 3 voltas na linha de dados e no outro em outras alturas em pôr 5 voltas e isso vai fazer com que, faria com que pudesse, portanto, eventualmente, danificar o Raspberry Pi, que é o que trabalha com tensões mais baixas.
+
+165
+00:26:37,000 --> 00:26:57,000
+Podemos depois, para a testa inicial, usar estas ferramentas, portanto, estes comandos, precisamente duas deste pacote I2C Tools, que permitem verificar e detectar dispositivos no barramento I2C,
+
+166
+00:26:57,000 --> 00:27:14,000
+ou seja, nós estamos aqui, seguimos este exemplo, de usar o BAS3, portanto, o quarto do barramento, digamos assim, ou o barramento 3, portanto, passamos aqui o 3 e ele vai detectar, faz uma sondagem do barramento,
+
+167
+00:27:14,000 --> 00:27:34,000
+testando cada um dos endereços possíveis e indica depois quais é que estão presentes. Neste caso, portanto, assumindo que esta estava ligada, ele iria detectar o dispositivo com o endereço 55 e mostra lá na lista, portanto, o 55 como estando presente.
+
+168
+00:27:34,000 --> 00:27:54,000
+Depois podemos fazer uma, portanto, para enviar, aqui também para testes, para enviar um comando, um byte, um único byte, podemos usar este comando, perdão, aqui é para fazer leitura,
+
+169
+00:27:54,000 --> 00:28:11,000
+depois para enviar, fazer coesões T7, portanto, o get para obter, portanto, indicando, portanto, isto é o bus, isto é o endereço do dispositivo no bus e a mesma coisa, a mesma lógica aqui para o set.
+
+170
+00:28:11,000 --> 00:28:36,000
+Outro dispositivo, ou melhor, um dispositivo que também está presente no Raspberry Pi e este, portanto, este é logo configurado como art,
+
+171
+00:28:36,000 --> 00:28:53,000
+portanto, é o art dos pins 14, que está disponível nos pins 14 e 15, cujas linhas de TX e de RX, ou seja, de envio e de recepção, estão disponíveis nos pins 14 e 15.
+
+172
+00:28:53,000 --> 00:29:13,000
+Isto tem rigor, pelo menos na versão atual do Raspberry Pi OS, este art já está preparada para permitir que um utilizador faça o login a partir de uma ligação séria,
+
+173
+00:29:13,000 --> 00:29:30,000
+ou seja, investir por SSH, fazer ter acesso pela ligação séria, por uma ligação mais direta, sem ser pela internet.
+
+174
+00:29:30,000 --> 00:29:42,000
+Para realmente usarmos o art nos nossos programas sem ter interferências do programa de login, que está lá pronto para permitir login, temos que desativar este serviço, portanto, este é o primeiro passo.
+
+175
+00:29:42,000 --> 00:30:01,000
+E até podemos usar este comando para verificar, para confirmar que já não temos mais nenhum processo a tentar, portanto, aceder à porta para depois não interferir nas nossas comunicações.
+
+176
+00:30:01,000 --> 00:30:13,000
+Temos, portanto, a configuração propriamente dita, de seguida, a configuração propriamente dita pode ser feita por linha de comando, pelo comando SCTY.
+
+177
+00:30:13,000 --> 00:30:41,000
+Portanto, tem várias opções de permitir alterar o BOS rate, desativar uma opção que está ativa por omissão que é o eco-automático dos dados recebidos e outras que queramos alterar, mas normalmente estes defaults já permitem uma comunicação dos dados normal.
+
+178
+00:30:41,000 --> 00:30:56,000
+Depois, reparem que eu esqueci de frisar esse aspecto, aqui temos um exemplo dos dados fecheiros de dispositivo e foi por isso também que eu peguei aqui neste exemplo da UART.
+
+179
+00:30:56,000 --> 00:31:12,000
+Temos um exemplo, portanto, de um fecheiro de dispositivo, ou seja, este TTY, um S0, que existe aqui neste diretório barradeira, é um fecheiro especial.
+
+180
+00:31:12,000 --> 00:31:33,000
+Portanto, aparece listado como um fecheiro do sistema, mas na prática é um fecheiro que dá acesso a um dispositivo, neste caso, a um dispositivo de comunicação que é a UART, ou uma das UARTs do Raspberry Pi.
+
+181
+00:31:34,000 --> 00:31:52,000
+E, portanto, todas as configurações são feitas sobre este fecheiro e o próprio envio de dados também é feito, o envio ou a recepção dos dados é feito com base neste fecheiro.
+
+182
+00:31:52,000 --> 00:32:15,000
+Nós conseguimos enviar, ler, fazer a leitura dos dados que estejam em buffer diretamente da própria shell, isto para ensaios, portanto, com o comando cat, e enviar strings de texto com o comando echo, que aqui peço desculpa que na cópia falhou-me qualquer coisa, ou seja, aqui teria que ser echo.
+

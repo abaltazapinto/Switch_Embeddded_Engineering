@@ -1,0 +1,272 @@
+1
+00:00:00,000 --> 00:00:05,160
+que o nosso vizinho do lado está a transmitir, nós vamos receber, poderá chegar mais atonuado,
+
+2
+00:00:05,160 --> 00:00:17,360
+mas nós vamos receber tudo. Antena no receptor, o filtro do receptor, que é para obter o sinal
+
+3
+00:00:17,360 --> 00:00:27,840
+na banda que nós queremos, o modificador, a seguir, isto pode estar trocado, o modificador
+
+4
+00:00:28,040 --> 00:00:36,640
+e o filtro depois, ou vice-versa. O desmodulador, basicamente vai fazer o papel contrário ao
+
+5
+00:00:36,640 --> 00:00:49,600
+modulador e obter um sinal parecido com aquilo que foi a minha entrada. Portanto, o encode sinal nós
+
+6
+00:00:49,600 --> 00:00:55,600
+já vimos, é um sinal, pode ser um sinal analógico, pode ser um sinal digital aqui.
+
+7
+00:00:56,480 --> 00:01:02,560
+O encoder vai converter o sinal de acordo com o código específico.
+
+8
+00:01:06,560 --> 00:01:13,680
+Há coisas relativamente simples em alguns sistemas, por exemplo, não transmitir muitos
+
+9
+00:01:13,920 --> 00:01:24,480
+seguidos ou muitos bons seguidos, pode ser uma das regras a utilizar aqui. Vai buscar também a
+
+10
+00:01:24,480 --> 00:01:36,480
+parte de obtermos erros, de acrescentar a frame, transmitir os códigos de correção deles, etc.
+
+11
+00:01:36,480 --> 00:01:45,760
+E depois temos a parte do modulador. Temos que partir aqui um bocadinho mais de tempo.
+
+12
+00:01:45,760 --> 00:01:53,760
+O modulador tem a ver com um problema que eu já vos fui referindo, que é nós não conseguimos,
+
+13
+00:01:53,760 --> 00:02:05,120
+na maior parte das vezes, transmitir um sinal no meio sem fios, dentro da gama de frequências
+
+14
+00:02:05,120 --> 00:02:12,240
+o sinal nos aparece. Nós não conseguimos transmitir no meio sem fios o sinal que seja
+
+15
+00:02:12,240 --> 00:02:21,760
+contínuo, não se mova, seja sempre com determinado valor. Sinais de baixa frequência também não
+
+16
+00:02:21,760 --> 00:02:33,840
+conseguimos transmiti-los, na maior parte das vezes. E portanto temos que adaptar o sinal
+
+17
+00:02:33,840 --> 00:02:38,240
+àquilo que nós queremos. Por exemplo, se nós tivéssemos transmitido um sinal de voz,
+
+18
+00:02:39,440 --> 00:02:47,440
+portanto a 10 km, tínhamos que ter uma antena com 7,5 km. Fazendo as continhas que eu estava a ler
+
+19
+00:02:47,440 --> 00:02:55,520
+falar sobre as antenas, tínhamos que ter uma antena com 7,5 km e é absolutamente impraticável ter isso.
+
+20
+00:02:55,520 --> 00:03:03,760
+Qual é a solução para isso? É nós usarmos algum tipo de modulação. E essa modulação implica
+
+21
+00:03:03,760 --> 00:03:12,320
+a gente pegar neste sinal de voz que está nos 10 km e passá-los para uma frequência muito mais
+
+22
+00:03:12,320 --> 00:03:18,480
+elevada, mais ou menos, tendo lá o conteúdo da informação da voz que estava nos 10 km. É o que
+
+23
+00:03:18,480 --> 00:03:27,000
+faz o AM e o FM, que vocês conhecem bem dos rádios dos carros. E depois, se isto não for um sinal
+
+24
+00:03:27,000 --> 00:03:34,280
+analógico, se for um sinal digital, nós temos também várias tecnologias que nos permitem resolver
+
+25
+00:03:34,280 --> 00:03:43,760
+parte do problema. Frequency Shift King, Spread Spectrum, que é aquilo que é utilizado pelo
+
+26
+00:03:44,760 --> 00:03:55,760
+Frequency Hopping, que é o que é utilizado pelo Bluetooth, é original. Cold Division é utilizado
+
+27
+00:03:55,760 --> 00:04:11,240
+por alguns protocolos do GSM, ligados ao GSM, etc. Portanto, o que faz o modulador é pegar um sinal
+
+28
+00:04:11,240 --> 00:04:18,240
+digital mais para cima. Melhor é ver isto por um exemplo que aqui está. Por exemplo, temos aqui
+
+29
+00:04:18,240 --> 00:04:26,840
+o modulador AM, que é um dos poucos que se consegue perceber visualmente o que é que se passa com o
+
+30
+00:04:26,840 --> 00:04:33,040
+sinal. Portanto, se eu estiver a transmitir este sinal que aqui está, portanto, uma onda sinusoidal,
+
+31
+00:04:33,040 --> 00:04:50,040
+eu preciso, levam-se do Spectrum de Freqüências, há uma gama para o rádio. E depois, há aqui uma
+
+32
+00:04:50,040 --> 00:05:01,040
+pequena gama, que é, por exemplo, onde eu tenho a RFM. E eu vou ter que pôr o sinal neste espaçozinho,
+
+33
+00:05:01,040 --> 00:05:08,640
+imaginamos que sou a minha voz de 10kHz, normalmente aqui eu posso ter aqui uma largura de banda que
+
+34
+00:05:08,640 --> 00:05:23,040
+poderá ir para aí aos 50kHz ou qualquer coisa assim do gênero. Só que este sinal vai estar nos 77MHz por aí.
+
+35
+00:05:23,040 --> 00:05:38,040
+Significa o quê? Que eu vou ter que pegar neste sinal e vou ter que multiplicar por este carrier,
+
+36
+00:05:38,040 --> 00:05:52,040
+o carrier do meu sinal. Ao fazer essa multiplicação, o que vai acontecer é que ele vai ficar com a amplitude
+
+37
+00:05:52,040 --> 00:06:01,040
+diferente. Eu só estou a multiplicar a amplitude, basicamente. Mas se vocês repararem, o meu sinal continua
+
+38
+00:06:01,040 --> 00:06:14,040
+aqui. Eu posso depois reconstruir o sinal através deste ponto de discussão, no fundo, os valores máximos da amplitude
+
+39
+00:06:14,040 --> 00:06:23,040
+da minha onda. É aquilo que eu tenho que fazer do outro lado quando desmodular o sinal. Como eu vos disse,
+
+40
+00:06:23,040 --> 00:06:29,040
+este é o mais fácil de visualizar as coisas, a partir daqui as coisas tornam-se um bocadinho mais complexas.
+
+41
+00:06:29,040 --> 00:06:41,040
+O IAM tem alguns problemas, por exemplo, vocês se estiverem de carro e começarem a afastar muito da fonte,
+
+42
+00:06:41,040 --> 00:06:48,040
+o volume começa-vos a diminuir, porque o sinal começa a ser cada vez mais pequeno. Claro que depois,
+
+43
+00:06:48,040 --> 00:06:55,040
+provavelmente já estão há muitos anos que eu não ouço nada em IAM, mas se calhar há rádios que já conseguem compensar
+
+44
+00:06:55,040 --> 00:07:04,040
+esse tipo de coisas. Mas o IAM é imune a isso, independentemente da distância que nos encontramos da fonte
+
+45
+00:07:04,040 --> 00:07:19,040
+e de outras influências. O IAM faz outra coisa, que é aquilo que ele vai modificar, esta amplitude que aqui está,
+
+46
+00:07:19,040 --> 00:07:27,040
+é a frequência do sinal. Se vocês virem, quando o sinal está perto de zero, a frequência é muito baixa,
+
+47
+00:07:27,040 --> 00:07:37,040
+e ele vai subir até a frequência mais alta, quando se aproxima pelo máximo de amplitude.
+
+48
+00:07:37,040 --> 00:07:45,040
+Estão a ver que aqui andam muito mais depressa que está a ser transmitido. Quando nos aproximamos da parte
+
+49
+00:07:45,040 --> 00:07:50,040
+que o sinal está mais baixo, estão a reparar que esta frequência do sinal é relativamente pequena.
+
+50
+00:07:50,040 --> 00:07:58,040
+Reparem que isto praticamente não se vê, só se está a ver agora aqui, porque dá jeito de mostrar, não é?
+
+51
+00:07:58,040 --> 00:08:10,040
+Porque a frequência do carrier é muitas vezes superior à do sinal em si.
+
+52
+00:08:10,040 --> 00:08:23,040
+Isto é o que faz o mecanismo de FM, tem basicamente uma grande resistência ao ruído também, em relação ao IAM,
+
+53
+00:08:23,040 --> 00:08:32,040
+basta acrescentar lá um bocadinho de ruído, no caso do IAM.
+
+54
+00:08:33,040 --> 00:08:46,040
+Ele vai colocar aqui algum ruído em cima do meu sinal também, mas no FM a única coisa que nós medimos é a frequência das ondas,
+
+55
+00:08:46,040 --> 00:08:51,040
+e portanto ao medir a frequência das ondas, o ruído não tem qualquer influência aqui,
+
+56
+00:08:51,040 --> 00:08:59,040
+portanto consegue ter muito melhor qualidade, até a largura de banda é melhor, portanto conseguimos transmitir muito mais frequências
+
+57
+00:08:59,040 --> 00:09:11,040
+de qualquer tipo de sinal. Só que também o FM vai usar uma largura de banda maior do que no caso do IAM.
+
+58
+00:09:21,040 --> 00:09:25,040
+Já vos falei isto no início.
+
+59
+00:09:25,040 --> 00:09:36,040
+Este escama aqui, não estou a esperar que vocês o percebam, mas é só para vos mostrar o aspecto eletromagnético que eu falei na última aula
+
+60
+00:09:36,040 --> 00:09:41,040
+e de que forma é que ele está alocado.
+
+61
+00:09:41,040 --> 00:09:48,040
+Se vocês pararem aqui de zero até qualquer coisa, deve ser relativamente baixa, não é?
+
+62
+00:09:48,040 --> 00:09:53,040
+Este aspecto não é alocado, também não é utilizável facilmente.
+
+63
+00:09:53,040 --> 00:10:07,040
+Aqui temos coisas para navegação, móvel marítimo, mais ondas para tráfego marítimo,
+
+64
+00:10:07,040 --> 00:10:19,040
+tem aqui imensos espaços que são para os militares aqui no meio, e alguns, está aqui uma coisinha pequenina, não sei se é este,
+
+65
+00:10:19,040 --> 00:10:25,040
+deste género, é onde nós podemos transmitir os sinais sem nos preocupar.
+
+66
+00:10:25,040 --> 00:10:34,040
+Portanto é a banda ESM, Instrumentation Scientific Medical, onde nós podemos colocar os nossos sinais,
+
+67
+00:10:34,040 --> 00:10:44,040
+por exemplo, ATTENCIVEIS 11, Bluetooth, e portanto todos eles têm que compartilhar um espaço mesmo muito pequenino.
+
+68
+00:10:44,040 --> 00:10:53,040
+Deixe-me só ver, são cerca de 8 horas, vamos esperar 10 minutinhos e voltamos já.
+

@@ -1,0 +1,800 @@
+1
+00:00:00,000 --> 00:00:04,960
+que estas são microcontroladores, baseadas em microcontrolador e depois têm uma ou duas
+
+2
+00:00:04,960 --> 00:00:09,360
+tipo Raspberry Pi, portanto que permitem instalar o Linux.
+
+3
+00:00:09,360 --> 00:00:14,560
+O Raspberry Pi, ao contrário, é que a parte das placas são orientadas ao uso de um sistema
+
+4
+00:00:14,560 --> 00:00:22,440
+operativo, que é nomeadamente o Linux, os outros são casos especiais, portanto orientada
+
+5
+00:00:22,440 --> 00:00:30,480
+aos Linux e depois tem um modelo que é, portanto, aqui da linha atual, portanto, se for para
+
+6
+00:00:30,480 --> 00:00:36,840
+os modelos antigos, tem mais, portanto, que é uma solução tipo microcontrolador, que
+
+7
+00:00:36,840 --> 00:00:42,520
+tem um processador, já agora para falarmos já deste caso, que é semelhante a alguns
+
+8
+00:00:42,520 --> 00:00:49,400
+dos que vimos, já aqueles processadores já mais adançados dos arduinos, baseados em núcleos
+
+9
+00:00:49,400 --> 00:00:55,480
+como os ARM, o ARM Cortex neste caso, o AM33, portanto aqui pela frequência também ficam
+
+10
+00:00:55,480 --> 00:01:04,000
+com uma ideia do desempenho, eu recordo que os arduinos tinham aqui os modelos baseados
+
+11
+00:01:04,000 --> 00:01:13,880
+no ADR, nos microcontroladores com micro, portanto com CPU da família AVR 8 bits, que
+
+12
+00:01:13,880 --> 00:01:22,840
+são processadores que trabalham a frequências na ordem dos 16, 20 MHz no máximo, enquanto
+
+13
+00:01:22,840 --> 00:01:27,560
+que as de Cedarmo já são, pelo menos em termos de frequência de relógio, quase cerca
+
+14
+00:01:27,560 --> 00:01:32,240
+de 10 vezes superiores e no caso do arduino até temos lá alguns casos com frequências
+
+15
+00:01:32,240 --> 00:01:33,240
+mais altas.
+
+16
+00:01:33,240 --> 00:01:41,160
+Este aqui, este modelo que eles comercializam atualmente até tem um aspecto interessante
+
+17
+00:01:41,320 --> 00:01:49,040
+que é no mesmo microcontrolador podemos escolher núcleos de diferentes arquiteturas, isto
+
+18
+00:01:49,040 --> 00:01:58,560
+é mais orientado a quem é, portanto é uma abordagem que eles têm de fornecer um núcleo
+
+19
+00:01:58,560 --> 00:02:04,560
+que está bem provado em termos de desempenho e de mercado e de suporte, que é este núcleo
+
+20
+00:02:04,560 --> 00:02:09,440
+ARM, mas por outro lado ter um que também está a oferecer, que é uma solução que
+
+21
+00:02:09,440 --> 00:02:14,560
+também está bastante em voga, por causa de ser uma solução de open source, hardware
+
+22
+00:02:14,560 --> 00:02:22,600
+open source e que é muito usada até em sistema, portanto para ensino, que é a arquitetura
+
+23
+00:02:22,600 --> 00:02:31,000
+RISC-V, portanto e assim dessa forma no mesmo microcontrolador tem-se o melhor de dois mundos
+
+24
+00:02:31,000 --> 00:02:36,520
+e pode-se na altura do boot escolher a trabalhação do arranque, escolher a trabalhação com os
+
+25
+00:02:36,520 --> 00:02:45,400
+processadores, ou seja os dois núcleos RISC-V ou os dois da arquitetura ARM, embora nunca
+
+26
+00:02:45,400 --> 00:02:50,200
+tenha experimentado ali na documentação que supostamente dá para até ter código
+
+27
+00:02:50,200 --> 00:02:56,320
+compilado para mais as arquiteturas e depois selecionar em tempo de execução, portanto
+
+28
+00:02:57,320 --> 00:03:03,800
+ou seja, eu tenho aqui várias opções de utilização, portanto em termos depois de
+
+29
+00:03:03,800 --> 00:03:12,400
+periféricos acaba por ser dentro do que vimos, portanto aqui as UARTs, o SPI, o I2C, o SPI,
+
+30
+00:03:12,400 --> 00:03:22,760
+já agora uma nota, eu deixei uns apontamentos sobre SPI, ainda nos slides sobre o ATmega 128,
+
+31
+00:03:23,240 --> 00:03:32,120
+mas portanto eu não dei aquilo, eu não apresentei aquilo não, até foi na aula que eu comecei a falar
+
+32
+00:03:32,120 --> 00:03:42,920
+sobre o Arduino, que eu abrudei os Arduinos e acabei por não falar disso do SPI, mas eventualmente
+
+33
+00:03:42,920 --> 00:03:52,480
+depois vemos um exemplo prático no contexto agora do Raspberry Pi. O I2C falamos, os PWMs
+
+34
+00:03:52,480 --> 00:04:07,200
+não abordamos o USB, aqui no micro que nós vimos não abordamos, o controlador USB, portanto já é um
+
+35
+00:04:07,200 --> 00:04:12,840
+dispositivo que não se resume em meio dos slides, portanto já tem vários modos de funcionamento,
+
+36
+00:04:13,320 --> 00:04:23,200
+portanto pelo menos aqui no âmbito deste módulo não vamos explorar, mesmo nestes micros, a ideia é
+
+37
+00:04:23,200 --> 00:04:30,880
+usar bibliotecas que já implementem as partes mais fastidiosas, porque realmente aí sim, portanto é
+
+38
+00:04:30,880 --> 00:04:36,120
+algo tão complexo que dar a começar a escrever software de rays para aquilo não é boa ideia,
+
+39
+00:04:36,120 --> 00:04:45,480
+mas a probabilidade de cometer erros é bastante grande, portanto o AD também, portanto a conversora
+
+40
+00:04:45,480 --> 00:04:54,360
+anológica ou digital. Ora bem, mas os casos que nos interessam, portanto agora para o curto prazo
+
+41
+00:04:54,360 --> 00:05:02,560
+são estes aqui, baseados nos microprocedores de aplicação, no momento de colatura da arma, portanto
+
+42
+00:05:02,560 --> 00:05:08,240
+os microprocedores que têm é uma unidade de esta memória, tipicamente no formato de sysamone, portanto
+
+43
+00:05:08,240 --> 00:05:16,360
+designado sysamone shifter, o microprocedor já portanto com suporte a sistemas operativos multiprocesso
+
+44
+00:05:16,360 --> 00:05:25,000
+e também eventualmente com memória e com vários periféricos também, tipo de microcontrolador, mas
+
+45
+00:05:25,000 --> 00:05:33,760
+é que portanto, apesar de em termos de processador ser mais poderoso, em termos de input-output,
+
+46
+00:05:33,760 --> 00:05:41,200
+em alguns casos até se chega a recomendar que se faça em combinação com um micro, que seja usado
+
+47
+00:05:41,200 --> 00:05:50,840
+em combinação com um microcontrolador mais simples. Este Raspberry Pi, portanto existem vários
+
+48
+00:05:50,840 --> 00:05:58,120
+modelos, aqui estes que vão de 1, 2, 3, 4, 5, têm a ver com as evoluções, portanto à medida que
+
+49
+00:05:58,120 --> 00:06:03,360
+foram surgindo processadores cada vez mais recentes e com melhor desempenho, portanto a placa também
+
+50
+00:06:03,360 --> 00:06:10,400
+foi sendo evoluída, também em termos de interfaces também houve algumas melhorias, por exemplo a
+
+51
+00:06:10,400 --> 00:06:18,480
+introdução do SB3, a própria interface de rede que até ao 3 era uma coisa ali, um módulo pendurado no
+
+52
+00:06:18,480 --> 00:06:24,240
+USB, portanto interligado através do SB, apesar de ter a sua própria interface, mas em termos
+
+53
+00:06:24,240 --> 00:06:34,320
+depois de desempenho criava algumas limitações. Depois temos aqui estas linhas, estes modelos zero,
+
+54
+00:06:34,320 --> 00:06:43,760
+em que a própria placa é mais compacta, como vamos ver no slide a seguir, mas portanto reparem que mesmo
+
+55
+00:06:43,760 --> 00:06:53,680
+neste mais recente, este Pi Zero 2, mesmo assim tem um micro processador com um SOC, um Sysamone
+
+56
+00:06:53,680 --> 00:07:06,720
+Chip, portanto quatro núcleos de processamento, portanto vamos já também ver a comparação deste Cortex A53
+
+57
+00:07:07,280 --> 00:07:16,880
+A72, por acaso aqui há uma garalha, eu pensei que devia ter escrito A76, eu pus aqui o do Raspberry Pi 4.
+
+58
+00:07:16,880 --> 00:07:28,080
+O Pi Zero até é um processador ainda single core, ok, portanto frequência de 1 GHz, mas apenas single core,
+
+59
+00:07:28,720 --> 00:07:37,120
+ok, algumas aplicações é suficiente, oferece o suporte ali núcleos, mas portanto nunca terão um
+
+60
+00:07:37,120 --> 00:07:43,200
+desempenho tão bom como estes que têm quatro núcleos, logo à partida conseguem fazer quatro
+
+61
+00:07:43,200 --> 00:07:48,240
+vezes mais coisas em paralelo do que este, desde que o acesso a memória não seja demasiado intensivo.
+
+62
+00:07:49,200 --> 00:07:57,200
+Ora bem, portanto, cá estão aqui, portanto eu tentei pôr isto mais ou menos à escala e estes
+
+63
+00:07:57,200 --> 00:08:03,600
+modelos do Raspberry Pi Zero, portanto são mais compactos, têm também menos interfaces,
+
+64
+00:08:03,600 --> 00:08:12,160
+eu tenho aqui, selecionei estas só para dar uma ideia de fato de escala, portanto isto é o conector
+
+65
+00:08:12,160 --> 00:08:17,920
+HDMI, isto é um conector micro USB, portanto por exemplo micro USB é aquele conector que era usado
+
+66
+00:08:17,920 --> 00:08:25,040
+nos discos rígidos externos até aos anos atrás, e é mesmo atualmente, ainda não alguns,
+
+67
+00:08:25,040 --> 00:08:30,160
+portanto é um conector pequenino só para terem uma ideia da escala da placa, é aqui no Raspberry
+
+68
+00:08:30,160 --> 00:08:42,080
+Pi 5, portanto dá para ter uma melhor ideia de fato de escala, temos aqui interface RJ45,
+
+69
+00:08:42,080 --> 00:08:49,920
+portanto são quatro conectores USB e temos aqui o conector USB-C também, que hoje em dia é bastante
+
+70
+00:08:49,920 --> 00:09:02,000
+conhecido, portanto esta é fácil perceber a escala do tamanho da placa. Em termos de tamanho,
+
+71
+00:09:02,000 --> 00:09:09,280
+os anteriores, o 4, o 3, o 2 e 1, portanto seguem o mesmo formato, o que tem melhorado é só o mesmo,
+
+72
+00:09:09,280 --> 00:09:19,760
+portanto as especificações, quer do processador, quer das interfaces de entrada e saída de dados.
+
+73
+00:09:23,960 --> 00:09:31,200
+Então pronto, para apreciarmos melhor a evolução que tem havido em termos de poder computacional,
+
+74
+00:09:31,200 --> 00:09:37,600
+aqui já coloquei corretamente, portanto é um aspecto que depois vou ter que corrigir antes
+
+75
+00:09:37,600 --> 00:09:43,680
+para não me utilizar, não me usam, portanto o Raspberry Pi 3, portanto para não ir demasiado atrás,
+
+76
+00:09:43,680 --> 00:09:55,600
+usava um processador que é baseado nesta Arme Cortex A53, que é o mesmo que também foi ali indicado
+
+77
+00:09:56,480 --> 00:10:02,640
+para este Raspberry Pi 0, mas a uma frequência mais, neste caso, mais baixa,
+
+78
+00:10:02,640 --> 00:10:15,360
+que é um núcleo Arme otimizado para a eficiência em termos de consumo, portanto a arquitetura Arme
+
+79
+00:10:15,360 --> 00:10:23,840
+tem aqui um chavão, que é um termo quase de marque, que é o Big Little, que é o fato de ter
+
+80
+00:10:24,000 --> 00:10:33,120
+processadores que são otimizados para desempenho, que são os Big, e depois os que são otimizados
+
+81
+00:10:33,120 --> 00:10:40,880
+para consumo, que são os Little, e depois até existem, é possível ter soques em que, portanto,
+
+82
+00:10:40,880 --> 00:10:45,040
+se isso não on-chip, em que temos a combinação de ambos os núcleos e depois o sistema operativo vai
+
+83
+00:10:45,520 --> 00:10:54,800
+usando, portanto, vai escalonando os processos de forma a otimizar, com forma otimizar o consumo
+
+84
+00:10:54,800 --> 00:11:02,320
+e dando preferência às aplicações que tem, portanto, em que se prefere ter um maior desempenho,
+
+85
+00:11:02,320 --> 00:11:09,040
+colocando-as, ou o melhor termo de resposta, colocando-nos processadores otimizados, nos núcleos
+
+86
+00:11:09,040 --> 00:11:16,240
+e os processadores otimizados para desempenho. Em termos da arquitetura, de instruções,
+
+87
+00:11:16,240 --> 00:11:22,160
+tanto este Ease Instruction Set Architecture, este Cortex A53, apesar de já ter alguns anos,
+
+88
+00:11:22,160 --> 00:11:29,280
+mesmo assim, já é de uma arquitetura recente, portanto, porto para 64-bits, modo operação 64-bits,
+
+89
+00:11:29,280 --> 00:11:37,520
+registro 64-bits, mas, portanto, isto sem entrar em muitos detalhes aqui de micro arquitetura,
+
+90
+00:11:37,520 --> 00:11:45,680
+portanto, é um processador que já tem, portanto, que já tem algumas características dos processadores
+
+91
+00:11:45,680 --> 00:11:55,680
+modernos, é um processador chamado superscalar, no sentido em que consegue emitir ou, portanto,
+
+92
+00:11:55,680 --> 00:12:01,000
+colocar em execução duas instruções em sequência, portanto, simultaneamente, ou seja,
+
+93
+00:12:01,000 --> 00:12:06,480
+portanto, consegue estar a fazer ofetos de duas instruções em simultâneo e depois tenta processá-las,
+
+94
+00:12:06,720 --> 00:12:11,480
+de uma forma mais paralela possível, desde que não tenham dependências entre elas,
+
+95
+00:12:12,400 --> 00:12:17,720
+embora seja, continua a fazer uma execução, seguindo a ordem natural dos programas.
+
+96
+00:12:17,720 --> 00:12:24,480
+Ora bem, o segredo dos processadores otimizados para desempenho é que usam técnicas avançadas,
+
+97
+00:12:24,480 --> 00:12:29,920
+portanto, o descalunamento das próprias instruções dos nossos programas, de nossos programas que,
+
+98
+00:12:29,920 --> 00:12:34,320
+quando escrevemos, pensamos naquilo de forma sequencial, depois aquilo ao ser convertido
+
+99
+00:12:34,320 --> 00:12:41,440
+nas instruções do processador, o processador consegue, por vezes, otimizar a ordem de execução
+
+100
+00:12:41,440 --> 00:12:48,640
+ou detectar partes dos programas em que não têm dependências entre si, em termos de variáveis,
+
+101
+00:12:48,640 --> 00:12:57,960
+e consegue até executar esses programas fora de ordem, portanto, antecipando a execução de instruções,
+
+102
+00:12:57,960 --> 00:13:06,240
+no caso dos saltos das instruções comissuais, quando temos um NIF, ou quando temos um WILE,
+
+103
+00:13:06,240 --> 00:13:13,040
+o teste da condição do WILE, portanto, muitas vezes eles até fazem a chamada execução especulativa,
+
+104
+00:13:13,040 --> 00:13:21,360
+em que começam a executar ambos os percursos possíveis do programa, e depois, de acordo com
+
+105
+00:13:21,360 --> 00:13:28,640
+a chamada do teste da condição, que é sabida a posteriori, quando a instrução inicial é concluída,
+
+106
+00:13:28,640 --> 00:13:36,000
+deitam fora o processamento que estiveram a fazer especulativamente e que não interessa,
+
+107
+00:13:36,000 --> 00:13:42,640
+portanto, só vão aproveitar um dos ramos que foram processados.
+
+108
+00:13:42,640 --> 00:13:50,680
+De qualquer maneira, portanto, com este tipo de otimizações em termos de arquitetura interna do
+
+109
+00:13:50,680 --> 00:14:03,200
+participador, o salto que houve do A53 para o A72 foi muito grande, apesar de terem, portanto,
+
+110
+00:14:03,200 --> 00:14:11,200
+no Raspberry Pi 4, uma vez que usam arrefecimento puramente passivo, aquele não é sequer um dissipador tem,
+
+111
+00:14:11,200 --> 00:14:19,200
+portanto, uma vez que trabalham, ou seja, mesmo trabalhando à mesma frequência, ou muito próximo,
+
+112
+00:14:19,200 --> 00:14:29,360
+este processador tem um desempenho quase à volta do dobro do Cortex A53.
+
+113
+00:14:29,360 --> 00:14:43,160
+No caso depois deste Raspberry Pi 5, que foi lançado mais recentemente, quando e recentemente, há dois ou três anos,
+
+114
+00:14:43,920 --> 00:14:53,840
+portanto, já tenho aqui, portanto, uso um núcleo Arma, que além de ter uma frequência mais alta,
+
+115
+00:14:53,840 --> 00:15:00,320
+portanto, mais uma vez, eu vou aqui a introdução de melhorias a nível da arquitetura interna do processador,
+
+116
+00:15:00,320 --> 00:15:09,120
+o próprio processo de fabrico também foi, portanto, um processo de fabrico que faz com que o desempenho térmico
+
+117
+00:15:09,120 --> 00:15:16,120
+e, portanto, a relação entre o desempenho e o consumo, portanto, aqui este performance per watt,
+
+118
+00:15:16,120 --> 00:15:24,400
+portanto, o desempenho por watt, sejam muito melhor do que este núcleo, portanto, ou seja, mais uma vez,
+
+119
+00:15:24,400 --> 00:15:32,880
+deste para este houve um salto quantitativo bastante grande, mais uma vez quase o dobro.
+
+120
+00:15:32,880 --> 00:15:47,520
+Dependendo, aqui dependendo das operações, só para comprovar o que eu estou a dizer,
+
+121
+00:15:47,520 --> 00:15:57,520
+isto foi um teste que fizeram, portanto, um benchmark, portanto, aqui com operações de nível, só com cálculos de inteiros,
+
+122
+00:15:57,760 --> 00:16:07,520
+em que realmente se vê que, portanto, o A72 aqui neste caso até tem um desempenho de mais do dobro do que o A53,
+
+123
+00:16:07,520 --> 00:16:11,520
+mas lá está isto depois, depende do tipo de processamento que está a fazer.
+
+124
+00:16:11,520 --> 00:16:27,520
+O ponto disto é de desenvolvimento e isto vai um pouco ao encontro daquilo que eu estava a pouco a pedir-vos,
+
+125
+00:16:27,520 --> 00:16:38,520
+relativamente a pé no SB, portanto, o SB Drive para usarem nas aulas.
+
+126
+00:16:38,520 --> 00:16:51,520
+Portanto, em termos de desenvolvimento para os Raspberry Pi que usam Linux, portanto, é nesses que estamos interessados neste momento,
+
+127
+00:16:51,520 --> 00:17:01,520
+portanto, existem várias abordagens, estes sistemas foram feitos de maneira a ter um poder computacional suficiente,
+
+128
+00:17:02,520 --> 00:17:11,520
+portanto, que seja suficiente até para fazer todo o trabalho diretamente na própria PLAC, ou seja, instalar o Linux,
+
+129
+00:17:11,520 --> 00:17:19,520
+instalar ferramentas de desenvolvimento e, portanto, mesmo para quem quer escrever os programas, fazer esse trabalho,
+
+130
+00:17:19,520 --> 00:17:28,520
+mas não se esqueçam que, portanto, isso é na perspetiva de tanto quem usa isto por hobby ou para quem quer aprender a trabalhar com Linux
+
+131
+00:17:28,520 --> 00:17:36,520
+e com as ferramentas, portanto, que ficam disponíveis, ou os sistemas de desenvolvimento que ficam disponíveis nessa plataforma.
+
+132
+00:17:36,520 --> 00:17:48,520
+Porque, de um ponto de vista mais prático, portanto, para já, tirando o caso do Raspberry Pi 5 que já começa a competir com alguns computadores pessoais
+
+133
+00:17:48,520 --> 00:17:55,520
+em termos de desempenho, mesmo assim, a maior parte dos computadores pessoais têm um poder computacional muito superior a este
+
+134
+00:17:55,520 --> 00:18:11,520
+e quando estamos a compilar aplicações, portanto, da dimensão já com uma dimensão despeitável, portanto, começa-se a notar a diferença,
+
+135
+00:18:11,520 --> 00:18:21,520
+portanto, nem que seja uma aplicação que demore a fazer uma build do zero a uma hora, portanto, aqui num sistema deste que calha não,
+
+136
+00:18:21,520 --> 00:18:30,520
+não pensei se demorar nem de tanto tempo, já é meia hora que poupamos, ou que não temos que esperar, portanto, estamos a falar disso.
+
+137
+00:18:30,520 --> 00:18:46,520
+E além disso, há todos aqui alguns aspetos que temos de ter em atenção. Mais uma vez, o Raspberry Pi 4 e o 5 já têm a possibilidade até de,
+
+138
+00:18:46,520 --> 00:18:52,520
+portanto, uma vez que tenho o barramento PC, portanto, tenho lá a aliação para o, não, perdão, no 5,
+
+139
+00:18:52,520 --> 00:19:04,520
+tenho a possibilidade de ligar discos SSD com algumas placas, com alguns adaptadores, portanto, já temos ali a possibilidade
+
+140
+00:19:04,520 --> 00:19:13,520
+de ter um dispositivo de armazenamento rápido, que no caso das compilações também é importante, mas nos sistemas mais antigos,
+
+141
+00:19:13,520 --> 00:19:28,520
+portanto, ou mesmo no 5, se usarmos simplesmente o cartão SD, o desempenho é muito pior do que um disco SSD num computador recente, num computador pessoal, não é?
+
+142
+00:19:28,520 --> 00:19:38,520
+Ora bem, depois que tivermos a pensar num sistema final, não faz sentido, e se quisermos estar ali a otimizar tudo em termos até de preço,
+
+143
+00:19:38,520 --> 00:19:47,520
+vamos querer usar o cartão mais pequeno possível, ou dispositivos de armazenamento de menor capacidade possível para,
+
+144
+00:19:47,520 --> 00:19:53,520
+e não vamos querer estar a desperdiçar espaço, obviamente, no sistema final, a deixar algumas ferramentas de desenvolvimento,
+
+145
+00:19:54,520 --> 00:20:04,520
+aí depois no sistema final só nos interessa deixar simplesmente os cheiros necessários para que o sistema funcione, não vamos usar um sistema de desenvolvimento como sistema final.
+
+146
+00:20:04,520 --> 00:20:18,520
+Daí que uma abordagem, existem várias, portanto, existem sistemas de desenvolvimento que podem ser usados nos sistemas de compilação cruzada,
+
+147
+00:20:18,520 --> 00:20:29,520
+ou seja, noutros tipos de computadores, que não o Raspberry Pi, com processadores diferentes do Raspberry Pi, nomeadamente, portanto, me referiram aos computadores pessoais baseados em processadores da Intel,
+
+148
+00:20:29,520 --> 00:20:41,520
+que, portanto, permitem, tal como fazemos para os micro-controladores, permitem, na história, compilar o programa, portanto, numa máquina mais rápida,
+
+149
+00:20:41,520 --> 00:20:48,520
+e depois simplesmente copiar os executáveis para, portanto, para o sistema alvo, para o Raspberry Pi.
+
+150
+00:20:48,520 --> 00:21:02,520
+Portanto, poder, há, portanto, toolchains, portanto, que são, no fundo, são pacotes de software que já têm o compilador e um conjunto de bibliotecas que permite fazer a compilação,
+
+151
+00:21:02,520 --> 00:21:17,520
+portanto, fazer o próprio linking dos executáveis, portanto, para que eles depois já estejam preparados para fazer as ligações às bibliotecas das quais dependem no sistema alvo.
+
+152
+00:21:17,520 --> 00:21:31,520
+Mas, portanto, aqui é convém usar uma toolchain que seja compatível com as versões do, depois das bibliotecas que são usadas no sistema operativo que estamos usando no Raspberry Pi.
+
+153
+00:21:31,520 --> 00:21:41,520
+Portanto, é em princípio que se usarmos versões modernas da distribuição Linux e das toolchains, normalmente acabam por ser, por não haver problemas de compatibilidade.
+
+154
+00:21:41,520 --> 00:21:54,520
+Agora, se tivermos a usar uma distribuição muito recente ou mais antiga e formos usar aqui uma toolchain que depois compila os executáveis já a pensar em bibliotecas mais recentes que nem sequer,
+
+155
+00:21:54,520 --> 00:22:06,520
+cujas versões poderão não existir ou não ser compatíveis com as que estão no sistema Linux, na distribuição Linux, no Raspberry Pi, aí já vai haver problemas, portanto,
+
+156
+00:22:06,520 --> 00:22:11,520
+os executáveis não funcionam, mas isso também é relativamente fácil de perceber.
+
+157
+00:22:11,520 --> 00:22:24,520
+De perceber ou de detectar como vai funcionar ou não funciona e aí depois tem que se arranjar uma solução ou escolher uma versão da toolchain que seja compatível com a distribuição ou atualizar a distribuição.
+
+158
+00:22:25,520 --> 00:22:34,520
+Agora, quando falo de bibliotecas, estou a falar mesmo dos fecheiros binários que são instalados juntamente com o sistema operativo,
+
+159
+00:22:34,520 --> 00:22:44,520
+depois também há o código fonte das bibliotecas que, principalmente quando estamos a falar de desenvolvimento em CET, temos de ter lá todo um conjunto de fecheiros de cabeçalho
+
+160
+00:22:44,520 --> 00:22:56,520
+para que seja possível compilar os programas, mas o que causa os principais problemas são as versões compiladas,
+
+161
+00:22:56,520 --> 00:23:01,520
+que são os fechos com a extensão .seo que existem nos sistemas Linux.
+
+162
+00:23:01,520 --> 00:23:13,520
+Depois temos aqui uma terceira abordagem, que é na mesma baseada no uso de uma toolchain para compilação cruzada, para cross compiling,
+
+163
+00:23:13,520 --> 00:23:31,520
+que consiste em usar ferramentas que existem atualmente, que fazem em simultâneo, conseguem gerar uma distribuição Linux e a respectiva toolchain para compilar código para essa distribuição,
+
+164
+00:23:31,520 --> 00:23:43,520
+adaptada, completamente adaptada às nossas necessidades, ou seja, nós podemos logo à partida, ou através de fecheiros de configuração,
+
+165
+00:23:43,520 --> 00:23:56,520
+no caso o Yocto, ou no caso o Build LUT através de uma interface de seleção de software, podemos escolher só as bibliotecas e as aplicações que queremos ter instalados no sistema final,
+
+166
+00:23:56,520 --> 00:24:12,520
+e o que essas ferramentas fazem é descarregar o código fonte desse software e compilá-lo, e depois podemos escolher as opções de otimização mais adequadas para fazer a compilação desse código,
+
+167
+00:24:12,520 --> 00:24:25,520
+ou seja, se soubermos o modelo exato do processador que vamos usar, podemos dizer para ele otimizar especificamente para aquele modelo processador que às vezes faz algumas diferenças,
+
+168
+00:24:25,520 --> 00:24:30,520
+em termos de, portanto, pode ter alguma diferença em termos de desempenho.
+
+169
+00:24:30,520 --> 00:24:49,520
+Ainda, já agora, portanto ainda aqui no sentido do desenvolvimento para o Raspberry Pi, portanto eu ia pedir-vos, eu já deixei esta nota nos slides da aula passada,
+
+170
+00:24:49,520 --> 00:25:04,520
+também tenha esquecido falar disso, a nota que eu deixei acho que foi a pedir-vos para trazer apenas, não sei se deixei este slide lá na semana passada.
+
+171
+00:25:04,520 --> 00:25:17,520
+Portanto, para poderem depois fazer os exercícios fora das aulas, e mesmo durante a aula, porque eu tenho a ideia que a maior parte de vocês estão a usar os próprios computadores,
+
+172
+00:25:17,520 --> 00:25:26,520
+e acho que é melhor a abordagem, porque assim podem mais facilmente continuar o trabalho em casa, portanto agora para esta parte do módulo,
+
+173
+00:25:26,520 --> 00:25:33,520
+eu vou pedir-vos para instalarem uma solução Linux qualquer no vosso computador.
+
+174
+00:25:33,520 --> 00:25:41,520
+Para quem está a trabalhar com um computador portátil Windows, existem várias soluções.
+
+175
+00:25:41,520 --> 00:25:52,520
+A mais simples e que é suficiente aqui para o que vamos fazer é instalar o WSL, o Windows Subsystem for Linux.
+
+176
+00:25:52,520 --> 00:26:08,520
+Portanto, eu não sei se, basicamente o WSL consiste numa máquina virtual que já é instalada automaticamente pelo Windows,
+
+177
+00:26:08,520 --> 00:26:17,520
+ele nem se refere àquilo como uma máquina virtual, mas no fundo é uma máquina virtual, e em que depois nós podemos escolher a distribuição que instalamos lá, a distribuição Linux.
+
+178
+00:26:17,520 --> 00:26:30,520
+Por omissão, se fizermos simplesmente na linha de comando a opção, deixem-me ver, não queria estar aqui a improvisar, mas deixem-me ver se consigo mostrar aqui na minha linha de comando.
+
+179
+00:26:30,520 --> 00:26:51,520
+Ok, portanto, abrindo uma linha de comando, basta fazer em WSL install, portanto, se fizerem só isto, ela instala o...
+
+180
+00:26:51,520 --> 00:27:01,520
+e eventualmente terá que ser como administrador, portanto, um terminal como admin.
+
+181
+00:27:01,520 --> 00:27:09,520
+Pronto, aqui a diferença. Se for no Windows 11, basta fazer pela linha de comando.
+
+182
+00:27:09,520 --> 00:27:28,520
+Eu tenho a ideia que no Windows 10 poderão ter que ir à aplicação das definições e ter que ativar lá o suporte para máquinas virtual, portanto, para a virtualização, para ele conseguir instalar o WSL.
+
+183
+00:27:28,520 --> 00:27:48,520
+Mas pelo menos no Windows 11, basta fazer isto, ao menos instala, e ele ativa tudo que é necessário para ter usado o WSL em funcionamento, e instala por omissão o Ubuntu, que pode ser esse, embora eu até preferia que para quem ainda não instalou,
+
+184
+00:27:48,520 --> 00:27:55,520
+ou mesmo para quem instalou, e até, portanto, isto funciona tipo, para quem sabe o que é, isto funciona tipo containers.
+
+185
+00:27:55,520 --> 00:28:12,520
+Portanto, ele, no fundo, quando se instala o WSL, ele instala um conjunto de fechiros básicos, portanto, que é a distribuição de Linux ali, optimizada para funcionar na máquina virtual da Microsoft,
+
+186
+00:28:12,520 --> 00:28:28,520
+mas depois nós podemos instalar distribuições adicionais que funcionam como containers da distribuição original, mas nós, portanto, como é habitual nos containers, não se nota praticamente nada em termos de desempenho.
+
+187
+00:28:28,520 --> 00:28:43,520
+Portanto, é que eu sugeria que instalassem esta, este Fezora Linux 43, ok? De qualquer maneira, eu deixei aqui isto, portanto, a dificuldade desta é mínima, se alguém depois tiver dificuldade também pode me avisar.
+
+188
+00:28:43,520 --> 00:29:02,520
+Portanto, tenho aqui o link, depois deixo-vos o link para quem quiser consulta. Existem outras opções. Não é obrigatório, mas pode facilitar, às vezes, no software que tem que instalar,
+
+189
+00:29:02,520 --> 00:29:11,520
+para não termos depois que andar a ver quais são os pacotes equivalentes noutras distribuições, nomeadamente no Ubuntu.
+
+190
+00:29:11,520 --> 00:29:28,520
+É assim, tem do Ubuntu o Ubuntu? Então pode, tudo bem. Não, então se já tem do Ubuntu com o Ubuntu, em princípio serve, ou seja, quem já tem Ubuntu pode usar o Ubuntu, ok? Não há problema.
+
+191
+00:29:28,520 --> 00:29:45,520
+Eu depois na aula, se for preciso adaptar a algum comando, portanto, eu tenho as fichas feitas para, de facto, para Fezora. E são só os comandos, principalmente os comandos de instalação de software, às vezes é preciso instalar mais alguma coisita.
+
+192
+00:29:45,520 --> 00:29:59,520
+Portanto, usam portanto os comandos e o próprio nome dos pacotes, são específicos de Fezora, mas consegue-se encontrar o equivalente para o Ubuntu facilmente.
+
+193
+00:29:59,520 --> 00:30:11,520
+Porque eu também já estou habituado a dar este tipo de aulas noutras unidades curriculares e de vez em quando lá aparecem alunos que já têm o Ubuntu instalado e conseguem, portanto, e fazem ainda mesmo os exercícios.
+
+194
+00:30:11,520 --> 00:30:26,520
+Portanto, o vosso colega acabou de mencionar aqui a questão do dual boot. Para quem... o dual boot é a solução que oferece melhor desempenho para depois na utilização do Linux.
+
+195
+00:30:26,520 --> 00:30:38,520
+Tenha a desvantagem de dar um bocadinho mais de trabalho, um bocadinho, este bocadinho depende dos conhecimentos de cada um, se não tiver muitos conhecimentos, já é mais, se calhar já é um bocadão.
+
+196
+00:30:38,520 --> 00:30:48,520
+Portanto, já poderá dar mais algum trabalho e, portanto, e até com risco de, se não fizerem as coisas bem feitas, poderem danificar a instalação do Linux.
+
+197
+00:30:48,520 --> 00:31:12,520
+Por isso, eu normalmente aqui, como não quero estar a fazer aqui uma oficina de instalação de Linux, de dual boot de Linux, não é esse o objetivo deste módulo, eu sugiro esta abordagem da máquina virtual, que, portanto, é menos agressiva, digamos assim, menos praticamente à prova de erro.
+
+198
+00:31:13,520 --> 00:31:35,520
+A instalação de dual boot, portanto, realmente oferece um melhor desempenho, depois não está funcionado abaixo do outro sistema operativo, tem essa desvantagem de uma maior dificuldade de instalação e, por outro lado, também obriga quando querem trabalhar em Linux,
+
+199
+00:31:35,520 --> 00:31:55,520
+tem que reiniciar a máquina para, portanto, se anteriormente já vão trabalhar em Linux, terão que reiniciar a máquina para trabalhar em Linux e vice-versa, não é obrigado a reiniciar a máquina para mudar o sistema operativo, enquanto com a máquina virtual é só, portanto, é equivalente a abrir uma nova aplicação.
+
+200
+00:31:55,520 --> 00:32:22,520
+Este tabuleCL já agora tem uma desvantagem, que para aqui não é muito grande, mas que é o facto de não ter, portanto, não oferecer um ambiente de desktop, portanto, basicamente isto trabalha-se, portanto, é baseado essencialmente numa linha de comando, embora permita, a partir da linha de comando,
+

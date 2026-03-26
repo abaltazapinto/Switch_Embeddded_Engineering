@@ -1,0 +1,1108 @@
+1
+00:00:00,000 --> 00:00:08,560
+aplicações gráficas, portanto, em modo general, que ficam depois integradas, portanto, no desktop
+
+2
+00:00:08,560 --> 00:00:17,840
+do Windows, como uma aplicação do Windows. Mas, portanto, para ser honesto, isto a Microsoft vai
+
+3
+00:00:17,840 --> 00:00:22,360
+melhorando, portanto, ver se são as versões, vai melhorando as coisas, mas já me tem acontecido a
+
+4
+00:00:22,360 --> 00:00:29,280
+ver aplicações que aquilo não sou arranque, às vezes o rato não consegue clicar nos sítios certos,
+
+5
+00:00:29,280 --> 00:00:34,920
+ou a aplicação fica bloqueada, o modo de funcionamento da OSL com aplicações gráficas,
+
+6
+00:00:34,920 --> 00:00:46,760
+quando funciona? Funciona bem, mas às vezes falha, portanto, e por isso, para quem preferir ter um
+
+7
+00:00:46,760 --> 00:00:55,800
+ambiente, portanto, de Linux também, com uma interface gráfica de Linux, com um ambiente
+
+8
+00:00:55,800 --> 00:01:00,480
+só pelo Linux, numa única janela, portanto, a simular o ecrã de um computador, tem outras
+
+9
+00:01:00,480 --> 00:01:09,640
+soluções, como o Hyper-V, que só existe nas versões Pro e superiores do Windows, ou seja,
+
+10
+00:01:09,640 --> 00:01:16,040
+não existe na versão Home do Windows, não sei o que faz, são batotas, mas isso aí obriga a andar
+
+11
+00:01:16,040 --> 00:01:21,560
+com as... portanto, vamos ser nas configurações do Windows e depois quando há updates ele volta às
+
+12
+00:01:22,160 --> 00:01:30,920
+fazer tudo, portanto, é sempre um risco, mas nas versões Pro e superiores existe esta aplicação,
+
+13
+00:01:30,920 --> 00:01:37,400
+esta funcionalidade do Windows, que é um sistema de virtualização mais parecido com o outro que
+
+14
+00:01:37,400 --> 00:01:42,680
+menciono aqui, este VirtualBox e com o VMWare, que já permite correr o Linux, portanto, o ambiente
+
+15
+00:01:42,680 --> 00:01:53,080
+do Linux na sua própria janela. Em termos até de gestão dessa parte gráfica, o VirtualBox é
+
+16
+00:01:53,080 --> 00:01:59,000
+melhor, portanto, a forma aqui do Hyper-V aceder ao ecrã, portanto, depois de oferecer o acesso ao
+
+17
+00:01:59,000 --> 00:02:05,160
+ecrã é um caso esquisito, é quase tipo um remote desktop connection, portanto, uma ligação remota,
+
+18
+00:02:06,120 --> 00:02:16,600
+o VirtualBox faz uma integração mais natural, digamos assim, mesmo o copy-paste entre o VirtualBox,
+
+19
+00:02:16,600 --> 00:02:22,680
+portanto, as aplicações do Linux estão correndo dentro do VirtualBox e as restantes aplicações do
+
+20
+00:02:22,680 --> 00:02:32,680
+Windows funcionam de uma forma mais robusta do que neste Hyper-V. Portanto, eu não mencionei aqui
+
+21
+00:02:32,680 --> 00:02:38,360
+a outra, uma vez, portanto, que também acho que ainda continua a ser gratuita, que já nos
+
+22
+00:02:38,360 --> 00:02:44,200
+comentamos há muito tempo, é o VMWare Workstation, a versão Player, VMWare Workstation Player.
+
+23
+00:02:44,200 --> 00:02:54,680
+O VirtualBox só tem um, portanto, em Windows 11 tem um problema, que é o facto de ter um desempenho
+
+24
+00:02:54,680 --> 00:03:01,320
+um bocadinho pior do que o Hyper-V, do que o da OSL, que portanto, dependa, algumas máquinas poderão
+
+25
+00:03:01,320 --> 00:03:10,680
+executar e máquinas mais lentas, nota-se logo. Então, se tivermos a fazer acessos intensivos
+
+26
+00:03:10,680 --> 00:03:19,800
+ao disco e mesmo em comunicações, nota-se o efeito da virtualização. Isto porquê? Porque o Windows
+
+27
+00:03:19,800 --> 00:03:26,040
+usa, portanto, atualmente usa algumas das ferramentas, dos mecanismos de virtualização
+
+28
+00:03:27,000 --> 00:03:35,480
+do processador, para implementar mecanismos de segurança. E no caso do WSEL e do Hyper-V,
+
+29
+00:03:35,480 --> 00:03:40,840
+como são aplicações deles, já têm, portanto, já têm, e como estão integrados no Windows,
+
+30
+00:03:40,840 --> 00:03:47,960
+eles conseguem partilhar esses recursos em aplicações terceiros. Já não, portanto, isso já não é,
+
+31
+00:03:48,440 --> 00:03:55,240
+portanto, até agora não tem sido possível e, portanto, acabam por não conseguir tirar a partir
+
+32
+00:03:55,240 --> 00:04:01,880
+de todas as funcionalidades de virtualização do processador e depois nota-se em termos de desempenho.
+
+33
+00:04:01,880 --> 00:04:08,920
+Portanto, até no Windows 7 e mesmo no Windows 10, antes de eles começarem a implementar essas
+
+34
+00:04:08,920 --> 00:04:17,880
+técnicas de proteção de memória, de proteção dos drivers, de não deixar instalar alguns drivers,
+
+35
+00:04:17,880 --> 00:04:26,120
+portanto, eu acho que é um memory isolation, não estou em erro, não lembro bem qual é a opção de configuração.
+
+36
+00:04:26,120 --> 00:04:34,360
+Portanto, com essas coisas desligadas, o VirtualBox fica com um desempenho igual ao do Hyper-V
+
+37
+00:04:34,360 --> 00:04:40,280
+ou do WSEL, mas a questão é que aí podemos estar a sacrificar todas as seguranças que hoje em dia
+
+38
+00:04:40,280 --> 00:04:48,520
+são importantes. Portanto, isso eu também não advoco que façam, não sei, que saibam bem ou que queiram correr o risco
+
+39
+00:04:48,520 --> 00:04:56,360
+ou que saibam bem o que estão a fazer. No caso dos computadores Mac, eu não sei se há aqui, já agora aproveitado
+
+40
+00:04:56,360 --> 00:05:02,040
+para fazer a pergunta, que eu por acaso não fiz essa pergunta ao meu colega, não sei se há aqui algum aluno
+
+41
+00:05:02,280 --> 00:05:05,080
+que costuma usar o computador Mac nas aulas?
+
+42
+00:05:08,360 --> 00:05:15,320
+Não, também, sim, entretanto. No caso do Mac, até surge uma questão, se for aos Macs modernos,
+
+43
+00:05:15,320 --> 00:05:25,560
+eles até já estão preparados para compilar, para operar-me nativamente, já, portanto, o compilador
+
+44
+00:05:26,200 --> 00:05:38,520
+compila código, portanto, uma vez que os produtores usados nesses novos Macs são anos, atrás, quando se instala o compilador nativo,
+
+45
+00:05:38,520 --> 00:05:45,400
+já fica pronto para compilar também para a mesma arquitetura Raspberry Pi. Agora, portanto, o compilar para arquitetura
+
+46
+00:05:45,400 --> 00:05:52,760
+não quer dizer que as aplicações sejam compatíveis, porque o sistema operativo do Mac, portanto, é o macOS,
+
+47
+00:05:52,760 --> 00:05:59,160
+que não é o Linux, não usam as mesmas bibliotecas, nem têm o mesmo kernel, portanto, são sistemas operativos diferentes,
+
+48
+00:05:59,160 --> 00:06:08,440
+embora em termos de bibliotecas de software, portanto, tenham algumas semelhanças, já há programas que, portanto,
+
+49
+00:06:08,440 --> 00:06:16,120
+oscritos em ZC, como a sua, tanto compilem Linux como no Mac, porque no fundo o Mac é um sistema tipo Nix,
+
+50
+00:06:16,440 --> 00:06:23,160
+aliás, até existem alguns Macs que são, portanto, algumas versões do macOS que são certificadas como o Nix,
+
+51
+00:06:24,280 --> 00:06:30,520
+e portanto, em termos de compilação de aplicações, portanto, para correr nativamente, corre, mas a questão é que,
+
+52
+00:06:30,520 --> 00:06:38,360
+para compilar para o sistema Linux aqui também, portanto, convém também instalar uma distribuição, portanto,
+
+53
+00:06:38,360 --> 00:06:47,320
+uma máquina virtual e instalar nessa máquina virtual uma distribuição Linux, que nesse caso terá que ser para,
+
+54
+00:06:47,320 --> 00:06:53,720
+não uma das normais, para computadores Intel, barra AMD, mas sim para arquiteturar-me, ok?
+
+55
+00:06:53,720 --> 00:07:01,640
+Portanto, por exemplo, no caso das distribuições Fedora, e penso que no Ubuntu também, assim, no Ubuntu também tem,
+
+56
+00:07:01,640 --> 00:07:12,680
+por exemplo, para instalar no próprio Raspberry Pi, tem distribuições, portanto, para que podem instalar numa máquina virtual do Mac.
+
+57
+00:07:15,240 --> 00:07:26,520
+Ora bem, pronto, isto era um recado para, portanto, se puderem antecipar este trabalho, portanto, para depois Nola ser só a parte já de programação.
+
+58
+00:07:27,480 --> 00:07:33,720
+Se puderem, se tiverem dificuldades, depois Nola também posso fazer, Nola de Saba também posso fazer uma ajuda.
+
+59
+00:07:36,360 --> 00:07:48,760
+Voltando aqui, agora vou falar um pouco do, portanto, da organização do, do, do system ownership, que é usado no Raspberry Pi 4,
+
+60
+00:07:48,760 --> 00:07:52,600
+que é a placa que vamos usar nas aulas.
+
+61
+00:07:53,320 --> 00:08:07,400
+E é, portanto, este, este BCM2711, que é, que é feito, portanto, propositadamente, para estas, para estas placas do próprio Data Sheet,
+
+62
+00:08:07,400 --> 00:08:10,680
+para não é, portanto, do Raspberry.
+
+63
+00:08:11,640 --> 00:08:23,000
+Portanto, aqui, isto é só para, aqui temos um panorama geral, aqui com a representação dos quatro núcleos, aqui da memória de caixa,
+
+64
+00:08:23,000 --> 00:08:33,720
+portanto, isto é típico nos processadores orientados ao desempenho, e mesmo nos, hoje em dia mesmo nos micro-controladores de mais alto desempenho,
+
+65
+00:08:33,800 --> 00:08:42,600
+já começam a ter caixa que é, portanto, que é uma memória que é mais rápida do que a memória principal, para que mantenha as instruções e os dados
+
+66
+00:08:42,600 --> 00:08:52,200
+mais frequentemente ou mais recentemente utilizados para otimizar, para, portanto, diminuir o tempo de acesso a esses dados ou instruções.
+
+67
+00:08:52,200 --> 00:09:01,880
+Portanto, aí, portanto, tipicamente algumas dessas caixas até estarem divididas em caixas de instruções e caixas de dados.
+
+68
+00:09:02,600 --> 00:09:05,160
+Portanto, o IA de Instruction e o IA de Data.
+
+69
+00:09:05,160 --> 00:09:14,280
+Pois, aqui neste caso até tem dois níveis de caixa, portanto, isto até, portanto, nos processores, nos computadores pessoais já devem ter apercebido dessa terminologia,
+
+70
+00:09:14,280 --> 00:09:21,000
+acho que caixa de nível 1, caixa de nível 2 e até caixa de nível 3, que normalmente ainda tem uma quantidade maior de memória,
+
+71
+00:09:21,000 --> 00:09:30,040
+mas depois, também os tempos de acesso são piores, portanto, é sempre uma questão, é sempre um compromisso entre o tamanho da caixa e o tempo de acesso.
+
+72
+00:09:30,200 --> 00:09:37,320
+Quanto menor for a caixa, tipicamente melhor o tempo de acesso, quanto, mas também menos dados conseguimos armazenar lá,
+
+73
+00:09:37,320 --> 00:09:42,840
+quanto maior a caixa, mais dados conseguimos armazenar, mas o tempo de acesso também vai piorando, portanto,
+
+74
+00:09:42,840 --> 00:09:50,200
+por isso é que há vários níveis de caixa para se poder criar um compromisso entre essas opções.
+
+75
+00:09:51,080 --> 00:10:12,680
+Depois temos aqui os dispositivos, portanto, aqui no caso do Raspberry Pi 4, portanto, já temos aqui a ligação, portanto, o modo USB 3, portanto, portos USB 3, portos USB 2,
+
+76
+00:10:13,160 --> 00:10:24,040
+portanto, uma interface dedicada, um controlador dedicado para internet, portanto, com ligação direta aos barramento, aos barramentos principais do processador
+
+77
+00:10:24,040 --> 00:10:33,880
+e depois aqui interfaces de SD, este SD-AOS são interfaces que seguem um protocolo semelhante ao que é usado para comunicar com os cartões SD,
+
+78
+00:10:33,880 --> 00:10:41,960
+mas que podem ser usados também para outros dispositivos, ou seja, é mais genérico.
+
+79
+00:10:42,040 --> 00:10:52,680
+Acho que este SD-AO já tinha aparecido num microcontroller qualquer, daqueles que eu mostrei como exemplo, na semana passada,
+
+80
+00:10:52,680 --> 00:11:00,920
+e tem também os pinos de GPIO, portanto, com várias funções possíveis.
+
+81
+00:11:00,920 --> 00:11:21,800
+Ora bem, agora, portanto, em termos de periféricos que existem no próprio SOC, temos, vamos centrar aqui nas 28 linhas de GPIO,
+
+82
+00:11:22,680 --> 00:11:31,960
+portanto, cada uma delas pode ter a funcionalidade básica de entrada ou saída digital de dados, como vimos para o ATmega,
+
+83
+00:11:31,960 --> 00:11:44,280
+e depois temos um conjunto de dispositivos, portanto, do ART e do AC, portanto, os geradores de canais PWM e ainda mais alguns que,
+
+84
+00:11:44,760 --> 00:11:54,280
+portanto, que no caso do ATmega nem sequer existiam, que podem ser associados a esses pinos de GPIO,
+
+85
+00:11:54,280 --> 00:12:08,200
+que, portanto, cada pino pode ter uma função diferente conforme a sua configuração e depois estes módulos podem ser mapeados para diferentes pinos de GPIO,
+
+86
+00:12:08,200 --> 00:12:16,760
+ou melhor, as suas respetivas linhas podem ser mapeados para diferentes pinos de GPIO.
+
+87
+00:12:16,760 --> 00:12:27,160
+Depois temos aqui alguns, temos aqui por exemplo este DPI que serve para ligar a displays, portanto, sendo uma ligação paralela,
+
+88
+00:12:27,160 --> 00:12:41,160
+portanto, quando é usado ocupa logo vários, eu por acaso agora não pus aqui o número de pinos que é oferecido, mas são vários que é usado,
+
+89
+00:12:41,160 --> 00:12:52,600
+que pode ser usado para ligar a ecrãs, portanto, para ligação direta a ecrãs, portanto, está logo a saída, tanto ao nível do Pixel,
+
+90
+00:12:53,000 --> 00:13:07,000
+portanto, em vez de usar uma saída HDMI, que tenha conversão para o formato HDMI, isto permite ligar diretamente a matriz de inputs de um ecrã, de um ecrã digital, obviamente.
+
+91
+00:13:07,000 --> 00:13:21,400
+Este PCM, portanto, é um controlador para uma interface para áudio, para transmissão de áudio digital, portanto, que pode ser usado quer como input, quer como output,
+
+92
+00:13:22,200 --> 00:13:33,000
+tem também algo que, portanto, normalmente só aparece nos, não alguns micro-controladores de mais alto desempenho, mas neste tipo de sistemas,
+
+93
+00:13:33,000 --> 00:13:39,000
+já com sistemas operativos é típico existir, que é a funcionalidade da DMA.
+
+94
+00:13:39,000 --> 00:13:50,600
+Porém, o que é que é o DMA? Portanto, DMA significa Direct Memory Access, portanto, é um mecanismo que permite que sejam feitas transferências
+
+95
+00:13:50,600 --> 00:14:01,400
+de um dispositivo para a memória principal, portanto, para RAM, ou da RAM para um dispositivo, sem intervenção do processador,
+
+96
+00:14:01,800 --> 00:14:13,000
+portanto, em vez do processador ter que estar ali a copiar os dados byte-a-byte, portanto, existe o próprio controlador do DMA,
+
+97
+00:14:13,000 --> 00:14:24,600
+portanto, faz essa transferência em paralelo com o funcionamento do processador, que pode, dessa forma, estar a executar outras instruções.
+
+98
+00:14:25,400 --> 00:14:36,200
+No fundo, o controlador do DMA acaba por ser um processador muito simples, que só sabe fazer cópias de dados, portanto, copiar dos dispositivos para memória
+
+99
+00:14:36,200 --> 00:14:48,200
+e da memória para dispositivos. Essa funcionalidade da DMA é usada, portanto, por alguns dispositivos que, por alguns dispositivos do Raspberry Pi,
+
+100
+00:14:48,200 --> 00:15:10,600
+que precisam de um desempenho mais alto, por exemplo, caso o controlador de SD card, mas também pode ser aplicado a algumas das UARTs e até ao SPI,
+
+101
+00:15:11,000 --> 00:15:23,000
+para, portanto, mais uma vez para libertar o processador do processamento dos dados, de fazer a leitura e a escrita dos dados e fazer a automatização disso,
+
+102
+00:15:23,000 --> 00:15:27,000
+mas esse aspecto vamos discutir mais à frente.
+
+103
+00:15:27,400 --> 00:15:41,400
+Agora, portanto, temos, por outro lado, fazendo aqui a comparação com o que já vimos dos micro-controladores, algumas lacunas no Raspberry Pi que saltam à vista,
+
+104
+00:15:41,400 --> 00:15:49,400
+uma delas é não ter nenhum compressor analógico ou digital.
+
+105
+00:15:49,800 --> 00:16:05,800
+Mesmo em termos, apesar de internamente ter vários módulos de temporização, portanto, estou a falar dos timers counters, como vimos também no caso do ATmega,
+
+106
+00:16:06,200 --> 00:16:14,200
+nenhum deles suporta a entrada, portanto, a entrada externa.
+
+107
+00:16:14,600 --> 00:16:26,600
+No caso do micro-controlador tão simples como o ATmega 128 ou do 328, que é usado no Arduino Uno,
+
+108
+00:16:27,000 --> 00:16:41,000
+é possível usar um dos timers, alguns dos timers permitem que o contador, em vez de ser alimentado pelo sinal de relógio interno,
+
+109
+00:16:41,400 --> 00:16:59,400
+portanto, o relógio dos módulos de input-output pode contar sinais que vêm de uma linha de GPIO,
+
+110
+00:16:59,800 --> 00:17:05,800
+que pode ser, por exemplo, no caso de estarmos a fazer controlo de velocidade do motor,
+
+111
+00:17:05,800 --> 00:17:15,800
+podemos usar essa entrada ligada a um contador de impulsos, portanto, ligado ao veio do motor,
+
+112
+00:17:15,800 --> 00:17:23,800
+que, dessa forma, contando o número de impulsos por um determinado período de tempo,
+
+113
+00:17:24,200 --> 00:17:28,200
+a velocidade de rotação do motor, e quando estamos a falar de controlo do motor,
+
+114
+00:17:28,200 --> 00:17:38,200
+estamos a falar, dependendo da velocidade do motor, obviamente, mas que puseram ser sinais na ordem das centenas de kW,
+
+115
+00:17:38,200 --> 00:17:44,200
+para ter uma contagem precisa da velocidade.
+
+116
+00:17:44,200 --> 00:17:52,200
+Ora bem, o Raspberry Pi não foi feito a pensar nesse tipo de aplicações também,
+
+117
+00:17:52,600 --> 00:18:02,600
+embora, em teoria e na prática, seja possível ligar, portanto, usar umas das entradas,
+
+118
+00:18:02,600 --> 00:18:10,600
+ou seja, um dos pins GPIO para estar a detectar transições, portanto, passagens de um para zero e zero para um,
+
+119
+00:18:10,600 --> 00:18:16,600
+e que até pode ser, essa detecção pode ser feita com base em interrupções,
+
+120
+00:18:17,000 --> 00:18:23,000
+ou seja, gerar uma interrupção sempre que existe um flanco ascendente ou descendente,
+
+121
+00:18:25,000 --> 00:18:35,000
+na prática essas entradas estão limitadas a frequências de apenas de alguns kW,
+
+122
+00:18:35,000 --> 00:18:41,000
+portanto, tanto para aplicações que precisam de usar sinais analógicos,
+
+123
+00:18:41,400 --> 00:18:45,400
+como fazer este tipo de contagens de impulsos a frequências mais altas,
+
+124
+00:18:45,400 --> 00:18:53,400
+a melhor solução é ligar, portanto, fazer essas aquisições num módulo auxiliar,
+
+125
+00:18:53,400 --> 00:18:57,400
+que pode ser um microcontrolador simples e depois ligá-los,
+
+126
+00:18:57,400 --> 00:19:05,400
+portanto, interligar esse microcontrolador ao Raspberry Pi através de uma ligação séria,
+
+127
+00:19:05,800 --> 00:19:13,800
+ou seja, síncrona, com o SPI ou o I2C, que depois já lê o valor processado,
+
+128
+00:19:13,800 --> 00:19:21,800
+portanto, o microcontrolador encarrega-se fazer a parte mais pesada de tanto o auxiliar estar ali a contar as rotações
+
+129
+00:19:21,800 --> 00:19:27,800
+e até pode fazer o cálculo da velocidade e depois, periodicamente, vamos lá ler o valor já calculado.
+
+130
+00:19:28,200 --> 00:19:34,200
+Já eu pus aqui estes dados, indiquei microcontrolador ou Watt, portanto,
+
+131
+00:19:34,200 --> 00:19:40,200
+os Raspberry permitem também encaixar placas de expansão,
+
+132
+00:19:40,200 --> 00:19:46,200
+portanto, eu não sei, não conheço todas as que existem no mercado, mas certamente que haverá algumas
+
+133
+00:19:46,200 --> 00:19:52,200
+que permita ter um, portanto, um módulo ADC para fazer aquisição de sistemas digitais
+
+134
+00:19:52,600 --> 00:20:00,600
+que encaixam diretamente no topo do, portanto, no tal, nestes conectores, ok?
+
+135
+00:20:00,600 --> 00:20:08,600
+Já agora, aqui no ecossistema do Raspberry Pi, eles chamam isso os ADCs,
+
+136
+00:20:08,600 --> 00:20:12,600
+nos arduinos chamam-os os Shields, mas no fundo vamos já falar,
+
+137
+00:20:12,600 --> 00:20:18,600
+é uma mini placa de expansão que, pois, encaixa em cima da placa base.
+
+138
+00:20:22,600 --> 00:20:28,600
+O traspeto a ter em conta aqui no Raspberry Pi é que não tem bateria
+
+139
+00:20:28,600 --> 00:20:32,600
+e, portanto, sempre que ligam aquilo está com a data errada.
+
+140
+00:20:32,600 --> 00:20:40,600
+Quando instalámos o sistema operativo, portanto,
+
+141
+00:20:44,600 --> 00:20:48,600
+podemos ter um serviço ativo que faz os, por exemplo,
+
+142
+00:20:49,000 --> 00:20:53,000
+os servidores de tempo mundiais para atualizar a hora, portanto,
+
+143
+00:20:53,000 --> 00:20:57,000
+a data e a hora logo no arranque.
+
+144
+00:20:57,000 --> 00:21:01,000
+Mesmo que não tenha, podemos fazer, ou que esse serviço não seja ativado,
+
+145
+00:21:01,000 --> 00:21:05,000
+podemos fazer isso na própria linha de comando, portanto, com o comando ntpdate
+
+146
+00:21:05,000 --> 00:21:09,000
+que, portanto, consultam o servidor tempo, usei este,
+
+147
+00:21:09,000 --> 00:21:15,000
+existem até, portanto, servidores que permitem,
+
+148
+00:21:15,400 --> 00:21:19,400
+portanto, que tem um conjunto, portanto, que servem como um proxy
+
+149
+00:21:19,400 --> 00:21:23,400
+para um conjunto de servidores e podem até, depois,
+
+150
+00:21:23,400 --> 00:21:27,400
+dirigir ou reencarminhar o pedido para um que não esteja com muita carga,
+
+151
+00:21:27,400 --> 00:21:31,400
+mas, tipicamente, eu costumo usar muitas vezes este
+
+152
+00:21:31,400 --> 00:21:35,400
+e nunca tive problemas de tempo de resposta.
+
+153
+00:21:37,400 --> 00:21:41,400
+Claro que, obviamente, que isto requer, por exemplo,
+
+154
+00:21:41,800 --> 00:21:45,800
+portanto, que o Raspberry Pi tenha ligação à internet.
+
+155
+00:21:45,800 --> 00:21:49,800
+Se não tiver, portanto, podemos usar os comandos de configuração
+
+156
+00:21:49,800 --> 00:21:53,800
+da data e da hora, portanto, do próprio sistema operativo.
+
+157
+00:22:01,800 --> 00:22:05,800
+Voltando aos GPIOs,
+
+158
+00:22:05,800 --> 00:22:09,800
+e àquela, portanto, do sistema operativo,
+
+159
+00:22:10,200 --> 00:22:14,200
+e àquele conector, portanto, temos,
+
+160
+00:22:14,200 --> 00:22:18,200
+portanto, como podem ver,
+
+161
+00:22:18,200 --> 00:22:22,200
+os GPIOs estão todos aqui disponíveis,
+
+162
+00:22:22,200 --> 00:22:26,200
+dois deles já estão reservados, portanto, não é exposto
+
+163
+00:22:26,200 --> 00:22:30,200
+o nosso software ou o próprio sistema operativo
+
+164
+00:22:30,200 --> 00:22:34,200
+mudar a sua finalidade, portanto, está definido
+
+165
+00:22:34,200 --> 00:22:38,200
+mais ou menos de forma standardizada
+
+166
+00:22:38,600 --> 00:22:42,600
+no ecossistema do Raspberry Pi para servir de interface
+
+167
+00:22:42,600 --> 00:22:46,600
+com as tais placas de expansão, portanto, já agora este
+
+168
+00:22:46,600 --> 00:22:50,600
+TAT, isto é um acrónimo, não é simplesmente o chapéu,
+
+169
+00:22:50,600 --> 00:22:54,600
+portanto, hardware atats don't top.
+
+170
+00:22:54,600 --> 00:22:58,600
+O nome é bastante descreativo, portanto, liga-se
+
+171
+00:22:58,600 --> 00:23:02,600
+em cima.
+
+172
+00:23:02,600 --> 00:23:06,600
+Agora, este diagramo
+
+173
+00:23:07,000 --> 00:23:11,000
+foi tirado diretamente do
+
+174
+00:23:11,000 --> 00:23:15,000
+datasheet, mas aqui
+
+175
+00:23:15,000 --> 00:23:19,000
+não mostra as várias funções que cada pino
+
+176
+00:23:19,000 --> 00:23:23,000
+pode ter, e no caso do,
+
+177
+00:23:23,000 --> 00:23:27,000
+nas primeiras versões do Raspberry Pi, como não havia assim também tantas combinações possíveis,
+
+178
+00:23:27,000 --> 00:23:31,000
+era fácil representar, agora no 4,
+
+179
+00:23:31,000 --> 00:23:35,000
+como já é um sistema bastante flexível,
+
+180
+00:23:35,000 --> 00:23:39,000
+tem aquelas wards todas, GSPIs, GPWMs,
+
+181
+00:23:39,000 --> 00:23:43,000
+tem tantas combinações que se torna difícil representar aqui graficamente,
+
+182
+00:23:43,000 --> 00:23:47,000
+portanto, o datasheet tem umas tabelas que indica para cada pino
+
+183
+00:23:47,000 --> 00:23:51,000
+quais são as funcionalidades que podemos selecionar,
+
+184
+00:23:51,000 --> 00:23:55,000
+e portanto, é por aí que
+
+185
+00:23:55,000 --> 00:23:59,000
+nos temos que guiar. De qualquer maneira, coloquei aqui
+
+186
+00:23:59,000 --> 00:24:03,000
+o diagrama correspondente, só para
+
+187
+00:24:03,000 --> 00:24:07,000
+exemplificar,
+
+188
+00:24:07,000 --> 00:24:11,000
+correspondente ao RP original, agora ao RP1,
+
+189
+00:24:15,000 --> 00:24:19,000
+portanto,
+
+190
+00:24:19,000 --> 00:24:23,000
+o meu conselho é que, se realmente não vamos precisar mais do que
+
+191
+00:24:23,000 --> 00:24:27,000
+estas funcionalidades, se só vamos precisar
+
+192
+00:24:27,000 --> 00:24:31,000
+de um ward ou só vamos precisar de um i2c ou de um SPI,
+
+193
+00:24:31,000 --> 00:24:35,000
+mais vale usar estas, precisamente estas configurações,
+
+194
+00:24:35,000 --> 00:24:39,000
+porque assim ficamos com uma configuração que tanto funciona
+
+195
+00:24:39,000 --> 00:24:43,000
+numa placa moderna como numa das placas
+
+196
+00:24:43,000 --> 00:24:47,000
+mais antigas,
+
+197
+00:24:47,000 --> 00:24:51,000
+que faz com que o software fique mais, a nossa aplicação fique mais
+
+198
+00:24:51,000 --> 00:24:55,000
+portável, portanto, até podemos chegar à conclusão que
+
+199
+00:24:55,000 --> 00:24:59,000
+para certas aplicações poderá
+
+200
+00:24:59,000 --> 00:25:03,000
+ser suficiente usar um dos modelos menos
+
+201
+00:25:03,000 --> 00:25:07,000
+poderosos, e assim temos a garantia que estas configurações
+
+202
+00:25:07,000 --> 00:25:11,000
+existem em todos.
+
+203
+00:25:11,000 --> 00:25:15,000
+Como eu mencionei, portanto,
+
+204
+00:25:15,000 --> 00:25:19,000
+quando queremos usar,
+
+205
+00:25:19,000 --> 00:25:23,000
+por exemplo, aqui o que tínhamos visto
+
+206
+00:25:23,000 --> 00:25:27,000
+a própria ward, pronto, se quisermos
+
+207
+00:25:27,000 --> 00:25:31,000
+ter uma comunicação full duplex, ou seja, com a possibilidade
+
+208
+00:25:31,000 --> 00:25:35,000
+de transmissão, ou melhor, bidireccional, com a possibilidade de transmissão e
+
+209
+00:25:35,000 --> 00:25:39,000
+receção,
+
+210
+00:25:39,000 --> 00:25:43,000
+só um momento, deixe-me só acabar aqui a ideia,
+
+211
+00:25:43,000 --> 00:25:47,000
+obviamente não vamos poder selecionar, configurar apenas
+
+212
+00:25:47,000 --> 00:25:51,000
+só o pino GPIO14, vamos ter que selecionar o GPIO14 e o 15
+
+213
+00:25:51,000 --> 00:25:55,000
+para trabalharem em modo do art. Uma coisa com o i2c aqui,
+
+214
+00:25:55,000 --> 00:25:59,000
+que fizeram dois pinos, e o outro que nos está aqui representado, aquele da ligação aos
+
+215
+00:25:59,000 --> 00:26:03,000
+os ecrãs, esse ocupa logo vários pinos,
+
+216
+00:26:03,000 --> 00:26:07,000
+portanto, apesar de
+
+217
+00:26:07,000 --> 00:26:11,000
+do RP4 ter aquelas possibilidades todas em termos do art
+
+218
+00:26:11,000 --> 00:26:15,000
+e desse país, não é possível ativar tudo ao mesmo tempo, temos que
+
+219
+00:26:15,000 --> 00:26:19,000
+fazer uma, portanto, caso a caso, ou aplique eleção à aplicação, só podemos
+
+220
+00:26:19,000 --> 00:26:23,000
+usar alguns. Pode colocar a questão agora,
+
+221
+00:26:23,000 --> 00:26:27,000
+acho que era o Daniel.
+
+222
+00:26:27,000 --> 00:26:31,000
+O professor tinha colocado no slide ao apresentar o RP4, que ele tinha dois canais de
+
+223
+00:26:31,000 --> 00:26:35,000
+i2c, eu normalmente,
+
+224
+00:26:35,000 --> 00:26:39,000
+até só conheço um, porque ele só tem um GPIO
+
+225
+00:26:39,000 --> 00:26:43,000
+com, aliados, até diz que tem seis.
+
+226
+00:26:43,000 --> 00:26:47,000
+Sim, eu acho, eu confio,
+
+227
+00:26:47,000 --> 00:26:51,000
+eu não andei a contar, porque ele só tem um pino STI
+
+228
+00:26:51,000 --> 00:26:55,000
+tira isto diretamente do data sheet, não andei aqui
+
+229
+00:26:55,000 --> 00:26:59,000
+a contar, porque é assim, este data sheet, ao contrário
+
+230
+00:26:59,000 --> 00:27:03,000
+do que acontece, por exemplo, nos produtos do
+
+231
+00:27:03,000 --> 00:27:07,000
+datamel, que usamos no modo anterior,
+
+232
+00:27:07,000 --> 00:27:11,000
+não tem uma apresentação tão detalhada e formal como tem o
+
+233
+00:27:11,000 --> 00:27:15,000
+basta dizer que não tem um diagrama de blocos do sistema todo,
+
+234
+00:27:15,000 --> 00:27:19,000
+podem alegar que é por ser muito complexo, mas mesmo
+
+235
+00:27:19,000 --> 00:27:23,000
+este diagrama de blocos que mostrei aqui, isto não é oficial, isto não foi tirado
+
+236
+00:27:23,000 --> 00:27:27,000
+da data sheet, isto foi já de um site que fez uma espécie de resumo
+
+237
+00:27:27,000 --> 00:27:31,000
+simplificado da organização, pronto,
+
+238
+00:27:31,000 --> 00:27:35,000
+aqui, de alto nível do módulo.
+
+239
+00:27:35,000 --> 00:27:39,000
+Mas então, você está a dizer que acha que não tem...
+
+240
+00:27:39,000 --> 00:27:43,000
+Porque ele só tem dois pinos, um PSTL e outro PSCL,
+
+241
+00:27:43,000 --> 00:27:47,000
+se ele usa esses dois pinos...
+
+242
+00:27:47,000 --> 00:27:51,000
+Está-se a basear em que documentação?
+
+243
+00:27:51,000 --> 00:27:55,000
+Normalmente no pinout que aparece
+
+244
+00:27:55,000 --> 00:27:59,000
+dos GPIOs, não comprou até o que o pessoal mostrou ainda agora.
+
+245
+00:27:59,000 --> 00:28:03,000
+Mas a questão é que este pinout,
+
+246
+00:28:03,000 --> 00:28:07,000
+este aqui é do original, não é do 4.
+
+247
+00:28:07,000 --> 00:28:11,000
+O que mostram muitas vezes,
+
+248
+00:28:11,000 --> 00:28:15,000
+o 4 é compatível com o original,
+
+249
+00:28:15,000 --> 00:28:19,000
+mas não quer dizer que não possamos usar mais funcionalidades.
+
+250
+00:28:19,000 --> 00:28:23,000
+Sim, certo, mas até o 5,
+
+251
+00:28:23,000 --> 00:28:27,000
+eu acho que ele só tem
+
+252
+00:28:27,000 --> 00:28:31,000
+um canal STA e um canal SCL.
+
+253
+00:28:31,000 --> 00:28:35,000
+Não sei se são esses pinos
+
+254
+00:28:35,000 --> 00:28:39,000
+com múltiplos canais cada um,
+
+255
+00:28:39,000 --> 00:28:43,000
+ou se existem outros.
+
+256
+00:28:43,000 --> 00:28:47,000
+Eu confesso, eu vou tirar isto...
+
+257
+00:28:47,000 --> 00:28:51,000
+Estas coisas, a única maneira, muitas vezes,
+
+258
+00:28:51,000 --> 00:28:55,000
+quando a documentação não é muito clara, é experimentar.
+
+259
+00:28:55,000 --> 00:28:59,000
+E eu confesso que ainda não tive tempo de experimentar.
+
+260
+00:28:59,000 --> 00:29:03,000
+Eu confesso que nunca fiz nenhuma aplicação
+
+261
+00:29:03,000 --> 00:29:07,000
+que tivesse que usar múltiplas wards e múltiplos SPIs.
+
+262
+00:29:07,000 --> 00:29:11,000
+Portanto, nunca surgiu esse problema.
+
+263
+00:29:11,000 --> 00:29:15,000
+Mas confesso que também é uma curiosidade que já me assaltou,
+
+264
+00:29:15,000 --> 00:29:19,000
+porque os diagramas mostram sempre esta versão simplificada,
+
+265
+00:29:19,000 --> 00:29:23,000
+mas depois o datasheet fala, e não sei quantos os artes,
+
+266
+00:29:23,000 --> 00:29:27,000
+não sei quantos SPIs,
+
+267
+00:29:27,000 --> 00:29:31,000
+e de facto quando se vai a ver aqui as tabelas,
+
+268
+00:29:31,000 --> 00:29:35,000
+deixa-me ver se se encontra aqui.
+
+269
+00:29:35,000 --> 00:29:39,000
+Tenho aqui o datasheet aberto.
+
+270
+00:29:39,000 --> 00:29:43,000
+Tem um conversor analógico digital, há sete conversores, só tem por exemplo quatro canais.
+
+271
+00:29:43,000 --> 00:29:47,000
+Se nós quisermos usar oito canais, temos dois conversores,
+
+272
+00:29:47,000 --> 00:29:51,000
+ele só pode ter uma ligação I2C, supostamente.
+
+273
+00:29:51,000 --> 00:29:55,000
+E aí já precisávamos de duas ligações I2C, a não ser que lá está.
+
+274
+00:29:55,000 --> 00:29:59,000
+E estes dois pinos têm múltiplos canais cada um,
+
+275
+00:29:59,000 --> 00:30:05,000
+e se possam ligar, até seis dispositivos I2C, não sei.
+
+276
+00:30:09,000 --> 00:30:13,000
+Vou querer-lhe mostrar aqui.
+
+277
+00:30:13,000 --> 00:30:17,000
+Isto é o datasheet.
+

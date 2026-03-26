@@ -1,0 +1,544 @@
+1
+00:00:00,000 --> 00:00:03,960
+e consegue chegar a outros, a outros sítios, ok?
+
+2
+00:00:04,800 --> 00:00:07,600
+Mas pronto, na propagação, há outras,
+
+3
+00:00:07,600 --> 00:00:12,400
+há várias fontes de distorção, ruído, ok?
+
+4
+00:00:14,560 --> 00:00:19,640
+A distorção está por base nas características também do próprio canal, ok?
+
+5
+00:00:19,640 --> 00:00:25,320
+Porque pode atenuar, reduzir a amplitude de algumas referências em relação a outras,
+
+6
+00:00:25,720 --> 00:00:31,920
+a interferência de outros mecanismos ou de outros sistemas de comunicação, ok?
+
+7
+00:00:31,920 --> 00:00:34,600
+A atenuação natural do canal, ok?
+
+8
+00:00:34,600 --> 00:00:36,680
+O sinal é transmitido e começa a reduzir.
+
+9
+00:00:36,680 --> 00:00:41,720
+Quanto mais ele se reduzir, menor vai ser a relação que ele tem com o ruído
+
+10
+00:00:41,720 --> 00:00:49,280
+e até que a certo ponto o ruído passa a ser superior ao sinal e eu já não consigo fazer nada, ok?
+
+11
+00:00:50,280 --> 00:00:52,680
+Isto é específico para comunicações sem fios, não é?
+
+12
+00:00:52,680 --> 00:00:58,320
+Portanto, os anteriores, isto é, todas as comunicações têm isto.
+
+13
+00:01:00,600 --> 00:01:06,200
+Aqui temos o pass-loss, novamente a potência vai diminuindo,
+
+14
+00:01:06,200 --> 00:01:12,960
+isto é proporcional a um sobre a distância, em algumas condições também, ok?
+
+15
+00:01:12,960 --> 00:01:16,400
+Portanto, isto depende muito das antenas, como nós falamos anteriormente,
+
+16
+00:01:16,400 --> 00:01:21,280
+qual é a forma das antenas, como é que estas antenas transmitem os dados,
+
+17
+00:01:21,280 --> 00:01:25,320
+que materiais é que são atravessados, se estamos a atravessar o ar,
+
+18
+00:01:25,320 --> 00:01:28,720
+se estamos a atravessar uma parede, se a parede é de ferro, se é de peladuro,
+
+19
+00:01:28,720 --> 00:01:34,240
+se é de cimento ou o que quer que seja, não é?
+
+20
+00:01:34,240 --> 00:01:40,240
+Portanto, isto vai ter consequências diferentes,
+
+21
+00:01:40,240 --> 00:01:42,840
+mas se tentamos passar uma parede que é de ferro,
+
+22
+00:01:42,840 --> 00:01:48,040
+o sinal vai tido para trás e não passa para o outro lado todo, ok?
+
+23
+00:01:48,080 --> 00:01:52,200
+O blocking, portanto, basicamente são obstáculos que nos impedem de passar,
+
+24
+00:01:52,200 --> 00:01:56,480
+estas reflexões que eu já um bocadinho falei, não é?
+
+25
+00:01:56,480 --> 00:02:01,440
+O scattering, ele passa para dois sinais mais fracos, dois ou mais,
+
+26
+00:02:01,440 --> 00:02:06,600
+refletes em várias direções e em vários caminhos diferentes, ok?
+
+27
+00:02:06,600 --> 00:02:12,280
+E o tal fenómeno da diferação, que vocês podem ver bem,
+
+28
+00:02:13,120 --> 00:02:23,320
+é em ondas, em ondas mesmo, com água a bater e a passar pelos obstáculos, ok?
+
+29
+00:02:23,320 --> 00:02:28,040
+Portanto, consequência disto é este fenómeno que se chama multi-pass propagation,
+
+30
+00:02:28,040 --> 00:02:34,360
+que complica muito as comunicações, ok?
+
+31
+00:02:34,400 --> 00:02:42,600
+Isto, devido àquele desalinhamento temporal que eu vos mostrei anteriormente,
+
+32
+00:02:42,600 --> 00:02:48,320
+vai levar aquilo que se chama interferência simbólica,
+
+33
+00:02:48,320 --> 00:02:52,960
+portanto, entre símbolos, entre o valor que ela estava a transmitir,
+
+34
+00:02:52,960 --> 00:02:56,080
+principalmente se for digital, entre o 0 e o 1, ok?
+
+35
+00:02:56,080 --> 00:03:01,640
+Portanto, significa que eu vou ter aqui o meu sinal a bater em várias paredes,
+
+36
+00:03:01,680 --> 00:03:02,840
+por exemplo, não é?
+
+37
+00:03:02,840 --> 00:03:06,520
+Está a ser transmitido para aqui, ok?
+
+38
+00:03:06,520 --> 00:03:08,840
+Há um caminho que é direto, ok?
+
+39
+00:03:08,840 --> 00:03:14,600
+Há outros caminhos em que ele bate nesta parede, por exemplo, e reflete para aqui,
+
+40
+00:03:14,600 --> 00:03:20,920
+outros em que ele vai bater ali ao fundo e eventualmente vai ser refletido para aqui,
+
+41
+00:03:20,920 --> 00:03:22,760
+e outras coisas desse jeito, ok?
+
+42
+00:03:22,760 --> 00:03:25,880
+Consequência, o sinal vai ser recebido,
+
+43
+00:03:25,880 --> 00:03:32,200
+se tivesse a transmitir um sinal digital, que eu volto a frisar, não é possível,
+
+44
+00:03:32,200 --> 00:03:37,080
+iria receber um sinal assim, só que depois ainda temos o ruído todo, ok?
+
+45
+00:03:37,080 --> 00:03:43,480
+Portanto, significa que o sinal ainda vai estar muito mais torto devido ao ruído,
+
+46
+00:03:43,480 --> 00:03:48,280
+e este ruído é relativamente pequeno, ok?
+
+47
+00:03:48,280 --> 00:03:53,000
+Portanto, voltando ao nosso esquema, temos depois uma antena,
+
+48
+00:03:53,960 --> 00:04:00,840
+vamos entrar em detalhes, é igual, basicamente é muito estranho que pareça,
+
+49
+00:04:00,840 --> 00:04:05,240
+a antena receptor é quase igual a antena transmissora, ok?
+
+50
+00:04:05,240 --> 00:04:07,880
+Na maior parte dos sistemas é sem fios.
+
+51
+00:04:07,880 --> 00:04:22,200
+Depois, eu tenho que filtrar o meu sinal, imaginamos que o meu sinal é este azul que
+
+52
+00:04:22,200 --> 00:04:27,160
+aqui acontece, mas o meu sinal original é este aqui estar,
+
+53
+00:04:27,160 --> 00:04:32,440
+é possível eu retirar parte deste ruído, ou grande parte deste ruído,
+
+54
+00:04:32,440 --> 00:04:37,480
+e ficar só com o sinal original.
+
+55
+00:04:37,480 --> 00:04:44,600
+Temos aqui também outro exemplo, este era em azul os dados que eu recebia,
+
+56
+00:04:44,600 --> 00:04:49,400
+depois de filtrado eu consigo ter aqui um sinal muito mais suavezinho,
+
+57
+00:04:49,640 --> 00:04:53,560
+muito mais simples do que o sinal que tinha anteriormente.
+
+58
+00:04:55,960 --> 00:04:59,080
+A seguir temos o amplificador também do lado do receptor,
+
+59
+00:04:59,080 --> 00:05:04,280
+o sinal quando chega é muito pequenino e eu tenho que o aumentar,
+
+60
+00:05:04,280 --> 00:05:08,440
+é o que faz este amplificador.
+
+61
+00:05:08,440 --> 00:05:14,440
+Temos depois uma peça extremamente complicada que é o desmodulador,
+
+62
+00:05:14,920 --> 00:05:19,080
+basicamente o desmodulador faz o contrário daquilo que fez o desmodulador,
+
+63
+00:05:19,080 --> 00:05:26,760
+como eu disse é uma peça muito complicada, portanto não vale a pena estar aqui
+
+64
+00:05:26,760 --> 00:05:31,800
+a falar nos princípios de funcionamento, a não ser que vocês tivessem que
+
+65
+00:05:31,800 --> 00:05:35,400
+ter sistemas de telecomunicações.
+
+66
+00:05:36,920 --> 00:05:43,800
+Temos a seguir o decoder que faz o contrário do codificador do outro lado,
+
+67
+00:05:44,760 --> 00:05:51,160
+tenta corrigir erros sobre os quais tenha percebido,
+
+68
+00:05:53,160 --> 00:05:57,160
+faz essas operações todas.
+
+69
+00:05:59,160 --> 00:06:06,680
+Entrando agora nos protocolos em si, começamos pelo 802.11,
+
+70
+00:06:07,640 --> 00:06:16,920
+802.11 já é um protocolo enviado a alguns nos anos 80, nos anos 80, desculpem, 90,
+
+71
+00:06:20,920 --> 00:06:29,640
+por um conjunto de empresas, mas que depois acabou por ser standardizado
+
+72
+00:06:29,640 --> 00:06:35,480
+por uma entidade chamada I3S, o I3S é basicamente o equivalente
+
+73
+00:06:35,480 --> 00:06:41,240
+a nossa ordem dos engenheiros dos EUA, mas que hoje em dia é uma das maiores
+
+74
+00:06:41,240 --> 00:06:47,240
+organizações de engenheiros autotécnicos do mundo, é muito grande.
+
+75
+00:06:51,240 --> 00:06:59,720
+Isto foi standardizado com este nome que aqui está, que é o I3S 802.11,
+
+76
+00:06:59,720 --> 00:07:02,440
+o nome comercial que isto tem é Wi-Fi.
+
+77
+00:07:03,400 --> 00:07:13,960
+Este 802.11 é um conjunto muito grande de protocolos, o mais conhecido de todos eles,
+
+78
+00:07:13,960 --> 00:07:19,720
+que é definido aqui, também é o 802.3, o Ethernet, o protocolo também que vocês utilizam
+
+79
+00:07:19,720 --> 00:07:27,640
+todos os dias, aqui estão os dois grandes e depois mais umas dezenas de protocolos
+
+80
+00:07:27,640 --> 00:07:36,920
+e subprotocolos que estão aqui. Há muita coisa referenciada com este standard 802.
+
+81
+00:07:36,920 --> 00:07:46,920
+Aqui mostramos um bocadinho da evolução dos 802.11, a evolução dos 802.11 é extremamente complexa,
+
+82
+00:07:46,920 --> 00:07:54,920
+está baseada nos standards 802.11, se vocês virem aqui, isto é o 802.11A,
+
+83
+00:07:54,920 --> 00:08:03,400
+é o primeiro standard de todos, 54 megabits, 5 gigahertz, mas o mais utilizado nos primeiros
+
+84
+00:08:03,400 --> 00:08:14,600
+anos é o 802.11B que dava 11 megabits por segundo na banda dos 2,4 gigahertz, mas ao mesmo tempo,
+
+85
+00:08:14,680 --> 00:08:24,760
+ao B, ok, algumas letras depois não evoluírem para standards, ao D, de homing, a partir daqui
+
+86
+00:08:24,760 --> 00:08:36,120
+apareceu 802.11G, também uma largura de banda maior, 54 megabits por segundo, na mesma banda,
+
+87
+00:08:37,000 --> 00:08:43,480
+aqui ao 802.11E, tinha a ver com qualidade de serviço, seria muito interessante
+
+88
+00:08:45,160 --> 00:08:54,280
+para utilizarem aplicações imobilias se as plaquinhas 802.11 não tivessem, infelizmente
+
+89
+00:08:54,280 --> 00:09:03,160
+não implementam, protocolos mais sofisticados também a nível de segurança, o que é que temos
+
+90
+00:09:03,160 --> 00:09:11,880
+aqui para frente, mais melhoramentos a nível de segurança, permitir o homing, por exemplo,
+
+91
+00:09:11,880 --> 00:09:21,560
+entre diferentes redes, 802.11, ok, 802.11PWave é para comunicações entre diferentes carros, ok,
+
+92
+00:09:23,320 --> 00:09:29,400
+mais protocolos, melhoramentos na parte da qualidade de serviço, também infelizmente,
+
+93
+00:09:29,480 --> 00:09:37,880
+a parte da defesa não está disponível, ok, e depois foram vários aumentos na velocidade do 802.11.
+
+94
+00:09:37,880 --> 00:09:49,880
+Portanto, há 1001 standards, no S vocês repararem que nós já vamos 802A, começou no 802A,
+
+95
+00:09:50,360 --> 00:10:00,120
+temos aqui 802.11AZ, significa que já deram a volta toda a 24 standards pelo menos,
+
+96
+00:10:00,120 --> 00:10:13,160
+só com uma letra, este já vai na letra Z, já temos 802BB também, VG, BI, BME, esta é uma coisa
+
+97
+00:10:13,320 --> 00:10:21,960
+mais específica. Continua a sair standards alguns a seguir aos outros, como eu vos disse,
+
+98
+00:10:21,960 --> 00:10:31,480
+isto é muito complexo de seguir o desenvolvimento do 802.11. O 802.11, basicamente, é uma rede para
+
+99
+00:10:31,480 --> 00:10:38,360
+distâncias curtas, se estivermos em um ambiente aberto, conseguimos ir até aos 100 metros,
+
+100
+00:10:39,320 --> 00:10:44,760
+mas, se estivermos em um ambiente fechado, obviamente que isto pode ser 10 metros,
+
+101
+00:10:44,760 --> 00:10:53,800
+podemos estar dentro de uma casa, às vezes não dá mais de 10 metros. O objetivo desta rede é ser de
+
+102
+00:10:53,800 --> 00:11:01,360
+baixo custo, isto hoje em dia já se conseguiu, mas as primeiras placas, os 802.11, que chegaram a
+
+103
+00:11:01,360 --> 00:11:09,840
+ser cerca de 500 euros, por exemplo. É utilizada nestas bandas públicas, em que qualquer pessoa
+
+104
+00:11:09,840 --> 00:11:17,680
+pode transmitir informação, desde que tenham alguns parâmetros específicos de potência de sinal,
+
+105
+00:11:17,680 --> 00:11:25,680
+por exemplo, seja naquela banda 2,4 GHz e com uma largura de banda também relativamente limitada.
+
+106
+00:11:26,640 --> 00:11:33,840
+Seja portável, pode ser uma porcoquinha pequenina, obviamente, tenha baixo consumo de energia e um
+
+107
+00:11:33,840 --> 00:11:43,200
+data rate, isto não foi, provavelmente, definido na altura, de 0 a 1 Mbps e já vamos com 1,73 Gbps.
+
+108
+00:11:43,200 --> 00:11:48,800
+Como nós sabemos, está uma grande interferência no meio.
+
+109
+00:11:49,520 --> 00:11:59,840
+Outra coisa que varia muito é a qualidade do sinal no tempo e no espaço, é muito estranho,
+
+110
+00:11:59,840 --> 00:12:07,680
+se vocês tentarem medir a qualidade 802.11, ela vai variar ao longo do tempo, mesmo que vocês
+
+111
+00:12:07,680 --> 00:12:14,480
+estejam quietinhos no sítio, vai sempre haver variações. Isto é importante, é um meio que é
+
+112
+00:12:14,560 --> 00:12:24,720
+de qualidade, qualquer pessoa pode estar a transmitir no meio, pode estar a utilizar o mesmo
+
+113
+00:12:24,720 --> 00:12:29,760
+canal que vocês, os vizinhos podem estar a usar o mesmo canal, se estiver a usar o mesmo canal,
+
+114
+00:12:29,760 --> 00:12:37,280
+azar, porque ele vai interferir muito sobre as vossas comunicações, o melhor é mudarem vocês
+
+115
+00:12:37,360 --> 00:12:43,840
+do canal. Muitas vezes também os vossos access points conseguem fazer essas brincadeiras já,
+
+116
+00:12:43,840 --> 00:12:53,680
+sem grandes problemas. Tenho este problemazinho, não vamos falar nisso mais à frente, pronto,
+
+117
+00:12:53,680 --> 00:13:00,320
+há diferentes regulamentos entre continentes, portanto, as faixas que eles utilizam são
+
+118
+00:13:00,400 --> 00:13:08,240
+completamente diferentes. Não é propriamente uma rede para ser utilizada quando nos estamos a mexer,
+
+119
+00:13:08,240 --> 00:13:11,920
+de um lado para o outro, então está aqui interferências devido à mobilidade, se estivermos
+
+120
+00:13:11,920 --> 00:13:18,240
+dentro de um carro, ou seja, se a fonte e o receptor estiveram dentro do carro a moverem-se à mesma
+
+121
+00:13:18,240 --> 00:13:24,960
+velocidade, não há problema, é o caso de um avião, por exemplo. Agora, se nós nos movimentarmos,
+
+122
+00:13:25,200 --> 00:13:32,320
+há interferência desse, devido ao movimento chamado efeito de Doppler.
+
+123
+00:13:33,880 --> 00:13:39,840
+Há questões muito particulares com a segurança no 8211, há muitos anos atrás houve uma broca
+
+124
+00:13:39,840 --> 00:13:46,400
+muito grande, porque foi possível acreschar um dos protocolos utilizados para encriptar as
+
+125
+00:13:46,480 --> 00:13:54,480
+instalações no 8211 e, portanto, teve que se mudar e definir o protocolo 8211.
+
+126
+00:13:54,480 --> 00:13:59,680
+Temos escalabilidade, também é uma rede, como vocês veem no ISEP, por exemplo,
+
+127
+00:13:59,680 --> 00:14:08,400
+ou em outras instituições, consegue suportar grandes quantidades de pessoas, muitos access points,
+
+128
+00:14:08,400 --> 00:14:14,720
+fazer roaming entre diferentes localizações, fazer balanceamento de carga entre os diferentes
+
+129
+00:14:14,720 --> 00:14:22,320
+access points e alguma qualidade de serviço, mas isso não é muito grande.
+
+130
+00:14:22,320 --> 00:14:31,280
+Pronto, o contrato de 8211, acho que vamos ficar por aqui, mais ou menos em cima das 8 horas,
+
+131
+00:14:31,280 --> 00:14:39,640
+e eu vou ver se acabo isto na próxima semana. Interessante eu vou ver se corrige aqui
+
+132
+00:14:39,640 --> 00:14:47,240
+os apps nos slides, tem aqui umas sobreposições e assim, e depois coloco-vos os slides lá dentro.
+
+133
+00:14:47,240 --> 00:14:54,440
+Não se assustem com o tamanho destes slides, vejam só aquilo que eu falei aqui na aula, tá bem?
+
+134
+00:14:54,440 --> 00:15:01,000
+Pronto, vemos-nos para a semana, penso que para a semana só temos aula na terça-feira, não é?
+
+135
+00:15:03,840 --> 00:15:05,000
+Sim, acho que é isso.
+
+136
+00:15:05,000 --> 00:15:10,280
+Ok, vai. Boa semana, e todos em terça-feira.
+

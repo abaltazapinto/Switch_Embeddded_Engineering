@@ -1,0 +1,277 @@
+aplicações gráficas, portanto, em modo general, que ficam depois integradas, portanto, no desktop
+do Windows, como uma aplicação do Windows. Mas, portanto, para ser honesto, isto a Microsoft vai
+melhorando, portanto, ver se são as versões, vai melhorando as coisas, mas já me tem acontecido a
+ver aplicações que aquilo não sou arranque, às vezes o rato não consegue clicar nos sítios certos,
+ou a aplicação fica bloqueada, o modo de funcionamento da OSL com aplicações gráficas,
+quando funciona? Funciona bem, mas às vezes falha, portanto, e por isso, para quem preferir ter um
+ambiente, portanto, de Linux também, com uma interface gráfica de Linux, com um ambiente
+só pelo Linux, numa única janela, portanto, a simular o ecrã de um computador, tem outras
+soluções, como o Hyper-V, que só existe nas versões Pro e superiores do Windows, ou seja,
+não existe na versão Home do Windows, não sei o que faz, são batotas, mas isso aí obriga a andar
+com as... portanto, vamos ser nas configurações do Windows e depois quando há updates ele volta às
+fazer tudo, portanto, é sempre um risco, mas nas versões Pro e superiores existe esta aplicação,
+esta funcionalidade do Windows, que é um sistema de virtualização mais parecido com o outro que
+menciono aqui, este VirtualBox e com o VMWare, que já permite correr o Linux, portanto, o ambiente
+do Linux na sua própria janela. Em termos até de gestão dessa parte gráfica, o VirtualBox é
+melhor, portanto, a forma aqui do Hyper-V aceder ao ecrã, portanto, depois de oferecer o acesso ao
+ecrã é um caso esquisito, é quase tipo um remote desktop connection, portanto, uma ligação remota,
+o VirtualBox faz uma integração mais natural, digamos assim, mesmo o copy-paste entre o VirtualBox,
+portanto, as aplicações do Linux estão correndo dentro do VirtualBox e as restantes aplicações do
+Windows funcionam de uma forma mais robusta do que neste Hyper-V. Portanto, eu não mencionei aqui
+a outra, uma vez, portanto, que também acho que ainda continua a ser gratuita, que já nos
+comentamos há muito tempo, é o VMWare Workstation, a versão Player, VMWare Workstation Player.
+O VirtualBox só tem um, portanto, em Windows 11 tem um problema, que é o facto de ter um desempenho
+um bocadinho pior do que o Hyper-V, do que o da OSL, que portanto, dependa, algumas máquinas poderão
+executar e máquinas mais lentas, nota-se logo. Então, se tivermos a fazer acessos intensivos
+ao disco e mesmo em comunicações, nota-se o efeito da virtualização. Isto porquê? Porque o Windows
+usa, portanto, atualmente usa algumas das ferramentas, dos mecanismos de virtualização
+do processador, para implementar mecanismos de segurança. E no caso do WSEL e do Hyper-V,
+como são aplicações deles, já têm, portanto, já têm, e como estão integrados no Windows,
+eles conseguem partilhar esses recursos em aplicações terceiros. Já não, portanto, isso já não é,
+portanto, até agora não tem sido possível e, portanto, acabam por não conseguir tirar a partir
+de todas as funcionalidades de virtualização do processador e depois nota-se em termos de desempenho.
+Portanto, até no Windows 7 e mesmo no Windows 10, antes de eles começarem a implementar essas
+técnicas de proteção de memória, de proteção dos drivers, de não deixar instalar alguns drivers,
+portanto, eu acho que é um memory isolation, não estou em erro, não lembro bem qual é a opção de configuração.
+Portanto, com essas coisas desligadas, o VirtualBox fica com um desempenho igual ao do Hyper-V
+ou do WSEL, mas a questão é que aí podemos estar a sacrificar todas as seguranças que hoje em dia
+são importantes. Portanto, isso eu também não advoco que façam, não sei, que saibam bem ou que queiram correr o risco
+ou que saibam bem o que estão a fazer. No caso dos computadores Mac, eu não sei se há aqui, já agora aproveitado
+para fazer a pergunta, que eu por acaso não fiz essa pergunta ao meu colega, não sei se há aqui algum aluno
+que costuma usar o computador Mac nas aulas?
+Não, também, sim, entretanto. No caso do Mac, até surge uma questão, se for aos Macs modernos,
+eles até já estão preparados para compilar, para operar-me nativamente, já, portanto, o compilador
+compila código, portanto, uma vez que os produtores usados nesses novos Macs são anos, atrás, quando se instala o compilador nativo,
+já fica pronto para compilar também para a mesma arquitetura Raspberry Pi. Agora, portanto, o compilar para arquitetura
+não quer dizer que as aplicações sejam compatíveis, porque o sistema operativo do Mac, portanto, é o macOS,
+que não é o Linux, não usam as mesmas bibliotecas, nem têm o mesmo kernel, portanto, são sistemas operativos diferentes,
+embora em termos de bibliotecas de software, portanto, tenham algumas semelhanças, já há programas que, portanto,
+oscritos em ZC, como a sua, tanto compilem Linux como no Mac, porque no fundo o Mac é um sistema tipo Nix,
+aliás, até existem alguns Macs que são, portanto, algumas versões do macOS que são certificadas como o Nix,
+e portanto, em termos de compilação de aplicações, portanto, para correr nativamente, corre, mas a questão é que,
+para compilar para o sistema Linux aqui também, portanto, convém também instalar uma distribuição, portanto,
+uma máquina virtual e instalar nessa máquina virtual uma distribuição Linux, que nesse caso terá que ser para,
+não uma das normais, para computadores Intel, barra AMD, mas sim para arquiteturar-me, ok?
+Portanto, por exemplo, no caso das distribuições Fedora, e penso que no Ubuntu também, assim, no Ubuntu também tem,
+por exemplo, para instalar no próprio Raspberry Pi, tem distribuições, portanto, para que podem instalar numa máquina virtual do Mac.
+Ora bem, pronto, isto era um recado para, portanto, se puderem antecipar este trabalho, portanto, para depois Nola ser só a parte já de programação.
+Se puderem, se tiverem dificuldades, depois Nola também posso fazer, Nola de Saba também posso fazer uma ajuda.
+Voltando aqui, agora vou falar um pouco do, portanto, da organização do, do, do system ownership, que é usado no Raspberry Pi 4,
+que é a placa que vamos usar nas aulas.
+E é, portanto, este, este BCM2711, que é, que é feito, portanto, propositadamente, para estas, para estas placas do próprio Data Sheet,
+para não é, portanto, do Raspberry.
+Portanto, aqui, isto é só para, aqui temos um panorama geral, aqui com a representação dos quatro núcleos, aqui da memória de caixa,
+portanto, isto é típico nos processadores orientados ao desempenho, e mesmo nos, hoje em dia mesmo nos micro-controladores de mais alto desempenho,
+já começam a ter caixa que é, portanto, que é uma memória que é mais rápida do que a memória principal, para que mantenha as instruções e os dados
+mais frequentemente ou mais recentemente utilizados para otimizar, para, portanto, diminuir o tempo de acesso a esses dados ou instruções.
+Portanto, aí, portanto, tipicamente algumas dessas caixas até estarem divididas em caixas de instruções e caixas de dados.
+Portanto, o IA de Instruction e o IA de Data.
+Pois, aqui neste caso até tem dois níveis de caixa, portanto, isto até, portanto, nos processores, nos computadores pessoais já devem ter apercebido dessa terminologia,
+acho que caixa de nível 1, caixa de nível 2 e até caixa de nível 3, que normalmente ainda tem uma quantidade maior de memória,
+mas depois, também os tempos de acesso são piores, portanto, é sempre uma questão, é sempre um compromisso entre o tamanho da caixa e o tempo de acesso.
+Quanto menor for a caixa, tipicamente melhor o tempo de acesso, quanto, mas também menos dados conseguimos armazenar lá,
+quanto maior a caixa, mais dados conseguimos armazenar, mas o tempo de acesso também vai piorando, portanto,
+por isso é que há vários níveis de caixa para se poder criar um compromisso entre essas opções.
+Depois temos aqui os dispositivos, portanto, aqui no caso do Raspberry Pi 4, portanto, já temos aqui a ligação, portanto, o modo USB 3, portanto, portos USB 3, portos USB 2,
+portanto, uma interface dedicada, um controlador dedicado para internet, portanto, com ligação direta aos barramento, aos barramentos principais do processador
+e depois aqui interfaces de SD, este SD-AOS são interfaces que seguem um protocolo semelhante ao que é usado para comunicar com os cartões SD,
+mas que podem ser usados também para outros dispositivos, ou seja, é mais genérico.
+Acho que este SD-AO já tinha aparecido num microcontroller qualquer, daqueles que eu mostrei como exemplo, na semana passada,
+e tem também os pinos de GPIO, portanto, com várias funções possíveis.
+Ora bem, agora, portanto, em termos de periféricos que existem no próprio SOC, temos, vamos centrar aqui nas 28 linhas de GPIO,
+portanto, cada uma delas pode ter a funcionalidade básica de entrada ou saída digital de dados, como vimos para o ATmega,
+e depois temos um conjunto de dispositivos, portanto, do ART e do AC, portanto, os geradores de canais PWM e ainda mais alguns que,
+portanto, que no caso do ATmega nem sequer existiam, que podem ser associados a esses pinos de GPIO,
+que, portanto, cada pino pode ter uma função diferente conforme a sua configuração e depois estes módulos podem ser mapeados para diferentes pinos de GPIO,
+ou melhor, as suas respetivas linhas podem ser mapeados para diferentes pinos de GPIO.
+Depois temos aqui alguns, temos aqui por exemplo este DPI que serve para ligar a displays, portanto, sendo uma ligação paralela,
+portanto, quando é usado ocupa logo vários, eu por acaso agora não pus aqui o número de pinos que é oferecido, mas são vários que é usado,
+que pode ser usado para ligar a ecrãs, portanto, para ligação direta a ecrãs, portanto, está logo a saída, tanto ao nível do Pixel,
+portanto, em vez de usar uma saída HDMI, que tenha conversão para o formato HDMI, isto permite ligar diretamente a matriz de inputs de um ecrã, de um ecrã digital, obviamente.
+Este PCM, portanto, é um controlador para uma interface para áudio, para transmissão de áudio digital, portanto, que pode ser usado quer como input, quer como output,
+tem também algo que, portanto, normalmente só aparece nos, não alguns micro-controladores de mais alto desempenho, mas neste tipo de sistemas,
+já com sistemas operativos é típico existir, que é a funcionalidade da DMA.
+Porém, o que é que é o DMA? Portanto, DMA significa Direct Memory Access, portanto, é um mecanismo que permite que sejam feitas transferências
+de um dispositivo para a memória principal, portanto, para RAM, ou da RAM para um dispositivo, sem intervenção do processador,
+portanto, em vez do processador ter que estar ali a copiar os dados byte-a-byte, portanto, existe o próprio controlador do DMA,
+portanto, faz essa transferência em paralelo com o funcionamento do processador, que pode, dessa forma, estar a executar outras instruções.
+No fundo, o controlador do DMA acaba por ser um processador muito simples, que só sabe fazer cópias de dados, portanto, copiar dos dispositivos para memória
+e da memória para dispositivos. Essa funcionalidade da DMA é usada, portanto, por alguns dispositivos que, por alguns dispositivos do Raspberry Pi,
+que precisam de um desempenho mais alto, por exemplo, caso o controlador de SD card, mas também pode ser aplicado a algumas das UARTs e até ao SPI,
+para, portanto, mais uma vez para libertar o processador do processamento dos dados, de fazer a leitura e a escrita dos dados e fazer a automatização disso,
+mas esse aspecto vamos discutir mais à frente.
+Agora, portanto, temos, por outro lado, fazendo aqui a comparação com o que já vimos dos micro-controladores, algumas lacunas no Raspberry Pi que saltam à vista,
+uma delas é não ter nenhum compressor analógico ou digital.
+Mesmo em termos, apesar de internamente ter vários módulos de temporização, portanto, estou a falar dos timers counters, como vimos também no caso do ATmega,
+nenhum deles suporta a entrada, portanto, a entrada externa.
+No caso do micro-controlador tão simples como o ATmega 128 ou do 328, que é usado no Arduino Uno,
+é possível usar um dos timers, alguns dos timers permitem que o contador, em vez de ser alimentado pelo sinal de relógio interno,
+portanto, o relógio dos módulos de input-output pode contar sinais que vêm de uma linha de GPIO,
+que pode ser, por exemplo, no caso de estarmos a fazer controlo de velocidade do motor,
+podemos usar essa entrada ligada a um contador de impulsos, portanto, ligado ao veio do motor,
+que, dessa forma, contando o número de impulsos por um determinado período de tempo,
+a velocidade de rotação do motor, e quando estamos a falar de controlo do motor,
+estamos a falar, dependendo da velocidade do motor, obviamente, mas que puseram ser sinais na ordem das centenas de kW,
+para ter uma contagem precisa da velocidade.
+Ora bem, o Raspberry Pi não foi feito a pensar nesse tipo de aplicações também,
+embora, em teoria e na prática, seja possível ligar, portanto, usar umas das entradas,
+ou seja, um dos pins GPIO para estar a detectar transições, portanto, passagens de um para zero e zero para um,
+e que até pode ser, essa detecção pode ser feita com base em interrupções,
+ou seja, gerar uma interrupção sempre que existe um flanco ascendente ou descendente,
+na prática essas entradas estão limitadas a frequências de apenas de alguns kW,
+portanto, tanto para aplicações que precisam de usar sinais analógicos,
+como fazer este tipo de contagens de impulsos a frequências mais altas,
+a melhor solução é ligar, portanto, fazer essas aquisições num módulo auxiliar,
+que pode ser um microcontrolador simples e depois ligá-los,
+portanto, interligar esse microcontrolador ao Raspberry Pi através de uma ligação séria,
+ou seja, síncrona, com o SPI ou o I2C, que depois já lê o valor processado,
+portanto, o microcontrolador encarrega-se fazer a parte mais pesada de tanto o auxiliar estar ali a contar as rotações
+e até pode fazer o cálculo da velocidade e depois, periodicamente, vamos lá ler o valor já calculado.
+Já eu pus aqui estes dados, indiquei microcontrolador ou Watt, portanto,
+os Raspberry permitem também encaixar placas de expansão,
+portanto, eu não sei, não conheço todas as que existem no mercado, mas certamente que haverá algumas
+que permita ter um, portanto, um módulo ADC para fazer aquisição de sistemas digitais
+que encaixam diretamente no topo do, portanto, no tal, nestes conectores, ok?
+Já agora, aqui no ecossistema do Raspberry Pi, eles chamam isso os ADCs,
+nos arduinos chamam-os os Shields, mas no fundo vamos já falar,
+é uma mini placa de expansão que, pois, encaixa em cima da placa base.
+O traspeto a ter em conta aqui no Raspberry Pi é que não tem bateria
+e, portanto, sempre que ligam aquilo está com a data errada.
+Quando instalámos o sistema operativo, portanto,
+podemos ter um serviço ativo que faz os, por exemplo,
+os servidores de tempo mundiais para atualizar a hora, portanto,
+a data e a hora logo no arranque.
+Mesmo que não tenha, podemos fazer, ou que esse serviço não seja ativado,
+podemos fazer isso na própria linha de comando, portanto, com o comando ntpdate
+que, portanto, consultam o servidor tempo, usei este,
+existem até, portanto, servidores que permitem,
+portanto, que tem um conjunto, portanto, que servem como um proxy
+para um conjunto de servidores e podem até, depois,
+dirigir ou reencarminhar o pedido para um que não esteja com muita carga,
+mas, tipicamente, eu costumo usar muitas vezes este
+e nunca tive problemas de tempo de resposta.
+Claro que, obviamente, que isto requer, por exemplo,
+portanto, que o Raspberry Pi tenha ligação à internet.
+Se não tiver, portanto, podemos usar os comandos de configuração
+da data e da hora, portanto, do próprio sistema operativo.
+Voltando aos GPIOs,
+e àquela, portanto, do sistema operativo,
+e àquele conector, portanto, temos,
+portanto, como podem ver,
+os GPIOs estão todos aqui disponíveis,
+dois deles já estão reservados, portanto, não é exposto
+o nosso software ou o próprio sistema operativo
+mudar a sua finalidade, portanto, está definido
+mais ou menos de forma standardizada
+no ecossistema do Raspberry Pi para servir de interface
+com as tais placas de expansão, portanto, já agora este
+TAT, isto é um acrónimo, não é simplesmente o chapéu,
+portanto, hardware atats don't top.
+O nome é bastante descreativo, portanto, liga-se
+em cima.
+Agora, este diagramo
+foi tirado diretamente do
+datasheet, mas aqui
+não mostra as várias funções que cada pino
+pode ter, e no caso do,
+nas primeiras versões do Raspberry Pi, como não havia assim também tantas combinações possíveis,
+era fácil representar, agora no 4,
+como já é um sistema bastante flexível,
+tem aquelas wards todas, GSPIs, GPWMs,
+tem tantas combinações que se torna difícil representar aqui graficamente,
+portanto, o datasheet tem umas tabelas que indica para cada pino
+quais são as funcionalidades que podemos selecionar,
+e portanto, é por aí que
+nos temos que guiar. De qualquer maneira, coloquei aqui
+o diagrama correspondente, só para
+exemplificar,
+correspondente ao RP original, agora ao RP1,
+portanto,
+o meu conselho é que, se realmente não vamos precisar mais do que
+estas funcionalidades, se só vamos precisar
+de um ward ou só vamos precisar de um i2c ou de um SPI,
+mais vale usar estas, precisamente estas configurações,
+porque assim ficamos com uma configuração que tanto funciona
+numa placa moderna como numa das placas
+mais antigas,
+que faz com que o software fique mais, a nossa aplicação fique mais
+portável, portanto, até podemos chegar à conclusão que
+para certas aplicações poderá
+ser suficiente usar um dos modelos menos
+poderosos, e assim temos a garantia que estas configurações
+existem em todos.
+Como eu mencionei, portanto,
+quando queremos usar,
+por exemplo, aqui o que tínhamos visto
+a própria ward, pronto, se quisermos
+ter uma comunicação full duplex, ou seja, com a possibilidade
+de transmissão, ou melhor, bidireccional, com a possibilidade de transmissão e
+receção,
+só um momento, deixe-me só acabar aqui a ideia,
+obviamente não vamos poder selecionar, configurar apenas
+só o pino GPIO14, vamos ter que selecionar o GPIO14 e o 15
+para trabalharem em modo do art. Uma coisa com o i2c aqui,
+que fizeram dois pinos, e o outro que nos está aqui representado, aquele da ligação aos
+os ecrãs, esse ocupa logo vários pinos,
+portanto, apesar de
+do RP4 ter aquelas possibilidades todas em termos do art
+e desse país, não é possível ativar tudo ao mesmo tempo, temos que
+fazer uma, portanto, caso a caso, ou aplique eleção à aplicação, só podemos
+usar alguns. Pode colocar a questão agora,
+acho que era o Daniel.
+O professor tinha colocado no slide ao apresentar o RP4, que ele tinha dois canais de
+i2c, eu normalmente,
+até só conheço um, porque ele só tem um GPIO
+com, aliados, até diz que tem seis.
+Sim, eu acho, eu confio,
+eu não andei a contar, porque ele só tem um pino STI
+tira isto diretamente do data sheet, não andei aqui
+a contar, porque é assim, este data sheet, ao contrário
+do que acontece, por exemplo, nos produtos do
+datamel, que usamos no modo anterior,
+não tem uma apresentação tão detalhada e formal como tem o
+basta dizer que não tem um diagrama de blocos do sistema todo,
+podem alegar que é por ser muito complexo, mas mesmo
+este diagrama de blocos que mostrei aqui, isto não é oficial, isto não foi tirado
+da data sheet, isto foi já de um site que fez uma espécie de resumo
+simplificado da organização, pronto,
+aqui, de alto nível do módulo.
+Mas então, você está a dizer que acha que não tem...
+Porque ele só tem dois pinos, um PSTL e outro PSCL,
+se ele usa esses dois pinos...
+Está-se a basear em que documentação?
+Normalmente no pinout que aparece
+dos GPIOs, não comprou até o que o pessoal mostrou ainda agora.
+Mas a questão é que este pinout,
+este aqui é do original, não é do 4.
+O que mostram muitas vezes,
+o 4 é compatível com o original,
+mas não quer dizer que não possamos usar mais funcionalidades.
+Sim, certo, mas até o 5,
+eu acho que ele só tem
+um canal STA e um canal SCL.
+Não sei se são esses pinos
+com múltiplos canais cada um,
+ou se existem outros.
+Eu confesso, eu vou tirar isto...
+Estas coisas, a única maneira, muitas vezes,
+quando a documentação não é muito clara, é experimentar.
+E eu confesso que ainda não tive tempo de experimentar.
+Eu confesso que nunca fiz nenhuma aplicação
+que tivesse que usar múltiplas wards e múltiplos SPIs.
+Portanto, nunca surgiu esse problema.
+Mas confesso que também é uma curiosidade que já me assaltou,
+porque os diagramas mostram sempre esta versão simplificada,
+mas depois o datasheet fala, e não sei quantos os artes,
+não sei quantos SPIs,
+e de facto quando se vai a ver aqui as tabelas,
+deixa-me ver se se encontra aqui.
+Tenho aqui o datasheet aberto.
+Tem um conversor analógico digital, há sete conversores, só tem por exemplo quatro canais.
+Se nós quisermos usar oito canais, temos dois conversores,
+ele só pode ter uma ligação I2C, supostamente.
+E aí já precisávamos de duas ligações I2C, a não ser que lá está.
+E estes dois pinos têm múltiplos canais cada um,
+e se possam ligar, até seis dispositivos I2C, não sei.
+Vou querer-lhe mostrar aqui.
+Isto é o datasheet.

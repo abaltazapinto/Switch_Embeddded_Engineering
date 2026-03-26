@@ -1,0 +1,852 @@
+1
+00:00:00,000 --> 00:00:05,680
+problemas possíveis, ok? Que é, a frame é transmitida e é perdida pelo meio,
+
+2
+00:00:05,680 --> 00:00:12,320
+portanto não é recebida depois de a termos enviada. Aqui o timeout vai acontecer e o meu
+
+3
+00:00:14,320 --> 00:00:20,520
+emissor vai enviar novamente uma frame, agora aqui é o acknowledgement e depois
+
+4
+00:00:20,520 --> 00:00:28,920
+o meu sistema conseguiu enviar a respectiva frame, ok? Por exemplo, ainda
+
+5
+00:00:28,920 --> 00:00:35,000
+vai existir aqui mais situações, que é ele estar constantemente a tentar enviar a frame e não
+
+6
+00:00:35,000 --> 00:00:40,440
+conseguir, não é? Ou seja, nós temos que ter também um limite ao número de transmissões que
+
+7
+00:00:40,440 --> 00:00:46,560
+podem ser feitas por estas frames, não é? Se tivermos problemas nas comunicações não vamos estar sempre
+
+8
+00:00:46,560 --> 00:00:53,600
+a tentar mandar dados por ali, porque não vale a pena, mas vale a esta transmissão como perdida.
+
+9
+00:00:54,440 --> 00:01:05,360
+Isto basicamente, por exemplo, as redes scan fazem um bocadinho isso, que é, vão transmitindo mas
+
+10
+00:01:05,360 --> 00:01:12,880
+quando houver um erro elas simplesmente saem de funcionamento ou modificam o modo de funcionamento
+
+11
+00:01:12,880 --> 00:01:20,960
+do transmissor, ok? Temos este outro caso que enviamos a frame, mas agora o acknowledgement que
+
+12
+00:01:21,040 --> 00:01:28,920
+tem que ser o receptor que tem que tentar gerir esta situação, porque ele não sabe que o
+
+13
+00:01:28,920 --> 00:01:37,720
+acknowledgement se perde, não é? E, portanto, dá-se o timeout do lado do sender, ele vai enviar novamente uma frame
+
+14
+00:01:37,720 --> 00:01:45,800
+e este receiver vai ter que fazer o acknowledgement e vai ter que descartar a duplicação desta frame, ok?
+
+15
+00:01:46,800 --> 00:01:53,480
+Temos também essa possibilidade, que é ele enviar a frame mas a rede está muito congestionada e como
+
+16
+00:01:53,480 --> 00:01:59,720
+consequência disso o acknowledgement vai chegar muito atrasado e chega depois do meu timeout e,
+
+17
+00:01:59,720 --> 00:02:06,560
+portanto, eu vou retransmitir novamente a frame, não é? E neste caso em particular novamente eu tenho que
+
+18
+00:02:06,560 --> 00:02:14,920
+conseguir descartar a segunda frame que recebeu. Esta parte descartar do lado do setor é relativamente
+
+19
+00:02:14,920 --> 00:02:25,480
+fácil, ele praticamente só tem que ter um apontador que me diga qual é o número da frame que ele
+
+20
+00:02:25,480 --> 00:02:33,800
+acabou de receber, ok? Pode agora enviar aqui o acknowledgement, que será recebido, esta imagem tem aqui um
+
+21
+00:02:33,800 --> 00:02:40,280
+ligeiro erro, eu devia ter a apontar um bocadinho antes do meu timeout e não depois, ok?
+
+22
+00:02:41,280 --> 00:02:52,360
+Pronto, portanto, este é o funcionamento do stop and wait protocol, ok? A duplicação de frames pode
+
+23
+00:02:52,360 --> 00:03:06,600
+ser resolvida através da tal numeração das frames, ok? Este é o outro protocolo, que é o em que nós para
+
+24
+00:03:06,640 --> 00:03:17,680
+cada frame fazemos uma troca de um bit para sabermos que houve uma nova transmissão de uma nova frame, ok?
+
+25
+00:03:17,680 --> 00:03:25,480
+Pronto, qual é o problema deste stop and wait protocol? É que se nós tivéssemos a fazer isto daqui até aos Estados
+
+26
+00:03:25,480 --> 00:03:32,280
+Unidos, por exemplo, em que ele tem que passar por várias rutas, vários suítes pelo meio cabos de fibra
+
+27
+00:03:32,280 --> 00:03:41,040
+ou seja, pelo meio do mar, o que nos ia acontecer é que nós estávamos a desperdiçar muita largura de
+
+28
+00:03:41,040 --> 00:03:49,440
+banda do meu sistema, ok? Muitas vezes o tempo que demora a transmitir uma frame daqui até os Estados
+
+29
+00:03:49,440 --> 00:04:00,000
+Unidos, poderiam caber nesse tempo cerca de 10, 20 frames, ok? Portanto, estamos a perder a transmissão de 20
+
+30
+00:04:00,000 --> 00:04:08,640
+frames e só podemos a transmitir uma, tá bem? Portanto, qual é a solução que nós temos, não é?
+
+31
+00:04:08,640 --> 00:04:17,640
+Isto aplica-se quando nós estamos a enviar grandes quantidades de dados, ok? É utilizar um protocolo usado pelo TCP
+
+32
+00:04:17,640 --> 00:04:28,320
+ou antes, um mecanismo usado pelo TCP, que é o chamado Sliding Window Protocol, ok? O Sliding Window Protocol
+
+33
+00:04:28,360 --> 00:04:40,760
+permite que o emissor envie várias frames consecutivamente, em rajada, basicamente, não está, imaginemos que 10 kilobytes
+
+34
+00:04:40,760 --> 00:04:51,360
+kilobytes para transmitir e vai enviar 10 frames de 1 kilobytes, ok? Tem que enviar um bocadinho mais, não é?
+
+35
+00:04:52,360 --> 00:05:02,640
+Vai enviar essas 10 frames e os acknowledgment vão sendo transmitidos do lado do receptor, como vemos, temos aqui a capacidade
+
+36
+00:05:02,640 --> 00:05:15,120
+desta ligação toda, toda ela aproveitada, ok? Isto faz-se através deste mecanismo, não vou entrar aqui em detalhes,
+
+37
+00:05:15,240 --> 00:05:25,800
+tenho aqui os dados todos nos slides, mas não vale a pena terem-se a preocupar depois muito com isto, esta parte tem cerca de 250 slides,
+
+38
+00:05:25,800 --> 00:05:41,680
+mas não se assustem, em que nós temos aqui a informação das frames que estão a ser enviadas, ok? E aqui é a janela para as frames
+
+39
+00:05:41,680 --> 00:05:55,320
+que estão a ser recebidas, ele enviou a frame 0, enviou a frame 1 e portanto esta janela do lado do receptor já ficou mais encolhida,
+
+40
+00:05:55,320 --> 00:06:08,560
+daqui a mesma coisa, o 0, o 1, mas ainda não recebeu o acknowledgment, certo? Vai receber agora aqui o acknowledgment e portanto pode
+
+41
+00:06:08,800 --> 00:06:22,040
+aumentar esta janela e ao mesmo tempo esta janela de receição também pode ir sendo aumentada, não é? Portanto, é um bocadinho, o jogo que ele vai fazendo
+
+42
+00:06:22,040 --> 00:06:32,840
+é ter uma janela, ou seja, o número de frames que ele pode transmitir, do outro lado o número de frames que ele pode receber também
+
+43
+00:06:33,040 --> 00:06:45,040
+e depois conforme elas vão sendo transmitidas e conforme vá fazendo o acknowledgment, as janelas podem se deslocar mais para a frente ou mais para trás
+
+44
+00:06:45,040 --> 00:07:00,840
+conforme a informação que está a ser enviada, ok? Portanto, isto tem mais ou menos um mecanismo que é utilizado aqui sem entrar em muitos detalhes, ok?
+
+45
+00:07:01,840 --> 00:07:18,440
+Portanto, o que é que este mecanismo nos permite? Alguma robustez nas comunicações, no fundo, as frames vão ser todas confirmadas, ok?
+
+46
+00:07:18,440 --> 00:07:28,440
+Mas atenção, elas podem não ser todas confirmadas por mensagens individuais, não é? Ele pode escolher só fazer a confirmação, só fazer o acknowledgment
+
+47
+00:07:28,440 --> 00:07:39,440
+por exemplo, 5 em 5 frames que sejam recebidas, ok? Ou 5 em 5 frames e menos do que x milisegundos, ok?
+
+48
+00:07:39,440 --> 00:07:50,440
+E isso permite, por exemplo, reduzir o número de acknowledgment e portanto a quantidade de tráfego na rede e o tratamento de todo esse tráfego, ok?
+
+49
+00:07:52,440 --> 00:08:07,440
+Este mecanismo tem esta característica aqui que é o throttle, ok? Que é, se do outro lado ele não conseguir processar as tramas
+
+50
+00:08:07,440 --> 00:08:17,440
+obviamente o acknowledgment não chega ao sender, como não chega ao sender o que vai acontecer é que ele não vai enviar
+
+51
+00:08:17,440 --> 00:08:27,440
+portanto, no fundo, é um mecanismo que nos permite controlar a velocidade em que o transmitter está, o sender está a enviar as frames
+
+52
+00:08:27,440 --> 00:08:37,440
+portanto, há um match entre a velocidade do sender e a velocidade com que o receiver consegue processar as frames que estão a ser enviadas, ok?
+
+53
+00:08:37,440 --> 00:08:51,440
+Pronto, e ao mesmo tempo temos a garantia de que não há um overrunning, portanto, não se excedem os buffers do setor, tem uma quantidade de espaço reservada
+
+54
+00:08:51,440 --> 00:09:03,440
+para nós sabermos os dados, ok? Isso torna-se muito importante ao nível de alguns sistemas impitos, não é? Que estamos a falar com sistemas IoT
+
+55
+00:09:03,440 --> 00:09:11,440
+com alguns megabytes de memória, ou alguns kilobytes de memória, em que esse espaço de memória é realmente muito importante e é muito limitado, ok?
+
+56
+00:09:11,440 --> 00:09:29,440
+Pronto, estes slides aqui explicam o funcionamento, eu acho que é capaz de ser aqui um bocadinho de mais falarmos nisto neste curso inicial, ok?
+
+57
+00:09:29,440 --> 00:09:45,440
+Pronto, depois o TCPIP implementa depois uns mecanismos chamados de congestion control, em que nós conseguimos determinar qual é a capacidade da rede
+
+58
+00:09:45,440 --> 00:09:58,440
+e transmitir sempre a um ritmo que possa haver um match por parte do receptor, ok? Pronto.
+
+59
+00:09:58,440 --> 00:10:15,440
+Isto depois aplica-se àquilo que se chama o addictive increase e multiplicative decrease, ok? Em que, ou seja, ele vai enviando, por exemplo, da primeira vez 4 frames seguidas
+
+60
+00:10:15,440 --> 00:10:37,440
+mas aqui já vai enviar 8, não é? Mas quando detecta que chegamos a um excesso na rede, ou seja, que o receptor do outro lado já não pode processar tanto, ele vai reduzir substancialmente o ritmo com que está a enviar os dados, ok?
+
+61
+00:10:37,440 --> 00:10:47,440
+Isto, eu tinha aqui, portanto, está aqui, por exemplo, um addictive increase, ele envia 1, primeiro vem o acknowledgement, a seguir vai enviar 2,
+
+62
+00:10:47,440 --> 00:11:01,440
+vem os 2 acknowledgments, talvez até viste algum, depois envia 3, vem os acknowledgments, 4 e vai aumentando assim, ou seja, gradualmente, sem começar logo no máximo possível,
+
+63
+00:11:01,440 --> 00:11:13,440
+vai aumentando o ritmo a que está a transmitir os dados e, portanto, vai-se adaptando minimamente à rede, ok? Ao que está a passar na rede, ok?
+
+64
+00:11:13,440 --> 00:11:23,440
+Quando há um drop de packet, por exemplo, há um pacote que se perde lá no meio e, portanto, não há um acknowledgement, não há o acknowledgement respectivo,
+
+65
+00:11:23,440 --> 00:11:39,440
+portanto houve aqui um time out, então ele vai fazer um multiplicativo decrease em que vai reduzir para metade imediatamente as janelas do sliding window, ok?
+
+66
+00:11:39,440 --> 00:11:49,440
+Do modo que a coisa funcione de uma forma mais eficiente, ok?
+
+67
+00:11:49,440 --> 00:12:03,440
+Pronto, depois tem aqui outros mecanismos do slow start, pronto, que nos permitem aumentar o ritmo mais depressa, ok?
+
+68
+00:12:03,440 --> 00:12:15,440
+Aqui, portanto, são mecanismos que permitem exponencialmente, então aqui envia-se 1, depois 2, depois 4, depois 8, então um aumento muito mais rápido, ok?
+
+69
+00:12:16,440 --> 00:12:26,440
+Há aqui várias mecanismos, portanto, no fundo, nós quando estamos a transmitir, o que nos vai acontecer é qualquer coisa deste jeito.
+
+70
+00:12:26,440 --> 00:12:36,440
+Começamos a aumentar aqui, até ao máximo, até haver aqui alguma perda de pacotes eventualmente, não é?
+
+71
+00:12:36,440 --> 00:12:47,440
+E depois entramos numa outra fase e esta fase é um bocadinho mais suave, ok?
+
+72
+00:12:47,440 --> 00:13:05,440
+Quando houver muitas perdas ele reduz significativamente o tamanho desta janela e voltamos a tentar aumentar a velocidade que estamos a enviar os pacotes, ok?
+
+73
+00:13:05,440 --> 00:13:18,440
+Pronto, são nos mecanismos basicamente que o TCPIP, sem que eu entre em muitos detalhes, que o TCPIP conseguiu implementar e que está implementado nas nossas máquinas.
+
+74
+00:13:18,440 --> 00:13:23,440
+Diga, estava aí o pesadil, Daniel, Daniel?
+
+75
+00:13:23,440 --> 00:13:36,440
+Sem dúvida, qual é a vantagem de ter um slow start? Ele não podia começar logo linearmente a tentar, ou verticalmente a tentar, o máximo de velocidade possível até de estrair perdas?
+
+76
+00:13:36,440 --> 00:13:42,440
+Repare que este slow start, não me engana, é exponencial, ok?
+
+77
+00:13:43,440 --> 00:13:50,440
+Sim, mas podia ser, por exemplo, linear com declive bem vertical, não é? Seria mais rápido.
+
+78
+00:13:50,440 --> 00:13:52,440
+Não existe alguma vantagem?
+
+79
+00:13:52,440 --> 00:13:57,440
+Isto é exponencial, isto é exponencial é sempre mais rápido que linear, ok?
+
+80
+00:13:57,440 --> 00:14:06,440
+Vai duplicando sempre a janela, começa por 1, por 2, por 4, por 8, é sempre mais eficaz do que qualquer...
+
+81
+00:14:06,440 --> 00:14:15,440
+Se eu tiver uma reta com declive bastante vertical, eu num segundo posso fazer 10 vezes ao invés de duplicar.
+
+82
+00:14:15,440 --> 00:14:19,440
+Mas isto foi testado?
+
+83
+00:14:19,440 --> 00:14:32,440
+Eu tento perceber se existe alguma limitação técnica para as coisas não poderem ser assim tão rápidas, então tem que ser um slow start, se existe alguma vantagem?
+
+84
+00:14:33,440 --> 00:14:39,440
+Já fiz estudado há 30, 40 anos atrás, ok?
+
+85
+00:14:39,440 --> 00:14:43,440
+E portanto não sei dizer...
+
+86
+00:14:43,440 --> 00:15:00,440
+Por qual é a razão específica para não utilizarem um mecanismo linear em que da primeira vez envia uma frame e a seguir envia 20, por exemplo, não é?
+
+87
+00:15:00,440 --> 00:15:12,440
+Para bater esta exponencial teria realmente que ser de uma forma diferente, ok?
+
+88
+00:15:12,440 --> 00:15:18,440
+Teria que ser uma curva muito inclinada, ok?
+
+89
+00:15:18,440 --> 00:15:28,440
+Provavelmente a conclusão a que se chegou é que esta seria uma solução que não comprometia o resto das comunicações, ok?
+
+90
+00:15:28,440 --> 00:15:34,440
+Isto já foi tudo muito testado anteriormente, está bem?
+
+91
+00:15:34,440 --> 00:15:36,440
+Obrigado.
+
+92
+00:15:36,440 --> 00:15:42,440
+Eu pergunto aos chat de APT, ele deve saber qual é a razão para isso, certo?
+
+93
+00:15:42,440 --> 00:15:50,440
+Sinceramente também não tinha posto, nunca fiz essa pergunta. Pergunto-lhe que ele deve saber, ok?
+
+94
+00:15:50,440 --> 00:16:00,440
+Pronto, entrando agora no mundo das comunicações sem fios e nos conceitos principais de comunicações sem fios, ok?
+
+95
+00:16:00,440 --> 00:16:10,440
+Grande parte dos sistemas que nós temos engobridos são também sem fios, ok?
+
+96
+00:16:10,440 --> 00:16:20,440
+Portanto, conseguem fazer as comunicações num meio que é partilhado por muita gente,
+
+97
+00:16:20,440 --> 00:16:28,440
+toda a gente quer utilizá-lo, mas que tem uma série de complicações, ok?
+
+98
+00:16:28,440 --> 00:16:34,440
+Portanto, o que é que nós queremos? Queremos aqui arranjar protocolos para suportar isto,
+
+99
+00:16:34,440 --> 00:16:44,440
+que nos permitam ser simples, ok? Ao mesmo tempo que forem simples e serem seguros, isto é quase uma contradição entre eles, não é?
+
+100
+00:16:44,440 --> 00:16:52,440
+Queremos que sejam seguros e tenham baixo consumo de energia, mais outra contradição, ok?
+
+101
+00:16:52,440 --> 00:17:00,440
+E ao mesmo tempo que tenham baixas necessidades em termos de computação, ok?
+
+102
+00:17:00,440 --> 00:17:10,440
+Portanto, o que é que seja de contas, por exemplo, que tem que se fazer tem que ser um conjunto de contas muito simples, ok?
+
+103
+00:17:10,440 --> 00:17:14,440
+E ao mesmo tempo, por exemplo, que sejam de baixo custo, ok?
+
+104
+00:17:14,440 --> 00:17:24,440
+Uma coisa tão simples relativamente ao baixo custo é a antena estar integrada na própria plaquinha do chip, não é?
+
+105
+00:17:24,440 --> 00:17:30,440
+Os chips que vocês estão, os kits que vocês estão a utilizar não têm nenhuma antena, não é?
+
+106
+00:17:30,440 --> 00:17:35,440
+Ou seja, já repararam nisso, certo? Ele não tem uma antena.
+
+107
+00:17:35,440 --> 00:17:50,440
+A antena está na própria placa do PCB, lá num sítiozinho aqui, nem parece ser uma antena, é só um caminho basicamente com determinadas dimensões, ok?
+
+108
+00:17:50,440 --> 00:18:02,440
+Portanto, isto é basicamente aquilo que nós queremos ao arranjarmos um protocolo sem fios para redes embedidas, não é?
+
+109
+00:18:02,440 --> 00:18:09,440
+Temos um conjunto muito grande de protocolos à nossa disposição, não é?
+
+110
+00:18:09,440 --> 00:18:18,440
+Obviamente que aqueles que vocês conhecem melhor são o I3S-8211 e o Bluetooth, não é?
+
+111
+00:18:18,440 --> 00:18:25,440
+Mas há uma carrada de outros protocolos, nomeadamente com outras vantagens, ok?
+
+112
+00:18:25,440 --> 00:18:30,440
+Por exemplo, o consumo muito mais baixo ou mais longa distância.
+
+113
+00:18:30,440 --> 00:18:36,440
+Portanto, depois permitem suportar determinados tipos de aplicações diferentes, não é?
+
+114
+00:18:36,440 --> 00:18:43,440
+O ZigBig, não é? O Sixlopan, o RFID, portanto, tem mesmo muito curta distância.
+
+115
+00:18:43,440 --> 00:18:47,440
+Os NFCs, o Z-Wave, não é?
+
+116
+00:18:47,440 --> 00:18:52,440
+Depois há outros protocolos específicos para Personal Aero Networks, ok?
+
+117
+00:18:52,440 --> 00:18:59,440
+E depois temos protocolos de long range, também para aplicações embedas em geral.
+
+118
+00:19:00,440 --> 00:19:11,440
+Ok? Coisas como o SigFox, também já está um bocadinho desatualizado, pelo menos em Portugal, já desistiram disto.
+
+119
+00:19:11,440 --> 00:19:18,440
+E depois temos todos os outros protocolos celulares, GSM, 3G, 4G, 5G e por aí fora,
+
+120
+00:19:18,440 --> 00:19:28,440
+que nos permitem depois ter uma aplicação em qualquer sítio, em qualquer lugar, praticamente com ligação à internet.
+
+121
+00:19:28,440 --> 00:19:35,440
+Tem um defeito, às vezes, de poder consumir um bocadinho mais de cá, que é o que devia, ok?
+
+122
+00:19:35,440 --> 00:19:43,440
+Portanto, sinais, eu já te falei a maior parte disto, não é?
+
+123
+00:19:43,440 --> 00:19:50,440
+Mas, basicamente, quando falei logo no início sobre a transformada de Fourier, não é?
+
+124
+00:19:50,440 --> 00:19:57,440
+O sinal é aquilo que nós queremos transmitir, que é uma representação física dos dados, ok?
+
+125
+00:19:57,440 --> 00:20:08,440
+Os sinais são transmitidos como ondas eletromagnéticas entre duas antenas, ou dois sistemas, são duas antenas, ok?
+
+126
+00:20:08,440 --> 00:20:21,440
+Portanto, basicamente, um sinal eletromagnético no fundo são oscilações das moléculas no caminho, ok?
+
+127
+00:20:21,440 --> 00:20:30,440
+Portanto, a sua propagação provoca a oscilação de várias moléculas que são detectadas também pela antena na OCSL, ok?
+
+128
+00:20:30,440 --> 00:20:35,440
+Temos vários tipos de sinais que são transmitidos, assimosóidos, ok?
+
+129
+00:20:35,440 --> 00:20:42,440
+Assimosóidos têm uma característica muito, muito especial e única, ok?
+
+130
+00:20:42,440 --> 00:20:51,440
+Que é, eu meto em qualquer, qualquer não é bem, mas na maior parte dos sistemas chamados lineares, ok?
+
+131
+00:20:51,440 --> 00:20:54,440
+Uma sinusóide, não é?
+
+132
+00:20:54,440 --> 00:21:06,440
+E do outro lado, quando for receber esta sinusóide, manteve, esperem lá, manteve a mesma forma, ok?
+
+133
+00:21:06,440 --> 00:21:15,440
+Eventualmente a tornoada, porque ela é transmitida por lá e do outro lado vai ser, vai ser recebida um bocadinho mais, um bocadinho mais pequena, ok?
+
+134
+00:21:15,440 --> 00:21:23,440
+Mas a forma é a mesma, continua a ser uma sinusóide, continua a ter o mesmo período, ok?
+
+135
+00:21:23,440 --> 00:21:27,440
+Que aquela que foi transmitida, ok?
+
+136
+00:21:27,440 --> 00:21:40,440
+Se eu tiver outras ondas mais quadradas, por exemplo, uma onda quadrada, já o meu resultado não vai ser o mesmo, ok?
+
+137
+00:21:40,440 --> 00:21:53,440
+Normalmente na recepção vou ter também uma onda mais pequenina, mas eventualmente ela vai estar um bocadinho mais distorcida, ok?
+
+138
+00:21:53,440 --> 00:22:03,440
+Portanto é um bocadinho mais difícil transmitir as ondas que são quadradas pelo ar por causa destas transições aqui abruptas entre dois valores, ok?
+
+139
+00:22:03,440 --> 00:22:07,440
+Isto não se dá, não se dá muito bem, ok?
+
+140
+00:22:07,440 --> 00:22:09,440
+Quando não sou de transmissão.
+
+141
+00:22:09,440 --> 00:22:17,440
+Depois há outras que são um bocado mais escreditas, pronto, que são basicamente impulsos que são transmitidos pelo ar,
+
+142
+00:22:17,440 --> 00:22:22,440
+ou um trem de impulsos, ou uma série de impulsos pequenos a serem transmitidos, ok?
+
+143
+00:22:23,440 --> 00:22:32,440
+Portanto aqui em termos de características nós vamos ter os dados a serem transmitidos em série,
+
+144
+00:22:32,440 --> 00:22:36,440
+os bits uns a seguir aos outros, ok?
+
+145
+00:22:36,440 --> 00:22:49,440
+Há situações em que nós conseguimos transmitir vários bits ao mesmo tempo, 2, 4, 8, por aí fora, ok?
+
+146
+00:22:49,440 --> 00:23:00,440
+Mas nem sempre isso é assim, mas pode ser feito também transmitir todos ao mesmo tempo, ok?
+
+147
+00:23:01,440 --> 00:23:06,440
+Os dados são estruturados em frames, ok?
+
+148
+00:23:06,440 --> 00:23:11,440
+Cada frame contém os dados que nós queremos transmitir, são dados do utilizador,
+
+149
+00:23:11,440 --> 00:23:14,440
+Informação de controle, ok?
+
+150
+00:23:14,440 --> 00:23:21,440
+Por exemplo coloco protocolo, coloco também da frame, qual é o identificador da frame, etc, ok?
+
+151
+00:23:21,440 --> 00:23:31,440
+Fundamental, na maior parte dos casos de que haver um endereço de destino e um endereço de fonte, ok?
+
+152
+00:23:31,440 --> 00:23:34,440
+Nem sempre isto é assim, ok?
+
+153
+00:23:34,440 --> 00:23:39,440
+Nós podemos pôr isso simplesmente em algumas redes como o Cane, dentro dos vossos cards,
+
+154
+00:23:39,440 --> 00:23:46,440
+ele transmita a informação mas não me diz para quem é que é, é basicamente para quem quiser absorver aquela informação, ok?
+
+155
+00:23:46,440 --> 00:23:55,440
+Portanto é um outro tipo de paradigma de comunicação em que a informação é enviada para quem é que quiser, ok?
+
+156
+00:23:55,440 --> 00:24:00,440
+Mas isso é uma rede que não é sem fios, é uma rede camelada, ok?
+
+157
+00:24:00,440 --> 00:24:10,440
+Tem que ter também mecanismos de detecção de erros e de correção de erros relativamente sofisticados, ok?
+
+158
+00:24:13,440 --> 00:24:22,440
+Por vezes até há uma característica nestas redes sem fios que apesar de parecer contradituitivo,
+
+159
+00:24:22,440 --> 00:24:28,440
+mas por vezes a energia que é consumida para descodificar as frames,
+
+160
+00:24:28,440 --> 00:24:32,440
+por exemplo estes mecanismos de detecção de erros e de correção de erros,
+
+161
+00:24:32,440 --> 00:24:37,440
+é superior à energia que é necessária para as transmitir, ok?
+
+162
+00:24:38,440 --> 00:24:45,440
+Depois tem que haver também códigos que permitam sincronizar o transmissor e o receptor,
+
+163
+00:24:45,440 --> 00:24:47,440
+o que é que nós temos?
+
+164
+00:24:47,440 --> 00:24:53,440
+Temos sistemas que não trabalham com muita precisão, não é?
+
+165
+00:24:53,440 --> 00:25:00,440
+Portanto nós podemos ter um relógio que se atrasa, por exemplo, dois segundos por dia
+
+166
+00:25:00,440 --> 00:25:06,440
+e podemos ter o mesmo sistema com os mesmos componentes que se adianta dois segundos por dia,
+
+167
+00:25:06,440 --> 00:25:10,440
+portanto vão ter uma diferença a certa altura de dois segundos entre eles, ok?
+
+168
+00:25:10,440 --> 00:25:15,440
+Isso pode ser significativo para algumas aplicações, não é?
+
+169
+00:25:15,440 --> 00:25:26,440
+E portanto o que fazem estes códigos de sincronização é tentar com que os relógios do transmissor e do receptor
+
+170
+00:25:26,440 --> 00:25:32,440
+estejam a bater a mesma cadência, acertem a cadência entre eles, ok?
+
+171
+00:25:32,440 --> 00:25:40,440
+Portanto vão ver um bocadinho estas coisas quando falarem em frames nestes tipos de comunicações.
+
+172
+00:25:40,440 --> 00:25:51,440
+Basicamente o sistema vai ter qualquer coisa deste jeito, portanto o sinal que entra aqui,
+
+173
+00:25:53,440 --> 00:26:00,440
+ele vai ser transformado em qualquer coisa que possa ser transmitida,
+
+174
+00:26:00,440 --> 00:26:05,440
+aqui pelo meio ele vai ter que passar pelo ar,
+
+175
+00:26:06,440 --> 00:26:12,440
+vai levar com os chamados communication impairments, vamos falar também disso naquele caso,
+
+176
+00:26:12,440 --> 00:26:16,440
+isto são muitas coisas diferentes, muitas, muitas coisas diferentes, não é?
+
+177
+00:26:16,440 --> 00:26:20,440
+nomeadamente, por exemplo, algum tipo de ruído, não é?
+
+178
+00:26:20,440 --> 00:26:25,440
+Depois ele vai ser, temos aqui uma antena, alguns, ok?
+
+179
+00:26:25,440 --> 00:26:28,440
+Isto também tem que haver aqui uma antena para transmitir,
+
+180
+00:26:28,440 --> 00:26:32,440
+pode-se, obviamente muitas antenas nem sequer têm este formato, não é?
+
+181
+00:26:32,440 --> 00:26:42,440
+Mas vamos ter que ter estas antenas e depois isto vai, vamos conseguir reconstruir o mesmo sinal do outro lado, ok?
+
+182
+00:26:42,440 --> 00:26:48,440
+Ou pelo menos um sinal muito, muito parecido com o que existia do outro lado, ok?
+
+183
+00:26:48,440 --> 00:26:55,440
+Temos aqui este exemplo, por exemplo, em que nós estamos a transmitir aqui um sinal digital pelo ar, não é?
+
+184
+00:26:55,440 --> 00:27:01,440
+Cá está o sinal, isto é um zero, depois é um um, depois é um zero,
+
+185
+00:27:01,440 --> 00:27:04,440
+estes são dois uns, não é?
+
+186
+00:27:04,440 --> 00:27:10,440
+E o salvo aqui são três zeros, um um e depois um zero, ok?
+
+187
+00:27:10,440 --> 00:27:22,440
+Na realidade, o sinal que vai passar pode ser esta coisa que está aqui a aparecer, não é?
+
+188
+00:27:22,440 --> 00:27:25,440
+Já muito distorcido, não é?
+
+189
+00:27:25,440 --> 00:27:32,440
+Ou seja, daqui quase que não conseguem perceber que este sinal tem alguma relação com o de cima, não é?
+
+190
+00:27:32,440 --> 00:27:37,440
+Mas os circuitos eletrônicos tratam de resolver grande parte do problema.
+
+191
+00:27:37,440 --> 00:27:42,440
+Mas ainda, se nós acrescentarmos algum ruído, e estamos a falar aqui de pouco ruído até,
+
+192
+00:27:42,440 --> 00:27:48,440
+o sinal começa a ter algumas diferenças aqui, por exemplo, ok?
+
+193
+00:27:48,440 --> 00:27:52,440
+Tem aqui mais uma parte que não é igual ao de cima, ok?
+
+194
+00:27:52,440 --> 00:27:57,440
+Mas os nossos circuitos têm que ser capazes de reconstruir o sinal,
+
+195
+00:27:57,440 --> 00:28:08,440
+e deste sinal aqui, obter novamente o sinal digital que tinha sido transmitido, ok?
+
+196
+00:28:08,440 --> 00:28:16,440
+Apesar de tudo aquilo que este for recebido, não tem praticamente nada a ver com o sinal que foi transmitido, ok?
+
+197
+00:28:16,440 --> 00:28:24,440
+E estamos a assumir que ele é transmitido na sua forma digital tal e qual como estava em cima, ok?
+
+198
+00:28:24,440 --> 00:28:30,440
+O que num sistema sem fios é impossível, ok?
+
+199
+00:28:30,440 --> 00:28:37,440
+Nós não conseguimos transmitir num sistema sem fios um sinal digital tal e qual como ele é.
+
+200
+00:28:37,440 --> 00:28:49,440
+Vamos ver aqui mais para a frente o que é que se faz para modular, para transmitir o sinal digital eficientemente.
+
+201
+00:28:49,440 --> 00:28:59,440
+Olhando com mais detalhes para aquilo que está neste input transducer e output transducer, temos aqui esta figurinha, ok?
+
+202
+00:29:00,440 --> 00:29:06,440
+Esta figurinha é bem mais complexa do que aquilo que parece, não é?
+
+203
+00:29:06,440 --> 00:29:20,440
+Estamos aqui a falar em 100 e tal anos de engenharia para construir um transmissor e um receptor de sinal de rádio, ok?
+
+204
+00:29:20,440 --> 00:29:25,440
+Imaginamos então aqui o sinal de entrada, ok?
+
+205
+00:29:25,440 --> 00:29:34,440
+Ele, a primeira coisa que faz é vir para o sistema que é o transmitter encoder, ok?
+
+206
+00:29:34,440 --> 00:29:42,440
+Depois vai para o modelador que é uma peça chave aqui do sistema, ok?
+
+207
+00:29:42,440 --> 00:29:53,440
+O amplificador da nossa parte não nos interessa para muitos, é hardware puro que vai amplificar o sinal para ele chegar à minha antena, não é?
+
+208
+00:29:53,440 --> 00:29:57,440
+Isso é transmitido com uma potência bastante grande, ok?
+
+209
+00:29:57,440 --> 00:30:09,440
+Aqui depois a antena, só a antena só por si é já um curso de engenharia, um ou dois cursos de engenharia só para o desenho de antenas, ok?
+
+210
+00:30:09,440 --> 00:30:18,440
+Queria perceber porque é que os elementos estão em determinada posição, com determinado tamanho, se tem furos no meio, se tem um panque, etc.
+
+211
+00:30:18,440 --> 00:30:23,440
+Porque tudo isso são tecnologias das antenas, são muito, muito sofisticadas, ok?
+
+212
+00:30:23,440 --> 00:30:33,440
+Temos depois a propagação do sinal pelo ar que depois vai levar com muitas coisas diferentes, vai levar com ruído, vai levar com outros sinais.
+
+213
+00:30:33,440 --> 00:30:36,440
+Estamos no meio sem fios.
+
