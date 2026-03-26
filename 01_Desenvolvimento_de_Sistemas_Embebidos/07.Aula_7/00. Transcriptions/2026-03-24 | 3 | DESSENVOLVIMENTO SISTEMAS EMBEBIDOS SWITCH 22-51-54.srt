@@ -1,0 +1,852 @@
+1
+00:00:00,000 --> 00:00:10,320
+depois passei lá tantas, algumas vezes, tava aqui a rever alguns detalhes, é estas coisas
+
+2
+00:00:10,320 --> 00:00:22,640
+aqui, tá a ver, o I2C, tantas linhas, deixa-me só recordar, o I2C, portanto são as linhas
+
+3
+00:00:22,640 --> 00:00:38,320
+SD e SCL, se não estou em erro, portanto tá a ver aqui SCA6, SCL6, SCA3, ou seja,
+
+4
+00:00:38,320 --> 00:00:49,640
+ele faz aqui menção aos seis, em diferentes pinos, é esta tabela que eu tava, portanto
+
+5
+00:00:49,640 --> 00:00:55,120
+isto a converter para gráfico, embora seja possível, ia ficar uma coisa muito atabalhada,
+
+6
+00:00:55,120 --> 00:01:02,360
+mas como pode ver, deixa-me ver por exemplo o caso das UARTs, onde é que estão as, portanto
+
+7
+00:01:02,360 --> 00:01:13,280
+tem aqui os TX, portanto está aqui, este TXD2, RXD2, que pode ser usado no GP10, GP1, pode
+
+8
+00:01:13,280 --> 00:01:19,440
+em teoria, porque na prática, como eu disse num slide anterior, estes pinos já são
+
+9
+00:01:19,440 --> 00:01:36,760
+reservados precisamente para a função de I2C, portanto usam a função I2C, e já
+
+10
+00:01:36,760 --> 00:01:43,720
+agora, como pode ver, até ele tem a possibilidade de escolher um pino zero entre o I2C zero
+
+11
+00:01:43,720 --> 00:01:54,200
+e o I2C6, está a ver, existem várias combinações, portanto, ou seja, eu penso que o que acontece
+
+12
+00:01:54,200 --> 00:02:01,320
+na minha parte, muitas vezes, e eu também confesso esse pecado, muitas vezes não sou
+
+13
+00:02:01,320 --> 00:02:06,200
+em como vai buscar informação e os diagramas a sites não oficiais, porque até os têm
+
+14
+00:02:06,200 --> 00:02:11,720
+representados de uma forma mais bonita e com informação já mais mastigada do que o que
+
+15
+00:02:11,720 --> 00:02:24,000
+existe nos próprios ratasheets, mas por outro lado, eu acho que muitas vezes esses poderão
+
+16
+00:02:24,000 --> 00:02:29,400
+não responder ou não ter lá informação, não responder exatamente à versão do ERP
+
+17
+00:02:29,400 --> 00:02:38,640
+que estamos a usar, como é que é o caso, e não ter lá todas as configurações possíveis,
+
+18
+00:02:38,640 --> 00:02:44,720
+porque é como eu lhe digo, se você me dissesse assim, no ERP I e II que só existe isto,
+
+19
+00:02:44,720 --> 00:02:51,600
+eu, sim, é isso, é verdade, agora no IV não, mesmo do III para o IV houve uma variação
+
+20
+00:02:51,600 --> 00:03:00,800
+muito grande em termos de número de PWMs, eu acho que o PWM, portanto, numa unidade
+
+21
+00:03:00,800 --> 00:03:06,720
+de currícula qualquer em que eu usava os PWMs, eu lembro que, portanto, do III para o IV,
+
+22
+00:03:06,720 --> 00:03:17,120
+que passou a haver mais pinos que podem ser usados como saída de PWM, mas eu depois para a aula prática
+
+23
+00:03:17,120 --> 00:03:25,920
+até posso pôr, podemos pensar aqui em alguns exercícios, portanto, em que se consiga esticar
+
+24
+00:03:25,920 --> 00:03:38,880
+um pouquinho aqui a tentar alubar isto ao limite, ou seja, aqui, como eu disse,
+
+25
+00:03:38,880 --> 00:03:42,440
+isto era para dar um exemplo sem querer ser muito exótico, porque se quisermos ser exóticos,
+
+26
+00:03:42,440 --> 00:03:48,960
+portanto agora que já mostrei, temos que ir ao data sheet e ver aqui pin-a-pino o que é que eles
+
+27
+00:03:49,040 --> 00:03:54,080
+têm, que funções é que eles permitem ter, portanto, ele aqui, de facto, tem as combinações todas
+
+28
+00:03:55,120 --> 00:04:07,200
+para os pinos, ah, depois, pois, aqui uma coisa, que é de facto, que nem todos os pinos estão
+
+29
+00:04:07,200 --> 00:04:16,480
+acessíveis no Eder, ele só está, no Eder só está acessível até ao GPO 28, isso, isso de facto
+
+30
+00:04:16,480 --> 00:04:25,920
+limita, pronto, está-me a esquecer desse aspecto, porque, como pode ver, eu tenho aqui as funções
+
+31
+00:04:25,920 --> 00:04:37,200
+do pin-a-pino 45, não é pino, sim, é pino, mas do circuito integrado, GPO 45, mas no Eder só temos
+
+32
+00:04:37,280 --> 00:04:43,840
+até ao 28 e isso, de facto, pode limitar, em alguns casos, a não deixar-me usar todos.
+
+33
+00:04:49,440 --> 00:04:55,120
+Mas de qualquer maneira, se você quiser ver alguma combinação específica, portanto, é ver se consegue
+
+34
+00:04:55,120 --> 00:05:07,440
+ver aqui nesta, portanto, nesta matriz, mas só até ao pin-a-pino, a GPO 27, que são os 28 primeiros.
+
+35
+00:05:08,880 --> 00:05:16,720
+Já agora podem ver aqui aquele DPI que eu estava a falar, eu estava a tentar evitar vir para aqui
+
+36
+00:05:16,720 --> 00:05:25,360
+a ideia deste demaralhal de sinais, mas pronto, o tal que eu mencionei tem aqui 24,
+
+37
+00:05:25,360 --> 00:05:32,560
+devia haver um DPI zero, portanto, além de dar aqui alguns sinais de controle, só de dados, estão a ver,
+
+38
+00:05:32,560 --> 00:05:38,320
+basicamente, se quisermos ligar um display, são todos os pinos, gastamos os pinos todos,
+
+39
+00:05:38,320 --> 00:05:43,200
+já não pudemos usar mais nenhuma função.
+
+40
+00:05:46,720 --> 00:06:01,920
+Ora bem, onde é que estamos? Let's, é isto aqui. Continuando, de certa forma, isto eu já fui avançando,
+
+41
+00:06:01,920 --> 00:06:12,320
+portanto, isto é o diagrama de blocos de cada genérico dos pinos, em que, portanto, todo, como indiquei,
+
+42
+00:06:12,880 --> 00:06:19,520
+cada um deles pode ser usado, no seu modo mais básico, como sinal de, portanto, como entrada ou saída digital,
+
+43
+00:06:19,520 --> 00:06:28,560
+portanto, para ler ou escrever só um bit. Também tem, como vimos, no caso do AVR, a opção de resistência de pull-up,
+
+44
+00:06:28,560 --> 00:06:34,880
+e neste caso também pull-down, que é o mesmo princípio, é a questão se queremos que, quando, portanto,
+
+45
+00:06:34,880 --> 00:06:41,840
+o pinos tem repouso, esteja a 0, a 1, no caso do pull-up, ou a 0, no caso do pull-down.
+
+46
+00:06:41,840 --> 00:06:57,680
+E depois, portanto, aqui, portanto, temos aqui este módulo que permite controlar qual é a função que o pino vai ter,
+
+47
+00:06:57,680 --> 00:07:06,240
+portanto, se vai ser como entrada digital, e aqui, neste caso, reparem que, como entrada,
+
+48
+00:07:06,240 --> 00:07:15,600
+aqui, como entrada, tem aqui vários mecanismos para detectar, portanto, para fazer a geração das interrupções,
+
+49
+00:07:15,600 --> 00:07:24,000
+portanto, ao nível ou ao flanco, portanto, estão aqui várias funcionalidades que depois podem ser configuradas,
+
+50
+00:07:24,960 --> 00:07:35,760
+e depois aqui, vamos ver que há um conjunto de registros que nos permitem configurar a função.
+
+51
+00:07:38,880 --> 00:07:47,040
+Portanto, nomeadamente, essas configurações são feitas através de 24 posições de memória,
+
+52
+00:07:48,000 --> 00:07:54,320
+que estão reservadas até de uma forma bastante compacta para fazer essas configurações,
+
+53
+00:07:54,320 --> 00:08:02,720
+portanto, nomeadamente, desta forma. Portanto, isto tem a ver, portanto, com os registros de configuração,
+
+54
+00:08:02,720 --> 00:08:15,760
+em que a função, para escolher a função do dispositivo, perdão, do pino, temos, portanto, um valor de 3 bits,
+
+55
+00:08:15,840 --> 00:08:20,720
+e no fundo, em termos de memória, portanto, este, como é que, onde é que vamos escrever estes 3 bits?
+
+56
+00:08:20,720 --> 00:08:31,120
+Existem, portanto, uns endereços, que já estão pré-definidos, fazem parte aqui do mapa de memória do SOC,
+
+57
+00:08:31,120 --> 00:08:39,440
+portanto, este VCM2711, acho que não estou a enganar na referência, portanto, a partir deste endereço,
+
+58
+00:08:40,320 --> 00:08:51,680
+portanto, cada 4 bits, portanto, ou se quiserem 32 bits, estão reservados para configurar 10 pinos de GPIO,
+
+59
+00:08:51,680 --> 00:08:58,400
+portanto, isto funciona como uma matriz, e depois, então, a maneira tipicamente para se trabalhar,
+
+60
+00:08:58,400 --> 00:09:07,120
+para configurar isto, software, é tratar que esta sequência é executada como uma palavra a 32 bits,
+
+61
+00:09:08,080 --> 00:09:21,520
+portanto, o int 32t, por exemplo, e depois, portanto, acedei a bit-a-bit para configurar cada um dos pinos que desejamos utilizar.
+
+62
+00:09:26,560 --> 00:09:33,440
+Portanto, eu aqui já tinha esta nota, mas já acabámos por ver isso na tabela, mas, se calhar,
+
+63
+00:09:33,760 --> 00:09:39,120
+se alinhar esse aspeto, que, portanto, existem, com 3 bits, existem 8 códigos possíveis,
+
+64
+00:09:39,120 --> 00:09:44,720
+em que o 0 e o 1 são sempre para selecionar como entrada ou como saída, respectivamente,
+
+65
+00:09:44,720 --> 00:09:51,040
+e depois, os códigos seguintes, também, para selecionar a função alternativa, portanto,
+
+66
+00:09:51,120 --> 00:10:05,200
+ou seja, o tal PWM, ou ART, ou SPI, ou I2C, ou até os outros mais, portanto, menos convencionais,
+
+67
+00:10:05,200 --> 00:10:13,440
+digamos assim, sendo que, como vimos há pouco na tabela, a função 0 não significa o mesmo tipo
+
+68
+00:10:13,520 --> 00:10:21,040
+de funcionalidade para cada pino, portanto, temos tempo, acaba sempre, ou seja, para o pino 5,
+
+69
+00:10:21,040 --> 00:10:26,800
+a função 0, que é esta alta 0, corresponde a uma saída de clock, este GP clock, eu há pouco,
+
+70
+00:10:26,800 --> 00:10:33,920
+acho que nem cheguei a mencionar, são saídas, é para o próprio micro gerar um relógio de alta freqüência,
+
+71
+00:10:33,920 --> 00:10:41,600
+portanto, que tem técnicas para controlar o JIT, principalmente para transmissão de sinais de áudio digital,
+
+72
+00:10:41,600 --> 00:10:51,760
+portanto, permitem ter um sinal de relógio mais preciso, portanto, ou seja, para estes pinos a função 0 é essa,
+
+73
+00:10:51,760 --> 00:10:59,360
+para outros já é o SPI, e por aí fora, portanto, ou seja, caso a caso, temos que ver qual é o número da função,
+
+74
+00:10:59,360 --> 00:11:07,680
+portanto, a que função corresponde a funcionalidade que pretendemos usar, e selecionar o código correspondente,
+
+75
+00:11:08,560 --> 00:11:18,720
+o código correspondente aqui, de acordo com esta tabela, que é sempre o 100 para a função 0, 101 para a função 1, e por aí fora.
+
+76
+00:11:22,240 --> 00:11:34,000
+Em termos de saída, ou melhor, quando queremos usar um pino como saída,
+
+77
+00:11:34,720 --> 00:11:45,520
+para alterarmos o seu valor, portanto, isto tem um funcionamento peculiar, em que, se quisermos colocar a 0,
+
+78
+00:11:45,520 --> 00:11:54,880
+vamos ter que escrever um em uma determinada gama de endereços, portanto, em que cada bit dessa gama de endereços corresponde a um dos pinos,
+
+79
+00:11:55,840 --> 00:12:08,000
+basicamente, nesta gama de endereços, já está codificado em bibliotecas de sistema e por aí fora, mas coloquei aqui por curiosidade,
+
+80
+00:12:08,000 --> 00:12:23,040
+portanto, nesta gama de endereços, cada corresponde a um dos pinos GPIO, e se quisermos colocar o pino 1, temos que escrever 1 no bit.
+
+81
+00:12:23,120 --> 00:12:30,320
+Se quisermos colocar a 0, já é noutra gama de endereços, também, escrever o 1, e isto vai fazer o reset do pino.
+
+82
+00:12:31,440 --> 00:12:40,240
+Pronto, como bem, cada sistema tem as suas particularidades.
+
+83
+00:12:41,200 --> 00:12:50,240
+Aqui vocês podem me colocar a questão, porque até esta preocupação tão grande de estar aqui a compactar os bits,
+
+84
+00:12:50,240 --> 00:13:02,240
+portanto, porque é que não se usava uma posição memória para configurar cada pino, basicamente, tal como eu digo aqui, é simplesmente para poupar endereços,
+
+85
+00:13:02,240 --> 00:13:16,480
+portanto, rapidamente, já estava aqui uma dezena ou algumas centenas até de endereços, e já hoje em dia, portanto, com as arquiteturas 64 bits,
+
+86
+00:13:16,480 --> 00:13:25,440
+temos passos de endereços muito grandes, que, portanto, neste momento não causam qualquer tipo de limitação, mas até ainda há pouco tempo,
+
+87
+00:13:26,400 --> 00:13:39,200
+portanto, já agora, no caso Raspberry Pi, até o Raspberry Pi 2, os processadores só trabalhavam em modo 32 bits, só suportavam sistemas operativos de 32 bits,
+
+88
+00:13:39,200 --> 00:13:58,240
+portanto, só tinham 32 bits para endereçar a memória, o que quer dizer que o espaço de endereçamento estava limitado a 4 GB.
+
+89
+00:13:59,200 --> 00:14:11,760
+Ora bem, 4 GB, hoje em dia já não há muito embora para sistemas embebidos, portanto, dependendo da publicação, já poderá ser um valor bastante respeitável,
+
+90
+00:14:11,760 --> 00:14:25,760
+não estamos aqui a falar de lançar várias aplicações ao mesmo tempo, o Excel ou o MATLAB, portanto, estamos a falar tipicamente de aplicações dedicadas que conseguimos otimizar,
+
+91
+00:14:26,480 --> 00:14:40,560
+mas mesmo assim, portanto, estar a gastar muitos endereços só para funções de configuração da hardware, portanto, era algo que se tentava evitar, portanto,
+
+92
+00:14:42,560 --> 00:14:52,160
+daí esta política de compactar ao máximo todos estes registros, que na maior parte das vezes só são configurados no arranque do sistema ou da aplicação,
+
+93
+00:14:52,160 --> 00:15:02,880
+e que depois nunca mais se mexe, portanto, não vão apontar a desperdiça a endereços de memória que depois não poderiam ser usados para aceder à memória RAM,
+
+94
+00:15:02,880 --> 00:15:12,880
+portanto, no fundo estaria a roubar-se endereços necessários para guardar variáveis e código dos programas.
+
+95
+00:15:13,600 --> 00:15:33,600
+Relativamente a isto, reparem que eu estou a falar destes detalhes, porque acho importante, portanto, perceberem que em termos de hardware,
+
+96
+00:15:34,320 --> 00:15:48,320
+não estamos a falar de funcionalidades, principalmente no modo, ou especialmente aqui no modo de, no aspecto de entrada e saída de dados,
+
+97
+00:15:48,320 --> 00:15:54,320
+que não, portanto, o modo de funcionamento e de configuração destas funcionalidades da UART e da SPI,
+
+98
+00:15:55,040 --> 00:16:05,040
+não é muito diferente dos outros microcontroledores, a menos das particularidades que têm a ver até com o próprio fabricante, com a forma como ele projeta as coisas,
+
+99
+00:16:07,040 --> 00:16:13,040
+mas na prática existe uma grande diferença, quando nós instalámos, depois em termos de software existe uma grande diferença,
+
+100
+00:16:13,040 --> 00:16:23,040
+quando instalámos um sistema operativo como o Linux para uma placa que já está estabelecida no mercado há vários anos e que tem uma equipe a desenvolver software por trás,
+
+101
+00:16:25,040 --> 00:16:38,040
+o próprio sistema operativo já dá suporte para utilizarmos a maior parte destas funcionalidades de uma forma muito mais amigável do que temos que estar a escrever programas em C,
+
+102
+00:16:38,760 --> 00:16:54,760
+cada um ali é configurar cada um dos bits para, como fizemos no caso do ATmega, aquela programação em bare metal, portanto é configurar cada detalhe do microcontrolador,
+
+103
+00:16:55,480 --> 00:17:07,480
+por outro lado, tem esta nota que eu tenho aqui com as reticências, isto dependa do tipo de desenvolvimento álbum que cada um tem,
+
+104
+00:17:07,480 --> 00:17:17,480
+porque para se ter um sistema como o Raspberry Pi e com todas as funcionalidades exportadas pelo Linux, alguém teve que escrever esse software,
+
+105
+00:17:18,200 --> 00:17:29,200
+ou seja, alguém tem que escrever hoje as bibliotecas de software ou os device drivers que são usados depois pelos desenvolvedores de aplicações,
+
+106
+00:17:29,200 --> 00:17:38,200
+que muitas vezes quando estamos a fazer um sistema imbebido, o que interessa nos é fazer a aplicação, é usar um sistema que já tenha suporte de sistema operativo,
+
+107
+00:17:38,920 --> 00:17:55,920
+nos podemos concentrar na aplicação, mas também pode haver pessoas, o estar a criar software de suporte para um determinado dispositivo também pode ser visto como uma subária dos sistemas imbebidos,
+
+108
+00:17:56,640 --> 00:18:14,640
+ou seja, quando se usa um sistema como o Raspberry Pi, que já tem bastante suporte de software, o Linux na sua forma mais básica já tem os chamados device drivers,
+
+109
+00:18:15,360 --> 00:18:31,360
+que no fundo são um código que é escrito em C e atualmente já é possível usar em algumas situações o Rust, já começa a haver suporte para o desenvolvimento de device drivers em Rust para Linux,
+
+110
+00:18:32,080 --> 00:18:50,080
+mas que, portanto, conjunto de funções muito semelhantes àquelas que fizemos para os micro controladores, mas que correm, portanto, que são funções que são executadas automaticamente pelo próprio núcleo do sistema operativo,
+
+111
+00:18:50,800 --> 00:19:04,800
+quando nós queremos aceder a essas funcionalidades, o Linux, portanto, expõe essas funcionalidades geralmente através de fecheiros especiais,
+
+112
+00:19:05,520 --> 00:19:20,520
+nós podemos ir lá escrever ou ler ou, portanto, de forma a configurar os dispositivos e depois ler ou escrever os dados, e mesmo assim, portanto, além disso,
+
+113
+00:19:21,240 --> 00:19:31,240
+depois já existem bibliotecas que fazem com que o acesso a esses cheiros ainda possa ser um bocado mais automatizado ou mais amigável, portanto, uma que é bastante usada, no caso o Raspberry Pi,
+
+114
+00:19:31,960 --> 00:19:51,960
+que no fundo acaba por ser uma espécie de Arduino para o Raspberry Pi, é esta Wiring Pi que, portanto, já tem uma API para aceder, portanto, à generalidade dos periféricos do Raspberry Pi,
+
+115
+00:19:52,680 --> 00:19:55,680
+pelo menos estes GPIOs.
+
+116
+00:19:56,400 --> 00:20:10,400
+É por esse motivo que, portanto, que eu neste módulo vou falar um bocadinho dessa programação a nível do kernel,
+
+117
+00:20:11,120 --> 00:20:26,120
+tanto isto a pensar que quando surge um sistema novo no mercado até pode haver partes desse sistema que ainda não são suportadas e alguém vai ter que escrever o software a nível do sistema,
+
+118
+00:20:26,120 --> 00:20:35,120
+o device driver, que torne a utilização desse dispositivo ou dessa funcionalidade mais amigável para os desenvolvedores de aplicações.
+
+119
+00:20:35,840 --> 00:20:47,840
+Portanto, a forma como vamos fazer isso, no fundo, é até usar o Raspberry Pi, portanto, vamos, no fundo, repetir algumas das coisas que já estão feitas,
+
+120
+00:20:47,840 --> 00:20:58,840
+mas, portanto, com isso, apercebemos melhor como é que elas podem se fazer numa situação nova, portanto, caso surja um sistema novo e nós tenhamos que,
+
+121
+00:20:59,560 --> 00:21:09,560
+para um determinado, por exemplo, até se quisermos usar um AD, como o vosso colega a pouco estava a dizer, de ligar um AD por I2C,
+
+122
+00:21:09,560 --> 00:21:19,560
+em certas situações pode ser mais difícil, embora possa ser feito, a leitura possa ser feita diretamente num programa que corre no User Space,
+
+123
+00:21:20,280 --> 00:21:30,280
+como um programa normal que é lançado na linha de comando, pode haver situações, principalmente quando estamos a falar de um AD com uma taxa muito alta da mostragem,
+
+124
+00:21:30,280 --> 00:21:42,280
+em que possa fazer a diferença, fazer essa programação como um módulo de kernel, que corre como uma tarefa interna do núcleo do sistema operativo,
+
+125
+00:21:43,000 --> 00:21:53,000
+e não como um processo utilizador que, portanto, corre num nível de privilégio mais baixo, pode ser interrompido em situações críticas,
+
+126
+00:21:53,000 --> 00:22:03,000
+não tem acesso a interrupções, portanto, o sistema, na prática, os nossos programas, o que fazem é a interrupção, portanto, a forma.
+
+127
+00:22:03,720 --> 00:22:13,720
+Peço desculpa, quem gera as interrupções é o núcleo do sistema operativo, que, portanto, quando há uma interrupção, por exemplo, no caso de uma transmissão série,
+
+128
+00:22:13,720 --> 00:22:25,720
+quando chega um, quando o buffer tem dados novos, o buffer do módulo UART tem dados novos, gera interrupção, existe uma função no núcleo do sistema operativo,
+
+129
+00:22:26,440 --> 00:22:36,440
+portanto, que faz parte do tal device driver, que é chamado automaticamente em resposta, portanto, como rotina de atendimento à interrupção,
+
+130
+00:22:36,440 --> 00:22:44,440
+e vai fazer a leitura do buffer, e depois vai fornecer esses dados no tal ficheiro que os nossos programas acedem,
+
+131
+00:22:45,160 --> 00:22:54,160
+e na prática, os nossos programas, enquanto estão à espera de dados, podem fazer uma espécie de read bloqueante, que fica ali à espera,
+
+132
+00:22:54,160 --> 00:23:00,160
+portanto, leitura bloqueante, que faz com que o programa fique ali à espera até que cheguem dados,
+
+133
+00:23:00,880 --> 00:23:10,880
+mas, e era aí que eu queria chegar, em situações em que sequer um, portanto, em que a taxa de transmissão dos dados seja muito alta,
+
+134
+00:23:10,880 --> 00:23:22,880
+ou que queramos otimizar o tempo de resposta, poderá fazer a diferença, fazer essa programação a nível, portanto, interno do núcleo do sistema operativo,
+
+135
+00:23:23,600 --> 00:23:29,600
+do kernel, ou seja, irmos lá colocar algum código que, portanto, em vez de estar a correr no modo de aplicação,
+
+136
+00:23:29,600 --> 00:23:35,600
+portanto, como um processo utilizador, correr diretamente a nível do núcleo do sistema operativo.
+
+137
+00:23:35,600 --> 00:23:45,600
+Ora bem, agora, continuando aqui, com a estrutura ainda dos GPIOs, que depois vamos usar isso nas aulas práticas,
+
+138
+00:23:46,320 --> 00:23:55,320
+portanto, no fundo, aquele mapa de registro que eu mencionei aqui, pode ser mapeado numa estrutura de C,
+
+139
+00:23:55,320 --> 00:24:07,320
+portanto, aquela sequência, portanto, neste caso, de palavras, de sequências de 32 bits, em cada um permite configurar 10 pinos,
+
+140
+00:24:08,040 --> 00:24:21,040
+portanto, aqui, que no fundo ocupa 6, portanto, no fundo é o equivalente a termos 6 colunas deste género para cobrir todos os GPIOs que estão previstos pelo fabricante,
+
+141
+00:24:23,040 --> 00:24:34,040
+portanto, podemos simplesmente declarar um vector desta forma e depois fazer o mapeamento desta estrutura para o endereço base destes registros,
+
+142
+00:24:34,760 --> 00:24:38,760
+vou já exemplificar uma possível forma de fazer isso.
+
+143
+00:24:38,760 --> 00:24:49,760
+Aqui eu mapiei, portanto, as primeiras gamas de registro, portanto, os que permitem fazer, então, a configuração de cada pino,
+
+144
+00:24:49,760 --> 00:25:01,760
+portanto, selecionar qual é a função que vai ser utilizada, depois, este são aqueles registros que eu mencionei que têm que ser usados quando queremos colocar a saída a 1,
+
+145
+00:25:02,480 --> 00:25:15,480
+estes que têm que ser usados quando queremos colocar a saída a 0, estes aqui são os que são usados quando ali o pino está em modo de entrada e queremos ler o seu estado,
+
+146
+00:25:15,480 --> 00:25:30,480
+portanto, lê-se o respeto e o bit aqui, portanto, será para leitura e, no limite, pode-se fazer este mapa para, portanto, criar uma estrutura que faz do mapeamento todo o mapa de memória
+
+147
+00:25:31,200 --> 00:25:36,200
+relativa aos registros de configuração dos módulos de input-output.
+
+148
+00:25:41,200 --> 00:25:50,200
+Nós, em Linux, podemos até, mesmo a partir de uma aplicação do utilizador, aceder a estes registros, é possível fazer isso.
+
+149
+00:25:50,920 --> 00:26:02,920
+Não é o método mais canónico, digamos assim, ou o mais aconselhável, mas, tecnicamente, é possível. Isto porquê? Porque o Linux tem um fecheiro especial,
+
+150
+00:26:03,640 --> 00:26:17,640
+que nos dá acesso a toda a memória física, a todos os espaços de interessamento do sistema, do espaço de interessamento principal.
+
+151
+00:26:18,360 --> 00:26:35,360
+Obviamente que estas barras são os, pelo menos por omissão, são os processos do utilizador root, portanto, do administrador do sistema, que conseguem aceder a este fecheiro,
+
+152
+00:26:36,080 --> 00:26:46,080
+pelo menos para escrita, porque, caso contrário, qualquer utilizador podia pôr em causa a estabilidade do sistema, estava a escrever valores aleatórios para alguma zona crítica,
+
+153
+00:26:46,080 --> 00:26:57,080
+ou até aceder a informações extensíveis de outros utilizadores, não se esqueçam que, no caso dos sistemas embedidos, tipicamente, não se coloca a questão dos utilizadores,
+
+154
+00:26:57,800 --> 00:27:14,800
+temos ali um processo, ou um conjunto de processos, que correm simplesmente para uma determinada função, para um determinado automatismo, e a questão dos múltiplos utilizadores acaba por não ser relevante,
+
+155
+00:27:15,520 --> 00:27:30,520
+mas o Linux, em si, é pensado também para sistemas multiutilizadores, e portanto, tem políticas de permissões para acesso a qualquer fecheiro, e este barra, embora seja um fecheiro especial,
+
+156
+00:27:31,240 --> 00:27:43,240
+obedece também às regras de acesso de qualquer outro fecheiro, portanto, normalmente, são os utilizadores mais privilegiados que terão acesso a este, portanto, o utilizador root é que terá acesso a este dispositivo,
+
+157
+00:27:43,240 --> 00:27:47,240
+a este fecheiro especial, que dá acesso à memória principal.
+
+158
+00:27:47,960 --> 00:27:59,960
+Mas, abrindo então este fecheiro, o seu conteúdo vai corresponder ao mapa de memória, e então, nós podemos até usarem uma função que existe nos sistemas Unix,
+
+159
+00:28:00,680 --> 00:28:15,680
+que é a função Mmap, permite mapear para, como se fosse uma variável do próprio programa, isto dito assim de uma forma muito terra a terra,
+
+160
+00:28:15,680 --> 00:28:20,680
+a forma mais técnica é, permite mapear para o espaço de interessamento virtual do processo,
+
+161
+00:28:21,400 --> 00:28:34,400
+uma gama de endereços do fecheiro, que neste caso corresponde à memória física, ou seja, nós, é quase como se fizéssemos uma espécie de malloc,
+
+162
+00:28:34,400 --> 00:28:42,400
+estou a referir à função C, malloc, da local memória, só que em vez de estarmos a reservar a memória, estamos a criar uma janela,
+
+163
+00:28:43,120 --> 00:28:51,120
+para poder ver o conteúdo e alterar o conteúdo de uma determinada região da memória, cujo endereço nós podemos escolher.
+
+164
+00:28:51,120 --> 00:29:05,120
+Portanto, nós podemos indicar aqui, uma vez que o início deste fecheiro é o endereço base, é o endereço zero da memória principal,
+
+165
+00:29:05,840 --> 00:29:12,840
+nós podemos indicar aqui neste parâmetro Mmap, eu peço desculpa, eu sei que para muitos de vocês, ou a maior parte, é a primeira vez que estão a ver esta função,
+
+166
+00:29:12,840 --> 00:29:22,840
+mas, portanto, esta função tem aqui um conjunto de parâmetros que nos permite escolher qual é a gama de memória a qual queremos aceder,
+
+167
+00:29:22,840 --> 00:29:30,840
+através de um apontador depois, aqui que é o valor retorno da função Mmap, ou seja, permite-nos escolher o endereço base,
+
+168
+00:29:31,560 --> 00:29:43,560
+depois, a partir deste endereço base, a quantidade de endereços que queremos aceder, no limite, poder por todos, mas até por uma questão de segurança,
+
+169
+00:29:43,560 --> 00:29:53,560
+não vamos estar aqui, portanto, neste exemplo, só me interessa aceder aos registros de configuração dos pinos de GPA,
+
+170
+00:29:54,280 --> 00:30:01,280
+portanto, no fundo, seria o tamanho, e conto muito para ver alterar e ver o seu estado, portanto, estamos a falar de,
+
+171
+00:30:01,280 --> 00:30:09,280
+ali, aquele tamanho, seria correspondente ao tamanho desta estrutura, poderia ser até fazer um size of destruct GPIO registers.
+
+172
+00:30:10,000 --> 00:30:23,000
+O resto são parâmetros auxiliares, este memfd tem a ver com o tal ficheiro, portanto, é o identificador do ficheiro que foi aberto,
+
+173
+00:30:23,000 --> 00:30:32,000
+que é o que dá acesso à memória principal, e portanto, isto aqui depois tem que ser aberto com algumas flags especiais,
+
+174
+00:30:32,720 --> 00:30:37,720
+através deste O5 é para garantir que os dados que nós estamos a escrever aqui, através destes apontadores,
+
+175
+00:30:37,720 --> 00:30:42,720
+são logo refletidos na memória, que não ficam armazenados ali na alguma caixa intermédia,
+
+176
+00:30:45,720 --> 00:30:50,720
+pronto, basicamente é isto, o resto são coisas que não interessa ter agora aqui este NULL,
+
+177
+00:30:50,720 --> 00:30:58,720
+portanto, é para ficar, em termos de memória do processo, ficar logo numa posição escolhida automaticamente,
+
+178
+00:30:59,440 --> 00:31:04,440
+e portanto, a partir do momento em que executamos esta instrução,
+
+179
+00:31:06,440 --> 00:31:14,440
+ou fazemos a chamada desta função, podemos usar este apontador para aceder aos registros,
+
+180
+00:31:14,440 --> 00:31:21,440
+reparem que eu, por acaso, aqui declarei como apontador para achar asterisco, ou seja, estou a aceder byte a byte,
+
+181
+00:31:21,440 --> 00:31:27,440
+mas poderia ter declarado como apontador para destruct GPIO registers,
+
+182
+00:31:28,160 --> 00:31:32,160
+por acaso, pronto, depois posso alterar este detalhe.
+
+183
+00:31:35,160 --> 00:31:40,160
+E a partir daqui, já posso, num programa de utilizadores, ou fazer configurações,
+
+184
+00:31:40,160 --> 00:31:49,160
+portanto mexer diretamente na memória, nos registros que permitem configurar o funcionamento do próprio sistema,
+
+185
+00:31:49,160 --> 00:31:51,160
+do próprio SOC.
+
+186
+00:31:51,880 --> 00:31:59,880
+Contudo, este barredev mesmo, portanto, embora para algumas situações possa ser usado,
+
+187
+00:31:59,880 --> 00:32:07,880
+tem algumas das limitações que eu mencionei há pouco, portanto, não dá-se, como qualquer outro,
+
+188
+00:32:07,880 --> 00:32:14,880
+portanto, sendo usado no espaço do utilizador, no user space, não permite usar interrupções,
+
+189
+00:32:14,880 --> 00:32:20,880
+não dá acesso, não permite configurar e lidar com as interrupções.
+
+190
+00:32:21,600 --> 00:32:27,600
+Também que tal, como eu disse há pouco, corremos sempre o risco de estar a meio de uma situação crítica,
+
+191
+00:32:27,600 --> 00:32:33,600
+em que é necessário dar resposta muito rapidamente na leitura de um registro, ou na escrita de um conjunto de registros,
+
+192
+00:32:33,600 --> 00:32:40,600
+portanto, em sequência rápida, e o processo ser interrompido, e depois só voltar a ser executado,
+
+193
+00:32:40,600 --> 00:32:44,600
+passados já algumas dezenas de milissegundos, o que, portanto, neste tipo,
+
+194
+00:32:45,320 --> 00:32:49,320
+em algumas aplicações pode ser crítico.
+
+195
+00:32:49,320 --> 00:32:55,320
+Reparem que 10 milissegundos, estou aqui a falar de um tempo que em Linux não é,
+
+196
+00:32:55,320 --> 00:33:00,320
+portanto, pode perfeitamente acontecer quando existe uma comutação entre espécies,
+
+197
+00:33:00,320 --> 00:33:03,320
+quando um processo é interrompido para dar a vez ao outro.
+
+198
+00:33:06,320 --> 00:33:14,320
+Por exemplo, 10 milissegundos, quando se está a ler dados de uma ligação séria de 9600 bits por segundo,
+
+199
+00:33:15,040 --> 00:33:19,040
+dá 10 caratérios, e reparem que 9600 não é muito rápido,
+
+200
+00:33:21,040 --> 00:33:27,040
+a maior parte das UARTs permite configurações até 115 mil kilobits por segundo.
+
+201
+00:33:30,040 --> 00:33:36,040
+E de uma forma geral, então, o kernel tem depois todo um conjunto de funcionalidades
+
+202
+00:33:36,760 --> 00:33:44,760
+que permite, então, desenvolver todos estes device drivers,
+
+203
+00:33:44,760 --> 00:33:49,760
+portanto, acesso aos dispositivos de uma forma mais sistemática,
+
+204
+00:33:49,760 --> 00:33:55,760
+e depois disponibilizar interfaces para a programação de aplicações que são mais familiares,
+
+205
+00:33:55,760 --> 00:33:59,760
+ou seja, os habituais ficheiros que encontramos no barra dev ou no barra sys,
+
+206
+00:33:59,760 --> 00:34:03,760
+para facilitar a escrita de aplicações.
+
+207
+00:34:04,480 --> 00:34:13,480
+Ora bem, entretanto, repare que estamos aqui também a chegar ao final,
+
+208
+00:34:13,480 --> 00:34:19,480
+portanto, na próxima aula, vamos então, eu vou focar nestas duas vertentes,
+
+209
+00:34:19,480 --> 00:34:24,480
+portanto, na vertente, dar aqui um apanhado destes métodos mais amigáveis,
+
+210
+00:34:24,480 --> 00:34:27,480
+e por outro lado também, o método assim, um bocadinho mais avançado,
+
+211
+00:34:28,200 --> 00:34:35,200
+de ver como é que estas coisas estão implementadas ao nível do núcleo sistema operativo, ok?
+
+212
+00:34:38,200 --> 00:34:43,200
+Pronto, vamos ficar por aqui hoje, se não houver, se alguém tiver alguma questão,
+
+213
+00:34:43,200 --> 00:34:46,200
+ainda estou disponível para responder.
+
