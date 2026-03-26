@@ -1,0 +1,736 @@
+1
+00:00:00,000 --> 00:00:06,000
+os acessos típicos que são feitos aos dispositivos de armazenamento.
+
+2
+00:00:06,000 --> 00:00:08,000
+Estes são orientados ao caráter,
+
+3
+00:00:08,000 --> 00:00:12,000
+portanto, trabalham os dados mais do ponto de vista sequencial,
+
+4
+00:00:12,000 --> 00:00:14,000
+portanto, como um fluxo, um stream de dados.
+
+5
+00:00:16,000 --> 00:00:21,000
+Cada um deles tem a sua própria API, nós aqui vamos concentrar-nos nesta.
+
+6
+00:00:21,000 --> 00:00:23,000
+Isso é agora em termos de barra dev,
+
+7
+00:00:23,000 --> 00:00:32,000
+podemos ver o tipo de dispositivos conforme esta primeira letra da coluna de atributos
+
+8
+00:00:32,000 --> 00:00:36,000
+de fecheiros especiais, que é esta primeira coluna,
+
+9
+00:00:36,000 --> 00:00:42,000
+que se aparecer aqui um C, indica que é um dispositivo orientado ao caráter,
+
+10
+00:00:42,000 --> 00:00:49,000
+se aparecer um B, é o que aparece tipicamente nestes SDAs e NVME,
+
+11
+00:00:49,000 --> 00:00:56,000
+que são os feches de dispositivos que são usados para aceder, fazer o acesso de baixo nível
+
+12
+00:00:56,000 --> 00:01:02,000
+aos dispositivos de armazenamento, por exemplo, para criar partições,
+
+13
+00:01:02,000 --> 00:01:07,000
+ou para formatar uma partição, ou para montar o disco através deste dispositivo.
+
+14
+00:01:07,000 --> 00:01:17,000
+Aqui, portanto, temos de ter principalmente este aviso que,
+
+15
+00:01:17,000 --> 00:01:23,000
+portanto, quando estamos a fazer um programa no espaço do utilizador,
+
+16
+00:01:23,000 --> 00:01:30,000
+que corremos, ou seja, que lançámos a partida shell e que corre em modo do utilizador,
+
+17
+00:01:30,000 --> 00:01:38,000
+podemos cometer os erros que quisermos, portanto, que não vamos pôr em causa a estabilidade do sistema.
+
+18
+00:01:38,000 --> 00:01:45,000
+Aqui na programação dos módulos kernel, isso já não é verdade, porque se tivermos um apontador mal iniciado,
+
+19
+00:01:45,000 --> 00:01:53,000
+que aceda ali, faça um acesso inválido à memória, ou que aceda a uma posição de memória que corresponda
+
+20
+00:01:53,000 --> 00:01:58,000
+às estruturas do kernel, por exemplo, para a gestão da memória, ou para a gestão dos processos,
+
+21
+00:01:58,000 --> 00:02:07,000
+o sistema fica logo num estado completamente instável e depois é obrigatório reiniciar o sistema.
+
+22
+00:02:07,000 --> 00:02:14,000
+Mesmo às vezes, sem ser com erros fatais, não tivemos cuidado na utilização da própria API de programação dos módulos,
+
+23
+00:02:14,000 --> 00:02:21,000
+portanto, entrámos ali em situações de ter cuidado no libertar os recursos na altura certa,
+
+24
+00:02:21,000 --> 00:02:28,000
+o sistema depois pode ficar em situações em que os recursos ficam bloqueados e depois estão mesmo reiniciando o sistema,
+
+25
+00:02:28,000 --> 00:02:31,000
+é que se consegue fazer, portanto, a limpeza.
+
+26
+00:02:37,000 --> 00:02:48,000
+Para criar este dispositivo, que é através dele que depois vamos conseguir fazer a escrita e a leitura do hardware,
+
+27
+00:02:48,000 --> 00:02:57,000
+portanto, das interfaces de input e output, nomeadamente, agora nos exemplos temos vindo a ver das linhas GPIO,
+
+28
+00:02:57,000 --> 00:03:09,000
+portanto, basicamente, primeiro, este dispositivo está sempre associado a um número de identificação,
+
+29
+00:03:09,000 --> 00:03:19,000
+que depois está, no fundo, organizado em duas partes, que signam o major number e o minor number,
+
+30
+00:03:19,000 --> 00:03:33,000
+em que, portanto, cada ficheiro de dispositivo depois vai ser identificado por estes primeiros 12 bits,
+
+31
+00:03:33,000 --> 00:03:44,000
+sendo que estes últimos 20 bits podem ser usados para selecionar funções dentro do mesmo dispositivo,
+
+32
+00:03:44,000 --> 00:03:54,000
+por exemplo, num controlador de áudio, o acesso pode ser feito através do mesmo ficheiro,
+
+33
+00:03:54,000 --> 00:04:06,000
+mas depois, conforme queremos fazer o input num determinado do microfone, mandar output para um determinado canal de áudio,
+
+34
+00:04:06,000 --> 00:04:14,000
+cada um desses canais corresponde a uma função diferente, ou seja, a um minor number diferente.
+
+35
+00:04:14,000 --> 00:04:21,000
+Outro exemplo, portanto, que também não estava relacionado com o input e o output periféricos,
+
+36
+00:04:21,000 --> 00:04:29,000
+periféricos, mas é o caso dos discos em que tanto podem estar organizados em partições,
+
+37
+00:04:29,000 --> 00:04:37,000
+e o Linux depois reconhece cada partição, portanto, tem um módulo principal que permite fazer a comunicação,
+
+38
+00:04:37,000 --> 00:04:49,000
+gerir a comunicação com o dispositivo de armazenamento, e depois, para fazer a seleção da partição,
+
+39
+00:04:49,000 --> 00:04:55,000
+usa este conceito de minor number, portanto, um minor number para cada partição detectado,
+
+40
+00:04:55,000 --> 00:04:59,000
+permite esse tipo de separação.
+
+41
+00:04:59,000 --> 00:05:08,000
+Ao criar o ficheiro do dispositivo, podemos alocar um número pré-definido,
+
+42
+00:05:08,000 --> 00:05:15,000
+ou podemos deixar o próprio sistema alocar-o automaticamente,
+
+43
+00:05:15,000 --> 00:05:25,000
+e depois temos o problema, portanto, a obrigação é que se o ficheiro do dispositivo,
+
+44
+00:05:25,000 --> 00:05:34,000
+se não for o próprio código a criar também o ficheiro do dispositivo, torna-se necessário,
+
+45
+00:05:34,000 --> 00:05:40,000
+portanto, o utilizador depois tem que andar a procura de ficheiros especiais,
+
+46
+00:05:40,000 --> 00:05:48,000
+portanto, que são criados automaticamente qual foi o major number que foi associado a esse dispositivo,
+
+47
+00:05:48,000 --> 00:05:53,000
+portanto, o dispositivo fica com o nome, é registrado no sistema com o nome, mas depois,
+
+48
+00:05:53,000 --> 00:06:01,000
+para ver o número propriamente, teríamos que andar a consultar esse ficheiro.
+
+49
+00:06:02,000 --> 00:06:13,000
+Na prática, depois também temos também a função para criar o próprio ficheiro do dispositivo,
+
+50
+00:06:13,000 --> 00:06:17,000
+o tal barra deve colocar qualquer coisa diretamente a partir do código sendo um obrigatório,
+
+51
+00:06:17,000 --> 00:06:22,000
+pode ser feito pela linha de comando, mas temos essa opção.
+
+52
+00:06:22,000 --> 00:06:32,000
+Isto faz a criação do ficheiro do dispositivo e depois vamos ter que associar a esse ficheiro do dispositivo
+
+53
+00:06:32,000 --> 00:06:40,000
+um conjunto de funções mínimas que correspondam, portanto, que façam então a resposta às operações
+
+54
+00:06:40,000 --> 00:06:45,000
+que são feitas pelo ficheiro do dispositivo, reparem que aqui está representado o tal espaço do utilizador
+
+55
+00:06:45,000 --> 00:06:49,000
+que eu tenho vindo a mencionar, temos aqui um programa qualquer, portanto, feito pelo utilizador,
+
+56
+00:06:49,000 --> 00:06:58,000
+até no limite pode ser aqueles cats e os echoes que eu exemplifiquei para enviar comandos para a porta série,
+
+57
+00:06:58,000 --> 00:07:02,000
+mas portanto, temos aqui um programa qualquer que faz a escrita diretamente para o barra deve,
+
+58
+00:07:02,000 --> 00:07:08,000
+aqui este STH, e faz também leituras.
+
+59
+00:07:08,000 --> 00:07:14,000
+Cada vez que, portanto, o utilizador usa uma das funções do sistema para fazer a escrita,
+
+60
+00:07:15,000 --> 00:07:21,000
+isso vai provocar, nesse ficheiro, vai provocar no módulo correspondente, ou seja, que registrou este ficheiro do dispositivo
+
+61
+00:07:21,000 --> 00:07:27,000
+a chamada de uma operação de callback, portanto, que foi registrada para essa operação,
+
+62
+00:07:27,000 --> 00:07:34,000
+portanto, temos que registrar uma operação para as operações de escrita, outra para as operações de leitura,
+
+63
+00:07:35,000 --> 00:07:43,000
+portanto, também é possível para a função de abertura, para a operação de abertura, o Open,
+
+64
+00:07:43,000 --> 00:07:50,000
+o Open não é um outro programa de ANC, para, portanto, para fazer a preparação do dispositivo,
+
+65
+00:07:50,000 --> 00:07:54,000
+quando se detecta que ele foi aberto por um programa, a mesma coisa depois no fecho,
+
+66
+00:07:54,000 --> 00:08:00,000
+para libertar recursos que, entretanto, ou para fazer limpezas,
+
+67
+00:08:00,000 --> 00:08:04,000
+sabendo que o programa já vai deixar de utilizar o dispositivo,
+
+68
+00:08:04,000 --> 00:08:10,000
+e todas as outras funções que estão disponíveis para ficheiros,
+
+69
+00:08:10,000 --> 00:08:16,000
+é possível definir, portanto, é possível definir uma função, a respectiva função de callback.
+
+70
+00:08:16,000 --> 00:08:29,000
+Aqui, pronto, isto existe já em algumas convenções, mas não nos vamos deixar isto aqui, mas
+
+71
+00:08:35,000 --> 00:08:40,000
+existem depois umas macros para manipular esta separação,
+
+72
+00:08:40,000 --> 00:08:47,000
+esta variável deve ter, a partir do deve ter, ir buscar o major number e minor number,
+
+73
+00:08:47,000 --> 00:08:54,000
+e vice-versa, porque há situações em que queremos trabalhar só com o major, outras em que queremos trabalhar com o minor,
+
+74
+00:08:54,000 --> 00:09:02,000
+e portanto, é possível usar estas macros para manipular a obtenção ou a escrita dos 12 e dos 20 bits,
+
+75
+00:09:02,000 --> 00:09:04,000
+isto é meramente auxiliar.
+
+76
+00:09:04,000 --> 00:09:11,000
+Aqui temos a tal estrutura que define as operações sobre o ficheiro, portanto, que define as operações
+
+77
+00:09:11,000 --> 00:09:19,000
+que é usada para definir as funções de callback, ou seja, as funções que devem ser chamadas em resposta
+
+78
+00:09:19,000 --> 00:09:26,000
+às operações sobre o ficheiro de dispositivo, e como podem ver temos aqui, eu marquei aqui a mais carregada,
+
+79
+00:09:27,000 --> 00:09:35,000
+as quatro que são mais usadas para fazer read, para fazer write, ou abertura e release, mas existem, portanto,
+
+80
+00:09:35,000 --> 00:09:42,000
+aqui mais algumas, e mesmo assim, eu acho que, se não me perdi erro, eu acho que abrevia isto para caber tudo no slide,
+
+81
+00:09:42,000 --> 00:09:50,000
+tirei alguns dos campos, portanto, temos aqui, deixei algumas que poderiam ser mais óbvias de perceber,
+
+82
+00:09:50,000 --> 00:10:01,000
+este LSI que é usado no caso de termos um buffer e quisermos andar ali a indicar que parte do buffer é que queremos ler,
+
+83
+00:10:01,000 --> 00:10:14,000
+portanto, corresponde ao FSI que das operações em ficheiro, temos aqui o IMAP, se quisermos permitir que o dispositivo
+
+84
+00:10:14,000 --> 00:10:21,000
+fique, portanto, os dados, ou certa parte dos registros dispositivos fiquem mapeados,
+
+85
+00:10:21,000 --> 00:10:29,000
+ou seja, podem ser mapeados em memória, portanto, em resposta ao pedido da IMAP da própria função IMAP
+
+86
+00:10:29,000 --> 00:10:38,000
+que eu ilustrei no caso do acesso aos registros CPIO, portanto, funções para as operações de controlo da IO,
+
+87
+00:10:38,000 --> 00:10:48,000
+os IO-CTLs, portanto, tem suporte para todas as operações que possam existir num ficheiro normal,
+
+88
+00:10:48,000 --> 00:10:58,000
+também existem para o ficheiro dispositivo, e então, portanto, depois é preciso fazer o registro desse ficheiro de operações
+
+89
+00:10:58,000 --> 00:11:22,000
+para, portanto, este CDEV veio daqui de trás, portanto, para, peço desculpa, associado ao dispositivo que é identificado pela variável DFT,
+
+90
+00:11:22,000 --> 00:11:31,000
+portanto, o ponto está feito aqui, ou seja, vamos adicionar aqui, portanto, aqui concretiza-se a configuração,
+
+91
+00:11:31,000 --> 00:11:37,000
+portanto, isto é só iniciar as variáveis, depois é usado para iniciar esta variável tipo CDEV,
+
+92
+00:11:37,000 --> 00:11:44,000
+que fica logo associada a uma variável deste tipo, e depois para adicionar, realmente, para registrar no sistema,
+
+93
+00:11:44,000 --> 00:11:54,000
+fazemos este CDEV em que se faz a associação, portanto, deste ficheiro de operações ao major number que está associado,
+
+94
+00:11:54,000 --> 00:12:03,000
+portanto, que queremos que seja usado, ou que vai ser usado para identificar o ficheiro de dispositivo,
+
+95
+00:12:03,000 --> 00:12:10,000
+sendo que depois este count aqui é o número de minor numbers que queremos usar,
+
+96
+00:12:10,000 --> 00:12:17,000
+portanto, o tal número de subfunções que pretendemos que estejam, que pretendemos usar.
+
+97
+00:12:17,000 --> 00:12:29,000
+Está aqui o exemplo de código, portanto, só definir os callbacks para estas quatro funções ou operações principais,
+
+98
+00:12:29,000 --> 00:12:44,000
+e aqui, portanto, aquelas funções que eu mencionei com exemplos concretos,
+
+99
+00:12:44,000 --> 00:12:57,000
+portanto, aqui a atribuição de um nome ao nosso device driver, neste caso, portanto, estamos a usar um major number pré-definido,
+
+100
+00:12:58,000 --> 00:13:09,000
+e de seguida faz-se o registro das estruturas das operações precisamente para este major number.
+
+101
+00:13:12,000 --> 00:13:22,000
+Estas funções, MyOpen, MyRead, MyWriting, MyRelease, portanto, têm que obter os parâmetros que estão definidos na API do kernel,
+
+102
+00:13:22,000 --> 00:13:31,000
+nomeadamente aqui no... nós não vamos aqui andar a explorar todos os campos daqui destes parâmetros.
+
+103
+00:13:33,000 --> 00:13:41,000
+Muitos deles, portanto, muitos deles até só fazem sentido quando queremos ir buscar informação sobre o próprio ficheiro de dispositivo,
+
+104
+00:13:42,000 --> 00:13:47,000
+portanto, na maior parte do caso uma necessidade era mexer nestes parâmetros,
+
+105
+00:13:47,000 --> 00:13:51,000
+então aqui por uma questão de dar o acesso a toda a informação possível,
+
+106
+00:13:53,000 --> 00:14:00,000
+e portanto aqui no MyOpen, no MyClose, isto tem mais, por uma só saber que esta função vai ser chamada quando o ficheiro de dispositivo é aberto,
+
+107
+00:14:01,000 --> 00:14:08,000
+esta quando ela é fechada podemos pôr aqui as funções respetivas para podermos chamar em cada situação.
+
+108
+00:14:17,000 --> 00:14:23,000
+Não sei porquê, queria já agora mostrar as quatro funções.
+
+109
+00:14:28,000 --> 00:14:38,000
+Aqui é a função, o exemplo de uma função de leitura em que aqui já temos pelo menos dois parâmetros que vão ter que ser sempre usados.
+
+110
+00:14:38,000 --> 00:14:46,000
+Ou seja, esta função de leitura representa uma leitura que é feita sobre o dispositivo.
+
+111
+00:14:47,000 --> 00:14:55,000
+Portanto, se um programa está a fazer um pedido de leitura, nós do ponto de vista do módulo de kernel vamos ter que lhe passar dados,
+
+112
+00:14:56,000 --> 00:15:01,000
+portanto, é porque ele está a pedir para fazer a leitura de dados, agora dependendo do título,
+
+113
+00:15:01,000 --> 00:15:10,000
+no limite até pode ser ler um bit para saber a posição de um pino, mas a questão é que vamos ter que escrever os dados,
+
+114
+00:15:11,000 --> 00:15:19,000
+enviá-los através deste parâmetro aqui, ou seja, isto aqui é um apontador para uma variável que existe nos parâmetros,
+
+115
+00:15:19,000 --> 00:15:23,000
+e portanto, de alguma forma, vamos ter que enviar para ali os dados.
+
+116
+00:15:24,000 --> 00:15:34,000
+Aqui neste parâmetro indica o número máximo de bytes que queremos ler, parem que, por exemplo, para fazer o drag de uma porta série,
+
+117
+00:15:35,000 --> 00:15:48,000
+vamos ter que escrever os dados, enviá-los através deste parâmetro aqui, ou seja, isto aqui é um apontador para uma variável que existe no espaço de memória do programa,
+
+118
+00:15:49,000 --> 00:15:55,000
+que obviamente não vamos estar aqui a reinventar a roda porque é um dispositivo bastante comum e o Linux já tem suporte,
+
+119
+00:15:56,000 --> 00:16:06,000
+pelo menos aqui para a generalidade, as UARTs que são usadas nos sistemas computacionais,
+
+120
+00:16:06,000 --> 00:16:25,000
+mas neste caso, este size serve precisamente para quando temos um dispositivo que recebeu vários dados e que já acumulou e que agora o utilizador vai fazer uma leitura desses dados, todos de uma vez,
+
+121
+00:16:25,000 --> 00:16:37,000
+ou seja, aquela opção de número de bytes que tipicamente passamos na função read é canalizada para a nossa função de callback aqui no canal.
+
+122
+00:16:38,000 --> 00:16:46,000
+Este offset pode ser usado para gerir as partes do buffer que o utilizador está a ler.
+
+123
+00:16:46,000 --> 00:17:02,000
+Se ele estiver a fazer leituras às pinguinhas, ler um byte cada vez, nós podemos usar isto para indicar qual é a posição do buffer que deverá ser lido a seguir.
+
+124
+00:17:02,000 --> 00:17:24,000
+A função write faz o contrário, é chamada quando é feito um pedido de escrita, aqui neste caso, esta variável ao base vai estar a apontar para uma zona de memória do programa do utilizador,
+
+125
+00:17:24,000 --> 00:17:36,000
+para uma variável qualquer do programa do utilizador, que o utilizador pretende escrever ou cujos dados o utilizador pretende enviar para o dispositivo.
+
+126
+00:17:36,000 --> 00:17:44,000
+Portanto, é para fazer uma escrita, isto indica o número de bytes que o utilizador pretende enviar.
+
+127
+00:17:44,000 --> 00:18:02,000
+Portanto, ele vai fazer as escritas no dispositivo de acordo com base neste pedido.
+
+128
+00:18:02,000 --> 00:18:21,000
+Tenho aqui este exemplo para arquitetura x86-64, mas o princípio é o mesmo.
+
+129
+00:18:21,000 --> 00:18:33,000
+Portanto, nos processores ARM também temos um mecanismo do GEN, embora os endereços não sejam os mesmos, o princípio de funcionamento é o mesmo.
+
+130
+00:18:33,000 --> 00:18:58,000
+Quando se faz a cópia de dados, por exemplo, aqui, quando eu faço aqui esta escrita, portanto, quando o feche de dispositivo recebe um pedido de escrita de dados,
+
+131
+00:18:58,000 --> 00:19:13,000
+nós vamos estar, peço desculpa, aqui no caso do read, que é um exemplo até mais evidente, portanto, aqui quando é feito um pedido de leitura,
+
+132
+00:19:13,000 --> 00:19:30,000
+nós vamos ter que escrever aqui no buffer, não é? Para que o utilizador possa, eu por acaso agora, ali há pouco eu acho que expliquei duas vezes a mesma maneira, para o read e para o write.
+
+133
+00:19:30,000 --> 00:19:45,000
+Portanto, aqui no read é que, portanto, é um pedido de leitura, portanto, o código do kernel vai ter que escrever neste buffer, quando aqui ao contrário, este buffer contém dados que nós vamos ter que ler,
+
+134
+00:19:45,000 --> 00:20:04,000
+foi isso que eu disse, peço desculpa. Portanto, aqui o código do kernel, portanto, vai escrever dados supostamente para este apontador, mas para garantir a estabilidade do sistema,
+
+135
+00:20:04,000 --> 00:20:24,000
+o código do kernel não pode confiar no endereço que o utilizador envia, porque senão no limite, portanto, ele pode estar a enviar um endereço inválido, um endereço que nem está configurado na unidade de gestão de memória,
+
+136
+00:20:24,000 --> 00:20:37,000
+que ainda não foi alocado, e provocar uma exceção de acesso à memória que, em última instância, portanto, pode até fazer com que o sistema tenha que ser reiniciado.
+
+137
+00:20:37,000 --> 00:20:52,000
+Isso é um dos problemas. Outro problema é o utilizador conseguir que, portanto, pôr aqui um endereço que até é válido, mas que corresponde ao espaço do kernel.
+
+138
+00:20:52,000 --> 00:21:14,000
+E dessa forma, obrigar o utilizador ou estar ali a induzir o código do módulo do kernel a escrever dados numa zona crítica do sistema, ou numa zona que esteja relacionada com verificação de permissões,
+
+139
+00:21:14,000 --> 00:21:27,000
+e como isso, portanto, ou corromper os tags atuais do sistema, ou conseguir acesso a outro, portanto, a serviços ou a informação que de outra forma não teria.
+
+140
+00:21:27,000 --> 00:21:40,000
+E aqui, portanto, no caso dos tags das escritas, portanto, o que vai acontecer é que ele vai fazer a leitura aqui de dados, portanto, vai fazer a transmissão,
+
+141
+00:21:40,000 --> 00:21:54,000
+e mais uma vez poderia estar, portanto, se for uma leitura de um endereço inválido, vai, portanto, causar uma exceção do processador, que no modo kernel é difícil de recuperar,
+
+142
+00:21:54,000 --> 00:22:11,000
+portanto, quando está a correr no modo privilégio máximo, ou até induzir a ler registros que podem depois ter efeitos secundários ao fato de se ir ler posições de memória.
+
+143
+00:22:11,000 --> 00:22:31,000
+Por isso, portanto, para fazer estas transferências é necessário usar sempre aqui umas funções auxiliares que fazem todas essas verificações, e mesmo no caso de haver necessidade de tradução de endereços,
+
+144
+00:22:31,000 --> 00:22:51,000
+mas que tem que ser usado em cada caso, portanto, quando estamos a fazer uma cópia do kernel, portanto, de variáveis do kernel, usados do kernel, para um apontador do programa utilizador,
+
+145
+00:22:51,000 --> 00:23:03,000
+usamos esta, este copyToUser, ou seja, este copyToUser será usado no caso da função mainRead, no caso da função de operação de leitura em que queremos enviar dados para o buffer,
+
+146
+00:23:03,000 --> 00:23:21,000
+para que o programa utilizador veja isso como uma leitura. A outra, portanto, o copyToUser, o copyFromUser, aliás, é usado aqui em que queremos vir buscar dados ao endereço indicado pelo utilizador,
+
+147
+00:23:21,000 --> 00:23:37,000
+supostamente o endereço de uma variável do programa do utilizador, e copiá-los para variáveis aqui do nosso módulo que está a funcionar no espaço privilegiado do kernel.
+
+148
+00:23:37,000 --> 00:23:55,000
+No fundo, estas funções, portanto, em termos de utilização não tem nada de especial, é só uma questão de realmente termos que usar isto, estas funções são equivalentes ao mesmo copy.
+
+149
+00:23:55,000 --> 00:24:07,000
+Portanto, em termos de utilização, não é equivalente, são análogas ao mesmo copy, no sentido que temos um argumento para indicar o destino, outro o origem e depois o número de bytes.
+
+150
+00:24:07,000 --> 00:24:24,000
+Portanto, para quem conhece a função memcpy, isto faz a mesma coisa, permite copiar um bloco de dados, mas ao contrário da função memcpy, portanto, fazem a verificação da validade dos endereços do origem e do destino.
+
+151
+00:24:24,000 --> 00:24:44,000
+Já há outras funções, estas são as mais genéricas, depois existem outras que permitem copiar, são um byte, ou até para variáveis que conseguem, quando são cópias de valores simples,
+
+152
+00:24:44,000 --> 00:24:52,000
+que conseguem detectar o tipo de variável, fazem a transferência do número de bytes correspondente, mas isto já são variações.
+
+153
+00:24:56,000 --> 00:25:03,000
+Agora, voltando aqui um pouco atrás, a parte que avancei há pouco, aqui temos...
+
+154
+00:25:03,000 --> 00:25:27,000
+Temos aqui outras alternativas que existem para comunicar através dos programas de utilizador e o módulo de kernel.
+
+155
+00:25:27,000 --> 00:25:33,000
+Portanto, o que nós tivemos a ver é este barra 0, temos agora aqui a ver com algum detalhe.
+
+156
+00:25:33,000 --> 00:25:51,000
+Outra alternativa são os cheiros, portanto, é criar cheiros aqui neste subsistema, neste espaço de cheiros virtual que é o barra CIS, que depois correspondem, podem no limite corresponder diretamente a variáveis,
+
+157
+00:25:51,000 --> 00:26:11,000
+portanto, a variáveis do código de programa, que quando nós escrevemos no ficheiro, atualizámos diretamente o valor da variável, ou se simplesmente quisermos consultar o valor da variável,
+
+158
+00:26:11,000 --> 00:26:23,000
+então podemos simplesmente ler o ficheiro, o conteúdo do ficheiro, e ver qual é o valor da variável, que era um dos métodos que também existe para...
+
+159
+00:26:23,000 --> 00:26:35,000
+Portanto, costumava existir para aceder diretamente aos valores do GPU e das suas configurações através de cheiros nesta pasta barra CIS,
+
+160
+00:26:35,000 --> 00:26:47,000
+que no fundo é uma questão depois de mapear isto para variáveis e que quando são escritas, portanto, vão diretamente para os registros de configuração.
+
+161
+00:26:47,000 --> 00:26:57,000
+No caso das escritas, se quisermos alterar uma configuração ou depois de fazer uma leitura, de ser mapeado para o registro de leitura.
+
+162
+00:26:58,000 --> 00:27:09,000
+Isto também é útil mesmo para debug, quando queremos ter acesso a variáveis, podemos defini-las como parâmetros, qualquer variável pode ser definida como parâmetro através desta macro,
+
+163
+00:27:09,000 --> 00:27:21,000
+e depois conseguimos ter acesso à variável através do tal ficheiro.
+
+164
+00:27:21,000 --> 00:27:35,000
+Outra forma, é através de ficheiros em barra PROC, que também é um método que acaba por ser semelhante a este barra CIS, que é mais antigo e acabou.
+
+165
+00:27:35,000 --> 00:27:46,000
+Portanto, ainda existe suporte atualmente no kernel e o próprio Linux tem serviços importantes, portanto, tem ficheiros importantes que são acescidos através deste subsistema.
+
+166
+00:27:47,000 --> 00:28:05,000
+Principalmente, é muito usado para obter informações sobre o estado do sistema, por exemplo, o CPU info, o mem info, a maior parte dos programas que podemos usar na linha de comando
+
+167
+00:28:05,000 --> 00:28:15,000
+para obter informação sobre o Linux ou sobre o seu estado de funcionamento, no fundo vão consultar ficheiros especiais que estão neste barra PROC.
+
+168
+00:28:15,000 --> 00:28:25,000
+Pelo menos isto, ou seja, atualmente mais vale deixar isto para as funcionalidades específicas do sistema operativo e a parte da aplicação pendura mais neste barra CIS,
+
+169
+00:28:25,000 --> 00:28:36,000
+embora ainda seja possível criar os nossos próprios cheios aqui no barra PROC, portanto, para transmitir ou receber informação.
+
+170
+00:28:36,000 --> 00:28:58,000
+Há pouco mencionei que existe a possibilidade de criar o tal ficheiro dispositivo que fica em barra Z, diretamente a partir do código C, nomeadamente com esta função device create,
+
+171
+00:28:58,000 --> 00:29:18,000
+mas também existe a possibilidade de criar pela própria linha de comando, em situações em que, no modo mais fundamental, podemos usar o comando e criar diretamente na linha de comando, na shell,
+
+172
+00:29:18,000 --> 00:29:34,000
+portanto, no caso dos dispositivos que vamos ver, estes são orientados ao caractere, portanto é fazer o MKNode, o C, e usar então, depois, temos que ter, para fazer a tal ponto com o módulo, temos que colocar aqui o major e o minor,
+
+173
+00:29:34,000 --> 00:29:59,000
+que são usados pelo, que foram registrados no código do módulo de kernel, portanto, aqui nestas funções, neste deve number, que usamos este valor PRO, portanto, esta constante corresponde a um valor inteiro de no máximo 12 bits,
+
+174
+00:29:59,000 --> 00:30:19,000
+portanto, para definir o major number, e neste caso só vamos ter um minor number, portanto, ali acaba por ser irrelevant o minor number que especificarmos. Irrelevante, portanto, temos que passar a zero, peço desculpa.
+
+175
+00:30:19,000 --> 00:30:48,000
+E depois o nome que é atribuído, parem que este nome, portanto, é um nome que, no caso daqueles dispositivos mais standard, segue uma determinada convenção, por exemplo, as portas sérias costumam ser TTY ou NES qualquer coisa, portanto, o número, dependendo depois do número da porta séria, mas por uma aplicação, por um módulo, portanto, já mais proprietário, pode ser o nome que quisermos, não existe nenhuma restrição.
+
+176
+00:30:49,000 --> 00:31:12,000
+Portanto, aqui está o código inicial, tenho aqui a sequência típica para criar o módulo, portanto, o fecheiro dispositivo, neste caso seria um fecheiro dispositivo com o nome barra DEV e ZEP, Andres Korschar DEV,
+
+177
+00:31:12,000 --> 00:31:41,000
+que ficaria debaixo de uma classe chamada, portanto, isto é uma questão de organizar depois lá os diretórios, portanto, para não ficarem todos os módulos debaixo do mesmo, na mesma categoria, podemos criar uma própria categoria, podemos não, é o que obriga-nos mesmo, no caso dos módulos terceiros, a criar uma categoria própria para onde vai ficar registrado o módulo.
+
+178
+00:31:42,000 --> 00:32:07,000
+Mas o Carnal já tem, portanto, a API do Linux já definem uma hierarquia de dispositivos e de funcionalidades que, quando estamos a escrever, a criar um módulo para um dispositivo que se liga a um terminado barramento, por exemplo, um dispositivo para USB,
+
+179
+00:32:07,000 --> 00:32:30,000
+um dispositivo no para o qual queremos criar o device driver correspondente, portanto, já existe uma infraestrutura de código, uma API específica para cada uma dessas classes que, portanto, quando temos que estar a escrever todas as funções a partir do zero,
+
+180
+00:32:30,000 --> 00:32:50,000
+todo o código a partir do zero e podemos aproveitar, e aí que se cria também depois uma dependência, portanto, que depois, obviamente, para termos estas funcionalidades, os respetivos módulos têm que ser carregados, ou a funcionalidade já faz parte do Carnal, ou então tem que ser carregado.
+
+181
+00:32:50,000 --> 00:33:07,000
+Daí, mais uma vez, ainda ao encontro do que eu estava a dizer há pouco, vamos pôr no limite que temos um sistema que não mais precisa do USB para nada. Podemos eliminar, portanto, na configuração toda esta parte correspondente ao USB.
+
+182
+00:33:07,000 --> 00:33:22,000
+Ou ao áudio aqui, portanto, todo este código que oferece os serviços básicos, as funções que são comuns a todos os dispositivos de áudio, portanto, a exclusão está presente em memória.
+
+183
+00:33:22,000 --> 00:33:49,000
+Eu não vou fazer, eu acho que vou mais a fundo, deixo aqui estes slides, confesso que são reciclados de outro curso, tipicamente, portanto, quando vou fazer perguntas teóricas sobre isto, quero que os alunos percebam bem estes conceitos aqui, é mais para vocês não ficarem...
+
+184
+00:33:49,000 --> 00:34:01,000
+Portanto, quando tivermos a fazer isto depois numa outra prática, não serem tão abstrato quem estiver cruzizado realmente em perceber porque é que certas coisas têm que ser feitas.
+
