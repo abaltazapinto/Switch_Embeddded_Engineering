@@ -1,0 +1,636 @@
+1
+00:00:00,000 --> 00:00:09,500
+Este é o estado Terminated, basicamente este estado não existe, ele volta novamente para o disco, digamos assim, ok?
+
+2
+00:00:10,500 --> 00:00:17,500
+Todos os processos são vistos pelo sistema operativo através desta estrutura, que é o chamado Process Control Block, ok?
+
+3
+00:00:19,000 --> 00:00:23,000
+Em que nós definimos qual é o PID do processo, não é?
+
+4
+00:00:23,500 --> 00:00:27,500
+Tem qual é o estado do processo, ok?
+
+5
+00:00:28,000 --> 00:00:38,500
+Tem mecanismos para controlar o processo, as áreas de memória que o meu processo pode aceder, etc.
+
+6
+00:00:38,500 --> 00:00:46,500
+Portanto, toda esta informação é guardada nesta estrutura que descreve cada um dos processos no sistema operativo, ok?
+
+7
+00:00:53,000 --> 00:01:02,500
+Ele tem aqui alguma informação que é utilizada, o Process State, o Program Counter, que me diz onde é que ele está no código,
+
+8
+00:01:02,500 --> 00:01:09,500
+o apontador para o stack do meu processo, qual é o estado das feches que estão abertas, ok?
+
+9
+00:01:09,500 --> 00:01:16,000
+Quais são os algoritmos de escalonamento ou parâmetros de escalonamento que são utilizados por este programa,
+
+10
+00:01:16,000 --> 00:01:21,000
+por este programa, o processo, etc. Portanto, tudo isto tem que alistar, ok?
+
+11
+00:01:21,500 --> 00:01:33,500
+E alguma desta informação, nomeadamente aqui o Process State, é gravada quando nós fazemos transições entre estados
+
+12
+00:01:33,500 --> 00:01:38,500
+e principalmente transições entre diferentes processos, ok?
+
+13
+00:01:41,500 --> 00:01:44,500
+Quando há transições também naqueles estados que nós vimos ali anteriormente,
+
+14
+00:01:44,500 --> 00:01:48,500
+também vai haver aqui um update da informação no Process Control Block,
+
+15
+00:01:49,000 --> 00:01:55,000
+por menos aquela informação sobre o estado do processo, vai haver um update dessa informação, ok?
+
+16
+00:01:57,000 --> 00:02:10,000
+Aqui isto é só uma ideia, basicamente isto dentro do sistema operativo é implementado como um conjunto de listas bastante complexos,
+
+17
+00:02:10,500 --> 00:02:22,500
+em que, desculpem, para cada um destes estados que nós tínhamos ali anteriormente, basicamente ele vai conter uma lista de process control PCBs
+
+18
+00:02:22,500 --> 00:02:31,500
+que se encontrem naquele estado específico e com esta informação que está aqui dentro de escrita, ok?
+
+19
+00:02:32,000 --> 00:02:40,000
+Portanto, o que é que nós temos lá dentro? O PID, ou um identificador único, ou um intape, o estado do processo,
+
+20
+00:02:40,000 --> 00:02:48,000
+waiting, running, ready, blocked, altered, agora depende se é um operativo ou se é um operativo, há diferentes nomes para estes estados
+
+21
+00:02:48,000 --> 00:02:56,000
+e pode haver também estados ligeiramente diferentes conforme a implementação que é, mas a base que eu vos mostrei
+
+22
+00:02:56,500 --> 00:03:05,500
+é mais ou menos o standard, este, aquele conjunto de estados existe com aquele nome, ou não, em classe de todos os sistemas operativos, ok?
+
+23
+00:03:08,500 --> 00:03:21,500
+Existe, pode haver também aqui uma prioridade do processo, basicamente é um número que é colocado no processo pelo escalador,
+
+24
+00:03:22,000 --> 00:03:31,000
+pelo seu operativo, pela própria pessoa, e permite-nos definir algumas características do escalonamento,
+
+25
+00:03:31,000 --> 00:03:43,000
+principalmente para o escalonamento de prioridades, se eu, por exemplo, mudar a prioridade do meu processo,
+
+26
+00:03:43,500 --> 00:03:51,500
+ele pode passar para um nível de prioridade superior, eu vou vos mostrar aqui com o Task Manager
+
+27
+00:03:57,500 --> 00:04:06,500
+neste momento, por exemplo, tudo isto está a funcionar muito lentamente, o meu computador está cheio de coisas abertas ao mesmo tempo,
+
+28
+00:04:07,000 --> 00:04:21,000
+nem estou a conseguir puxar esta coisa para aqui, neste momento ele está com uma utilização relativamente elevada
+
+29
+00:04:21,000 --> 00:04:33,000
+para quem não está a fazer quase nada, por exemplo, se eu ver aqui, tenho aqui o meu Power Point,
+
+30
+00:04:33,500 --> 00:04:37,500
+eu salvo o erro, estou a ver este que aqui está,
+
+31
+00:04:41,500 --> 00:04:44,500
+e não me está a deixar ir de lá,
+
+32
+00:04:52,500 --> 00:04:54,500
+desculpem-me, não me está a deixar,
+
+33
+00:04:55,000 --> 00:04:57,000
+estou a deixar aqui para os detalhes,
+
+34
+00:05:04,000 --> 00:05:14,000
+pronto, portanto eu posso chegar aqui ao meu Power Point e mudar a prioridade,
+
+35
+00:05:14,000 --> 00:05:23,000
+se vocês virem, vocês têm aqui vários níveis de prioridade que eu posso dar ao Power Point,
+
+36
+00:05:23,500 --> 00:05:33,500
+em geral, todos estes estão a trabalhar em normal, este decidiu, não sei por que razão, estar em above normal,
+
+37
+00:05:33,500 --> 00:05:39,500
+não sei quem é que mandou por a minha inteligência artificial em above normal,
+
+38
+00:05:39,500 --> 00:05:49,500
+por exemplo, aqui está em low, está desligado praticamente, o meu Outlook também está em normal,
+
+39
+00:05:50,000 --> 00:05:55,000
+a maior parte dos programas estão em normal, o que nós queremos, por exemplo, aqui é mudar a prioridade
+
+40
+00:05:55,000 --> 00:06:07,000
+e eu posso mudar entre estes níveis que correspondem a uma gama de valores entre os quais o programa pode mudar entre estes valores todos,
+
+41
+00:06:07,000 --> 00:06:15,000
+mas daqui a bocadinho também vamos falar nisso, pronto, como eu estou a sentir que isto está muito lento,
+
+42
+00:06:15,500 --> 00:06:21,500
+o meu Power Point, eu subo-lhe a prioridade que ele tem e, em princípio, dentro do meu sistema,
+
+43
+00:06:21,500 --> 00:06:29,500
+ele vai ser executado de uma forma um bocadinho mais rápida do que aquela que estava a ser executada,
+
+44
+00:06:29,500 --> 00:06:35,500
+mas aqui no Windows, reparem aqueles níveis que ele tinha, high, low e não sei o que,
+
+45
+00:06:35,500 --> 00:06:41,500
+eram gamas de valores desse valor numérico da prioridade,
+
+46
+00:06:42,000 --> 00:06:47,000
+e depois o programa conforme o seu comportamento, e vamos ver isso mais à frente,
+
+47
+00:06:47,000 --> 00:06:53,000
+vai mudando o seu nível de prioridade dentro daquela gama que corresponde à alta prioridade,
+
+48
+00:06:53,000 --> 00:06:59,000
+a média ou a normal, ou o que é que seja, no caso do Windows também,
+
+49
+00:06:59,000 --> 00:07:08,000
+o Linux é ligeiramente diferente e um bocadinho mais complicado mesmo o próprio escalonamento,
+
+50
+00:07:08,500 --> 00:07:12,500
+não é um escalonamento muito nada simples.
+
+51
+00:07:12,500 --> 00:07:26,500
+Portanto, este nível de prioridade nos sistemas desktop normalmente é um valor que é dado ao tempo de criação,
+
+52
+00:07:26,500 --> 00:07:32,500
+mas vai mudando ao longo do tempo de acordo com os recursos que vão ser consumidos,
+
+53
+00:07:32,500 --> 00:07:36,500
+com o comportamento do processo, etc.
+
+54
+00:07:37,000 --> 00:07:42,000
+Portanto, aqui vamos ter a prioridade dentro do PCB,
+
+55
+00:07:42,000 --> 00:07:46,000
+vamos ter também a informação de accounting, isto por vezes é interessante,
+
+56
+00:07:46,000 --> 00:07:52,000
+por exemplo, estou utilizando neste momento o Deucalion, o super computador português,
+
+57
+00:07:52,000 --> 00:08:00,000
+e obviamente tenho 700 horas de CPU, mais 700 horas de GPU,
+
+58
+00:08:00,000 --> 00:08:04,000
+e tudo isso tem que ser gerido pelo próprio sistema,
+
+59
+00:08:04,500 --> 00:08:13,500
+tem que haver um accounting, tem que ser registrado a quantidade de recursos que estão a ser consumidos no CPU,
+
+60
+00:08:13,500 --> 00:08:22,500
+é isso, basicamente isso que aqui é feito, se existir e se for relevante que existir,
+
+61
+00:08:22,500 --> 00:08:26,500
+por exemplo, há alguns temas de tempo real, não existe nada disto,
+
+62
+00:08:26,500 --> 00:08:31,500
+não vale a pena estar a pôr muita coisa quando não é necessário.
+
+63
+00:08:32,000 --> 00:08:38,000
+Programa counter, portanto aquilo que já é o endereço que neste momento estamos a executar,
+
+64
+00:08:38,000 --> 00:08:42,000
+uma lista com os fecheiros abertos, isto é muito interessante,
+
+65
+00:08:42,000 --> 00:08:49,000
+por exemplo, quando o processo termina de forma não programada,
+
+66
+00:08:49,000 --> 00:08:55,000
+permite ao sistema operativo fechar depois os fecheiros que o meu programa tinha em aberto.
+
+67
+00:08:55,500 --> 00:09:04,500
+Também da mesma forma, uma lista de todos os dispositivos de input e output que estão alocados ao meu processo,
+
+68
+00:09:04,500 --> 00:09:10,500
+e também pode fechar isso quando o programa termina, ou se eu não terminar como deve ser,
+
+69
+00:09:10,500 --> 00:09:21,500
+postar os registros da CPU que permitem fazer o context switch entre dois programas, entre dois processos diferentes,
+
+70
+00:09:22,000 --> 00:09:31,000
+os pointers para os outros PCBs, aqui basicamente tem o endereço do próximo, process control log,
+
+71
+00:09:31,000 --> 00:09:40,000
+tem endereço para o irmão, para o pai, portanto, o processo que criou o meu processo, etc.
+
+72
+00:09:42,000 --> 00:09:46,000
+Informação sobre eventos, portanto, o que é que este processo está bloqueado,
+
+73
+00:09:46,500 --> 00:09:52,500
+está à espera de que interrupção, está à espera de que evento do próprio sistema operativo,
+
+74
+00:09:52,500 --> 00:09:57,500
+portanto, essa informação também aparece aqui neste evento Information.
+
+75
+00:09:57,500 --> 00:10:02,500
+Existe mais informação lá pelo meio, mas depois são coisas às vezes muito específicas
+
+76
+00:10:02,500 --> 00:10:09,500
+e difíceis de explicar em parte.
+
+77
+00:10:09,500 --> 00:10:14,500
+Portanto, nós vamos ter aqui então um conjunto de serviços para gerir os meus processos,
+
+78
+00:10:15,000 --> 00:10:22,000
+para criar, terminar, para escalonar, isto aqui é transparente para o utilizador,
+
+79
+00:10:22,000 --> 00:10:30,000
+não há um serviço de escalonamento mesmo, mas isto é fundamental para a multiprogramação,
+
+80
+00:10:30,000 --> 00:10:38,000
+portanto, para termos programas a correr com várias threads ou vários processos em paralelo,
+
+81
+00:10:38,500 --> 00:10:40,500
+vários utilizadores, etc.
+
+82
+00:10:40,500 --> 00:10:48,500
+Serviços também para a gestão de interrupções, mecanismos usados para a sincronização entre processos,
+
+83
+00:10:48,500 --> 00:11:01,500
+isto é, eu posso querer que um determinado programa só execute depois de um outro processo
+
+84
+00:11:02,000 --> 00:11:10,000
+ter terminado uma determinada operação e são os tais mecanismos de sincronização.
+
+85
+00:11:10,000 --> 00:11:16,000
+Eu posso querer que um determinado processo enquanto está a aceder um expeditivo de input
+
+86
+00:11:16,000 --> 00:11:22,000
+ou output, o outro não aceda, isso também é controlado por um mecanismo de sincronização para o fazer.
+
+87
+00:11:22,000 --> 00:11:28,000
+E depois tem que ter também mecanismos que nos permitam comunicar entre diferentes processos
+
+88
+00:11:28,500 --> 00:11:36,500
+passando mensagens e outras coisas desse, passando sinais e outras coisas desse jeito.
+
+89
+00:11:36,500 --> 00:11:43,500
+Nós vamos ter um conjunto de serviço, isto é genérico, não queriam dizer que no Linux ou no Windows
+
+90
+00:11:43,500 --> 00:11:47,500
+tenham este nome, mas será qualquer coisa parecida com isto.
+
+91
+00:11:48,000 --> 00:11:58,000
+End, normalmente, por exemplo, no Linux este é um exit, isto é, por ordem do utilizador,
+
+92
+00:11:58,000 --> 00:12:06,000
+houve o fim do programa, ou apart, aqui já houve o erro da execução do processo,
+
+93
+00:12:06,000 --> 00:12:12,000
+ele terminou de uma forma abrupta, fazer o load do programa na memória,
+
+94
+00:12:12,500 --> 00:12:21,500
+isto é um processo que é transparente para toda a gente, mas que é um processo muito complexo
+
+95
+00:12:21,500 --> 00:12:27,500
+de ir buscar um programa ao disco e colocá-lo em execução na memória.
+
+96
+00:12:27,500 --> 00:12:31,500
+Acho que mais à frente tem uns slides em que falo um bocadinho sobre isso.
+
+97
+00:12:31,500 --> 00:12:38,500
+Execute, para executar um outro programa, um outro processo de forma controlada,
+
+98
+00:12:39,000 --> 00:12:46,000
+mais à frente também vou falar nisto, nas aulas de sistemas de tempo real ou assim,
+
+99
+00:12:46,000 --> 00:12:51,000
+para criar um processo, eu posso criar um processo, terminar um processo,
+
+100
+00:12:51,000 --> 00:12:57,000
+terminar um processo não é o próprio processo, um outro processo qualquer,
+
+101
+00:12:57,000 --> 00:13:01,000
+mudanças de atributos, colocar o programa a dormir,
+
+102
+00:13:01,500 --> 00:13:07,500
+esperar por um determinado evento no meu programa, por exemplo,
+
+103
+00:13:07,500 --> 00:13:13,500
+que o meu disco termine uma determinada operação, sinalizar um evento,
+
+104
+00:13:13,500 --> 00:13:17,500
+por exemplo, a outro processo que esteja à espera de alguma coisa,
+
+105
+00:13:17,500 --> 00:13:21,500
+os tais mecanismos também de sincronização, alocar a memória,
+
+106
+00:13:21,500 --> 00:13:30,500
+isto não é bem por este módulo, é mais, é um conjunto do módulo de process management
+
+107
+00:13:31,000 --> 00:13:36,000
+e do módulo de gestão da memória, que é o módulo seguinte.
+
+108
+00:13:36,000 --> 00:13:45,000
+Portanto, o que não tinha mais ou menos deixado, a memória principal é difícil de gerir,
+
+109
+00:13:45,000 --> 00:13:51,000
+e portanto precisa de um módulo específico para gerir essa memória toda.
+
+110
+00:13:51,000 --> 00:13:56,000
+Nós no fundo vamos ter na memória um conjunto de bytes ou de palavras
+
+111
+00:13:56,500 --> 00:14:01,500
+que são endereçáveis individualmente pelo meu processador,
+
+112
+00:14:01,500 --> 00:14:06,500
+em que eu tenho que meter o código de vários processos,
+
+113
+00:14:08,500 --> 00:14:12,500
+os dados e o stack associado a cada processo,
+
+114
+00:14:12,500 --> 00:14:19,500
+também às vezes na própria memória estão mapeados os dispositivos de input-output,
+
+115
+00:14:19,500 --> 00:14:25,500
+e portanto um dos papéis principais que eu tenho aqui é a alocação de memória.
+
+116
+00:14:26,000 --> 00:14:29,000
+E o que é que eu quero dizer com alocação de memória?
+
+117
+00:14:29,000 --> 00:14:36,000
+É, no meio de uma confusão enorme, como vocês viram há um bocadinho,
+
+118
+00:14:36,000 --> 00:14:41,000
+em que eu tinha mais de 200 processos a funcionar ao mesmo tempo,
+
+119
+00:14:42,000 --> 00:14:45,000
+todos eles ocuparam uma determinada área de memória,
+
+120
+00:14:45,000 --> 00:14:55,000
+significa que a minha memória vai ser uma manta de retalhos com várias partes ocupadas,
+
+121
+00:14:55,500 --> 00:15:02,500
+se calhar aqui com os espaços, pelo meio, com várias partes ocupadas pelos meus diferentes processos.
+
+122
+00:15:03,500 --> 00:15:08,500
+Então, eu tenho que saber onde é que vou meter o meu programa,
+
+123
+00:15:11,500 --> 00:15:16,500
+ou meter ou alocar um pedaço de memória que eu preciso.
+
+124
+00:15:17,500 --> 00:15:20,500
+Há várias estratégias para fazer isso,
+
+125
+00:15:21,000 --> 00:15:25,000
+algumas parecem perfeitamente lógicas, perfeitamente intuitivas,
+
+126
+00:15:25,000 --> 00:15:27,000
+a última talvez não.
+
+127
+00:15:27,000 --> 00:15:30,000
+Então, vamos começar aqui pela primeira, que é o first feed.
+
+128
+00:15:30,000 --> 00:15:34,000
+Isto é muito simples, tem um objetivo ser rápido.
+
+129
+00:15:35,000 --> 00:15:38,000
+Se eu tenho um programa que tem este tamanho, imaginemos,
+
+130
+00:15:39,000 --> 00:15:44,000
+o que é que ele vai fazer? First feed? Se calhar ele pode entrar aqui na posição zero.
+
+131
+00:15:44,000 --> 00:15:50,000
+Então, vamos pôr aqui o meu pedaço de memória e o alocavo logo aqui.
+
+132
+00:15:51,000 --> 00:15:55,000
+Isto é uma estratégia a mais rápida que nós temos.
+
+133
+00:15:55,000 --> 00:16:06,000
+First feed vai alocar o bloco de memória mais pequeno,
+
+134
+00:16:06,000 --> 00:16:13,000
+que é suficientemente grande para que os meus dados caibam lá dentro.
+
+135
+00:16:13,500 --> 00:16:21,500
+Eu teria hipótese de meter aqui no princípio, aqui ou, por exemplo, aqui no fim.
+
+136
+00:16:22,500 --> 00:16:33,500
+Vamos imaginar, então, que o bloco mais pequeno é este que está.
+
+137
+00:16:33,500 --> 00:16:38,500
+Portanto, ele iria alocar aqui o meu programa no first feed.
+
+138
+00:16:39,000 --> 00:16:46,000
+O first feed é intuitivo, ele diz, allocates the largest available free memory block.
+
+139
+00:16:47,000 --> 00:16:50,000
+Este aqui parece-me contribuir para que não haja fragmentação,
+
+140
+00:16:50,000 --> 00:16:53,000
+que haja uma diminuição de blocos.
+
+141
+00:16:53,000 --> 00:16:57,000
+Portanto, se for o first feed, ele vai alocar aqui este bloco,
+
+142
+00:16:57,000 --> 00:17:02,000
+que será o bloco maior de memória, então fica aqui este espaço todo livre.
+
+143
+00:17:02,000 --> 00:17:04,000
+Qual é a lógica disto?
+
+144
+00:17:04,500 --> 00:17:08,500
+É que, provavelmente, se eu usar esta estratégia do first feed,
+
+145
+00:17:08,500 --> 00:17:14,500
+é provável que eu consiga meter aqui um outro processo.
+
+146
+00:17:16,500 --> 00:17:20,500
+Enquanto que aqui, se calhar, já não é possível fazer essa alocação.
+
+147
+00:17:20,500 --> 00:17:23,500
+E aqui este espaço vai ser desperdiçado.
+
+148
+00:17:23,500 --> 00:17:27,500
+Portanto, tenho que usar aqui umas estratégias deste género,
+
+149
+00:17:27,500 --> 00:17:31,500
+ou mais sofisticadas, para alocar a memória.
+
+150
+00:17:32,000 --> 00:17:34,000
+Como vocês devem estar a imaginar,
+
+151
+00:17:34,000 --> 00:17:36,000
+depois de nós estarmos a utilizar,
+
+152
+00:17:36,000 --> 00:17:39,000
+o computador já não é desligado para uma semana ou duas,
+
+153
+00:17:39,000 --> 00:17:44,000
+portanto, não há um reset da memória.
+
+154
+00:17:44,000 --> 00:17:46,000
+O que é que vai acontecer?
+
+155
+00:17:46,000 --> 00:17:48,000
+Vai acontecer que, pura e simplesmente,
+
+156
+00:17:48,000 --> 00:17:51,000
+esta fragmentação é muito grande e vão existir,
+
+157
+00:17:51,000 --> 00:17:54,000
+dentro da minha memória, muitos espaços livres.
+
+158
+00:17:54,000 --> 00:18:01,000
+Significa que, provavelmente, em vez de eu conseguir utilizar 100% da memória,
+
+159
+00:18:01,000 --> 00:18:07,500
+eu, se calhar, só consigo 80% ou 70% da memória porque o resto é...
+

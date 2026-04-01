@@ -1,0 +1,524 @@
+1
+00:00:00,000 --> 00:00:08,400
+é a prioridade, é o P2, ele é executado até aqui, depois temos o P5 que tem prioridade 2,
+
+2
+00:00:08,400 --> 00:00:21,400
+executa todo até o FIG, o P1, o P3 e depois finalmente o P4, sendo um algoritmo não preemptivo
+
+3
+00:00:21,400 --> 00:00:29,600
+é muito fácil de perceber como é que ele é executado, indo para um algoritmo que é preemptivo,
+
+4
+00:00:29,600 --> 00:00:40,000
+já o que acontece no processador é muito mais complicado, digamos com um bocadinho mais complicado,
+
+5
+00:00:40,000 --> 00:00:48,600
+imaginemos que chegou primeiro aqui o P1, o P1 tem prioridade 3, ele vai sendo executado,
+
+6
+00:00:48,600 --> 00:00:55,200
+ele vai ser executado durante 3 unidades de tempo, portanto aqui ele consumiu 2 unidades de tempo,
+
+7
+00:00:56,200 --> 00:01:04,200
+e chegam o P2 e o P3, ora o P2 tem prioridade 1 que é mais alta do que o P1, se ele é preemptivo
+
+8
+00:01:04,200 --> 00:01:13,200
+ele vai retirar o P1 de execução e vai colocar o P2, porque o P3 também tem prioridade 4,
+
+9
+00:01:13,200 --> 00:01:21,200
+portanto o P2 executaria durante 2 unidades de tempo e termina aqui.
+
+10
+00:01:21,200 --> 00:01:35,200
+Agora temos, portanto o P2 já saiu de contenção, temos aqui o P3 no final disto, neste ponto,
+
+11
+00:01:35,200 --> 00:01:47,200
+temos o P3 e o P1, o P1 tem prioridade 3, portanto tem mais prioridade que o P3 entra em execução
+
+12
+00:01:47,200 --> 00:01:55,200
+e executa até terminar a sua execução, portanto o P1 também saiu aqui do sistema, saiu da fila da ready.
+
+13
+00:01:55,200 --> 00:02:03,200
+Chegamos entretanto aqui o P4 que tem prioridade 5, portanto é mais alta que o P3,
+
+14
+00:02:03,200 --> 00:02:12,200
+significa que o P3 vai ser executado durante 2 unidades de tempo e termina também o P3.
+
+15
+00:02:13,200 --> 00:02:21,200
+Chegamos agora aqui ao mesmo tempo que o P3 termina o P5, isto é claro que na realidade estas sincronizações
+
+16
+00:02:21,200 --> 00:02:28,200
+entre as chegadas e os fins não são bem reais, são giras para pôr aqui.
+
+17
+00:02:28,200 --> 00:02:36,200
+Chegamos aqui o P5 que tem prioridade 2 que é mais alta do que o P4, portanto o P5 executa até ao fim
+
+18
+00:02:36,200 --> 00:02:44,200
+e só depois é que só resta lá o P4, o P4 vai ser executado, o CPU a partir daqui ficaria vazia.
+
+19
+00:02:44,200 --> 00:02:55,200
+Este é o algoritmo mais utilizado em sistemas de tempo real, há um dos, mas não tenho a certeza,
+
+20
+00:02:55,200 --> 00:03:01,200
+é provável que esteja mais utilizado, também há um que é muito utilizado que é os chamados executores cíclicos,
+
+21
+00:03:01,200 --> 00:03:11,200
+mas porque é possível matematicamente olhando para estes tempos de execução dos meus processos,
+
+22
+00:03:11,200 --> 00:03:20,200
+o período, o tempo de chegada e por aí fora, fazer umas continhas e dizer ok, o tempo de resposta
+
+23
+00:03:20,200 --> 00:03:29,200
+para este processo no pior caso é x, portanto é isto que se consegue fazer com este escalonamento de prioridades,
+
+24
+00:03:29,200 --> 00:03:37,200
+matematicamente provar que o sistema está correto, que temporalmente nunca vai haver um problema.
+
+25
+00:03:37,200 --> 00:03:44,200
+Outra parte difícil aqui no meio é determinar os tempos de execução dos meus processos,
+
+26
+00:03:44,200 --> 00:03:53,200
+isto também é mais uma parte da ciência complicada do meu sistema, eu tenho que analisar o código,
+
+27
+00:03:53,200 --> 00:03:59,200
+analisar o código em assembly, saber qual é o processador em que aquilo vai ser executado,
+
+28
+00:03:59,200 --> 00:04:09,200
+portanto tenho que saber muita informação, ter muitos modelos e normalmente este cálculo é extremamente pessimista,
+
+29
+00:04:09,200 --> 00:04:18,200
+estamos a falar de pessimismos que podem ir até mais de 70% daquilo que é a média do tempo de execução do meu processo.
+
+30
+00:04:19,200 --> 00:04:26,200
+Não sei se vamos falar nisto neste curso, mas pode ser que sim.
+
+31
+00:04:29,200 --> 00:04:41,200
+Outro algoritmo que é muito utilizado, ou em parte é muito utilizado em sistemas correntes normais,
+
+32
+00:04:41,200 --> 00:04:45,200
+é o chamado algoritmo de round robin, em que é que nós fazemos?
+
+33
+00:04:45,200 --> 00:04:55,200
+Cada processo tem uma parte do tempo da CPU, o tal time quantum ou o time slice,
+
+34
+00:04:55,200 --> 00:05:00,200
+os nossos dois nomes, qualquer coisa entre os 10 e os 100 milissegundos,
+
+35
+00:05:00,200 --> 00:05:06,200
+e o processo pode executar no CPU durante esse tempo, mas temos que 10 milissegundos,
+
+36
+00:05:06,200 --> 00:05:12,200
+ao fim de 10 milissegundos ele é substituído por outro processo que está na fila,
+
+37
+00:05:12,200 --> 00:05:15,200
+mais uma vez é uma fila, first in, first out.
+
+38
+00:05:15,200 --> 00:05:23,200
+Isto é essencialmente os primeiros algoritmos para sistemas partilhados que fossem multi utilizadores.
+
+39
+00:05:23,200 --> 00:05:32,200
+Não sabíamos, temos aqui um CPU, vamos distribui-lo irmamente entre toda a gente que está a utilizar o meu sistema.
+
+40
+00:05:32,200 --> 00:05:42,200
+Portanto, pegando aqui num exemplo, temos aqui estes processos P1, P2, P3 e P4,
+
+41
+00:05:42,200 --> 00:05:50,200
+cada um com um tempo de execução de 53 a 7, 108 e 24, um time quantum de 20 unidades do tempo,
+
+42
+00:05:50,200 --> 00:05:54,200
+podem achar que são 20 milissegundos ou que quiserem.
+
+43
+00:05:54,200 --> 00:05:56,200
+Portanto, o que é que nós temos?
+
+44
+00:05:56,200 --> 00:05:58,200
+Portanto, o que é que nós temos?
+
+45
+00:05:58,200 --> 00:06:04,200
+São todos a chegar ao mesmo tempo, assumir, P1 executa 20 unidades do tempo,
+
+46
+00:06:04,200 --> 00:06:13,200
+P2 vai executar não 20, mas 17, que ele só tinha um tempo de 17, não é?
+
+47
+00:06:13,200 --> 00:06:24,200
+Vai agora executar P3, 20 unidades de tempo, quando termina tanto o P1 como o P3 estão na fila de ready, certo?
+
+48
+00:06:24,200 --> 00:06:29,200
+Agora vai o P4 e executa 20 unidades de tempo, faltam de 4.
+
+49
+00:06:29,200 --> 00:06:37,200
+Reparem que neste caso aqui, num sistema aberto, nós não sabemos muito bem quanto tempo é que cada um deles vai executar.
+
+50
+00:06:39,200 --> 00:06:49,200
+Agora voltamos novamente ao P1, não é? O P1 tinha executado 20, vai executar mais 20, já vai com 40 unidades de tempo aqui.
+
+51
+00:06:49,200 --> 00:06:54,200
+Agora é executado o P3, que tem muito que executar.
+
+52
+00:06:54,200 --> 00:07:01,200
+O P4 já tinha executado 20, são só mais 4 unidades de tempo aqui, neste período.
+
+53
+00:07:01,200 --> 00:07:08,200
+Depois o P1 que estava nos 40, portanto aqui executa 13 unidades de tempo.
+
+54
+00:07:09,200 --> 00:07:21,200
+Finalmente o P3, mais 20 e depois mais 8 unidades de tempo aqui para terminar a sua execução.
+
+55
+00:07:23,200 --> 00:07:30,200
+Este também é relativamente simples de perceber como é que ele funciona.
+
+56
+00:07:30,200 --> 00:07:38,200
+Isto basicamente é dividir o meu processador pelos vários processos que estão no sistema.
+
+57
+00:07:39,200 --> 00:07:46,200
+O problema que ele tem é como é que nós definimos qual é o time quantum, idealmente o menor time quantum possível.
+
+58
+00:07:46,200 --> 00:07:51,200
+O problema é que há um overhead muito grande da comutação de processos.
+
+59
+00:07:51,200 --> 00:07:59,200
+Se for muito pequeno, o overhead de fazer a comutação de processos, o tempo que demora, é muito grande em relação ao tempo que ele vai executar.
+
+60
+00:07:59,200 --> 00:08:03,200
+E começa a ser desinteressante ter um time quantum muito pequeno.
+
+61
+00:08:03,200 --> 00:08:09,200
+Mas o ideal era termos um time quantum extremamente pequeno, zero.
+
+62
+00:08:09,200 --> 00:08:18,200
+Por isso, se nós tivermos um time quantum maior, o que vai acontecer é que ele vai favorecer em geral os processos que são CPU bound.
+
+63
+00:08:18,200 --> 00:08:26,200
+Porquê? Porque os processos Iodound vão estar a ir ao disco, passar para o estado de waiting.
+
+64
+00:08:26,200 --> 00:08:38,200
+E, portanto, acabam de prestar muito pouco tempo realmente no CPU, porque são comutados por outro processo, também cada vez que fazem uma operação de input-output.
+
+65
+00:08:39,200 --> 00:08:42,200
+Os processos de CPU bound, o que é que fazem?
+
+66
+00:08:42,200 --> 00:08:48,200
+Usam o tempo todo os tais, no caso anterior, as 20 unidades de tempo, os 20 milliseconds.
+
+67
+00:08:48,200 --> 00:08:52,200
+Volta uma vez para o fieldhead, a seguir voltam novamente a utilizar os 20 milliseconds.
+
+68
+00:08:53,200 --> 00:09:01,200
+Enquanto os processos da Iodound, se calhar só usam 10 e a seguir só usam mais 10, portanto são prejudicados em relação aos anteriores.
+
+69
+00:09:04,200 --> 00:09:09,200
+O que é que se inventou a seguir? Foi o algoritmo multinível por filas.
+
+70
+00:09:10,200 --> 00:09:24,200
+Ou seja, partindo do princípio que nós podemos classificar os processos em diferentes tipos, interativo, processos batchs, processos multimédia ou outra classificação qualquer que me interessa,
+
+71
+00:09:25,200 --> 00:09:33,200
+eu posso colocar esses processos, cada um desses tipos, na respectiva fila.
+
+72
+00:09:34,200 --> 00:09:44,200
+E posso fazer mais do que isso, que é, em cada uma das filas, utilizar uma política de escalonamento diferente.
+
+73
+00:09:45,200 --> 00:09:55,200
+Por exemplo, para processos interativos usar round-robin, para processos batchs usar first-come, first-serve, para processos de sistema usar um algoritmo de prioridades, etc.
+
+74
+00:09:56,200 --> 00:10:00,200
+O que nós temos aqui é que cada fila tem prioridades sobre o outro.
+
+75
+00:10:01,200 --> 00:10:09,200
+Nós tivemos aqui um sistema muito antigo, nós temos aqui os processos do sistema com mais alta prioridade,
+
+76
+00:10:10,200 --> 00:10:18,200
+significa que se esta fila tiver processos do sistema para executar, estes são os que ocupam o CPU antes dos outros que estão aqui.
+
+77
+00:10:19,200 --> 00:10:25,200
+Se por sua vez tivermos processos interativos, primeiro vão ser executados estes processos,
+
+78
+00:10:26,200 --> 00:10:36,200
+quando estes processos já foram todos executados, então o meu sistema pode executar,
+
+79
+00:10:36,200 --> 00:10:49,200
+pode executar estes processos que estão aqui.
+
+80
+00:10:50,200 --> 00:10:58,200
+Quando estes terminarem, já não haverá aqui nada, então pode vir a este, já não há aqui nada, pode vir a executar aqui estes.
+
+81
+00:10:59,200 --> 00:11:03,200
+Entretanto, se aparecer aqui um destes, este vai ter que ser executado primeiro, não é?
+
+82
+00:11:04,200 --> 00:11:11,200
+E só depois é que pode vir aqui aos processos dos alunos, ou quer que seja, executar cada um destes.
+
+83
+00:11:12,200 --> 00:11:16,200
+Portanto, este é o algoritmo que aqui está.
+
+84
+00:11:17,200 --> 00:11:25,200
+Ou seja, cada fila tem mais prioridades sobre a fila de baixo e primeiro esgotamos os da fila de cima até passar para a fila de baixo.
+
+85
+00:11:25,200 --> 00:11:32,200
+O que isto tem é que cada uma das filas pode implementar algoritmos diferentes na sua execução.
+
+86
+00:11:35,200 --> 00:11:42,200
+Pronto, isto torna o algoritmo muito mais complicado em termos de execução.
+
+87
+00:11:46,200 --> 00:11:53,200
+Muito mais, supostamente até pode demorar um bocadinho mais de tempo que os outros algoritmos.
+
+88
+00:11:54,200 --> 00:12:07,200
+Mas conseguimos aproximar um sistema para um sistema mais justo e que utilize de forma mais eficiente o CPU do meu computador.
+
+89
+00:12:08,200 --> 00:12:14,200
+Temos aqui assim algum exemplo, não vou entrar aqui em detalhes sobre este exemplo.
+
+90
+00:12:15,200 --> 00:12:28,200
+Finalmente temos o multinível com realimentação por filas, que é basicamente a base dos algoritmos utilizados no Linux e no Windows.
+
+91
+00:12:29,200 --> 00:12:42,200
+O que é que ele faz? A realimentação quer dizer que o sistema de escalonamento vai saber como é que está a correr o escalonamento
+
+92
+00:12:42,200 --> 00:12:47,200
+e vai utilizar essa informação para se adaptar.
+
+93
+00:12:49,200 --> 00:12:58,200
+Isto quer dizer o quê? Que normalmente eu não sei fazer esta classificação, quais são os processos interativos, quais são os processos matos
+
+94
+00:12:59,200 --> 00:13:05,200
+e mesmo que eu soubesse, os próprios programas podia me entir sobre qual era a sua classificação
+
+95
+00:13:05,200 --> 00:13:12,200
+ou pior do que isso, há diferentes programas que se vão comportar de diferentes maneiras ao longo do tempo.
+
+96
+00:13:13,200 --> 00:13:18,200
+Por vezes são interativos, por vezes estão a fazer algum tipo de processamento e demoram mais tempo.
+
+97
+00:13:19,200 --> 00:13:31,200
+São um CPU bound, outras vezes são IL bound, portanto esta classificação em sistemas abertos é quase impossível de se realizar e não é prática também.
+
+98
+00:13:32,200 --> 00:13:40,200
+Portanto, este algoritmo o que tenta é adaptar-se ao que está a passar.
+
+99
+00:13:41,200 --> 00:13:53,200
+Por exemplo, nós podemos definir aqui um algoritmo round robin, em que nós definimos um time quantum de 8 para os que estão na primeira fila,
+
+100
+00:13:53,200 --> 00:14:02,200
+que entram por aqui, um time quantum de 16 para a segunda fila e um first come first serve para a última fila.
+
+101
+00:14:03,200 --> 00:14:10,200
+Isto quer dizer o quê? Se nós tivermos aqui um processo deste género, com 32 de comprimento,
+
+102
+00:14:10,200 --> 00:14:18,200
+ele vai executar neste primeiro nível durante 8 unidades de tempo,
+
+103
+00:14:19,200 --> 00:14:32,200
+depois vai executar já no segundo nível mais 16 unidades de tempo e vai novamente esgotar esses 16 unidades de tempo
+
+104
+00:14:32,200 --> 00:14:42,200
+e vai passar para a first come first serve em que vai executar as restantes 8 unidades de tempo que lhe faltavam.
+
+105
+00:14:43,200 --> 00:14:54,200
+Se nós pelo contrário tivermos um processo que seja mais interativo, então isto já não vai acontecer.
+
+106
+00:14:55,200 --> 00:15:03,200
+Vamos imaginar que em vez de termos um processo assim, temos um processo que é assim uma coisa,
+
+107
+00:15:04,200 --> 00:15:08,200
+em que ele vai executar durante um bocadinho, depois outro bocadinho, depois outro bocadinho,
+
+108
+00:15:09,200 --> 00:15:14,200
+portanto sempre bocadinhos menores de 8, imagina que são de 4.
+
+109
+00:15:15,200 --> 00:15:26,200
+Significa que este programa vai executar durante 4, está a fazer input-output, vai executar durante 4,
+
+110
+00:15:27,200 --> 00:15:33,200
+mas agora imaginemos que ele se comece a comportar de maneira diferente a partir daqui.
+
+111
+00:15:34,200 --> 00:15:44,200
+Então, o que vai acontecer é que se ele aqui precisar, por exemplo, de 16 unidades de tempo,
+
+112
+00:15:45,200 --> 00:15:57,200
+ele vai executar aqui 8 neste nível e a partir daqui ele passa para a fila de prioridades mais baixa.
+
+113
+00:15:58,200 --> 00:16:03,200
+E só vai executar a partir daqui as restantes 8 unidades de tempo.
+
+114
+00:16:04,200 --> 00:16:11,200
+Como só executou 8, ele vai continuar na mesma fila, não passa para a fila de baixo do first come first serve.
+
+115
+00:16:13,200 --> 00:16:20,200
+Portanto, é assim que estes algoritmos funcionam, é mais ou menos uma coisa bocadinho,
+
+116
+00:16:20,200 --> 00:16:25,200
+é até substancialmente mais sofisticada com uma série de otimizações, etc,
+
+117
+00:16:26,200 --> 00:16:31,200
+que os algoritmos do Linux e do Windows vão funcionando.
+
+118
+00:16:32,200 --> 00:16:40,200
+Por exemplo, no Linux não, mas no Windows são definidos aqueles níveis de prioridades que eu vos mostrei ao bocadinho,
+
+119
+00:16:40,200 --> 00:16:44,200
+high, medium and low e real-time, por exemplo,
+
+120
+00:16:45,200 --> 00:16:52,200
+e o meu processo fica no conjunto de níveis de prioridade dentro daquelas filas.
+
+121
+00:16:53,200 --> 00:17:01,200
+E conforme, por exemplo, basta eu estar com esta janela aberta, ter o foco nesta janela,
+
+122
+00:17:01,200 --> 00:17:13,200
+ele consegue logo subir a prioridade do processo ligeiramente para que a responsabilidade seja maior devido a ter mais prioridade.
+
+123
+00:17:14,200 --> 00:17:24,200
+Pronto, hoje eu acho que ficaríamos por aqui, vocês têm por aqui também mais uns exemplos.
+
+124
+00:17:25,200 --> 00:17:37,200
+E na próxima semana já vamos passar para uma outra matéria, para continuarmos mais diferentes,
+
+125
+00:17:38,200 --> 00:17:50,200
+acho que na próxima semana vamos falar sobre comunicações, vamos falar sobre comunicações em sistemas embebidos,
+
+126
+00:17:50,200 --> 00:17:54,200
+em sistemas embebidos, essencialmente.
+
+127
+00:17:55,200 --> 00:18:01,200
+E portanto não sei se há alguma questão que me queiram pôr, hoje conseguimos acabar a horas.
+
+128
+00:18:03,200 --> 00:18:04,200
+Não?
+
+129
+00:18:05,200 --> 00:18:09,200
+Pronto, então um bom jantar a todos, vemos então na próxima semana.
+
+130
+00:18:10,200 --> 00:18:11,200
+Boa jantar.
+
+131
+00:18:12,200 --> 00:18:13,200
+Boa jantar.
+

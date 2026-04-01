@@ -1,0 +1,468 @@
+1
+00:00:00,000 --> 00:00:02,500
+não está disponível, ok?
+
+2
+00:00:02,500 --> 00:00:05,500
+Mas, pronto, não se preocupem muito porque depois
+
+3
+00:00:05,500 --> 00:00:10,500
+há uma estratégia de alocação de memória do próprio hardware
+
+4
+00:00:10,500 --> 00:00:13,500
+que resolve em grande parte estes problemas
+
+5
+00:00:13,500 --> 00:00:17,000
+dividindo a memória em vários blocos, ok?
+
+6
+00:00:17,000 --> 00:00:23,500
+E, portanto, esta capacidade de nós termos muitos buracos
+
+7
+00:00:23,500 --> 00:00:27,500
+deixa de existir, o que pode acontecer é existir
+
+8
+00:00:27,500 --> 00:00:29,500
+como estamos a alocar blocos
+
+9
+00:00:29,500 --> 00:00:33,500
+e nós não ocuparmos estes blocos todos de memória, ok?
+
+10
+00:00:33,500 --> 00:00:37,500
+Porque isso é que não resolve o problema na sua qualidade, ok?
+
+11
+00:00:39,500 --> 00:00:43,000
+Portanto, o que é que tem que fazer o memory management?
+
+12
+00:00:43,000 --> 00:00:47,000
+Mantenha uma lista para saber o que é que está em cada região de memória
+
+13
+00:00:47,000 --> 00:00:51,000
+e que processo é que corresponde, ok?
+
+14
+00:00:52,500 --> 00:00:56,000
+Se tivermos sistemas com pouca memória, decide que processos
+
+15
+00:00:56,000 --> 00:01:00,500
+é que vão ser carregados na memória, no espaço que está livre, não é?
+
+16
+00:01:00,500 --> 00:01:05,500
+Isto é particularmente relevante, por exemplo, em telemóveis
+
+17
+00:01:05,500 --> 00:01:08,500
+em sistemas com poucos recursos, não é?
+
+18
+00:01:08,500 --> 00:01:14,500
+Podemos pôr parte da minha memória de um processo para o disco, ok?
+
+19
+00:01:14,500 --> 00:01:19,500
+E alocar e desalocar memória dinamicamente
+
+20
+00:01:19,500 --> 00:01:22,000
+de acordo com as necessidades do meu programa.
+
+21
+00:01:22,000 --> 00:01:25,000
+As funções principais são relativamente simples
+
+22
+00:01:25,000 --> 00:01:27,000
+é o chamado malloc e free.
+
+23
+00:01:27,000 --> 00:01:31,000
+Malloc aloca-me um pedaço de memória com o tamanho que eu quiser
+
+24
+00:01:31,000 --> 00:01:35,000
+o free vai libertar esse pedaço de memória
+
+25
+00:01:35,000 --> 00:01:37,000
+quando eu já não preciso dele, ok?
+
+26
+00:01:39,500 --> 00:01:44,000
+A seguir, tenho umas funções que têm a ver com a gestão de fecheiros, não é?
+
+27
+00:01:44,000 --> 00:01:50,500
+Mais uma vez, a gestão de fecheiros também é uma coisa bastante complexa, não é?
+
+28
+00:01:51,000 --> 00:01:55,000
+Eu tenho um disco que...
+
+29
+00:01:56,500 --> 00:02:01,500
+Bem, os discos hoje em dia são quase todos sólidos, não é?
+
+30
+00:02:02,000 --> 00:02:06,000
+Os que nós estamos a usar pelo menos nos portáteis, em geral,
+
+31
+00:02:06,000 --> 00:02:08,000
+não têm tanto este problema, não é?
+
+32
+00:02:08,000 --> 00:02:14,000
+Mas também há muitos discos rotativos, não é?
+
+33
+00:02:15,000 --> 00:02:17,500
+Discos mesmo, não é?
+
+34
+00:02:18,000 --> 00:02:26,500
+E nesses discos é preciso saber em que sítio, em que setor é que está a minha...
+
+35
+00:02:26,500 --> 00:02:28,500
+Em que setor é que estão os meus dados, ok?
+
+36
+00:02:28,500 --> 00:02:30,500
+Qual é o comprimento desses dados.
+
+37
+00:02:30,500 --> 00:02:34,500
+Eventualmente, nós vamos escrevendo para o disco e o disco vai ficando fragmentado.
+
+38
+00:02:34,500 --> 00:02:38,500
+Portanto, eu já não consigo, se tiver que meter um fecheiro de 1 GB,
+
+39
+00:02:38,500 --> 00:02:42,000
+ele vai ficar em vários bocadinhos diferentes ao longo do disco.
+
+40
+00:02:42,000 --> 00:02:48,000
+Portanto, eu tenho que ter a noção e perceber onde é que estão cada um dos fecheiros.
+
+41
+00:02:48,000 --> 00:02:52,000
+Significa que às vezes eu posso ter, para o mesmo fecheiro,
+
+42
+00:02:52,000 --> 00:02:57,000
+a primeira parte está numa determinada posição, ok?
+
+43
+00:02:57,000 --> 00:03:00,000
+Depois tenho aqui uma segunda parte
+
+44
+00:03:01,000 --> 00:03:08,000
+e tenho uma terceira parte também na outra posição qualquer do meu disco.
+
+45
+00:03:08,000 --> 00:03:12,000
+Isto porque o resto do disco está ocupado
+
+46
+00:03:12,000 --> 00:03:16,000
+e ele só aproveitou os espaços que estavam vazios, ok?
+
+47
+00:03:16,000 --> 00:03:18,000
+Portanto, pode haver esta necessidade.
+
+48
+00:03:18,000 --> 00:03:21,000
+Basicamente, o que é que ele faz mais?
+
+49
+00:03:21,000 --> 00:03:27,000
+Faz a criação de criar e terminar fecheiros e apagar fecheiros, não é?
+
+50
+00:03:27,000 --> 00:03:33,000
+Operações de leitura e de escrita, são os principais sobre os fecheiros, ok?
+
+51
+00:03:33,000 --> 00:03:38,000
+Gestão também deste mapeamento dos fecheiros no próprio disco, ok?
+
+52
+00:03:38,000 --> 00:03:41,000
+Eventualmente, escalonar o acesso ao disco.
+
+53
+00:03:41,000 --> 00:03:44,000
+Isto é permitir, por exemplo, que processos de mais alta prioridade
+
+54
+00:03:44,000 --> 00:03:47,000
+acedam mais rapidamente ao disco, ok?
+
+55
+00:03:47,000 --> 00:03:54,000
+E depois, gerir a proteção dos fecheiros, não é?
+
+56
+00:03:54,000 --> 00:04:03,000
+Por exemplo, garantir que uma pessoa que tem lá um conjunto de fecheiros
+
+57
+00:04:03,000 --> 00:04:08,000
+não vá ver a outra pessoa ver que vai aceder aos fecheiros dessa pessoa, certo?
+
+58
+00:04:08,000 --> 00:04:13,000
+Isto também é outra parte do sistema que faz esta proteção
+
+59
+00:04:13,000 --> 00:04:18,000
+em função com aquele modo que trata dos utilizadores e assim, ok?
+
+60
+00:04:18,000 --> 00:04:23,000
+É o conjunto de fecheiros de funções que aqui nós vamos ter, ok?
+
+61
+00:04:23,000 --> 00:04:28,000
+Vamos ter também a parte de gestão de dispositivos, não é?
+
+62
+00:04:28,000 --> 00:04:35,000
+Como é que nós interagimos com o rato, com a clave e por aí fora, não é?
+
+63
+00:04:35,000 --> 00:04:40,000
+E, portanto, todos os sistemas operativos tentam oferecer uma forma standard,
+
+64
+00:04:40,000 --> 00:04:47,000
+mais ou menos igual para cada dispositivo e, ao mesmo tempo, seja tal user-friendly, ok?
+
+65
+00:04:47,000 --> 00:04:51,000
+User-friendly não quer muito, não é?
+
+66
+00:04:51,000 --> 00:04:57,000
+O que é que se tem conseguido e como é que por estranho que pareça,
+
+67
+00:04:57,000 --> 00:05:04,000
+por exemplo, no Linux e no Windows, o acesso aos dispositivos, às portas USB e por aí fora
+
+68
+00:05:04,000 --> 00:05:08,000
+é quase a mesma coisa de estar a aceder ao fecheiro, ok?
+
+69
+00:05:08,000 --> 00:05:14,000
+Temos operações de leitura e de escrita sobre esse fecheiro, não é?
+
+70
+00:05:14,000 --> 00:05:20,000
+Temos operações de abertura do fecheiro, de fechar o fecheiro, que é ligarmos ao dispositivo,
+
+71
+00:05:20,000 --> 00:05:22,000
+sair do dispositivo, não é?
+
+72
+00:05:22,000 --> 00:05:32,000
+Portanto, é isso basicamente que faz este standard, é tratar os dispositivos como se fosse mais um fecheiro, não é?
+
+73
+00:05:32,000 --> 00:05:38,000
+Eles são abertos quase da mesma maneira, é assim um bocado estranho.
+
+74
+00:05:38,000 --> 00:05:40,000
+Como é que nós gerimos isto?
+
+75
+00:05:40,000 --> 00:05:44,000
+Isto geria-se através de um conjunto de device drivers,
+
+76
+00:05:44,000 --> 00:05:51,000
+temos aqui uma série de operações complexas que implicam a programação de bits
+
+77
+00:05:51,000 --> 00:05:59,000
+e cada bit pode ter um determinado valor no meu device driver, no meu hardware, ok?
+
+78
+00:05:59,000 --> 00:06:04,000
+E depois tem que ter aqui vários componentes para fazer baforização,
+
+79
+00:06:04,000 --> 00:06:09,000
+para fazer catching dos dispositivos, pooling se for necessário, ok?
+
+80
+00:06:10,000 --> 00:06:16,000
+Tem que ter também interfaces genéricas para os device drivers
+
+81
+00:06:16,000 --> 00:06:24,000
+e depois os device drivers tendo a serem mais específicos,
+
+82
+00:06:24,000 --> 00:06:28,000
+isto é para facilitar a vida ao próprio programador.
+
+83
+00:06:28,000 --> 00:06:35,000
+Programar um device driver não é propriamente uma coisa muito trivial,
+
+84
+00:06:35,000 --> 00:06:37,000
+mas este sistema também trata-se.
+
+85
+00:06:37,000 --> 00:06:40,000
+Portanto, o que é que eu posso fazer aqui no device manager?
+
+86
+00:06:40,000 --> 00:06:43,000
+Funções de request, pedir acesso a um determinado dispositivo,
+
+87
+00:06:43,000 --> 00:06:49,000
+release, dizer que já não preciso mais deste dispositivo, pode passar para outra pessoa,
+
+88
+00:06:49,000 --> 00:06:57,000
+fazer operações de leitura e descrita, atributos, ligar nos outros ligarmos do dispositivo.
+
+89
+00:06:59,000 --> 00:07:06,000
+Outra parte do sistema, mas se tem a ver com a gestão da parte de comunicações,
+
+90
+00:07:06,000 --> 00:07:14,000
+basicamente nós podemos ter em muitos sistemas diferentes protocolos de comunicação,
+
+91
+00:07:14,000 --> 00:07:25,000
+em sistemas desktop praticamente o protocolo de comunicação mais utilizado,
+
+92
+00:07:25,000 --> 00:07:31,000
+em 99,9% das vezes é este protocolo TCPIP,
+
+93
+00:07:31,000 --> 00:07:36,000
+sobre o qual depois vamos assentar todos os outros protocolos que eu quiser,
+
+94
+00:07:36,000 --> 00:07:42,000
+estamos aqui a falar de file transfer protocolo, do NFS,
+
+95
+00:07:42,000 --> 00:07:51,000
+são coisas até muito antigas, mas podemos ter aqui coisas como cascas, como REST e outras coisas do género
+
+96
+00:07:51,000 --> 00:07:54,000
+a gerir a parte de comunicações.
+
+97
+00:07:55,000 --> 00:08:07,000
+Este mecanismo também pode, em certos casos, ter interfaces diferentes conforme o protocolo que estamos a utilizar,
+
+98
+00:08:07,000 --> 00:08:13,000
+por exemplo, para coisas como o Bluetooth, vocês já trabalharam com o Bluetooth nas aulas práticas?
+
+99
+00:08:13,000 --> 00:08:19,000
+Não? Não. Ok, ok.
+
+100
+00:08:19,000 --> 00:08:25,000
+Portanto, o Bluetooth consegue-nos definir, não sei se vão trabalhar, por acaso não vi o programa,
+
+101
+00:08:25,000 --> 00:08:33,000
+mas estava lá essa parte do Bluetooth, consegue-nos definir uma série de camadas de comunicação,
+
+102
+00:08:33,000 --> 00:08:37,000
+entre as quais a própria camada de aplicação.
+
+103
+00:08:37,000 --> 00:08:41,000
+A comunicação, o TCP já não vai tão longe, fica bastante mais abaixo,
+
+104
+00:08:41,000 --> 00:08:47,000
+nós também vamos falar ligeiramente, rapidamente sobre isso aqui mais para a frente.
+
+105
+00:08:49,000 --> 00:08:57,000
+E portanto, podem haver vários flavors desta interface com a própria rede.
+
+106
+00:08:58,000 --> 00:09:09,000
+O mais comum é o TCPIP, que tem funções também muito simples de criar um canal de comunicações
+
+107
+00:09:09,000 --> 00:09:14,000
+entre dois processos diferentes, normalmente tem duas máquinas diferentes,
+
+108
+00:09:14,000 --> 00:09:25,000
+terminar esse canal e apagá-lo, enviar e receber mensagens e funções internas de transferir status etc.
+
+109
+00:09:26,000 --> 00:09:33,000
+Se vocês quiseram ler mais alguma coisa sobre isto, tem uma série de livros que podem ler,
+
+110
+00:09:33,000 --> 00:09:43,000
+bastante grandes, 900 páginas, 1000 páginas, e que vocês podem tentar ler estes livros.
+
+111
+00:09:43,000 --> 00:09:50,000
+Há várias edições, até vai haver edições mais recentes que esta que eu pus aqui de 2001,
+
+112
+00:09:50,000 --> 00:09:57,000
+se os tipos que estão na certificação destes cursos vissem isso, já me estavam a chatear por eu ter posto um livro de 2001,
+
+113
+00:09:57,000 --> 00:10:05,000
+mas que na base a coisa continua quase mesmo que em 2001, pelo menos aquilo que eu falei até agora.
+
+114
+00:10:07,000 --> 00:10:15,000
+Vamos fazer dez minutinhos de intervalo e eu depois também espero conseguir acabar esta parte aqui
+
+115
+00:10:15,000 --> 00:10:23,000
+sobre o escolaramento do processo antes das oito.
+
+116
+00:10:23,000 --> 00:10:25,000
+Fazemos então dez minutos, pode ser?
+
+117
+00:10:25,000 --> 00:10:27,000
+Ok.
+

@@ -11,7 +11,7 @@ Electronics | no switch esta | baixo | logica digital
 RTOS | sim | baixo | scheduling
 
 numero ISEP: 
-1200209
+1200209@isep.ipp.pt
 
 AULAS Calendario
 

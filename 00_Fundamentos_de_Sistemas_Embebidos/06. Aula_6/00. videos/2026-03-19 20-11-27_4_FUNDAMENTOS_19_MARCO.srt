@@ -1,0 +1,640 @@
+1
+00:00:00,000 --> 00:00:06,480
+que ser executados, isto é a base, não vamos complicar a ideia principal, isto só tem
+
+2
+00:00:06,480 --> 00:00:13,440
+aqui uma figurinha que descreve este processo.
+
+3
+00:00:13,440 --> 00:00:22,120
+Portanto, podemos agora ver essencialmente este ponto quadro, como é que nós selecionamos
+
+4
+00:00:22,120 --> 00:00:29,760
+qual é o próximo processo a entrar em funcionamento, e isso é feito pelos meus
+
+5
+00:00:29,760 --> 00:00:37,280
+calculadores, ou scheduler em inglês.
+
+6
+00:00:37,280 --> 00:00:46,920
+Ele vai selecionar o processo, tem um objetivo, selecionado vários processos que estão
+
+7
+00:00:46,920 --> 00:00:51,760
+prontos, que estão na fila de red, e qual é que vai ser executado, como é que vai
+
+8
+00:00:51,760 --> 00:00:59,640
+alocar o CPU de maneira eficiente, como é que vai assegurar a fairness, português
+
+9
+00:00:59,640 --> 00:01:07,840
+não estou lembrado o termo, e a responsabilidade do próprio programa, que pode ser um objetivo,
+
+10
+00:01:07,840 --> 00:01:14,400
+por exemplo, mais uma vez, em sistemas de tempo real, por exemplo, um dos objetivos
+
+11
+00:01:15,400 --> 00:01:21,640
+pode ser que as tarefas mais críticas corram primeiro do que as tarefas menos críticas,
+
+12
+00:01:21,640 --> 00:01:30,480
+uma tarefa que trata do ABS do carro com mais prioridade do que a tarefa que está a tratar
+
+13
+00:01:30,480 --> 00:01:37,280
+do rádio que estamos a ouvir, parece mais ou menos evidente isso, aqui pode haver várias
+
+14
+00:01:37,280 --> 00:01:45,240
+estratégias aqui no mundo, nem todas elas, nem sempre nós queremos fairness, a fairness
+
+15
+00:01:45,240 --> 00:01:46,240
+vem de que?
+
+16
+00:01:46,240 --> 00:01:51,880
+Num sistema que esteja aberto, nós não sabemos o que é que vai entrar lá para dentro,
+
+17
+00:01:51,880 --> 00:01:59,280
+nós sabemos que vamos pôr um Word, vamos pôr um Excel, vamos pôr um browser a funcionar,
+
+18
+00:01:59,280 --> 00:02:04,480
+não fazemos a menor ideia, quem desenhou o Windows, não faz a menor ideia do que é
+
+19
+00:02:04,560 --> 00:02:11,080
+vai lá entrar, portanto tem que ser minimamente justa para todos os tipos de programas que
+
+20
+00:02:11,080 --> 00:02:18,360
+estejam a funcionar, num sistema embebido, num sistema de tempo real, isso já nos preocupa
+
+21
+00:02:18,360 --> 00:02:25,800
+muito, nós queremos, nós sabemos exatamente o que é que vai lá entrar e poucas vezes
+
+22
+00:02:25,800 --> 00:02:30,800
+há muitas variações, não há a possibilidade de pôrmos muitas coisas lá para dentro,
+
+23
+00:02:30,800 --> 00:02:40,400
+embora isso seja uma coisa que cada vez mais há a mudar, mas são mudanças muito lentas
+
+24
+00:02:40,400 --> 00:02:46,800
+que vão demorar muitos anos e há tanta capacidade de processamento para coisas banais, não
+
+25
+00:02:46,800 --> 00:02:53,400
+é preciso estar a meter coisas banais no sistema de controle do motor do carro, por
+
+26
+00:02:53,400 --> 00:02:58,840
+exemplo, é preferível ter lá um sistema independente só a tratar da parte de controle
+
+27
+00:02:58,840 --> 00:03:06,440
+do motor. Mais para frente, nós vamos usar esta notação só para exemplificar as coisas,
+
+28
+00:03:06,440 --> 00:03:12,840
+portanto este, este tinha a indicar a chegada de um processo ao meu sistema, quando é que
+
+29
+00:03:12,840 --> 00:03:18,240
+ele foi lançado no fundo, isto é o processo que está em execução, que está no estado
+
+30
+00:03:18,240 --> 00:03:23,640
+de running, que está a correr, este é um processo à espera, portanto está no estado
+
+31
+00:03:23,640 --> 00:03:30,640
+de waiting e quando coloco aqui esta bolinha significa que o processo finalizou, portanto
+
+32
+00:03:30,640 --> 00:03:38,640
+imaginemos isto, obviamente pouco corresponde a um programa, mas certo para exemplificar
+
+33
+00:03:38,640 --> 00:03:46,640
+o programa, pelo menos num sistema como este, um sistema aberto, o Windows, o Word, o Excel,
+
+34
+00:03:47,640 --> 00:03:53,640
+a coisa parecida, não funciona assim, mas muitas coisas em sistemas embedidos funcionam
+
+35
+00:03:53,640 --> 00:04:00,640
+exatamente como eu tenho aqui. Existe o processo é lançado, vai fazer por exemplo uma recolha
+
+36
+00:04:00,640 --> 00:04:09,640
+de um conjunto de valores de sensores, faz uma funçãozinha de controle, calcula um
+
+37
+00:04:09,640 --> 00:04:15,640
+output qualquer e atua sobre um output e desliga-se, novamente até o próximo período,
+
+38
+00:04:15,640 --> 00:04:22,640
+até entrar novamente em execução. Isto é o normal, significa que este depois mais
+
+39
+00:04:22,640 --> 00:04:29,640
+à frente, o P2, vai entrar novamente em funcionamento e normalmente ele tem aqui um determinado período
+
+40
+00:04:29,640 --> 00:04:36,640
+que é constante em termos de execução deste processo. Não vamos entrar ainda nisso, isso
+
+41
+00:04:36,640 --> 00:04:41,640
+deixo para as próximas cadeiras que vocês vão falar sobre este assunto. Portanto,
+
+42
+00:04:41,640 --> 00:04:46,640
+ele está a ser executado, aqui está no estado de waiting, está a espera por exemplo
+
+43
+00:04:46,640 --> 00:04:51,640
+de uma operação no disco, em execução, novamente em waiting, novamente em execução
+
+44
+00:04:51,640 --> 00:04:58,640
+e aqui termina o meu processo. Vai sair esta nomenclatura que eu vou utilizar, se for
+
+45
+00:04:58,640 --> 00:05:09,640
+possível voltamos para aqui. Portanto, onde é que entra aqui o escalonador? O escalonador
+
+46
+00:05:09,640 --> 00:05:18,640
+entra nesta passagem do estado de ready para running, é quando ele é executado, mas ele
+
+47
+00:05:18,640 --> 00:05:24,640
+é disputado sempre que um processo está no estado de running e vai para terminated,
+
+48
+00:05:24,640 --> 00:05:30,640
+ou seja, desapareceu de running, desapareceu dali um processo, é preciso ligar o escalonador
+
+49
+00:05:30,640 --> 00:05:35,640
+para ir buscar um processo à fila de ready e para decidir qual é que vai ser a execução.
+
+50
+00:05:35,640 --> 00:05:43,640
+Quando esta interrupção, por exemplo, que é programada periódica, coloca o escalonador
+
+51
+00:05:43,640 --> 00:05:50,640
+em funcionamento, quando o meu processo faz uma operação de input-output e passa para
+
+52
+00:05:50,640 --> 00:05:57,640
+o estado waiting, portanto auto-suspende-se, e pode também entrar em funcionamento o
+
+53
+00:05:57,640 --> 00:06:03,640
+escalonador eventualmente nesta situação, que é quando o processo passa do estado waiting
+
+54
+00:06:03,640 --> 00:06:08,640
+para o estado ready, por exemplo, quando pediu para ele ver um disco, para buscar dados
+
+55
+00:06:08,640 --> 00:06:13,640
+a um disco e os dados chegaram e ele deixa de estar no estado waiting e passa para o
+
+56
+00:06:13,640 --> 00:06:19,640
+estado ready, pode, em certas circunstâncias, também acontecer esta transferência do
+
+57
+00:06:19,640 --> 00:06:28,640
+estado do escalonador. Está descrito aqui. Em termos de escalonadores, há três tipos
+
+58
+00:06:28,640 --> 00:06:34,640
+essenciais de escalonadores, de acordo com o horizonte temporal em que eles vão fazer
+
+59
+00:06:34,640 --> 00:06:41,640
+o escalonamento. Short-term scheduler, basicamente é o que vai selecionar qual é o próximo
+
+60
+00:06:41,640 --> 00:06:47,640
+processo que vai ter a execução e corre com extrema frequência, portanto várias vezes
+
+61
+00:06:47,640 --> 00:06:54,640
+por segundo, com uma frequência de mil e segundos. Está azul porque é o único que
+
+62
+00:06:54,640 --> 00:07:05,640
+vamos trabalhar aqui. Há o medium-term scheduler, que pode suspender e resumir processos de
+
+63
+00:07:05,640 --> 00:07:12,640
+modo a aliviar a carga do processador durante breves instantes, isto é, na ordem dos segundos
+
+64
+00:07:12,640 --> 00:07:17,640
+as decisões que ele toma de acordo com o estado do processador, se está muito carregado,
+
+65
+00:07:17,640 --> 00:07:25,640
+se não está. E depois há o long-term scheduler, que é, no fundo, eu escalonei para serem
+
+66
+00:07:25,640 --> 00:07:32,640
+executados durante a noite vários processos uns a seguir aos outros. Isto é aquilo que
+
+67
+00:07:32,640 --> 00:07:39,640
+se designa normalmente por programação em batch, em que várias coisas vão ocorrer
+
+68
+00:07:39,640 --> 00:07:49,640
+durante tempos bastante prolongados. O objetivo é controlar a carga do sistema, de modo
+
+69
+00:07:49,640 --> 00:07:55,640
+a nunca estarem muitos processos ao mesmo tempo a serem executados. Nós vamos ficar
+
+70
+00:07:55,640 --> 00:08:02,640
+só pelo short-term scheduler. Aliás, a maior parte destes, ou é muito simples, ou simplesmente
+
+71
+00:08:02,640 --> 00:08:10,640
+não está presente na maior parte dos sistemas que nós utilizamos hoje em dia. Isto era
+
+72
+00:08:10,640 --> 00:08:17,640
+mais uma compatibilidade com coisas antigas, mas por exemplo, aqui o long-term scheduler
+
+73
+00:08:17,640 --> 00:08:24,640
+é o crontab do Linux. No Windows deve existir uma coisa semelhante, isso também nunca procurei
+
+74
+00:08:25,640 --> 00:08:34,640
+Portanto, o que é que nós pretendemos utilizar ou optimizar quando definimos uma política
+
+75
+00:08:34,640 --> 00:08:39,640
+de escalonamento? Qual é a utilização do CPU, de modo a maximizar a utilização do CPU?
+
+76
+00:08:39,640 --> 00:08:45,640
+Estamos ali a pagar um recurso que é extremamente caro e obviamente queremos que ele esteja sempre
+
+77
+00:08:45,640 --> 00:08:50,640
+a funcionar, principalmente em determinados sistemas que sejam partilhados por muita gente,
+
+78
+00:08:50,640 --> 00:08:58,640
+por exemplo. Ter uma utilização muito elevada do CPU é muito interessante.
+
+79
+00:09:00,640 --> 00:09:06,640
+Podemos também querer maximizar o throughput, que é o número de trabalhos ou processos que
+
+80
+00:09:06,640 --> 00:09:16,640
+são completados ao longo do tempo. O chamado turnaround time, portanto o tempo total de um
+
+81
+00:09:16,640 --> 00:09:24,640
+processo, a sua submissão até ter terminado. O tempo de espera, portanto, da partir do momento
+
+82
+00:09:24,640 --> 00:09:30,640
+que ele aparece no sistema, minimizar o tempo de espera na fila de ready, ou response time,
+
+83
+00:09:30,640 --> 00:09:35,640
+que é o tempo total desde que o processo chegue até que termine a sua execução.
+
+84
+00:09:35,640 --> 00:09:41,640
+Mas atenção que há outras definições para o response time, esta é aquela que nós utilizamos
+
+85
+00:09:41,640 --> 00:09:51,640
+normalmente nesta área de trabalho. Temos aqui alguns algoritmos que nós vamos falar a seguir,
+
+86
+00:09:51,640 --> 00:09:58,640
+first come first serve, escalamento de prioridades, já fui dando assim umas a chega,
+
+87
+00:09:58,640 --> 00:10:03,640
+depois os outros mais sofisticados, os que são chamados multi-level.
+
+88
+00:10:03,640 --> 00:10:11,640
+Nós temos que distinguir aqui essencialmente dois tipos de processos, os processos CPU bound,
+
+89
+00:10:11,640 --> 00:10:18,640
+estes estão aqui nesta primeira imagem, e os processos IO bound, são os principais que nos vão interessar
+
+90
+00:10:18,640 --> 00:10:25,640
+neste escalonamento a curto prazo. Um processo CPU bound é um processo que está durante muito tempo
+
+91
+00:10:25,640 --> 00:10:31,640
+na CPU e que raramente faz operações de input-output. Imaginemos que ele é lançado,
+
+92
+00:10:31,640 --> 00:10:37,640
+significa que ele vai ter um processo CPU bound, ele vai estar muito tempo na CPU e de vez em quando
+
+93
+00:10:37,640 --> 00:10:46,640
+lá faz uma operação de input-output. Isto dá para cálculos científicos, codificação de vídeo,
+
+94
+00:10:46,640 --> 00:10:52,640
+processamento de dados, etc. O impacto que isto tem é que se nós não retirarmos um processo deste
+
+95
+00:10:52,640 --> 00:11:00,640
+processo deste género que pode demorar minutos ou segundos a ser executado, ele fica para sempre no CPU.
+
+96
+00:11:00,640 --> 00:11:11,640
+Portanto, não nos interessa muito que isto aconteça e portanto podemos dar-lhe baixa prioridade, por exemplo.
+
+97
+00:11:11,640 --> 00:11:21,640
+Os processos IO bound são diferentes, eles passam muito tempo a fazer operações de input-output,
+
+98
+00:11:21,640 --> 00:11:29,640
+se calhar são umas coisas assim deste género, portanto o processo está a mais tempo a fazer input-output
+
+99
+00:11:29,640 --> 00:11:35,640
+do que a executar no processador. Mas quando se faz input-output normalmente tem que ser rápido, por exemplo,
+
+100
+00:11:35,640 --> 00:11:50,640
+como interface gráfica ela passa 99% do tempo fora do CPU, não está a fazer nada, é só estar lá a imagem e mais nada.
+
+101
+00:11:50,640 --> 00:12:00,640
+Portanto, são operações que têm interações com o utilizador, com fecheiros, comunicações,
+
+102
+00:12:00,640 --> 00:12:07,640
+portanto normalmente quando nós escalonamos queremos dar-lhes alta prioridade para ter uma responsabilidade maior.
+
+103
+00:12:07,640 --> 00:12:15,640
+Temos também depois outros processos, isto são menos preocupantes para aquilo que vamos falar a seguir,
+
+104
+00:12:15,640 --> 00:12:26,640
+os processos interativos que basicamente são processos com o utilizador e que querem um tempo de resposta também relativamente rápido
+
+105
+00:12:26,640 --> 00:12:30,640
+e são basicamente muito equivalentes aos processos IO bound.
+
+106
+00:12:30,640 --> 00:12:36,640
+Temos processos em batch, portanto que não têm interação com o utilizador, demoram muito tempo,
+
+107
+00:12:36,640 --> 00:12:47,640
+que correm em background com os outros programas todos, backups, computações muito pesadas, treino de algoritmos diários em NIM
+
+108
+00:12:47,640 --> 00:12:56,640
+e portanto têm baixa prioridade e o foco aqui é no throughput e não no tempo de resposta dos processos.
+
+109
+00:12:56,640 --> 00:13:00,640
+Depois temos eventualmente processos de tempo real.
+
+110
+00:13:00,640 --> 00:13:09,640
+Estes têm deadlines específicas para cumprir, ou seja, o tempo de resposta, ou seja, o tempo desse que ele chega ao sistema até que sai
+
+111
+00:13:09,640 --> 00:13:15,640
+tem que ser delimitado e tem que ser bem definido.
+
+112
+00:13:15,640 --> 00:13:21,640
+Aqui temos dois tipos de processos, os de ARD e os de soft real-time.
+
+113
+00:13:21,640 --> 00:13:31,640
+Os de ARD quando há uma falha numa destas deadlines pode levar o sistema a falhar completamente,
+
+114
+00:13:31,640 --> 00:13:35,640
+a termos um acidente com um avião ou num carro ou outra coisa qualquer,
+
+115
+00:13:35,640 --> 00:13:40,640
+e nos soft real-time são aqueles que se nós perdemos uma deadline é só chato.
+
+116
+00:13:40,640 --> 00:13:48,640
+Um sistema de vídeo, por exemplo, está a receber uma mensagem,
+
+117
+00:13:48,640 --> 00:13:55,640
+a descodificar essa mensagem da rede e colocar uma imagem no nosso ecrã.
+
+118
+00:13:55,640 --> 00:14:05,640
+Se deixar de receber as mensagens, por exemplo, o que acontece é que a imagem fica congelada durante alguns segundos.
+
+119
+00:14:05,640 --> 00:14:10,640
+É chato, não acontece nada de especial, é perfeitamente tolerável.
+
+120
+00:14:10,640 --> 00:14:20,640
+Portanto, aqui isto tem basicamente mecanismos de escalonamento especiais
+
+121
+00:14:20,640 --> 00:14:26,640
+que não são aqueles exceto o algoritmo de escalonamento por prioridades que vamos falar a seguir,
+
+122
+00:14:26,640 --> 00:14:32,640
+mas normalmente no sistema de real-time não se utilizam os algoritmos que vamos falar a seguir.
+
+123
+00:14:32,640 --> 00:14:39,640
+Portanto, o primeiro é o mais básico de todos, é o chamado first come, first served.
+
+124
+00:14:39,640 --> 00:14:51,640
+A partir daqui está tudo em português e eu ouvi isto, não tive hipótese de alterar isto.
+
+125
+00:14:52,640 --> 00:15:02,640
+Aqui isto é muito simples, vamos ao primeiro processo que está na fila da rede e é esse processo que vai ser executado.
+
+126
+00:15:02,640 --> 00:15:06,640
+Portanto, isto é trivial de implementar.
+
+127
+00:15:06,640 --> 00:15:14,640
+É um algoritmo chamado não preemptivo, isto é, quando o meu processo entra em funcionamento,
+
+128
+00:15:14,640 --> 00:15:26,640
+ele não vai ser interrompido pelo processo 2, eu não tenho nenhuma razão para escalonar o processo 2.
+
+129
+00:15:26,640 --> 00:15:38,640
+Portanto, o 1 vai executar até aqui, o 2 só vai começar a executar aqui quando terminar a sua execução.
+
+130
+00:15:39,640 --> 00:15:47,640
+Portanto, o que é que isto vai resultar? Como estão a ver, se os processos forem CPU bound,
+
+131
+00:15:47,640 --> 00:15:51,640
+eles vão ficar muito tempo no CPU.
+
+132
+00:15:51,640 --> 00:15:59,640
+Portanto, isto vai resultar naquilo que se chama o efeito de comboio em que o tempo de resposta é muito, muito elevado.
+
+133
+00:15:59,640 --> 00:16:10,640
+Portanto, isto é um algoritmo que não é utilizado, a não ser em combinação com os outros algoritmos que nós vamos falar aqui mais para frente,
+
+134
+00:16:10,640 --> 00:16:15,640
+para situações de empate entre processos.
+
+135
+00:16:15,640 --> 00:16:25,640
+Isto leva-nos a que a pessoa possa ter aqui, por exemplo, um tempo de espera e um tempo médio de 27, num caso,
+
+136
+00:16:25,640 --> 00:16:40,640
+se mudarmos a sequência com que é feito o escalonamento, por exemplo, o tempo de espera passa a ser muito menor para os processos.
+
+137
+00:16:40,640 --> 00:16:48,640
+Portanto, tem aqui alguns problemas, devido a nós não conseguimos interromper o próprio processo,
+
+138
+00:16:48,640 --> 00:16:56,640
+e se os processos forem CPU bound, este algoritmo beneficia muito este tipo de processos.
+
+139
+00:16:56,640 --> 00:17:06,640
+É algo que se vê aqui nesta imagem que o processo que é IO bound vai acabar por ser o último a ser executado,
+
+140
+00:17:06,640 --> 00:17:12,640
+porque o P2 vai monopolizar o CPU.
+
+141
+00:17:12,640 --> 00:17:26,640
+O Source Shop First é outro mecanismo também, sozinho, que é pouco utilizado,
+
+142
+00:17:26,640 --> 00:17:34,640
+que vai à fila de heavy e vai selecionar o processo que tem o menor tempo de execução.
+
+143
+00:17:34,640 --> 00:17:40,640
+O problema está exatamente aqui. Como é que nós sabemos qual é o processo que tem o menor tempo de execução?
+
+144
+00:17:40,640 --> 00:17:48,640
+É muito complicado. Portanto, este algoritmo não é muito prático,
+
+145
+00:17:48,640 --> 00:17:56,640
+exceto naqueles algoritmos mais de debates em que aí poderá ser utilizado.
+
+146
+00:17:56,640 --> 00:18:10,640
+Temos depois o escalonamento de prioridades, que faz a seguinte, a cada processo nós associamos uma prioridade.
+
+147
+00:18:10,640 --> 00:18:20,640
+Conforme a prioridade, sabemos que aquele processo tem mais capacidade para utilizar o processador,
+
+148
+00:18:20,640 --> 00:18:26,640
+porque é mais importante que os outros, obviamente.
+
+149
+00:18:26,640 --> 00:18:38,640
+Os processos que são de igual prioridade, lá está, vão ser alocados através do algoritmo First Comes First Served.
+
+150
+00:18:38,640 --> 00:18:44,640
+Se nós definimos o processo com a mesma prioridade, é perfeitamente possível que isso aconteça.
+
+151
+00:18:44,640 --> 00:18:52,640
+Pode ser preemptivo ou não preemptivo, isto é, interromper um processo que está a ser executado,
+
+152
+00:18:52,640 --> 00:19:02,640
+porque chegou a um processo novo. Normalmente, a prioridade é representada por nome inteiro.
+
+153
+00:19:02,640 --> 00:19:08,640
+Para tornar as coisas mais fáceis, nós utilizamos a prioridade ser como a prioridade mais alta.
+
+154
+00:19:08,640 --> 00:19:14,640
+Em muitos sistemas, isto é assim, há outros sistemas em que isto não é assim.
+
+155
+00:19:14,640 --> 00:19:24,640
+Por exemplo, no Linux, não é assim, a prioridade mais alta é mesmo o número mais alto, só foi o 143 em termos de prioridade.
+
+156
+00:19:24,640 --> 00:19:34,640
+Mas vamos dizer com isto que o Linux utiliza um algoritmo de prioridades, já vamos mais à frente perceber qual é.
+
+157
+00:19:34,640 --> 00:19:44,640
+Por exemplo, temos esta situação aqui, em que temos um processo, isto podemos chamar que é o tempo de execução do processo,
+
+158
+00:19:44,640 --> 00:19:52,640
+em que temos um algoritmo não preemptivo, em que todos os processos vão chegar ao mesmo tempo.
+
+159
+00:19:52,640 --> 00:19:58,640
+Peço desculpa a figura do meu lado, vão chegar todos ao mesmo tempo.
+
+160
+00:19:58,640 --> 00:20:02,640
+E, portanto, o que é que vai ser?
+

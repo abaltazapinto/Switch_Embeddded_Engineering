@@ -1,0 +1,360 @@
+1
+00:00:30,000 --> 00:00:43,000
+Já devem estar a ver agora a parte de operating system design, não é? Certo?
+
+2
+00:00:44,000 --> 00:00:53,000
+Ok, pronto. Então vamos andando para frente, vamos seguir a falar nisto, o que é que é o sistema operativo, não é?
+
+3
+00:00:55,000 --> 00:01:10,000
+A ideia é isolar o nosso programa do hardware e conhecer também o mecanismo para a execução das aplicações fiáveis, não é?
+
+4
+00:01:10,000 --> 00:01:23,000
+Namoradamente quando, por exemplo, temos diversos utilizadores, não é? Ou diversas aplicações diferentes a serem executadas na mesma máquina, nós não queremos que as aplicações interfiram umas com as outras, não é?
+
+5
+00:01:23,000 --> 00:01:37,000
+Portanto, em aplicações em medidas, a maior parte dos casos, mas não quero dizer que sejam todos, não é? Temos um sistema que tem um utilizador, não é?
+
+6
+00:01:37,000 --> 00:01:52,000
+E portanto, o principal é realmente que temos uma série de aplicações a serem executadas concorrentemente, interagem com o hardware de uma forma segura, aquelas aplicações todas que eventualmente interagem com o hardware, não é?
+
+7
+00:01:52,000 --> 00:02:12,000
+Mas não é muito normal haver muitos utilizadores, ok? Muitas vezes existem diferentes níveis de criticalidade para as aplicações e arranja-se uma forma de fazer isolamento entre diferentes tipos de criticalidade de aplicações,
+
+8
+00:02:12,000 --> 00:02:29,000
+de modo a que o mesmo sistema computacional possa estar a cober aplicações críticas, aplicações não críticas, interfaces com utilizadores e assim, tudo ao mesmo tempo e também tudo de uma forma fiável, não é?
+
+9
+00:02:29,000 --> 00:02:42,000
+O principal, a principal coisa que vai executar, que é o principal conceito, que é o conceito de processo, não é?
+
+10
+00:02:42,000 --> 00:02:53,000
+Basicamente, nós temos um bocado de dificuldade a separar o que é que é um programa e o que é que é um processo.
+
+11
+00:02:53,000 --> 00:03:13,000
+Então, tem aqui algumas definições que acho que podem ajudar um bocado a separar estes dois conceitos embora sejam muito, muito parecidos e mesmo quem está dentro do assunto utilizando isto de uma forma um bocadinho sem muito cuidado, ok?
+
+12
+00:03:13,000 --> 00:03:30,000
+Mas, basicamente, nós temos um programa como uma sequência finita de instruções que são executadas numa plataforma computacional, que o objetivo é resolver um determinado problema, uma determinada tarefa, ok?
+
+13
+00:03:30,000 --> 00:03:52,000
+Depois temos o programa, também tem outra definição que é uma entidade passiva que contém instruções armazenadas na memória, deixe-me arranjar um ponteiro, tem instruções armazenadas em memórias, ok?
+
+14
+00:03:52,000 --> 00:03:58,000
+E depois, e aqui esta é a parte engraçada, se transformam num processo, ok?
+
+15
+00:03:58,000 --> 00:04:06,000
+Aquilo que nós chamamos um programa é uma coisa que é passiva, não faz nada, não é?
+
+16
+00:04:06,000 --> 00:04:12,000
+Quando ela se torna ativa, o programa, no fundo, transforma-se num processo, ok?
+
+17
+00:04:12,000 --> 00:04:15,000
+E esse processo é o que é executado pela CPU, ok?
+
+18
+00:04:15,000 --> 00:04:31,000
+Portanto, define-se o processo como uma instância ativa de um programa que tem o seu código, tem os seus dados, tem o seu estado, tem os recursos ocupados pelo meu programa, ok?
+
+19
+00:04:31,000 --> 00:04:49,000
+Por exemplo, se nós ponhamos aqui ao meu Task Manager do Windows, vocês com o abelho, temos que a maior parte de vocês tem uma coisa igual, já mexeu nisto, não é?
+
+20
+00:04:49,000 --> 00:04:57,000
+Aqui, essencialmente, nós temos as tarefas todas que estão a ser, que estão a ser neste momento executadas, não é?
+
+21
+00:04:57,000 --> 00:05:05,000
+Mas eu posso ir aqui e, por exemplo, ir para Go To Details, não é?
+
+22
+00:05:05,000 --> 00:05:09,000
+E ele aqui vai-me aparecer a lista de tarefas.
+
+23
+00:05:09,000 --> 00:05:14,000
+Isto está, o meu computador está a ficar muito lento, é muito apoiado ao mesmo tempo a ser executado.
+
+24
+00:05:15,000 --> 00:05:21,000
+A lista de tarefas ou de processos que, neste momento, estão a ser executadas, ok?
+
+25
+00:05:21,000 --> 00:05:30,000
+Portanto, tenho aqui alguma informação sobre cada um destes processos, o seu PID, por exemplo, ok?
+
+26
+00:05:30,000 --> 00:05:37,000
+O PID é um número que identifica esse processo perante o sistema operativo, não é?
+
+27
+00:05:37,000 --> 00:05:40,000
+Isto é o Windows, mas no Linux é assim.
+
+28
+00:05:40,000 --> 00:05:46,000
+Tem aqui o seu estado, nós já vamos lá mais à frente perceber o que é que isto é, mas quer dizer que neste momento está suspended,
+
+29
+00:05:46,000 --> 00:05:52,000
+quer dizer que neste momento esta tarefa não está a ocupar o CPU, não está a ser executada.
+
+30
+00:05:52,000 --> 00:06:01,000
+Está a espera que, isto é uma background task post, junto a ver com comunicações, está a espera que chegue aqui algum tipo de comunicação, ok?
+
+31
+00:06:01,000 --> 00:06:10,000
+Quem é utilizador, o dono desta tarefa, não é? Só sou eu aqui a utilizar o computador, mas também podemos ter tarefas aqui do próprio sistema, não é?
+
+32
+00:06:10,000 --> 00:06:15,000
+Qual é a porcentagem de CPU que está a ser utilizada neste momento por esta tarefa, não é?
+
+33
+00:06:15,000 --> 00:06:21,000
+Podemos tentar ver aqui quem é que está a ocupar mais tempo.
+
+34
+00:06:21,000 --> 00:06:33,000
+Como estão a ver, quem é a ocupar mais tempo é o Teams, não é? E também os processos idle do próprio sistema, ok?
+
+35
+00:06:33,000 --> 00:06:39,000
+Qual é a quantidade de memória que ela está a utilizar, não é?
+
+36
+00:06:39,000 --> 00:06:45,000
+Estão a ver aqui o Teams, quase que ocupa 700k de memória, 700 megabytes, desculpa, ok?
+
+37
+00:06:45,000 --> 00:06:53,000
+A arquitetura em que ela está a cober, pronto, e alguma descrição do que é que isto é, não é?
+
+38
+00:06:53,000 --> 00:07:03,000
+Outras formas, podemos ver por PID, normalmente os PIDs estão sendo atribuídos desde que o computador começa a entrar em execução, portanto,
+
+39
+00:07:03,000 --> 00:07:15,000
+o PID 0 será o primeiro processo, quase, a entrar entre opção, este é o 4, Regis e Streeting estão a ver,
+
+40
+00:07:15,000 --> 00:07:25,000
+tem aqui várias coisas, várias informações, e neste momento, aquilo que vocês estão a ver, reparem que o Estado está aqui em Running, na maior parte delas, não é?
+
+41
+00:07:25,000 --> 00:07:31,000
+Quer dizer que estão, neste momento, em execução no meu CPU, tudo ao mesmo tempo, ok?
+
+42
+00:07:31,000 --> 00:07:39,000
+Pronto, aquilo que nós temos de bom num sistema em PID, é que normalmente nós sabemos exatamente o que é que vai lá estar a cober,
+
+43
+00:07:39,000 --> 00:07:49,000
+não temos esta bandalheira toda, é que eu tenho aqui tarefas de tudo e mais alguma coisa, algumas delas, eu nem sei o que é que elas estão aqui a fazer,
+
+44
+00:07:49,000 --> 00:07:57,000
+foram provavelmente pequenas aplicações que eu pus a executar e que depois se perderam aqui no meio, não é?
+
+45
+00:07:57,000 --> 00:07:59,000
+Ok?
+
+46
+00:07:59,000 --> 00:08:10,000
+Pronto, isto são os meus processos, também como eu ouvi falar, mais para frente noutros conceitos, que é o conceito de thread e de task,
+
+47
+00:08:10,000 --> 00:08:20,000
+em que basicamente as threads e os processos são quase a mesma coisa, a única diferença é que as threads, a única, não é?
+
+48
+00:08:20,000 --> 00:08:31,000
+Uma das diferenças principais é que as threads são mais leves, são mais rápidas a serem criadas, é mais rápido a mudarmos entre threads do que a mudar entre processos, não é?
+
+49
+00:08:31,000 --> 00:08:44,000
+Nos últimos anos começaram-se a utilizar cada vez mais threads do que processos, mas isso também depende daquilo que se está exatamente a fazer.
+
+50
+00:08:44,000 --> 00:08:55,000
+As tasks, ainda vão um bocadinho mais à frente, são mecanismos que permitem reaproveitar a mesma thread para fazer sempre, para fazer a mesma coisa, ok?
+
+51
+00:08:55,000 --> 00:09:02,000
+Portanto, os processos são então entidades dinâmicas, são geridos pelo sistema operativo, não é?
+
+52
+00:09:02,000 --> 00:09:08,000
+Como eu disse, tem o código, tem o estado de execução e os recursos. Ah, e também tem os dados.
+
+53
+00:09:08,000 --> 00:09:20,000
+Desculpem lá, já agora, eu vou já corrigir isto, está falta aqui os dados.
+
+54
+00:09:25,000 --> 00:09:27,000
+Está ao mesmo momento.
+
+55
+00:09:38,000 --> 00:09:44,000
+Ah, e falta a stack também.
+
+56
+00:09:46,000 --> 00:09:50,000
+A stack do próprio programa, ok?
+
+57
+00:09:50,000 --> 00:09:58,000
+Ah, está bem, está nas slides que... ah, isso também.
+
+58
+00:09:59,000 --> 00:10:10,000
+Ok, pronto. Ok, pronto, aqui já está correto os dados, o código, os dados, ok?
+
+59
+00:10:10,000 --> 00:10:22,000
+Portanto, as variáveis estáticas, quer dizer, são variáveis que não são facilmente modificadas, são variáveis globais ao todo o programa, em parte.
+
+60
+00:10:22,000 --> 00:10:29,000
+A parte de stack tem a ver com as chamadas às funções, as variáveis locais dentro das funções, ok?
+
+61
+00:10:29,000 --> 00:10:35,000
+A heap, portanto, isto é memória que é alocada dinamicamente.
+
+62
+00:10:35,000 --> 00:10:40,000
+Portanto, isto é que são basicamente os componentes do meu processo em runtime, ok?
+
+63
+00:10:40,000 --> 00:10:52,000
+Ainda existem depois umas estruturas de controle, vamos falar mais à frente, que é o process control block, que são usadas pelo sistema operativo, operando o sistema operativo para descrever o próprio processo, ok?
+
+64
+00:10:53,000 --> 00:10:58,000
+Os processos têm um conjunto de status, não é? Portanto, o que é que eu tenho?
+
+65
+00:10:58,000 --> 00:11:02,000
+Para começar, o processo vai ser criado, não é?
+
+66
+00:11:02,000 --> 00:11:06,000
+E vai ser criado, está aqui no estado de new, ok?
+
+67
+00:11:06,000 --> 00:11:17,000
+Portanto, no fundo, eu tenho que pegar no programa que está no disco, ir lá buscar o programa ao disco, ver quais são as necessidades que esse programa tem,
+
+68
+00:11:17,000 --> 00:11:29,000
+depois de ver qual é as necessidades fazer a alocação de memória para metermos a quantidade de dados que vêm do disco e outras coisas que tal, não é?
+
+69
+00:11:29,000 --> 00:11:42,000
+Portanto, só a partir daí é que o processo é criado, é colocado no código que foi retirado do disco, pronto, e a seguir é posto a funcionar, portanto passa para este estado aqui de ready, não é?
+
+70
+00:11:42,000 --> 00:11:46,000
+Este estado de ready podem estar vários processos ao mesmo tempo, não é?
+
+71
+00:11:46,000 --> 00:11:54,000
+E significa que estão prontos para entrar em execução na CPU, mas não entram em execução na CPU porque ela está ocupada, ok?
+
+72
+00:11:54,000 --> 00:12:06,000
+Então, ele passa do estado de ready para o estado de running quando há um despacho do meu escalonador, ok?
+
+73
+00:12:06,000 --> 00:12:15,000
+O escalonador é uma parte muito importante do sistema operativo, particularmente para sistemas em tempo real,
+
+74
+00:12:15,000 --> 00:12:26,000
+e vai selecionar dos processos todos que estão na fila de ready, qual é que vai ser executado no CPU, ok?
+
+75
+00:12:26,000 --> 00:12:37,000
+E depois, o que é que vai acontecer? Pode acontecer aqui um interrupt, estes interrupts não quer dizer que sejam sempre aqueles interrupts de hardware que nós falamos, ok?
+
+76
+00:12:37,000 --> 00:12:49,000
+Pode ser também um interrupt de hardware, pode ser de software, pode ser um interrupt relacionado com um temporizador, no fundo que é um de software, não é?
+
+77
+00:12:49,000 --> 00:13:02,000
+E portanto, são eles que vão retirar o processo de execução, não é? O escalonador o que faz é se ocorre pelo menos temporariamente, ou sempre que há uma transmissão destas que vocês estão aqui a ver, não é?
+
+78
+00:13:02,000 --> 00:13:17,000
+E portanto, se não acontecer nada, o problema é ficar lá a executar, o problema é o processo ficar lá a ser executado, pelo menos vai haver um timer que desiste em sistema,
+
+79
+00:13:17,000 --> 00:13:32,000
+por exemplo, no Linux é a volta de 20 mil em segundos, é disparado e leva a que o processo seja retirado do estado de ready e seja recolocado novamente no estado de ready, não é?
+
+80
+00:13:32,000 --> 00:13:41,000
+E seja executado novamente o escalonador para selecionar um novo programa que esteja aqui no estado de ready, ok?
+
+81
+00:13:41,000 --> 00:13:51,000
+Eu posso ter também outra situação que é, por exemplo, eu estou no estado de running e, entretanto, o meu programa decide que vai fazer uma leitura a um ficheio, ok?
+
+82
+00:13:51,000 --> 00:13:57,000
+Isso é um processo que demora alguns mil em segundos a ser executado.
+
+83
+00:13:58,000 --> 00:14:10,000
+Portanto, é feito uma system call, etc. E o programa, em vez de ficar parado no CPU à espera que venha alguma coisa, faz uma coisa inteligente que é passar para este estado de waiting
+
+84
+00:14:10,000 --> 00:14:18,000
+em que ele fica à espera que o meu disco me retorne alguma informação que ele pediu, ok?
+
+85
+00:14:18,000 --> 00:14:25,000
+Quando esta informação é retornada, o meu processo vem novamente aqui para o estado de ready, não é? Portanto, aqui vamos ter uma fila.
+
+86
+00:14:27,000 --> 00:14:37,000
+Uma fila ou uma lista, como vocês quiserem, com os vários processos que vão ser depois escalonados novamente.
+
+87
+00:14:37,000 --> 00:14:46,000
+Obviamente, quando o programa decide terminar, terminar de forma ordenada ou terminar de forma não ordenada, não é?
+
+88
+00:14:46,000 --> 00:14:59,000
+Ele passa para um estado terminated e aqui pode haver eventualmente um estado intermédio que muitas vezes vocês veem chamá-lo no Linux como um zombie.
+
+89
+00:14:59,000 --> 00:15:10,000
+Ele pode ter terminado, não é? Mas ainda há algumas estruturas que são guardadas no sistema operativo.
+
+90
+00:15:10,000 --> 00:15:18,000
+Não vou entrar em muitos detalhes sobre o assunto, mas é possível, às vezes, que um processo vai parar ao tal estado de...
+
