@@ -1,0 +1,932 @@
+1
+00:00:00,000 --> 00:00:10,000
+ter aqui o Broker, um Publisher e um Subscriber. E o que é que o Subscriber lhe diz?
+
+2
+00:00:10,000 --> 00:00:22,000
+Ok, eu quero receber mensagens com o tópico igual a X. E o Broker, quando transmite esta mensagem,
+
+3
+00:00:22,000 --> 00:00:28,000
+vai transmitir-me uma mensagem, que tem um determinado texto lá dentro, mas tem um canto,
+
+4
+00:00:28,000 --> 00:00:34,000
+que é o tópico, que é o tal X. Este Broker, ao receber esta mensagem, já sabe, ah ok,
+
+5
+00:00:34,000 --> 00:00:42,000
+X é este gajo que está subscrito em dia para ele. Podem existir mais subscritores de todos eles ao tópico X.
+
+6
+00:00:46,000 --> 00:00:52,000
+Se todos eles tiverem subscrito o tópico X, também vão receber a respectiva cópia da mensagem.
+
+7
+00:00:52,000 --> 00:01:06,000
+O que é que há aqui de muito interessante? É que os Publishers não precisam saber nada sobre os subscritores.
+
+8
+00:01:06,000 --> 00:01:16,000
+Eles só precisam saber quem é o Broker e enviar para lá a mensagem. Depois é o Broker que trata de tudo em termos de comunicações.
+
+9
+00:01:16,000 --> 00:01:26,000
+Há um chamado desacopelamento total entre o produtor e o consumidor, o Publisher e o Subscriber,
+
+10
+00:01:26,000 --> 00:01:36,000
+o que é muito interessante porque, por exemplo, o Publisher não tem problemas de receber demais pedidos para lhe enviarem a informação.
+
+11
+00:01:36,000 --> 00:01:46,000
+Quando nós enviamos um protocolo como cliente-servidor, como já falamos na última aula, normalmente o Publisher vai ser perguntado
+
+12
+00:01:46,000 --> 00:01:56,000
+manda-me aí, tens a idade para me mandar? Sim, manda-me. E tem que ter uma ligação com o subscritor.
+
+13
+00:01:56,000 --> 00:02:02,000
+Desta forma, eu só tenho uma ligação que é com o Broker e os subscritores só têm uma ligação que é com o Broker.
+
+14
+00:02:03,000 --> 00:02:10,000
+É um bocadinho mais lento, éticas, todas as comunicações vão ter que passar por um nó que é o Broker, mas é muito mais eficiente.
+
+15
+00:02:10,000 --> 00:02:21,000
+Eu posso, por exemplo, ter uma câmara de surf numa praia, por exemplo, e estar a transmitir imagens do que está a passar na praia
+
+16
+00:02:21,000 --> 00:02:29,000
+para as pessoas verem as ondas, a milhares de pessoas ao mesmo tempo. Podem estar as milhares de pessoas ao mesmo tempo a ver.
+
+17
+00:02:29,000 --> 00:02:34,000
+E só lá ver se as ondas estão boas para eu ir fazer um bocadinho de surf.
+
+18
+00:02:34,000 --> 00:02:43,000
+Posso fazer isso, uma câmara também diz um sensor de temperatura, de umidade, de velocidade do vento, que possa eventualmente interessar
+
+19
+00:02:43,000 --> 00:02:51,000
+nessas pessoas e podemos transmitir informação para milhares, porque entretanto, se for preciso, isto é muito escalável,
+
+20
+00:02:52,000 --> 00:03:05,000
+nós tivemos que suportar mais coisas, podemos dividir o Broker por dois nós diferentes e suportar mais subscritores agarrados ao outro Broker a seguir.
+
+21
+00:03:07,000 --> 00:03:18,000
+Portanto, aqui o segredo está na definição do chamado tópico, vamos lá ver mais à frente como é que se define o tópico, é uma coisa muito simples em geral.
+
+22
+00:03:18,000 --> 00:03:32,000
+Só uma questão, em relação a este middleware que nós acrescentamos aqui, também tem a questão de acrescentar aqui uma complexidade extra à questão da segurança, não?
+
+23
+00:03:32,000 --> 00:03:43,000
+Porque temos aqui uma direção, uma comunicação direta, passa aqui pelo Broker e só depois do Broker é que vai para, neste caso, para os subscritores?
+
+24
+00:03:43,000 --> 00:04:00,000
+Não, por exemplo, podemos ter, se os subscritores forem pedados, podemos ter protocolos diferentes para ligar os subscritores e o publisher, protocolos mais seguros, por exemplo, do lado dos subscritores, não é?
+
+25
+00:04:00,000 --> 00:04:15,000
+O Broker é uma máquina mais pesada, portanto pode correr facilmente protocolos mais sofisticados, encriptação e tudo o resto, portanto não me parece que haja aqui propriamente problemas de segurança,
+
+26
+00:04:15,000 --> 00:04:23,000
+pode haver problemas essencialmente é de performance, de segurança não vejo assim muitos, ok?
+
+27
+00:04:29,000 --> 00:04:36,000
+Vejo mais nos outros protocolos até do que neste, porque estes podem ter autenticação, não é?
+
+28
+00:04:36,000 --> 00:04:51,000
+Quando se estabelece a comunicação, não é? Inicialmente, tanto dos publishers como dos subscribers, pode haver mais facilmente mecanismos de autenticação mais sofisticados do que aqueles que são utilizados, por exemplo, no resto, ok?
+
+29
+00:04:51,000 --> 00:05:06,000
+Por exemplo, nisso é mais fácil, não é? Pode haver outras situações em que se consiga dar mais facilmente a volta, mas eu acho que genericamente estes protocolos são mais seguros, ok?
+
+30
+00:05:06,000 --> 00:05:25,000
+Eu estava a perguntar isto porque eu estava aí no trabalho a implementar aqui uma comunicação com recurso AMQTT e a parte de cibersegurança alertou-me para, pronto, algumas dificuldades que eles iam ter em controle da segurança, mas por causa disto perceber o que é que podia acontecer.
+
+31
+00:05:25,000 --> 00:05:42,000
+Pronto, o que acontece a maioria das vezes é que qualquer departamento de IT, qualquer sítio, tem normalmente estes portos todos bloqueados, ok? Só tem aqueles portos que são essenciais abertos, não é?
+
+32
+00:05:42,000 --> 00:05:55,000
+O servidor do AMQTT se puser dentro das suas instalações, por exemplo, tem que ter para as comunicações, por exemplo, com o exterior e por aí fora, essa abertura desses portos, não é?
+
+33
+00:05:55,000 --> 00:06:02,000
+Estes departamentos de IT não gostam nada de abrir, portos de 8080 não querem abrir mais nada.
+
+34
+00:06:02,000 --> 00:06:15,000
+Era isso. Tinha a ver com as exceções que tinha que era preciso abrir nas regras firewall e os portos que tinha que abrir que não estão abertos e, pronto, deu problemas por causa disto. Por isso é que eu estava a perguntar, era mais nesse sentido.
+
+35
+00:06:15,000 --> 00:06:27,000
+Isso é o geral, se vocês tentarem pôr isso a funcionar dentro do departamento, por exemplo, um servidor AMQTT, não funciona, ok? Mas se o fizerem em vossa casa, já conseguem fazer isso com alguma facilidade, não é?
+
+36
+00:06:27,000 --> 00:06:41,000
+E eventualmente em alguns casos tem que fazer o... também abrir o porto do AMQTT, não é? Mas isso é comum a qualquer tipo de servidor, certo?
+
+37
+00:06:41,000 --> 00:06:42,000
+Ok, obrigado.
+
+38
+00:06:42,000 --> 00:06:54,000
+O que acontece é que a internet toda está preparada para ter já sempre os portos, o 8080 e o outro do HTTPS, já abertos, sempre quase por defeito, não é?
+
+39
+00:06:54,000 --> 00:07:06,000
+Uma das soluções é pôr o AMQTT nos mesmos portos que são utilizados pelo HTTPS, por exemplo, o HTTP, certo?
+
+40
+00:07:06,000 --> 00:07:07,000
+Sim.
+
+41
+00:07:07,000 --> 00:07:15,000
+Muitas vezes não é possível, ok? Nós temos instalações a correr com AMQTT, com RabbitMQ, com Kafka, não é?
+
+42
+00:07:15,000 --> 00:07:25,000
+E, pronto, sem grandes problemas. Sem nenhum problema para tentar correr muito bem até agora, ok?
+
+43
+00:07:25,000 --> 00:07:34,000
+Pronto. Está bem, eu vou dizer, então, portanto, isto tem grande vantagem, vocês têm uma mensagem a ser enviada para cada tópico,
+
+44
+00:07:34,000 --> 00:07:42,000
+depois é distribuída para múltiplos subscritores pelo broker, ok?
+
+45
+00:07:42,000 --> 00:07:55,000
+Pode haver de muitos publishers para muitos subscritores, pode haver o mais normal, é mais esta situação aqui, que é muitos censores, muitos nossos,
+
+46
+00:07:55,000 --> 00:08:06,000
+embebidos e por aí fora, a enviar informação para meia dúzia de nós que estão na Cláudia, que depois fazem a análise dos dados, ok?
+
+47
+00:08:06,000 --> 00:08:23,000
+O AMQTT foi desenhado por um grupo de standardização chamado Oasis, que é um grupo que faz a standardização de uma série de protocolos
+
+48
+00:08:23,000 --> 00:08:32,000
+para Internet of Things e não só, que também tem outras coisas standardizadas por eles, ok?
+
+49
+00:08:33,000 --> 00:08:49,000
+A ideia base é ser muito baixos peso computacional, ser o mais simples possível, e, portanto, conseguir correr em dispositivos com meia dúzia de kilobytes de memória, não é?
+
+50
+00:08:49,000 --> 00:08:57,000
+Mesmo a nível do broker, nós conseguimos correr o broker em máquinas muito, muito leves, aquilo é muito simples, aquilo é...
+
+51
+00:08:57,000 --> 00:09:08,000
+Se vocês podem facilmente instalar, por exemplo, o Mosquito, que é um broker AMQTT, aquilo pensa funcionar com um comando apenas, ok?
+
+52
+00:09:08,000 --> 00:09:14,000
+E a partir do momento que esse comando é feito, o broker fica a funcionar, ok?
+
+53
+00:09:15,000 --> 00:09:24,000
+O que é que nós temos aqui, portanto? Comunicações simplificadas, eu só limito-me a enviar os meus dados e alguém me pesa usar de consumir.
+
+54
+00:09:24,000 --> 00:09:39,000
+Eliminar as questões de polling, que são típicas dos protocolos REST e protocolos normais na Internet, portanto, isto reduz substancialmente os custos da comunicação, ok?
+
+55
+00:09:39,000 --> 00:09:58,000
+Tem aquilo que se chama um discovery fácil, e esse discovery fácil é feito através do tópico, portanto, os subscritores não subscrevem sequer para um nó específico, eles subscrevem para um tópico, ok?
+
+56
+00:09:58,000 --> 00:10:03,000
+Por exemplo, imaginemos naquele exemplo que estava, o sensor de temperatura da praia de Lécia, ok?
+
+57
+00:10:03,000 --> 00:10:08,000
+E se não quiser, a praia de Lécia é o sensor de temperatura da praia de Matosinhos, não é?
+
+58
+00:10:08,000 --> 00:10:17,000
+E é assim que ele pode fazer essa tal subscrição, não precisam saber nada sobre aquilo que está do outro lado, não é?
+
+59
+00:10:17,000 --> 00:10:23,000
+Só precisam saber como é que os dados chegam, eles chegam em graus centígrados ou em graus Celsius, não é?
+
+60
+00:10:23,000 --> 00:10:27,000
+Essa informação até pode vir na própria mensagem, ok?
+
+61
+00:10:27,000 --> 00:10:31,000
+Tem esse mecanismo que é o chamado decoupling, ok?
+
+62
+00:10:31,000 --> 00:10:36,000
+Portanto, os televistas não sabem quem são os consumidores, ok?
+
+63
+00:10:36,000 --> 00:10:51,000
+E portanto, o sistema depois pode facilmente adicionar-nos mais consumidores, sem qualquer problema, não é?
+
+64
+00:10:51,000 --> 00:10:54,000
+E até também mais produtores, ok?
+
+65
+00:10:54,000 --> 00:11:00,000
+Por exemplo, se produzirem para o mesmo tópico que outros produtores que ali estão, ok?
+
+66
+00:11:00,000 --> 00:11:02,000
+Que às vezes pode interessar, não é?
+
+67
+00:11:02,000 --> 00:11:08,000
+Imaginemos que querem saber a temperatura de todas as praias do Norte, não é?
+
+68
+00:11:08,000 --> 00:11:18,000
+E têm todos os sensors de temperatura das praias do Norte a enviar para o mesmo tópico a respectiva temperatura de, por exemplo, 10 em 10 segundos, ok?
+
+69
+00:11:18,000 --> 00:11:21,000
+Também é possível fazer uma coisa dessas, não é?
+
+70
+00:11:21,000 --> 00:11:30,000
+Normal, depois quem a recebe tem que conseguir distinguir entre as diferentes praias qual é que é, ok?
+
+71
+00:11:30,000 --> 00:11:36,000
+Pronto, mais coisas tanto ser eficiente e ser de baixo custo, ok?
+
+72
+00:11:36,000 --> 00:11:49,000
+Tem também aqui importante que é mecanismos de qualidade de serviço para garantir a transmissão robusta de mensagens, ok?
+
+73
+00:11:49,000 --> 00:12:00,000
+Ser também bidireccional, portanto, consegue enviar e receber mensagens nas duas direções, tanto do produtor para o consumidor como do consumidor para o produtor, ok?
+
+74
+00:12:00,000 --> 00:12:10,000
+A única coisa que ele tem que estabelecer é um novo tópico para comunicar com o produtor, ok?
+
+75
+00:12:10,000 --> 00:12:20,000
+Tem também capacidade de suportar redes que não sejam muito robustas, não é?
+
+76
+00:12:20,000 --> 00:12:33,000
+Portanto, se a ligação for abaixo, o próprio broker restabelecer novamente a comunicação com o produtor ou com o consumidor de dados, não é?
+
+77
+00:12:34,000 --> 00:12:42,000
+Portanto, pode ser isso. A única coisa que os brokers da NKTT não fazem é armazenar a informação.
+
+78
+00:12:42,000 --> 00:12:47,000
+Eles têm um buffer muito limitado que é um buffer de uma mensagem, ok?
+
+79
+00:12:47,000 --> 00:12:53,000
+Portanto, cada vez que uma mensagem chega, se tiver lá a outra, ela é pagada imediatamente, ok?
+
+80
+00:12:53,000 --> 00:13:00,000
+Portanto, a mensagem chega e é escrita em cima da outra. Portanto, o buffer é de uma mensagem apenas, ok?
+
+81
+00:13:00,000 --> 00:13:08,000
+Portanto, é uma das coisas que os brokers da NKTT Standard não fazem.
+
+82
+00:13:08,000 --> 00:13:14,000
+Isto consegue depois escalar facilmente para milhões de coisas, não é?
+
+83
+00:13:14,000 --> 00:13:26,000
+Milhões de dispositivos que estão conectados, porque nós depois podemos construir vários brokers, por vários brokers a funcionar em paralelo sem grande problema.
+
+84
+00:13:26,000 --> 00:13:35,000
+Os dados chegam a distribuir a carga entre eles todos, porque não conseguimos facilmente pôr isto tudo a funcionar.
+
+85
+00:13:35,000 --> 00:13:49,000
+Em termos de segurança, ok? Portanto, eu consigo encriptar as mensagens antes do TLS e tenho protocolos também sofisticados de autenticação que resolvem parte dos problemas de segurança.
+
+86
+00:13:49,000 --> 00:13:54,000
+Portanto, isto é só o exemplo do que eu estava ali a dizer.
+
+87
+00:13:54,000 --> 00:14:03,000
+Isto são só, já agora para a vossa referência, alguns brokers públicos da NKTT, ok?
+
+88
+00:14:03,000 --> 00:14:11,000
+Mas também as podem ir buscar. Normalmente aquilo que eu tenho utilizado mais, com mais sucesso, é aqui o Mosquito.
+
+89
+00:14:11,000 --> 00:14:19,000
+Funciona muito bem, é extremamente simples, tem-se tudo a trabalhar em meia dúzia de minutos.
+
+90
+00:14:19,000 --> 00:14:35,000
+Agora, cada vez há a aparecer mais também os outros brokers que começam a ser pagos, este IBM Q também, este Mosca nunca experimentei, este deve estar errado.
+
+91
+00:14:35,000 --> 00:14:47,000
+Acho que aqui não deve ter enganado, não é o IBM Q, é outro qualquer que eu não pus o nome correto, ok?
+
+92
+00:14:47,000 --> 00:14:54,000
+Portanto, como é que isto funciona? Funciona à base dos tais topics, ok?
+
+93
+00:14:54,000 --> 00:15:03,000
+Por exemplo, se eu tiver uma casa, eu posso definir aqui um tópico como a minha casa, ok?
+
+94
+00:15:03,000 --> 00:15:11,000
+Ground floor, portanto o andar de baixo, qual é o living room, ok? E lá dentro tenho um sensor de temperatura.
+
+95
+00:15:11,000 --> 00:15:18,000
+Isto é como se fosse um caminho para lá chegar, separado pelas barras.
+
+96
+00:15:19,000 --> 00:15:27,000
+Depois, o que é que isto me permite? Por exemplo, ir buscar todos os sensores, não é?
+
+97
+00:15:27,000 --> 00:15:32,000
+Subscrever a todos os sensores que estão no living room, ok?
+
+98
+00:15:32,000 --> 00:15:38,000
+Já vamos ver isso a seguir, o MQTT permite fazer coisas desse género, ok?
+
+99
+00:15:38,000 --> 00:15:53,000
+Pronto, outra coisa que o MQTT tem é que não é preciso inicializar um tópico antes de começar a comunicação.
+
+100
+00:15:53,000 --> 00:15:59,000
+Noutros brokers isso é assim como no RabbitMQ que eu vos falei um bocadinho, ok?
+
+101
+00:15:59,000 --> 00:16:03,000
+Cada vez que enviado uma mensagem, ela vai com esse tópico, não é?
+
+102
+00:16:03,000 --> 00:16:12,000
+Portanto, é o servidor depois que se der esta, em runtime, a encontrar os tópicos e fazer as ligações como devem ser, não é?
+
+103
+00:16:14,000 --> 00:16:27,000
+Estão aqui mais alguns exemplos do tópico, portanto isto é um valor qualquer dentro de um país, indicar o estado, para qual é a cidade,
+
+104
+00:16:28,000 --> 00:16:31,000
+e a zona dentro da cidade, ok?
+
+105
+00:16:31,000 --> 00:16:38,000
+Aqui, por exemplo, isto supõe que provavelmente será um endereço de um Bluetooth, ok?
+
+106
+00:16:39,000 --> 00:16:41,000
+E qual é a função de status, ok?
+
+107
+00:16:43,000 --> 00:16:52,000
+Aqui, isto será um card, não é? Para eu saber qual é a latitude do card que tem este identificador que aqui está, ok?
+
+108
+00:16:52,000 --> 00:17:02,000
+Portanto, basicamente é assim que eu defino os tópicos, como se fosse uma árvore de diretórios e eu posso utilizar isto desta forma, ok?
+
+109
+00:17:05,000 --> 00:17:17,000
+Eu depois posso utilizar também os tópicos desta forma, com mais ou com o cardinal, ok?
+
+110
+00:17:18,000 --> 00:17:23,000
+Se eu fizer My Home Ground Floor mais Temperature, ok?
+
+111
+00:17:24,000 --> 00:17:29,000
+Ele vai fazer a subscrição de todas as divisões no Ground Floor, ok?
+
+112
+00:17:30,000 --> 00:17:33,000
+Se eu fizer My Home Ground Floor cardinal, ok?
+
+113
+00:17:36,000 --> 00:17:43,000
+Portanto, ele vai fazer a subscriver a temperatura de todas as divisões do Ground Floor, ok?
+
+114
+00:17:44,000 --> 00:17:48,000
+E assim como outros sensores que se encontrem também no Ground Floor, ok?
+
+115
+00:17:49,000 --> 00:17:53,000
+Pronto, estamos aqui a assumir apenas quatro níveis neste caso que aqui está.
+
+116
+00:17:54,000 --> 00:18:07,000
+Se eu entrar aqui muito mais tarde, só para verificar, depois eu posso fazer aqui muitas brincadeiras com estes tópicos, fazer filtros específicos, ok?
+
+117
+00:18:08,000 --> 00:18:16,000
+Coisas como RabbitMQ também funciona da mesma forma, mas ainda permite filtros mais sofisticados sobre estes tópicos, não é?
+
+118
+00:18:17,000 --> 00:18:22,000
+Portanto, isto é uma coisa que é relativamente fácil, ok?
+
+119
+00:18:23,000 --> 00:18:31,000
+Em termos de qualidade de serviço, nós temos a qualidade de serviço depois a vários lados.
+
+120
+00:18:32,000 --> 00:18:39,000
+Do lado do cliente, que é o publisher ou o subscriber, e o MQTT broker, ok?
+
+121
+00:18:40,000 --> 00:18:46,000
+Portanto, se eu inicializar com QoS0, isto quer dizer At Most Lance, ok?
+
+122
+00:18:47,000 --> 00:18:51,000
+Portanto, este é um nível mínimo de qualidade de serviço, não existe, ok?
+
+123
+00:18:52,000 --> 00:18:59,000
+É basicamente por este effort eu envio a mensagem, não quero saber, não há qualquer garantia de entrega.
+
+124
+00:19:00,000 --> 00:19:04,000
+Não há acknowledgement na recepção da mensagem, ok?
+
+125
+00:19:05,000 --> 00:19:13,000
+Portanto, basicamente vai providenciar o mesmo tipo de garantias do que o protocolo que está por baixo, que é o tal protocolo TCPIP, ok?
+
+126
+00:19:14,000 --> 00:19:26,000
+Se eu colocar QoS1, já vou ter um bocadinho mais de qualidade de serviço, ele vai me garantir que pelo menos uma vez ele vai receber, ok?
+
+127
+00:19:26,000 --> 00:19:35,000
+O que é que é feito? Eu envio a minha mensagem e depois ele tem esta mensagem para o back, ok?
+
+128
+00:19:36,000 --> 00:19:44,000
+Que basicamente me diz que houve aqui um acknowledgement que a minha mensagem foi recebida pelo broker, ok?
+
+129
+00:19:44,000 --> 00:19:48,000
+Se, não vou entrar aqui em muitos detalhes sobre isto, ok?
+
+130
+00:19:49,000 --> 00:19:56,000
+Se pelo contrário eu quero garantir que a mensagem é entregue exatamente uma vez, ok?
+
+131
+00:19:57,000 --> 00:20:01,000
+Tenho que recorrer a um mecanismo um bocadinho mais sofisticado, ok?
+
+132
+00:20:02,000 --> 00:20:06,000
+E, como estão a ver, obriga-me à transmissão de quatro mensagens.
+
+133
+00:20:07,000 --> 00:20:15,000
+Basicamente em termos de performance, se eu tiver a transmitir grandes quantidades de dados, a minha performance é reduzida quase de quatro vezes, ok?
+
+134
+00:20:16,000 --> 00:20:18,000
+Mas eu tenho a certeza que a mensagem chega ao outro lado, não é?
+
+135
+00:20:19,000 --> 00:20:28,000
+No fundo, tem que haver uma mensagem, tem que haver aqui uma resposta, uma nova resposta e depois aqui uma nova confirmação, ok?
+
+136
+00:20:28,000 --> 00:20:34,000
+Para garantir que realmente a mensagem foi entregue como devia ser e foi entregue apenas uma vez, ok?
+
+137
+00:20:35,000 --> 00:20:41,000
+Que este protocolo que aqui está, o que me garanta é que a mensagem é entregue pelo menos uma vez, não é?
+
+138
+00:20:42,000 --> 00:20:50,000
+Mas eventualmente, se por exemplo esta mensagem falhar, ela pode ser entregue duas vezes, ok?
+
+139
+00:20:50,000 --> 00:20:59,000
+Portanto, este protocolo já não, já me garante que ela é entregue exatamente uma vez por causa desta troca de quatro mensagens entre os diferentes nós, pronto?
+
+140
+00:21:00,000 --> 00:21:10,000
+Isto também são coisas que vem dos anos 80 desta tecnologia para ser entregue duas vezes, ok?
+
+141
+00:21:10,000 --> 00:21:15,000
+Portanto, quais são as best practices que nós temos aqui, ok?
+
+142
+00:21:16,000 --> 00:21:22,000
+Nós quando usamos o que é o S0, quando a conexão for estável, ok?
+
+143
+00:21:23,000 --> 00:21:25,000
+Quando a conexão for estável, ok?
+
+144
+00:21:26,000 --> 00:21:28,000
+Quando a conexão for estável, ok?
+
+145
+00:21:29,000 --> 00:21:31,000
+Quando a conexão for estável, ok?
+
+146
+00:21:32,000 --> 00:21:34,000
+Quando a conexão for estável, ok?
+
+147
+00:21:35,000 --> 00:21:39,000
+Nós quando usamos o que é o S0, quando a conexão for estável, ok?
+
+148
+00:21:40,000 --> 00:21:45,000
+Quando temos uma conexão estável entre o emissor e o setor, ok?
+
+149
+00:21:47,000 --> 00:21:49,000
+Pode-se fazer isto, ok?
+
+150
+00:21:50,000 --> 00:21:56,000
+Quando aquilo que estamos a transmitir não for nada de muito grave, ok?
+
+151
+00:21:57,000 --> 00:22:00,000
+De vez em quando eu posso perder uma mensagem, não é?
+
+152
+00:22:00,000 --> 00:22:05,000
+Imaginemos que estamos a transmitir a temperatura de um em um segundo.
+
+153
+00:22:06,000 --> 00:22:09,000
+A temperatura não varia assim tão rapidamente, não é?
+
+154
+00:22:10,000 --> 00:22:14,000
+Se eu perder algumas mensagens de temperatura não faz qualquer diferença,
+
+155
+00:22:14,000 --> 00:22:20,000
+é perfeitamente aceitável que estes dados sejam perdidos, ok?
+
+156
+00:22:24,000 --> 00:22:28,000
+Pronto, e quando não preciso de qualquer tipo de queuing, ok?
+
+157
+00:22:31,000 --> 00:22:34,000
+Use QoS 1, ok?
+
+158
+00:22:35,000 --> 00:22:40,000
+Quando eu consigo tratar duplicações de mensagens, ok?
+
+159
+00:22:41,000 --> 00:22:46,000
+Normalmente isto é dos níveis de QoS que são mais utilizados,
+
+160
+00:22:46,000 --> 00:22:52,000
+porque aquilo que vem numa confirmação me garante que realmente a mensagem foi entregue do outro lado, ok?
+
+161
+00:22:53,000 --> 00:23:01,000
+Mas tem que contar que podem ser recebidas várias mensagens ao mesmo tempo, ok?
+
+162
+00:23:02,000 --> 00:23:08,000
+Portanto, a aplicação tem que garantir que pode receber duplicados da mesma mensagem.
+
+163
+00:23:08,000 --> 00:23:14,000
+Bom, então se receber duplicados também não faz diferença nenhuma, ok?
+
+164
+00:23:15,000 --> 00:23:22,000
+QoS 2, só usamos normalmente em aplicações críticas em que seja realmente que a mensagem
+
+165
+00:23:22,000 --> 00:23:25,000
+seja entregue exatamente uma vez, ok?
+
+166
+00:23:26,000 --> 00:23:33,000
+E que portanto não temos esta necessidade de...
+
+167
+00:23:35,000 --> 00:23:41,000
+Não temos capacidade para ter mensagens duplicadas ou outras coisas do género.
+
+168
+00:23:41,000 --> 00:23:45,000
+Podemos perder mais tempo nas comunicações, mas ao mesmo tempo
+
+169
+00:23:45,000 --> 00:23:50,000
+ter a garantia de que a mensagem é entregue como deve ser, ok?
+
+170
+00:23:53,000 --> 00:24:01,000
+O MQTT, portanto, não faz isto message queuing por definição, ok?
+
+171
+00:24:01,000 --> 00:24:07,000
+Mas consegue fazer o queuing de algumas mensagens para os clientes, ok?
+
+172
+00:24:07,000 --> 00:24:13,000
+Portanto, se nós usarmos um mecanismo de persistent connection, eu consigo que as
+
+173
+00:24:13,000 --> 00:24:22,000
+mensagens sejam entregues ao cliente se ele se desligar pelo meio, ok?
+
+174
+00:24:26,000 --> 00:24:32,000
+Prontos, portanto, estão alguns mecanismos depois para tornar as sessões mais robustas
+
+175
+00:24:32,000 --> 00:24:37,000
+na comunicação de mensagens, ok?
+
+176
+00:24:37,000 --> 00:24:42,000
+Pronto, outra coisa também, a clean session, mas também não vou entrar aqui muito tarde.
+
+177
+00:24:43,000 --> 00:24:48,000
+Tudo bem, pronto, meus caros, eu acho que por hoje ficamos aqui, está bem?
+
+178
+00:24:50,000 --> 00:24:57,000
+Do curso também, desta entrada inicial, também vamos ficar por aqui, portanto vocês
+
+179
+00:24:57,000 --> 00:25:03,000
+depois vão, para algumas destas matérias, dar mais alguns detalhes, ok?
+
+180
+00:25:03,000 --> 00:25:07,000
+Nas respectivas cadeiras, sobre sistemas operativos, sobre comunicações,
+
+181
+00:25:07,000 --> 00:25:15,000
+sobre esta parte de comunicações dos sensores para cloud e entre clouds, ok?
+
+182
+00:25:15,000 --> 00:25:21,000
+Mas, pronto, eu só fico por aqui numa pequena introdução, portanto, espero que isto
+
+183
+00:25:21,000 --> 00:25:27,000
+vos tenha aberto um bocadinho o apetite para depois procurar mais coisas, não é?
+
+184
+00:25:27,000 --> 00:25:33,000
+Para tentar encontrar os tópicos que vocês necessitem para fazer trabalhos, ou o que
+
+185
+00:25:33,000 --> 00:25:35,000
+quer que seja, não é?
+
+186
+00:25:35,000 --> 00:25:40,000
+Mas, de qualquer das formas, se vocês precisarem, estou à vossa disposição, está bem?
+
+187
+00:25:40,000 --> 00:25:46,000
+Como eu vos disse, relativamente ao exame, será um exame de 30 a 45 minutos, não sei
+
+188
+00:25:46,000 --> 00:25:53,000
+quanto é que será, eu vou colocar depois isso no módulo, está bem?
+
+189
+00:25:53,000 --> 00:26:00,000
+Será feito no módulo, como eu vos disse, pronto, e no resto acho que qualquer questão
+
+190
+00:26:00,000 --> 00:26:03,000
+vocês sejam à vontade de me colocar.
+
+191
+00:26:03,000 --> 00:26:08,000
+Ah, esqueci-me de dizer, depois, serão quatro questões, escolham múltipla, portanto,
+
+192
+00:26:08,000 --> 00:26:11,000
+para escolher aquela questão que está correta, ok?
+
+193
+00:26:12,000 --> 00:26:15,000
+Não haverá variações destas questões, ok?
+
+194
+00:26:15,000 --> 00:26:19,000
+Será sempre com escolha múltipla, apenas.
+
+195
+00:26:19,000 --> 00:26:20,000
+Ok?
+
+196
+00:26:22,000 --> 00:26:23,000
+Natália?
+
+197
+00:26:23,000 --> 00:26:27,000
+Desculpe, professor, se posso, por favor, repetir, quando é o exame?
+
+198
+00:26:27,000 --> 00:26:30,000
+Na dia 9, abril, ou não?
+
+199
+00:26:30,000 --> 00:26:36,000
+Sim, salvo que eu disse ao bocadinho que era 9 de abril, não foi?
+
+200
+00:26:36,000 --> 00:26:39,000
+Deixe-me, depois, que dia é que eu disse?
+
+201
+00:26:39,000 --> 00:26:42,000
+Desculpem lá que eu não tenho aqui o meu hot-look aberto.
+
+202
+00:26:42,000 --> 00:26:44,000
+Ok, ok.
+
+203
+00:26:44,000 --> 00:26:46,000
+Penso que foi dia 9.
+
+204
+00:26:46,000 --> 00:26:47,000
+Dia 9, ok, ok.
+
+205
+00:26:47,000 --> 00:26:48,000
+Sim, é dia 9.
+
+206
+00:26:48,000 --> 00:26:49,000
+Ok, muito obrigado.
+
+207
+00:26:49,000 --> 00:26:53,000
+Exatamente, é quinta-feira, quinta-feira às 8.
+
+208
+00:26:53,000 --> 00:26:54,000
+Online, sim?
+
+209
+00:26:54,000 --> 00:26:56,000
+Sim, será feito online, ok?
+
+210
+00:26:56,000 --> 00:26:58,000
+Às 7 horas, está bem?
+
+211
+00:26:58,000 --> 00:27:05,000
+Parece que havia aí outra marcação qualquer que vocês tinham e, portanto, é às 7 horas.
+
+212
+00:27:06,000 --> 00:27:07,000
+Tá bem?
+
+213
+00:27:07,000 --> 00:27:10,000
+Eu tenho só a marcação da aula, é isso?
+
+214
+00:27:10,000 --> 00:27:13,000
+É isso, sim, é a mesma coisa.
+
+215
+00:27:13,000 --> 00:27:18,000
+Ok, é, exatamente, deixe-me ver, já abri aqui o hot-look.
+
+216
+00:27:18,000 --> 00:27:20,000
+Ah, ainda não, ainda não abri.
+
+217
+00:27:25,000 --> 00:27:28,000
+Ok, agora, não vêm outros atos, está bem?
+
+218
+00:27:28,000 --> 00:27:32,000
+O exame é para começar às 7h10h, pronto, depois de cá.
+
+219
+00:27:32,000 --> 00:27:33,000
+Obrigado.
+
+220
+00:27:33,000 --> 00:27:39,000
+E depois de cá vai fechou, não podem, tem uma tolerância de 1 ou 2 minutos, no máximo,
+
+221
+00:27:39,000 --> 00:27:47,000
+porque os exames não mudam, não consigo fazer muitas variações, está bem?
+
+222
+00:27:47,000 --> 00:27:49,000
+Portanto, tenham atenção a isso.
+
+223
+00:27:49,000 --> 00:27:50,000
+Ok.
+
+224
+00:27:50,000 --> 00:27:56,000
+Ok, olha, ainda não consegui abrir isto, é dia 9, é isso que está marcado, então
+
+225
+00:27:56,000 --> 00:27:58,000
+às 7h10h, está bem?
+
+226
+00:27:58,000 --> 00:27:59,000
+Ok?
+
+227
+00:27:59,000 --> 00:28:00,000
+Ok.
+
+228
+00:28:00,000 --> 00:28:01,000
+Ok.
+
+229
+00:28:01,000 --> 00:28:03,000
+Então, até a próxima.
+
+230
+00:28:03,000 --> 00:28:05,000
+Até a próxima.
+
+231
+00:28:05,000 --> 00:28:06,000
+Até a próxima.
+
+232
+00:28:06,000 --> 00:28:07,000
+Até a próxima.
+
+233
+00:28:07,000 --> 00:28:08,000
+Até a próxima.
+

@@ -1,0 +1,912 @@
+1
+00:00:00,000 --> 00:00:10,600
+O meu computador está muito lento hoje, não sei o que é que ele tem.
+
+2
+00:00:10,600 --> 00:00:15,040
+Já estão a ver alguma coisa?
+
+3
+00:00:15,040 --> 00:00:21,920
+Pronto, estava a dizer-lhe falar de 802.11, não é?
+
+4
+00:00:21,920 --> 00:00:24,920
+Lento, pronto.
+
+5
+00:00:24,920 --> 00:00:35,920
+Temos só visto algumas coisas básicas sobre o protocolo,
+
+6
+00:00:35,920 --> 00:00:40,920
+quais eram as suas características mais básicas, etc.
+
+7
+00:00:40,920 --> 00:00:49,920
+Pronto, a chamar a atenção, eu tenho aqui, neste range do 802.11,
+
+8
+00:00:49,920 --> 00:00:57,920
+os 100 metros é em espaço aberto, muito aberto e sem muita...
+
+9
+00:00:57,920 --> 00:01:04,920
+sem muita interferência ultramagnética, dentro de uma casa ou dentro de um edifício,
+
+10
+00:01:04,920 --> 00:01:13,920
+vão no máximo aos 20, 30 metros, não passa muito disso, enorme.
+
+11
+00:01:13,920 --> 00:01:19,920
+Aqui estão os vários canais do 802.11, não é?
+
+12
+00:01:19,920 --> 00:01:25,920
+Temos aqui, normalmente na nossa zona, estes 14 canais que aqui aparecem.
+
+13
+00:01:25,920 --> 00:01:29,920
+Todos eles têm uma largura de banda de 22 megahertz,
+
+14
+00:01:29,920 --> 00:01:34,920
+a quantidade de dados pode passar aqui dentro de cada um dos canais,
+
+15
+00:01:34,920 --> 00:01:36,920
+e tem esta forma assim, pronto.
+
+16
+00:01:36,920 --> 00:01:42,920
+É representada como uma redondada, não é bem redondada, mas é uma forma de o fazer.
+
+17
+00:01:42,920 --> 00:01:48,920
+E se vocês repararem, os canais interferem entre si, muitos deles, não é?
+
+18
+00:01:48,920 --> 00:01:54,920
+Há aqui alguns, estes que estão a preto, mais escuro, não interferem, não é?
+
+19
+00:01:54,920 --> 00:01:59,920
+Mas todos os outros têm alguma interferência entre eles.
+
+20
+00:01:59,920 --> 00:02:02,920
+Isto quer dizer o quê? Quer dizer que se vocês colocarem, por exemplo,
+
+21
+00:02:02,920 --> 00:02:05,920
+numa rede dentro da vossa casa, no canal 1 e outra no canal 2,
+
+22
+00:02:05,920 --> 00:02:08,920
+elas vão interferir ligeiramente uma com a outra.
+
+23
+00:02:08,920 --> 00:02:11,920
+Ligeiramente, não quero dizer que interfiram sempre,
+
+24
+00:02:11,920 --> 00:02:16,920
+porque a rede 1 pode estar parada e a rede 2 estar a transmitir coisas,
+
+25
+00:02:16,920 --> 00:02:24,920
+e aliás, a maior parte da utilização, ainda pai, por 10, 20%, no máximo dos máximos da vossa rede.
+
+26
+00:02:24,920 --> 00:02:27,920
+Portanto, a interferência também é relativamente pouca,
+
+27
+00:02:27,920 --> 00:02:29,920
+mas se quiserem garantir que não há mesmo interferência,
+
+28
+00:02:29,920 --> 00:02:35,920
+têm que separar os canais de pelo menos de 5 canais
+
+29
+00:02:35,920 --> 00:02:39,920
+para garantir que não há interferência entre eles, ok?
+
+30
+00:02:39,920 --> 00:02:43,920
+Portanto, se virem, por exemplo, uma rede do vizinho, se o tiver na 1,
+
+31
+00:02:43,920 --> 00:02:47,920
+vocês não vão colocar a vossa rede na 2, vão colocar a vossa rede na 6, na 7, na 8,
+
+32
+00:02:47,920 --> 00:02:54,920
+ou coisa parecida, ou o mais afastado possível da rede que o vossa vizinho tem, ok?
+
+33
+00:02:54,920 --> 00:02:57,920
+Não é um ambiente industrial, a mesma coisa e assim.
+
+34
+00:02:57,920 --> 00:02:59,920
+Só que no ambiente industrial vocês têm outra vantagem,
+
+35
+00:02:59,920 --> 00:03:05,920
+que podem planear convenientemente a rede, quem diz um ambiente industrial,
+
+36
+00:03:05,920 --> 00:03:10,920
+diz um ambiente comercial, por exemplo, dentro do vizep,
+
+37
+00:03:10,920 --> 00:03:13,920
+podem planear convenientemente os canais da rede,
+
+38
+00:03:13,920 --> 00:03:15,920
+de modo a que eles não interfiram entre si, ok?
+
+39
+00:03:15,920 --> 00:03:19,920
+E hoje em dia também os bútares e os switches fazem isso quase tudo,
+
+40
+00:03:19,920 --> 00:03:24,920
+e portanto nós nem precisamos nos chatear com isto, ok?
+
+41
+00:03:29,920 --> 00:03:37,920
+Portanto, não sei porque é que eu tenho aqui isto.
+
+42
+00:03:41,920 --> 00:03:47,920
+Outra possibilidade do 8211 é correr também noutro pedaço de espectro
+
+43
+00:03:47,920 --> 00:03:52,920
+que está livre para este tipo de coisas, que é os 5 GHz.
+
+44
+00:03:53,920 --> 00:04:01,920
+Este espectro está menos sobrecarregado que a banda ESM,
+
+45
+00:04:01,920 --> 00:04:09,920
+portanto pode oferecer larguras de bandas superiores à outra banda, ok?
+
+46
+00:04:09,920 --> 00:04:21,920
+Normalmente tem aqui alguns detalhes, que é, por exemplo, ter um alcance menor, ok?
+
+47
+00:04:22,920 --> 00:04:30,920
+Porquê? Porque nesta gama de frequências as radiações electromagneticas
+
+48
+00:04:30,920 --> 00:04:34,920
+não penetram tão bem pelas paredes, ok?
+
+49
+00:04:34,920 --> 00:04:39,920
+E portanto, se houver muitas paredes pelo meio ou qualquer outro tipo de obstáculos,
+
+50
+00:04:39,920 --> 00:04:45,920
+não funciona tão bem como na banda de ESM, ok?
+
+51
+00:04:45,920 --> 00:04:51,920
+Portanto, depois os canais também variam dependendo do domínio, ok?
+
+52
+00:04:52,920 --> 00:05:02,920
+Tipicamente são 23 canais overlapping, portanto, sem interferirem uns com os outros, ok?
+
+53
+00:05:02,920 --> 00:05:09,920
+Isto é, por exemplo, uma alocação na gama dos 5 GHz, ok?
+
+54
+00:05:09,920 --> 00:05:13,920
+Definido por uma das outras normas, que é 8211 AC, ok?
+
+55
+00:05:13,920 --> 00:05:17,920
+E que tem os vários canais em várias posições diferentes, ok?
+
+56
+00:05:17,920 --> 00:05:21,920
+E de uns 5 GHz, ok?
+
+57
+00:05:21,920 --> 00:05:29,920
+Como vocês podem ver, aqui nesta banda temos a possibilidade de agrupar vários canais, ok?
+
+58
+00:05:29,920 --> 00:05:33,920
+Ou dividir em vários canais de menor largura, ok?
+
+59
+00:05:33,920 --> 00:05:38,920
+Para termos maiores taxas de transferência de dados, ok?
+
+60
+00:05:40,920 --> 00:05:52,920
+Mais uma vez, em termos de componentes, é uma rede destinada a instalações genéricas, ok?
+
+61
+00:05:52,920 --> 00:06:00,920
+Qualquer tipo de instalação genérica, mas vocês encontram 8211 ou versões de 8211, por exemplo, em meio industrial, ok?
+
+62
+00:06:01,920 --> 00:06:12,920
+Há uma rede vendida pela Siemens, o Profinet, o Wireless Profinet, que é baseada em tecnologia 802.
+
+63
+00:06:12,920 --> 00:06:17,920
+Com mais uns pós em cima, em termos de protocolo.
+
+64
+00:06:17,920 --> 00:06:21,920
+O Profinet base também, portanto, uma tecnologia de automação industrial,
+
+65
+00:06:21,920 --> 00:06:24,920
+para ligar máquinas e ligar dentro de máquinas umas coisas às outras,
+
+66
+00:06:24,920 --> 00:06:29,920
+também todo ele é suportado sobre a Ethernet, ok?
+
+67
+00:06:29,920 --> 00:06:33,920
+E a parte sem fios por 802.
+
+68
+00:06:34,920 --> 00:06:41,920
+Aqui, normalmente nós temos aqui algumas designações importantes a considerar, ok?
+
+69
+00:06:41,920 --> 00:06:49,920
+Só para explicarmos rapidamente, temos os access points, basicamente, vocês conhecermos de vossa casa,
+
+70
+00:06:49,920 --> 00:06:55,920
+é onde entra a internet que vem daquilo que eles chamam o Distribution System,
+
+71
+00:06:55,920 --> 00:07:04,920
+que vai ligar diferentes access points, mas que pertencem a este ESS, que é o Extended Service Set,
+
+72
+00:07:04,920 --> 00:07:08,920
+por exemplo, em vossa casa, se tiverem mais do que um access point,
+
+73
+00:07:08,920 --> 00:07:14,920
+e os access points têm que ter um bocadinho mais de inteligência que aqueles que normalmente nós compramos para a nossa casa,
+
+74
+00:07:14,920 --> 00:07:21,920
+para conseguirem comunicar entre eles, eles formam um Extended Service Set, ok?
+
+75
+00:07:21,920 --> 00:07:28,920
+O Basic Service Set, este BSS, basicamente é toda a área que é definida pelo access point
+
+76
+00:07:28,920 --> 00:07:34,920
+e todas as estações com quem ele consegue comunicar e consegue trocar mensagens, ok?
+
+77
+00:07:34,920 --> 00:07:40,920
+Chama a atenção que todas as comunicações neste modelo vão ao access point, por exemplo,
+
+78
+00:07:40,920 --> 00:07:45,920
+e do access point é que vão para o sistema distribuidor, não é?
+
+79
+00:07:45,920 --> 00:07:49,920
+Se há duas estações aqui que, por exemplo, querem comunicar uma com a outra,
+
+80
+00:07:49,920 --> 00:07:54,920
+o que não é propriamente o mais previsível no sistema deste jeito,
+
+81
+00:07:54,920 --> 00:08:03,920
+isto vai aqui ao access point e depois ao access point reenviar a mensagem para a outra estação, ok?
+
+82
+00:08:03,920 --> 00:08:09,920
+Portanto, não há propriamente comunicações diretas entre estações, não é?
+
+83
+00:08:09,920 --> 00:08:15,920
+Isto deve-se a quê? Por exemplo, há um problema em qualquer tipo de rede sem fios, que é o problema do nó escondido, não é?
+
+84
+00:08:15,920 --> 00:08:23,920
+Se nós tentarmos fazer aqui uma figurinha, se tivermos aqui um access point, por exemplo, aqui no teto, não é?
+
+85
+00:08:23,920 --> 00:08:31,920
+Se tivermos aqui uma parede muito grossa, se tivermos aqui uma estação e outra deste lado,
+
+86
+00:08:31,920 --> 00:08:37,920
+o que vai acontecer é que quando esta está a transmitir os sinais conseguem chegar ali, ok?
+
+87
+00:08:37,920 --> 00:08:43,920
+Mas entre as duas elas não conseguem comunicar diretamente porque está aqui uma parede a tapar
+
+88
+00:08:43,920 --> 00:08:49,920
+completamente as estações, normalmente também têm potências menores da transmissão
+
+89
+00:08:49,920 --> 00:08:56,920
+e, portanto, sofrem deste problema do nó escondido, ok?
+
+90
+00:08:56,920 --> 00:09:01,920
+É um problema típico das redes sem fios, ok?
+
+91
+00:09:01,920 --> 00:09:07,920
+E o que é que isto pode levar a acontecer é, em determinadas situações, não é?
+
+92
+00:09:07,920 --> 00:09:11,920
+Estes dois nós começam a transmitir ao mesmo tempo.
+
+93
+00:09:11,920 --> 00:09:19,920
+Se começarem a transmitir ao mesmo tempo, basicamente, se dá-se aqui uma colisão entre estas duas tramas que estão a ser transmitidas
+
+94
+00:09:19,920 --> 00:09:29,920
+e o access point não vai receber nada, ok? Não vai receber a transmissão que estaria à espera de um destes nós, ok?
+
+95
+00:09:29,920 --> 00:09:39,920
+Portanto, está aqui descrito nos slides, há depois mecanismos para resolver este problema dos nossos escondidos,
+
+96
+00:09:39,920 --> 00:09:47,920
+são nós que só conseguem comunicar com o access point, não conseguem ouvir o que os outros nós estão a transmitir, ok?
+
+97
+00:09:47,920 --> 00:09:51,920
+E por isso é que há a tal colisão neste meio.
+
+98
+00:09:52,920 --> 00:09:58,920
+Os access points têm mecanismos muito sofisticados, de encriptação e autenticação,
+
+99
+00:09:58,920 --> 00:10:03,920
+depois eu não vou falar com grande detalhe, ok?
+
+100
+00:10:03,920 --> 00:10:13,920
+Serviços também para suportar qualidade de serviço, infelizmente a maior parte dos access points não têm esta,
+
+101
+00:10:13,920 --> 00:10:21,920
+e as tracas em geral não têm os mecanismos de qualidade de serviços implementados como deve ser,
+
+102
+00:10:21,920 --> 00:10:28,920
+ou então é difícil de lhes aceder e portanto não é usado assim normalmente, ok?
+
+103
+00:10:28,920 --> 00:10:36,920
+Embora desse algum jeito no tipo de coisas que normalmente nós fazemos em sistemas embedidos, ok?
+
+104
+00:10:37,920 --> 00:10:47,920
+Pronto, depois tenham mais coisas de analytics, portanto, de monitorização do access point,
+
+105
+00:10:47,920 --> 00:10:53,920
+de funcionamento em meshes também, como repetidores, etc.
+
+106
+00:10:56,920 --> 00:11:02,920
+Há também a possibilidade, no 8211, alguns de vocês já devem ter feito isto pelo menos com o vosso telemóvel,
+
+107
+00:11:02,920 --> 00:11:10,920
+que é de ligarem-se desta forma uns aos outros, aliás, desculpem, com o telemóvel é diferente, é outra coisa,
+
+108
+00:11:10,920 --> 00:11:18,920
+num chamado independent basic service set, em que os computadores vão comunicar diretamente uns com os outros,
+
+109
+00:11:18,920 --> 00:11:27,920
+mas podem eventualmente perder aqui, vamos dizer que um deles faça de router, o acesso à internet,
+
+110
+00:11:27,920 --> 00:11:34,920
+tem uma ligação cableada, por exemplo, o acesso à internet, ok? Também é possível fazer isto.
+
+111
+00:11:34,920 --> 00:11:37,920
+Normalmente não funciona em nada mais.
+
+112
+00:11:39,920 --> 00:11:48,920
+Já falei, eu vou passar muitas coisas à frente porque também não temos muito tempo para falar muito sobre o assunto, ok?
+
+113
+00:11:49,920 --> 00:11:56,920
+O mecanismo de acesso ao meio é este MAC, ok? Medium Access Control.
+
+114
+00:11:58,920 --> 00:12:05,920
+E é o CSMA-CA, ok? Isto é Carrier Sense Multiple Access Collision Reflectance.
+
+115
+00:12:05,920 --> 00:12:14,920
+Portanto, é um mecanismo muito semelhante ao Ethernet, que vocês têm nos cabos que ligam aos computadores,
+
+116
+00:12:15,920 --> 00:12:23,920
+mas tem aqui uma coisa que é diferente, que é Collision Avoidance, ok?
+
+117
+00:12:23,920 --> 00:12:34,920
+O 800 Ethernet é CD, Carrier Sense Multiple Access, CD Collision Detection, ok?
+
+118
+00:12:34,920 --> 00:12:41,920
+Em comunicações sem fios, o que acontece é que, quando nós estamos a transmitir, estamos a receber pela mesma antena,
+
+119
+00:12:41,920 --> 00:12:48,920
+a antena que recebe é a mesma que transmite. A consequência disso, enquanto num meio com fios,
+
+120
+00:12:48,920 --> 00:12:53,920
+temos um fio para transmitir e um fio para receber.
+
+121
+00:12:54,920 --> 00:13:02,920
+A consequência dessa brincadeira é que nós conseguimos escutar coisas realmente diferentes no carro, ok?
+
+122
+00:13:03,920 --> 00:13:14,920
+Quando estamos no ar, a potência de transmissão é tanta que não há nenhum sinal que possa ser recebido pela nossa antena.
+
+123
+00:13:14,920 --> 00:13:24,920
+A não ser que a gente tenha uma antena a 10 metros de nor, não é possível estar a receber o sinal e a transmitir ao mesmo tempo, ok?
+
+124
+00:13:24,920 --> 00:13:31,920
+Portanto, se houver uma colisão, isto é, se dois nós, por exemplo, numa situação como aquela que eu coloquei anteriormente,
+
+125
+00:13:31,920 --> 00:13:38,920
+tiverem a tentar transmitir ao mesmo tempo, o que vai acontecer é que ele não vai detectar essa colisão,
+
+126
+00:13:38,920 --> 00:13:44,920
+só vai detectar essa colisão como, eventualmente, ela tiver acontecido na sua totalidade, ok?
+
+127
+00:13:44,920 --> 00:13:52,920
+Enquanto que no Ethernet essa colisão é detectada facilmente e, antes de chegarmos ao fim da transmissão da trama,
+
+128
+00:13:52,920 --> 00:14:00,920
+já temos essa colisão detectada e já estamos a tentar corrigir a colisão, ok?
+
+129
+00:14:00,920 --> 00:14:20,920
+Depois, os modos que temos aqui é o Distributed Coordinator Function, que basicamente é um mecanismo CSMA-CA, ok?
+
+130
+00:14:20,920 --> 00:14:32,920
+E depois temos o Point Coordinator Function, que eu não vou falar também, mas que basicamente nos permite suportar qualidade de serviço nas comunicações, ok?
+
+131
+00:14:32,920 --> 00:14:45,920
+Este Distributed Coordinator Function funciona de uma forma relativamente simples, com base neste princípio que é do Virtual Carrier Sessing, ok?
+
+132
+00:14:45,920 --> 00:14:57,920
+Isto é, o que vamos ter que ter é que todas as frames que são transmitidas vão ter que dizer qual é a sua duração, basicamente é qual é o seu tamanho da frame, ok?
+
+133
+00:14:57,920 --> 00:15:07,920
+Quando alguém quer enviar uma frame, ele tem que enviar primeiro um pacote deste tipo que aqui está, RTS Request to Send, ok?
+
+134
+00:15:07,920 --> 00:15:16,920
+Depois disso, o receptor, basicamente o Access Point, vai responder com um Clear to Send, ok? Podes enviar, não é?
+
+135
+00:15:16,920 --> 00:15:33,920
+A partir do momento em que isto é recebido, ele vai alocar o meio e já sabe, aqui diz, ok, eu vou precisar de 15 para transmitir uma pacote, e uma pacote é este que aqui está, ok?
+
+136
+00:15:33,920 --> 00:15:41,920
+Que vai ter a duração de 15, não é? Ele vai alocar o meio para esta transmissão toda, certo?
+
+137
+00:15:41,920 --> 00:15:55,920
+Vai-lhe enviar este Clear to Send para o transmissor, este Clear to Send ele já sabe que, então, e todos os outros nós também vão receber isto,
+
+138
+00:15:55,920 --> 00:16:06,920
+mesmo aqueles que não tenham recebido, eventualmente podem não ter recebido o FTS, mas todos os outros vão receber o CTS que é enviado pelo Access Point.
+
+139
+00:16:07,920 --> 00:16:17,920
+A partir daqui, ele já sabe que tem 15 unidades de tempo, seja lá isso o que for, para transmitir esta frame, mais estes espaços, ok?
+
+140
+00:16:17,920 --> 00:16:25,920
+E ainda mais este espaço entre frames e o Acknowledgement que põe aqui, ok?
+
+141
+00:16:25,920 --> 00:16:32,920
+Ou seja, o Access Point tem sempre, depois de terem enviado esta frame, tem sempre a responder com Acknowledgement para dizer,
+
+142
+00:16:32,920 --> 00:16:39,920
+sim senhor, a frame foi recebida por mim, não há outra forma de fazer, ok?
+
+143
+00:16:40,920 --> 00:16:50,920
+Mesmo assim, este mecanismo pode levar a algum tipo de colisões entre as frames, ok?
+
+144
+00:16:50,920 --> 00:17:05,920
+Para resolver este problema, pelo menos, quando nós estamos a enviar este RTS, podem haver aqui colisões, por exemplo, entre vários nós, não é?
+
+145
+00:17:06,920 --> 00:17:19,920
+Portanto, o que é que nós vamos utilizar? Vamos usar aqui a chamada janela de contenção, que é uma janela em que os meus nós podem começar a transmitir, ok?
+
+146
+00:17:19,920 --> 00:17:25,920
+E o que é que eles fazem? Para evitar que haja colisões, eles vão escolher, ok?
+
+147
+00:17:25,920 --> 00:17:34,920
+Imaginamos que estão dois nós ao mesmo tempo, o nó 1 escolheu este slot aqui, o nó 2 escolheu este slot aqui, ok?
+
+148
+00:17:35,920 --> 00:17:45,920
+E, entretanto, eles vão verificando em cada um destes slots, está alguém a transmitir? Não, está alguém a transmitir? Não, está alguém a transmitir? Não, ok?
+
+149
+00:17:46,920 --> 00:17:54,920
+Se há transmissões ou não, não é? Portanto, imaginando esta situação em que está aqui o nó 1, começa aqui a transmitir,
+
+150
+00:17:54,920 --> 00:18:05,920
+antes da transmitir vai verificar se está aqui o nó 1 e o nó 2, está alguém a transmitir? Não, está tudo bem? Ok, começou a transmitir a partir daqui,
+
+151
+00:18:07,920 --> 00:18:10,920
+aqui é que realmente começa a transmissão da sua frame,
+
+152
+00:18:11,920 --> 00:18:25,920
+e depois o que vai acontecer é que o 1 está a transmitir a sua frame, o 2, ao tentar fazer aqui o carrier sense, vai detectar que há uma transmissão em curso,
+
+153
+00:18:25,920 --> 00:18:39,920
+logo ele faz o chamado back off, sai, sai de vontade de transmitir e espera que o nó que começou a transmitir faça realmente a sua transmissão,
+
+154
+00:18:40,920 --> 00:18:50,920
+mas, isto de vez em quando, eles podem, eles têm, acho que digo aí mais à frente, acho que são 8 slots inicialmente,
+
+155
+00:18:51,920 --> 00:19:08,920
+e, portanto, há a probabilidade deles colidirem, deles escolherem, aqui, por exemplo, slot 1, o 1 e o 2 selecionarem este slot
+
+156
+00:19:08,920 --> 00:19:18,920
+para começar a transmitir. Ora, nesta situação, o 1 vai transmitir uma frame, o 2 vai transmitir uma frame,
+
+157
+00:19:19,920 --> 00:19:30,920
+só que depois, o que é que vai acontecer? Chegamos aqui ao fim e o acknowledgement que devia vir, aqui do, do,
+
+158
+00:19:31,920 --> 00:19:39,920
+de alguém, do access point, não chega, não é transmitido, portanto, eles esperam aqui um tempo determinado,
+
+159
+00:19:40,920 --> 00:19:48,920
+este acknowledgement não veio e sabem que vão ter que novamente iniciar um novo período de contenção.
+
+160
+00:19:49,920 --> 00:19:56,920
+Com sorte, isto é tudo uma questão de probabilidade, se calhar desta vez vamos escolher slots diferentes para começarem a transmitir
+
+161
+00:19:56,920 --> 00:20:04,920
+e, então, o 1, que tinha este slot para começar a transmitir, vai realmente começar a transmitir e transmita a partir daqui,
+
+162
+00:20:05,920 --> 00:20:11,920
+é desta forma que se evitam as colisões. É claro, porque, em situações em que estão muitos nós na rede, não é,
+
+163
+00:20:14,920 --> 00:20:24,920
+então, e há muito tráfego também, a probabilidade de ocorrerem colisões entre frames começa a ser cada vez maior,
+
+164
+00:20:25,920 --> 00:20:35,920
+quanto mais gente, quanto mais tráfego, maior a probabilidade que venham a ocorrer colisões e, portanto, que as coisas se atrasem substancialmente.
+
+165
+00:20:37,920 --> 00:20:46,920
+Pronto, basicamente é este o mecanismo, é isto que é interessante de perceber e depois até é importante quando falarem em escalonamento e assim,
+
+166
+00:20:47,920 --> 00:20:50,920
+para perceber como é que isto vai funcionando.
+
+167
+00:20:51,920 --> 00:21:01,920
+Pronto, as regras estão aqui todas definidas, já agora, se eles voltarem a chocar, se houver novamente uma nova colisão,
+
+168
+00:21:02,920 --> 00:21:09,920
+aquela janela de contenção, o número de slots também vai aumentar mais, de modo a cada vez seguinte que eles tentem,
+
+169
+00:21:10,920 --> 00:21:15,920
+a probabilidade de chocar isso seja ainda menor, mesmo que estejam mais nós a tentar entrar em contenção.
+
+170
+00:21:16,920 --> 00:21:24,920
+E assim, por aí fora, salvo eu até sete tentativas, embora isto seja configurável na rede,
+
+171
+00:21:25,920 --> 00:21:37,920
+e vai ter uns slots de cerca de, se eu não me engano, 128 slots diferentes para poder nem começar a transmitir.
+
+172
+00:21:39,920 --> 00:21:43,920
+Reparem também outra coisa, já agora que é importante perceber.
+
+173
+00:21:43,920 --> 00:21:56,920
+Se vocês olharem aqui para estas comunicações todas, apesar de nós dizermos, este é uma rede que tem um gigabit por segundo,
+
+174
+00:21:57,920 --> 00:22:06,920
+um gigabit por segundo em que de dados úteis se aproveita isto, que é esta frame aqui que foi transmitida.
+
+175
+00:22:06,920 --> 00:22:19,920
+Estamos a falar de qualquer coisa como, se tudo correr bem, paga uns 20% de utilização da largura de banda da rede, não mais do que isto.
+
+176
+00:22:20,920 --> 00:22:26,920
+Logo à partida, por causa do over-red que tem todo o protocolo que aqui está.
+
+177
+00:22:26,920 --> 00:22:32,920
+Aqui não vou voltar a falar muito.
+
+178
+00:22:33,920 --> 00:22:42,920
+Do Bluetooth, isto já é uma rede tão antiga como 8211, foram mais ou menos as duas redes ouvidas ao mesmo tempo,
+
+179
+00:22:43,920 --> 00:22:55,920
+e o objetivo na altura era substituir as comunicações através de infravermelho.
+
+180
+00:22:56,920 --> 00:23:06,920
+Os telemóveis e os PDAs na altura, que eram o equivalente aos nossos telefones mas têm a parte de telefone,
+
+181
+00:23:09,920 --> 00:23:16,920
+conseguiam na altura comunicar através de infravermelhos, alguns de vocês não devem ter visto algumas coisas deste jeito.
+
+182
+00:23:17,920 --> 00:23:31,920
+Portanto, a ideia foi ter dispositivos e na altura, reparem, o objetivo era chegarmos aos 5€ por peça de silício.
+
+183
+00:23:32,920 --> 00:23:44,920
+Hoje em dia, este valor está muito, muito abaixo dos 5€ em termos de silício, muito menos, são alguns cêntimos só o custo do Bluetooth no equipamento.
+
+184
+00:23:46,920 --> 00:23:57,920
+Pronto, basicamente temos normalmente short range, cerca de 10 metros, baixo consumo de energia, muito mais baixo que 8211,
+
+185
+00:23:58,920 --> 00:24:09,920
+e também a necessidade de operar nas bandas ISM, 2,45 GHz, a banda que era free e continua assim.
+
+186
+00:24:10,920 --> 00:24:18,920
+Portanto, o objetivo também é permitir a transmissão de dados e de voz, aproximadamente até 1 megavídeo por segundo.
+
+187
+00:24:20,920 --> 00:24:27,920
+Funciona para dados e voz, vídeo já começa a se calhar a arrastar-se um bocadinho.
+
+188
+00:24:28,920 --> 00:24:41,920
+O Bluetooth, ao contrário de 8211, teve muitos problemas nas primeiras versões do Bluetooth, que destruiu muito aquilo que se pensava que o Bluetooth poderia vir a fazer.
+
+189
+00:24:43,920 --> 00:24:51,920
+Basicamente havia problemas de interoperabilidade do hardware, havia problemas de interoperabilidade também com o software,
+
+190
+00:24:52,920 --> 00:25:03,920
+alguns dos quais, como era o Microsoft, tinha lá um software para Windows que não seguia exatamente as normas do Bluetooth,
+
+191
+00:25:03,920 --> 00:25:20,920
+portanto depois rapidamente se rectificou o standard, ou a versão 1.1, com algumas coisas que foram arranjadas normalmente para ter maior compatibilidade.
+
+192
+00:25:21,920 --> 00:25:29,920
+Depois veio o 1.2, portanto aqui estes estamos a falar que para ligarmos um Bluetooth há uns anos atrás,
+
+193
+00:25:30,920 --> 00:25:35,920
+poderemos demorar cerca de 30 segundos ou um minuto para que ele se ligasse à rede.
+
+194
+00:25:36,920 --> 00:25:43,920
+Nas últimas versões isto já conseguiu ser feito muito mais rapidamente, rapidamente se faz a ligação.
+
+195
+00:25:43,920 --> 00:25:50,920
+E pronto, maiores taxas de transmissão, portanto foi mais ou menos isso que as coisas foram sendo feitas.
+
+196
+00:25:51,920 --> 00:26:00,920
+Apareceu o Bluetooth 2.0 também, com maiores data rates, outras técnicas de codificação mais poderosas, etc.
+
+197
+00:26:00,920 --> 00:26:13,920
+O Bluetooth 3.0, já em 2009, já conseguia ter a capacidade de juntar-se ao 8211 e transferir dados até cerca de 24 megabits por segundo.
+
+198
+00:26:14,920 --> 00:26:17,920
+E muitas outras coisas também aqui interessantes.
+
+199
+00:26:17,920 --> 00:26:27,920
+Depois, na sua evolução, apareceu o Bluetooth Low Energy, o Bluetooth Low Energy é basicamente um protocolo novo,
+
+200
+00:26:27,920 --> 00:26:33,920
+que tem ainda menos, ainda não consomem menos energia do que o Bluetooth.
+
+201
+00:26:34,920 --> 00:26:42,920
+Portanto, a ideia é que ele seja executado com aquelas pilhas que são, como é que se chama,
+
+202
+00:26:42,920 --> 00:26:44,920
+uma moeda, ok?
+
+203
+00:26:45,920 --> 00:26:51,920
+Pronto, e depois tem já o mecanismo necessário para a troca de dados, ok?
+
+204
+00:26:52,920 --> 00:26:58,920
+Bluetooth Low Energy não é propriamente uma rede de transmissão, não é uma rede de transmissão,
+
+205
+00:26:59,920 --> 00:27:03,920
+não é uma rede de transmissão, não é uma rede de transmissão.
+
+206
+00:27:03,920 --> 00:27:08,920
+E depois tem já o mecanismo necessário para a troca de dados, ok?
+
+207
+00:27:09,920 --> 00:27:16,920
+Bluetooth Low Energy não é propriamente uma rede para a transmissão de grandes quantidades de dados, em passo temos a internet,
+
+208
+00:27:17,920 --> 00:27:23,920
+mas serve para acedermos a múltiplos tipos de dispositivos de baixa energia, ok?
+
+209
+00:27:24,920 --> 00:27:37,920
+Já lá, os sensores cardíacos que vocês utilizam, os relógios também que estão muito na moda ultimamente,
+
+210
+00:27:38,920 --> 00:27:43,920
+também se ligam a vários sensores por Bluetooth Low Energy, ok?
+
+211
+00:27:44,920 --> 00:27:51,920
+Portanto, foi uma coisa que funcionou muito bem nas últimas, nesta última versão do Bluetooth, ok?
+
+212
+00:27:51,920 --> 00:27:57,920
+E teve um sucesso muito razoável, se calhar vocês até vão utilizar isto nas aulas,
+
+213
+00:27:58,920 --> 00:28:04,920
+porque ela é muito simples de estabelecer comunicações entre duas máquinas utilizando a Bluetooth, ok?
+
+214
+00:28:05,920 --> 00:28:11,920
+O Bluetooth também funciona nesta banda, tem 79 canais, ok?
+
+215
+00:28:12,920 --> 00:28:16,920
+Cada um tem um megahertz de largura de banda, ok?
+
+216
+00:28:17,920 --> 00:28:26,920
+Usa uma modulação Frequency Shift Key, ok?
+
+217
+00:28:27,920 --> 00:28:36,920
+É um bocadinho diferente daquela que nós vimos, mas basicamente para o zero tem uma frequência, para o outro tem outra frequência, ok?
+
+218
+00:28:36,920 --> 00:28:47,920
+Tem uma característica interessante, que é quando nós estamos a transmitir uma frame em Bluetooth,
+
+219
+00:28:48,920 --> 00:28:55,920
+ela está sempre a ser transmitida, cada vez que vamos transmitir uma nova, ela vai ser transmitida numa modulação diferente,
+
+220
+00:28:56,920 --> 00:29:00,920
+uma modulação, desculpa, num canal diferente, mas ele tem 79 canais, ok?
+
+221
+00:29:01,920 --> 00:29:07,920
+Então, uma coisa que é, ele tem uma forma, salta por estar no canal 1, não é?
+
+222
+00:29:08,920 --> 00:29:17,920
+Mas a seguir vai para o canal 43, do 43 pode vir para o 23, do 23 vai para aí para o 80, do 80 volta para o 35,
+
+223
+00:29:18,920 --> 00:29:29,920
+portanto, há uma sequência pseudo-aliatória, que me diz como é que ele vai mudando de canais de transmissão, ok?
+
+224
+00:29:31,920 --> 00:29:34,920
+Qual é o objetivo deste chamado Frequency Hopping?
+
+225
+00:29:35,920 --> 00:29:45,920
+É, se houver interferência num determinado canal, se ele for transmitir no outro a seguir, essa interferência em princípio já desapareceu, ok?
+
+226
+00:29:46,920 --> 00:29:51,920
+Se ele falhar aqui uma transmissão no canal 35 e a seguir for transmitir outra vez no canal 80, ok?
+
+227
+00:29:52,920 --> 00:29:55,920
+Se calhar a do canal 80 já vai, já vai passar, ok?
+
+228
+00:29:55,920 --> 00:29:59,920
+Pronto, portanto...
+

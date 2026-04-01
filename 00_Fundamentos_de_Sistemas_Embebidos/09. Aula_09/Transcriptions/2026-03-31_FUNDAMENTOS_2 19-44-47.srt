@@ -1,0 +1,436 @@
+1
+00:00:00,000 --> 00:00:08,000
+de comunicações. Portanto, ela já tem mecanismos para suportar voz, para suportar dados e basicamente
+
+2
+00:00:08,000 --> 00:00:15,000
+a topologia é o chamado Piconet, basicamente é uma topologia de rede chamada estrela.
+
+3
+00:00:15,000 --> 00:00:19,000
+É isto que aparece aqui nesta figurinha, aqui ao lado direito.
+
+4
+00:00:19,000 --> 00:00:26,000
+Basicamente, numa rede Bluetooth nós vamos ter o Master, que é o nó que vai controlar as comunicações.
+
+5
+00:00:26,000 --> 00:00:34,000
+Vamos ter os slaves ativos, estes que estão aqui a verde.
+
+6
+00:00:34,000 --> 00:00:40,000
+E depois vamos ter outros slaves, eventualmente que estão mais ou menos ligados,
+
+7
+00:00:40,000 --> 00:00:51,000
+que estão neste estado de P ou SB, parte ou em standby, que têm determinadas características
+
+8
+00:00:51,000 --> 00:00:56,000
+a nível daquilo que conseguem receber e transmitir.
+
+9
+00:00:56,000 --> 00:01:03,000
+Normalmente nós só podemos ter numa rede Bluetooth o Master e 7 slaves a comunicar ativamente naquele estado ativo.
+
+10
+00:01:03,000 --> 00:01:10,000
+Mas nesses estados eles conseguem algumas comunicações.
+
+11
+00:01:10,000 --> 00:01:20,000
+Quem determina aquele padrão de hopping que eu falei, de saltos, é o Master através do seu endereço
+
+12
+00:01:20,000 --> 00:01:25,000
+e daí os slaves fazem exatamente a mesma coisa que o Master faz.
+
+13
+00:01:35,000 --> 00:01:45,000
+Os nós vão passando aqui entre vários estados, basicamente eles começam num estado de standby.
+
+14
+00:01:46,000 --> 00:01:54,000
+Do estado de standby podem passar para aqui para o estado de inquiry, que é procurar outros dispositivos aos quais se podem ligar.
+
+15
+00:01:54,000 --> 00:01:57,000
+Normalmente é por a ação nossa.
+
+16
+00:01:57,000 --> 00:02:05,000
+Podem ir diretamente para o estado de page para se conectarem a um dispositivo específico.
+
+17
+00:02:05,000 --> 00:02:13,000
+Isto de standby para page ou de inquiry para page depois de ter descoberto um dispositivo.
+
+18
+00:02:13,000 --> 00:02:22,000
+Depois podem passar por este estado que é o Connected AMA, em que ele participa na PConnect e tem um endereço ativo.
+
+19
+00:02:22,000 --> 00:02:31,000
+E podem depois entrar num estado de parque, em que eles libertam o endereço que tinham.
+
+20
+00:02:31,000 --> 00:02:36,000
+Lembre-se que só existem 7 slaves possíveis.
+
+21
+00:02:37,000 --> 00:02:47,000
+Um estado old, em que alguns tipos de comunicações são paradas, mas os outros ainda são possíveis.
+
+22
+00:02:47,000 --> 00:02:53,000
+Este SCO é o Synchronous Connection Oriented, portanto é comunicações de voz.
+
+23
+00:02:53,000 --> 00:02:57,000
+As comunicações de voz ainda continuam a ser, o resto das comunicações não.
+
+24
+00:02:57,000 --> 00:03:09,000
+Ou podem estar aqui no estado de SNIF, em que periodicamente vão acordando e vão ver se há mensagens para eles para fazerem alguma coisa.
+
+25
+00:03:09,000 --> 00:03:18,000
+Estes estados que eu falei, além do estado ativo e dos outros estados de parque ou de SNIF, têm a ver essencialmente com poupanças de energia.
+
+26
+00:03:18,000 --> 00:03:26,000
+Se eu tenho um dispositivo que depende de uma bateriazinha, quanto menos tempo tiver esse dispositivo ligado, melhor.
+
+27
+00:03:26,000 --> 00:03:32,000
+Existe aqui alguma descrição de cada um destes estados.
+
+28
+00:03:32,000 --> 00:03:40,000
+O stack parece muito complicado para um dispositivo deste género.
+
+29
+00:03:41,000 --> 00:03:48,000
+E, na realidade, até o EPRO que reparem, ele suporta muita coisa aqui.
+
+30
+00:03:48,000 --> 00:03:56,000
+Desde o protocolo TCPIP, esta parte que está aqui que falamos na última aula.
+
+31
+00:03:56,000 --> 00:04:00,000
+Mecanismos de transmissão de áudio.
+
+32
+00:04:00,000 --> 00:04:12,000
+Depois temos aqui mecanismos antigos de comunicação, como se isto fosse um MOGAN.
+
+33
+00:04:12,000 --> 00:04:18,000
+Mecanismos de comunicação sério também.
+
+34
+00:04:18,000 --> 00:04:21,000
+Também já praticamente não usamos.
+
+35
+00:04:21,000 --> 00:04:27,000
+Depois, isto tudo está suportado aqui em baixo por estas camadas.
+
+36
+00:04:27,000 --> 00:04:31,000
+Basicamente é o hardware aqui, a camada do rádio.
+
+37
+00:04:31,000 --> 00:04:41,000
+Baseband, basicamente aqui é a parte do mecanismo de acesso ao meio.
+
+38
+00:04:41,000 --> 00:04:46,000
+Esta parte tem a ver com a gestão do protocolo ICI.
+
+39
+00:04:46,000 --> 00:04:56,000
+E aqui temos o logic alien control, que é um mecanismo que permite a ligação entre os vários dispositivos,
+
+40
+00:04:56,000 --> 00:05:00,000
+que controla as transmissões de dados, etc.
+
+41
+00:05:00,000 --> 00:05:06,000
+Se repararem, o áudio faz o bypass desta camada, não passa pelo logic alien control,
+
+42
+00:05:06,000 --> 00:05:08,000
+só liga-se diretamente aqui em baixo,
+
+43
+00:05:08,000 --> 00:05:12,000
+por isso é que nós conseguimos ter uns headsets que comunicam com alguma facilidade
+
+44
+00:05:12,000 --> 00:05:15,000
+e com muito baixo custo de energias.
+
+45
+00:05:18,000 --> 00:05:24,000
+Depois, o Bluetooth tem uma característica que o 80511 não tem.
+
+46
+00:05:24,000 --> 00:05:27,000
+Nós nunca definimos o que é que ele faz.
+
+47
+00:05:27,000 --> 00:05:33,000
+Nós só definimos os mecanismos para enviar e receber mensagens.
+
+48
+00:05:34,000 --> 00:05:42,000
+O que acontece com o Bluetooth é que ele define aquilo que chamam os perfis da aplicação.
+
+49
+00:05:42,000 --> 00:05:51,000
+Basicamente, depois um conjunto de mecanismos que implementam diversos tipos de serviços.
+
+50
+00:05:51,000 --> 00:05:57,000
+Por exemplo, isto é o generic access profile.
+
+51
+00:05:57,000 --> 00:06:01,000
+Se nós não sabermos o que é que vai fazer, isto é o generic.
+
+52
+00:06:03,000 --> 00:06:07,000
+Telefone sem cordas, por exemplo.
+
+53
+00:06:07,000 --> 00:06:12,000
+Os headsets, para pôrmos na orelha.
+
+54
+00:06:12,000 --> 00:06:17,000
+Mecanismos para fax, que já ninguém usa, infelizmente.
+
+55
+00:06:17,000 --> 00:06:23,000
+Para transmissão de objetos, de fecheiros, etc.
+
+56
+00:06:23,000 --> 00:06:28,000
+Se vocês forem ver aos perfis do Bluetooth,
+
+57
+00:06:28,000 --> 00:06:33,000
+vocês vão ver que existem muitas coisas para nós acedermos à impressora.
+
+58
+00:06:33,000 --> 00:06:37,000
+Sistemas de imagem, portanto.
+
+59
+00:06:37,000 --> 00:06:40,000
+Mais mil e uma coisas diferentes.
+
+60
+00:06:40,000 --> 00:06:49,000
+Sensores de cardíacos, por exemplo, embora este seja mais normal no Bluetooth no energy.
+
+61
+00:06:51,000 --> 00:06:52,000
+O Bluetooth no energy.
+
+62
+00:06:52,000 --> 00:06:54,000
+Vou passar aqui muito rapidamente sobre isto.
+
+63
+00:06:54,000 --> 00:07:00,000
+Basicamente, tem ainda um range mais curto.
+
+64
+00:07:00,000 --> 00:07:03,000
+Não é tão grande como o Bluetooth.
+
+65
+00:07:03,000 --> 00:07:05,000
+Usa ainda menos energia.
+
+66
+00:07:05,000 --> 00:07:10,000
+A ideia é operar durante meses ou mesmo anos.
+
+67
+00:07:10,000 --> 00:07:15,000
+Ainda com um tamanho menor e um custo muito melhor.
+
+68
+00:07:15,000 --> 00:07:17,000
+Muito menor também.
+
+69
+00:07:17,000 --> 00:07:22,000
+A arquitetura é muito semelhante, mas tiramos, por exemplo, daqui a parte do TCP e IP,
+
+70
+00:07:22,000 --> 00:07:26,000
+porque não é suportar pelo Bluetooth no low energy.
+
+71
+00:07:29,000 --> 00:07:32,000
+Em termos de canais, ele é muito semelhante.
+
+72
+00:07:32,000 --> 00:07:36,000
+Embora usava 79, este só usa 40 canais.
+
+73
+00:07:36,000 --> 00:07:38,000
+Só que são um bocadinho mais largos.
+
+74
+00:07:38,000 --> 00:07:42,000
+Têm um 2 MHz, têm vantagens.
+
+75
+00:07:42,000 --> 00:07:47,000
+Têm menos complexo de estar a meter as coisas no canal muito pequenininho.
+
+76
+00:07:47,000 --> 00:07:52,000
+E assim conseguimos ter circuitos mais baratos.
+
+77
+00:07:55,000 --> 00:08:02,000
+Este Bluetooth e o Wi-Fi, aliás, quase todas as redes sem fios,
+
+78
+00:08:02,000 --> 00:08:04,000
+interferem todas umas com as outras.
+
+79
+00:08:04,000 --> 00:08:05,000
+Estão a ver aqui.
+
+80
+00:08:05,000 --> 00:08:08,000
+Estes são os canais que são mais largos.
+
+81
+00:08:08,000 --> 00:08:16,000
+Se tivermos aqui uma transmissão de Wi-Fi, reparem que isto pode interferir com muitos canais do Bluetooth ao mesmo tempo.
+
+82
+00:08:20,000 --> 00:08:23,000
+É por isso que normalmente o Bluetooth faz.
+
+83
+00:08:23,000 --> 00:08:25,000
+A primeira transmissão é aqui.
+
+84
+00:08:25,000 --> 00:08:27,000
+A segunda pode ser aqui.
+
+85
+00:08:27,000 --> 00:08:29,000
+A terceira pode ser, por exemplo, aqui.
+
+86
+00:08:29,000 --> 00:08:31,000
+A quarta pode ser aqui.
+
+87
+00:08:31,000 --> 00:08:33,000
+Depois a quinta pode ser alguns aqui.
+
+88
+00:08:33,000 --> 00:08:35,000
+A sexta pode ser aqui.
+
+89
+00:08:35,000 --> 00:08:41,000
+Portanto, ele vai saltando entre as várias transmissões.
+
+90
+00:08:41,000 --> 00:08:43,000
+A segunda pode ser aqui.
+
+91
+00:08:43,000 --> 00:08:45,000
+A terceira pode ser aqui.
+
+92
+00:08:45,000 --> 00:08:47,000
+A quarta pode ser aqui.
+
+93
+00:08:47,000 --> 00:08:49,000
+A quinta pode ser aqui.
+
+94
+00:08:49,000 --> 00:08:51,000
+A sexta pode ser aqui.
+
+95
+00:08:51,000 --> 00:08:56,000
+Ele vai saltando entre as várias transmissões.
+
+96
+00:08:57,000 --> 00:09:00,000
+Entre as várias frequências.
+
+97
+00:09:02,000 --> 00:09:10,000
+Aqui também era só isso que eu vos queria mostrar no Bluetooth do Energy.
+
+98
+00:09:10,000 --> 00:09:19,000
+O top you get, que será que vocês já utilizaram ou vão utilizar nas aulas práticas quando mexerem em dispositivo de IoT.
+
+99
+00:09:20,000 --> 00:09:37,000
+E também depois tem os tais perfis de aplicação para sensores de pressão sanguínea, termómetros, monitores de glucose.
+
+100
+00:09:39,000 --> 00:09:43,000
+Aquelas balanças que nos dão a composição do corpo.
+
+101
+00:09:43,000 --> 00:09:46,000
+Para as bicicletas, por exemplo.
+
+102
+00:09:46,000 --> 00:09:48,000
+Outro tipo de bicicletas.
+
+103
+00:09:48,000 --> 00:09:52,000
+Pode ter uma ligeira diferença em relação ao anterior.
+
+104
+00:09:52,000 --> 00:09:57,000
+Heart rate, portanto, o ritmo cardíaco.
+
+105
+00:09:57,000 --> 00:10:03,000
+Localizações, velocidade, pesos, etc.
+
+106
+00:10:03,000 --> 00:10:08,000
+Faz mais de mil e uma coisa.
+
+107
+00:10:09,000 --> 00:10:12,000
+Pronto, quanto a rates, nós vamos ficar por aqui.
+
+108
+00:10:13,000 --> 00:10:16,000
+Vamos fazer agora os 10 minutinhos de intervalo.
+
+109
+00:10:16,000 --> 00:10:21,000
+Acho que sim, antes de eu passar à matéria seguinte.
+
