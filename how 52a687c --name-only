@@ -1,0 +1,137 @@
+[33mcommit 7a037c4087b057a927b76e89dc8a2ca26580cfad[m
+Author: abaltazarpinto <andrebaltazarpinto@gmail.com>
+Date:   Mon Apr 6 15:42:19 2026 +0100
+
+    art of electronics book
+
+[1mdiff --git a/05. Books/06. Arts of Electronics/The_Art_of_Electronics_-_Paul_Horowitz.pdf b/05. Books/06. Arts of Electronics/The_Art_of_Electronics_-_Paul_Horowitz.pdf[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8de2955[m
+[1m--- /dev/null[m
+[1m+++ b/05. Books/06. Arts of Electronics/The_Art_of_Electronics_-_Paul_Horowitz.pdf[m	
+[36m@@ -0,0 +1,75922 @@[m
+[32m+[m[32m                   O[m
+[32m+[m[32m                       F[m
+[32m+[m[32mTHE                      S[m
+[32m+[m
+[32m+[m[32m                   N  IC[m
+[32m+[m
+[32m+[m[32m              TRO[m
+[32m+[m[32m           C                  ITZ[m
+[32m+[m[32m        E     PAULINHFIOELRDOHWILL[m
+[32m+[m[32m     L[m
+[32m+[m[32mE[m
+[32m+[m
+[32m+[m[32m              W[m
+[32m+[m
+[32m+[m[32m                                       THIRD[m
+[32m+[m[32m                                    EDITION[m
+[32m+[m[32mThe Art of Electronics[m
+[32m+[m
+[32m+[m[32mThird Edition[m
+[32m+[m
+[32m+[m[32mAt long last, here is the thoroughly revised and updated, and long-anticipated, third edition of the hugely successful[m
+[32m+[m[32mThe Art of Electronics. Widely accepted as the best single authoritative text and reference on electronic circuit design,[m
+[32m+[m[32mboth analog and digital, the ﬁrst two editions were translated into eight languages, and sold more than a million copies[m
+[32m+[m[32mworldwide. The art of electronics is explained by stressing the methods actually used by circuit designers – a combination[m
+[32m+[m[32mof some basic laws, rules of thumb, and a nonmathematical treatment that encourages understanding why and how a[m
+[32m+[m[32mcircuit works.[m
+[32m+[m
+[32m+[m[32mPaul Horowitz is a Research Professor of Physics and of Electrical Engineering at Harvard University, where in 1974[m
+[32m+[m[32mhe originated the Laboratory Electronics course from which emerged The Art of Electronics. In addition to his work in[m
+[32m+[m[32mcircuit design and electronic instrumentation, his research interests have included observational astrophysics, x-ray and[m
+[32m+[m[32mparticle microscopy, and optical interferometry. He is one of the pioneers of the search for intelligent life beyond Earth[m
+[32m+[m[32m(SETI). He is the author of some 200 scientiﬁc articles and reports, has consulted widely for industry and government,[m
+[32m+[m[32mand is the designer of numerous scientiﬁc and photographic instruments.[m
+[32m+[m
+[32m+[m[32mWinﬁeld Hill is by inclination an electronics circuit-design guru. After dropping out of the Chemical Physics graduate[m
+[32m+[m[32mprogram at Harvard University, and obtaining an E.E. degree, he began his engineering career at Harvard’s Electronics[m
+[32m+[m[32mDesign Center. After 7 years of learning electronics at Harvard he founded Sea Data Corporation, where he spent 16 years[m
+[32m+[m[32mdesigning instruments for Physical Oceanography. In 1988 he was recruited by Edwin Land to join the Rowland Institute[m
+[32m+[m[32mfor Science. The institute subsequently merged with Harvard University in 2003. As director of the institute’s Electronics[m
+[32m+[m[32mEngineering Lab he has designed some 500 scientiﬁc instruments. Recent interests include high-voltage RF (to 15 kV),[m
+[32m+[m[32mhigh-current pulsed electronics (to 1200 A), low-noise ampliﬁers (to sub-nV and pA), and MOSFET pulse generators.[m
+[32m+[m[32mThis page intentionally left blank[m
+[32m+[m[32m        THE ART OF ELECTRONICS[m
+[32m+[m
+[32m+[m[32m              Third Edition[m
+[32m+[m
+[32m+[m[32mPaul Horowitz HARVARD UNIVERSITY[m
+[32m+[m[32mWinﬁeld Hill ROWLAND INSTITUTE AT HARVARD[m
+[32m+[m[32m32 Avenue of the Americas, New York, NY 10013-2473, USA[m
+[32m+[m
+[32m+[m[32mCambridge University Press is part of the University of Cambridge.[m
+[32m+[m
+[32m+[m[32mIt furthers the University’s mission by disseminating knowledge in the pursuit of[m
+[32m+[m[32meducation, learning, and research at the highest international levels of excellence.[m
+[32m+[m
+[32m+[m[32mwww.cambridge.org[m
+[32m+[m[32mInformation on this title: www.cambridge.org/9780521809269[m
+[32m+[m
+[32m+[m[32m© Cambridge University Press, 1980, 1989, 2015[m
+[32m+[m
+[32m+[m[32mThis publication is in copyright. Subject to statutory exception[m
+[32m+[m[32mand to the provisions of relevant collective licensing agreements,[m
+[32m+[m[32mno reproduction of any part may take place without the written[m
+[32m+[m[32mpermission of Cambridge University Press.[m
+[32m+[m
+[32m+[m[32mFirst published 1980[m
+[32m+[m[32mSecond edition 1989[m
+[32m+[m[32mThird edition 2015[m
+[32m+[m[32m7th printing 2016 with corrections[m
+[32m+[m
+[32m+[m[32mPrinted in the United States of America[m
+[32m+[m
+[32m+[m[32mA catalog record for this publication is available from the British Library.[m
+[32m+[m
+[32m+[m[32mISBN 978-0-521-80926-9 Hardback[m
+[32m+[m
+[32m+[m[32mCambridge University Press has no responsibility for the persistence or[m
+[32m+[m[32maccuracy of URLs for external or third-party Internet websites referred to[m
+[32m+[m[32min this publication and does not guarantee that any content on such[m
+[32m+[m[32mwebsites is, or will remain, accurate or appropriate.[m
+[32m+[m[32mTo Vida and Ava[m
+[32m+[m[32mThis page intentionally left blank[m
+[32m+[m[32mIn Memoriam: Jim Williams, 1948–2011[m
+[32m+[m[32mThis page intentionally left blank[m
+[32m+[m[32m                CONTENTS[m
+[32m+[m
+[32m+[m[32mList of Tables                          xxii       1.6.5 Regulators                             34[m
+[32m+[m
+[32m+[m[32m                                                   1.6.6 Circuit applications of diodes         35[m
+[32m+[m
+[32m+[m[32mPreface to the First Edition            xxv        1.6.7 Inductive loads and diode[m
+[32m+[m
+[32m+[m[32m                                                   protection                                   38[m
+[32m+[m
+[32m+[m[32mPreface to the Second Edition           xxvii      1.6.8 Interlude: inductors as friends        39[m
+[32m+[m
+[32m+[m[32m                                                   1.7 Impedance and reactance                  40[m
+[32m+[m
+[32m+[m[32mPreface to the Third Edition            xxix       1.7.1 Frequency analysis of reactive[m
+[32m+[m
+[32m+[m[32m                                                   circuits                                     41[m
+[32m+[m
+[32m+[m[32mONE: Foundations                        1          1.7.2 Reactance of inductors                 44[m
+[32m+[m
+[32m+[m[32m1.1 Introduction                        1          1.7.3 Voltages and currents as[m
+[32m+[m
+[32m+[m[32m1.2 Voltage, current, and resistance    1          complex numbers                              44[m
+[32m+[m
+[32m+[m[32m1.2.1 Voltage and current               1          1.7.4 Reactance of capacitors and[m
+[32m+[m
+[32m+[m[32m1.2.2 Relationship between voltage                 inductors                                    45[m
+[32m+[m
+[32m+[m[32m                and current: resistors  3          1.7.5 Ohm’s law generalized                  46[m
+[32m+[m
+[32m+[m[32m1.2.3 Voltage dividers                  7          1.7.6 Power in reactive circuits             47[m
+[32m+[m
+[32m+[m[32m1.2.4 Voltage sources and current                  1.7.7 Voltage dividers generalized           48[m
+[32m+[m
+[32m+[m[32m                sources                 8          1.7.8 RC highpass ﬁlters                     48[m
+[32m+[m
+[32m+[m[32m1.2.5 The´venin equivalent circuit      9          1.7.9 RC lowpass ﬁlters                      50[m
+[32m+[m
+[32m+[m[32m1.2.6 Small-signal resistance           12         1.7.10 RC differentiators and[m
+[32m+[m
+[32m+[m[32m1.2.7 An example: “It
