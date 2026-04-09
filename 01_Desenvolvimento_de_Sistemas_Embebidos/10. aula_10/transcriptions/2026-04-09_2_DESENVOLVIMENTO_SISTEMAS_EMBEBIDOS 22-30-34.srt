@@ -1,0 +1,932 @@
+1
+00:00:00,000 --> 00:00:05,000
+Portanto, como eu estava a dizer, este primeiro exercício não é para entregarem nada,
+
+2
+00:00:05,000 --> 00:00:08,000
+isto é para experimentarem o código.
+
+3
+00:00:10,000 --> 00:00:17,000
+Portanto, o exercício 2 é que, também já tinha feito uma pequena descrição,
+
+4
+00:00:17,000 --> 00:00:23,000
+portanto é colocar, configurar...
+
+5
+00:00:27,000 --> 00:00:29,000
+Deixe-me sentir este aqui.
+
+6
+00:00:31,000 --> 00:00:35,000
+Só recordar o que é que eu já tinha dito sobre isso.
+
+7
+00:00:45,000 --> 00:00:49,000
+Exato, até no ficheiro de init não se esqueçam que não pode ser que o barra deve-barra-mem,
+
+8
+00:00:49,000 --> 00:00:56,000
+portanto, obter o apontador para os registros tem que ser feito com esta linha de código.
+
+9
+00:00:56,000 --> 00:01:07,000
+O resto é igual, portanto, a parte da configuração da função e para pôr a 1 e a 0 é igual
+
+10
+00:01:07,000 --> 00:01:11,000
+ao da ficha, portanto, o que fazem no outro exercício.
+
+11
+00:01:11,000 --> 00:01:15,000
+Mas para obter o endereço tem que ser desta maneira.
+
+12
+00:01:18,000 --> 00:01:22,000
+E agora, relativamente ao exercício 3.
+
+13
+00:01:22,000 --> 00:01:28,000
+Portanto, neste aqui foi por causa deste exercício que eu dei,
+
+14
+00:01:28,000 --> 00:01:31,000
+que eu forneci aquele ficheiro Blinker HR.
+
+15
+00:01:34,000 --> 00:01:40,000
+Basicamente é só para quando vimos isto a funcionar o led não ficar a piscar,
+
+16
+00:01:40,000 --> 00:01:50,000
+porque se usarem o outro não se conseguia uma frequência muito alta
+
+17
+00:01:50,000 --> 00:01:56,000
+e depois, portanto, óbvio que se pusermos o PWM a 100%, como o led está sempre ligado,
+
+18
+00:01:56,000 --> 00:02:03,000
+não se nota a piscar, mas qualquer outro valor que implique interrupções nota-se o led a piscar.
+
+19
+00:02:04,000 --> 00:02:10,000
+Desta maneira, usando este timer, já conseguimos ter uma frequência de 1 kW,
+
+20
+00:02:10,000 --> 00:02:14,000
+que nem sequer era preciso tanto, com 100 Hz ou até com 50 Hz,
+
+21
+00:02:14,000 --> 00:02:20,000
+portanto, já dificilmente se nota o led a piscar.
+
+22
+00:02:23,000 --> 00:02:28,000
+Este exercício também, depois de fazerem o 2, também não é nada de especial,
+
+23
+00:02:28,000 --> 00:02:35,000
+ou seja, em vez de ser só ligar e desligar, tem que implementar a lógica do PWM,
+
+24
+00:02:35,000 --> 00:02:40,000
+que está aqui explicado isto neste pseudo código,
+
+25
+00:02:40,000 --> 00:02:48,000
+portanto, ou seja, no início de cada ciclo há casos limites,
+
+26
+00:02:48,000 --> 00:02:55,000
+se o data cycle for 0, o pino vai estar sempre a 0, não temos que mudar nada,
+
+27
+00:02:55,000 --> 00:03:01,000
+se o data cycle for sempre a 100, o pino tem que estar sempre a 1.
+
+28
+00:03:01,000 --> 00:03:11,000
+Depois, nos casos intermédios, o que temos que calcular é, em vez de termos um delay fixo,
+
+29
+00:03:11,000 --> 00:03:15,000
+portanto, para fazer a comutação de 1 para 0,
+
+30
+00:03:15,000 --> 00:03:20,000
+vamos ter que calcular esse delay em função do data cycle.
+
+31
+00:03:20,000 --> 00:03:26,000
+Eu aqui estou a assumir que estamos a trabalhar com kW, ou seja, um período de 1 ms.
+
+32
+00:03:26,000 --> 00:03:33,000
+Então, quando o data cycle é maior que 0,
+
+33
+00:03:37,000 --> 00:03:40,000
+inicialmente, depois o pino,
+
+34
+00:03:41,000 --> 00:03:51,000
+e vamos armar o timer para daqui a 1 ms vezes o factor do data cycle.
+
+35
+00:03:51,000 --> 00:03:55,000
+Portanto, eu aqui estou a assumir que o data cycle está de 0 a 100, dividido por 100,
+
+36
+00:03:55,000 --> 00:04:01,000
+para dar um valor de 0 a 1, não é? Um coeficiente de 0 a 1.
+
+37
+00:04:01,000 --> 00:04:06,000
+Ou seja, por exemplo, vamos dizer que o data cycle está a 20%.
+
+38
+00:04:06,000 --> 00:04:15,000
+A 20% vai dar 200 microsegundos, ou seja, eu quero que daqui a 200 microsegundos,
+
+39
+00:04:15,000 --> 00:04:20,000
+ou seja, 0 a 2 milisegundos, que o pino passe a 0.
+
+40
+00:04:20,000 --> 00:04:26,000
+Ou quero que passá-lo a 0. Então, vou armar a temporização para 0 a 2 milisegundos.
+
+41
+00:04:28,000 --> 00:04:37,000
+E, portanto, sai da função do timer, portanto, daquele handler, já agora para localizar,
+
+42
+00:04:37,000 --> 00:04:40,000
+estou a falar desta,
+
+43
+00:04:42,000 --> 00:04:44,000
+aqui desta função.
+
+44
+00:04:45,000 --> 00:04:51,000
+Funciono este, é só fazer isto, este código aqui vai ser substituído por aquela coisa
+
+45
+00:04:51,000 --> 00:04:55,000
+um bocadinho mais elaborada.
+
+46
+00:04:56,000 --> 00:05:02,000
+Pronto, armamos o timer para daqui a 0.2 milisegundos, no exemplo que eu estava a dizer.
+
+47
+00:05:02,000 --> 00:05:08,000
+Passá-lo a 0.2 milisegundos, eu volto aqui, esta variável newPeriod vai...
+
+48
+00:05:09,000 --> 00:05:14,000
+Já agora não acabei o, portanto, se for menor que 100, set newPeriod to 0.
+
+49
+00:05:14,000 --> 00:05:18,000
+Portanto, quero dizer que, porque é que eu usei esta variável auxiliar aqui,
+
+50
+00:05:18,000 --> 00:05:23,000
+para indicar a saber se estou no início do novo ciclo PWM ou não.
+
+51
+00:05:23,000 --> 00:05:30,000
+Eu sei que, portanto, eu sei que agora da próxima vez que houver que chegar à função,
+
+52
+00:05:30,000 --> 00:05:33,000
+que ainda estou a meio do ciclo. Portanto, vou pôr a 0.
+
+53
+00:05:33,000 --> 00:05:38,000
+Então, da vez seguinte que passado os tais 0.2 milisegundos,
+
+54
+00:05:38,000 --> 00:05:43,000
+eu cheguei aqui, é o novo período? Não, porque ele está a 0.
+
+55
+00:05:43,000 --> 00:05:50,000
+Então, ponho o pino a 0 e vou agora armar a temporização
+
+56
+00:05:50,000 --> 00:05:54,000
+para o resto do tempo que falta, que é para fazer o ciclo completo.
+
+57
+00:05:55,000 --> 00:06:04,000
+Ou seja, agora é o complementar do datiCycle 1 menos o datiCycle vezes o milisegundos.
+
+58
+00:06:04,000 --> 00:06:10,000
+Ou seja, para daqui a, no exemplo que eu estava a dar, para daqui a 0.8 milisegundos.
+
+59
+00:06:10,000 --> 00:06:16,000
+E antes de sair da função, ponho o newPeriod a 1, para quê?
+
+60
+00:06:16,000 --> 00:06:21,000
+Passado os tais 0.8 milisegundos, termino o ciclo e ele volta novamente aqui,
+
+61
+00:06:21,000 --> 00:06:26,000
+a função começa sempre por aqui e desta vez já vai ser novamente o novo período
+
+62
+00:06:26,000 --> 00:06:32,000
+e já vai seguir esta parte de código. Portanto, no fundo este exercício 3,
+
+63
+00:06:32,000 --> 00:06:41,000
+no fundo é pegarem naquele Blinker HR e nas funções também que já,
+
+64
+00:06:41,000 --> 00:06:48,000
+portanto, de configuração do, ou nas linhas de código que têm a ver com a configuração
+
+65
+00:06:48,000 --> 00:07:01,000
+do GPIO e de polo 1 e a 0 e, portanto, na função do timer, implementar esta lógica.
+
+66
+00:07:01,000 --> 00:07:05,000
+Portanto, também não é assim nada de transcendente.
+
+67
+00:07:09,000 --> 00:07:17,000
+Eu menciono aqui que o valor do datiCycle deverá ser passado através de um parâmetro do módulo.
+
+68
+00:07:17,000 --> 00:07:37,000
+Esses parâmetros do módulo são definidos através destas macros.
+
+69
+00:07:37,000 --> 00:07:42,000
+Portanto, temos de ter uma variável já previamente definida,
+
+70
+00:07:43,000 --> 00:07:51,000
+e depois dizemos que essa variável pode ser usada como parâmetro do módulo
+
+71
+00:07:51,000 --> 00:07:56,000
+e tudo que seja definido depois como parâmetro do módulo vai aparecer como um ficheiro
+
+72
+00:07:56,000 --> 00:08:00,000
+que pode ser de leitura ou de escrita conforme os valores que colocamos aqui
+
+73
+00:08:00,000 --> 00:08:10,000
+e isto são as permissões normais dos cheiros do Nix, sistemas aperitivos tipo Nix,
+
+74
+00:08:10,000 --> 00:08:14,000
+ou seja, se quiserem dar de leitura e escrita para todos os utilizadores,
+
+75
+00:08:14,000 --> 00:08:23,000
+põe aqui 0666, 0666 e depois nem precisam de andar a fazer sudo nem nada,
+
+76
+00:08:23,000 --> 00:08:27,000
+mesmo como utilizador normal tem acesso de leitura e escrita aos cheiros.
+
+77
+00:08:28,000 --> 00:08:36,000
+Portanto, neste caso, estes que já estão definidos no código que eu forneço,
+
+78
+00:08:36,000 --> 00:08:40,000
+ao carregar em um módulo eu criei automaticamente estes cheiros virtuais
+
+79
+00:08:40,000 --> 00:08:46,000
+que permitem que o módulo só leia e altera as variáveis do módulo.
+
+80
+00:08:46,000 --> 00:08:51,000
+A ideia depois é adicionar mais uma variável deste tipo para o data cycle.
+
+81
+00:08:54,000 --> 00:08:57,000
+Pode ser também, como estamos a trabalhar com valores de 0 a 100,
+
+82
+00:08:57,000 --> 00:09:01,000
+pode ser também um share, portanto que depois aqui aparece como o tipo byte.
+
+83
+00:09:06,000 --> 00:09:22,000
+Ora bem, então, no avendo deixe-me só ver se não está ninguém aqui.
+
+84
+00:09:22,000 --> 00:09:28,000
+Às vezes eu penso, desculpa, que às vezes ponho-me aqui a mexer nas janelas
+
+85
+00:09:28,000 --> 00:09:33,000
+e depois mando aqui o Teams para trás mesmo que alguém esteja aqui com a mão no ar ou no outro, mas não está.
+
+86
+00:09:33,000 --> 00:09:41,000
+Portanto, no avendo de questões vou então mostrar agora aqui um exemplo relativamente simples de utilização de SPI.
+
+87
+00:09:47,000 --> 00:09:55,000
+Portanto, o SPI é muitas vezes até pouco parado ao I2C
+
+88
+00:09:56,000 --> 00:10:04,000
+devido ao facto de ser também um protocolo de comunicação série síncrono.
+
+89
+00:10:04,000 --> 00:10:17,000
+Tal como no I2C temos uma linha de relógio que é gerada pelo controlador do SPI,
+
+90
+00:10:17,000 --> 00:10:22,000
+portanto aqui na nomenclatura tradicional do SPI pelo master,
+
+91
+00:10:22,000 --> 00:10:36,000
+cada dispositivo, ao contrário do I2C em que cada target ou cada dispositivo tem o seu próprio endereço,
+
+92
+00:10:36,000 --> 00:10:43,000
+aqui os targets têm que ser selecionados cada um através de uma linha individual,
+
+93
+00:10:43,000 --> 00:10:51,000
+o que logo aí, portanto, marca uma grande diferença para o I2C em que, portanto,
+
+94
+00:10:51,000 --> 00:10:59,000
+no caso do I2C, no fundo, o endereçamento é feito através da própria ligação séria,
+
+95
+00:10:59,000 --> 00:11:07,000
+portanto uma das primeiras coisas a transmitir é o endereço do slave que queremos contactar,
+
+96
+00:11:07,000 --> 00:11:20,000
+aqui não, aqui tem que haver uma linha para cada slave, logo a partir de invalidar um pouco a utilização para muitos
+
+97
+00:11:20,000 --> 00:11:31,000
+ou para uma quantidade massiva de targets, mesmo no título de exemplo, cada controlador do SPI, do Raspberry Pi,
+
+98
+00:11:31,000 --> 00:11:41,000
+e no máximo tem, portanto, todos permitem selecionar dois, acho que há um ou dois que vamos já ver a seguir,
+
+99
+00:11:41,000 --> 00:11:54,000
+que permitem três, mas estão a ver que, portanto, é bastante menos do que os 127 permitidos no caso dos desvogamentos I2C.
+
+100
+00:11:55,000 --> 00:12:09,000
+Por outro lado, tradicionalmente o SPI permite taxas de transmissão mais altas, embora também para distâncias mais curtas,
+
+101
+00:12:09,000 --> 00:12:18,000
+normalmente existe sempre um trade-off, se não tivermos cuidado com as ligações, quanto maior for a distância,
+
+102
+00:12:18,000 --> 00:12:28,000
+a distância aumenta a capacidade da linha, aumenta as entreprensas e acaba, portanto, a taxa ficou sem máxima de transmissão,
+
+103
+00:12:28,000 --> 00:12:41,000
+acaba por ficar limitada. Em termos da transmissão de dados, tem duas linhas, eu recordo que o I2C só tinha uma para dados,
+
+104
+00:12:41,000 --> 00:12:53,000
+portanto, só permitia comunicação ao Full Duplex, o SPI permite comunicação Full Duplex, mas esta comunicação Full Duplex temos que,
+
+105
+00:12:53,000 --> 00:12:58,000
+é uma comunicação Full Duplex especial, vamos já ver.
+
+106
+00:12:59,000 --> 00:13:20,000
+Basicamente, quando o controlador começa a transmitir os dados do seu buffer, imediatamente e obrigatoriamente,
+
+107
+00:13:21,000 --> 00:13:30,000
+começa a receber, portanto, a preencher o seu próprio buffer com os dados que está a receber.
+
+108
+00:13:30,000 --> 00:13:42,000
+Assim, obrigatoriamente, é óbvio que esta linha pode estar no limite, até pode estar no ar e, portanto, e depois vai estar a ler aqui,
+
+109
+00:13:42,000 --> 00:13:50,000
+no fundo, o valor ou o ruído ou o valor que for imposto aqui, mas o modo típico de utilização, ou seja, até para testes,
+
+110
+00:13:50,000 --> 00:14:02,000
+o que por vezes se faz é fazer aqui um loop para verificar se conseguimos ler o que estamos a transmitir, mas não no modo de utilização mais comum,
+
+111
+00:14:02,000 --> 00:14:12,000
+portanto, esta linha de master output slave input, portanto, transmite, como o nome indica, os bits do master para o slave,
+
+112
+00:14:12,000 --> 00:14:24,000
+e depois esta aqui de master input slave output, permite ao target em simultâneo estar a enviar os bits do seu buffer,
+
+113
+00:14:24,000 --> 00:14:45,000
+ou seja, no final da transmissão de uma palavra, o master vai ter o conteúdo que estava no buffer do slave e o slave vai ter o conteúdo que estava no buffer do master.
+
+114
+00:14:45,000 --> 00:15:00,000
+Para bem, isto, portanto, pode haver situações que logo à partida, com funções muito simples, em que logo à partida o slave pode ter aqui dados preparados para fazer uma leitura,
+
+115
+00:15:00,000 --> 00:15:12,000
+mas se for um sistema mais complicado, com um protocolo típico de resposta, no fundo, na primeira transmissão, antes de fazer a primeira transmissão,
+
+116
+00:15:12,000 --> 00:15:21,000
+o dispositivo que está aqui deste lado não consegue adivinhar o que é que o master pretende, e só depois de receber os dados é que pode carregar o seu buffer,
+
+117
+00:15:21,000 --> 00:15:33,000
+e só então é que depois, no pedido seguinte, na transmissão seguinte, é que o master vai conseguir ler os dados que ele, entretanto, colocou lá.
+
+118
+00:15:33,000 --> 00:15:43,000
+Ou seja, vamos supor o exemplo que eu vou mostrar daqui um bocado, em que pretendemos ler um AD que tem vários canais.
+
+119
+00:15:43,000 --> 00:15:51,000
+O primeiro tem que indicar o canal, o AD não adivinha qual é o canal que eu quero ler, portanto primeiro vou ter que receber uma palavra a indicar o canal,
+
+120
+00:15:51,000 --> 00:16:02,000
+aqui o slave, vai ter que receber uma palavra a indicar qual é o canal que pretende fazer a leitura, e só nessa altura é que poderá dar a ordem de início de conversão desse canal,
+
+121
+00:16:02,000 --> 00:16:07,000
+portanto nesse canal de aquisição de sinal analógico.
+
+122
+00:16:07,000 --> 00:16:19,000
+Depois, portanto, se a aquisição for suficientemente rápida, na leitura seguinte, então, portanto, ele pode conseguir carregar o valor, vamos de pouco, é um AD de 8 bits,
+
+123
+00:16:19,000 --> 00:16:32,000
+lê os 8 bits resultantes da conversão para o buffer, e na vez seguinte, quando o master enviar o pedido, ele já, portanto, ao enviar a palavra,
+
+124
+00:16:32,000 --> 00:16:43,000
+o slave, portanto, o buffer do slave já fica, já começa a ser transmitido para o buffer do master, e desta forma, portanto, é feita a transmissão da resposta.
+
+125
+00:16:43,000 --> 00:16:56,000
+Isto para fazer o quê? Que, portanto, é verdade, existe aqui uma comunicação em full duplex, mas o full duplex só pode ser explorado,
+
+126
+00:16:56,000 --> 00:17:05,000
+depois, em situações de transmissão contínua, quando, por exemplo, sabemos que existe um bloco de dados,
+
+127
+00:17:06,000 --> 00:17:16,000
+e, por exemplo, quando se está a ler de memória e o master diz, olha, quero ler, n bytes a partir desta posição, e aí sim, portanto,
+
+128
+00:17:16,000 --> 00:17:26,000
+de acordo com um protocolo qualquer, já a nível da aplicação, ele envia essa informação, pode ser, por exemplo, a primeira palavra indicar o endereço base,
+
+129
+00:17:26,000 --> 00:17:34,000
+e o assunto da palavra, o número de endereços que podem transmitir, e ele, depois, sabe que a partir daí, pode estar a sempre a ler continuamente,
+
+130
+00:17:36,000 --> 00:17:43,000
+mas, de qualquer maneira, muitas vezes, vai haver aqui transmissões que, portanto, que não contém informação útil,
+
+131
+00:17:43,000 --> 00:17:56,000
+seja do master para o slave, que apenas pretende empurrar os dados que estão no buffer do slave para o seu próprio buffer,
+
+132
+00:17:56,000 --> 00:18:08,000
+ou, portanto, transmissões do slave, principalmente nos pedidos de iniciagem, que, portanto, os dados que ainda estão aqui no buffer do slave,
+
+133
+00:18:08,000 --> 00:18:14,000
+portanto, ainda não tem qualquer significado, porque o slave não sabe o que é que o master pretende.
+
+134
+00:18:14,000 --> 00:18:38,000
+Em termos de configuração, em geral, os dispositivos, os controladores da SPI permitem configurar quatro modos de operação,
+
+135
+00:18:38,000 --> 00:18:48,000
+que têm a ver com a polaridade do relógio e a altura em que se faz a amostragem, portanto, se o relógio começa em zero e passa para um,
+
+136
+00:18:48,000 --> 00:18:58,000
+ou se começa em um e vai para zero, e depois se a amostragem dos dados é feita no flanco ascendente ou no flanco descendente,
+
+137
+00:18:58,000 --> 00:19:05,000
+portanto, a combinação destes quatro fatores dá quatro modos de operação dos dispositivos SPI.
+
+138
+00:19:05,000 --> 00:19:20,000
+Naturalmente, quando estamos a comunicar com o dispositivo, vamos ter que configurar o master de acordo com a especificação do slave,
+
+139
+00:19:20,000 --> 00:19:24,000
+com aquilo que o slave consegue entender.
+
+140
+00:19:24,000 --> 00:19:34,000
+A título do exemplo, portanto, já fui adentrando, estava ali a falar de um ADEK que permite selecionar vários canais,
+
+141
+00:19:34,000 --> 00:19:50,000
+portanto, isto é um exemplo real, este módulo, este circuito integrado para aquisição de sinais analógicos com uma resolução de 12 bits,
+
+142
+00:19:50,000 --> 00:20:05,000
+portanto, usa uma comunicação SPI, podemos ver aqui, portanto, podem ver aqui as oito entradas, os oito canais, temos aqui o VRF,
+
+143
+00:20:05,000 --> 00:20:20,000
+a tensão de referência, tal como já tínhamos visto no ATmega, a alimentação, depois referente à parte do SPI, temos aqui o sinal de relógio,
+
+144
+00:20:20,000 --> 00:20:29,000
+portanto, isto vai ser um target, portanto, funciona um target, um slave, aqui neste caso funciona como input,
+
+145
+00:20:29,000 --> 00:20:44,000
+depois este DOUT, no fundo isto é o slave output, ou melhor, o master input, slave output, e aqui o IN vai ser o MOSI,
+
+146
+00:20:44,000 --> 00:20:50,000
+portanto, vai estar ligado ao MOSI do controlador, portanto, o master output, slave input.
+
+147
+00:20:50,000 --> 00:21:00,000
+Eu queria mostrar, era principalmente isto, para terem aqui um exemplo de transmissão de dados usando o SPI.
+
+148
+00:21:00,000 --> 00:21:17,000
+Neste caso, este módulo transmite palavras, como podem ver aqui, que podem ir até, eu por acaso não pus aqui o original,
+
+149
+00:21:17,000 --> 00:21:25,000
+portanto, estamos aqui a ver 24 bits, ok?
+
+150
+00:21:25,000 --> 00:21:40,000
+No entanto, o controlador do SPI também permite ter palavras até 32 bits, mas já, por exemplo, o ATmega, o ATmega 128 e o 328 do Arduino Uno,
+
+151
+00:21:40,000 --> 00:21:57,000
+só permitem trabalhar com palavras até 8 bits, o que, portanto, depois obriga a organizar melhor, portanto, a forma como são lidos os bits e como é feita a delimitação das palavras.
+
+152
+00:21:57,000 --> 00:22:09,000
+Este dispositivo já foi, portanto, o seu protocolo foi definido a pensar nisso e, portanto, ele até está definido aqui uma regra,
+
+153
+00:22:09,000 --> 00:22:20,000
+depois é que no impulso relógio iniciais a linha de dados é suposta estar a zero,
+
+154
+00:22:20,000 --> 00:22:33,000
+depois é suposto o master enviar uma espécie de start bit, portanto, ou seja, fazer aqui uma transmissão de zero para um,
+
+155
+00:22:33,000 --> 00:22:51,000
+e só então é que começa a verdadeira operação de acesso ao AD, nomeadamente estes 4 bits são usados para indicar o canal e o modo,
+
+156
+00:22:51,000 --> 00:23:00,000
+portanto, isto acaba por ser, não sei se estão recordados do ATmega 128, tínhamos aqueles modos de single-land e modo diferencial,
+
+157
+00:23:00,000 --> 00:23:14,000
+este aqui, portanto, este AD também permite essas opções, portanto, fazer usar alguns canais em modo diferencial, algumas combinações de pares de canais,
+
+158
+00:23:14,000 --> 00:23:27,000
+para fazer, trabalhar em modo diferencial, mas de qualquer maneira, ou seja, estes 4 bits servem, no fundo, para fazer a seleção do canal ou canais em despetivo modo,
+
+159
+00:23:27,000 --> 00:23:29,000
+se é single-land ou em modo diferencial.
+
+160
+00:23:29,000 --> 00:23:43,000
+A conversão é feita, a ordem de conversão é feita automaticamente, portanto, o mal recebe o canal e inicia logo a conversão,
+
+161
+00:23:43,000 --> 00:23:53,000
+e portanto, passado um ciclo de relógio, está pronto, começa a transmitir a resposta.
+
+162
+00:23:53,000 --> 00:24:06,000
+Aqui também o protocolo deste dispositivo define que inicialmente a sua linha de saída vai estar, portanto, aqui em alta impedância,
+
+163
+00:24:06,000 --> 00:24:14,000
+e depois inicialmente enviou sempre um bit a zero, e só então é que começa a enviar os dados.
+
+164
+00:24:14,000 --> 00:24:27,000
+Como é um AD de 12 bits, para enviar os bits de todos, o que ele faz é enviar primeiro aqui, no final desta primeira palavra de 8 bits, envia os 4 primeiros,
+
+165
+00:24:27,000 --> 00:24:44,000
+ou seja, o master vai receber uma palavra aqui em que estes 3 bits não interessam, portanto, é a altura em que a linha está em alta impedância,
+
+166
+00:24:44,000 --> 00:24:54,000
+esta linha é que vai estar ligada aqui, é isto, como se isto fosse o AD, está ligada aqui, por exemplo, um Raspberry Pi.
+
+167
+00:24:54,000 --> 00:25:15,000
+Portanto, o que sabemos é que vai haver aqui um valor a zero e que estes 4 bits já vão ser os 4 bits mais significativos do resultado da conversão.
+
+168
+00:25:15,000 --> 00:25:40,000
+Reparem que isto só enviado em resposta, quando ele envia esta palavra, ele aqui consegue colocar imediatamente estes bits no buffer.
+
+169
+00:25:45,000 --> 00:25:57,000
+Nesta fase, depois de enviar a seleção do canal e do modo de conversão, o que o master envia já não interessa, ele pode enviar os valores que quiser,
+
+170
+00:25:57,000 --> 00:26:07,000
+tem que enviar alguma coisa para fazer circular o buffer, ou seja, já estamos naquela fase em que não interessa o que o master está a transmitir,
+
+171
+00:26:07,000 --> 00:26:22,000
+portanto, tem que transmitir para que haja tal circulação, isto, no fundo, os bits já não a rodar aqui, aliás, se o master não alterar os valores,
+
+172
+00:26:22,000 --> 00:26:33,000
+na transmissão seguinte, o slave vai receber o que acabou, o que tinha transmitido anteriormente.
+
+173
+00:26:33,000 --> 00:26:50,000
+Portanto, e então, finalmente, na transmissão seguinte, são enviados os 8 bits menos significativos.
+
+174
+00:26:50,000 --> 00:27:12,000
+Isto aqui era para verem um exemplo da comunicação e que depois, portanto, em termos de software, temos que ter cuidado,
+
+175
+00:27:12,000 --> 00:27:22,000
+portanto, para o dispositivo ver como é que os dados são distribuídos em cada palavra, à medida que são recebidos, e depois fazer o agrupamento.
+
+176
+00:27:22,000 --> 00:27:32,000
+É um bocado como, embora não estejamos a falar de uma transmissão em série, mesmo na própria leitura do ADC, no caso do ATMEGA 128,
+
+177
+00:27:32,000 --> 00:27:41,000
+tínhamos que ler primeiro a palavra mais baixa, depois a palavra, os dois bits mais significativos e fazer o deslocamento para juntar tudo.
+
+178
+00:27:41,000 --> 00:27:49,000
+Aqui também vamos ter uma situação desse género.
+
+179
+00:27:49,000 --> 00:27:57,000
+Uma vez que as transmissões são feitas, tem palavra a palavra. Lá está. Aqui está exemplificado para 8 bits.
+
+180
+00:27:57,000 --> 00:28:08,000
+Há contumadores de SPI que permitem palavras com o maior número de bits, mas se o dispositivo em si, se o target,
+
+181
+00:28:08,000 --> 00:28:16,000
+o slave não permitir trabalhar com esse número de bits, não adianta nada.
+
+182
+00:28:16,000 --> 00:28:27,000
+No caso do Raspberry Pi 4, como já mencionei anteriormente, eu já não lembro se foi por causa do I2C ou do SPI, mas temos vários controladores do SPI
+
+183
+00:28:27,000 --> 00:28:36,000
+que estão aqui associados a conjuntos de pinos. Portanto, é o SPI 1.
+
+184
+00:28:36,000 --> 00:28:45,000
+Há pouco estava a dizer que apenas um ou dois é que permitiam selecionar três dispositivos, até que é só um, é o SPI.
+
+185
+00:28:45,000 --> 00:28:55,000
+Permite fazer o enable de três dispositivos diferentes, ou seja, tem três linhas que depois permite selecionar.
+
+186
+00:28:55,000 --> 00:29:05,000
+Eventualmente, com algum esforço, embora depois já poderia ser um pouco mais, menos direto em termos de software,
+
+187
+00:29:05,000 --> 00:29:19,000
+podias usar linhas de adicionais, mas se quisermos usar a infraestrutura software existente, portanto, o que é permitido são estes,
+
+188
+00:29:19,000 --> 00:29:34,000
+é este número de dispositivos. Parem que os outros, tem todos um CE0 e um CE1, portanto o 3, o 4, o 5 e o 6 já estão aqui nestes últimos gapilhas.
+
+189
+00:29:34,000 --> 00:29:56,000
+Isto em termos de Linux. Também, tal como vimos para o I2C, existem já alguns device drivers feitos para trabalhar com os controladores do SPI.
+
+190
+00:29:56,000 --> 00:30:05,000
+Para ativarmos, para usarmos os device drivers, temos que ativar o overlay correspondente.
+
+191
+00:30:05,000 --> 00:30:14,000
+Reparem que estes overlays já existem, já estão feitos, não é necessário fazer direto, não precisamos ter nós a fazer como mostrei na que eliza-se as interrupções,
+
+192
+00:30:14,000 --> 00:30:26,000
+que são fornecidos, não são ativados por omissão. Portanto, se for um overlay que queiramos utilizar sempre, que se liga ao sistema,
+
+193
+00:30:26,000 --> 00:30:35,000
+até podemos colocá-lo no ficheiro de configuração da partição de arranque, é possível ir lá e adicionar uma linha para ativar esse overlay.
+
+194
+00:30:35,000 --> 00:30:43,000
+Portanto, se não quisermos fazer isso, por algo pontual, podemos usar este comandante overlay, que eu já tinha mostrado anteriormente,
+
+195
+00:30:43,000 --> 00:30:50,000
+para a partir da própria linha de comando, já com o Linux em funcionamento, carregar esse overlay.
+
+196
+00:30:50,000 --> 00:31:04,000
+E quando fazemos isso, o Linux detecta que existe mais uma, que foi ativada uma funcionalidade e carrega os módulos de kernel correspondentes,
+
+197
+00:31:04,000 --> 00:31:12,000
+através daquele sistema de registros e de compatibilidades que eu mencionei por exemplo das interrupções,
+
+198
+00:31:12,000 --> 00:31:19,000
+e isso é o mecanismo que é usado depois para todos os dispositivos ou para todas as funcionalidades aqui do Raspberry Pi.
+
+199
+00:31:20,000 --> 00:31:33,000
+Aqui neste caso, este overlay, portanto, esta nomenclatura indica que quero carregar o overlay correspondente ao controlador SPI0,
+
+200
+00:31:33,000 --> 00:31:44,000
+apenas como uma linha de seleção. Este SCS é de chip select, ou seja, vamos ter, portanto, é o 0.
+
+201
+00:31:44,000 --> 00:31:54,000
+Ou seja, só vão estar a ser usadas estas quatro linhas. Este CL não é usado.
+
+202
+00:31:56,000 --> 00:32:07,000
+Ao fazermos isto, então, os módulos estão, em princípio, vão ser carregados automaticamente, pelo menos o Raspberry Pi ou o S são carregados,
+
+203
+00:32:07,000 --> 00:32:17,000
+se não forem, podemos carregá-los manualmente, mas em princípio, mesmo no Ubuntu, deverá funcionar da mesma maneira,
+
+204
+00:32:17,000 --> 00:32:31,000
+e deverá aparecer o ficheiro dispositivo que nos permite escrever e ler através do controlador de SPI,
+
+205
+00:32:31,000 --> 00:32:43,000
+portanto, este SPI deve ser 0.0, portanto, no diretório barra deve, portanto, que é o tal ficheiro dispositivo criado por este módulo de kernel.
+
+206
+00:32:47,000 --> 00:33:00,000
+Para fazer alguns testes de linha de comando, sem sequer ir para a programação, temos este comando SPI pipe que permite fazer até configurar a própria frequência do relógio,
+
+207
+00:33:01,000 --> 00:33:12,000
+escolher qual é o dispositivo queremos usar, caso tenhamos vários controladores de SPI ativos, ou mesmo que não tenhamos, temos que indicar qual é.
+
+208
+00:33:13,000 --> 00:33:18,000
+Portanto, aqui estou no seguimento do exemplo, de usar este SPI deve ser 0.0.
+
+209
+00:33:19,000 --> 00:33:31,000
+Isto aqui é em bits por segundo, portanto, como podem ver, aqui estou a usar 40 MHz, confesso que,
+
+210
+00:33:31,000 --> 00:33:43,000
+eu acho que não sei porquê que pus este valor aqui, duvido que o Raspberry Pi suporte isto, esta frequência.
+
+211
+00:33:43,000 --> 00:33:56,000
+Aliás, eu, portanto, frequências de relógios estáveis que eu consegui com Arduino, acho que foi a volta de 600 kW,
+
+212
+00:33:57,000 --> 00:34:05,000
+mas isto aqui com estes fios pelo ar, e ligações através do Abraze Board, portanto, ser assim uma ligação curtinha,
+
+213
+00:34:06,000 --> 00:34:12,000
+e sem passar pelo Abraze Board, se calhar realmente conseguimos conseguir frequências mais altas.
+
+214
+00:34:12,000 --> 00:34:25,000
+Neste caso, isto é um maior exemplo, que está a redirecionar um fecheiro, portanto, o conteúdo de um fecheiro,
+
+215
+00:34:25,000 --> 00:34:35,000
+podemos ter um comando e fazer o pipe, portanto, ter um comando que envia para o seu output, um comando, um programa que envia para o seu output
+
+216
+00:34:35,000 --> 00:34:45,000
+um conjunto de dados que queremos enviar através do SPI, e então redirecionar para este comando, para o Standard Input deste SPI Pipe,
+
+217
+00:34:45,000 --> 00:34:58,000
+e portanto canalida desta forma, usar este SPI Pipe como uma ponte de acesso ao controlador de SPI, e portanto, isto é o input,
+
+218
+00:34:58,000 --> 00:35:06,000
+o output depois aparece no ecrã, que também se quisermos podemos redirecionar para outro programa ou para um fecheiro.
+
+219
+00:35:06,000 --> 00:35:33,000
+O controlador de SPI do Raspberry Pi permite, portanto enviar sequências de bits contínuas, mantendo sempre o chip select a zero,
+
+220
+00:35:33,000 --> 00:35:42,000
+portanto, aqui talvez, ou seja, permite fazer coisas deste gênero. Já o Arduino Uno, já tem megas, não conseguem, como eu disse,
+
+221
+00:35:42,000 --> 00:35:52,000
+só conseguem 8 bits cada um. Isto tem um impacto, depois tempo que o chip select vai a 1 e para voltar a ir a 0, há ali um tempo, portanto,
+
+222
+00:35:52,000 --> 00:36:05,000
+faz com que as transmissões não sejam tão rápidas, é por isso que quando ambos os dispositivos permitem estar a transmitir os bits contínuamente,
+
+223
+00:36:05,000 --> 00:36:15,000
+mantendo o chip select sempre a zero, portanto a transmissão acaba por ser mais eficiente, mas também não é nada de dramático.
+
+224
+00:36:22,000 --> 00:36:32,000
+Se quisermos usar isto em C, é uma questão de fazermos leituras e escritas para este fecheiro, mas tal como na comunicação séria,
+
+225
+00:36:32,000 --> 00:36:42,000
+temos que, se quisermos alterar a configuração, temos que recorrer a configurações específicas.
+
+226
+00:36:43,000 --> 00:36:55,000
+Basicamente, eu tenho aqui nesta estrutura, este código é adaptado dos utilitários que vêm no próprio código fonte do kernel,
+
+227
+00:36:55,000 --> 00:37:09,000
+portanto, para quem descarga o mesmo código fonte do kernel ou fez o clone do repositório,
+
+228
+00:37:09,000 --> 00:37:20,000
+portanto, há lá uma pasta que é da documentação e se procurarem lá no subdiretório relativo SPI, tem lá uns exemplos de código que,
+
+229
+00:37:20,000 --> 00:37:28,000
+portanto, depois mesmo os utilitários Linux são baseados nesses exemplos.
+
+230
+00:37:29,000 --> 00:37:40,000
+E portanto, as configurações que tipicamente são feitas, as mais genéricas, são o tal modo de operação que tem a ver com aquelas polaridades
+
+231
+00:37:40,000 --> 00:37:50,000
+e com o instante em que é feito a mostragem, como mostrei aqui nestes diagramas, para ser compatível com os dispositivos com os quais queremos comunicar,
+
+232
+00:37:50,000 --> 00:38:00,000
+depois a própria ordem dos bits que eu não tinha referido, portanto, há dispositivos que em vez de enviar os bits,
+
+233
+00:38:00,000 --> 00:38:11,000
+portanto, aqui neste caso está-se a enviar primeiro o bit mais significativo, mas pode haver dispositivos que ao contrário, que enviam primeiro o...
+

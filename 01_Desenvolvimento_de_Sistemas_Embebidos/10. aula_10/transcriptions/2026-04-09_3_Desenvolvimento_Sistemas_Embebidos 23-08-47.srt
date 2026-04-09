@@ -1,0 +1,492 @@
+1
+00:00:00,000 --> 00:00:12,000
+menos significativo, e naturalmente ambos têm que seguir a mesma lógica, senão depois entendem os valores de forma diferente.
+
+2
+00:00:16,000 --> 00:00:27,000
+Aqui é a seleção do número de bits por palavra, que tem a ver então com o tempo em que o chip select vai ficar a zero,
+
+3
+00:00:27,000 --> 00:00:41,000
+portanto se eu quiser ter palavras muito longas vou ter que aumentar aqui o número de bits,
+
+4
+00:00:41,000 --> 00:00:47,000
+pois aqui esta SPSpeed é o tal que tenho a ver com este parâmetro que temos aqui,
+
+5
+00:00:47,000 --> 00:01:00,000
+este Ready, portanto há dispositivos que permitem precisamente para permiterem o controlo do fluxo de dados,
+
+6
+00:01:00,000 --> 00:01:09,000
+o Slabel Target pode ter uma linha de Ready que indica ao master quando é que ele está pronto para transmitir.
+
+7
+00:01:11,000 --> 00:01:23,000
+O exemplo final ilustra este aspecto, portanto não usa esta funcionalidade mas ilustra a necessidade que pode surgir
+
+8
+00:01:23,000 --> 00:01:33,000
+em certas situações, que é se tivermos, se tentarmos fazer a transmissão com uma frequência muito alta
+
+9
+00:01:33,000 --> 00:01:42,000
+ou não dando um tempo de espera suficiente, o dispositivo pode não ter tempo de processar o pedido,
+
+10
+00:01:42,000 --> 00:01:49,000
+portanto quando o master logo a seguir está a pedir a resposta, ou tentar fazer transmitir a resposta,
+
+11
+00:01:49,000 --> 00:01:55,000
+ele ainda não tem a resposta no buffer e depois vai estar a receber uma resposta que não faz sentido.
+
+12
+00:01:55,000 --> 00:02:02,000
+Para evitar estas situações, portanto há dispositivos que têm uma linha de Ready,
+
+13
+00:02:02,000 --> 00:02:10,000
+portanto só quando esta linha vai a 1, portanto quando fica ativa, dependendo se fica ativa a 0 ou 1,
+
+14
+00:02:10,000 --> 00:02:23,000
+é que o controlador sabe que pode começar a gerar o sino de relógio para forçar a transmissão de dados entre os buffers.
+
+15
+00:02:25,000 --> 00:02:39,000
+Isto tal como no caso daquele código que eu forneci para a configuração séria normal que andamos aqui a ver,
+
+16
+00:02:39,000 --> 00:02:47,000
+portanto tem detalhes, estas opções todas, portanto o MEDELEV é através desta função IOCTL,
+
+17
+00:02:47,000 --> 00:02:53,000
+portanto que depois de termos o fecheiro aberto, portanto o primeiro passo é abrir o fecheiro,
+
+18
+00:02:54,000 --> 00:03:06,000
+mas depois aparentemente é que temos o fecheiro aberto, este IOCTL permite mudar configurações desse fecheiro especial,
+
+19
+00:03:06,000 --> 00:03:12,000
+porque no fundo isto é necessário ser tratado como um fecheiro, obviamente não é um fecheiro de dados normal,
+
+20
+00:03:12,000 --> 00:03:19,000
+não é um fecheiro TXT, nem é um fecheiro executável, é um fecheiro virtual que dá acesso a um amp,
+
+21
+00:03:19,000 --> 00:03:27,000
+portanto que é processado pelo código do módulo, como vimos lá com aquelas funções de Open, Read, Write e de Close,
+
+22
+00:03:27,000 --> 00:03:34,000
+e portanto também além destas funções de Open, Read, Write e por aí fora,
+
+23
+00:03:34,000 --> 00:03:41,000
+podemos definir também estas funções no módulo de kernel que em resposta a estes IOCTLs,
+
+24
+00:03:41,000 --> 00:03:45,000
+fazem a configuração dos registros especiais do dispositivo.
+
+25
+00:03:49,000 --> 00:03:59,000
+Ou seja, com este código consegue-se configurar as funções, portanto, os parâmetros principais do SPI,
+
+26
+00:03:59,000 --> 00:04:04,000
+e depois ficamos, portanto, aqui com o descritor de fecheiro,
+
+27
+00:04:04,000 --> 00:04:11,000
+que pode ser usado com as operações Read e Write para fazer uma comunicação.
+
+28
+00:04:12,000 --> 00:04:17,000
+Aqui neste caso, portanto, ao usar as funções Read e Write,
+
+29
+00:04:17,000 --> 00:04:24,000
+no fundo existem duas maneiras de nos programas trabalharmos com o, portanto,
+
+30
+00:04:24,000 --> 00:04:28,000
+depois de abrir o fecheiro, existem duas maneiras de fazer as leituras e as escritas,
+
+31
+00:04:28,000 --> 00:04:36,000
+eu aqui ilustrei a mais simples que é usar as funções tradicionais de leitura e escrita.
+
+32
+00:04:36,000 --> 00:04:39,000
+No entanto, isto esta,
+
+33
+00:04:39,000 --> 00:04:45,000
+usar estas funções impõe uma limitação, que é quando eu faço um Write,
+
+34
+00:04:45,000 --> 00:04:52,000
+não consigo ler o que o slave me enviou,
+
+35
+00:04:52,000 --> 00:04:59,000
+e quando faço um Read, não consigo alterar em simultâneo aquilo que estou a enviar,
+
+36
+00:04:59,000 --> 00:05:05,000
+ou seja, na verdade não consigo implementar uma comunicação full duplex.
+
+37
+00:05:05,000 --> 00:05:14,000
+Isto não, portanto, na maior parte dos casos acaba por não ser muito limitativo,
+
+38
+00:05:14,000 --> 00:05:18,000
+mas em situações em que queremos, em cada altura, controlar,
+
+39
+00:05:18,000 --> 00:05:23,000
+portanto, por exemplo, ao fazer uma leitura,
+
+40
+00:05:23,000 --> 00:05:34,000
+controlar em cada instante o que temos no buffer do master e ver o que é que acabou de chegar,
+
+41
+00:05:34,000 --> 00:05:41,000
+ou seja, colocar no buffer aquilo que queremos enviar e logo a seguir ver o que foi recebido,
+
+42
+00:05:42,000 --> 00:05:53,000
+portanto, temos que recorrer a estas, portanto, a estes ILCILs e aceder a umas funções especiais
+
+43
+00:05:53,000 --> 00:06:08,000
+que permitem transmitir em simultâneo os dados que queremos enviar e receber do kernel
+
+44
+00:06:08,000 --> 00:06:11,000
+o que acabou de chegar ao buffer.
+
+45
+00:06:22,000 --> 00:06:27,000
+Um exemplo adicional que eu aqui tinha como exercício,
+
+46
+00:06:28,000 --> 00:06:38,000
+portanto, é ligar, neste exercício, o que se pretende é ligar,
+
+47
+00:06:38,000 --> 00:06:46,000
+comunicar através do protocolo SPI com um Arduino,
+
+48
+00:06:46,000 --> 00:06:55,000
+em que o Arduino vai ter o papel de escravo, o papel de controlador ou de master,
+
+49
+00:06:55,000 --> 00:07:04,000
+e dessa forma, portanto, a funcionalidade que pretendemos que esteja disponível através do SPI
+
+50
+00:07:04,000 --> 00:07:17,000
+é a leitura do AD através do SPI, ou seja, é usar o Arduino para implementar um dispositivo do género
+
+51
+00:07:17,000 --> 00:07:23,000
+do que eu acabei de escrever ali há pouco com este NPC 32008.
+
+52
+00:07:23,000 --> 00:07:36,000
+No caso do Arduino, portanto, o AD é de 10 bits, portanto, vamos ter na mesma que dividir ter 2 bits numa palavra e 8 noutra,
+
+53
+00:07:36,000 --> 00:07:52,000
+e também vamos ter que fazer a seleção do canal, portanto, a ideia é, no fundo, de certa forma,
+
+54
+00:07:52,000 --> 00:08:04,000
+usar uma abordagem semelhante ao que vimos ali para aquele dispositivo que é apenas um AD,
+
+55
+00:08:04,000 --> 00:08:08,000
+implementar o mesmo tipo de comunicação com o Arduino.
+
+56
+00:08:08,000 --> 00:08:19,000
+No entanto, uma coisa que vimos quando estudámos o AD do Arduino é que ele não era, assim, muito rápido.
+
+57
+00:08:19,000 --> 00:08:32,000
+Este aqui, eu até acho que pus aqui os... eu dei maior cuidado por aqui os dados, portanto, o fundo permite fazer 100 mil amostras por segundo,
+
+58
+00:08:32,000 --> 00:08:47,000
+o AD do Arduino é cerca de 10 vezes mais lento que este, portanto, aqui claramente vai-se colocar aquela situação que vimos há pouco,
+
+59
+00:08:47,000 --> 00:08:59,000
+que se tentarmos fazer a transmissão através do SPI a uma frequência muito alta, o ATmega não vai ter tempo sequer de completar a conversão,
+
+60
+00:08:59,000 --> 00:09:09,000
+portanto, não vou estar agora aqui a massar com os cálculos, mas podem recordar-se que, portanto, que até havia aquela,
+
+61
+00:09:09,000 --> 00:09:22,000
+portanto, depois já ter configurado o relógio do AD, que ele podia demorar entre 13 a 14 ciclos de relógio para fazer uma conversão completa,
+
+62
+00:09:22,000 --> 00:09:24,000
+para terminar a conversão.
+
+63
+00:09:26,000 --> 00:09:43,000
+Portanto, o que... ou seja, daí que neste exemplo defini um protocolo em que é o seguinte que cada vez que o controlador do SPI recebe uma palavra,
+
+64
+00:09:43,000 --> 00:09:52,000
+depois de enviar o pedido de conversão, portanto, que vai ser semelhante ao que vimos no caso do outro AD, enviar, portanto,
+
+65
+00:09:52,000 --> 00:10:06,000
+inicialmente os bits todos a 1 e depois enviar os 4 bits de seleção de canal, aqui, esta sequência aqui, ou melhor, enviar estes 3-1s e depois isto aqui é servido a start bit,
+
+66
+00:10:06,000 --> 00:10:20,000
+e depois os 4 bits de seleção de canal, depois na resposta só vamos interpretar o byte recebido como sendo o início da resposta,
+
+67
+00:10:20,000 --> 00:10:32,000
+se os seus primeiros bits forem estes, ou seja, 5 bits a 1 e depois aqui novamente um 0 que simula uma espécie de start bit.
+
+68
+00:10:33,000 --> 00:10:49,000
+Portanto, quando recebemos esta sequência nos 6 bits mais significativos da resposta, portanto, podemos assumir que os 2 bits seguintes são os 2 bits mais significativos da conversão do AD,
+
+69
+00:10:49,000 --> 00:10:58,000
+portanto, que recordo é uma conversão de 10 bits, é um valor de 10 bits, sendo que os 8 bits seguintes virão depois na palavra seguinte, portanto,
+
+70
+00:10:58,000 --> 00:11:10,000
+depois na transmissão seguinte já serão os últimos 8 bits, ou os 8 bits menos significativos, portanto, eu recordo que isto porque o Arduino só permite,
+
+71
+00:11:10,000 --> 00:11:19,000
+o número máximo de bits que ele consegue transmitir de cada vez é 8, portanto, cada vez que transmita 8 bits volta a pôr o chip select,
+
+72
+00:11:19,000 --> 00:11:29,000
+a desactivar o chip select, ou requer que seja desactivado o chip select e só depois é que transmita novamente 8 bits.
+
+73
+00:11:30,000 --> 00:11:38,000
+Ou seja, a ideia seria fazer então um programa com o Raspberry Pi que permita fazer essa leitura.
+
+74
+00:11:41,000 --> 00:11:55,000
+Isto eu tenho aqui o código do Arduino, mas vamos já passar aqui para o código de, portanto, como é que se poderia implementar a função para fazer a leitura desses valores,
+
+75
+00:11:55,000 --> 00:12:05,000
+portanto, ou seja, isto no seguimento deste código de preparação de configuração do SPI,
+
+76
+00:12:05,000 --> 00:12:17,000
+portanto, depois aqui, eventualmente abririam aqui uma chamada aquela função de ler o ADC através do SPI,
+
+77
+00:12:17,000 --> 00:12:27,000
+portanto, o que é que esta função faz? Vai inicialmente enviar este valor, é 0, fazer esta escrita para o buffer,
+
+78
+00:12:27,000 --> 00:12:41,000
+portanto, escreve para o buffer e dá a ordem de envio, portanto, é o que esta função write faz, ou seja, nessa altura, ou quando o Raspberry Pi executa este write,
+
+79
+00:12:41,000 --> 00:12:59,000
+o SPI vai estar a receber este valor no seu buffer e em simultâneo o Arduino está a receber o quer que seja que o Arduino tem no seu buffer,
+
+80
+00:12:59,000 --> 00:13:07,000
+portanto, mas nesta fase não interessa, nesta fase o que nos interessa é dar a ordem de início de conversão, estamos a ler, portanto, do canal 0.
+
+81
+00:13:07,000 --> 00:13:30,000
+De seguida, agora vamos querer ler sempre o que vem do Arduino até que seja detectada aquela sequência de bits, portanto, com 4 bits a 1, ou melhor 5 bits a 1 e depois uma 0,
+
+82
+00:13:30,000 --> 00:13:46,000
+portanto, corresponde a termos este f8 aqui, portanto, é 4 bits a 1, aqui ainda mais 1 e os outros 3 a 0, mas os outros não interessa,
+
+83
+00:13:46,000 --> 00:14:00,000
+portanto, estamos aqui a mascarar os 6 bits, os 6 bits mais significativos, portanto, eu recordo que C é 1.1.0.0, ou seja, quando recebemos esta sequência,
+
+84
+00:14:00,000 --> 00:14:17,000
+isto significa que os outros bits que faltam aqui, eu fiz de uma maneira mais complicada, isto no fundo é fazer o I com 3, portanto, com os 2 bits menos significativos,
+
+85
+00:14:17,000 --> 00:14:32,000
+portanto, eu estou a fazer com isto negado, no fundo é uma coisa que fazer o N com 3. Para ir buscar os 2 bits, aqueles 2 bits do fim da palavra, do menos significativos da palavra, ficam guardados no VH.
+
+86
+00:14:32,000 --> 00:14:43,000
+Agora, portanto, sai do loop e sei que agora na próxima leitura vou ler, portanto, já vou ler o byte com os 8 bits menos significativos da conversão do AD.
+
+87
+00:14:43,000 --> 00:15:08,000
+Portanto, e depois faço esta operação, como já fizemos no código, nos exemplos de utilização do AD do Arduino, do ATmega 128, portanto, para juntar aqui os, portanto, transpor estes 2 bits que foram leidos aqui neste VH para a parte mais significativa.
+
+88
+00:15:08,000 --> 00:15:28,000
+Portanto, com isto, reparem que ao fazermos este read, portanto, o driver do SPI gera os ciclos de relógio necessários para que, portanto, a transmissão ocorra.
+
+89
+00:15:28,000 --> 00:15:41,000
+No fundo, eu estou a dar uma ordem de leitura, mas o Raspberry Pi vai estar a transmitir o que tiver naquela altura no huffer, também é transmitido para o Arduino.
+
+90
+00:15:41,000 --> 00:16:05,000
+Portanto, eu, quando testei este programa, pude de facto verificar que, se vocês testarem este programa, vão verificar que quanto maior for a frequência da transmissão que impomos na configuração inicial, mais iterações a função vai passar neste loop,
+
+91
+00:16:05,000 --> 00:16:18,000
+Portanto, ele consegue fazer o pedido muito rapidamente, mas depois tem que esperar alguns ciclos de transmissão para que o AD do Arduino consiga completar a transmissão.
+
+92
+00:16:18,000 --> 00:16:35,000
+Isto, portanto, talvez para perceber melhor, voltamos agora aqui atrás ao código que está no Arduino. Portanto, o código que está no Arduino tem que fazer a configuração do controlador do SPI do Arduino para funcionar em modo escravo,
+
+93
+00:16:35,000 --> 00:16:59,000
+e depois tenho aqui uma rotina que faz a leitura, portanto, a verificação da flag da fim de recepção, que passa a 1 quando o buffer é preenchido com a palavra NOR,
+
+94
+00:16:59,000 --> 00:17:07,000
+portanto, e nesta altura este x fica com o valor do buffer.
+
+95
+00:17:07,000 --> 00:17:29,000
+Portanto, temos aqui codificados as várias fases possíveis da transmissão. Inicialmente, portanto, quando ainda não recebeu nada, vai verificar se este x corresponde, portanto, se tem naqueles bits iniciais aquela assinatura de 3 1s e um 0.
+
+96
+00:17:30,000 --> 00:17:46,000
+Se não for, é porque é ruído, pode ter havido alguma retransmissão e ignoramos. Caso contrário, continua por aqui, e então isto quer dizer que vamos fazer, que está a receber a ordem de leitura.
+
+97
+00:17:46,000 --> 00:17:59,000
+Portanto, vai selecionar aqui no max, no registro da seleção de canal, vai pôr lá os bits correspondentes, que vem nesta palavra, portanto, recordo que são os 4 bits menos significativos,
+
+98
+00:17:59,000 --> 00:18:09,000
+são os bits de seleção de canal, e de seguida dá a ordem de início de função. Isto aqui vocês ainda devem estar recordados, que devem ter feito isto para os trabalhos anteriores.
+
+99
+00:18:10,000 --> 00:18:19,000
+E, portanto, passa aqui agora esta variable state, passa para a fase seguinte, que é o estado 1, e sai do ciclo.
+
+100
+00:18:20,000 --> 00:18:34,000
+A próxima palavra que receber, portanto, já vai estar no, o state já vai estar no 1, e ele já vem para aqui. E aqui neste caso, que ele verifica, vai verificar, portanto, o código do Arduino vai verificar se a conversão já terminou.
+
+101
+00:18:34,000 --> 00:18:50,000
+Então, se este bit ainda estiver a 1, quer dizer que a conversão ainda não terminou. Então, o que ele vai fazer é enviar, portanto, coloca ff no buffer,
+
+102
+00:18:50,000 --> 00:19:04,000
+e é isso que o Raspberry Pi vai receber.
+
+103
+00:19:04,000 --> 00:19:24,000
+Caso contrário, vai colocar o, portanto, caso já tenha terminado a conversão, coloca aqui em variáveis auxiliares o valor recebido, o valor convertido,
+
+104
+00:19:24,000 --> 00:19:41,000
+e, e constrói, portanto, passa para o buffer a primeira parte, que é aquela que tem a sequência de 5.1 e 1.0, mais os dois bits menos significativos aqui do, portanto, do VH.
+
+105
+00:19:41,000 --> 00:19:54,000
+Portanto, são os bits 9 e 10, ou melhor, 8 e 9 da palavra do AD. E coloca essa informação no buffer.
+
+106
+00:19:54,000 --> 00:20:14,000
+Portanto, na próxima transmissão que for feita, na próxima ordem de leitura do Raspberry Pi, ele vai conseguir ler isto que está no buffer, e na seguinte...
+
+107
+00:20:14,000 --> 00:20:28,000
+Eu vou mandar o quadro para vocês, basicamente, o, tipo assim, ele, o produtor já tinha dado mais ou menos como é que aquilo ia funcionar, e o quadro do slide já vai funcionar mais ou menos.
+
+108
+00:20:28,000 --> 00:20:41,000
+E aí tu cegas aquilo, aí tem só uma cesta que tem essa estrutura aqui, né, essa estrutura do Arduino, vai colocar o valor, os bits que faltam transmitir.
+
+109
+00:20:41,000 --> 00:20:49,000
+E só então na leitura seguinte é que este buffer vai ser transmitido.
+
+110
+00:20:50,000 --> 00:21:04,000
+Que tem que redefinir, aí tu tem o GP7 e o GPCLR, que é o de clear. Então se tu dá, por exemplo, o GP7 e o pino, ai, inclusive, é pino dividido por 32, não é pino dividido por 18.
+
+111
+00:21:04,000 --> 00:21:14,000
+Porque tu está querendo só fazer, na verdade, o 18, e o pino quer dividido por 32 para ele dar o 7, e depois a mesma coisa para ele dar o clear.
+
+112
+00:21:15,000 --> 00:21:29,000
+O slide, que até é o modo menos comum, o Arduino normalmente até é usado para, em modo master, para obter valores, para comunicar com sensores, ou com atuadores, ou com memórias,
+
+113
+00:21:29,000 --> 00:21:42,000
+obviamente é usado como master, mas também pode ser usado como slave. E aqui, portanto, no caso do SPI, isto está a trabalhar no modo master.
+
+114
+00:21:43,000 --> 00:21:59,000
+Ora bem, e por hoje também estamos aqui, também estamos a chegar ao fim, não sei se alguém quer colocar alguma questão, caso contrário, podemos terminar por aqui.
+
+115
+00:22:02,000 --> 00:22:04,000
+Ok, obrigado.
+
+116
+00:22:04,000 --> 00:22:07,000
+Pronto, então boa noite para todos e até sábado.
+
+117
+00:22:07,000 --> 00:22:09,000
+Boa noite.
+
+118
+00:22:09,000 --> 00:22:10,000
+Obrigado.
+
+119
+00:22:12,000 --> 00:22:13,000
+Boa noite.
+
+120
+00:22:42,000 --> 00:22:43,000
+Boa noite.
+
+121
+00:23:12,000 --> 00:23:13,000
+Boa noite.
+
+122
+00:23:42,000 --> 00:23:44,000
+Boa noite.
+
+123
+00:24:12,000 --> 00:24:14,000
+Boa noite.
+

@@ -1,0 +1,3 @@
+o exame ira passar para dia 14 de Abril ..
+
+20 a 30 perguntas e escolha multipla... 4 escolhas...
