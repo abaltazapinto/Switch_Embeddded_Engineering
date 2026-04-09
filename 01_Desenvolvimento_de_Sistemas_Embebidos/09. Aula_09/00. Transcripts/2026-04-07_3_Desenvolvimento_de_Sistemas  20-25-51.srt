@@ -1,0 +1,1032 @@
+1
+00:00:00,000 --> 00:00:05,960
+Em termos depois do exercício que vos é pedido para fazer, em vez de ter, podem usar
+
+2
+00:00:05,960 --> 00:00:13,040
+na mesma deixar aqui este led status para saber se é para pôr o pino a 0 ou 1, podem
+
+3
+00:00:13,040 --> 00:00:22,560
+até testar o valor atual do led status e com base nisso, vão pôr depois o GPIO correspondente,
+
+4
+00:00:22,560 --> 00:00:25,880
+deixem-me, neste exercício já não me lembro qual é que é o... mas vamos usar o mesmo,
+
+5
+00:00:25,880 --> 00:00:39,840
+vamos pôr o GPIO 12 a 1 ou a 0 conforme o valor do led status, ou seja, aqui mais uma vez vamos
+
+6
+00:00:39,840 --> 00:00:51,800
+precisar de inicialmente também na função de init configurar o porto como saída, ou seja,
+
+7
+00:00:52,000 --> 00:01:02,120
+aquela função que eu mencionei há pouco, portanto, como ia que fizessem, para configurar a
+
+8
+00:01:02,120 --> 00:01:14,120
+função do porto e depois a de estabelecer a saída, basicamente isto é o que eu pus no
+
+9
+00:01:14,120 --> 00:01:20,600
+quadro na semana passada, também isto não é nenhum segredo de estado, parem cá está aquela
+
+10
+00:01:20,600 --> 00:01:27,280
+divisão inteira por 10, depois a multiplicação por 3, por causa de ser 3 bits a cada porto,
+
+11
+00:01:28,280 --> 00:01:35,560
+portanto, estas funções, se alguém quiser tirar muito rápido um snapshot, também não
+
+12
+00:01:35,560 --> 00:01:45,600
+tenho problemas com isso, depois já aqui a questão de pôr o bit a 1, portanto, depois já temos bits
+
+13
+00:01:45,600 --> 00:01:50,880
+anuais quando é para pôr a 1 ou a 0, portanto, havia aquele pormenor se quisermos pôr a 1,
+
+14
+00:01:50,880 --> 00:01:58,480
+quando é para pôr a 1 é num registro, quando é para pôr a 0 também vamos ter que escrever um,
+
+15
+00:01:58,480 --> 00:02:06,960
+mas agora já noutro registro diferente, ou seja, existe um registro para ativar o GPIO,
+
+16
+00:02:06,960 --> 00:02:14,360
+outro para a linha e outro para a limpar, para pôr a 0, portanto, no fundo, também
+
+17
+00:02:14,360 --> 00:02:24,680
+vamos precisar destas funções no módulo de kernel. O que é diferente aqui é a parte de aceder aos registros.
+
+18
+00:02:24,680 --> 00:02:33,960
+Antes de avançar, tinha só uma dúvida em relação ao código anterior. Estas funções do timer setup
+
+19
+00:02:33,960 --> 00:02:39,480
+e web timer são built-in ou temos que incluir alguma biblioteca para ter acesso a elas ou somos nós que
+
+20
+00:02:39,480 --> 00:02:46,880
+temos que escrever? Não, não, não, não, elas estão, portanto, fazem part-app aí do Linux, mas eu penso que,
+
+21
+00:02:46,880 --> 00:02:58,880
+ou seja, tanto não tem que incluir porque, deixa-me só, também tenho aqui, só para ter certeza que não abro o fecheiro errado,
+
+22
+00:02:58,880 --> 00:03:10,520
+portanto, está aqui, penso que é esta, o código que eu forneço penso que é esta aqui, o que está no PDF já deve ser uma versão diferente,
+
+23
+00:03:10,520 --> 00:03:24,840
+portanto, já nem me lembrava que tinha posto isso no PDF e na autografia fiz copy-paste do enunciado e não deve ter atualizado esse código.
+
+24
+00:03:24,840 --> 00:03:33,160
+Portanto, é natural que consigam identificar aqui uma outra diferença no código, mas respondendo à sua questão,
+
+25
+00:03:33,160 --> 00:03:43,160
+portanto, isto, pelo menos no meu sistema, compila só com estes Cedar files, portanto, o módulo .h já inclui muitas das funções,
+
+26
+00:03:43,160 --> 00:03:54,400
+o Linux barra o módulo .h e este fs também já inclui uma grande parte das funções principais da programação dos módulos.
+
+27
+00:03:55,400 --> 00:04:05,880
+Ou seja, então agora encaixando aqui no código completo, temos aqui esta estrutura que eu já apresentei numa das semanas anteriores,
+
+28
+00:04:05,880 --> 00:04:18,840
+que acredito que possa estar esquecido, mas podemos ver muito rapidamente, portanto, eu recordo que todos os módulos de kernel têm uma função de init e outra de exit,
+
+29
+00:04:19,800 --> 00:04:27,440
+portanto, que são declaradas aqui com estas macros, portanto, a módulo init e a módulo exit, depois o nome podemos dar e o que quisermos,
+
+30
+00:04:27,440 --> 00:04:35,200
+portanto, ou seja, aqui esta blinker init vai ser a função que vai ser chamada automaticamente quando o módulo for carregado para a memória,
+
+31
+00:04:35,200 --> 00:04:47,680
+portanto, isso é feito com a função insmod, que eu depois não poderei recordar ou ajudar.
+
+32
+00:04:47,680 --> 00:04:57,680
+Portanto, é uma operação que exige permissões da investidura, portanto, tem que ser sudo em esse modo e o nome do ficheiro k ou o que é gerado,
+
+33
+00:04:57,680 --> 00:05:05,920
+mas então vamos ver aqui na função de init o que é que temos, portanto, temos aquele extract de código como mostrei no slide,
+
+34
+00:05:06,920 --> 00:05:19,680
+queremos que seja, portanto, isso que está logo no início, quando o módulo é carregado, depois temos aqui mais um código auxiliar que tem a ver com a criação daqueles ficheiros,
+
+35
+00:05:19,680 --> 00:05:32,680
+do ficheiro no diretório barra 10, o tal ficheiro de dispositivo que neste caso vamos usar simplesmente para conseguirmos ler qual é o período que está a ser usado,
+
+36
+00:05:32,680 --> 00:05:48,680
+portanto, na comutação da linha e para podermos também alterar esse período. Como é que isso é feito? Se repararem, isto aqui faz o registro através,
+
+37
+00:05:48,680 --> 00:05:57,680
+portanto, eu associei este módulo que até podemos dar um nome qualquer, portanto, depois já apareceu lá nas listagens de módulos carregados,
+
+38
+00:05:57,680 --> 00:06:11,680
+para ser mais fácil identificar qual é, ou ver se está carregado ou não, e depois temos aqui uma variável que é este blinkerfops que são as funções que têm que ser implementadas,
+
+39
+00:06:11,680 --> 00:06:25,680
+já estão assim, temos que ser nós a implementar, mas já estão feitas, eu forneci isto já feito, portanto, está aqui a estrutura blinkerfops onde se declaram quatro funções,
+
+40
+00:06:26,680 --> 00:06:39,680
+declaram ou especificam neste caso, portanto, para as operações de read é suposto o curdle chamar a função blinkerread, para as operações de write é suposto chamar o blinkerwrite,
+
+41
+00:06:39,680 --> 00:06:47,680
+por aí fora, e para o open, o blinkeropen e o release, que é quando se fecha o ficheiro chamar o blinkerrelease.
+
+42
+00:06:47,680 --> 00:06:57,680
+Esta open e release, portanto, não fazem grande coisa, é só para, só faço aqui uma sinalização, uso esta aqui uma variável global,
+
+43
+00:06:57,680 --> 00:07:13,680
+simplesmente para não deixar, portanto, para indicar que algum programa abriu o ficheiro dispositivo, portanto, eu recordo, o que eu estou a chamar ficheiro dispositivo é um ficheiro que depois vai ser criado automaticamente,
+
+44
+00:07:13,680 --> 00:07:23,680
+automaticamente ou manualmente, neste caso até falta aqui o código para criar automaticamente que eu, pois, poderei adicionar, neste caso,
+
+45
+00:07:23,680 --> 00:07:31,680
+seria de ser manualmente, com uma MK panoso, mas, portanto, fica no barra deve, barra qualquer coisa, o nome que nós dermos, pode ser blinker,
+
+46
+00:07:31,680 --> 00:07:41,680
+e, pois, nós vamos poder abrir esse ficheiro ou escrever para esse ficheiro, por exemplo, alterarmos o período de comutação,
+
+47
+00:07:41,680 --> 00:07:49,680
+com o período, obviamente o período implica a frequência, o período é o inverso da frequência de comutação.
+
+48
+00:07:49,680 --> 00:07:59,680
+Portanto, mas aqui, portanto, eu uso esta variável para impedir, para quê? Para chamar aqui umas funções especiais, que também fazem parte aqui da programação do kernel,
+
+49
+00:07:59,680 --> 00:08:13,680
+que indicam, este traiModuleGet, no fundo é uma espécie de tranca, indicador de que o módulo está a ser utilizado e, portanto, caso, mesmo que o administrador sistema
+
+50
+00:08:13,680 --> 00:08:21,680
+tente descarregar o módulo, não vai conseguir, portanto, porque isso poderia ser crítico, deixar a meio de alguma operação, portanto,
+
+51
+00:08:21,680 --> 00:08:30,680
+no fundo bloqueia o módulo em memória depois, quando o ficheiro é fechado, aí já liberta este módulo PUT, no fundo liberta o módulo,
+
+52
+00:08:30,680 --> 00:08:40,680
+no sentido em que se o administrador o quiser descarregar, portanto, de memória, pode descarregá-lo.
+
+53
+00:08:41,680 --> 00:08:56,680
+As funções, então, de leitura e escrita estão aqui implementadas e o objetivo disto é, então, ler um valor que supostamente virá em milissegundos,
+
+54
+00:08:56,680 --> 00:09:04,680
+portanto, porque eu estou-se assim, por acaso eu tenho uma versão deste código que também posso fornecer que trabalhe em nanosegundos,
+
+55
+00:09:04,680 --> 00:09:12,680
+para termos uma precisão maior, mas aqui para isto também não precisamos, os milissegundos chegam.
+
+56
+00:09:12,680 --> 00:09:25,680
+Portanto, a versão que eu tenho para nanosegundos é para implementarmos um PWM, mas aí sem usar o controlador, por bitbanking,
+
+57
+00:09:25,680 --> 00:09:35,680
+ou seja, o próprio software que está ali em cada impulso, digamos assim, decide isso, vai pôr a 0 ou 1.
+
+58
+00:09:35,680 --> 00:09:47,680
+Mas voltando aqui, separarem este read, o read é fazer a leitura, portanto, esta função blinca o read,
+
+59
+00:09:47,680 --> 00:09:55,680
+a operação do read, portanto, vai ser chamada quando alguém ler o fichete de dispositivo, ou seja, se está a ler é porque quer saber qual é o período que está a ser usado.
+
+60
+00:09:55,680 --> 00:10:09,680
+Então, o que vamos fazer é converter este blinque delay de JIFS para milissegundos, portanto, esta divisão por HZ converte para segundos,
+
+61
+00:10:09,680 --> 00:10:17,680
+mas para terem a trabalhar com valores inteiros e em milissegundos multiplico por 1000, não é?
+
+62
+00:10:17,680 --> 00:10:31,680
+E cá está a multiplicação por 2, porque no fundo o blinque delay é só metade do período, portanto, para ser o período inteiro tenho que o multiplicar por 2.
+
+63
+00:10:31,680 --> 00:10:42,680
+Portanto, e aqui temos então o valor real do período em milissegundos, que depois é convertido para string, para ser mais fácil,
+
+64
+00:10:42,680 --> 00:10:54,680
+para se alguém fizer, por exemplo, um cat do ficheiro barra dev barra blinker, poder ver logo imediatamente em texto qual é o valor do período em milissegundos.
+
+65
+00:10:55,680 --> 00:11:11,680
+Depois aqui este copy to user para fazer o mesmo copy deste buffer local para o endereço memória passado pelo programa que está a ler o ficheiro de dispositivo.
+
+66
+00:11:11,680 --> 00:11:29,680
+O write faz o inverso, portanto, a ideia é que um utilizador pode escrever para o ficheiro de dispositivo um novo valor do período em milissegundos e vai ficar guardado aqui neste buffer
+
+67
+00:11:29,680 --> 00:11:42,680
+e temos que ler este buffer e converter para o valor guardado depois dos fatores de escala devidamente aplicados guardado na variável blinque delay.
+
+68
+00:11:42,680 --> 00:11:49,680
+Ou seja, isto também estamos a assumir que é enviado em milissegundos e em modo texto e terminado com um barra n.
+
+69
+00:11:49,680 --> 00:12:03,680
+E portanto, aqui é um ciclo inicial em que está a ler carater a carater até tentar o barra n, portanto, lê-se buffer um byte cada vez,
+
+70
+00:12:03,680 --> 00:12:25,680
+vai incrementando a posição onde está a ler e quando se contata o barra n, portanto, é porque já temos a string completamente lida e vamos então fazer a compressão de texto panumérico, portanto, com este symbol strtool.
+
+71
+00:12:25,680 --> 00:12:33,680
+Eu aproveito para recordar que na programação do kernel não temos acesso às funções de standard do C.
+
+72
+00:12:33,680 --> 00:12:45,680
+O C tem uma função que é o strtool, mas que não existe aqui na programação do kernel porque nós não temos acesso às funções da libc, do linux.
+
+73
+00:12:45,680 --> 00:12:56,680
+Portanto, os desenvolvedores do linux criaram, portanto, aqui na API do linux, uma função para fazer a mesma coisa.
+
+74
+00:12:56,680 --> 00:13:07,680
+Podiam ter dado o mesmo nome, por vezes dão exatamente o mesmo nome, aqui, para salientar algumas diferenças que existem, deram-lhe um nome diferente, este symbol strtool.
+
+75
+00:13:08,680 --> 00:13:19,680
+Que, basicamente, pega neste localbuff, que tem um valor decimal, que se assume que seja decimal e converte-o para o correspondente valor numérico.
+
+76
+00:13:19,680 --> 00:13:32,680
+Portanto, string para valor numérico e depois aqui faz-te exatamente o inverso do que foi feito ali, portanto, para converter para gif, isso tem que se multiplicar pela constante hz,
+
+77
+00:13:32,680 --> 00:13:42,680
+depois da divisão por dois, porque no blink delay é só metade do período e o mil é para, portanto, para converter-se no fundo isto, para ser mais claro, devia ser assim.
+
+78
+00:13:44,680 --> 00:13:46,680
+O mil é para converter de mil em segundos para segundos.
+
+79
+00:13:47,680 --> 00:14:09,680
+Ou seja, isto é um exemplo para vocês perceberem uma possível aplicação destes dos 6 dispositivos, aqui até está usado para um exemplo, portanto, um bocado básico, até para o código, não ser muito extenso,
+
+80
+00:14:09,680 --> 00:14:22,680
+normalmente isto, estes reads e writes vão buscar, portanto, vão ler ou escrever em buffers que contém dados que já foram lidos do hardware ou que estão à espera,
+
+81
+00:14:22,680 --> 00:14:31,680
+ou que depois vão ser transmitidos através do hardware, portanto, numa placa de rede, numa ligação série, portanto, são usados para fazer a transmissão destes dados,
+
+82
+00:14:31,680 --> 00:14:40,680
+portanto, que vem das variáveis dos nossos programas do ponto de vista televisador e que queremos transmitir para os periféricos,
+
+83
+00:14:40,680 --> 00:14:49,680
+e que tem que, portanto, principalmente quando as transmissões têm que ser feitas aos bocadinhos, por exemplo, através das comunicações sérias, por exemplo,
+
+84
+00:14:49,680 --> 00:15:03,680
+portanto, tipicamente o módulo de kernel tem aqui, guarda os dados num buffer, portanto, que é reservado na memória do kernel e depois conforme vai transmitindo a taxa possível.
+
+85
+00:15:03,680 --> 00:15:18,680
+Ora bem, mas então, recapitulando, o primeiro exercício que está alado, portanto, eu até acho que não sei se está aqui aberto ou é se não o tenho aberto,
+
+86
+00:15:18,680 --> 00:15:29,680
+o primeiro exercício é pegar neste código, portanto, o primeiro passo é compilar para ver se isto compila direitinho no nosso sistema, portanto, antes de fazerem qualquer alteração,
+
+87
+00:15:29,680 --> 00:15:45,680
+e depois vão fazer aqui a ideia transformar, portanto, conseguirmos usar este módulo para fazer piscar um led no Raspberry Pi, portanto, o que é que temos que fazer?
+
+88
+00:15:45,680 --> 00:15:55,680
+Basicamente, aqui na função de INIT, vão ter que colocar a parte de configurar a função do registro,
+
+89
+00:15:55,680 --> 00:16:08,680
+vamos configurar o registro para termos o PIN como saída, depois convém colocá-lo com valor inicial a 1 ou a 0,
+
+90
+00:16:08,680 --> 00:16:19,680
+e depois aqui, vamos ter que chamar a função de alterar também, de estabelecer o valor do PIN, ou seja, este set GPO output value,
+
+91
+00:16:19,680 --> 00:16:34,680
+para se tiver um colocar a 0 e vice-versa, se tiver a 0 colocar a 1, portanto, depois explicar desta maneira é simples,
+
+92
+00:16:34,680 --> 00:16:44,680
+Portanto, há uma diferença que temos de ter em atenção, que era o slide que eu já ia mostrar há pouco,
+
+93
+00:16:44,680 --> 00:16:54,680
+portanto, uma diferença que surge derivada do facto de estarmos a programar a nível de módulos de kernel, é o acesso aos registros,
+
+94
+00:16:54,680 --> 00:17:13,680
+eu recordo que, vamos voltar atrás, este open do barra dev barra mem, portanto, é para termos nos nossos programas como utilizadores do sistema,
+
+95
+00:17:13,680 --> 00:17:22,680
+portanto, ao nível da aplicação, para termos acesso aos endereços físicos de memória, portanto, este barra dev barra mem,
+
+96
+00:17:22,680 --> 00:17:32,680
+dá-nos acesso direto, dá-nos acesso aos endereços físicos de memória, e por isso é que podemos usar diretamente os endereços que aparecem no data sheet,
+
+97
+00:17:32,680 --> 00:17:46,680
+no entanto, a nível do kernel, não vamos poder usar isto, não estou a dizer que tecnicamente se fosse impossível de usar, mas não é o mais adequado, o mais conveniente,
+
+98
+00:17:46,680 --> 00:17:57,680
+e portanto, até porque a vantagem de se programar ao nível do kernel é que se tem permissões para aceder a qualquer endereço de memória,
+
+99
+00:17:57,680 --> 00:18:06,680
+no entanto, há um aspecto que temos de ter em atenção, é que o Linux é um sistema operativo multiprocesse, e portanto, trabalha com endereços virtuais,
+
+100
+00:18:06,680 --> 00:18:17,680
+mesmo ao nível do kernel, também tem o seu próprio espaço de interessamento virtual, e portanto, temos que chamar aqui, em resumo, temos que chamar aqui uma função especial
+
+101
+00:18:17,680 --> 00:18:33,680
+para mapear o endereço, o endereço dos registros que nos interessam para a configuração do GPU, o endereço base lá do banco de registros de configuração
+
+102
+00:18:33,680 --> 00:18:50,680
+e de controle dos GPIOs para um endereço virtual do kernel, isso é feito com esta função EORMAP, que recebe um endereço físico e depois retorna um endereço, portanto, um apontador,
+
+103
+00:18:50,680 --> 00:19:03,680
+válido no espaço de endereços virtual do kernel, ou seja, em vez de usarem aquela OPA de seguida do EORMAP, a parte de inicialização tem que ser feita desta maneira, portanto, em vez de, portanto,
+
+104
+00:19:03,680 --> 00:19:24,680
+no fundo isto é uma espécie de EORMAP, mas pega no endereço físico e dá, portanto, um endereço do espaço do kernel, com a vantagem que, portanto, como só serve para isso, não tem tantos parâmetros como o EORMAP, que é uma função que tem muitas aplicações.
+
+105
+00:19:24,680 --> 00:19:47,680
+Portanto, isto terá que ser a primeira coisa a fazer antes de tentarem acessar o que quer que seja lá dos GPIOs, ou seja, aqui no, vou colocar isto, logo aqui no início do blinker init declaram a variável,
+
+106
+00:19:47,680 --> 00:20:14,680
+este GPIO base como variável global, se separarem eu aqui tenho várias globais, portanto, que declaram, tipicamente declaramos como setetic para não criar poluição, portanto, aqui o setetic numa global, como devem saber, é sério para indicar que a variável só é visível no módulo,
+
+107
+00:20:14,680 --> 00:20:37,680
+portanto, é como se fosse uma variável privada deste ficheiro C, e, portanto, tudo que seja global declarem como setetic, portanto, vão declarar então o apontador, portanto, aquele GPIO com o nome, portanto, uma variável deste tipo, apontador para VCM2835GPORegisters,
+
+108
+00:20:37,680 --> 00:20:50,680
+que depois iniciam aqui no blinker init, portanto, pode ser logo a primeira operação.
+
+109
+00:20:50,680 --> 00:21:13,680
+O resto de código aí já é só com base naquelas funções do, para trabalhar, que eu mostrei a pouco, estas aqui dos GPIOs, portanto, esta para fazer o GPIO function e depois esta para mudar o valor de sair.
+
+110
+00:21:13,680 --> 00:21:23,680
+Professora, aqui uma questão, nesta variável do GPIO base, nós também temos que defini-la com um apontador, tendo em conta que estamos a fazer um casting para esse...
+
+111
+00:21:23,680 --> 00:21:35,680
+Sim, sim, eu aqui não pus precisamente para vocês não induzirem erro, porque esta variável tem que ser declarada como global,
+
+112
+00:21:35,680 --> 00:21:44,680
+porque depois vocês vão querer aceder a esta variável quer no... portanto, em vários sítios do código, em dois, nomeadamente.
+
+113
+00:21:44,680 --> 00:21:46,680
+E ela vai ter que ter o tipo do apontador, não é?
+
+114
+00:21:46,680 --> 00:21:49,680
+Sim, sim, sim, declara como... é deste tipo, tem que declarar...
+
+115
+00:21:49,680 --> 00:21:51,680
+Exatamente como o casting.
+
+116
+00:21:51,680 --> 00:21:54,680
+Ok, obrigado.
+
+117
+00:21:54,680 --> 00:22:06,680
+Porque vocês vão precisar de ver eu usar, quer no blinker init, como estava a mostrar a pouco, eu tenho aqui dois blinkers, não sei qual, mas pronto.
+
+118
+00:22:06,680 --> 00:22:11,680
+Portanto, neste no blinker init, como no My Timer Func.
+
+119
+00:22:15,680 --> 00:22:19,680
+Ok, ok, no local eu tenho...
+
+120
+00:22:24,680 --> 00:22:50,680
+Ou seja, este exercício, depois de terem lá o sistema para compilar os módulos e adicionarem no função três ou quatro linhas de código, está pronto a funcionar.
+
+121
+00:22:50,680 --> 00:23:02,680
+Eu gosto também de me lembrar que a Makefile, portanto a Makefile do sistema, para compilar isto, obedece um formato especial.
+
+122
+00:23:02,680 --> 00:23:10,680
+Eu depois coloco também o ficheiro Makefile aqui, mas é melhor ouvir já, para chamar a atenção de um aspecto.
+
+123
+00:23:12,680 --> 00:23:14,680
+Deixe-me lá ver...
+
+124
+00:23:20,680 --> 00:23:25,680
+...
+
+125
+00:23:25,680 --> 00:23:42,680
+...
+
+126
+00:23:42,680 --> 00:23:51,680
+...
+
+127
+00:23:51,680 --> 00:23:52,680
+...
+
+128
+00:24:12,680 --> 00:24:15,680
+...
+
+129
+00:24:15,680 --> 00:24:17,680
+Ora bem.
+
+130
+00:24:24,680 --> 00:24:36,680
+Vocês vão ter que ter um ficheiro chamado Makefile, no mesmo diretório eu tenho o código no blinker, não sei como eu tenho aqui nesta barra.
+
+131
+00:24:36,680 --> 00:24:45,680
+Portanto, isto até está aqui o exemplo deste já compilado, isto já era vários ficheiros auxiliares, mas vão ter que...
+
+132
+00:24:45,680 --> 00:24:53,680
+De início, além do ficheiro .c, este blinker .c, vão ter que ter um ficheiro Makefile, em que o .m é meios.
+
+133
+00:24:54,680 --> 00:25:04,680
+E, portanto, eu depois vou colocar isto no módulo, já não me recordo também se isto está no enunciado do exercício ou não.
+
+134
+00:25:04,680 --> 00:25:10,680
+Mas o aspecto que pode variar, o único aspecto que pode variar do sistema, para o sistema, é esta variável do que quero não dir.
+
+135
+00:25:10,680 --> 00:25:18,680
+Portanto, este blinker .o, é o ficheiro object correspondente ao blinker .c, é o que ele vai gerar.
+
+136
+00:25:22,680 --> 00:25:27,680
+Ou melhor, vai gerar este ficheiro o que depois é transformado, no final de tudo, no ficheiro ko.
+
+137
+00:25:28,680 --> 00:25:37,680
+Mas o que pode variar é que este diretório para os tais ficheiros, para os ficheiros do kernel, em que...
+
+138
+00:25:37,680 --> 00:25:45,680
+Portanto, eu tenho aqui as duas versões. Na maior parte dos exemplos de Makefile aparece assim.
+
+139
+00:25:45,680 --> 00:25:48,680
+Parece o quero não dir, igual a este caminho.
+
+140
+00:25:48,680 --> 00:25:56,680
+Basicamente, é o diretório default, onde são colocados os ficheiros do kernel das distribuições Linux.
+
+141
+00:25:56,680 --> 00:26:06,680
+Mesmo quando se instala o pacote com os ficheiros adicionais que permitem compilar os módulos, eles ficam aqui nesta pasta build, neste diretório build.
+
+142
+00:26:06,680 --> 00:26:13,680
+Este comando shell, o name-r, o que faz é obter a versão do kernel.
+
+143
+00:26:14,680 --> 00:26:26,680
+Basicamente, se vocês colocarem isto na linha de comando, se fizerem comando o name-r, vão ver que aparece a versão do kernel que vão usar no sistema.
+
+144
+00:26:26,680 --> 00:26:31,680
+No WSL, no Fedora, vão ajudar a versão.
+
+145
+00:26:31,680 --> 00:26:41,680
+E ele, portanto, desta forma, quando estamos a compilar diretamente no próprio sistema onde vamos usar o módulo, é isto que se faz.
+
+146
+00:26:41,680 --> 00:26:53,680
+Se estivermos a fazer a compilação cruzada, já vamos ter que indicar o diretório onde temos o ficheiro do kernel correspondente à maquinal,
+
+147
+00:26:53,680 --> 00:27:04,680
+que em geral já não vai estar aqui no diretório barra ali barra módulos, vai estar nos nossos diretórios de trabalho.
+
+148
+00:27:05,680 --> 00:27:20,680
+Por exemplo, aqui, ao descompactar isto, já não me lembro porquê, fez um mapeamento para o SR barra Libo, aproveitei este prefixo, mas enfim, já não me lembro porquê que pus este prefixo aqui, mas foi assim que ficou.
+
+149
+00:27:23,680 --> 00:27:31,680
+Já me estou a recordar, sim, eu estava a tentar fazer uma batota, que era copiar diretamente do sistema.
+
+150
+00:27:32,680 --> 00:27:43,680
+Mas como podem ver, portanto, no vosso caso, vocês vão ter que pôr, quem estiver a compilar isso no WSL ou no Fedora,
+
+151
+00:27:43,680 --> 00:27:55,680
+portanto, vão ter que indicar aqui o caminho para o diretório que é criado quando fazem o git clone, portanto, este passo inicial, logo do slide inicial,
+
+152
+00:27:55,680 --> 00:28:12,680
+portanto, este comando aqui vai vos criar um diretório chamado Linux, e basicamente, aquela variável kerneldir tem que referenciar este diretório que é criado aqui na altura do git
+
+153
+00:28:12,680 --> 00:28:18,680
+e que basicamente contém o código de fonte do kernel e depois o resultado também da compilação.
+
+154
+00:28:25,680 --> 00:28:38,680
+Pronto, isto era um aspecto que, ou seja, nós porque até puseram isso a um nível abaixo, pode ser uma coisa tão simples como isto,
+
+155
+00:28:38,680 --> 00:28:50,680
+ponto, ponto, barra Linux, se estiver num nível abaixo, num diretório Linux, uma coisa que vocês também, se tiverem dúvidas, também posso,
+
+156
+00:28:50,680 --> 00:28:55,680
+é uma questão de me enviarem uma listagem da vossa estrutura de diretores que eu posso dar mesmo.
+
+157
+00:28:55,680 --> 00:29:06,680
+E este é melhor, deixo este como está.
+
+158
+00:29:06,680 --> 00:29:34,680
+O último exercício, e ele depois, na próxima semana continuamos aqui, mas portanto, para fazer o tal, o medidor de frequência de PWM,
+
+159
+00:29:34,680 --> 00:29:48,680
+ou seja, do que for, o sinal, no fundo é um contador de impulsos, portanto, eu pretendo que vocês usem o sistema de interrupções externas do Raspberry Pi.
+
+160
+00:29:48,680 --> 00:29:58,680
+Portanto, o Raspberry Pi permite associar uma interrupção a cada um dos seus GPIOs, dos seus pinos de GPIO.
+
+161
+00:29:58,680 --> 00:30:12,680
+Portanto, ao contrário do que vimos no ATmega, que só alguns pinos é que podiam ser usados como interrupção externa, aqui podemos, qualquer um deles pode.
+
+162
+00:30:12,680 --> 00:30:28,680
+Mas do ponto de vista de programação, e uma vez que estamos aqui no ecossistema do Linux, a utilização dessas interrupções fica um bocadinho mais elaborada em termos de programação.
+
+163
+00:30:28,680 --> 00:30:47,680
+Basicamente, como o Linux quer ser o mais configurável possível e suportar o maior número possível de máquinas, a maior quantidade possível de computadores,
+
+164
+00:30:47,680 --> 00:31:05,680
+ele tem um sistema para gerir os pinos de GPIO e as respetivas interrupções que nos obriga a criar fecheiros que descrevem a funcionalidade dos pinos que queremos usar.
+
+165
+00:31:05,680 --> 00:31:10,680
+Portanto, tenho aqui um exemplo, que são os fecheiros de Device Tree.
+
+166
+00:31:10,680 --> 00:31:23,680
+Portanto, tem um aspecto que eu também mencionei numa vez aos outros, que eu falei do Linux, em que, por exemplo, num PC, num computador, qualquer computador que tenha barramentos PCI e PCI Express,
+
+167
+00:31:23,680 --> 00:31:36,680
+consegue detectar automaticamente quais são os dispositivos, porque os próprios dispositivos já são obrigados, as placas de expansão e qualquer dispositivo que esteja ligado aos barramentos PCI ou PCI Express,
+
+168
+00:31:36,680 --> 00:31:47,680
+são obrigados, pelo standard, a ter a capacidade de se identificar e de dizer que recursos já querem utilizar, nomeadamente se querem usar interrupções ou não.
+
+169
+00:31:47,680 --> 00:31:59,680
+Ou seja, o software, portanto, durante o arranco ou depois durante a utilização, consegue configurar automaticamente qualquer dispositivo que esteja ligado a esses barramentos.
+
+170
+00:31:59,680 --> 00:32:09,680
+O próprio sistema do USB acaba por estar interligado depois ao processador através também de ligações PCI Express.
+
+171
+00:32:09,680 --> 00:32:16,680
+Portanto, num sistema Linux a funcionar, num PC, toda essa configuração é automática.
+
+172
+00:32:16,680 --> 00:32:36,680
+Minhas sistemas, tipo o Raspberry Pi, sistemas industriais, tipicamente, são sistemas específicos para funções já mais específicas e que, tipicamente, também não são feitos a pensar em ser expansíveis.
+
+173
+00:32:36,680 --> 00:32:56,680
+Portanto, todos estes recursos são alocados estaticamente e não existe nenhum mecanismo automático para identificar essas funcionalidades e os recursos que são usados por cada pino ou pelos vários modos existentes.
+
+174
+00:32:56,680 --> 00:33:10,680
+Ou seja, tem que ser tudo definido a priori, no fundo, quase hardcoded, mas, portanto, aqui no caso Linux, nos cheiros que, ouvessem aqui uma convenção, portanto, os cheiros DTS,
+
+175
+00:33:10,680 --> 00:33:26,680
+portanto, os DTS de device trick, no fundo, é o que o nome diz, permite especificar uma árvore de dispositivos e das dependências e a forma como esses dispositivos estão ligados entre si.
+
+176
+00:33:26,680 --> 00:33:42,680
+O Raspberry Pi já traz alguns fecheiros para as funcionalidades básicas, portanto, e para o modo de funcionamento de foco, mas já num exemplo do que mostrei numa aula passada,
+
+177
+00:33:42,680 --> 00:33:55,680
+por exemplo, no I2C, para ativar a função de I2C num dos pinos que, habitualmente, não são usados, tivemos que carregar um destes fecheiros, portanto, estes chamados fecheiros de overlay,
+
+178
+00:33:55,680 --> 00:34:03,680
+para que o sistema reconhecesse essa funcionalidade e que o driver correspondente, ou seja, o modo correspondente, fosse ativado.
+
+179
+00:34:03,680 --> 00:34:16,680
+Aqui o que vamos fazer neste exercício é precisamente isso, vamos criar um fecheiro de dispositivo em que vamos, tanto vai funcionar como um overlay em relação à configuração que é usada no próprio arranque do Raspberry Pi,
+
+180
+00:34:16,680 --> 00:34:28,680
+portanto, temos que indicar aqui, neste tempo compatible, é para indicar depois ao kernel, para que o kernel saiba para que dispositivo é que este fecheiro se destina,
+
+181
+00:34:28,680 --> 00:34:48,680
+neste caso queremos que seja para este controlador 2835, que é o controlador que já vinha atrás logo do Raspberry Pi inicial, mas que o mesmo 2711 ainda é compatível,
+
+182
+00:34:48,680 --> 00:35:03,680
+ainda usa a maior parte das funcionalidades, ainda é baseado neste 2835. E vamos selecionar aqui, vamos identificar um pino, que é o 16,
+
+183
+00:35:03,680 --> 00:35:20,680
+isto são tudo palavras-chaves, tenho um API para lidar com os sistemas GPIO, portanto, tudo isto são palavras-chaves, não vou estar aqui a estudar exaustivamente esta gramática, mas basicamente a função,
+
+184
+00:35:20,680 --> 00:35:31,680
+é o código 0, portanto é o mesmo código que é usado depois no resto da programação, ou seja, o 1 para a entrada, depois o 4 para a primeira função alternativa e por aí fora,
+
+185
+00:35:31,680 --> 00:35:41,680
+aqui esta é para indicar se queremos usar a resistência de pull-up ou não, portanto, todas estas configurações, ou seja, eles fizeram, tentaram fazer uma coisa o mais genérica possível,
+
+186
+00:35:41,680 --> 00:35:55,680
+para ser possível configurar, portanto, qualquer sistema de uma forma coerente, o mais semelhante possível. Para ativar a interrupção nesse pino,
+
+187
+00:35:55,680 --> 00:36:08,680
+vamos tunir aqui este fragmento, portanto, mais uma vez como overlay, vou chamar aqui este make counter depois, portanto, é uma etiqueta que vamos ter que usar no código,
+
+188
+00:36:08,680 --> 00:36:22,680
+para fazer a associação do nosso código com esta configuração, em que, portanto, estamos aqui a dizer que queremos usar o interrupt no pino 16,
+
+189
+00:36:22,680 --> 00:36:31,680
+este 1 é um código especial também, depois posso mostrar as outras opções, mas o 1 é para dizer que queremos que a interrupção seja gerada no flanque ascendente,
+
+190
+00:36:31,680 --> 00:36:39,680
+depois existe o flanque descendente, o ao nível, portanto, aquelas opções todas que são supportadas pelo Raspberry Pi,
+
+191
+00:36:39,680 --> 00:36:48,680
+aqui é só, portanto, queremos que ele esteja no flanque ascendente, portanto, é este código 1, este status ok é a que fica logo a ativar-se.
+
+192
+00:36:48,680 --> 00:37:02,680
+Ou seja, o que vamos ver então é que vamos caber um módulo que é carregado para memória e depois, quando executamos este comando,
+
+193
+00:37:02,680 --> 00:37:19,680
+vai haver uma função que, portanto, o Linux vai percorrer todos os módulos que estão carregados e ver qual deles é que é compatível com esta etiqueta aqui,
+
+194
+00:37:19,680 --> 00:37:29,680
+portanto, e nós vamos colocar essa etiqueta no nosso módulo, este MyCounter, e então, quando isto for carregado, o nosso módulo vai, portanto, vai haver uma função,
+
+195
+00:37:29,680 --> 00:37:39,680
+o nosso módulo que vai ser chamada e que nos vai permitir identificar o pino de, portanto, a interrupção que está a ser, que foi selecionada,
+
+196
+00:37:39,680 --> 00:37:58,680
+ativada para aquele pino e associar-lhe uma função, basicamente assim, ou seja, tudo isto faz parte da API do Linux, portanto, a ideia é ter aqui um vector deste tipo,
+
+197
+00:37:58,680 --> 00:38:10,680
+onde, portanto, podemos até colocar vários, ou seja, o nosso módulo poderia estar preparado para trabalhar com diferentes dispositivos, com diferentes placas aqui,
+
+198
+00:38:10,680 --> 00:38:22,680
+portanto, neste caso só vai ser compatível com este MyCounter, que corresponde a esta interrupção no pino 16,
+
+199
+00:38:23,680 --> 00:38:44,680
+isto é uma palavra chave, uma macro que vai adicionar esta identificação às identificações do sistema, ou seja, a partir daqui o sistema já sabe que este módulo é compatível com
+
+200
+00:38:44,680 --> 00:38:57,680
+uma funcionalidade que estejam etiquetadas com este MyCounter e definimos aqui também numa estrutura auxiliar quais são as funções que devem ser chamadas,
+
+201
+00:38:57,680 --> 00:39:15,680
+quando, portanto, essa funciona, quando o dispositivo é detectado e depois quando o módulo é terminado aqui, ou seja, aqui as funções de arranque e determinação são declaradas de maneira diferente aqui nesta abordagem.
+
+202
+00:39:15,680 --> 00:39:32,680
+Pronto, de qualquer maneira, isto é só, estou a reparar que já estamos aqui a ficar em cima da hora, portanto, é a abordagem geral,
+
+203
+00:39:32,680 --> 00:39:46,680
+pois, se calhar, o melhor é voltar isto no início da próxima aula, portanto, vou deixar aqui este código de aumentar agora mesmo que isto está à espera, portanto, aqui estaria o código da configuração,
+
+204
+00:39:46,680 --> 00:39:50,680
+portanto, a definição da função de atendimento e interrupção propriamente.
+
+205
+00:39:51,680 --> 00:40:06,680
+É, mas então, o que eu sugeria era que tentassem batalhar agora, portanto, já têm estes slats com as notas, tenta colocar pelo menos, compilar este blinker.c que eu entretanto coloquei no módulo
+
+206
+00:40:06,680 --> 00:40:24,680
+para ver se, portanto, se no sábado já chegam lá, ou pelo menos para ver se nos surgem questões para podermos ajudar na quinta-feira para que a aula de sábado seja o mais produtiva possível, ok?
+
+207
+00:40:24,680 --> 00:40:45,680
+Pronto, então, quinta-feira é a hora normal, portanto, às 21h40, não é? Portanto, é isso, vocês devem ter, sempre vão ter a avaliação na aula das setoras?
+
+208
+00:40:45,680 --> 00:41:06,680
+Acho que sim. Ok, pronto, mas também, depois da aula já não estou a pensar nisso, mas compreendo que se calhar vão ter que se dedicar, pronto, como é um exame, um teste, assim mais teórico, se calhar vão ter que se dedicar algum tempo a isso, não é?
+
+209
+00:41:06,680 --> 00:41:10,680
+Mas pronto, fazemos o que for possível.
+
+210
+00:41:10,680 --> 00:41:21,680
+Professor, desculpe, última pergunta, onde nós vamos ter data de entrega para este trabalho? Na esta semana ou a próxima?
+
+211
+00:41:21,680 --> 00:41:40,680
+Em princípio, teria que ser no sábado, é assim, no sábado é que vai ser a última oportunidade que eu tenho para vos fazer perguntas e para ver as coisas a funcionar.
+
+212
+00:41:40,680 --> 00:42:03,680
+Portanto, eu depois posso dar alguma folga para fazerem alguma submissão final, alguma alteração que ainda façam na aula, mas a ideia era que esta semana isto ficasse fechado, por isso é que eu hoje estive aqui a dar estas dicas e na quinta-feira vou fazer o mesmo.
+
+213
+00:42:03,680 --> 00:42:25,680
+Portanto, tentem, pronto, é isso que eu estou a dizer, que eu estava a concluir, eu percebo que se calhar vocês com esse teste na quinta-feira, se calhar não vão ter muito tempo a dedicar aqui a parte da programação, mas se conseguirem, pronto, avançar um bocadinho nem que seja de ter as coisas prontas para compilar,
+
+214
+00:42:25,680 --> 00:42:46,680
+já nos poupava tempo depois no sábado para ver se no sábado se fazem tudo na aula e depois é só só meter no mudo. O meu plano era isso, era vocês no sábado já trazerem o código quase feito, eu via a funcionar e pronto, e ficava fechado por aí.
+
+215
+00:42:47,680 --> 00:42:52,680
+Fazia uma outra pergunta para ver se tinham percebido o que estavam, se perceberam o que estão a fazer.
+
+216
+00:42:53,680 --> 00:42:56,680
+Mas o código, relativamente estas duas últimas fichas do...
+
+217
+00:42:57,680 --> 00:42:58,680
+Sim, sim, estas aqui.
+
+218
+00:42:59,680 --> 00:43:01,680
+Do Raspberry Pi ou as outras anteriores?
+
+219
+00:43:02,680 --> 00:43:04,680
+Não, não, as anteriores...
+
+220
+00:43:05,680 --> 00:43:06,680
+Já está fechado.
+
+221
+00:43:06,680 --> 00:43:09,680
+Já está, essa fechou, mas não foi.
+
+222
+00:43:09,680 --> 00:43:10,680
+Certo.
+
+223
+00:43:10,680 --> 00:43:28,680
+Agora estas aqui, eu ainda não abri, portanto, a parte de se meter, não me preocupa, mas eu queria ver o código a funcionar, alguma coisa a funcionar no sábado, porque a minha impressão vai ser feita com base no que eu vi no sábado, não é?
+
+224
+00:43:29,680 --> 00:43:38,680
+Para fazer testes, nós precisávamos de Raspberry Pi ou se apassiam fazer testes como o Ubuntu, por exemplo?
+
+225
+00:43:39,680 --> 00:43:42,680
+Não, para verem o led apiscar e por aí fora.
+
+226
+00:43:43,680 --> 00:43:59,680
+Eu vou ver se na quinta-feira, a mesma maneira de durante a aula vocês poderem, ou seja, fazer na mesma aula, portanto, por videoconferência, mas ver se consigo disponibilizar um IP para vocês poderem testar durante a própria aula.
+
+227
+00:44:00,680 --> 00:44:21,680
+Ou seja, acedem, como não, vocês compilam aí nos vossos computadores, carregam para o endereço que eu vos der e depois digo se está a funcionar ou não, porque eu também, ou eu posso pôr aqui uma câmera virada para a placa e penso que consigo fazer isso.
+
+228
+00:44:22,680 --> 00:44:33,680
+E assim, pelo menos durante aquelas duas horas podiam fazer alguns testes, mas para isso, como é que já tenham as ferramentas prontas para conseguirem compilar o código?
+
+229
+00:44:34,680 --> 00:44:44,680
+Eu sei que alguns na última aula já estavam a trabalhar nos próprios computadores e ficaram com isso a funcionar, mas nem todos.
+
+230
+00:44:45,680 --> 00:44:53,680
+Lembro-me que alguns, até lembro-lhe pelo menos de uma pessoa que até na altura estava com dificuldade a instalar o Linux.
+
+231
+00:44:54,680 --> 00:45:13,680
+Pronto, é assim, se tiverem problemas com o WSL, tentem com o VirtualBox, como o vosso colega fez, o Cláudio, que portanto a minha única recomendação contra o VirtualBox é ser um pouco mais lento, mas assim, mais valento do que nada.
+
+232
+00:45:13,680 --> 00:45:30,680
+Portanto, se tiverem dificuldades com o WSL, e em termos do, portanto inicialmente tinha dito Fedora, mas se calhar mais vale usarem o, portanto, quem ainda não instalou, mais vale usar o Ubuntu.
+
+233
+00:45:30,680 --> 00:45:51,680
+Assim, como também estamos a usar o Ubuntu no Raspberry Pi, e eu acabei também, até aqui nos slides, há alguns comandos, penso que acabei por usar para o Ubuntu, mas vale, para quem ainda for instalar, mais vale instalar o Ubuntu, ok?
+
+234
+00:45:51,680 --> 00:46:03,680
+É o default do WSL, e quem for usar no VirtualBox, portanto, mais vale ir ao site do Ubuntu e descarregar a última versão.
+
+235
+00:46:03,680 --> 00:46:08,680
+Ok.
+
+236
+00:46:08,680 --> 00:46:11,680
+Ok.
+
+237
+00:46:11,680 --> 00:46:28,680
+Pessoal, eu, aqui na parte do Linux do kernel, aquela compilação do módulo, eu estava aqui a executar o comando de make, só que ele me testava a mandar erro, eu depois envio-lhe um print, não sei se depois consegue ajudar.
+
+238
+00:46:28,680 --> 00:46:30,680
+Mas enviam-me agora por email?
+
+239
+00:46:30,680 --> 00:46:33,680
+Não, não, eu vim tentar depois envio-lhe.
+
+240
+00:46:33,680 --> 00:46:36,680
+Ok, ok, é que eu não tinha aqui os...
+
+241
+00:46:36,680 --> 00:46:46,680
+Eu não sei como é que o cache do ficheiro estava a receber um erro por causa do caminho de ter espaços, mas que o cache no root, isso desaparece.
+
+242
+00:46:46,680 --> 00:46:56,680
+Sim, atenção aos espaços nos diretórios que alguns, algumas make files não gostam disso.
+
+243
+00:46:56,680 --> 00:47:10,680
+Pode ser o caso, de facto. Às vezes já há pessoas que no próprio username, não sei, põem lá diretórios com espaços e depois...
+
+244
+00:47:10,680 --> 00:47:13,680
+No meu caso era o diretório default área de trabalho.
+
+245
+00:47:13,680 --> 00:47:15,680
+Pois não, não.
+
+246
+00:47:15,680 --> 00:47:17,680
+Quando for...
+
+247
+00:47:17,680 --> 00:47:21,680
+Pois não trabalho na área de trabalho, eu queria um...
+
+248
+00:47:21,680 --> 00:47:25,680
+Portanto, quando abro o terminal para ir para o seu diretório base, é fazer...
+
+249
+00:47:25,680 --> 00:47:34,680
+Portanto, para já eu abro logo aí, mas se quiser ir, é CD espaço TIL, e fica logo, portanto, no seu home dir.
+
+250
+00:47:34,680 --> 00:47:38,680
+E o que eu sugiro é que aí crie um diretório promo para cada módulo que vai compilar.
+
+251
+00:47:39,680 --> 00:47:45,680
+Por exemplo, ao Blinker, faça mkdir Blinker e descarregue os cheios para lá.
+
+252
+00:47:45,680 --> 00:47:52,680
+Os módulos com bem, cada módulo com bem que esteja no seu próprio diretório.
+
+253
+00:47:52,680 --> 00:48:07,680
+Portanto, isso como gera aqueles cheios auxiliares todos para não, se não, rapidamente fica uma confusão, se estiver misturado com outros trabalhos ou projetos, ou seja lá o que for.
+
+254
+00:48:07,680 --> 00:48:09,680
+Ok, obrigado.
+
+255
+00:48:14,680 --> 00:48:22,680
+Também questões que tenham, enviem por e-mail que eu dentro dos possíveis tento responder.
+
+256
+00:48:24,680 --> 00:48:29,680
+Também daqui na quinta-feira já temos algo outra vez.
+
+257
+00:48:31,680 --> 00:48:35,680
+Se não houver então mais questões, podemos chegar por aqui hoje.
+
+258
+00:48:35,680 --> 00:48:37,680
+Ok, até mais.
+

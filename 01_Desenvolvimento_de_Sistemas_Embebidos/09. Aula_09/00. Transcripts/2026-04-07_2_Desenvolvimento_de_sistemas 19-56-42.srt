@@ -1,0 +1,560 @@
+1
+00:00:00,000 --> 00:00:11,520
+Depois, com base nestes apontadores, usamos os campos da respectiva estrutura para ativar os bits correspondentes.
+
+2
+00:00:11,520 --> 00:00:19,040
+Aqui, até já exemplifiquei para o caso da configuração do registro de controle.
+
+3
+00:00:19,040 --> 00:00:30,080
+Portanto, colocar o bit set a 1 para colocar no modo MaxSpace, no modo PWM mais básico,
+
+4
+00:00:30,080 --> 00:00:42,560
+e depois este para ativar o primeiro canal, digamos assim, que é o que é mapeado para o GPIO 12. Aqui já está bem.
+
+5
+00:00:42,560 --> 00:01:03,600
+Depois tenho que usar, conforme o valor que vier aqui na linha de comando, vou escrevê-lo no campo data, que é neste channel 0 data.
+
+6
+00:01:13,520 --> 00:01:16,560
+Não sei se alguém quer colocar.
+
+7
+00:01:16,560 --> 00:01:28,240
+Portanto, aqui a minha ideia era que vocês experimentassem o código, e até surgisse aí algum erro de compilação para eu poder ajudar.
+
+8
+00:01:28,240 --> 00:01:33,440
+Não sei é se conseguem assim, em tempo real, transpor isto.
+
+9
+00:01:33,440 --> 00:01:38,480
+Ah, também posso fazer outra coisa, que é colocar estes slites já no muzzle.
+
+10
+00:01:38,560 --> 00:01:41,840
+Deixa eu ver o que eu já devia ter feito para vocês estarem a seguir.
+
+11
+00:01:43,360 --> 00:01:52,720
+Vamos fazer o seguinte, eu ia dizer fazer um intervalo, mas basicamente já estou a fazer o intervalo, não precisarei de ligar a câmera.
+
+12
+00:01:52,720 --> 00:02:00,880
+Portanto, dêem-me 10 minutos para eu colocar estes slites no muzzle para vocês poderem ir consultando.
+
+13
+00:02:00,960 --> 00:02:05,920
+Ok, até se alguém...
+
+14
+00:02:05,920 --> 00:02:11,920
+Portanto, só volto a explicações daqui a 10 minutos, às 8 e 10.
+
+15
+00:02:11,920 --> 00:02:18,720
+Se alguém quiser sair entretanto e voltar a entrar daqui a 10 minutos, isto estejam a vontade.
+
+16
+00:02:18,720 --> 00:02:19,840
+Estou a ver.
+
+17
+00:02:19,840 --> 00:02:20,480
+Sim, sim.
+
+18
+00:02:20,480 --> 00:02:29,040
+Eu entretanto consegui instalar aqui a VirtualBox, a minha empresa, onde estou, quando eu estou aqui, a minha empresa.
+
+19
+00:02:29,040 --> 00:02:37,000
+que instalar aqui a VirtualBox. Ok, mas você então tinha conseguido para a VirtualBox
+
+20
+00:02:37,000 --> 00:02:42,800
+não precisou de... Se eles vivessem não. Pronto, ok, ainda bem. Eu me pergunto porque
+
+21
+00:02:42,800 --> 00:02:47,880
+ah, mas eu pela linha de comando dava-me aquele erro de permissão, a VirtualBox consegui
+
+22
+00:02:47,880 --> 00:02:58,480
+sacar e meti aqui o Ubuntu. Ok. Eu só não sei detalhes é que devo meter
+
+23
+00:02:58,480 --> 00:03:04,120
+aqui para o sistema, que ele depois pede-me aqui quanta rama que tem que alocar a máquina,
+
+24
+00:03:04,120 --> 00:03:09,960
+qual é o tamanho do disco e o número dos produtores. Quanto a memória, o número dos
+
+25
+00:03:09,960 --> 00:03:14,840
+produtores pode pôr, arrastar até aquilo começar a ficar vermelho ou vermelho ou cinzento,
+
+26
+00:03:14,840 --> 00:03:23,720
+isso pode pôr, normalmente é meio. Ok. Da memória, precisa ter cuidado porque a sua
+
+27
+00:03:23,720 --> 00:03:31,200
+máquina, quanta quantidade de rama é que tem? Não sei, deixa-me aqui ver. Será oito,
+
+28
+00:03:31,200 --> 00:03:50,360
+dezesseis. Para o computador, propriedades. Se eu aloquei, seis, mas não sei se... Será
+
+29
+00:03:50,360 --> 00:03:57,640
+o ideal. É assim, se você tiver uma máquina com oito e lançar uma máquina virtual com seis,
+
+30
+00:03:57,640 --> 00:04:06,440
+o Windows começa logo a sofrer. Ok. Isso é que eu estou a perguntar. Você já conseguiu ver aí no...
+
+31
+00:04:06,440 --> 00:04:18,400
+Ele tem RAM 32. Então, pode pôr oito, põe seis ou oito, portanto também não vai estar sempre
+
+32
+00:04:18,400 --> 00:04:28,440
+a máquina virtual ligada. Seis em princípios já terão desempenho razoável. É que eu meti seis,
+
+33
+00:04:28,440 --> 00:04:33,680
+mas ele parece-me aqui um bocado lento quando abre. Ele está aqui a instalar, o bom Twitter,
+
+34
+00:04:33,680 --> 00:04:39,640
+portanto, mas parece um bocado lento, mas também se eu ver continuar lento, desinstalo esta e aí
+
+35
+00:04:39,640 --> 00:04:46,160
+volto todo e instalo com a memória maior alocada a isto. Não precisa instalar isso, a memória você
+
+36
+00:04:46,160 --> 00:04:52,800
+pode mudar cada vez que reiniciar a máquina. Pode ir afinando até ficar com o... Porque se tem 32
+
+37
+00:04:52,800 --> 00:05:02,920
+GB até podia, no limite, pôr aí dez a seis e... Em princípios, se tivesse mau desempenho já não
+
+38
+00:05:02,920 --> 00:05:07,480
+seria por falta de memória. Ok. Ou seja, isto estar assim um bocado lento será atribuído aqui um
+
+39
+00:05:07,480 --> 00:05:15,440
+bocado à parte da memória pelo que é isto? Ou de ainda estar com muita atividade no disco
+
+40
+00:05:15,720 --> 00:05:22,040
+e como é uma máquina virtual ficar lenta? O problema do VirtualBox é que, portanto,
+
+41
+00:05:24,160 --> 00:05:35,160
+hoje em dia no Windows 11, ela não funciona no modo ótimo. Se vocês repararem na barra de baixo,
+
+42
+00:05:35,160 --> 00:05:41,520
+até deve aparecer lá o símbolo de uma tartaruga que indica que eu estou a trabalhar assim no modo
+
+43
+00:05:42,520 --> 00:05:50,000
+que não consegue utilizar todas as funcionalidades de virtualização da máquina. Mas desde que,
+
+44
+00:05:50,000 --> 00:05:55,600
+pronto, desde que não fique aí... Foi uma solução que eu conseguia... Não, pois, desde que seja minimamente
+
+45
+00:05:55,600 --> 00:06:03,040
+funcional. Eu já vi, às vezes, alunos que até escrever depois tem que ter cuidado, que carregam
+
+46
+00:06:03,040 --> 00:06:08,440
+numa tecla, ela só parece passar de um segundo isso a trabalhar assim, é desagradável, mas não...
+
+47
+00:06:08,440 --> 00:06:17,720
+Portanto, desde que dê para executar os comandos normalmente, em vez de... Se aparecer instantâneamente,
+
+48
+00:06:17,720 --> 00:06:24,160
+se em vez de demorar um minuto, demorar um minuto e meio também não é grave. Ok, ok.
+
+49
+00:06:25,880 --> 00:06:32,720
+Maravilhoso, então vou... Deixe-me só ver se eu não tenho aqui nada... Pode ser isto.
+
+50
+00:08:38,640 --> 00:08:45,800
+Se alguém quiser descarregar, já coloquei os slides no múdulo. Então agora ia também pedir-vos
+
+51
+00:08:45,800 --> 00:08:50,400
+dois ou três minutinhos, vou aproveitar para beber um copo de água. Até já, até já.
+
+52
+00:15:38,440 --> 00:15:59,040
+Maravilhoso, então, vou passar agora aqui a segunda parte. Antes disso, eu ia-vos pedir uma coisa que...
+
+53
+00:15:59,040 --> 00:16:14,320
+Só para... Quem tiver a câmara, só pelo menos momentaneamente, será possível ligarem a câmara,
+
+54
+00:16:14,320 --> 00:16:26,960
+para eu poder mais facilmente associar as caras aos nomes, porque temos poucas aulas, alguns eu já
+
+55
+00:16:26,960 --> 00:16:34,800
+estou interessando, mas... Portanto, gostava de ficar aqui com uma fotografia do grupo, que por um momento,
+
+56
+00:16:34,800 --> 00:16:43,720
+obviamente, não divulgar, é mesmo só para efeitos de eu poder mais facilmente perceber quem são as pessoas.
+
+57
+00:16:43,720 --> 00:16:50,480
+Pronto, eu estava com uma avaliação, é baseada nos exercícios e, de certa forma, pronto, também,
+
+58
+00:16:50,480 --> 00:17:00,400
+no vosso avontade nas aulas. Não quero estar a enganar. Vou já tirar aqui os...
+
+59
+00:17:20,480 --> 00:17:40,800
+Pelo menos, pela minha memória visual e, portanto, tendo em conta o sítio onde vocês estão,
+
+60
+00:17:41,680 --> 00:17:51,520
+acho que já deve ser suficiente. Ok, tá bom, obrigado, então. Se quiserem, desligar-se-os ou à vontade.
+
+61
+00:17:51,520 --> 00:18:16,120
+Vamos então passar para aquele segundo conjunto de exercícios, em que... Deixem-me lá ver. Eu também vou
+
+62
+00:18:16,120 --> 00:18:28,680
+abrir o código todo, eu tentei zoar aqui nos slides as partes, portanto, mais relevantes, mas de qualquer
+
+63
+00:18:28,680 --> 00:18:34,040
+maneira, se calhar, também, como bem que tem aqui, iremos olhando para o código original, para vocês situarem.
+
+64
+00:18:34,040 --> 00:18:39,960
+Portanto, este é o uso Blinker, tem que ver onde é que tem esse Blinker.
+
+65
+00:18:46,120 --> 00:19:04,520
+Pronto, penso que será este.
+
+66
+00:19:04,520 --> 00:19:14,440
+O pessoal já agora com uma dúvida rápida sobre o código. O pessoal definiu ali o let status como zero,
+
+67
+00:19:14,440 --> 00:19:22,440
+mas definiu como char, não devia ser o minuto. Ou existe alguma razão?
+
+68
+00:19:22,440 --> 00:19:36,840
+Este é um esqueleto de código que eu na altura, portanto, que isto já vem do meu... Portanto, fui adaptando o
+
+69
+00:19:36,840 --> 00:19:42,840
+ano após ano. Isto não era do tempo em que os meus testes que eu fiz com isto eram na porta paralela dos
+
+70
+00:19:42,840 --> 00:19:49,480
+PCs, na altura em que eles ainda tinham porta paralela, portanto, bastava 8 bits para as 8 linhas de dados.
+
+71
+00:19:49,720 --> 00:19:57,160
+Basicamente, é por isso que usava o char. O char, no fundo, é tratado como um valor de 8 bits,
+
+72
+00:19:57,160 --> 00:20:06,120
+quando lhe atribuímos inteiros e quando o tratamos como um valor numérico, no fundo é um valor de 8 bits.
+
+73
+00:20:06,760 --> 00:20:16,760
+Eu, por acaso, no código que eu escrevo, mas pronto, de vez em quando que lá me escapa o char,
+
+74
+00:20:16,760 --> 00:20:24,600
+mas normalmente tento usar o tipo de dados, o int, aqui até... Exato, esta é necessária.
+
+75
+00:20:24,600 --> 00:20:32,040
+Portanto, até depois posso alterar isto, normalmente aqui até prefiro chamar isto o int 8 underscore t,
+
+76
+00:20:32,200 --> 00:20:39,880
+para deixar claro que está a ser tratado como um inteiro de 8 bits, mas é assim, o compilador basicamente trata isto como um inteiro de 8 bits.
+
+77
+00:20:39,880 --> 00:20:48,360
+Para este exercício nós, no fundo, até só vamos usar um bit, embora eu faça aqui depois o complemento de todos os bits.
+
+78
+00:20:48,360 --> 00:20:59,000
+Na altura era para... Olha, eu posso dizer que na altura eu fazia isto para poder ligar o LED, ou o que é que eu ligava,
+
+79
+00:20:59,000 --> 00:21:05,960
+a qualquer um dos pinos sem me meter a preocupar, assim como estava todos, portanto era indiferente.
+
+80
+00:21:05,960 --> 00:21:12,440
+É por isso que trabalho aqui com os 8 bits, em vez de ser só com um.
+
+81
+00:21:13,400 --> 00:21:28,360
+Ora bem, basicamente este fecheiro blinker.c que já agora, eu ia dizer que está no Moodle, mas deixem-me ver se eu...
+
+82
+00:21:28,360 --> 00:21:33,400
+Pois, este também sequer está no Moodle.
+
+83
+00:21:34,360 --> 00:21:47,640
+Também é algo que... Eu acho que devia estar a planear dar-vos isto durante a aula, e depois acabei por não pôr, também vou já pôr para não esquecer.
+
+84
+00:21:47,640 --> 00:21:52,440
+Este aqui é em relação à segunda ficha, não é? Ao exercício 2?
+
+85
+00:21:52,440 --> 00:21:54,360
+Sim, sim, ao exercício 2.
+
+86
+00:21:54,360 --> 00:21:57,720
+Sim, está nos anexos e dizes lá o blinker.c.
+
+87
+00:21:57,720 --> 00:22:03,720
+Mas está no pdf, não é?
+
+88
+00:22:03,720 --> 00:22:05,720
+Sim, sim.
+
+89
+00:22:05,720 --> 00:22:09,720
+Mas para não terem que copiar o fecheiro.c.
+
+90
+00:22:09,720 --> 00:22:19,720
+Pronto, mas pelo menos tem o... Ok, então já viram o código fonte, mas este por acaso que está no pdf, poderá até nem ter...
+
+91
+00:22:19,720 --> 00:22:25,720
+Tudo bem. Eu depois forneço isso.
+
+92
+00:22:25,720 --> 00:22:35,720
+Porque, mais uma vez, deixem-me ver esta versão que eu tenho aqui, P4, este blinker.
+
+93
+00:22:55,720 --> 00:23:09,720
+Pronto, de qualquer maneira já o atirei para lá.
+
+94
+00:23:09,720 --> 00:23:13,720
+Sim, já tenho o fecheiro, sim.
+
+95
+00:23:13,720 --> 00:23:17,720
+E este aqui...
+
+96
+00:23:17,720 --> 00:23:27,720
+Antes mesmo, portanto, vamos ver este fecheiro, o funcionamento deste módulo de kernel baseado nesta utilização de um timer
+
+97
+00:23:27,720 --> 00:23:33,720
+que tem que ser inicialmente configurado, portanto através de uma função timer setup,
+
+98
+00:23:33,720 --> 00:23:41,720
+em que vamos iniciar esta variável made timer que é declarada globalmente, iniciada aqui,
+
+99
+00:23:41,720 --> 00:23:46,720
+e o que nos interessa iniciar essencialmente é indicar qual é a função de callback,
+
+100
+00:23:46,720 --> 00:23:50,720
+qual é a função que vai ser chamada quando a temporização termina.
+
+101
+00:23:50,720 --> 00:24:01,720
+O segundo aspecto que temos de configurar é quando é que a temporização vai acabar, ou a duração desta temporização.
+
+102
+00:24:01,720 --> 00:24:07,720
+Isto é feito aqui neste código, é feito com base nesta variável global.gifis.
+
+103
+00:24:07,720 --> 00:24:21,720
+Esta variável gifis é uma variável que faz parte da API do Linux, portanto do núcleo do Linux, para a programação de kernel.
+
+104
+00:24:21,720 --> 00:24:31,720
+E é uma... ela conta... serve de base de tempo, isto é usado pelo próprio escalonador do sistema operativo,
+
+105
+00:24:31,720 --> 00:24:39,720
+e é a frequência com que este... deste sinal de gifis, que no fundo é o sinal de relógio,
+
+106
+00:24:39,720 --> 00:24:44,720
+até pode ser configurado na altura da... quando se está a configurar o kernel.
+
+107
+00:24:44,720 --> 00:24:51,720
+Os valores, portanto, os valores típicos são o 100, o 250 ou 1000 Hz.
+
+108
+00:24:51,720 --> 00:25:00,720
+A configuração default no Raspberry Pi é o... portanto, é 250, portanto, o que é que isto quer dizer que...
+
+109
+00:25:00,720 --> 00:25:08,720
+que este relógio, portanto, esta variável gifis é incrementada 250 vezes por segundo, ok?
+
+110
+00:25:08,720 --> 00:25:15,720
+E isso é depois, em termos de programação, podemos confirmar isso usando esta variável global hz,
+
+111
+00:25:15,720 --> 00:25:22,720
+que, portanto... perdão, isto não é uma variável, é uma constante que vem precisamente da configuração do kernel,
+
+112
+00:25:22,720 --> 00:25:29,720
+que nos diz, então, quantos impulsos de relógio ocorrem por segundo.
+
+113
+00:25:29,720 --> 00:25:36,720
+E que depois podemos usar esta constante para normalizar aqui os nossos tempos, não é?
+
+114
+00:25:36,720 --> 00:25:47,720
+Ou seja, aqui ao colocar aqui este blink delay ao igualar ao hz, no fundo queres dizer que quero ter uma pausa de um segundo, ok?
+
+115
+00:25:47,720 --> 00:25:53,720
+Porque o hz, no fundo, é o número de impulsos que vão ocorrer num segundo.
+
+116
+00:25:53,720 --> 00:26:03,720
+Então, ou seja, eu aqui estou a dizer que o meu timer vai expirar daqui a um segundo, porque gifis é o instante atual,
+
+117
+00:26:03,720 --> 00:26:11,720
+portanto, o número de impulsos que foram gerados desde que o sistema arrancou,
+
+118
+00:26:11,720 --> 00:26:21,720
+e vamos fazer a espera para daqui a 250, no fundo, que é o valor deste blink delay, ou seja, daqui a um segundo.
+
+119
+00:26:21,720 --> 00:26:27,720
+E, finalmente, a temporização iniciada aqui com esta função é de timer.
+
+120
+00:26:27,720 --> 00:26:33,720
+Esta função é de timer, atualmente já existe uma alternativa, que é o modo timer,
+
+121
+00:26:33,720 --> 00:26:39,720
+em que, portanto, se consegue fazer isto tudo, ou seja, em vez de estar a fazer isto como uma linha de código,
+
+122
+00:26:39,720 --> 00:26:45,720
+coloca-se aqui como parâmetro, mas é a mesma coisa, vai dar ao mesmo.
+
+123
+00:26:45,720 --> 00:26:51,720
+Depois temos, então, que definir na função de callback este my timer func,
+
+124
+00:26:51,720 --> 00:26:58,720
+portanto, que é uma função que tem que ter um cabeçalho pré-definido, portanto, tem que ter um no retorno nada,
+
+125
+00:26:58,720 --> 00:27:06,720
+e tem um único parâmetro deste tipo, no fundo, o sistema quando chama, portanto, quando a temporização termina,
+
+126
+00:27:06,720 --> 00:27:12,720
+chama a função e passa-lhe o apontador para o próprio timer,
+
+127
+00:27:12,720 --> 00:27:20,720
+ou seja, em rigor nem precisava ter colocado aqui como variável global, porque ele é,
+
+128
+00:27:20,720 --> 00:27:28,720
+para este fim, pelo menos, porque ele é passado, mas coloquei depois para fazer a limpeza quando o módulo é descarregado,
+
+129
+00:27:28,720 --> 00:27:38,720
+para ter certeza que ele é eliminado, portanto, tem que ter aqui acesso como variável global para a função de remove.
+
+130
+00:27:38,720 --> 00:27:46,720
+E portanto, aqui é que vamos, cada vez que esta função for chamada, vamos alterar,
+
+131
+00:27:46,720 --> 00:27:54,720
+aqui no exemplo é alterado o valor desta variável, portanto, sim, o valor da variável addstat,
+
+132
+00:27:54,720 --> 00:28:02,720
+vai estar sempre a comutar entre 0 e 255, que basicamente corresponde a ter os bits todos a 1,
+
+133
+00:28:02,720 --> 00:28:12,720
+e de seguida armar a próxima temporização, que será daqui a mais um ciclo.
+
+134
+00:28:12,720 --> 00:28:20,720
+Reparem que este blink delay, nesta implementação, isto, o blink delay é metade do período,
+
+135
+00:28:20,720 --> 00:28:30,720
+porque, portanto, durante o tempo correspondente a um blink delay, vamos ter a saída, portanto, a saída a 1,
+
+136
+00:28:30,720 --> 00:28:36,720
+depois, durante outro período de tempo igual ao blink delay, vamos ter a 0,
+
+137
+00:28:36,720 --> 00:28:46,720
+portanto, ou seja, o período total vai ser duas vezes o blink delay, é um por menor,
+
+138
+00:28:46,720 --> 00:28:54,720
+depois, até nas funções que eu defini aí no código, para podermos passar o período em milissegundos,
+
+139
+00:28:54,720 --> 00:29:02,720
+tem que-se fazer uma divisão por dois e uma multiplicação por dois, conforme se está a ler ou a escrever,
+
+140
+00:29:02,720 --> 00:29:06,720
+precisamente, para compensar este aspecto.
+

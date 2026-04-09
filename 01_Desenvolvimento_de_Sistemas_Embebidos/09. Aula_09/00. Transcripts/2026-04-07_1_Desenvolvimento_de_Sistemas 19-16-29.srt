@@ -1,0 +1,1544 @@
+1
+00:00:00,000 --> 00:00:11,920
+cuidar trabalhar diretamente nesse sistema, basta instalar este pacote.
+
+2
+00:00:11,920 --> 00:00:20,440
+No entanto, eu suponho que, se calhar, a maioria, e principalmente neste momento, não tenham
+
+3
+00:00:20,440 --> 00:00:27,920
+acesso, portanto, a alternativa é, pelo menos, para compilar, para ver que se não
+
+4
+00:00:27,920 --> 00:00:35,720
+tem, pelo menos, para ver se conseguem gerar o ficheiro, para depois poderem testar diretamente
+
+5
+00:00:35,720 --> 00:00:46,160
+na máquina, é instalar o Cosmos Fondo do Kernel no vosso sistema Linux e fazer a compilação
+
+6
+00:00:46,160 --> 00:00:55,480
+cruzada como já foi feito, ou como está explicado naquele primeiro exercício que
+
+7
+00:00:55,480 --> 00:01:00,480
+vocês têm que fazer quando se for programar no vosso PC, portanto, usam o cross compiler
+
+8
+00:01:00,480 --> 00:01:10,120
+para, portanto, poderem compilar localmente na vossa máquina e depois basta copiar o ficheiro
+
+9
+00:01:10,120 --> 00:01:12,440
+resultante para o Raspberry Pi.
+
+10
+00:01:12,440 --> 00:01:15,800
+Sim, sim, posa, André?
+
+11
+00:01:15,800 --> 00:01:23,200
+Era só para questionar aí dessa parte que diz cross compilation, ou seja, se o ideal
+
+12
+00:01:23,200 --> 00:01:29,240
+era fazermos assim, só porque, ou seja, depois, quando tivermos algum sistema em vida
+
+13
+00:01:29,240 --> 00:01:34,840
+ou assim, eu creio que, ou seja, na maioria dos casos, vai ser assim que vamos fazer,
+
+14
+00:01:34,840 --> 00:01:35,840
+não é?
+
+15
+00:01:35,840 --> 00:01:40,760
+Depois, ou seja, passando aqui um bocado mais para a parte prática, não é?
+
+16
+00:01:40,760 --> 00:01:46,680
+Ou seja, quando, ou seja, quando quisermos realmente implementar isto em algum sistema,
+
+17
+00:01:46,680 --> 00:01:47,680
+não é?
+
+18
+00:01:47,680 --> 00:01:51,000
+A ideia é compilarmo-nos isto sempre na nossa máquina, ou não?
+
+19
+00:01:51,000 --> 00:01:52,000
+Fiquei com essa dúvida.
+
+20
+00:01:52,320 --> 00:02:01,080
+Não, é, é, eu aqui, neste momento lá está, eu dei esta, mostrei aqui esta hipótese
+
+21
+00:02:01,080 --> 00:02:08,560
+já a atalhar, porque realmente para módulos mais simples, para código mais simples, também
+
+22
+00:02:08,560 --> 00:02:14,000
+no impacto, o tempo de compilação e para quem tem acesso, portanto, permanente a este
+
+23
+00:02:14,000 --> 00:02:20,480
+computador, eu, por exemplo, eu, há coisas que, portanto, confesso, eu tenho possibilidade,
+
+24
+00:02:20,480 --> 00:02:26,080
+tenho um Raspberry Pi ligado sempre aqui ao meu lado, ou seja, através da rede, eu
+
+25
+00:02:26,080 --> 00:02:30,040
+às vezes quero fazer uma pequena alteração, já tenho lá o código de fonte, ou quero
+
+26
+00:02:30,040 --> 00:02:35,840
+fazer um teste, muitas vezes eu até faço, passo diretamente no próprio, portanto, no
+
+27
+00:02:35,840 --> 00:02:42,440
+próprio Raspberry Pi, mas, pronto, por até disciplina de programação, não ter os cheiros
+
+28
+00:02:42,440 --> 00:02:46,080
+espalhados num lado ou noutro, que depois também já tive esse tipo de infortúnios,
+
+29
+00:02:46,520 --> 00:02:52,160
+não usar o git e, pronto, ficar e depois limpar o cartão e depois ficar na dúvida
+
+30
+00:02:52,160 --> 00:02:56,760
+se fiquei com a versão mais recente do programa ou não, portanto, aí mais valorou só ser
+
+31
+00:02:56,760 --> 00:03:03,720
+organizada e realmente ter na nossa estação de trabalho, e depois, portanto, usando a
+
+32
+00:03:03,720 --> 00:03:13,640
+compilação cruzada. E, basicamente, portanto, nesse sentido, eu ia pedir-vos para fazerem
+
+33
+00:03:13,640 --> 00:03:22,640
+portanto eu vou assumir que eu não sei se estão todos, eu podia ter avisado, não sei se estão todos com a possibilidade
+
+34
+00:03:22,640 --> 00:03:33,640
+de trabalhar diretamente na vossa máquina Linux neste momento, mas o que eu ia pedir é que fizessem estes passos já,
+
+35
+00:03:33,640 --> 00:03:42,640
+porque principalmente há aqui uma parte que poderá envolver uma compilação demorada.
+
+36
+00:03:42,640 --> 00:03:52,640
+Portanto, eu queria que testassem mesmo aquele primeiro módulo para ver se ficam com isto,
+
+37
+00:03:52,640 --> 00:04:01,640
+portanto, com capacidade de fazer compilação para depois, mais à frente, poderem facilmente compilar
+
+38
+00:04:01,640 --> 00:04:11,640
+e não estarem só a escrever código, portanto, sem ter certeza que ele está correto.
+
+39
+00:04:11,640 --> 00:04:14,640
+Sim, sim, Cláudio, pode falar.
+
+40
+00:04:14,640 --> 00:04:28,640
+Pessoal, eu tenho só o WSL aqui na minha máquina, aqui está o computador de trabalho, não tenho o Ubuntu nem o Fedora, nem o Linux instalado aqui.
+
+41
+00:04:28,640 --> 00:04:31,640
+Mas o WSL instalou com o Ubuntu?
+
+42
+00:04:32,640 --> 00:04:44,640
+Não foi eu que instalei, porque eu tenho que pedir permissões ao departamento de IT e eles instalaram aqui o WSL.
+
+43
+00:04:44,640 --> 00:04:50,640
+Mas se você abrir com o Windows 11?
+
+44
+00:04:50,640 --> 00:04:52,640
+É, sim.
+
+45
+00:04:53,640 --> 00:04:57,640
+Tinha aqui qualquer coisa a pitar?
+
+46
+00:04:57,640 --> 00:05:06,640
+Então, tem que abrir no, portanto, se fizer com o botão direito rato em cima do símbolo do Windows,
+
+47
+00:05:06,640 --> 00:05:16,640
+abrir o menu de tarefas de aplicações, aliás, tem aqui o start, não é?
+
+48
+00:05:16,640 --> 00:05:20,640
+Tem que abrir um terminal e...
+
+49
+00:05:20,640 --> 00:05:22,640
+Ou seja, botão do Windows e...
+
+50
+00:05:22,640 --> 00:05:26,640
+Até basta escrever, desculpa, até basta escrever WSL.
+
+51
+00:05:26,640 --> 00:05:36,640
+Se escrever WSL na lupa, no Finder das aplicações, vai aparecer lá WSL System, não é?
+
+52
+00:05:36,640 --> 00:05:37,640
+Sim.
+
+53
+00:05:37,640 --> 00:05:39,640
+Clique nesse.
+
+54
+00:05:39,640 --> 00:05:44,640
+Só, ele tenta-me abrir aqui um terminal e depois fecha. Não sei se...
+
+55
+00:05:44,640 --> 00:05:51,640
+Pois, então é porque está aí algum problema, porque ele devia de facto abrir o terminal...
+
+56
+00:05:51,640 --> 00:05:52,640
+E ficar...
+
+57
+00:05:52,640 --> 00:05:55,640
+E ficar lá.
+
+58
+00:06:00,640 --> 00:06:04,640
+Portanto, aí já deixa-me... que alternativa...
+
+59
+00:06:04,640 --> 00:06:08,640
+Comigo o Hyper-V funcionou muito bem.
+
+60
+00:06:09,640 --> 00:06:12,640
+Genetivo do Windows.
+
+61
+00:06:12,640 --> 00:06:13,640
+Certo.
+
+62
+00:06:13,640 --> 00:06:15,640
+O Hyper-V...
+
+63
+00:06:15,640 --> 00:06:21,640
+Pois, mas aqui o vosso colega tem um problema, porque ele não tem permissões para instalar software, portanto...
+
+64
+00:06:21,640 --> 00:06:26,640
+Mas o Hyper-V já está instalado nativamente, acho.
+
+65
+00:06:26,640 --> 00:06:29,640
+Eu acho que não tem. Hyper-Vision.
+
+66
+00:06:29,640 --> 00:06:34,640
+Hyper-V... não, pois, certo, certo...
+
+67
+00:06:34,640 --> 00:06:37,640
+Pois, já teria que ser no Windows profissional.
+
+68
+00:06:37,640 --> 00:06:44,640
+E assim, ele realmente, se já estiver instalado, ele pode criar uma máquina virtual na conta dele.
+
+69
+00:06:44,640 --> 00:06:48,640
+Tenta procurar por gestor de Hyper-V.
+
+70
+00:06:50,640 --> 00:06:54,640
+Gestor de Hyper-V.
+
+71
+00:06:54,640 --> 00:06:56,640
+Não aparece nada.
+
+72
+00:06:56,640 --> 00:06:57,640
+Não.
+
+73
+00:06:57,640 --> 00:06:58,640
+Ok.
+
+74
+00:06:59,640 --> 00:07:04,640
+Pois, era essa janela o Hyper-V Manager.
+
+75
+00:07:05,640 --> 00:07:13,640
+Se não tem isso também, mesmo quando muito teria isso por linha de comando, mas duvido.
+
+76
+00:07:13,640 --> 00:07:23,640
+Normalmente quando o Hyper-V está ativado ou instalado, esta ferramenta vem em conjunto.
+
+77
+00:07:23,640 --> 00:07:29,640
+Que é a interface gráfica para criar as máquinas virtuais e depois fazer a sua gestão.
+
+78
+00:07:29,640 --> 00:07:37,640
+Pois, eu abri aqui entretanto o PowerShell e meti aqui um código que tinha aqui na suporte da Microsoft para instalar.
+
+79
+00:07:37,640 --> 00:07:42,640
+Só que diz que a operação pedida necessita de elevação, portanto...
+
+80
+00:07:43,640 --> 00:07:46,640
+Acho que não dá.
+
+81
+00:07:47,640 --> 00:07:55,640
+Estou a pensar o problema que vocês não têm contato.
+
+82
+00:07:55,640 --> 00:08:06,640
+Como isto é um curso assim um bocado misto entre departamentos, vocês não têm contato nos novos servidores do departamento de Engenharia Eletrotecnica,
+
+83
+00:08:06,640 --> 00:08:11,640
+porque nós temos lá uma máquina Linux que em princípio...
+
+84
+00:08:11,640 --> 00:08:26,640
+Mas convinha que arranjasse uma solução para conseguir fazer estes trabalhos, porque eu duvido no sábado tendo em conta,
+
+85
+00:08:26,640 --> 00:08:34,640
+porque é assim, realmente não só chega lá, está a ligar e os receber e você destalar-se, o tempo vai passando.
+
+86
+00:08:35,640 --> 00:08:42,640
+E eu tenho muito receio que na próxima aula não tenham tempo suficiente para fazer tudo.
+
+87
+00:08:43,640 --> 00:08:45,640
+Se não forem já...
+
+88
+00:08:45,640 --> 00:08:54,640
+Mas já agora, alguém conseguiu fazer este comando do Git de descarregar o código-fonte?
+
+89
+00:08:54,640 --> 00:08:56,640
+Sim, eu sim.
+
+90
+00:08:56,640 --> 00:09:04,640
+E depois já é fazer este CD ali, não que se parem para o diretório,
+
+91
+00:09:04,640 --> 00:09:14,640
+depois isto é escrever mesmo isto na linha de comando para indicar que queremos usar a versão de 64-gits,
+
+92
+00:09:14,640 --> 00:09:21,640
+pois aqui estas barras, isto indica que é tudo na mesma linha, isto é tudo na mesma linha de comando.
+
+93
+00:09:21,640 --> 00:09:29,640
+Este primeiro comando que temos aqui é para aplicar a configuração default para o Raspberry Pi,
+
+94
+00:09:29,640 --> 00:09:36,640
+aqui é usada, e depois aqui é a ordem de compilação que é o tal passo que demora bastante,
+
+95
+00:09:36,640 --> 00:09:43,640
+não digo bastante, é meia hora, dependendo dos empenhos da máquina.
+
+96
+00:09:44,640 --> 00:09:53,640
+E aqui também tem que adaptar isto, portanto eu estou a assumir que tenho instalado o tal toolchain
+
+97
+00:09:53,640 --> 00:10:04,640
+que eu indiquei na última aula PIL, que supostamente deveriam ter usado para compilar o primeiro exercício.
+
+98
+00:10:04,640 --> 00:10:09,640
+Portanto, eu aqui puse este TIL barra porque no meu sistema instalei mesmo,
+
+99
+00:10:09,640 --> 00:10:18,640
+ou no sistema que estava a usar para fazer estes testes, instalei mesmo no diretório base do meu user,
+
+100
+00:10:18,640 --> 00:10:25,640
+mas se instalar um Nogon sob diretório depois tem que adaptar, o melhor é pôr em um caminho completo,
+
+101
+00:10:25,640 --> 00:10:32,640
+barra home, barra o vosso nome do utilizador e por aí fora.
+
+102
+00:10:44,640 --> 00:10:51,640
+Ora bem, eu não sei se querem tirar um screenshot disto e eu entretanto, se é que é possível,
+
+103
+00:10:51,640 --> 00:10:58,640
+quer dizer, devem conseguir, não é? Para eu passar de slide.
+
+104
+00:11:00,640 --> 00:11:09,640
+E entretanto também, se quiserem ir tentando, tem aí as instruções.
+
+105
+00:11:09,640 --> 00:11:17,640
+Portanto, isto é uma sequência de comandos. Sendo que, volto a dizer, este último é suposto ser demorado
+
+106
+00:11:17,640 --> 00:11:27,640
+porque ele vai, ele, portanto, neste pacote, quando se instale o Raspberry Pi,
+
+107
+00:11:27,640 --> 00:11:35,640
+ele já traz os cheiros necessários para podermos, todos os cheiros necessários para fazermos os módulos de kernel
+
+108
+00:11:35,640 --> 00:11:43,640
+sem ter que compilar nada. Aqui o que estamos a fazer é descarregar o código fonte, portanto, do Linux,
+
+109
+00:11:43,640 --> 00:11:51,640
+já adaptado ao Raspberry Pi, depois aplicamos a configuração default, que é usada pelo sistema operativo
+
+110
+00:11:51,640 --> 00:11:59,640
+e depois vamos ter que compilar, portanto, só temos a código fonte e ele precisa de alguns cheiros,
+
+111
+00:11:59,640 --> 00:12:05,640
+portanto, precisa ser compilado, ou pelo menos alguns dos cheiros necessários da compilação para poder também,
+
+112
+00:12:05,640 --> 00:12:13,640
+depois podemos compilar os módulos à parte. Por isso é que, pronto, tenho este procedimento um bocado,
+
+113
+00:12:13,640 --> 00:12:23,640
+e além disso, sempre que sai uma versão nova do kernel, é preciso voltar a gerar, portanto,
+
+114
+00:12:23,640 --> 00:12:30,640
+a descarregar ou a fazer, portanto, a sincronizar e voltar a compilar para a nova versão do kernel.
+
+115
+00:12:30,640 --> 00:12:37,640
+Portanto, eu recordo que os módulos têm que ser compilados exatamente para a versão e para a configuração
+
+116
+00:12:37,640 --> 00:12:42,640
+que é usada depois no sistema final, portanto, do Linux que é usado no sistema final.
+
+117
+00:12:42,640 --> 00:12:48,640
+Por isso é que isto, às vezes, até pode ser uma coisa simples, mas só para ficar compilado direitinho,
+
+118
+00:12:48,640 --> 00:12:55,640
+para funcionar, dá algum trabalho, é preciso ter-se cuidado com estes passos todos.
+
+119
+00:12:55,640 --> 00:13:01,640
+Qual é que é a versão do Raspberry que usamos lá na...
+
+120
+00:13:01,640 --> 00:13:03,640
+É o 4?
+
+121
+00:13:03,640 --> 00:13:07,640
+Sim, não era isso, é a versão do kernel e do OS.
+
+122
+00:13:07,640 --> 00:13:11,640
+É assim, aqui eu não sei se você vai conseguir escolher.
+
+123
+00:13:11,640 --> 00:13:18,640
+Não, é que eu tenho um 4 exatamente igual, era mais para programar exatamente como está no laboratório, não era por...
+
+124
+00:13:18,640 --> 00:13:25,640
+Ah não, mas você vai fazer, vai compilar diretamente no Raspberry?
+
+125
+00:13:25,640 --> 00:13:29,640
+Era para fazer as duas, na verdade, por isso é que estou...
+
+126
+00:13:29,640 --> 00:13:36,640
+Eu posso dizer, deixa-me, eu tenho que consultar aqui, eu penso que...
+
+127
+00:13:36,640 --> 00:13:41,640
+Eu estava agora a fechá-lo, por isso é que perguntei, estava a usar o...
+
+128
+00:13:41,640 --> 00:13:44,640
+Não, basicamente é a versão mais recente, eu...
+
+129
+00:13:44,640 --> 00:13:52,640
+Portanto, há coisa de duas semanas, naquela semana que antecedeu a UAPL,
+
+130
+00:13:54,640 --> 00:14:03,640
+ou melhor, foi na própria semana, eu descarreguei a versão mais recente do Raspberry POS, o Trixie,
+
+131
+00:14:03,640 --> 00:14:10,640
+aquele que é baseado no Trixie, e o kernel, mas depois fiz um update e ele atualizou o kernel,
+
+132
+00:14:10,640 --> 00:14:18,640
+e portanto, respondendo à sua questão, ele está a usar, portanto, a versão 6.12.75 do kernel.
+
+133
+00:14:18,640 --> 00:14:20,640
+Não sei se era isso que você estava a perguntar.
+
+134
+00:14:20,640 --> 00:14:21,640
+Era, era.
+
+135
+00:14:21,640 --> 00:14:27,640
+Portanto, se fizer o comando, o name "-a", depois de instalar, é super...
+
+136
+00:14:27,640 --> 00:14:32,640
+Mas é assim, isso já não me preocupa tanto, porque se você tiver o código a funcionar
+
+137
+00:14:32,640 --> 00:14:37,640
+para uma versão minimamente recente do kernel,
+
+138
+00:14:37,640 --> 00:14:44,640
+depois, para pôr a funcionar no laboratório, é só fazer novamente make e ele, portanto,
+
+139
+00:14:44,640 --> 00:14:51,640
+compila na hora e a compilação dos módulos é rápida, é praticamente instantânea.
+
+140
+00:14:51,640 --> 00:14:58,640
+Só não queria... Portanto, era até chegarem lá no sábado e ainda terem que estar a lutar contra erros de compilação,
+
+141
+00:14:58,640 --> 00:15:02,640
+a lutar a escrever o código lá na hora, porque aí é que não dá mesmo tempo.
+
+142
+00:15:07,640 --> 00:15:13,640
+A proposta, eu ia dizer qualquer coisa, lembre-me qualquer coisa, a proposta é isso, a versão do name "-a".
+
+143
+00:15:15,640 --> 00:15:18,640
+Sim, sim, já agora.
+
+144
+00:15:19,640 --> 00:15:27,640
+Este código, portanto, mesmo os exemplos, os exemplos que eu tenho nos slides e o código que eu coloco no módulo,
+
+145
+00:15:27,640 --> 00:15:30,640
+isto é feito para a versão 6.12.
+
+146
+00:15:32,640 --> 00:15:36,640
+Se vocês testarem este código em versões mais antigas do kernel,
+
+147
+00:15:36,640 --> 00:15:39,640
+ou até numa que seja-me mais recente,
+
+148
+00:15:42,640 --> 00:15:48,640
+há certas coisas que poderão não funcionar ou, portanto, está mesmo a recompilação,
+
+149
+00:15:48,640 --> 00:15:53,640
+porque isto o Linux, portanto, tem um desenvolvimento bastante dinâmico,
+
+150
+00:15:54,640 --> 00:15:57,640
+mudou muitas vezes a API.
+
+151
+00:15:57,640 --> 00:16:03,640
+Quando digo muitas vezes, se uma pessoa se pega em código de há dez anos atrás,
+
+152
+00:16:03,640 --> 00:16:07,640
+existe uma grande probabilidade de já não funcionar com as versões atuais do kernel.
+
+153
+00:16:07,640 --> 00:16:12,640
+Ok, não estou a dizer que mudou, não estou a dizer de cada mês que as coisas deixam de funcionar,
+
+154
+00:16:12,640 --> 00:16:17,640
+mas estou a dizer que se tiverem lá um sistema já antigo, que nunca atualizaram,
+
+155
+00:16:17,640 --> 00:16:23,640
+é natural que o código possa não ser totalmente compatível porque há funções que vão ser no deprecated
+
+156
+00:16:23,640 --> 00:16:29,640
+e depois são marcadas como deprecated e depois desaparecem mesmo.
+
+157
+00:16:29,640 --> 00:16:37,640
+Ainda hoje estava a consultar uma coisa na versão 7 que está em release candidate
+
+158
+00:16:37,640 --> 00:16:45,640
+e já ali umas funções que eu estou a usar que daqui a uns anos, quando começar a usar o 7,
+
+159
+00:16:45,640 --> 00:16:50,640
+já vou ter que alterar o código porque elas já desapareceram.
+
+160
+00:16:50,640 --> 00:16:53,640
+Mas pronto, isso foi só uma curiosidade.
+
+161
+00:16:55,640 --> 00:17:02,640
+Portanto, como está a instalar agora, em princípio vai vir com a versão 6.12,
+
+162
+00:17:02,640 --> 00:17:08,640
+depois a minor version, digamos assim, a release exata,
+
+163
+00:17:08,640 --> 00:17:15,640
+portanto isso já não afeta muito, ou não afeta nada na questão da API,
+
+164
+00:17:15,640 --> 00:17:20,640
+do conjunto de funções que são usadas aqui nos exercícios.
+
+165
+00:17:27,640 --> 00:17:29,640
+Parabéns.
+
+166
+00:17:30,640 --> 00:17:42,640
+Esta estrutura, portanto, o primeiro passo que eu penso que todos deviam ter conseguido fazer na última aula,
+
+167
+00:17:42,640 --> 00:17:47,640
+até porque depois no final dei lá algumas dicas no quadro,
+
+168
+00:17:47,640 --> 00:17:53,640
+era fazer, no fundo, uma mini-biblioteca para trabalhar com o GPA,
+
+169
+00:17:53,640 --> 00:17:59,640
+ou uma mini-biblioteca, no fundo, duas funções, nomeadamente,
+
+170
+00:17:59,640 --> 00:18:03,640
+uma para escolher a função do pino,
+
+171
+00:18:03,640 --> 00:18:09,640
+tanto se é entrada, saída, ou uma daquelas funções alternativas especiais,
+
+172
+00:18:09,640 --> 00:18:13,640
+tipo o PWM, como depois vamos usar no exercício a seguir,
+
+173
+00:18:13,640 --> 00:18:20,640
+ou o I2C, ou esses modos alternativos que podem ser atribuídos aos pinos.
+
+174
+00:18:20,640 --> 00:18:25,640
+E outra, quando estamos a trabalhar no modo saída, para aquele primeiro exercício,
+
+175
+00:18:25,640 --> 00:18:28,640
+e depois que vamos usar também no modo de kernel,
+
+176
+00:18:28,640 --> 00:18:33,640
+uma para mudar quando o pino está configurado como saída,
+
+177
+00:18:33,640 --> 00:18:36,640
+para colocá-lo a 0 ou 1,
+
+178
+00:18:36,640 --> 00:18:41,640
+portanto, para podermos escolher o valor que está aplicado ao pino.
+
+179
+00:18:41,640 --> 00:18:46,640
+No fundo, o objectivo do exercício 1 era fazer isso,
+
+180
+00:18:46,640 --> 00:18:53,640
+portanto, estes nomes de funções, foi eu que lhes dissei,
+
+181
+00:18:53,640 --> 00:18:55,640
+vocês podem dar os nomes que quiserem,
+
+182
+00:18:55,640 --> 00:18:57,640
+mas em termos de funcionalidade convinha ter isso,
+
+183
+00:18:57,640 --> 00:19:00,640
+porque depois vão precisar disso no segundo conjunto de exercícios,
+
+184
+00:19:00,640 --> 00:19:05,640
+não vão fazer a mesma coisa, mas já no espaço do kernel.
+
+185
+00:19:10,640 --> 00:19:13,640
+Portanto, recapitulando, esse primeiro exercício,
+
+186
+00:19:14,640 --> 00:19:18,640
+eu aqui até o alterei ligeiramente,
+
+187
+00:19:18,640 --> 00:19:28,640
+eu na aula disse para passarem o valor da saída como parâmetro de linha de comando,
+
+188
+00:19:28,640 --> 00:19:37,640
+mas aqui neste fragmento de código até fiz a própria seleção do pino também como parâmetro de linha de comando,
+
+189
+00:19:37,640 --> 00:19:42,640
+ou seja, o primeiro parâmetro será a indicação do pino, um valor numérico,
+
+190
+00:19:42,640 --> 00:19:47,640
+e o outro será o estado, portanto, 0 ou 1,
+
+191
+00:19:47,640 --> 00:19:53,640
+exatamente, 0 ou 1, porque aqui não estou a fazer verificações de erro,
+
+192
+00:19:53,640 --> 00:19:59,640
+portanto, também, vamos assumir, isto é também feito de teste.
+
+193
+00:19:59,640 --> 00:20:07,640
+Portanto, aqui, esta parte de obter o acesso aos registros,
+
+194
+00:20:07,640 --> 00:20:12,640
+através da função de abrir o .dev.mem e o .map,
+
+195
+00:20:12,640 --> 00:20:16,640
+que estão nos slides anteriores,
+
+196
+00:20:16,640 --> 00:20:20,640
+também penso que é só irem lá e copiarem,
+
+197
+00:20:20,640 --> 00:20:22,640
+e depois aplicar estas funções.
+
+198
+00:20:22,640 --> 00:20:27,640
+Relativamente a estas funções, eu não sei se sentaram a fazer,
+
+199
+00:20:27,640 --> 00:20:33,640
+ou se tiveram dificuldade a fazer, se houve alguma dúvida,
+
+200
+00:20:33,640 --> 00:20:39,640
+portanto, eu pus lá assim umas dicas no quadro, aquela questão de estarem os,
+
+201
+00:20:39,640 --> 00:20:50,640
+portanto, cada banco de 32 bits servir para configurar 10 registros,
+
+202
+00:20:50,640 --> 00:21:00,640
+isto porque são usados 3 bits para configurar a função de cada registro,
+
+203
+00:21:00,640 --> 00:21:03,640
+portanto, eu pus lá as fórmulas no quadro,
+
+204
+00:21:03,640 --> 00:21:07,640
+a ideia é passarem estas operações aqui para dentro da função,
+
+205
+00:21:07,640 --> 00:21:10,640
+para depois poderem usar nos outros programas,
+
+206
+00:21:10,640 --> 00:21:14,640
+nos outros exercícios que vão aparecer aí à frente.
+
+207
+00:21:19,640 --> 00:21:23,640
+Também, portanto, se alguém tiver dificuldade nessa parte,
+
+208
+00:21:25,640 --> 00:21:29,640
+também pusemos, posso voltar aí.
+
+209
+00:21:30,640 --> 00:21:32,640
+.map
+
+210
+00:21:41,640 --> 00:21:46,640
+Relativamente ao som do exercício,
+
+211
+00:21:46,640 --> 00:21:48,640
+.map
+
+212
+00:21:54,640 --> 00:22:01,640
+A ideia é ativar a função de pwm, portanto, aqui não vamos nós implementar o pwm,
+
+213
+00:22:01,640 --> 00:22:03,640
+poderia ser, podíamos fazer isto por bitbanging,
+
+214
+00:22:03,640 --> 00:22:12,640
+mas a ideia é usar o gerador de pwm do Sysam ownership.
+
+215
+00:22:12,640 --> 00:22:19,640
+Vamos fazer um programa que aceite valores de 0 a 100 e depois,
+
+216
+00:22:19,640 --> 00:22:23,640
+portanto, de acordo com esse valor, vai configurar,
+
+217
+00:22:23,640 --> 00:22:30,640
+depois a linha vai ficar lá com o sinal de pwm com o respectivo daticycle.
+
+218
+00:22:30,640 --> 00:22:35,640
+Portanto, mais uma vez, vamos ter um preâmbulo deste género e aqui,
+
+219
+00:22:35,640 --> 00:22:41,640
+portanto, mais uma vez, vamos ter a ideia de fazermos isto como uma função,
+
+220
+00:22:41,640 --> 00:22:46,640
+a tal mini biblioteca que eu mencionei, é podermos usar esta função,
+
+221
+00:22:46,640 --> 00:22:50,640
+que já foi necessária aqui no exercício anterior,
+
+222
+00:22:50,640 --> 00:22:56,640
+usamos agora para configurar este GPO16.
+
+223
+00:22:58,640 --> 00:23:01,640
+Eu peço desculpa que há aqui uma incongruência, já não lembro se era 16 ou 12,
+
+224
+00:23:02,640 --> 00:23:05,640
+depois tem que ver no inútil, sem haver com as ligações,
+
+225
+00:23:05,640 --> 00:23:07,640
+quer dizer, não tem só haver com as ligações,
+
+226
+00:23:07,640 --> 00:23:10,640
+porque peço desculpa, eu acho que o erro é aqui,
+
+227
+00:23:10,640 --> 00:23:15,640
+vamos atirar isso a limpo quando olharmos para os estratos do datasheet.
+
+228
+00:23:20,640 --> 00:23:23,640
+Agora a questão é que valor é que vamos passar aqui
+
+229
+00:23:23,640 --> 00:23:26,640
+para selecionar essa função de pwm,
+
+230
+00:23:26,640 --> 00:23:29,640
+e para isso temos que consultar o datasheet,
+
+231
+00:23:29,640 --> 00:23:34,640
+eu já fui pôr alguma dessa informação nos slides da semana passada,
+
+232
+00:23:34,640 --> 00:23:37,640
+mas vou ter que colocar aqui,
+
+233
+00:23:37,640 --> 00:23:43,640
+ou seja, é o 12, tem que ser o 12, portanto, aqui foi erro meu,
+
+234
+00:23:43,640 --> 00:23:47,640
+portanto, eu penso que o 16 deve ser no outro exercício,
+
+235
+00:23:47,640 --> 00:23:49,640
+é no último exercício que eu tenho aqui nos slides,
+
+236
+00:23:49,640 --> 00:23:52,640
+na altura de ter confundido.
+
+237
+00:23:52,640 --> 00:24:02,640
+Portanto, como podem ver, o pino 12 de facto tem lá,
+
+238
+00:24:02,640 --> 00:24:05,640
+o pino 12 é o gpio 12,
+
+239
+00:24:05,640 --> 00:24:12,640
+numa das duas funções tem a geração de pw0,
+
+240
+00:24:12,640 --> 00:24:15,640
+portanto, esta alta é de alternativa,
+
+241
+00:24:15,640 --> 00:24:18,640
+portanto, função alternativa,
+
+242
+00:24:18,640 --> 00:24:23,640
+já vimos na semana passada que pode ir até 6 funções alternativas,
+
+243
+00:24:23,640 --> 00:24:29,640
+portanto, a função alternativa 0 corresponde ao pwm 0,
+
+244
+00:24:29,640 --> 00:24:37,640
+basicamente este processador tem dois geradores de pwm
+
+245
+00:24:37,640 --> 00:24:40,640
+e cada gerador de pwm tem dois canais,
+
+246
+00:24:42,640 --> 00:24:47,640
+ou seja, no limite podemos ter 4 sinais de pwm,
+
+247
+00:24:48,640 --> 00:24:54,640
+ou seja, então qual é o código que temos que escolher aqui para a função alta 0?
+
+248
+00:24:54,640 --> 00:24:57,640
+Ao contrário do que poderíamos ter pensado,
+
+249
+00:24:57,640 --> 00:24:59,640
+temos que ter atenção que estes números não estão por ordem,
+
+250
+00:24:59,640 --> 00:25:04,640
+portanto, a função 0 não responde à posição a seguir ao 2,
+
+251
+00:25:04,640 --> 00:25:09,640
+apesar da representação que existe aqui nesta tabela,
+
+252
+00:25:09,640 --> 00:25:13,640
+portanto, para selecionarmos a função alternativa 0,
+
+253
+00:25:13,640 --> 00:25:19,640
+em qualquer um dos casos temos que carregar aqueles 3 bits com o valor 4,
+
+254
+00:25:19,640 --> 00:25:21,640
+portanto, este 1,0,0,
+
+255
+00:25:23,640 --> 00:25:25,640
+ou seja, este ponto de interrogação que está aqui,
+
+256
+00:25:25,640 --> 00:25:29,640
+este ponto de interrogação basicamente é o valor 4.
+
+257
+00:25:36,640 --> 00:25:39,640
+Já agora, não relacionado com o exercício,
+
+258
+00:25:39,640 --> 00:25:47,640
+mas mais uma vez para ilustrar aqui a flexibilidade que temos na escolha das funções dos pinos,
+
+259
+00:25:47,640 --> 00:25:49,640
+que neste caso nem é muita,
+
+260
+00:25:50,640 --> 00:25:53,640
+os pinos que podemos usar para a geração de pwm,
+
+261
+00:25:53,640 --> 00:25:58,640
+no fundo, dos que estão acessíveis lá no conector,
+
+262
+00:25:58,640 --> 00:26:01,640
+ou melhor, nos pinos de header, são só estes,
+
+263
+00:26:01,640 --> 00:26:03,640
+o 12, o 13, o 18 e o 19,
+
+264
+00:26:03,640 --> 00:26:07,640
+sendo que o 12 e o 13 usam o pwm 0,
+
+265
+00:26:07,640 --> 00:26:14,640
+e o 18 e o 19 usam o pwm também o 0,
+
+266
+00:26:14,640 --> 00:26:17,640
+ou seja, ou são usados para aqui ou para aqui,
+
+267
+00:26:17,640 --> 00:26:21,640
+isto depois, em algumas situações, dá-lhes mais jeito usar o 12 ou 13,
+
+268
+00:26:21,640 --> 00:26:23,640
+em outros, o 18 ou o 19.
+
+269
+00:26:23,640 --> 00:26:28,640
+Reparem que já agora aqui este 0, este underscore 0 e underscore 1,
+
+270
+00:26:28,640 --> 00:26:34,640
+têm a ver com o tal canal que existem, com os dois canais que existem em cada gerador de sinal.
+
+271
+00:26:34,640 --> 00:26:36,640
+Aqui ele representa como 0 e 1,
+
+272
+00:26:36,640 --> 00:26:39,640
+e noutras partes, ele, quando digo ele, é o data sheet,
+
+273
+00:26:39,640 --> 00:26:41,640
+porque este é um estrato do data sheet,
+
+274
+00:26:43,640 --> 00:26:46,640
+e noutros sítios, representa como um I2,
+
+275
+00:26:46,640 --> 00:26:48,640
+que acaba por ser um bocado confuso,
+
+276
+00:26:48,640 --> 00:26:52,640
+eu tentei seguir sempre a convenção de 0 e 1,
+
+277
+00:26:52,640 --> 00:26:57,640
+que começa com o 0, mas mesmo nos slides tem aqui também uns estratos do data sheet
+
+278
+00:26:57,640 --> 00:27:00,640
+que aparece a referir um I2.
+
+279
+00:27:01,640 --> 00:27:04,640
+De qualquer maneira, a ideia é usarmos o primeiro canal,
+
+280
+00:27:04,640 --> 00:27:07,640
+que é o que está associado ao GPO 12.
+
+281
+00:27:15,640 --> 00:27:18,640
+O gerador pwm tem aqui vários registros,
+
+282
+00:27:18,640 --> 00:27:23,640
+como é habitual, não vamos estar a vê-los aqui exaustivamente,
+
+283
+00:27:23,640 --> 00:27:26,640
+para já algo estou em duplicado, que é para, portanto,
+
+284
+00:27:26,640 --> 00:27:29,640
+para configurar cada canal, independentemente.
+
+285
+00:27:29,640 --> 00:27:32,640
+Depois temos este controlo, vamos ter,
+
+286
+00:27:32,640 --> 00:27:37,640
+basicamente os que vão ter que selecionar são estes de controlo,
+
+287
+00:27:37,640 --> 00:27:40,640
+é este controlo, aliás, este CTL,
+
+288
+00:27:40,640 --> 00:27:46,640
+e o de range e o de data.
+
+289
+00:27:47,640 --> 00:27:51,640
+Os outros pode-se deixar com os valores default,
+
+290
+00:27:51,640 --> 00:27:56,640
+que, portanto, são funcionalidades que não vamos explorar aqui.
+
+291
+00:28:00,640 --> 00:28:07,640
+Basicamente, o registro de range, de certa forma,
+
+292
+00:28:07,640 --> 00:28:21,640
+estabelece a resolução do gerador pwm.
+
+293
+00:28:22,640 --> 00:28:27,640
+Por acaso, agora, esquece-me de pôr aqui,
+
+294
+00:28:27,640 --> 00:28:31,640
+eu penso que pode ir até 4095.
+
+295
+00:28:32,640 --> 00:28:36,640
+Mas, agora, vamos ver aqui.
+
+296
+00:28:39,640 --> 00:28:41,640
+Portanto, pwm.
+
+297
+00:28:57,640 --> 00:29:00,640
+Portanto, pwm.
+
+298
+00:29:00,640 --> 00:29:03,640
+Portanto, pwm.
+
+299
+00:29:17,640 --> 00:29:20,640
+Portanto, pwm.
+
+300
+00:29:20,640 --> 00:29:23,640
+Portanto, pwm.
+
+301
+00:29:28,640 --> 00:29:31,640
+Vou ler 32 bits.
+
+302
+00:29:36,640 --> 00:29:39,640
+Não, perdão, o range, estou à procura do range.
+
+303
+00:29:50,640 --> 00:30:09,640
+32, isto é um registro de 32 bits, mas eu tenho quase certeza absoluta que ligo aqui,
+
+304
+00:30:09,640 --> 00:30:15,640
+não tenho ideia que isto tenha o que no valor máximo não chega a 32 bits.
+
+305
+00:30:16,640 --> 00:30:19,640
+Bem, é algo que podemos experimentar depois.
+
+306
+00:30:19,640 --> 00:30:23,640
+De qualquer maneira, eu aqui no nível do exercício,
+
+307
+00:30:23,640 --> 00:30:30,640
+vou voltar aqui, a ideia é, portanto, isto é um registro de 32 bits,
+
+308
+00:30:30,640 --> 00:30:35,640
+mas eu tenho a ideia que o valor não pode ser tão elevado.
+
+309
+00:30:35,640 --> 00:30:38,640
+Depois tenho de confirmar isso.
+
+310
+00:30:39,640 --> 00:30:42,640
+E, no fundo, basta-o ser a resolução.
+
+311
+00:30:42,640 --> 00:30:49,640
+Depois, o data register, no fundo, vai indicar o número de ciclos em que a linha vai estar a 1.
+
+312
+00:30:49,640 --> 00:30:53,640
+No fundo, vai determinar o data cycle.
+
+313
+00:30:53,640 --> 00:31:00,640
+Ou seja, se nós pusermos, por exemplo, aqui no range register o valor 100,
+
+314
+00:31:01,640 --> 00:31:11,640
+depois podemos definir o valor do data cycle praticamente como se fosse uma percentagem,
+
+315
+00:31:11,640 --> 00:31:18,640
+de 0 a 100, colocando esse valor inteiro aqui no registro, neste data register.
+
+316
+00:31:19,640 --> 00:31:31,640
+Adicionalmente, estes geradores de PWM do BCM2711, dos Raspberry Pi em geral,
+
+317
+00:31:31,640 --> 00:31:34,640
+têm dois modos de operação.
+
+318
+00:31:34,640 --> 00:31:41,640
+Têm o modo de operação tradicional, portanto que está durante o tempo,
+
+319
+00:31:41,640 --> 00:31:51,640
+mantém a 1 durante o período correspondente ao valor colocado aqui no data register
+
+320
+00:31:51,640 --> 00:31:55,640
+e depois, no restante, fica a 0.
+
+321
+00:31:55,640 --> 00:32:00,640
+Mas este modo de operação nem sequer é o default.
+
+322
+00:32:00,640 --> 00:32:05,640
+O modo default de operação dele consiste em distribuir os uns,
+
+323
+00:32:05,640 --> 00:32:10,640
+portanto, fazer com que o sinal de PWM seja o mais equilibrado possível.
+
+324
+00:32:10,640 --> 00:32:15,640
+Portanto, em vez de termos aqui uma sequência de períodos, no fundo,
+
+325
+00:32:15,640 --> 00:32:23,640
+o gerador de PWM vê cada uma destes bocadinhos aqui, portanto, deste período como um conjunto de períodos,
+
+326
+00:32:23,640 --> 00:32:27,640
+cujo número é dado aqui por este range register,
+
+327
+00:32:27,640 --> 00:32:34,640
+e em vez de pôr primeiro aqui um conjunto de períodos de impulsos a 1,
+
+328
+00:32:34,640 --> 00:32:36,640
+ou de ciclos de relógio a 1,
+
+329
+00:32:36,640 --> 00:32:43,640
+o que ele faz é distribuir, ir alternando o mais possível uns com zeros para que isto fique equilibrado.
+
+330
+00:32:43,640 --> 00:32:54,640
+Portanto, desta forma fica-se com a teoria disto é que depois a interferência gerada pelo sinal de PWM
+
+331
+00:32:54,640 --> 00:32:59,640
+ou a eventual interferência gerada pelo sinal de PWM fica com uma frequência mais alta
+
+332
+00:32:59,640 --> 00:33:11,640
+e para as aplicações em vista acaba depois por ser mais útil ter essa frequência mais alta
+
+333
+00:33:11,640 --> 00:33:16,640
+que eventualmente até poderá ser mais facilmente filtrada.
+
+334
+00:33:16,640 --> 00:33:21,640
+É por isso que ele usa este método, porque no fundo em termos médios é a mesma coisa,
+
+335
+00:33:22,640 --> 00:33:28,640
+e depois aqui todos os zeros, ou ter esses uns e zeros espalhados,
+
+336
+00:33:28,640 --> 00:33:35,640
+portanto, depois em termos médios o número de íons vai ser o mesmo, o período vai ser o mesmo,
+
+337
+00:33:35,640 --> 00:33:38,640
+portanto vai dar o mesmo data cycle.
+
+338
+00:33:38,640 --> 00:33:46,640
+De qualquer maneira, aqui para o exercício eu vou pedir-vos que usem este modo,
+
+339
+00:33:46,640 --> 00:33:53,640
+porque depois para o exercício que vêm de seguida,
+
+340
+00:33:53,640 --> 00:33:59,640
+em que eu quero que contem, que verifiquem realmente a frequência,
+
+341
+00:33:59,640 --> 00:34:02,640
+ou que meçam a frequência que é gerada pelo PWM,
+
+342
+00:34:02,640 --> 00:34:10,640
+é mais fácil se tiverem, portanto, se houver uma transição por cada ciclo de PWM.
+
+343
+00:34:10,640 --> 00:34:21,640
+Os bits que tem que ativar aqui no Registo de Controlo,
+
+344
+00:34:21,640 --> 00:34:27,640
+portanto, eu recordo que este Registo de Controlo é este primeiro que está aqui,
+
+345
+00:34:27,640 --> 00:34:36,640
+no endereço base do Banco de Registros para configuração do PWM zero,
+
+346
+00:34:36,640 --> 00:34:40,640
+cujos endereços agora eu até indiquei aqui, depois vamos ter que usar isto no código.
+
+347
+00:34:44,640 --> 00:34:52,640
+Portanto, reparem que aqui aparece aquele fenômeno que eu estava a mencionar há pouco,
+
+348
+00:34:52,640 --> 00:34:57,640
+em que o datasheet menciona os canais em vez de 0 e 1, é 1 e 2,
+
+349
+00:34:57,640 --> 00:35:01,640
+portanto, aqui onde aparece o que nos interessa neste caso, desta tabela,
+
+350
+00:35:01,640 --> 00:35:10,640
+é o 1 que corresponde ao 0, aqui na minha notação e nos exemplos de código que eu tenho.
+
+351
+00:35:10,640 --> 00:35:19,640
+Portanto, ou seja, o que eu pretendo é que coloquem neste modo M-S, portanto, o marque 7,
+
+352
+00:35:19,640 --> 00:35:27,640
+marque space, aliás, este modo aqui,
+
+353
+00:35:27,640 --> 00:35:35,640
+e depois tem que se colocar este bit a 1 para ativar o módulo PWM,
+
+354
+00:35:35,640 --> 00:35:42,640
+portanto, são os dois únicos bits que têm que ativar neste Registo.
+
+355
+00:35:42,640 --> 00:35:53,640
+Portanto, para fazerem isso é usar uma estratégia semelhante, análoga ao que fizeram para a configuração dos módulos de entrada e saída,
+
+356
+00:35:53,640 --> 00:36:01,640
+no exercício inicial definimos uma estrutura que mapeia os registros, neste caso, do PWM,
+
+357
+00:36:01,640 --> 00:36:09,640
+portanto, temos aqui o controlo, temos aqui o range, o data, estes não eram precisos mas deixo isto ficando mesmo,
+
+358
+00:36:09,640 --> 00:36:12,640
+mas pelo menos até aqui iamos precisar.
+
+359
+00:36:12,640 --> 00:36:19,640
+E depois vão usar a função, portanto, abrem o .dev.mem, que já está aberto no início do programa,
+
+360
+00:36:19,640 --> 00:36:26,640
+e fazem um emmap, só que agora usam o endereço correspondente aos registros,
+
+361
+00:36:26,640 --> 00:36:38,640
+aqui neste parâmetro tem que passar o endereço correspondente aos registros do PWM,
+
+362
+00:36:38,640 --> 00:36:44,640
+que estão neste offset, que eu mencionei a pouco no slide, este C000.
+
+363
+00:36:49,640 --> 00:37:00,640
+Eu peço desculpa, eu não sei se alguém, entretanto, está com o manual, porque eu, ao mexer na janela,
+
+364
+00:37:00,640 --> 00:37:03,640
+está com a janela do Teams.
+
+365
+00:37:03,640 --> 00:37:11,640
+Não sei se alguém tem alguma questão, ou melhor, se tiverem questões, obviamente, podem colocar.
+
+366
+00:37:11,640 --> 00:37:16,640
+Pois ainda há outra coisa que tem que fazer, que é configurar o clock.
+
+367
+00:37:16,640 --> 00:37:27,640
+Mais uma vez, portanto, esta configuração do clock é um dos aspectos que eu até mencionei numa das aulas anteriores,
+
+368
+00:37:27,640 --> 00:37:35,640
+que, enfim, não está nada, nem sequer está documentada no data sheet, visto em exemplos de código,
+
+369
+00:37:35,640 --> 00:37:44,640
+mas pronto, o endereço base é este, tem que fazer da mesma o emmap para apanhar aqui,
+
+370
+00:37:44,640 --> 00:37:50,640
+aqui só nos interessa, no fundo há este, e se quiserem experimentar o playscaler,
+
+371
+00:37:50,640 --> 00:37:58,640
+curiosidade, tem que mapear dois registros de 32 bits, ou dois registros de 4 bytes,
+
+372
+00:37:58,640 --> 00:38:10,640
+no fundo dois, o int 32t, mais ou menos como está aqui, portanto o primeiro dá acesso ao registro de configuração do relógio,
+
+373
+00:38:10,640 --> 00:38:16,640
+e o segundo ao playscaler. Eu aqui ainda mencionei o playscaler, não vou apenas ter,
+
+374
+00:38:16,640 --> 00:38:22,640
+mas se alguém tiver a curiosidade de experimentar com diferentes frequências de PWA.
+
+375
+00:38:23,640 --> 00:38:32,640
+O oscilador, portanto o Raspberry Pi, ou estes processores delados pelo Raspberry Pi,
+
+376
+00:38:32,640 --> 00:38:39,640
+tem os módulos até bastante elaborados da geração de sinais de relógio, com bastante precisão,
+
+377
+00:38:39,640 --> 00:38:48,640
+que são estes PLLA, PLLCD, até dá para usar o sinal de relógio do HDMI,
+
+378
+00:38:49,640 --> 00:38:57,640
+portanto vamos usar o mais simples, este oscilador, que é um sinal de 54 MHz,
+
+379
+00:38:57,640 --> 00:39:05,640
+no Raspberry Pi 4, nos anteriores era 19,2, acho que isso está no enunciado, se não estou em erro,
+
+380
+00:39:05,640 --> 00:39:13,640
+mas pronto, por isso é que eu depois quero, para termos de ter, ou para confirmarmos que está a funcionar corretamente,
+
+381
+00:39:14,640 --> 00:39:21,640
+o último exercício que eu quero que vocês façam é um medidor de frequência, usando interrupções.
+
+382
+00:39:27,640 --> 00:39:41,640
+Ou seja, recapitulando, para este exercício o PWM, já não basta fazer o M-map para os registros GPIO,
+
+383
+00:39:41,640 --> 00:39:47,640
+precisam fazer porque ele tem que ser configurado para a função 4, como vimos,
+
+384
+00:39:48,640 --> 00:39:55,640
+além desse M-map, não tem que fazer o M-map para o registro do relógio, porque ele tem que ser ativado,
+
+385
+00:39:55,640 --> 00:40:05,640
+se não isto não funciona, e ainda um terceiro M-map para os registros do PWM,
+
+386
+00:40:05,640 --> 00:40:10,640
+para aquele do controle, do range e do data.
+
