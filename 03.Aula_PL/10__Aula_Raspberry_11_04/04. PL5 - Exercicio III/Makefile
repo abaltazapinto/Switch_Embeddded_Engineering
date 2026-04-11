@@ -1,11 +1,11 @@
-obj-m += dimmer-rpi4.o
-dimmer-rpi4-objs := dimmer-rpi4.o gpio.o
+obj-m += blinker-rpi4.o
+blinker-rpi4-objs := blinker.o gpio.o
 
-KERNEL_DIR = ../linux-source-6.12
-CCC_ARGS = ARCH=arm64 CROSS_COMPILE=/home/USERNAME/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+KERNEL_DIR = /lib/modules/$(shell uname -r)/build
+CCC_ARGS = ARCH=arm64
 
-all:
-	make -C ${KERNEL_DIR} M=$(PWD) modules $(CCC_ARGS)
+all: 
+        make -C ${KERNEL_DIR} M=$(PWD) modules $(CCC_ARGS)
 
 clean:
-	make -C ${KERNEL_DIR} M=$(PWD) clean
+        make -C ${KERNEL_DIR} M=$(PWD) clean
