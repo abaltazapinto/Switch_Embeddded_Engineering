@@ -43,7 +43,7 @@ static void setGPIOOutputValue(bcm2711_gpio_registers_t *gpio, int pin, int valu
 }
 
 int main(int argc, char **argv) {
-    int pin = 18; // podes mudar se quiseres
+    int pin = 12; // podes mudar se quiseres
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     if (fd < 0) {
         perror("open");
