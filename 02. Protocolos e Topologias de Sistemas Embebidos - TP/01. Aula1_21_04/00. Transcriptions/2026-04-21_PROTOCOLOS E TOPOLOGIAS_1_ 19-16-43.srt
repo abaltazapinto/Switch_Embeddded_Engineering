@@ -1,0 +1,1596 @@
+1
+00:00:00,000 --> 00:00:08,320
+entre 10 e 10 e permitir o controle centralizado e a visualização do Estado centralizada,
+
+2
+00:00:08,320 --> 00:00:15,920
+não podia haver depois um sistema computacional distante de remoto e havia uma comunicação
+
+3
+00:00:15,920 --> 00:00:22,440
+entre estes sistemas baseados, e esta comunicação era baseada, tipo que não é um protocolo
+
+4
+00:00:22,440 --> 00:00:32,200
+de linha, porque as capacidades oferecidas por qualquer dispositivo eletrônico para comunicar
+
+5
+00:00:32,200 --> 00:00:38,840
+são muito fracases e, portanto, tínhamos pouca capacidade de crescimento e pouca capacidade
+
+6
+00:00:38,840 --> 00:00:45,520
+de comunicação n estes dispositivos. Quando estes sistemas computacionais começaram a ficar
+
+7
+00:00:45,520 --> 00:00:54,080
+mais baratos e mais fáceis de reproduzir e foi possível replicar ter mais, então passamos
+
+8
+00:00:54,080 --> 00:01:07,200
+a ter, passamos a ter sistemas impabidos, onde o processador ou sistema computacional que
+
+9
+00:01:07,200 --> 00:01:16,080
+estava ali em cima, deixou para o nível de baixo, para o nível inferior, e com isso conseguimos
+
+10
+00:01:16,080 --> 00:01:25,440
+ter dispositivos mais inteligentes que implementam processamento dos dados e eventualmente control
+
+11
+00:01:25,440 --> 00:01:36,000
+local. E também, se temos mais capacidade de processar dados, também podemos utilizar
+
+12
+00:01:36,000 --> 00:01:42,520
+protocolos de comunicação mais evoluídos e comunicar para mais linhas e comunicar
+
+13
+00:01:42,520 --> 00:01:46,560
+de outras formas, dizendo como quem queremos falar, etc.
+
+14
+00:01:46,560 --> 00:01:58,240
+Então, aqui, deste boneco, também se pode perceber o que é um sistema impabido, ou que pode
+
+15
+00:01:58,240 --> 00:02:02,960
+ser um sistema impabido, porque o sistema impabido para lentar um mercado fora de moda
+
+16
+00:02:02,960 --> 00:02:15,200
+é também um tema, um título um bocado específico, porque pode designar coisas muito diferentes,
+
+17
+00:02:15,200 --> 00:02:19,640
+há quem usa o termo de sistemas impabidos para designar o sistema computacional que está
+
+18
+00:02:19,640 --> 00:02:26,400
+aqui dentro, ou seja, esta parte está dentro do amarelo, sendo o amarelo um sistema dedicado,
+
+19
+00:02:26,400 --> 00:02:32,280
+e há quem usa o nome de sistema impabido para designar o amarelo, ou seja, um sistema dedicado
+
+20
+00:02:32,280 --> 00:02:38,920
+que tem um sistema computacional incluído, ou impabido, então que o sistema impabido pode
+
+21
+00:02:38,920 --> 00:02:46,280
+ser o azul ou amarelo, para evitar ambiguitades, eu às vezes falo de dispositivos dedicados
+
+22
+00:02:46,280 --> 00:02:52,960
+e de sistema computacional impabido, para se perceber se estou a falar de uma coisa ou se
+
+23
+00:02:52,960 --> 00:03:00,400
+estou a falar de outra, então, para mim, um sistema impabido pode ser um sistema computacional
+
+24
+00:03:00,400 --> 00:03:04,560
+impabido num dispositivo dedicado, ou pode ser um sistema dedicado que dentro,
+
+25
+00:03:04,560 --> 00:03:09,720
+tem um postador impabido, ou seja, pode ser o retango azul ou o retango amarelo,
+
+26
+00:03:09,720 --> 00:03:24,000
+ou se daqui para aqui o sistema computacional desgeu, porque se tornou mais vulgar, mais fácil
+
+27
+00:03:24,000 --> 00:03:32,440
+de usar, e, portanto, foi possível desgeu-lo de nível, ou voltastei com os dias que também
+
+28
+00:03:32,440 --> 00:03:40,320
+deixaram de nível, nomeadamente, a comunicação com capacidades computacional aqui dentro,
+
+29
+00:03:40,320 --> 00:03:48,360
+foi possível que a comunicação global passasse também, estar acessível diretamente
+
+30
+00:03:48,360 --> 00:03:57,600
+a partir dos dispositivos dedicados, então, atualmente, os estivas impabidos são aquelas
+
+31
+00:03:57,600 --> 00:04:05,960
+coisas que se ligam a internet e que dão origem a internet das coisas, isso não é possível
+
+32
+00:04:05,960 --> 00:04:11,640
+ligar coisas a uma vez de global sentir-se, um postador, um sistema computacional aqui
+
+33
+00:04:11,640 --> 00:04:15,880
+dentro, a partir do momento em que há um sistema computacional aqui dentro, é possível
+
+34
+00:04:15,880 --> 00:04:23,360
+que a comunicação seja feita por internet, e é aquilo que está na moda, e que normalmente
+
+35
+00:04:23,360 --> 00:04:51,880
+chamamos em internet das coisas, vamos falar com o link de todos das referências,
+
+36
+00:04:51,880 --> 00:05:01,600
+porque, normalmente, quando há coisas complicadas para se explicarem, há necessidade de esperar
+
+37
+00:05:01,600 --> 00:05:12,200
+os temas em partes ou camadas, e, em maneira de dividir coisas complicadas, em coisas
+
+38
+00:05:12,200 --> 00:05:17,920
+simples, isso dividirmos em camadas, pode ser que outra implementação ou outra definição
+
+39
+00:05:17,920 --> 00:05:25,080
+do mesmo problema, se utilizar a mesma definição em camadas, então, depois temos um conjunto
+
+40
+00:05:25,080 --> 00:05:35,040
+de várias implementações que são comparáveis umas com as outras, a estratégia de visão
+
+41
+00:05:35,040 --> 00:05:45,360
+em camadas existem quase tudo, o que é complexo e quase tudo que é inventado pelo homem,
+
+42
+00:05:45,360 --> 00:05:58,000
+por exemplo, um computador acolher uma aplicação, pode ser descreto, a partir da divisão em
+
+43
+00:05:58,000 --> 00:06:05,320
+camadas, e a divisão em camadas natural, a definirmos o hardware, a bios, o sistema operativo,
+
+44
+00:06:05,320 --> 00:06:13,040
+a aplicação, e, depois, o utilizador, qualquer aplicação que seja diferente pode ser descrita
+
+45
+00:06:13,040 --> 00:06:18,160
+com o mesmo conjunto de camadas, se, por mesmo, só a aplicação que é diferente a que
+
+46
+00:06:18,160 --> 00:06:24,240
+vemos no sistema operativo é só definido, outro nível de aplicação aqui ao lado, a mesma
+
+47
+00:06:24,240 --> 00:06:30,000
+aplicação pode funcionar com um outro sistema operativo, quando temos uma aplicação
+
+48
+00:06:30,000 --> 00:06:34,520
+a que o renoto sistema operativo, se quisermos descraver o conjunto de todos, nos vamos
+
+49
+00:06:34,520 --> 00:06:43,240
+de explicar a camada da aplicação e apontarmos só as diferenças das camadas inferiores
+
+50
+00:06:43,240 --> 00:06:50,400
+e, por aí, fora, vamos utilizarmos as divisões que são, as divisões em camadas que são
+
+51
+00:06:50,400 --> 00:06:56,480
+normais para as outras pessoas, conseguimos que as nossas definições e as especificações
+
+52
+00:06:56,480 --> 00:07:12,800
+também sejam compreendidas para outras pessoas, a divisão em camadas vivis têm muitas
+
+53
+00:07:12,800 --> 00:07:25,880
+outras coisas, ainda nos computadores, se quisermos desenjar um modelo comercial para vender
+
+54
+00:07:25,880 --> 00:07:33,040
+aplicações que correm em computadores, se usamos ser de nós a implementar, assetar
+
+55
+00:07:33,040 --> 00:07:38,800
+que toda e vendermos os processadores, fazermos os processadores para termos computadores,
+
+56
+00:07:38,800 --> 00:07:45,320
+pois, por nós, as nossas aplicações, podemos fazer só as aplicações e se garantirmos
+
+57
+00:07:45,320 --> 00:07:51,240
+uma interface, garantirmos que a nossa aplicação corre em cima dos processadores normais que
+
+58
+00:07:51,240 --> 00:07:58,040
+os outros vendem, então, conseguimos facilmente vender a nossa aplicação, quem quer fazer computadores
+
+59
+00:07:58,040 --> 00:08:06,000
+também, deve fazer computadores que usam os processadores que já existem e que podem ser usados
+
+60
+00:08:06,000 --> 00:08:12,240
+pelas aplicações que os outros vão fazer e quem quer fazer processadores de fim, uma
+
+61
+00:08:12,240 --> 00:08:17,840
+interface para que seja fácil depois os outros fazerem madabortes, placa as pontucinais
+
+62
+00:08:17,840 --> 00:08:30,600
+para os nossos processadores, no caso das comunicações, existe a mesma necessidade de divisão
+
+63
+00:08:30,600 --> 00:08:39,360
+das coisas em camadas e existem normas para divisão das funcionalidades em camadas e,
+
+64
+00:08:39,360 --> 00:08:43,680
+uma norma mais conhecida e mais famosa que o problema de toda a gente ouviu falar é um modelo
+
+65
+00:08:43,680 --> 00:08:57,760
+Aussi, o modelo Aussi é uma norma oficial publicada por vários organismos oficiais de normalização
+
+66
+00:08:57,760 --> 00:09:02,800
+e, portanto, quando nós inventamos uma tecnologia, qualquer que se enteixa lá no meio de um processo
+
+67
+00:09:02,800 --> 00:09:12,280
+de comunicação, melhor é tentar-mos descrever a nossa invenção com as interfaces para as
+
+68
+00:09:12,280 --> 00:09:17,000
+camadas que estão abaixas e para as camadas que estão acima e preferência de vemos definidos
+
+69
+00:09:17,000 --> 00:09:26,600
+essas interfaces de acordo com as interfaces das camadas do modelo Aussi ou do outro modelo
+
+70
+00:09:26,600 --> 00:09:28,600
+precioso como referência.
+
+71
+00:09:43,240 --> 00:09:50,960
+Panto um modelo Aussi e não diz como é que as coisas funcionam, só diz como é que devem interagir as
+
+72
+00:09:50,960 --> 00:09:55,720
+implementações que implementam as funcionalidades definidas para cada camada.
+
+73
+00:09:55,720 --> 00:10:06,880
+O modelo Aussi define um conjunto de 7 camadas, a quem acha que é um bocado pesado, sempre
+
+74
+00:10:06,880 --> 00:10:12,440
+que implementamos uma comunicação, estamos a implementar algum conjunto destas camadas,
+
+75
+00:10:12,440 --> 00:10:16,600
+não necessariamente todas, por que algumas estão destinadas a implementar funcionalidades
+
+76
+00:10:16,600 --> 00:10:23,720
+que nós às vezes não precisamos e, portanto, podemos supermila e, por outras vezes, também
+
+77
+00:10:23,720 --> 00:10:29,680
+as funcionalidades que estão definidas para duas ou três camadas, nós podemos implementar
+
+78
+00:10:29,680 --> 00:10:37,120
+em conjunto, ou seja, a mesma implementação pode cumprir os acasitos de várias camadas
+
+79
+00:10:37,120 --> 00:10:47,480
+e, então, se pudermos descrever o nosso produto com um modelo que tem a menos camadas.
+
+80
+00:10:47,480 --> 00:10:54,320
+Não vou apenas saber isto de cor, o nome destas camadas, quem quiser saber de cor,
+
+81
+00:10:54,320 --> 00:11:04,520
+também há umas manomónicas, baseadas em pisas, que permitem memorizar os nomes das
+
+82
+00:11:04,520 --> 00:11:14,600
+camadas, mas não nos interessa assim muito, em portanto, perceber que, apesar de isto ser
+
+83
+00:11:14,600 --> 00:11:24,840
+norma, e que vemos fazer as implementações, as especificações, maneira encaixarem nos leidos
+
+84
+00:11:24,840 --> 00:11:29,360
+do modelo, não somos obrigados a fazer isso, podemos fazer o que nós quisermos, podemos
+
+85
+00:11:29,360 --> 00:11:33,440
+nem conhecer a norma e fazer uma coisa que funciona.
+
+86
+00:11:44,600 --> 00:11:55,040
+O desquizermos de descrever um processo completo de comunicação, e se tivermos o processo
+
+87
+00:11:55,040 --> 00:12:01,880
+implementado de cor de um modelo de disafrencia em camadas.
+
+88
+00:12:01,880 --> 00:12:11,560
+Tipicamente, o que acontece é que, em interface de imissão, é uma aplicação, ou alguém
+
+89
+00:12:11,560 --> 00:12:17,800
+que usa uma aplicação do lado do imissor, e que está, por exemplo, aqui, e só precisa
+
+90
+00:12:17,800 --> 00:12:22,640
+conhecer a interface com a camada superior, e a camada superior tem que se entender com
+
+91
+00:12:22,640 --> 00:12:27,840
+os restantes, se querermos enviar um pacote de dados, qualquer, esse pacote de dados só
+
+92
+00:12:27,840 --> 00:12:34,000
+tem que ser enviado àquela camada, aquela camada vai enviar à camada, enviadamente
+
+93
+00:12:34,000 --> 00:12:40,200
+inferior, e por aí fora até chegarmos ao nível inferior, que é o nível físico, um
+
+94
+00:12:40,200 --> 00:12:45,760
+do nosso pacote de dados, o nosso conjunto de dados, vai circular para um meio físico
+
+95
+00:12:45,760 --> 00:12:57,280
+qualquer, a chegada passa a sucontrar e os dados que chegam para o meio físico vão ser
+
+96
+00:12:57,280 --> 00:13:04,480
+enviados à camada, imigatamente superior, e a camada superior vai entregar a entidade
+
+97
+00:13:04,480 --> 00:13:15,440
+aplicacional, o final do que pretende receber os dados, mas as redes, às vezes são
+
+98
+00:13:15,440 --> 00:13:25,120
+complexas, podem existir, pode existir uma comunicação física direta da linha de ali, ou
+
+99
+00:13:25,120 --> 00:13:32,720
+podem existir vários comunicações físicas que aparecem em nós intermedios que trabalham
+
+100
+00:13:32,720 --> 00:13:41,880
+em outros nível, nomeadamente, é muito comum, a ver aqui máquinas, quando estamos a
+
+101
+00:13:41,880 --> 00:13:51,480
+comunicar na internet, existem aqui máquinas que comprem o protocolo IP, o protocolo da internet
+
+102
+00:13:51,480 --> 00:13:57,040
+e que se encarregam de fazer nomeadamente o engaminhamento e decidir se as coisas vão
+
+103
+00:13:57,040 --> 00:14:05,280
+disso, por este link ou por outro link que estão ligadas, e portanto, pode haver muitas
+
+104
+00:14:05,280 --> 00:14:11,480
+mudanças, muitas subidas de nível, aqui pelo meio e também de chidas, quando o maior
+
+105
+00:14:11,480 --> 00:14:17,400
+for a segmentação das eras de um impacutamento, mais subidas e de chidas temos, e portanto
+
+106
+00:14:17,400 --> 00:14:19,280
+mais processamento também vamos ter.
+
+107
+00:14:27,040 --> 00:14:38,800
+Onde como modelos e é complicado e nem sempre se ajusta exatamente as implementações
+
+108
+00:14:38,800 --> 00:14:46,680
+que entretanto foram feitas das coisas que funcionam, às vezes uns outros modelos, por
+
+109
+00:14:46,680 --> 00:14:52,160
+exemplo, o modelo onde a implementação dos protocolos que usamos na internet em caixa
+
+110
+00:14:52,160 --> 00:14:59,280
+melhor é o protocolo de TCPP, é o modelo de TCPP, e o que é um modelo mais simples
+
+111
+00:14:59,280 --> 00:15:06,300
+que o modelo lozi, tem apenas quatro níveis, os níveis do modelo de TCPP não são na
+
+112
+00:15:06,300 --> 00:15:11,720
+piáveis diretamente nos níveis do modelo lozi, ou seja, alguns que não existem, outros
+
+113
+00:15:11,720 --> 00:15:17,180
+que estão agregados, mas mesmo assim, há ali umas diferenças em que não encaixam
+
+114
+00:15:17,180 --> 00:15:28,940
+exatamente, mas o modelo de TCPP é mais simples e mais simpático para enquadrarmos os
+
+115
+00:15:28,940 --> 00:15:30,940
+protocolos que se usam na internet.
+
+116
+00:15:30,940 --> 00:15:36,380
+O modelo de TCPP é este que está aqui em.
+
+117
+00:15:36,380 --> 00:15:45,460
+O que temos aqui, o nível físico e de ligação de dados, aqui o nível de rede onde funcionam
+
+118
+00:15:45,460 --> 00:15:50,500
+o protocolo IP, o protocolo fundamental da internet, e depois ali uma camada de transporte
+
+119
+00:15:50,500 --> 00:15:53,020
+e a camada de aplicação.
+
+120
+00:15:53,020 --> 00:16:11,100
+No outros casos, nomeadamente nas redes industriais, onde muitas vezes não é preciso
+
+121
+00:16:11,100 --> 00:16:16,660
+se quer fazer interessamento, ou seja, quem imite dados, não precisa dizer a quem
+
+122
+00:16:16,660 --> 00:16:21,660
+é que eles se destino, podem enviar para todas as outras máquinas ou todos os outros
+
+123
+00:16:21,660 --> 00:16:24,500
+participantes da rede.
+
+124
+00:16:24,500 --> 00:16:30,880
+Às vezes usam um modelo ainda mais simplificado, que é o modelo lozi, que é um modelo lozi
+
+125
+00:16:30,880 --> 00:16:44,720
+colapsado, onde se omite o nível de rede, o nível de rede é que nós fazemos os
+
+126
+00:16:44,720 --> 00:16:50,040
+indereçamentos, onde dizemos um pacote para onde é que há de ir, se não precisar
+
+127
+00:16:50,040 --> 00:16:55,260
+mos disso, porque estamos numa rede fechada, por exemplo, dentro de um carro, dentro de uma
+
+128
+00:16:55,260 --> 00:17:03,660
+casa, podemos admitir que toda a gente que está em casa pode receber a informação que
+
+129
+00:17:03,660 --> 00:17:11,060
+os outros imitem, e, portanto, não precisamos de fazer interessamento e num carro também
+
+130
+00:17:11,060 --> 00:17:16,660
+todos os censores, ou todos os outros podem receber a informação de todos os censores
+
+131
+00:17:16,660 --> 00:17:21,220
+acharmos que é essa arquitetura que nós queremos, e, então, nessas situações, podemos
+
+132
+00:17:21,220 --> 00:17:27,020
+omitir o nível de rede.
+
+133
+00:17:27,020 --> 00:17:37,880
+Apesar disso ser assim, nós hoje vamos falar, sobretudo, vamos de indereços, o indereçamento
+
+134
+00:17:37,880 --> 00:17:45,460
+e, às vezes, tem vários níveis, nós vamos usar como exemplo o nível IP para falarmos
+
+135
+00:17:45,460 --> 00:18:07,660
+de indereços IP, eu vou só mudar aqui a apresentação.
+
+136
+00:18:15,460 --> 00:18:41,140
+Eu estou no princípio não expliquei, mas se alguém achar que eu estou a andar de
+
+137
+00:18:41,140 --> 00:18:51,220
+pressa de mais, ou que tenho alguma dúvida, pode me interromper, e existem que mais funcionalidades
+
+138
+00:18:51,220 --> 00:18:57,020
+de levantar o braço, ou seja, devem conhecer-se, e, se eu não ouvir, também podem ligar
+
+139
+00:18:57,020 --> 00:19:07,220
+o microfone e interromper-me para esclarecermos alguma coisa.
+
+140
+00:19:07,220 --> 00:19:13,540
+Eu também não sei aquilo que vocês sabem, nem aquilo que vocês querem saber, o programa
+
+141
+00:19:13,540 --> 00:19:26,380
+desta curso e desta disciplina é um bocado aquilo que nós quisermos ficarmos mais
+
+142
+00:19:26,380 --> 00:19:31,980
+no assunto qualquer que achem interessante, nós podemos falar do assunto, ou podemos
+
+143
+00:19:31,980 --> 00:19:37,420
+insistir mais, em algum promenor que, às vezes, passa-se a se interprécia de mais.
+
+144
+00:19:37,420 --> 00:19:50,260
+Então, vamos estarmos depois de falar de indereços IP, que são os indereços usados aqui
+
+145
+00:19:50,260 --> 00:20:02,940
+no protocolo IP, que está na camada de redes, da internet, esta camada serve para interligar
+
+146
+00:20:02,940 --> 00:20:09,020
+trafe-me de redes locais, que são protocolos que têm capacidade para comunicar apenas
+
+147
+00:20:09,020 --> 00:20:19,940
+dentro de uma rede local, para conseguirmos falar para o do site, foi criado o protocolo IP
+
+148
+00:20:19,940 --> 00:20:29,020
+e o protocolo IP tem como principal função fazer o inderecimento e, portanto, vamos usar
+
+149
+00:20:29,020 --> 00:20:39,020
+indereços aqui em todos os protocolos de redes, a camada que implementa o protocolo recebe
+
+150
+00:20:39,020 --> 00:20:49,220
+os dados da camada superior, no caso da comunicação na internet, temos os utilizadores a gerar
+
+151
+00:20:49,220 --> 00:20:58,140
+um pacote de dados que querem enviar, isso pacote a enviada a camada de aplicação, que
+
+152
+00:20:58,140 --> 00:21:07,980
+é implementado na aplicação e a aplicação cria aqui um pacote, a crescenda no cabeçalho,
+
+153
+00:21:07,980 --> 00:21:14,220
+que é o cabeçalho da aplicação, a aplicação junta aos 3 dados, depois há um protocolo
+
+154
+00:21:14,220 --> 00:21:21,220
+de transporte que trata das conjuntos de dados e a crescenda mais em cabeçalho, não é um momento
+
+155
+00:21:21,220 --> 00:21:29,220
+TCP e isto da origem, um pacote que se chamam o segmento, o segmento TCP, o segmento TCP é
+
+156
+00:21:29,220 --> 00:21:39,220
+depois em que a pessoalado não dá ta grama IP, juntando-se um cabeçalho IP e se o IP depois
+
+157
+00:21:39,220 --> 00:21:46,220
+foi transportado sobre a ternete, vemos encapsular aquilo numa terneta que sentando mais um
+
+158
+00:21:46,220 --> 00:21:55,220
+cabeçalho e um trailer a ternete, este trabalho de cima para baixo ou passagem dos dados de cima
+
+159
+00:21:55,220 --> 00:22:01,220
+para baixo é aquilo que acontece no envio, quando alguém quer enviar dados, na receção tem que
+
+160
+00:22:01,220 --> 00:22:12,220
+existir o contrário, o contrário acontece, o que pode acontecer em árvore, porque
+
+161
+00:22:12,220 --> 00:22:20,220
+pode haver várias aplicações a usar TCP e vários protocolos da camada da gelo a funcionar com o
+
+162
+00:22:20,220 --> 00:22:34,220
+português MIP e pode haver vários protocolos a usar a ternete, portanto é preciso em cada um
+
+163
+00:22:34,220 --> 00:22:41,220
+dos níveis, é preciso olhar para os pacotes e ver se vemos de enviado para ali ou para ali,
+
+164
+00:22:41,220 --> 00:22:47,220
+para a esquerda ou para a direita, sempre para cima, para a esquerda ou para a direita e
+
+165
+00:22:47,220 --> 00:22:54,220
+portanto, com uma ansiedade de fazer esta escolha, este desenca absolutamente de novo ao nome de
+
+166
+00:22:54,220 --> 00:23:03,220
+desmultiplexagem, porque nós vamos separar os dados para as aplicações todas que estão a usar.
+
+167
+00:23:04,220 --> 00:23:12,220
+Quando o protocolo IP foi criado, já existiam redes de computadores e redes de desculativos e
+
+168
+00:23:12,220 --> 00:23:21,220
+já existiam que vivemos nos bonecos anteriores dispositivos a comunicar em uns com os outros,
+
+169
+00:23:21,220 --> 00:23:30,220
+mesmo sem verdadeiras redes de computadores. O problema que existia na altura é que as
+
+170
+00:23:30,220 --> 00:23:38,220
+redes eram todas limitadas e não compatíveis. Havia redes muito diferentes umas das outras,
+
+171
+00:23:38,220 --> 00:23:47,220
+mas eram redes ATM ou tocan ring, as outras ethernetes e cada rede permitia que os utilizadores
+
+172
+00:23:47,220 --> 00:23:54,220
+comunicassem uns dos outros dentro da rede, mas para implementar a comunicação de uma rede para
+
+173
+00:23:54,220 --> 00:24:01,220
+outra era preciso de desenvolvimentos dedicados, uma via maneira fácil de, por as coisas
+
+174
+00:24:01,220 --> 00:24:12,220
+comunicarem. A ideia da internet foi criar uma rede global, onde qualquer máquina estivessem
+
+175
+00:24:12,220 --> 00:24:18,220
+qualquer rede, pode-se falar com qualquer outra máquina, de qualquer outra rede, mesmo que seja
+
+176
+00:24:19,220 --> 00:24:26,220
+diferente em termos de implementação, em termos de especificação, em termos de localização, etc.
+
+177
+00:24:26,220 --> 00:24:50,220
+Para isso foi criado o protocolo IP, que tem tão como objetivo permitir a utilização de
+
+178
+00:24:50,220 --> 00:24:55,220
+qualquer tipo de redes, ou seja, o protocolo IP não foi pensado para criar mais redes substituícias
+
+179
+00:24:55,220 --> 00:25:03,220
+outras todas, mas para criar uma rede que agregaças outras todas, ou seja, uma camada em cima
+
+180
+00:25:03,220 --> 00:25:10,220
+daquilo que já existia. O serviço oferecido pelo protocolo IP é um serviço de computação
+
+181
+00:25:10,220 --> 00:25:18,220
+de datagramas, ou seja, um pacote de dados, pode ser encaixado no envelope, e no envelope
+
+182
+00:25:18,220 --> 00:25:27,220
+venho nindereço de destino, e esse envelope depois de fechado segue o seu caminho até o destino, de forma
+
+183
+00:25:27,220 --> 00:25:32,220
+completamente independentes dos outros pacotes, mesmo que os outros pacotes tenham vindo
+
+184
+00:25:32,220 --> 00:25:39,220
+mesmo, da mesma origem, e se dirijam ao mesmo destino, cada um dos pacotes, ou cada um dos datagramas,
+
+185
+00:25:39,220 --> 00:25:46,220
+da aumentidade, independente, e eventualmente até podem seguir caminhos diferentes para chegar ao mesmo
+
+186
+00:25:46,220 --> 00:25:56,220
+destino. No protocolo IP não há, então, estabelecimento de sido individual, ou seja, não há um
+
+187
+00:25:57,220 --> 00:26:05,220
+um caminho para depois de enviar as coisas para um caminho. O circuito virtual existe, por exemplo,
+
+188
+00:26:05,220 --> 00:26:10,220
+na rede telefónica, na rede telefónica, e o que tem a iniciar, uma comunicação com outra
+
+189
+00:26:10,220 --> 00:26:16,220
+pessoa, primeiro marco um número, depois da outra pessoa atender, está estabelecido um circuito
+
+190
+00:26:16,220 --> 00:26:23,220
+virtual, e a partir daí todas as frases que eu dissem vão parar ao mesmo destinatário, que
+
+191
+00:26:23,220 --> 00:26:31,220
+é o meu companheiro de conversa, e não precisa, em cada frase, dizer como para quem
+
+192
+00:26:31,220 --> 00:26:40,220
+é que se destina a frase, a frase segue o circuito previamente definido até ao destino. Em IP não
+
+193
+00:26:40,220 --> 00:26:47,220
+existe isso, existem frases ou blocos de dados independentes que adonam o seu caminho até chegar
+
+194
+00:26:47,220 --> 00:26:58,220
+ao destino. Pode acontecer que alguns pacotes não cheguem, o IP não consegue detectar
+
+195
+00:26:58,220 --> 00:27:06,220
+que as coisas se perderam, e também não consegue detectar que as coisas possam se chegar
+
+196
+00:27:06,220 --> 00:27:14,220
+em duplicado, às vezes acontece que as coisas chegam em duplicado, e não há garantias de
+
+197
+00:27:14,220 --> 00:27:20,220
+rega, ou seja, quando eu envio alguma coisa em IP, o IP tenta que as coisas chegem ao destino,
+
+198
+00:27:20,220 --> 00:27:29,220
+mas se não chegarem ninguém recompensa por isso, porque ninguém me garantiu que as coisas
+
+199
+00:27:29,220 --> 00:27:37,220
+chegavam. Quando encapsulamos um pacote de dados num data grama IP, acrescentamos um
+
+200
+00:27:37,220 --> 00:27:44,220
+salio, este caposalho tem este formato que está aqui, é uma coisa relativamente pequena,
+
+201
+00:27:44,220 --> 00:27:52,220
+porque é um conjunto de inversão mais 32 bits que são 4 bytes, vezes 1, 2, 3, 4, 5,
+
+202
+00:27:52,220 --> 00:28:06,220
+vezes 4, 20 bytes, 20 bytes não é uma coisa muito grande, estes 20 bytes são acrescentados
+
+203
+00:28:06,220 --> 00:28:14,900
+acrescentados a todos os blocos de informação que seja preciso enviar para alguém. Se enviarmos
+
+204
+00:28:14,900 --> 00:28:22,460
+coisas muito pequenas, por exemplo uma tecla ou uma temperatura ou uma posição, estamos
+
+205
+00:28:22,460 --> 00:28:32,340
+a acrescentar 20 bytes. Essa informação muito pequena, que é uma redução da eficiência
+
+206
+00:28:32,340 --> 00:28:42,080
+de bastante grande, mas para cá outros grandes de dados de 2004-2008 bytes insignificantes.
+
+207
+00:28:42,080 --> 00:28:48,300
+Quanto a maneira, vamos falar de sistemas imbebidos, sistemas imbebidos às vezes gostam
+
+208
+00:28:48,300 --> 00:28:54,660
+de enviar dados obtidos de sensores, podem ser coisas muito simples com uma temperatura
+
+209
+00:28:54,660 --> 00:29:00,740
+ou uma posição ou uma desdeção, ou simplesmente a indicação que, em fim de curso, foi
+
+210
+00:29:00,740 --> 00:29:08,060
+isso ativado ou que alguém quase de um botão e isso é uma coisa muito pequena. Devemos saber
+
+211
+00:29:08,060 --> 00:29:16,580
+se queremos essas coisas se circunla em como um overhead de um para 20 ou não. Não vamos
+
+212
+00:29:16,580 --> 00:29:24,860
+ver isto em terminar, porque o nosso objetivo não é saber implementar o IP. O IP está implementado
+
+213
+00:29:24,860 --> 00:29:30,060
+em muitas bibliotecas e todos os sistemas operativos têm implementações de IP. Nós temos
+
+214
+00:29:30,060 --> 00:29:38,180
+que saber usar o IP e perceber como funciona, para escolhermos bem as coisas. Os campos
+
+215
+00:29:38,180 --> 00:29:43,380
+mais importantes que estão aqui são também os maiores, são aquele endereço de origem
+
+216
+00:29:43,380 --> 00:29:50,060
+e o endereço de destino. São esses mais importantes, sobre o endereço de destino, é aquele
+
+217
+00:29:50,060 --> 00:29:59,060
+que diz para onde as coisas devem ser enviadas. E como se perceba aqui para isto, os
+
+218
+00:29:59,060 --> 00:30:09,540
+endereços são de 32 bitres. E essa é a principal característica de esta versão do protocol
+
+219
+00:30:09,540 --> 00:30:12,540
+IP, que é ter 32 bitres no endereço.
+
+220
+00:30:19,020 --> 00:30:25,540
+Os telefonos não têm nada a ver com o IP, mas também usam no endereço, que é o número
+
+221
+00:30:25,540 --> 00:30:32,380
+de telefone. Os números de telefone são menos normalizados que os endereços IP, há
+
+222
+00:30:32,380 --> 00:30:38,300
+números de telefones mais compridos ou dos mais curtos. Aqui há umas décadas atrás
+
+223
+00:30:38,300 --> 00:30:45,500
+ou umas tentativas uns organismos internacionais que tentaram normalizar os números de telefone
+
+224
+00:30:45,500 --> 00:30:55,020
+a 12 dígitos. Acho que esta tentativa não foi completamente bem sucedida, mas em muitos
+
+225
+00:30:55,020 --> 00:31:01,940
+casos, temos números de telefone de 12 dígitos em Portugal, os números de telefone
+
+226
+00:31:01,940 --> 00:31:11,620
+tem 12 dígitos e acho que não é o parque dos países europeus também. Os 12 dígitos,
+
+227
+00:31:11,620 --> 00:31:20,500
+são 12 dígitos, se cada dígito pode ter um algoritmo de 0 a 9, ou seja, o algoritmo
+
+228
+00:31:20,500 --> 00:31:24,740
+tem 10 hipóteses, temos 10 hipóteses para escolher um algoritmo para cada uma das 12
+
+229
+00:31:24,740 --> 00:31:31,500
+posições. Então, o número máximo de telefones que podemos ter no mundo é 10, 12, 10
+
+230
+00:31:31,500 --> 00:31:38,500
+ou 12, é um número muito grande, é um milhão de milhões e portanto é muito mais
+
+231
+00:31:38,500 --> 00:31:43,820
+do que o número de pessoas que temos no mundo. O número de temos 8 mil milhões de pessoas
+
+232
+00:31:43,820 --> 00:31:52,180
+e podemos ter 1 milhão de milhões de telefones, tanto sempre em princípio, o número de telefones
+
+233
+00:31:52,180 --> 00:31:58,060
+deve chegar para toda a gente de telefonear. Os números de telefone costumam ser divididos
+
+234
+00:31:58,060 --> 00:32:03,780
+em duas partes, uma parte que identifica o país e outra parte que identifica o telefone
+
+235
+00:32:03,780 --> 00:32:11,100
+no país. A parte que identifica o país em Portugal é 3.1, isso significa que o resto
+
+236
+00:32:11,100 --> 00:32:18,580
+do telefone, o resto número de telefones, termos os 12 dígitos, aqui só podemos ter 9,
+
+237
+00:32:18,580 --> 00:32:25,280
+e que o 9 número significa que em Portugal pode haver 10 levantado a 9 telefones.
+
+238
+00:32:26,000 --> 00:32:33,240
+Deixada 9 é 1 mil milhões e em Portugal temos 10 milhões de pessoas, 1 mil milhões também
+
+239
+00:32:33,240 --> 00:32:41,720
+deve chegar para as pessoas todas. Os identificativos dos países nem sempre têm 3 dígitos,
+
+240
+00:32:41,720 --> 00:32:47,680
+mas que o mais normal é ter em dois dígitos e isso acontece nos países grandes, nos países
+
+241
+00:32:47,680 --> 00:32:54,400
+médios e também nos países, pequenos, não muito pequenos, mas países com a dimensão
+
+242
+00:32:54,400 --> 00:33:03,240
+de Portugal ou o maior gestão de terção dos dígitos. Quando tem dois dígitos, tem direito
+
+243
+00:33:03,240 --> 00:33:08,600
+a ter mais um dígito no número de telefone, que identifica o telefone dentro do país e, portanto,
+
+244
+00:33:08,600 --> 00:33:14,560
+não já é no Unido da França, na Espanha, na Grécia e no Luxemburgo. Temos 10
+
+245
+00:33:14,560 --> 00:33:23,480
+levantado a 10 telefones, ou seja, 10 mil milhões de telefones. Acho que os Estados Unidos
+
+246
+00:33:23,480 --> 00:33:30,640
+é o único país que utiliza um identificador de apenas um dígito e então pode ter 10
+
+247
+00:33:30,640 --> 00:33:44,720
+levantado a 11 telefones. Nos endereços IP, se temos 32 bitis, se o TocolliP foi
+
+248
+00:33:44,720 --> 00:33:53,960
+desenhado para ter 32 bitis, por cada endereço, e se queremos conseguir por qualquer máquina
+
+249
+00:33:53,960 --> 00:33:58,920
+do mundo, falar com qualquer máquina, vamos ter que ter um endereço único para cada
+
+250
+00:33:58,920 --> 00:34:04,640
+máquina do mundo. O número total de endereços que nós conseguimos representar com
+
+251
+00:34:04,640 --> 00:34:11,400
+32 bitis, um bit é um dígito que o L10 ou L11, portanto, só tem duas hipóteses, o número
+
+252
+00:34:11,400 --> 00:34:16,560
+total de endereços é então 2, levantado a 32, que é este número que está aqui, que é
+
+253
+00:34:16,560 --> 00:34:25,480
+um número grande, mas não é assim muito grande, isto que está aqui é 4 mil milhões, mais
+
+254
+00:34:25,480 --> 00:34:33,400
+de 4 mil milhões, mas não é um mundo, temos mais de 8 mil milhões de pessoas, portanto,
+
+255
+00:34:33,400 --> 00:34:37,400
+apesar este número ser grande, não chega a sequer para termos um endereço para cada
+
+256
+00:34:37,400 --> 00:34:49,980
+pessoa do mundo. Os nomes telefones, os endereços IP, que são 32 bitis, uma chatos
+
+257
+00:34:49,980 --> 00:34:59,700
+que escreveram 0x1, um conjunto muito grande de 0x1, normalmente, quando se escreve
+
+258
+00:34:59,700 --> 00:35:06,020
+um endereço IP, escreve-se nesta forma, que se chama a notação doce decimal, a notação
+
+259
+00:35:06,020 --> 00:35:13,220
+decimal com pontos, e que já toda a gente viu o endereço IP, esperitos desta forma, e
+
+260
+00:35:13,220 --> 00:35:21,020
+desta forma é obtida dividindo aqueles 32 bitis em grupos de 8, os bitis, e depois convertendo
+
+261
+00:35:21,020 --> 00:35:30,140
+de cada grupo de 8 em decimal, e ficamos com o endereço nesta forma, então aqui outros exemplos
+
+262
+00:35:30,140 --> 00:35:33,460
+de endereços escritos nesta forma.
+
+263
+00:35:33,460 --> 00:35:44,660
+Então, alguns endereços, apesar de eles não serem muito só alguns endereços, são reservados
+
+264
+00:35:44,660 --> 00:35:52,220
+para aplicações especiais, e tal como nos números telefones, nós podemos olhar para
+
+265
+00:35:52,220 --> 00:35:56,820
+o nome do telefone, que nós estamos divididos em duas partes, uma parte que identifica o país,
+
+266
+00:35:56,820 --> 00:36:03,980
+ou que identifica o telefone dentro do país, no caso dos endereços IP, também podemos
+
+267
+00:36:03,980 --> 00:36:10,020
+considerar que os endereços são divididos em duas partes, uma parte que é o identificador
+
+268
+00:36:10,020 --> 00:36:19,540
+de rede, o NetID, e outra parte que identifica a máquina dentro da rede, no endereço completo,
+
+269
+00:36:19,540 --> 00:36:28,180
+é sempre a concatenação, o conjunto do NetID com o OSTID, o comprimento do endereço é
+
+270
+00:36:28,180 --> 00:36:36,700
+sempre 32 bitis, isso significa que o comprimento do NetID mais o comprimento do OSTID da 32 bitis.
+
+271
+00:36:36,700 --> 00:36:47,260
+Se usaremos NetID-spequenos, usamos ficamos com OSTID-spequenos, se usaremos NetID-spequenos,
+
+272
+00:36:47,260 --> 00:36:51,940
+vamos com OSTID-spequenos, mais portos, a soma dos comprimentos dos dois tem que dar sempre
+
+273
+00:36:51,940 --> 00:36:58,540
+32 bitis, o tamanho da rede, ou o número de telefones, o número de endereços que temos
+
+274
+00:36:58,540 --> 00:37:04,820
+dentro do país, o que dentro do mar rede, depende do comprimento do OSTID, quanto maior
+
+275
+00:37:04,820 --> 00:37:13,540
+para o OSTID, mais endereços temos dentro daquela rede, o número de endereços que podemos
+
+276
+00:37:13,540 --> 00:37:33,900
+ter numa rede é dois lentados ao comprimento do OSTID, o protocol IP foi desenhado no princípio
+
+277
+00:37:33,900 --> 00:37:45,500
+dos anos 80, foi publicada aqui a norma do protocol IP, e logo passado pouco tempo, exatamente
+
+278
+00:37:45,500 --> 00:37:54,300
+em 92, foi descrito de forma formal, ou seja, publicado um documento que descreve o problema
+
+279
+00:37:54,300 --> 00:38:02,460
+da falta de endereços, ou seja, em 92 já sabia que os endereços de facto eram
+
+280
+00:38:02,460 --> 00:38:07,860
+poucos, que é isto de dois de lentado a 32, é menos do que o número de pessoas que existiam
+
+281
+00:38:07,860 --> 00:38:17,820
+no mundo, e portanto já se sabia que estábamos condenados a ter falta de endereços, e
+
+282
+00:38:17,820 --> 00:38:26,620
+foi necessário começar a pensar em resolver o problema, e para resolver esse problema, ou
+
+283
+00:38:26,620 --> 00:38:43,220
+tudo, três iniciativas ou três tarefas, uma foi liberalizar os comprimentos dos NetIDs no princípio
+
+284
+00:38:43,220 --> 00:38:50,740
+por preguiça ou por norma ou por outra razão de qualquer, por uma questão de especificação,
+
+285
+00:38:50,740 --> 00:39:01,660
+só se usavam NetIDs, ou de 8 bits, ou de 16, ou de 24, ou seja, tal como nas redes telefónicas,
+
+286
+00:39:01,660 --> 00:39:08,220
+só há países pequenos, médios e grandes, aqui também só havia redes pequenas grandes e
+
+287
+00:39:08,220 --> 00:39:18,940
+integrantes, isto levava a ver muito desperdício, e a partir daqui de 93 deixou de haver
+
+288
+00:39:18,940 --> 00:39:27,140
+se plazes de endereços, e passou a poder usar qualquer comprimento de NetID de maneira
+
+289
+00:39:27,140 --> 00:39:31,940
+a poder obter os redes muito pequenas, mais ou menos pequenas redes médias, redes médias
+
+290
+00:39:31,940 --> 00:39:38,100
+grandes, etc., podemos fazer o que quisermos, explicar o NetID à nossa vontade,
+
+291
+00:39:38,100 --> 00:39:44,220
+e assim ficamos com o OSTID, começando o complementar disso para os 32 bits,
+
+292
+00:39:44,220 --> 00:39:52,660
+atualmente já não vale a pena falar do que se passava antes, porque, atualmente, todas as
+
+293
+00:39:52,660 --> 00:40:00,940
+máquinas se portam NetIDs de qualquer também, e toda a gente usa NetIDs de também em qualquer
+
+294
+00:40:00,940 --> 00:40:08,900
+sem problema nenhum. Outra iniciativa foi feita, foi desencadeada para tentar resolver
+
+295
+00:40:08,900 --> 00:40:14,460
+o problema da falta de endereços, foi a utilização de redes privadas e o Net, e isto é
+
+296
+00:40:14,460 --> 00:40:21,060
+muito importante para a internet das coisas e para ligação de dispositivos em bebidos
+
+297
+00:40:21,060 --> 00:40:31,460
+em internet, porque, normalmente, os endereços privados são a solução ideal para ligar
+
+298
+00:40:31,460 --> 00:40:44,780
+coisas em internet, e vemos de falar isto na próxima semana, talvez, e depois a solução
+
+299
+00:40:44,780 --> 00:40:53,180
+definitiva para o problema das cacês de endereços, foi a nova versão do ProtocolliP,
+
+300
+00:40:53,180 --> 00:41:01,620
+que é o ProtocolliPV6, já existe definido desde 1996, e de forma oficial a partir
+
+301
+00:41:01,620 --> 00:41:13,220
+de 2000 está em uso, e tenho custado muito a motivar as pessoas para mudar para o ProtocolliPV6,
+
+302
+00:41:13,220 --> 00:41:24,340
+e, no entanto, quando se desenvolvem sistemas novos de comunicação para famílias de dispositivos
+
+303
+00:41:24,340 --> 00:41:31,660
+dedicados, o IPV6 é a solução ideal, o IPV6 é a única solução para permitirmos
+
+304
+00:41:31,660 --> 00:41:43,380
+teus todas as coisas ligadas a internet, tal como foi previsto aqui em 92, em 91, em 2011,
+
+305
+00:41:43,380 --> 00:41:49,900
+acabaram os endereços IPV4, ou seja, acabaram esses endereços de 32 bits que nós
+
+306
+00:41:49,900 --> 00:41:58,740
+ainda usamos, mas que já não estão mais disponíveis para adquirirmos mais, e, melhor,
+
+307
+00:41:58,740 --> 00:42:03,700
+é começarmos a pensar em não usar, e, sobretudo, se tivemos que projetar sistemas novos
+
+308
+00:42:03,700 --> 00:42:12,860
+que ligam muitas coisas em internet, nem pensar usar a versão IPV4, demos usar a nova
+
+309
+00:42:12,860 --> 00:42:24,980
+versão IPV6, que já não sofre do problema das passeiras de endereços, como é que
+
+310
+00:42:24,980 --> 00:42:35,860
+os endereços são distribuídos, isto é uma autoridade mundial de central, que não distribui
+
+311
+00:42:35,860 --> 00:42:43,540
+as coisas diretamente aos utilizadores, mas distribuiam umas autoridades regionais, e,
+
+312
+00:42:43,540 --> 00:42:50,980
+para este efeito, o mundo está dividido em cinco regiões, para este efeito, a Rússia
+
+313
+00:42:50,980 --> 00:42:57,100
+faz parte da Europa, para este fim, o medeoriente também faz parte da Europa, pois temos uma
+
+314
+00:42:57,100 --> 00:43:03,340
+região que é a América do Norte, ou que é a América Latina, ou que é África, ou
+
+315
+00:43:03,340 --> 00:43:13,060
+que é a região básica pacífico, onde a autoridade central distribui blocos de endereços
+
+316
+00:43:13,060 --> 00:43:19,300
+aqueles, e aqueles depois distribuem para países, ou para os utilizadores, e, pois os países
+
+317
+00:43:19,300 --> 00:43:31,860
+distribuem para o pradores, etc. Só por curiosidade, em 2000 e 16, alguém desenhou este mapa,
+
+318
+00:43:31,860 --> 00:43:38,380
+onde está o espaço de investimento de todos, ou seja, aos endereços todos do IKV4 estão
+
+319
+00:43:38,380 --> 00:43:48,820
+aqui, nesta altura, em 2006, os blocos livres eram este que estavam a verde, o tour que está
+
+320
+00:43:48,820 --> 00:43:57,500
+abrenco já está ocupado, e aqui dá para ver que, sobre este bloco, aqui do canto superior
+
+321
+00:43:57,500 --> 00:44:05,780
+do, era onde se costumavam distribuir redes muito grandes, e no início da internet,
+
+322
+00:44:05,780 --> 00:44:11,180
+quando isto estava tudo vazio, as grandes empresas norte-americanas que aderiram a internet
+
+323
+00:44:11,180 --> 00:44:18,020
+pediram blocos deste, então, estes blocos até têm aqui o nome de quem os detenham, e vemos
+
+324
+00:44:18,020 --> 00:44:25,300
+aqui a HP, a DEC, a Digital, a Forge, a Digital é uma empresa com todos, pois foi comprada
+
+325
+00:44:25,300 --> 00:44:31,700
+pela Compaque, e depois a Compaque foi comprada pela HP, temos aqui o departamento de
+
+326
+00:44:31,700 --> 00:44:39,300
+Fesa, Intel, IBM, etc., grandes empresas americanas, quem começou a usar em internet e pagou
+
+327
+00:44:39,300 --> 00:44:45,540
+pelo início das coisas, teve direito a ter um bloco muito grande de endereços, os outros
+
+328
+00:44:45,540 --> 00:45:02,620
+foram aproveitando o que sobrava, e sem 2016 era isto, em 2011, passou a ser isto,
+
+329
+00:45:02,620 --> 00:45:11,860
+sobrou aqui um bloco verde, que é um conjunto de endereços que se decidiu manter como
+
+330
+00:45:11,860 --> 00:45:17,700
+o reservado para se for precisar alguma coisa no futuro, e não só distribuir aquilo a
+
+331
+00:45:17,700 --> 00:45:24,300
+ninguém, portanto, não há mais blocos para distribuir a ninguém a partir de 2011.
+
+332
+00:45:30,300 --> 00:45:37,340
+O texto gráfico mostra a quantidade de endereço de blocos que estavam disponíveis ao longo
+
+333
+00:45:37,340 --> 00:45:47,580
+do tempo, aqui a linha Vermelha, o número de blocos que estavam disponíveis na entidade
+
+334
+00:45:47,580 --> 00:45:52,980
+central, que é o IANA, e a linha verde é a quantidade de blocos que estavam disponíveis
+
+335
+00:45:52,980 --> 00:46:00,060
+na unidade central mais nas regiões, um tempo de 2011, o que aconteceu foi que a unidade
+
+336
+00:46:00,060 --> 00:46:06,820
+autoridade central ficou sem endereços, isto chegou a zero, e deixou de distribuir,
+
+337
+00:46:06,820 --> 00:46:11,540
+as regiões continuavam a ter alguns endereços, continuaram a ainda distribuir durante algum
+
+338
+00:46:11,540 --> 00:46:19,540
+tempo, a velocidade de descida disso diminuiu, porque a velocidade de entrega de endereços
+
+339
+00:46:19,540 --> 00:46:25,580
+também diminuiu, a partir do momento em que aquelas entidades já não recebiam, também
+
+340
+00:46:25,580 --> 00:46:32,140
+começaram a não entregar, e algumas regiões também ficaram sem endereços para entregar.
+
+341
+00:46:36,860 --> 00:46:41,500
+Isto mostra, o texto gráfico mostra a taxa de consumo na esta altura, taxa de consumo
+
+342
+00:46:41,500 --> 00:46:54,100
+de endereços por região, nesta fase, depois do ano 2000, quem comprava mais endereços
+
+343
+00:46:54,100 --> 00:47:00,820
+é a região da Asia pacífico, mas é agora uma região da Asia pacífico, quando em 2011,
+
+344
+00:47:00,820 --> 00:47:10,220
+aqui neste pico, a autoridade central ficou sem endereços, logo a seguir, aqui a região
+
+345
+00:47:10,220 --> 00:47:18,460
+da Asia pacífico também ficou sem endereços para distribuir a Europa, que é esta barra verde
+
+346
+00:47:18,460 --> 00:47:24,580
+ainda, continuou a distribuir endereços por mais um ano, e depois as outras, e aqui
+
+347
+00:47:24,580 --> 00:47:28,140
+estão ficando sem endereços, e para as outras regiões estão a ficaram sem endereços.
+
+348
+00:47:33,580 --> 00:47:36,580
+Estou na previsão, mas já está desatualizada.
+
+349
+00:47:36,580 --> 00:47:49,140
+Então, na retolfônica, para saber-mos, quando temos um número de telefone, para saber-mos
+
+350
+00:47:49,140 --> 00:47:56,100
+qual é a parte de respeito ao identificativo do país, e qual é o que diz respeito ao número
+
+351
+00:47:56,100 --> 00:48:03,900
+do telefone dentro do país, só uma solução é conhecermos, usarmos uma tabela de indicativos
+
+352
+00:48:03,900 --> 00:48:14,820
+dos países, e se conseguimos fazer o MATS com um, já sabemos que qual é o país e que o identificativo
+
+353
+00:48:14,820 --> 00:48:20,900
+do país acaba aí, se não temos que fazer o MATS com um conjunto de dois dígitos ou com um conjunto
+
+354
+00:48:20,900 --> 00:48:33,060
+de três dígitos. No caso dos endereços, que também podem ser divididos em NetID e OSTID,
+
+355
+00:48:33,900 --> 00:48:45,060
+para saber-mos onde acaba o NetID, e começa o OSTID, temos que usar uma informação externa
+
+356
+00:48:45,060 --> 00:48:50,020
+que pode ser a máscara da freda. A máscara da freda é uma palavra de 32 bits, que começa
+
+357
+00:48:50,020 --> 00:48:57,340
+com uns, e acaba em zero, e serve para nos dizer quais são os bits do endereço que
+
+358
+00:48:57,340 --> 00:49:10,420
+pertencem ao NetID e quais os bits do endereço pertencem ao OSTID. Se quisermos saber
+
+359
+00:49:10,420 --> 00:49:21,220
+o NetID de onde funciona, onde é terminado o endereço, e tivermos a máscara, podemos fazer
+
+360
+00:49:21,220 --> 00:49:28,700
+um end bit-bit daquilo endereço com a máscara negada, e temos o NetID. Se quisermos saber
+
+361
+00:49:28,700 --> 00:49:36,020
+qual é o OSTID, podemos fazer o end bit-bit do endereço com a máscara, e se quisermos saber
+
+362
+00:49:36,020 --> 00:49:41,180
+qual é o endereço quando temos o NetID e o OSTID, podemos concatenar os dois ou sumar os dois.
+
+363
+00:49:51,780 --> 00:49:58,100
+Onde com nas máscaras, tem que começar por um dos e tem que acabar em zero, só há 33
+
+364
+00:49:58,100 --> 00:50:04,420
+valores possíveis para as máscaras e PV4, que são esses que estão aqui. Se convertermos
+
+365
+00:50:04,420 --> 00:50:13,820
+8 bits de 1 para a decimal da 255, portanto, se convertermos 4 grupos de 1, 4 grupos de 8
+
+366
+00:50:14,540 --> 00:50:23,420
+em decimal, ficamos com 250, 155, 155, 155, que significa que alguém que estáis a usar aquela
+
+367
+00:50:23,420 --> 00:50:31,940
+máscara, todo o endereço é NetID, alguém que estáis a usar aquela máscara significa que todo o
+
+368
+00:50:31,940 --> 00:50:40,780
+endereço é o OSTID, não tem nenhum bit de NetID, todas as outras combinações estão aqui definidas.
+
+369
+00:50:44,780 --> 00:50:52,020
+A máscara também pode ser usada para determinarmos o número de endereços de uma determinada
+
+370
+00:50:52,020 --> 00:51:02,860
+rede ou de uma determinada gama, se fizermos esta conta um mais a máscara megada, ficamos com o número
+
+371
+00:51:02,860 --> 00:51:10,780
+de endereços da rede, por exemplo, se temos uma máscara que é isto que está aqui em binário,
+
+372
+00:51:10,780 --> 00:51:22,340
+se negarmos isto, ou seja, trocamos os 1 por 0 e os 1 por 1, convertemos para a sinal da
+
+373
+00:51:22,340 --> 00:51:30,380
+que é o número, o mais aqui, o da 496, que é o número de endereços, que temos dentro de qualquer
+
+374
+00:51:30,380 --> 00:51:33,180
+rede que utilizes esta máscara que está aqui.
+
+375
+00:51:40,780 --> 00:51:55,540
+Quando atribuímos gamas de endereços, o blocos de endereços há alguém, atribuímos sempre um
+
+376
+00:51:55,540 --> 00:52:02,980
+conjunto de endereços, que genericamente começa no endereço e acaba no outro, e que é o conjunto de
+
+377
+00:52:02,980 --> 00:52:13,940
+todos os endereços entre o endereço-base e o endereço-fim. Para alguns efeitos, nós podemos
+
+378
+00:52:13,940 --> 00:52:18,820
+espelhar as ganas que quisermos, do tamanho que quisermos, a começar em qualquer endereço,
+
+379
+00:52:18,820 --> 00:52:23,860
+e acabar com qualquer endereço. Das que sejam um conjunto de seguido de endereços, podemos dizer que
+
+380
+00:52:23,860 --> 00:52:35,380
+isso é uma gama. No entanto, se queremos atribuir gamas, que depois funcionem com os incaminhadores
+
+381
+00:52:35,380 --> 00:52:44,180
+de p, para que os incaminhadores saiguem enviar o tráfago para uma determinada rede, nós temos que usar
+
+382
+00:52:44,180 --> 00:52:52,100
+não uma gama esquais quermas de umas gamas mais estritas, que são umas gama especiais, que se
+
+383
+00:52:52,100 --> 00:53:04,460
+podem chamar gamas alinhadas, ou gamas CIDR, algumas gamas comprem estes requisitos, outras não.
+
+384
+00:53:10,700 --> 00:53:17,980
+As gamas CIDR-gamas alinhadas são aquelas que podem ser escritas, por um endereço-base e uma máscara,
+
+385
+00:53:17,980 --> 00:53:34,060
+as outras não, para que seja possível escrever uma gama através de um endereço-base e uma máscara.
+
+386
+00:53:34,060 --> 00:53:43,980
+A dimensão da gama, ou seja, o número de endereços da gama tem que ser uma potência de dois, ou seja, só podemos usar
+
+387
+00:53:43,980 --> 00:53:51,980
+gamas, para a maior parte das aplicações, só podemos usar gamas que sejam conjuntos de dois endereços,
+
+388
+00:53:51,980 --> 00:53:56,980
+quatro endereços, oito endereços de seis endereços, trinta e dois endereços, não podemos ter
+
+389
+00:53:56,980 --> 00:54:04,980
+gamas de nove endereços nem de sete endereços. Além disso, as gamas têm que começar no
+
+390
+00:54:04,980 --> 00:54:11,980
+múltiplo da sua dimensão, isso é que faz com que elas tenham o atributo de serem alinhadas,
+
+391
+00:54:11,980 --> 00:54:21,980
+estão alinhadas no múltiplo da sua dimensão, ou seja, uma gama de oito endereços tem que começar no
+
+392
+00:54:21,980 --> 00:54:28,980
+endereço oito, ou no endereço de seis, ou no endereço de vinte e quatro, uma gama de oito endereços
+
+393
+00:54:28,980 --> 00:54:34,980
+não pode começar no endereço que seja múltiplo de cinco, se não for múltiplo de oito.
+
+394
+00:54:40,980 --> 00:54:49,980
+Todos os equipamentos devem suportar todas as gamas alinhadas, ou todas as gamas que seja
+
+395
+00:54:49,980 --> 00:54:58,980
+possível especificar através do endereço base e da máscara, ou numa notação alternativa,
+
+396
+00:54:58,980 --> 00:55:07,980
+o partir do endereço base, e para não escrevermos a máscara que dá um exame muito complicado,
+
+397
+00:55:07,980 --> 00:55:14,980
+podemos utilizar uma notação alternativa chamada a notação CIDR, que está mais na moda,
+
+398
+00:55:14,980 --> 00:55:22,980
+onde usamos uma barra, que é o símbolo de dividir, e a frente descrevemos o comprimento
+
+399
+00:55:22,980 --> 00:55:31,980
+da máscara, o comprimento do neta ID, por exemplo, a rede do departamento de índio.
+

@@ -1,0 +1,2912 @@
+1
+00:00:00,000 --> 00:00:05,760
+e bem-vindos às aulas de sistemas ao partido de tempo real,
+
+2
+00:00:05,760 --> 00:00:11,440
+nestas aulas serão lesionadas para o professor Paulo Baltarejo.
+
+3
+00:00:11,440 --> 00:00:14,840
+E por mim, eu sou o professor Ricardo Severino,
+
+4
+00:00:14,840 --> 00:00:25,120
+eu inicierei, portanto, esta semana, com uma pequena apresentação sobre a unidade curricular,
+
+5
+00:00:25,360 --> 00:00:31,280
+se iniciar portanto a introdução aos fundamentos de sistemas de tempo real,
+
+6
+00:00:31,280 --> 00:00:35,800
+uma coisa muito levezinha, mas que é fundamental.
+
+7
+00:00:35,800 --> 00:00:42,520
+E depois das restantes semanas, iremos aprofundar mais alguns tópicos
+
+8
+00:00:42,520 --> 00:00:47,760
+relacionados com este tema de sistemas de partidos de tempo real,
+
+9
+00:00:47,760 --> 00:01:09,400
+portanto, portanto, o professor Paulo Baltarejo é que é, portanto, o regente de unidade curricular,
+
+10
+00:01:09,400 --> 00:01:16,800
+portanto, ele pediu para fazer aqui uma curta introdução para passar aqui alguns celais sobre os contidutos,
+
+11
+00:01:16,800 --> 00:01:21,480
+e podem notar, portanto, que é indicado,
+
+12
+00:01:21,480 --> 00:01:24,680
+que essas apresentações, materiais que irão ser utilizados,
+
+13
+00:01:24,680 --> 00:01:28,160
+são adaptais vários fontes, como já já vem aqui a Calcuaga,
+
+14
+00:01:28,160 --> 00:01:32,120
+nós iremos indicar depois no final, e na ficha do legal curricular também,
+
+15
+00:01:32,120 --> 00:01:36,800
+tem vários fontes que podem consultar, sem assim entender.
+
+16
+00:01:37,640 --> 00:01:46,720
+Portanto, vamos começar a proceder um sumário do que é este lugar curricular,
+
+17
+00:01:46,720 --> 00:01:53,880
+como tem, como é que vamos avaliar um intrusão ao planeamento,
+
+18
+00:01:53,880 --> 00:02:00,400
+como é que ela está planeada, e depois, por exemplo, mais ou menos,
+
+19
+00:02:00,400 --> 00:02:05,560
+mas voltei ao portanto, depois de Calcuaga iniciar o professor Paulo Baltarejo a seguir.
+
+20
+00:02:05,600 --> 00:02:11,160
+Portanto, a unidade, este umidade curricular, estamos operativos,
+
+21
+00:02:11,160 --> 00:02:16,320
+está por real, começa por analisar no conjunto de conceitos e princípios
+
+22
+00:02:16,320 --> 00:02:23,680
+de sistemas de tempo real, em particular, escalamento ao agrítimos de escalamento,
+
+23
+00:02:23,680 --> 00:02:31,000
+e em canismos de partilhas de recursos, e irão perceber já agora que tudo o que diz respeito
+
+24
+00:02:31,040 --> 00:02:39,560
+é este tema, este tema de tempo real, aprende-se precisamente com partilha de recursos.
+
+25
+00:02:39,560 --> 00:02:45,960
+Mesmo escalamento existe, devido a necessidade de partilhar os recursos do professor.
+
+26
+00:02:45,960 --> 00:02:55,000
+Tudo resumo, quase com o regular, quase um sistema político,
+
+27
+00:02:55,000 --> 00:03:00,040
+vamos ver, é quase isso, temos uma política para regular uma cidade
+
+28
+00:03:00,080 --> 00:03:09,600
+e garantir acesso, mais ou menos, igual a todos os recursos que existem na nossa nação.
+
+29
+00:03:09,600 --> 00:03:14,240
+E aqui, no sistema computacional do tempo real, isso não é muito diferente.
+
+30
+00:03:14,240 --> 00:03:19,400
+Também, fazendo aqui um paralelismo político, é também cemento, é preciso garantir
+
+31
+00:03:19,400 --> 00:03:24,640
+e conseguimos as sejas recursos de uma forma, mas deixaram-me a uma forma igual,
+
+32
+00:03:24,680 --> 00:03:33,800
+é pouco socialista, é mais de uma forma e de uma perspectiva de criticidade.
+
+33
+00:03:33,800 --> 00:03:40,280
+Então, depois iremos focar um conjunto conceitos e princípios das sistemas operativos de tempo real,
+
+34
+00:03:40,280 --> 00:03:46,440
+assim como que são os ajos para assegurar a operação correta das aplicações,
+
+35
+00:03:46,480 --> 00:03:57,440
+e depois iremos focar outros estômios, outros tópicos, um pouco mais avançados, mais profinal.
+
+36
+00:04:00,440 --> 00:04:02,440
+Ou seja, eu já cabei mais ou menos por dizer o que está aqui.
+
+37
+00:04:03,440 --> 00:04:10,440
+Assumo-se, portanto, que os outros têm, ou seja, o familiarizados com o conjunto de conceitos,
+
+38
+00:04:10,440 --> 00:04:18,440
+em particular, a equilitatura de computadores, a utilização em fundamentos de temas operativos,
+
+39
+00:04:18,440 --> 00:04:27,440
+como é que funciona tarefas, processos, como é que funciona esses conceitos estruturados,
+
+40
+00:04:27,440 --> 00:04:37,440
+a programação em cia, e algum conhecimento de Linux base para, sobretudo para os laboratorios,
+
+41
+00:04:37,440 --> 00:04:41,440
+onde iremos implementar alguns desses escalonamentos.
+
+42
+00:04:41,440 --> 00:04:51,440
+Tanto o final de concurso, potência que os alunos sejam capazes de compreender os conceitos e os princípios associados com os sistemas de tempo real,
+
+43
+00:04:51,440 --> 00:05:00,440
+avaliar algoritmos escalonamentos e compreender a análise dos escalonamentos em estômios públicos e em multiprocessor,
+
+44
+00:05:00,440 --> 00:05:06,440
+no início iremos falar em sistemas uniprocessor, porque os sistemas multiprocedoração irão perceber,
+
+45
+00:05:06,440 --> 00:05:12,440
+depois, mais tarde, sobretudo, com um professor Paulo Altarejo, bastante, mais complexos, bastante, mais complexos,
+
+46
+00:05:12,440 --> 00:05:21,440
+e ainda tem vários problemas em aberto, compreender os fundamentos de temas operativos,
+
+47
+00:05:21,440 --> 00:05:25,440
+tempo real, assim como a sua arquitetura, e, portanto, depois há diferenças,
+
+48
+00:05:26,440 --> 00:05:34,440
+messo implementação, estômio a partir de passos operativos, mas há um trombo comum do conceitos que são partilhados entre eles,
+
+49
+00:05:34,440 --> 00:05:41,440
+depois há preciso ir a conseguir avaliar, portanto, os diferentes cúmios implementados,
+
+50
+00:05:41,440 --> 00:05:47,440
+diferentes mecanismos ou os diferentes mecanismos implementados assim aqui, e a serem capazes de aplicar,
+
+51
+00:05:47,440 --> 00:05:54,440
+portanto, mecanismos de sistemas operativos, tempo real, para sofrutar aplicações em tempo real,
+
+52
+00:05:54,440 --> 00:06:00,440
+temos que se não sais para ser capazes de implementar este tipo de aplicações.
+
+53
+00:06:03,440 --> 00:06:08,440
+Portanto, iremos começar por abordar fundamentos de sistemas tempo real,
+
+54
+00:06:09,440 --> 00:06:18,440
+até o que levamos a abordar nesta aula, na aula seguinte, iremos solar um pouco mais de sistemas operativos,
+
+55
+00:06:18,440 --> 00:06:29,440
+princípios complementos e arquiteturas, depois avançaremos para escalamento e partilhas de recursos e desenvolvimento de kernel,
+
+56
+00:06:30,440 --> 00:06:31,440
+provamos-se tão ao nível do kernel.
+
+57
+00:06:33,440 --> 00:06:39,440
+Temos um conjunto de APIs, tanto aulas teóricas ou práticas e laboratores,
+
+58
+00:06:39,440 --> 00:06:47,440
+estas aulas decorrem as terças, e na que eu tenho isso acho que está mais à frente,
+
+59
+00:06:47,440 --> 00:06:53,440
+pois apresenta-se, mas acho que tem isso mais à frente, pois um tanto aulas T APIs decorrem as terças e quintas,
+
+60
+00:06:53,440 --> 00:07:00,440
+e depois um laboratório é o sábado. Quero que esta semana não teremos um laboratório, como se sabora,
+
+61
+00:07:00,440 --> 00:07:02,440
+é um friado nacional.
+
+62
+00:07:07,440 --> 00:07:11,440
+Pronto, e já o sábado é desproduzado, tanto vai com o tio de sono mudo,
+
+63
+00:07:11,440 --> 00:07:16,440
+pois eu já estou a fallar, porque esta aprendação que depois de voco, esta já lá está,
+
+64
+00:07:16,440 --> 00:07:22,440
+mas apresenta-se o que tenho em seguida e que irá apresentar, não coloquei lá,
+
+65
+00:07:22,440 --> 00:07:25,440
+mas vou colocar já no final de algo, mas se preocupem com isso,
+
+66
+00:07:25,440 --> 00:07:31,440
+e portanto, teremos também se lutar automaterial, que seja necessário,
+
+67
+00:07:31,440 --> 00:07:35,440
+que achamos necessário para a unidade curricular.
+
+68
+00:07:38,440 --> 00:07:45,440
+Aqui tenho alguns juntos livros sobre estes tópicos que quiserem consultar,
+
+69
+00:07:46,440 --> 00:07:51,440
+e o jogo que há a partida, o material que faça a discussão é suficiente,
+
+70
+00:07:51,440 --> 00:07:57,440
+mas se sentir em curiosidade e aprofundar um outro assunto estes mais montados,
+
+71
+00:07:57,440 --> 00:08:00,440
+são livros muito bons nestas áreas,
+
+72
+00:08:00,440 --> 00:08:05,440
+e bastante autoas, bastante rototásos, no caso Allan Burnes,
+
+73
+00:08:05,440 --> 00:08:08,440
+dos olhos lutados, ok?
+
+74
+00:08:09,440 --> 00:08:15,440
+Portanto, alguns servei a ser as que são mais fácelles de lheir e merecem ser lidos,
+
+75
+00:08:15,440 --> 00:08:20,440
+ok? Santo, acho que são bastante interessantes para consultarem,
+
+76
+00:08:20,440 --> 00:08:27,440
+e depois queremos utilizar alguns recursos também para os laboratórios sobre todo,
+
+77
+00:08:27,440 --> 00:08:29,440
+que os recursos computacionais.
+
+78
+00:08:30,440 --> 00:08:36,440
+A voiação desta unidade curricular será feita em dois momentos,
+
+79
+00:08:36,440 --> 00:08:45,440
+um momento um que diz respeito às primeiras duas semanas de alos e um momento de dois às gestantes.
+
+80
+00:08:46,440 --> 00:08:50,440
+Tanto o primeiro é um exercício, eles são exercícios do laboratório,
+
+81
+00:08:50,440 --> 00:08:55,440
+quando são pedidos para responder a algum inunciado,
+
+82
+00:08:55,440 --> 00:08:58,440
+algumas questões e implementarem alguma coisa, ok?
+
+83
+00:08:58,440 --> 00:09:02,440
+Um conjunto de tarefas e analisarem, portanto, há algo para se germe,
+
+84
+00:09:02,440 --> 00:09:06,440
+e só que horrorar, portanto, num dos laboratórios, no meu caso,
+
+85
+00:09:06,440 --> 00:09:11,440
+estas primeiras duas semanas, cedar no sábado da terceira semana de alas,
+
+86
+00:09:12,440 --> 00:09:16,440
+e do outro, depois da cor respondente.
+
+87
+00:09:19,440 --> 00:09:23,440
+Aqui está a forma que a nota final é calculada,
+
+88
+00:09:24,440 --> 00:09:28,440
+santo, com um peso que diz respeito no fundo da quantidade de semanas,
+
+89
+00:09:28,440 --> 00:09:32,440
+são duas semanas e de primeira parte, e 3 julgo-eu da segunda,
+
+90
+00:09:32,440 --> 00:09:35,440
+portanto, está relativamente bem reclibrado,
+
+91
+00:09:36,440 --> 00:09:40,440
+e aqui temos portanto o planeamento, e como já de ferrei,
+
+92
+00:09:40,440 --> 00:09:42,440
+nesta semana, não haverá laboratória,
+
+93
+00:09:42,440 --> 00:09:45,440
+haverá na semana assim, e na outra seguir um de será,
+
+94
+00:09:45,440 --> 00:09:48,440
+não temos um momento um da valiação, ok?
+
+95
+00:09:48,440 --> 00:09:49,440
+Será isto?
+
+96
+00:09:51,440 --> 00:09:53,440
+Pronto, aqui temos contatos,
+
+97
+00:09:54,440 --> 00:09:58,440
+e vamos se mover aqui em nenhuma questão,
+
+98
+00:09:59,440 --> 00:10:03,440
+irá avançar para a apresentação de hoje,
+
+99
+00:10:03,440 --> 00:10:15,440
+para começarmos a iniciar o tópico de conceitos fundamentais de sistemas de tempo real,
+
+100
+00:10:16,440 --> 00:10:20,440
+deixa-me que iniciar a partilha,
+
+101
+00:10:30,440 --> 00:10:31,440
+estou a ouvir o éclare?
+
+102
+00:10:34,440 --> 00:10:35,440
+Sim, sim.
+
+103
+00:10:35,440 --> 00:10:36,440
+Ok?
+
+104
+00:10:36,440 --> 00:10:37,440
+Sim.
+
+105
+00:10:37,440 --> 00:10:38,440
+Obrigado.
+
+106
+00:10:42,440 --> 00:10:43,440
+Pronto, então...
+
+107
+00:10:46,440 --> 00:10:52,440
+Normalmente, tempo real, os sistemas de tempo real,
+
+108
+00:10:52,440 --> 00:10:59,440
+é de termilogia que é utilizada para referir aos requisitos temporais,
+
+109
+00:10:59,440 --> 00:11:02,440
+requisitos temporais de aplicações,
+
+110
+00:11:02,440 --> 00:11:04,440
+onde o mais importante,
+
+111
+00:11:04,440 --> 00:11:07,440
+ou, ok, vamos dizer que se calhar,
+
+112
+00:11:07,440 --> 00:11:09,440
+uma das coisas mais importantes,
+
+113
+00:11:09,440 --> 00:11:11,440
+dessas aplicações é precisamente,
+
+114
+00:11:12,440 --> 00:11:18,440
+são os seus requisitos temporais em paralel com os requisitos funcionais,
+
+115
+00:11:18,440 --> 00:11:20,440
+e eu já estou a fazer aqui uma diferença,
+
+116
+00:11:20,440 --> 00:11:24,440
+são os requisitos temporais e os requisitos funcionais,
+
+117
+00:11:24,440 --> 00:11:28,440
+e que é como quem diz os requisitos temporais,
+
+118
+00:11:28,440 --> 00:11:31,440
+são termilineses, não é?
+
+119
+00:11:31,440 --> 00:11:35,440
+São requisitos não funcionais, ok?
+
+120
+00:11:37,440 --> 00:11:40,440
+Exemple-os disso, mas já vou afundar mais isso mais da frente,
+
+121
+00:11:40,440 --> 00:11:45,440
+Exemple-os desses sistemas de controlo de ariões,
+
+122
+00:11:45,440 --> 00:11:47,440
+sistemas médicos,
+
+123
+00:11:49,440 --> 00:11:52,440
+software, algum software automotivo,
+
+124
+00:11:52,440 --> 00:11:55,440
+não todo, mas grande parte de este software,
+
+125
+00:11:55,440 --> 00:11:59,440
+controlo aplicações de controlo industrial,
+
+126
+00:11:59,440 --> 00:12:04,440
+telecomicações nos rutas, por exemplo,
+
+127
+00:12:05,440 --> 00:12:13,440
+e outros aparelhos electrônicos de uso corrente,
+
+128
+00:12:13,440 --> 00:12:16,440
+também podem ser sistemas de tempo que há.
+
+129
+00:12:16,440 --> 00:12:19,440
+Portanto, estamos a ver que, tipicamente,
+
+130
+00:12:19,440 --> 00:12:25,440
+esses temas são implementados em sistemas que também são críticos,
+
+131
+00:12:25,440 --> 00:12:27,440
+ok, uns mais que outros,
+
+132
+00:12:27,440 --> 00:12:30,440
+mas se há um sistema crítico,
+
+133
+00:12:30,440 --> 00:12:33,440
+sempre tem um sistema de tempo real,
+
+134
+00:12:33,440 --> 00:12:37,440
+ou seja, um sistema e cuja criticidade temporal
+
+135
+00:12:37,440 --> 00:12:42,440
+é fundamental para garantir a segurança,
+
+136
+00:12:42,440 --> 00:12:46,440
+não só escapabilitar-me, mas também a segurança,
+
+137
+00:12:46,440 --> 00:12:51,440
+aqui safety do sistema.
+
+138
+00:12:51,440 --> 00:12:55,440
+Portanto, e são os temas que interagem como ambientes,
+
+139
+00:12:55,440 --> 00:12:58,440
+tipicamente, são os sistemas ciber físicos,
+
+140
+00:12:58,440 --> 00:13:04,440
+portanto, e onde existe portanto uma interação crítica,
+
+141
+00:13:04,440 --> 00:13:07,440
+com os humanos, muitas vezes,
+
+142
+00:13:07,440 --> 00:13:10,440
+a tal forma que um problema,
+
+143
+00:13:10,440 --> 00:13:13,440
+não é o que pode levar a uma falha,
+
+144
+00:13:13,440 --> 00:13:16,440
+pode levar portanto, depois,
+
+145
+00:13:16,440 --> 00:13:19,440
+pera devido a uma,
+
+146
+00:13:19,440 --> 00:13:25,440
+ou perdas montais significativas,
+
+147
+00:13:25,440 --> 00:13:31,440
+ou mesmo impacto ambiental grave, ok?
+
+148
+00:13:31,440 --> 00:13:34,440
+Semos críticos portantes.
+
+149
+00:13:34,440 --> 00:13:37,440
+Portanto, aqui a questão fundamental,
+
+150
+00:13:37,440 --> 00:13:40,440
+se tem um sistema de tempo real do restante,
+
+151
+00:13:40,440 --> 00:13:45,440
+é que é forma como se ger o tempo,
+
+152
+00:13:45,440 --> 00:13:48,440
+o aspecto temporal da aplicação.
+
+153
+00:13:48,440 --> 00:13:51,440
+Então, um resultado desta aplicação,
+
+154
+00:13:51,440 --> 00:13:54,440
+um outro puto da aplicação, como portanto,
+
+155
+00:13:54,440 --> 00:13:56,440
+seja, ele qual for,
+
+156
+00:13:56,440 --> 00:13:58,440
+para lá em ser correto,
+
+157
+00:13:58,440 --> 00:14:04,440
+tem que ser entrega dentro de um período bem definido.
+
+158
+00:14:04,440 --> 00:14:07,440
+E portanto, a deadline,
+
+159
+00:14:07,440 --> 00:14:12,440
+é o requisito que é imposto nestas aplicações existentes,
+
+160
+00:14:12,440 --> 00:14:16,440
+e é um requisito importantíssimo,
+
+161
+00:14:16,440 --> 00:14:18,440
+ou tal importante,
+
+162
+00:14:18,440 --> 00:14:22,440
+uma correça dos resultados que são apresentados,
+
+163
+00:14:22,440 --> 00:14:24,440
+de tal forma, que o resultado,
+
+164
+00:14:24,440 --> 00:14:27,440
+num sistema de tempo de hardware,
+
+165
+00:14:27,440 --> 00:14:30,440
+tanto de temporal estrito,
+
+166
+00:14:30,440 --> 00:14:33,440
+se não for entregue,
+
+167
+00:14:33,440 --> 00:14:36,440
+o dia do deadline,
+
+168
+00:14:36,440 --> 00:14:39,440
+não tem valor,
+
+169
+00:14:39,440 --> 00:14:41,440
+como tem valor negativo,
+
+170
+00:14:41,440 --> 00:14:44,440
+ou seja, pode ser contra-producentes,
+
+171
+00:14:44,440 --> 00:14:46,440
+na aplicação.
+
+172
+00:14:46,440 --> 00:14:49,440
+Então, se estes dos deadlines,
+
+173
+00:14:49,440 --> 00:14:51,440
+que é como quem diz,
+
+174
+00:14:51,440 --> 00:14:56,440
+se o resultado não for entregue dentro do tempo correto,
+
+175
+00:14:56,440 --> 00:14:58,440
+o sistema de filha,
+
+176
+00:14:58,440 --> 00:15:01,440
+quando tem hardware de deadlines,
+
+177
+00:15:01,440 --> 00:15:03,440
+o que vai trazer, portanto,
+
+178
+00:15:03,440 --> 00:15:05,440
+consequências graves,
+
+179
+00:15:05,440 --> 00:15:07,440
+e aqui temos alguns isemos,
+
+180
+00:15:07,440 --> 00:15:09,440
+o veículo que não para,
+
+181
+00:15:09,440 --> 00:15:12,440
+tanto antes da aplicação,
+
+182
+00:15:12,440 --> 00:15:14,440
+tem um exemplo muito interessante,
+
+183
+00:15:14,440 --> 00:15:16,440
+por exemplo, o exemplo,
+
+184
+00:15:16,440 --> 00:15:18,440
+pode até às vezes,
+
+185
+00:15:18,440 --> 00:15:20,440
+tem alguns isemos dos testes de hardware,
+
+186
+00:15:20,440 --> 00:15:23,440
+mas isso não foi tanto um plano do sistema de tempo correto,
+
+187
+00:15:23,440 --> 00:15:26,440
+mas um sistema de sensual até,
+
+188
+00:15:26,440 --> 00:15:29,440
+é muito referido à câmera,
+
+189
+00:15:29,440 --> 00:15:31,440
+que não tentou,
+
+190
+00:15:31,440 --> 00:15:33,440
+ou tal, lembrar,
+
+191
+00:15:33,440 --> 00:15:35,440
+que não tentou, portanto,
+
+192
+00:15:35,440 --> 00:15:37,440
+outro lado,
+
+193
+00:15:37,440 --> 00:15:40,440
+mas o sistema é um plano da tela gerenima diferente,
+
+194
+00:15:40,440 --> 00:15:43,440
+porque se tem a ver com mais parte de processão,
+
+195
+00:15:43,440 --> 00:15:45,440
+ou na máquina de raio X,
+
+196
+00:15:45,440 --> 00:15:47,440
+que pode, tanto, enviar,
+
+197
+00:15:47,440 --> 00:15:50,440
+ou entregar-te-maziada a radiação,
+
+198
+00:15:50,440 --> 00:15:52,440
+mais de o que devia,
+
+199
+00:15:52,440 --> 00:15:54,440
+para executar um isame,
+
+200
+00:15:54,440 --> 00:15:55,440
+tem que ter consequências,
+
+201
+00:15:55,440 --> 00:15:57,440
+que podem levar bastante a morte,
+
+202
+00:15:57,440 --> 00:16:01,440
+ou em tal mesmo,
+
+203
+00:16:01,440 --> 00:16:05,440
+uma questão económica de bolsista,
+
+204
+00:16:05,440 --> 00:16:07,440
+quando é dito,
+
+205
+00:16:07,440 --> 00:16:09,440
+quando é enviado um pedido,
+
+206
+00:16:09,440 --> 00:16:11,440
+para agir,
+
+207
+00:16:11,440 --> 00:16:14,440
+que vai ser um determinado recurso,
+
+208
+00:16:14,440 --> 00:16:16,440
+se isso não for feito,
+
+209
+00:16:16,440 --> 00:16:18,440
+tendo um determinado período de tempo,
+
+210
+00:16:18,440 --> 00:16:22,440
+o valor pode levar a peda significativas, né?
+
+211
+00:16:22,440 --> 00:16:24,440
+Portanto, estamos a ver aqui,
+
+212
+00:16:24,440 --> 00:16:29,440
+que há uma relação entre o valor
+
+213
+00:16:29,440 --> 00:16:32,440
+de informação que é entregue,
+
+214
+00:16:32,440 --> 00:16:34,440
+e o tempo.
+
+215
+00:16:34,440 --> 00:16:39,440
+Essa relação entre o valor de informação que é entregue,
+
+216
+00:16:39,440 --> 00:16:42,440
+o tempo varia de acordo
+
+217
+00:16:42,440 --> 00:16:45,440
+com o tipo de estema de tempo real,
+
+218
+00:16:45,440 --> 00:16:47,440
+que estamos a falar.
+
+219
+00:16:47,440 --> 00:16:52,440
+No lado da escala mais restrito,
+
+220
+00:16:52,440 --> 00:16:55,440
+temos os estemas de rare real time,
+
+221
+00:16:55,440 --> 00:16:57,440
+e são os estemas que os valor
+
+222
+00:16:57,440 --> 00:17:00,440
+de informação de cresce,
+
+223
+00:17:00,440 --> 00:17:02,440
+não só de cresce, como se torna,
+
+224
+00:17:02,440 --> 00:17:03,440
+portanto, negativo,
+
+225
+00:17:03,440 --> 00:17:06,440
+enfimita, bem infinitamente negativo,
+
+226
+00:17:07,440 --> 00:17:10,440
+depois de passar o deadline da entrega,
+
+227
+00:17:10,440 --> 00:17:14,440
+e isto quer dizer que este resultado é crítico
+
+228
+00:17:14,440 --> 00:17:16,440
+para o comportamento de estema,
+
+229
+00:17:16,440 --> 00:17:18,440
+e não só o resultado não é correto,
+
+230
+00:17:18,440 --> 00:17:20,440
+como pode ser prodicial,
+
+231
+00:17:20,440 --> 00:17:22,440
+ou seja, vai levar o estema,
+
+232
+00:17:22,440 --> 00:17:25,440
+a tomar uma decisão baseada em informação
+
+233
+00:17:25,440 --> 00:17:28,440
+que já não é correto, ok?
+
+234
+00:17:28,440 --> 00:17:30,440
+Um estema firm,
+
+235
+00:17:30,440 --> 00:17:31,440
+real time,
+
+236
+00:17:31,440 --> 00:17:34,440
+e o valor da informação
+
+237
+00:17:34,440 --> 00:17:38,440
+entre a pôr do deadline de cresce,
+
+238
+00:17:38,440 --> 00:17:40,440
+para ver, é, não é mais importante,
+
+239
+00:17:40,440 --> 00:17:43,440
+mas não leva tipicamente,
+
+240
+00:17:43,440 --> 00:17:48,440
+tanto, não tenha mesma criticidade em leva
+
+241
+00:17:48,440 --> 00:17:51,440
+a este tipo de problemas tão graves.
+
+242
+00:17:51,440 --> 00:17:54,440
+E depois temos pro outro lado,
+
+243
+00:17:54,440 --> 00:17:55,440
+o software real time,
+
+244
+00:17:55,440 --> 00:17:58,440
+em que o valor vai ir crescendo
+
+245
+00:17:58,440 --> 00:18:01,440
+após a passagem de este deadline,
+
+246
+00:18:01,440 --> 00:18:05,440
+e portanto, não há problema de criticidade,
+
+247
+00:18:05,440 --> 00:18:08,440
+é, pequenos ou mais um problema de qualidade de serviço,
+
+248
+00:18:08,440 --> 00:18:12,440
+não tanto, um problema de hardware real time,
+
+249
+00:18:12,440 --> 00:18:14,440
+ou de criticidade, não é?
+
+250
+00:18:14,440 --> 00:18:18,440
+E temos, por exemplo, o caso de muitos estemas multimídios,
+
+251
+00:18:18,440 --> 00:18:20,440
+perdemos qualidade de serviço,
+
+252
+00:18:20,440 --> 00:18:21,440
+perdemos uns frames,
+
+253
+00:18:21,440 --> 00:18:25,440
+mas não vai acontecer nada de mal por causa disso.
+
+254
+00:18:31,440 --> 00:18:35,440
+E, portanto, de uma forma geral,
+
+255
+00:18:35,440 --> 00:18:37,440
+mais apostata,
+
+256
+00:18:37,440 --> 00:18:41,440
+se quisermos, podíamos separar o estema
+
+257
+00:18:41,440 --> 00:18:43,440
+estema real em fundamentalmente
+
+258
+00:18:43,440 --> 00:18:45,440
+dois tipos de estemas,
+
+259
+00:18:45,440 --> 00:18:46,440
+dois grandes tipos,
+
+260
+00:18:46,440 --> 00:18:48,440
+o software real time,
+
+261
+00:18:48,440 --> 00:18:50,440
+e o hardware real time,
+
+262
+00:18:50,440 --> 00:18:52,440
+sempre quer fazer a perceber que os hardware real time
+
+263
+00:18:52,440 --> 00:18:53,440
+estou mostrimos na escala,
+
+264
+00:18:53,440 --> 00:18:56,440
+e esses são os críticos, os mais críticos, né?
+
+265
+00:18:56,440 --> 00:18:59,440
+O software, o firmware, né?
+
+266
+00:18:59,440 --> 00:19:01,440
+Tem software frame time constraints,
+
+267
+00:19:01,440 --> 00:19:03,440
+portanto, o que quisermos temporais,
+
+268
+00:19:03,440 --> 00:19:05,440
+o software ou firmes,
+
+269
+00:19:05,440 --> 00:19:07,440
+e tenho, por exemplo,
+
+270
+00:19:07,440 --> 00:19:09,440
+nove momentos estemas multimídia,
+
+271
+00:19:09,440 --> 00:19:11,440
+e depois temos os outros,
+
+272
+00:19:11,440 --> 00:19:13,440
+que são, portanto, utilizados em estemas
+
+273
+00:19:13,440 --> 00:19:15,440
+que eu pensi nela ao que me nisso,
+
+274
+00:19:15,440 --> 00:19:17,440
+temos de control,
+
+275
+00:19:17,440 --> 00:19:19,440
+e mostriado ao automóvel,
+
+276
+00:19:19,440 --> 00:19:22,440
+no espaço, por exemplo, estemas críticos,
+
+277
+00:19:22,440 --> 00:19:24,440
+são das espaciais,
+
+278
+00:19:24,440 --> 00:19:26,440
+estemos claramente críticos.
+
+279
+00:19:26,440 --> 00:19:29,440
+O Pathfinder lembra-se como um problema,
+
+280
+00:19:29,440 --> 00:19:30,440
+é um problema de,
+
+281
+00:19:30,440 --> 00:19:32,440
+já agora, a sonda de marca,
+
+282
+00:19:32,440 --> 00:19:33,440
+o Pathfinder,
+
+283
+00:19:33,440 --> 00:19:35,440
+não será se criar,
+
+284
+00:19:35,440 --> 00:19:37,440
+da geração de muitos evocias,
+
+285
+00:19:37,440 --> 00:19:39,440
+mas, o problema,
+
+286
+00:19:39,440 --> 00:19:41,440
+ou um problema com essa sonda
+
+287
+00:19:41,440 --> 00:19:42,440
+que posses até poderiam,
+
+288
+00:19:42,440 --> 00:19:44,440
+seria interessante até que vocês podessem,
+
+289
+00:19:44,440 --> 00:19:45,440
+analisar,
+
+290
+00:19:47,440 --> 00:19:49,440
+no seguimento desta aula,
+
+291
+00:19:49,440 --> 00:19:50,440
+porque ainda santo e sim,
+
+292
+00:19:50,440 --> 00:19:51,440
+porque isso, o problema,
+
+293
+00:19:51,440 --> 00:19:52,440
+é como com essa sonda,
+
+294
+00:19:52,440 --> 00:19:54,440
+que pousou a marca,
+
+295
+00:19:54,440 --> 00:19:56,440
+esteve precisamente de relacionado
+
+296
+00:19:56,440 --> 00:19:58,440
+com um problema,
+
+297
+00:19:58,440 --> 00:20:00,440
+de tempo real,
+
+298
+00:20:00,440 --> 00:20:02,440
+o problema,
+
+299
+00:20:02,440 --> 00:20:04,440
+na gestão das tarefas,
+
+300
+00:20:04,440 --> 00:20:06,440
+na preenção das tarefas,
+
+301
+00:20:06,440 --> 00:20:08,440
+uma coisa muito interessante,
+
+302
+00:20:08,440 --> 00:20:10,440
+que, depois, até que podemos analisar,
+
+303
+00:20:10,440 --> 00:20:11,440
+mas, afem, como caímos,
+
+304
+00:20:11,440 --> 00:20:12,440
+que isso tudo,
+
+305
+00:20:12,440 --> 00:20:13,440
+que isso tudo é,
+
+306
+00:20:13,440 --> 00:20:15,440
+após termos os dados,
+
+307
+00:20:15,440 --> 00:20:18,440
+o fundamento já aprendidos.
+
+308
+00:20:18,440 --> 00:20:21,440
+Estemos,
+
+309
+00:20:21,440 --> 00:20:23,440
+os dados real-time são,
+
+310
+00:20:23,440 --> 00:20:24,440
+normalmente,
+
+311
+00:20:24,440 --> 00:20:25,440
+sempre crítical,
+
+312
+00:20:25,440 --> 00:20:27,440
+o que significa que temos,
+
+313
+00:20:27,440 --> 00:20:28,440
+portanto,
+
+314
+00:20:28,440 --> 00:20:30,440
+requisitos,
+
+315
+00:20:30,440 --> 00:20:32,440
+mais fortes,
+
+316
+00:20:32,440 --> 00:20:34,440
+e, portanto,
+
+317
+00:20:34,440 --> 00:20:36,440
+temos que assumir sempre,
+
+318
+00:20:36,440 --> 00:20:37,440
+o chamado,
+
+319
+00:20:37,440 --> 00:20:38,440
+hoje de que é isso,
+
+320
+00:20:38,440 --> 00:20:39,440
+a Samsung,
+
+321
+00:20:39,440 --> 00:20:40,440
+tanto,
+
+322
+00:20:40,440 --> 00:20:41,440
+o pior caso,
+
+323
+00:20:41,440 --> 00:20:42,440
+nostonamento
+
+324
+00:20:42,440 --> 00:20:44,440
+e no planimento do sistema,
+
+325
+00:20:44,440 --> 00:20:46,440
+vamos sempre,
+
+326
+00:20:46,440 --> 00:20:48,440
+pelo pior caso,
+
+327
+00:20:48,440 --> 00:20:50,440
+o que significa, também,
+
+328
+00:20:50,440 --> 00:20:52,440
+que, muitas vezes,
+
+329
+00:20:52,440 --> 00:20:54,440
+ao pegar,
+
+330
+00:20:54,440 --> 00:20:56,440
+nesse pior caso,
+
+331
+00:20:56,440 --> 00:20:57,440
+estamos também a ser,
+
+332
+00:20:57,440 --> 00:20:58,440
+demasiado,
+
+333
+00:20:58,440 --> 00:20:59,440
+peicinistas,
+
+334
+00:20:59,440 --> 00:21:01,440
+no comportamento do sistema,
+
+335
+00:21:01,440 --> 00:21:02,440
+será.
+
+336
+00:21:02,440 --> 00:21:03,440
+A vantagem disso,
+
+337
+00:21:03,440 --> 00:21:04,440
+é que nos garantivos,
+
+338
+00:21:04,440 --> 00:21:05,440
+que,
+
+339
+00:21:05,440 --> 00:21:06,440
+dependa de habilidade,
+
+340
+00:21:06,440 --> 00:21:08,440
+ou dependa de habilidade,
+
+341
+00:21:08,440 --> 00:21:09,440
+portanto, os casitos,
+
+342
+00:21:09,440 --> 00:21:11,440
+serão, portanto,
+
+343
+00:21:11,440 --> 00:21:12,440
+destas,
+
+344
+00:21:12,440 --> 00:21:13,440
+serão, portanto,
+
+345
+00:21:13,440 --> 00:21:14,440
+garantidos,
+
+346
+00:21:14,440 --> 00:21:15,440
+ok?
+
+347
+00:21:15,440 --> 00:21:16,440
+Portanto, apoiar,
+
+348
+00:21:16,440 --> 00:21:17,440
+fala, será,
+
+349
+00:21:17,440 --> 00:21:18,440
+infinitamente,
+
+350
+00:21:18,440 --> 00:21:19,440
+menor.
+
+351
+00:21:19,440 --> 00:21:21,440
+Então, nós estamos a apontar
+
+352
+00:21:21,440 --> 00:21:22,440
+para,
+
+353
+00:21:22,440 --> 00:21:24,440
+coisas,
+
+354
+00:21:29,440 --> 00:21:30,440
+a literar,
+
+355
+00:21:30,440 --> 00:21:31,440
+10 menos nove,
+
+356
+00:21:31,440 --> 00:21:32,440
+umas vezes,
+
+357
+00:21:32,440 --> 00:21:33,440
+10 centrais de nove,
+
+358
+00:21:33,440 --> 00:21:34,440
+peço perdá-lo.
+
+359
+00:21:34,440 --> 00:21:35,440
+Portanto,
+
+360
+00:21:35,440 --> 00:21:36,440
+a cerca de um máximo,
+
+361
+00:21:36,440 --> 00:21:37,440
+a probabilidade seria,
+
+362
+00:21:37,440 --> 00:21:38,440
+menor que,
+
+363
+00:21:38,440 --> 00:21:39,440
+uma falha,
+
+364
+00:21:39,440 --> 00:21:42,440
+a cada centricatorze mil anos.
+
+365
+00:21:42,440 --> 00:21:43,440
+Então,
+
+366
+00:21:43,440 --> 00:21:44,440
+a ideia,
+
+367
+00:21:44,440 --> 00:21:45,440
+ou seja, entenda-me,
+
+368
+00:21:45,440 --> 00:21:46,440
+tanto, uma probabilidade de falha,
+
+369
+00:21:46,440 --> 00:21:47,440
+pois há formas de fazer,
+
+370
+00:21:47,440 --> 00:21:48,440
+de calcular,
+
+371
+00:21:48,440 --> 00:21:49,440
+esta probabilidade de falha,
+
+372
+00:21:49,440 --> 00:21:50,440
+a conversão,
+
+373
+00:21:50,440 --> 00:21:51,440
+mas é sem ideia.
+
+374
+00:21:51,440 --> 00:21:52,440
+Então, apontar,
+
+375
+00:21:52,440 --> 00:21:53,440
+ao pior caso.
+
+376
+00:21:53,440 --> 00:21:55,440
+Eu falei,
+
+377
+00:21:55,440 --> 00:21:56,440
+nesse tema de conto-o,
+
+378
+00:21:56,440 --> 00:21:59,440
+de um avião,
+
+379
+00:21:59,440 --> 00:22:02,440
+ou de um drone,
+
+380
+00:22:02,440 --> 00:22:03,440
+tanto de faz,
+
+381
+00:22:03,440 --> 00:22:04,440
+aqui, tipicamente,
+
+382
+00:22:04,440 --> 00:22:06,440
+há uma machine interface,
+
+383
+00:22:06,440 --> 00:22:07,440
+a board,
+
+384
+00:22:07,440 --> 00:22:09,440
+então,
+
+385
+00:22:09,440 --> 00:22:10,440
+temos aqui,
+
+386
+00:22:10,440 --> 00:22:12,440
+três componentes fundamentais,
+
+387
+00:22:12,440 --> 00:22:14,440
+de um atitude diante,
+
+388
+00:22:14,440 --> 00:22:16,440
+ex漕a-o,
+
+389
+00:22:16,440 --> 00:22:19,440
+sloga no olhar,
+
+390
+00:22:19,440 --> 00:22:22,440
+miocont egg,
+
+391
+00:22:22,440 --> 00:22:23,440
+o sistema de controle,
+
+392
+00:22:23,440 --> 00:22:24,440
+onde existe,
+
+393
+00:22:24,440 --> 00:22:26,440
+portanto,
+
+394
+00:22:26,440 --> 00:22:27,440
+uma…
+
+395
+00:22:27,440 --> 00:22:28,440
+uma…
+
+396
+00:22:28,440 --> 00:22:29,440
+uma Crossedge de disculpe,
+
+397
+00:22:29,440 --> 00:22:31,440
+lleze,
+
+398
+00:22:31,440 --> 00:22:32,440
+um à presur,
+
+399
+00:22:32,440 --> 00:22:34,440
+a diversos macoonço everyday,
+
+400
+00:22:34,440 --> 00:22:35,440
+dente,
+
+401
+00:22:35,440 --> 00:22:36,440
+dua...
+
+402
+00:22:36,440 --> 00:22:39,440
+Pirouçanda,
+
+403
+00:22:39,440 --> 00:22:41,440
+então pero,
+
+404
+00:22:41,440 --> 00:22:42,440
+Sarah En chwil,
+
+405
+00:22:42,440 --> 00:22:43,440
+én,
+
+406
+00:22:43,440 --> 00:22:52,160
+E portanto, estes, e depois temos alarmos que também terão que serem entregues, e temos
+
+407
+00:22:52,160 --> 00:22:55,560
+também registrosados que também terão a ser feito.
+
+408
+00:22:55,560 --> 00:23:01,920
+Ora, se nós imaginámos que isto tem que correr tudo, na mesma plataforma e que temos
+
+409
+00:23:01,920 --> 00:23:08,200
+vamos assumir um só procedor, já conseguem entender que vamos ter que ter uma maneira
+
+410
+00:23:08,200 --> 00:23:13,480
+e está só proceder também que há aqui requisitos de criticidade diferentes, já estamos
+
+411
+00:23:13,480 --> 00:23:19,520
+a ver que teremos que ter algum tipo de estratégia para garantir que eles vão esgotar
+
+412
+00:23:19,520 --> 00:23:26,240
+sem um utopiolo, sem que haja conflito na partir dos recursos computacionais.
+
+413
+00:23:26,240 --> 00:23:38,640
+Então isto é mais ou menos o que vai dizer, portanto, nós iremos, portanto, neste
+
+414
+00:23:38,640 --> 00:23:45,220
+sistema de controlo, tem aquelas tudo que já refri, temos também consideração,
+
+415
+00:23:45,220 --> 00:23:58,420
+portanto, no caso do sensing, portanto, da perceção, temos que adquirir o estado da aeronave,
+
+416
+00:23:58,420 --> 00:24:04,740
+portanto, tira o digital-chado, portanto, a perceção de toda aeronave do seu estado atual
+
+417
+00:24:04,740 --> 00:24:11,980
+para podermos tomar depois mais à frente uma decisão de controlo correta, e portanto,
+
+418
+00:24:11,980 --> 00:24:22,060
+na validade deste estado é fundamental para conseguir garantir o controlo correto, e tipicamente
+
+419
+00:24:22,060 --> 00:24:29,220
+a uma necessidade com o sample priódico, digo aqui, e algum tipo ou então algum tipo de
+
+420
+00:24:29,220 --> 00:24:37,340
+interruptiva, portanto, o mecanismo que haja quando há um dado fora do normal e tem
+
+421
+00:24:37,340 --> 00:24:44,060
+que ser portanto atualizado ambientamento. Então temos que considerar também, que isto
+
+422
+00:24:44,060 --> 00:24:49,260
+é de jita, ou seja, váriasções de entrega de estados, que são inerentes ao próprio
+
+423
+00:24:49,260 --> 00:24:56,340
+sistema, ou os sistemas de comunicação, em normal, e obceu processamento.
+
+424
+00:24:56,340 --> 00:25:01,420
+Depois do sistema de controlo é responsável na trama de procedência e informação, e
+
+425
+00:25:01,420 --> 00:25:08,420
+controlar, portanto, a dinâmica dos sistema, tendo em consideração, a correta, a expressão
+
+426
+00:25:08,420 --> 00:25:13,140
+que tendo por alta, de todas as idade dos computacionais, porque não importa o nosso que
+
+427
+00:25:13,140 --> 00:25:18,300
+se vêmos em formação dos sensores, depois é preciso ter um lupo de controlo que permita
+
+428
+00:25:18,300 --> 00:25:24,220
+computar o que fazer a seguir, e entregar ao resultado, esta computação tem que ser feita
+
+429
+00:25:24,220 --> 00:25:29,660
+num determinado momento, não é? Com um deadline muito claro caso contrário, nós temos
+
+430
+00:25:29,660 --> 00:25:35,420
+uma informação correta, muito bem, mas depois vai sair uma decisão de controlo que já
+
+431
+00:25:35,420 --> 00:25:41,420
+está completamente errada, considerando a nova situação da aeronave, já estou a perseguir
+
+432
+00:25:41,420 --> 00:25:47,100
+o problema, não é? É como quem diz, aeronave está a subir, e eu digo que pode mexer, mas
+
+433
+00:25:47,100 --> 00:25:50,780
+interessante, aeronave já tinha começado a descer, eu vou te chamar, eu posso te fiar,
+
+434
+00:25:50,780 --> 00:26:01,020
+vou ver mais ou menos uma questão, muito na eva, de estipos de coisas, e depois nós
+
+435
+00:26:01,020 --> 00:26:06,700
+temos que atuar também, e a atuação também tem que ser feita, dentro de um determinado
+
+436
+00:26:06,700 --> 00:26:21,820
+determinado meta temporal, então aqui temos para garantir que o resultado é correto, e
+
+437
+00:26:21,820 --> 00:26:27,660
+isto significa que temos que olhar para a questão temporal e o valor, portanto a infumação,
+
+438
+00:26:27,660 --> 00:26:35,940
+e portanto o sistema não tem que ser só correto na sua perspectiva, funcional, as suas
+
+439
+00:26:35,940 --> 00:26:41,980
+propriedades funcionam mais, essas têm que ser naturalmente corretas, porque definem o
+
+440
+00:26:41,980 --> 00:26:45,540
+próprio sistema, o que é que ele tem que entregar com antes, o que tem que entregar,
+
+441
+00:26:45,540 --> 00:26:56,640
+que tipo de dados, como é que é feito isso, essa computação, e depois temos os
+
+442
+00:26:56,640 --> 00:27:02,700
+estais requisitos temporais, que são também paralelamentos importantes, e que são requisitos
+
+443
+00:27:02,700 --> 00:27:11,980
+não funcionais, e portanto tem a ver com os típicos de calma menos, que é utilizado
+
+444
+00:27:11,980 --> 00:27:19,380
+para estas tarefas, o tipo de análise que é feita, não é aplicando o tipo de análise
+
+445
+00:27:19,380 --> 00:27:30,980
+do desses calma menos, como controlar as diferentes tarefas computacionais, que estão a tentar
+
+446
+00:27:30,980 --> 00:27:37,620
+obtir o controlo do procedador para poder executar, com o isolar, essas atives, essas diferentes
+
+447
+00:27:37,620 --> 00:27:45,580
+tarefas, de forma que elas não tenham, ou forma minimizar, valar, a interação das diferentes
+
+448
+00:27:45,580 --> 00:27:52,140
+aplicações considerando que elas têm muitas vezes de partilhar recursos, e portanto para
+
+449
+00:27:52,140 --> 00:27:58,940
+tudo isto, que vamos causar sempre novamente, reforço a ideia, portanto o SDK, portanto o
+
+450
+00:27:58,940 --> 00:28:06,960
+pior caso, definir sempre o pior caso e não o caso médio, para fazer isto, então,
+
+451
+00:28:06,960 --> 00:28:16,120
+em estes requisitos não funcionais, que nós vamos estar a trabalhar durante estas aulas,
+
+452
+00:28:16,120 --> 00:28:23,580
+temos aqui um exemplo de um sistema de controlo de retirada da água de uma mina, por
+
+453
+00:28:23,580 --> 00:28:34,820
+exemplo, tipo de desembo, que também pode ser interessante analisar para terem um exemplo
+
+454
+00:28:34,820 --> 00:28:45,780
+mais concreto de este tipo de sistema, estão a ver portanto o calma conjunto de água e portanto
+
+455
+00:28:45,780 --> 00:28:53,420
+é uma água que se vai depositar na mina, é preciso retirar ela, naturalmente usando aquela
+
+456
+00:28:53,420 --> 00:29:03,960
+bomba de pequenos elétricas, e há dois sensores, quando o sensor diz que o nível de água
+
+457
+00:29:03,960 --> 00:29:12,740
+está demasiado elevado, é preciso ligar a bomba, com a astrociciante para, mas há um problema,
+
+458
+00:29:12,740 --> 00:29:20,660
+é que se nós ligarmos a bomba elétrica, para retirar a água, quando o nível de metáno,
+
+459
+00:29:20,660 --> 00:29:28,660
+por exemplo, ou outros gatos, que podem portanto se são convertíveis, é demasiado elevado,
+
+460
+00:29:28,660 --> 00:29:36,700
+alguma coisa pode acontecer, como devem imaginar, e então há um conjunto de sensores que estão
+
+461
+00:29:36,700 --> 00:29:43,420
+completados ao sistema de controlo, que têm que ser verificados antes de por bom bem funcionamento,
+
+462
+00:29:43,420 --> 00:29:48,060
+então o sistema de tempo real, crítico, claro, não é?
+
+463
+00:29:48,060 --> 00:29:57,880
+Isto é o que eu acabei de dizer, para tomar a plantar aqui a algueristo, portanto aqui
+
+464
+00:29:57,880 --> 00:30:06,660
+temos de requisitos temporais, temos para o sensor de monóxido carbone, esta
+
+465
+00:30:06,660 --> 00:30:14,220
+tanto ele tem que ser livre todos os 10 mil segundos, com 10,6 mil segundos, e estou aqui
+
+466
+00:30:14,220 --> 00:30:23,100
+já a entrar com o conceito de preuco, ler todos os 10 mil segundos, é a felicidade da
+
+467
+00:30:23,100 --> 00:30:31,020
+carrefa, e o seu deadline tem que terminar a leitura em 6 mil segundos, o de metáno queda
+
+468
+00:30:31,020 --> 00:30:39,020
+o 8 mil segundos, com o deadline de 3 mil segundos, o sistema da parte da ventilação,
+
+469
+00:30:39,020 --> 00:30:51,500
+10 de 10, e depois o sistema, tanto os sensores de controlo de sair em
+
+470
+00:30:51,500 --> 00:30:58,340
+10 mil segundos, cada 100 mil segundos com o deadline de 4 mil segundos, e cada
+
+471
+00:30:58,340 --> 00:31:03,980
+segundo o operador tem que ter acesso ao que está a acontecer, tanto as características
+
+472
+00:31:03,980 --> 00:31:12,260
+atuais do sistema, portanto os sensores de água operam a 6 mil segundos assim aqui, no
+
+473
+00:31:12,260 --> 00:31:21,780
+máximo do deadline de 20 mil segundos, portanto se souverem um problema, isso terá
+
+474
+00:31:21,780 --> 00:31:26,540
+que haver uma resposta no prazo máximo de 20 mil segundos, estamos aqui ver o tanto
+
+475
+00:31:26,540 --> 00:31:41,700
+um mal armístico, ou seja, há portanto uma ativação priódica do sistema, há uma leitura
+
+476
+00:31:41,700 --> 00:31:54,340
+do sensor, há uma leitura do sensor, há essa leitura demora há algum tempo, e depois
+
+477
+00:31:54,340 --> 00:32:01,900
+isso há uma seguida qualquer, e porque uma dessas tarefas tem um deadline, tanto
+
+478
+00:32:01,900 --> 00:32:08,300
+isso há um dia e também tem que ir entre ativação da tarefa, e a istoção da tarefa,
+
+479
+00:32:08,300 --> 00:32:16,620
+e este leit é variável, é o tal gíter, pode ser variável muitas vezes, muitas vezes
+
+480
+00:32:16,620 --> 00:32:23,820
+tanto este é of 7, muitas vezes não é fixo, e é importante isso, mas esta computação
+
+481
+00:32:23,820 --> 00:32:31,300
+tipicamente é o deveria ser, e depois temos o tal priódico, o priódico, de fim, portanto,
+
+482
+00:32:31,300 --> 00:32:40,300
+a cadeia ser como que estas tarefas vão ser ativadas, o chamado priódico efetivo ou efécte
+
+483
+00:32:40,300 --> 00:32:47,700
+píria, também consideração portanto esta variação da ativação da tarefa, consideramos
+
+484
+00:32:47,700 --> 00:32:54,340
+aqui qual é a tarefa iniciada, e isso tem a ver de facto com, de fim, portanto, o gíter
+
+485
+00:32:54,340 --> 00:33:09,020
+da ativação, normalmente os ticos computacionais em tempo real seguem um modelo muito típico,
+
+486
+00:33:09,020 --> 00:33:14,820
+que é o mesmo modelo já agora que é também aplicado na robótica, que é o típico
+
+487
+00:33:14,820 --> 00:33:26,340
+senso, computo e arte, é o típico, há uma processão, há uma iniciada tanto o senso,
+
+488
+00:33:26,340 --> 00:33:31,220
+vamos obtir a informação, vamos computar alguma coisa, vamos fazer alguma coisa com
+
+489
+00:33:31,220 --> 00:33:37,860
+mais informação que escou, e depois vamos intergar no terminar no resultado, existem,
+
+490
+00:33:37,860 --> 00:33:46,780
+claro, estemos mais complexos do que este, quando temos outro típico de grafos, e existem
+
+491
+00:33:46,780 --> 00:33:57,820
+importante uma sequência de atividades ou de tarefas, que têm que pensar em putos
+
+492
+00:33:57,820 --> 00:34:06,660
+umas das outras, mas não é o típico, que típicamente nós temos este modelos mais simples,
+
+493
+00:34:06,660 --> 00:34:13,660
+mas elas existem, e que tornam, portanto, a análise do sistema, depois muito mais complexa.
+
+494
+00:34:13,660 --> 00:34:23,660
+Por que temos um gráfico de mostra a interação de diferentes tarefas que são concorrentes?
+
+495
+00:34:23,660 --> 00:34:31,980
+E estas tarefas podem ser, podem ter muitas vezes que comunicarem ou se incormizarem entre
+
+496
+00:34:31,980 --> 00:34:37,980
+as tarefas, e a questão fundamental é que elas competem pelos mesmos recursos faclados,
+
+497
+00:34:37,980 --> 00:34:44,980
+ou seja, temos uma plataforma única, neste caso, acordámos que vamos usar um possador apenas,
+
+498
+00:34:44,980 --> 00:34:55,980
+a mesma memória, os mesmos exclusivos e etc., e temos um conjunto de tarefas que vão competir
+
+499
+00:34:55,980 --> 00:35:03,980
+ativamente para ter esse recurso para poder estudar. Estas atividades ou tarefas podem ser
+
+500
+00:35:03,980 --> 00:35:10,980
+típica de prioridades ou não prioridades. É assim, são prioridades, ocorrem com uma
+
+501
+00:35:10,980 --> 00:35:17,980
+cadência bem terminada, se não são prioridades, essa cadência não é bem determinada.
+
+502
+00:35:18,980 --> 00:35:27,980
+Dentro das não-priólicas, temos o apriólico e o esporálico, tarefas apriólicas,
+
+503
+00:35:27,980 --> 00:35:37,980
+as prioridades podem repetir relativamente, as sporálicas têm uma frequência máxima para a sua repetição,
+
+504
+00:35:38,980 --> 00:35:47,980
+e que pode surgir a não-messão event trigger, event driven, a qualquer coisa que dá início
+
+505
+00:35:47,980 --> 00:35:53,980
+a execução dessa tarefa, as apriólicas podem ocorrer a qualquer momento,
+
+506
+00:35:53,980 --> 00:35:58,980
+não há qualquer tipo de restrição entre anos de reconhecimento de repetição,
+
+507
+00:35:59,980 --> 00:36:04,980
+e eles têm os diferentes tipos de tarefas, são esses aqui.
+
+508
+00:36:04,980 --> 00:36:10,980
+Então, grosso modo, prioridades, não-priólicas, e depois temos as apriólicas, as sporálicas,
+
+509
+00:36:10,980 --> 00:36:16,980
+que são definidas por esse tipo de questão, quanta a sua frequência de repetição.
+
+510
+00:36:16,980 --> 00:36:18,980
+Gabriel, sim, força.
+
+511
+00:36:19,980 --> 00:36:28,980
+Eu tenho muitas paríólicas, por exemplo, qual é você dar um exemplo do montano,
+
+512
+00:36:28,980 --> 00:36:36,980
+por exemplo, na água, como é que se colaciona, ou seja, qual é a faturta decisão ou a regra,
+
+513
+00:36:36,980 --> 00:36:42,980
+sobre a faturta do mercado, que seja neste período, neste tempo.
+
+514
+00:36:43,980 --> 00:36:48,980
+São por curiosidade, ou seja, qual é a faturta decisão?
+
+515
+00:36:48,980 --> 00:36:52,980
+Terminando para qual é a curiosidade de uma determinada tarefa.
+
+516
+00:36:52,980 --> 00:36:54,980
+Exato.
+
+517
+00:36:54,980 --> 00:37:00,980
+Isso depende, naturalmente, de dar aplicação em que estamos a trabalhar.
+
+518
+00:37:00,980 --> 00:37:04,980
+Normalmente, é o sistema de control que dita essa curiosidade.
+
+519
+00:37:04,980 --> 00:37:10,980
+Nós sabemos, ou melhor, vamos voltar até, eu vou usar uma resposta até se criar mais inteligentes.
+
+520
+00:37:11,980 --> 00:37:14,980
+Normalmente, é a física.
+
+521
+00:37:14,980 --> 00:37:19,980
+É a física do sistema que dita esses requisitos.
+
+522
+00:37:19,980 --> 00:37:27,980
+Porque, um avião, que está em pleno voo, tem uma estratégica,
+
+523
+00:37:27,980 --> 00:37:31,980
+que as físicas nos controlam da sua aerodinâmica, como completamente diferente,
+
+524
+00:37:31,980 --> 00:37:34,980
+de um automóvel no control de velocidade.
+
+525
+00:37:35,980 --> 00:37:39,980
+O sistema de control industrial, e mesmo os temas de control industrial,
+
+526
+00:37:39,980 --> 00:37:44,980
+temos sistemas que os respostas têm de ser dada em mais ou menos o tempo.
+
+527
+00:37:44,980 --> 00:37:49,980
+E, dependendo muito tanto da física do sistema,
+
+528
+00:37:49,980 --> 00:37:54,980
+lembra-me de que os já referir que esses tipos de sistema têm uma interação clara com o ambiente?
+
+529
+00:37:54,980 --> 00:37:55,980
+Com o humano.
+
+530
+00:37:55,980 --> 00:37:58,980
+Está uma característica com fatores físicos.
+
+531
+00:37:58,980 --> 00:38:01,980
+E o que se fim fundamentalmente são esses é essa física.
+
+532
+00:38:02,980 --> 00:38:06,980
+É a física que vai dizer, para agir, atuar completamente com esse sistema,
+
+533
+00:38:06,980 --> 00:38:10,980
+que o sistema de control tem que atuar em tantos mil e segundos.
+
+534
+00:38:10,980 --> 00:38:12,980
+E, após a partir daí, andamos para trás.
+
+535
+00:38:12,980 --> 00:38:14,980
+Se tem que ser em tantos mil e estudos,
+
+536
+00:38:14,980 --> 00:38:19,980
+a torrefe vai ser, vai ocorrer de xx e outros ellips,
+
+537
+00:38:19,980 --> 00:38:22,980
+são ellips, são ellips, insucivelmente.
+
+538
+00:38:22,980 --> 00:38:26,980
+Qualquer depois, há um conjunto de ferramentas que são utilizadas para testar o sistema
+
+539
+00:38:26,980 --> 00:38:29,980
+e ver se o vai fazer sentido e vai bater certo ou não.
+
+540
+00:38:30,980 --> 00:38:32,980
+Compra-me de uma ideia agarriada.
+
+541
+00:38:32,980 --> 00:38:34,980
+Sim, sim, sim.
+
+542
+00:38:34,980 --> 00:38:35,980
+Ok.
+
+543
+00:38:36,980 --> 00:38:40,980
+Este é a ideia de gostar os tipos de tarefas.
+
+544
+00:38:40,980 --> 00:38:43,980
+Fuda-me mentalmente, são esses tipos de tarefas,
+
+545
+00:38:43,980 --> 00:38:47,980
+somente não, são esses tipos de tarefas com que podem encontrar.
+
+546
+00:38:49,980 --> 00:38:54,980
+Portanto, nós temos aqui, neste modelo de computação,
+
+547
+00:38:54,980 --> 00:39:01,980
+em real-time, portanto, já a definição de alguns conceitos.
+
+548
+00:39:01,980 --> 00:39:08,980
+O período, ou o minimum interval time,
+
+549
+00:39:08,980 --> 00:39:12,980
+ou seja, o tempo mínimo em que uma tarefa pode surgir,
+
+550
+00:39:12,980 --> 00:39:16,980
+ou seja, tem a ver com a frequência de expoção,
+
+551
+00:39:16,980 --> 00:39:17,980
+dessa tarefa.
+
+552
+00:39:18,980 --> 00:39:24,980
+O worst case xxx no time, que é o tempo máximo,
+
+553
+00:39:24,980 --> 00:39:28,980
+que essa tarefa pode levar a expoção, o worst case,
+
+554
+00:39:28,980 --> 00:39:32,980
+novamente, já refri, vamos usar sempre o worst case pela poda acabar antes.
+
+555
+00:39:32,980 --> 00:39:35,980
+Nós queremos saber o tempo pior que quando é o pior.
+
+556
+00:39:35,980 --> 00:39:38,980
+Isso é que importa, porque nós queremos garantir que não vamos falhá-lo da ed online.
+
+557
+00:39:38,980 --> 00:39:41,980
+Isso é que é importante, agarça-me para o pior caso.
+
+558
+00:39:41,980 --> 00:39:48,980
+E considerando, portanto, o worst case xxxxx não tem de das tarefas.
+
+559
+00:39:50,980 --> 00:39:53,980
+Podíamos calcular o responsTAIMO.
+
+560
+00:39:53,980 --> 00:39:58,980
+Por sono, portanto, naturalmente, esses tempos de expoção das expoções teréfas.
+
+561
+00:39:58,980 --> 00:40:01,980
+E assim, que isso é o responsTAIMO do sistema.
+
+562
+00:40:02,980 --> 00:40:05,980
+Isso parece óbvio, mas depois estamos contando-me,
+
+563
+00:40:05,980 --> 00:40:06,980
+queridos mais como poesados,
+
+564
+00:40:06,980 --> 00:40:10,980
+como começamos a compreender que estas tarefas não ocorrem
+
+565
+00:40:10,980 --> 00:40:18,120
+correm exatamente só desta forma. Então, nós estamos a ver aqui, a tarefa são claramente
+
+566
+00:40:18,120 --> 00:40:25,260
+preóbicas, na tarefa 1 e a 2 são preóbicas e ao correm, e há aqui, inclusive, um aparentemente
+
+567
+00:40:25,260 --> 00:40:28,420
+algum tipo de prioridade, que é a primeira que começa a executar e só que depois quando
+
+568
+00:40:28,420 --> 00:40:33,200
+ela acaba, a inicia a segunda, né? E assim, sucessivamente, até hoje estou lindendo
+
+569
+00:40:33,200 --> 00:40:36,660
+caixadas umas nas outras, me disse, não é isso que é um pouco assim, e pois há me
+
+570
+00:40:36,660 --> 00:40:43,180
+reuni-nos para gerir isto. E estamos a ver, portanto, que se considerando aqui este
+
+571
+00:40:43,180 --> 00:40:50,300
+responso de tempo, vamos ver que conseguimos calcular depois a tarefa 2 e a feijar o dermeir
+
+572
+00:40:50,300 --> 00:40:56,940
+ou só conseguirei entregarmos o tarco depois. Então, nós podemos pensar isto desta forma,
+
+573
+00:40:56,940 --> 00:41:02,180
+e vamos depois, durante o curso, falar mais sobre como é que podemos calcular estas poedas,
+
+574
+00:41:02,180 --> 00:41:11,460
+e o que há o ritmo dos árvores para gerir isto. Então, vamos assumir aqui um modelo, um
+
+575
+00:41:11,460 --> 00:41:18,780
+modelo simples, em que que adapta que a sessão contém um conjunto de fixo tarefas,
+
+576
+00:41:18,780 --> 00:41:25,300
+estas tarefas são preóbicas, com períodos bem definidos, constantes, portanto, e em
+
+577
+00:41:25,300 --> 00:41:31,460
+que a da período é lançada um novo jove para trás. O jove é a instância de discussão da
+
+578
+00:41:31,460 --> 00:41:39,540
+tarefa, que é da instância de discussão da tarefa, é um jove. Essas tarefas também são, vamos
+
+579
+00:41:39,540 --> 00:41:44,620
+assumir para já, que é o que está aqui, são completamente impidentes, mas as outras,
+
+580
+00:41:44,620 --> 00:41:54,620
+para já vamos assumir isto, não só, normalmente, não há houveretes no sistema, quer dizer que
+
+581
+00:41:54,620 --> 00:42:00,060
+não temos tempos de context switch, se estou lembrando de conceitos dos sistemas operativos,
+
+582
+00:42:00,060 --> 00:42:07,780
+sempre que, mudarmos do processo, há um houverete, é preciso fazer um context switch em mudar
+
+583
+00:42:07,780 --> 00:42:13,280
+a stack, etc., dá um conjunto de tarefas que os são operativos, tenho que fazer, isto
+
+584
+00:42:13,280 --> 00:42:19,820
+demora de tempo, e vamos ignorar isto para já, então, houverete, dizer, todas estas tarefas
+
+585
+00:42:19,820 --> 00:42:25,740
+têm um deadline igual a período, e portanto, tem que comportar antes que há uma nova,
+
+586
+00:42:25,740 --> 00:42:38,420
+um novo jove da mesma tarefa, mas dá também de situações em que não é assim, e portanto,
+
+587
+00:42:38,420 --> 00:42:54,280
+isto as tarefas têm um fixo hoje de case, neste tipo de móvel computacional, e
+
+588
+00:42:54,280 --> 00:43:05,800
+este tipo de houveretes, são agora, portanto, incorporados, normalmente, no case é que
+
+589
+00:43:05,800 --> 00:43:15,440
+se cresce no time, caspeite blindes, e o tipo de optimizações, normalmente, este
+
+590
+00:43:15,440 --> 00:43:24,760
+termos críticos são simplesmente desligados, em outros sistemas, menos críticos, que
+
+591
+00:43:24,760 --> 00:43:32,480
+antes de obtener os resultados de worst case para conseguir mudir qual é este peso, que
+
+592
+00:43:32,480 --> 00:43:37,560
+as caspeite, as sessão caspeite, e os diferenços para planos têm depois na aplicação, mas
+
+593
+00:43:37,560 --> 00:43:44,800
+já repararam que ele disse, típicamente, as optimizações, destas plataformas são
+
+594
+00:43:44,800 --> 00:43:50,480
+os ligados em sistemas críticos, e são os ligados precisamente, porque muitas vezes
+
+595
+00:43:50,480 --> 00:44:04,400
+introduzem variações, que não podem ser pré-calculadas, e se nós não podemos calcular
+
+596
+00:44:04,400 --> 00:44:10,920
+correctamente o worst case, então, não vamos conseguir ter um sema crítica, então,
+
+597
+00:44:10,920 --> 00:44:15,920
+normalmente o worst case é que o seu time é calculado, fazendo uma análise estática
+
+598
+00:44:15,920 --> 00:44:22,520
+do código, para, olhando para os loops e todas as condições e filas, para perceber
+
+599
+00:44:22,520 --> 00:44:28,640
+qual é o pior caso, na discussão temporal, e qual é a análise de coisas, quando
+
+600
+00:44:28,640 --> 00:44:35,160
+temos como o tipo de processador, pipelines, e os sugestões de pásseis, etc, é muito
+
+601
+00:44:35,160 --> 00:44:41,320
+mais comunicar, portanto, normalmente este é o processo que é utilizado, e se temos
+
+602
+00:44:41,320 --> 00:44:47,160
+um software de realtime, e portanto, se estão lembrados o valor da informação, não
+
+603
+00:44:47,160 --> 00:44:52,040
+é, portanto, vai de cresciante, ou então, é zero, após o deadline, e isto não é tão
+
+604
+00:44:52,040 --> 00:44:57,040
+crítico, e portanto, posso considerar valores de média e muitas vezes, para calcular
+
+605
+00:44:57,040 --> 00:45:09,920
+este tipo de coisas, se esta é a frase, não se se não for em periodicas, não se
+
+606
+00:45:09,920 --> 00:45:14,020
+sou natureza, não for em periodicas, sou em portanto, escorádicas ou aprióricas, escrevo
+
+607
+00:45:14,020 --> 00:45:22,400
+aqui, os assítipicamente, o worst case interrogado do time, o que é que quer dizer, usamos,
+
+608
+00:45:22,400 --> 00:45:28,640
+se ela é aprióricas, ou esperaria, então, vamos utilizar o pior caso, que é quando
+
+609
+00:45:28,640 --> 00:45:33,400
+a tarefa surgem, o mais próximo, os jogos das tarefas, as instâncias de execução da
+
+610
+00:45:33,400 --> 00:45:41,920
+tarefa surge, o mais próximo, uma das outras possíveis, o pior caso. Portanto, considerando
+
+611
+00:45:41,920 --> 00:45:52,360
+no mesmo modelo do controle do avião, podemos imaginar que temos uma tarefa priori
+
+612
+00:45:52,360 --> 00:45:57,480
+que é responsável, para controlar o pítice, o roo e o íon do earthquake, tanto do
+
+613
+00:45:57,480 --> 00:46:05,840
+do avião, tanto com o óleo da sua attitude, e que esta tarefa tem que executar a 60 mil
+
+614
+00:46:05,840 --> 00:46:15,320
+segundos, e sabemos que ela demora 20 mil segundos a executar e a dar um resultado em 40 mil
+
+615
+00:46:15,320 --> 00:46:26,280
+segundos. Então, tipicamente, nós, tem as outras a seguir, a escorádica de alarm, já
+
+616
+00:46:26,280 --> 00:46:31,080
+estamos a ver que a escorádica não é apriórica, e a escorádica, porque é uma frequência
+
+617
+00:46:31,080 --> 00:46:39,840
+máxima com que ela vai ocorrer, tem que ocorrer a todos os eventos que estão a gerar, tem
+
+618
+00:46:39,840 --> 00:46:46,280
+que ser respondidos em, enfim, mil segundos, tendo mil e segundos para executar, e uma
+
+619
+00:46:46,280 --> 00:46:54,760
+prióvica de logging que vai resistar os eventos na caixa negra do avião, com um período
+
+620
+00:46:54,760 --> 00:47:01,160
+de 100 mil e segundos, e um tempo de execução de 50 mil e segundos. Então, temos aqui
+
+621
+00:47:01,160 --> 00:47:13,600
+as três compridades, que definem o requisito temporal de qualquer tarefa. Temos, portanto,
+
+622
+00:47:13,600 --> 00:47:22,520
+o período, o seu período, a sua frequência da ativação, vamos dizer assim, o seu período,
+
+623
+00:47:22,520 --> 00:47:33,360
+a sua deadline, e o seu tempo de execução, e que é diferente, vamos ver, para cada uma
+
+624
+00:47:33,360 --> 00:47:40,720
+destas tarefas. Pronto, aqui novamente, temos um resumo de para cada tarefa, como é que
+
+625
+00:47:40,720 --> 00:47:47,040
+isso se processa, temos tal jogo, estua a instância em execução de uma tarefa, o ar sequência
+
+626
+00:47:47,040 --> 00:47:53,440
+de execução de time, o tempo máximo, isso que são da tarefa, o offset, o dia de ativação,
+
+627
+00:47:53,440 --> 00:47:57,960
+até o seu início de possumidos, e a deadline.
+
+628
+00:47:57,960 --> 00:48:10,920
+Para o início, podemos também considerar outro tipo de mais álbumas propriedades, como
+
+629
+00:48:10,920 --> 00:48:17,120
+o ativa e o início, a instância da ativação, o start time, quando começa, portanto,
+
+630
+00:48:17,120 --> 00:48:24,280
+que se finge o ativés entre este fingo, o offset da tarefa, e o seu finish in time.
+
+631
+00:48:24,280 --> 00:48:43,600
+Pronto, aqui, o que diz aqui, foi uma constatação de cada óbvia, que é o deadline ao sul
+
+632
+00:48:43,600 --> 00:48:51,760
+de qualquer jogo, da tarefa, qualquer instância em execução da tarefa, igual ao instante ativação
+
+633
+00:48:51,760 --> 00:49:08,880
+dela, mais, o seu deadline relativo, aqui temos o conjunto de modelos, e vamos agora
+
+634
+00:49:08,880 --> 00:49:17,720
+abordar um outro que está estetamente relacionada com a gestão de este tipo de tarefas
+
+635
+00:49:17,720 --> 00:49:23,400
+de que, num sistema computacional, que é a preenção.
+
+636
+00:49:23,400 --> 00:49:37,200
+A preenção de correto do facto de várias tarefas partilharem o mesmo CPU, ou seja, as tarefas
+
+637
+00:49:37,200 --> 00:49:48,880
+escutam e suspendem a melhor a tarefa em execução, que possa ser suspendida, interpretada e
+
+638
+00:49:48,880 --> 00:49:51,400
+sustituída por outra tarefa.
+
+639
+00:49:51,400 --> 00:50:01,080
+A gestão no CPU não é, a gestão é derrumpida, e a outra tarefa é escutada em vez de ela.
+
+640
+00:50:01,080 --> 00:50:06,720
+E há várias razões para isso, isso pode ser por uma interrupção, uma interrupção tipicamente
+
+641
+00:50:06,720 --> 00:50:13,040
+já era logo uma preenção do que está a ser feito, ou então, isto é muito comum, se
+
+642
+00:50:13,040 --> 00:50:17,840
+me cumpra contra o lado de hoje, quem já apagou com o lado de hoje sabe disso perfeitamente,
+
+643
+00:50:17,840 --> 00:50:21,880
+o timer já era muito opção, ela é respondida depois de uma retunida de interrupção,
+
+644
+00:50:21,880 --> 00:50:29,440
+então, na prioridade sobre as outras tarefas, mas, tipicamente, ou então, existe uma outra
+
+645
+00:50:29,440 --> 00:50:33,680
+tarefa que também precisa ser escutada e tem uma prioridade superior à outra, e isso
+
+646
+00:50:33,680 --> 00:50:39,000
+leva também, é que há tal preenção de suspensão.
+
+647
+00:50:39,000 --> 00:50:46,420
+A gestão é, depois há gestão que são não preentivos, ou sela que não é preentivo
+
+648
+00:50:46,420 --> 00:50:59,400
+significa que a gestão é insucrível, não é sessão, e vai isto ter acesso ao seu final.
+
+649
+00:50:59,400 --> 00:51:05,560
+E só um ponto de suspensão, o que está a ser feito é que mesmo que seja o meu priori,
+
+650
+00:51:05,560 --> 00:51:11,840
+é que pode estudar, é um sistema que não é preentivo, e depois temos outros sela que
+
+651
+00:51:11,840 --> 00:51:19,360
+têm uma preenção de divinitada, nós temos que alinitada, cuja preenção só pode
+
+652
+00:51:19,360 --> 00:51:23,980
+poder interimitar os pontos, e tem ele que passou a própria expressão, há a menos 3
+
+653
+00:51:23,980 --> 00:51:30,740
+vezes, quando é preenção, e, no menos, depois, que já pode, este período, já pode
+
+654
+00:51:30,740 --> 00:51:31,740
+ter preenção.
+
+655
+00:51:31,740 --> 00:51:43,660
+Um exemplo de uma situação dessas é que quando há um cidadã fesso, um conjunto
+
+656
+00:51:43,660 --> 00:51:55,940
+recurso é partilhado, por exemplo, o recurso demora que é partilhado, em que, portanto,
+
+657
+00:51:55,940 --> 00:52:02,300
+que têm que tomar um portanto, essa sessão recurso toma priorirado sobre qualquer outra
+
+658
+00:52:02,300 --> 00:52:05,740
+prioridade do sistema, e há uma razão para isso que é prioritar, depois dé do loco
+
+659
+00:52:05,740 --> 00:52:15,220
+e depois não façam isso, vamos adiantar-nos, ou seja, se uma tarefa estiver assurar um loco
+
+660
+00:52:15,220 --> 00:52:18,900
+de você sabe, não podemos ter esses temas que estão a inscrever para o mesmo sítio em
+
+661
+00:52:18,900 --> 00:52:25,380
+simultâneo, vamos ler, mas escreveem em simultâneo, não podemos, porque há alguma corrupção
+
+662
+00:52:25,380 --> 00:52:31,860
+dos lados, numa situação em que tanto uma tarefa tem um loco com um determinado recurso,
+
+663
+00:52:31,860 --> 00:52:38,060
+ela não pode ser os suspensos, porque se escrevei essa tarefa, e uma outra tarefa que
+
+664
+00:52:38,060 --> 00:52:42,860
+não sai escutarem em vez dela, e ela precisar também de esse recurso, como é que vão libertar
+
+665
+00:52:42,860 --> 00:52:47,820
+a outra, como é que agora vai esportar outra, ou que não estáis que são para libertar
+
+666
+00:52:47,820 --> 00:52:54,620
+o loco, para libertar esse loco que tem sobre essa área, portanto, ou esse recurso,
+
+667
+00:52:54,620 --> 00:53:02,860
+essas situações podem ocorrer, e já agora estão relacionadas com muitos problemas na
+
+668
+00:53:02,860 --> 00:53:08,900
+gestão de sistemas temporale. Portanto, a preenção é importante a sistemas temporale,
+
+669
+00:53:08,900 --> 00:53:17,900
+nos colamentos, os calmamentos de sistemas temporale, em forma a alocar corretamente o
+
+670
+00:53:17,900 --> 00:53:24,660
+time do possedor, as tarefas que precisam de disposão de alta, e garantir, portanto,
+
+671
+00:53:24,660 --> 00:53:30,100
+que as tarefas têm maior variedade, não são bloqueadas, portarefas têm menor variedade,
+
+672
+00:53:30,100 --> 00:53:34,780
+que é como que tem disso, naquele sistema de controlo tripartil, que eu refri do avião,
+
+673
+00:53:34,780 --> 00:53:40,500
+é quase como se o registro da caixa negra tomasse, porque tem mais tempo de ansiedade,
+
+674
+00:53:40,500 --> 00:53:47,700
+tem uma discussão, tomasse prioridade sobre a tarefa de controla, o movimento do avião,
+
+675
+00:53:47,700 --> 00:53:55,420
+há tipo de poder avião, não pode, não é? Não pode ocorrer, naturalmente aqui já
+
+676
+00:53:55,420 --> 00:54:03,900
+a necessidade de definir prioridades diferentes nas tarefas. Portanto, claro que quando
+
+677
+00:54:03,900 --> 00:54:09,340
+nós temos sistemas que são não preventivos, isto ilumina, grande parte, os problemas
+
+678
+00:54:09,340 --> 00:54:18,540
+de context switching, ou seja, uma vez que as tarefas só vão ocorrer depois de usar
+
+679
+00:54:18,540 --> 00:54:25,540
+terminar, o número de context switching, tanto de mogança ou do varé, que vem dessa
+
+680
+00:54:25,540 --> 00:54:33,700
+mogança de instância, tem discussão, é menor, não tem, não é um varé de tão grande,
+
+681
+00:54:33,700 --> 00:54:39,140
+o que torna, portanto, os tempos de discussão, menores, mais fácil de cá, mais fáceis
+
+682
+00:54:39,140 --> 00:54:44,900
+de tal colar, e eu tenho, esquece aqui, morro para de víctubo, portanto, mais previsível
+
+683
+00:54:44,900 --> 00:54:48,540
+e a previsível idade é tudo em sistemas temporal, pois isso é que nós ficamos no horas
+
+684
+00:54:48,540 --> 00:54:54,880
+de que isso, né? Pois é que quando vamos calcular os tempos de discussão, pegamos sempre
+
+685
+00:54:54,880 --> 00:54:59,620
+no horas de que isso no caso pior, porque nós temos que ser, ter uma matemática que
+
+686
+00:54:59,620 --> 00:55:03,780
+seja previsível, porque se o sistema não é previsível, não podemos ofrecer grandias
+
+687
+00:55:03,780 --> 00:55:10,700
+sobre ele, não é? Portanto, isto sempre fica com acesso a recursos partilhados, se uma
+
+688
+00:55:10,700 --> 00:55:16,980
+começa a termina, outro começa a termina, portanto, não há a preemissão, então, não há
+
+689
+00:55:16,980 --> 00:55:22,220
+necessidade de nos preocuparmos com partilhados recursos, que elas nunca vão estar a partilharem
+
+690
+00:55:22,220 --> 00:55:28,060
+mesmo assim, se imutarem, ao mesmo tempo que estão a explotarem, né? E portanto, é fácil
+
+691
+00:55:28,140 --> 00:55:35,140
+prevenir o tecnologo, o desgoc é aquilo que eu acabei de referir, né? É termos uma circunstância
+
+692
+00:55:35,140 --> 00:55:43,940
+em que uma tarefa debaixa, debaixa por idade, impede as de alta prioridade de escutar,
+
+693
+00:55:43,940 --> 00:55:56,460
+porque ela possui o logo sobre o recurso que a outra precisa, ok? E portanto, e outra, como
+
+694
+00:55:56,460 --> 00:56:00,260
+tem meu apuridar, não consegue deixar de baixo apurizar a escutar, então a outra nunca
+
+695
+00:56:00,260 --> 00:56:07,860
+liberta a louca, e isto depois, no laboratório, eu posso fazer um pequeno gráfico sobre
+
+696
+00:56:07,860 --> 00:56:16,660
+esta questão, que é muito interessante. Também reduz, portanto, o tamanho da STAC, todas
+
+697
+00:56:16,660 --> 00:56:21,900
+estas podem usar a mesma STAC, porque não há vários STACs para cada tarefa que estão
+
+698
+00:56:21,900 --> 00:56:27,460
+em execução em simultâneo, mas, por causa deste compact switch em tua, então isto também
+
+699
+00:56:27,460 --> 00:56:29,940
+reduz esse overhead.
+
+700
+00:56:29,940 --> 00:56:41,260
+Portanto, temos aqui a definição aqui, no conjunto de tarefas, de três tarefas, no caso,
+
+701
+00:56:41,260 --> 00:56:47,540
+portanto, na eventualidade, temos um CPU que é preantivo, temos, portanto, aqui, uma seta
+
+702
+00:56:47,540 --> 00:56:57,460
+de guarda, esquerda que indica, é a importância cresciante de cada tarefa, portanto, que
+
+703
+00:56:57,460 --> 00:57:04,580
+refere à prioridade da tarefa, portanto, temos a maior proprietária que em cima, e temos
+
+704
+00:57:04,580 --> 00:57:10,700
+marcasos, os responsos de cada tarefa, o período de ativação de cada tarefa, e estamos
+
+705
+00:57:10,700 --> 00:57:14,300
+a ver, então, o que acontece?
+
+706
+00:57:14,300 --> 00:57:25,220
+A primeira quinta execução é esta aqui embaixo, esta tarefa é uma quinta execução,
+
+707
+00:57:25,220 --> 00:57:34,620
+começa a executar e é preantada, ou seja, nesse momento, consegui ver meu rato, já agora.
+
+708
+00:57:34,620 --> 00:57:43,700
+Ok, é preantada aqui, o que é dizer, porque, portanto, esta tarefa foi espultada, portanto,
+
+709
+00:57:43,700 --> 00:57:47,860
+esta tarefa foi espultada e, como tem uma prioridade superior e, em tens execução, esta
+
+710
+00:57:47,860 --> 00:57:54,300
+é preantada para guarda os recursos, ela guarda o informação sobre ela, a sua setaque,
+
+711
+00:57:54,300 --> 00:58:01,340
+e começa a executar, porque tem a melhor prioridade, começa a executar, e, entanto, há uma outra
+
+712
+00:58:01,340 --> 00:58:07,780
+tarefa de menor prioridade que é lançada aqui, claro, ela tem uma prioridade inferior,
+
+713
+00:58:07,780 --> 00:58:11,980
+não pode executar logo, então, tem que guardar, que é esta termina, e, quando ela termina
+
+714
+00:58:11,980 --> 00:58:18,180
+aqui, ela pode, se, agora, iniciar a sua execução, para garantir o que é, que é esta, possa
+
+715
+00:58:18,180 --> 00:58:22,940
+cumprir o seu deadline que está aqui, se isso não tivesse acontecido, nós não desfintivéssemos
+
+716
+00:58:22,940 --> 00:58:28,540
+definir esta prioridade, que é que aconteceria, este iniciava aqui a sua execução, e, como já
+
+717
+00:58:28,540 --> 00:58:33,780
+estão a ver, esta não ia conseguir terminar esse que são o tempo, ou então, pior, esta
+
+718
+00:58:33,780 --> 00:58:39,220
+debaixo de prioridade continua a executar até ao fim, e esta fallaria o seu deadline,
+
+719
+00:58:39,220 --> 00:58:45,180
+e esta também, porque este tem um deadline aqui, e é um tempo de discussão muito maior,
+
+720
+00:58:45,180 --> 00:58:51,780
+apesar de ter uma prioridade mais mais, ok? Então, estamos a ver aqui, que é uma relação,
+
+721
+00:58:51,780 --> 00:58:55,980
+portanto, aqui, entre o work, que é o tempo de discussão, e a sua prioridade com muitas
+
+722
+00:58:55,980 --> 00:59:10,800
+vezes, e isso são restrições importantes depois no escalamento do destino, pronto, a
+
+723
+00:59:10,800 --> 00:59:18,500
+custa deste escalamento, vimos aqui, mas já apenas em prioridades, verificamos, então,
+
+724
+00:59:18,500 --> 00:59:28,900
+porque o que a tarefa 3 falhou o seu deadline, ou seja, o seu risponso-time que tem
+
+725
+00:59:28,900 --> 00:59:35,100
+em consideração, o seu tempo de discussão, e este, o que diz, e este, e este, e este,
+
+726
+00:59:35,100 --> 00:59:40,940
+e o tempo em que este é ready, a espera de discussão, e este seu risponso-time, foi
+
+727
+00:59:40,940 --> 00:59:48,180
+superior ao deadline, e, portanto, falhou o deadline, por causa desta premsa que ocorreu
+
+728
+00:59:48,180 --> 00:59:52,860
+aqui, ok? E, por exemplo, o clássico de não é um sistema de tempo real.
+
