@@ -4,17 +4,17 @@ Context:
 - The SRT file contains the transcription of the lecture (PRIMARY SOURCE).
 - Images are the powerpoint from the professor. 
 - notes are SUPPORTING MATERIAL (they may be incomplete or incorrect but they have images from the professor monitor)
-- The goal is to reconstruct the actual lecture, not just summarize files.
+- The goal is to reconstruct the actual lecture, not just summarize files. With the notes and the images you can even tied the srt with the images from the professor and notes. there is two srts with 1hr one and the other less, but you can try to build the actual lesson with srt and the images from the notas.md and the transcriptions.
 
 Critical rule:
 Always prioritize the SRT content as the ground truth of what was actually taught. USE THE.MD with images that is the Prof powerpoint.
-Use notes only to clarify or enrich — never to override the SRT.
+Use notes only to clarify,enrich and link to the srt.
 
 Tasks:
 
 1. Reconstruct the lecture:
    - Build structured study notes based primarily on the SRT.
-   - Use images/notes only to fill gaps or clarify concepts.
+   - Use images/notes to fill and build potential class and clarify concepts.
 
 2. Explain difficult parts simply:
    - Assume beginner level.
