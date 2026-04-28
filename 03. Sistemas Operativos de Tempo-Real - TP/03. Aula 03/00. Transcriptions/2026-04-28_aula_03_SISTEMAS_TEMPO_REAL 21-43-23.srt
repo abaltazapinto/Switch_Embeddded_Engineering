@@ -1,0 +1,6232 @@
+1
+00:00:00,000 --> 00:00:17,160
+e de sábado, e depois já era eu que ia segurar as aulas, e também sou eu responsável pela
+
+2
+00:00:17,160 --> 00:00:18,160
+disciplina.
+
+3
+00:00:18,160 --> 00:00:24,960
+A minha pergunta que estava de vos perguntar, porque não sei se ele fez isso, porque entretanto
+
+4
+00:00:24,960 --> 00:00:34,600
+eu não consegui falar com ele, na primeira aula ele apresentou-vos o planeamento e o propósito
+
+5
+00:00:34,600 --> 00:00:35,600
+da disciplina.
+
+6
+00:00:35,600 --> 00:00:38,810
+Ah, sim.
+
+7
+00:00:38,810 --> 00:00:45,850
+Portanto, vocês sabem quando é que são os momentos da avaliação e sabem qual é o
+
+8
+00:00:45,850 --> 00:00:46,850
+planeamento.
+
+9
+00:00:46,850 --> 00:00:55,850
+Eu que está naquele fecheiro no Mudo, ou está no fecheiro Tp0, apresentou-vos isso, ou existe
+
+10
+00:00:55,850 --> 00:01:02,240
+alguma dúvida e angulação a isso?
+
+11
+00:01:02,240 --> 00:01:03,240
+Eu acho que não.
+
+12
+00:01:03,240 --> 00:01:04,240
+Não sei.
+
+13
+00:01:04,240 --> 00:01:09,040
+Fiquei com a ideia de uma data específica sobre o momento da avaliação.
+
+14
+00:01:09,040 --> 00:01:14,440
+Fiquei com a ideia que era algo mais continuo, mas segurar as capas.
+
+15
+00:01:14,440 --> 00:01:19,840
+Portanto, por exemplo, eu passo isto muito rapidamente para, uma vez que eu vou ser o
+
+16
+00:01:19,840 --> 00:01:25,360
+que vou continuar, vou agora até ao fim, com o bem que isso fique bem definido, que
+
+17
+00:01:25,360 --> 00:01:38,680
+é para depois não, deixe-me só partilhar isto e depois passamos para a aula de hoje.
+
+18
+00:01:38,680 --> 00:01:41,020
+Pronto.
+
+19
+00:01:41,020 --> 00:01:50,260
+O curso, basicamente, tem duas componentes, uma componente de real-time e outra componente
+
+20
+00:01:50,260 --> 00:02:02,660
+de sistemas operativos, nomeadamente, portanto, o real-time tem a ver sobretudo com políticas
+
+21
+00:02:02,660 --> 00:02:11,100
+de esconnamento e de recursos partilhados, portanto, vulgos, semáforos, motexes, coisas
+
+22
+00:02:11,100 --> 00:02:19,860
+assim do género, depois da parte do sistema operativo vocês vão ver como é que se implementam
+
+23
+00:02:19,980 --> 00:02:24,380
+e eu digo vão ver porque não vos vou pedir para vocês implementar porque não temos tempo.
+
+24
+00:02:24,380 --> 00:02:30,420
+Portanto, isto é um curso, é um módulo, uma disciplina que funciona num espaço muito
+
+25
+00:02:30,420 --> 00:02:38,020
+curto de tempo e não dá para eu vos apresentar tudo o que precisam de saber e depois pedir-vos
+
+26
+00:02:38,020 --> 00:02:46,300
+para vocês adicionarem alguma política de esconnamento ao sistema operativo, algum
+
+27
+00:02:46,420 --> 00:02:55,100
+mecanismo de resorciarem, aquilo que vai acontecer, eu vou explicar obviamente os conceitos
+
+28
+00:02:55,100 --> 00:03:01,620
+e depois vou vos mostrar como é que se faz isso e vamos disponibilizar tutoriais de
+
+29
+00:03:01,620 --> 00:03:06,020
+forma a que vocês também consigam no fazer.
+
+30
+00:03:06,100 --> 00:03:16,340
+Vamos tentar usar as aulas práticas, portanto, as aulas ao sábado. Para vocês tentarem, a
+
+31
+00:03:16,340 --> 00:03:22,020
+ideia será um pouquinho, vocês tentarem fazer alguma coisa fora das aulas e nas aulas
+
+32
+00:03:22,020 --> 00:03:28,380
+ao sábado, uma vez que são presenciais, eu ajudar-vos a resolver alguns problemas de
+
+33
+00:03:28,380 --> 00:03:36,140
+forma a que vocês no final consigam ter nomeadamente uma política de escolhamento
+
+34
+00:03:36,140 --> 00:03:46,140
+e um mecanismo de resorciarem numa versão do Linux, portanto, é esse o propósito.
+
+35
+00:03:46,140 --> 00:03:53,700
+Para que não dá, este conceito são abordados uma disciplina no ISEP, mas a disciplina demora
+
+36
+00:03:53,700 --> 00:03:59,500
+um semestre e por quê? Porque também só tenho uma aula por semana, portanto, em termos de aulas
+
+37
+00:03:59,500 --> 00:04:06,380
+são mesmas, está muito mais espaçado no tempo e daria tempo para pedir para fazer isso,
+
+38
+00:04:06,380 --> 00:04:12,660
+mas aqui não é possível, portanto, e também, para ser sincero, não sei em que nível,
+
+39
+00:04:12,660 --> 00:04:20,860
+ao nível dos conhecimentos base, é que esta formação, qual é-se, se estão à vontade
+
+40
+00:04:20,860 --> 00:04:25,380
+de concesse, se não estão à vontade de concesse, se estão à vontade com ferramentas de compilação,
+
+41
+00:04:25,380 --> 00:04:30,860
+sobretudo, coisas assim desse jeito, portanto, é a ideia é essa.
+
+42
+00:04:30,860 --> 00:04:38,220
+No que diz respeito às avaliações, vai haver, portanto, existem dois momentos sem avaliação,
+
+43
+00:04:38,220 --> 00:04:45,180
+sem exame, esses dois momentos, o momento M1 e o momento M2, têm a ver com exercício
+
+44
+00:04:45,180 --> 00:04:53,940
+sobre real-time, portanto, pelo que o Ricardo me disse, ele apresentou-vos ou nos slides
+
+45
+00:04:53,940 --> 00:04:58,940
+colocou lá alguns exercícios para vocês fazerem, portanto, a ideia, na maior parte dos casos,
+
+46
+00:04:58,940 --> 00:05:08,380
+é fazer o tracing da execução das tarefas, não vamos estar a forçar muito no que diz respeito
+
+47
+00:05:08,380 --> 00:05:16,700
+àquela análise mais complicada, a não ser só o teste de escalonabilidade, essa é
+
+48
+00:05:16,700 --> 00:05:24,780
+relativamente simples, para o ritmo anotônico, para o EDF ainda mais simples, de fazer como
+
+49
+00:05:24,780 --> 00:05:29,100
+vamos ver hoje.
+
+50
+00:05:29,100 --> 00:05:36,340
+Depois, também, vou fazer isso na próxima aula, vamos ver um pouquinho de canismos
+
+51
+00:05:36,460 --> 00:05:41,620
+do resource sharing, o text, e semáforos, o problema associado a isso, nomeadamente
+
+52
+00:05:41,620 --> 00:05:50,220
+a herança de prioridades e o teto de prioridades, portanto, que são duas abordagens usadas
+
+53
+00:05:50,220 --> 00:05:55,620
+neste contexto de sistemas temporal para resolver o problema de infestão de prioridades,
+
+54
+00:05:55,620 --> 00:06:05,500
+porque se eu tiver uma tarefa, um recurso com semáforo e houver outra maior prioridade
+
+55
+00:06:05,500 --> 00:06:12,500
+que queira usar aquele recurso, obviamente não consegue usar, porque se é de exclusão,
+
+56
+00:06:12,500 --> 00:06:18,180
+só quando a tarefa de menor prioridade ou libertária, que é outra de maior prioridade,
+
+57
+00:06:18,180 --> 00:06:23,300
+é que pode executar, e este fenômeno me diga-se de inversão de prioridade, e os sistemas
+
+58
+00:06:23,300 --> 00:06:28,620
+temporal têm mecanismos para resolver isto.
+
+59
+00:06:28,940 --> 00:06:36,540
+Portanto, em relação, em relação, portanto, e os exercícios, os exercícios de real-time,
+
+60
+00:06:36,540 --> 00:06:44,020
+serão coisas relativamente simples, portanto, na próxima aula, vamos ter, na próxima
+
+61
+00:06:44,020 --> 00:06:49,620
+aula, no próximo sábado, porque a próxima aula é na quinta-feira, na próxima sábado,
+
+62
+00:06:49,620 --> 00:06:56,420
+vamos ter, então, um pouquinho de exercício prático, vamos fazer um tamanho, um pequeno,
+
+63
+00:06:56,420 --> 00:07:04,140
+uns programinhas para colocar, criar umas tarefas e mudar as políticas de calenamento,
+
+64
+00:07:04,140 --> 00:07:07,500
+e depois vamos fazer uma análise a isso.
+
+65
+00:07:07,500 --> 00:07:14,700
+Em relação a parte da avaliação do sistema operativo, aqui, não, apesar de se referir,
+
+66
+00:07:14,700 --> 00:07:19,580
+que é um exercício em laboratório, em laboratório, mas é na aula, é profissional da prática,
+
+67
+00:07:19,580 --> 00:07:28,300
+aí será um exercício mais teórico, não vamos voltar a pedir para implementar em nada
+
+68
+00:07:28,300 --> 00:07:34,340
+aquilo que vai ser um exercício, vai ser, portanto, um exercício escrito com perguntas
+
+69
+00:07:34,340 --> 00:07:40,620
+de escolha múltiple, sobre os tópicos sobre dados, nada mais do que isso.
+
+70
+00:07:40,620 --> 00:07:46,660
+Em termos de calenamento, é isto que está previsto, portanto, o primeiro será no dia
+
+71
+00:07:46,660 --> 00:07:57,860
+29, portanto, que será feito num exercício em que eu vos dou 2 ou 3 task sets, e vamos
+
+72
+00:07:57,860 --> 00:08:03,420
+pedir para vocês colunarem aquilo, no diante, uma determinada heurística de calenamento,
+
+73
+00:08:03,420 --> 00:08:11,180
+coisa assim, do gene, fazer o tracing, até um determinado ponto, até um determinado
+
+74
+00:08:11,180 --> 00:08:20,260
+ponto temporal, e depois, no dia 30, será um teste, um exercício escrito sobre sistemas
+
+75
+00:08:20,260 --> 00:08:25,980
+operativos, sobre aquilo que nós estamos a abordar, que tem a ver com desenvolvimento
+
+76
+00:08:25,980 --> 00:08:35,500
+para o cardinal do Linux, portanto, vamos usar o Linux como base, porque é, tipicamente,
+
+77
+00:08:35,500 --> 00:08:42,300
+o sistema operativo de base para a maior parte das outras versões que existem para
+
+78
+00:08:42,300 --> 00:08:47,220
+ir de real-time, etc., e outras coisas assim, do gene, está bem?
+
+79
+00:08:47,220 --> 00:08:56,620
+Portanto, não sei se há alguma dúvida, se há alguma questão em relação a isto?
+
+80
+00:08:56,620 --> 00:08:57,620
+Não.
+
+81
+00:08:57,620 --> 00:08:58,620
+Não?
+
+82
+00:08:58,620 --> 00:08:59,620
+Pronto.
+
+83
+00:09:00,620 --> 00:09:11,790
+Ora, o que é que eu estou saindo agora para esta, para a portagem de hoje, portanto,
+
+84
+00:09:11,790 --> 00:09:17,830
+o que é que nós vamos, porque vocês sempre quiserem podem me interromper, deixem-me
+
+85
+00:09:17,830 --> 00:09:23,270
+que vos diga que eu detesto aulas além, as aulas além para mim são horríveis, mas
+
+86
+00:09:23,270 --> 00:09:30,350
+é o que é, hoje em dia a pandemia trouxe-nos isto, e às vezes dá jeito, mas eu confesso
+
+87
+00:09:30,350 --> 00:09:37,670
+que não gosto muito de nome de fio das aulas presenciais.
+
+88
+00:09:37,670 --> 00:09:44,710
+Ora, bem, nós vamos, então, falar sobre vocês, por aquilo que o Ricardo me falou,
+
+89
+00:09:44,710 --> 00:09:51,030
+vocês na última aula tiveram a falar sobre prioridades fixas, nomeadamente, sobre o
+
+90
+00:09:51,030 --> 00:09:57,110
+reto monotónico, não sei se abordaram um deadline monotónico, mas portanto, prioridades
+
+91
+00:09:57,110 --> 00:09:58,110
+fixas.
+
+92
+00:09:58,110 --> 00:10:08,510
+Nós hoje vamos ver aqui outras abordagens para, portanto, de escalonamento que são
+
+93
+00:10:08,510 --> 00:10:15,190
+mais flexíveis e que, em geral, têm um desempenho melhor.
+
+94
+00:10:15,190 --> 00:10:22,390
+Ora, bem, em termos de, vamos imaginar, este tácio que, sério, também foi colocado
+
+95
+00:10:22,390 --> 00:10:30,990
+para as prioridades fixas, portanto, imagine um sistema composto aqui por três tarefas
+
+96
+00:10:30,990 --> 00:10:39,150
+em que temos aqui, portanto, um tempo de execução, o período e o deadline, certo?
+
+97
+00:10:39,150 --> 00:10:49,910
+Portanto, se nós usássemos um sistema de prioridades fixas, teríamos de considerar
+
+98
+00:10:49,910 --> 00:10:58,350
+um destes elementos para atribuir a prioridade, embora, aqui, nós não temos implícito deadline,
+
+99
+00:10:58,350 --> 00:11:06,190
+portanto, porque o período é diferente do deadline, portanto, teríamos aqui que ver
+
+100
+00:11:06,190 --> 00:11:11,630
+qual é que seria a abordagem mais adequada para garantir que o sistema era escalonado.
+
+101
+00:11:11,630 --> 00:11:18,630
+Ora, bem, em termos de abordagens de escalonamento, existem, basicamente, três não, existem
+
+102
+00:11:18,630 --> 00:11:31,630
+quatro, mas três, aquelas que têm, que são, a prioridade é atribuída à tarefa e,
+
+103
+00:11:31,630 --> 00:11:39,470
+a partir daí, nunca muda ao longo de execução, portanto, tipicamente, nesses sistemas, que
+
+104
+00:11:39,470 --> 00:11:41,230
+é que são os mais comuns?
+
+105
+00:11:41,230 --> 00:11:48,590
+As prioridades são definidas antes de execução e, quando o sistema arranca, as prioridades
+
+106
+00:11:48,590 --> 00:11:49,590
+não alteram.
+
+107
+00:11:49,590 --> 00:11:56,910
+E, aqui, é frequente nós falarmos em task, porque, geralmente, nós usamos o termo task
+
+108
+00:11:56,910 --> 00:12:05,030
+para um conceito genérico e usamos o termo jove para cada interação dessa tarefa ao
+
+109
+00:12:05,030 --> 00:12:06,030
+longo do sistema.
+
+110
+00:12:06,030 --> 00:12:12,830
+Portanto, o jove, tipicamente, é uma interação de um, portanto, é um ciclo, uma interação
+
+111
+00:12:12,830 --> 00:12:19,550
+de um ciclo em que executa ali uma determinada, um determinado jove, me faz ali alguma coisa
+
+112
+00:12:19,550 --> 00:12:25,990
+durante esse período e, depois, volta a adormecer até um determinado instante, acorda, volta
+
+113
+00:12:25,990 --> 00:12:26,990
+a executar.
+
+114
+00:12:26,990 --> 00:12:32,830
+Quando falamos em prioridades fixas, uma vez que aquilo é atribuído à tarefa, não vai
+
+115
+00:12:32,830 --> 00:12:38,950
+alterar nos jove, portanto, o jove vai ter a prioridade da tarefa, portanto, que foi aquilo
+
+116
+00:12:38,950 --> 00:12:44,590
+que vocês viram, o reto manotónico, eu tive a dar uma vista de olhos no slide, parece-me
+
+117
+00:12:44,590 --> 00:12:49,190
+que também vi lá a deadline manotónico, mas, é a mesma coisa, são prioridades fixas
+
+118
+00:12:49,190 --> 00:12:51,270
+com base num valor qualquer.
+
+119
+00:12:51,270 --> 00:13:02,030
+Que, por exemplo, no Linux, nós conseguimos implementar isto, mas temos que usar as
+
+120
+00:13:02,030 --> 00:13:09,070
+prioridades que estão definidas, e aí já não é pelo período ou pelo deadline, mas
+
+121
+00:13:09,070 --> 00:13:15,350
+temos que, temos uma escala, digamos assim, em que podemos usar isso para dar mais prioridade
+
+122
+00:13:15,350 --> 00:13:22,150
+a umas tarefas e a outras, e a partir daí elas executam sempre com essas prioridades.
+
+123
+00:13:22,150 --> 00:13:29,910
+Depois temos duas, mais duas abordagens que é fixe, jove, priority, que têm a ver com
+
+124
+00:13:29,910 --> 00:13:30,910
+o seguinte.
+
+125
+00:13:30,910 --> 00:13:41,390
+A prioridade do jove não altera durante a sua execução, mas, portanto, quando o jove
+
+126
+00:13:41,390 --> 00:13:47,270
+começa a executar, o elemento que lhe determina a prioridade, portanto, tem que haver um
+
+127
+00:13:47,270 --> 00:13:52,550
+elemento qualquer, um valor numérico, uma coisa qualquer, não altera até que o jove
+
+128
+00:13:52,550 --> 00:13:53,550
+termine.
+
+129
+00:13:54,550 --> 00:14:03,870
+E, depois, temos dinâmica de jove priority, em que a prioridade do jove pode alterar
+
+130
+00:14:03,870 --> 00:14:09,630
+durante a execução do jove, portanto, durante aquela alteração, ele num dado instante
+
+131
+00:14:09,630 --> 00:14:14,990
+pode ser o jove com mais prioridade e, no instante seguinte, aliás, a abordagem que
+
+132
+00:14:14,990 --> 00:14:19,910
+vamos ver, já pode não ser e, então, tem de ser preemptado.
+
+133
+00:14:19,910 --> 00:14:28,070
+E, depois, por fim, existem, porque estas abordagens são um pouquinho académicas,
+
+134
+00:14:28,070 --> 00:14:35,150
+um pouquinho teóricas, porque na maior parte dos casos consideram que as tarefas,
+
+135
+00:14:35,150 --> 00:14:41,550
+ou que os taxos que sete são constituídos por tarefas iguais, com coisas assim, tudo
+
+136
+00:14:41,550 --> 00:14:49,790
+muito parecido, com uma prioridade bem definida, coisas assim do gênio, com um tempo de execução
+
+137
+00:14:49,790 --> 00:14:55,710
+tão bem conhecido, e isso não é verdade num sistema qualquer, portanto, num sistema
+
+138
+00:14:55,710 --> 00:15:00,670
+real nem sempre é possível ter essa informação.
+
+139
+00:15:00,670 --> 00:15:07,150
+Então, temos que arranjar aqui maneira de conseguir incorporar tarefas que são, por
+
+140
+00:15:07,150 --> 00:15:12,470
+exemplo, a periódicas, que não sequem ao período, ou, então, como vamos ver, por
+
+141
+00:15:12,470 --> 00:15:19,710
+exemplo, a questão do tempo de execução, o tempo de execução, geralmente da forma
+
+142
+00:15:19,710 --> 00:15:30,270
+como os engenheiros do sistema criaticos, o definem é muito pessimista, portanto, e
+
+143
+00:15:30,270 --> 00:15:36,230
+existem abordagens que ajudam a resolver isso, não quer dizer que sejam perfeitas, nada
+
+144
+00:15:36,230 --> 00:15:41,630
+disso é perfeito, mas ajudam a incorporar essas coisas, portanto, é o que nós vamos
+
+145
+00:15:41,630 --> 00:15:52,390
+ver, portanto, tem a ver com estres tópicos, o fix, o dinâmico e o hierárquico, portanto,
+
+146
+00:15:52,390 --> 00:15:57,910
+que engloba mais do que uma abordagem.
+
+147
+00:15:57,910 --> 00:16:08,270
+Ora vai, quando nós temos prioridades dinâmicas, isso significa que as prioridades são definidas
+
+148
+00:16:08,270 --> 00:16:16,790
+em tempo de execução, portanto, seja qual for a abordagem, em tempo de execução que
+
+149
+00:16:16,790 --> 00:16:21,990
+é determinada a prioridade daquela tarefa, portanto, que é contrário àquilo que vocês
+
+150
+00:16:21,990 --> 00:16:31,030
+viram sob o notebook mal, em que aquilo é fixo e aquela tarefa tem aquela prioridade
+
+151
+00:16:31,030 --> 00:16:34,550
+e vai ter sempre aquela prioridade até o sistema terminar.
+
+152
+00:16:34,550 --> 00:16:43,110
+Aqui não, aqui as tarefas dão mudando de prioridade, primeiro, e eu como tenho, portanto,
+
+153
+00:16:43,110 --> 00:16:50,990
+meu foco é muita parte da implementação, obviamente que quando temos prioridades dinâmicas,
+
+154
+00:16:50,990 --> 00:16:58,910
+em termos de implementação, é mais complexo do que prioridades fixas, por exemplo, eu
+
+155
+00:16:58,910 --> 00:17:07,590
+posso implementar as prioridades fixas usando um arrei em que vou colocando as tarefas nas
+
+156
+00:17:07,590 --> 00:17:15,110
+posições em função da prioridade e quando o escalonador precisar de uma tarefa, começa
+
+157
+00:17:15,110 --> 00:17:22,830
+a percorrer o arrei desde a posição que tenha mais prioridade até a última posição
+
+158
+00:17:22,830 --> 00:17:28,670
+e quando encontrar uma tarefa, escolhe essa tarefa, portanto, relativamente simples de
+
+159
+00:17:28,670 --> 00:17:29,670
+implementar.
+
+160
+00:17:29,670 --> 00:17:35,510
+No caso das prioridades dinâmicas, é um pouquinho mais complexo, porque nós temos
+
+161
+00:17:35,510 --> 00:17:42,550
+que, em tempo de execução, temos que calcular o elemento que vai determinar a ordem de
+
+162
+00:17:42,550 --> 00:17:43,550
+execução.
+
+163
+00:17:43,550 --> 00:17:51,230
+Isso, portanto, por um lado, é um mais complexo de implementação e depois tem uma outra
+
+164
+00:17:51,230 --> 00:17:57,830
+coisa que é, tem mais alveretes, porque uma coisa é, é eu não ter que calcular
+
+165
+00:17:57,830 --> 00:18:03,590
+as prioridades, outra coisa é eu ter que fazer o cálculo das prioridades durante
+
+166
+00:18:03,590 --> 00:18:08,590
+o tempo de execução da tarefa.
+
+167
+00:18:08,590 --> 00:18:21,190
+Contudo, estas abordagens são mais fáceis de escalar, são mais fáceis de incorporar
+
+168
+00:18:21,190 --> 00:18:31,150
+diferentes tipos de tarefas e depois, como já referi, tenho uma complexidade maior,
+
+169
+00:18:31,150 --> 00:18:40,910
+tenho uns alveretes, portanto, tenho os alveretes, é o tempo que o sistema utiliza para conseguir
+
+170
+00:18:40,910 --> 00:18:47,150
+escalonar as tarefas e obviamente que esse tempo é tempo inútil, porque não está a
+
+171
+00:18:47,150 --> 00:18:51,710
+produzir nada, porque o que produz são, é a execução das tarefas e quando eu tenho
+
+172
+00:18:51,710 --> 00:18:57,750
+um processador que está a executar operações do sistema operativo logo não está a executar
+
+173
+00:18:57,750 --> 00:19:03,470
+tarefas, logo o throughput do processador está a baixar, porque está a executar outras
+
+174
+00:19:03,470 --> 00:19:09,750
+coisas que não fazem, que não produzem nada, podem ser fundamentais para algum funcionamento,
+
+175
+00:19:09,750 --> 00:19:13,590
+mas em termos de produção não produzem nada.
+
+176
+00:19:13,590 --> 00:19:23,990
+Mas também estas abordagens, quando existe uma sobrecarga do sistema, é um pouquinho
+
+177
+00:19:23,990 --> 00:19:33,550
+difícil perceber qual é a tarefa ou o jovem, ou que jovens de que tarefa irão perder o
+
+178
+00:19:33,550 --> 00:19:34,550
+deadline.
+
+179
+00:19:34,550 --> 00:19:42,230
+Portanto, não é possível, no caso das prioridades fixas, é possível, se o sistema
+
+180
+00:19:42,230 --> 00:19:48,030
+ficar estiver muito sobrecarregado, obviamente que as tarefas que vão perder o deadline são
+
+181
+00:19:48,030 --> 00:19:54,710
+as tarefas de menor prioridade, não vão ser as de maior prioridade, porque num sistema
+
+182
+00:19:54,710 --> 00:20:02,830
+desses, cedando as tarefas no sistema, o sistema vai sempre executar aquela que tenha prioridade
+
+183
+00:20:02,830 --> 00:20:08,470
+mais alta, que foi definida antes da execução, portanto, no sete tempo do sistema e que
+
+184
+00:20:08,470 --> 00:20:10,310
+não muda durante a execução.
+
+185
+00:20:12,500 --> 00:20:22,660
+Ora vai, neste contexto do fixe de Jop, portanto, em que é calculado a prioridade de
+
+186
+00:20:22,660 --> 00:20:29,260
+um Jop, portanto, uma interação, vamos assumir aqui um ciclo, em que temos um delay until
+
+187
+00:20:29,260 --> 00:20:37,140
+até um determinado ponto, quando acorda do work, durante algum tempo, calcula o novo
+
+188
+00:20:37,140 --> 00:20:43,220
+release, delay until, até esse novo instante, e assim, portanto.
+
+189
+00:20:43,220 --> 00:20:54,140
+Ora, nesse contexto do fixe de Jop, temos basicamente duas políticas, sempre mais
+
+190
+00:20:54,140 --> 00:21:05,580
+conhecidas, o first come, first serve, que é uma política que tem a ver com o tempo
+
+191
+00:21:05,580 --> 00:21:12,220
+de espera, a tarefa que estiver à espera, ou a tarefa que chegou há mais tempo ao sistema
+
+192
+00:21:12,220 --> 00:21:20,220
+é aquela que vai executar, que tem mais prioridade, portanto, isto é algo muito simples de implementar
+
+193
+00:21:20,220 --> 00:21:26,700
+uma vez que, depende da posição, se nós usarmos uma estrutura de dados, uma lista
+
+194
+00:21:26,700 --> 00:21:32,140
+ligada a uma coisa do género, é relativamente fácil de implementar isto, portanto, a tarefa
+
+195
+00:21:32,140 --> 00:21:39,460
+chega e ser no fim da fila, a tarefa que vai ser escalonada é que está no início
+
+196
+00:21:39,460 --> 00:21:41,380
+da fila, porque é que está lá há mais tempo.
+
+197
+00:21:41,380 --> 00:21:54,580
+O Linux tem isso, portanto, na classe RT utiliza isto, embora tenha também por níveis de
+
+198
+00:21:54,580 --> 00:22:01,380
+prioridade, portanto, o Linux primeiro define para a classe RT para software all time, o
+
+199
+00:22:01,380 --> 00:22:07,180
+Linux define sem níveis de prioridade e dentro de cada nível, uma das políticas
+
+200
+00:22:07,180 --> 00:22:17,460
+que tem é o first come, first serve, e certo, tem este propósito.
+
+201
+00:22:17,460 --> 00:22:26,100
+Contudo, neste contexto do real time, o que é mais usado é o ADF, o earliest deadline
+
+202
+00:22:26,100 --> 00:22:34,500
+and first, o Linux também já tem isso com o schedule deadline, deixe-me dizer, eu estou
+
+203
+00:22:34,500 --> 00:22:37,620
+sempre para beber água, porque eu tenho problemas de garganta, tenho que estar constantemente
+
+204
+00:22:37,620 --> 00:22:49,340
+para beber água, e nós já vamos ver os princípios do release deadline, mas é talvez
+
+205
+00:22:49,340 --> 00:22:55,660
+o algoritmo mais usado hoje em dia, portanto, o Linux tem, através do schedule deadline,
+
+206
+00:22:55,660 --> 00:23:04,780
+que foi implementado por uns tipos da escola superior Santana de Pisa, e que a primeira
+
+207
+00:23:04,780 --> 00:23:10,900
+vez que foi apresentado foi precisamente no EZEP, numa conferência que houve no EZEP
+
+208
+00:23:10,900 --> 00:23:11,900
+em 2011.
+
+209
+00:23:11,900 --> 00:23:26,400
+Hoje temos o dinâmico de job priority, temos este list, laxity first, que usa portanto
+
+210
+00:23:26,400 --> 00:23:35,600
+do job, portanto, num dado instante, é o que tem mais prioridade, e depois, como esteve
+
+211
+00:23:35,600 --> 00:23:43,920
+a executar, a sua prioridade pode alterar, porque é o mesmo, e apesar de ter nomes
+
+212
+00:23:43,920 --> 00:23:52,960
+diferentes, a teoria é o mesmo, tem a ver com o nível de urgência, isto é, já vamos
+
+213
+00:23:52,960 --> 00:24:02,840
+ver os detalhes, mas tem a ver com aquilo que falta executar e tendo em atenção o deadline,
+
+214
+00:24:02,840 --> 00:24:11,440
+portanto, obviamente que, se o que falta executar e o deadline, obviamente que a tarefa quando
+
+215
+00:24:11,440 --> 00:24:15,560
+executa, fica-lhe a faltar menos, então o que é que isso significa?
+
+216
+00:24:15,560 --> 00:24:22,440
+Significa que pode acontecer e acontece, por isso é que não é um algoritmo muito utilizado,
+
+217
+00:24:22,440 --> 00:24:28,640
+queres, vocês neste contexto do real-time existem muitos algoritmos que não servem
+
+218
+00:24:28,640 --> 00:24:33,520
+para nada, porque até são muito bonitos, deram muitos artigos e coisas de género, mas
+
+219
+00:24:33,520 --> 00:24:39,320
+depois na prática não dá para implementar, e este é um deles, porque ele é até engraçado,
+
+220
+00:24:39,320 --> 00:24:46,080
+mas o que vai acontecer a partir de uma determinada altura, se eu tiver duas tarefas que tenham
+
+221
+00:24:46,080 --> 00:24:53,720
+a mesma laxity, o mesmo nível de urgência, eu vou ter que selecionar uma e vou executar,
+
+222
+00:24:53,720 --> 00:24:59,080
+logo a seguir, a outra vai passar a ter mais prioridade, portanto, vou ter que preemptar
+
+223
+00:24:59,080 --> 00:25:03,800
+esta para executar a outra, e assim, portanto, quer dizer, e há aqui muitos context suítos
+
+224
+00:25:03,800 --> 00:25:10,760
+que não é muito interessante, mas pronto, mas é um algoritmo de descalmamento, quando
+
+225
+00:25:10,760 --> 00:25:18,600
+digo, com os sistemas, com as bases dos sistemas operativos que temos, este aqui não é muito
+
+226
+00:25:18,600 --> 00:25:25,640
+interessante, por causa disso, porque quando a laxity é igual, é mais que uma tarefa,
+
+227
+00:25:25,640 --> 00:25:30,360
+começa a centrar num ponto em que um executa um bocadinho uma, depois executa outra, executa
+
+228
+00:25:30,360 --> 00:25:35,680
+e anda sempre ali a fazer context suítos, e o que aqui significa muito over-app.
+
+229
+00:25:37,500 --> 00:25:44,740
+Ora bem, como é que funciona o early access deadline first? Muito simples, o early access deadline
+
+230
+00:25:44,740 --> 00:25:52,900
+first funciona, portanto, todas as tarefas, como vocês sabem, ou pelo menos abordaram na última aula,
+
+231
+00:25:52,900 --> 00:26:02,740
+têm três parâmetros, o tempo de execução, o deadline e o período. Para já, vamos assumir aqui
+
+232
+00:26:02,740 --> 00:26:12,980
+o período, igual ao deadline, para não complicar. Ora, o descalmamento vai ser feito com base no
+
+233
+00:26:12,980 --> 00:26:20,580
+deadline absoluto, como é que é o calculado do deadline absoluto? O deadline absoluto é, vocês
+
+234
+00:26:20,580 --> 00:26:34,790
+conseguem ver, conseguem ver o rato, certo? Sim, sim, sim, pronto. Imaginem aqui esta tarefa,
+
+235
+00:26:34,830 --> 00:26:43,430
+esta tarefa apareceu, foi feito o release da tarefa, portanto, um delay until, portanto,
+
+236
+00:26:43,430 --> 00:26:51,950
+chegou àquele instante e a tarefa apareceu no sistema para fazer algo de um trabalho,
+
+237
+00:26:51,950 --> 00:26:59,750
+portanto, ela está em condições de ser executada. O deadline absoluto é igual ao instante da
+
+238
+00:26:59,750 --> 00:27:08,310
+condição, mas o deadline relativo, portanto, dá aqui o deadline absoluto. Para cada tarefa,
+
+239
+00:27:08,310 --> 00:27:14,350
+temos isto. Ora, o que é que acontece, o que é que acontece num dado instante? Portanto, nós
+
+240
+00:27:14,350 --> 00:27:21,390
+temos aqui um instante, o que é que vamos, portanto, vamos sumar a esse instante o deadline
+
+241
+00:27:21,390 --> 00:27:29,430
+relativo e dá-nos o deadline absoluto. O escalonador, quando acontece uma situação
+
+242
+00:27:29,430 --> 00:27:36,630
+de trevas, vai olhar para todas as tarefas que estão no estado ou que estão elegíveis para
+
+243
+00:27:36,630 --> 00:27:47,310
+executar, portanto, para serem atribuídas ao CPU, vai ver aquela que tem o deadline absoluto mais
+
+244
+00:27:47,310 --> 00:27:56,910
+próximo e atribui essa tarefa ao CPU, reteira que lá estiver e atribui essa tarefa ao CPU.
+
+245
+00:27:56,910 --> 00:28:08,310
+Por que? Porque é a tarefa que tem mais prioridade. Sim, portanto, aparecer uma que mesmo aparecendo
+
+246
+00:28:08,310 --> 00:28:14,750
+mais tarde, mas tem um deadline relativo mais pequeno, portanto, se essa passar a ter o deadline
+
+247
+00:28:14,750 --> 00:28:21,430
+absoluto mais pequeno, mais perto, então, ele tem que pre-amputar, a que estava a executar e colocar
+
+248
+00:28:21,430 --> 00:28:27,830
+no CPU a tarefa que acabou de chegar. Portanto, o princípio é sempre muito simples, é, eu tenho,
+
+249
+00:28:27,830 --> 00:28:33,790
+o que é que é preciso fazer? Durante a execução, muito simples, aliás, isto implementa-se de uma forma
+
+250
+00:28:33,790 --> 00:28:41,630
+muito simples, como é que se implementa o EDF, por exemplo, no Linux utilizando uma árvore binário.
+
+251
+00:28:41,630 --> 00:28:50,190
+Portanto, o que é que eu faço? Eu tenho, vou colocar todas as tarefas que estão no estado de
+
+252
+00:28:50,230 --> 00:28:57,470
+execução, portanto, prontas para poderem ser atribuídas ao CPU, vou colocá-las numa árvore
+
+253
+00:28:57,470 --> 00:29:08,350
+binária ordenadas pelo absoluto deadline. E, dessa forma, eu tenho a tarefa, o noxte e verde mais à
+
+254
+00:29:08,350 --> 00:29:16,190
+esquerda, é a tarefa que tenho o deadline absoluto mais pequeno, mais próximo. Portanto, o que é que
+
+255
+00:29:16,190 --> 00:29:24,190
+eu tenho que fazer? Sempre que há uma tarefa que aparece, eu tenho que verificar se a tarefa que
+
+256
+00:29:24,190 --> 00:29:30,590
+está a execução é aquela que tenho o deadline absoluto mais próximo. Se for, continua a execução.
+
+257
+00:29:30,590 --> 00:29:36,390
+Se não for, tenho que aparentar e mudar para a tarefa que tenho o deadline absoluto mais próximo.
+
+258
+00:29:36,390 --> 00:29:45,390
+Portanto, em termos de implementação, é muito, muito fácil. Esta política de esclavamento
+
+259
+00:29:45,390 --> 00:29:53,390
+que tenho uma utilização muito superior ao ritmo amatônico, tem aqui um problema que é,
+
+260
+00:29:53,390 --> 00:30:04,390
+em caso do overload do sistema, portanto, de uma subcarga extrema, não conseguimos dizer
+
+261
+00:30:04,390 --> 00:30:11,390
+é esta tarefa ou são os jogos desta tarefa que vai perder o que vão perder o deadline
+
+262
+00:30:11,390 --> 00:30:18,390
+ou da outra tarefa. Não é possível porque isto é dinâmico.
+
+263
+00:30:18,390 --> 00:30:26,390
+Se houver alguma questão, vocês podem me interromper. Um outro aspecto do EDF é que,
+
+264
+00:30:26,390 --> 00:30:33,390
+ao contrário do ritmo amatônico em que o instante crítico é quando todas as tarefas chegam ao
+
+265
+00:30:33,390 --> 00:30:42,390
+sistema, aqui isso não é verdade. Portanto, um instante crítico depende de muitos aspectos.
+
+266
+00:30:42,390 --> 00:30:51,390
+Tipicamente, nós, para fazermos uma análise temporal para o EDF, temos que fazer,
+
+267
+00:30:51,390 --> 00:30:58,390
+ao contrário do que fazemos no ritmo amatônico, que no ritmo amatônico fazemos para os primeiros
+
+268
+00:30:58,390 --> 00:31:12,390
+primeiros, em função do período da tarefa, o período maior. No caso do EDF, teremos
+
+269
+00:31:12,390 --> 00:31:19,390
+de fazer para o período correspondente ao mínimo múltiplo comum de todos os períodos.
+
+270
+00:31:19,390 --> 00:31:26,390
+Portanto, temos que arranjar, ver qual é o mínimo múltiplo comum dos períodos das
+
+271
+00:31:26,390 --> 00:31:32,390
+tarefas e saber qual é esse valor e fazer a análise para esse período. Não é muito
+
+272
+00:31:32,390 --> 00:31:38,390
+executable, mas se fizer para fazermos essa análise baseado na resposta, teria de ser
+
+273
+00:31:38,390 --> 00:31:52,670
+feito dessa forma. Portanto, o que nós temos aqui é um exemplo. Se eu tiver quatro tarefas
+
+274
+00:31:52,670 --> 00:32:02,670
+e os períodos, a minha janela, imagine vocês fazerem isto à mão. Fazermos o escalamento
+
+275
+00:32:02,670 --> 00:32:11,670
+fazer o tracing à mão. Portanto, temos que fazer isto para, até um instante, 4.423.800.
+
+276
+00:32:11,670 --> 00:32:18,670
+Portanto, só aí, e para ver se o sistema é escalonado, fazendo a análise baseada na resposta.
+
+277
+00:32:18,670 --> 00:32:31,670
+Ora, tipicamente não se faz isto porque o EDF tem uma taxa, tem uma utilização de 100%.
+
+278
+00:32:31,670 --> 00:32:42,670
+Portanto, se a utilização for inferior a 1, se for inferior a 100%, com o EDF, o sistema
+
+279
+00:32:42,670 --> 00:32:49,670
+é escalonável, certo? Portanto, o sistema é escalonável. Portanto, tipicamente é isso
+
+280
+00:32:49,670 --> 00:32:56,670
+que se considera. Obviamente, eu estou aqui a falar a utilização de uma tarefa de ter
+
+281
+00:32:56,670 --> 00:33:05,670
+o C a dividir pelo T. Embora, obviamente que depois, se o sistema não tiver implícito
+
+282
+00:33:05,670 --> 00:33:15,670
+de Atlânesis, isto é, se o T variar do D, temos outras condições, mas o que temos
+
+283
+00:33:15,670 --> 00:33:26,670
+que fazer é considerar sempre o valor mais pequeno para o denominador e calcular a utilização
+
+284
+00:33:26,670 --> 00:33:34,670
+tendo isso, portanto, para considerar esse pior caso. Mas o EDF tendo, considerando
+
+285
+00:33:34,670 --> 00:33:43,670
+esse pior caso, no caso dos deadlines não serem implícitos, não serem iguais ao período,
+
+286
+00:33:43,670 --> 00:33:52,670
+a utilização é de 100%. Portanto, só temos que calcular a utilização de cada tarefa, sumar tudo
+
+287
+00:33:52,670 --> 00:34:00,670
+e depois verificar se é inferior a 100%. Se for, é escalonável. Se for superior a 100%,
+
+288
+00:34:00,670 --> 00:34:07,670
+não é escalonável de uma loja. Isso não é milagre, não é nada que se possa fazer.
+
+289
+00:34:07,670 --> 00:34:18,670
+Por exemplo, vocês, na última aula, viram isto, portanto, este teste de escalonabilidade,
+
+290
+00:34:18,670 --> 00:34:27,670
+portanto, em que já foi definido, penso que o artigo foi publicado em 1969 ou 1967, portanto,
+
+291
+00:34:27,670 --> 00:34:37,670
+em que define, digamos, esta forma para indicar se o sistema é escalonável ou não. Portanto,
+
+292
+00:34:37,670 --> 00:34:49,670
+neste caso, o sistema é escalonável contra estas tarefas. Se a análise, se a utilização
+
+293
+00:34:49,670 --> 00:34:57,670
+for inferior a 70%, olha, como se pode ver aqui, é superior, é de 84%, logo, não é escalonável,
+
+294
+00:34:57,670 --> 00:35:04,670
+usando o reto monotónico, ou o Adeline monotónico, mas usando o EDF, é escalonável, porque,
+
+295
+00:35:04,670 --> 00:35:13,670
+porque é inferior a 100%. Ora, bem, nós não vamos abordar aqui,
+
+296
+00:35:13,670 --> 00:35:23,670
+até porque não faz muito sentido hoje em dia usarmos situações para sistemas não preemptivos.
+
+297
+00:35:23,670 --> 00:35:32,670
+Embora os sistemas não preemptivos, nós temos isso, por exemplo, quando se usam os GPUs,
+
+298
+00:35:32,670 --> 00:35:40,670
+por exemplo, os GPUs são não preemptivos. Portanto, existem aí algumas frameworks que permitem
+
+299
+00:35:40,670 --> 00:35:47,670
+colocar tarefas a executar nas placas gráficas, e não sei o que mais, e isso aí não é
+
+300
+00:35:47,670 --> 00:35:54,670
+não preemptivo. Contudo, não faz um pouquinho do âmbito aqui do curso, não vamos abordar isto.
+
+301
+00:35:54,670 --> 00:36:05,670
+Também em relação à análise baseada no tempo de resposta. Para isto, não faz muito sentido
+
+302
+00:36:05,670 --> 00:36:17,980
+por aquilo que eu estive a referir, embora existe uma abordagem em que não é necessário fazer
+
+303
+00:36:17,980 --> 00:36:26,980
+análise baseada no tempo de resposta naquela intervalo todo, ou melhor, temos que fazer naquela
+
+304
+00:36:26,980 --> 00:36:34,980
+intervalo todo, mas é possível fazer saltos grandes. Portanto, existe, houve um tipo de
+
+305
+00:36:34,980 --> 00:36:44,980
+universidade diórquia em Inglaterra que definiu uma abordagem em que melhora esse teste,
+
+306
+00:36:44,980 --> 00:36:52,980
+obviamente que não dá para fazer a análise, como aplicação, mas existe uma forma, portanto,
+
+307
+00:36:52,980 --> 00:36:59,980
+eu defini uma abordagem em que não precisamos de verificar todos os pontos, e ele definiu
+
+308
+00:36:59,980 --> 00:37:06,980
+uma abordagem que nos indica quais os pontos em que deveríamos fazer essa análise.
+
+309
+00:37:06,980 --> 00:37:15,980
+Ora, o EDF, ao contrário do que acontece no récord monotônico, tenta ser justo. Eu,
+
+310
+00:37:15,980 --> 00:37:21,980
+não sei se foi o caso, se não, mas deve ter ido à tropa, não sei se algum de vocês
+
+311
+00:37:21,980 --> 00:37:26,980
+foi, mas quando se andava na tropa, dizia-se que a velha ia ser a um posto, e aqui é um
+
+312
+00:37:26,980 --> 00:37:36,980
+pouquinho isso. Portanto, o EDF resolve o problema do Starvation, provavelmente não
+
+313
+00:37:36,980 --> 00:37:42,980
+foi pensado nisso, mas é uma consequência. Starvation é quando uma tarefa é impedida
+
+314
+00:37:42,980 --> 00:37:53,980
+de executar, apesar de estar em condições de poder ser atribuído ao CPU. E quando nós
+
+315
+00:37:53,980 --> 00:38:00,980
+temos prioridades fixas, se não tivermos outro mecanismo que altera a prioridade,
+
+316
+00:38:00,980 --> 00:38:07,980
+pode acontecer o Starvation. Portanto, se os sistemas tiveram um bocado sobrecarregado,
+
+317
+00:38:07,980 --> 00:38:14,980
+as tarefas de menor prioridade não executam. Aqui, isso não é verdade, porque a tarefa,
+
+318
+00:38:14,980 --> 00:38:21,980
+quando o jovem, para ser mais preciso, tem um deadline absoluto, obviamente que à medida
+
+319
+00:38:21,980 --> 00:38:27,980
+que vai executando as tarefas que têm o deadline absoluto mais próximo, há de chegar uma
+
+320
+00:38:27,980 --> 00:38:35,980
+altura que vai chegar àquela. Portanto, não há nenhuma tarefa que fique sem poder ser
+
+321
+00:38:35,980 --> 00:38:44,980
+executada fora. Pode perder os deadlines, não estou de agora ficar sem tempo de ser
+
+322
+00:38:44,980 --> 00:38:51,980
+no CPU, isso, tipicamente, não acontece com o EDF.
+
+323
+00:38:51,980 --> 00:39:01,980
+Só uma pergunta. Então, por exemplo, em sistemas extremamente críticos, o EDF não será
+
+324
+00:39:01,980 --> 00:39:07,980
+uma solução ótima, porque se tiverem sobrecarga, as que têm, ou seja, não ligasse prioridades,
+
+325
+00:39:07,980 --> 00:39:13,980
+se nós queremos garantir que as tarefas mais prioritárias são sempre feitas, o outro
+
+326
+00:39:13,980 --> 00:39:25,980
+algoritmo fará mais sentido, não é? Certo, apesar de ter, em termos de desempenho,
+
+327
+00:39:25,980 --> 00:39:33,980
+piores valores, dá mais garantia, isso é certo, mas num sistema crítico, tipicamente,
+
+328
+00:39:33,980 --> 00:39:44,980
+não existe o overrun, isto é, tipicamente, a não ser que haja um erro de setup e ter
+
+329
+00:39:44,980 --> 00:39:50,980
+um sistema em que isso aconteça, a não ser que haja alguma coisa que apareça que não
+
+330
+00:39:50,980 --> 00:39:58,980
+esteja previsto, mas, tipicamente, quando se está a planear um sistema crítico, teremos
+
+331
+00:39:58,980 --> 00:40:06,980
+que saber que é que ele nunca vai ter uma taxa de utilização superior a 100%.
+
+332
+00:40:06,980 --> 00:40:14,980
+Eu estou a dizer mais, porque eu como trabalho mais com automáticos, normalmente, eu uso-se
+
+333
+00:40:14,980 --> 00:40:17,980
+mais o outro escalonamento, ou seja...
+
+334
+00:40:17,980 --> 00:40:24,980
+É mais simples, é mais simples, é mais... tem tudo mais simples, tem menos overhead.
+
+335
+00:40:24,980 --> 00:40:32,940
+Portanto, e o que acontece? E o que acontece é que é mais confiável.
+
+336
+00:40:32,940 --> 00:40:34,940
+Sabe-te isso.
+
+337
+00:40:34,940 --> 00:40:42,940
+Agora deixe-me dizer-me-se uma coisa, não tem nada a ver com faltar o respeito, não é
+
+338
+00:40:42,940 --> 00:40:47,940
+nada disto, é uma questão de hábito, eu trato os alunos por tu, se vocês não querem
+
+339
+00:40:47,940 --> 00:40:52,940
+tratar por um problema nenhum, certo, não é falta de respeito, é o meu hábito e, para
+
+340
+00:40:52,940 --> 00:41:00,940
+você, sabe, não se saterem com isso, ou se saterem, digam-me, que eu tento não fazer,
+
+341
+00:41:00,940 --> 00:41:02,940
+está bem?
+
+342
+00:41:02,940 --> 00:41:11,940
+A questão das prioridades fixas é que é tudo mais simples, é tudo mais previsível e,
+
+343
+00:41:11,940 --> 00:41:16,940
+obviamente, a questão que coloca-se aqui no EDF, quando o que?
+
+344
+00:41:16,940 --> 00:41:23,940
+Eu quero ter, vamos imaginar que eu tenho um sistema que é muito caro, você é muito
+
+345
+00:41:23,940 --> 00:41:28,940
+caro, eu não posso ter um sistema muito caro para ter uma taxa de utilização de 50%,
+
+346
+00:41:28,940 --> 00:41:39,340
+e no caso das prioridades fixas, com o rate monotônico, na verdade o sistema não tem
+
+347
+00:41:39,340 --> 00:41:44,140
+uma utilização superior a 50%, por que?
+
+348
+00:41:44,140 --> 00:41:52,140
+Pois como vamos ver, o tempo de discussão que é definido é muito inflacionado.
+
+349
+00:41:52,140 --> 00:42:00,140
+Aconteceu uma vez, nas medições que se fez, aconteceu uma vez, se calhar nem tanto,
+
+350
+00:42:00,140 --> 00:42:07,140
+aliás, há quem diga que depois considera-se o tempo mais alto e depois atribui-se um
+
+351
+00:42:07,140 --> 00:42:14,140
+melhor para ainda aquilo ficar mais, porque é muito difícil, primeiro não se consegue
+
+352
+00:42:14,140 --> 00:42:23,140
+andar a medir todos aqueles tempos para se conseguir de uma forma analítica ter a
+
+353
+00:42:23,140 --> 00:42:26,140
+certeza do worst case execution time.
+
+354
+00:42:26,140 --> 00:42:31,140
+Portanto, e o que acontece na maior parte dos casos é que é muito inflacionado, portanto,
+
+355
+00:42:31,140 --> 00:42:39,140
+no sistema rate monotônico, ou com prioridades fixas, o sistema tem uma utilização um pouco,
+
+356
+00:42:39,140 --> 00:42:47,140
+eu arrisco 50% no máximo 60%, não estou a ver a ter muito mais do que isso, percebes?
+
+357
+00:42:47,140 --> 00:42:52,140
+Agora, imagina que esse sistema é muito caro, que é uma coisa muito cara, se calhar
+
+358
+00:42:52,140 --> 00:43:00,140
+de quando vem ter ali uma utilização maior, e aí já vamos para o EDF, agora concordo
+
+359
+00:43:00,140 --> 00:43:08,140
+contigo, que tudo que baseado em prioridades fixas, definidas logo no setup, é muito mais,
+
+360
+00:43:08,140 --> 00:43:12,140
+vamos dizer assim, muito mais previsível.
+
+361
+00:43:12,140 --> 00:43:14,140
+Certo, sim.
+
+362
+00:43:14,140 --> 00:43:16,140
+Está bem?
+
+363
+00:43:16,140 --> 00:43:21,140
+Ora bem, pois tenho aqui uns exercícios para vocês fazerem nenhum tracing, também para
+
+364
+00:43:21,140 --> 00:43:29,140
+treinar, geralmente quando nós fazemos estes exercícios, ou quando pensamos neles,
+
+365
+00:43:29,140 --> 00:43:35,140
+pensamos que são fáceis, mas depois quando os vamos fazer, enganámos-nos muitas vezes.
+
+366
+00:43:35,140 --> 00:43:36,140
+E por quê?
+
+367
+00:43:36,140 --> 00:43:43,140
+Já agora tenho que vos adicionar, aquilo que vocês devem fazer é colocar logo os realizes
+
+368
+00:43:43,140 --> 00:43:50,140
+dos diferentes jogos ao longo da janela que querem analisar, porque senão vão se esquecer.
+
+369
+00:43:50,140 --> 00:43:57,140
+Se colocarem só o realiza à medida que vão fazendo o tracing, vão se esquecer de colocar
+
+370
+00:43:57,140 --> 00:44:02,140
+os realizes e depois acabam por não produzir o escalonamento correto.
+
+371
+00:44:02,140 --> 00:44:11,140
+Pronto, é aqui um outro exercício para vocês calcularem aqui qual seria o período, o deadline
+
+372
+00:44:11,140 --> 00:44:18,140
+de forma que esse sistema fosse escalonável, isto é, tivesse uma utilização inferior
+
+373
+00:44:18,140 --> 00:44:21,140
+ou igual a 100%.
+
+374
+00:44:22,140 --> 00:44:25,140
+Ora, o list lag city first.
+
+375
+00:44:25,140 --> 00:44:28,140
+Este algoritmo, como é que...
+
+376
+00:44:28,140 --> 00:44:34,140
+Eu vou passar à frente porque tenho aqui um time line, porque é mais fácil para vocês
+
+377
+00:44:34,140 --> 00:44:35,140
+perceber.
+
+378
+00:44:35,140 --> 00:44:37,140
+Mas o que é que é preciso?
+
+379
+00:44:37,140 --> 00:44:42,140
+E vocês facilmente compreenderão porque eu disse que este exercício não é muito interessante
+
+380
+00:44:42,140 --> 00:44:47,140
+de implementar ou...
+
+381
+00:44:47,140 --> 00:44:54,140
+Exato, acho que não tem grande vantagem o custo de implementação.
+
+382
+00:44:54,140 --> 00:44:56,140
+Os algoritmos são muito grandes.
+
+383
+00:44:56,140 --> 00:45:06,140
+Primeiro, é preciso andar a controlar o tempo que falta para o deadline.
+
+384
+00:45:06,140 --> 00:45:12,140
+É preciso estar a controlar o tempo que falta de execução.
+
+385
+00:45:12,140 --> 00:45:23,140
+Portanto, estes dois parâmetros aqui é o tempo que falta para o deadline absoluto e este
+
+386
+00:45:23,140 --> 00:45:29,140
+parâmetro aqui é o tempo que falta para o de execução.
+
+387
+00:45:29,140 --> 00:45:35,140
+Portanto, vamos olhar aqui para este exemplo para perceber.
+
+388
+00:45:35,140 --> 00:45:38,140
+Vamos olhar aqui neste ponto.
+
+389
+00:45:38,140 --> 00:45:41,140
+Vamos olhar aqui no ponto 70.
+
+390
+00:45:41,140 --> 00:45:45,140
+Ora, esta tarefa aqui é o alarm.
+
+391
+00:45:45,140 --> 00:45:49,140
+Aqui no ponto...
+
+392
+00:45:49,140 --> 00:45:51,140
+O alarm está aqui.
+
+393
+00:45:51,140 --> 00:45:57,420
+Estamos aqui no instante 60.
+
+394
+00:45:57,420 --> 00:46:01,420
+Ora, o que é que estamos aqui no instante 60?
+
+395
+00:46:01,420 --> 00:46:07,420
+Portanto, ele tem o deadline absoluto no instante 90.
+
+396
+00:46:07,420 --> 00:46:11,420
+O instante em que estamos agora é o 60.
+
+397
+00:46:11,420 --> 00:46:16,420
+Portanto, o quanto tempo é que falta para o deadline 30?
+
+398
+00:46:16,420 --> 00:46:17,420
+Se estamos...
+
+399
+00:46:17,420 --> 00:46:24,420
+Se o instante atual é este, o deadline está no instante 90.
+
+400
+00:46:24,420 --> 00:46:31,420
+Portanto, neste instante, ele tem, em termos de remaining deadline, 30.
+
+401
+00:46:31,420 --> 00:46:38,420
+Ora, em termos de execução, neste instante, ele tem um C de 10.
+
+402
+00:46:38,420 --> 00:46:40,420
+Então, menos 10.
+
+403
+00:46:40,420 --> 00:46:43,420
+Dá uma laxity de 20.
+
+404
+00:46:43,420 --> 00:46:51,920
+Esta tarefa aqui do control que tem também aqui no instante 60.
+
+405
+00:46:51,920 --> 00:46:56,920
+Ora, o deadline desta tarefa é o instante 100.
+
+406
+00:46:56,920 --> 00:47:00,920
+Portanto, esta tarefa tem um período e um deadline de 50.
+
+407
+00:47:00,920 --> 00:47:03,920
+Apareceu aqui no instante 0, 50 a 100.
+
+408
+00:47:03,920 --> 00:47:05,920
+Com isto aqui é a segunda ativação.
+
+409
+00:47:05,920 --> 00:47:07,920
+Tem um deadline de 100.
+
+410
+00:47:07,920 --> 00:47:13,920
+Ora, 100 menos o instante atual, 40.
+
+411
+00:47:13,920 --> 00:47:14,920
+Menos...
+
+412
+00:47:14,920 --> 00:47:18,920
+Ora, ele tem um tempo de execução de 20.
+
+413
+00:47:18,920 --> 00:47:21,920
+Menos 20.
+
+414
+00:47:21,920 --> 00:47:23,920
+Dá uma laxity de 20.
+
+415
+00:47:23,920 --> 00:47:26,920
+Portanto, temos aqui um empate.
+
+416
+00:47:26,920 --> 00:47:36,920
+Quando temos um empate, portanto, os sistemas têm que usar uma heurística qualquer para partir esse empate.
+
+417
+00:47:36,920 --> 00:47:42,920
+Aqui, aparentemente, ele desempata pela tarefa que está há mais tempo no sistema.
+
+418
+00:47:42,920 --> 00:47:44,920
+Então, o que é que acontece aqui?
+
+419
+00:47:44,920 --> 00:47:49,920
+Ele vai executar e agora vamos saltar aqui para o instante 70.
+
+420
+00:47:49,920 --> 00:47:51,920
+E depois...
+
+421
+00:47:51,920 --> 00:47:55,920
+Porque isto nos sistemas computacionais não é assim tão linear.
+
+422
+00:47:55,920 --> 00:47:56,920
+Mas vamos assumir.
+
+423
+00:47:56,920 --> 00:47:59,920
+Ele passa para o instante 70.
+
+424
+00:47:59,920 --> 00:48:05,920
+E que nesta altura, vamos assumir que no instante 70, o...
+
+425
+00:48:05,920 --> 00:48:07,920
+Vai haver uma...
+
+426
+00:48:07,920 --> 00:48:10,920
+Portanto, vai haver uma análise ao sistema.
+
+427
+00:48:10,920 --> 00:48:15,920
+Ora, o que é que acontece aqui no instante 70?
+
+428
+00:48:15,920 --> 00:48:20,920
+Ora, esta tarefa, o controle, que agora...
+
+429
+00:48:20,920 --> 00:48:22,920
+Tenho o deadline absoluto.
+
+430
+00:48:22,920 --> 00:48:25,920
+Tenho o deadline absoluto no instante 100.
+
+431
+00:48:25,920 --> 00:48:29,920
+Como estamos no instante 70, 30.
+
+432
+00:48:29,920 --> 00:48:38,920
+Uma, aquilo que falta executar, se são 10, porque já executou 10, fica com uma laxity de 20.
+
+433
+00:48:38,920 --> 00:48:46,220
+Ou, a tarefa que está aqui em cima, o alarm, que também está aqui,
+
+434
+00:48:46,220 --> 00:48:48,220
+no instante 70...
+
+435
+00:48:48,220 --> 00:48:52,220
+Ora, o deadline da tarefa é o instante 90.
+
+436
+00:48:52,220 --> 00:48:57,220
+Ora, 90 menos 70 dá vinho.
+
+437
+00:48:57,220 --> 00:49:05,220
+Como o C é de 10, terando-lhe o C que ainda falta executar, ainda não executou nada, falta executar.
+
+438
+00:49:05,220 --> 00:49:08,220
+Tenho uma laxity de 10.
+
+439
+00:49:08,220 --> 00:49:14,220
+Ora, se tenho uma laxity mais baixa, o que é que o sistema vai ter que fazer?
+
+440
+00:49:14,220 --> 00:49:19,220
+Preemptar a tarefa que está a executar para executar aquela.
+
+441
+00:49:19,220 --> 00:49:22,220
+E assim, portanto, o que é que isso significa?
+
+442
+00:49:22,220 --> 00:49:30,220
+Vamos imaginar que o alarme tinha um C maior e não sei o que.
+
+443
+00:49:30,220 --> 00:49:35,220
+As tarefas iam andar aqui a fazer context suíte, mas uma a outra.
+
+444
+00:49:35,220 --> 00:49:42,220
+Porque se executou, a sua urgência vai diminuir, não vai ser tão urgente.
+
+445
+00:49:42,220 --> 00:49:46,220
+Aquela que não executou, vai passar a ser mais urgente.
+
+446
+00:49:46,220 --> 00:49:51,220
+Porque não executou nada e está a chegar ao deadline.
+
+447
+00:49:51,220 --> 00:49:58,220
+Portanto, além disso, depois de nós, quando chegamos à parte da implementação,
+
+448
+00:49:58,220 --> 00:50:07,220
+vamos ver que isto não é fácil definir quando é que se analisa o esclonamento.
+
+449
+00:50:07,220 --> 00:50:13,220
+E isto levaria na prática.
+
+450
+00:50:13,220 --> 00:50:19,220
+Isto levaria a uma situação em que as tarefas estavam sempre a mudar, sempre a mudar.
+
+451
+00:50:19,220 --> 00:50:24,220
+Ou então, tínhamos que definir granularidades de esclonamento.
+
+452
+00:50:24,220 --> 00:50:29,220
+Isto é, dizer, os eventos de esclonamento só ocorrem de X em X tempo.
+
+453
+00:50:29,220 --> 00:50:34,220
+O que não é uma boa abordagem.
+
+454
+00:50:34,220 --> 00:50:39,220
+Daí, portanto, eu dizer que esta não é uma política muito interessante
+
+455
+00:50:39,220 --> 00:50:43,220
+em termos de implementação, em termos teóricos é muito bonito
+
+456
+00:50:43,220 --> 00:50:48,220
+e certamente deu lugar a muitas publicações.
+
+457
+00:50:49,220 --> 00:50:52,220
+Ora bem, esclonamento hierárquico.
+
+458
+00:50:52,220 --> 00:50:59,220
+Por exemplo, o Linux tem este esclonamento hierárquico no geral.
+
+459
+00:50:59,220 --> 00:51:03,220
+Porque implementa várias políticas de esclonamento.
+
+460
+00:51:03,220 --> 00:51:14,840
+Embora o Linux, apesar de ser um sistema operativo que serve de base
+
+461
+00:51:14,840 --> 00:51:19,840
+a muitos sistemas operativos de tempo real, o Linux não é um sistema operativo de tempo real.
+
+462
+00:51:19,840 --> 00:51:31,840
+Apesar de ter o schedule line, apesar de ter a classe RT para o software real time tasks
+
+463
+00:51:31,840 --> 00:51:35,840
+mas não é um sistema de tempo real, ninguém vai meter o Linux num avião.
+
+464
+00:51:35,840 --> 00:51:41,840
+Isso é certo, porque obviamente dá para muitas coisas
+
+465
+00:51:41,840 --> 00:51:47,840
+mas não deixa de ser um sistema operativo de general propósito, portanto, de propósito geral
+
+466
+00:51:47,840 --> 00:51:58,840
+e como tal, nesses sistemas operativos é frequente o objetivo do furnace.
+
+467
+00:51:58,840 --> 00:52:04,840
+Isto é, de ser justo e não deixar nenhuma tarefa para trás.
+
+468
+00:52:04,840 --> 00:52:09,840
+E usa-se várias abordagens.
+
+469
+00:52:09,840 --> 00:52:14,840
+Aliás, nós, na implementação que eu vos vou mostrar
+
+470
+00:52:14,840 --> 00:52:20,840
+depois eu espero que vocês em casa e na aula prática, embora na aula prática, não vai dar para tudo.
+
+471
+00:52:20,840 --> 00:52:26,840
+Em casa tenta implementar aquilo.
+
+472
+00:52:26,840 --> 00:52:32,840
+Para conseguir ter um esclonamento de acordo com a minha política que eu defini
+
+473
+00:52:32,840 --> 00:52:43,840
+eu tive que retirar, eu tive que colocar uma pequena instrução numa parte do código
+
+474
+00:52:43,840 --> 00:52:50,840
+para eliminar o mecanismo que o Linux tem para evitar o Starvation.
+
+475
+00:52:50,840 --> 00:52:57,840
+Isto é, o Linux o que faz é quando as tarefas estão muito tempo sem executar
+
+476
+00:52:57,840 --> 00:53:04,840
+ele vai colocá-las num servidor deadline do schedule deadline
+
+477
+00:53:04,840 --> 00:53:11,840
+e vai executar com a prioridade do schedule deadline
+
+478
+00:53:11,840 --> 00:53:19,840
+que é o que tem a mais prioridade no sistema para que essas tarefas consigam ter tempo de CPU
+
+479
+00:53:19,840 --> 00:53:27,840
+porque senão nunca teriam tempo de CPU e isso é típico nos sistemas operativos de gênero ao propósito.
+
+480
+00:53:27,840 --> 00:53:33,840
+Nos sistemas operativos de tempo real, tipicamente, não se implementam esse tipo de mecanismos
+
+481
+00:53:33,840 --> 00:53:40,840
+porque de alguma forma esses mecanismos adulteram o esclonamento, certo?
+
+482
+00:53:40,840 --> 00:53:50,840
+Portanto, parece que um sistema operativo tempo real é diferente de um sistema operativo de gênero ao propósito.
+
+483
+00:53:50,840 --> 00:53:55,840
+Ora bem, vamos então olhar aqui para estas questões.
+
+484
+00:53:55,840 --> 00:54:04,840
+Portanto, porque é que nós precisamos de um algoritmo ou de abordagens hierárquicas?
+
+485
+00:54:04,840 --> 00:54:17,840
+Hierárquicas aqui significa termos diferentes níveis, pode não ser diferentes prioridades
+
+486
+00:54:17,840 --> 00:54:25,840
+mas termos forma de conseguir considerar outras tarefas.
+
+487
+00:54:25,840 --> 00:54:36,840
+Isto porque, por exemplo, um dos problemas dos sistemas críticos é a utilização do sistema,
+
+488
+00:54:36,840 --> 00:54:45,840
+tipicamente a utilização é muito baixa, porque um dos parâmetros que nós consideramos para definir a utilização do sistema
+
+489
+00:54:45,840 --> 00:54:51,840
+é o tempo de execução. Ora, o tempo de execução, eu só não digo o que geralmente digo
+
+490
+00:54:51,840 --> 00:54:59,840
+porque eu não tenho muita confiança com você para dizer isso, mas tipicamente para se determinar o tempo de execução.
+
+491
+00:54:59,840 --> 00:55:09,840
+No início, há uns anos atrás, dizia-se que se andava a analisar o código, não sei o que, esqueça, isso não me volta.
+
+492
+00:55:09,840 --> 00:55:16,840
+Portanto, depois que começou a usar abordagens mais pragmáticas, em que se põe aquilo a executar com diferentes abordagens,
+
+493
+00:55:16,840 --> 00:55:32,840
+habilita cash, não sei o que, coisas assim desse género e tenta-se obter, portanto, os tempos de execução e depois vai se calcular o worst case.
+
+494
+00:55:32,840 --> 00:55:42,840
+Tipicamente, em teoria, será o valor mais alto. Mas, na prática, o que eu conheci era que o valor mais alto obtido
+
+495
+00:55:42,840 --> 00:55:53,840
+ainda se sumava mais qualquer coisa, que era para ter a certeza que, certeza de certeza, nunca se tinha, mas, pronto, ter algum nível de confiança.
+
+496
+00:55:53,840 --> 00:56:01,840
+Portanto, o que é que isso significa? Na maior parte dos casos, as tarefas vão demorar este tempo a executar,
+
+497
+00:56:01,840 --> 00:56:07,840
+em termos de tempo de CPU, mas aquilo que vai ser considerado é o dobro.
+
+498
+00:56:08,840 --> 00:56:21,840
+Obviamente, e isto só aconteceu em situações muito exporádicas e muito especiais, que, provavelmente, essas condições nunca se vão purificar quando o sistema tiverem execução.
+
+499
+00:56:21,840 --> 00:56:32,840
+Portanto, logo aqui, temos isto, temos aqui uma utilização baixa do sistema.
+
+500
+00:56:32,840 --> 00:56:41,840
+Depois, também usando a mesma abordagem, eu costumo dizer que esta malta do real time são todos uns mediricas, tudo cheio de medo.
+
+501
+00:56:41,840 --> 00:56:55,840
+Portanto, o que é que acontece? Quando eu tenho tarefas exporádicas, em que uma tarefa exporádica, eu não sei, portanto, não é periódica, não tem um período bem definido,
+
+502
+00:56:56,840 --> 00:57:03,840
+eu sei que a tarefa vai aparecer, umas vezes vai demorar mais, outras vezes vai demorar menos.
+
+503
+00:57:03,840 --> 00:57:12,840
+O que é que eu faço? Analizo aquilo e vou considerar o pior caso, usando a mesma abordagem.
+
+504
+00:57:12,840 --> 00:57:20,840
+Ora, o que é que isso significa? Então, a ver, por exemplo, eu vou considerar que a tarefa tem este período,
+
+505
+00:57:20,840 --> 00:57:32,840
+tem este minimal interval time. Ora, se repararem aqui, é três vezes mais e aqui, mas é isto o que é que isso significa?
+
+506
+00:57:32,840 --> 00:57:44,840
+Significa que estou aqui a considerar que esta tarefa tem uma utilização que na prática não vai ter, porque na maior parte dos casos não vai ter isso.
+
+507
+00:57:44,840 --> 00:57:52,840
+Mas, obviamente, para um sistema crítico faz para o sentido considerar isto, nada, nada ao pôr.
+
+508
+00:57:52,840 --> 00:58:01,840
+Agora, depois ainda existe uma outra coisa, que são as tarefas que não têm período, que eu não sei qual é o período,
+
+509
+00:58:01,840 --> 00:58:14,340
+uma tarefa que seja que apareça por força de um evento qualquer e que não seja um evento programável, seja uma coisa qualquer,
+
+510
+00:58:14,340 --> 00:58:24,340
+o satélite vai bater não sei aonde, tem que desviar, coisa assim de gênero, coisas assim desse gênero.
+
+511
+00:58:24,340 --> 00:58:33,340
+Portanto, aí não há parâmetro nenhum. Eu até posso eventualmente determinar o tempo de execução da tarefa,
+
+512
+00:58:33,340 --> 00:58:39,340
+mas não sei quando é que ela vai acontecer, não sei quando ela vai acontecer.
+
+513
+00:58:39,340 --> 00:58:44,340
+Portanto, como é que eu incorporo isto tudo num sistema?
+
+514
+00:58:44,340 --> 00:59:01,340
+Portanto, o tempo de execução, tipicamente, assim como o período das tarefas porádicas, é muito pessimista.
+
+515
+00:59:01,340 --> 00:59:12,880
+Como é que eu vou suportar no meu sistema tarefas apriódicas? Não vou.
+
+516
+00:59:12,880 --> 00:59:23,190
+E, agora, para, portanto, e um qualquer sistema, não há sistemas só com tarefas ar de real-time,
+
+517
+00:59:23,190 --> 00:59:28,190
+em que temos tudo definido. Não, portanto, o que é sério? Não há sistemas.
+
+518
+00:59:29,190 --> 00:59:35,190
+Eventualmente existo, mas não são todos, não são todos.
+
+519
+00:59:35,190 --> 00:59:43,190
+Portanto, a maior parte deles tem diferentes tipos de tarefas com diferentes características.
+
+520
+00:59:43,190 --> 00:59:51,190
+Como é que nós vamos incorporar isto? Porque isso é que está mais perto da realidade.
+
+521
+00:59:51,190 --> 00:59:57,190
+Como é que eu vou incorporar isto? Por exemplo, como é que eu vou ter tempo para executar uma tarefa
+
+522
+00:59:57,190 --> 01:00:06,190
+que não sei quando é que aparece, sem tornar o meu sistema não escalonável?
+
+523
+01:00:06,190 --> 01:00:10,190
+Porque eu tenho que considerar aquela tarefa.
+
+524
+01:00:11,190 --> 01:00:18,190
+Provavelmente, aquela, tenho que olhar para aquela tarefa e dizer, olha, quando a tarefa é executar,
+
+525
+01:00:18,190 --> 01:00:23,190
+eu tenho que ter aqui alguma coisa que lhe permite executar.
+
+526
+01:00:23,190 --> 01:00:36,190
+Ora, uma das abordagens, uma das abordagens, seria, nomeadamente, e vamos nos focar um pouquinho nas tarefas apriódicas,
+
+527
+01:00:36,190 --> 01:00:46,190
+vamos esquecer o problema do worst case, e do minimal interarival, tem, ser muito pessimista,
+
+528
+01:00:46,190 --> 01:00:52,190
+vamos focar aqui nas tarefas apriódicas, isto é, nas tarefas que eu não sei quando é que aparecem,
+
+529
+01:00:52,190 --> 01:00:56,190
+e eventualmente não sei quanto tempo é que vão demorar a executar, não sei nada.
+
+530
+01:00:56,190 --> 01:01:03,190
+Se aqui existem, mas não sei nada. Portanto, não consigo fazer uma análise de escalonabilidade,
+
+531
+01:01:03,190 --> 01:01:10,190
+tendo a intenção, isto que eu sei. Posso fazer para as outras tarefas, mas para aquela.
+
+532
+01:01:10,190 --> 01:01:16,190
+Portanto, como é que eu vou garantir que aquela não vai dar cabo do sistema?
+
+533
+01:01:16,190 --> 01:01:22,190
+Uma das abordagens é essa tarefa, e vamos assumir para simplificar,
+
+534
+01:01:22,190 --> 01:01:26,190
+vamos assumir que essa é uma tarefa, que é para não complicar isto.
+
+535
+01:01:26,190 --> 01:01:33,190
+Ora, o que é que eu faço? Vou atribuir a essa tarefa, prioridade mais baixa,
+
+536
+01:01:33,190 --> 01:01:38,190
+ou, no caso do EDF, um deadline absoluto infinito.
+
+537
+01:01:38,190 --> 01:01:46,190
+E a tarefa executa quando, para não haver mais nada para executar, e dessa forma não prejudica o meu sistema.
+
+538
+01:01:46,190 --> 01:01:58,270
+Mas, obviamente, isto dá-se a tarefa, e até se questiona, então, o que é que está lá fazer a tarefa?
+
+539
+01:01:59,270 --> 01:02:13,060
+Se a tarefa for real-time, isto é, se precisar de terminar num determinado instante, pode acontecer.
+
+540
+01:02:13,060 --> 01:02:19,060
+Então, aí temos outras abordagens, que é usar servidores.
+
+541
+01:02:19,060 --> 01:02:25,060
+O que é que é um servidor? É uma tarefa feita, ela não existe,
+
+542
+01:02:25,060 --> 01:02:30,060
+mas é considerada na análise como existe-se.
+
+543
+01:02:30,060 --> 01:02:42,060
+Vamos imaginar, temos aqui um servidor, portanto, em que não é mais nem menos do que um intervalo de tempo,
+
+544
+01:02:42,060 --> 01:02:52,060
+que se repete ao longo do tempo, em que, portanto, funciona como se fosse uma tarefa,
+
+545
+01:02:52,060 --> 01:03:03,060
+e que serve para executar essas tarefas, a periódicas, que aparecem quando acontece.
+
+546
+01:03:03,060 --> 01:03:14,060
+Portanto, esta é uma das abordagens que nós temos para podermos suportar esse tipo de tarefas,
+
+547
+01:03:14,060 --> 01:03:19,060
+é usar servidores, e, tipicamente, os servidores têm dois parâmetros.
+
+548
+01:03:19,060 --> 01:03:25,060
+Uma periodicidade e um budget, ou um tempo de CPU.
+
+549
+01:03:25,060 --> 01:03:35,410
+Portanto, e agora, pois vamos ver aqui várias abordagens, portanto, neste caso, o que é que eu tenho aqui?
+
+550
+01:03:35,410 --> 01:03:44,410
+Tenho um servidor que é periódico e que é escalonado de acordo com o seu nível de prioridade.
+
+551
+01:03:44,410 --> 01:03:49,260
+De acordo com o seu nível de prioridade.
+
+552
+01:03:49,260 --> 01:03:56,260
+Eu ouvi para aqui isto, como vocês se falam, para ver se eu consigo ouvir.
+
+553
+01:03:56,260 --> 01:03:59,260
+Não sei se está ouvindo.
+
+554
+01:03:59,260 --> 01:04:04,260
+Pronto, é que os fones estão a ficar sem bateria.
+
+555
+01:04:04,260 --> 01:04:13,260
+Portanto, e usando esta abordagem, uma vez que isto é como se fosse uma tarefa feita,
+
+556
+01:04:14,260 --> 01:04:19,260
+mas que tem o seu tempo de execução, que é um budget, que tem o seu periódico,
+
+557
+01:04:19,260 --> 01:04:25,260
+portanto, tem uma utilização e é considerada na análise da escalonabilidade.
+
+558
+01:04:25,260 --> 01:04:30,260
+E, depois, de acordo com o algoritmo, vamos já ver várias abordagens,
+
+559
+01:04:30,260 --> 01:04:41,260
+portanto, é considerada para ser executada, de acordo com a política de escalonamento.
+
+560
+01:04:41,260 --> 01:04:51,260
+Se houver alguma tarefa atribuída a esse servidor e chegar à altura em que o servidor é atribuído ao CPU,
+
+561
+01:04:51,260 --> 01:04:57,260
+obviamente que o servidor não pode ser atribuído ao CPU porque o servidor não é nada.
+
+562
+01:04:57,260 --> 01:04:59,260
+É uma tarefa feita.
+
+563
+01:04:59,260 --> 01:05:06,260
+O trato de ser atribuído ao CPU é uma tarefa efetiva, mas vai ser executada,
+
+564
+01:05:06,260 --> 01:05:12,260
+portanto, vai ser considerada como se fosse uma tarefa no contexto do servidor.
+
+565
+01:05:12,260 --> 01:05:18,260
+E, desta forma, nós conseguimos resolver o problema das tarefas aperiódicas.
+
+566
+01:05:18,260 --> 01:05:27,260
+Portanto, incluindo um servidor, portanto, uma tarefa feita, que tem os parâmetros como os outros
+
+567
+01:05:27,260 --> 01:05:33,260
+e que vai acomodar as tarefas aperiódicas, aquelas que aparecem no sistema,
+
+568
+01:05:33,260 --> 01:05:39,260
+sem que eu saiba quando aquelas vão acontecer.
+
+569
+01:05:39,260 --> 01:05:42,740
+Daniel.
+
+570
+01:05:42,740 --> 01:05:45,740
+Tenho uma dúvida na relação ao estado anterior.
+
+571
+01:05:45,740 --> 01:05:49,740
+As tarefas que estão nos servidores perdem sempre a prioridade,
+
+572
+01:05:49,740 --> 01:05:53,740
+mesmo para aquelas tarefas que, supostamente, teriam uma prioridade inferior?
+
+573
+01:05:53,740 --> 01:06:00,740
+Não. As tarefas que são atribuídas ao servidor dependem depois da heurística.
+
+574
+01:06:00,740 --> 01:06:06,740
+Por exemplo, eu posso ter um servidor, eu posso ter um sistema em que eu tenho prioridades fixas
+
+575
+01:06:06,740 --> 01:06:09,740
+e o servidor há de ter uma prioridade.
+
+576
+01:06:09,740 --> 01:06:16,740
+No exemplo anterior, parece que ele perde a prioridade com uma tarefa que, supostamente, tinha prioridade inferior.
+
+577
+01:06:16,740 --> 01:06:18,740
+Por exemplo, o...
+
+578
+01:06:18,740 --> 01:06:19,740
+Qual?
+
+579
+01:06:19,740 --> 01:06:22,740
+Ou seja, no terceiro e na terceira interação.
+
+580
+01:06:22,740 --> 01:06:23,740
+Aqui?
+
+581
+01:06:23,740 --> 01:06:24,740
+Ou isso é o fim?
+
+582
+01:06:24,740 --> 01:06:27,740
+Não. Isso. Exatamente aí.
+
+583
+01:06:27,740 --> 01:06:28,740
+Mas porque é que...
+
+584
+01:06:28,740 --> 01:06:30,740
+Não, de lado esquerdo, de lado esquerdo. No anterior.
+
+585
+01:06:30,740 --> 01:06:31,740
+No anterior.
+
+586
+01:06:31,740 --> 01:06:32,740
+Aqui?
+
+587
+01:06:32,740 --> 01:06:34,740
+Isso. Aí.
+
+588
+01:06:34,740 --> 01:06:36,740
+Mas por que?
+
+589
+01:06:36,740 --> 01:06:43,040
+Ele foi interrompido para começar uma tarefa de baixo,
+
+590
+01:06:43,040 --> 01:06:45,040
+ter uma prioridade supostamente inferior,
+
+591
+01:06:45,040 --> 01:06:48,040
+para depois começar a ter a prioridade mais alta,
+
+592
+01:06:48,040 --> 01:06:50,040
+para depois ele continuar no fim,
+
+593
+01:06:50,040 --> 01:06:52,040
+para ser interrompido por estar mal.
+
+594
+01:06:52,040 --> 01:06:54,040
+Não. Tras interpretá-lo.
+
+595
+01:06:54,040 --> 01:06:58,040
+Mas isso não significa que tenha perdido o que quer que seja.
+
+596
+01:06:58,040 --> 01:07:03,040
+Agora vamos lá tentar perceber aqui este esculpamento.
+
+597
+01:07:03,040 --> 01:07:05,040
+Embora, portanto,
+
+598
+01:07:05,040 --> 01:07:09,040
+nesta altura chegou esta tarefa.
+
+599
+01:07:09,040 --> 01:07:12,040
+Começou a executar esta tarefa.
+
+600
+01:07:12,040 --> 01:07:16,040
+Neste ponto apareceu esta tarefa, que tem mais prioridade.
+
+601
+01:07:16,040 --> 01:07:20,040
+Então, preemptou esta e passou a executar esta.
+
+602
+01:07:20,040 --> 01:07:23,040
+Entretanto, seria...
+
+603
+01:07:23,040 --> 01:07:26,040
+Houve o release do servidor.
+
+604
+01:07:26,040 --> 01:07:28,040
+Houve o release do servidor.
+
+605
+01:07:28,040 --> 01:07:33,040
+Houve o release do servidor.
+
+606
+01:07:33,040 --> 01:07:35,040
+Pois, eu já percebi o que é que...
+
+607
+01:07:35,040 --> 01:07:37,040
+Aqui é um problema de desenho.
+
+608
+01:07:37,040 --> 01:07:39,040
+Aqui é um problema de...
+
+609
+01:07:39,040 --> 01:07:41,040
+Não, não há problema nenhum.
+
+610
+01:07:41,040 --> 01:07:43,040
+Minto. Não há problema nenhum, porque ele...
+
+611
+01:07:43,040 --> 01:07:45,040
+Isso depende um pouquinho agora.
+
+612
+01:07:45,040 --> 01:07:48,040
+Isto aqui é um bocado genérico.
+
+613
+01:07:48,040 --> 01:07:51,040
+É só para... porque depois depende um pouquinho do algoritmo.
+
+614
+01:07:51,040 --> 01:07:53,040
+Mas vamos fazer...
+
+615
+01:07:53,040 --> 01:07:56,040
+Explicar de acordo com o que está aqui,
+
+616
+01:07:56,040 --> 01:07:59,040
+mas isto pode não ser o correto,
+
+617
+01:07:59,040 --> 01:08:01,040
+porque vamos ver...
+
+618
+01:08:01,040 --> 01:08:04,040
+Ele está executado sem ter tarefa, e não é suposto.
+
+619
+01:08:04,040 --> 01:08:06,040
+Mas pronto, já lá vamos.
+
+620
+01:08:06,040 --> 01:08:08,040
+Portanto, imagine. Portanto, a tarefa...
+
+621
+01:08:08,040 --> 01:08:10,040
+O sistema está aqui.
+
+622
+01:08:10,040 --> 01:08:13,040
+Chegou esta tarefa que começou a executar.
+
+623
+01:08:13,040 --> 01:08:15,040
+Entretanto,
+
+624
+01:08:15,040 --> 01:08:18,040
+chegou esta tarefa, comente mais alta,
+
+625
+01:08:18,040 --> 01:08:21,040
+preemptou esta, passou a executar esta.
+
+626
+01:08:21,040 --> 01:08:23,040
+Entretanto, era suposto chegar...
+
+627
+01:08:23,040 --> 01:08:25,040
+ou chegou aqui o servidor,
+
+628
+01:08:25,040 --> 01:08:28,040
+mas como esta tarefa até mais prioridade
+
+629
+01:08:28,040 --> 01:08:30,040
+continua até o fim,
+
+630
+01:08:30,040 --> 01:08:32,040
+e depois,
+
+631
+01:08:32,040 --> 01:08:34,040
+quando a tarefa termina,
+
+632
+01:08:34,040 --> 01:08:36,040
+dientras que estão ativas,
+
+633
+01:08:36,040 --> 01:08:39,040
+a que até mais prioridade é o servidor.
+
+634
+01:08:39,040 --> 01:08:41,040
+Exatamente, até aqui.
+
+635
+01:08:41,040 --> 01:08:43,040
+Até aí tudo bem.
+
+636
+01:08:43,040 --> 01:08:45,040
+Supostamente, geralmente,
+
+637
+01:08:45,040 --> 01:08:47,040
+não é isto que acontece,
+
+638
+01:08:47,040 --> 01:08:49,040
+se o servidor não tiver tarefa
+
+639
+01:08:49,040 --> 01:08:51,040
+para executar, não executa.
+
+640
+01:08:53,040 --> 01:08:55,040
+Mas pronto, isto aqui é...
+
+641
+01:08:55,040 --> 01:08:57,040
+Portanto, ele vai executar o servidor,
+
+642
+01:08:57,040 --> 01:08:59,040
+entretanto, chegou uma tarefa
+
+643
+01:08:59,040 --> 01:09:01,040
+a periódica,
+
+644
+01:09:01,040 --> 01:09:03,040
+durante o tempo em que o servidor
+
+645
+01:09:03,040 --> 01:09:05,040
+tem o CPU,
+
+646
+01:09:05,040 --> 01:09:07,040
+vai executar, o CPU
+
+647
+01:09:07,040 --> 01:09:09,040
+vai executar até terminar.
+
+648
+01:09:09,040 --> 01:09:11,040
+E, depois,
+
+649
+01:09:11,040 --> 01:09:13,040
+temos aqui, terminou,
+
+650
+01:09:13,040 --> 01:09:15,040
+vai executar, portanto, neste momento,
+
+651
+01:09:15,040 --> 01:09:17,040
+só está uma tarefa no sistema,
+
+652
+01:09:17,040 --> 01:09:19,040
+que é esta,
+
+653
+01:09:19,040 --> 01:09:21,040
+vai executar esta, entretanto,
+
+654
+01:09:21,040 --> 01:09:23,040
+chegou a outra,
+
+655
+01:09:23,040 --> 01:09:25,040
+entretanto, chegou a outra,
+
+656
+01:09:25,040 --> 01:09:27,040
+que não tem mais prioridade,
+
+657
+01:09:27,040 --> 01:09:29,040
+vai executar.
+
+658
+01:09:29,040 --> 01:09:32,040
+Ora, depois, o que é que nós temos aqui?
+
+659
+01:09:32,040 --> 01:09:34,040
+Temos,
+
+660
+01:09:34,040 --> 01:09:36,040
+pois,
+
+661
+01:09:36,040 --> 01:09:38,040
+está frio por causa disto aqui, é isso?
+
+662
+01:09:38,040 --> 01:09:40,040
+Não, de lá direito, não é mais de lá direito.
+
+663
+01:09:40,040 --> 01:09:42,040
+Ou seja,
+
+664
+01:09:42,040 --> 01:09:44,040
+o servidor começa aí,
+
+665
+01:09:44,040 --> 01:09:46,040
+aí não, pois, não tinha isso,
+
+666
+01:09:46,040 --> 01:09:48,040
+tem que estar acabado, porque o traço,
+
+667
+01:09:48,040 --> 01:09:50,040
+provavelmente, está em cima da bola.
+
+668
+01:09:50,040 --> 01:09:52,040
+Exatamente,
+
+669
+01:09:52,040 --> 01:09:54,040
+exatamente.
+
+670
+01:09:54,040 --> 01:09:56,040
+Porque parece que
+
+671
+01:09:56,040 --> 01:09:58,040
+o servidor é interrompido
+
+672
+01:09:58,040 --> 01:10:00,040
+pela tarefa que está de baixo
+
+673
+01:10:00,040 --> 01:10:02,040
+em prioridade,
+
+674
+01:10:02,040 --> 01:10:04,040
+mas ele não vê que está terminado.
+
+675
+01:10:04,040 --> 01:10:06,040
+Não, terminou, terminou, terminou.
+
+676
+01:10:06,040 --> 01:10:08,040
+O que está aqui, porque é assim,
+
+677
+01:10:08,040 --> 01:10:10,040
+isto é um
+
+678
+01:10:10,040 --> 01:10:12,040
+esquema
+
+679
+01:10:12,040 --> 01:10:14,040
+que foi
+
+680
+01:10:14,040 --> 01:10:16,040
+usado,
+
+681
+01:10:16,040 --> 01:10:18,040
+que foi usado,
+
+682
+01:10:18,040 --> 01:10:20,040
+não, isto está bem,
+
+683
+01:10:20,040 --> 01:10:22,040
+isto está com prioridade fígis.
+
+684
+01:10:22,040 --> 01:10:24,040
+Isto está bem, portanto,
+
+685
+01:10:24,040 --> 01:10:26,040
+voltando,
+
+686
+01:10:26,040 --> 01:10:28,040
+o que é que
+
+687
+01:10:28,040 --> 01:10:30,040
+aconteceu?
+
+688
+01:10:30,040 --> 01:10:32,040
+Ele terminou o servidor,
+
+689
+01:10:32,040 --> 01:10:34,040
+a partir do momento que terminou
+
+690
+01:10:34,040 --> 01:10:36,040
+o servidor, só esta é que está
+
+691
+01:10:36,040 --> 01:10:38,040
+disponível e executa,
+
+692
+01:10:38,040 --> 01:10:40,040
+apareceu esta, vai executar.
+
+693
+01:10:40,040 --> 01:10:42,040
+O que está aqui a dizer é que
+
+694
+01:10:42,040 --> 01:10:44,040
+chegou aqui uma tarefa
+
+695
+01:10:44,040 --> 01:10:46,040
+a periódica,
+
+696
+01:10:46,040 --> 01:10:48,040
+portanto, chegou, mas como está a executar
+
+697
+01:10:48,040 --> 01:10:50,040
+esta aqui
+
+698
+01:10:50,040 --> 01:10:52,040
+fica a espera.
+
+699
+01:10:52,040 --> 01:10:54,040
+Entretanto,
+
+700
+01:10:56,040 --> 01:10:58,040
+entretanto, o servidor
+
+701
+01:10:58,040 --> 01:11:00,040
+ainda não foi ativado, porque
+
+702
+01:11:00,040 --> 01:11:02,040
+o servidor, como é uma tarefa,
+
+703
+01:11:02,040 --> 01:11:04,040
+só vai ser ativado aqui,
+
+704
+01:11:04,040 --> 01:11:06,040
+portanto, em função da sua
+
+705
+01:11:06,040 --> 01:11:08,040
+periodicidade,
+
+706
+01:11:08,040 --> 01:11:10,040
+apesar de ter aqui uma tarefa
+
+707
+01:11:10,040 --> 01:11:12,040
+a periódica, mas a tarefa
+
+708
+01:11:12,040 --> 01:11:14,040
+em si não interessa,
+
+709
+01:11:14,040 --> 01:11:16,040
+por isso é que isto depois vamos ver outras abordagens.
+
+710
+01:11:16,040 --> 01:11:18,040
+A tarefa em si
+
+711
+01:11:18,040 --> 01:11:20,040
+não interessa, o que interessa
+
+712
+01:11:20,040 --> 01:11:22,040
+é o servidor, por isso
+
+713
+01:11:22,040 --> 01:11:24,040
+esta tarefa só vai ser
+
+714
+01:11:24,040 --> 01:11:26,040
+executada quando o servidor
+
+715
+01:11:26,040 --> 01:11:28,040
+chegar à altura do servidor
+
+716
+01:11:28,040 --> 01:11:30,040
+executar. Ora,
+
+717
+01:11:30,040 --> 01:11:32,040
+o servidor só vai executar
+
+718
+01:11:32,040 --> 01:11:34,040
+depois de ter feito o release,
+
+719
+01:11:34,040 --> 01:11:36,040
+portanto, o servidor vai
+
+720
+01:11:36,040 --> 01:11:38,040
+fazer o release aqui, que faz
+
+721
+01:11:38,040 --> 01:11:40,040
+aqui, faz aqui, faz
+
+722
+01:11:40,040 --> 01:11:42,040
+aqui. Ora,
+
+723
+01:11:42,040 --> 01:11:44,040
+nesta altura, e o que acontece
+
+724
+01:11:44,040 --> 01:11:46,040
+aqui, fruto
+
+725
+01:11:46,040 --> 01:11:48,040
+desta política, por isso é que nós vamos ver
+
+726
+01:11:48,040 --> 01:11:50,040
+outras, em que isto não aconteceria,
+
+727
+01:11:50,040 --> 01:11:52,040
+o que acontece aqui é que, por exemplo,
+
+728
+01:11:52,040 --> 01:11:54,040
+há aqui uma altura em que
+
+729
+01:11:54,040 --> 01:11:56,040
+vamos ter
+
+730
+01:11:56,040 --> 01:11:58,040
+uma tarefa a periódica no sistema
+
+731
+01:11:58,040 --> 01:12:00,040
+e o sistema não vai fazer
+
+732
+01:12:00,040 --> 01:12:02,040
+nada, porque
+
+733
+01:12:02,040 --> 01:12:04,040
+ainda não chegou à altura
+
+734
+01:12:04,040 --> 01:12:06,040
+do servidor executar.
+
+735
+01:12:06,040 --> 01:12:08,040
+Por isso é que esta
+
+736
+01:12:08,040 --> 01:12:10,040
+tarefa que chega aqui só é
+
+737
+01:12:10,040 --> 01:12:12,040
+executada neste ponto, depois
+
+738
+01:12:12,040 --> 01:12:14,040
+de ter
+
+739
+01:12:14,040 --> 01:12:16,040
+a ativação da tarefa
+
+740
+01:12:16,040 --> 01:12:18,040
+servidor, que só acontece
+
+741
+01:12:18,040 --> 01:12:20,040
+aqui. Fiz-me entender?
+
+742
+01:12:20,040 --> 01:12:22,040
+Sim, sim.
+
+743
+01:12:22,040 --> 01:12:24,040
+Para mim por isso. E depois, o
+
+744
+01:12:24,040 --> 01:12:26,040
+escalonamento, embora isto, obviamente
+
+745
+01:12:26,040 --> 01:12:28,040
+depois como vamos ver,
+
+746
+01:12:28,040 --> 01:12:30,040
+temos aqui
+
+747
+01:12:30,040 --> 01:12:32,040
+aqui uma perca
+
+748
+01:12:32,040 --> 01:12:34,040
+que se calhar, se pode
+
+749
+01:12:34,040 --> 01:12:36,040
+usando outra abordagem, que consegue
+
+750
+01:12:36,040 --> 01:12:38,040
+usar isto.
+
+751
+01:12:38,040 --> 01:12:40,040
+Portanto, o
+
+752
+01:12:40,040 --> 01:12:42,040
+que é que nós, o que é que, portanto,
+
+753
+01:12:42,040 --> 01:12:44,040
+o servidor funciona
+
+754
+01:12:44,040 --> 01:12:46,040
+tipo uma tarefa
+
+755
+01:12:46,040 --> 01:12:48,040
+feita, que tem aquelas
+
+756
+01:12:48,040 --> 01:12:50,040
+características
+
+757
+01:12:50,040 --> 01:12:52,040
+de uma tarefa normal,
+
+758
+01:12:52,040 --> 01:12:54,040
+que obviamente só
+
+759
+01:12:54,040 --> 01:12:56,040
+pode ser
+
+760
+01:12:56,040 --> 01:12:58,040
+considerada para a execução, embora
+
+761
+01:12:58,040 --> 01:13:00,040
+volta a dizer não é o servidor
+
+762
+01:13:00,040 --> 01:13:02,040
+que é executado, são as
+
+763
+01:13:02,040 --> 01:13:04,040
+tarefas que são atribuídas,
+
+764
+01:13:04,040 --> 01:13:06,040
+quando ela está num sistema.
+
+765
+01:13:06,040 --> 01:13:08,040
+E portanto,
+
+766
+01:13:08,040 --> 01:13:12,280
+temos isto.
+
+767
+01:13:12,280 --> 01:13:14,280
+Esta abordagem dos servidores
+
+768
+01:13:14,280 --> 01:13:16,280
+também vai permitir
+
+769
+01:13:18,280 --> 01:13:20,280
+resolver, aliás, existem
+
+770
+01:13:20,280 --> 01:13:22,280
+alguns sistemas operativos
+
+771
+01:13:22,280 --> 01:13:24,280
+que
+
+772
+01:13:24,280 --> 01:13:26,280
+utilizam uma abordagem de este
+
+773
+01:13:26,280 --> 01:13:28,280
+géner
+
+774
+01:13:28,280 --> 01:13:30,280
+para resolver o problema
+
+775
+01:13:30,280 --> 01:13:32,280
+do worst case
+
+776
+01:13:32,280 --> 01:13:34,280
+execution.
+
+777
+01:13:34,280 --> 01:13:36,280
+Isto é,
+
+778
+01:13:36,280 --> 01:13:38,280
+existem
+
+779
+01:13:40,280 --> 01:13:42,280
+sistemas
+
+780
+01:13:42,280 --> 01:13:44,280
+em que as tarefas, todas elas
+
+781
+01:13:44,280 --> 01:13:46,280
+executam dentro
+
+782
+01:13:46,280 --> 01:13:48,280
+no contexto de um servidor
+
+783
+01:13:50,280 --> 01:13:52,280
+em que o servidor tem
+
+784
+01:13:52,280 --> 01:13:54,280
+a sua
+
+785
+01:13:54,280 --> 01:13:56,280
+periodicidade e
+
+786
+01:13:56,280 --> 01:13:58,280
+tem o seu
+
+787
+01:13:58,280 --> 01:14:00,280
+budget.
+
+788
+01:14:00,280 --> 01:14:02,280
+E o que é feito, é que o budget
+
+789
+01:14:02,280 --> 01:14:04,280
+é controlado por um timer.
+
+790
+01:14:06,280 --> 01:14:08,280
+E dessa forma,
+
+791
+01:14:08,280 --> 01:14:10,280
+resolve o problema do worst case
+
+792
+01:14:10,280 --> 01:14:12,280
+execution. Isto é,
+
+793
+01:14:12,280 --> 01:14:14,280
+nunca acontece o overrun.
+
+794
+01:14:14,280 --> 01:14:16,280
+Por que?
+
+795
+01:14:16,280 --> 01:14:18,280
+Porque quando a tarefa
+
+796
+01:14:18,280 --> 01:14:20,280
+começa a executar, é feito
+
+797
+01:14:20,280 --> 01:14:22,280
+antes do 7
+
+798
+01:14:22,280 --> 01:14:24,280
+do timer,
+
+799
+01:14:24,280 --> 01:14:26,280
+e se a tarefa
+
+800
+01:14:26,280 --> 01:14:28,280
+não terminar
+
+801
+01:14:28,280 --> 01:14:30,280
+antes do timer a esperar,
+
+802
+01:14:30,280 --> 01:14:32,280
+quando o timer a esperar,
+
+803
+01:14:32,280 --> 01:14:34,280
+ela é retirada do CPU.
+
+804
+01:14:34,280 --> 01:14:36,280
+Isto é uma das abordagens
+
+805
+01:14:36,280 --> 01:14:38,280
+que é possível usar
+
+806
+01:14:38,280 --> 01:14:40,280
+para evitar
+
+807
+01:14:40,280 --> 01:14:42,280
+o problema dos overruns.
+
+808
+01:14:44,280 --> 01:14:46,280
+E, provavelmente,
+
+809
+01:14:46,280 --> 01:14:48,280
+não precisamos de ter
+
+810
+01:14:48,280 --> 01:14:50,280
+um worst case
+
+811
+01:14:50,280 --> 01:14:52,280
+tão pessimista.
+
+812
+01:14:52,280 --> 01:14:54,280
+Ah, mas isso faz-se de um avião?
+
+813
+01:14:54,280 --> 01:14:56,280
+Se calhar, não.
+
+814
+01:14:56,280 --> 01:14:58,280
+Se calhar, não.
+
+815
+01:14:58,280 --> 01:15:00,280
+Tem que se manter
+
+816
+01:15:00,280 --> 01:15:02,280
+bastante pessimista e
+
+817
+01:15:02,280 --> 01:15:04,280
+se calhar por muito pessimista.
+
+818
+01:15:04,280 --> 01:15:06,280
+Mas existem sistemas
+
+819
+01:15:06,280 --> 01:15:08,280
+em que,
+
+820
+01:15:08,280 --> 01:15:10,280
+ou então, por exemplo,
+
+821
+01:15:10,280 --> 01:15:12,280
+em tarefas que não sejam
+
+822
+01:15:12,280 --> 01:15:14,280
+hard real time,
+
+823
+01:15:14,280 --> 01:15:16,280
+se calhar pode-se fazer
+
+824
+01:15:16,280 --> 01:15:18,280
+usando esta abordagem,
+
+825
+01:15:18,280 --> 01:15:20,280
+também é possível resolver
+
+826
+01:15:20,280 --> 01:15:22,280
+fazer o isolamento temporal.
+
+827
+01:15:22,280 --> 01:15:24,280
+Certo?
+
+828
+01:15:24,280 --> 01:15:26,280
+Portanto, que serve
+
+829
+01:15:26,280 --> 01:15:28,280
+para aquelas situações anómalas
+
+830
+01:15:28,280 --> 01:15:30,280
+em que, por um motivo qualquer,
+
+831
+01:15:30,280 --> 01:15:32,280
+existe um overrun.
+
+832
+01:15:32,280 --> 01:15:34,280
+Pronto.
+
+833
+01:15:34,280 --> 01:15:36,280
+O que eu acabei de referir.
+
+834
+01:15:36,280 --> 01:15:38,280
+Neste contexto,
+
+835
+01:15:38,280 --> 01:15:40,280
+existem
+
+836
+01:15:40,280 --> 01:15:42,280
+várias abordagens
+
+837
+01:15:42,280 --> 01:15:44,280
+para
+
+838
+01:15:44,280 --> 01:15:46,280
+a utilização dos servers.
+
+839
+01:15:46,280 --> 01:15:48,280
+Temos o sistema de pooling
+
+840
+01:15:48,280 --> 01:15:50,280
+ou o servidor periódico,
+
+841
+01:15:50,280 --> 01:15:52,280
+o servidor
+
+842
+01:15:52,280 --> 01:15:54,280
+que difere.
+
+843
+01:15:54,280 --> 01:15:56,280
+Já vamos ver que, no fundo,
+
+844
+01:15:56,280 --> 01:15:58,280
+vai esperar pelo melhor
+
+845
+01:15:58,280 --> 01:16:00,280
+momento e depois temos o outro
+
+846
+01:16:00,280 --> 01:16:02,280
+que naquie é
+
+847
+01:16:02,280 --> 01:16:04,280
+esporádico e que não é periódico.
+
+848
+01:16:04,280 --> 01:16:06,280
+E depois, em termos
+
+849
+01:16:06,280 --> 01:16:08,280
+de políticas,
+
+850
+01:16:08,280 --> 01:16:10,280
+temos o total
+
+851
+01:16:10,280 --> 01:16:12,280
+bandwidth server e o mais
+
+852
+01:16:12,280 --> 01:16:14,280
+conhecido, que é o que está
+
+853
+01:16:14,280 --> 01:16:16,280
+implementado no Linux,
+
+854
+01:16:16,280 --> 01:16:18,280
+que é o CBS, o constante
+
+855
+01:16:18,280 --> 01:16:20,280
+bandwidth server.
+
+856
+01:16:20,280 --> 01:16:26,540
+Já vamos ver os detalhes de cada um deles.
+
+857
+01:16:26,540 --> 01:16:28,540
+Ora,
+
+858
+01:16:28,540 --> 01:16:30,540
+pooling.
+
+859
+01:16:30,540 --> 01:16:32,540
+O pooling ou
+
+860
+01:16:32,540 --> 01:16:34,540
+periódico server é
+
+861
+01:16:34,540 --> 01:16:36,540
+nem mais, nem menos do que
+
+862
+01:16:36,540 --> 01:16:38,540
+ter uma tarefa
+
+863
+01:16:38,540 --> 01:16:40,540
+feita periódica
+
+864
+01:16:40,540 --> 01:16:42,540
+com determinado budget.
+
+865
+01:16:42,540 --> 01:16:44,540
+Portanto,
+
+866
+01:16:44,540 --> 01:16:46,540
+o servidor
+
+867
+01:16:46,540 --> 01:16:48,540
+aparece,
+
+868
+01:16:48,540 --> 01:16:50,540
+tem um instante de ativação,
+
+869
+01:16:50,540 --> 01:16:52,540
+tem um tempo de
+
+870
+01:16:52,540 --> 01:16:54,540
+discussão e, só depois de
+
+871
+01:16:54,540 --> 01:16:56,540
+ativada, é que
+
+872
+01:16:56,540 --> 01:16:58,540
+pode usar o tempo
+
+873
+01:16:58,540 --> 01:17:00,540
+de
+
+874
+01:17:00,540 --> 01:17:02,540
+aquele tempo
+
+875
+01:17:02,540 --> 01:17:04,540
+para executar tarefas.
+
+876
+01:17:04,540 --> 01:17:06,540
+Se, por ventura, não aparecer
+
+877
+01:17:06,540 --> 01:17:08,540
+nenhuma tarefa
+
+878
+01:17:08,540 --> 01:17:10,540
+durante esse tempo, ou antes,
+
+879
+01:17:10,540 --> 01:17:12,540
+ele não executa nada.
+
+880
+01:17:12,540 --> 01:17:14,540
+Portanto,
+
+881
+01:17:14,540 --> 01:17:16,540
+temos aqui
+
+882
+01:17:16,540 --> 01:17:18,540
+um servidor
+
+883
+01:17:18,540 --> 01:17:20,540
+periódico, portanto, o que
+
+884
+01:17:20,540 --> 01:17:22,540
+faz isto?
+
+885
+01:17:22,540 --> 01:17:24,540
+Obviamente, que se
+
+886
+01:17:24,540 --> 01:17:26,540
+aparecer muitas tarefas,
+
+887
+01:17:26,540 --> 01:17:28,540
+ele só executa
+
+888
+01:17:28,540 --> 01:17:30,540
+o tempo, portanto,
+
+889
+01:17:30,540 --> 01:17:32,540
+só executa o budget
+
+890
+01:17:32,540 --> 01:17:34,540
+que tem para aquele período.
+
+891
+01:17:34,540 --> 01:17:36,540
+O que é que nós temos?
+
+892
+01:17:36,540 --> 01:17:38,540
+Temos num determinado período
+
+893
+01:17:38,540 --> 01:17:40,540
+fixo,
+
+894
+01:17:40,540 --> 01:17:42,540
+temos um budget
+
+895
+01:17:42,540 --> 01:17:44,540
+para se portar estas tarefas.
+
+896
+01:17:44,540 --> 01:17:46,540
+Portanto, isto é o pooling
+
+897
+01:17:46,540 --> 01:17:48,540
+server, ou o periódico server.
+
+898
+01:17:48,540 --> 01:17:50,540
+Ora,
+
+899
+01:17:50,540 --> 01:17:52,540
+qual é o problema
+
+900
+01:17:52,540 --> 01:17:54,540
+disto?
+
+901
+01:17:54,540 --> 01:17:56,540
+É que, claro, ele acaba
+
+902
+01:17:56,540 --> 01:17:58,540
+por funcionar
+
+903
+01:17:58,540 --> 01:18:00,540
+quase como uma tarefa,
+
+904
+01:18:00,540 --> 01:18:02,540
+problema, não é bem um problema,
+
+905
+01:18:02,540 --> 01:18:04,540
+mas já vamos ver qual é
+
+906
+01:18:04,540 --> 01:18:06,540
+a diferença para os outros.
+
+907
+01:18:06,540 --> 01:18:08,540
+Mas,
+
+908
+01:18:08,540 --> 01:18:10,540
+apresenta como vantagem
+
+909
+01:18:10,540 --> 01:18:12,540
+no que diz respeito
+
+910
+01:18:12,540 --> 01:18:14,540
+à análise da escalonabilidade,
+
+911
+01:18:14,540 --> 01:18:16,540
+é que aquilo não deixa de ser
+
+912
+01:18:16,540 --> 01:18:18,540
+uma tarefa como outra qualquer.
+
+913
+01:18:18,540 --> 01:18:20,540
+Nós, em termos de análise,
+
+914
+01:18:20,540 --> 01:18:22,540
+podemos olhar para
+
+915
+01:18:22,540 --> 01:18:24,540
+um servidor
+
+916
+01:18:24,540 --> 01:18:26,540
+conhecendo uma tarefa
+
+917
+01:18:26,540 --> 01:18:28,540
+de tal forma que a análise
+
+918
+01:18:28,540 --> 01:18:30,540
+baseada na utilização,
+
+919
+01:18:30,540 --> 01:18:32,540
+na verdade,
+
+920
+01:18:32,540 --> 01:18:34,540
+para prioridades fixas,
+
+921
+01:18:34,540 --> 01:18:36,540
+é igual a aquilo que nós tínhamos.
+
+922
+01:18:36,540 --> 01:18:38,540
+Portanto, não há diferença algum.
+
+923
+01:18:38,540 --> 01:18:40,540
+Porque aquilo é uma tarefa
+
+924
+01:18:40,540 --> 01:18:42,540
+que tem aquele tempo de CPU,
+
+925
+01:18:42,540 --> 01:18:44,540
+ou tem aquele budget,
+
+926
+01:18:44,540 --> 01:18:46,540
+aquele worst case execution time,
+
+927
+01:18:46,540 --> 01:18:48,540
+e como tal,
+
+928
+01:18:48,540 --> 01:18:50,540
+se não fizer o overrun,
+
+929
+01:18:50,540 --> 01:18:52,540
+não vai prejudicar
+
+930
+01:18:52,540 --> 01:18:54,540
+o sistema.
+
+931
+01:18:54,540 --> 01:18:56,540
+E tudo o resto
+
+932
+01:18:56,540 --> 01:18:58,540
+se mantém.
+
+933
+01:18:58,540 --> 01:19:00,540
+Ora,
+
+934
+01:19:00,540 --> 01:19:02,540
+esta abordagem
+
+935
+01:19:02,540 --> 01:19:04,540
+periódica
+
+936
+01:19:04,540 --> 01:19:06,540
+a um problema,
+
+937
+01:19:06,540 --> 01:19:08,540
+porque assim que o servidor
+
+938
+01:19:08,540 --> 01:19:10,540
+de alguma forma
+
+939
+01:19:10,540 --> 01:19:12,540
+é ativado,
+
+940
+01:19:12,540 --> 01:19:14,540
+eu quero esteja a executar,
+
+941
+01:19:14,540 --> 01:19:16,540
+quero não esteja,
+
+942
+01:19:16,540 --> 01:19:20,540
+e se estiver na altura,
+
+943
+01:19:20,540 --> 01:19:22,540
+portanto, em que ele tem
+
+944
+01:19:22,540 --> 01:19:24,540
+supostamente o tempo de CPU,
+
+945
+01:19:24,540 --> 01:19:26,540
+mas se não tiver
+
+946
+01:19:26,540 --> 01:19:28,540
+nenhuma tarefa,
+
+947
+01:19:28,540 --> 01:19:30,540
+contando a mesma como se tivesse a usar.
+
+948
+01:19:30,540 --> 01:19:32,540
+Portanto,
+
+949
+01:19:32,540 --> 01:19:34,540
+aqui
+
+950
+01:19:34,540 --> 01:19:36,540
+uma abordagem que não é muito otimista.
+
+951
+01:19:36,540 --> 01:19:38,540
+Ora, então,
+
+952
+01:19:38,540 --> 01:19:41,980
+o sistema evoluiu
+
+953
+01:19:41,980 --> 01:19:43,980
+para esta abordagem
+
+954
+01:19:43,980 --> 01:19:45,980
+do Deferable Server,
+
+955
+01:19:45,980 --> 01:19:47,980
+em que
+
+956
+01:19:47,980 --> 01:19:49,980
+o que acontece, é que só
+
+957
+01:19:49,980 --> 01:19:51,980
+vai
+
+958
+01:19:51,980 --> 01:19:53,980
+descontar o tempo de execução
+
+959
+01:19:53,980 --> 01:19:55,980
+quando
+
+960
+01:19:55,980 --> 01:19:57,980
+efetivamente uma tarefa
+
+961
+01:19:57,980 --> 01:19:59,980
+está executado.
+
+962
+01:19:59,980 --> 01:20:01,980
+Obviamente que
+
+963
+01:20:01,980 --> 01:20:03,980
+naquele período,
+
+964
+01:20:03,980 --> 01:20:05,980
+não vai executar mais tempo
+
+965
+01:20:05,980 --> 01:20:07,980
+do que
+
+966
+01:20:07,980 --> 01:20:09,980
+é suposto.
+
+967
+01:20:09,980 --> 01:20:11,980
+Mas
+
+968
+01:20:11,980 --> 01:20:13,980
+pode acontecer, se não tiver
+
+969
+01:20:13,980 --> 01:20:15,980
+nenhuma tarefa
+
+970
+01:20:15,980 --> 01:20:17,980
+para executar,
+
+971
+01:20:17,980 --> 01:20:19,980
+pode obviamente
+
+972
+01:20:19,980 --> 01:20:21,980
+manter o budget
+
+973
+01:20:21,980 --> 01:20:23,980
+e
+
+974
+01:20:23,980 --> 01:20:25,980
+quando aparecer
+
+975
+01:20:25,980 --> 01:20:27,980
+uma tarefa,
+
+976
+01:20:27,980 --> 01:20:29,980
+essa tarefa é só aí que desconta
+
+977
+01:20:29,980 --> 01:20:31,980
+no budget.
+
+978
+01:20:31,980 --> 01:20:33,980
+Pode chegar ao fim e dizer,
+
+979
+01:20:33,980 --> 01:20:35,980
+mas ele não executou o budget todo.
+
+980
+01:20:35,980 --> 01:20:37,980
+Pronto, paciência, se uma tarefa
+
+981
+01:20:37,980 --> 01:20:39,980
+chegou ali mesmo no limite,
+
+982
+01:20:39,980 --> 01:20:41,980
+não vai haver tempo
+
+983
+01:20:41,980 --> 01:20:43,980
+de desgotar o budget todo.
+
+984
+01:20:43,980 --> 01:20:45,980
+Mas usando esta abordagem,
+
+985
+01:20:45,980 --> 01:20:47,980
+e se for possível,
+
+986
+01:20:47,980 --> 01:20:49,980
+ele vai deferir
+
+987
+01:20:49,980 --> 01:20:51,980
+o descontar
+
+988
+01:20:51,980 --> 01:20:53,980
+do budget
+
+989
+01:20:53,980 --> 01:20:55,980
+dentro
+
+990
+01:20:55,980 --> 01:20:57,980
+de um exemplo,
+
+991
+01:20:57,980 --> 01:20:59,980
+de forma a não estragar a escalonabilidade.
+
+992
+01:20:59,980 --> 01:21:01,980
+Isto é,
+
+993
+01:21:01,980 --> 01:21:03,980
+ele no máximo só vai executar
+
+994
+01:21:03,980 --> 01:21:05,980
+aquele budget.
+
+995
+01:21:05,980 --> 01:21:07,980
+Agora, a questão é que pode executar
+
+996
+01:21:07,980 --> 01:21:09,980
+esse budget um pouquinho antes
+
+997
+01:21:09,980 --> 01:21:11,980
+ou um pouquinho depois
+
+998
+01:21:11,980 --> 01:21:13,980
+quando efetivamente tiver tarefas
+
+999
+01:21:13,980 --> 01:21:15,980
+para executar.
+
+1000
+01:21:15,980 --> 01:21:17,980
+É o que nós estamos a ver aqui.
+
+1001
+01:21:17,980 --> 01:21:19,980
+Portanto, como a tarefa só chegou
+
+1002
+01:21:19,980 --> 01:21:21,980
+aqui no instante 2,
+
+1003
+01:21:21,980 --> 01:21:23,980
+ele só, a partir daqui, é que
+
+1004
+01:21:23,980 --> 01:21:25,980
+pode executar. Aqui neste caso
+
+1005
+01:21:25,980 --> 01:21:27,980
+o sistema que o periódico
+
+1006
+01:21:27,980 --> 01:21:29,980
+ou pooling é a mesma coisa,
+
+1007
+01:21:29,980 --> 01:21:31,980
+portanto, ainda não tinha chegado
+
+1008
+01:21:31,980 --> 01:21:33,980
+nenhuma tarefa e ele já está
+
+1009
+01:21:33,980 --> 01:21:35,980
+a descontar.
+
+1010
+01:21:35,980 --> 01:21:37,980
+Portanto, é uma evolução,
+
+1011
+01:21:37,980 --> 01:21:39,980
+uma otimização
+
+1012
+01:21:39,980 --> 01:21:41,980
+do sistema.
+
+1013
+01:21:41,980 --> 01:21:43,980
+Depois,
+
+1014
+01:21:43,980 --> 01:21:45,980
+o seporado e que server,
+
+1015
+01:21:45,980 --> 01:21:47,980
+o seporado e que server
+
+1016
+01:21:47,980 --> 01:21:49,980
+qual é a diferença para estes?
+
+1017
+01:21:49,980 --> 01:21:51,980
+A diferença para estes é a questão
+
+1018
+01:21:51,980 --> 01:21:53,980
+da periodicidade.
+
+1019
+01:21:53,980 --> 01:21:57,320
+Quando nós temos, nos dois
+
+1020
+01:21:57,320 --> 01:21:59,320
+anteriores, nós temos algo
+
+1021
+01:21:59,320 --> 01:22:01,320
+que é periódico. Portanto, o período
+
+1022
+01:22:01,320 --> 01:22:03,320
+é fixe.
+
+1023
+01:22:03,320 --> 01:22:05,320
+No seporado e que server
+
+1024
+01:22:05,320 --> 01:22:07,320
+nós temos um minimal
+
+1025
+01:22:07,320 --> 01:22:09,320
+interval time. Quero
+
+1026
+01:22:09,320 --> 01:22:11,320
+dizer que
+
+1027
+01:22:11,320 --> 01:22:13,320
+eu posso
+
+1028
+01:22:13,320 --> 01:22:15,320
+considerar que o servidor
+
+1029
+01:22:15,320 --> 01:22:17,320
+foi ativado
+
+1030
+01:22:17,320 --> 01:22:19,320
+somente quando chega
+
+1031
+01:22:19,320 --> 01:22:23,020
+uma tarefa.
+
+1032
+01:22:23,020 --> 01:22:25,020
+Vamos então olhar aqui
+
+1033
+01:22:25,020 --> 01:22:27,020
+para,
+
+1034
+01:22:27,020 --> 01:22:29,020
+portanto, o que é que eu vou
+
+1035
+01:22:29,020 --> 01:22:31,020
+fazer?
+
+1036
+01:22:31,020 --> 01:22:33,020
+Ora, aqui está,
+
+1037
+01:22:33,020 --> 01:22:35,020
+estamos aqui,
+
+1038
+01:22:35,020 --> 01:22:37,020
+temos aqui
+
+1039
+01:22:37,020 --> 01:22:39,020
+o servidor,
+
+1040
+01:22:39,020 --> 01:22:41,020
+portanto,
+
+1041
+01:22:41,020 --> 01:22:43,020
+ele vai,
+
+1042
+01:22:43,020 --> 01:22:45,020
+o tempo que vocês podem ver
+
+1043
+01:22:45,020 --> 01:22:47,020
+o
+
+1044
+01:22:47,020 --> 01:22:49,020
+período
+
+1045
+01:22:49,020 --> 01:22:51,020
+do servidor
+
+1046
+01:22:51,020 --> 01:22:53,020
+vai ser calculado
+
+1047
+01:22:53,020 --> 01:22:55,020
+em função da ativação
+
+1048
+01:22:55,020 --> 01:22:57,020
+da tarefa. Isto é,
+
+1049
+01:22:57,020 --> 01:22:59,020
+o servidor como é esporádico
+
+1050
+01:22:59,020 --> 01:23:01,020
+não é periódico,
+
+1051
+01:23:01,020 --> 01:23:03,020
+está, se não tiver
+
+1052
+01:23:03,020 --> 01:23:05,020
+nenhuma tarefa, é como se não
+
+1053
+01:23:05,020 --> 01:23:07,020
+aparecer-se no sistema.
+
+1054
+01:23:07,020 --> 01:23:09,020
+Quando
+
+1055
+01:23:09,020 --> 01:23:11,020
+aparece uma tarefa,
+
+1056
+01:23:11,020 --> 01:23:13,020
+vamos imaginar que o servidor está
+
+1057
+01:23:13,020 --> 01:23:15,020
+a dormir, não está no sistema,
+
+1058
+01:23:15,020 --> 01:23:17,020
+como é esporádico,
+
+1059
+01:23:17,020 --> 01:23:19,020
+eu posso assumir
+
+1060
+01:23:19,020 --> 01:23:21,020
+que quando chega
+
+1061
+01:23:21,020 --> 01:23:23,020
+uma
+
+1062
+01:23:23,020 --> 01:23:25,020
+tarefa para ser
+
+1063
+01:23:25,020 --> 01:23:27,020
+executada dentro do servidor
+
+1064
+01:23:27,020 --> 01:23:29,020
+eu vou considerar que foi
+
+1065
+01:23:29,020 --> 01:23:31,020
+o instante da ativação
+
+1066
+01:23:31,020 --> 01:23:33,020
+do servidor
+
+1067
+01:23:33,020 --> 01:23:35,020
+e isso vai me
+
+1068
+01:23:35,020 --> 01:23:37,020
+dar mais tempo
+
+1069
+01:23:37,020 --> 01:23:39,020
+porque o
+
+1070
+01:23:39,020 --> 01:23:41,020
+servidor
+
+1071
+01:23:41,020 --> 01:23:43,020
+vai,
+
+1072
+01:23:43,020 --> 01:23:45,020
+ou todo o escalonamento
+
+1073
+01:23:45,020 --> 01:23:47,020
+vai ser feito como se
+
+1074
+01:23:47,020 --> 01:23:49,020
+o servidor fosse ativado
+
+1075
+01:23:49,020 --> 01:23:51,020
+naquela instante.
+
+1076
+01:23:51,020 --> 01:23:53,020
+E isto differe
+
+1077
+01:23:53,020 --> 01:23:55,020
+das abordagens anteriores
+
+1078
+01:23:55,020 --> 01:23:57,020
+porque as abordagens anteriores
+
+1079
+01:23:57,020 --> 01:23:59,020
+são periódicas.
+
+1080
+01:23:59,020 --> 01:24:01,020
+Aqui o esporádico
+
+1081
+01:24:01,020 --> 01:24:03,020
+tem esta característica,
+
+1082
+01:24:03,020 --> 01:24:05,020
+eu sei o mínimo
+
+1083
+01:24:05,020 --> 01:24:07,020
+interval time,
+
+1084
+01:24:07,020 --> 01:24:09,020
+ora que é uma das características
+
+1085
+01:24:09,020 --> 01:24:11,020
+mas
+
+1086
+01:24:11,020 --> 01:24:13,020
+do sistema esporádico
+
+1087
+01:24:13,020 --> 01:24:15,020
+mas eu só vou considerar
+
+1088
+01:24:15,020 --> 01:24:17,020
+que o servidor está ativo
+
+1089
+01:24:17,020 --> 01:24:19,020
+quando chega uma tarefa
+
+1090
+01:24:19,020 --> 01:24:21,020
+e é o que nós,
+
+1091
+01:24:21,020 --> 01:24:23,020
+por isso é que temos aqui
+
+1092
+01:24:23,020 --> 01:24:25,020
+este,
+
+1093
+01:24:25,020 --> 01:24:27,020
+o período do servidor
+
+1094
+01:24:27,020 --> 01:24:29,020
+varia,
+
+1095
+01:24:29,020 --> 01:24:31,020
+portanto tem teoria, seria daqui
+
+1096
+01:24:31,020 --> 01:24:33,020
+até aqui
+
+1097
+01:24:33,020 --> 01:24:35,020
+mas na verdade
+
+1098
+01:24:35,020 --> 01:24:37,020
+ele vai considerar
+
+1099
+01:24:37,020 --> 01:24:39,020
+daqui até aqui
+
+1100
+01:24:39,020 --> 01:24:41,020
+vai fazer
+
+1101
+01:24:41,020 --> 01:24:43,020
+isto. O tamanho
+
+1102
+01:24:43,020 --> 01:24:45,020
+é o mesmo
+
+1103
+01:24:45,020 --> 01:24:47,020
+o que difere é o instante
+
+1104
+01:24:47,020 --> 01:24:49,020
+da ativação
+
+1105
+01:24:49,020 --> 01:24:51,020
+que vai ser ativado quando
+
+1106
+01:24:51,020 --> 01:24:53,020
+efetivamente tenho uma tarefa
+
+1107
+01:24:53,020 --> 01:24:55,020
+para escutar e porque
+
+1108
+01:24:55,020 --> 01:25:01,820
+pela natureza esporádica
+
+1109
+01:25:01,820 --> 01:25:03,820
+que o servidor tem.
+
+1110
+01:25:03,820 --> 01:25:05,820
+Ora vai, continuando.
+
+1111
+01:25:05,820 --> 01:25:07,820
+Depois
+
+1112
+01:25:07,820 --> 01:25:09,820
+dentro destes
+
+1113
+01:25:09,820 --> 01:25:11,820
+abordagens
+
+1114
+01:25:11,820 --> 01:25:13,820
+existe
+
+1115
+01:25:13,820 --> 01:25:15,820
+uma abordagem em que
+
+1116
+01:25:15,820 --> 01:25:17,820
+temos uma percentagem
+
+1117
+01:25:17,820 --> 01:25:19,820
+e fazemos
+
+1118
+01:25:19,820 --> 01:25:21,820
+os cálculos dos parâmetros
+
+1119
+01:25:21,820 --> 01:25:23,820
+em função de uma
+
+1120
+01:25:23,820 --> 01:25:25,820
+dessa percentagem.
+
+1121
+01:25:25,820 --> 01:25:27,820
+Portanto, no fundo, o que nós
+
+1122
+01:25:27,820 --> 01:25:29,820
+vamos fazer, portanto,
+
+1123
+01:25:29,820 --> 01:25:31,820
+o servidor tem uma determinada capacidade
+
+1124
+01:25:31,820 --> 01:25:33,820
+e
+
+1125
+01:25:33,820 --> 01:25:35,820
+assim que chega
+
+1126
+01:25:35,820 --> 01:25:37,820
+uma tarefa
+
+1127
+01:25:37,820 --> 01:25:39,820
+assim que chega uma tarefa
+
+1128
+01:25:39,820 --> 01:25:41,820
+nós vamos assegurar
+
+1129
+01:25:41,820 --> 01:25:43,820
+que
+
+1130
+01:25:43,820 --> 01:25:45,820
+o servidor
+
+1131
+01:25:45,820 --> 01:25:47,820
+no máximo, portanto,
+
+1132
+01:25:47,820 --> 01:25:49,820
+vai usar a sua capacidade
+
+1133
+01:25:49,820 --> 01:25:51,820
+e como é que isso é feito?
+
+1134
+01:25:51,820 --> 01:25:53,820
+É feito determinando-lhe
+
+1135
+01:25:53,820 --> 01:25:55,820
+o deadline
+
+1136
+01:25:55,820 --> 01:25:57,820
+em que o deadline
+
+1137
+01:25:57,820 --> 01:25:59,820
+é o máximo
+
+1138
+01:25:59,820 --> 01:26:01,820
+ou do instante atual
+
+1139
+01:26:01,820 --> 01:26:03,820
+em que chega a tarefa
+
+1140
+01:26:03,820 --> 01:26:05,820
+ou do deadline
+
+1141
+01:26:05,820 --> 01:26:07,820
+da última tarefa
+
+1142
+01:26:07,820 --> 01:26:09,820
+vamos imaginar que
+
+1143
+01:26:09,820 --> 01:26:11,820
+uma tarefa chegou
+
+1144
+01:26:11,820 --> 01:26:13,820
+um instante e que
+
+1145
+01:26:13,820 --> 01:26:15,820
+a tarefa anterior já executou
+
+1146
+01:26:15,820 --> 01:26:17,820
+mas o deadline dessa tarefa
+
+1147
+01:26:17,820 --> 01:26:19,820
+é posterior ao instante atual
+
+1148
+01:26:19,820 --> 01:26:21,820
+portanto, ele vai considerar
+
+1149
+01:26:21,820 --> 01:26:23,820
+o máximo disso
+
+1150
+01:26:23,820 --> 01:26:25,820
+e depois vai
+
+1151
+01:26:25,820 --> 01:26:27,820
+sumar isso
+
+1152
+01:26:27,820 --> 01:26:29,820
+a este fator que é
+
+1153
+01:26:29,820 --> 01:26:31,820
+o tempo
+
+1154
+01:26:31,820 --> 01:26:33,820
+de execução, o C
+
+1155
+01:26:33,820 --> 01:26:35,820
+da tarefa, a dividir
+
+1156
+01:26:35,820 --> 01:26:37,820
+que vai dar uma multiplicação
+
+1157
+01:26:37,820 --> 01:26:39,820
+uma vez que isto é uma percentagem
+
+1158
+01:26:39,820 --> 01:26:41,820
+pela utilização do servidor
+
+1159
+01:26:41,820 --> 01:26:43,820
+portanto, pela capacidade
+
+1160
+01:26:43,820 --> 01:26:45,820
+e isto vai
+
+1161
+01:26:45,820 --> 01:26:47,820
+portanto, vai garantir
+
+1162
+01:26:47,820 --> 01:26:49,820
+que esta tarefa
+
+1163
+01:26:49,820 --> 01:26:51,820
+ocupa no máximo, aqui no
+
+1164
+01:26:51,820 --> 01:26:53,820
+no sistema, o que está aqui definido
+
+1165
+01:26:53,820 --> 01:26:55,820
+qual é o problema
+
+1166
+01:26:55,820 --> 01:26:57,820
+desta abordagem?
+
+1167
+01:26:57,820 --> 01:26:59,820
+Obriga
+
+1168
+01:26:59,820 --> 01:27:01,820
+a saber o C
+
+1169
+01:27:01,820 --> 01:27:03,820
+da tarefa que chega
+
+1170
+01:27:03,820 --> 01:27:05,820
+ora que para
+
+1171
+01:27:05,820 --> 01:27:07,820
+pronto, o que a serem
+
+1172
+01:27:07,820 --> 01:27:09,820
+para tarefas
+
+1173
+01:27:09,820 --> 01:27:11,820
+que sabem, independentemente
+
+1174
+01:27:11,820 --> 01:27:13,820
+de ser a periódica ou a sporádica
+
+1175
+01:27:13,820 --> 01:27:15,820
+não há grande problema
+
+1176
+01:27:15,820 --> 01:27:17,820
+mas já sabemos que o C
+
+1177
+01:27:17,820 --> 01:27:19,820
+tem um
+
+1178
+01:27:19,820 --> 01:27:21,820
+problema de
+
+1179
+01:27:21,820 --> 01:27:23,820
+pessimismo
+
+1180
+01:27:23,820 --> 01:27:25,820
+portanto, é o problema
+
+1181
+01:27:25,820 --> 01:27:27,820
+associado a esta abordagem
+
+1182
+01:27:27,820 --> 01:27:29,820
+mas
+
+1183
+01:27:29,820 --> 01:27:31,820
+funciona
+
+1184
+01:27:31,820 --> 01:27:33,820
+embora para aquele contexto
+
+1185
+01:27:33,820 --> 01:27:35,820
+de
+
+1186
+01:27:35,820 --> 01:27:37,820
+o C a tarefa e eu
+
+1187
+01:27:37,820 --> 01:27:39,820
+não sei quando o tempo que
+
+1188
+01:27:39,820 --> 01:27:41,820
+executa, não sei qual é o que vai ser
+
+1189
+01:27:41,820 --> 01:27:43,820
+o tempo de execução etc, obviamente
+
+1190
+01:27:43,820 --> 01:27:45,820
+que se eu não tiver esse parâmetro
+
+1191
+01:27:45,820 --> 01:27:47,820
+não consigo usar esta abordagem
+
+1192
+01:27:47,820 --> 01:27:49,820
+ora
+
+1193
+01:27:51,820 --> 01:27:53,820
+assim sendo
+
+1194
+01:27:53,820 --> 01:27:55,820
+não sabendo isso ou melhor
+
+1195
+01:27:55,820 --> 01:27:57,820
+obrigando a saber isso
+
+1196
+01:27:57,820 --> 01:27:59,820
+pronto, isto obviamente
+
+1197
+01:27:59,820 --> 01:28:01,820
+tem casos de utilização
+
+1198
+01:28:01,820 --> 01:28:03,820
+embora a ideia
+
+1199
+01:28:03,820 --> 01:28:05,820
+do servidor é um pouquinho
+
+1200
+01:28:05,820 --> 01:28:07,820
+apanhar
+
+1201
+01:28:07,820 --> 01:28:09,820
+tudo aquilo que de alguma forma
+
+1202
+01:28:09,820 --> 01:28:11,820
+nós não sabemos os parâmetros
+
+1203
+01:28:11,820 --> 01:28:13,820
+ou coisas assim de género portanto
+
+1204
+01:28:13,820 --> 01:28:15,820
+aqui foge um pouquinho desse princípio
+
+1205
+01:28:15,820 --> 01:28:17,820
+mas
+
+1206
+01:28:17,820 --> 01:28:19,820
+se souber esta informação
+
+1207
+01:28:19,820 --> 01:28:21,820
+funciona e aquela
+
+1208
+01:28:21,820 --> 01:28:23,820
+tarefa no máximo
+
+1209
+01:28:23,820 --> 01:28:25,820
+utiliza aquela
+
+1210
+01:28:25,820 --> 01:28:27,820
+utilização e pronto
+
+1211
+01:28:27,820 --> 01:28:29,820
+e o sistema não
+
+1212
+01:28:29,820 --> 01:28:31,820
+tem qualquer problema em relação a isso
+
+1213
+01:28:31,820 --> 01:28:33,820
+uma outra abordagem mais
+
+1214
+01:28:33,820 --> 01:28:35,820
+usada é
+
+1215
+01:28:35,820 --> 01:28:37,820
+o CBS, o constante bandido server
+
+1216
+01:28:37,820 --> 01:28:39,820
+que usa
+
+1217
+01:28:39,820 --> 01:28:41,820
+uma abordagem
+
+1218
+01:28:41,820 --> 01:28:43,820
+também
+
+1219
+01:28:43,820 --> 01:28:45,820
+parecida
+
+1220
+01:28:45,820 --> 01:28:47,820
+em termos de
+
+1221
+01:28:47,820 --> 01:28:49,820
+de largura
+
+1222
+01:28:49,820 --> 01:28:51,820
+de, portanto, atribui
+
+1223
+01:28:51,820 --> 01:28:53,820
+um tempo, uma largura de
+
+1224
+01:28:53,820 --> 01:28:55,820
+banda do cpu
+
+1225
+01:28:55,820 --> 01:28:57,820
+mas tem aqui uma outra
+
+1226
+01:28:57,820 --> 01:28:59,820
+característica
+
+1227
+01:28:59,820 --> 01:29:01,820
+que torna
+
+1228
+01:29:01,820 --> 01:29:03,820
+e que fez com que
+
+1229
+01:29:03,820 --> 01:29:05,820
+isto seja
+
+1230
+01:29:05,820 --> 01:29:07,820
+a abordagem mais adotada
+
+1231
+01:29:07,820 --> 01:29:09,820
+por isso aqui é adotada, por exemplo, no Linux
+
+1232
+01:29:09,820 --> 01:29:11,820
+e é das abordagens
+
+1233
+01:29:11,820 --> 01:29:13,820
+mais adotadas
+
+1234
+01:29:13,820 --> 01:29:15,820
+eu vou passarmos aqui para
+
+1235
+01:29:15,820 --> 01:29:17,820
+uma parte, aqui para
+
+1236
+01:29:17,820 --> 01:29:19,820
+explicarmos isto e depois tenho aqui
+
+1237
+01:29:19,820 --> 01:29:21,820
+um outro slide
+
+1238
+01:29:21,820 --> 01:29:23,820
+com
+
+1239
+01:29:23,820 --> 01:29:25,820
+uma timeline para vocês perceberem
+
+1240
+01:29:25,820 --> 01:29:27,820
+como é que isto funciona portanto
+
+1241
+01:29:27,820 --> 01:29:29,820
+os servidores têm na mesma
+
+1242
+01:29:29,820 --> 01:29:31,820
+um budget
+
+1243
+01:29:31,820 --> 01:29:33,820
+que é o tempo de cpu
+
+1244
+01:29:33,820 --> 01:29:35,820
+e tem um período
+
+1245
+01:29:35,820 --> 01:29:37,820
+vamos assumir
+
+1246
+01:29:37,820 --> 01:29:39,820
+isto aqui não é muito relevante
+
+1247
+01:29:39,820 --> 01:29:41,820
+porque o servidor, o deadline
+
+1248
+01:29:41,820 --> 01:29:43,820
+não é relevante
+
+1249
+01:29:43,820 --> 01:29:45,820
+dependendo dos sistemas mas
+
+1250
+01:29:45,820 --> 01:29:47,820
+não é relevante
+
+1251
+01:29:47,820 --> 01:29:49,820
+e vamos imaginar que temos aqui uma tarefa
+
+1252
+01:29:49,820 --> 01:29:51,820
+a periódica que tem um c de 5
+
+1253
+01:29:51,820 --> 01:29:53,820
+ora
+
+1254
+01:29:53,820 --> 01:29:55,820
+quando a tarefa chega
+
+1255
+01:29:55,820 --> 01:29:57,820
+o servidor é
+
+1256
+01:29:57,820 --> 01:29:59,820
+ativado
+
+1257
+01:29:59,820 --> 01:30:01,820
+e é ativado com o budget
+
+1258
+01:30:01,820 --> 01:30:03,820
+e não está aqui mais nenhuma tarefa
+
+1259
+01:30:03,820 --> 01:30:05,820
+com o budget de 3
+
+1260
+01:30:05,820 --> 01:30:07,820
+que é o que tem
+
+1261
+01:30:07,820 --> 01:30:09,820
+ora não há mais nenhuma tarefa
+
+1262
+01:30:09,820 --> 01:30:11,820
+vai executar a tarefa que chegou
+
+1263
+01:30:11,820 --> 01:30:13,820
+que vamos assumir
+
+1264
+01:30:13,820 --> 01:30:15,820
+que tem um c de 5
+
+1265
+01:30:15,820 --> 01:30:17,820
+executa, executa, executa
+
+1266
+01:30:17,820 --> 01:30:19,820
+e o que é que vai
+
+1267
+01:30:19,820 --> 01:30:21,820
+acontecer
+
+1268
+01:30:21,820 --> 01:30:23,820
+aqui
+
+1269
+01:30:23,820 --> 01:30:25,820
+o que vai acontecer é que ele esgotou
+
+1270
+01:30:25,820 --> 01:30:27,820
+o budget
+
+1271
+01:30:27,820 --> 01:30:29,820
+portanto ele fez esta execução
+
+1272
+01:30:29,820 --> 01:30:33,130
+fez esta execução
+
+1273
+01:30:33,130 --> 01:30:35,130
+tendo em atenção
+
+1274
+01:30:35,130 --> 01:30:37,130
+o deadline
+
+1275
+01:30:37,130 --> 01:30:39,130
+portanto quando
+
+1276
+01:30:39,130 --> 01:30:41,130
+uma tarefa começa
+
+1277
+01:30:41,130 --> 01:30:43,130
+a executar
+
+1278
+01:30:43,130 --> 01:30:45,130
+o que é que é feito
+
+1279
+01:30:45,130 --> 01:30:47,130
+a tarefa
+
+1280
+01:30:47,130 --> 01:30:49,130
+a essa tarefa é atribuído
+
+1281
+01:30:49,130 --> 01:30:51,130
+o deadline absoluto
+
+1282
+01:30:51,130 --> 01:30:53,130
+do servidor
+
+1283
+01:30:53,130 --> 01:30:55,130
+que é calculado
+
+1284
+01:30:55,130 --> 01:30:57,130
+o instante
+
+1285
+01:30:57,130 --> 01:30:59,130
+atual
+
+1286
+01:30:59,130 --> 01:31:01,130
+mais o deadline
+
+1287
+01:31:01,130 --> 01:31:03,130
+ou período
+
+1288
+01:31:03,130 --> 01:31:05,130
+do servidor
+
+1289
+01:31:05,130 --> 01:31:07,130
+portanto
+
+1290
+01:31:07,130 --> 01:31:09,130
+esta tarefa quando começa a executar
+
+1291
+01:31:09,130 --> 01:31:11,130
+executa com um deadline de 6
+
+1292
+01:31:11,130 --> 01:31:13,130
+um deadline absoluto de 6
+
+1293
+01:31:15,130 --> 01:31:17,130
+quando chegou aqui ao instante 3
+
+1294
+01:31:17,130 --> 01:31:19,130
+esgotou
+
+1295
+01:31:19,130 --> 01:31:21,130
+o budget
+
+1296
+01:31:21,130 --> 01:31:23,130
+e então como é que funciona isto
+
+1297
+01:31:23,130 --> 01:31:25,130
+eu há pouco disso só tenho uma tarefa
+
+1298
+01:31:25,130 --> 01:31:27,130
+mas em teoria
+
+1299
+01:31:27,130 --> 01:31:29,130
+estamos aqui um intervalo
+
+1300
+01:31:29,130 --> 01:31:31,130
+é porque executou aqui alguma coisa
+
+1301
+01:31:31,130 --> 01:31:33,130
+entretanto, mas como é que funciona isto
+
+1302
+01:31:33,130 --> 01:31:35,130
+quando o budget
+
+1303
+01:31:35,130 --> 01:31:37,130
+é esgotado
+
+1304
+01:31:37,130 --> 01:31:40,410
+o que é que o sistema
+
+1305
+01:31:40,410 --> 01:31:42,410
+faz
+
+1306
+01:31:42,410 --> 01:31:44,410
+vai voltar
+
+1307
+01:31:44,410 --> 01:31:46,410
+a encher
+
+1308
+01:31:46,410 --> 01:31:48,410
+o budget
+
+1309
+01:31:48,410 --> 01:31:50,410
+mas altera o deadline
+
+1310
+01:31:50,410 --> 01:31:52,410
+para o instante
+
+1311
+01:31:52,410 --> 01:31:56,100
+o que é que acontece
+
+1312
+01:31:56,100 --> 01:31:58,100
+esta parte
+
+1313
+01:31:58,100 --> 01:32:00,100
+da tarefa
+
+1314
+01:32:00,100 --> 01:32:02,100
+executou com um deadline
+
+1315
+01:32:02,100 --> 01:32:04,100
+absoluto de 6
+
+1316
+01:32:04,100 --> 01:32:06,100
+esta parte
+
+1317
+01:32:06,100 --> 01:32:08,100
+da tarefa executou
+
+1318
+01:32:08,100 --> 01:32:10,100
+com um deadline absoluto de 12
+
+1319
+01:32:10,100 --> 01:32:13,930
+com esta abordagem
+
+1320
+01:32:13,930 --> 01:32:15,930
+e aqui também
+
+1321
+01:32:15,930 --> 01:32:17,930
+eu considero que este
+
+1322
+01:32:17,930 --> 01:32:19,930
+servidor
+
+1323
+01:32:19,930 --> 01:32:21,930
+pode
+
+1324
+01:32:21,930 --> 01:32:23,930
+ao contrário do que acontece
+
+1325
+01:32:23,930 --> 01:32:25,930
+naqueles periódicos
+
+1326
+01:32:25,930 --> 01:32:27,930
+em que isto não aconteceria
+
+1327
+01:32:27,930 --> 01:32:29,930
+na prática
+
+1328
+01:32:29,930 --> 01:32:31,930
+isto aqui só poderia executar
+
+1329
+01:32:31,930 --> 01:32:33,930
+depois
+
+1330
+01:32:33,930 --> 01:32:35,930
+na próxima release
+
+1331
+01:32:35,930 --> 01:32:37,930
+usando esta abordagem
+
+1332
+01:32:37,930 --> 01:32:39,930
+o que acontece
+
+1333
+01:32:39,930 --> 01:32:41,930
+é que
+
+1334
+01:32:41,930 --> 01:32:43,930
+não ferindo
+
+1335
+01:32:43,930 --> 01:32:45,930
+a escalonabilidade
+
+1336
+01:32:45,930 --> 01:32:47,930
+porque isto é esporático
+
+1337
+01:32:47,930 --> 01:32:49,930
+volto a referir
+
+1338
+01:32:49,930 --> 01:32:51,930
+é como se
+
+1339
+01:32:51,930 --> 01:32:53,930
+porque nós estamos
+
+1340
+01:32:53,930 --> 01:32:55,930
+a protelar o deadline
+
+1341
+01:32:55,930 --> 01:32:57,930
+e esta tarefa
+
+1342
+01:32:57,930 --> 01:32:59,930
+só executou aqui
+
+1343
+01:32:59,930 --> 01:33:01,930
+porque na altura
+
+1344
+01:33:01,930 --> 01:33:03,930
+desta execução
+
+1345
+01:33:03,930 --> 01:33:05,930
+ela era a que tinha o deadline
+
+1346
+01:33:05,930 --> 01:33:07,930
+absoluto mais próximo
+
+1347
+01:33:07,930 --> 01:33:09,930
+portanto, e desta
+
+1348
+01:33:09,930 --> 01:33:11,930
+e desta forma
+
+1349
+01:33:11,930 --> 01:33:13,930
+consegue-se ter um desempenho
+
+1350
+01:33:13,930 --> 01:33:15,930
+do sistema melhor
+
+1351
+01:33:15,930 --> 01:33:17,930
+porque
+
+1352
+01:33:17,930 --> 01:33:19,930
+não há aquelas interrupções
+
+1353
+01:33:19,930 --> 01:33:21,930
+que nós vimos
+
+1354
+01:33:21,930 --> 01:33:23,930
+também não a oferir
+
+1355
+01:33:23,930 --> 01:33:25,930
+da escalonabilidade
+
+1356
+01:33:25,930 --> 01:33:27,930
+porque
+
+1357
+01:33:27,930 --> 01:33:29,930
+assim que
+
+1358
+01:33:29,930 --> 01:33:31,930
+é feito o enchimento
+
+1359
+01:33:31,930 --> 01:33:33,930
+do budget
+
+1360
+01:33:33,930 --> 01:33:35,930
+altera-se
+
+1361
+01:33:35,930 --> 01:33:37,930
+o critério
+
+1362
+01:33:37,930 --> 01:33:39,930
+porque isto é escalonado de acordo com o ADF
+
+1363
+01:33:39,930 --> 01:33:41,930
+altera-se o critério
+
+1364
+01:33:41,930 --> 01:33:43,930
+para
+
+1365
+01:33:43,930 --> 01:33:45,930
+definir a prioridade
+
+1366
+01:33:45,930 --> 01:33:47,930
+e em que se aumenta
+
+1367
+01:33:47,930 --> 01:33:49,930
+esse valor
+
+1368
+01:33:49,930 --> 01:33:51,930
+portanto, e se a tarefa
+
+1369
+01:33:51,930 --> 01:33:53,930
+continua
+
+1370
+01:33:53,930 --> 01:33:55,930
+em execução
+
+1371
+01:33:55,930 --> 01:33:57,930
+significa que não há outra tarefa
+
+1372
+01:33:57,930 --> 01:33:59,930
+no sistema
+
+1373
+01:33:59,930 --> 01:34:01,930
+para executar
+
+1374
+01:34:01,930 --> 01:34:03,930
+porque, ou então, se pode haver
+
+1375
+01:34:03,930 --> 01:34:05,930
+mas que tenha o deadline absoluto
+
+1376
+01:34:05,930 --> 01:34:07,930
+muito mais
+
+1377
+01:34:07,930 --> 01:34:09,930
+mais longe
+
+1378
+01:34:09,930 --> 01:34:11,930
+portanto, não está tão próximo
+
+1379
+01:34:11,930 --> 01:34:13,930
+portanto, vocês têm aqui
+
+1380
+01:34:13,930 --> 01:34:15,930
+um exemplo em que temos aqui
+
+1381
+01:34:15,930 --> 01:34:17,930
+duas tarefas ar de realtime
+
+1382
+01:34:17,930 --> 01:34:19,930
+e temos aqui uma tarefa periódica
+
+1383
+01:34:19,930 --> 01:34:21,930
+uma tarefa periódica
+
+1384
+01:34:21,930 --> 01:34:23,930
+temos aqui os dados
+
+1385
+01:34:23,930 --> 01:34:25,930
+do nosso servidor, o servidor
+
+1386
+01:34:25,930 --> 01:34:27,930
+tem um budget de 2
+
+1387
+01:34:27,930 --> 01:34:29,930
+e um período
+
+1388
+01:34:29,930 --> 01:34:31,930
+e vamos assumir de um deadline
+
+1389
+01:34:31,930 --> 01:34:33,930
+de 6
+
+1390
+01:34:33,930 --> 01:34:35,930
+ora, temos aqui a tarefa 1
+
+1391
+01:34:35,930 --> 01:34:37,930
+que
+
+1392
+01:34:37,930 --> 01:34:39,930
+executa com um deadline absoluto
+
+1393
+01:34:39,930 --> 01:34:41,930
+de 6
+
+1394
+01:34:41,930 --> 01:34:43,930
+a tarefa 2
+
+1395
+01:34:43,930 --> 01:34:45,930
+executa com um
+
+1396
+01:34:45,930 --> 01:34:47,930
+deadline absoluto de 9
+
+1397
+01:34:47,930 --> 01:34:49,930
+mas o que é que aconteceu?
+
+1398
+01:34:49,930 --> 01:34:51,930
+aconteceu
+
+1399
+01:34:51,930 --> 01:34:53,930
+aqui que a tarefa
+
+1400
+01:34:55,930 --> 01:34:57,930
+em teoria
+
+1401
+01:34:57,930 --> 01:34:59,930
+o servidor
+
+1402
+01:34:59,930 --> 01:35:01,930
+foi ativado neste instante
+
+1403
+01:35:01,930 --> 01:35:03,930
+mas como não tinha nenhuma
+
+1404
+01:35:03,930 --> 01:35:05,930
+tarefa
+
+1405
+01:35:05,930 --> 01:35:07,930
+ele foi
+
+1406
+01:35:07,930 --> 01:35:09,930
+efetivamente
+
+1407
+01:35:09,930 --> 01:35:11,930
+ativado
+
+1408
+01:35:11,930 --> 01:35:13,930
+quando chegou a tarefa que foi
+
+1409
+01:35:13,930 --> 01:35:15,930
+aqui no instante 2
+
+1410
+01:35:15,930 --> 01:35:17,930
+ora, quando ele chegou aqui
+
+1411
+01:35:17,930 --> 01:35:19,930
+no instante 2, esta tarefa
+
+1412
+01:35:19,930 --> 01:35:21,930
+o que é que é feito?
+
+1413
+01:35:21,930 --> 01:35:23,930
+o servidor
+
+1414
+01:35:23,930 --> 01:35:25,930
+é enchido
+
+1415
+01:35:25,930 --> 01:35:27,930
+uma vez que ainda não tinha
+
+1416
+01:35:27,930 --> 01:35:29,930
+executado
+
+1417
+01:35:29,930 --> 01:35:31,930
+é enchido seu budget
+
+1418
+01:35:31,930 --> 01:35:33,930
+portanto, com o valor 2
+
+1419
+01:35:33,930 --> 01:35:35,930
+e o deadline
+
+1420
+01:35:35,930 --> 01:35:37,930
+é colocado aqui, a 8
+
+1421
+01:35:37,930 --> 01:35:39,930
+é que esta tarefa
+
+1422
+01:35:39,930 --> 01:35:41,930
+executa primeiro do que esta
+
+1423
+01:35:41,930 --> 01:35:43,930
+porque
+
+1424
+01:35:43,930 --> 01:35:45,930
+esta tem o deadline
+
+1425
+01:35:45,930 --> 01:35:47,930
+o deadline de 9
+
+1426
+01:35:47,930 --> 01:35:49,930
+e esta tem de 8
+
+1427
+01:35:49,930 --> 01:35:51,930
+obviamente que
+
+1428
+01:35:51,930 --> 01:35:53,930
+o sistema tem que ser escalonável
+
+1429
+01:35:53,930 --> 01:35:55,930
+tendo em atenção
+
+1430
+01:35:55,930 --> 01:35:57,930
+isto e isto
+
+1431
+01:35:57,930 --> 01:35:59,930
+porque senão, obviamente
+
+1432
+01:35:59,930 --> 01:36:01,930
+não há milagres, tenho que se fazer
+
+1433
+01:36:01,930 --> 01:36:03,930
+análise, tendo isto em atenção
+
+1434
+01:36:03,930 --> 01:36:05,930
+e se o sistema for escalonável
+
+1435
+01:36:05,930 --> 01:36:07,930
+não há problema algum
+
+1436
+01:36:07,930 --> 01:36:09,930
+portanto
+
+1437
+01:36:09,930 --> 01:36:11,930
+o que é que acontece
+
+1438
+01:36:11,930 --> 01:36:13,930
+vem por aqui
+
+1439
+01:36:13,930 --> 01:36:15,930
+chega
+
+1440
+01:36:15,930 --> 01:36:17,930
+um
+
+1441
+01:36:17,930 --> 01:36:19,930
+quando chegou aqui a este ponto
+
+1442
+01:36:19,930 --> 01:36:21,930
+esgotou o budget
+
+1443
+01:36:21,930 --> 01:36:23,930
+encheu o budget
+
+1444
+01:36:23,930 --> 01:36:25,930
+mas o deadline
+
+1445
+01:36:25,930 --> 01:36:27,930
+passou para aqui
+
+1446
+01:36:27,930 --> 01:36:29,930
+de 8 para
+
+1447
+01:36:29,930 --> 01:36:31,930
+mais 6 para 14
+
+1448
+01:36:31,930 --> 01:36:33,930
+por isso aqui
+
+1449
+01:36:33,930 --> 01:36:35,930
+foi preemptado e só terminou
+
+1450
+01:36:35,930 --> 01:36:37,930
+aqui
+
+1451
+01:36:37,930 --> 01:36:39,930
+porque entretanto
+
+1452
+01:36:39,930 --> 01:36:41,930
+apareceram outras tarefas com um deadline
+
+1453
+01:36:41,930 --> 01:36:43,930
+no absoluto mais próximo
+
+1454
+01:36:43,930 --> 01:36:45,930
+e esta é
+
+1455
+01:36:45,930 --> 01:36:47,930
+digamos a abordagem mais
+
+1456
+01:36:47,930 --> 01:36:49,930
+usual que temos
+
+1457
+01:36:49,930 --> 01:36:51,930
+neste
+
+1458
+01:36:51,930 --> 01:36:53,930
+nos sistemas críticos
+
+1459
+01:36:53,930 --> 01:36:55,930
+em que temos este tipo de tarefas
+
+1460
+01:36:55,930 --> 01:36:57,930
+com prioridades dinâmicas
+
+1461
+01:36:57,930 --> 01:36:59,930
+porque
+
+1462
+01:36:59,930 --> 01:37:01,930
+esta abordagem
+
+1463
+01:37:01,930 --> 01:37:03,930
+tem esta
+
+1464
+01:37:03,930 --> 01:37:05,930
+característica
+
+1465
+01:37:05,930 --> 01:37:07,930
+também do isolamento
+
+1466
+01:37:07,930 --> 01:37:09,930
+temporal
+
+1467
+01:37:09,930 --> 01:37:11,930
+eu não quero estar a dizer as negras
+
+1468
+01:37:11,930 --> 01:37:13,930
+mas se eu tiver a dizer ao mais negras
+
+1469
+01:37:13,930 --> 01:37:15,930
+pois eu corrisso
+
+1470
+01:37:15,930 --> 01:37:17,930
+mas por exemplo eu tenho a ideia
+
+1471
+01:37:17,930 --> 01:37:19,930
+de que o R temos
+
+1472
+01:37:19,930 --> 01:37:21,930
+faz isto para
+
+1473
+01:37:21,930 --> 01:37:23,930
+todas as tarefas
+
+1474
+01:37:23,930 --> 01:37:25,930
+isto é
+
+1475
+01:37:25,930 --> 01:37:27,930
+e ele executa todas as tarefas
+
+1476
+01:37:27,930 --> 01:37:29,930
+no contexto de um servidor
+
+1477
+01:37:29,930 --> 01:37:31,930
+para aqui
+
+1478
+01:37:31,930 --> 01:37:33,930
+para garantir
+
+1479
+01:37:33,930 --> 01:37:35,930
+o isolamento temporal
+
+1480
+01:37:35,930 --> 01:37:37,930
+portanto sempre que uma tarefa
+
+1481
+01:37:37,930 --> 01:37:39,930
+começa a executar
+
+1482
+01:37:39,930 --> 01:37:41,930
+por exemplo neste caso
+
+1483
+01:37:41,930 --> 01:37:43,930
+esta tarefa
+
+1484
+01:37:43,930 --> 01:37:45,930
+e se fossemos implementar isto
+
+1485
+01:37:45,930 --> 01:37:47,930
+por exemplo no linux
+
+1486
+01:37:47,930 --> 01:37:49,930
+quando eu fizesse suites tu
+
+1487
+01:37:49,930 --> 01:37:51,930
+desta tarefa
+
+1488
+01:37:51,930 --> 01:37:53,930
+para o cpu
+
+1489
+01:37:53,930 --> 01:37:58,740
+eu tinha que ativar um timer para este instante
+
+1490
+01:37:58,740 --> 01:38:00,740
+é o budget
+
+1491
+01:38:00,740 --> 01:38:02,740
+quando o timer inspirasse
+
+1492
+01:38:02,740 --> 01:38:04,740
+eu tinha que
+
+1493
+01:38:04,740 --> 01:38:06,740
+voltar, tinha que atualizar os parâmetros
+
+1494
+01:38:06,740 --> 01:38:08,740
+e voltar a fazer
+
+1495
+01:38:08,740 --> 01:38:10,740
+a pedir ao escalonador
+
+1496
+01:38:10,740 --> 01:38:12,740
+para dizer qual era a tarefa
+
+1497
+01:38:12,740 --> 01:38:14,740
+de mais alta prioridade
+
+1498
+01:38:14,740 --> 01:38:16,740
+daquelas que estavam no sistema
+
+1499
+01:38:16,740 --> 01:38:18,740
+e o que ele iria dizer é que a de mais alta prioridade
+
+1500
+01:38:18,740 --> 01:38:22,950
+é esta
+
+1501
+01:38:22,950 --> 01:38:24,950
+dúvidas, perguntas
+
+1502
+01:38:24,950 --> 01:38:33,060
+ou assinados com isto
+
+1503
+01:38:33,060 --> 01:38:35,060
+pois existem variantes
+
+1504
+01:38:35,060 --> 01:38:37,060
+eu acho que
+
+1505
+01:38:37,060 --> 01:38:39,060
+o linux
+
+1506
+01:38:39,060 --> 01:38:41,060
+além do cbs
+
+1507
+01:38:41,060 --> 01:38:43,060
+tem os melhoramentos
+
+1508
+01:38:43,060 --> 01:38:45,060
+obviamente que depois olhando aqui
+
+1509
+01:38:45,060 --> 01:38:47,060
+para alguns detalhes aqui
+
+1510
+01:38:47,060 --> 01:38:49,060
+algumas coisas que se podem melhorar
+
+1511
+01:38:49,060 --> 01:38:51,060
+portanto e entretanto
+
+1512
+01:38:51,060 --> 01:38:53,060
+surgiram novas abordagens
+
+1513
+01:38:53,060 --> 01:38:55,060
+e já agora este css
+
+1514
+01:38:55,060 --> 01:38:57,060
+nada
+
+1515
+01:38:57,060 --> 01:38:59,060
+tem a ver com o css
+
+1516
+01:38:59,060 --> 01:39:01,060
+o css
+
+1517
+01:39:01,060 --> 01:39:03,060
+foi um algoritmo
+
+1518
+01:39:03,060 --> 01:39:05,060
+que foi
+
+1519
+01:39:05,060 --> 01:39:07,060
+o migalpinho
+
+1520
+01:39:07,060 --> 01:39:09,060
+e o pessoal de isnogueira
+
+1521
+01:39:09,060 --> 01:39:11,060
+que criaram
+
+1522
+01:39:11,060 --> 01:39:13,060
+portanto este
+
+1523
+01:39:13,060 --> 01:39:15,060
+que tem a ver com roubar
+
+1524
+01:39:15,060 --> 01:39:17,060
+se vocês falarem como eu
+
+1525
+01:39:17,060 --> 01:39:19,060
+eu perguntei que ele rouba
+
+1526
+01:39:19,060 --> 01:39:21,060
+o tempo de discussão
+
+1527
+01:39:21,060 --> 01:39:23,060
+isto tem a ver com os sistemas multipressadores
+
+1528
+01:39:23,060 --> 01:39:25,060
+não tão, com os sistemas unipressadores
+
+1529
+01:39:25,060 --> 01:39:27,060
+faz o stailing
+
+1530
+01:39:27,060 --> 01:39:29,060
+se tiver
+
+1531
+01:39:29,060 --> 01:39:31,060
+tempo de cpu
+
+1532
+01:39:31,060 --> 01:39:33,060
+no determinado cpu
+
+1533
+01:39:33,060 --> 01:39:35,060
+faz para ir umas
+
+1534
+01:39:35,060 --> 01:39:37,060
+maróscas quaisques
+
+1535
+01:39:37,060 --> 01:39:39,060
+para melhorar o desempenho
+
+1536
+01:39:39,060 --> 01:39:41,060
+destas coisas
+
+1537
+01:39:41,060 --> 01:39:43,060
+e era isto que eu tinha hoje
+
+1538
+01:39:43,060 --> 01:39:45,060
+para
+
+1539
+01:39:45,060 --> 01:39:47,060
+para esta parte
+
+1540
+01:39:47,060 --> 01:39:49,060
+dos algoritmos dinâmicos
+
+1541
+01:39:49,060 --> 01:39:51,060
+sei se é alguma questão que vocês queiram
+
+1542
+01:39:51,060 --> 01:39:58,120
+colocar-se alguma dúvida
+
+1543
+01:39:58,120 --> 01:40:01,500
+agora não, obrigado
+
+1544
+01:40:01,500 --> 01:40:03,500
+eu geralmente
+
+1545
+01:40:03,500 --> 01:40:05,500
+remate desta forma
+
+1546
+01:40:05,500 --> 01:40:07,500
+alunos
+
+1547
+01:40:07,500 --> 01:40:09,500
+extraordinários professores
+
+1548
+01:40:09,500 --> 01:40:11,500
+ssional
+
+1549
+01:40:11,500 --> 01:40:13,500
+muito obrigado
+
+1550
+01:40:13,500 --> 01:40:15,500
+vemos-nos na próxima
+
+1551
+01:40:15,500 --> 01:40:17,500
+quinta-feira
+
+1552
+01:40:17,500 --> 01:40:19,500
+e
+
+1553
+01:40:19,500 --> 01:40:21,500
+se não for mais
+
+1554
+01:40:21,500 --> 01:40:23,500
+conhecê-nos no próximo sábado
+
+1555
+01:40:23,500 --> 01:40:25,500
+está bem?
+
+1556
+01:40:25,500 --> 01:40:27,500
+convidado
+
+1557
+01:40:27,500 --> 01:40:29,500
+obrigado
+
+1558
+01:40:29,500 --> 01:40:33,350
+adorado
+
