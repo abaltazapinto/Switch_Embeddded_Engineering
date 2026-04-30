@@ -1,0 +1,8644 @@
+1
+00:00:10,290 --> 00:01:24,000
+Boa noite a todos. Acho que ainda a gente tem que entrar, acho que podemos ir começando.
+
+2
+00:01:24,000 --> 00:01:33,220
+Hoje vamos falar de IPv6, a versão 6 do protocolo IP.
+
+3
+00:01:33,220 --> 00:01:48,840
+Já quando falamos do protocolo IPv4, vimos que cedo se percebeu que os endereços de IPv4 eram poucos,
+
+4
+00:01:48,840 --> 00:01:55,840
+e portanto iam acabar, e já vimos este gráfico, eles acabaram a nível central em 2011
+
+5
+00:01:55,840 --> 00:02:02,000
+e depois a nível regional também foram acabando.
+
+6
+00:02:02,000 --> 00:02:07,510
+Vimos que quando se percebeu que os endereços iam acabar,
+
+7
+00:02:07,510 --> 00:02:14,380
+se começou a pensar em formas de colegir o problema,
+
+8
+00:02:14,380 --> 00:02:22,320
+e imediatamente se passou a fazer uma distribuição mais otimizada dos endereços,
+
+9
+00:02:22,320 --> 00:02:32,720
+permitindo tamanhos customizados da rede, ou seja, redes, qualquer número de potência de dois endereços,
+
+10
+00:02:32,720 --> 00:02:36,320
+número de endereços e qualquer potência de dois,
+
+11
+00:02:36,320 --> 00:02:43,320
+isso permitiu fazer uma distribuição mais adequada às necessidades e por para endereços.
+
+12
+00:02:43,320 --> 00:02:55,350
+Outro melhoramento que se fez foi a utilização de redes privadas
+
+13
+00:02:55,350 --> 00:03:03,150
+e na sessão falamos do NAT, um mecanismo que permite ter as máquinas em redes privadas
+
+14
+00:03:03,150 --> 00:03:08,950
+e permitir o acesso à internet trocando os endereços do cabeçalho IP.
+
+15
+00:03:08,950 --> 00:03:19,350
+Já vimos isto, vimos que na região da Ásia Pacífico é que sentiram mais falta de endereços no início deste século,
+
+16
+00:03:19,350 --> 00:03:24,640
+e foram os primeiros a ficar sem endereços.
+
+17
+00:03:24,640 --> 00:03:30,440
+A terceira solução que se ajejou para resolver o problema dos endereços,
+
+18
+00:03:30,440 --> 00:03:38,640
+é a solução que se julga que seja definitiva e foi a criação da versão 6 do protocolo IP.
+
+19
+00:03:38,640 --> 00:03:45,640
+Ou seja, quando se decidiu criar o protocolo IPv6,
+
+20
+00:03:45,640 --> 00:03:53,440
+foi porque se percebeu que o protocolo anterior de IP, que se chama IPv4,
+
+21
+00:03:53,440 --> 00:03:59,040
+tinha um número insuficiente de endereços, tinha um espaço de endereçamento quase esgotado,
+
+22
+00:03:59,040 --> 00:04:06,640
+tinha pouca flexibilidade de serviços suportados e as tabelas de encaminhamento dos routers
+
+23
+00:04:06,640 --> 00:04:16,560
+estavam a crescer muito e podiam tornar o processamento dos routers insustentável.
+
+24
+00:04:16,560 --> 00:04:21,560
+O tamanho das tabelas tem a ver com a divisão das redes,
+
+25
+00:04:21,560 --> 00:04:28,160
+ou seja, se atribuímos redes pequenas a quem precisa,
+
+26
+00:04:28,160 --> 00:04:35,960
+quando as instituições crescem temos que atribuir mais redes pequenas,
+
+27
+00:04:35,960 --> 00:04:42,760
+duas redes pequenas obrigam a ter duas rotas no natural de encaminhamento,
+
+28
+00:04:42,760 --> 00:04:51,560
+houver ainda maior crescimento, uma instituição pode precisar de muitas rotas nas tabelas de encaminhamento,
+
+29
+00:04:51,560 --> 00:04:56,560
+isto é verdade, para instituições, para pessoas ou para países ou exigiões,
+
+30
+00:04:56,560 --> 00:05:02,160
+e se houvesse mais endereços podíamos distribuir uma distribuição mais à larga
+
+31
+00:05:02,160 --> 00:05:13,200
+e manter as tabelas de encaminhamento com poucas rotas.
+
+32
+00:05:13,400 --> 00:05:18,400
+Os objetivos da criação da nova versão do protocolo IP,
+
+33
+00:05:18,400 --> 00:05:25,600
+a princípio chamou-se essa versão nova geração, o IP NG, IP de nova geração,
+
+34
+00:05:25,600 --> 00:05:33,720
+que depois mais tarde foi batizado IPv6 e IPv6,
+
+35
+00:05:33,720 --> 00:05:37,320
+tendo-se criado um protocolo IP para substituir o anterior,
+
+36
+00:05:37,320 --> 00:05:41,120
+que pudesse suportar um número elevado de máquinas,
+
+37
+00:05:41,120 --> 00:05:46,500
+reduzir também das tabelas de encaminhamento,
+
+38
+00:05:46,500 --> 00:05:52,300
+e, já agora, perseguir também outros benefícios como simplificar o protocolo
+
+39
+00:05:52,300 --> 00:05:55,900
+para dar menos trabalho aos routers,
+
+40
+00:05:55,900 --> 00:06:01,280
+por ser melhor segurança, suportar mais tipos de serviço,
+
+41
+00:06:01,280 --> 00:06:06,680
+esperava-se também que fosse possível suportar máquinas móveis sem alteração de endereço,
+
+42
+00:06:06,680 --> 00:06:10,680
+porque já vemos que os endereços têm sempre um prefixo
+
+43
+00:06:10,680 --> 00:06:14,680
+que depende da rede onde estão, quando as máquinas se mexem
+
+44
+00:06:14,680 --> 00:06:18,480
+e quando vão para outras zonas, ficam na outra rede,
+
+45
+00:06:18,480 --> 00:06:22,480
+e é preciso mudar os endereços, pelo menos o prefixo.
+
+46
+00:06:24,480 --> 00:06:30,480
+O IPv6 tem, ainda há alguns mecanismos que facilitam esta mobilidade,
+
+47
+00:06:30,480 --> 00:06:34,480
+mas o segredo ainda não é suficiente.
+
+48
+00:06:34,480 --> 00:06:39,480
+Por outro lado, como se percebeu que o protocolo IPv4 já estava a funcionar
+
+49
+00:06:39,480 --> 00:06:43,280
+e não era possível desligar um protocolo e pôr todas as pessoas
+
+50
+00:06:43,280 --> 00:06:47,080
+no mesmo dia a começarem a usar outro protocolo,
+
+51
+00:06:47,080 --> 00:06:53,080
+decidiu-se que o novo protocolo devia poder coexistir com o protocolo antigo
+
+52
+00:06:53,080 --> 00:07:00,080
+e termos nas redes o protocolo IPv4 funcionar ao mesmo tempo que o protocolo IPv6,
+
+53
+00:07:00,080 --> 00:07:07,080
+e, claro, permitir flexibilidade para podermos evoluir no futuro se for preciso.
+
+54
+00:07:09,700 --> 00:07:15,700
+A grande alteração do protocolo IPv6 foi o tamanho do endereço.
+
+55
+00:07:15,700 --> 00:07:21,700
+A maior parte dos problemas da versão anterior do IPv4
+
+56
+00:07:21,700 --> 00:07:27,700
+eram motivados pelo facto dos endereços esterem muito curtos, só 32 bits,
+
+57
+00:07:27,700 --> 00:07:34,700
+e vimos que isso não chegava para darmos um endereço a cada pessoa do mundo.
+
+58
+00:07:34,700 --> 00:07:40,700
+Então, decidiu-se alargar o campo do endereço agora para 128 bits.
+
+59
+00:07:40,700 --> 00:07:46,700
+Com 128 bits, é possível interessar-se,
+
+60
+00:07:46,700 --> 00:07:51,700
+é possível ter 2 delantadas 128 endereços diferentes.
+
+61
+00:07:51,700 --> 00:07:55,700
+2 delantadas 128 é este número grande que está aqui,
+
+62
+00:07:55,700 --> 00:08:00,700
+que é o 3,4 vezes 10 a 38.
+
+63
+00:08:00,700 --> 00:08:03,700
+Pronto, este é um número mesmo muito grande,
+
+64
+00:08:03,700 --> 00:08:09,700
+enquanto quem IPv4 não era possível dar um endereço a cada pessoa do mundo,
+
+65
+00:08:09,700 --> 00:08:16,700
+com IPv6 nós já podemos dar a cada pessoa do mundo um número de endereços,
+
+66
+00:08:16,700 --> 00:08:21,700
+loco de endereços, com um número de endereços maior do que o número de pessoas do mundo,
+
+67
+00:08:21,700 --> 00:08:29,700
+ou seja, cada pessoa pode ter mais de 8 mil milhões de endereços e ainda sobram muitos endereços.
+
+68
+00:08:29,700 --> 00:08:36,700
+Também podemos ver que este número é muito grande, porque se pensarmos em dividir este número,
+
+69
+00:08:36,700 --> 00:08:43,700
+que é o número possível de endereços que temos pela área de terreno que temos na Planeta Terra,
+
+70
+00:08:43,700 --> 00:08:51,700
+em metros quadrados, vemos que podemos ter 6 vezes 10 a 23 endereços por cada metro quadrado de terreno,
+
+71
+00:08:51,700 --> 00:09:00,700
+ou seja, só esgotarmos esta capacidade se tivermos os terrenos todos cobertos por equipamentos,
+
+72
+00:09:00,700 --> 00:09:11,700
+em cada quadradinho de 1 metro por 1 metro podemos ter 6 vezes 10 a 23 dispositivos diferentes, todos a falarem IPv6.
+
+73
+00:09:11,700 --> 00:09:22,860
+Os endereços IPv6 são de 128 bits, podemos escrevê-los em binário,
+
+74
+00:09:22,860 --> 00:09:28,860
+mas está uma cadeia de 128 zeros ou 128 uns, não é muito confortável,
+
+75
+00:09:28,860 --> 00:09:33,860
+em decimal também fica, também dá origem a um dos muito grandes,
+
+76
+00:09:33,860 --> 00:09:41,860
+a representação normalizada para os endereços IPv6 é o hexadecimal.
+
+77
+00:09:42,860 --> 00:09:49,170
+O meu esmenha hexadecimal, número de 128 bits,
+
+78
+00:09:49,170 --> 00:09:55,170
+pode ser representado em hexadecimal por 32 dígitos hexadecimais,
+
+79
+00:09:55,170 --> 00:10:01,170
+escrever 32 dígitos ainda é um bocado pesado,
+
+80
+00:10:01,170 --> 00:10:09,170
+e pode dar origem a erros, então para ser mais fácil de ler, escrever e copiar,
+
+81
+00:10:10,170 --> 00:10:15,170
+criou-se uma representação própria para o endereço IPv6,
+
+82
+00:10:15,170 --> 00:10:22,170
+em que os 32 dígitos hexadecimais são escritos em grupos de 4,
+
+83
+00:10:22,170 --> 00:10:29,720
+e cada grupo é separado por 2 pontos,
+
+84
+00:10:29,720 --> 00:10:33,720
+dos 2 pontos só serem para ajudar a ler-se e a escrever e a copiar,
+
+85
+00:10:33,720 --> 00:10:38,720
+podemos copiar um grupinho de cada vez e sabemos onde vamos,
+
+86
+00:10:39,720 --> 00:10:44,720
+para copar caneta e copar trabalho, quando você tem que se escrever um endereço IPv6,
+
+87
+00:10:44,720 --> 00:10:54,190
+admite que se possam iluminar ou não representar os zeros que estão à esquerda de cada grupo,
+
+88
+00:10:54,190 --> 00:10:57,190
+isso significa que aquele endereço que ele está,
+
+89
+00:10:57,190 --> 00:11:00,190
+pode ser também representado como está aqui,
+
+90
+00:11:00,190 --> 00:11:06,190
+ou seja, ali tem um zero à esquerda de um grupo, podemos omitir o zero,
+
+91
+00:11:06,190 --> 00:11:10,190
+ali temos outro zero à esquerda, podemos omitir aquele zero,
+
+92
+00:11:10,190 --> 00:11:13,190
+e aquele grupo fica só um zero um,
+
+93
+00:11:13,190 --> 00:11:17,190
+ali temos quatro zeros, um grupo só com quatro zeros,
+
+94
+00:11:17,190 --> 00:11:22,190
+podemos omitir os três zeros e fica só um zero,
+
+95
+00:11:22,190 --> 00:11:27,190
+aqueles quatro zeros também podemos omitir três e fica só um zero,
+
+96
+00:11:27,190 --> 00:11:31,190
+ali temos dois zeros à esquerda, podemos omitir os dois e por aí fora,
+
+97
+00:11:32,190 --> 00:11:36,190
+este endereço que está aqui, é a mesma coisa que aquele que está ali,
+
+98
+00:11:36,190 --> 00:11:43,190
+só abreviamos, retirando os zeros que estavam à esquerda dos grupos,
+
+99
+00:11:43,190 --> 00:11:52,850
+para copar ainda mais trabalho de escrita e tinta, quando temos que escrever isto,
+
+100
+00:11:52,850 --> 00:12:04,550
+é possível também omitir grupos inteiros, ou conjuntos de grupos inteiros,
+
+101
+00:12:04,550 --> 00:12:10,550
+mas essa omição só se pode fazer uma vez em cada endereço,
+
+102
+00:12:10,550 --> 00:12:16,550
+por exemplo aqui temos dois grupos que estão a zero e que estão seguidos,
+
+103
+00:12:16,550 --> 00:12:24,550
+podemos omitir aqueles dois, retirámos e deixámos estas apresentações assim como dois pontos,
+
+104
+00:12:24,550 --> 00:12:37,890
+dois pontos, dois pontos, significa que ali estão aqui omitidos grupos de dígitos hexadecimais,
+
+105
+00:12:37,890 --> 00:12:42,890
+que são todos zeros, como é que sabemos quando leemos isto,
+
+106
+00:12:42,890 --> 00:12:46,890
+este endereço é o mesmo que aquele, quando nos aparece isto,
+
+107
+00:12:46,890 --> 00:12:52,890
+como é que sabemos que este endereço é aquele, um endereço completo tem que ter sempre oito grupos,
+
+108
+00:12:52,890 --> 00:13:00,890
+para dar os 128 bits, se aqui temos um, dois, três, quatro, cinco, seis grupos,
+
+109
+00:13:00,890 --> 00:13:08,890
+significa que faltam dois, aqueles dois pontos, dois pontos, então representam os dois grupos que faltam,
+
+110
+00:13:08,890 --> 00:13:14,890
+se queremos escrever um endereço por extenso, devemos acrescentar aqui zero,
+
+111
+00:13:14,890 --> 00:13:27,080
+dois pontos zero no meio daqueles dois pontos, dois pontos.
+
+112
+00:13:27,080 --> 00:13:33,940
+Há vários tipos de endereços, lá endereços que foram reservados para fins específicos,
+
+113
+00:13:33,940 --> 00:13:45,940
+os endereços normais que identificam uma máquina na internet são endereços chamados de unicast global,
+
+114
+00:13:45,940 --> 00:13:50,940
+permitem, são de unicast porque se refere a uma máquina e são globais,
+
+115
+00:13:50,940 --> 00:13:54,940
+são endereços globais porque são endereços únicos no mundo,
+
+116
+00:13:54,940 --> 00:13:59,940
+ou seja, na rede global apontam para uma máquina.
+
+117
+00:13:59,940 --> 00:14:10,530
+Tal como em IPv4 e como na rede telefónica, um endereço pode ser dividido em duas partes,
+
+118
+00:14:10,530 --> 00:14:17,530
+em que uma parte designa a rede e outra designa a máquina, ou até identificar a máquina dentro da rede.
+
+119
+00:14:17,530 --> 00:14:23,530
+Em IPv6 também é assim, podemos também considerar que o endereço é dividido em duas partes
+
+120
+00:14:23,530 --> 00:14:29,530
+e podemos usar a sintaxe que já conhecemos, barra 64 ou barra, qualquer coisa, barra n,
+
+121
+00:14:29,530 --> 00:14:32,530
+para dizer qual é o tamanho do prefixo.
+
+122
+00:14:32,530 --> 00:14:42,070
+Em IPv4 os prefixes só podem ter entre 0 e 32 bits, agora podem ter entre 0 e 128 bits.
+
+123
+00:14:42,070 --> 00:14:52,560
+Então, um conjunto de endereços, que são aqueles que começam por FE80 ao perto disso,
+
+124
+00:14:52,560 --> 00:14:58,560
+que são redarbados para endereços link local, os endereços link local não são globais,
+
+125
+00:14:58,560 --> 00:15:04,560
+como o nome indica, são endereços que só são válidos num link local.
+
+126
+00:15:04,560 --> 00:15:12,900
+Se eles só são válidos num link local, então os routers não devem encaminhar isto para lá nenhum
+
+127
+00:15:12,900 --> 00:15:19,900
+e também não pode haver endereços destes a circular para fora da instituição.
+
+128
+00:15:19,900 --> 00:15:32,800
+Desiste um endereço de loopback que podemos usar para comunicar ou testar a comunicação com a nossa placa de rede
+
+129
+00:15:32,800 --> 00:15:39,800
+e disto um endereço zero normalmente significa não-endereço, o endereço não especificado,
+
+130
+00:15:39,800 --> 00:15:48,800
+e disto uma gama de endereços multicast que permitem comunicar com várias máquinas ao mesmo tempo,
+
+131
+00:15:48,800 --> 00:15:55,620
+que é também uma extensão que já existia no IPv4.
+
+132
+00:15:55,620 --> 00:15:59,620
+Já conhecemos a mutação barra, qualquer coisa.
+
+133
+00:15:59,620 --> 00:16:07,620
+Aquilo barra, qualquer coisa diz que os primeiros bits representam o prefixo,
+
+134
+00:16:07,620 --> 00:16:14,620
+permitem de saber de um endereço o que é que é o prefixo e o que é que não é prefixo,
+
+135
+00:16:14,620 --> 00:16:20,150
+portanto identificar a máquina dentro da rede.
+
+136
+00:16:20,150 --> 00:16:26,150
+Não existem classes de endereços como existiu no início do IPv4, que agora também já não existe.
+
+137
+00:16:26,150 --> 00:16:33,150
+No IPv4 existem endereços de broadcast que servem para comunicar com todas as máquinas do NGD local.
+
+138
+00:16:33,150 --> 00:16:39,150
+Aqui não existe isso, não se define a comunicação como todos os nós,
+
+139
+00:16:39,150 --> 00:16:47,620
+porque isto é um caso especial do multicast, em que o multicast pode ser dirigido a todas as máquinas.
+
+140
+00:16:47,620 --> 00:16:54,620
+Os endereços normais são os endereços de unicast, que permitem comunicar com uma máquina.
+
+141
+00:16:54,620 --> 00:17:11,160
+Uma novidade que existe no IPv6 são os endereços de enicast que permitem comunicar com uma máquina de um determinado grupo.
+
+142
+00:17:11,160 --> 00:17:20,790
+Se várias máquinas tiverem configuradas para responder ao mesmo endereço de enicast,
+
+143
+00:17:20,790 --> 00:17:31,320
+quando falamos com uma máquina dessas, falamos com uma delas, provavelmente a que estiver mais perto.
+
+144
+00:17:31,320 --> 00:17:43,320
+O multicast e o enicast são parecidos, só que no multicast o destinatário da comunicação é que são todas as máquinas do grupo de multicast,
+
+145
+00:17:43,320 --> 00:17:48,320
+enquanto que no enicast o destinatário é apenas uma máquina do grupo.
+
+146
+00:17:48,320 --> 00:18:02,150
+Os endereços de unicast também foram batizados com endereços de unicast globais, ou GUA,
+
+147
+00:18:02,150 --> 00:18:14,520
+que são também, podemos considerá-los organizados de forma hierárquica,
+
+148
+00:18:14,520 --> 00:18:24,480
+ou seja, a parte esquerda identifica sempre uma rede e depois podemos usar mais bits para ir dividindo.
+
+149
+00:18:24,480 --> 00:18:30,480
+Já vamos ver como se começou a fazer a distribuição dos endereços IPv6.
+
+150
+00:18:30,480 --> 00:18:38,750
+Ontem os endereços flint locales já falamos, normalmente são começados por FE80,
+
+151
+00:18:38,750 --> 00:18:45,750
+mas formalmente são os endereços pretencentes à gama FE80 2.2.10,
+
+152
+00:18:45,750 --> 00:18:51,750
+ou seja, só os primeiros 10 bits é que têm que ser aqueles, os outros podem,
+
+153
+00:18:51,750 --> 00:18:58,380
+ou seja, aqueles zeros podem já não ser zeros, desde que começa por FE80 já serve.
+
+154
+00:18:58,380 --> 00:19:05,380
+Os endereços site local foram descontinuados, não precisamos de falar deles,
+
+155
+00:19:05,380 --> 00:19:15,380
+em vez de site local definiu-se depois um conjunto de endereços que são cada vez mais importantes
+
+156
+00:19:16,380 --> 00:19:24,380
+para nós ou para quem queira fazer redes de coisas ou redes de dispositivos.
+
+157
+00:19:24,380 --> 00:19:32,380
+Normalmente quando queremos criar uma rede de dispositivos, podemos ter necessidades de pôr os dispositivos todos
+
+158
+00:19:32,380 --> 00:19:36,380
+a comunicarem os que os outros, mas a comunicação para a rede global
+
+159
+00:19:36,380 --> 00:19:42,380
+pode não ser absolutamente necessária, pelo menos de forma transparente.
+
+160
+00:19:42,380 --> 00:19:48,380
+Então os endereços OLA dão muito jeito nessas situações.
+
+161
+00:19:48,380 --> 00:19:54,380
+Os endereços OLA são os endereços que são locais, portanto só são usados nas redes locais,
+
+162
+00:19:54,380 --> 00:20:02,380
+não servem para comunicar para fora, mas não são endereços privados,
+
+163
+00:20:02,380 --> 00:20:06,380
+porque são endereços que são únicos no mundo.
+
+164
+00:20:06,380 --> 00:20:13,380
+Ou seja, em princípio quando usamos um endereço destes, mais ninguém no mundo usa o nosso endereço,
+
+165
+00:20:13,380 --> 00:20:21,380
+o nosso endereço é único no mundo, ou pelo menos muito provavelmente é o único,
+
+166
+00:20:21,380 --> 00:20:26,380
+é muito difícil que alguém use o mesmo.
+
+167
+00:20:26,380 --> 00:20:44,640
+Para estes endereços existe uma gama de prefixes, barra 48, ou seja, de 48 bits,
+
+168
+00:20:44,640 --> 00:20:53,640
+e destes 48 bits uns identificam o endereço deste tipo, os outros identificam a minha rede,
+
+169
+00:20:53,640 --> 00:21:02,640
+e portanto mais ninguém usa o meu identificador de rede, mais ninguém no mundo vai utilizar os meus endereços.
+
+170
+00:21:02,640 --> 00:21:14,620
+Os endereços deste tipo não são atribuídos de forma central,
+
+171
+00:21:14,620 --> 00:21:19,620
+normalmente não são atribuídos de forma centralizada, as pessoas escolhem os seus,
+
+172
+00:21:19,620 --> 00:21:23,620
+uma metodologia normalizada.
+
+173
+00:21:23,620 --> 00:21:32,620
+Não existe hierarquia entre gamas OLA, ou seja, se eu tiver duas gamas destas,
+
+174
+00:21:32,620 --> 00:21:39,620
+porque tenho duas instituições que se juntaram e cada uma delas tem a sua gama OLA,
+
+175
+00:21:39,620 --> 00:21:49,020
+a junção dessas gamas não gera uma gama nova, continuam a ser duas gamas separadas.
+
+176
+00:21:49,020 --> 00:21:59,020
+Os endereços OLA funcionam assim, começam pelo prefixo FC002.2.7,
+
+177
+00:21:59,020 --> 00:22:07,020
+ou seja, os primeiros 7 bits daqui são sempre os mesmos,
+
+178
+00:22:07,020 --> 00:22:15,020
+e com aquele barra 7 eu não posso mexer naqueles 4 bits representados pelo F,
+
+179
+00:22:15,020 --> 00:22:21,020
+e também não posso mexer nos primeiros 3 bits daqueles 4 bits representados pelo C,
+
+180
+00:22:21,020 --> 00:22:27,020
+posso mexer no último bit representado pelo C, esse bit pode ser um 0 ou um 1,
+
+181
+00:22:27,020 --> 00:22:39,020
+ou seja, posso dividir esta gama FC002.2.7 em duas gamas barra 8, aquela FC00 barra 8,
+
+182
+00:22:39,020 --> 00:22:43,020
+e a outra KFD00 barra 8.
+
+183
+00:22:43,020 --> 00:22:54,020
+Então, esta gama, que é uma metade daquela, foi reservada para endereços OLA atribuídos centralmente,
+
+184
+00:22:54,020 --> 00:22:59,020
+e para já, tanto quanto eu sei, não há ninguém a nível central a atribuir endereços destes,
+
+185
+00:22:59,020 --> 00:23:01,020
+portanto, esta gama está vazia.
+
+186
+00:23:01,020 --> 00:23:09,020
+Daquela gama FD00 barra 8, nós podemos alocar blocos,
+
+187
+00:23:09,020 --> 00:23:15,020
+e não temos que dizer a ninguém que os alucamos e podemos usá-los,
+
+188
+00:23:15,020 --> 00:23:19,020
+eles são locais, podemos usar os alus à vontade dentro da nossa rede,
+
+189
+00:23:19,020 --> 00:23:33,640
+são uns endereços de multicaste normalizados ou reservados para fins específicos.
+
+190
+00:23:33,640 --> 00:23:41,490
+Onde nós não vimos em para o menor o cabeçalho do IPv4, vimos assim um boneco deste géner,
+
+191
+00:23:41,490 --> 00:23:50,490
+para termos uma ideia do que é que lá tinha, se alguém se lembra visualmente do aspecto do cabeçalho IPv4,
+
+192
+00:23:50,490 --> 00:23:55,490
+deve-se lembrar que era muito mais complicado do que este.
+
+193
+00:23:56,490 --> 00:24:03,490
+Ou seja, aqui temos menos campos, o cabeçalho IPv4 tem mais campos,
+
+194
+00:24:03,490 --> 00:24:09,490
+para o IPv6, como um dos objetivos era simplificar o protocolo,
+
+195
+00:24:09,490 --> 00:24:24,050
+decidiu-se iluminar campos, transformar o cabeçalho numa coisa mais simples,
+
+196
+00:24:24,050 --> 00:24:31,050
+apesar de ter menos campos, isso não significa que este cabeçalho seja mais pequeno do que o cabeçalho IPv4,
+
+197
+00:24:31,050 --> 00:24:36,050
+aqui temos dois campos muito grandes, que são os endereços,
+
+198
+00:24:36,050 --> 00:24:41,050
+os endereços de origem e o endereço de destino, como os endereços agora são maiores,
+
+199
+00:24:41,050 --> 00:24:46,050
+estes campos são também muito maiores, 128 bits são 16 bytes,
+
+200
+00:24:46,050 --> 00:24:56,770
+portanto temos aqui dois campos de 16 bytes, cada um dá logo um tamanho considerável,
+
+201
+00:24:56,770 --> 00:25:02,770
+e que faz como que normalmente este cabeçalho seja maior do que o cabeçalho IPv4.
+
+202
+00:25:02,770 --> 00:25:09,790
+Uma das diferenças também que salta à vista, é que no cabeçalho IPv4,
+
+203
+00:25:09,790 --> 00:25:16,790
+tínhamos um último campo que se chamava Opções, que é representado novamente aqui embaixo,
+
+204
+00:25:16,790 --> 00:25:22,790
+que era um campo de tamanho variável, que podia existir ou podia não existir,
+
+205
+00:25:22,790 --> 00:25:27,790
+o que fazia com que o tamanho do cabeçalho também fosse variável,
+
+206
+00:25:27,790 --> 00:25:33,790
+se o tamanho do cabeçalho era variável, era preciso ter um campo com o comprimento do cabeçalho,
+
+207
+00:25:33,790 --> 00:25:39,790
+isso complicava muito a vida aos routers, quando estavam a receber um pacote,
+
+208
+00:25:39,790 --> 00:25:47,790
+tinham que saber se tinham memória para guardar o cabeçalho do pacote ou não,
+
+209
+00:25:47,790 --> 00:25:54,790
+e a gestão do espaço, às vezes um cabeçalho, não cabe no espaço de memória
+
+210
+00:25:54,790 --> 00:25:58,790
+que está livre, porque foi deixado por outro pacote que já lá esteve,
+
+211
+00:25:58,790 --> 00:26:03,790
+porque, entretanto, foi embora, se tínhamos um cabeçalho que saiu,
+
+212
+00:26:03,790 --> 00:26:07,790
+mas agora vem um cabeçalho maior, esse cabeçalho não cabe no mesmo espaço de memória,
+
+213
+00:26:07,790 --> 00:26:16,790
+então a gestão de memória de um router IPv4 é mais complicada do que a gestão de memória de um router IPv6,
+
+214
+00:26:16,790 --> 00:26:23,790
+isso permite que, dar menos trabalho aos routers e ter processadores,
+
+215
+00:26:23,790 --> 00:26:30,790
+trabalhar menos com menos energia e tratar mais pacotes por segundo.
+
+216
+00:26:30,790 --> 00:26:48,180
+Algumas funcionalidades que se perderam pelo facto de não termos o campo opcional aqui,
+
+217
+00:26:48,180 --> 00:26:59,460
+no caso do IPv6, as funcionalidades, às vezes, foram passadas para cabeçalhos opcionais,
+
+218
+00:26:59,460 --> 00:27:05,460
+ou seja, existe este cabeçalho, que é o cabeçalho obrigatório que vem em todos os pacotes,
+
+219
+00:27:05,460 --> 00:27:11,460
+e todos os routers IPv6 têm que ser capazes de interpretar este cabeçalho.
+
+220
+00:27:11,460 --> 00:27:17,460
+Para outras funcionalidades extra, podem existir uns cabeçalhos adicionais,
+
+221
+00:27:17,460 --> 00:27:24,460
+mas os routers que não suportem essas funcionalidades não têm que se preocupar,
+
+222
+00:27:24,460 --> 00:27:31,460
+interpretam só este cabeçalho e o resto tratam como parte do pacote,
+
+223
+00:27:31,460 --> 00:27:39,460
+mudados e transportam essas opções dentro do pacote sem ter que olhar para elas,
+
+224
+00:27:39,460 --> 00:27:43,460
+e, portanto, sem perder tempo com coisas que não suportam.
+
+225
+00:27:43,460 --> 00:27:54,220
+Não sei se vale a pena vermos estes campos todos, o primeiro campo, a versão,
+
+226
+00:27:54,220 --> 00:28:01,220
+identifica-se o cabeçalho a um cabeçalho IPv4 ou IPv6, este campo também existia no IPv4,
+
+227
+00:28:01,220 --> 00:28:14,110
+depois, enquanto que no IPv4 existiam um campo com o tamanho do cabeçalho,
+
+228
+00:28:14,110 --> 00:28:21,110
+aqui já não existe, porque o tamanho do cabeçalho é fixo, são sempre 40 bytes fixos,
+
+229
+00:28:21,110 --> 00:28:26,110
+então não é preciso estar cá escrito, e existe aqui um tamanho,
+
+230
+00:28:26,110 --> 00:28:30,110
+aquele tamanho dos dados transportados pelo cabeçalho, ou seja, o pacote completo,
+
+231
+00:28:30,110 --> 00:28:38,250
+são os 40 bytes mais aquilo que estiver aqui, existe ali um campo de prioridade,
+
+232
+00:28:38,250 --> 00:28:48,250
+ou flags, que serve para implementar serviços distintos, e existe ali um flow label
+
+233
+00:28:48,250 --> 00:28:58,630
+que permite criar uma espécie de ligações, o objetivo do IP não é estar a um serviço
+
+234
+00:28:58,630 --> 00:29:07,400
+com o estabelecimento de ligações, outros campos mudaram de nome,
+
+235
+00:29:07,400 --> 00:29:19,560
+IPv4 existia um TTL, um Time to Live, agora existe um Club Limit, e o resto é parecido.
+
+236
+00:29:19,560 --> 00:29:28,620
+Funcionalidades adicionais, são metidas em cabeçalhos de extensão,
+
+237
+00:29:28,620 --> 00:29:35,620
+existem aqui alguns exemplos de cabeçalhos de extensão normalizados,
+
+238
+00:29:35,620 --> 00:29:40,620
+a fragmentação era uma funcionalidade que fazia parte do IPv4, todos os lutas
+
+239
+00:29:40,620 --> 00:29:47,620
+tinham que suportar fragmentação, agora o normal é os lutas não suportarem fragmentação,
+
+240
+00:29:47,620 --> 00:29:52,620
+a possibilidade de fragmentação foi passada por uma opção,
+
+241
+00:29:53,620 --> 00:30:00,620
+existem cabeçalhos de lutinho para dizer por onde é que o pacote deve ser enviado,
+
+242
+00:30:00,620 --> 00:30:08,620
+e existem cabeçalhos de segurança que permitem incluídos os traves e criar segurança.
+
+243
+00:30:08,620 --> 00:30:14,620
+Os cabeçalhos de extensão funcionam assim, este que está aqui é o cabeçalho normal do IPv6,
+
+244
+00:30:14,620 --> 00:30:19,620
+nos seus endereços de origem, endereços de destino grandes e mais aqueles campos,
+
+245
+00:30:19,620 --> 00:30:25,620
+existem aqui um campo NextEder que substitui o campo protocol do IPv4,
+
+246
+00:30:25,620 --> 00:30:33,620
+no IPv4 existia um campo protocol que se devia para dizer o que é que o datagrama IPv6,
+
+247
+00:30:33,620 --> 00:30:41,620
+o que é que o datagrama IPv4 tinha, se tinha um segmento TCP ou um pacote dp ou outra coisa qualquer,
+
+248
+00:30:41,620 --> 00:30:46,620
+aqui esse campo não existe, em vez desse existe o NextEder que faz isso,
+
+249
+00:30:46,620 --> 00:30:51,620
+e também identifica cabeçalhos de extensão que venham a seguida.
+
+250
+00:30:51,620 --> 00:30:59,620
+O normal de um datagrama IPv6 do pacote IPv6 que transporta um segmento TCP,
+
+251
+00:30:59,620 --> 00:31:06,620
+o segmento TCP está aqui, tem um cabeçalho TCP e mais os dados do segmento,
+
+252
+00:31:06,620 --> 00:31:12,620
+quando transportamos um segmento TCP em IP colocamos aqui um cabeçalho IP,
+
+253
+00:31:12,620 --> 00:31:20,620
+e se isto é IPv6, este campo NextEder leva ali um identificador de TCP,
+
+254
+00:31:20,620 --> 00:31:25,620
+que é um número normalizado que diz que a seguir vem um cabeçalho TCP,
+
+255
+00:31:25,620 --> 00:31:31,620
+o cabeçalho TCP há de estar aqui no início do conteúdo do pacote IP.
+
+256
+00:31:31,620 --> 00:31:39,600
+Ontem isto é um pacote IP normal sem cabeçalhos de extensão,
+
+257
+00:31:40,600 --> 00:31:47,600
+se precisarmos de transportar cabeçalhos de extensão, como por exemplo um cabeçalho de routing
+
+258
+00:31:47,600 --> 00:31:53,600
+para dizer-se aos routers que venham a seguir como devem encaminhar o pacote,
+
+259
+00:31:53,600 --> 00:32:01,710
+ou sugerir aos routers como devem encaminhar o pacote que os routers fazem como eles quiserem,
+
+260
+00:32:01,710 --> 00:32:08,710
+então entre o segmento TCP e o cabeçalho colocamos aqui um novo cabeçalho de extensão,
+
+261
+00:32:08,710 --> 00:32:14,710
+um cabeçalho de routing, que há de ter um formato semelhante a este,
+
+262
+00:32:14,710 --> 00:32:20,710
+ou pelo menos uma parte inicial semelhante a esta, e portanto também tem um campo NextEder,
+
+263
+00:32:20,710 --> 00:32:27,710
+e agora no campo NextEder do cabeçalho IP vem um identificador de routing,
+
+264
+00:32:27,710 --> 00:32:30,710
+quer dizer que a seguir vem um cabeçalho de routing,
+
+265
+00:32:30,710 --> 00:32:37,710
+e neste cabeçalho de routing existe um campo NextEder que diz que a seguir vem um cabeçalho TCP,
+
+266
+00:32:37,710 --> 00:32:41,710
+isto é um segmento TCP que começa com um cabeçalho TCP.
+
+267
+00:32:41,710 --> 00:32:47,710
+Se quisermos duas opções, dois cabeçalhos de extensão,
+
+268
+00:32:47,710 --> 00:32:54,710
+por exemplo um cabeçalho de routing e um cabeçalho de fragmentação,
+
+269
+00:32:54,710 --> 00:32:59,710
+o cabeçalho IP identifica que a seguir vem um cabeçalho de routing,
+
+270
+00:32:59,710 --> 00:33:06,710
+no cabeçalho de routing o campo NextEder diz que a seguir vem um cabeçalho de fragmento,
+
+271
+00:33:06,710 --> 00:33:13,710
+e no cabeçalho de fragmento tem um campo NextEder que diz que a seguir vem um segmento TCP,
+
+272
+00:33:13,710 --> 00:33:15,710
+e por aí fora.
+
+273
+00:33:15,710 --> 00:33:20,710
+Os routers que não saibam o que isto é, só leem aquele cabeçalho,
+
+274
+00:33:20,710 --> 00:33:24,710
+e ali está o endereço de origem e de destino, e já chega.
+
+275
+00:33:24,710 --> 00:33:27,710
+A maior parte das vezes para fazer o inquiaminhamento do pacote,
+
+276
+00:33:27,710 --> 00:33:39,920
+tudo o resto segue, como se fossem dados, inseridos dentro do pacote.
+
+277
+00:33:39,920 --> 00:33:45,920
+Aqui temos uma lista das diferenças entre os cabeçalhos IPv4 e IPv6,
+
+278
+00:33:45,920 --> 00:33:51,920
+nós não vimos sempre menores IPv4, mas podemos ver isto muito rapidamente,
+
+279
+00:33:51,920 --> 00:33:56,920
+os campos relacionados com fragmentos que existiam no IPv6 desapareceram,
+
+280
+00:33:56,920 --> 00:34:02,920
+são três campos, portanto o cabeçalho IPv6, por isso é que tem menos campos,
+
+281
+00:34:02,920 --> 00:34:04,920
+e estes e outros desapareceram.
+
+282
+00:34:04,920 --> 00:34:07,920
+Em vez do protocolo já vimos que temos o NextEder,
+
+283
+00:34:08,920 --> 00:34:16,920
+o InstructionEderLand, o InternetEderLand, que tem o comprimento do cabeçalho IP,
+
+284
+00:34:16,920 --> 00:34:20,920
+deixa de ser preciso em IPv6, porque o comprimento do cabeçalho é fixo.
+
+285
+00:34:20,920 --> 00:34:25,920
+Em IPv4 defini-se um checksum, que seria para controlar erros,
+
+286
+00:34:25,920 --> 00:34:32,920
+e os routers perdiam muito tempo nesta verificação de erros,
+
+287
+00:34:32,920 --> 00:34:37,920
+e no cálculo do checksum sempre que havia alteração do cabeçalho,
+
+288
+00:34:37,920 --> 00:34:44,920
+e desde que o CampoTTL era alterado, havia sempre necessidade de calcular o checksum.
+
+289
+00:34:44,920 --> 00:34:52,290
+Então, desta simplificação pode ser vista como uma perda de qualidade,
+
+290
+00:34:52,290 --> 00:34:57,690
+temos agora menos possibilidade de detectar erros,
+
+291
+00:34:57,690 --> 00:35:04,690
+mas isso não é muito grave, porque os níveis inferiores e superiores do IP
+
+292
+00:35:04,690 --> 00:35:06,690
+normalmente já têm essa funcionalidade,
+
+293
+00:35:06,690 --> 00:35:10,690
+ou seja, se transportamos os pacotes IP num Ethernet,
+
+294
+00:35:10,690 --> 00:35:13,690
+Ethernet já tem o checksum,
+
+295
+00:35:13,690 --> 00:35:18,690
+se os dados transportados no IP vêm do TCP,
+
+296
+00:35:18,690 --> 00:35:24,690
+o TCP também já implementa uma verificação de erros melhor que a do IP.
+
+297
+00:35:25,690 --> 00:35:29,690
+Portanto, podemos, no nível 3, no nível IP, não calcular,
+
+298
+00:35:29,690 --> 00:35:32,690
+não fazer verificação de erros,
+
+299
+00:35:32,690 --> 00:35:38,690
+e existe no entanto a possibilidade de fazermos a verificação de erros extra,
+
+300
+00:35:38,690 --> 00:35:45,690
+se nós quisermos, na camada da aplicação ou numa opção do IPv6.
+
+301
+00:35:45,690 --> 00:35:51,690
+A grande diferença já vimos é que os endereços de 32 bits passaram para 128 bits,
+
+302
+00:35:51,690 --> 00:35:55,690
+os serviços especiais são colocados em cabeçalhos de extensão,
+
+303
+00:35:55,690 --> 00:35:59,690
+já da ver aquele campo de comprimento variável,
+
+304
+00:35:59,690 --> 00:36:01,690
+que dava muito trabalho aos lutas.
+
+305
+00:36:01,690 --> 00:36:09,400
+Conta autos, conjuntos de endereços especiais,
+
+306
+00:36:09,400 --> 00:36:15,400
+alguns vocacionados para permitir compatibilizar redes IPv4 e IPv6,
+
+307
+00:36:15,400 --> 00:36:21,400
+usaram-se numa fase de transição, atualmente estão cada vez mais em desuso,
+
+308
+00:36:21,400 --> 00:36:30,400
+porque se assume que o IPv6 já é suportado, de forma mais ou menos garantida,
+
+309
+00:36:30,400 --> 00:36:34,400
+em todas as redes principais.
+
+310
+00:36:34,400 --> 00:36:42,400
+Os sistemas operativos também já usam IPv6, já suportam IPv6 há muitos anos,
+
+311
+00:36:42,400 --> 00:36:52,400
+por exemplo o Windows XP2 que veio antes do Windows Vista,
+
+312
+00:36:52,400 --> 00:36:58,400
+no início do século já suportava IPv6,
+
+313
+00:36:58,400 --> 00:37:04,400
+quando pedimos a configuração das redes aparecem os endereços IPv6,
+
+314
+00:37:04,400 --> 00:37:09,910
+neste caso um endereço de link local e um endereço global,
+
+315
+00:37:09,910 --> 00:37:15,910
+e um default gateway IPv4 e um default gateway IPv6,
+
+316
+00:37:15,910 --> 00:37:22,380
+neste caso um endereço de link local, porque começa com fio 80.
+
+317
+00:37:22,380 --> 00:37:28,380
+O Linux também já há mais de 20 anos suporta IPv6,
+
+318
+00:37:28,380 --> 00:37:33,380
+quando fazemos um fconfig para ver a configuração de uma placa de rede,
+
+319
+00:37:33,380 --> 00:37:39,380
+vemos o endereço IPv4, o endereço IPv4 que esteja definido e também o endereço IPv6,
+
+320
+00:37:39,380 --> 00:37:44,380
+e também podemos usar este mesmo comando para definir o endereço IPv6,
+
+321
+00:37:44,380 --> 00:37:54,550
+para podermos o IPv6 a funcionar.
+
+322
+00:37:54,550 --> 00:37:58,550
+O fundamental é configurarmos as máquinas com endereços,
+
+323
+00:37:58,550 --> 00:38:04,550
+desde que as máquinas tenham o endereço IPv6, elas depois podem falar IPv6,
+
+324
+00:38:04,550 --> 00:38:08,550
+configurar endereços IPv6.
+
+325
+00:38:08,550 --> 00:38:14,550
+A partida pode parecer mais usado do que configurar o endereço IPv4,
+
+326
+00:38:14,550 --> 00:38:18,550
+que são mais compridos ou mais de trabalho a escrever,
+
+327
+00:38:18,550 --> 00:38:25,690
+e isso é verdade, no entanto, há mais endereços,
+
+328
+00:38:25,690 --> 00:38:30,690
+às vezes pode-se escolher endereços mais simples e que são mais fáceis,
+
+329
+00:38:30,690 --> 00:38:40,690
+e também existem mais mecanismos de configuração automática para IPv6 do que para IPv4.
+
+330
+00:38:41,690 --> 00:38:44,690
+Quando se andava a desenhar o protocolo IPv6,
+
+331
+00:38:47,690 --> 00:38:53,690
+teve que decidir qual havia de ser o comprimento do endereço,
+
+332
+00:38:53,690 --> 00:38:59,690
+e na altura havia adeptos dos 64 bits e adeptos dos 128 bits,
+
+333
+00:38:59,690 --> 00:39:06,690
+e adeptos também de outros tamanhos, mas os 64 bits e os 128 bits eram a maioria,
+
+334
+00:39:09,520 --> 00:39:16,520
+e os adeptos dos 64 bits diziam que 64 bits era mais do que suficiente
+
+335
+00:39:16,520 --> 00:39:20,520
+para termos endereços para sempre, para toda a gente,
+
+336
+00:39:20,520 --> 00:39:24,520
+os 128 bits até concordavam com esse argumento,
+
+337
+00:39:24,520 --> 00:39:31,520
+mas achavam que se devia fazer-se maior para garantir que nunca mais
+
+338
+00:39:31,520 --> 00:39:34,520
+ia ser preciso alterar o tamanho dos endereços,
+
+339
+00:39:34,520 --> 00:39:46,860
+e um dos argumentos que os 128 bits usaram para que a decisão final fosse por os 128 bits
+
+340
+00:39:46,860 --> 00:39:52,860
+foi o argumento de que quanto mais comprido fosse o endereço,
+
+341
+00:39:52,860 --> 00:39:55,860
+quanto mais difícil fosse escrever o endereço,
+
+342
+00:39:55,860 --> 00:40:01,860
+mais motivação haveria para se desenvolver em mecanismos de configuração automática
+
+343
+00:40:01,860 --> 00:40:05,860
+que permitissem que as pessoas não escrevessem os endereços à mão,
+
+344
+00:40:05,860 --> 00:40:13,240
+e assim é o protocolo IPv6 logo que foi desenhado,
+
+345
+00:40:13,240 --> 00:40:19,240
+que foi desenhado com ferramentas de configuração automática
+
+346
+00:40:19,240 --> 00:40:24,240
+que tentam diminuir o trabalho de configuração das máquinas,
+
+347
+00:40:24,240 --> 00:40:31,240
+e foi escrito na norma que, em princípio, nunca deve ser preciso escrever um endereço IPv6,
+
+348
+00:40:31,240 --> 00:40:34,240
+pelo menos por um utilizador normal,
+
+349
+00:40:34,240 --> 00:40:40,680
+um gestor de uma rede, um administrador de uma rede,
+
+350
+00:40:40,680 --> 00:40:46,680
+é que pode ter que eventualmente começar por escrever coisas à mão
+
+351
+00:40:46,680 --> 00:40:53,230
+para depois as coisas começarem a funcionar direitinho.
+
+352
+00:40:53,230 --> 00:40:58,230
+Desses mecanismos de autoconfiguração, a maior parte deles são baseados
+
+353
+00:40:58,230 --> 00:41:06,980
+num endereço link local, um endereço link local especial
+
+354
+00:41:06,980 --> 00:41:11,980
+que as máquinas podem configurar por sua livre iniciativa
+
+355
+00:41:11,980 --> 00:41:18,980
+e que não precisam de nenhum serviço adicional que tenha que ser instalado por outra pessoa,
+
+356
+00:41:18,980 --> 00:41:20,980
+ou tenha que existir definido na rede.
+
+357
+00:41:20,980 --> 00:41:25,980
+Qualquer pessoa tendo uma placa de rede, mesmo que não esteja ligado a lado nenhum,
+
+358
+00:41:25,980 --> 00:41:29,980
+pode configurar a sua placa de rede com um endereço destes,
+
+359
+00:41:29,980 --> 00:41:33,980
+ou o normal é que ela, se temos um sistema operativo,
+
+360
+00:41:33,980 --> 00:41:37,980
+provavelmente a placa de rede já está configurada com o endereço destes.
+
+361
+00:41:37,980 --> 00:41:47,280
+Foram definidos mecanismos para sites pequenos,
+
+362
+00:41:47,280 --> 00:41:53,280
+redes simples, onde se deve poder pôr as coisas a funcionar
+
+363
+00:41:53,280 --> 00:42:03,710
+mesmo sem memória, mesmo sem termos que memorizar um endereço,
+
+364
+00:42:03,710 --> 00:42:07,710
+ou termos que registrar os endereços das máquinas,
+
+365
+00:42:08,710 --> 00:42:11,710
+a maneira a ficar registrada qual é o endereço de cada máquina,
+
+366
+00:42:11,710 --> 00:42:16,710
+não deve ser preciso fazer esse registro, ou essa definição de endereços,
+
+367
+00:42:16,710 --> 00:42:20,710
+e as máquinas devem poder funcionar de forma simples,
+
+368
+00:42:20,710 --> 00:42:27,600
+de maneira stateless, ou seja, sem estado ou sem registro.
+
+369
+00:42:27,600 --> 00:42:38,570
+No entanto, um site maior, uma rede com mais meios de administração,
+
+370
+00:42:39,570 --> 00:42:46,570
+pode criar mecanismos de definição dos endereços
+
+371
+00:42:46,570 --> 00:42:50,570
+e pode haver uma pessoa que dá um endereço a cada máquina
+
+372
+00:42:50,570 --> 00:42:53,570
+e diz, esta máquina tem que trabalhar com aquele endereço,
+
+373
+00:42:53,570 --> 00:42:57,570
+se não as coisas não funcionam e, dessa maneira,
+
+374
+00:42:57,570 --> 00:43:01,570
+podemos usar os endereços para identificar as máquinas,
+
+375
+00:43:01,570 --> 00:43:05,570
+sabemos que existe uma relação entre os endereços e as máquinas.
+
+376
+00:43:05,570 --> 00:43:16,800
+Como é que funciona o processo de configuração de endereços em IPv6?
+
+377
+00:43:16,800 --> 00:43:25,760
+Primeiro, as máquinas devem ser capazes de arranjar um identificador
+
+378
+00:43:25,760 --> 00:43:32,760
+único de 64 bits, que deve ser único no mundo.
+
+379
+00:43:32,760 --> 00:43:39,120
+O normal é que, por exemplo, as placas Ethernet,
+
+380
+00:43:39,120 --> 00:43:44,120
+que esteja Ethernet com fios, ou Wi-Fi que é Ethernet sem fios,
+
+381
+00:43:44,120 --> 00:43:49,120
+têm sempre um endereço Mac que, à partida,
+
+382
+00:43:49,120 --> 00:43:55,120
+já é o único no mundo, porque é lá posto pelo fabricante do chip controlador
+
+383
+00:43:55,120 --> 00:44:00,120
+e esse fabricante encarrega-se dentro da sua gama
+
+384
+00:44:00,120 --> 00:44:07,120
+de instanciar esses endereços com números sempre diferentes
+
+385
+00:44:07,120 --> 00:44:11,120
+e quando vende 10 mil controladores de rede,
+
+386
+00:44:11,120 --> 00:44:18,330
+vende-se a todos com endereços diferentes.
+
+387
+00:44:18,330 --> 00:44:23,330
+Com base nesses endereços das placas, ou com base noutra informação,
+
+388
+00:44:23,330 --> 00:44:29,330
+deve ser possível um mecanismo que permite arranjar-nos identificadores de 64 bits.
+
+389
+00:44:29,330 --> 00:44:40,320
+Depois, com esses 64 bits, é possível arranjar um endereço IPv6 do tipo link local.
+
+390
+00:44:40,320 --> 00:44:44,320
+Já vimos que são aqueles endereços que começam por FE80, normalmente.
+
+391
+00:44:45,320 --> 00:44:50,320
+Este endereço link local é um endereço link local stateless,
+
+392
+00:44:50,320 --> 00:44:55,320
+porque é um endereço link local que não foi registrado,
+
+393
+00:44:55,320 --> 00:44:59,320
+nem foi atribuído com base numa tabela oficial, foi escolhido pela máquina,
+
+394
+00:44:59,320 --> 00:45:04,320
+foi definido pela máquina e, portanto, é um endereço stateless.
+
+395
+00:45:04,320 --> 00:45:09,320
+Dá para acontecer que no dia seguinte, dependendo do mecanismo que a máquina está a usar,
+
+396
+00:45:09,320 --> 00:45:13,320
+no dia seguinte a mesma máquina pode escolher outro endereço
+
+397
+00:45:13,320 --> 00:45:16,320
+porque ele é um endereço stateless.
+
+398
+00:45:16,320 --> 00:45:24,700
+Esse endereço, se é um endereço link local,
+
+399
+00:45:24,700 --> 00:45:29,700
+talvez seja válido para começar a comunicar com os vizinhos,
+
+400
+00:45:29,700 --> 00:45:31,700
+ou seja, dentro do mesmo link,
+
+401
+00:45:31,700 --> 00:45:35,700
+para isso ele deve ser verificado,
+
+402
+00:45:35,700 --> 00:45:37,700
+pode ser usado ou não,
+
+403
+00:45:37,700 --> 00:45:42,700
+e se verificarmos que é bom para ser usado,
+
+404
+00:45:42,700 --> 00:45:45,700
+então podemos configurar a placa com esse endereço
+
+405
+00:45:46,700 --> 00:45:50,700
+e podemos começar a conversar com os nossos vizinhos.
+
+406
+00:45:50,700 --> 00:45:54,700
+Em princípio, em todas as redes,
+
+407
+00:45:54,700 --> 00:45:57,700
+onde existe uma ligação pós-terior,
+
+408
+00:45:57,700 --> 00:45:59,700
+tem que haver uma porta de saída pós-terior,
+
+409
+00:45:59,700 --> 00:46:03,700
+um gateway pós-terior que,
+
+410
+00:46:03,700 --> 00:46:07,700
+e esse gateway é uma tarefa desempenhada sempre por um router.
+
+411
+00:46:07,700 --> 00:46:12,700
+Há sempre um router que desempenha o papel de gateway
+
+412
+00:46:12,700 --> 00:46:15,700
+e que permite ligar a rede ao exterior.
+
+413
+00:46:17,700 --> 00:46:19,700
+Para nós podermos comunicar com o exterior,
+
+414
+00:46:19,700 --> 00:46:21,700
+temos que começar a perceber quem é esse router,
+
+415
+00:46:21,700 --> 00:46:24,700
+então perguntarmos pelo router,
+
+416
+00:46:24,700 --> 00:46:27,700
+pedimos informação sobre o router,
+
+417
+00:46:27,700 --> 00:46:36,010
+e os routers devemos informar quem são,
+
+418
+00:46:36,010 --> 00:46:39,010
+ou seja, sobre um router,
+
+419
+00:46:39,010 --> 00:46:41,010
+ele deve nos dizer quem é,
+
+420
+00:46:41,010 --> 00:46:44,010
+e pode dar também mais indicações,
+
+421
+00:46:44,010 --> 00:46:47,010
+dizer, por exemplo, qual é o prefixo da rede.
+
+422
+00:46:47,010 --> 00:46:50,010
+E se disser qual é o prefixo da rede,
+
+423
+00:46:50,010 --> 00:46:52,010
+nós com o nosso prefixo,
+
+424
+00:46:52,010 --> 00:46:55,010
+e com aquele identificador que arranjamos ali,
+
+425
+00:46:55,010 --> 00:47:00,010
+se já conseguimos arranjar um endereço global,
+
+426
+00:47:00,010 --> 00:47:06,010
+porque o prefixo é um prefixo global,
+
+427
+00:47:06,010 --> 00:47:10,010
+que é o prefixo que o router nos disse que se usa nesta rede,
+
+428
+00:47:10,010 --> 00:47:13,010
+e com esse prefixo, dentro desse prefixo,
+
+429
+00:47:13,010 --> 00:47:22,640
+todos os endereços são então globais.
+
+430
+00:47:22,640 --> 00:47:24,640
+Aqui, este solicitar informação sobre o router
+
+431
+00:47:24,640 --> 00:47:26,640
+está em diferentes, porque pode ser omitido,
+
+432
+00:47:26,640 --> 00:47:28,640
+este passe quatro,
+
+433
+00:47:28,640 --> 00:47:30,640
+nós podemos simplesmente ficar à espera
+
+434
+00:47:30,640 --> 00:47:32,640
+de anúncios do router,
+
+435
+00:47:32,640 --> 00:47:34,640
+e os routers, se forem simpáticos,
+
+436
+00:47:34,640 --> 00:47:36,640
+periodicamente informam,
+
+437
+00:47:36,640 --> 00:47:38,640
+dão informações sobre quem são
+
+438
+00:47:38,640 --> 00:47:40,640
+e qual é o prefixo que se usa,
+
+439
+00:47:40,640 --> 00:47:42,640
+se nós tivermos pressa,
+
+440
+00:47:42,640 --> 00:47:44,640
+podemos solicitar informação.
+
+441
+00:47:44,640 --> 00:47:46,640
+O router nos anunciaram prefixo,
+
+442
+00:47:46,640 --> 00:47:48,640
+nos indicaram prefixo,
+
+443
+00:47:48,640 --> 00:47:53,400
+então nós agora podemos configurar um endereço
+
+444
+00:47:53,400 --> 00:47:55,400
+que continua a ser stateless,
+
+445
+00:47:55,400 --> 00:47:57,400
+porque a parte do lado direito
+
+446
+00:47:57,400 --> 00:48:00,400
+foi escolhida por nós,
+
+447
+00:48:00,400 --> 00:48:04,400
+mas utilizamos o prefixo
+
+448
+00:48:04,400 --> 00:48:06,400
+que o router nos deu,
+
+449
+00:48:06,400 --> 00:48:08,400
+e já temos um endereço que é stateless,
+
+450
+00:48:08,400 --> 00:48:10,400
+mas é global,
+
+451
+00:48:10,400 --> 00:48:12,400
+e já pode ser usado para comunicar
+
+452
+00:48:12,400 --> 00:48:14,400
+para os estereodes,
+
+453
+00:48:14,400 --> 00:48:16,400
+ou da internet.
+
+454
+00:48:16,400 --> 00:48:18,400
+Se o router
+
+455
+00:48:18,400 --> 00:48:20,400
+dê a indicação de que
+
+456
+00:48:20,400 --> 00:48:22,400
+não devemos usar esse endereço stateless,
+
+457
+00:48:22,400 --> 00:48:24,400
+mas devemos usar um endereço stateful,
+
+458
+00:48:24,400 --> 00:48:26,400
+então nós vamos
+
+459
+00:48:26,400 --> 00:48:28,400
+contactar um servidor
+
+460
+00:48:28,400 --> 00:48:30,400
+de DHCP,
+
+461
+00:48:30,400 --> 00:48:32,400
+que é uma coisa que também
+
+462
+00:48:32,400 --> 00:48:34,400
+já se usava em pv4,
+
+463
+00:48:34,400 --> 00:48:36,400
+em pv6 é um bocado diferente,
+
+464
+00:48:36,400 --> 00:48:38,400
+mas tem o mesmo nome,
+
+465
+00:48:38,400 --> 00:48:40,400
+e tem mais ou menos os mesmos funções,
+
+466
+00:48:40,400 --> 00:48:42,400
+e o servidor DHCP
+
+467
+00:48:42,400 --> 00:48:44,400
+vai nos dar um endereço
+
+468
+00:48:44,400 --> 00:48:46,400
+stateful,
+
+469
+00:48:46,400 --> 00:48:48,400
+porque pode ser um endereço
+
+470
+00:48:48,400 --> 00:48:50,400
+que o administrador
+
+471
+00:48:50,400 --> 00:48:52,400
+levou lá para nós,
+
+472
+00:48:52,400 --> 00:48:54,400
+e todos os dias
+
+473
+00:48:54,400 --> 00:48:56,400
+nos vai dar aquele endereço,
+
+474
+00:48:56,400 --> 00:48:58,400
+e dessa maneira existe memória,
+
+475
+00:48:58,400 --> 00:49:00,400
+amanhã o administrador sabe
+
+476
+00:49:00,400 --> 00:49:02,400
+que nós somos os mesmos utilizadores
+
+477
+00:49:02,400 --> 00:49:04,400
+que já fizemos as neiras hoje.
+
+478
+00:49:04,400 --> 00:49:10,430
+Então vamos ver este espaço
+
+479
+00:49:10,430 --> 00:49:12,430
+mais ou menos de forma detalhada.
+
+480
+00:49:12,430 --> 00:49:14,430
+Primeiro passo,
+
+481
+00:49:14,430 --> 00:49:16,430
+a engenjar
+
+482
+00:49:16,430 --> 00:49:18,430
+um identificador
+
+483
+00:49:18,430 --> 00:49:20,430
+é o I64,
+
+484
+00:49:20,430 --> 00:49:22,430
+de 64 bits,
+
+485
+00:49:22,430 --> 00:49:26,030
+e isso vai ser feito
+
+486
+00:49:26,030 --> 00:49:28,030
+em função do
+
+487
+00:49:28,030 --> 00:49:30,030
+endereço MAC,
+
+488
+00:49:30,030 --> 00:49:32,030
+o endereço Ethernet,
+
+489
+00:49:32,030 --> 00:49:34,030
+que está escrito no controlador da placa,
+
+490
+00:49:34,030 --> 00:49:36,030
+esse endereço é de 48 bits,
+
+491
+00:49:36,030 --> 00:49:38,030
+esses 48 bits
+
+492
+00:49:40,030 --> 00:49:42,030
+normalmente já são divididos
+
+493
+00:49:42,030 --> 00:49:44,030
+em duas partes de 24 bits,
+
+494
+00:49:44,030 --> 00:49:46,030
+a maior parte identifica
+
+495
+00:49:46,030 --> 00:49:48,030
+a empresa
+
+496
+00:49:48,030 --> 00:49:50,030
+que fez o equipamento,
+
+497
+00:49:50,030 --> 00:49:52,030
+fez o chip,
+
+498
+00:49:52,030 --> 00:49:54,030
+fez o controlador,
+
+499
+00:49:54,030 --> 00:49:56,030
+e depois outros 24 bits,
+
+500
+00:49:56,030 --> 00:49:58,030
+onde o fabricante
+
+501
+00:49:58,030 --> 00:50:00,030
+do controlador
+
+502
+00:50:02,030 --> 00:50:04,030
+tem números sequenciais,
+
+503
+00:50:04,030 --> 00:50:06,030
+de maneira a garantir
+
+504
+00:50:06,030 --> 00:50:08,030
+que todas as placas de rede
+
+505
+00:50:08,030 --> 00:50:10,030
+mesmo que seja um do mesmo modelo
+
+506
+00:50:10,030 --> 00:50:12,030
+têm números diferentes.
+
+507
+00:50:12,030 --> 00:50:17,900
+Para gerar
+
+508
+00:50:17,900 --> 00:50:19,900
+nosso identificador
+
+509
+00:50:19,900 --> 00:50:21,900
+único de 64 bits,
+
+510
+00:50:21,900 --> 00:50:23,900
+nós pegamos nestes 48 bits,
+
+511
+00:50:23,900 --> 00:50:25,900
+dividimos em duas metades,
+
+512
+00:50:25,900 --> 00:50:27,900
+24 bits para um lado, 24 bits para o outro,
+
+513
+00:50:27,900 --> 00:50:29,900
+e no meio
+
+514
+00:50:29,900 --> 00:50:31,900
+metemos uma etiqueta anormalizada
+
+515
+00:50:31,900 --> 00:50:33,900
+que é FFFE,
+
+516
+00:50:33,900 --> 00:50:38,330
+existe
+
+517
+00:50:38,330 --> 00:50:40,330
+grande especificação para isto,
+
+518
+00:50:40,330 --> 00:50:42,330
+foi convencionado
+
+519
+00:50:42,330 --> 00:50:44,330
+que seria assim,
+
+520
+00:50:44,330 --> 00:50:46,330
+FFFE
+
+521
+00:50:46,330 --> 00:50:48,330
+são 16 bits,
+
+522
+00:50:48,330 --> 00:50:50,330
+isto são 16 bits,
+
+523
+00:50:50,330 --> 00:50:52,330
+se tínhamos 48
+
+524
+00:50:52,330 --> 00:50:54,330
+e acrescentamos aqui no meio 16
+
+525
+00:50:54,330 --> 00:50:56,330
+já ficamos com 64 bits.
+
+526
+00:50:56,330 --> 00:51:00,030
+Até isto
+
+527
+00:51:00,030 --> 00:51:02,030
+já se pode chamar um endereço
+
+528
+00:51:02,030 --> 00:51:04,030
+é UI74
+
+529
+00:51:04,030 --> 00:51:06,030
+um identificador é UI64
+
+530
+00:51:06,030 --> 00:51:08,030
+para o identificador
+
+531
+00:51:08,030 --> 00:51:10,030
+é UI74 IPv6
+
+532
+00:51:12,030 --> 00:51:14,030
+temos que fazer aqui uma troca de um bit,
+
+533
+00:51:14,030 --> 00:51:16,030
+aquele bit que faz parte do código
+
+534
+00:51:16,030 --> 00:51:18,030
+do fabricante
+
+535
+00:51:18,030 --> 00:51:20,030
+indica
+
+536
+00:51:20,030 --> 00:51:22,030
+se o endereço
+
+537
+00:51:22,030 --> 00:51:24,030
+foi atribuído
+
+538
+00:51:24,030 --> 00:51:26,030
+de forma centralizada ou não
+
+539
+00:51:26,030 --> 00:51:28,030
+e aqui para este efeito
+
+540
+00:51:28,030 --> 00:51:30,030
+temos que trocar aquele bit
+
+541
+00:51:30,030 --> 00:51:37,120
+de 0 para 1 ou de 1 para 0
+
+542
+00:51:37,120 --> 00:51:39,120
+depois desta troca continuamos a ter 64 bits
+
+543
+00:51:39,120 --> 00:51:41,120
+estes 64 bits
+
+544
+00:51:41,120 --> 00:51:43,120
+são aquilo que se chama o endereço
+
+545
+00:51:43,120 --> 00:51:45,120
+IPv6 é UI74
+
+546
+00:51:45,120 --> 00:51:50,890
+o endereço é o identificador
+
+547
+00:51:50,890 --> 00:51:52,890
+é melhor o identificador
+
+548
+00:51:52,890 --> 00:51:54,890
+porque não é um endereço IPv6
+
+549
+00:51:54,890 --> 00:51:56,890
+porque não tem 128 bits
+
+550
+00:51:56,890 --> 00:52:05,360
+se aquele identificador
+
+551
+00:52:05,360 --> 00:52:09,150
+é este que está aqui
+
+552
+00:52:09,150 --> 00:52:11,150
+de 64 bits
+
+553
+00:52:11,150 --> 00:52:13,150
+se descentarmos o prefixo
+
+554
+00:52:13,150 --> 00:52:15,150
+FE80
+
+555
+00:52:15,150 --> 00:52:17,150
+2 pontos
+
+556
+00:52:17,150 --> 00:52:19,150
+ficamos com um endereço
+
+557
+00:52:19,150 --> 00:52:21,150
+de 128 bits
+
+558
+00:52:21,150 --> 00:52:23,150
+que é um endereço
+
+559
+00:52:23,150 --> 00:52:25,150
+IPv6
+
+560
+00:52:25,150 --> 00:52:27,150
+link local
+
+561
+00:52:27,150 --> 00:52:32,410
+status
+
+562
+00:52:32,410 --> 00:52:34,410
+como é que eu sei que estou a acrescentar
+
+563
+00:52:34,410 --> 00:52:36,410
+64 bits
+
+564
+00:52:36,410 --> 00:52:38,410
+aqui os 2 pontos 2 pontos
+
+565
+00:52:38,410 --> 00:52:40,410
+significa muitos zeros
+
+566
+00:52:40,410 --> 00:52:42,410
+os que forem necessários
+
+567
+00:52:42,410 --> 00:52:44,410
+para completar os 128 bits
+
+568
+00:52:44,410 --> 00:52:46,410
+agora se tínhamos aqui 64 bits
+
+569
+00:52:46,410 --> 00:52:48,410
+aqui
+
+570
+00:52:48,410 --> 00:52:50,410
+vamos ter outros 64
+
+571
+00:52:50,410 --> 00:52:52,410
+temos FE80
+
+572
+00:52:52,410 --> 00:52:54,410
+depois muitos zeros até
+
+573
+00:52:54,410 --> 00:52:56,410
+completarmos os 64 bits até aqui
+
+574
+00:52:56,410 --> 00:52:58,410
+ou até completarmos os 128 bits até aqui
+
+575
+00:52:58,410 --> 00:53:00,410
+vamos ver um exemplo
+
+576
+00:53:00,410 --> 00:53:02,410
+uma máquina
+
+577
+00:53:02,410 --> 00:53:04,410
+tem uma
+
+578
+00:53:04,410 --> 00:53:06,410
+placa de rede Ethernet
+
+579
+00:53:06,410 --> 00:53:08,410
+com este endereço MAC
+
+580
+00:53:08,410 --> 00:53:10,410
+estes endereços Ethernet
+
+581
+00:53:10,410 --> 00:53:12,410
+são de 48 bits
+
+582
+00:53:12,410 --> 00:53:14,410
+e costumam se escrever
+
+583
+00:53:14,410 --> 00:53:16,410
+em hexadecimal
+
+584
+00:53:16,410 --> 00:53:18,410
+com os dígitos
+
+585
+00:53:18,410 --> 00:53:20,410
+hexadecimais agrupados
+
+586
+00:53:20,410 --> 00:53:22,410
+em grupos de 2 e separados
+
+587
+00:53:22,410 --> 00:53:24,410
+por 2 pontos
+
+588
+00:53:24,410 --> 00:53:26,410
+separados por ifan
+
+589
+00:53:26,410 --> 00:53:28,410
+também há quem separa por 2 pontos
+
+590
+00:53:28,410 --> 00:53:30,410
+mas a norma
+
+591
+00:53:30,410 --> 00:53:32,410
+mais habitual é usarmos ifans
+
+592
+00:53:32,410 --> 00:53:35,920
+se pegarmos nisto
+
+593
+00:53:35,920 --> 00:53:37,920
+dividirmos a meio
+
+594
+00:53:37,920 --> 00:53:39,920
+e acrescentarmos no meio um FFFE
+
+595
+00:53:39,920 --> 00:53:41,920
+ficamos com isto
+
+596
+00:53:41,920 --> 00:53:43,920
+está aqui
+
+597
+00:53:43,920 --> 00:53:45,920
+isto já são 64 bits
+
+598
+00:53:45,920 --> 00:53:47,920
+e agora trocamos aqui
+
+599
+00:53:47,920 --> 00:53:49,920
+um bit
+
+600
+00:53:49,920 --> 00:53:51,920
+aquele bit específico
+
+601
+00:53:51,920 --> 00:53:53,920
+de zero para 1
+
+602
+00:53:53,920 --> 00:53:55,920
+então aquele dígito
+
+603
+00:53:55,920 --> 00:53:57,920
+hexadecimal zero
+
+604
+00:53:57,920 --> 00:53:59,920
+dígito hexadecimal 2
+
+605
+00:53:59,920 --> 00:54:01,920
+este é o nosso
+
+606
+00:54:01,920 --> 00:54:03,920
+identificador
+
+607
+00:54:03,920 --> 00:54:05,920
+IPv6
+
+608
+00:54:05,920 --> 00:54:07,920
+é o I64
+
+609
+00:54:07,920 --> 00:54:13,920
+aquilo que se mete aqui
+
+610
+00:54:13,920 --> 00:54:15,920
+se quisermos como isto é para trabalhar com IPv6
+
+611
+00:54:15,920 --> 00:54:17,920
+podemos escrever isto
+
+612
+00:54:17,920 --> 00:54:19,920
+na anotação hexadecimal
+
+613
+00:54:19,920 --> 00:54:21,920
+habitual do IPv6
+
+614
+00:54:21,920 --> 00:54:23,920
+ou seja, em vez de termos
+
+615
+00:54:23,920 --> 00:54:25,920
+dígitos hexadecimais agrupados
+
+616
+00:54:25,920 --> 00:54:27,920
+em grupos de 2
+
+617
+00:54:27,920 --> 00:54:29,920
+agrupamos em grupos de 4
+
+618
+00:54:29,920 --> 00:54:31,920
+a junta com o C fica 2 a 1
+
+619
+00:54:31,920 --> 00:54:33,920
+o FE junta com o 3F
+
+620
+00:54:33,920 --> 00:54:35,920
+fica FE3F
+
+621
+00:54:35,920 --> 00:54:37,920
+o 00 junta com o FF
+
+622
+00:54:37,920 --> 00:54:39,920
+fica FF
+
+623
+00:54:39,920 --> 00:54:41,920
+e o 02 junta com o AA
+
+624
+00:54:41,920 --> 00:54:43,920
+fica 2AA
+
+625
+00:54:43,920 --> 00:54:48,160
+se acrescentarmos
+
+626
+00:54:48,160 --> 00:54:50,160
+o prefixo FE80
+
+627
+00:54:50,160 --> 00:54:52,160
+passamos a ter um endereço
+
+628
+00:54:52,160 --> 00:54:54,160
+link local stateless
+
+629
+00:54:54,160 --> 00:54:56,160
+de 128 bits
+
+630
+00:54:56,160 --> 00:55:01,230
+bom, este processo de criação
+
+631
+00:55:01,230 --> 00:55:03,230
+deste identificador de 74 bits
+
+632
+00:55:03,230 --> 00:55:05,230
+é um processo normalizado
+
+633
+00:55:05,230 --> 00:55:07,230
+e que
+
+634
+00:55:07,230 --> 00:55:09,230
+toda a gente pode usar
+
+635
+00:55:09,230 --> 00:55:11,230
+mas existem outras
+
+636
+00:55:11,230 --> 00:55:13,230
+formas de gerar este
+
+637
+00:55:13,230 --> 00:55:15,230
+identificador de 64 bits
+
+638
+00:55:15,230 --> 00:55:17,230
+existe também uma
+
+639
+00:55:17,230 --> 00:55:19,230
+norma para gerar identificadores
+
+640
+00:55:19,230 --> 00:55:21,230
+de 64 bits sem ser
+
+641
+00:55:21,230 --> 00:55:23,230
+com base no endereço MAC
+
+642
+00:55:23,230 --> 00:55:25,230
+para permitir
+
+643
+00:55:25,230 --> 00:55:27,230
+anonimato
+
+644
+00:55:27,230 --> 00:55:29,230
+alguém que não queira
+
+645
+00:55:29,230 --> 00:55:31,230
+que seja possível
+
+646
+00:55:31,230 --> 00:55:33,230
+que seja possível
+
+647
+00:55:33,230 --> 00:55:35,230
+através do seu endereço link local stateless
+
+648
+00:55:35,230 --> 00:55:37,230
+saberse
+
+649
+00:55:37,230 --> 00:55:39,230
+que é a mesma pessoa ou a mesma máquina
+
+650
+00:55:39,230 --> 00:55:41,230
+que já usou ontem
+
+651
+00:55:41,230 --> 00:55:43,230
+pode gerar
+
+652
+00:55:43,230 --> 00:55:45,230
+novos endereços
+
+653
+00:55:45,230 --> 00:55:47,230
+mais ou menos aleatoriamente
+
+654
+00:55:47,230 --> 00:55:57,040
+então um cliente
+
+655
+00:55:57,040 --> 00:55:59,040
+um dispositivo qualquer
+
+656
+00:55:59,040 --> 00:56:01,040
+um computador, um telefone
+
+657
+00:56:01,040 --> 00:56:03,040
+ou alguém tem um
+
+658
+00:56:03,040 --> 00:56:05,040
+porta de rede com determinado endereço MAC
+
+659
+00:56:05,040 --> 00:56:09,690
+com base naquele endereço MAC
+
+660
+00:56:09,690 --> 00:56:11,690
+põe ali o FF
+
+661
+00:56:11,690 --> 00:56:13,690
+FE no meio a grupo em grupos de 4
+
+662
+00:56:13,690 --> 00:56:15,690
+acrescenta o prefixo FE80
+
+663
+00:56:15,690 --> 00:56:17,690
+tem aqui um endereço
+
+664
+00:56:17,690 --> 00:56:19,690
+link local stateless
+
+665
+00:56:19,690 --> 00:56:21,690
+este endereço deve ser visto
+
+666
+00:56:21,690 --> 00:56:23,690
+para já com o temporário
+
+667
+00:56:23,690 --> 00:56:25,690
+porque ainda não confirmamos
+
+668
+00:56:25,690 --> 00:56:27,690
+que se possa usar
+
+669
+00:56:27,690 --> 00:56:29,690
+para saber se este endereço
+
+670
+00:56:29,690 --> 00:56:31,690
+se pode usar ou não
+
+671
+00:56:31,690 --> 00:56:35,480
+as máquinas têm obrigação
+
+672
+00:56:35,480 --> 00:56:37,480
+de antes de começar a usar
+
+673
+00:56:37,480 --> 00:56:39,480
+fazer-se
+
+674
+00:56:39,480 --> 00:56:41,480
+uma detecção
+
+675
+00:56:41,480 --> 00:56:43,480
+de endereço duplicado
+
+676
+00:56:43,480 --> 00:56:46,800
+esta detecção
+
+677
+00:56:46,800 --> 00:56:48,800
+de endereço duplicado
+
+678
+00:56:48,800 --> 00:56:50,800
+consiste em enviar para a rede
+
+679
+00:56:50,800 --> 00:56:52,800
+a rede aqui é
+
+680
+00:56:52,800 --> 00:56:54,800
+apenas um link
+
+681
+00:56:54,800 --> 00:56:56,800
+ou seja, só se envia para os vizinhos
+
+682
+00:56:56,800 --> 00:56:58,800
+nos enviamos um pedido
+
+683
+00:56:58,800 --> 00:57:00,800
+ou uma pergunta a dizer
+
+684
+00:57:00,800 --> 00:57:02,800
+perguntar alguém está a usar
+
+685
+00:57:02,800 --> 00:57:07,130
+este endereço
+
+686
+00:57:07,130 --> 00:57:09,130
+se ninguém responder
+
+687
+00:57:09,130 --> 00:57:11,130
+que ninguém na rede está a usar
+
+688
+00:57:11,130 --> 00:57:13,130
+este endereço deve ser o mais habitual
+
+689
+00:57:13,130 --> 00:57:15,130
+e
+
+690
+00:57:15,130 --> 00:57:17,130
+então nós podemos considerar que este
+
+691
+00:57:17,130 --> 00:57:19,130
+endereço é válido
+
+692
+00:57:19,130 --> 00:57:21,130
+e configuramos a nossa placa
+
+693
+00:57:21,130 --> 00:57:23,130
+para usar este endereço
+
+694
+00:57:23,130 --> 00:57:25,130
+e agora podemos
+
+695
+00:57:25,130 --> 00:57:27,130
+começar a falar
+
+696
+00:57:27,130 --> 00:57:29,130
+com os nossos vizinhos
+
+697
+00:57:29,130 --> 00:57:31,130
+utilizando este endereço
+
+698
+00:57:31,130 --> 00:57:33,130
+este endereço para já só ser
+
+699
+00:57:33,130 --> 00:57:35,130
+para comunicar com os vizinhos
+
+700
+00:57:35,130 --> 00:57:37,130
+e
+
+701
+00:57:37,130 --> 00:57:39,130
+nos vizinhos é muito importante
+
+702
+00:57:39,130 --> 00:57:41,130
+que deve ser um router
+
+703
+00:57:41,130 --> 00:57:43,130
+é com esse que vamos querer falar
+
+704
+00:57:43,130 --> 00:57:45,130
+provavelmente mas podemos falar com ele
+
+705
+00:57:45,130 --> 00:57:47,130
+já por IPv6
+
+706
+00:57:47,130 --> 00:57:49,130
+porque já temos um endereço IPv6
+
+707
+00:57:49,130 --> 00:57:56,960
+configurado na nossa placa
+
+708
+00:57:56,960 --> 00:57:58,960
+ou seja até agora
+
+709
+00:57:58,960 --> 00:58:00,960
+o dispositivo que se quer
+
+710
+00:58:00,960 --> 00:58:02,960
+ligar em IPv6
+
+711
+00:58:02,960 --> 00:58:04,960
+começou por gerar um endereço
+
+712
+00:58:04,960 --> 00:58:06,960
+link local
+
+713
+00:58:06,960 --> 00:58:08,960
+do link local stateless
+
+714
+00:58:08,960 --> 00:58:10,960
+e fez um pedido de
+
+715
+00:58:10,960 --> 00:58:12,960
+duplicate address detection
+
+716
+00:58:12,960 --> 00:58:14,960
+ou seja perguntou
+
+717
+00:58:14,960 --> 00:58:16,960
+aos seus vizinhos
+
+718
+00:58:16,960 --> 00:58:18,960
+alguém está a usar este endereço
+
+719
+00:58:20,960 --> 00:58:22,960
+se alguém responder
+
+720
+00:58:22,960 --> 00:58:24,960
+um tempo razoável
+
+721
+00:58:26,960 --> 00:58:28,960
+então falhou a validação
+
+722
+00:58:28,960 --> 00:58:30,960
+do nosso endereço
+
+723
+00:58:30,960 --> 00:58:32,960
+e
+
+724
+00:58:32,960 --> 00:58:34,960
+não podemos usar este endereço
+
+725
+00:58:34,960 --> 00:58:36,960
+temos que arranjar uma solução
+
+726
+00:58:36,960 --> 00:58:38,960
+qualquer arranjar outro
+
+727
+00:58:38,960 --> 00:58:40,960
+identificador
+
+728
+00:58:40,960 --> 00:58:42,960
+chamar alguém
+
+729
+00:58:42,960 --> 00:58:44,960
+acender uma luz
+
+730
+00:58:44,960 --> 00:58:46,960
+ligar um alarme para fazer qualquer coisa
+
+731
+00:58:46,960 --> 00:58:48,960
+porque as coisas não vão funcionar
+
+732
+00:58:48,960 --> 00:58:50,960
+com este endereço
+
+733
+00:58:50,960 --> 00:58:52,960
+disto, em princípio é raro
+
+734
+00:58:52,960 --> 00:58:54,960
+porque os identificadores são únicos no mundo
+
+735
+00:58:54,960 --> 00:58:56,960
+portanto é muito improvável
+
+736
+00:58:56,960 --> 00:58:58,960
+que haja algo marciano
+
+737
+00:58:58,960 --> 00:59:00,960
+na nossa rede
+
+738
+00:59:00,960 --> 00:59:04,200
+que use
+
+739
+00:59:04,200 --> 00:59:06,200
+o mesmo identificador que nós
+
+740
+00:59:06,200 --> 00:59:08,200
+se não for detectado uma colisão
+
+741
+00:59:08,200 --> 00:59:10,200
+que é o mais normal
+
+742
+00:59:10,200 --> 00:59:12,200
+ou seja, há um tempo de espera
+
+743
+00:59:12,200 --> 00:59:14,200
+se não chegou uma resposta
+
+744
+00:59:14,200 --> 00:59:16,200
+é porque ninguém
+
+745
+00:59:16,200 --> 00:59:18,200
+se acusou dizendo que está a usar
+
+746
+00:59:18,200 --> 00:59:20,200
+o endereço que nós pretendemos usar
+
+747
+00:59:20,200 --> 00:59:22,200
+então atribuímos este endereço
+
+748
+00:59:22,200 --> 00:59:24,200
+a interface
+
+749
+00:59:24,200 --> 00:59:26,200
+e podemos agora comunicar
+
+750
+00:59:26,200 --> 00:59:28,200
+no nosso link com os nossos vizinhos
+
+751
+00:59:28,200 --> 00:59:41,050
+um dos nossos vizinhos
+
+752
+00:59:41,050 --> 00:59:43,050
+é um router
+
+753
+00:59:43,050 --> 00:59:45,050
+certeza
+
+754
+00:59:45,050 --> 00:59:47,050
+se não é porque estamos no presidência
+
+755
+00:59:47,050 --> 00:59:49,050
+de uma rede isolada
+
+756
+00:59:49,050 --> 00:59:51,050
+e numa rede isolada também não é possível falar
+
+757
+00:59:51,050 --> 00:59:53,050
+para o exterior, portanto os usamos
+
+758
+00:59:53,050 --> 00:59:55,050
+nos preocuparem ter um endereço
+
+759
+00:59:55,050 --> 00:59:57,050
+global porque não vamos conseguir falar
+
+760
+00:59:57,050 --> 00:59:59,050
+com ninguém no mundo
+
+761
+00:59:59,050 --> 01:00:01,050
+os routers
+
+762
+01:00:01,050 --> 01:00:03,050
+devem
+
+763
+01:00:03,050 --> 01:00:05,050
+periodicamente
+
+764
+01:00:05,050 --> 01:00:07,050
+enviar mensagens de routers
+
+765
+01:00:07,050 --> 01:00:09,050
+de advertisement
+
+766
+01:00:09,050 --> 01:00:11,050
+de anúncios de routers
+
+767
+01:00:11,050 --> 01:00:13,050
+que são mensagens de R.A.
+
+768
+01:00:13,050 --> 01:00:17,390
+e os routers
+
+769
+01:00:17,390 --> 01:00:20,800
+enviam isso
+
+770
+01:00:20,800 --> 01:00:22,800
+endereçados
+
+771
+01:00:22,800 --> 01:00:24,800
+em pacotes IPv6
+
+772
+01:00:24,800 --> 01:00:26,800
+endereçados por multicast
+
+773
+01:00:26,800 --> 01:00:28,800
+a um grupo
+
+774
+01:00:28,800 --> 01:00:30,800
+que se chama todos os outros
+
+775
+01:00:30,800 --> 01:00:32,800
+ou seja, todas as máquinas
+
+776
+01:00:32,800 --> 01:00:34,800
+que têm um endereço IPv6 válido
+
+777
+01:00:34,800 --> 01:00:36,800
+devem receber estes anúncios
+
+778
+01:00:36,800 --> 01:00:50,350
+periodicamente
+
+779
+01:00:50,350 --> 01:00:52,350
+e nesta mensagem
+
+780
+01:00:52,350 --> 01:00:54,350
+há de vir informação
+
+781
+01:00:54,350 --> 01:01:01,690
+sobre o que é que se deve fazer a seguir
+
+782
+01:01:01,690 --> 01:01:03,690
+aqui estão ilustradas essas mensagens
+
+783
+01:01:03,690 --> 01:01:05,690
+aqui um cliente
+
+784
+01:01:05,690 --> 01:01:07,690
+que tinha um Mac
+
+785
+01:01:07,690 --> 01:01:09,690
+com este Mac arranjou um identificador
+
+786
+01:01:09,690 --> 01:01:11,690
+de 64 bits
+
+787
+01:01:11,690 --> 01:01:13,690
+e depois um endereço
+
+788
+01:01:13,690 --> 01:01:15,690
+IPv6 stateless link local
+
+789
+01:01:15,690 --> 01:01:17,690
+configurou a placa
+
+790
+01:01:17,690 --> 01:01:19,690
+e agora consegue
+
+791
+01:01:19,690 --> 01:01:21,690
+falar com os vizinhos
+
+792
+01:01:21,690 --> 01:01:23,690
+e também consegue receber
+
+793
+01:01:23,690 --> 01:01:25,690
+as mensagens de R.A.
+
+794
+01:01:25,690 --> 01:01:27,690
+que o router
+
+795
+01:01:27,690 --> 01:01:29,690
+que está aqui recebe
+
+796
+01:01:29,690 --> 01:01:31,690
+que o router que está aqui envia
+
+797
+01:01:31,690 --> 01:01:33,690
+estas mensagens
+
+798
+01:01:33,690 --> 01:01:35,690
+são enviadas
+
+799
+01:01:35,690 --> 01:01:37,690
+direita para a esquerda
+
+800
+01:01:37,690 --> 01:01:39,690
+como indica esta seta
+
+801
+01:01:39,690 --> 01:01:41,690
+este desenho às vezes pode fazer um bocado confusão
+
+802
+01:01:41,690 --> 01:01:43,690
+mas isto
+
+803
+01:01:43,690 --> 01:01:45,690
+serve para apontar
+
+804
+01:01:45,690 --> 01:01:47,690
+para a decimipada baixos
+
+805
+01:01:47,690 --> 01:01:49,690
+dizer que isto são mensagens de R.A.
+
+806
+01:01:49,690 --> 01:01:51,690
+que eu não quero dizer que as mensagens
+
+807
+01:01:51,690 --> 01:01:53,690
+andem da esquerda para direita
+
+808
+01:01:53,690 --> 01:01:55,690
+as mensagens vão da direita para a esquerda
+
+809
+01:01:55,690 --> 01:01:57,690
+ou de cima para baixo
+
+810
+01:01:57,690 --> 01:01:59,690
+do router para os clientes todos
+
+811
+01:01:59,690 --> 01:02:01,690
+e
+
+812
+01:02:01,690 --> 01:02:03,690
+estas mensagens
+
+813
+01:02:03,690 --> 01:02:05,690
+são enviadas periódicamente
+
+814
+01:02:05,690 --> 01:02:07,690
+o cliente
+
+815
+01:02:07,690 --> 01:02:09,690
+se ainda não recebeu
+
+816
+01:02:09,690 --> 01:02:11,690
+nenhuma mensagem dessas
+
+817
+01:02:11,690 --> 01:02:13,690
+pode simplesmente esperar
+
+818
+01:02:13,690 --> 01:02:15,690
+que ela chegue
+
+819
+01:02:15,690 --> 01:02:20,250
+e depois olha para ela
+
+820
+01:02:20,250 --> 01:02:23,600
+se o cliente é pressado
+
+821
+01:02:23,600 --> 01:02:25,600
+e não está com vontade de esperar
+
+822
+01:02:25,600 --> 01:02:27,600
+até que o router envie
+
+823
+01:02:27,600 --> 01:02:29,600
+e o router pode estar configurado
+
+824
+01:02:29,600 --> 01:02:31,600
+para ser muito lento
+
+825
+01:02:31,600 --> 01:02:33,600
+e demorar uns segundos
+
+826
+01:02:33,600 --> 01:02:35,600
+a enviar estas mensagens
+
+827
+01:02:35,600 --> 01:02:37,600
+se o cliente não quer esperar
+
+828
+01:02:37,600 --> 01:02:39,600
+para aquelas mensagens
+
+829
+01:02:39,600 --> 01:02:41,600
+já que na esta fase já tem um endereço
+
+830
+01:02:41,600 --> 01:02:43,600
+link local stateless
+
+831
+01:02:43,600 --> 01:02:45,600
+e portanto já pode falar com os vizinhos
+
+832
+01:02:45,600 --> 01:02:47,600
+também pode enviar para a rede
+
+833
+01:02:47,600 --> 01:02:49,600
+um pedido
+
+834
+01:02:49,600 --> 01:02:51,600
+de
+
+835
+01:02:51,600 --> 01:02:53,600
+router solicitation
+
+836
+01:02:53,600 --> 01:02:55,600
+enviou uma mensagem de
+
+837
+01:02:55,600 --> 01:03:00,540
+router solicitation
+
+838
+01:03:00,540 --> 01:03:02,540
+uma mensagem de router solicitation
+
+839
+01:03:02,540 --> 01:03:04,540
+para pedir
+
+840
+01:03:04,540 --> 01:03:06,540
+para perguntar
+
+841
+01:03:06,540 --> 01:03:08,540
+está aí algum router
+
+842
+01:03:08,540 --> 01:03:10,540
+um router que recebe um router solicitation
+
+843
+01:03:10,540 --> 01:03:12,540
+deve responder
+
+844
+01:03:12,540 --> 01:03:14,540
+com uma mensagem de
+
+845
+01:03:14,540 --> 01:03:16,540
+router advertisement
+
+846
+01:03:16,540 --> 01:03:18,540
+com um R.A.
+
+847
+01:03:18,540 --> 01:03:20,540
+ou seja o cliente tem duas hipóteses
+
+848
+01:03:20,540 --> 01:03:22,540
+ou espera pelo próximo R.A.
+
+849
+01:03:22,540 --> 01:03:24,540
+periódico
+
+850
+01:03:24,540 --> 01:03:26,540
+ou solicita
+
+851
+01:03:26,540 --> 01:03:28,540
+um R.A.
+
+852
+01:03:28,540 --> 01:03:30,540
+através de um R.S.
+
+853
+01:03:30,540 --> 01:03:32,540
+onde este tempo é mais rápido
+
+854
+01:03:32,540 --> 01:03:36,520
+se
+
+855
+01:03:36,520 --> 01:03:38,520
+o cliente solicitar a mensagem
+
+856
+01:03:38,520 --> 01:03:40,520
+é um router
+
+857
+01:03:40,520 --> 01:03:42,520
+em princípio responde logo
+
+858
+01:03:42,520 --> 01:03:44,520
+enquanto que os envios periódicos
+
+859
+01:03:44,520 --> 01:03:51,480
+podem demorar alguns segundos
+
+860
+01:03:51,480 --> 01:03:53,480
+o que é que vem na mensagem de R.A.
+
+861
+01:03:53,480 --> 01:03:56,960
+o típico e aquilo que nos faz
+
+862
+01:03:56,960 --> 01:03:58,960
+mais falta é a identificação
+
+863
+01:03:58,960 --> 01:04:00,960
+do prefixo
+
+864
+01:04:00,960 --> 01:04:02,960
+um prefixo é uma coisa destas
+
+865
+01:04:02,960 --> 01:04:04,960
+um conjunto
+
+866
+01:04:04,960 --> 01:04:06,960
+de bits
+
+867
+01:04:06,960 --> 01:04:08,960
+e a dimensão do prefixo
+
+868
+01:04:08,960 --> 01:04:10,960
+os bits do prefixo
+
+869
+01:04:10,960 --> 01:04:12,960
+e a dimensão do tamanho
+
+870
+01:04:12,960 --> 01:04:14,960
+do prefixo
+
+871
+01:04:14,960 --> 01:04:16,960
+se nós tenhamos aquele endereço
+
+872
+01:04:16,960 --> 01:04:18,960
+MAC
+
+873
+01:04:18,960 --> 01:04:20,960
+e configuramos um endereço
+
+874
+01:04:20,960 --> 01:04:22,960
+stateless link local
+
+875
+01:04:22,960 --> 01:04:24,960
+usando um identificadores
+
+876
+01:04:24,960 --> 01:04:26,960
+IPv6 aui64
+
+877
+01:04:26,960 --> 01:04:28,960
+um prefixo fio 80
+
+878
+01:04:28,960 --> 01:04:30,960
+agora podemos
+
+879
+01:04:30,960 --> 01:04:32,960
+se recebermos aquele prefixo
+
+880
+01:04:32,960 --> 01:04:34,960
+podemos acrescentar
+
+881
+01:04:34,960 --> 01:04:36,960
+o nosso identificador
+
+882
+01:04:36,960 --> 01:04:38,960
+IPv6 aui64
+
+883
+01:04:38,960 --> 01:04:40,960
+ao prefixo
+
+884
+01:04:40,960 --> 01:04:42,960
+que o router nos muda
+
+885
+01:04:42,960 --> 01:04:44,960
+ou seja, tiramos o fio 80
+
+886
+01:04:44,960 --> 01:04:46,960
+e pomos o novo prefixo
+
+887
+01:04:46,960 --> 01:04:48,960
+que o router nos
+
+888
+01:04:48,960 --> 01:04:50,960
+enviou
+
+889
+01:04:50,960 --> 01:04:52,960
+e passamos a ter um endereço
+
+890
+01:04:52,960 --> 01:04:54,960
+que
+
+891
+01:04:54,960 --> 01:04:56,960
+agora continua a ser um endereço
+
+892
+01:04:56,960 --> 01:04:58,960
+stateless porque esta parte
+
+893
+01:04:58,960 --> 01:05:00,960
+lá direito foi escolhida
+
+894
+01:05:00,960 --> 01:05:02,960
+sem registro
+
+895
+01:05:02,960 --> 01:05:04,960
+mas é um endereço global
+
+896
+01:05:04,960 --> 01:05:06,960
+porque a parte do lado esquerdo
+
+897
+01:05:06,960 --> 01:05:08,960
+é um prefixo oficial
+
+898
+01:05:08,960 --> 01:05:10,960
+que nos foi fornecido pelo router
+
+899
+01:05:10,960 --> 01:05:12,960
+que nos liga a internet
+
+900
+01:05:12,960 --> 01:05:17,900
+e podemos
+
+901
+01:05:17,900 --> 01:05:19,900
+usar este endereço
+
+902
+01:05:19,900 --> 01:05:21,900
+para comunicar na rede IPv6 global
+
+903
+01:05:21,900 --> 01:05:23,900
+para todo mundo
+
+904
+01:05:23,900 --> 01:05:31,050
+destas mensagens de
+
+905
+01:05:31,050 --> 01:05:33,050
+router solicitation
+
+906
+01:05:33,050 --> 01:05:37,520
+e router advertisement
+
+907
+01:05:37,520 --> 01:05:41,050
+foram
+
+908
+01:05:41,050 --> 01:05:43,050
+especificadas, foram criadas
+
+909
+01:05:43,050 --> 01:05:45,050
+o protocol IPv6
+
+910
+01:05:45,050 --> 01:05:47,050
+e um protocol
+
+911
+01:05:47,050 --> 01:05:49,050
+auxiliar do protocol IPv6
+
+912
+01:05:49,050 --> 01:05:51,050
+que é o protocol NDP
+
+913
+01:05:51,050 --> 01:05:53,050
+que se chama
+
+914
+01:05:53,050 --> 01:05:56,520
+Neighbor Discovery Protocol
+
+915
+01:05:56,520 --> 01:05:58,520
+ele substitui umas funcionalidades
+
+916
+01:05:58,520 --> 01:06:00,520
+que tínhamos que usávamos no IPv4
+
+917
+01:06:00,520 --> 01:06:02,520
+que era o ARP
+
+918
+01:06:02,520 --> 01:06:04,520
+o ARP também servia para as máquinas IPv4
+
+919
+01:06:06,520 --> 01:06:08,520
+perguntarem
+
+920
+01:06:08,520 --> 01:06:10,520
+pelos endereços MAC
+
+921
+01:06:10,520 --> 01:06:12,520
+das máquinas com quem queriam falar
+
+922
+01:06:12,520 --> 01:06:14,520
+o
+
+923
+01:06:14,520 --> 01:06:16,520
+Neighbor solicitation
+
+924
+01:06:16,520 --> 01:06:18,520
+faz
+
+925
+01:06:18,520 --> 01:06:20,520
+essas funcionalidades do ARP
+
+926
+01:06:20,520 --> 01:06:22,520
+o ARP
+
+927
+01:06:22,520 --> 01:06:24,520
+não se costuma usar
+
+928
+01:06:24,520 --> 01:06:26,520
+outras coisas não se costuma usar
+
+929
+01:06:26,520 --> 01:06:28,520
+mas agora temos também
+
+930
+01:06:28,520 --> 01:06:30,520
+o router solicitation e o router advertisement
+
+931
+01:06:30,520 --> 01:06:32,520
+que
+
+932
+01:06:32,520 --> 01:06:34,520
+não existiam em IPv4
+
+933
+01:06:34,520 --> 01:06:36,520
+e que servem para
+
+934
+01:06:36,520 --> 01:06:38,520
+fazer autoconfiguração e permitem
+
+935
+01:06:38,520 --> 01:06:40,520
+uma autoconfiguração simples
+
+936
+01:06:40,520 --> 01:06:42,520
+sem precisarmos de servidores adicionais
+
+937
+01:06:44,520 --> 01:06:46,520
+o router
+
+938
+01:06:46,520 --> 01:06:54,860
+faz o trabalho necessário
+
+939
+01:06:54,860 --> 01:06:56,860
+as mensagens NDP
+
+940
+01:06:56,860 --> 01:06:58,860
+são
+
+941
+01:06:58,860 --> 01:07:00,860
+encapsuladas em pacotes ICMP
+
+942
+01:07:00,860 --> 01:07:02,860
+o ICMP
+
+943
+01:07:02,860 --> 01:07:04,860
+é o protocol que se usa
+
+944
+01:07:04,860 --> 01:07:06,860
+por exemplo no ping
+
+945
+01:07:06,860 --> 01:07:08,860
+os pings em IPv4 usavam o ICMP
+
+946
+01:07:08,860 --> 01:07:10,860
+e os pings
+
+947
+01:07:10,860 --> 01:07:12,860
+IPv6 usam o ICMP v6
+
+948
+01:07:12,860 --> 01:07:14,860
+um termo de pacote
+
+949
+01:07:14,860 --> 01:07:18,650
+ICMP
+
+950
+01:07:18,650 --> 01:07:20,650
+tem sempre
+
+951
+01:07:20,650 --> 01:07:22,650
+esta parte de cima igual
+
+952
+01:07:22,650 --> 01:07:24,650
+tem sempre aqui um identificador de tipo
+
+953
+01:07:24,650 --> 01:07:26,650
+as mensagens do router solicitation
+
+954
+01:07:26,650 --> 01:07:28,650
+são pacotes destes onde pusmos
+
+955
+01:07:28,650 --> 01:07:30,650
+o tipo igual a 133
+
+956
+01:07:30,650 --> 01:07:34,090
+tipo igual a 133
+
+957
+01:07:34,090 --> 01:07:36,090
+e o código igual a 0
+
+958
+01:07:36,090 --> 01:07:38,090
+significa
+
+959
+01:07:38,090 --> 01:07:40,090
+que a mensagem é do router solicitation
+
+960
+01:07:42,090 --> 01:07:44,090
+aqui pode ir informação
+
+961
+01:07:44,090 --> 01:07:46,090
+adicional, ou seja, o router solicitation
+
+962
+01:07:46,090 --> 01:07:48,090
+é enviado por um cliente que está à procura
+
+963
+01:07:48,090 --> 01:07:50,090
+de um router
+
+964
+01:07:50,090 --> 01:07:52,090
+se o cliente quiser pode se identificar
+
+965
+01:07:52,090 --> 01:07:54,090
+aqui e dizer aqui
+
+966
+01:07:54,090 --> 01:07:56,090
+qual é o seu endereço
+
+967
+01:07:56,090 --> 01:07:58,090
+linklayer, o seu endereço MAC
+
+968
+01:07:58,090 --> 01:08:03,550
+mas não é obrigatório
+
+969
+01:08:03,550 --> 01:08:05,550
+pôr lá as coisas
+
+970
+01:08:05,550 --> 01:08:07,550
+uma mensagem do router advertisement
+
+971
+01:08:07,550 --> 01:08:09,550
+tem
+
+972
+01:08:09,550 --> 01:08:11,550
+mesmo início de cabeçalho
+
+973
+01:08:11,550 --> 01:08:13,550
+só que tem aqui um tipo 134
+
+974
+01:08:13,550 --> 01:08:15,550
+esta é a mensagem
+
+975
+01:08:15,550 --> 01:08:17,550
+onde o router
+
+976
+01:08:17,550 --> 01:08:19,550
+informa os clientes
+
+977
+01:08:19,550 --> 01:08:21,550
+sobre qual é o prefixo que devem usar
+
+978
+01:08:21,550 --> 01:08:23,550
+o prefixo
+
+979
+01:08:23,550 --> 01:08:25,550
+vai aqui
+
+980
+01:08:25,550 --> 01:08:27,550
+e aqui para além do prefixo pode ir outra informação
+
+981
+01:08:27,550 --> 01:08:29,550
+nomeadamente
+
+982
+01:08:29,550 --> 01:08:31,550
+o tamanho máximo de pacote
+
+983
+01:08:31,550 --> 01:08:33,550
+que se usa nesta gêdeo
+
+984
+01:08:33,550 --> 01:08:35,550
+e em outras coisas
+
+985
+01:08:35,550 --> 01:08:42,990
+aqui vai também uma coisa
+
+986
+01:08:42,990 --> 01:08:44,990
+umas flags
+
+987
+01:08:44,990 --> 01:08:48,650
+ou seja, uma informação de um bit
+
+988
+01:08:48,650 --> 01:08:50,650
+dois campos de informação
+
+989
+01:08:50,650 --> 01:08:52,650
+de um bit, cada um que são importantes
+
+990
+01:08:52,650 --> 01:08:54,650
+é a flag M e a flag O
+
+991
+01:08:54,650 --> 01:08:57,930
+que são importantes
+
+992
+01:08:57,930 --> 01:08:59,930
+nesta tarefa de auto
+
+993
+01:08:59,930 --> 01:09:05,520
+configuração
+
+994
+01:09:05,520 --> 01:09:07,520
+está aqui ilustrado o
+
+995
+01:09:07,520 --> 01:09:09,520
+utilidade das flags M
+
+996
+01:09:09,520 --> 01:09:14,400
+e O
+
+997
+01:09:14,400 --> 01:09:16,400
+quando um cliente recebe
+
+998
+01:09:16,400 --> 01:09:18,400
+um pacote router
+
+999
+01:09:18,400 --> 01:09:20,400
+advertisement
+
+1000
+01:09:20,400 --> 01:09:22,400
+normalmente traz o prefixo
+
+1001
+01:09:22,400 --> 01:09:26,600
+traz também as flags M
+
+1002
+01:09:26,600 --> 01:09:28,600
+e O
+
+1003
+01:09:28,600 --> 01:09:30,600
+o cliente deve usar
+
+1004
+01:09:30,600 --> 01:09:32,600
+deve olhar para a flag M
+
+1005
+01:09:32,600 --> 01:09:34,600
+a flag M
+
+1006
+01:09:34,600 --> 01:09:36,600
+chama-se a flag de menas de
+
+1007
+01:09:36,600 --> 01:09:38,600
+o router põe esta flag
+
+1008
+01:09:38,600 --> 01:09:40,600
+A1
+
+1009
+01:09:40,600 --> 01:09:42,600
+quando quer indicar que estamos
+
+1010
+01:09:42,600 --> 01:09:44,600
+na presença de uma rede gerida
+
+1011
+01:09:44,600 --> 01:09:46,600
+uma rede de menas de uma rede gerida
+
+1012
+01:09:46,600 --> 01:09:48,600
+ou seja, uma rede em que existe um editor
+
+1013
+01:09:48,600 --> 01:09:50,600
+que manda
+
+1014
+01:09:50,600 --> 01:09:52,600
+e portanto
+
+1015
+01:09:52,600 --> 01:09:54,600
+se estamos numa rede gerida
+
+1016
+01:09:54,600 --> 01:09:56,600
+quer dizer que não devemos usar
+
+1017
+01:09:56,600 --> 01:09:58,600
+endereço stateless
+
+1018
+01:09:58,600 --> 01:10:00,600
+ou seja, devemos parar
+
+1019
+01:10:00,600 --> 01:10:02,600
+aquele processo
+
+1020
+01:10:02,600 --> 01:10:04,600
+de juntar o prefixo
+
+1021
+01:10:04,600 --> 01:10:06,600
+com o nosso endereço
+
+1022
+01:10:06,600 --> 01:10:08,600
+o nosso identificador é o I64
+
+1023
+01:10:08,600 --> 01:10:10,600
+porque isso daria origem a um
+
+1024
+01:10:10,600 --> 01:10:12,600
+endereço stateless
+
+1025
+01:10:12,600 --> 01:10:14,600
+devemos parar esse processo
+
+1026
+01:10:14,600 --> 01:10:16,600
+e fazer uma configuração
+
+1027
+01:10:16,600 --> 01:10:18,600
+de raiz bem feita
+
+1028
+01:10:18,600 --> 01:10:20,600
+usando o endereço, um endereço que
+
+1029
+01:10:20,600 --> 01:10:22,600
+alguém nos vai dar
+
+1030
+01:10:22,600 --> 01:10:24,600
+típicamente um servidor
+
+1031
+01:10:24,600 --> 01:10:26,600
+que nos vai informar
+
+1032
+01:10:26,600 --> 01:10:30,110
+dessas coisas
+
+1033
+01:10:30,110 --> 01:10:32,110
+se aquela flag estiver a zero
+
+1034
+01:10:32,110 --> 01:10:34,110
+quer dizer que estamos numa rede
+
+1035
+01:10:34,110 --> 01:10:36,110
+que não é
+
+1036
+01:10:36,110 --> 01:10:38,110
+gerida
+
+1037
+01:10:38,110 --> 01:10:40,110
+ou seja, não existe ninguém
+
+1038
+01:10:40,110 --> 01:10:42,110
+dar endereços às máquinas
+
+1039
+01:10:42,110 --> 01:10:44,110
+então as máquinas devem
+
+1040
+01:10:44,110 --> 01:10:46,110
+podem continuar
+
+1041
+01:10:46,110 --> 01:10:48,110
+com seu processo de configuração stateless
+
+1042
+01:10:48,110 --> 01:10:50,110
+podem pegar um prefixo
+
+1043
+01:10:50,110 --> 01:10:52,110
+com catenal, com seu identificador
+
+1044
+01:10:52,110 --> 01:10:54,110
+IPv6 ao I64
+
+1045
+01:10:54,110 --> 01:10:56,110
+e obter um endereço
+
+1046
+01:10:56,110 --> 01:11:00,640
+para além disso
+
+1047
+01:11:00,640 --> 01:11:02,640
+ou nesta situação
+
+1048
+01:11:02,640 --> 01:11:04,640
+as máquinas também podem olhar para flag O
+
+1049
+01:11:04,640 --> 01:11:06,640
+depois disso
+
+1050
+01:11:06,640 --> 01:11:08,640
+depois de já terem
+
+1051
+01:11:08,640 --> 01:11:10,640
+um endereço
+
+1052
+01:11:10,640 --> 01:11:12,640
+podem olhar para flag O
+
+1053
+01:11:12,640 --> 01:11:14,640
+e a flag O
+
+1054
+01:11:14,640 --> 01:11:16,640
+é a flag de outra informação
+
+1055
+01:11:18,640 --> 01:11:20,640
+e se a flag O estiver a um
+
+1056
+01:11:20,640 --> 01:11:23,920
+nós devemos
+
+1057
+01:11:23,920 --> 01:11:25,920
+usar
+
+1058
+01:11:25,920 --> 01:11:27,920
+uma configuração oficial
+
+1059
+01:11:27,920 --> 01:11:29,920
+uma configuração stateful
+
+1060
+01:11:29,920 --> 01:11:31,920
+para outros parâmetros
+
+1061
+01:11:31,920 --> 01:11:33,920
+que não o endereço
+
+1062
+01:11:33,920 --> 01:11:35,920
+devemos também contactar um servidor
+
+1063
+01:11:35,920 --> 01:11:37,920
+DHCP que nos pode informar
+
+1064
+01:11:37,920 --> 01:11:39,920
+de outras coisas
+
+1065
+01:11:39,920 --> 01:11:41,920
+essas outras coisas podem ser
+
+1066
+01:11:41,920 --> 01:11:43,920
+coisas muito variadas
+
+1067
+01:11:43,920 --> 01:11:45,920
+e que nos podem ser úteis
+
+1068
+01:11:45,920 --> 01:11:47,920
+por exemplo, gateways
+
+1069
+01:11:47,920 --> 01:11:49,920
+de backup
+
+1070
+01:11:49,920 --> 01:11:51,920
+nós podemos querer saber
+
+1071
+01:11:51,920 --> 01:11:53,920
+identificar para
+
+1072
+01:11:53,920 --> 01:11:55,920
+no caso do nosso default gateway
+
+1073
+01:11:55,920 --> 01:11:57,920
+falhar, podermos usar outros
+
+1074
+01:11:57,920 --> 01:12:01,450
+naquela outra
+
+1075
+01:12:01,450 --> 01:12:03,450
+informação
+
+1076
+01:12:03,450 --> 01:12:05,450
+para além do endereço
+
+1077
+01:12:05,450 --> 01:12:07,450
+outra informação pode ser
+
+1078
+01:12:07,450 --> 01:12:09,450
+por exemplo, a identificação de servidores
+
+1079
+01:12:09,450 --> 01:12:11,450
+de DNS
+
+1080
+01:12:11,450 --> 01:12:13,450
+que permitem traduzir nomes
+
+1081
+01:12:13,450 --> 01:12:15,450
+em endereços
+
+1082
+01:12:15,450 --> 01:12:17,450
+pode ser
+
+1083
+01:12:19,450 --> 01:12:21,450
+pode vir também identificado qual é o
+
+1084
+01:12:21,450 --> 01:12:23,450
+nosso nome na rede do Windows
+
+1085
+01:12:23,450 --> 01:12:25,450
+qual é o nosso nome
+
+1086
+01:12:25,450 --> 01:12:27,450
+no sistema DNS
+
+1087
+01:12:27,450 --> 01:12:29,450
+qual é o servidor
+
+1088
+01:12:29,450 --> 01:12:31,450
+que nós devemos usar para acertar
+
+1089
+01:12:31,450 --> 01:12:33,450
+o relógio da nossa máquina
+
+1090
+01:12:33,450 --> 01:12:35,450
+e muitas outras
+
+1091
+01:12:35,450 --> 01:12:40,460
+coisas desse género
+
+1092
+01:12:40,460 --> 01:12:42,460
+ou seja, o gestor do majeu
+
+1093
+01:12:42,460 --> 01:12:44,460
+pode
+
+1094
+01:12:44,460 --> 01:12:46,460
+deixar tudo
+
+1095
+01:12:46,460 --> 01:12:48,460
+automático
+
+1096
+01:12:48,460 --> 01:12:50,460
+e por aquilo a zero
+
+1097
+01:12:50,460 --> 01:12:52,460
+e deixar que cada um configura o seu endereço
+
+1098
+01:12:52,460 --> 01:12:54,460
+e pouco mais
+
+1099
+01:12:54,460 --> 01:12:56,460
+depois que se derrasque
+
+1100
+01:12:56,460 --> 01:12:58,460
+ou pode
+
+1101
+01:12:58,460 --> 01:13:00,460
+deixar as máquinas configurarem os seus
+
+1102
+01:13:00,460 --> 01:13:02,460
+endereços stateless
+
+1103
+01:13:02,460 --> 01:13:04,460
+que é a parte mais pesada e a que dá mais trabalho
+
+1104
+01:13:04,460 --> 01:13:06,460
+de gerir, são os endereços
+
+1105
+01:13:06,460 --> 01:13:08,460
+porque é para os endereços para cada máquina
+
+1106
+01:13:08,460 --> 01:13:10,460
+mas a outra informação
+
+1107
+01:13:10,460 --> 01:13:12,460
+o administrador da rede
+
+1108
+01:13:12,460 --> 01:13:14,460
+pode querer informar as máquinas sobre
+
+1109
+01:13:14,460 --> 01:13:16,460
+outras coisas
+
+1110
+01:13:16,460 --> 01:13:18,460
+ou o administrador pode decidir
+
+1111
+01:13:18,460 --> 01:13:20,460
+que é tudo configurado
+
+1112
+01:13:20,460 --> 01:13:22,460
+de forma oficial
+
+1113
+01:13:22,460 --> 01:13:24,460
+e então põe aquela flega
+
+1114
+01:13:24,460 --> 01:13:26,460
+um pad
+
+1115
+01:13:26,460 --> 01:13:28,460
+configurações stateless
+
+1116
+01:13:28,460 --> 01:13:30,460
+e obriga a configurações stateful
+
+1117
+01:13:30,460 --> 01:13:32,460
+quer do endereço
+
+1118
+01:13:32,460 --> 01:13:34,460
+quer da restante informação
+
+1119
+01:13:34,460 --> 01:13:43,500
+ou seja, quando
+
+1120
+01:13:43,500 --> 01:13:45,500
+o administrador
+
+1121
+01:13:45,500 --> 01:13:47,500
+acha que não pode deixar
+
+1122
+01:13:47,500 --> 01:13:49,500
+a rede
+
+1123
+01:13:49,500 --> 01:13:52,910
+uma utilização livre
+
+1124
+01:13:52,910 --> 01:13:54,910
+uma utilização stateless em que as máquinas
+
+1125
+01:13:54,910 --> 01:13:56,910
+se ligam e arranjam o endereço
+
+1126
+01:13:56,910 --> 01:13:58,910
+e no dia seguinte podem arranjar o endereço
+
+1127
+01:13:58,910 --> 01:14:00,910
+e nem sabemos quem são as máquinas
+
+1128
+01:14:00,910 --> 01:14:02,910
+que estão a usar a rede
+
+1129
+01:14:02,910 --> 01:14:04,910
+porque todas conseguem arranjar
+
+1130
+01:14:04,910 --> 01:14:06,910
+um endereço
+
+1131
+01:14:06,910 --> 01:14:08,910
+se não queremos isso
+
+1132
+01:14:08,910 --> 01:14:10,910
+então devemos usar
+
+1133
+01:14:10,910 --> 01:14:12,910
+uma configuração stateful
+
+1134
+01:14:12,910 --> 01:14:14,910
+e para isso temos que
+
+1135
+01:14:14,910 --> 01:14:16,910
+arranjar um servidor
+
+1136
+01:14:16,910 --> 01:14:18,910
+DHCP, ou seja, uma máquina
+
+1137
+01:14:18,910 --> 01:14:20,910
+adicional
+
+1138
+01:14:20,910 --> 01:14:22,910
+que vai dar
+
+1139
+01:14:22,910 --> 01:14:24,910
+endereços
+
+1140
+01:14:24,910 --> 01:14:28,800
+aos dispositivos
+
+1141
+01:14:28,800 --> 01:14:30,800
+esse servidor DHCP
+
+1142
+01:14:30,800 --> 01:14:32,800
+pode dar
+
+1143
+01:14:32,800 --> 01:14:34,800
+informação sobre endereços
+
+1144
+01:14:34,800 --> 01:14:44,640
+ou só sobre outras coisas
+
+1145
+01:14:44,640 --> 01:14:46,640
+para termos um servidor DHCP
+
+1146
+01:14:46,640 --> 01:14:48,640
+e termos um servidor DHCP
+
+1147
+01:14:48,640 --> 01:14:50,640
+é um mecanismo normal
+
+1148
+01:14:50,640 --> 01:14:52,640
+para conseguirmos uma gestão stateful
+
+1149
+01:14:52,640 --> 01:14:56,400
+uma gestão constado
+
+1150
+01:14:56,400 --> 01:14:58,400
+então
+
+1151
+01:14:58,400 --> 01:15:01,680
+para termos
+
+1152
+01:15:01,680 --> 01:15:03,680
+uma configuração baseada em DHCP
+
+1153
+01:15:03,680 --> 01:15:05,680
+temos que instalar um servidor
+
+1154
+01:15:05,680 --> 01:15:07,680
+ou seja, uma máquina
+
+1155
+01:15:07,680 --> 01:15:09,680
+ou seja, uma máquina virtual
+
+1156
+01:15:09,680 --> 01:15:11,680
+ou um processo de uma máquina que já exista
+
+1157
+01:15:11,680 --> 01:15:13,680
+mas
+
+1158
+01:15:13,680 --> 01:15:15,680
+culpa sempre recursos
+
+1159
+01:15:15,680 --> 01:15:17,680
+e é preciso configurar esses servidores
+
+1160
+01:15:17,680 --> 01:15:19,680
+para
+
+1161
+01:15:19,680 --> 01:15:21,680
+fazer a distribuição de endereços
+
+1162
+01:15:21,680 --> 01:15:23,680
+ou de outra informação
+
+1163
+01:15:23,680 --> 01:15:25,680
+de acordo com
+
+1164
+01:15:25,680 --> 01:15:29,790
+as decisões do administrador
+
+1165
+01:15:29,790 --> 01:15:31,790
+o DHCP pode dar endereços
+
+1166
+01:15:31,790 --> 01:15:33,790
+pode dar outra informação
+
+1167
+01:15:33,790 --> 01:15:35,790
+como por exemplo identificar os servidores DNS
+
+1168
+01:15:35,790 --> 01:15:37,790
+que servem para traduzir os nomes
+
+1169
+01:15:37,790 --> 01:15:39,790
+por endereços
+
+1170
+01:15:39,790 --> 01:15:45,470
+e muitas outras coisas
+
+1171
+01:15:45,470 --> 01:15:47,470
+vamos ter sempre três possibilidades
+
+1172
+01:15:47,470 --> 01:15:49,470
+de configurar uma rede
+
+1173
+01:15:49,470 --> 01:15:51,470
+ou usar auto
+
+1174
+01:15:51,470 --> 01:15:55,610
+configuração stateless
+
+1175
+01:15:55,610 --> 01:15:57,610
+ou seja, não usamos DHCP para coisa nenhuma
+
+1176
+01:15:57,610 --> 01:15:59,610
+isto da origem
+
+1177
+01:15:59,610 --> 01:16:01,610
+a configuração stateless
+
+1178
+01:16:01,610 --> 01:16:03,610
+que se pode
+
+1179
+01:16:03,610 --> 01:16:05,610
+também chamar Slack
+
+1180
+01:16:05,610 --> 01:16:07,610
+Slack são os iniciais de stateless
+
+1181
+01:16:07,610 --> 01:16:09,610
+adereço auto configuration
+
+1182
+01:16:09,610 --> 01:16:11,610
+ou seja, auto configuração de endereços
+
+1183
+01:16:11,610 --> 01:16:13,610
+stateless sem estado
+
+1184
+01:16:15,610 --> 01:16:20,460
+chama Slack
+
+1185
+01:16:20,460 --> 01:16:22,460
+e esta alternativa é a única
+
+1186
+01:16:22,460 --> 01:16:24,460
+que não exige
+
+1187
+01:16:24,460 --> 01:16:26,460
+a instalação de um servidor DHCP
+
+1188
+01:16:26,460 --> 01:16:28,460
+e portanto é aquela que podemos usar
+
+1189
+01:16:28,460 --> 01:16:30,460
+quando não queremos
+
+1190
+01:16:30,460 --> 01:16:32,460
+ter a obrigação de instalar
+
+1191
+01:16:32,460 --> 01:16:37,050
+o servidor DHCP
+
+1192
+01:16:37,050 --> 01:16:39,050
+podemos instalar um servidor
+
+1193
+01:16:39,050 --> 01:16:41,050
+DHCP
+
+1194
+01:16:41,050 --> 01:16:43,050
+e não permitir auto configuração
+
+1195
+01:16:43,050 --> 01:16:45,050
+de endereços, ou seja, por
+
+1196
+01:16:45,050 --> 01:16:47,050
+DHCP configurar tudo
+
+1197
+01:16:47,050 --> 01:16:49,050
+ou podemos deixar que as máquinas
+
+1198
+01:16:49,050 --> 01:16:51,050
+auto configurem o seu endereço
+
+1199
+01:16:51,050 --> 01:16:54,560
+de forma que vimos
+
+1200
+01:16:54,560 --> 01:16:56,560
+mas depois
+
+1201
+01:16:56,560 --> 01:16:58,560
+fizeram as máquinas que devem usar
+
+1202
+01:16:58,560 --> 01:17:00,560
+o servidor DHCP
+
+1203
+01:17:00,560 --> 01:17:02,560
+para obter
+
+1204
+01:17:02,560 --> 01:17:04,560
+informação sobre outras coisas
+
+1205
+01:17:04,560 --> 01:17:11,230
+para além do endereço
+
+1206
+01:17:11,230 --> 01:17:13,230
+quando é que devemos usar Slack
+
+1207
+01:17:13,230 --> 01:17:15,230
+ou auto configuração
+
+1208
+01:17:15,230 --> 01:17:17,230
+de endereços sem estado
+
+1209
+01:17:17,230 --> 01:17:19,230
+quando queremos um setup mínimo
+
+1210
+01:17:19,230 --> 01:17:21,230
+podemos que as máquinas
+
+1211
+01:17:21,230 --> 01:17:23,230
+sejam ligar e usar
+
+1212
+01:17:23,230 --> 01:17:28,300
+isso
+
+1213
+01:17:28,300 --> 01:17:30,300
+essa solução
+
+1214
+01:17:30,300 --> 01:17:32,300
+a solução sem estado
+
+1215
+01:17:32,300 --> 01:17:34,300
+é a que dá menos trabalho
+
+1216
+01:17:34,300 --> 01:17:36,300
+a instalar e a que dá menos trabalho
+
+1217
+01:17:36,300 --> 01:17:38,300
+a reconfigurar quando é preciso
+
+1218
+01:17:38,300 --> 01:17:40,300
+mudar os prefixes por alguma jazão
+
+1219
+01:17:40,300 --> 01:17:42,300
+nomeadamente quando mudamos de
+
+1220
+01:17:42,300 --> 01:17:44,300
+formos de acesso à internet
+
+1221
+01:17:44,300 --> 01:17:46,300
+ou quando mudamos de rede
+
+1222
+01:17:46,300 --> 01:17:48,300
+não precisamos
+
+1223
+01:17:48,300 --> 01:17:50,300
+de um servidor
+
+1224
+01:17:50,300 --> 01:17:52,300
+DHCP portanto poupamos
+
+1225
+01:17:52,300 --> 01:17:54,300
+provavelmente dinheiro
+
+1226
+01:17:54,300 --> 01:18:03,020
+e trabalho de configuração
+
+1227
+01:18:03,020 --> 01:18:05,020
+desvantagens desta solução
+
+1228
+01:18:05,020 --> 01:18:07,020
+de utilizarmos
+
+1229
+01:18:07,020 --> 01:18:09,020
+auto configuração
+
+1230
+01:18:09,020 --> 01:18:11,020
+stateless de endereços
+
+1231
+01:18:11,020 --> 01:18:13,020
+ficamos sem possibilidade
+
+1232
+01:18:13,020 --> 01:18:15,020
+de controlar
+
+1233
+01:18:15,020 --> 01:18:17,020
+ficamos até sem saber
+
+1234
+01:18:17,020 --> 01:18:19,020
+as vezes quem são as máquinas
+
+1235
+01:18:19,020 --> 01:18:21,020
+que estão a usar um determinado endereço
+
+1236
+01:18:21,020 --> 01:18:23,020
+porque a máquina configurou
+
+1237
+01:18:23,020 --> 01:18:25,020
+um endereço
+
+1238
+01:18:25,020 --> 01:18:27,020
+livre e iniciativa
+
+1239
+01:18:27,020 --> 01:18:29,020
+e portanto temos vulnerabilidades
+
+1240
+01:18:33,020 --> 01:18:35,020
+não podemos identificar
+
+1241
+01:18:35,020 --> 01:18:37,020
+quem fez determinada ação
+
+1242
+01:18:37,020 --> 01:18:39,020
+ou temos mais dificuldade
+
+1243
+01:18:39,020 --> 01:18:41,020
+nisso
+
+1244
+01:18:41,020 --> 01:18:43,020
+em pôr as culpas em alguém
+
+1245
+01:18:43,020 --> 01:18:45,020
+porque esse alguém pode mudar
+
+1246
+01:18:45,020 --> 01:18:47,020
+de endereço
+
+1247
+01:18:47,020 --> 01:18:49,020
+muito facilmente
+
+1248
+01:18:49,020 --> 01:18:51,020
+e também não podemos controlar quem é que accede
+
+1249
+01:18:51,020 --> 01:18:53,020
+a rede e quem não acede
+
+1250
+01:18:53,020 --> 01:18:55,020
+porque todas as máquinas
+
+1251
+01:18:55,020 --> 01:18:57,020
+têm capacidade de auto configuração
+
+1252
+01:18:57,020 --> 01:19:00,520
+stateless
+
+1253
+01:19:00,520 --> 01:19:02,520
+por outro lado também
+
+1254
+01:19:02,520 --> 01:19:04,520
+com auto configuração stateless
+
+1255
+01:19:04,520 --> 01:19:06,520
+não conseguimos
+
+1256
+01:19:06,520 --> 01:19:08,520
+informar as máquinas
+
+1257
+01:19:08,520 --> 01:19:10,520
+de todas as coisas
+
+1258
+01:19:10,520 --> 01:19:12,520
+que gostávamos
+
+1259
+01:19:12,520 --> 01:19:14,520
+conseguimos
+
+1260
+01:19:14,520 --> 01:19:16,520
+aquelas auto configura em um endereço
+
+1261
+01:19:16,520 --> 01:19:18,520
+conseguimos informá-las
+
+1262
+01:19:18,520 --> 01:19:20,520
+sobre quem é o router
+
+1263
+01:19:20,520 --> 01:19:22,520
+isso é o fundamental para elas poderem comunicar
+
+1264
+01:19:22,520 --> 01:19:24,520
+mas não conseguimos
+
+1265
+01:19:24,520 --> 01:19:26,520
+ou pelo menos não é fácil
+
+1266
+01:19:26,520 --> 01:19:28,520
+ou não é imediato
+
+1267
+01:19:28,520 --> 01:19:30,520
+não é completo
+
+1268
+01:19:30,520 --> 01:19:32,520
+conseguimos informar servidores de DNS
+
+1269
+01:19:32,520 --> 01:19:34,520
+para resolver nomes
+
+1270
+01:19:34,520 --> 01:19:36,520
+traduzir nomes em endereços
+
+1271
+01:19:36,520 --> 01:19:38,520
+servidores de NTP
+
+1272
+01:19:38,520 --> 01:19:40,520
+para acertar os relógios das máquinas
+
+1273
+01:19:40,520 --> 01:19:42,520
+em função da hora oficial
+
+1274
+01:19:44,520 --> 01:19:46,520
+gateways de fallback
+
+1275
+01:19:46,520 --> 01:19:48,520
+que se usam quando falham os gateways principais
+
+1276
+01:19:48,520 --> 01:19:50,520
+e
+
+1277
+01:19:50,520 --> 01:19:52,520
+nomes de máquinas
+
+1278
+01:19:54,520 --> 01:19:56,520
+servidores
+
+1279
+01:19:56,520 --> 01:19:58,520
+da ZED Windows
+
+1280
+01:19:58,520 --> 01:20:01,870
+muitas outras coisas
+
+1281
+01:20:01,870 --> 01:20:03,870
+outra desvantagem
+
+1282
+01:20:03,870 --> 01:20:05,870
+grande
+
+1283
+01:20:05,870 --> 01:20:07,870
+o que é importante
+
+1284
+01:20:07,870 --> 01:20:09,870
+em alguns casos
+
+1285
+01:20:09,870 --> 01:20:11,870
+é que se utilizarmos o mecanismo de auto
+
+1286
+01:20:11,870 --> 01:20:13,870
+configuração
+
+1287
+01:20:13,870 --> 01:20:15,870
+stateless de endereços
+
+1288
+01:20:15,870 --> 01:20:19,240
+vimos que
+
+1289
+01:20:19,240 --> 01:20:21,240
+os endereços auto configurados
+
+1290
+01:20:21,240 --> 01:20:23,240
+eram baseados num prefixo
+
+1291
+01:20:23,240 --> 01:20:25,240
+e mais um identificador
+
+1292
+01:20:25,240 --> 01:20:27,240
+de 64 bits
+
+1293
+01:20:27,240 --> 01:20:29,240
+isso significa
+
+1294
+01:20:29,240 --> 01:20:31,240
+que os prefixes não podem ter
+
+1295
+01:20:31,240 --> 01:20:33,240
+mais do que 64 bits
+
+1296
+01:20:33,240 --> 01:20:35,240
+porque
+
+1297
+01:20:35,240 --> 01:20:37,240
+se o prefixo tivesse mais do que 64 bits
+
+1298
+01:20:37,240 --> 01:20:39,240
+quando acrescentarmos
+
+1299
+01:20:39,240 --> 01:20:41,240
+o
+
+1300
+01:20:41,240 --> 01:20:43,240
+e acrescentarmos o identificador
+
+1301
+01:20:43,240 --> 01:20:45,240
+de 64 bits ficámos com mais de 128 bits
+
+1302
+01:20:45,240 --> 01:20:47,240
+ou seja, só podemos usar prefixes
+
+1303
+01:20:47,240 --> 01:20:49,240
+até 64 bits
+
+1304
+01:20:49,240 --> 01:20:51,240
+ou seja, usamos
+
+1305
+01:20:51,240 --> 01:20:53,240
+um conjunto
+
+1306
+01:20:53,240 --> 01:20:55,240
+grande de endereços
+
+1307
+01:20:55,240 --> 01:20:57,240
+para a nossa rede
+
+1308
+01:20:57,240 --> 01:20:59,240
+stateless
+
+1309
+01:20:59,240 --> 01:21:01,240
+porque
+
+1310
+01:21:01,240 --> 01:21:03,240
+a nossa rede vai ficar
+
+1311
+01:21:03,240 --> 01:21:05,240
+ocupar um número de endereços
+
+1312
+01:21:05,240 --> 01:21:07,240
+que é 2.64
+
+1313
+01:21:07,240 --> 01:21:09,240
+que é um número muito grande
+
+1314
+01:21:09,240 --> 01:21:11,240
+é um número maior
+
+1315
+01:21:11,240 --> 01:21:13,240
+do que o número de endereços
+
+1316
+01:21:13,240 --> 01:21:15,240
+que temos em IPv4
+
+1317
+01:21:15,240 --> 01:21:17,240
+cada vez que usamos
+
+1318
+01:21:17,240 --> 01:21:19,240
+uma rede Slack gastamos
+
+1319
+01:21:19,240 --> 01:21:21,240
+2.64
+
+1320
+01:21:21,240 --> 01:21:24,750
+endereços
+
+1321
+01:21:24,750 --> 01:21:33,630
+nessa rede
+
+1322
+01:21:33,630 --> 01:21:35,630
+onde vimos
+
+1323
+01:21:35,630 --> 01:21:37,630
+o formato dos pacotes de
+
+1324
+01:21:37,630 --> 01:21:39,630
+router advertisement
+
+1325
+01:21:39,630 --> 01:21:41,630
+e router solicitation
+
+1326
+01:21:41,630 --> 01:21:43,630
+o protocol NDP
+
+1327
+01:21:43,630 --> 01:21:45,630
+para além do
+
+1328
+01:21:45,630 --> 01:21:47,630
+router advertisement e do router solicitation
+
+1329
+01:21:47,630 --> 01:21:49,630
+defino também
+
+1330
+01:21:49,630 --> 01:21:51,630
+uma mensagem de neighbor solicitation
+
+1331
+01:21:51,630 --> 01:21:53,630
+é uma mensagem que serve
+
+1332
+01:21:53,630 --> 01:21:55,630
+para
+
+1333
+01:21:55,630 --> 01:21:57,630
+perguntarmos a um vizinho
+
+1334
+01:21:57,630 --> 01:21:59,630
+qual é o seu endereço MAC
+
+1335
+01:21:59,630 --> 01:22:03,000
+quando precisamos
+
+1336
+01:22:03,000 --> 01:22:05,000
+falar com o vizinho
+
+1337
+01:22:05,000 --> 01:22:07,000
+usando o metternet
+
+1338
+01:22:07,000 --> 01:22:09,000
+sabermos o endereço IP do vizinho
+
+1339
+01:22:09,000 --> 01:22:11,000
+temos primeiro que traduzir
+
+1340
+01:22:11,000 --> 01:22:13,000
+o endereço IP no endereço MAC
+
+1341
+01:22:13,000 --> 01:22:15,000
+para depois usarmos a Ethernet
+
+1342
+01:22:15,000 --> 01:22:17,000
+para falar com o vizinho
+
+1343
+01:22:17,000 --> 01:22:19,000
+isso em IPv4
+
+1344
+01:22:19,000 --> 01:22:21,000
+fazia-se com o ARP
+
+1345
+01:22:21,000 --> 01:22:23,000
+em IPv6 faz-se com o neighbor solicitation
+
+1346
+01:22:23,000 --> 01:22:25,000
+é enviado um pacote
+
+1347
+01:22:25,000 --> 01:22:27,000
+em que aqui vem um endereço IP
+
+1348
+01:22:27,000 --> 01:22:29,000
+o endereço IP
+
+1349
+01:22:29,000 --> 01:22:31,000
+de quem nós queremos falar
+
+1350
+01:22:31,000 --> 01:22:33,000
+e
+
+1351
+01:22:33,000 --> 01:22:35,000
+a máquina
+
+1352
+01:22:35,000 --> 01:22:37,000
+este é enviado para todas as máquinas
+
+1353
+01:22:37,000 --> 01:22:39,000
+para todos os vizinhos
+
+1354
+01:22:39,000 --> 01:22:41,000
+e o vizinho
+
+1355
+01:22:41,000 --> 01:22:43,000
+que tenha este endereço IP
+
+1356
+01:22:43,000 --> 01:22:45,000
+deve responder com o neighbor advertisement
+
+1357
+01:22:45,000 --> 01:22:47,000
+dizendo
+
+1358
+01:22:47,000 --> 01:22:49,000
+que o meu endereço MAC
+
+1359
+01:22:49,000 --> 01:22:52,890
+é este
+
+1360
+01:22:52,890 --> 01:22:54,890
+estas mensagens de neighbor solicitation
+
+1361
+01:22:54,890 --> 01:22:56,890
+servem para perguntar a um vizinho
+
+1362
+01:22:56,890 --> 01:22:58,890
+quem é que tem este endereço IP
+
+1363
+01:22:58,890 --> 01:23:00,890
+ou qual é o endereço MAC
+
+1364
+01:23:00,890 --> 01:23:02,890
+da máquina
+
+1365
+01:23:02,890 --> 01:23:04,890
+que tem este endereço IP
+
+1366
+01:23:04,890 --> 01:23:06,890
+então estas mensagens também servem
+
+1367
+01:23:06,890 --> 01:23:08,890
+para fazer
+
+1368
+01:23:08,890 --> 01:23:10,890
+aquele mecanismo de DAD
+
+1369
+01:23:10,890 --> 01:23:12,890
+de duplicate address
+
+1370
+01:23:12,890 --> 01:23:14,890
+detection
+
+1371
+01:23:14,890 --> 01:23:16,890
+que nós vimos que tínhamos que fazer
+
+1372
+01:23:16,890 --> 01:23:18,890
+de começar a usar um endereço
+
+1373
+01:23:18,890 --> 01:23:20,890
+stateless linked local
+
+1374
+01:23:20,890 --> 01:23:24,400
+para sabermos
+
+1375
+01:23:24,400 --> 01:23:26,400
+se estamos
+
+1376
+01:23:26,400 --> 01:23:28,400
+se alguém tem um endereço duplicado
+
+1377
+01:23:28,400 --> 01:23:30,400
+com o nosso
+
+1378
+01:23:30,400 --> 01:23:32,400
+enviamos uma mensagem destas
+
+1379
+01:23:32,400 --> 01:23:34,400
+com o endereço que nós queremos usar
+
+1380
+01:23:34,400 --> 01:23:36,400
+a espera ver se alguém responde
+
+1381
+01:23:36,400 --> 01:23:38,400
+com o seu endereço MAC
+
+1382
+01:23:38,400 --> 01:23:40,400
+se alguém responder
+
+1383
+01:23:40,400 --> 01:23:42,400
+é porque alguém tem este endereço IP
+
+1384
+01:23:42,400 --> 01:23:44,400
+e portanto nós não podemos usar
+
+1385
+01:23:44,400 --> 01:23:46,400
+é exatamente a mesma pergunta
+
+1386
+01:23:46,400 --> 01:23:48,400
+que fazemos quando queremos falar
+
+1387
+01:23:48,400 --> 01:23:50,400
+com alguém que existe
+
+1388
+01:23:50,400 --> 01:23:52,400
+do qual sabemos apenas
+
+1389
+01:23:52,400 --> 01:23:54,400
+o endereço IP
+
+1390
+01:23:54,400 --> 01:23:56,400
+e vamos aqui o endereço IP
+
+1391
+01:23:56,400 --> 01:23:58,400
+do destinatário
+
+1392
+01:23:58,400 --> 01:24:00,400
+da nossa conversa
+
+1393
+01:24:00,400 --> 01:24:02,400
+e esse destinatário há de responder
+
+1394
+01:24:02,400 --> 01:24:04,400
+com seu endereço MAC
+
+1395
+01:24:04,400 --> 01:24:06,400
+outras respostas
+
+1396
+01:24:06,400 --> 01:24:08,400
+um neighbor solicitation
+
+1397
+01:24:08,400 --> 01:24:10,400
+são as respostas de neighbor advertisement
+
+1398
+01:24:10,400 --> 01:24:12,400
+que levam ali o tipo 136
+
+1399
+01:24:12,400 --> 01:24:14,400
+e que
+
+1400
+01:24:14,400 --> 01:24:16,400
+que trazem aqui
+
+1401
+01:24:16,400 --> 01:24:18,400
+o endereço linked local
+
+1402
+01:24:18,400 --> 01:24:27,720
+normalmente
+
+1403
+01:24:27,720 --> 01:24:29,720
+existe o interesse
+
+1404
+01:24:29,720 --> 01:24:31,720
+em informar
+
+1405
+01:24:31,720 --> 01:24:33,720
+também as máquinas sobre
+
+1406
+01:24:33,720 --> 01:24:35,720
+quais são os servidores de DNS
+
+1407
+01:24:35,720 --> 01:24:37,720
+que devemos usar
+
+1408
+01:24:39,720 --> 01:24:41,720
+vimos que normalmente
+
+1409
+01:24:41,720 --> 01:24:43,720
+para fazer isso
+
+1410
+01:24:43,720 --> 01:24:45,720
+é melhor
+
+1411
+01:24:45,720 --> 01:24:47,720
+usarmos um servidor DHCP
+
+1412
+01:24:47,720 --> 01:24:49,720
+também as extensões
+
+1413
+01:24:49,720 --> 01:24:51,720
+dos routers advertisement que permitem
+
+1414
+01:24:51,720 --> 01:24:53,720
+incluir
+
+1415
+01:24:53,720 --> 01:24:55,720
+resolver esse problema
+
+1416
+01:24:55,720 --> 01:24:57,720
+de forma simples
+
+1417
+01:24:57,720 --> 01:25:01,000
+mas que pode ser suficiente
+
+1418
+01:25:01,000 --> 01:25:05,280
+vamos falar mais um bocadinho
+
+1419
+01:25:05,280 --> 01:25:07,280
+de endereços
+
+1420
+01:25:07,280 --> 01:25:09,280
+únicos
+
+1421
+01:25:09,280 --> 01:25:11,280
+é uma coisa que nos interessa
+
+1422
+01:25:11,280 --> 01:25:13,280
+se estamos num curso
+
+1423
+01:25:13,280 --> 01:25:15,280
+de sistemas imbebidos
+
+1424
+01:25:15,280 --> 01:25:17,280
+estamos a pensar fazer
+
+1425
+01:25:17,280 --> 01:25:19,280
+dispositivos
+
+1426
+01:25:19,280 --> 01:25:21,280
+falarem com outros dispositivos
+
+1427
+01:25:21,280 --> 01:25:23,280
+provavelmente
+
+1428
+01:25:23,280 --> 01:25:25,280
+pode não haver necessidade de termos
+
+1429
+01:25:25,280 --> 01:25:27,280
+os dispositivos até falar com pessoas
+
+1430
+01:25:27,280 --> 01:25:29,280
+mas
+
+1431
+01:25:29,280 --> 01:25:31,280
+se fizermos
+
+1432
+01:25:31,280 --> 01:25:33,280
+lâmpadas inteligentes
+
+1433
+01:25:33,280 --> 01:25:35,280
+vamos querer que os interruptores falem
+
+1434
+01:25:35,280 --> 01:25:37,280
+com as lâmpadas para poderem acender e apagar
+
+1435
+01:25:37,280 --> 01:25:39,280
+as lâmpadas
+
+1436
+01:25:39,280 --> 01:25:41,280
+pode não ser preciso que as máquinas
+
+1437
+01:25:41,280 --> 01:25:43,280
+que estejam preparadas
+
+1438
+01:25:43,280 --> 01:25:45,280
+para andar a navegar na internet com um browser
+
+1439
+01:25:45,280 --> 01:25:47,280
+consigam
+
+1440
+01:25:47,280 --> 01:25:49,280
+falar diretamente com a lâmpada
+
+1441
+01:25:49,280 --> 01:25:52,810
+mas
+
+1442
+01:25:52,810 --> 01:25:54,810
+realmente admite
+
+1443
+01:25:54,810 --> 01:25:56,810
+conectividade global
+
+1444
+01:25:56,810 --> 01:26:01,760
+muitas vezes
+
+1445
+01:26:01,760 --> 01:26:03,760
+também queremos estes dispositivos
+
+1446
+01:26:03,760 --> 01:26:05,760
+se estivermos numa empresa
+
+1447
+01:26:05,760 --> 01:26:07,760
+que quer fazer lâmpadas inteligentes
+
+1448
+01:26:07,760 --> 01:26:09,760
+e pô-las à venda
+
+1449
+01:26:09,760 --> 01:26:11,760
+queremos que os nossos clientes
+
+1450
+01:26:11,760 --> 01:26:13,760
+quem comprar as lâmpadas possa chegar
+
+1451
+01:26:13,760 --> 01:26:15,760
+a casa e pô-las as lâmpadas
+
+1452
+01:26:15,760 --> 01:26:17,760
+e as lâmpadas têm que trabalhar
+
+1453
+01:26:17,760 --> 01:26:19,760
+na rede do nosso cliente
+
+1454
+01:26:19,760 --> 01:26:21,760
+não vamos lá
+
+1455
+01:26:21,760 --> 01:26:23,760
+à casa do cliente instalar uma rede nova
+
+1456
+01:26:23,760 --> 01:26:25,760
+e fazer o endereçamento
+
+1457
+01:26:25,760 --> 01:26:27,760
+para essa rede
+
+1458
+01:26:27,760 --> 01:26:29,760
+portanto temos que saber o que a classe usa
+
+1459
+01:26:29,760 --> 01:26:31,760
+ou conseguir usar-os
+
+1460
+01:26:31,760 --> 01:26:33,760
+aquilo que aparecer
+
+1461
+01:26:33,760 --> 01:26:35,760
+com endereços
+
+1462
+01:26:35,760 --> 01:26:37,760
+oficiais
+
+1463
+01:26:37,760 --> 01:26:39,760
+dados pela rede de lá
+
+1464
+01:26:39,760 --> 01:26:41,760
+ou endereços
+
+1465
+01:26:41,760 --> 01:26:43,760
+não oficiais
+
+1466
+01:26:43,760 --> 01:26:45,760
+predefinidos por nós
+
+1467
+01:26:45,760 --> 01:26:47,760
+outra coisa qualquer
+
+1468
+01:26:47,760 --> 01:26:49,760
+uma realidade muito significativa
+
+1469
+01:26:49,760 --> 01:26:51,760
+muito interessante é usar-nos endereços únicos
+
+1470
+01:26:51,760 --> 01:26:53,760
+locais
+
+1471
+01:26:53,760 --> 01:26:55,760
+se eles estão únicos
+
+1472
+01:26:55,760 --> 01:26:57,760
+podemos configurá-los na fábrica
+
+1473
+01:26:57,760 --> 01:26:59,760
+podemos fazer os nossos dispositivos
+
+1474
+01:26:59,760 --> 01:27:01,760
+já com o endereço
+
+1475
+01:27:01,760 --> 01:27:03,760
+podemos pôr-lo ao endereço
+
+1476
+01:27:03,760 --> 01:27:05,760
+e depois arranja a maneira
+
+1477
+01:27:05,760 --> 01:27:07,760
+que
+
+1478
+01:27:07,760 --> 01:27:09,760
+se dois dos nossos dispositivos
+
+1479
+01:27:09,760 --> 01:27:11,760
+forem parar a mesma rede
+
+1480
+01:27:11,760 --> 01:27:13,760
+eles vão poder falar um com o outro
+
+1481
+01:27:13,760 --> 01:27:15,760
+porque
+
+1482
+01:27:15,760 --> 01:27:17,760
+tem endereços que são funcionais
+
+1483
+01:27:17,760 --> 01:27:23,880
+outros endereços
+
+1484
+01:27:23,880 --> 01:27:25,880
+o LA
+
+1485
+01:27:25,880 --> 01:27:27,880
+são endereços globais
+
+1486
+01:27:27,880 --> 01:27:31,260
+em termos
+
+1487
+01:27:31,260 --> 01:27:33,260
+de unicidade
+
+1488
+01:27:33,260 --> 01:27:35,260
+ou seja, são únicos no mundo
+
+1489
+01:27:35,260 --> 01:27:37,260
+mas são endereços que são locais
+
+1490
+01:27:37,260 --> 01:27:39,260
+portanto não podem
+
+1491
+01:27:39,260 --> 01:27:41,260
+ser exportados para fora
+
+1492
+01:27:41,260 --> 01:27:43,260
+da rede de uma instituição
+
+1493
+01:27:43,260 --> 01:27:45,260
+portanto funcionam como os endereços privados do IPv4
+
+1494
+01:27:45,260 --> 01:27:47,260
+sobre esse ponto de vista
+
+1495
+01:27:47,260 --> 01:27:49,260
+em termos de
+
+1496
+01:27:49,260 --> 01:27:51,260
+incaminhamento que são privados
+
+1497
+01:27:51,260 --> 01:27:53,260
+em termos
+
+1498
+01:27:53,260 --> 01:27:55,260
+de serem únicos
+
+1499
+01:27:55,260 --> 01:28:05,930
+eles são globalmente únicos
+
+1500
+01:28:05,930 --> 01:28:07,930
+para trabalharmos com o endereço
+
+1501
+01:28:07,930 --> 01:28:09,930
+o LA temos que arranjar um prefixo de 48 bit
+
+1502
+01:28:09,930 --> 01:28:14,010
+único
+
+1503
+01:28:14,010 --> 01:28:16,010
+e
+
+1504
+01:28:16,010 --> 01:28:19,290
+já vimos isto
+
+1505
+01:28:19,290 --> 01:28:21,290
+para arranjarmos um prefixo de 48 bit
+
+1506
+01:28:21,290 --> 01:28:23,290
+os 48 bit vem até aqui
+
+1507
+01:28:23,290 --> 01:28:25,290
+já vimos que começamos
+
+1508
+01:28:25,290 --> 01:28:27,290
+ali com fd00
+
+1509
+01:28:27,290 --> 01:28:29,290
+que
+
+1510
+01:28:29,290 --> 01:28:31,290
+são os metados do fc00-7
+
+1511
+01:28:31,290 --> 01:28:33,290
+e
+
+1512
+01:28:33,290 --> 01:28:35,290
+vamos arranjar aqui
+
+1513
+01:28:35,290 --> 01:28:37,290
+um conjunto de 40 bit
+
+1514
+01:28:37,290 --> 01:28:39,290
+que nos vai
+
+1515
+01:28:39,290 --> 01:28:41,290
+permitir
+
+1516
+01:28:41,290 --> 01:28:43,290
+criar uma rede única porque mais ninguém no mundo
+
+1517
+01:28:43,290 --> 01:28:45,290
+vai usar estes 40 bit
+
+1518
+01:28:45,290 --> 01:28:47,290
+como é que arranjamos estes 40 bit
+
+1519
+01:28:47,290 --> 01:28:49,290
+existe uma norma
+
+1520
+01:28:49,290 --> 01:28:51,290
+que diz
+
+1521
+01:28:51,290 --> 01:28:53,290
+que nós podemos
+
+1522
+01:28:53,290 --> 01:28:55,290
+sortear estes 40 bit
+
+1523
+01:28:55,290 --> 01:28:57,290
+ou seja, não podemos escolher
+
+1524
+01:28:57,290 --> 01:28:59,290
+o nosso nome
+
+1525
+01:28:59,290 --> 01:29:01,290
+e por ali o nosso nome
+
+1526
+01:29:01,290 --> 01:29:03,290
+nem o nome da nossa empresa
+
+1527
+01:29:03,290 --> 01:29:05,290
+nem por uma palavra
+
+1528
+01:29:05,290 --> 01:29:07,290
+nem por o nome do nosso filho
+
+1529
+01:29:07,290 --> 01:29:09,290
+ou o nome do nosso cão
+
+1530
+01:29:09,290 --> 01:29:11,290
+porque se pudermos
+
+1531
+01:29:11,290 --> 01:29:13,290
+se pudermos ali uma palavra
+
+1532
+01:29:13,290 --> 01:29:15,290
+ou alguma coisa baseada numa dessas palavras
+
+1533
+01:29:15,290 --> 01:29:17,290
+pode acontecer que mais alguém no mundo
+
+1534
+01:29:17,290 --> 01:29:19,290
+tenha um cão com o mesmo nome
+
+1535
+01:29:19,290 --> 01:29:21,290
+ou um filho com o mesmo nome
+
+1536
+01:29:21,290 --> 01:29:23,290
+e isso vai dar origem
+
+1537
+01:29:23,290 --> 01:29:25,290
+em um identificador igual
+
+1538
+01:29:25,290 --> 01:29:27,290
+de se sortear
+
+1539
+01:29:27,290 --> 01:29:29,290
+aqueles 40 bit
+
+1540
+01:29:29,290 --> 01:29:36,000
+e
+
+1541
+01:29:36,000 --> 01:29:38,000
+existem até
+
+1542
+01:29:38,000 --> 01:29:40,000
+de forma normalizada
+
+1543
+01:29:40,000 --> 01:29:42,000
+algoritmos de
+
+1544
+01:29:42,000 --> 01:29:44,000
+números aleatórios que permitem
+
+1545
+01:29:44,000 --> 01:29:46,000
+gerar aqueles 40 bit
+
+1546
+01:29:46,000 --> 01:29:48,000
+de forma aleatória
+
+1547
+01:29:48,000 --> 01:29:50,000
+e
+
+1548
+01:29:50,000 --> 01:29:52,000
+se toda a gente usar esse mecanismo
+
+1549
+01:29:52,000 --> 01:29:54,000
+de escolha de números aleatórias
+
+1550
+01:29:54,000 --> 01:29:56,000
+é muito provável
+
+1551
+01:29:56,000 --> 01:29:58,000
+que não haja repetições
+
+1552
+01:29:58,000 --> 01:30:00,000
+daqueles 40 bit
+
+1553
+01:30:00,000 --> 01:30:02,000
+não é matematicamente garantido
+
+1554
+01:30:02,000 --> 01:30:04,000
+pode acontecer
+
+1555
+01:30:04,000 --> 01:30:06,000
+que alguém na China
+
+1556
+01:30:06,000 --> 01:30:08,000
+ou no outro sítio qualquer
+
+1557
+01:30:08,000 --> 01:30:10,000
+faça um sorteio
+
+1558
+01:30:10,000 --> 01:30:12,000
+e arranja os mesmos 40 bit
+
+1559
+01:30:12,000 --> 01:30:14,000
+que nós arranjamos
+
+1560
+01:30:14,000 --> 01:30:16,000
+mas é muito improvável
+
+1561
+01:30:16,000 --> 01:30:18,000
+porque dois levantado a 40
+
+1562
+01:30:18,000 --> 01:30:20,000
+é muito mais
+
+1563
+01:30:20,000 --> 01:30:22,000
+do que o número de pessoas
+
+1564
+01:30:22,000 --> 01:30:24,000
+que existem no mundo
+
+1565
+01:30:24,000 --> 01:30:26,000
+portanto, se todas as pessoas
+
+1566
+01:30:26,000 --> 01:30:28,000
+sortiarem um número de 40 bits
+
+1567
+01:30:28,000 --> 01:30:30,000
+provavelmente
+
+1568
+01:30:30,000 --> 01:30:32,000
+não vai haver repetições
+
+1569
+01:30:32,000 --> 01:30:34,000
+ou muito dificilmente haverá repetições
+
+1570
+01:30:34,000 --> 01:30:37,370
+ou colisões
+
+1571
+01:30:37,370 --> 01:30:39,370
+e portanto
+
+1572
+01:30:39,370 --> 01:30:41,370
+os endereços
+
+1573
+01:30:41,370 --> 01:30:43,370
+o L e A
+
+1574
+01:30:43,370 --> 01:30:45,370
+podemos dizer-los que são
+
+1575
+01:30:45,370 --> 01:30:47,370
+em princípio únicos
+
+1576
+01:30:47,370 --> 01:30:49,370
+mas não
+
+1577
+01:30:49,370 --> 01:30:51,370
+garantidamente
+
+1578
+01:30:51,370 --> 01:30:53,370
+ou não podemos garantir
+
+1579
+01:30:53,370 --> 01:30:55,370
+de forma matemática que sejam de facto únicos
+
+1580
+01:30:55,370 --> 01:30:57,370
+mas pode acontecer
+
+1581
+01:30:57,370 --> 01:31:03,080
+que alguém os use
+
+1582
+01:31:03,080 --> 01:31:05,080
+se
+
+1583
+01:31:05,080 --> 01:31:07,080
+temos estes endereços
+
+1584
+01:31:07,080 --> 01:31:09,080
+que podem funcionar
+
+1585
+01:31:09,080 --> 01:31:11,080
+como os endereços privados do IPv4
+
+1586
+01:31:11,080 --> 01:31:13,080
+para
+
+1587
+01:31:13,080 --> 01:31:15,080
+comunicarmos dentro de uma rede
+
+1588
+01:31:15,080 --> 01:31:17,080
+mas que não podem ser publicados
+
+1589
+01:31:17,080 --> 01:31:19,080
+para fora, não podemos encaminhar
+
+1590
+01:31:19,080 --> 01:31:21,080
+pacotes com estes endereços
+
+1591
+01:31:21,080 --> 01:31:23,080
+para a rede pública
+
+1592
+01:31:23,080 --> 01:31:25,080
+alguém se lembrou
+
+1593
+01:31:25,080 --> 01:31:27,080
+de também
+
+1594
+01:31:27,080 --> 01:31:29,080
+encaminhar um mecanismo
+
+1595
+01:31:29,080 --> 01:31:32,360
+parecido com o NAT
+
+1596
+01:31:32,360 --> 01:31:34,360
+para IPv6
+
+1597
+01:31:34,360 --> 01:31:36,360
+e uma solução
+
+1598
+01:31:36,360 --> 01:31:38,360
+de termos acesso à rede pública
+
+1599
+01:31:38,360 --> 01:31:40,360
+em IPv6
+
+1600
+01:31:40,360 --> 01:31:42,360
+pode ser também termos
+
+1601
+01:31:42,360 --> 01:31:44,360
+as máquinas configuradas
+
+1602
+01:31:44,360 --> 01:31:46,360
+com o endereço do L e A
+
+1603
+01:31:46,360 --> 01:31:48,360
+e depois
+
+1604
+01:31:48,360 --> 01:31:50,360
+vamos na fronteira da rede
+
+1605
+01:31:50,360 --> 01:31:52,360
+um equipamento
+
+1606
+01:31:52,360 --> 01:31:54,360
+que implementa
+
+1607
+01:31:54,360 --> 01:31:56,360
+tradução de endereços
+
+1608
+01:31:56,360 --> 01:31:58,360
+está definido uma norma
+
+1609
+01:31:58,360 --> 01:32:00,360
+NPT
+
+1610
+01:32:00,360 --> 01:32:02,360
+que não é bem como o NAT
+
+1611
+01:32:02,360 --> 01:32:04,360
+do IPv4
+
+1612
+01:32:04,360 --> 01:32:06,360
+por que, por exemplo, o nome
+
+1613
+01:32:06,360 --> 01:32:08,360
+este faz tradução só de prefixos
+
+1614
+01:32:08,360 --> 01:32:10,360
+não faz
+
+1615
+01:32:10,360 --> 01:32:12,360
+tradução do endereço completo
+
+1616
+01:32:12,360 --> 01:32:14,360
+mas
+
+1617
+01:32:14,360 --> 01:32:16,360
+os prefixos também
+
+1618
+01:32:16,360 --> 01:32:18,360
+são prefixos de 48 bits
+
+1619
+01:32:18,360 --> 01:32:20,360
+já chega
+
+1620
+01:32:20,360 --> 01:32:22,360
+traduzimos o prefixo
+
+1621
+01:32:22,360 --> 01:32:24,360
+nosso prefixo do L e A
+
+1622
+01:32:24,360 --> 01:32:26,360
+o prefixo oficial
+
+1623
+01:32:26,360 --> 01:32:28,360
+e, dessa forma, conseguimos
+
+1624
+01:32:28,360 --> 01:32:30,360
+transformar um endereço
+
+1625
+01:32:30,360 --> 01:32:32,360
+o L e A ou privado
+
+1626
+01:32:32,360 --> 01:32:34,360
+num endereço público
+
+1627
+01:32:34,360 --> 01:32:36,360
+e permitir que as máquinas com o endereço
+
+1628
+01:32:36,360 --> 01:32:38,360
+o L e A acedam
+
+1629
+01:32:38,360 --> 01:32:40,360
+aos
+
+1630
+01:32:40,360 --> 01:32:43,800
+à rede pública
+
+1631
+01:32:43,800 --> 01:32:45,800
+quanto o
+
+1632
+01:32:45,800 --> 01:32:47,800
+NPT, então, se só troca endereços
+
+1633
+01:32:47,800 --> 01:32:49,800
+faz um NAT
+
+1634
+01:32:49,800 --> 01:32:51,800
+um para um
+
+1635
+01:32:51,800 --> 01:32:53,800
+ou seja,
+
+1636
+01:32:53,800 --> 01:32:55,800
+usar tantos endereços públicos
+
+1637
+01:32:55,800 --> 01:32:57,800
+como endereços privados
+
+1638
+01:32:57,800 --> 01:32:59,800
+ou endereços o L e A
+
+1639
+01:32:59,800 --> 01:33:01,800
+o objetivo deste NAT
+
+1640
+01:33:01,800 --> 01:33:03,800
+aqui não é
+
+1641
+01:33:03,800 --> 01:33:05,800
+poupar endereços
+
+1642
+01:33:05,800 --> 01:33:07,800
+o NAT IPv4 foi criado, sobretudo, para poupar endereços
+
+1643
+01:33:07,800 --> 01:33:09,800
+para permitir que muitas máquinas
+
+1644
+01:33:09,800 --> 01:33:11,800
+com endereços privados
+
+1645
+01:33:11,800 --> 01:33:13,800
+diferentes acedam a internet
+
+1646
+01:33:13,800 --> 01:33:15,800
+com o mesmo endereço público
+
+1647
+01:33:15,800 --> 01:33:17,800
+aqui vamos usar
+
+1648
+01:33:17,800 --> 01:33:19,800
+tantos endereços públicos
+
+1649
+01:33:19,800 --> 01:33:21,800
+como endereços privados
+
+1650
+01:33:21,800 --> 01:33:23,800
+porque só vamos trocar
+
+1651
+01:33:23,800 --> 01:33:25,800
+o prefixo
+
+1652
+01:33:25,800 --> 01:33:27,800
+no NPT
+
+1653
+01:33:27,800 --> 01:33:29,800
+também
+
+1654
+01:33:29,800 --> 01:33:33,820
+não há troca de portos
+
+1655
+01:33:33,820 --> 01:33:35,820
+tecnicamente pode ser possível
+
+1656
+01:33:35,820 --> 01:33:37,820
+trocarmos portos, mas não
+
+1657
+01:33:37,820 --> 01:33:39,820
+é habitual
+
+1658
+01:33:39,820 --> 01:33:41,820
+e na definição original
+
+1659
+01:33:41,820 --> 01:33:43,820
+do NPT
+
+1660
+01:33:43,820 --> 01:33:50,170
+não existia manipulação de portos
+
+1661
+01:33:50,170 --> 01:33:52,170
+coisas apareceram umas alternativas
+
+1662
+01:33:52,170 --> 01:33:54,170
+ao NPT como o NAT
+
+1663
+01:33:54,170 --> 01:33:56,170
+66
+
+1664
+01:33:56,170 --> 01:33:58,170
+significa
+
+1665
+01:33:58,170 --> 01:34:00,170
+na tua cadera de Translation
+
+1666
+01:34:00,170 --> 01:34:02,170
+IPv6 para IPv6
+
+1667
+01:34:02,170 --> 01:34:09,710
+já pode manipular
+
+1668
+01:34:09,710 --> 01:34:11,710
+o endereço completo
+
+1669
+01:34:11,710 --> 01:34:13,710
+para além do prefixo
+
+1670
+01:34:13,710 --> 01:34:15,710
+apesar de não haver muito interesse
+
+1671
+01:34:15,710 --> 01:34:17,710
+em fazer isso, mas tecnicamente é possível
+
+1672
+01:34:17,710 --> 01:34:19,710
+e também podemos
+
+1673
+01:34:19,710 --> 01:34:21,710
+manipular portos
+
+1674
+01:34:21,710 --> 01:34:23,710
+se
+
+1675
+01:34:23,710 --> 01:34:25,710
+dentro do pacote IP, viajo
+
+1676
+01:34:25,710 --> 01:34:27,710
+um segmento TCP, um datagramo
+
+1677
+01:34:27,710 --> 01:34:29,710
+do IP, outra coisa que tenha portos
+
+1678
+01:34:29,710 --> 01:34:33,630
+o mais normal
+
+1679
+01:34:33,630 --> 01:34:35,630
+é fazermos trocas
+
+1680
+01:34:35,630 --> 01:34:37,630
+N para N, ou seja, se temos N endereços privados
+
+1681
+01:34:39,630 --> 01:34:41,630
+vamos usar N endereços públicos
+
+1682
+01:34:41,630 --> 01:34:43,630
+não há necessidade
+
+1683
+01:34:43,630 --> 01:34:45,630
+de fazermos poupanças
+
+1684
+01:34:45,630 --> 01:34:47,630
+mas também
+
+1685
+01:34:47,630 --> 01:34:49,630
+é tecnicamente possível
+
+1686
+01:34:49,630 --> 01:34:51,630
+fazermos trocas
+
+1687
+01:34:51,630 --> 01:34:53,630
+como fazíamos no
+
+1688
+01:34:53,630 --> 01:34:55,630
+NAPT do IPv4
+
+1689
+01:34:55,630 --> 01:34:57,630
+fazer-se usar N endereços privados
+
+1690
+01:34:57,630 --> 01:34:59,630
+mapeados para um único
+
+1691
+01:34:59,630 --> 01:35:01,630
+endereço público
+
+1692
+01:35:01,630 --> 01:35:03,630
+ou
+
+1693
+01:35:03,630 --> 01:35:05,630
+um conjunto de endereços públicos
+
+1694
+01:35:05,630 --> 01:35:07,630
+inferior ao número de endereços privados
+
+1695
+01:35:07,630 --> 01:35:15,740
+que temos.
+
+1696
+01:35:15,740 --> 01:35:17,740
+Estes mecanismos
+
+1697
+01:35:17,740 --> 01:35:19,740
+de NAPT em IPv6
+
+1698
+01:35:19,740 --> 01:35:21,740
+às vezes estão criticados porque
+
+1699
+01:35:21,740 --> 01:35:23,740
+o IPv6
+
+1700
+01:35:23,740 --> 01:35:25,740
+foi pensado
+
+1701
+01:35:25,740 --> 01:35:27,740
+para não ser preciso
+
+1702
+01:35:27,740 --> 01:35:29,740
+usar NAPT
+
+1703
+01:35:29,740 --> 01:35:31,740
+na internet
+
+1704
+01:35:31,740 --> 01:35:33,740
+e estava escrito que com IPv6
+
+1705
+01:35:33,740 --> 01:35:35,740
+que usávamos de fazer NAPT
+
+1706
+01:35:35,740 --> 01:35:37,740
+no entanto
+
+1707
+01:35:37,740 --> 01:35:39,740
+se calhar
+
+1708
+01:35:39,740 --> 01:35:41,740
+as pessoas gostaram do NAPT
+
+1709
+01:35:41,740 --> 01:35:43,740
+há muitos administradores
+
+1710
+01:35:43,740 --> 01:35:45,740
+de redes
+
+1711
+01:35:45,740 --> 01:35:47,740
+que gostam do NAPT
+
+1712
+01:35:47,740 --> 01:35:49,740
+pelo facto de terem
+
+1713
+01:35:49,740 --> 01:35:53,020
+control
+
+1714
+01:35:53,020 --> 01:35:55,020
+sobre os endereços que as máquinas
+
+1715
+01:35:55,020 --> 01:35:57,020
+usam
+
+1716
+01:35:57,020 --> 01:35:59,020
+e sobre os endereços que as máquinas usam
+
+1717
+01:35:59,020 --> 01:36:01,020
+para acelerar a internet
+
+1718
+01:36:01,020 --> 01:36:03,020
+e portanto
+
+1719
+01:36:03,020 --> 01:36:05,020
+há quem goste de utilizar
+
+1720
+01:36:05,020 --> 01:36:07,020
+tradução de endereços
+
+1721
+01:36:07,020 --> 01:36:09,020
+à cidadia instituição
+
+1722
+01:36:09,020 --> 01:36:11,020
+e portanto
+
+1723
+01:36:11,020 --> 01:36:13,020
+há quem
+
+1724
+01:36:13,020 --> 01:36:15,020
+usa NAPT
+
+1725
+01:36:15,020 --> 01:36:17,020
+e a utilização de
+
+1726
+01:36:17,020 --> 01:36:19,020
+do NAPT e do NAPT-6
+
+1727
+01:36:19,020 --> 01:36:21,020
+no IPv6 está aumentados.
+
+1728
+01:36:21,020 --> 01:36:25,640
+Quanto queremos fazer uma rede?
+
+1729
+01:36:25,640 --> 01:36:27,640
+Temos que decidir
+
+1730
+01:36:27,640 --> 01:36:29,640
+primeiro
+
+1731
+01:36:29,640 --> 01:36:31,640
+como é que vamos organizar
+
+1732
+01:36:31,640 --> 01:36:33,640
+se vamos usar endereços locais
+
+1733
+01:36:33,640 --> 01:36:35,640
+ou seja, endereços
+
+1734
+01:36:35,640 --> 01:36:37,640
+que socam FE80
+
+1735
+01:36:37,640 --> 01:36:39,640
+e é possível só com esses endereços
+
+1736
+01:36:39,640 --> 01:36:41,640
+ter um NAPT
+
+1737
+01:36:41,640 --> 01:36:43,640
+ou uma tradução de endereços
+
+1738
+01:36:43,640 --> 01:36:45,640
+e permitir o acesso à internet
+
+1739
+01:36:45,640 --> 01:36:47,640
+a partir de endereços desos
+
+1740
+01:36:47,640 --> 01:36:49,640
+é muito
+
+1741
+01:36:49,640 --> 01:36:51,640
+adequado mas podia-se fazer
+
+1742
+01:36:51,640 --> 01:36:53,640
+podemos para as máquinas todas com endereços globais
+
+1743
+01:36:53,640 --> 01:36:58,330
+e acesso direto
+
+1744
+01:36:58,330 --> 01:37:00,330
+ou podemos usar endereços
+
+1745
+01:37:00,330 --> 01:37:02,330
+o LIA
+
+1746
+01:37:02,330 --> 01:37:04,330
+ou e também podemos usar
+
+1747
+01:37:04,330 --> 01:37:06,330
+endereços o LIA
+
+1748
+01:37:06,330 --> 01:37:08,330
+para permitir
+
+1749
+01:37:08,330 --> 01:37:10,330
+a comunicação dentro
+
+1750
+01:37:10,330 --> 01:37:12,330
+da nossa rede
+
+1751
+01:37:12,330 --> 01:37:14,330
+institucional
+
+1752
+01:37:14,330 --> 01:37:16,330
+e podemos
+
+1753
+01:37:16,330 --> 01:37:18,330
+juntar
+
+1754
+01:37:18,330 --> 01:37:20,330
+isto tudo
+
+1755
+01:37:20,330 --> 01:37:22,330
+não há problema nenhum
+
+1756
+01:37:22,330 --> 01:37:24,330
+em que cada dispositivo
+
+1757
+01:37:24,330 --> 01:37:26,330
+ou cada máquina tenha um endereço daqueles
+
+1758
+01:37:26,330 --> 01:37:28,330
+um endereço daqueles e um endereço daqueles
+
+1759
+01:37:28,330 --> 01:37:30,330
+o primeiro
+
+1760
+01:37:30,330 --> 01:37:32,330
+é obrigatório
+
+1761
+01:37:32,330 --> 01:37:34,330
+as placas já têm
+
+1762
+01:37:34,330 --> 01:37:36,330
+um endereço daqueles
+
+1763
+01:37:36,330 --> 01:37:38,330
+o sistema operativo que suporte IPv6
+
+1764
+01:37:38,330 --> 01:37:40,330
+cria um endereço destes automaticamente
+
+1765
+01:37:40,330 --> 01:37:42,330
+começado por FE80
+
+1766
+01:37:42,330 --> 01:37:44,330
+para cada placa da gente
+
+1767
+01:37:44,330 --> 01:37:46,330
+portanto não adianta decidir
+
+1768
+01:37:46,330 --> 01:37:48,330
+se queremos aquilo ou não
+
+1769
+01:37:48,330 --> 01:37:50,330
+em princípio aqueles endereços
+
+1770
+01:37:50,330 --> 01:37:52,330
+só servem para comunicar dentro do link
+
+1771
+01:37:52,330 --> 01:37:54,330
+mas
+
+1772
+01:37:54,330 --> 01:37:56,330
+poder comunicar dentro do link
+
+1773
+01:37:56,330 --> 01:37:58,330
+é uma condição que tem que estar satisfeita
+
+1774
+01:37:58,330 --> 01:38:00,330
+para podemos falar com o router
+
+1775
+01:38:00,330 --> 01:38:02,330
+ou podemos falar com o servidor
+
+1776
+01:38:02,330 --> 01:38:04,330
+DHCP
+
+1777
+01:38:04,330 --> 01:38:06,330
+e portanto é obrigatório termos aquilo
+
+1778
+01:38:06,330 --> 01:38:08,330
+se
+
+1779
+01:38:08,330 --> 01:38:10,330
+pretendermos
+
+1780
+01:38:10,330 --> 01:38:12,330
+comunicação com internet
+
+1781
+01:38:12,330 --> 01:38:14,330
+com exterior
+
+1782
+01:38:14,330 --> 01:38:16,330
+então temos que ou ter
+
+1783
+01:38:16,330 --> 01:38:18,330
+endereços globais
+
+1784
+01:38:18,330 --> 01:38:20,330
+ou então termos NPT
+
+1785
+01:38:20,330 --> 01:38:24,120
+ou NAT
+
+1786
+01:38:24,120 --> 01:38:26,120
+e aquilo é preciso ser
+
+1787
+01:38:26,120 --> 01:38:28,120
+configurado
+
+1788
+01:38:28,120 --> 01:38:30,120
+podem ser configurados
+
+1789
+01:38:30,120 --> 01:38:32,120
+de forma stateless
+
+1790
+01:38:32,120 --> 01:38:34,120
+de forma simples
+
+1791
+01:38:34,120 --> 01:38:37,370
+só com o router
+
+1792
+01:38:37,370 --> 01:38:39,370
+para além disso
+
+1793
+01:38:39,370 --> 01:38:41,370
+e sobretudo se decidirmos usar
+
+1794
+01:38:41,370 --> 01:38:43,370
+endereços stateless
+
+1795
+01:38:43,370 --> 01:38:45,370
+que é o mais fácil
+
+1796
+01:38:45,370 --> 01:38:47,370
+para aceder a internet
+
+1797
+01:38:47,370 --> 01:38:49,370
+endereços globais stateless
+
+1798
+01:38:49,370 --> 01:38:51,370
+os endereços stateless podem variar
+
+1799
+01:38:51,370 --> 01:38:53,370
+então não são adequados
+
+1800
+01:38:53,370 --> 01:38:55,370
+para pôr as máquinas a comunicar
+
+1801
+01:38:55,370 --> 01:38:57,370
+diretamente umas coisas outras dentro
+
+1802
+01:38:57,370 --> 01:38:59,370
+da nossa instituição
+
+1803
+01:38:59,370 --> 01:39:01,370
+por exemplo se queremos falar com
+
+1804
+01:39:01,370 --> 01:39:03,370
+uma impressora que está na nossa empresa
+
+1805
+01:39:03,370 --> 01:39:05,370
+devemos saber
+
+1806
+01:39:05,370 --> 01:39:07,370
+qual é o endereço da impressora
+
+1807
+01:39:07,370 --> 01:39:09,370
+deve estar escrito no papel
+
+1808
+01:39:09,370 --> 01:39:11,370
+ou escrito no algodos
+
+1809
+01:39:11,370 --> 01:39:13,370
+ou numa tabela
+
+1810
+01:39:13,370 --> 01:39:15,370
+automatizada
+
+1811
+01:39:15,370 --> 01:39:17,370
+qual é o endereço da impressora
+
+1812
+01:39:17,370 --> 01:39:19,370
+se a impressora tem um endereço
+
+1813
+01:39:19,370 --> 01:39:21,370
+que é stateless
+
+1814
+01:39:21,370 --> 01:39:23,370
+portanto pode mudar todos os dias
+
+1815
+01:39:23,370 --> 01:39:25,370
+nós
+
+1816
+01:39:25,370 --> 01:39:27,370
+não sabemos em cada dia qual é o endereço
+
+1817
+01:39:27,370 --> 01:39:29,370
+da impressora
+
+1818
+01:39:29,370 --> 01:39:31,370
+uma solução
+
+1819
+01:39:31,370 --> 01:39:33,370
+se usamos endereços stateless
+
+1820
+01:39:33,370 --> 01:39:35,370
+para aceder a internet
+
+1821
+01:39:35,370 --> 01:39:37,370
+então se calhar é boa ideia termos
+
+1822
+01:39:37,370 --> 01:39:39,370
+também endereços o LIA
+
+1823
+01:39:39,370 --> 01:39:41,370
+fixos
+
+1824
+01:39:41,370 --> 01:39:43,370
+para
+
+1825
+01:39:43,370 --> 01:39:45,370
+podemos criar tabelas
+
+1826
+01:39:45,370 --> 01:39:47,370
+dentro da nossa instituição
+
+1827
+01:39:47,370 --> 01:39:49,370
+e pelo menos dentro da nossa instituição
+
+1828
+01:39:49,370 --> 01:39:51,370
+as pessoas poderiam falar com as impressoras
+
+1829
+01:39:51,370 --> 01:39:53,370
+ou com os servidores
+
+1830
+01:39:53,370 --> 01:39:55,370
+ou com as máquinas
+
+1831
+01:39:55,370 --> 01:39:57,370
+que implementam os serviços
+
+1832
+01:39:57,370 --> 01:40:01,070
+que nós queremos aceder
+
+1833
+01:40:01,070 --> 01:40:03,070
+mesmo as redes institucionais grandes
+
+1834
+01:40:03,070 --> 01:40:05,070
+podem funcionar com o LIA
+
+1835
+01:40:05,070 --> 01:40:07,070
+e haver routing
+
+1836
+01:40:07,070 --> 01:40:09,070
+dentro de departamentos
+
+1837
+01:40:09,070 --> 01:40:11,070
+com o endereço do LIA
+
+1838
+01:40:11,070 --> 01:40:16,620
+ou seja esta tabela
+
+1839
+01:40:16,620 --> 01:40:18,620
+mostra o que é que temos
+
+1840
+01:40:18,620 --> 01:40:20,620
+que ter para satisfazer
+
+1841
+01:40:20,620 --> 01:40:24,220
+cada requisito
+
+1842
+01:40:24,220 --> 01:40:26,220
+se queremos aceder
+
+1843
+01:40:26,220 --> 01:40:28,220
+a rede interna
+
+1844
+01:40:28,220 --> 01:40:30,220
+com as máquinas a poder falar
+
+1845
+01:40:30,220 --> 01:40:32,220
+com as outras dentro da nossa rede interna
+
+1846
+01:40:32,220 --> 01:40:34,220
+mas temos a rede organizada em vários departamentos
+
+1847
+01:40:34,220 --> 01:40:36,220
+portanto precisamos de routing
+
+1848
+01:40:36,220 --> 01:40:38,220
+então usamos link local
+
+1849
+01:40:38,220 --> 01:40:40,220
+com NAT
+
+1850
+01:40:40,220 --> 01:40:42,220
+porque o link local
+
+1851
+01:40:42,220 --> 01:40:44,220
+não serve para falar com outros departamentos
+
+1852
+01:40:44,220 --> 01:40:46,220
+ou usamos
+
+1853
+01:40:46,220 --> 01:40:48,220
+endereços globais
+
+1854
+01:40:48,220 --> 01:40:51,880
+e endereços globais
+
+1855
+01:40:51,880 --> 01:40:53,880
+podemos usá-los fixos
+
+1856
+01:40:53,880 --> 01:40:57,640
+ou não fixos
+
+1857
+01:40:57,640 --> 01:40:59,640
+os fixos requerem stateful
+
+1858
+01:40:59,640 --> 01:41:01,640
+se não temos configuração
+
+1859
+01:41:01,640 --> 01:41:03,640
+stateful
+
+1860
+01:41:03,640 --> 01:41:05,640
+vamos ter sempre endereços
+
+1861
+01:41:05,640 --> 01:41:07,640
+que podem não ser fixos
+
+1862
+01:41:07,640 --> 01:41:09,640
+os servidores DHCP
+
+1863
+01:41:09,640 --> 01:41:11,640
+também podem gerar endereços
+
+1864
+01:41:11,640 --> 01:41:13,640
+que não são fixos
+
+1865
+01:41:13,640 --> 01:41:15,640
+colocar os endereços
+
+1866
+01:41:15,640 --> 01:41:17,640
+isso não é bom para poder falar
+
+1867
+01:41:17,640 --> 01:41:19,640
+uns que os outros
+
+1868
+01:41:19,640 --> 01:41:21,640
+porque não sabemos qual é o endereço de impressora
+
+1869
+01:41:21,640 --> 01:41:23,640
+qual é o endereço de nosso colega
+
+1870
+01:41:23,640 --> 01:41:25,640
+os endereços do LIA
+
+1871
+01:41:25,640 --> 01:41:27,640
+normalmente são fixos
+
+1872
+01:41:27,640 --> 01:41:29,640
+o endereço LIA não ser fixo
+
+1873
+01:41:29,640 --> 01:41:31,640
+porque ele é atribuído internamente
+
+1874
+01:41:31,640 --> 01:41:33,640
+temos muitos endereços
+
+1875
+01:41:33,640 --> 01:41:35,640
+principalmente o LIA
+
+1876
+01:41:35,640 --> 01:41:37,640
+é com endereços fixos
+
+1877
+01:41:37,640 --> 01:41:39,640
+se queremos aceder a internet
+
+1878
+01:41:39,640 --> 01:41:41,640
+ou usamos NAT
+
+1879
+01:41:41,640 --> 01:41:43,640
+com o endereço LIA
+
+1880
+01:41:43,640 --> 01:41:45,640
+link local
+
+1881
+01:41:45,640 --> 01:41:47,640
+ou
+
+1882
+01:41:47,640 --> 01:41:49,640
+temos que ter um endereço global
+
+1883
+01:41:49,640 --> 01:41:51,640
+independentemente de ser fixo
+
+1884
+01:41:51,640 --> 01:41:53,640
+ou não
+
+1885
+01:41:53,640 --> 01:41:55,640
+se queremos que
+
+1886
+01:41:55,640 --> 01:41:57,640
+as máquinas sejam endereçáveis
+
+1887
+01:41:57,640 --> 01:41:59,640
+ou se queremos que uma máquina seja
+
+1888
+01:41:59,640 --> 01:42:01,640
+endereçável
+
+1889
+01:42:01,640 --> 01:42:03,640
+para poder ter serviços e os serviços de experiência
+
+1890
+01:42:03,640 --> 01:42:05,640
+consultados pelas outras pessoas
+
+1891
+01:42:05,640 --> 01:42:07,640
+então
+
+1892
+01:42:07,640 --> 01:42:09,640
+ou temos um endereço link local
+
+1893
+01:42:09,640 --> 01:42:11,640
+fixo
+
+1894
+01:42:11,640 --> 01:42:13,640
+mas isso também só nos resolve
+
+1895
+01:42:13,640 --> 01:42:15,640
+dentro do link
+
+1896
+01:42:15,640 --> 01:42:17,640
+a máquina fica a ser endereçável
+
+1897
+01:42:17,640 --> 01:42:21,050
+só para os vizinhos
+
+1898
+01:42:21,050 --> 01:42:23,050
+endereços stateless
+
+1899
+01:42:23,050 --> 01:42:25,050
+ou endereços não fixos
+
+1900
+01:42:25,050 --> 01:42:27,050
+os serviços
+
+1901
+01:42:27,050 --> 01:42:29,050
+os serviços têm que estarem endereços
+
+1902
+01:42:29,050 --> 01:42:31,050
+conhecidos
+
+1903
+01:42:31,050 --> 01:42:33,050
+ou temos um endereço global fixo
+
+1904
+01:42:33,050 --> 01:42:35,050
+ou temos um endereço
+
+1905
+01:42:35,050 --> 01:42:41,150
+o LIA fixo
+
+1906
+01:42:41,150 --> 01:42:43,150
+e portanto por aqui podemos escolher
+
+1907
+01:42:43,150 --> 01:42:47,070
+quais destes
+
+1908
+01:42:47,070 --> 01:42:50,410
+quatro
+
+1909
+01:42:50,410 --> 01:42:52,410
+quais destes quatro tipos de endereços é que podemos
+
+1910
+01:42:52,410 --> 01:42:54,410
+para satisfazer os requisitos
+
+1911
+01:42:54,410 --> 01:42:59,320
+que nós temos
+
+1912
+01:42:59,320 --> 01:43:01,320
+vamos só ver o que está a acontecer
+
+1913
+01:43:01,320 --> 01:43:03,320
+ao IPv6
+
+1914
+01:43:03,320 --> 01:43:05,320
+como se ficou o IPv4
+
+1915
+01:43:05,320 --> 01:43:07,320
+se lutou muito rapidamente
+
+1916
+01:43:07,320 --> 01:43:09,320
+para
+
+1917
+01:43:09,320 --> 01:43:11,320
+distribuir endereço IPv6
+
+1918
+01:43:11,320 --> 01:43:13,320
+tentou-se fazer as coisas com calma
+
+1919
+01:43:13,320 --> 01:43:15,320
+e começaram a distribuir devagar
+
+1920
+01:43:15,320 --> 01:43:17,320
+este círculo
+
+1921
+01:43:17,320 --> 01:43:19,320
+mostra
+
+1922
+01:43:19,320 --> 01:43:21,320
+o espaço de endereçamento IPv6 todos
+
+1923
+01:43:21,320 --> 01:43:23,320
+ou seja, todos os endereços IPv6
+
+1924
+01:43:23,320 --> 01:43:25,320
+ou a gama barra zero
+
+1925
+01:43:25,320 --> 01:43:27,320
+que significa toda a internet IPv6
+
+1926
+01:43:27,320 --> 01:43:29,320
+foi decidido
+
+1927
+01:43:29,320 --> 01:43:31,320
+guardar tudo
+
+1928
+01:43:31,320 --> 01:43:33,320
+poupar e começar a distribuir
+
+1929
+01:43:33,320 --> 01:43:35,320
+começar a usar só um bloco
+
+1930
+01:43:35,320 --> 01:43:37,320
+barra 3
+
+1931
+01:43:37,320 --> 01:43:39,320
+portanto um oitavo
+
+1932
+01:43:39,320 --> 01:43:41,320
+do círculo todo
+
+1933
+01:43:41,320 --> 01:43:43,320
+só este oitavo
+
+1934
+01:43:43,320 --> 01:43:45,320
+dos endereços
+
+1935
+01:43:45,320 --> 01:43:47,320
+que corresponde a este círculo todo
+
+1936
+01:43:47,320 --> 01:43:49,320
+é que se começou a usar
+
+1937
+01:43:49,320 --> 01:43:51,320
+e deste bloco todo
+
+1938
+01:43:51,320 --> 01:43:53,320
+que é um oitavo do espaço todo
+
+1939
+01:43:53,320 --> 01:43:55,320
+foi-se buscar ali uma fatiazinha
+
+1940
+01:43:55,320 --> 01:43:57,320
+barra 12
+
+1941
+01:43:57,320 --> 01:43:59,320
+ou 506 barra 12
+
+1942
+01:43:59,320 --> 01:44:01,320
+ou 506 barra 12
+
+1943
+01:44:01,320 --> 01:44:03,320
+que é
+
+1944
+01:44:03,320 --> 01:44:05,320
+uma fatia muito pequena daquilo
+
+1945
+01:44:05,320 --> 01:44:07,320
+e distribuiu-se
+
+1946
+01:44:07,320 --> 01:44:09,320
+um barra 12
+
+1947
+01:44:09,320 --> 01:44:11,320
+para cada uma das regiões
+
+1948
+01:44:11,320 --> 01:44:13,320
+um barra 12 para a Europa
+
+1949
+01:44:13,320 --> 01:44:15,320
+um barra 12 para a América
+
+1950
+01:44:15,320 --> 01:44:17,320
+um barra 12 para a África
+
+1951
+01:44:17,320 --> 01:44:19,320
+etc
+
+1952
+01:44:19,320 --> 01:44:21,320
+e depois
+
+1953
+01:44:21,320 --> 01:44:23,320
+mais um, este gastou
+
+1954
+01:44:23,320 --> 01:44:25,320
+5 barra 12
+
+1955
+01:44:25,320 --> 01:44:27,320
+os outros
+
+1956
+01:44:27,320 --> 01:44:29,320
+foram distribuídos
+
+1957
+01:44:29,320 --> 01:44:31,320
+a quem precisava
+
+1958
+01:44:31,320 --> 01:44:33,320
+ou quem justificava
+
+1959
+01:44:33,320 --> 01:44:35,320
+e por exemplo
+
+1960
+01:44:35,320 --> 01:44:37,320
+o RIP, ou seja, a Europa
+
+1961
+01:44:37,320 --> 01:44:39,320
+recebeu mais 15
+
+1962
+01:44:39,320 --> 01:44:41,320
+barra 12
+
+1963
+01:44:46,330 --> 01:44:48,330
+para além daqueles
+
+1964
+01:44:48,330 --> 01:44:50,330
+que cada região recebeu um
+
+1965
+01:44:50,330 --> 01:44:52,330
+e as outras regiões também receberam
+
+1966
+01:44:52,330 --> 01:44:54,330
+outros, mas isto é um conjunto
+
+1967
+01:44:54,330 --> 01:44:56,330
+aqui muito pequeno
+
+1968
+01:44:56,330 --> 01:44:58,330
+dentro daquilo
+
+1969
+01:44:58,330 --> 01:45:00,330
+há muitos endereços
+
+1970
+01:45:00,330 --> 01:45:02,330
+isto que já está desatualizado
+
+1971
+01:45:02,330 --> 01:45:04,330
+mas
+
+1972
+01:45:04,330 --> 01:45:06,330
+a ideia de poupança continua
+
+1973
+01:45:06,330 --> 01:45:11,820
+ontem estes gráficos
+
+1974
+01:45:11,820 --> 01:45:13,820
+mostram um número de alocações
+
+1975
+01:45:13,820 --> 01:45:15,820
+e a Europa foi quem
+
+1976
+01:45:15,820 --> 01:45:17,820
+no início começou a usar
+
+1977
+01:45:17,820 --> 01:45:19,820
+mais endereços IPv6
+
+1978
+01:45:19,820 --> 01:45:21,820
+e portanto teve mais alocações
+
+1979
+01:45:21,820 --> 01:45:23,820
+de endereços que as outras regiões
+
+1980
+01:45:23,820 --> 01:45:25,820
+a região da Ásia Pacífico
+
+1981
+01:45:25,820 --> 01:45:27,820
+também depois começou a crescer
+
+1982
+01:45:27,820 --> 01:45:29,820
+porque precisava de muitos endereços
+
+1983
+01:45:31,820 --> 01:45:33,820
+aqui temos
+
+1984
+01:45:33,820 --> 01:45:35,820
+o consumo de endereços IPv6
+
+1985
+01:45:35,820 --> 01:45:37,820
+por região
+
+1986
+01:45:37,820 --> 01:45:39,820
+desde que começou IPv6
+
+1987
+01:45:41,820 --> 01:45:43,820
+até 2015
+
+1988
+01:45:43,820 --> 01:45:45,820
+e
+
+1989
+01:45:45,820 --> 01:45:47,820
+digamos que aqui esta zona verde
+
+1990
+01:45:47,820 --> 01:45:49,820
+a Europa é
+
+1991
+01:45:49,820 --> 01:45:51,820
+quem tem
+
+1992
+01:45:51,820 --> 01:45:53,820
+mais endereços IPv6
+
+1993
+01:45:53,820 --> 01:45:55,820
+a serem alocados
+
+1994
+01:45:55,820 --> 01:45:57,820
+atualmente já não é assim
+
+1995
+01:45:57,820 --> 01:45:59,820
+mas até
+
+1996
+01:45:59,820 --> 01:46:01,820
+2016 foi assim
+
+1997
+01:46:01,820 --> 01:46:03,820
+isto é um gráfico de utilização
+
+1998
+01:46:03,820 --> 01:46:05,820
+de IPv6
+
+1999
+01:46:05,820 --> 01:46:09,710
+da Google
+
+2000
+01:46:09,710 --> 01:46:11,710
+compara a utilização de IPv6
+
+2001
+01:46:11,710 --> 01:46:13,710
+com
+
+2002
+01:46:13,710 --> 01:46:15,710
+utilização de coisas não IPv6
+
+2003
+01:46:15,710 --> 01:46:17,710
+ou seja IPv4
+
+2004
+01:46:17,710 --> 01:46:19,710
+em 2020
+
+2005
+01:46:19,710 --> 01:46:21,710
+e tal estávamos a chegar aos 50%
+
+2006
+01:46:21,710 --> 01:46:27,040
+este gráfico também
+
+2007
+01:46:27,040 --> 01:46:29,040
+mostra que o IPv6 está a crescer
+
+2008
+01:46:29,040 --> 01:46:31,040
+o IPv4 começou a descer
+
+2009
+01:46:31,040 --> 01:46:33,040
+a utilização de IPv6
+
+2010
+01:46:33,040 --> 01:46:35,040
+o IPv6
+
+2011
+01:46:35,040 --> 01:46:37,040
+ultrapassou
+
+2012
+01:46:37,040 --> 01:46:39,040
+os 50%
+
+2013
+01:46:39,040 --> 01:46:41,040
+utilização de IPv4
+
+2014
+01:46:41,040 --> 01:46:43,040
+aqui por volta de 2019-2020
+
+2015
+01:46:43,040 --> 01:46:45,040
+se o IPv4 está a diminuir
+
+2016
+01:46:45,040 --> 01:46:47,040
+significa que provavelmente
+
+2017
+01:46:47,040 --> 01:46:51,920
+vai acabar
+
+2018
+01:46:51,920 --> 01:46:53,920
+e portanto devemos
+
+2019
+01:46:53,920 --> 01:46:55,920
+se pudermos
+
+2020
+01:46:55,920 --> 01:46:57,920
+quando criamos coisas novas
+
+2021
+01:46:57,920 --> 01:47:01,640
+pôlas em IPv6
+
+2022
+01:47:01,640 --> 01:47:03,640
+onde isto é um zoom do gráfico anterior
+
+2023
+01:47:03,640 --> 01:47:05,640
+da Google que mostra a
+
+2024
+01:47:05,640 --> 01:47:07,640
+utilização de IPv6
+
+2025
+01:47:07,640 --> 01:47:09,640
+de
+
+2026
+01:47:09,640 --> 01:47:11,640
+digamos de outra forma
+
+2027
+01:47:11,640 --> 01:47:13,640
+ver se que
+
+2028
+01:47:13,640 --> 01:47:15,640
+estas coisas não sempre subiria a descer
+
+2029
+01:47:15,640 --> 01:47:17,640
+ou seja, existe aqui
+
+2030
+01:47:17,640 --> 01:47:19,640
+uma oscilação com período de uma semana
+
+2031
+01:47:19,640 --> 01:47:21,640
+verifica-se
+
+2032
+01:47:21,640 --> 01:47:23,640
+que aos fins de semana
+
+2033
+01:47:23,640 --> 01:47:25,640
+as pessoas usam mais IPv6
+
+2034
+01:47:25,640 --> 01:47:27,640
+quando comparado com aquilo que usam
+
+2035
+01:47:27,640 --> 01:47:29,640
+durante a semana
+
+2036
+01:47:29,640 --> 01:47:31,640
+e depois também existem umas oscilações
+
+2037
+01:47:31,640 --> 01:47:33,640
+periódicas aqui uma vez por ano
+
+2038
+01:47:33,640 --> 01:47:35,640
+aqui, aqui e aqui
+
+2039
+01:47:35,640 --> 01:47:37,640
+que são os natais
+
+2040
+01:47:37,640 --> 01:47:39,640
+ou seja, no natal
+
+2041
+01:47:39,640 --> 01:47:41,640
+as pessoas usam mais IPv6
+
+2042
+01:47:41,640 --> 01:47:45,440
+como é que isto se explica
+
+2043
+01:47:45,440 --> 01:47:47,440
+quer a variação
+
+2044
+01:47:47,440 --> 01:47:49,440
+semanal, quer a variação do natal
+
+2045
+01:47:49,440 --> 01:47:51,440
+justifica-se por facto
+
+2046
+01:47:51,440 --> 01:47:53,440
+de as pessoas usarem mais IPv6
+
+2047
+01:47:53,440 --> 01:47:55,440
+quando estão em casa
+
+2048
+01:47:55,440 --> 01:47:57,440
+e menos IPv6 quando estão no trabalho
+
+2049
+01:47:57,440 --> 01:47:59,440
+ou seja, as empresas
+
+2050
+01:47:59,440 --> 01:48:01,440
+têm mais inércia
+
+2051
+01:48:01,440 --> 01:48:03,440
+e mudam IPv6
+
+2052
+01:48:03,440 --> 01:48:05,440
+enquanto que os operadores de internet
+
+2053
+01:48:05,440 --> 01:48:07,440
+foram mais rápidos a mudar IPv6
+
+2054
+01:48:07,440 --> 01:48:09,440
+e põem as pessoas em casa
+
+2055
+01:48:09,440 --> 01:48:11,440
+a usar IPv6
+
+2056
+01:48:11,440 --> 01:48:13,440
+enquanto que as empresas continuam a usar
+
+2057
+01:48:13,440 --> 01:48:15,440
+IPv4
+
+2058
+01:48:15,440 --> 01:48:17,440
+aqui também
+
+2059
+01:48:17,440 --> 01:48:19,440
+houve uma perturbação que foi o Covid-19
+
+2060
+01:48:19,440 --> 01:48:21,440
+que levou as pessoas para casa
+
+2061
+01:48:21,440 --> 01:48:23,440
+e então a taxa de utilização
+
+2062
+01:48:23,440 --> 01:48:28,350
+de IPv6 também subiu
+
+2063
+01:48:28,350 --> 01:48:30,350
+antes de estar
+
+2064
+01:48:30,350 --> 01:48:32,350
+IPv6 por país
+
+2065
+01:48:32,350 --> 01:48:34,350
+e vemos que a Índia
+
+2066
+01:48:34,350 --> 01:48:36,350
+tem o uso de IPv6
+
+2067
+01:48:36,350 --> 01:48:38,350
+que há entre países
+
+2068
+01:48:38,350 --> 01:48:40,350
+os nossos vizinhos espanhóis
+
+2069
+01:48:40,350 --> 01:48:42,350
+que estão atrasados na introdução
+
+2070
+01:48:42,350 --> 01:48:44,350
+de IPv6
+
+2071
+01:48:44,350 --> 01:48:46,350
+o gráfico se espera
+
+2072
+01:48:46,350 --> 01:48:48,350
+e estes são os que estão a vermelho
+
+2073
+01:48:48,350 --> 01:48:50,350
+os que estão piores no IPv6
+
+2074
+01:48:50,350 --> 01:48:52,350
+e os nossos vizinhos espanhóis
+
+2075
+01:48:52,350 --> 01:48:55,600
+também aparecem assim
+
+2076
+01:48:55,600 --> 01:48:57,600
+Bom, hoje vamos ficar por aqui
+
+2077
+01:48:57,600 --> 01:48:59,600
+depois vamos
+
+2078
+01:48:59,600 --> 01:49:01,600
+encontrarmos num sábado
+
+2079
+01:49:01,600 --> 01:49:03,600
+para experimentarmos
+
+2080
+01:49:03,600 --> 01:49:05,600
+um simulador de gente
+
+2081
+01:49:05,600 --> 01:49:07,600
+e configurarmos a nossa linha de IPv4
+
+2082
+01:49:07,600 --> 01:49:09,600
+e depois a vermos
+
+2083
+01:49:09,600 --> 01:49:11,600
+também o IPv6 a funcionar
+
+2084
+01:49:11,600 --> 01:49:13,600
+e vamos usar mais IPv6 do que IPv4
+
+2085
+01:49:13,600 --> 01:49:17,450
+nas nossas aulas
+
+2086
+01:49:17,450 --> 01:49:21,080
+Não há questões?
+
+2087
+01:49:21,080 --> 01:49:23,080
+Sim
+
+2088
+01:49:23,080 --> 01:49:25,080
+por acaso tinha
+
+2089
+01:49:25,080 --> 01:49:27,080
+ele fazer um pedido
+
+2090
+01:49:27,080 --> 01:49:29,080
+se pudesse reabrir o exercício número 3
+
+2091
+01:49:29,080 --> 01:49:31,080
+que eu pensava que ia só
+
+2092
+01:49:31,080 --> 01:49:33,080
+afixar amanhã
+
+2093
+01:49:33,080 --> 01:49:35,080
+não sei se é possível
+
+2094
+01:49:35,080 --> 01:49:38,680
+e...
+
+2095
+01:49:38,680 --> 01:49:40,680
+que eu as 21h40
+
+2096
+01:49:40,680 --> 01:49:42,680
+eu sei que já tinha
+
+2097
+01:49:42,680 --> 01:49:44,680
+estendido um bocadinho para aso
+
+2098
+01:49:44,680 --> 01:49:46,680
+mas
+
+2099
+01:49:46,680 --> 01:49:48,680
+estendo mais
+
+2100
+01:49:48,680 --> 01:49:52,410
+até ao fim de semana
+
+2101
+01:49:52,410 --> 01:49:54,410
+assim, obrigado
+
+2102
+01:49:54,410 --> 01:49:56,410
+então
+
+2103
+01:49:56,410 --> 01:49:58,410
+então encontramos no sábado
+
+2104
+01:49:58,410 --> 01:50:00,410
+na sala f505
+
+2105
+01:50:00,410 --> 01:50:04,430
+o edificio f2z
+
+2106
+01:50:04,430 --> 01:50:06,430
+está bem?
+
+2107
+01:50:06,430 --> 01:50:08,430
+está bem?
+
+2108
+01:50:08,430 --> 01:50:10,430
+ok
+
+2109
+01:50:10,430 --> 01:50:12,430
+professora desculpa
+
+2110
+01:50:12,430 --> 01:50:14,430
+última pergunta sobre a laboratória número 3
+
+2111
+01:50:14,430 --> 01:50:16,430
+se possível por favor
+
+2112
+01:50:16,430 --> 01:50:18,430
+trocar horário
+
+2113
+01:50:18,430 --> 01:50:20,430
+porque eu vou trabalhar amanhã
+
+2114
+01:50:20,430 --> 01:50:22,430
+e eu preciso
+
+2115
+01:50:22,430 --> 01:50:24,430
+mais ou menos 3-4 horas
+
+2116
+01:50:24,430 --> 01:50:26,430
+por exemplo até o fim de dia amanhã
+
+2117
+01:50:26,430 --> 01:50:30,030
+porque
+
+2118
+01:50:30,030 --> 01:50:32,030
+acho que agora o tempo
+
+2119
+01:50:32,030 --> 01:50:35,720
+oito amanhã
+
+2120
+01:50:35,720 --> 01:50:37,720
+pará-lo
+
+2121
+01:50:37,720 --> 01:50:39,720
+está bem
+
+2122
+01:50:39,720 --> 01:50:41,720
+eu pensava a largar isso
+
+2123
+01:50:41,720 --> 01:50:43,720
+de que
+
+2124
+01:50:43,720 --> 01:50:45,720
+para permitir
+
+2125
+01:50:45,720 --> 01:50:47,720
+que se façam alterações
+
+2126
+01:50:47,720 --> 01:50:49,720
+durante a aula de laboratória
+
+2127
+01:50:49,720 --> 01:50:51,720
+eu vou seguir a aula de laboratório
+
+2128
+01:50:51,720 --> 01:50:53,720
+eu puse um prazo
+
+2129
+01:50:53,720 --> 01:50:55,720
+muito curto
+
+2130
+01:50:55,720 --> 01:50:57,720
+para motivar as pessoas a fazerem aquilo
+
+2131
+01:50:57,720 --> 01:50:59,720
+antes da aula de laboratório
+
+2132
+01:50:59,720 --> 01:51:01,720
+porque a ideia agora é simular aquilo
+
+2133
+01:51:01,720 --> 01:51:03,720
+e se na aula de laboratório
+
+2134
+01:51:03,720 --> 01:51:05,720
+virmos que está mal projetado
+
+2135
+01:51:05,720 --> 01:51:07,720
+devemos poder corrigir
+
+2136
+01:51:07,720 --> 01:51:09,720
+é para isso que servem as simulações
+
+2137
+01:51:09,720 --> 01:51:11,720
+para corrigir
+
+2138
+01:51:11,720 --> 01:51:13,720
+e depois por direito
+
+2139
+01:51:13,720 --> 01:51:15,720
+ou seja, eu ainda não corrigi
+
+2140
+01:51:15,720 --> 01:51:17,720
+aquilo não vou corrigir
+
+2141
+01:51:17,720 --> 01:51:19,720
+antes da aula de laboratório
+
+2142
+01:51:19,720 --> 01:51:21,720
+mas espero que vocês façam aquilo antes
+
+2143
+01:51:21,720 --> 01:51:23,720
+da aula de laboratório
+
+2144
+01:51:23,720 --> 01:51:25,720
+depois o resultado do laboratório
+
+2145
+01:51:25,720 --> 01:51:27,720
+é que vai servir para a avaliação
+
+2146
+01:51:27,720 --> 01:51:29,720
+eu percebo por exemplo
+
+2147
+01:51:29,720 --> 01:51:31,720
+porque amanhã
+
+2148
+01:51:31,720 --> 01:51:33,720
+oito novo amanhã
+
+2149
+01:51:33,720 --> 01:51:35,720
+está não possível para fazer o exercício
+
+2150
+01:51:35,720 --> 01:51:37,720
+mais tempo
+
+2151
+01:51:37,720 --> 01:51:39,720
+meio dia
+
+2152
+01:51:39,720 --> 01:51:41,720
+ou até oito tarde
+
+2153
+01:51:41,720 --> 01:51:43,720
+só há uma restrição
+
+2154
+01:51:43,720 --> 01:51:45,720
+que é absoluta
+
+2155
+01:51:45,720 --> 01:51:47,720
+que não podemos controlar
+
+2156
+01:51:47,720 --> 01:51:49,720
+é que temos que fazer aquilo
+
+2157
+01:51:49,720 --> 01:51:51,720
+antes da aula de laboratório
+
+2158
+01:51:51,720 --> 01:51:53,720
+se não chegamos ao laboratório não conseguimos fazer nada
+
+2159
+01:51:53,720 --> 01:51:55,720
+tá bem?
+
+2160
+01:51:55,720 --> 01:51:57,720
+combinado então
+
+2161
+01:51:57,720 --> 01:51:59,720
+até sábado então
+
