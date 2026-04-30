@@ -1,0 +1,7156 @@
+1
+00:04:01,010 --> 00:04:06,940
+Olá, boa noite.
+
+2
+00:04:06,940 --> 00:07:45,810
+Boa noite.
+
+3
+00:07:45,810 --> 00:08:55,660
+Boa noite a todos, mais uma vez.
+
+4
+00:08:55,660 --> 00:09:03,190
+Hoje vamos falar de endereçamento IP,
+
+5
+00:09:03,190 --> 00:09:13,520
+encaminhamento IP.
+
+6
+00:09:13,520 --> 00:09:16,520
+A gente continua a entrar, muito bem.
+
+7
+00:09:16,520 --> 00:09:23,180
+E eu queria avisar que houve alguns de vocês que acharam estranho
+
+8
+00:09:23,180 --> 00:09:28,180
+a correção que o módulo apresentava
+
+9
+00:09:28,180 --> 00:09:32,180
+daqueles exercícios que fizemos na semana passada.
+
+10
+00:09:32,180 --> 00:09:37,180
+Aquele exercício de atribuir ganas aos departamentos
+
+11
+00:09:37,180 --> 00:09:41,180
+ou às secções tinha várias soluções,
+
+12
+00:09:41,180 --> 00:09:44,180
+portanto o módulo tem alguma dificuldade
+
+13
+00:09:44,180 --> 00:09:47,180
+em corrigir coisas assim.
+
+14
+00:09:47,180 --> 00:09:51,180
+A ideia é vocês não ligarem as correções do módulo,
+
+15
+00:09:51,180 --> 00:09:55,180
+a correção é feita depois de forma manual.
+
+16
+00:09:55,180 --> 00:10:03,460
+Houve também a divulgação dos slides que eu apresentei
+
+17
+00:10:03,460 --> 00:10:06,460
+que foram publicados por PDF.
+
+18
+00:10:06,460 --> 00:10:09,460
+Houve uns que não ficaram publicados da primeira vez,
+
+19
+00:10:09,460 --> 00:10:13,460
+eu depois corrigi isso, acho que agora deve estar tudo publicado.
+
+20
+00:10:13,460 --> 00:10:16,460
+Para aula 2 ainda não me publiquei,
+
+21
+00:10:16,460 --> 00:10:21,460
+as coisas também vamos pegar no pacote do IP
+
+22
+00:10:21,460 --> 00:10:27,460
+que eu já disponibilizei da aula anterior,
+
+23
+00:10:27,460 --> 00:10:31,460
+de qualquer maneira, depois da aula,
+
+24
+00:10:31,460 --> 00:10:40,480
+se houver algum slide extra, eu publico depois.
+
+25
+00:10:40,480 --> 00:10:44,170
+Algo certo.
+
+26
+00:10:44,170 --> 00:10:45,170
+Isto é.
+
+27
+00:10:45,170 --> 00:10:46,170
+Sim?
+
+28
+00:10:46,170 --> 00:10:49,170
+Era só para dizer que os PDFs ainda não estão disponíveis
+
+29
+00:10:49,170 --> 00:10:56,870
+no módulo, pelo menos não estão disponíveis.
+
+30
+00:10:56,870 --> 00:10:58,870
+Aqui eu acho que estão.
+
+31
+00:10:58,870 --> 00:11:02,870
+Alguém desgorda?
+
+32
+00:11:02,870 --> 00:11:04,870
+Eu também não consigo.
+
+33
+00:11:04,870 --> 00:11:11,100
+Eu conseguia saber.
+
+34
+00:11:11,100 --> 00:11:14,100
+Acho que é a partir do calendário que se eu...
+
+35
+00:11:14,100 --> 00:11:15,100
+Sim, sim.
+
+36
+00:11:15,100 --> 00:11:18,100
+Eu vou tentar mostrar aqui.
+
+37
+00:11:18,100 --> 00:11:21,100
+Sim, quando se abre o calendário temos acesso.
+
+38
+00:11:21,100 --> 00:11:22,100
+Ok, ok.
+
+39
+00:11:22,100 --> 00:11:35,010
+Não sabia que era o calendário.
+
+40
+00:11:35,010 --> 00:11:49,540
+Agora, se estas coisas funcionam,
+
+41
+00:11:49,540 --> 00:11:52,540
+eu acho que estou a partilhar um browser, certo?
+
+42
+00:11:52,540 --> 00:11:53,540
+Sim.
+
+43
+00:11:53,540 --> 00:11:59,290
+Isto deve ser o que vocês veem.
+
+44
+00:11:59,290 --> 00:12:02,290
+Se carregarem no calendário,
+
+45
+00:12:02,290 --> 00:12:06,290
+deve aparecer isto e clicando aqui.
+
+46
+00:12:06,290 --> 00:12:08,290
+Não aparece o pop-up, certo?
+
+47
+00:12:08,290 --> 00:12:13,950
+Mas o novo pop-up não está a aparecer.
+
+48
+00:12:13,950 --> 00:12:14,950
+Para nós.
+
+49
+00:12:14,950 --> 00:12:24,970
+E se fizerem as refreshs no módulo?
+
+50
+00:12:24,970 --> 00:12:26,970
+Não, estou a dizer na partilha.
+
+51
+00:12:26,970 --> 00:12:29,970
+Na partilha acaba não aparecer.
+
+52
+00:12:29,970 --> 00:12:35,210
+Ah, eu percebei isso.
+
+53
+00:12:35,210 --> 00:12:37,210
+Pronto, mas,
+
+54
+00:12:37,210 --> 00:12:39,210
+indo por aqui, vão para o calendário
+
+55
+00:12:39,210 --> 00:12:41,210
+e no calendário aparece uma lista
+
+56
+00:12:41,210 --> 00:12:44,210
+com as aulas
+
+57
+00:12:44,210 --> 00:12:46,210
+e clicando em cima do tópico da aula,
+
+58
+00:12:46,210 --> 00:12:48,210
+deve aparecer PDF.
+
+59
+00:12:48,210 --> 00:12:55,770
+Algum já confirmaram isso.
+
+60
+00:12:55,770 --> 00:12:58,770
+Portanto, eu acho que está a funcionar.
+
+61
+00:12:58,770 --> 00:13:01,770
+Procurei melhor que deve estar a funcionar.
+
+62
+00:13:01,770 --> 00:13:02,770
+Sim, sim.
+
+63
+00:13:02,770 --> 00:13:04,770
+Eu não sabia que era no calendário que estava.
+
+64
+00:13:04,770 --> 00:13:16,980
+Está a funcionar.
+
+65
+00:13:16,980 --> 00:13:18,980
+Então, vou tentar partilhar
+
+66
+00:13:18,980 --> 00:13:24,460
+as coisas que vamos ver hoje,
+
+67
+00:13:24,460 --> 00:13:36,990
+experimentares,
+
+68
+00:13:36,990 --> 00:13:54,800
+aqui no método.
+
+69
+00:13:54,800 --> 00:13:58,070
+Vê-se bem?
+
+70
+00:13:58,070 --> 00:13:59,070
+Sim.
+
+71
+00:13:59,070 --> 00:14:00,070
+Sim.
+
+72
+00:14:00,070 --> 00:14:01,070
+Sim, sim.
+
+73
+00:14:01,070 --> 00:14:15,430
+Bem, na última sessão
+
+74
+00:14:15,430 --> 00:14:17,430
+tivemos a ver como é que
+
+75
+00:14:17,430 --> 00:14:20,430
+arranjávamos, que eram os endereços
+
+76
+00:14:20,430 --> 00:14:23,430
+e como é que arranjávamos blocos de endereços
+
+77
+00:14:23,430 --> 00:14:25,430
+para atribuir às redes.
+
+78
+00:14:25,430 --> 00:14:31,190
+As redes interligam equipamentos.
+
+79
+00:14:31,190 --> 00:14:35,190
+Todos os equipamentos estão próximos uns dos outros.
+
+80
+00:14:35,190 --> 00:14:36,190
+Estes que estão aqui,
+
+81
+00:14:36,190 --> 00:14:39,190
+tipicamente, partilham a mesma rede
+
+82
+00:14:39,190 --> 00:14:42,190
+e vimos que os endereços tinham uma parte,
+
+83
+00:14:42,190 --> 00:14:44,190
+que é o NetID,
+
+84
+00:14:44,190 --> 00:14:46,190
+que identifica a rede.
+
+85
+00:14:46,190 --> 00:14:49,190
+Se dois equipamentos estão ligados à mesma rede,
+
+86
+00:14:49,190 --> 00:14:52,190
+os seus endereços vão ter o mesmo NetID.
+
+87
+00:14:52,190 --> 00:14:59,420
+NIP.
+
+88
+00:14:59,420 --> 00:15:02,420
+As redes não podem ser ligadas
+
+89
+00:15:02,420 --> 00:15:04,420
+diretamente umas às outras.
+
+90
+00:15:04,420 --> 00:15:07,420
+Tem que ser ligadas através de um equipamento
+
+91
+00:15:07,420 --> 00:15:10,420
+que se chama encaminhadores,
+
+92
+00:15:10,420 --> 00:15:12,420
+ou um router.
+
+93
+00:15:12,420 --> 00:15:17,690
+Em inglês, um router em português, um encaminhador.
+
+94
+00:15:17,690 --> 00:15:20,690
+O encaminhador é que sempre que recebe tráfego
+
+95
+00:15:20,690 --> 00:15:22,690
+vindo de um dos lados,
+
+96
+00:15:22,690 --> 00:15:24,690
+olha para o endereço IP,
+
+97
+00:15:24,690 --> 00:15:26,690
+porque ele é um router IP,
+
+98
+00:15:26,690 --> 00:15:28,690
+um encaminhador IP.
+
+99
+00:15:28,690 --> 00:15:30,690
+Olha, sobretudo, pós NetID
+
+100
+00:15:30,690 --> 00:15:32,690
+e vê-se
+
+101
+00:15:32,690 --> 00:15:34,690
+o destino
+
+102
+00:15:34,690 --> 00:15:36,690
+daquele NetID,
+
+103
+00:15:36,690 --> 00:15:38,690
+fica para a direita para a esquerda
+
+104
+00:15:38,690 --> 00:15:40,690
+e envia-o para um lado para o outro.
+
+105
+00:15:40,690 --> 00:15:43,690
+Os routers podem ter duas portas,
+
+106
+00:15:43,690 --> 00:15:45,690
+como estas estão aqui,
+
+107
+00:15:45,690 --> 00:15:47,690
+ou podem ter mais portas
+
+108
+00:15:47,690 --> 00:15:49,690
+de maneira a encaminhar o tráfego
+
+109
+00:15:49,690 --> 00:15:53,800
+para mais do que duas redes.
+
+110
+00:15:53,800 --> 00:15:55,800
+Quando uma máquina está aqui,
+
+111
+00:15:55,800 --> 00:15:57,800
+quero falar com uma máquina que está aqui,
+
+112
+00:15:57,800 --> 00:15:59,800
+tem que conhecer,
+
+113
+00:15:59,800 --> 00:16:02,800
+tem que saber quem é aquele encaminhador
+
+114
+00:16:02,800 --> 00:16:05,800
+e tem que enviar as coisas para o encaminhador
+
+115
+00:16:05,800 --> 00:16:07,800
+para depois o encaminhador ser capaz
+
+116
+00:16:07,800 --> 00:16:10,800
+de enviar as coisas para a rede seguinte.
+
+117
+00:16:10,800 --> 00:16:14,800
+E se uma máquina que está aqui quiser enviar
+
+118
+00:16:14,800 --> 00:16:17,800
+as coisas para uma das máquinas que estão aqui,
+
+119
+00:16:19,800 --> 00:16:22,800
+não precisa de saber quem é aquele,
+
+120
+00:16:22,800 --> 00:16:25,800
+basta continuar a saber quem é aquele
+
+121
+00:16:25,800 --> 00:16:28,800
+e envia para aquele
+
+122
+00:16:28,800 --> 00:16:31,800
+e aquele a saber que deve enviar para aquele
+
+123
+00:16:31,800 --> 00:16:34,800
+e aquele deve saber enviar para o destino.
+
+124
+00:16:34,800 --> 00:16:37,800
+Ou seja, uma máquina para comunicar
+
+125
+00:16:37,800 --> 00:16:40,800
+tem que ter o seu endereço IP,
+
+126
+00:16:40,800 --> 00:16:43,800
+que tem que ser distinto dos outros todos,
+
+127
+00:16:43,800 --> 00:16:48,080
+e esse endereço tem que ter o prefixo,
+
+128
+00:16:48,080 --> 00:16:50,080
+a parte de lado esquerdo do endereço
+
+129
+00:16:50,080 --> 00:16:52,080
+tem que ser o NetID desta rede,
+
+130
+00:16:52,080 --> 00:16:54,080
+que é comum a todos,
+
+131
+00:16:54,080 --> 00:16:57,080
+mas para uma máquina poder comunicar
+
+132
+00:16:57,080 --> 00:17:01,080
+para fora para as redes que não são
+
+133
+00:17:01,080 --> 00:17:03,080
+diretas,
+
+134
+00:17:03,080 --> 00:17:05,080
+ele precisa de ter também,
+
+135
+00:17:05,080 --> 00:17:07,080
+precisa também de conhecer o endereço
+
+136
+00:17:07,080 --> 00:17:10,080
+deste router que aqui está
+
+137
+00:17:10,080 --> 00:17:12,080
+e que se chama,
+
+138
+00:17:12,080 --> 00:17:15,080
+quando temos assim um router a servir de ligação
+
+139
+00:17:15,080 --> 00:17:17,080
+posterior de uma rede,
+
+140
+00:17:17,080 --> 00:17:19,080
+chama-se-se,
+
+141
+00:17:19,080 --> 00:17:22,080
+desde que este router desempenha o papel de
+
+142
+00:17:22,080 --> 00:17:24,080
+Gateway da rede,
+
+143
+00:17:24,080 --> 00:17:27,080
+ou porta de saída da rede,
+
+144
+00:17:27,080 --> 00:17:38,420
+ou Gateway da rede.
+
+145
+00:17:38,420 --> 00:17:40,420
+Para além disso, a máquina, cada uma das máquinas
+
+146
+00:17:40,420 --> 00:17:43,420
+também tem que ser capaz de saber-se
+
+147
+00:17:43,420 --> 00:17:46,420
+se um determinado destino
+
+148
+00:17:46,420 --> 00:17:51,440
+é ou não um destino vizinho.
+
+149
+00:17:51,440 --> 00:17:54,440
+Quando esta máquina quer falar com aquela,
+
+150
+00:17:54,440 --> 00:17:56,440
+quando estas duas são vizinhas,
+
+151
+00:17:56,440 --> 00:17:59,440
+esta máquina não vai mandar as coisas para o router,
+
+152
+00:17:59,440 --> 00:18:03,440
+vai mandar as coisas diretamente para aquela máquina,
+
+153
+00:18:03,440 --> 00:18:05,440
+usando as capacidades de transmissão
+
+154
+00:18:05,440 --> 00:18:08,440
+oferecidas pela rede layer 2 que está aqui,
+
+155
+00:18:08,440 --> 00:18:10,440
+que pode ser uma Ethernet ou outra coisa qualquer,
+
+156
+00:18:10,440 --> 00:18:12,440
+mas que é uma rede que já tem capacidade
+
+157
+00:18:12,440 --> 00:18:16,440
+por estas máquinas a comunicarem com as outras.
+
+158
+00:18:16,440 --> 00:18:19,440
+Esta só precisa é de decidir primeiro
+
+159
+00:18:19,440 --> 00:18:22,440
+se vai falar com um vizinho
+
+160
+00:18:22,440 --> 00:18:25,440
+ou só falar com alguém que não é vizinho.
+
+161
+00:18:25,440 --> 00:18:30,700
+Se esta máquina
+
+162
+00:18:30,700 --> 00:18:34,700
+quer falar com alguém e se alguém não é vizinho,
+
+163
+00:18:34,700 --> 00:18:36,700
+então eu via para ali,
+
+164
+00:18:36,700 --> 00:18:41,110
+para saber se uma máquina é vizinho ou não.
+
+165
+00:18:41,110 --> 00:18:43,110
+A máquina tem que conhecer o seu NetID
+
+166
+00:18:43,110 --> 00:18:46,110
+e o tem que ser capaz de calcular o seu NetID
+
+167
+00:18:46,110 --> 00:18:48,110
+e como o NetID faz parte do endereço,
+
+168
+00:18:48,110 --> 00:18:51,110
+são os primeiros bits do endereço,
+
+169
+00:18:51,110 --> 00:18:55,110
+basta aquela máquina saber quantos bits do endereço
+
+170
+00:18:55,110 --> 00:18:57,110
+é que são o NetID
+
+171
+00:18:57,110 --> 00:19:00,110
+e dessa forma olhando para o endereço
+
+172
+00:19:00,110 --> 00:19:03,110
+e conta o número de bits que são do NetID
+
+173
+00:19:03,110 --> 00:19:05,110
+e já sabe o NetID
+
+174
+00:19:05,110 --> 00:19:07,110
+e com o NetID pode saber-se
+
+175
+00:19:07,110 --> 00:19:09,110
+se um determinado endereço de destino
+
+176
+00:19:09,110 --> 00:19:11,110
+pertence ou não à rede local,
+
+177
+00:19:11,110 --> 00:19:14,110
+ou seja, se o destino é ou não um vizinho.
+
+178
+00:19:14,110 --> 00:19:25,300
+Ou seja, o que pode acontecer
+
+179
+00:19:25,300 --> 00:19:27,300
+é uma coisa destas.
+
+180
+00:19:27,300 --> 00:19:28,300
+A máquina,
+
+181
+00:19:28,300 --> 00:19:31,300
+uma daquelas máquinas que vimos ali do lado esquerdo
+
+182
+00:19:31,300 --> 00:19:33,300
+ou qualquer que querem enviar alguma coisa,
+
+183
+00:19:33,300 --> 00:19:38,300
+por exemplo, a máquina 194, 146, 29, 15,
+
+184
+00:19:38,300 --> 00:19:40,300
+querem enviar dados
+
+185
+00:19:40,300 --> 00:19:48,300
+para uma máquina de destino que é o 194, 146, 29, 55.
+
+186
+00:19:48,300 --> 00:19:51,300
+Antes de enviar alguma coisa,
+
+187
+00:19:51,300 --> 00:19:54,300
+a máquina de origem,
+
+188
+00:19:54,300 --> 00:19:56,300
+quem quer enviar,
+
+189
+00:19:56,300 --> 00:19:59,300
+tem que conseguir responder esta pergunta.
+
+190
+00:19:59,300 --> 00:20:02,300
+Será que o destino pertence à rede local?
+
+191
+00:20:02,300 --> 00:20:06,700
+É a mesma coisa que responder à pergunta.
+
+192
+00:20:06,700 --> 00:20:11,700
+Será que o 146, 146, 29, 55, que é o destino,
+
+193
+00:20:11,700 --> 00:20:16,700
+pertence à rede 194, 146, 29, 15,
+
+194
+00:20:16,700 --> 00:20:18,700
+barra 23.
+
+195
+00:20:18,700 --> 00:20:27,010
+Isto, se a nossa rede for barra 23.
+
+196
+00:20:27,010 --> 00:20:29,010
+Para responder esta pergunta,
+
+197
+00:20:29,010 --> 00:20:31,010
+a máquina pode fazer estas contas.
+
+198
+00:20:31,010 --> 00:20:33,010
+Se estamos numa rede barra 23,
+
+199
+00:20:33,010 --> 00:20:35,010
+significa que os primeiros 23 bits
+
+200
+00:20:35,010 --> 00:20:37,010
+são o NetID.
+
+201
+00:20:37,010 --> 00:20:40,010
+Podemos gerar uma máscara
+
+202
+00:20:40,010 --> 00:20:43,010
+que é um conjunto de 23,
+
+203
+00:20:43,010 --> 00:20:46,010
+que é isto que está aqui,
+
+204
+00:20:46,010 --> 00:20:48,010
+ou isto que está aqui em binário,
+
+205
+00:20:48,010 --> 00:20:51,010
+23 uns e depois 9 zeros.
+
+206
+00:20:51,010 --> 00:20:55,860
+Com esta máscara nós podemos obter
+
+207
+00:20:55,860 --> 00:20:57,860
+o nosso NetID,
+
+208
+00:20:57,860 --> 00:20:59,860
+que é o NetID local,
+
+209
+00:20:59,860 --> 00:21:04,860
+fazendo 1 bit-a-bit do nosso endereço,
+
+210
+00:21:04,860 --> 00:21:06,860
+o endereço é aquele 29,15,
+
+211
+00:21:06,860 --> 00:21:08,860
+com a máscara.
+
+212
+00:21:08,860 --> 00:21:10,860
+Porque ele pode ser posto em binário,
+
+213
+00:21:10,860 --> 00:21:12,860
+fazendo, comparando,
+
+214
+00:21:12,860 --> 00:21:16,860
+fazendo 1 bit-a-bit com aqueles bits todos,
+
+215
+00:21:16,860 --> 00:21:21,860
+obtemos 194, 146, 28, 0,
+
+216
+00:21:21,860 --> 00:21:23,860
+que é o nosso NetID,
+
+217
+00:21:23,860 --> 00:21:28,270
+o NetID da rede onde nós estamos.
+
+218
+00:21:28,270 --> 00:21:30,270
+Fazemos outra conta parecida
+
+219
+00:21:30,270 --> 00:21:33,270
+para calcular o NetID do destino,
+
+220
+00:21:33,270 --> 00:21:36,270
+fazendo 1 bit-a-bit do endereço de destino
+
+221
+00:21:36,270 --> 00:21:40,270
+com a máscara que já calculamos,
+
+222
+00:21:40,270 --> 00:21:43,270
+e o resultado é aquele,
+
+223
+00:21:43,270 --> 00:21:46,270
+se o nosso NetID
+
+224
+00:21:46,270 --> 00:21:48,270
+é igual ao NetID de destino,
+
+225
+00:21:48,270 --> 00:21:50,270
+significa que a rede,
+
+226
+00:21:50,270 --> 00:21:52,270
+a nossa rede,
+
+227
+00:21:52,270 --> 00:21:54,270
+é a mesma rede que a rede de destino,
+
+228
+00:21:54,270 --> 00:21:56,270
+e isso significa que o destino,
+
+229
+00:21:56,270 --> 00:21:58,270
+então,
+
+230
+00:21:58,270 --> 00:22:00,270
+está na nossa rede,
+
+231
+00:22:00,270 --> 00:22:02,270
+é nosso vizinho.
+
+232
+00:22:02,270 --> 00:22:09,710
+Sim, Daniel.
+
+233
+00:22:09,710 --> 00:22:11,710
+Daniel, quer dizer alguma coisa?
+
+234
+00:22:11,710 --> 00:22:13,710
+Sim, sim.
+
+235
+00:22:13,710 --> 00:22:15,710
+O nome é que foi buscar um 23,
+
+236
+00:22:15,710 --> 00:22:17,710
+assumi-se que são 23 bits,
+
+237
+00:22:17,710 --> 00:22:19,710
+o NetID,
+
+238
+00:22:19,710 --> 00:22:21,710
+o mesmo sitio que fui buscar,
+
+239
+00:22:21,710 --> 00:22:23,710
+aquele endereço,
+
+240
+00:22:23,710 --> 00:22:25,710
+ou seja,
+
+241
+00:22:25,710 --> 00:22:27,710
+uma máquina para poder comunicar
+
+242
+00:22:27,710 --> 00:22:29,710
+tem que ser previamente configurada
+
+243
+00:22:29,710 --> 00:22:31,710
+com 3 coisas,
+
+244
+00:22:31,710 --> 00:22:33,710
+um endereço,
+
+245
+00:22:33,710 --> 00:22:35,710
+o endereço do Gateway,
+
+246
+00:22:35,710 --> 00:22:37,710
+e
+
+247
+00:22:37,710 --> 00:22:39,710
+o número de bits
+
+248
+00:22:39,710 --> 00:22:41,710
+do prefixo,
+
+249
+00:22:41,710 --> 00:22:43,710
+ou seja, o 23,
+
+250
+00:22:43,710 --> 00:22:45,710
+ou 23,
+
+251
+00:22:45,710 --> 00:22:47,710
+ou alternativamente a máscara.
+
+252
+00:22:47,710 --> 00:22:49,710
+Há
+
+253
+00:22:49,710 --> 00:22:51,710
+máquinas que são configuradas
+
+254
+00:22:51,710 --> 00:22:53,710
+com o endereço,
+
+255
+00:22:53,710 --> 00:22:55,710
+máscara e endereço do Gateway,
+
+256
+00:22:55,710 --> 00:22:57,710
+outras que são configuradas
+
+257
+00:22:57,710 --> 00:22:59,710
+com o endereço,
+
+258
+00:22:59,710 --> 00:23:01,710
+o endereço do Gateway e
+
+259
+00:23:01,710 --> 00:23:03,710
+o número de bits do prefixo.
+
+260
+00:23:03,710 --> 00:23:05,710
+O número de bits do prefixo
+
+261
+00:23:05,710 --> 00:23:07,710
+tem a mesma informação que a máscara,
+
+262
+00:23:07,710 --> 00:23:09,710
+podemos passar de um para o outro
+
+263
+00:23:09,710 --> 00:23:11,710
+quando quisermos.
+
+264
+00:23:11,710 --> 00:23:13,710
+Aqui estamos a assumir que aquela máquina
+
+265
+00:23:13,710 --> 00:23:15,710
+que tem,
+
+266
+00:23:15,710 --> 00:23:17,710
+de origem, tem aquele endereço
+
+267
+00:23:17,710 --> 00:23:19,710
+e também tem o barra 23,
+
+268
+00:23:19,710 --> 00:23:21,710
+com o número de bits do prefixo.
+
+269
+00:23:21,710 --> 00:23:23,710
+Foi pré-definido pelo projetista
+
+270
+00:23:23,710 --> 00:23:25,710
+e configurado pelo dono da máquina.
+
+271
+00:23:27,710 --> 00:23:31,340
+Ok, obrigado.
+
+272
+00:23:31,340 --> 00:23:33,340
+Então, se o NetID local
+
+273
+00:23:33,340 --> 00:23:35,340
+é igual ao NetID de destino,
+
+274
+00:23:35,340 --> 00:23:37,340
+isso significa que o destino pretensária
+
+275
+00:23:37,340 --> 00:23:39,340
+é de local.
+
+276
+00:23:39,340 --> 00:23:41,340
+Então, temos o nosso pacote IP,
+
+277
+00:23:41,340 --> 00:23:43,340
+que é este retângulo que está aqui,
+
+278
+00:23:43,340 --> 00:23:45,340
+que tem um cabeçalho IP
+
+279
+00:23:45,340 --> 00:23:47,340
+onde temos o endereço IP
+
+280
+00:23:47,340 --> 00:23:49,340
+de origem e o endereço IP
+
+281
+00:23:49,340 --> 00:23:51,340
+de destino,
+
+282
+00:23:51,340 --> 00:23:53,340
+e encapsulamos este
+
+283
+00:23:53,340 --> 00:23:55,340
+datagram IP
+
+284
+00:23:55,340 --> 00:23:57,340
+numa trama Ethernet
+
+285
+00:23:57,340 --> 00:23:59,340
+que vai
+
+286
+00:23:59,340 --> 00:24:01,340
+endereçada
+
+287
+00:24:01,340 --> 00:24:03,340
+ao destinatário.
+
+288
+00:24:03,340 --> 00:24:05,340
+Pomos aqui o endereço
+
+289
+00:24:05,340 --> 00:24:10,100
+mac da máquina de destino.
+
+290
+00:24:10,100 --> 00:24:12,100
+Está aqui uma parte que estamos a saltar,
+
+291
+00:24:12,100 --> 00:24:14,100
+que é como é que, a partir do endereço
+
+292
+00:24:14,100 --> 00:24:16,100
+de destino, temos o mac de destino,
+
+293
+00:24:16,100 --> 00:24:18,100
+mas isso
+
+294
+00:24:18,100 --> 00:24:20,100
+vamos ver depois, como falarmos
+
+295
+00:24:20,100 --> 00:24:22,100
+da Ethernet,
+
+296
+00:24:22,100 --> 00:24:24,100
+é uma funcionalidade Ethernet
+
+297
+00:24:24,100 --> 00:24:26,100
+de saber permitir
+
+298
+00:24:26,100 --> 00:24:28,100
+que as máquinas obtenham os macs
+
+299
+00:24:28,100 --> 00:24:32,020
+dos seus vizinhos.
+
+300
+00:24:32,020 --> 00:24:34,020
+Tanto vai, de facto,
+
+301
+00:24:34,020 --> 00:24:36,020
+aqui vão dois endereços,
+
+302
+00:24:36,020 --> 00:24:38,020
+um endereço de origem e um endereço de destino,
+
+303
+00:24:38,020 --> 00:24:40,020
+que são o endereço IP.
+
+304
+00:24:40,020 --> 00:24:42,020
+No cabeçalho Ethernet
+
+305
+00:24:42,020 --> 00:24:44,020
+também vão dois endereços,
+
+306
+00:24:44,020 --> 00:24:46,020
+o endereço de origem e o endereço de destino,
+
+307
+00:24:46,020 --> 00:24:48,020
+dois endereços mac,
+
+308
+00:24:48,020 --> 00:24:50,020
+mas que são das mesmas máquinas.
+
+309
+00:24:50,020 --> 00:24:52,020
+Os dois endereços de origem
+
+310
+00:24:52,020 --> 00:24:54,020
+são da máquina de origem,
+
+311
+00:24:54,020 --> 00:24:56,020
+os dois endereços de destino
+
+312
+00:24:56,020 --> 00:24:58,020
+são da máquina de destino, que é um vizinho.
+
+313
+00:24:58,020 --> 00:25:05,420
+Vamos depor agora
+
+314
+00:25:05,420 --> 00:25:07,420
+que a mesma máquina, a máquina
+
+315
+00:25:07,420 --> 00:25:09,420
+194, 146, 29, 15,
+
+316
+00:25:09,420 --> 00:25:11,420
+querem enviar dados
+
+317
+00:25:11,420 --> 00:25:13,420
+para a máquina 194,
+
+318
+00:25:13,420 --> 00:25:15,420
+146,
+
+319
+00:25:15,420 --> 00:25:20,080
+31, 55.
+
+320
+00:25:20,080 --> 00:25:22,080
+Começa
+
+321
+00:25:22,080 --> 00:25:24,080
+para tentar responder a pergunta
+
+322
+00:25:24,080 --> 00:25:26,080
+será que o destino pretensa a rede local?
+
+323
+00:25:26,080 --> 00:25:28,080
+Começa por
+
+324
+00:25:28,080 --> 00:25:30,080
+calcular a sua máscara
+
+325
+00:25:30,080 --> 00:25:32,080
+é a mesma sequência de bits,
+
+326
+00:25:32,080 --> 00:25:34,080
+é a mesma máscara que
+
+327
+00:25:34,080 --> 00:25:36,080
+no slide anterior.
+
+328
+00:25:36,080 --> 00:25:38,080
+O NetID local
+
+329
+00:25:38,080 --> 00:25:40,080
+é o mesmo que anteriormente,
+
+330
+00:25:40,080 --> 00:25:42,080
+porque o nosso endereço é o mesmo e a nossa máscara
+
+331
+00:25:42,080 --> 00:25:44,080
+é a mesma,
+
+332
+00:25:44,080 --> 00:25:46,080
+é o 28.0.
+
+333
+00:25:46,080 --> 00:25:48,080
+E agora calculamos também o NetID de destino
+
+334
+00:25:48,080 --> 00:25:50,080
+fazendo um
+
+335
+00:25:50,080 --> 00:25:52,080
+do ano de bit a bit entre o endereço
+
+336
+00:25:52,080 --> 00:25:54,080
+de destino, que é o 31.55
+
+337
+00:25:54,080 --> 00:25:56,080
+com a máscara e o resultado
+
+338
+00:25:56,080 --> 00:25:58,080
+é aquele que está aqui.
+
+339
+00:25:58,080 --> 00:26:00,080
+Neste caso
+
+340
+00:26:00,080 --> 00:26:02,080
+o NetID de destino
+
+341
+00:26:02,080 --> 00:26:04,080
+é diferente do NetID local
+
+342
+00:26:04,080 --> 00:26:06,080
+o que significa
+
+343
+00:26:06,080 --> 00:26:08,080
+que o destino não está
+
+344
+00:26:08,080 --> 00:26:11,940
+na rede local.
+
+345
+00:26:11,940 --> 00:26:13,940
+O destino não é nosso vizinho.
+
+346
+00:26:13,940 --> 00:26:17,630
+Então, o que é que fazemos?
+
+347
+00:26:17,630 --> 00:26:19,630
+Temos o nosso pacote IP
+
+348
+00:26:19,630 --> 00:26:21,630
+que é o mesmo,
+
+349
+00:26:21,630 --> 00:26:23,630
+que é o bocado,
+
+350
+00:26:23,630 --> 00:26:25,630
+aqui vai o endereço IP
+
+351
+00:26:25,630 --> 00:26:27,630
+do origem e o endereço IP de destino
+
+352
+00:26:27,630 --> 00:26:29,630
+e agora vamos encapsular isto
+
+353
+00:26:29,630 --> 00:26:31,630
+numa trama Ethernet
+
+354
+00:26:31,630 --> 00:26:33,630
+mas a trama Ethernet
+
+355
+00:26:33,630 --> 00:26:35,630
+agora aqui
+
+356
+00:26:35,630 --> 00:26:37,630
+vai levar um endereço
+
+357
+00:26:37,630 --> 00:26:39,630
+que é o endereço
+
+358
+00:26:39,630 --> 00:26:41,630
+Mac, ou seja, o endereço Ethernet
+
+359
+00:26:41,630 --> 00:26:43,630
+não do destinatário
+
+360
+00:26:43,630 --> 00:26:45,630
+mas do Gateway.
+
+361
+00:26:45,630 --> 00:26:47,630
+O Gateway é aquele router
+
+362
+00:26:47,630 --> 00:26:49,630
+que está a desempenhar os papéis
+
+363
+00:26:49,630 --> 00:26:51,630
+de porta de saída da nossa rede
+
+364
+00:26:51,630 --> 00:26:53,630
+e que
+
+365
+00:26:53,630 --> 00:26:55,630
+depois há de saber encaminhar
+
+366
+00:26:55,630 --> 00:26:57,630
+há de saber pegar neste pacote IP
+
+367
+00:26:57,630 --> 00:26:59,630
+e enviá-lo
+
+368
+00:26:59,630 --> 00:27:01,630
+para outro sítio mais perto do destino.
+
+369
+00:27:01,630 --> 00:27:05,140
+Portanto, aqui temos
+
+370
+00:27:05,140 --> 00:27:07,140
+um endereço de destino Ethernet
+
+371
+00:27:07,140 --> 00:27:09,140
+que corresponda a uma máquina
+
+372
+00:27:09,140 --> 00:27:11,140
+diferente do
+
+373
+00:27:11,140 --> 00:27:13,140
+destinatário que vai aqui
+
+374
+00:27:13,140 --> 00:27:24,320
+identificado por IP.
+
+375
+00:27:24,320 --> 00:27:26,320
+Um encaminhador
+
+376
+00:27:26,320 --> 00:27:28,320
+quando recebe um pacote
+
+377
+00:27:28,320 --> 00:27:33,780
+faz
+
+378
+00:27:33,780 --> 00:27:37,310
+com todas as outras máquinas
+
+379
+00:27:37,310 --> 00:27:39,310
+seu origem e o destino do pacote
+
+380
+00:27:39,310 --> 00:27:41,310
+estão na mesma rede
+
+381
+00:27:41,310 --> 00:27:43,310
+então
+
+382
+00:27:43,310 --> 00:27:45,310
+o encaminhador entrega o pacote
+
+383
+00:27:45,310 --> 00:27:47,310
+diretamente no destino utilizando
+
+384
+00:27:47,310 --> 00:27:49,310
+as funcionalidades da rede layer 2
+
+385
+00:27:49,310 --> 00:27:51,310
+que
+
+386
+00:27:51,310 --> 00:27:54,880
+permite chegar ao destino.
+
+387
+00:27:54,880 --> 00:27:56,880
+Se as máquinas não pertencem à mesma rede
+
+388
+00:27:56,880 --> 00:27:58,880
+ou seja, se o encaminhador
+
+389
+00:27:58,880 --> 00:28:00,880
+não pertença
+
+390
+00:28:00,880 --> 00:28:02,880
+à mesma rede do
+
+391
+00:28:02,880 --> 00:28:04,880
+destinatário
+
+392
+00:28:04,880 --> 00:28:06,880
+então o pacote entrega
+
+393
+00:28:06,880 --> 00:28:10,900
+um outro router
+
+394
+00:28:10,900 --> 00:28:12,900
+e cada router quando recebe um pacote
+
+395
+00:28:12,900 --> 00:28:14,900
+consulta uma tabela
+
+396
+00:28:14,900 --> 00:28:16,900
+que se chama tabela de encaminhamento
+
+397
+00:28:16,900 --> 00:28:18,900
+ou tabela de routing
+
+398
+00:28:18,900 --> 00:28:20,900
+Essas tabelas são
+
+399
+00:28:20,900 --> 00:28:22,900
+listas
+
+400
+00:28:22,900 --> 00:28:24,900
+que relacionam
+
+401
+00:28:24,900 --> 00:28:26,900
+endereços ou gamas
+
+402
+00:28:26,900 --> 00:28:28,900
+de redes
+
+403
+00:28:28,900 --> 00:28:30,900
+com endereços dos próximos passos
+
+404
+00:28:30,900 --> 00:28:32,900
+dos próximos lutas
+
+405
+00:28:32,900 --> 00:28:34,900
+que podem chamar
+
+406
+00:28:34,900 --> 00:28:36,900
+esses lutas os necks de hops
+
+407
+00:28:36,900 --> 00:28:38,900
+os passos seguintes
+
+408
+00:28:38,900 --> 00:28:44,290
+ou os saltos seguintes
+
+409
+00:28:44,290 --> 00:28:46,290
+Aqueles destinos
+
+410
+00:28:46,290 --> 00:28:48,290
+nestas tabelas podem ser
+
+411
+00:28:48,290 --> 00:28:50,290
+endereços simples
+
+412
+00:28:50,290 --> 00:28:52,290
+ou seja, podemos ter
+
+413
+00:28:52,290 --> 00:28:54,290
+regras de encaminhamento
+
+414
+00:28:54,290 --> 00:28:56,290
+uma relação entre um destino
+
+415
+00:28:56,290 --> 00:28:58,290
+e um necks de hop
+
+416
+00:28:58,290 --> 00:29:00,290
+é uma
+
+417
+00:29:00,290 --> 00:29:02,290
+rota
+
+418
+00:29:02,290 --> 00:29:04,290
+ou uma regra de encaminhamento
+
+419
+00:29:04,290 --> 00:29:06,290
+Essas regras de encaminhamento podem ser
+
+420
+00:29:06,290 --> 00:29:08,290
+feitas para
+
+421
+00:29:08,290 --> 00:29:10,290
+gamas de rede ou endereços simples
+
+422
+00:29:12,290 --> 00:29:14,290
+endereços de máquinas simples
+
+423
+00:29:14,290 --> 00:29:16,290
+podemos ter uma regra de encaminho
+
+424
+00:29:16,290 --> 00:29:18,290
+para uma determinada máquina
+
+425
+00:29:18,290 --> 00:29:26,850
+ou que encaminho para uma rede grande
+
+426
+00:29:26,850 --> 00:29:28,850
+ou está às vezes para distinguir
+
+427
+00:29:28,850 --> 00:29:30,850
+se a regra
+
+428
+00:29:30,850 --> 00:29:32,850
+é para ser aplicada a uma
+
+429
+00:29:32,850 --> 00:29:34,850
+máquina
+
+430
+00:29:34,850 --> 00:29:36,850
+ou
+
+431
+00:29:36,850 --> 00:29:38,850
+uma rede, existe uma flag
+
+432
+00:29:38,850 --> 00:29:40,850
+e para indicar
+
+433
+00:29:40,850 --> 00:29:42,850
+se as coisas devem ser entregues
+
+434
+00:29:42,850 --> 00:29:44,850
+diretamente no destinatário
+
+435
+00:29:44,850 --> 00:29:46,850
+ou entregues a um gateway
+
+436
+00:29:46,850 --> 00:29:48,850
+existe uma flag
+
+437
+00:29:48,850 --> 00:29:50,850
+que também fazem parte
+
+438
+00:29:50,850 --> 00:29:52,850
+da tabela
+
+439
+00:29:52,850 --> 00:29:54,850
+mas o importante para a tabela
+
+440
+00:29:54,850 --> 00:29:56,850
+é relacionar endereços
+
+441
+00:29:56,850 --> 00:29:58,850
+ou gamas de endereços
+
+442
+00:29:58,850 --> 00:30:02,900
+com endereços dos gateways
+
+443
+00:30:02,900 --> 00:30:04,900
+também nas tabelas
+
+444
+00:30:04,900 --> 00:30:06,900
+aparece normalmente
+
+445
+00:30:06,900 --> 00:30:08,900
+uma indicação da interface de rede
+
+446
+00:30:08,900 --> 00:30:10,900
+que vai servir para sair
+
+447
+00:30:10,900 --> 00:30:12,900
+do encaminhador
+
+448
+00:30:12,900 --> 00:30:14,900
+e isto é importante
+
+449
+00:30:14,900 --> 00:30:16,900
+sobretudo para falar com os vizinhos
+
+450
+00:30:16,900 --> 00:30:18,900
+um rote
+
+451
+00:30:18,900 --> 00:30:20,900
+que pode ter muitas portas de rede
+
+452
+00:30:20,900 --> 00:30:22,900
+e portanto muitas redes vizinhas
+
+453
+00:30:22,900 --> 00:30:24,900
+quando se trata
+
+454
+00:30:24,900 --> 00:30:26,900
+de enviar diretamente para um vizinho
+
+455
+00:30:26,900 --> 00:30:28,900
+é preciso saber porque porta
+
+456
+00:30:28,900 --> 00:30:30,900
+é que se encaminham as coisas
+
+457
+00:30:30,900 --> 00:30:32,900
+e isso pode estar na tabela de encaminhamento
+
+458
+00:30:32,900 --> 00:30:46,480
+um exemplo de uma tabela de encaminhamento
+
+459
+00:30:46,480 --> 00:30:48,480
+esta que está aqui
+
+460
+00:30:48,480 --> 00:30:55,020
+um conjunto de
+
+461
+00:30:55,020 --> 00:30:57,020
+um endereço de rede
+
+462
+00:30:57,020 --> 00:30:59,020
+ou um endereço base mais uma máscara
+
+463
+00:30:59,020 --> 00:31:01,020
+da uma gama
+
+464
+00:31:01,020 --> 00:31:03,020
+de destino
+
+465
+00:31:03,020 --> 00:31:05,020
+e depois temos aqui uma coluna
+
+466
+00:31:05,020 --> 00:31:07,020
+de gateways
+
+467
+00:31:07,020 --> 00:31:09,020
+uma regra como esta segunda linha
+
+468
+00:31:09,020 --> 00:31:11,020
+que aqui está significa que
+
+469
+00:31:11,020 --> 00:31:13,020
+para enviarmos tráfego
+
+470
+00:31:13,020 --> 00:31:15,020
+para
+
+471
+00:31:15,020 --> 00:31:17,020
+todos os endereços
+
+472
+00:31:17,020 --> 00:31:19,020
+que começam por 149.762
+
+473
+00:31:19,020 --> 00:31:23,490
+independentemente
+
+474
+00:31:23,490 --> 00:31:25,490
+do conteúdo deste último octet
+
+475
+00:31:25,490 --> 00:31:27,490
+porque este último octet
+
+476
+00:31:27,490 --> 00:31:29,490
+como diz aqui na máscara
+
+477
+00:31:29,490 --> 00:31:31,490
+já pretende só o study
+
+478
+00:31:31,490 --> 00:31:33,490
+para enviar alguma coisa
+
+479
+00:31:33,490 --> 00:31:35,490
+para um destinatário nesta rede
+
+480
+00:31:35,490 --> 00:31:37,490
+e enviamos as coisas para aquele gateway
+
+481
+00:31:37,490 --> 00:31:42,240
+para enviar coisas para este destino
+
+482
+00:31:42,240 --> 00:31:44,240
+enviamos para aquele gateway
+
+483
+00:31:44,240 --> 00:31:46,240
+para enviar coisas para aquele destino
+
+484
+00:31:46,240 --> 00:31:48,240
+enviamos para aquele gateway
+
+485
+00:31:48,240 --> 00:31:50,240
+algumas destas regras
+
+486
+00:31:50,240 --> 00:31:53,620
+não têm em gateway
+
+487
+00:31:53,620 --> 00:31:55,620
+o que significa
+
+488
+00:31:55,620 --> 00:31:57,620
+esta máquina
+
+489
+00:31:57,620 --> 00:31:59,620
+como tem esta tabela de encaminhamento
+
+490
+00:31:59,620 --> 00:32:01,620
+quando quero mandar as coisas
+
+491
+00:32:01,620 --> 00:32:03,620
+para esta rede
+
+492
+00:32:03,620 --> 00:32:05,620
+para os endereços que começam por
+
+493
+00:32:05,620 --> 00:32:07,620
+149.761
+
+494
+00:32:07,620 --> 00:32:09,620
+deve enviar as coisas diretamente
+
+495
+00:32:09,620 --> 00:32:11,620
+para o destinatário sem gateway
+
+496
+00:32:11,620 --> 00:32:13,620
+porque
+
+497
+00:32:13,620 --> 00:32:15,620
+provavelmente esta rede
+
+498
+00:32:15,620 --> 00:32:17,620
+é uma rede
+
+499
+00:32:17,620 --> 00:32:19,620
+direta, é uma rede dos nossos vizinhos
+
+500
+00:32:19,620 --> 00:32:21,620
+e nesse caso utilizamos
+
+501
+00:32:21,620 --> 00:32:23,620
+esta porta de saída
+
+502
+00:32:23,620 --> 00:32:27,340
+que nos permite falar com aquela rede
+
+503
+00:32:27,340 --> 00:32:29,340
+estas tabelas podem ter
+
+504
+00:32:29,340 --> 00:32:37,070
+um aspecto
+
+505
+00:32:37,070 --> 00:32:39,070
+ligeiramente diferente
+
+506
+00:32:39,070 --> 00:32:41,070
+a máscara
+
+507
+00:32:41,070 --> 00:32:44,990
+às vezes chama-se gene masque
+
+508
+00:32:44,990 --> 00:32:46,990
+porque é uma máscara que pode ser
+
+509
+00:32:46,990 --> 00:32:48,990
+eventualmente gerada automaticamente
+
+510
+00:32:48,990 --> 00:32:50,990
+mas normalmente
+
+511
+00:32:50,990 --> 00:32:52,990
+não é
+
+512
+00:32:52,990 --> 00:32:54,990
+temos aqui um conjunto de flags
+
+513
+00:32:54,990 --> 00:32:56,990
+já falamos das flags
+
+514
+00:32:56,990 --> 00:32:58,990
+H e G
+
+515
+00:32:58,990 --> 00:33:00,990
+não é muito bom
+
+516
+00:33:00,990 --> 00:33:02,990
+aqui temos também
+
+517
+00:33:02,990 --> 00:33:04,990
+umas contabilidades
+
+518
+00:33:04,990 --> 00:33:06,990
+estatísticas de utilização
+
+519
+00:33:06,990 --> 00:33:08,990
+daquelas rotas
+
+520
+00:33:08,990 --> 00:33:10,990
+e aqui temos
+
+521
+00:33:10,990 --> 00:33:14,300
+uma tabela de encaminhamento
+
+522
+00:33:14,300 --> 00:33:16,300
+maior mas que
+
+523
+00:33:16,300 --> 00:33:20,510
+é semelhante
+
+524
+00:33:20,510 --> 00:33:26,740
+as lutas não são todos
+
+525
+00:33:26,740 --> 00:33:28,740
+exatamente iguais
+
+526
+00:33:28,740 --> 00:33:30,740
+não trabalham todos
+
+527
+00:33:30,740 --> 00:33:32,740
+exatamente da mesma forma
+
+528
+00:33:32,740 --> 00:33:34,740
+mas todos fazem
+
+529
+00:33:34,740 --> 00:33:36,740
+basicamente isto
+
+530
+00:33:36,740 --> 00:33:38,740
+para encaminhar um pacote
+
+531
+00:33:38,740 --> 00:33:40,740
+o router
+
+532
+00:33:40,740 --> 00:33:42,740
+pesquisa a sua tabela de encaminhamento
+
+533
+00:33:42,740 --> 00:33:44,740
+ver se tem algum
+
+534
+00:33:44,740 --> 00:33:46,740
+endereço de destino igual
+
+535
+00:33:46,740 --> 00:33:48,740
+ao endereço de destino do pacote
+
+536
+00:33:48,740 --> 00:33:52,340
+que queremos enviar
+
+537
+00:33:52,340 --> 00:33:54,340
+se não existir
+
+538
+00:33:54,340 --> 00:33:56,340
+procura-se na tabela
+
+539
+00:33:56,340 --> 00:33:58,340
+um netid
+
+540
+00:33:58,340 --> 00:34:00,340
+um destino
+
+541
+00:34:00,340 --> 00:34:02,340
+do mesmo netid
+
+542
+00:34:02,340 --> 00:34:04,340
+ou seja uma regra que permitem encaminhar
+
+543
+00:34:04,340 --> 00:34:06,340
+as coisas para
+
+544
+00:34:06,340 --> 00:34:10,420
+uma regra de destino
+
+545
+00:34:10,420 --> 00:34:12,420
+se não existir
+
+546
+00:34:12,420 --> 00:34:14,420
+nenhuma regra aplicável
+
+547
+00:34:16,420 --> 00:34:18,420
+os lutas tentam encontrar
+
+548
+00:34:18,420 --> 00:34:20,420
+uma regra especial
+
+549
+00:34:20,420 --> 00:34:22,420
+que se chama regra de default
+
+550
+00:34:22,420 --> 00:34:26,370
+ou de
+
+551
+00:34:26,370 --> 00:34:28,370
+uma regra
+
+552
+00:34:28,370 --> 00:34:30,370
+aplicável por omissão
+
+553
+00:34:30,370 --> 00:34:37,010
+quando não existe mais nenhuma
+
+554
+00:34:37,010 --> 00:34:39,010
+essas regras de default
+
+555
+00:34:39,010 --> 00:34:41,010
+nestas tabelas que
+
+556
+00:34:41,010 --> 00:34:43,010
+temos aqui
+
+557
+00:34:43,010 --> 00:34:45,010
+esta regra
+
+558
+00:34:45,010 --> 00:34:47,010
+que está aqui
+
+559
+00:34:47,010 --> 00:34:49,010
+é chamada regra de default
+
+560
+00:34:49,010 --> 00:34:51,010
+é uma regra que é aplicável a todos os endereços
+
+561
+00:34:51,010 --> 00:34:53,010
+que
+
+562
+00:34:53,010 --> 00:34:55,010
+tenham zero bits
+
+563
+00:34:55,010 --> 00:34:57,010
+de netid
+
+564
+00:34:57,010 --> 00:34:59,010
+netid
+
+565
+00:34:59,010 --> 00:35:01,010
+se chamasse que era zero
+
+566
+00:35:01,010 --> 00:35:03,010
+significa que todos os bits
+
+567
+00:35:03,010 --> 00:35:05,010
+são de ousetid
+
+568
+00:35:05,010 --> 00:35:07,010
+e portanto qualquer ousetid
+
+569
+00:35:07,010 --> 00:35:09,010
+é aplicável a esta regra
+
+570
+00:35:09,010 --> 00:35:11,010
+ou esta regra é aplicável a qualquer
+
+571
+00:35:11,010 --> 00:35:13,010
+endereço
+
+572
+00:35:13,010 --> 00:35:15,010
+mas como as outras
+
+573
+00:35:15,010 --> 00:35:17,010
+regras são aplicadas primeiros
+
+574
+00:35:17,010 --> 00:35:19,010
+são consultadas primeiro
+
+575
+00:35:19,010 --> 00:35:21,010
+se houver uma das outras que é aplicada
+
+576
+00:35:21,010 --> 00:35:24,290
+aquela já não é
+
+577
+00:35:24,290 --> 00:35:26,290
+esta chama-se a regra de
+
+578
+00:35:26,290 --> 00:35:28,290
+default e aquela regra que é aplicada
+
+579
+00:35:28,290 --> 00:35:30,290
+para encaminhar o tráfego
+
+580
+00:35:30,290 --> 00:35:32,290
+que não pode ser encaminhado
+
+581
+00:35:32,290 --> 00:35:34,290
+por nenhuma das outras regras
+
+582
+00:35:34,290 --> 00:35:36,290
+tipicamente usa-se
+
+583
+00:35:36,290 --> 00:35:38,290
+para encaminhar o tráfego para internet
+
+584
+00:35:38,290 --> 00:35:40,290
+ou seja um router
+
+585
+00:35:40,290 --> 00:35:42,290
+sabe que para encaminhar o tráfego
+
+586
+00:35:42,290 --> 00:35:44,290
+para uma determinada rede
+
+587
+00:35:44,290 --> 00:35:46,290
+envia para um sítio, para outra rede
+
+588
+00:35:46,290 --> 00:35:48,290
+envia para o outro sítio
+
+589
+00:35:48,290 --> 00:35:50,290
+tudo o resto
+
+590
+00:35:50,290 --> 00:35:52,290
+envia
+
+591
+00:35:52,290 --> 00:35:54,290
+para este gateway que está aqui
+
+592
+00:35:54,290 --> 00:35:56,290
+e este gateway também pode ser
+
+593
+00:35:56,290 --> 00:35:58,290
+designado como default gateway
+
+594
+00:35:58,290 --> 00:36:00,290
+o gateway
+
+595
+00:36:00,290 --> 00:36:02,290
+que é aplicado por default
+
+596
+00:36:02,290 --> 00:36:04,290
+ou por omissão quando não há mais
+
+597
+00:36:04,290 --> 00:36:06,290
+informação nenhuma de encaminhamento
+
+598
+00:36:06,290 --> 00:36:10,690
+dependendo do equipamento
+
+599
+00:36:10,690 --> 00:36:12,690
+a rota default
+
+600
+00:36:12,690 --> 00:36:14,690
+pode aparecer
+
+601
+00:36:14,690 --> 00:36:16,690
+com
+
+602
+00:36:16,690 --> 00:36:18,690
+esta designação explícita
+
+603
+00:36:18,690 --> 00:36:23,090
+de rota de default
+
+604
+00:36:23,090 --> 00:36:25,090
+em princípio a rota default
+
+605
+00:36:25,090 --> 00:36:27,090
+tem que ter sempre um gateway
+
+606
+00:36:27,090 --> 00:36:30,530
+que nunca pode
+
+607
+00:36:30,530 --> 00:36:32,530
+não ter gateway
+
+608
+00:36:32,530 --> 00:36:34,530
+porque senão não podíamos encaminhar
+
+609
+00:36:34,530 --> 00:36:36,530
+tráfego para internet
+
+610
+00:36:36,530 --> 00:36:38,530
+ou isso só fazia sentido se
+
+611
+00:36:38,530 --> 00:36:45,140
+todas as máquinas do mundo fossem nossas vizinhas
+
+612
+00:36:45,140 --> 00:36:47,140
+então aqui também está
+
+613
+00:36:47,140 --> 00:36:49,140
+a regra em que temos o endereço zero
+
+614
+00:36:49,140 --> 00:36:51,140
+e a máscara zero
+
+615
+00:36:51,140 --> 00:36:55,060
+e um determinado gateway
+
+616
+00:36:55,060 --> 00:36:57,060
+então se não houver mais nenhuma
+
+617
+00:36:57,060 --> 00:36:59,060
+rota aplicável
+
+618
+00:36:59,060 --> 00:37:01,060
+aplica-se a rota default
+
+619
+00:37:01,060 --> 00:37:08,940
+se ela existir
+
+620
+00:37:08,940 --> 00:37:10,940
+essa rota aplicável
+
+621
+00:37:10,940 --> 00:37:12,940
+pode ou não ter um gateway
+
+622
+00:37:12,940 --> 00:37:14,940
+às vezes a existência
+
+623
+00:37:14,940 --> 00:37:16,940
+do gateway é
+
+624
+00:37:16,940 --> 00:37:18,940
+especificada por uma flag
+
+625
+00:37:18,940 --> 00:37:20,940
+que diz se existe gateway
+
+626
+00:37:20,940 --> 00:37:22,940
+ou não
+
+627
+00:37:22,940 --> 00:37:24,940
+às vezes
+
+628
+00:37:24,940 --> 00:37:26,940
+o campo gateway está a zeros
+
+629
+00:37:26,940 --> 00:37:28,940
+ou tem um tracinho
+
+630
+00:37:28,940 --> 00:37:30,940
+ou tem uma anotação qualquer que diz que não existe
+
+631
+00:37:30,940 --> 00:37:32,940
+independentemente
+
+632
+00:37:32,940 --> 00:37:34,940
+aqui vemos que
+
+633
+00:37:34,940 --> 00:37:36,940
+os únicos que não estão a zeros
+
+634
+00:37:36,940 --> 00:37:38,940
+são os que tem o guê
+
+635
+00:37:38,940 --> 00:37:40,940
+indica que
+
+636
+00:37:40,940 --> 00:37:42,940
+temos gateway
+
+637
+00:37:42,940 --> 00:37:44,940
+os outros
+
+638
+00:37:44,940 --> 00:37:46,940
+ou pelo zero ou por não termos o guê
+
+639
+00:37:46,940 --> 00:37:52,820
+sabemos que não temos gateway
+
+640
+00:37:54,260 --> 00:37:56,260
+se temos gateway
+
+641
+00:37:56,260 --> 00:37:58,260
+no next hop
+
+642
+00:37:58,260 --> 00:38:00,260
+ou seja, o gateway
+
+643
+00:38:00,260 --> 00:38:02,260
+mantendo
+
+644
+00:38:02,260 --> 00:38:04,260
+o endereço IP de destino
+
+645
+00:38:04,260 --> 00:38:06,260
+como o recebemos
+
+646
+00:38:06,260 --> 00:38:08,260
+mas geramos uma nova
+
+647
+00:38:08,260 --> 00:38:10,260
+trama
+
+648
+00:38:10,260 --> 00:38:12,260
+e no endereço da trama
+
+649
+00:38:12,260 --> 00:38:14,260
+vai o endereço internet do gateway
+
+650
+00:38:16,260 --> 00:38:18,260
+se não existir flag
+
+651
+00:38:18,260 --> 00:38:20,260
+ou se não existir gateway
+
+652
+00:38:20,260 --> 00:38:22,260
+então enviamos as coisas diretamente para o destino
+
+653
+00:38:22,260 --> 00:38:24,260
+usando
+
+654
+00:38:24,260 --> 00:38:26,260
+mantendo o endereço IP
+
+655
+00:38:26,260 --> 00:38:28,260
+destino do pacote, não se mexe no pacote
+
+656
+00:38:28,260 --> 00:38:30,260
+e
+
+657
+00:38:30,260 --> 00:38:32,260
+endereça
+
+658
+00:38:32,260 --> 00:38:34,260
+a trama com o endereço mac
+
+659
+00:38:34,260 --> 00:38:36,260
+do destinatário
+
+660
+00:38:36,260 --> 00:38:38,260
+se por acaso não existir
+
+661
+00:38:38,260 --> 00:38:40,260
+nenhuma rota aplicável
+
+662
+00:38:40,260 --> 00:38:42,260
+pacote é editado fora
+
+663
+00:38:42,260 --> 00:38:44,260
+não é encaminhado
+
+664
+00:38:44,260 --> 00:38:46,260
+não sabemos por onde ouvimos demandar
+
+665
+00:38:46,260 --> 00:38:48,260
+não mandamos
+
+666
+00:38:48,260 --> 00:38:50,260
+isso só pode acontecer se também não existir
+
+667
+00:38:50,260 --> 00:38:52,260
+a rota default
+
+668
+00:38:52,260 --> 00:38:54,260
+que a rota default é aplicável
+
+669
+00:38:54,260 --> 00:38:56,260
+em todos os casos
+
+670
+00:38:56,260 --> 00:38:58,260
+e portanto só se não existir
+
+671
+00:38:58,260 --> 00:39:00,260
+rota default é que corremos o risco
+
+672
+00:39:00,260 --> 00:39:02,260
+de não termos rotas aplicáveis
+
+673
+00:39:02,260 --> 00:39:09,120
+então
+
+674
+00:39:09,120 --> 00:39:11,120
+se queremos fazer uma tabela de encaminhamento
+
+675
+00:39:11,120 --> 00:39:13,120
+bem feita
+
+676
+00:39:13,120 --> 00:39:15,120
+para um funcionamento normal
+
+677
+00:39:17,120 --> 00:39:19,120
+de maneira a interligarmos
+
+678
+00:39:19,120 --> 00:39:21,120
+coisas a rede global
+
+679
+00:39:21,120 --> 00:39:23,120
+a internet
+
+680
+00:39:23,120 --> 00:39:25,120
+tem que existir uma rota default
+
+681
+00:39:25,120 --> 00:39:27,120
+qualquer coisa deste género
+
+682
+00:39:27,120 --> 00:39:29,120
+desde que
+
+683
+00:39:29,120 --> 00:39:31,120
+para o destino 0000
+
+684
+00:39:31,120 --> 00:39:34,370
+barra 0
+
+685
+00:39:34,370 --> 00:39:36,370
+existe um gateway
+
+686
+00:39:36,370 --> 00:39:39,870
+e indica-se
+
+687
+00:39:39,870 --> 00:39:41,870
+para além disso
+
+688
+00:39:41,870 --> 00:39:43,870
+uma tabela de encaminhamento
+
+689
+00:39:43,870 --> 00:39:45,870
+só está correta
+
+690
+00:39:45,870 --> 00:39:47,870
+se tiver uma rota explícita
+
+691
+00:39:47,870 --> 00:39:49,870
+para cada destino
+
+692
+00:39:49,870 --> 00:39:51,870
+que precisa de um encaminhamento
+
+693
+00:39:51,870 --> 00:39:53,870
+diferente do default gateway
+
+694
+00:39:53,870 --> 00:39:57,500
+ou seja, só ver destinos
+
+695
+00:39:57,500 --> 00:39:59,500
+para os quais a rota default
+
+696
+00:39:59,500 --> 00:40:01,500
+sirva
+
+697
+00:40:01,500 --> 00:40:03,500
+nós exclusamos de nos preocupar
+
+698
+00:40:03,500 --> 00:40:05,500
+com esse destino
+
+699
+00:40:05,500 --> 00:40:07,500
+se houver destinos que precisem
+
+700
+00:40:07,500 --> 00:40:09,500
+de um encaminhamento específico
+
+701
+00:40:09,500 --> 00:40:11,500
+porque temos que arranjar um caminho
+
+702
+00:40:11,500 --> 00:40:13,500
+diferente do caminho default
+
+703
+00:40:13,500 --> 00:40:15,500
+para atingir esse destino
+
+704
+00:40:15,500 --> 00:40:17,500
+então temos que ter uma rota explícita
+
+705
+00:40:17,500 --> 00:40:23,020
+para cada um desses destinos
+
+706
+00:40:23,020 --> 00:40:26,400
+para além disso
+
+707
+00:40:26,400 --> 00:40:28,400
+tem que existir uma rota
+
+708
+00:40:28,400 --> 00:40:30,400
+direta
+
+709
+00:40:30,400 --> 00:40:32,400
+para cada uma das redes vizinhas
+
+710
+00:40:32,400 --> 00:40:34,400
+cada uma das redes ligadas diretamente
+
+711
+00:40:34,400 --> 00:40:36,400
+esta rota
+
+712
+00:40:36,400 --> 00:40:38,400
+é uma rota sem gateway
+
+713
+00:40:38,400 --> 00:40:40,400
+ou seja, não leva a flag de g
+
+714
+00:40:40,400 --> 00:40:42,400
+ou não leva endereço de gateway
+
+715
+00:40:42,400 --> 00:40:44,400
+ou leva o endereço de gateway 0
+
+716
+00:40:44,400 --> 00:40:46,400
+e essa rota
+
+717
+00:40:46,400 --> 00:40:48,400
+precisa
+
+718
+00:40:48,400 --> 00:40:50,400
+de explícitar
+
+719
+00:40:50,400 --> 00:40:52,400
+a porta de saída
+
+720
+00:40:52,400 --> 00:40:54,400
+porque se não temos gateway
+
+721
+00:40:54,400 --> 00:40:56,400
+não se sabe para onde é que sabe a demandar
+
+722
+00:40:56,400 --> 00:40:58,400
+temos que saber escolher a porta
+
+723
+00:40:58,400 --> 00:41:00,400
+e as coisas
+
+724
+00:41:00,400 --> 00:41:02,400
+normalmente este tipo de rotas
+
+725
+00:41:02,400 --> 00:41:07,540
+referido aqui
+
+726
+00:41:07,540 --> 00:41:09,540
+podem ser criadas automaticamente
+
+727
+00:41:09,540 --> 00:41:11,540
+na configuração das portas
+
+728
+00:41:11,540 --> 00:41:13,540
+dependendo dos equipamentos
+
+729
+00:41:13,540 --> 00:41:15,540
+quando configuramos uma porta e dizemos
+
+730
+00:41:15,540 --> 00:41:17,540
+esta porta tem um endereço
+
+731
+00:41:17,540 --> 00:41:19,540
+tal e está ligado a uma rede
+
+732
+00:41:19,540 --> 00:41:21,540
+com
+
+733
+00:41:21,540 --> 00:41:23,540
+em que os primeiros n bits
+
+734
+00:41:23,540 --> 00:41:25,540
+são do prefixo
+
+735
+00:41:25,540 --> 00:41:27,540
+já estamos a dar toda a informação
+
+736
+00:41:27,540 --> 00:41:29,540
+sobre qual é a rede que está ligada a esta porta
+
+737
+00:41:29,540 --> 00:41:31,540
+e portanto
+
+738
+00:41:31,540 --> 00:41:33,540
+normalmente não precisamos de criar
+
+739
+00:41:33,540 --> 00:41:35,540
+rotas destas
+
+740
+00:41:35,540 --> 00:41:37,540
+porque elas
+
+741
+00:41:37,540 --> 00:41:39,540
+podem ser criadas automaticamente
+
+742
+00:41:39,540 --> 00:41:41,540
+na configuração das portas
+
+743
+00:41:41,540 --> 00:41:49,940
+do encaminhador
+
+744
+00:41:49,940 --> 00:41:51,940
+outras rotas
+
+745
+00:41:51,940 --> 00:41:53,940
+que não façam falta
+
+746
+00:41:53,940 --> 00:41:55,940
+para conseguirmos encaminhar o tráfego
+
+747
+00:41:55,940 --> 00:41:57,940
+os que usamos das colocar
+
+748
+00:41:57,940 --> 00:42:02,020
+por exemplo
+
+749
+00:42:02,020 --> 00:42:04,020
+nós ainda não falamos em redes privadas
+
+750
+00:42:04,020 --> 00:42:06,020
+como falamos na próxima sessão
+
+751
+00:42:06,020 --> 00:42:09,870
+mas
+
+752
+00:42:09,870 --> 00:42:11,870
+as redes privadas são redes
+
+753
+00:42:11,870 --> 00:42:13,870
+que não estão ligadas
+
+754
+00:42:13,870 --> 00:42:15,870
+às redes públicas
+
+755
+00:42:15,870 --> 00:42:17,870
+ou às redes exterior
+
+756
+00:42:17,870 --> 00:42:19,870
+portanto nós não temos que colocar
+
+757
+00:42:19,870 --> 00:42:21,870
+rotas para redes privadas
+
+758
+00:42:23,870 --> 00:42:25,870
+também não temos que
+
+759
+00:42:25,870 --> 00:42:27,870
+colocar rotas para redes
+
+760
+00:42:27,870 --> 00:42:29,870
+que não tenham
+
+761
+00:42:29,870 --> 00:42:31,870
+destinatários válidos
+
+762
+00:42:31,870 --> 00:42:33,870
+por exemplo se uma rede
+
+763
+00:42:33,870 --> 00:42:35,870
+é uma rede só para tráfego
+
+764
+00:42:35,870 --> 00:42:37,870
+só para trânsito
+
+765
+00:42:37,870 --> 00:42:39,870
+para encaminhar os pacotes de um lado
+
+766
+00:42:39,870 --> 00:42:41,870
+para o outro
+
+767
+00:42:41,870 --> 00:42:43,870
+e não existe lá ninguém com quem a gente
+
+768
+00:42:43,870 --> 00:42:45,870
+queira falar
+
+769
+00:42:45,870 --> 00:42:47,870
+nenhum servidor
+
+770
+00:42:47,870 --> 00:42:49,870
+que nós precisamos
+
+771
+00:42:49,870 --> 00:42:51,870
+de contactar
+
+772
+00:42:51,870 --> 00:42:53,870
+para sermos servidos
+
+773
+00:42:53,870 --> 00:42:55,870
+de alguma coisa
+
+774
+00:42:55,870 --> 00:42:57,870
+então não precisamos de ter rotas
+
+775
+00:42:57,870 --> 00:42:59,870
+se não precisamos de falar com ninguém de uma rede
+
+776
+00:42:59,870 --> 00:43:04,590
+não precisamos de ter rotas de peça rede
+
+777
+00:43:04,590 --> 00:43:06,590
+por exemplo
+
+778
+00:43:06,590 --> 00:43:08,590
+neste géner
+
+779
+00:43:08,590 --> 00:43:10,590
+que os encaminhadores estão representados
+
+780
+00:43:10,590 --> 00:43:12,590
+por retângulos
+
+781
+00:43:12,590 --> 00:43:14,590
+e as redes por nuvens
+
+782
+00:43:16,590 --> 00:43:18,590
+se a rede B
+
+783
+00:43:18,590 --> 00:43:20,590
+é uma rede únicamente trânsita
+
+784
+00:43:20,590 --> 00:43:22,590
+ou seja só serve para enviar
+
+785
+00:43:22,590 --> 00:43:24,590
+o tráfego do R2 para o R3
+
+786
+00:43:24,590 --> 00:43:26,590
+e não há aqui
+
+787
+00:43:26,590 --> 00:43:28,590
+no departamento B
+
+788
+00:43:28,590 --> 00:43:32,380
+nenhuma
+
+789
+00:43:32,380 --> 00:43:34,380
+pessoa com quem nós queramos falar
+
+790
+00:43:34,380 --> 00:43:36,380
+nenhuma máquina
+
+791
+00:43:36,380 --> 00:43:38,380
+com quem nós queramos falar
+
+792
+00:43:38,380 --> 00:43:40,380
+em nenhum serviço
+
+793
+00:43:40,380 --> 00:43:42,380
+nós precisamos de endereçar
+
+794
+00:43:42,380 --> 00:43:44,380
+então
+
+795
+00:43:44,380 --> 00:43:46,380
+não precisamos de ter rotas
+
+796
+00:43:46,380 --> 00:43:48,380
+então o R1
+
+797
+00:43:48,380 --> 00:43:50,380
+não precisa de ter uma rota
+
+798
+00:43:50,380 --> 00:43:52,380
+para a rede B
+
+799
+00:43:52,380 --> 00:43:54,380
+o R1
+
+800
+00:43:54,380 --> 00:43:56,380
+pode precisar de ter
+
+801
+00:43:56,380 --> 00:43:58,380
+rotas para a rede A
+
+802
+00:43:58,380 --> 00:44:00,380
+porque ela está ligada
+
+803
+00:44:00,380 --> 00:44:02,380
+diretamente e todas
+
+804
+00:44:02,380 --> 00:44:04,380
+as redes diretas
+
+805
+00:44:04,380 --> 00:44:06,380
+têm que ter uma rota própria
+
+806
+00:44:06,380 --> 00:44:08,380
+o R1
+
+807
+00:44:08,380 --> 00:44:10,380
+se precisar de falar para a rede C
+
+808
+00:44:10,380 --> 00:44:12,380
+tem que ter uma rota para a rede C
+
+809
+00:44:12,380 --> 00:44:14,380
+o R1 se precisar de falar para a rede
+
+810
+00:44:14,380 --> 00:44:16,380
+D
+
+811
+00:44:16,380 --> 00:44:18,380
+precisa ter uma rota para a rede D
+
+812
+00:44:18,380 --> 00:44:20,380
+mas
+
+813
+00:44:20,380 --> 00:44:22,380
+se não precisa de falar para a rede B
+
+814
+00:44:22,380 --> 00:44:24,380
+não precisa de ter uma rota para a rede B
+
+815
+00:44:24,380 --> 00:44:28,500
+outro lado se a rede D
+
+816
+00:44:28,500 --> 00:44:30,500
+for uma rede privada
+
+817
+00:44:30,500 --> 00:44:32,500
+o R1
+
+818
+00:44:32,500 --> 00:44:34,500
+não pode falar diretamente
+
+819
+00:44:34,500 --> 00:44:36,500
+para a rede privada
+
+820
+00:44:36,500 --> 00:44:38,500
+o R2 também não pode falar com a rede privada
+
+821
+00:44:38,500 --> 00:44:40,500
+então se a rede D for privada
+
+822
+00:44:40,500 --> 00:44:42,500
+nem o R1
+
+823
+00:44:42,500 --> 00:44:44,500
+nem o R2 precisam de ter rotas para a rede D
+
+824
+00:44:44,500 --> 00:44:49,180
+então já agora
+
+825
+00:44:49,180 --> 00:44:51,180
+podemos aproveitar este exemplo
+
+826
+00:44:51,180 --> 00:44:53,180
+para ver outras coisas que não são precisas
+
+827
+00:44:53,180 --> 00:44:55,180
+o R3
+
+828
+00:44:55,180 --> 00:44:58,500
+precisa de ter rotas para a rede B
+
+829
+00:44:58,500 --> 00:45:00,500
+e para a rede D
+
+830
+00:45:00,500 --> 00:45:02,500
+porque são
+
+831
+00:45:02,500 --> 00:45:04,500
+rotas diretas
+
+832
+00:45:04,500 --> 00:45:06,500
+precisa de saber que para mandar as coisas
+
+833
+00:45:06,500 --> 00:45:08,500
+e para ali manda diretamente
+
+834
+00:45:08,500 --> 00:45:10,500
+este imaginando
+
+835
+00:45:10,500 --> 00:45:12,500
+que existe alguma coisa
+
+836
+00:45:12,500 --> 00:45:15,900
+na rede B
+
+837
+00:45:15,900 --> 00:45:17,900
+o R3 precisa de saber mandar
+
+838
+00:45:17,900 --> 00:45:22,530
+coisas para o R2
+
+839
+00:45:22,530 --> 00:45:24,530
+se saber de mandar para a rede B
+
+840
+00:45:24,530 --> 00:45:26,530
+sabe mandar para o R2
+
+841
+00:45:26,530 --> 00:45:28,530
+o R3
+
+842
+00:45:28,530 --> 00:45:30,530
+não precisa
+
+843
+00:45:30,530 --> 00:45:32,530
+o R3 precisa de saber
+
+844
+00:45:32,530 --> 00:45:34,530
+mandar coisas para a internet
+
+845
+00:45:34,530 --> 00:45:36,530
+e vai ter uma rota
+
+846
+00:45:36,530 --> 00:45:38,530
+a dizer que
+
+847
+00:45:38,530 --> 00:45:40,530
+tudo o resto
+
+848
+00:45:40,530 --> 00:45:42,530
+tudo o que for preciso mandar para fora
+
+849
+00:45:42,530 --> 00:45:45,940
+manda para o R2
+
+850
+00:45:45,940 --> 00:45:47,940
+tendo essa rota
+
+851
+00:45:47,940 --> 00:45:49,940
+para a internet
+
+852
+00:45:49,940 --> 00:45:51,940
+apontar para o R2
+
+853
+00:45:51,940 --> 00:45:53,940
+eles já não precisam de ter rotas
+
+854
+00:45:53,940 --> 00:45:55,940
+o R3 já não precisa ter rotas
+
+855
+00:45:55,940 --> 00:45:57,940
+nem para a rede C
+
+856
+00:45:57,940 --> 00:45:59,940
+porque a rede A
+
+857
+00:45:59,940 --> 00:46:01,940
+para o R2
+
+858
+00:46:01,940 --> 00:46:03,940
+está no caminho de default
+
+859
+00:46:03,940 --> 00:46:05,940
+ou seja
+
+860
+00:46:05,940 --> 00:46:07,940
+o R3
+
+861
+00:46:07,940 --> 00:46:09,940
+ou para a internet
+
+862
+00:46:09,940 --> 00:46:11,940
+faz sempre a mesma coisa que mandar para o R2
+
+863
+00:46:11,940 --> 00:46:13,940
+e como
+
+864
+00:46:13,940 --> 00:46:15,940
+a rota que vamos pôr de default
+
+865
+00:46:15,940 --> 00:46:17,940
+engloba
+
+866
+00:46:17,940 --> 00:46:19,940
+tudo e portanto engloba
+
+867
+00:46:19,940 --> 00:46:21,940
+também o departamento A e C
+
+868
+00:46:21,940 --> 00:46:23,940
+essa rota chega
+
+869
+00:46:23,940 --> 00:46:25,940
+para o departamento C
+
+870
+00:46:25,940 --> 00:46:37,630
+enviar coisas para o A e C
+
+871
+00:46:37,630 --> 00:46:39,630
+outros rotas não trabalham todos exatamente
+
+872
+00:46:39,630 --> 00:46:41,630
+da mesma maneira
+
+873
+00:46:41,630 --> 00:46:43,630
+uns que nós
+
+874
+00:46:43,630 --> 00:46:45,630
+damos as rotas
+
+875
+00:46:45,630 --> 00:46:47,630
+os ordenam as rotas
+
+876
+00:46:47,630 --> 00:46:49,630
+em umas primeiras outras depois
+
+877
+00:46:49,630 --> 00:46:51,630
+normalmente os que fazem isso
+
+878
+00:46:51,630 --> 00:46:53,630
+os que ordenam as rotas são os que depois usam
+
+879
+00:46:53,630 --> 00:46:55,630
+essa ordem
+
+880
+00:46:55,630 --> 00:46:57,630
+para implementar as consultas
+
+881
+00:46:57,630 --> 00:46:59,630
+ou seja, começam a procurar na tabela
+
+882
+00:46:59,630 --> 00:47:06,590
+a partir da primeira rota
+
+883
+00:47:06,590 --> 00:47:08,590
+esses que ordenam as rotas
+
+884
+00:47:08,590 --> 00:47:13,440
+normalmente ordenam
+
+885
+00:47:13,440 --> 00:47:15,440
+as rotas começando com os prefixes
+
+886
+00:47:15,440 --> 00:47:17,440
+mais compridos
+
+887
+00:47:17,440 --> 00:47:19,440
+e acabando nos prefixes
+
+888
+00:47:19,440 --> 00:47:21,440
+mais curtos
+
+889
+00:47:21,440 --> 00:47:23,440
+os prefixes mais compridos
+
+890
+00:47:23,440 --> 00:47:25,440
+dizem em respeito às rotas
+
+891
+00:47:25,440 --> 00:47:27,440
+que são só para uma máquina
+
+892
+00:47:27,440 --> 00:47:29,440
+ou para redes pequenas
+
+893
+00:47:29,440 --> 00:47:31,440
+os prefixes mais curtos são para redes grandes
+
+894
+00:47:31,440 --> 00:47:33,440
+a default route
+
+895
+00:47:33,440 --> 00:47:35,440
+que tem um prefixo 0
+
+896
+00:47:35,440 --> 00:47:37,440
+normalmente é sempre
+
+897
+00:47:37,440 --> 00:47:39,440
+a última rota
+
+898
+00:47:39,440 --> 00:47:41,440
+e o que faz sentido
+
+899
+00:47:41,440 --> 00:47:43,440
+se depois a pesquisa das rotas
+
+900
+00:47:43,440 --> 00:47:45,440
+começar
+
+901
+00:47:45,440 --> 00:47:47,440
+da primeira para a última
+
+902
+00:47:47,440 --> 00:47:50,750
+então
+
+903
+00:47:50,750 --> 00:47:52,750
+é lógica que a default route
+
+904
+00:47:52,750 --> 00:47:54,750
+que só é aplicada quando as outras não são
+
+905
+00:47:54,750 --> 00:47:56,750
+seja também a última
+
+906
+00:47:56,750 --> 00:47:58,750
+independentemente delas estarem ordenadas
+
+907
+00:48:00,750 --> 00:48:02,750
+e serem consultadas por ordem
+
+908
+00:48:02,750 --> 00:48:04,750
+ou não estarem ordenadas
+
+909
+00:48:04,750 --> 00:48:06,750
+e serem consultadas
+
+910
+00:48:06,750 --> 00:48:08,750
+pela dimensão do prefixo
+
+911
+00:48:08,750 --> 00:48:10,750
+o normal
+
+912
+00:48:10,750 --> 00:48:12,750
+é que a pesquisa
+
+913
+00:48:12,750 --> 00:48:14,750
+seja sempre feita
+
+914
+00:48:14,750 --> 00:48:16,750
+por ordem de prefixo
+
+915
+00:48:16,750 --> 00:48:18,750
+e portanto
+
+916
+00:48:18,750 --> 00:48:20,750
+a prioridade as rotas
+
+917
+00:48:20,750 --> 00:48:22,750
+mais específicas
+
+918
+00:48:22,750 --> 00:48:24,750
+as rotas que tenham
+
+919
+00:48:24,750 --> 00:48:32,160
+os prefixes mais compridos
+
+920
+00:48:32,160 --> 00:48:34,160
+isso pode facilitar a construção
+
+921
+00:48:34,160 --> 00:48:36,160
+das tabelas de encaminhamento
+
+922
+00:48:36,160 --> 00:48:38,160
+podemos construir tabelas de encaminhamento
+
+923
+00:48:38,160 --> 00:48:40,160
+se soubemos que os routers
+
+924
+00:48:40,160 --> 00:48:42,160
+se comportam assim
+
+925
+00:48:42,160 --> 00:48:44,160
+podemos simplificar as tabelas de encaminhamento
+
+926
+00:48:44,160 --> 00:48:46,160
+e não depor as rotas todas
+
+927
+00:48:46,160 --> 00:48:50,180
+porque
+
+928
+00:48:50,180 --> 00:48:52,180
+usamos rotas maiores
+
+929
+00:48:52,180 --> 00:48:54,180
+que
+
+930
+00:48:54,180 --> 00:48:56,180
+aplicam a mais endereços
+
+931
+00:48:56,180 --> 00:48:58,180
+e com isso conseguimos menos rotas
+
+932
+00:48:58,180 --> 00:49:02,030
+por exemplo
+
+933
+00:49:02,030 --> 00:49:04,030
+se tivermos um caso
+
+934
+00:49:04,030 --> 00:49:06,030
+em que temos aqui deste lado
+
+935
+00:49:06,030 --> 00:49:08,030
+temos aqui deste lado
+
+936
+00:49:08,030 --> 00:49:10,030
+uma rede pequena
+
+937
+00:49:10,030 --> 00:49:17,700
+barra 16
+
+938
+00:49:17,700 --> 00:49:19,700
+e
+
+939
+00:49:19,700 --> 00:49:21,700
+ali
+
+940
+00:49:21,700 --> 00:49:23,700
+temos uma rede grande
+
+941
+00:49:23,700 --> 00:49:25,700
+uma barra 8
+
+942
+00:49:25,700 --> 00:49:27,700
+barra 8
+
+943
+00:49:27,700 --> 00:49:29,700
+10 qualquer coisa
+
+944
+00:49:29,700 --> 00:49:31,700
+ou 10 000 barra 8
+
+945
+00:49:31,700 --> 00:49:33,700
+significa todos os endereços que começam por 10
+
+946
+00:49:35,700 --> 00:49:37,700
+10.100 barra 16
+
+947
+00:49:37,700 --> 00:49:39,700
+significa todos os endereços
+
+948
+00:49:39,700 --> 00:49:41,700
+que começam por 10.1
+
+949
+00:49:41,700 --> 00:49:43,700
+mas todos os endereços
+
+950
+00:49:43,700 --> 00:49:45,700
+que começam por 10.1
+
+951
+00:49:45,700 --> 00:49:47,700
+também começam por 10
+
+952
+00:49:47,700 --> 00:49:49,700
+e portanto
+
+953
+00:49:49,700 --> 00:49:51,700
+esta rede 10.1
+
+954
+00:49:51,700 --> 00:49:57,500
+pertence à rede 10 barra 8
+
+955
+00:49:57,500 --> 00:50:00,820
+se tivermos
+
+956
+00:50:00,820 --> 00:50:02,820
+aqui os endereços
+
+957
+00:50:02,820 --> 00:50:04,820
+da rede
+
+958
+00:50:04,820 --> 00:50:06,820
+10.0 barra 8
+
+959
+00:50:06,820 --> 00:50:08,820
+quase todos os endereços
+
+960
+00:50:08,820 --> 00:50:10,820
+da rede 10.0 barra 8
+
+961
+00:50:10,820 --> 00:50:12,820
+e
+
+962
+00:50:12,820 --> 00:50:14,820
+excepto
+
+963
+00:50:14,820 --> 00:50:16,820
+só não temos os endereços
+
+964
+00:50:16,820 --> 00:50:18,820
+da rede 10.1 barra 16
+
+965
+00:50:18,820 --> 00:50:23,470
+a construção
+
+966
+00:50:23,470 --> 00:50:25,470
+de uma tabela de encaminhamento
+
+967
+00:50:25,470 --> 00:50:28,820
+pode ser
+
+968
+00:50:28,820 --> 00:50:30,820
+pode ser feita só assim
+
+969
+00:50:30,820 --> 00:50:36,910
+tirando partido
+
+970
+00:50:36,910 --> 00:50:38,910
+do facto do R2
+
+971
+00:50:38,910 --> 00:50:40,910
+fazer o matching
+
+972
+00:50:40,910 --> 00:50:42,910
+primeiro
+
+973
+00:50:42,910 --> 00:50:44,910
+prioritário às redes mais pequenas
+
+974
+00:50:44,910 --> 00:50:46,910
+ou seja, o que
+
+975
+00:50:46,910 --> 00:50:48,910
+aqui visse que
+
+976
+00:50:48,910 --> 00:50:50,910
+o R2 manda para o R3
+
+977
+00:50:50,910 --> 00:50:52,910
+tudo o que for 10.0 barra 8
+
+978
+00:50:52,910 --> 00:50:54,910
+e manda para o R4
+
+979
+00:50:54,910 --> 00:50:56,910
+tudo o que for 10.1
+
+980
+00:50:56,910 --> 00:50:58,910
+não desta tabela
+
+981
+00:50:58,910 --> 00:51:00,910
+não está ordenada
+
+982
+00:51:00,910 --> 00:51:02,910
+mas desde que o router
+
+983
+00:51:02,910 --> 00:51:04,910
+dê prioridade
+
+984
+00:51:04,910 --> 00:51:06,910
+aos perfíxios mais pequenos
+
+985
+00:51:06,910 --> 00:51:08,910
+aos perfíxios mais compridos
+
+986
+00:51:08,910 --> 00:51:10,910
+então quando desaparece
+
+987
+00:51:10,910 --> 00:51:12,910
+um pacote 10.1.1
+
+988
+00:51:12,910 --> 00:51:14,910
+pacote com destino
+
+989
+00:51:14,910 --> 00:51:16,910
+para 10.1.1.1
+
+990
+00:51:16,910 --> 00:51:24,670
+o router
+
+991
+00:51:24,670 --> 00:51:28,180
+vai
+
+992
+00:51:28,180 --> 00:51:30,180
+fazer o matching
+
+993
+00:51:30,180 --> 00:51:32,180
+ver este destino com os destinos
+
+994
+00:51:32,180 --> 00:51:34,180
+da sua tabela de encaminhamento
+
+995
+00:51:34,180 --> 00:51:36,180
+desta com
+
+996
+00:51:36,180 --> 00:51:38,180
+aquele destino
+
+997
+00:51:38,180 --> 00:51:40,180
+e o 10.1.1
+
+998
+00:51:40,180 --> 00:51:42,180
+pertence ao destino 10 barra 8
+
+999
+00:51:42,180 --> 00:51:44,180
+então esta rota deu matos
+
+1000
+00:51:44,180 --> 00:51:46,180
+pela seguida
+
+1001
+00:51:46,180 --> 00:51:48,180
+pode continuar a procurar
+
+1002
+00:51:48,180 --> 00:51:50,180
+na sua tabela de encaminhamento
+
+1003
+00:51:50,180 --> 00:51:52,180
+e aquela também dá sucesso
+
+1004
+00:51:52,180 --> 00:51:54,180
+porque o 10.1.1
+
+1005
+00:51:54,180 --> 00:51:56,180
+tem a
+
+1006
+00:51:56,180 --> 00:51:58,180
+pretençar a rede
+
+1007
+00:51:58,180 --> 00:52:00,180
+10.1
+
+1008
+00:52:00,180 --> 00:52:03,460
+barra 16
+
+1009
+00:52:03,460 --> 00:52:05,460
+depois procurar o outro
+
+1010
+00:52:05,460 --> 00:52:07,460
+não dá matos
+
+1011
+00:52:07,460 --> 00:52:09,460
+e
+
+1012
+00:52:09,460 --> 00:52:11,460
+procurar a rota default
+
+1013
+00:52:11,460 --> 00:52:13,460
+e esta dá sempre matos
+
+1014
+00:52:13,460 --> 00:52:15,460
+para todos os endereços
+
+1015
+00:52:15,460 --> 00:52:17,460
+então
+
+1016
+00:52:18,960 --> 00:52:20,960
+houve um matos
+
+1017
+00:52:20,960 --> 00:52:22,960
+na primeira regra
+
+1018
+00:52:22,960 --> 00:52:24,960
+na segunda e na quarta
+
+1019
+00:52:24,960 --> 00:52:26,960
+ele vai usar
+
+1020
+00:52:26,960 --> 00:52:28,960
+aquela que tiver o prefixo mais comprido
+
+1021
+00:52:28,960 --> 00:52:30,960
+que é aquela que tem o barra 16
+
+1022
+00:52:30,960 --> 00:52:32,960
+que é aquela que diz
+
+1023
+00:52:32,960 --> 00:52:43,250
+respeito a um destino mais
+
+1024
+00:52:43,250 --> 00:52:45,250
+específico
+
+1025
+00:52:45,250 --> 00:52:47,250
+quando tirando partir disso
+
+1026
+00:52:47,250 --> 00:52:50,660
+nós podemos eliminar algumas rotas
+
+1027
+00:52:50,660 --> 00:52:52,660
+para continuar com essa otimização
+
+1028
+00:52:52,660 --> 00:52:56,320
+para já
+
+1029
+00:52:56,320 --> 00:53:02,160
+vou te opor
+
+1030
+00:53:02,160 --> 00:53:04,160
+no módulo
+
+1031
+00:53:04,160 --> 00:53:06,160
+mais uns exercícios para fazermos
+
+1032
+00:53:06,160 --> 00:53:14,910
+hoje
+
+1033
+00:53:14,910 --> 00:53:16,910
+umas perguntas de escolha
+
+1034
+00:53:16,910 --> 00:53:18,910
+múltipla sobre
+
+1035
+00:53:18,910 --> 00:53:20,910
+verificarmos
+
+1036
+00:53:20,910 --> 00:53:22,910
+se temos endereços
+
+1037
+00:53:22,910 --> 00:53:24,910
+incluídos
+
+1038
+00:53:24,910 --> 00:53:26,910
+em gamas
+
+1039
+00:53:26,910 --> 00:53:28,910
+e depois um exercício
+
+1040
+00:53:28,910 --> 00:53:30,910
+de atribuição
+
+1041
+00:53:30,910 --> 00:53:35,150
+de gamas
+
+1042
+00:53:35,150 --> 00:53:37,150
+como já fizemos
+
+1043
+00:53:37,150 --> 00:53:39,150
+continuando agora para
+
+1044
+00:53:39,150 --> 00:53:41,150
+a configuração dos encaminhadores
+
+1045
+00:53:41,150 --> 00:53:43,150
+e
+
+1046
+00:53:43,150 --> 00:53:45,150
+criação de uma tabela de encaminhamento
+
+1047
+00:53:45,150 --> 00:53:47,150
+que é isto que tivemos a ver hoje
+
+1048
+00:53:47,150 --> 00:53:57,730
+neste exercício
+
+1049
+00:53:57,730 --> 00:53:59,730
+imagino que
+
+1050
+00:53:59,730 --> 00:54:01,730
+cada um de vocês tenha uma gama
+
+1051
+00:54:01,730 --> 00:54:05,520
+pode ser diferente
+
+1052
+00:54:05,520 --> 00:54:07,520
+dos vossos polegas
+
+1053
+00:54:07,520 --> 00:54:09,520
+podem trabalhar
+
+1054
+00:54:09,520 --> 00:54:11,520
+em conjunto mas cada um
+
+1055
+00:54:11,520 --> 00:54:15,150
+pode arranjar a sua solução
+
+1056
+00:54:15,150 --> 00:54:17,150
+e eu também vou fazer aqui
+
+1057
+00:54:17,150 --> 00:54:19,150
+para outra
+
+1058
+00:54:19,150 --> 00:54:21,150
+outro enunciado
+
+1059
+00:54:21,150 --> 00:54:23,150
+semelhante
+
+1060
+00:54:23,150 --> 00:54:25,150
+mas não igual ao que
+
+1061
+00:54:25,150 --> 00:54:28,500
+vocês tenham para fazer
+
+1062
+00:54:28,500 --> 00:54:30,500
+acho que a topologia da rede
+
+1063
+00:54:30,500 --> 00:54:41,200
+é sempre a mesma
+
+1064
+00:54:41,200 --> 00:54:43,200
+não tenho aqui
+
+1065
+00:54:43,200 --> 00:54:45,200
+rede nenhuma
+
+1066
+00:54:45,200 --> 00:54:47,200
+vamos arranjar
+
+1067
+00:54:47,200 --> 00:54:49,200
+a gama que eu vou dar
+
+1068
+00:54:49,200 --> 00:54:51,200
+para resolver isto
+
+1069
+00:54:51,200 --> 00:54:53,200
+vai ser diferente da vossa
+
+1070
+00:54:53,200 --> 00:54:55,200
+e a minha vai ser
+
+1071
+00:54:55,200 --> 00:54:57,200
+123.14
+
+1072
+00:55:26,930 --> 00:55:28,930
+deixe-me só confirmar
+
+1073
+00:55:28,930 --> 00:55:34,540
+que estou a fazer bem
+
+1074
+00:55:34,540 --> 00:55:39,260
+sim, pode ser esta
+
+1075
+00:55:39,260 --> 00:55:41,260
+esta é a gama que eu vou usar
+
+1076
+00:55:41,260 --> 00:55:43,260
+vocês vão usar outra
+
+1077
+00:55:43,260 --> 00:55:45,260
+o número de dispositivos
+
+1078
+00:55:45,260 --> 00:55:47,260
+por rede
+
+1079
+00:55:47,260 --> 00:55:49,260
+nos vossos casos também vai ser diferente
+
+1080
+00:55:49,260 --> 00:55:51,260
+acho que se eu mostrar
+
+1081
+00:55:51,260 --> 00:55:53,260
+como se faz
+
+1082
+00:55:53,260 --> 00:55:55,260
+para este caso
+
+1083
+00:55:55,260 --> 00:55:57,260
+que vocês não têm dificuldade
+
+1084
+00:55:57,260 --> 00:55:59,260
+em responder para o vosso caso
+
+1085
+00:55:59,260 --> 00:56:04,560
+a primeira coisa que nos perguntam
+
+1086
+00:56:04,560 --> 00:56:06,560
+é quantos endereços
+
+1087
+00:56:06,560 --> 00:56:08,560
+temos aqui nesta gama
+
+1088
+00:56:08,560 --> 00:56:11,870
+o número de endereços
+
+1089
+00:56:11,870 --> 00:56:13,870
+já vimos na sessão passada
+
+1090
+00:56:13,870 --> 00:56:15,870
+pode ser sempre calculado como
+
+1091
+00:56:15,870 --> 00:56:17,870
+2 levantado a
+
+1092
+00:56:17,870 --> 00:56:19,870
+32 menos n
+
+1093
+00:56:19,870 --> 00:56:23,470
+neste caso nosso n é 21
+
+1094
+00:56:23,470 --> 00:56:25,470
+temos 2 levantado a
+
+1095
+00:56:25,470 --> 00:56:27,470
+32 menos 21
+
+1096
+00:56:29,470 --> 00:56:31,470
+e é 2 levantado a
+
+1097
+00:56:31,470 --> 00:56:33,470
+11
+
+1098
+00:56:33,470 --> 00:56:35,470
+e 2 levantado a 11
+
+1099
+00:56:35,470 --> 00:56:37,470
+é 2048
+
+1100
+00:56:41,490 --> 00:56:43,490
+acho que é o mesmo número que tivemos
+
+1101
+00:56:43,490 --> 00:56:54,420
+na última sessão
+
+1102
+00:56:54,420 --> 00:56:56,420
+depois apresentam-nos
+
+1103
+00:56:56,420 --> 00:57:00,690
+uma tabela
+
+1104
+00:57:00,690 --> 00:57:02,690
+com o número de dispositivos
+
+1105
+00:57:02,690 --> 00:57:08,180
+por rede
+
+1106
+00:57:08,180 --> 00:57:10,180
+nos pedem para sumarmos
+
+1107
+00:57:10,180 --> 00:57:12,180
+calcularmos
+
+1108
+00:57:12,180 --> 00:57:16,380
+o número de dispositivos
+
+1109
+00:57:16,380 --> 00:57:18,380
+total
+
+1110
+00:57:18,380 --> 00:57:20,380
+e essa pergunta
+
+1111
+00:57:20,380 --> 00:57:22,380
+às vezes causa confusão
+
+1112
+00:57:22,380 --> 00:57:24,380
+é tão fácil
+
+1113
+00:57:24,380 --> 00:57:26,380
+que vocês acham que deve ter algo mais a esteira
+
+1114
+00:57:26,380 --> 00:57:28,380
+mas não tem a esteira nenhuma
+
+1115
+00:57:28,380 --> 00:57:30,380
+a ideia é mesmo
+
+1116
+00:57:30,380 --> 00:57:32,380
+motivar as pessoas
+
+1117
+00:57:32,380 --> 00:57:34,380
+para fazer sempre essa conta
+
+1118
+00:57:34,380 --> 00:57:36,380
+antes de começar a distribuir endereços
+
+1119
+00:57:36,380 --> 00:57:38,380
+porque
+
+1120
+00:57:38,380 --> 00:57:40,380
+antes de começarmos a distribuir
+
+1121
+00:57:40,380 --> 00:57:42,380
+melhor sabermos quantos temos
+
+1122
+00:57:42,380 --> 00:57:44,380
+para ver se chegam ou não
+
+1123
+00:57:44,380 --> 00:57:46,380
+para ver se sabemos distribuir
+
+1124
+00:57:46,380 --> 00:57:48,380
+a larga ou sabemos de sede
+
+1125
+00:57:48,380 --> 00:57:50,380
+muito restritivos a distribuir
+
+1126
+00:57:52,380 --> 00:57:54,380
+no meu caso 895
+
+1127
+00:57:54,380 --> 00:57:56,380
+mais 112
+
+1128
+00:57:56,380 --> 00:57:58,380
+mais 436
+
+1129
+00:57:58,380 --> 00:58:00,380
+mais 195
+
+1130
+00:58:00,380 --> 00:58:17,010
+coisa com uma mão
+
+1131
+00:58:17,010 --> 00:58:19,010
+se eu fiz bem as contas
+
+1132
+00:58:19,010 --> 00:58:21,010
+no meu caso eu tenho 1638
+
+1133
+00:58:21,010 --> 00:58:23,010
+endereços
+
+1134
+00:58:23,010 --> 00:58:25,010
+no total
+
+1135
+00:58:28,750 --> 00:58:30,750
+a primeira coisa que nos pedem
+
+1136
+00:58:30,750 --> 00:58:32,750
+é para
+
+1137
+00:58:32,750 --> 00:58:34,750
+determinarmos as gamas
+
+1138
+00:58:34,750 --> 00:58:36,750
+e pedem no Moodle
+
+1139
+00:58:36,750 --> 00:58:38,750
+vamos pedir as gamas
+
+1140
+00:58:38,750 --> 00:58:40,750
+especificadas com endereço base
+
+1141
+00:58:40,750 --> 00:58:42,750
+máscara
+
+1142
+00:58:42,750 --> 00:58:44,750
+e aqui
+
+1143
+00:58:44,750 --> 00:58:46,750
+não importa trabalhar a mais
+
+1144
+00:58:46,750 --> 00:58:48,750
+e use também
+
+1145
+00:58:48,750 --> 00:58:50,750
+uma coluna com o barre N
+
+1146
+00:58:50,750 --> 00:58:52,750
+o número de bits do prefixo
+
+1147
+00:58:52,750 --> 00:58:54,750
+que tem a mesma informação
+
+1148
+00:58:54,750 --> 00:58:56,750
+que a máscara
+
+1149
+00:58:56,750 --> 00:58:58,750
+e para facilitar o meu trabalho
+
+1150
+00:58:58,750 --> 00:59:00,750
+criei também aqui uma coluna com o número
+
+1151
+00:59:00,750 --> 00:59:02,750
+de endereços que vou atribuir
+
+1152
+00:59:02,750 --> 00:59:06,670
+a cada rede
+
+1153
+00:59:06,670 --> 00:59:08,670
+e estes vou atribuir
+
+1154
+00:59:08,670 --> 00:59:10,670
+a potência de 2
+
+1155
+00:59:10,670 --> 00:59:12,670
+imediatamente superior a 895
+
+1156
+00:59:12,670 --> 00:59:14,670
+que é 1024
+
+1157
+00:59:14,670 --> 00:59:18,140
+aqui vou atribuir
+
+1158
+00:59:18,140 --> 00:59:20,140
+ou 128 ou 256
+
+1159
+00:59:22,140 --> 00:59:24,140
+pode ser 128
+
+1160
+00:59:24,140 --> 00:59:27,460
+1212
+
+1161
+00:59:27,460 --> 00:59:32,980
+e aqui 256
+
+1162
+00:59:32,980 --> 00:59:34,980
+ou se quiser sumar isto tudo
+
+1163
+00:59:36,980 --> 00:59:38,980
+isto dá qualquer coisa menor
+
+1164
+00:59:38,980 --> 00:59:47,120
+do 2048
+
+1165
+00:59:47,120 --> 00:59:49,120
+a verdade 2048 menos
+
+1166
+00:59:49,120 --> 01:00:00,110
+128
+
+1167
+01:00:00,110 --> 01:00:02,110
+onde vamos agora então atribuir
+
+1168
+01:00:02,110 --> 01:00:04,110
+gamas
+
+1169
+01:00:04,110 --> 01:00:06,110
+a estes departamentos
+
+1170
+01:00:06,110 --> 01:00:08,110
+eu vou atribuir gamas dentro
+
+1171
+01:00:08,110 --> 01:00:15,580
+daquilo
+
+1172
+01:00:15,580 --> 01:00:17,580
+e utilizando a prática
+
+1173
+01:00:17,580 --> 01:00:19,580
+que é fundada
+
+1174
+01:00:19,580 --> 01:00:21,580
+de começarmos a atribuir
+
+1175
+01:00:21,580 --> 01:00:23,580
+pelos departamentos grandes
+
+1176
+01:00:23,580 --> 01:00:25,580
+e vou começar pelo departamento A
+
+1177
+01:00:25,580 --> 01:00:27,580
+ou se eu não começo pelo departamento A
+
+1178
+01:00:27,580 --> 01:00:29,580
+por ele ser o primeiro
+
+1179
+01:00:29,580 --> 01:00:31,580
+está na primeira linha
+
+1180
+01:00:31,580 --> 01:00:33,580
+começo pelo departamento A
+
+1181
+01:00:33,580 --> 01:00:35,580
+por ele ser o maior
+
+1182
+01:00:35,580 --> 01:00:41,140
+vou atribuir os primeiros
+
+1183
+01:00:41,140 --> 01:00:43,140
+endereços da minha gama
+
+1184
+01:00:43,140 --> 01:00:45,140
+aqueles que começam
+
+1185
+01:00:45,140 --> 01:00:51,040
+neste sítio
+
+1186
+01:00:51,040 --> 01:00:53,040
+e o barre N
+
+1187
+01:00:53,040 --> 01:00:55,040
+barra 22
+
+1188
+01:00:55,040 --> 01:01:00,590
+ou seja os primeiros 22 bits
+
+1189
+01:01:00,590 --> 01:01:02,590
+são do netid
+
+1190
+01:01:02,590 --> 01:01:04,590
+isso significa que a minha máscara
+
+1191
+01:01:04,590 --> 01:01:06,590
+vai ser 255
+
+1192
+01:01:06,590 --> 01:01:08,590
+255
+
+1193
+01:01:08,590 --> 01:01:10,590
+já escrevi 16 bits
+
+1194
+01:01:10,590 --> 01:01:12,590
+para 22
+
+1195
+01:01:12,590 --> 01:01:14,590
+só me faltam 6 bits
+
+1196
+01:01:14,590 --> 01:01:18,350
+6 bits
+
+1197
+01:01:20,350 --> 01:01:22,350
+é 255
+
+1198
+01:01:22,350 --> 01:01:24,350
+menos 3
+
+1199
+01:01:24,350 --> 01:01:30,260
+252.0
+
+1200
+01:01:30,260 --> 01:01:44,060
+continuando
+
+1201
+01:01:44,060 --> 01:01:46,060
+a ordem de crescente
+
+1202
+01:01:46,060 --> 01:01:48,060
+da dimensão das redes
+
+1203
+01:01:48,060 --> 01:01:50,060
+agora vou passar para esta
+
+1204
+01:01:50,060 --> 01:01:52,060
+pelo departamento C
+
+1205
+01:01:52,060 --> 01:01:54,060
+e vou pôr aqui
+
+1206
+01:01:54,060 --> 01:01:56,060
+o próximo endereço livre
+
+1207
+01:01:58,060 --> 01:02:00,060
+depois de todos os que aloquei
+
+1208
+01:02:00,060 --> 01:02:05,970
+para o departamento A
+
+1209
+01:02:05,970 --> 01:02:07,970
+aloquei 4 vezes
+
+1210
+01:02:07,970 --> 01:02:09,970
+256 endereços
+
+1211
+01:02:09,970 --> 01:02:13,730
+que significa que tenho que
+
+1212
+01:02:13,730 --> 01:02:15,730
+somar 4
+
+1213
+01:02:15,730 --> 01:02:17,730
+este octeto
+
+1214
+01:02:17,730 --> 01:02:19,730
+e portanto
+
+1215
+01:02:19,730 --> 01:02:23,140
+passo para 28
+
+1216
+01:02:23,140 --> 01:02:25,140
+aqui vou ter um bar a 23
+
+1217
+01:02:25,140 --> 01:02:28,930
+e a máscara é 255.0
+
+1218
+01:02:28,930 --> 01:02:30,930
+255.0
+
+1219
+01:02:30,930 --> 01:02:32,930
+254.0
+
+1220
+01:02:32,930 --> 01:02:39,600
+a seguir passo para este
+
+1221
+01:02:39,600 --> 01:02:47,520
+aqui atribui 512
+
+1222
+01:02:47,520 --> 01:02:49,520
+endereços
+
+1223
+01:02:49,520 --> 01:02:51,520
+que é 2 vezes 256
+
+1224
+01:02:51,520 --> 01:02:53,520
+ou seja
+
+1225
+01:02:53,520 --> 01:02:55,520
+são duas unidades
+
+1226
+01:02:55,520 --> 01:02:57,520
+ao segundo octeto
+
+1227
+01:02:57,520 --> 01:02:59,520
+e loco aqui
+
+1228
+01:02:59,520 --> 01:03:01,520
+um bar a 24
+
+1229
+01:03:02,990 --> 01:03:04,990
+e tenho 245
+
+1230
+01:03:04,990 --> 01:03:06,990
+245.0
+
+1231
+01:03:06,990 --> 01:03:17,600
+e agora os próximos endereços
+
+1232
+01:03:17,600 --> 01:03:19,600
+livres
+
+1233
+01:03:19,600 --> 01:03:21,600
+são estes
+
+1234
+01:03:21,600 --> 01:03:23,600
+31.0
+
+1235
+01:03:23,600 --> 01:03:27,780
+e vou atribuir 128 endereços
+
+1236
+01:03:27,780 --> 01:03:29,780
+portanto um bar a 25
+
+1237
+01:03:29,780 --> 01:03:31,780
+ou não máscara 245.0
+
+1238
+01:03:31,780 --> 01:03:33,780
+245.0
+
+1239
+01:03:33,780 --> 01:03:35,780
+255.0
+
+1240
+01:03:35,780 --> 01:03:37,780
+255.0
+
+1241
+01:03:37,780 --> 01:03:45,410
+antes isto foi o mesmo trabalho
+
+1242
+01:03:45,410 --> 01:03:47,410
+que já tínhamos feito
+
+1243
+01:03:47,410 --> 01:03:49,410
+na aula anterior
+
+1244
+01:03:49,410 --> 01:03:52,660
+agora para o outro enunciado
+
+1245
+01:03:52,660 --> 01:03:54,660
+e agora para além de sabermos
+
+1246
+01:03:54,660 --> 01:03:56,660
+atribuir rotas
+
+1247
+01:03:56,660 --> 01:04:01,790
+as redes
+
+1248
+01:04:01,790 --> 01:04:05,520
+também
+
+1249
+01:04:05,520 --> 01:04:07,520
+já sabemos
+
+1250
+01:04:07,520 --> 01:04:09,520
+atribuir endereços
+
+1251
+01:04:09,520 --> 01:04:11,520
+às máquinas
+
+1252
+01:04:11,520 --> 01:04:13,520
+basta escolhermos endereços dentro das gamas
+
+1253
+01:04:13,520 --> 01:04:15,520
+das redes
+
+1254
+01:04:15,520 --> 01:04:20,430
+onde as máquinas estão ligadas
+
+1255
+01:04:20,430 --> 01:04:22,430
+não nos dão os nomes das portas
+
+1256
+01:04:22,430 --> 01:04:26,960
+mas
+
+1257
+01:04:26,960 --> 01:04:28,960
+dá para ver que o
+
+1258
+01:04:28,960 --> 01:04:30,960
+R1 tem 3 portas
+
+1259
+01:04:30,960 --> 01:04:32,960
+e o R2 também
+
+1260
+01:04:32,960 --> 01:04:34,960
+tem 3 portas
+
+1261
+01:04:34,960 --> 01:04:36,960
+se não nos dão nomes
+
+1262
+01:04:36,960 --> 01:04:38,960
+para as portas podemos nós escolher os nomes
+
+1263
+01:04:38,960 --> 01:04:42,210
+agora podemos preencher
+
+1264
+01:04:42,210 --> 01:04:44,210
+esta coluna
+
+1265
+01:04:44,210 --> 01:04:46,210
+aqui e relacionarmos
+
+1266
+01:04:46,210 --> 01:04:53,870
+aqueles endereços com a porta
+
+1267
+01:04:53,870 --> 01:04:55,870
+o R1 está ligado
+
+1268
+01:04:55,870 --> 01:04:57,870
+à rede A
+
+1269
+01:04:57,870 --> 01:04:59,870
+e à rede C
+
+1270
+01:04:59,870 --> 01:05:01,870
+então podemos
+
+1271
+01:05:01,870 --> 01:05:03,870
+arranjar
+
+1272
+01:05:03,870 --> 01:05:05,870
+uma porta
+
+1273
+01:05:05,870 --> 01:05:07,870
+chamada ETH-A
+
+1274
+01:05:07,870 --> 01:05:09,870
+outra
+
+1275
+01:05:09,870 --> 01:05:11,870
+ETH-B
+
+1276
+01:05:11,870 --> 01:05:13,870
+e outra ETH-C
+
+1277
+01:05:19,140 --> 01:05:21,140
+se utilizasse números
+
+1278
+01:05:21,140 --> 01:05:23,140
+ficava mais amigo
+
+1279
+01:05:23,140 --> 01:05:25,140
+e devia escrever no desenho
+
+1280
+01:05:25,140 --> 01:05:27,140
+o nome
+
+1281
+01:05:27,140 --> 01:05:29,140
+de cada porta
+
+1282
+01:05:29,140 --> 01:05:31,140
+para saber
+
+1283
+01:05:31,140 --> 01:05:33,140
+qual é cada uma das portas
+
+1284
+01:05:33,140 --> 01:05:35,140
+assim usando esta notação
+
+1285
+01:05:35,140 --> 01:05:37,140
+assumo-se
+
+1286
+01:05:37,140 --> 01:05:39,140
+que
+
+1287
+01:05:39,140 --> 01:05:41,140
+a porta chamada ETH-A
+
+1288
+01:05:41,140 --> 01:05:43,140
+é a porta que está ligada ao departamento A
+
+1289
+01:05:43,140 --> 01:05:45,140
+a porta ETH-B
+
+1290
+01:05:45,140 --> 01:05:47,140
+que está ligada ao departamento B
+
+1291
+01:05:47,140 --> 01:05:49,140
+e a porta ETH-C
+
+1292
+01:05:49,140 --> 01:05:51,140
+é aquela que está ligada ao departamento C
+
+1293
+01:05:51,140 --> 01:05:53,140
+já agora o R2
+
+1294
+01:05:53,140 --> 01:06:00,160
+o R2
+
+1295
+01:06:00,160 --> 01:06:04,500
+está ligado ao departamento C
+
+1296
+01:06:04,500 --> 01:06:06,500
+ao departamento D
+
+1297
+01:06:06,500 --> 01:06:08,500
+e a internet
+
+1298
+01:06:08,500 --> 01:06:13,220
+CD e internet
+
+1299
+01:06:13,220 --> 01:06:15,220
+então podemos chamar as portas
+
+1300
+01:06:15,220 --> 01:06:17,220
+do R2
+
+1301
+01:06:17,220 --> 01:06:19,220
+ETH-C
+
+1302
+01:06:21,220 --> 01:06:23,220
+ETH-D
+
+1303
+01:06:23,220 --> 01:06:26,460
+ETH-I
+
+1304
+01:06:26,460 --> 01:06:28,460
+e de internet
+
+1305
+01:06:34,620 --> 01:06:36,620
+escolheram um endereço
+
+1306
+01:06:36,620 --> 01:06:42,340
+para cada uma das portas
+
+1307
+01:06:42,340 --> 01:06:44,340
+basta-me escolher
+
+1308
+01:06:44,340 --> 01:06:46,340
+que eu goste
+
+1309
+01:06:46,340 --> 01:06:48,340
+da rede onde a porta está ligada
+
+1310
+01:06:48,340 --> 01:06:50,340
+se a porta ETH-A
+
+1311
+01:06:50,340 --> 01:06:52,340
+eu disse que está ligada à rede A
+
+1312
+01:06:52,340 --> 01:06:54,340
+basta-me escolher um endereço
+
+1313
+01:06:54,340 --> 01:06:56,340
+pertencendo a esta gama
+
+1314
+01:06:56,340 --> 01:07:00,770
+na escolha de endereços
+
+1315
+01:07:00,770 --> 01:07:02,770
+eu já gosto de tudo em APV4
+
+1316
+01:07:02,770 --> 01:07:04,770
+não se deve escolher
+
+1317
+01:07:04,770 --> 01:07:06,770
+o endereço que tenha o
+
+1318
+01:07:06,770 --> 01:07:08,770
+STID igual a zero
+
+1319
+01:07:08,770 --> 01:07:10,770
+nem se deve escolher
+
+1320
+01:07:10,770 --> 01:07:12,770
+ou seja, não se deve escolher
+
+1321
+01:07:12,770 --> 01:07:14,770
+o primeiro endereço
+
+1322
+01:07:14,770 --> 01:07:16,770
+escolher o último endereço
+
+1323
+01:07:16,770 --> 01:07:18,770
+aquele que tenha o STID
+
+1324
+01:07:18,770 --> 01:07:20,770
+com os bits todos a um
+
+1325
+01:07:20,770 --> 01:07:22,770
+os outros podemos escolher
+
+1326
+01:07:22,770 --> 01:07:24,770
+dos todos à vontade
+
+1327
+01:07:24,770 --> 01:07:26,770
+com cuidado de não repetirmos
+
+1328
+01:07:26,770 --> 01:07:28,770
+endereços para máquinas diferentes
+
+1329
+01:07:28,770 --> 01:07:30,770
+se não as coisas
+
+1330
+01:07:30,770 --> 01:07:32,770
+não vão funcionar
+
+1331
+01:07:32,770 --> 01:07:37,010
+ou seja, aqui
+
+1332
+01:07:37,010 --> 01:07:39,010
+para o departamento A
+
+1333
+01:07:39,010 --> 01:07:45,010
+podemos pôr 123.12.24.1
+
+1334
+01:07:45,010 --> 01:07:51,680
+a era bitrário
+
+1335
+01:07:51,680 --> 01:07:53,680
+fui o que escolhi
+
+1336
+01:07:53,680 --> 01:07:55,680
+acho que fica bonito
+
+1337
+01:07:55,680 --> 01:07:57,680
+para o que se trata do Router 1
+
+1338
+01:07:57,680 --> 01:07:59,680
+mas
+
+1339
+01:07:59,680 --> 01:08:01,680
+podia ter posto 4, 5
+
+1340
+01:08:01,680 --> 01:08:03,680
+ou outra coisa qualquer
+
+1341
+01:08:03,680 --> 01:08:05,680
+e até podia ter posto aqui 25
+
+1342
+01:08:05,680 --> 01:08:07,680
+25.1
+
+1343
+01:08:07,680 --> 01:08:09,680
+também ficava bem
+
+1344
+01:08:09,680 --> 01:08:11,680
+porque os endereços
+
+1345
+01:08:11,680 --> 01:08:13,680
+começados por 25
+
+1346
+01:08:13,680 --> 01:08:15,680
+pertencem
+
+1347
+01:08:15,680 --> 01:08:17,680
+os endereços começados por 123.12.25
+
+1348
+01:08:17,680 --> 01:08:19,680
+qualquer coisa
+
+1349
+01:08:19,680 --> 01:08:21,680
+pertencem também ao departamento A
+
+1350
+01:08:21,680 --> 01:08:23,680
+portanto podia ter usado um desses
+
+1351
+01:08:25,680 --> 01:08:27,680
+ao departamento B
+
+1352
+01:08:27,680 --> 01:08:31,680
+posso pôr 123.13.31.1
+
+1353
+01:08:31,680 --> 01:08:35,310
+e para este
+
+1354
+01:08:35,310 --> 01:08:37,310
+posso pôr do departamento C
+
+1355
+01:08:37,310 --> 01:08:41,310
+123.12.28.1
+
+1356
+01:08:41,310 --> 01:08:47,220
+para o Router 2
+
+1357
+01:08:47,220 --> 01:08:49,220
+temos que arranjar outro endereço
+
+1358
+01:08:49,220 --> 01:08:51,220
+da rede C
+
+1359
+01:08:51,220 --> 01:08:53,220
+para atribuir
+
+1360
+01:08:53,220 --> 01:08:55,220
+esta porta do R2
+
+1361
+01:08:55,220 --> 01:09:00,510
+daqui como é evidente
+
+1362
+01:09:00,510 --> 01:09:02,510
+não posso pôr um 1
+
+1363
+01:09:02,510 --> 01:09:04,510
+porque se não ele ficava
+
+1364
+01:09:04,510 --> 01:09:06,510
+igual a aquele
+
+1365
+01:09:06,510 --> 01:09:08,510
+não podemos ter
+
+1366
+01:09:08,510 --> 01:09:10,510
+duas portas diferentes
+
+1367
+01:09:10,510 --> 01:09:12,510
+de máquinas diferentes
+
+1368
+01:09:12,510 --> 01:09:14,510
+ligadas ao mesmo endereço
+
+1369
+01:09:14,510 --> 01:09:16,510
+então posso pôr aqui um 2
+
+1370
+01:09:16,510 --> 01:09:18,510
+e assim já fica
+
+1371
+01:09:18,510 --> 01:09:20,510
+diferente daquilo
+
+1372
+01:09:20,510 --> 01:09:23,950
+são endereços distintos
+
+1373
+01:09:23,950 --> 01:09:29,950
+tenho 123.12.30.1
+
+1374
+01:09:29,950 --> 01:09:31,950
+ou .2
+
+1375
+01:09:31,950 --> 01:09:33,950
+como eu quiser
+
+1376
+01:09:33,950 --> 01:09:35,950
+posso usar um 2
+
+1377
+01:09:35,950 --> 01:09:37,950
+para ser o Router 2
+
+1378
+01:09:37,950 --> 01:09:41,650
+ninguém me impede de usar o 1
+
+1379
+01:09:41,650 --> 01:09:43,650
+e
+
+1380
+01:09:43,650 --> 01:09:45,650
+para a outra porta
+
+1381
+01:09:45,650 --> 01:09:47,650
+que está ligada a internet
+
+1382
+01:09:47,650 --> 01:09:49,650
+não vou
+
+1383
+01:09:49,650 --> 01:09:51,650
+usar nenhum destes endereços
+
+1384
+01:09:51,650 --> 01:09:53,650
+porque estes endereços
+
+1385
+01:09:53,650 --> 01:09:55,650
+são lançados para aqueles 4 departamentos
+
+1386
+01:09:55,650 --> 01:09:57,650
+aqui tenho que usar
+
+1387
+01:09:57,650 --> 01:09:59,650
+tem que ser qualquer coisa diferente
+
+1388
+01:09:59,650 --> 01:10:01,650
+e que
+
+1389
+01:10:01,650 --> 01:10:03,650
+não vai ser nenhum endereço
+
+1390
+01:10:03,650 --> 01:10:05,650
+dos
+
+1391
+01:10:05,650 --> 01:10:07,650
+pertencentes a esta gama
+
+1392
+01:10:07,650 --> 01:10:09,650
+que é a gama dos meus endereços
+
+1393
+01:10:09,650 --> 01:10:11,650
+aquela porta
+
+1394
+01:10:11,650 --> 01:10:13,650
+não é da minha rede
+
+1395
+01:10:13,650 --> 01:10:15,650
+se este é o Router de entrada
+
+1396
+01:10:15,650 --> 01:10:17,650
+da minha rede
+
+1397
+01:10:17,650 --> 01:10:19,650
+provavelmente este segmento
+
+1398
+01:10:19,650 --> 01:10:21,650
+tem um Router de manifestador
+
+1399
+01:10:21,650 --> 01:10:23,650
+pode ser
+
+1400
+01:10:23,650 --> 01:10:25,650
+um segmento do meu fornecedor
+
+1401
+01:10:25,650 --> 01:10:27,650
+da SESA internet
+
+1402
+01:10:27,650 --> 01:10:29,650
+meu fornecedor da SESA internet
+
+1403
+01:10:29,650 --> 01:10:31,650
+é tão é que manda aqui
+
+1404
+01:10:31,650 --> 01:10:33,650
+ele deve dizer qual é a gama de endereços que se usa aqui
+
+1405
+01:10:33,650 --> 01:10:35,650
+e portanto ele vai dizer qual é
+
+1406
+01:10:35,650 --> 01:10:37,650
+o endereço que se põe aqui
+
+1407
+01:10:37,650 --> 01:10:39,650
+eu não tenho
+
+1408
+01:10:39,650 --> 01:10:41,650
+autoridade nenhuma
+
+1409
+01:10:41,650 --> 01:10:43,650
+para pôr lá um endereço
+
+1410
+01:10:43,650 --> 01:10:45,650
+e então posso pôr
+
+1411
+01:10:45,650 --> 01:10:47,650
+assim e dizer
+
+1412
+01:10:47,650 --> 01:10:49,650
+não sei
+
+1413
+01:10:49,650 --> 01:10:51,650
+dizer que é um endereço FESP
+
+1414
+01:10:51,650 --> 01:10:55,150
+onde qualquer coisa
+
+1415
+01:10:55,150 --> 01:10:57,150
+é um endereço da gama
+
+1416
+01:10:57,150 --> 01:10:59,150
+do meu fornecedor da SESA internet
+
+1417
+01:11:18,590 --> 01:11:22,960
+pedem-nos agora para fazermos
+
+1418
+01:11:22,960 --> 01:11:26,660
+uma tabela de encaminhamento
+
+1419
+01:11:26,660 --> 01:11:28,660
+já não sei se é para o Router 1
+
+1420
+01:11:28,660 --> 01:11:30,660
+ou se é para o Router 2
+
+1421
+01:11:30,660 --> 01:11:32,660
+alguém já viu o enunciado
+
+1422
+01:11:32,660 --> 01:11:34,660
+e sabe dizer rapidamente
+
+1423
+01:11:34,660 --> 01:11:36,660
+se é o Router 1 ou Router 2
+
+1424
+01:11:36,660 --> 01:11:38,660
+o que dizemos fazer?
+
+1425
+01:11:38,660 --> 01:11:40,660
+não me aparece o Router 2 percebe
+
+1426
+01:11:40,660 --> 01:11:44,640
+vamos fazer tabela de encaminhamento
+
+1427
+01:11:44,640 --> 01:11:48,780
+mas
+
+1428
+01:11:48,780 --> 01:11:50,780
+desculpe interromper
+
+1429
+01:11:50,780 --> 01:11:52,780
+um bocadinho
+
+1430
+01:11:52,780 --> 01:11:57,700
+no anterior nós
+
+1431
+01:11:57,700 --> 01:11:59,700
+não encaminhamos entre
+
+1432
+01:11:59,700 --> 01:12:01,700
+entre os dois Router
+
+1433
+01:12:01,700 --> 01:12:03,700
+ou seja, nós só encaminhamos
+
+1434
+01:12:03,700 --> 01:12:05,700
+do R2
+
+1435
+01:12:05,700 --> 01:12:07,700
+ou R1
+
+1436
+01:12:07,700 --> 01:12:09,700
+se for
+
+1437
+01:12:09,700 --> 01:12:11,700
+para o P ou para o A
+
+1438
+01:12:11,700 --> 01:12:13,700
+nós aqui nós não
+
+1439
+01:12:13,700 --> 01:12:15,700
+para já ainda não encaminhamos coisa nenhuma
+
+1440
+01:12:15,700 --> 01:12:17,700
+nós tivemos a dar endereços
+
+1441
+01:12:17,700 --> 01:12:19,700
+às portas dos Routers
+
+1442
+01:12:19,700 --> 01:12:21,700
+sim, o que está a fazer confusão
+
+1443
+01:12:21,700 --> 01:12:23,700
+é estar em os dois legados
+
+1444
+01:12:23,700 --> 01:12:25,700
+a RTC
+
+1445
+01:12:25,700 --> 01:12:30,160
+mas se calhar vou perceber melhor depois
+
+1446
+01:12:30,160 --> 01:12:33,700
+como vem perceber logo no princípio
+
+1447
+01:12:35,700 --> 01:12:37,700
+não sei se
+
+1448
+01:12:37,700 --> 01:12:39,700
+o normal
+
+1449
+01:12:39,700 --> 01:12:41,700
+é dois Routers
+
+1450
+01:12:41,700 --> 01:12:43,700
+nunca podem estar
+
+1451
+01:12:43,700 --> 01:12:45,700
+ligados diretamente
+
+1452
+01:12:45,700 --> 01:12:47,700
+sem ser por uma rede
+
+1453
+01:12:47,700 --> 01:12:49,700
+sem ser por qualquer
+
+1454
+01:12:49,700 --> 01:12:51,700
+entre dois equipamentos IP
+
+1455
+01:12:51,700 --> 01:12:56,220
+por definição é uma rede IP
+
+1456
+01:12:56,220 --> 01:12:58,220
+ou seja, se desenharmos os Routers
+
+1457
+01:12:58,220 --> 01:13:00,220
+com rodinhas destas e as redes por nuvens
+
+1458
+01:13:02,220 --> 01:13:04,220
+não podemos ter
+
+1459
+01:13:04,220 --> 01:13:06,220
+dois Routers ligados um a outro
+
+1460
+01:13:06,220 --> 01:13:08,220
+sem termos de uma nuvem no meio
+
+1461
+01:13:08,220 --> 01:13:10,220
+nem podemos ter duas nuvens
+
+1462
+01:13:10,220 --> 01:13:13,470
+ligadas uma a outra sem ter um Router no meio
+
+1463
+01:13:13,470 --> 01:13:15,470
+aqui foi usado um esquema
+
+1464
+01:13:15,470 --> 01:13:17,470
+que diz que
+
+1465
+01:13:17,470 --> 01:13:19,470
+isto tudo, este risco preto
+
+1466
+01:13:19,470 --> 01:13:21,470
+que aqui está é uma
+
+1467
+01:13:21,470 --> 01:13:23,470
+rede
+
+1468
+01:13:23,470 --> 01:13:25,470
+dominio de colisão do departamento C
+
+1469
+01:13:25,470 --> 01:13:27,470
+ou seja, de facto
+
+1470
+01:13:27,470 --> 01:13:29,470
+o Router 2
+
+1471
+01:13:29,470 --> 01:13:31,470
+quando quer falar com o Router 1
+
+1472
+01:13:31,470 --> 01:13:33,470
+usar a rede do departamento C
+
+1473
+01:13:33,470 --> 01:13:35,470
+a mesma rede que utilizaria
+
+1474
+01:13:35,470 --> 01:13:37,470
+para falar com uma máquina que está já aqui
+
+1475
+01:13:37,470 --> 01:13:39,470
+ok
+
+1476
+01:13:39,470 --> 01:13:41,470
+o departamento até pode ser só
+
+1477
+01:13:41,470 --> 01:13:43,470
+aquele retângulo, mas a rede do departamento
+
+1478
+01:13:43,470 --> 01:13:45,470
+é a mesma
+
+1479
+01:13:45,470 --> 01:13:47,470
+existe aqui uma ligação
+
+1480
+01:13:47,470 --> 01:13:49,470
+o tráfego aqui circula
+
+1481
+01:13:49,470 --> 01:13:51,470
+estes são todos vizinhos
+
+1482
+01:13:51,470 --> 01:13:53,470
+este é vizinho daqueles todos
+
+1483
+01:13:53,470 --> 01:13:55,470
+e o Router 2 também é vizinho daqueles todos
+
+1484
+01:13:55,470 --> 01:13:57,470
+se não existem
+
+1485
+01:13:57,470 --> 01:13:59,470
+encaminhadores pelo meio
+
+1486
+01:13:59,470 --> 01:14:01,470
+eles estão todos na mesma rede
+
+1487
+01:14:01,470 --> 01:14:03,470
+na mesma nuvem
+
+1488
+01:14:03,470 --> 01:14:05,470
+falam todos uns com os outros
+
+1489
+01:14:05,470 --> 01:14:07,470
+diretamente, não precisam de encaminhamento IP
+
+1490
+01:14:07,470 --> 01:14:12,830
+portanto, o Router 2
+
+1491
+01:14:12,830 --> 01:14:14,830
+vai falar com o Router 1 diretamente
+
+1492
+01:14:14,830 --> 01:14:16,830
+porque estão na mesma rede
+
+1493
+01:14:16,830 --> 01:14:18,830
+estão os dois ligados à rede
+
+1494
+01:14:18,830 --> 01:14:22,530
+do departamento C
+
+1495
+01:14:22,530 --> 01:14:24,530
+e se estão ligados à rede do departamento C
+
+1496
+01:14:24,530 --> 01:14:26,530
+ambos têm que ter
+
+1497
+01:14:26,530 --> 01:14:28,530
+endereços
+
+1498
+01:14:28,530 --> 01:14:30,530
+pertencentes à gama
+
+1499
+01:14:30,530 --> 01:14:34,700
+da rede do departamento C
+
+1500
+01:14:34,700 --> 01:14:36,700
+foi isso que eu puse aqui
+
+1501
+01:14:36,700 --> 01:14:40,500
+aqui o que vamos fazer agora
+
+1502
+01:14:40,500 --> 01:14:42,500
+não é para facilitar a comunicação entre o Router 1
+
+1503
+01:14:42,500 --> 01:14:44,500
+e o Router 2
+
+1504
+01:14:44,500 --> 01:14:46,500
+que a partir do momento que eles têm estes endereços
+
+1505
+01:14:46,500 --> 01:14:48,500
+já são vizinhos falam um com o outro
+
+1506
+01:14:48,500 --> 01:14:50,500
+agora vamos
+
+1507
+01:14:50,500 --> 01:14:52,500
+fazer o encaminhamento
+
+1508
+01:14:52,500 --> 01:14:54,500
+as coisas falem
+
+1509
+01:14:54,500 --> 01:14:56,500
+com os externos
+
+1510
+01:14:56,500 --> 01:14:58,500
+entre as redes
+
+1511
+01:14:58,500 --> 01:15:00,500
+hoje
+
+1512
+01:15:00,500 --> 01:15:04,190
+se chegarmos ao Router 1 e ao Router 2
+
+1513
+01:15:04,190 --> 01:15:06,190
+e definirmos estes endereços
+
+1514
+01:15:06,190 --> 01:15:08,190
+configurarmos estes endereços nas portas
+
+1515
+01:15:08,190 --> 01:15:10,190
+são criadas logo automaticamente
+
+1516
+01:15:10,190 --> 01:15:12,190
+as redes
+
+1517
+01:15:12,190 --> 01:15:14,190
+as rotas
+
+1518
+01:15:14,190 --> 01:15:16,190
+para as redes locais
+
+1519
+01:15:16,190 --> 01:15:18,190
+ou para as redes diretas
+
+1520
+01:15:18,190 --> 01:15:20,190
+no caso do Router 2
+
+1521
+01:15:20,190 --> 01:15:22,190
+ou seja, no caso do Router 2
+
+1522
+01:15:22,190 --> 01:15:24,190
+vamos ter
+
+1523
+01:15:24,190 --> 01:15:26,190
+rotas diretas para C
+
+1524
+01:15:26,190 --> 01:15:28,190
+e para D
+
+1525
+01:15:28,190 --> 01:15:33,070
+e mais qualquer coisa aqui
+
+1526
+01:15:33,070 --> 01:15:38,660
+ou seja
+
+1527
+01:15:38,660 --> 01:15:43,220
+a comunicação com
+
+1528
+01:15:43,220 --> 01:15:46,780
+o C e o D
+
+1529
+01:15:46,780 --> 01:15:48,780
+vai ser uma comunicação
+
+1530
+01:15:48,780 --> 01:15:50,780
+direta
+
+1531
+01:15:50,780 --> 01:15:52,780
+portanto não vai usar Gateway
+
+1532
+01:15:52,780 --> 01:15:54,780
+e podemos dizer
+
+1533
+01:15:54,780 --> 01:15:56,780
+não existe com um traço
+
+1534
+01:15:56,780 --> 01:15:58,780
+ou com
+
+1535
+01:15:58,780 --> 01:16:00,780
+um traço
+
+1536
+01:16:00,780 --> 01:16:02,780
+ou o endereço 0.0.0
+
+1537
+01:16:07,500 --> 01:16:09,500
+os equipamentos
+
+1538
+01:16:09,500 --> 01:16:11,500
+normalmente não aceitam nomes
+
+1539
+01:16:11,500 --> 01:16:13,500
+para dizermos qual é a gama
+
+1540
+01:16:13,500 --> 01:16:15,500
+uma rota qualquer
+
+1541
+01:16:15,500 --> 01:16:17,500
+que temos que pôr
+
+1542
+01:16:17,500 --> 01:16:19,500
+não podemos pôr o nome
+
+1543
+01:16:19,500 --> 01:16:21,500
+da rede, temos que pôr
+
+1544
+01:16:21,500 --> 01:16:23,500
+o endereço da rede
+
+1545
+01:16:23,500 --> 01:16:25,500
+então aqui tem que pôr
+
+1546
+01:16:25,500 --> 01:16:27,500
+o endereço da rede C
+
+1547
+01:16:27,500 --> 01:16:29,500
+que está aqui
+
+1548
+01:16:29,500 --> 01:16:37,070
+que era um barra 23
+
+1549
+01:16:37,070 --> 01:16:39,070
+e o departamento D
+
+1550
+01:16:39,070 --> 01:16:41,070
+é
+
+1551
+01:16:41,070 --> 01:16:43,070
+o 30 barra 24
+
+1552
+01:16:43,070 --> 01:16:53,970
+se o
+
+1553
+01:16:53,970 --> 01:16:55,970
+o Router 2 precisar
+
+1554
+01:16:55,970 --> 01:16:57,970
+de falar então com a rede C
+
+1555
+01:16:57,970 --> 01:16:59,970
+ele sabe que não precisa de Gateway
+
+1556
+01:16:59,970 --> 01:17:03,700
+vai mandar direto
+
+1557
+01:17:03,700 --> 01:17:05,700
+mas vai mandar direto porque porta
+
+1558
+01:17:05,700 --> 01:17:07,700
+temos que pôr aqui
+
+1559
+01:17:07,700 --> 01:17:11,680
+quando o Router 2
+
+1560
+01:17:11,680 --> 01:17:13,680
+quer falar com a rede C
+
+1561
+01:17:13,680 --> 01:17:15,680
+ele vai usar
+
+1562
+01:17:15,680 --> 01:17:17,680
+esta porta que está aqui
+
+1563
+01:17:17,680 --> 01:17:19,680
+e o nome desta porta
+
+1564
+01:17:19,680 --> 01:17:23,120
+é THC
+
+1565
+01:17:23,120 --> 01:17:25,120
+então escrevemos aqui
+
+1566
+01:17:25,120 --> 01:17:30,510
+THC e da mesma forma
+
+1567
+01:17:30,510 --> 01:17:32,510
+quando quer falar com a rede D
+
+1568
+01:17:32,510 --> 01:17:34,510
+ele vai usar uma porta
+
+1569
+01:17:34,510 --> 01:17:38,660
+que é fácil de terminar qual é
+
+1570
+01:17:38,660 --> 01:17:49,360
+porque se chama THC
+
+1571
+01:17:49,360 --> 01:17:51,360
+se começamos a pôr primeiro
+
+1572
+01:17:51,360 --> 01:17:53,360
+as redes diretas
+
+1573
+01:17:53,360 --> 01:17:55,360
+podemos tratar
+
+1574
+01:17:55,360 --> 01:17:57,360
+já desta
+
+1575
+01:17:57,360 --> 01:17:59,360
+Router 2
+
+1576
+01:17:59,360 --> 01:18:01,360
+para falar com as máquinas
+
+1577
+01:18:01,360 --> 01:18:03,360
+que estejam aqui
+
+1578
+01:18:03,360 --> 01:18:05,360
+e aqui tem que haver pelo menos
+
+1579
+01:18:05,360 --> 01:18:07,360
+uma máquina que seja outro Gateway
+
+1580
+01:18:07,360 --> 01:18:09,360
+que ele encaminhar sempre para seguir
+
+1581
+01:18:09,360 --> 01:18:11,360
+ou seja, a seguirá de sempre a ver outro Gateway
+
+1582
+01:18:11,360 --> 01:18:13,360
+pelo menos
+
+1583
+01:18:13,360 --> 01:18:15,360
+e portanto para falar para aqui
+
+1584
+01:18:15,360 --> 01:18:17,360
+tem que existir
+
+1585
+01:18:17,360 --> 01:18:20,830
+para falar para a rede do ISP
+
+1586
+01:18:20,830 --> 01:18:22,830
+que deve ter
+
+1587
+01:18:22,830 --> 01:18:24,830
+um endereço
+
+1588
+01:18:24,830 --> 01:18:26,830
+ISP 0.0
+
+1589
+01:18:26,830 --> 01:18:28,830
+0.0
+
+1590
+01:18:28,830 --> 01:18:30,830
+barra N
+
+1591
+01:18:30,830 --> 01:18:34,560
+não sabemos quanto é o N
+
+1592
+01:18:34,560 --> 01:18:37,900
+ele também vai falar direto
+
+1593
+01:18:37,900 --> 01:18:39,900
+portanto não precisa de Gateway
+
+1594
+01:18:39,900 --> 01:18:41,900
+e vai usar a NTFA CTHI
+
+1595
+01:18:41,900 --> 01:18:46,210
+no caso do Router 1
+
+1596
+01:18:46,210 --> 01:18:48,210
+já não colocamos este
+
+1597
+01:18:48,210 --> 01:18:50,210
+não
+
+1598
+01:18:50,210 --> 01:18:52,210
+o Router 1
+
+1599
+01:18:52,210 --> 01:18:54,210
+não tem nenhuma ligação
+
+1600
+01:18:54,210 --> 01:18:56,210
+agora já só colocamos rotas
+
+1601
+01:18:56,210 --> 01:18:58,210
+para as redes diretas
+
+1602
+01:18:58,210 --> 01:19:00,210
+o Router 1 não tem como
+
+1603
+01:19:00,210 --> 01:19:02,210
+direto uma rede do ISP
+
+1604
+01:19:02,210 --> 01:19:12,300
+que mais é que temos que
+
+1605
+01:19:12,300 --> 01:19:14,300
+incluir
+
+1606
+01:19:14,300 --> 01:19:16,300
+na configuração da tabela
+
+1607
+01:19:16,300 --> 01:19:18,300
+de encaminhamento do Router 2
+
+1608
+01:19:18,300 --> 01:19:20,300
+o Router 2 agora já sabe falar para a rede C
+
+1609
+01:19:20,300 --> 01:19:22,300
+para a rede D e para esta
+
+1610
+01:19:22,300 --> 01:19:24,300
+convém que ele saiba
+
+1611
+01:19:24,300 --> 01:19:26,300
+falar também para a rede B
+
+1612
+01:19:26,300 --> 01:19:28,300
+e para a rede A
+
+1613
+01:19:28,300 --> 01:19:30,300
+então vamos tratar disso
+
+1614
+01:19:30,300 --> 01:19:32,300
+vamos por aqui
+
+1615
+01:19:32,300 --> 01:19:37,410
+departamento A
+
+1616
+01:19:37,410 --> 01:19:40,750
+e o B
+
+1617
+01:19:40,750 --> 01:19:46,210
+que tem como endereços
+
+1618
+01:19:46,210 --> 01:19:55,950
+24
+
+1619
+01:19:55,950 --> 01:19:57,950
+barra 22
+
+1620
+01:19:57,950 --> 01:20:22,510
+e 31 barra 25
+
+1621
+01:20:22,510 --> 01:20:34,300
+31 barra 25
+
+1622
+01:20:34,300 --> 01:20:36,300
+e como é que se envia o tráfego
+
+1623
+01:20:36,300 --> 01:20:45,120
+para aqueles sítios
+
+1624
+01:20:45,120 --> 01:20:47,120
+para mandar para o departamento B
+
+1625
+01:20:47,120 --> 01:20:49,120
+temos que mandar para o R1
+
+1626
+01:20:49,120 --> 01:20:51,120
+para a porta
+
+1627
+01:20:51,120 --> 01:20:53,120
+ethc
+
+1628
+01:20:53,120 --> 01:20:55,120
+e para o A a mesma coisa
+
+1629
+01:20:55,120 --> 01:20:58,590
+mandarmos para o mesmo sítio
+
+1630
+01:20:58,590 --> 01:21:00,590
+então o Gateway
+
+1631
+01:21:00,590 --> 01:21:02,590
+o r1.ethc
+
+1632
+01:21:06,130 --> 01:21:10,560
+e aqui também
+
+1633
+01:21:10,560 --> 01:21:12,560
+r1.ethc
+
+1634
+01:21:16,560 --> 01:21:18,560
+e o r1.ethc
+
+1635
+01:21:18,560 --> 01:21:25,010
+tem este endereço
+
+1636
+01:21:25,010 --> 01:21:27,010
+e neste caso
+
+1637
+01:21:27,010 --> 01:21:29,010
+em que já temos um Gateway
+
+1638
+01:21:29,010 --> 01:21:31,010
+identificado
+
+1639
+01:21:31,010 --> 01:21:33,010
+às vezes
+
+1640
+01:21:33,010 --> 01:21:35,010
+não é preciso identificarmos a porta
+
+1641
+01:21:35,010 --> 01:21:37,010
+mas se quisermos
+
+1642
+01:21:37,010 --> 01:21:39,010
+também podemos identificar
+
+1643
+01:21:39,010 --> 01:21:41,010
+a porta
+
+1644
+01:21:41,010 --> 01:21:43,010
+como sendo ethc
+
+1645
+01:21:43,010 --> 01:21:54,130
+depois de ficar pronto
+
+1646
+01:21:54,130 --> 01:21:56,130
+só precisamos de mais
+
+1647
+01:21:56,130 --> 01:21:58,130
+uma regra
+
+1648
+01:21:58,130 --> 01:22:03,260
+que é mais importante
+
+1649
+01:22:03,260 --> 01:22:05,260
+é de default
+
+1650
+01:22:05,260 --> 01:22:07,260
+que diz
+
+1651
+01:22:07,260 --> 01:22:09,260
+que tudo o resto
+
+1652
+01:22:09,260 --> 01:22:14,620
+há de ser enviado
+
+1653
+01:22:14,620 --> 01:22:16,620
+para um Gateway
+
+1654
+01:22:16,620 --> 01:22:18,620
+que alguém nos há de dizer qual é
+
+1655
+01:22:18,620 --> 01:22:20,620
+e que
+
+1656
+01:22:20,620 --> 01:22:22,620
+os acessar a internet nos há de dizer qual é
+
+1657
+01:22:22,620 --> 01:22:24,620
+portanto não sabemos
+
+1658
+01:22:24,620 --> 01:22:26,620
+há de ser
+
+1659
+01:22:26,620 --> 01:22:28,620
+um ISP Gateway
+
+1660
+01:22:28,620 --> 01:22:35,330
+e que deve ter
+
+1661
+01:22:35,330 --> 01:22:37,330
+um endereço
+
+1662
+01:22:37,330 --> 01:22:39,330
+ISP.x.x
+
+1663
+01:22:39,330 --> 01:22:41,330
+e vamos usar a porta
+
+1664
+01:22:41,330 --> 01:22:43,330
+ethc
+
+1665
+01:22:43,330 --> 01:22:49,230
+pronto
+
+1666
+01:22:49,230 --> 01:22:51,230
+isto está feito
+
+1667
+01:22:51,230 --> 01:22:53,230
+aqui muitas coisas que nós
+
+1668
+01:22:53,230 --> 01:22:55,230
+não sabemos o que são
+
+1669
+01:22:55,230 --> 01:22:57,230
+mas é mesmo assim
+
+1670
+01:22:57,230 --> 01:22:59,230
+só pômos aqui
+
+1671
+01:22:59,230 --> 01:23:01,230
+para ficar claro
+
+1672
+01:23:01,230 --> 01:23:03,230
+que esta
+
+1673
+01:23:03,230 --> 01:23:05,230
+rota tem que existir
+
+1674
+01:23:05,230 --> 01:23:07,230
+temos que ser nós a colocar esta rota
+
+1675
+01:23:07,230 --> 01:23:09,230
+no router 2 mas com dados
+
+1676
+01:23:09,230 --> 01:23:11,230
+que alguém nos tem que dar
+
+1677
+01:23:11,230 --> 01:23:13,230
+não somos nós a inventar estas coisas
+
+1678
+01:23:13,230 --> 01:23:20,800
+alguma dúvida
+
+1679
+01:23:20,800 --> 01:23:22,800
+onde respondam as outras perguntas
+
+1680
+01:23:22,800 --> 01:23:24,800
+que estão no
+
+1681
+01:23:24,800 --> 01:23:26,800
+módulo 100
+
+1682
+01:23:26,800 --> 01:23:28,800
+a minha questão é mais
+
+1683
+01:23:28,800 --> 01:23:30,800
+eu estou sempre que nós falámos
+
+1684
+01:23:30,800 --> 01:23:32,800
+que a porta
+
+1685
+01:23:32,800 --> 01:23:34,800
+é sempre do router
+
+1686
+01:23:34,800 --> 01:23:36,800
+quando falamos destas tabelas
+
+1687
+01:23:36,800 --> 01:23:38,800
+de encaminhamento
+
+1688
+01:23:38,800 --> 01:23:40,800
+a porta é sempre referente
+
+1689
+01:23:40,800 --> 01:23:42,800
+ao router do qual
+
+1690
+01:23:42,800 --> 01:23:44,800
+somos para dar esta tabela
+
+1691
+01:23:44,800 --> 01:23:46,800
+esta coluna é a porta
+
+1692
+01:23:46,800 --> 01:23:48,800
+de saída do router
+
+1693
+01:23:48,800 --> 01:23:50,800
+onde esta tabela existe
+
+1694
+01:23:50,800 --> 01:23:52,800
+esta porta que está aqui
+
+1695
+01:23:52,800 --> 01:23:54,800
+é a porta de entrada
+
+1696
+01:23:54,800 --> 01:23:56,800
+no router Gateway
+
+1697
+01:23:56,800 --> 01:23:58,800
+neste caso não é de hilo
+
+1698
+01:23:58,800 --> 01:24:00,800
+e portas estas são sempre
+
+1699
+01:24:00,800 --> 01:24:02,800
+do R2
+
+1700
+01:24:02,800 --> 01:24:06,910
+estamos a te fazer a tabela no R2
+
+1701
+01:24:06,910 --> 01:24:08,910
+quando estamos por aqui
+
+1702
+01:24:08,910 --> 01:24:10,910
+mais alguma questão
+
+1703
+01:24:10,910 --> 01:24:12,910
+acho que não
+
+1704
+01:24:12,910 --> 01:24:14,910
+só uma dúvida
+
+1705
+01:24:14,910 --> 01:24:16,910
+estas tabelas de encaminhamento
+
+1706
+01:24:16,910 --> 01:24:18,910
+são sempre relacionadas
+
+1707
+01:24:18,910 --> 01:24:20,910
+só têm
+
+1708
+01:24:20,910 --> 01:24:22,910
+duas gateways então
+
+1709
+01:24:22,910 --> 01:24:28,780
+é anterior e é seguinte
+
+1710
+01:24:28,780 --> 01:24:30,780
+neste caso
+
+1711
+01:24:30,780 --> 01:24:32,780
+temos R1 e R2
+
+1712
+01:24:32,780 --> 01:24:34,780
+mas soubesse até R5
+
+1713
+01:24:36,780 --> 01:24:38,780
+esta tabela de encaminhamento
+
+1714
+01:24:38,780 --> 01:24:40,780
+que nós fizemos é só para o R2
+
+1715
+01:24:40,780 --> 01:24:42,780
+porque
+
+1716
+01:24:42,780 --> 01:24:44,780
+temos também um router R1
+
+1717
+01:24:44,780 --> 01:24:46,780
+na nossa rede
+
+1718
+01:24:46,780 --> 01:24:48,780
+para pôr a nossa rede a funcionar
+
+1719
+01:24:48,780 --> 01:24:50,780
+teremos que fazer também a tabela de encaminhamento do R1
+
+1720
+01:24:50,780 --> 01:24:52,780
+e se tivermos 20 encaminhadores
+
+1721
+01:24:52,780 --> 01:24:54,780
+temos que fazer 20 tabelas de encaminhamento
+
+1722
+01:24:54,780 --> 01:24:56,780
+uma para cada um
+
+1723
+01:24:56,780 --> 01:25:00,220
+a tabela fica guardada dentro
+
+1724
+01:25:00,220 --> 01:25:02,220
+do encaminhador
+
+1725
+01:25:02,220 --> 01:25:04,220
+a tabela que o encaminhador vai usar
+
+1726
+01:25:04,220 --> 01:25:06,220
+cada encaminhador tem que ter a sua tabela de encaminhamento
+
+1727
+01:25:08,220 --> 01:25:10,220
+mas ele tem que reconhecer todos os
+
+1728
+01:25:10,220 --> 01:25:12,220
+todos os caminhos por todos os routas
+
+1729
+01:25:12,220 --> 01:25:14,220
+não?
+
+1730
+01:25:14,220 --> 01:25:16,220
+uma tabela de encaminhamento
+
+1731
+01:25:16,220 --> 01:25:18,220
+relaciona
+
+1732
+01:25:18,220 --> 01:25:20,220
+destinos redes de destino
+
+1733
+01:25:20,220 --> 01:25:23,730
+com gateways
+
+1734
+01:25:23,730 --> 01:25:25,730
+temos que pôr tantas rotas
+
+1735
+01:25:25,730 --> 01:25:27,730
+seja preciso
+
+1736
+01:25:27,730 --> 01:25:29,730
+para conseguirmos falar para todo lado
+
+1737
+01:25:29,730 --> 01:25:33,580
+não vamos pôr todas as
+
+1738
+01:25:33,580 --> 01:25:35,580
+todas as redes
+
+1739
+01:25:35,580 --> 01:25:37,580
+da internet
+
+1740
+01:25:37,580 --> 01:25:39,580
+que são quase infinitas
+
+1741
+01:25:39,580 --> 01:25:41,580
+porque
+
+1742
+01:25:41,580 --> 01:25:43,580
+felizmente aquela de default
+
+1743
+01:25:43,580 --> 01:25:45,580
+serve para encaminhar
+
+1744
+01:25:45,580 --> 01:25:47,580
+logo para muitas
+
+1745
+01:25:49,580 --> 01:25:51,580
+independentemente da nossa rede
+
+1746
+01:25:51,580 --> 01:25:53,580
+ter muitas redes ou ter poucas
+
+1747
+01:25:53,580 --> 01:25:55,580
+a rota de default
+
+1748
+01:25:55,580 --> 01:25:57,580
+pode servir para muitas redes
+
+1749
+01:25:57,580 --> 01:25:59,580
+das nossas ou das outras
+
+1750
+01:25:59,580 --> 01:26:01,580
+aqui não interessa se as redes
+
+1751
+01:26:01,580 --> 01:26:03,580
+são nossas ou são de outras
+
+1752
+01:26:03,580 --> 01:26:05,580
+o que é preciso é
+
+1753
+01:26:05,580 --> 01:26:07,580
+se o caminho
+
+1754
+01:26:07,580 --> 01:26:09,580
+só houver um caminho para as outras todas
+
+1755
+01:26:09,580 --> 01:26:11,580
+basta uma rota de default
+
+1756
+01:26:11,580 --> 01:26:13,580
+souber caminhos alternativos
+
+1757
+01:26:13,580 --> 01:26:15,580
+temos que listar os caminhos todos
+
+1758
+01:26:15,580 --> 01:26:17,580
+mas se esse caminho
+
+1759
+01:26:17,580 --> 01:26:19,580
+passar por dois routas
+
+1760
+01:26:19,580 --> 01:26:21,580
+só temos que
+
+1761
+01:26:21,580 --> 01:26:23,580
+fazer o caminho para que é o router
+
+1762
+01:26:23,580 --> 01:26:25,580
+a seguir
+
+1763
+01:26:25,580 --> 01:26:27,580
+nós aqui definimos os caminhos
+
+1764
+01:26:27,580 --> 01:26:29,580
+só pelo next hop
+
+1765
+01:26:29,580 --> 01:26:31,580
+o próximo salto
+
+1766
+01:26:31,580 --> 01:26:33,580
+não precisamos nos preocupar
+
+1767
+01:26:33,580 --> 01:26:36,990
+com o que acontece
+
+1768
+01:26:36,990 --> 01:26:38,990
+depois
+
+1769
+01:26:38,990 --> 01:26:40,990
+o router seguinte, o next hop
+
+1770
+01:26:40,990 --> 01:26:42,990
+é que há de saber
+
+1771
+01:26:42,990 --> 01:26:44,990
+qual será o passo seguinte e por aí fora
+
+1772
+01:26:44,990 --> 01:26:46,990
+para que conseguimos falar após Japão
+
+1773
+01:26:46,990 --> 01:26:48,990
+podemos ter que falar
+
+1774
+01:26:48,990 --> 01:26:50,990
+por 30 routas
+
+1775
+01:26:50,990 --> 01:26:52,990
+nossa comunicação
+
+1776
+01:26:52,990 --> 01:26:54,990
+pode passar por 30 routas
+
+1777
+01:26:54,990 --> 01:26:56,990
+dar 30 saldos em routas
+
+1778
+01:26:56,990 --> 01:26:58,990
+mas nós não precisamos saber quais são
+
+1779
+01:26:58,990 --> 01:27:00,990
+só quando configuramos uma rede
+
+1780
+01:27:00,990 --> 01:27:02,990
+só temos que saber qual é o próximo
+
+1781
+01:27:02,990 --> 01:27:04,990
+ok
+
+1782
+01:27:04,990 --> 01:27:06,990
+obrigado
+
+1783
+01:27:06,990 --> 01:27:08,990
+então nos encontramos na terça-feira
+
+1784
+01:27:08,990 --> 01:27:10,990
+também por esta via
+
+1785
+01:27:10,990 --> 01:27:15,780
+certo?
+
+1786
+01:27:15,780 --> 01:27:17,780
+tá certo professor
+
+1787
+01:27:17,780 --> 01:27:19,780
+boa noite então
+
+1788
+01:27:19,780 --> 01:27:21,780
+boa noite obrigado
+
+1789
+01:27:21,780 --> 01:27:23,780
+boa noite
+
