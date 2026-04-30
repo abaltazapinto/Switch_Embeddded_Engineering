@@ -1,0 +1,12904 @@
+1
+00:00:39,600 --> 00:00:44,030
+Boa tarde, boa tarde.
+
+2
+00:00:44,030 --> 00:01:34,900
+Boa tarde, professora.
+
+3
+00:01:34,900 --> 00:01:36,900
+E quanto aos pagas vão entrando,
+
+4
+00:01:36,900 --> 00:01:39,900
+eu queria só perguntar-se,
+
+5
+00:01:39,900 --> 00:01:43,900
+quando a disciplina ficou disponível,
+
+6
+00:01:43,900 --> 00:01:47,900
+havia um pequeno guia de como instalarmos,
+
+7
+00:01:47,900 --> 00:01:49,900
+portanto a VM,
+
+8
+00:01:49,900 --> 00:01:52,900
+mas depois, entretanto, já não ficou mais disponível.
+
+9
+00:01:52,900 --> 00:01:55,900
+Entretanto, o outro professor tinha preferido
+
+10
+00:01:55,900 --> 00:01:58,900
+que ele libertar esse recurso para nós também vermos
+
+11
+00:01:58,900 --> 00:02:02,900
+e estivemos a falar e queria pedir-se,
+
+12
+00:02:02,900 --> 00:02:05,900
+se fosse possível, e só ver-se esse recurso
+
+13
+00:02:05,900 --> 00:02:10,900
+para se pudesse deixar para nós vermos.
+
+14
+00:02:10,900 --> 00:02:12,900
+Já está disponível.
+
+15
+00:02:12,900 --> 00:02:14,900
+Ah, está bem, obrigada.
+
+16
+00:02:14,900 --> 00:02:21,900
+Não, faltava fazer uma atualização,
+
+17
+00:02:21,900 --> 00:02:26,900
+faltava fazer uma verificação,
+
+18
+00:02:26,900 --> 00:02:29,900
+e só consegui fazer hoje,
+
+19
+00:02:29,900 --> 00:02:33,900
+e então tive que acrescentar lá uma linha de...
+
+20
+00:02:33,900 --> 00:02:36,900
+um comando para vocês executarem,
+
+21
+00:02:36,900 --> 00:02:41,900
+para instalarem uma ferramenta e o que faltava.
+
+22
+00:02:41,900 --> 00:02:47,900
+Só que não tinha tido a possibilidade de fazer isso.
+
+23
+00:02:47,900 --> 00:02:49,900
+Qual que é que faz?
+
+24
+00:02:49,900 --> 00:02:52,940
+Ah...
+
+25
+00:02:52,940 --> 00:02:55,940
+Ora bem, já estamos 14, vocês são 20, não é?
+
+26
+00:02:56,940 --> 00:03:00,800
+Acho que é um pouco mais.
+
+27
+00:03:00,800 --> 00:03:02,800
+Acho que é um bocado mais, sim.
+
+28
+00:03:02,800 --> 00:03:03,800
+22?
+
+29
+00:03:03,800 --> 00:03:06,800
+22, esperamos, então vamos esperar mais...
+
+30
+00:03:06,800 --> 00:03:09,800
+vamos esperar os 5 minutos do orden.
+
+31
+00:03:09,800 --> 00:03:13,800
+Professor, só tinha uma pergunta também.
+
+32
+00:03:13,800 --> 00:03:15,800
+A aula APL,
+
+33
+00:03:15,800 --> 00:03:17,800
+é possível fazer-nos computadores do ISEP
+
+34
+00:03:17,800 --> 00:03:20,800
+ou convém levar o portátil?
+
+35
+00:03:20,800 --> 00:03:22,800
+É sim.
+
+36
+00:03:22,800 --> 00:03:24,800
+Eu vou...
+
+37
+00:03:24,800 --> 00:03:26,800
+A próxima aula APL,
+
+38
+00:03:26,800 --> 00:03:30,800
+não vai ser...
+
+39
+00:03:30,800 --> 00:03:35,800
+vai haver ali uma parte que vai ser sobre sistemas de tempo real,
+
+40
+00:03:35,800 --> 00:03:37,800
+vocês perceberem...
+
+41
+00:03:37,800 --> 00:03:39,800
+fazerem uns exercícios de idênticos
+
+42
+00:03:39,800 --> 00:03:43,800
+àqueles que nós temos nos slides.
+
+43
+00:03:43,800 --> 00:03:46,800
+E depois vai haver uma outra parte
+
+44
+00:03:46,800 --> 00:03:51,800
+que vai ser sobre linucos,
+
+45
+00:03:51,800 --> 00:03:54,800
+criar processos,
+
+46
+00:03:54,800 --> 00:03:56,800
+criar trezes,
+
+47
+00:03:56,800 --> 00:03:59,800
+usar assim uns semáforos para...
+
+48
+00:03:59,800 --> 00:04:02,800
+para vocês verem o que é que está envolvido
+
+49
+00:04:02,800 --> 00:04:09,800
+quando se criam essas coisas
+
+50
+00:04:09,800 --> 00:04:12,800
+e o que é que acontece na prática
+
+51
+00:04:12,800 --> 00:04:14,800
+em termos de sistema.
+
+52
+00:04:14,800 --> 00:04:16,800
+Vamos lá ver, vamos usar uma ferramenta
+
+53
+00:04:16,800 --> 00:04:19,800
+para ver ali um bocadinho do escalundamento das coisas
+
+54
+00:04:19,800 --> 00:04:21,800
+e pronto.
+
+55
+00:04:21,800 --> 00:04:22,800
+Mas depois,
+
+56
+00:04:22,800 --> 00:04:27,800
+essa ferramenta está no guião
+
+57
+00:04:27,800 --> 00:04:29,800
+que eu disponibilizei,
+
+58
+00:04:29,800 --> 00:04:32,800
+a ideia é vocês terem uma máquina virtual
+
+59
+00:04:32,800 --> 00:04:37,800
+e depois de trabalharem sobre essa máquina virtual.
+
+60
+00:04:37,800 --> 00:04:40,800
+Portanto, na próxima aula,
+
+61
+00:04:40,800 --> 00:04:42,800
+não tem que se fazer numa máquina virtual,
+
+62
+00:04:42,800 --> 00:04:45,800
+pode ser num computador.
+
+63
+00:04:45,800 --> 00:04:50,800
+Desde que tenha linucos serve bem.
+
+64
+00:04:50,800 --> 00:04:53,800
+Mas depois,
+
+65
+00:04:53,800 --> 00:04:57,800
+porque depois o que nós vamos fazer
+
+66
+00:04:57,800 --> 00:05:00,800
+é mexer no kernel do linucos.
+
+67
+00:05:00,800 --> 00:05:03,800
+Portanto, o que nós vamos fazer
+
+68
+00:05:03,800 --> 00:05:05,800
+a partir de terça-feira
+
+69
+00:05:05,800 --> 00:05:09,800
+é criar a nossa versão do linucos.
+
+70
+00:05:09,800 --> 00:05:14,800
+Portanto, vamos criar uma nova versão
+
+71
+00:05:14,800 --> 00:05:18,800
+que vai ter uma nova política de escalundamento
+
+72
+00:05:18,800 --> 00:05:25,800
+que vai ter uma nova política de resource sharing.
+
+73
+00:05:25,800 --> 00:05:28,800
+Portanto, a ideia é um pouquinho essa.
+
+74
+00:05:28,800 --> 00:05:32,800
+E isso é feito com base numa máquina virtual.
+
+75
+00:05:32,800 --> 00:05:35,800
+Dá para fazer num outro computador,
+
+76
+00:05:35,800 --> 00:05:38,800
+porque não é obrigatório ser na máquina virtual.
+
+77
+00:05:38,800 --> 00:05:41,800
+Mas isso eu não consigo fazer
+
+78
+00:05:41,800 --> 00:05:46,800
+nas máquinas do eSepis, não consigo.
+
+79
+00:05:46,800 --> 00:05:52,800
+Porque não tenho permissões de instalação.
+
+80
+00:05:52,800 --> 00:05:54,800
+Só estou a perguntar isso
+
+81
+00:05:54,800 --> 00:05:56,800
+porque nos próximos dois sábados
+
+82
+00:05:56,800 --> 00:05:59,800
+não vou conseguir ter portátil.
+
+83
+00:05:59,800 --> 00:06:02,800
+A partir daí já tenho novamente, mas pronto.
+
+84
+00:06:02,800 --> 00:06:06,800
+Mas isso também não é dramático.
+
+85
+00:06:06,800 --> 00:06:08,800
+Vocês podem se juntar em grupos
+
+86
+00:06:08,800 --> 00:06:11,800
+e até, menos no próximo sábado,
+
+87
+00:06:11,800 --> 00:06:14,800
+aqueles que estão mais à vontade.
+
+88
+00:06:14,800 --> 00:06:16,800
+Eu não vos conheço.
+
+89
+00:06:16,800 --> 00:06:18,800
+Portanto, eu não sei em concreto
+
+90
+00:06:18,800 --> 00:06:20,800
+qual é o vosso decorante.
+
+91
+00:06:20,800 --> 00:06:22,800
+Portanto, assumindo pelo que me disseram,
+
+92
+00:06:22,800 --> 00:06:24,800
+havia aqui alguma variabilidade.
+
+93
+00:06:24,800 --> 00:06:26,800
+Portanto, certamente há pessoas
+
+94
+00:06:26,800 --> 00:06:28,800
+que queriam processos,
+
+95
+00:06:28,800 --> 00:06:31,800
+queriam atletas, há mecanismos de resource sharing.
+
+96
+00:06:31,800 --> 00:06:33,800
+É fácil, para outros,
+
+97
+00:06:33,800 --> 00:06:35,800
+vai ser um processadelo.
+
+98
+00:06:35,800 --> 00:06:37,800
+Portanto, e a ideia também de alguma forma,
+
+99
+00:06:37,800 --> 00:06:41,800
+no sábado, é tentar juntar
+
+100
+00:06:41,800 --> 00:06:43,800
+pessoas que se sintam mais à vontade,
+
+101
+00:06:43,800 --> 00:06:45,800
+como pessoas que se sintam menos à vontade
+
+102
+00:06:45,800 --> 00:06:48,800
+para se tentar fazer ali um ou dois programinhos
+
+103
+00:06:48,800 --> 00:06:50,800
+no sentido de...
+
+104
+00:06:50,800 --> 00:06:52,800
+Pessoal, para todos aqueles que não estão à vontade,
+
+105
+00:06:52,800 --> 00:06:55,800
+saber o que é que estamos a falar.
+
+106
+00:06:55,800 --> 00:06:57,800
+Ok, ok.
+
+107
+00:06:57,800 --> 00:06:58,800
+Tá bem?
+
+108
+00:06:58,800 --> 00:07:00,800
+Depois, dá pra jeito.
+
+109
+00:07:00,800 --> 00:07:04,800
+Ter, porque as aulas ao sábado
+
+110
+00:07:04,800 --> 00:07:06,800
+vão ser para vocês
+
+111
+00:07:06,800 --> 00:07:08,800
+tentarem implementar
+
+112
+00:07:08,800 --> 00:07:10,800
+aquilo que está nos tutoriais.
+
+113
+00:07:10,800 --> 00:07:12,800
+Portanto, seguir.
+
+114
+00:07:12,800 --> 00:07:16,800
+E as aulas serão essencialmente para
+
+115
+00:07:16,800 --> 00:07:18,800
+salvar alguma coisa
+
+116
+00:07:18,800 --> 00:07:20,800
+que não esteja a correr,
+
+117
+00:07:20,800 --> 00:07:23,800
+eu resolver nessas aulas,
+
+118
+00:07:23,800 --> 00:07:25,800
+porque o propósito,
+
+119
+00:07:25,800 --> 00:07:27,800
+aquilo que me foi pedido,
+
+120
+00:07:27,800 --> 00:07:30,800
+foi que vos dessa a conhecer
+
+121
+00:07:30,800 --> 00:07:35,800
+como é que funcionam os sistemas internamente.
+
+122
+00:07:35,800 --> 00:07:38,800
+Isto é, como é que um sistema operativo,
+
+123
+00:07:38,800 --> 00:07:40,800
+portanto, porque aqui a ideia não é vocês
+
+124
+00:07:40,800 --> 00:07:42,800
+interagirem com um sistema operativo,
+
+125
+00:07:42,800 --> 00:07:45,800
+é perceberem como é que as coisas funcionam
+
+126
+00:07:45,800 --> 00:07:47,800
+na prática,
+
+127
+00:07:47,800 --> 00:07:49,800
+e com essa...
+
+128
+00:07:49,800 --> 00:07:51,800
+e dessa forma,
+
+129
+00:07:51,800 --> 00:07:53,800
+ganharem um pouquinho mais à vontade
+
+130
+00:07:53,800 --> 00:07:55,800
+nesses desconceitos de processos,
+
+131
+00:07:55,800 --> 00:07:59,800
+de trechos, de mecanismos de sincronização, etcétera.
+
+132
+00:07:59,800 --> 00:08:04,340
+Ok, por favor. Obrigado.
+
+133
+00:08:04,340 --> 00:08:07,620
+Ora, tá bem, pronto.
+
+134
+00:08:07,620 --> 00:08:10,620
+Já passaram sete minutos,
+
+135
+00:08:10,620 --> 00:08:14,620
+e eu tenho aqui algum material para falar hoje,
+
+136
+00:08:14,620 --> 00:08:17,620
+portanto, vou já começar e depois...
+
+137
+00:08:17,620 --> 00:08:30,010
+Vamos continuar com esta parte
+
+138
+00:08:30,010 --> 00:08:33,010
+associada ao sistema de tempo real,
+
+139
+00:08:33,010 --> 00:08:36,010
+só para que vocês fiquem com noção
+
+140
+00:08:36,010 --> 00:08:38,010
+daquilo que existe, portanto,
+
+141
+00:08:38,010 --> 00:08:40,010
+de vocês, aquilo que foi abordado até agora,
+
+142
+00:08:40,010 --> 00:08:42,010
+portanto, fizeram o overview
+
+143
+00:08:42,010 --> 00:08:44,010
+sobre sistemas de tempo real, portanto,
+
+144
+00:08:44,010 --> 00:08:46,010
+o sistema de tempo real tem uma característica
+
+145
+00:08:46,010 --> 00:08:48,010
+muito importante, que é...
+
+146
+00:08:48,010 --> 00:08:51,010
+as tarefas têm associado uma meta...
+
+147
+00:08:51,010 --> 00:08:53,010
+uma meta temporal,
+
+148
+00:08:53,010 --> 00:08:56,010
+até o qual devem disponibilizar
+
+149
+00:08:56,010 --> 00:08:59,010
+os resultados,
+
+150
+00:08:59,010 --> 00:09:02,010
+e obviamente, essa meta temporal
+
+151
+00:09:02,010 --> 00:09:04,010
+e essas características
+
+152
+00:09:04,010 --> 00:09:07,010
+são usadas para produzir um escolinamento.
+
+153
+00:09:07,010 --> 00:09:12,010
+Portanto, os escolinadores usam esses elementos
+
+154
+00:09:12,010 --> 00:09:15,010
+para definir uma ordem.
+
+155
+00:09:15,010 --> 00:09:18,010
+Depois, nós já vimos duas abordagens
+
+156
+00:09:18,010 --> 00:09:21,010
+vaziasas em prioridades estáticas,
+
+157
+00:09:21,010 --> 00:09:24,010
+nomeadamente, ou prioridades fixes,
+
+158
+00:09:24,010 --> 00:09:26,010
+nomeadamente, o rei tecomanotónico,
+
+159
+00:09:26,010 --> 00:09:29,010
+portanto, em que as prioridades são definidas
+
+160
+00:09:32,500 --> 00:09:34,500
+arrancamos com o sistema.
+
+161
+00:09:34,500 --> 00:09:37,500
+Temos as prioridades definidas,
+
+162
+00:09:37,500 --> 00:09:39,500
+e obviamente, esses sistemas
+
+163
+00:09:39,500 --> 00:09:42,500
+são mais simples, como souber é,
+
+164
+00:09:42,500 --> 00:09:44,500
+porque não tem de fazer nada
+
+165
+00:09:44,500 --> 00:09:46,500
+durante a execução, portanto, aquilo está
+
+166
+00:09:46,500 --> 00:09:49,500
+mais ou menos definido.
+
+167
+00:09:49,500 --> 00:09:51,500
+Portanto, existem várias abordagens,
+
+168
+00:09:51,500 --> 00:09:53,500
+por exemplo, vamos ver em concreto
+
+169
+00:09:53,500 --> 00:09:55,500
+como é que no inútil
+
+170
+00:09:55,500 --> 00:09:57,500
+conseguimos ter essas prioridades fixes.
+
+171
+00:09:57,500 --> 00:10:03,500
+Depois, vimos o EDF,
+
+172
+00:10:03,500 --> 00:10:06,500
+portanto, em que usamos
+
+173
+00:10:06,500 --> 00:10:10,500
+prioridades amicas do nível dos jovens,
+
+174
+00:10:10,500 --> 00:10:15,500
+isto é, a prioridade de cada jovem
+
+175
+00:10:15,500 --> 00:10:18,500
+é diferente, em função também
+
+176
+00:10:18,500 --> 00:10:20,500
+de uma característica,
+
+177
+00:10:20,500 --> 00:10:23,500
+e depois vimos
+
+178
+00:10:23,500 --> 00:10:26,500
+uma outra abordagem,
+
+179
+00:10:26,500 --> 00:10:29,500
+ou mais duas, mas uma, não é assim muito relevante,
+
+180
+00:10:29,500 --> 00:10:31,500
+em termos de calitérios,
+
+181
+00:10:31,500 --> 00:10:33,500
+o first come, first serve,
+
+182
+00:10:33,500 --> 00:10:35,500
+a ver com o tempo que está à espera,
+
+183
+00:10:35,500 --> 00:10:38,500
+mas vimos que é o liste laxity,
+
+184
+00:10:38,500 --> 00:10:41,500
+que faz ali uns cálculos
+
+185
+00:10:41,500 --> 00:10:44,500
+no sentido, portanto, mesmo durante a execução
+
+186
+00:10:44,500 --> 00:10:47,500
+do jovem, a prioridade do jovem pode mudar.
+
+187
+00:10:47,500 --> 00:10:50,500
+Em termos práticos,
+
+188
+00:10:50,500 --> 00:10:53,500
+esse algoritmo não é muito útil,
+
+189
+00:10:53,500 --> 00:10:59,500
+porque impõe muitos context suites,
+
+190
+00:10:59,500 --> 00:11:01,500
+muitas mudanças de tarefa,
+
+191
+00:11:01,500 --> 00:11:04,500
+portanto, a partir de uma determinada altura,
+
+192
+00:11:04,500 --> 00:11:07,500
+se o laxity estiver muito próximo,
+
+193
+00:11:07,500 --> 00:11:09,500
+uma da outra, aquilo começa
+
+194
+00:11:09,500 --> 00:11:12,500
+a mudar o processo com muita frequência,
+
+195
+00:11:12,500 --> 00:11:15,500
+e acabamos de não ser muito importante.
+
+196
+00:11:15,500 --> 00:11:20,500
+Depois vimos abordagens para resolver
+
+197
+00:11:20,500 --> 00:11:23,500
+o problema de termos diferentes tipos de tarefas,
+
+198
+00:11:23,500 --> 00:11:26,500
+mantendo a escalonabilidade do sistema,
+
+199
+00:11:26,500 --> 00:11:29,500
+portanto, nas abordagens anteriores,
+
+200
+00:11:29,500 --> 00:11:31,500
+típicamente assumo-se que as tarefas
+
+201
+00:11:31,500 --> 00:11:33,500
+são todas iguais,
+
+202
+00:11:33,500 --> 00:11:35,500
+depois vimos uma abordagem
+
+203
+00:11:35,500 --> 00:11:37,500
+vaseada em servidores,
+
+204
+00:11:37,500 --> 00:11:40,500
+portanto, existe uma tarefa fake,
+
+205
+00:11:40,500 --> 00:11:42,500
+designada de servidor,
+
+206
+00:11:42,500 --> 00:11:44,500
+que tem, digamos, os seus parâmetros,
+
+207
+00:11:44,500 --> 00:11:46,500
+vimos o caso das periódicas,
+
+208
+00:11:46,500 --> 00:11:49,500
+das deferidas e das esporádicas,
+
+209
+00:11:49,500 --> 00:11:52,500
+que não são tarefas feitas,
+
+210
+00:11:52,500 --> 00:11:55,500
+em termos de análise da escalonabilidade,
+
+211
+00:11:55,500 --> 00:11:57,500
+funcionam como se fosse uma tarefa,
+
+212
+00:11:57,500 --> 00:11:59,500
+mas que, na prática, não existem,
+
+213
+00:11:59,500 --> 00:12:02,500
+e esse tempo é reservado
+
+214
+00:12:02,500 --> 00:12:05,500
+para resolver as tarefas
+
+215
+00:12:05,500 --> 00:12:08,500
+ou não sabemos nada sobre elas,
+
+216
+00:12:08,500 --> 00:12:15,500
+ou então tem parâmetros
+
+217
+00:12:15,500 --> 00:12:19,500
+muito, muito variáveis
+
+218
+00:12:19,500 --> 00:12:21,500
+e que, obviamente,
+
+219
+00:12:21,500 --> 00:12:23,500
+usando a abordagem característica
+
+220
+00:12:23,500 --> 00:12:25,500
+dos sistemas temporal,
+
+221
+00:12:25,500 --> 00:12:27,500
+que é o PSIMismo,
+
+222
+00:12:27,500 --> 00:12:29,500
+tornava aos sistemas
+
+223
+00:12:29,500 --> 00:12:31,500
+muito, muito,
+
+224
+00:12:31,500 --> 00:12:34,500
+com uma utilização muito, muito baixa.
+
+225
+00:12:34,500 --> 00:12:37,500
+Típicamente, eles têm uma utilização baixa,
+
+226
+00:12:37,500 --> 00:12:39,500
+mas se considerassemos isso,
+
+227
+00:12:39,500 --> 00:12:41,500
+seria ainda pior.
+
+228
+00:12:41,500 --> 00:12:44,500
+Portanto, vimos estas três,
+
+229
+00:12:44,500 --> 00:12:46,500
+estas três abordagens.
+
+230
+00:12:46,500 --> 00:12:50,500
+Hoje, vamos entrar numa outra,
+
+231
+00:12:50,500 --> 00:12:52,500
+numa outra parte,
+
+232
+00:12:52,500 --> 00:12:55,500
+tem a ver com o mix de crítica e eletir sistemas.
+
+233
+00:12:55,500 --> 00:12:57,500
+Também tem um pouquinho a ver com isso,
+
+234
+00:12:57,500 --> 00:12:59,500
+pois vamos falar um pouquinho
+
+235
+00:12:59,500 --> 00:13:01,500
+do que é que é isso dos resource sharing
+
+236
+00:13:01,500 --> 00:13:03,500
+e depois vamos terminar
+
+237
+00:13:03,500 --> 00:13:05,500
+com uma abordagem aos sistemas multipressador,
+
+238
+00:13:05,500 --> 00:13:09,500
+no sentido de dar aqui alguma ideia
+
+239
+00:13:09,500 --> 00:13:11,500
+do que é que é um sistema multipressador
+
+240
+00:13:11,500 --> 00:13:13,500
+e como é que isso funciona.
+
+241
+00:13:13,500 --> 00:13:16,500
+Portanto, o que é que é um sistema
+
+242
+00:13:16,500 --> 00:13:18,500
+mix de crítica e eletir?
+
+243
+00:13:18,500 --> 00:13:20,500
+Tem a ver com o seguinte,
+
+244
+00:13:20,500 --> 00:13:22,500
+tem algo muito parecido
+
+245
+00:13:22,500 --> 00:13:24,500
+com a questão dos servidores.
+
+246
+00:13:24,500 --> 00:13:26,500
+É muito parecido o que é.
+
+247
+00:13:26,500 --> 00:13:28,500
+No fundo, no fundo,
+
+248
+00:13:28,500 --> 00:13:30,500
+é uma abordagem diferente.
+
+249
+00:13:30,500 --> 00:13:33,500
+No fundo, o que é que nós vamos ter?
+
+250
+00:13:33,500 --> 00:13:36,500
+Vamos ter tarefas com diferentes níveis
+
+251
+00:13:36,500 --> 00:13:38,500
+de crítica e eletir,
+
+252
+00:13:38,500 --> 00:13:40,500
+e dirão vocês, mas isso já tínhamos.
+
+253
+00:13:40,500 --> 00:13:42,500
+Portanto, podemos ter
+
+254
+00:13:42,500 --> 00:13:44,500
+que a críticalidade pode ser
+
+255
+00:13:44,500 --> 00:13:46,500
+de diferentes níveis de prioridade.
+
+256
+00:13:46,500 --> 00:13:48,500
+Mas aqui vai um pouquinho mais à frente.
+
+257
+00:13:48,500 --> 00:13:50,500
+A questão aqui é
+
+258
+00:13:50,500 --> 00:13:52,500
+as tarefas
+
+259
+00:13:52,500 --> 00:13:58,500
+têm diferentes níveis de críticalidade
+
+260
+00:13:58,500 --> 00:14:00,500
+e o que acontece é
+
+261
+00:14:00,500 --> 00:14:02,500
+quando o sistema,
+
+262
+00:14:02,500 --> 00:14:04,500
+por um motivo qualquer,
+
+263
+00:14:04,500 --> 00:14:06,500
+está surcargado,
+
+264
+00:14:06,500 --> 00:14:09,500
+é feito um context switch
+
+265
+00:14:09,500 --> 00:14:11,500
+em termos, é feito um switch
+
+266
+00:14:11,500 --> 00:14:13,500
+do modo de operação.
+
+267
+00:14:13,500 --> 00:14:15,500
+E começa,
+
+268
+00:14:15,500 --> 00:14:17,500
+e quando se muda
+
+269
+00:14:17,500 --> 00:14:19,500
+esse modo de operação,
+
+270
+00:14:19,500 --> 00:14:21,500
+porque eventualmente o sistema
+
+271
+00:14:21,500 --> 00:14:23,500
+está a não conseguir responder
+
+272
+00:14:23,500 --> 00:14:25,500
+ou coisas assim de gênero,
+
+273
+00:14:25,500 --> 00:14:27,500
+ele vai, no fundo,
+
+274
+00:14:27,500 --> 00:14:29,500
+executar só umas determinadas
+
+275
+00:14:29,500 --> 00:14:31,500
+tarefas
+
+276
+00:14:31,500 --> 00:14:33,500
+e não executar outras.
+
+277
+00:14:33,500 --> 00:14:35,500
+Portanto, os aposististas têm
+
+278
+00:14:35,500 --> 00:14:37,500
+várias abordagens para
+
+279
+00:14:37,500 --> 00:14:39,500
+considerar isso
+
+280
+00:14:39,500 --> 00:14:41,500
+e esta abordagem
+
+281
+00:14:41,500 --> 00:14:43,500
+tem uma outra característica
+
+282
+00:14:43,500 --> 00:14:45,500
+que é, permite
+
+283
+00:14:45,500 --> 00:14:47,500
+tornar
+
+284
+00:14:47,500 --> 00:14:49,500
+os sistemas mais eficientes.
+
+285
+00:14:49,500 --> 00:14:51,500
+Por quê?
+
+286
+00:14:51,500 --> 00:14:53,500
+Porque em termos de utilização,
+
+287
+00:14:53,500 --> 00:14:55,500
+porque tendo a possibilidade
+
+288
+00:14:55,500 --> 00:14:57,500
+de dizer,
+
+289
+00:14:57,500 --> 00:14:59,500
+numa situação de aperto,
+
+290
+00:14:59,500 --> 00:15:01,500
+não executamos estas,
+
+291
+00:15:01,500 --> 00:15:03,500
+obviamente que,
+
+292
+00:15:03,500 --> 00:15:05,500
+tendo esse mecanismo de segurança,
+
+293
+00:15:05,500 --> 00:15:07,500
+nós não precisamos ser tão pessimista
+
+294
+00:15:07,500 --> 00:15:09,500
+na abordagem,
+
+295
+00:15:09,500 --> 00:15:11,500
+porque
+
+296
+00:15:11,500 --> 00:15:13,500
+temos um mecanismo que, se a coisa
+
+297
+00:15:13,500 --> 00:15:15,500
+não estiver a correr bem,
+
+298
+00:15:15,500 --> 00:15:17,500
+seja qual for o motivo,
+
+299
+00:15:17,500 --> 00:15:19,500
+conseguimos mudar para
+
+300
+00:15:19,500 --> 00:15:21,500
+esse mecanismo.
+
+301
+00:15:21,500 --> 00:15:23,500
+Portanto,
+
+302
+00:15:23,500 --> 00:15:25,500
+no fundo também tem a ver
+
+303
+00:15:25,500 --> 00:15:27,500
+com suportar
+
+304
+00:15:27,500 --> 00:15:29,500
+diferentes tipos
+
+305
+00:15:29,500 --> 00:15:31,500
+de tarefas, embora aqui
+
+306
+00:15:31,500 --> 00:15:33,500
+a abordagem seja
+
+307
+00:15:33,500 --> 00:15:35,500
+um pouquinho diferente.
+
+308
+00:15:35,500 --> 00:15:37,500
+Resource sharing
+
+309
+00:15:37,500 --> 00:15:39,500
+então o resource sharing
+
+310
+00:15:39,500 --> 00:15:41,500
+tem a ver com o que.
+
+311
+00:15:41,500 --> 00:15:43,500
+O resource sharing, por exemplo,
+
+312
+00:15:43,500 --> 00:15:45,500
+imagina-me o seguinte, imaginem
+
+313
+00:15:45,500 --> 00:15:47,500
+que vocês são professores
+
+314
+00:15:47,500 --> 00:15:49,500
+e querem escrever no quadro.
+
+315
+00:15:49,500 --> 00:15:51,500
+Tenho o quadro,
+
+316
+00:15:51,500 --> 00:15:53,500
+um quadro branco, o recurso
+
+317
+00:15:53,500 --> 00:15:55,500
+é o quadro
+
+318
+00:15:55,500 --> 00:15:57,500
+e só há um marcador.
+
+319
+00:15:57,500 --> 00:15:59,500
+Portanto,
+
+320
+00:15:59,500 --> 00:16:01,500
+se temos vários professores
+
+321
+00:16:01,500 --> 00:16:03,500
+que conseguem escrever no quadro
+
+322
+00:16:03,500 --> 00:16:05,500
+e só há um marcador, quem é que escreve?
+
+323
+00:16:05,500 --> 00:16:07,500
+Aquele que detém o marcador.
+
+324
+00:16:07,500 --> 00:16:09,500
+Os outros não conseguem escrever.
+
+325
+00:16:09,500 --> 00:16:11,500
+Portanto, é isso que é
+
+326
+00:16:11,500 --> 00:16:13,500
+que são mecanismos de resource sharing.
+
+327
+00:16:13,500 --> 00:16:15,500
+É assegurar,
+
+328
+00:16:15,500 --> 00:16:17,500
+eu vou considerar aqui para ser mais fácil,
+
+329
+00:16:17,500 --> 00:16:19,500
+a exclusão mútua,
+
+330
+00:16:19,500 --> 00:16:21,500
+isso é, só executa um
+
+331
+00:16:21,500 --> 00:16:23,500
+de cada vez.
+
+332
+00:16:23,500 --> 00:16:25,500
+Portanto, se está a ser executado por um,
+
+333
+00:16:25,500 --> 00:16:27,500
+não pode ser executado por outro,
+
+334
+00:16:27,500 --> 00:16:29,500
+porque depois existem outras abordagens,
+
+335
+00:16:29,500 --> 00:16:31,500
+porque
+
+336
+00:16:31,500 --> 00:16:33,500
+existem
+
+337
+00:16:33,500 --> 00:16:35,500
+situações em que alguns
+
+338
+00:16:35,500 --> 00:16:37,500
+elementos são considerados leitores.
+
+339
+00:16:37,500 --> 00:16:39,500
+Ora, se for leitor
+
+340
+00:16:39,500 --> 00:16:41,500
+não está a alterar a inflimação,
+
+341
+00:16:41,500 --> 00:16:43,500
+podem estar vários a ler
+
+342
+00:16:43,500 --> 00:16:45,500
+o conteúdo ao mesmo tempo.
+
+343
+00:16:45,500 --> 00:16:47,500
+Mas, se tiver leitores,
+
+344
+00:16:47,500 --> 00:16:49,500
+eu não posso ter nenhum escritor.
+
+345
+00:16:49,500 --> 00:16:51,500
+Portanto, quando tenho
+
+346
+00:16:51,500 --> 00:16:53,500
+escritores, e só posso ter
+
+347
+00:16:53,500 --> 00:16:55,500
+um escritor de cada vez, não posso ter
+
+348
+00:16:55,500 --> 00:16:57,500
+dois a escrever no mesmo documento,
+
+349
+00:16:57,500 --> 00:16:59,500
+só posso ter um de cada vez.
+
+350
+00:16:59,500 --> 00:17:01,500
+Existem várias abordagens,
+
+351
+00:17:01,500 --> 00:17:03,500
+nós aqui vamos considerar
+
+352
+00:17:03,500 --> 00:17:05,500
+só ter acesso ou não ter acesso.
+
+353
+00:17:05,500 --> 00:17:07,500
+Portanto, chama-se a isso
+
+354
+00:17:07,500 --> 00:17:09,500
+semáforos ou mecanismos de
+
+355
+00:17:09,500 --> 00:17:11,500
+exclusão.
+
+356
+00:17:11,500 --> 00:17:13,500
+Só existe
+
+357
+00:17:13,500 --> 00:17:15,500
+exclusividade, só existe
+
+358
+00:17:15,500 --> 00:17:17,500
+um de cada vez.
+
+359
+00:17:17,500 --> 00:17:19,500
+Portanto, tipicamente,
+
+360
+00:17:19,500 --> 00:17:21,500
+aquilo que se faz
+
+361
+00:17:21,500 --> 00:17:23,500
+é usar um mecanismo
+
+362
+00:17:23,500 --> 00:17:25,500
+que quem
+
+363
+00:17:25,500 --> 00:17:27,500
+teve esse mecanismo
+
+364
+00:17:27,500 --> 00:17:29,500
+é que
+
+365
+00:17:29,500 --> 00:17:31,500
+consegue executar. E aqui quem
+
+366
+00:17:31,500 --> 00:17:33,500
+é tarefa? Portanto,
+
+367
+00:17:33,500 --> 00:17:35,500
+às vezes,
+
+368
+00:17:35,500 --> 00:17:37,500
+sobretudo, quem não é
+
+369
+00:17:37,500 --> 00:17:39,500
+área de informática,
+
+370
+00:17:39,500 --> 00:17:41,500
+às vezes acham um bocado esquisito
+
+371
+00:17:41,500 --> 00:17:43,500
+da forma como nós falamos
+
+372
+00:17:43,500 --> 00:17:45,500
+das
+
+373
+00:17:45,500 --> 00:17:47,500
+coisas para que estamos personalizados,
+
+374
+00:17:47,500 --> 00:17:49,500
+mas é um pouquinho isso.
+
+375
+00:17:49,500 --> 00:17:51,500
+As tarefas para
+
+376
+00:17:51,500 --> 00:17:53,500
+poder executar os processos
+
+377
+00:17:53,500 --> 00:17:55,500
+de qualquer que nós damos ver
+
+378
+00:17:55,500 --> 00:17:57,500
+o que é que pode ser
+
+379
+00:17:57,500 --> 00:17:59,500
+para poder
+
+380
+00:17:59,500 --> 00:18:01,500
+fazer isso, ler o conteúdo
+
+381
+00:18:01,500 --> 00:18:03,500
+de uma variável, uma coisa qualquer
+
+382
+00:18:03,500 --> 00:18:05,500
+para depois
+
+383
+00:18:05,500 --> 00:18:07,500
+e quando libertar
+
+384
+00:18:07,500 --> 00:18:09,500
+é que outros
+
+385
+00:18:09,500 --> 00:18:11,500
+podem
+
+386
+00:18:11,500 --> 00:18:13,500
+fazer aquela operação.
+
+387
+00:18:13,500 --> 00:18:15,500
+Chama-se
+
+388
+00:18:15,500 --> 00:18:17,500
+a isso. Portanto,
+
+389
+00:18:17,500 --> 00:18:19,500
+essas zonas
+
+390
+00:18:19,500 --> 00:18:21,500
+são designadas
+
+391
+00:18:21,500 --> 00:18:23,500
+e as sections críticas.
+
+392
+00:18:23,500 --> 00:18:25,500
+Portanto, neste
+
+393
+00:18:25,500 --> 00:18:27,500
+exemplo, temos aqui
+
+394
+00:18:27,500 --> 00:18:29,500
+uma variável, vamos imaginar,
+
+395
+00:18:29,500 --> 00:18:31,500
+esta é uma variável, em que,
+
+396
+00:18:31,500 --> 00:18:33,500
+portanto, isto aqui é tudo a mesma
+
+397
+00:18:33,500 --> 00:18:35,500
+variável que vai tomar diferentes
+
+398
+00:18:35,500 --> 00:18:37,500
+valores. Imaginem que
+
+399
+00:18:37,500 --> 00:18:39,500
+esta variável
+
+400
+00:18:41,500 --> 00:18:43,500
+representa
+
+401
+00:18:43,500 --> 00:18:45,500
+um computador
+
+402
+00:18:45,500 --> 00:18:47,500
+qualquer. Ora, se representa um computador
+
+403
+00:18:47,500 --> 00:18:49,500
+eu sempre
+
+404
+00:18:49,500 --> 00:18:51,500
+que acesa aquela variável
+
+405
+00:18:51,500 --> 00:18:53,500
+eu tenho que incrementar.
+
+406
+00:18:53,500 --> 00:18:55,500
+Tenho que incrementar
+
+407
+00:18:55,500 --> 00:18:57,500
+e depois guardar. Ora,
+
+408
+00:18:57,500 --> 00:18:59,500
+isto é a mesma coisa que
+
+409
+00:18:59,500 --> 00:19:01,500
+imagina que estamos duas pessoas
+
+410
+00:19:01,500 --> 00:19:03,500
+ao olhar para um quadro,
+
+411
+00:19:03,500 --> 00:19:05,500
+está lá um número.
+
+412
+00:19:05,500 --> 00:19:07,500
+Eu, se ambas
+
+413
+00:19:07,500 --> 00:19:09,500
+leem o número e se incrementar,
+
+414
+00:19:09,500 --> 00:19:11,500
+portanto, não só incrementar um,
+
+415
+00:19:11,500 --> 00:19:13,500
+mas o que era suposto
+
+416
+00:19:13,500 --> 00:19:15,500
+era que as pessoas incrementaram. Então,
+
+417
+00:19:15,500 --> 00:19:17,500
+uma lea
+
+418
+00:19:17,500 --> 00:19:19,500
+incrementa e escreve.
+
+419
+00:19:19,500 --> 00:19:21,500
+A outra lea
+
+420
+00:19:21,500 --> 00:19:23,500
+incrementa e escreve. E, desta forma, o valor
+
+421
+00:19:23,500 --> 00:19:25,500
+está correto. Aqui é que o que
+
+422
+00:19:25,500 --> 00:19:27,500
+acontece. Por que?
+
+423
+00:19:27,500 --> 00:19:29,500
+Porque, na informática,
+
+424
+00:19:29,500 --> 00:19:31,500
+e isto aqui dava jeito
+
+425
+00:19:31,500 --> 00:19:33,500
+de vocês, mas não temos tempo
+
+426
+00:19:33,500 --> 00:19:35,500
+nem sequer espaço para isso tudo,
+
+427
+00:19:35,500 --> 00:19:37,500
+falar um pouquinho como é que funciona
+
+428
+00:19:37,500 --> 00:19:39,500
+um sistema de computacionais,
+
+429
+00:19:39,500 --> 00:19:41,500
+fazer qualquer coisa do género,
+
+430
+00:19:41,500 --> 00:19:43,500
+e
+
+431
+00:19:43,500 --> 00:19:45,500
+em nome de uma variável, mais um,
+
+432
+00:19:45,500 --> 00:19:47,500
+em que o valor da variável, por exemplo,
+
+433
+00:19:47,500 --> 00:19:49,500
+é zero, mais um,
+
+434
+00:19:49,500 --> 00:19:51,500
+e igual, aí, mais um.
+
+435
+00:19:51,500 --> 00:19:53,500
+Isto não é atómico.
+
+436
+00:19:53,500 --> 00:19:55,500
+Isto,
+
+437
+00:19:55,500 --> 00:19:57,500
+em termos de
+
+438
+00:19:57,500 --> 00:19:59,500
+processador, em termos
+
+439
+00:19:59,500 --> 00:20:01,500
+de instruções que o processador
+
+440
+00:20:01,500 --> 00:20:03,500
+executa, é dividido em várias instruções.
+
+441
+00:20:03,500 --> 00:20:05,500
+Como é dividido
+
+442
+00:20:05,500 --> 00:20:07,500
+em várias instruções.
+
+443
+00:20:07,500 --> 00:20:09,500
+E, em sistemas preemptivos,
+
+444
+00:20:09,500 --> 00:20:11,500
+pode acontecer
+
+445
+00:20:11,500 --> 00:20:13,500
+que, se nós não
+
+446
+00:20:13,500 --> 00:20:15,500
+terminarmos esta sequestração atómica,
+
+447
+00:20:15,500 --> 00:20:17,500
+pode acontecer
+
+448
+00:20:17,500 --> 00:20:19,500
+que o processo leu o número
+
+449
+00:20:19,500 --> 00:20:21,500
+e é interrompido
+
+450
+00:20:21,500 --> 00:20:23,500
+antes do incrementar.
+
+451
+00:20:25,500 --> 00:20:27,500
+Outra tarefa,
+
+452
+00:20:27,500 --> 00:20:29,500
+é que é o número importante e vai
+
+453
+00:20:29,500 --> 00:20:31,500
+incrementar. Na verdade,
+
+454
+00:20:31,500 --> 00:20:33,500
+o valor da variável devia de
+
+455
+00:20:33,500 --> 00:20:35,500
+incrementar dois, porque temos dois
+
+456
+00:20:35,500 --> 00:20:37,500
+processos, e na prática só incrementou
+
+457
+00:20:37,500 --> 00:20:39,500
+um. Isto aqui é
+
+458
+00:20:39,500 --> 00:20:41,500
+um rito, um mecanismo de reforça,
+
+459
+00:20:41,500 --> 00:20:43,500
+e nós temos que
+
+460
+00:20:43,500 --> 00:20:45,500
+proteger estas
+
+461
+00:20:45,500 --> 00:20:47,500
+fecções críticas.
+
+462
+00:20:47,500 --> 00:20:49,500
+Imaginem aqui,
+
+463
+00:20:49,500 --> 00:20:51,500
+e isso leva-nos aqui a alguns
+
+464
+00:20:51,500 --> 00:20:53,500
+...
+
+465
+00:20:53,500 --> 00:20:55,500
+...
+
+466
+00:20:57,650 --> 00:20:59,650
+Isto leva-nos aqui a algumas questões
+
+467
+00:20:59,650 --> 00:21:01,650
+que,
+
+468
+00:21:01,650 --> 00:21:03,650
+nos sistemas temporal,
+
+469
+00:21:03,650 --> 00:21:05,650
+podem ser
+
+470
+00:21:05,650 --> 00:21:07,650
+dramáticas.
+
+471
+00:21:07,650 --> 00:21:09,650
+Vamos olhar aqui para
+
+472
+00:21:09,650 --> 00:21:11,650
+este exemplo. Imaginem aqui
+
+473
+00:21:11,650 --> 00:21:13,650
+os S,
+
+474
+00:21:13,650 --> 00:21:15,650
+é a execução,
+
+475
+00:21:15,650 --> 00:21:17,650
+o V e o Q,
+
+476
+00:21:17,650 --> 00:21:19,650
+são recursos partilhados.
+
+477
+00:21:19,650 --> 00:21:21,650
+Portanto,
+
+478
+00:21:21,650 --> 00:21:23,650
+para usar
+
+479
+00:21:23,650 --> 00:21:25,650
+para executar isto,
+
+480
+00:21:25,650 --> 00:21:27,650
+só pode executar uma tarefa
+
+481
+00:21:27,650 --> 00:21:29,650
+de cada vez.
+
+482
+00:21:29,650 --> 00:21:31,650
+Então, vamos assumindo
+
+483
+00:21:31,650 --> 00:21:33,650
+prioridades fixas,
+
+484
+00:21:33,650 --> 00:21:35,650
+em que o T1,
+
+485
+00:21:35,650 --> 00:21:37,650
+neste caso T1, tem mais prioridade
+
+486
+00:21:37,650 --> 00:21:39,650
+que o T3.
+
+487
+00:21:39,650 --> 00:21:41,650
+Assumindo que a tarefa
+
+488
+00:21:41,650 --> 00:21:43,650
+T3, aparece aqui neste instante,
+
+489
+00:21:43,650 --> 00:21:45,650
+como é o único no sistema
+
+490
+00:21:45,650 --> 00:21:47,650
+que começa a executar.
+
+491
+00:21:47,650 --> 00:21:49,650
+Se
+
+492
+00:21:49,650 --> 00:21:51,650
+executa, obtenha o recurso.
+
+493
+00:21:51,650 --> 00:21:53,650
+Portanto,
+
+494
+00:21:53,650 --> 00:21:55,650
+com tudo, apareceu a tarefa
+
+495
+00:21:55,650 --> 00:21:57,650
+1, que tem mais prioridade,
+
+496
+00:21:57,650 --> 00:21:59,650
+não importa se tem um
+
+497
+00:21:59,650 --> 00:22:01,650
+... executar uma secção crítica ou não.
+
+498
+00:22:01,650 --> 00:22:03,650
+Aparece uma tarefa que
+
+499
+00:22:03,650 --> 00:22:05,650
+tem mais prioridade, vai
+
+500
+00:22:05,650 --> 00:22:07,650
+interpretar
+
+501
+00:22:07,650 --> 00:22:09,650
+a tarefa.
+
+502
+00:22:09,650 --> 00:22:11,650
+Vai interpretar a tarefa e vai executar
+
+503
+00:22:11,650 --> 00:22:13,650
+o que tem que executar.
+
+504
+00:22:13,650 --> 00:22:15,650
+O que é que acontece aqui neste ponto?
+
+505
+00:22:15,650 --> 00:22:17,650
+A tarefa 1
+
+506
+00:22:17,650 --> 00:22:19,650
+precisa do recurso
+
+507
+00:22:19,650 --> 00:22:21,650
+V,
+
+508
+00:22:21,650 --> 00:22:23,650
+mas o recurso V está
+
+509
+00:22:23,650 --> 00:22:25,650
+bloqueado
+
+510
+00:22:25,650 --> 00:22:27,650
+pela tarefa 3.
+
+511
+00:22:27,650 --> 00:22:29,650
+Logo, a tarefa 1
+
+512
+00:22:29,650 --> 00:22:31,650
+não pode executar.
+
+513
+00:22:31,650 --> 00:22:33,650
+O que é que nós temos
+
+514
+00:22:33,650 --> 00:22:35,650
+aqui? Uma inversão de prioridade.
+
+515
+00:22:35,650 --> 00:22:37,650
+Portanto, o que é que acontece?
+
+516
+00:22:37,650 --> 00:22:39,650
+A tarefa 1 está
+
+517
+00:22:39,650 --> 00:22:41,650
+ativa,
+
+518
+00:22:41,650 --> 00:22:43,650
+mas não pode executar
+
+519
+00:22:43,650 --> 00:22:45,650
+porque a tarefa 3, de menor
+
+520
+00:22:45,650 --> 00:22:47,650
+prioridade, tem
+
+521
+00:22:47,650 --> 00:22:49,650
+o recurso. Portanto, temos aqui uma inversão
+
+522
+00:22:49,650 --> 00:22:51,650
+de prioridade. Esta tarefa
+
+523
+00:22:51,650 --> 00:22:53,650
+está a executar primeiro do que
+
+524
+00:22:53,650 --> 00:22:55,650
+aquela, o que não era suposto.
+
+525
+00:22:59,650 --> 00:23:01,650
+E assim por diante.
+
+526
+00:23:01,650 --> 00:23:03,650
+Portanto,
+
+527
+00:23:03,650 --> 00:23:05,650
+este no sistema estampo real
+
+528
+00:23:05,650 --> 00:23:07,650
+é muito mal, porque
+
+529
+00:23:07,650 --> 00:23:09,650
+se nós
+
+530
+00:23:09,650 --> 00:23:11,650
+tivermos
+
+531
+00:23:11,650 --> 00:23:13,650
+as tarefas com prioridade,
+
+532
+00:23:13,650 --> 00:23:15,650
+típicamente as tarefas
+
+533
+00:23:15,650 --> 00:23:17,650
+de mais alta prioridade
+
+534
+00:23:17,650 --> 00:23:19,650
+realizam tarefas
+
+535
+00:23:19,650 --> 00:23:21,650
+ou têm funções mais,
+
+536
+00:23:21,650 --> 00:23:23,650
+coisas mais críticas,
+
+537
+00:23:23,650 --> 00:23:25,650
+é importante que o tempo de resposta
+
+538
+00:23:25,650 --> 00:23:27,650
+seja assegurado.
+
+539
+00:23:27,650 --> 00:23:29,650
+Um outro aspecto muito
+
+540
+00:23:29,650 --> 00:23:31,650
+importante tem a ver com os deadlocks.
+
+541
+00:23:31,650 --> 00:23:33,650
+Quando é que é um deadlock? Muito simples.
+
+542
+00:23:33,650 --> 00:23:35,650
+Quando eu tenho,
+
+543
+00:23:35,650 --> 00:23:37,650
+quando uma tarefa tem um
+
+544
+00:23:37,650 --> 00:23:39,650
+recurso,
+
+545
+00:23:39,650 --> 00:23:41,650
+outra tarefa tem outro recurso
+
+546
+00:23:41,650 --> 00:23:43,650
+e uma quer
+
+547
+00:23:43,650 --> 00:23:45,650
+o recurso do outro e a outra quer
+
+548
+00:23:45,650 --> 00:23:47,650
+o recurso do primeiro.
+
+549
+00:23:47,650 --> 00:23:49,650
+Portanto, há aqui uma troca.
+
+550
+00:23:49,650 --> 00:23:51,650
+Ora, a partir dessa altura
+
+551
+00:23:51,650 --> 00:23:53,650
+temos um deadlock, isto é,
+
+552
+00:23:53,650 --> 00:23:55,650
+não é possível executar estas tarefas.
+
+553
+00:23:55,650 --> 00:23:57,650
+Elas ficam bloqueadas.
+
+554
+00:23:57,650 --> 00:23:59,650
+O que é que nós temos aqui?
+
+555
+00:23:59,650 --> 00:24:01,650
+Até o processo 1 fez
+
+556
+00:24:01,650 --> 00:24:03,650
+o lock do recurso 1,
+
+557
+00:24:03,650 --> 00:24:05,650
+o processo 2 fez
+
+558
+00:24:05,650 --> 00:24:07,650
+o lock do recurso 2
+
+559
+00:24:07,650 --> 00:24:09,650
+e agora
+
+560
+00:24:09,650 --> 00:24:11,650
+o processo 2
+
+561
+00:24:11,650 --> 00:24:13,650
+quer fazer o lock
+
+562
+00:24:13,650 --> 00:24:15,650
+para continuar do recurso 1.
+
+563
+00:24:15,650 --> 00:24:17,650
+Não é possível, porque
+
+564
+00:24:17,650 --> 00:24:19,650
+está o processo 1
+
+565
+00:24:19,650 --> 00:24:21,650
+é que detenha
+
+566
+00:24:21,650 --> 00:24:23,650
+este recurso
+
+567
+00:24:23,650 --> 00:24:25,650
+e vice-versa.
+
+568
+00:24:25,650 --> 00:24:27,650
+Quando acontece uma situação destas
+
+569
+00:24:27,650 --> 00:24:29,650
+temos uma situação de deadlock
+
+570
+00:24:29,650 --> 00:24:31,650
+isto é, a aplicação
+
+571
+00:24:31,650 --> 00:24:33,650
+não consegue conseguir a educação.
+
+572
+00:24:33,650 --> 00:24:35,650
+Portanto,
+
+573
+00:24:35,650 --> 00:24:37,650
+este fenómeno nos sistemas
+
+574
+00:24:37,650 --> 00:24:39,650
+preemptivos leva, portanto,
+
+575
+00:24:39,650 --> 00:24:41,650
+não o fenómeno do deadlock,
+
+576
+00:24:41,650 --> 00:24:43,650
+o fenómeno do deadlock
+
+577
+00:24:43,650 --> 00:24:45,650
+implica o sistema
+
+578
+00:24:45,650 --> 00:24:47,650
+parar,
+
+579
+00:24:47,650 --> 00:24:49,650
+mas o outro implica
+
+580
+00:24:49,650 --> 00:24:51,650
+que é o que eu tinha referido anteriormente,
+
+581
+00:24:51,650 --> 00:24:53,650
+implica
+
+582
+00:24:53,650 --> 00:24:55,650
+a inversão de prioridades.
+
+583
+00:24:55,650 --> 00:24:57,650
+E a inversão de prioridade é quando
+
+584
+00:24:57,650 --> 00:24:59,650
+uma tarefa mais alta a prioridade
+
+585
+00:24:59,650 --> 00:25:01,650
+está à espera
+
+586
+00:25:01,650 --> 00:25:03,650
+ou é
+
+587
+00:25:03,650 --> 00:25:05,650
+impedida de executar
+
+588
+00:25:05,650 --> 00:25:07,650
+devido a uma tarefa de menor prioridade.
+
+589
+00:25:07,650 --> 00:25:09,650
+Portanto,
+
+590
+00:25:09,650 --> 00:25:11,650
+este fenómeno
+
+591
+00:25:11,650 --> 00:25:13,650
+no sistema temporal é bastante critico.
+
+592
+00:25:13,650 --> 00:25:15,650
+Pior ainda,
+
+593
+00:25:15,650 --> 00:25:17,650
+pior ainda
+
+594
+00:25:17,650 --> 00:25:19,650
+quando temos
+
+595
+00:25:19,650 --> 00:25:21,650
+o que?
+
+596
+00:25:21,650 --> 00:25:23,650
+Portanto,
+
+597
+00:25:23,650 --> 00:25:25,650
+este aqui é mais um exemplo
+
+598
+00:25:25,650 --> 00:25:27,650
+mas torna-se pior
+
+599
+00:25:27,650 --> 00:25:29,650
+quando o tempo
+
+600
+00:25:29,650 --> 00:25:31,650
+de deadlock
+
+601
+00:25:31,650 --> 00:25:33,650
+não é
+
+602
+00:25:33,650 --> 00:25:35,650
+previsível,
+
+603
+00:25:35,650 --> 00:25:37,650
+eu não consigo determinar
+
+604
+00:25:37,650 --> 00:25:39,650
+e temos aqui um exemplo.
+
+605
+00:25:39,650 --> 00:25:41,650
+A tarefa 1 é de mais alta a prioridade.
+
+606
+00:25:45,650 --> 00:25:47,650
+A tarefa 3 é
+
+607
+00:25:47,650 --> 00:25:49,650
+de menor prioridade.
+
+608
+00:25:49,650 --> 00:25:51,650
+O que é que acontece aqui?
+
+609
+00:25:51,650 --> 00:25:53,650
+Acontece o seguinte,
+
+610
+00:25:53,650 --> 00:25:55,650
+a tarefa 3 começa a executar,
+
+611
+00:25:55,650 --> 00:25:57,650
+tem aqui
+
+612
+00:25:57,650 --> 00:25:59,650
+o bloqueio.
+
+613
+00:25:59,650 --> 00:26:01,650
+Entretanto, chegou a tarefa 2,
+
+614
+00:26:01,650 --> 00:26:03,650
+executou.
+
+615
+00:26:03,650 --> 00:26:05,650
+Entretanto, chegou a tarefa 1,
+
+616
+00:26:05,650 --> 00:26:07,650
+executou.
+
+617
+00:26:07,650 --> 00:26:09,650
+A tarefa 1
+
+618
+00:26:09,650 --> 00:26:11,650
+precisa do recurso,
+
+619
+00:26:11,650 --> 00:26:13,650
+não pode executar,
+
+620
+00:26:13,650 --> 00:26:15,650
+então, passa a executar a tarefa 2.
+
+621
+00:26:15,650 --> 00:26:17,650
+A tarefa 2
+
+622
+00:26:17,650 --> 00:26:19,650
+executa. Entretanto,
+
+623
+00:26:19,650 --> 00:26:21,650
+como já estava no sistema
+
+624
+00:26:21,650 --> 00:26:23,650
+a tarefa 4, que tem mais prioridade
+
+625
+00:26:23,650 --> 00:26:25,650
+que a 3, vai estar aqui
+
+626
+00:26:25,650 --> 00:26:27,650
+a executar o
+
+627
+00:26:27,650 --> 00:26:29,650
+que for preciso, porque tem mais prioridade
+
+628
+00:26:29,650 --> 00:26:31,650
+que a tarefa 3. Ora,
+
+629
+00:26:31,650 --> 00:26:33,650
+o tempo,
+
+630
+00:26:33,650 --> 00:26:35,650
+o máximo
+
+631
+00:26:35,650 --> 00:26:37,650
+blocking time não é determinístico
+
+632
+00:26:37,650 --> 00:26:39,650
+e isso
+
+633
+00:26:39,650 --> 00:26:41,650
+nos sistemas computacionais
+
+634
+00:26:41,650 --> 00:26:43,650
+de tempo real não pode ser,
+
+635
+00:26:43,650 --> 00:26:45,650
+porque se nós
+
+636
+00:26:45,650 --> 00:26:47,650
+existo, não há nenhuma análica
+
+637
+00:26:47,650 --> 00:26:49,650
+de escalonabilidade
+
+638
+00:26:49,650 --> 00:26:51,650
+que suporte
+
+639
+00:26:51,650 --> 00:26:53,650
+blocking time,
+
+640
+00:26:53,650 --> 00:26:55,650
+portanto,
+
+641
+00:26:55,650 --> 00:26:57,650
+que não seja determinístico, não é possível fazer
+
+642
+00:26:57,650 --> 00:26:59,650
+quantos.
+
+643
+00:26:59,650 --> 00:27:01,650
+Ou então,
+
+644
+00:27:01,650 --> 00:27:03,650
+tínhamos que assumir
+
+645
+00:27:03,650 --> 00:27:05,650
+um blocking time,
+
+646
+00:27:05,650 --> 00:27:07,650
+uma coisa muito grande,
+
+647
+00:27:07,650 --> 00:27:09,650
+que obviamente
+
+648
+00:27:09,650 --> 00:27:11,650
+seria muito pessimista.
+
+649
+00:27:11,650 --> 00:27:15,600
+Então,
+
+650
+00:27:15,600 --> 00:27:17,600
+a inversão de prioridades
+
+651
+00:27:17,600 --> 00:27:19,600
+acontece sempre
+
+652
+00:27:19,600 --> 00:27:21,600
+que temos mecanismos de resource sharing.
+
+653
+00:27:21,600 --> 00:27:23,600
+Bom, não há como
+
+654
+00:27:23,600 --> 00:27:25,600
+evitar isso.
+
+655
+00:27:25,600 --> 00:27:27,600
+Nos sistemas
+
+656
+00:27:27,600 --> 00:27:29,600
+tempo real, tem que se evitar isso
+
+657
+00:27:29,600 --> 00:27:31,600
+e então surgiram
+
+658
+00:27:31,600 --> 00:27:33,600
+vários
+
+659
+00:27:33,600 --> 00:27:35,600
+alguns algoritmos,
+
+660
+00:27:35,600 --> 00:27:37,600
+várias abordagens
+
+661
+00:27:37,600 --> 00:27:39,600
+para impedir
+
+662
+00:27:39,600 --> 00:27:41,600
+a inversão de prioridade.
+
+663
+00:27:43,600 --> 00:27:45,600
+E sobretudo aquela inversão
+
+664
+00:27:45,600 --> 00:27:47,600
+que
+
+665
+00:27:47,600 --> 00:27:49,600
+não é,
+
+666
+00:27:49,600 --> 00:27:51,600
+não se consegue determinar
+
+667
+00:27:51,600 --> 00:27:53,600
+o seu tempo de bloqueio.
+
+668
+00:27:53,600 --> 00:27:55,600
+Ora, existem estes
+
+669
+00:27:55,600 --> 00:27:57,600
+quatro protocolos, embora
+
+670
+00:27:57,600 --> 00:27:59,600
+os dois do meio
+
+671
+00:27:59,600 --> 00:28:01,600
+sejam praticamente,
+
+672
+00:28:01,600 --> 00:28:03,600
+são o mesmo,
+
+673
+00:28:03,600 --> 00:28:05,600
+aliás,
+
+674
+00:28:05,600 --> 00:28:07,600
+este quando apareceu não se chamava original,
+
+675
+00:28:07,600 --> 00:28:09,600
+só passou a ser original
+
+676
+00:28:09,600 --> 00:28:11,600
+quando apareceu o immediate
+
+677
+00:28:11,600 --> 00:28:13,600
+para distinguir entre
+
+678
+00:28:13,600 --> 00:28:15,600
+os dois.
+
+679
+00:28:15,600 --> 00:28:17,600
+Portanto, um tem a ver
+
+680
+00:28:17,600 --> 00:28:19,600
+com a herança de prioridade,
+
+681
+00:28:19,600 --> 00:28:21,600
+outro tem a ver,
+
+682
+00:28:21,600 --> 00:28:23,600
+os dois do meio têm a ver com
+
+683
+00:28:23,600 --> 00:28:25,600
+o ceiling,
+
+684
+00:28:25,600 --> 00:28:27,600
+o teto de prioridade
+
+685
+00:28:27,600 --> 00:28:29,600
+e o terceiro
+
+686
+00:28:29,600 --> 00:28:31,600
+é muito parecido com os dois anteriormente,
+
+687
+00:28:31,600 --> 00:28:33,600
+mas
+
+688
+00:28:33,600 --> 00:28:35,600
+tem a ver com prioridades dinâmicas.
+
+689
+00:28:35,600 --> 00:28:37,600
+Já vamos ver
+
+690
+00:28:37,600 --> 00:28:39,600
+e os dois primeiros, estes aqui
+
+691
+00:28:39,600 --> 00:28:41,600
+têm a ver com prioridades estáticas.
+
+692
+00:28:41,600 --> 00:28:43,600
+Assim como o
+
+693
+00:28:43,600 --> 00:28:45,600
+dirença também,
+
+694
+00:28:45,600 --> 00:28:47,600
+poderia se implementar
+
+695
+00:28:47,600 --> 00:28:49,600
+com prioridades dinâmicas
+
+696
+00:28:49,600 --> 00:28:51,600
+e consegue se implementar,
+
+697
+00:28:51,600 --> 00:28:53,600
+mas é mais fácil de explicar
+
+698
+00:28:53,600 --> 00:28:55,600
+com prioridades
+
+699
+00:28:55,600 --> 00:28:57,600
+estáticas.
+
+700
+00:28:57,600 --> 00:28:59,600
+Então, imaginem aqui
+
+701
+00:28:59,600 --> 00:29:01,600
+este exemplo.
+
+702
+00:29:01,600 --> 00:29:03,600
+Ora,
+
+703
+00:29:03,600 --> 00:29:05,600
+nós temos aqui
+
+704
+00:29:05,600 --> 00:29:07,600
+a tarefa 3, tem menos prioridade
+
+705
+00:29:07,600 --> 00:29:09,600
+que a tarefa 1.
+
+706
+00:29:09,600 --> 00:29:11,600
+Ora, o que é que acontece?
+
+707
+00:29:11,600 --> 00:29:13,600
+A tarefa 3 começa a executar
+
+708
+00:29:13,600 --> 00:29:15,600
+bloqueia o recurso.
+
+709
+00:29:15,600 --> 00:29:17,600
+Então, portanto, chegou a tarefa 2,
+
+710
+00:29:17,600 --> 00:29:19,600
+tem mais prioridade de executa,
+
+711
+00:29:19,600 --> 00:29:21,600
+chegou a tarefa 1,
+
+712
+00:29:21,600 --> 00:29:23,600
+tem mais prioridade de executa,
+
+713
+00:29:23,600 --> 00:29:25,600
+mas a tarefa 1,
+
+714
+00:29:25,600 --> 00:29:27,600
+não está aqui, mas já está
+
+715
+00:29:27,600 --> 00:29:29,600
+à frente, a tarefa 1
+
+716
+00:29:31,600 --> 00:29:33,600
+vai precisar
+
+717
+00:29:33,600 --> 00:29:35,600
+do recurso, portanto,
+
+718
+00:29:35,600 --> 00:29:37,600
+posso já passar para aqui.
+
+719
+00:29:37,600 --> 00:29:39,600
+A tarefa 1 vai precisar do recurso,
+
+720
+00:29:39,600 --> 00:29:41,600
+aquilo que tenha a executar a seguir
+
+721
+00:29:41,600 --> 00:29:43,600
+é o recurso.
+
+722
+00:29:43,600 --> 00:29:45,600
+Então, para não
+
+723
+00:29:45,600 --> 00:29:47,600
+sofrer este bloqueio,
+
+724
+00:29:47,600 --> 00:29:49,600
+a tarefa 3
+
+725
+00:29:49,600 --> 00:29:51,600
+vai executar
+
+726
+00:29:51,600 --> 00:29:53,600
+o recurso com a prioridade
+
+727
+00:29:53,600 --> 00:29:55,600
+da tarefa 1.
+
+728
+00:29:55,600 --> 00:29:57,600
+Por isso é que ela vai estar a executar
+
+729
+00:29:57,600 --> 00:29:59,600
+antes da tarefa 2.
+
+730
+00:29:59,600 --> 00:30:01,600
+Portanto,
+
+731
+00:30:01,600 --> 00:30:03,600
+é isto que é
+
+732
+00:30:03,600 --> 00:30:05,600
+a prioridade.
+
+733
+00:30:05,600 --> 00:30:07,600
+Portanto, o que é que significa?
+
+734
+00:30:07,600 --> 00:30:09,600
+A tarefa que detém
+
+735
+00:30:09,600 --> 00:30:11,600
+o recurso
+
+736
+00:30:11,600 --> 00:30:13,600
+vai ir dar a prioridade
+
+737
+00:30:13,600 --> 00:30:15,600
+de uma tarefa que precisa
+
+738
+00:30:15,600 --> 00:30:17,600
+do recurso
+
+739
+00:30:17,600 --> 00:30:19,600
+e vai executar o recurso
+
+740
+00:30:19,600 --> 00:30:21,600
+tendo a prioridade
+
+741
+00:30:21,600 --> 00:30:23,600
+da tarefa que está bloqueada.
+
+742
+00:30:23,600 --> 00:30:25,600
+Portanto,
+
+743
+00:30:25,600 --> 00:30:27,600
+e desta forma,
+
+744
+00:30:27,600 --> 00:30:29,600
+resolve-se aqui o problema
+
+745
+00:30:29,600 --> 00:30:31,600
+da
+
+746
+00:30:31,600 --> 00:30:33,600
+conversão de prioridade.
+
+747
+00:30:33,600 --> 00:30:35,600
+Embora, aqui há alguns bloqueios,
+
+748
+00:30:35,600 --> 00:30:37,600
+mas resolve-se
+
+749
+00:30:37,600 --> 00:30:41,420
+esse problema.
+
+750
+00:30:41,420 --> 00:30:43,420
+Existe, obviamente,
+
+751
+00:30:43,420 --> 00:30:45,420
+algum bloqueio
+
+752
+00:30:45,420 --> 00:30:47,420
+porque, como vimos,
+
+753
+00:30:47,420 --> 00:30:49,420
+a tarefa de mais alta prioridade
+
+754
+00:30:49,420 --> 00:30:51,420
+foi
+
+755
+00:30:51,420 --> 00:30:53,420
+preemptada,
+
+756
+00:30:53,420 --> 00:30:55,420
+mas para executar
+
+757
+00:30:55,420 --> 00:30:57,420
+aquele...
+
+758
+00:30:57,420 --> 00:30:59,420
+para que a tarefa tinha
+
+759
+00:30:59,420 --> 00:31:01,420
+o recurso terminado.
+
+760
+00:31:01,420 --> 00:31:03,420
+Tenho aqui algum problema
+
+761
+00:31:03,420 --> 00:31:05,420
+que pode levar
+
+762
+00:31:05,420 --> 00:31:07,420
+a discussões do deadlock.
+
+763
+00:31:07,420 --> 00:31:09,420
+Não quero falar muito em detalhes,
+
+764
+00:31:09,420 --> 00:31:11,420
+mas não garante
+
+765
+00:31:11,420 --> 00:31:13,420
+que não exista deadlocks.
+
+766
+00:31:13,420 --> 00:31:15,420
+Portanto,
+
+767
+00:31:15,420 --> 00:31:17,420
+daí não ser um algoritmo,
+
+768
+00:31:17,420 --> 00:31:19,420
+não vou dizer muito usado
+
+769
+00:31:19,420 --> 00:31:21,420
+que o Linux, por exemplo, implementa,
+
+770
+00:31:21,420 --> 00:31:23,420
+mas
+
+771
+00:31:23,420 --> 00:31:25,420
+pronto,
+
+772
+00:31:25,420 --> 00:31:27,420
+não é dos mais deficientes.
+
+773
+00:31:27,420 --> 00:31:29,420
+Talvez seja o mais
+
+774
+00:31:29,420 --> 00:31:31,420
+fácil de implementar,
+
+775
+00:31:31,420 --> 00:31:33,420
+mas não é dos melhores
+
+776
+00:31:33,420 --> 00:31:35,420
+algoritmos.
+
+777
+00:31:35,420 --> 00:31:37,420
+O melhor algoritmo
+
+778
+00:31:37,420 --> 00:31:39,420
+é o OCPP.
+
+779
+00:31:39,420 --> 00:31:41,420
+Portanto, o que
+
+780
+00:31:41,420 --> 00:31:43,420
+é que, no fundo, é uma expansão
+
+781
+00:31:43,420 --> 00:31:45,420
+do...
+
+782
+00:31:45,420 --> 00:31:47,420
+do...
+
+783
+00:31:47,420 --> 00:31:49,420
+do PIP,
+
+784
+00:31:49,420 --> 00:31:51,420
+do protocolo de herança?
+
+785
+00:31:51,420 --> 00:31:53,420
+Em que o que é que ele faz?
+
+786
+00:31:53,420 --> 00:31:55,420
+Faz o seguinte,
+
+787
+00:31:55,420 --> 00:31:57,420
+antes,
+
+788
+00:31:57,420 --> 00:31:59,420
+do set-up
+
+789
+00:31:59,420 --> 00:32:01,420
+do sistema
+
+790
+00:32:01,420 --> 00:32:03,420
+é feito
+
+791
+00:32:03,420 --> 00:32:05,420
+uma análise
+
+792
+00:32:05,420 --> 00:32:07,420
+ao sistema
+
+793
+00:32:07,420 --> 00:32:09,420
+e vamos verificar
+
+794
+00:32:09,420 --> 00:32:11,420
+que tarefas
+
+795
+00:32:11,420 --> 00:32:13,420
+é que precisam
+
+796
+00:32:13,420 --> 00:32:15,420
+usar aquele recurso.
+
+797
+00:32:15,420 --> 00:32:17,420
+Portanto, que tarefas
+
+798
+00:32:17,420 --> 00:32:19,420
+executam aquela secção crítica,
+
+799
+00:32:19,420 --> 00:32:21,420
+aquele recurso.
+
+800
+00:32:21,420 --> 00:32:23,420
+E vai ser atribuído
+
+801
+00:32:23,420 --> 00:32:25,420
+a essa tarefa
+
+802
+00:32:25,420 --> 00:32:27,420
+a prioridade da maior.
+
+803
+00:32:29,420 --> 00:32:31,420
+Vai ser atribuída
+
+804
+00:32:31,420 --> 00:32:33,420
+a esse recurso
+
+805
+00:32:33,420 --> 00:32:35,420
+a prioridade
+
+806
+00:32:35,420 --> 00:32:37,420
+da tarefa de mais alta prioridade
+
+807
+00:32:37,420 --> 00:32:39,420
+que executa essa recurso.
+
+808
+00:32:39,420 --> 00:32:41,420
+Portanto, voltando aqui
+
+809
+00:32:41,420 --> 00:32:43,420
+atrás, por exemplo, neste caso
+
+810
+00:32:43,420 --> 00:32:45,420
+o recurso B
+
+811
+00:32:47,420 --> 00:32:49,420
+teria a prioridade da tarefa 1.
+
+812
+00:32:49,420 --> 00:32:51,420
+Por que? Porque ela é...
+
+813
+00:32:51,420 --> 00:32:53,420
+a tarefa 1 é a tarefa
+
+814
+00:32:53,420 --> 00:32:55,420
+de mais alta prioridade
+
+815
+00:32:55,420 --> 00:32:57,420
+que executa o recurso B.
+
+816
+00:32:57,420 --> 00:32:59,420
+O recurso Q
+
+817
+00:32:59,420 --> 00:33:01,420
+teria a prioridade do extra Q.
+
+818
+00:33:01,420 --> 00:33:03,420
+Porque é a tarefa de mais alta prioridade
+
+819
+00:33:03,420 --> 00:33:05,420
+que executa...
+
+820
+00:33:09,420 --> 00:33:11,420
+que executa o recurso Q.
+
+821
+00:33:11,420 --> 00:33:13,420
+Ora,
+
+822
+00:33:13,420 --> 00:33:15,420
+então, o princípio
+
+823
+00:33:15,420 --> 00:33:17,420
+em este, que é
+
+824
+00:33:17,420 --> 00:33:19,420
+quando
+
+825
+00:33:19,420 --> 00:33:21,420
+a tarefa
+
+826
+00:33:21,420 --> 00:33:23,420
+uma tarefa vai...
+
+827
+00:33:23,420 --> 00:33:25,420
+vai executar
+
+828
+00:33:25,420 --> 00:33:27,420
+esse recurso
+
+829
+00:33:27,420 --> 00:33:29,420
+se ele estiver livre.
+
+830
+00:33:29,420 --> 00:33:31,420
+Se estiver livre, executa.
+
+831
+00:33:31,420 --> 00:33:33,420
+Se não,
+
+832
+00:33:33,420 --> 00:33:35,420
+é usado uma variável
+
+833
+00:33:35,420 --> 00:33:37,420
+ao nível de sistema
+
+834
+00:33:37,420 --> 00:33:39,420
+em que tem
+
+835
+00:33:39,420 --> 00:33:42,770
+qual é
+
+836
+00:33:42,770 --> 00:33:44,770
+o...
+
+837
+00:33:44,770 --> 00:33:46,770
+qual é a prioridade
+
+838
+00:33:46,770 --> 00:33:48,770
+máxima
+
+839
+00:33:48,770 --> 00:33:50,770
+qual é a prioridade máxima
+
+840
+00:33:50,770 --> 00:33:52,770
+de recursos que estão a ser usados.
+
+841
+00:33:52,770 --> 00:33:54,770
+Isto é.
+
+842
+00:33:54,770 --> 00:33:56,770
+Vamos imaginar que
+
+843
+00:33:56,770 --> 00:33:58,770
+existe uma tarefa
+
+844
+00:33:58,770 --> 00:34:00,770
+que está a usar o recurso com mais alta prioridade.
+
+845
+00:34:00,770 --> 00:34:02,770
+Se houver uma tarefa
+
+846
+00:34:02,770 --> 00:34:04,770
+de menor prioridade
+
+847
+00:34:04,770 --> 00:34:06,770
+que precise desse recurso
+
+848
+00:34:06,770 --> 00:34:08,770
+não vai conseguir
+
+849
+00:34:08,770 --> 00:34:10,770
+usar. Por que?
+
+850
+00:34:10,770 --> 00:34:12,770
+Porque o...
+
+851
+00:34:12,770 --> 00:34:14,770
+digamos, o sailing do sistema
+
+852
+00:34:14,770 --> 00:34:16,770
+está com um nível superior.
+
+853
+00:34:16,770 --> 00:34:18,770
+A ideia
+
+854
+00:34:18,770 --> 00:34:20,770
+disto é
+
+855
+00:34:20,770 --> 00:34:22,770
+evitar os...
+
+856
+00:34:22,770 --> 00:34:24,770
+portanto,
+
+857
+00:34:24,770 --> 00:34:26,770
+esse sailing,
+
+858
+00:34:26,770 --> 00:34:28,770
+essa variável vai conter
+
+859
+00:34:28,770 --> 00:34:30,770
+o, digamos, o nível
+
+860
+00:34:30,770 --> 00:34:32,770
+mais alto daquilo que está a ser
+
+861
+00:34:32,770 --> 00:34:34,770
+executado naquele instante.
+
+862
+00:34:34,770 --> 00:34:36,770
+Podemos ter vários recursos
+
+863
+00:34:36,770 --> 00:34:38,770
+bloqueados em cima do plano
+
+864
+00:34:38,770 --> 00:34:40,770
+e ele
+
+865
+00:34:40,770 --> 00:34:42,770
+tem essa indicação disto.
+
+866
+00:34:42,770 --> 00:34:44,770
+Neste momento, o nível
+
+867
+00:34:44,770 --> 00:34:46,770
+vamos chamar assim, o teto de
+
+868
+00:34:46,770 --> 00:34:48,770
+bloqueia isto. Então, a tarefa
+
+869
+00:34:48,770 --> 00:34:50,770
+se tiver uma prioridade
+
+870
+00:34:50,770 --> 00:34:52,770
+mais baixa, não consegue
+
+871
+00:34:52,770 --> 00:34:54,770
+pegar no recurso.
+
+872
+00:34:54,770 --> 00:34:56,770
+Se tiver uma prioridade
+
+873
+00:34:56,770 --> 00:34:58,770
+mais alta, consegue pegar no recurso.
+
+874
+00:34:58,770 --> 00:35:00,770
+Mas se for mais...
+
+875
+00:35:00,770 --> 00:35:02,770
+portanto, desta forma, que se tenho
+
+876
+00:35:02,770 --> 00:35:04,770
+uma prioridade mais baixa, não vai
+
+877
+00:35:04,770 --> 00:35:06,770
+provocar o bloqueio. Por que?
+
+878
+00:35:06,770 --> 00:35:08,770
+Porque não consegue pegar no recurso.
+
+879
+00:35:08,770 --> 00:35:10,770
+Nenhum...
+
+880
+00:35:10,770 --> 00:35:12,770
+portanto, não consegue fazer
+
+881
+00:35:12,770 --> 00:35:14,770
+com tal
+
+882
+00:35:14,770 --> 00:35:16,770
+que não...
+
+883
+00:35:16,770 --> 00:35:18,770
+não fica
+
+884
+00:35:18,770 --> 00:35:20,770
+e não há possibilidade de
+
+885
+00:35:20,770 --> 00:35:22,770
+dedo-loques, nem por lokeis de uma
+
+886
+00:35:22,770 --> 00:35:24,770
+tarefa ter um recurso
+
+887
+00:35:24,770 --> 00:35:26,770
+que outra mais alta
+
+888
+00:35:26,770 --> 00:35:28,770
+prioridade
+
+889
+00:35:28,770 --> 00:35:30,770
+tem. Qual é o problema disto?
+
+890
+00:35:30,770 --> 00:35:32,770
+Por isso é que é uma extensão do PIB.
+
+891
+00:35:32,770 --> 00:35:34,770
+É que este é
+
+892
+00:35:34,770 --> 00:35:36,770
+a altura em que se vai fazer o loco
+
+893
+00:35:36,770 --> 00:35:38,770
+à tarefa.
+
+894
+00:35:38,770 --> 00:35:40,770
+Este é como se fosse uma herança.
+
+895
+00:35:40,770 --> 00:35:42,770
+Este cheque é feito nessa altura.
+
+896
+00:35:42,770 --> 00:35:44,770
+A diferença
+
+897
+00:35:44,770 --> 00:35:46,770
+para o
+
+898
+00:35:46,770 --> 00:35:48,770
+imediate
+
+899
+00:35:48,770 --> 00:35:50,770
+é que o imediate faz a mesma coisa,
+
+900
+00:35:50,770 --> 00:35:52,770
+atribui a cada recurso
+
+901
+00:35:52,770 --> 00:35:54,770
+um teto de prioridade
+
+902
+00:35:54,770 --> 00:35:56,770
+e
+
+903
+00:35:56,770 --> 00:35:58,770
+independentemente
+
+904
+00:35:58,770 --> 00:36:00,770
+de
+
+905
+00:36:00,770 --> 00:36:02,770
+estar ou não estar
+
+906
+00:36:02,770 --> 00:36:04,770
+bloqueado,
+
+907
+00:36:04,770 --> 00:36:06,770
+o que acontece
+
+908
+00:36:06,770 --> 00:36:08,770
+é que as tarefas
+
+909
+00:36:08,770 --> 00:36:10,770
+herdam a prioridade
+
+910
+00:36:10,770 --> 00:36:12,770
+máxima
+
+911
+00:36:12,770 --> 00:36:14,770
+de um determinado recurso.
+
+912
+00:36:14,770 --> 00:36:16,770
+Isto é.
+
+913
+00:36:16,770 --> 00:36:18,770
+Quando a tarefa, por isso é que é imediate,
+
+914
+00:36:18,770 --> 00:36:20,770
+o outro não é
+
+915
+00:36:20,770 --> 00:36:22,770
+imediate, o outro depende
+
+916
+00:36:22,770 --> 00:36:24,770
+do instante
+
+917
+00:36:24,770 --> 00:36:26,770
+que vai cantar ao ter
+
+918
+00:36:26,770 --> 00:36:28,770
+o recurso. Aqui não.
+
+919
+00:36:28,770 --> 00:36:30,770
+Aqui é...
+
+920
+00:36:30,770 --> 00:36:32,770
+Assim que começa a executar o recurso
+
+921
+00:36:32,770 --> 00:36:34,770
+vai executar com a prioridade
+
+922
+00:36:34,770 --> 00:36:36,770
+máxima associada a esse recurso.
+
+923
+00:36:36,770 --> 00:36:38,770
+Por isso é que vocês
+
+924
+00:36:38,770 --> 00:36:40,770
+veem isto aqui. A tarefa 3
+
+925
+00:36:40,770 --> 00:36:42,770
+é que tem menos prioridade
+
+926
+00:36:42,770 --> 00:36:44,770
+mas como se fosse
+
+927
+00:36:44,770 --> 00:36:46,770
+executar o recurso B
+
+928
+00:36:46,770 --> 00:36:48,770
+e o recurso B tenha prioridade
+
+929
+00:36:48,770 --> 00:36:50,770
+da tarefa 1
+
+930
+00:36:50,770 --> 00:36:52,770
+do que eu inclusive
+
+931
+00:36:52,770 --> 00:36:56,780
+é a tarefa 1
+
+932
+00:36:56,780 --> 00:36:58,780
+até libertar o recurso.
+
+933
+00:36:58,780 --> 00:37:00,780
+Foi libertar o recurso
+
+934
+00:37:00,780 --> 00:37:02,780
+executar a tarefa 1
+
+935
+00:37:02,780 --> 00:37:04,780
+porque isto é só durante
+
+936
+00:37:04,780 --> 00:37:06,780
+a
+
+937
+00:37:06,780 --> 00:37:08,780
+execução do recurso.
+
+938
+00:37:08,780 --> 00:37:10,780
+Isto é.
+
+939
+00:37:10,780 --> 00:37:12,780
+Ora
+
+940
+00:37:12,780 --> 00:37:14,780
+o SRP
+
+941
+00:37:14,780 --> 00:37:16,780
+é muito
+
+942
+00:37:16,780 --> 00:37:18,780
+preciso
+
+943
+00:37:18,780 --> 00:37:20,780
+com o...
+
+944
+00:37:20,780 --> 00:37:22,780
+Isto está mal, não é?
+
+945
+00:37:22,780 --> 00:37:24,780
+A PCP porque
+
+946
+00:37:24,780 --> 00:37:26,780
+às vezes aparece esta designação
+
+947
+00:37:26,780 --> 00:37:28,780
+sem provisão.
+
+948
+00:37:28,780 --> 00:37:30,780
+Com o OCP, com o ICPP
+
+949
+00:37:30,780 --> 00:37:32,780
+é muito
+
+950
+00:37:32,780 --> 00:37:34,780
+preciso com isso
+
+951
+00:37:34,780 --> 00:37:36,780
+só que para
+
+952
+00:37:36,780 --> 00:37:38,780
+sistemas com prioridades
+
+953
+00:37:38,780 --> 00:37:40,780
+dinâmicas.
+
+954
+00:37:40,780 --> 00:37:42,780
+O...
+
+955
+00:37:42,780 --> 00:37:44,780
+Isto aqui está mal
+
+956
+00:37:44,780 --> 00:37:46,780
+tenho que mudar isto.
+
+957
+00:37:46,780 --> 00:37:48,780
+O OCPP
+
+958
+00:37:48,780 --> 00:37:50,780
+e o
+
+959
+00:37:50,780 --> 00:37:52,780
+ICPP
+
+960
+00:37:52,780 --> 00:37:56,610
+funcionam com
+
+961
+00:37:56,610 --> 00:37:59,860
+prioridades estáticas.
+
+962
+00:37:59,860 --> 00:38:01,860
+Ora, por exemplo, com o reito
+
+963
+00:38:01,860 --> 00:38:03,860
+monotônico, o deadline monotônico
+
+964
+00:38:03,860 --> 00:38:05,860
+coisas assim de gente.
+
+965
+00:38:05,860 --> 00:38:07,860
+Não funcionam com
+
+966
+00:38:07,860 --> 00:38:09,860
+prioridades dinâmicas, por exemplo, como
+
+967
+00:38:09,860 --> 00:38:11,860
+é da época a prioridade é
+
+968
+00:38:11,860 --> 00:38:13,860
+definida pelo deadline absoluto.
+
+969
+00:38:13,860 --> 00:38:15,860
+Então,
+
+970
+00:38:15,860 --> 00:38:17,860
+para resolver este problema
+
+971
+00:38:17,860 --> 00:38:19,860
+neste protocolo
+
+972
+00:38:19,860 --> 00:38:21,860
+que segue mais ou menos os mesmos
+
+973
+00:38:21,860 --> 00:38:23,860
+princípios que
+
+974
+00:38:23,860 --> 00:38:25,860
+são idênticos
+
+975
+00:38:25,860 --> 00:38:27,860
+define aquilo que se diz
+
+976
+00:38:27,860 --> 00:38:29,860
+na de preemption level.
+
+977
+00:38:29,860 --> 00:38:31,860
+Isto é.
+
+978
+00:38:31,860 --> 00:38:33,860
+Vai analisar
+
+979
+00:38:33,860 --> 00:38:35,860
+as tarefas e vai
+
+980
+00:38:35,860 --> 00:38:37,860
+definir o nível de preemption
+
+981
+00:38:37,860 --> 00:38:39,860
+que no fundo vai funcionar
+
+982
+00:38:39,860 --> 00:38:41,860
+como sempre uma prioridade
+
+983
+00:38:41,860 --> 00:38:43,860
+dentre as tarefas que
+
+984
+00:38:43,860 --> 00:38:45,860
+estão ativas naquele instante.
+
+985
+00:38:45,860 --> 00:38:47,860
+Portanto, uma vez que
+
+986
+00:38:47,860 --> 00:38:49,860
+com os deadline absolutos
+
+987
+00:38:49,860 --> 00:38:51,860
+não é fácil
+
+988
+00:38:51,860 --> 00:38:53,860
+definir
+
+989
+00:38:53,860 --> 00:38:55,860
+a prioridade baseada nisso
+
+990
+00:38:55,860 --> 00:38:57,860
+então, o
+
+991
+00:38:57,860 --> 00:38:59,860
+esta abordagem e aquilo que faz
+
+992
+00:38:59,860 --> 00:39:01,860
+é introduzir este
+
+993
+00:39:01,860 --> 00:39:03,860
+preemption level
+
+994
+00:39:03,860 --> 00:39:05,860
+e tenham em atenção
+
+995
+00:39:05,860 --> 00:39:07,860
+os deadline absolutos.
+
+996
+00:39:07,860 --> 00:39:09,860
+Portanto, por isso é que isto
+
+997
+00:39:09,860 --> 00:39:11,860
+é aplicável
+
+998
+00:39:11,860 --> 00:39:13,860
+querem prioridades fixas
+
+999
+00:39:13,860 --> 00:39:15,860
+querem prioridades dinâmicas
+
+1000
+00:39:15,860 --> 00:39:17,860
+enquanto os anteriores
+
+1001
+00:39:17,860 --> 00:39:19,860
+é só em prioridades
+
+1002
+00:39:19,860 --> 00:39:21,860
+fixas.
+
+1003
+00:39:21,860 --> 00:39:23,860
+Olha bem,
+
+1004
+00:39:23,860 --> 00:39:25,860
+o Linux
+
+1005
+00:39:25,860 --> 00:39:27,860
+o Linux
+
+1006
+00:39:27,860 --> 00:39:29,860
+implementa
+
+1007
+00:39:29,860 --> 00:39:31,860
+uma
+
+1008
+00:39:31,860 --> 00:39:33,860
+escala de
+
+1009
+00:39:33,860 --> 00:39:35,860
+algoritmos de
+
+1010
+00:39:35,860 --> 00:39:37,860
+esclonamento
+
+1011
+00:39:37,860 --> 00:39:39,860
+implementa aqui o schedule
+
+1012
+00:39:39,860 --> 00:39:41,860
+deadline e o schedule
+
+1013
+00:39:41,860 --> 00:39:43,860
+FIFO.
+
+1014
+00:39:43,860 --> 00:39:45,860
+O schedule deadline para
+
+1015
+00:39:45,860 --> 00:39:47,860
+prioridades dinâmicas
+
+1016
+00:39:47,860 --> 00:39:49,860
+o schedule FIFO
+
+1017
+00:39:49,860 --> 00:39:51,860
+para prioridades estáticas
+
+1018
+00:39:51,860 --> 00:39:53,860
+não necessariamente baseados
+
+1019
+00:39:53,860 --> 00:39:55,860
+no deadline absoluto
+
+1020
+00:39:55,860 --> 00:39:57,860
+no deadline relativo
+
+1021
+00:39:57,860 --> 00:39:59,860
+mas usando uma escala
+
+1022
+00:39:59,860 --> 00:40:01,860
+e obviamente
+
+1023
+00:40:01,860 --> 00:40:03,860
+que
+
+1024
+00:40:03,860 --> 00:40:05,860
+tendo
+
+1025
+00:40:05,860 --> 00:40:07,860
+tendo usando
+
+1026
+00:40:07,860 --> 00:40:09,860
+recursos partilhados
+
+1027
+00:40:09,860 --> 00:40:11,860
+obviamente que existe
+
+1028
+00:40:11,860 --> 00:40:13,860
+existe
+
+1029
+00:40:13,860 --> 00:40:15,860
+inversão de
+
+1030
+00:40:15,860 --> 00:40:17,860
+prioridades, certo?
+
+1031
+00:40:17,860 --> 00:40:19,860
+Com tudo
+
+1032
+00:40:19,860 --> 00:40:21,860
+o
+
+1033
+00:40:21,860 --> 00:40:23,860
+o Linux
+
+1034
+00:40:23,860 --> 00:40:25,860
+nesta já me recordo
+
+1035
+00:40:25,860 --> 00:40:27,860
+qual é que foi
+
+1036
+00:40:27,860 --> 00:40:29,860
+implementado
+
+1037
+00:40:29,860 --> 00:40:31,860
+implementa
+
+1038
+00:40:31,860 --> 00:40:33,860
+uma herança de prioridade
+
+1039
+00:40:33,860 --> 00:40:35,860
+portanto um
+
+1040
+00:40:35,860 --> 00:40:37,860
+para resolver
+
+1041
+00:40:37,860 --> 00:40:39,860
+alguns problemas
+
+1042
+00:40:39,860 --> 00:40:41,860
+mas o protocol de herança de prioridade
+
+1043
+00:40:41,860 --> 00:40:43,860
+não é dos mais eficientes
+
+1044
+00:40:43,860 --> 00:40:45,860
+é dos mais fáceis
+
+1045
+00:40:45,860 --> 00:40:47,860
+de implementar
+
+1046
+00:40:47,860 --> 00:40:49,860
+mas não é dos
+
+1047
+00:40:49,860 --> 00:40:51,860
+mais eficientes
+
+1048
+00:40:51,860 --> 00:40:53,860
+e ele implementa isso.
+
+1049
+00:40:53,860 --> 00:40:55,860
+Com tudo
+
+1050
+00:40:55,860 --> 00:40:57,860
+o Linux, nomeadamente
+
+1051
+00:40:57,860 --> 00:40:59,860
+com o schedule deadline
+
+1052
+00:40:59,860 --> 00:41:01,860
+ou com o schedule FIFO
+
+1053
+00:41:01,860 --> 00:41:03,860
+temos aqueles problemas que vimos há pouco
+
+1054
+00:41:03,860 --> 00:41:05,860
+portanto pode haver
+
+1055
+00:41:05,860 --> 00:41:07,860
+bloqueio das tarefas
+
+1056
+00:41:07,860 --> 00:41:09,860
+de mais alta prioridade
+
+1057
+00:41:09,860 --> 00:41:11,860
+devido à execução
+
+1058
+00:41:11,860 --> 00:41:13,860
+a forma como os recursos são
+
+1059
+00:41:13,860 --> 00:41:15,860
+partilhados.
+
+1060
+00:41:15,860 --> 00:41:17,860
+Ora bem
+
+1061
+00:41:17,860 --> 00:41:19,860
+sistemas multiprocessadores
+
+1062
+00:41:19,860 --> 00:41:21,860
+sistemas multiprocessadores
+
+1063
+00:41:21,860 --> 00:41:23,860
+não são mais nem menos
+
+1064
+00:41:23,860 --> 00:41:25,860
+do que a junção
+
+1065
+00:41:25,860 --> 00:41:27,860
+aliás, os sistemas multiprocessadores
+
+1066
+00:41:27,860 --> 00:41:29,860
+surgiram
+
+1067
+00:41:29,860 --> 00:41:31,860
+porque
+
+1068
+00:41:31,860 --> 00:41:33,860
+falhou
+
+1069
+00:41:33,860 --> 00:41:35,860
+o projeto
+
+1070
+00:41:35,860 --> 00:41:37,860
+que permitiria ter
+
+1071
+00:41:37,860 --> 00:41:39,860
+processadores a 10 GHz
+
+1072
+00:41:39,860 --> 00:41:41,860
+e por exemplo
+
+1073
+00:41:41,860 --> 00:41:43,860
+isso falhou completamente
+
+1074
+00:41:43,860 --> 00:41:45,860
+aliás, na altura
+
+1075
+00:41:45,860 --> 00:41:47,860
+a EMD já tinha dito que ia falhar
+
+1076
+00:41:47,860 --> 00:41:49,860
+mas então não aceitou
+
+1077
+00:41:49,860 --> 00:41:51,860
+e então ainda investiu
+
+1078
+00:41:51,860 --> 00:41:53,860
+muito forte a criar
+
+1079
+00:41:53,860 --> 00:41:55,860
+processadores
+
+1080
+00:41:55,860 --> 00:41:57,860
+com 10 GHz
+
+1081
+00:41:57,860 --> 00:41:59,860
+e coisas dos anos
+
+1082
+00:41:59,860 --> 00:42:01,860
+só que aquilo era preciso um frigorífico
+
+1083
+00:42:01,860 --> 00:42:03,860
+para refecer
+
+1084
+00:42:03,860 --> 00:42:05,860
+e mesmo assim
+
+1085
+00:42:05,860 --> 00:42:07,860
+não era eficaz
+
+1086
+00:42:07,860 --> 00:42:09,860
+e então resolveram
+
+1087
+00:42:09,860 --> 00:42:11,860
+criar os tais sistemas multi-core
+
+1088
+00:42:11,860 --> 00:42:13,860
+mas os sistemas multi-core
+
+1089
+00:42:13,860 --> 00:42:15,860
+portanto que no fundo consistem
+
+1090
+00:42:15,860 --> 00:42:17,860
+vários processadores no mesmo chip
+
+1091
+00:42:17,860 --> 00:42:19,860
+podem ser
+
+1092
+00:42:19,860 --> 00:42:21,860
+existem sistemas e a maior parte
+
+1093
+00:42:21,860 --> 00:42:23,860
+deles ou uma grande parte deles
+
+1094
+00:42:23,860 --> 00:42:25,860
+sobretudo aqueles mais
+
+1095
+00:42:25,860 --> 00:42:27,860
+de propósito escenérico
+
+1096
+00:42:27,860 --> 00:42:29,860
+são idênticos isto é
+
+1097
+00:42:29,860 --> 00:42:31,860
+os processadores têm as mesmas características
+
+1098
+00:42:31,860 --> 00:42:33,860
+e se isto tem algumas abordagens
+
+1099
+00:42:33,860 --> 00:42:35,860
+para
+
+1100
+00:42:35,860 --> 00:42:37,860
+situações mais específicas
+
+1101
+00:42:37,860 --> 00:42:39,860
+em que são heterogênicos
+
+1102
+00:42:39,860 --> 00:42:41,860
+portanto existem
+
+1103
+00:42:41,860 --> 00:42:43,860
+processadores com diferentes
+
+1104
+00:42:43,860 --> 00:42:45,860
+características
+
+1105
+00:42:45,860 --> 00:42:47,860
+e temos também
+
+1106
+00:42:47,860 --> 00:42:56,580
+aqui
+
+1107
+00:42:56,580 --> 00:42:58,580
+os destinos
+
+1108
+00:42:58,580 --> 00:43:00,580
+mas na maior parte dos casos
+
+1109
+00:43:00,580 --> 00:43:04,500
+o que nós temos são os sistemas idênticos
+
+1110
+00:43:04,500 --> 00:43:06,500
+e qual é o problema
+
+1111
+00:43:06,500 --> 00:43:08,500
+dos sistemas multi-core
+
+1112
+00:43:08,500 --> 00:43:10,500
+um problema que depois tentaram
+
+1113
+00:43:10,500 --> 00:43:12,500
+remediado
+
+1114
+00:43:12,500 --> 00:43:14,500
+mas no início
+
+1115
+00:43:14,500 --> 00:43:16,500
+a coisa não estava a correr
+
+1116
+00:43:16,500 --> 00:43:18,500
+assim tão bem
+
+1117
+00:43:18,500 --> 00:43:20,500
+que é eu até posso ter capacidade
+
+1118
+00:43:20,500 --> 00:43:22,500
+de processamento
+
+1119
+00:43:22,500 --> 00:43:24,500
+mas
+
+1120
+00:43:24,500 --> 00:43:26,500
+eu não sei se vocês sabem isso
+
+1121
+00:43:26,500 --> 00:43:28,500
+não sabem mas pronto
+
+1122
+00:43:28,500 --> 00:43:30,500
+os processadores
+
+1123
+00:43:30,500 --> 00:43:32,500
+para funcionar
+
+1124
+00:43:32,500 --> 00:43:34,500
+tem que colocar as instruções
+
+1125
+00:43:34,500 --> 00:43:36,500
+na memória
+
+1126
+00:43:36,500 --> 00:43:38,500
+ora e as instruções
+
+1127
+00:43:38,500 --> 00:43:40,500
+o código tem que viajar
+
+1128
+00:43:40,500 --> 00:43:42,500
+a memória até os registros
+
+1129
+00:43:42,500 --> 00:43:44,500
+do processador
+
+1130
+00:43:44,500 --> 00:43:46,500
+ora qual é que é o problema
+
+1131
+00:43:46,500 --> 00:43:48,500
+o problema é que na maior parte
+
+1132
+00:43:48,500 --> 00:43:50,500
+dos casos nós temos
+
+1133
+00:43:50,500 --> 00:43:52,500
+um barramento partilhado
+
+1134
+00:43:52,500 --> 00:43:54,500
+portanto eu posso ter vários processadores
+
+1135
+00:43:54,500 --> 00:43:56,500
+mas
+
+1136
+00:43:56,500 --> 00:43:58,500
+sempre que a ser
+
+1137
+00:43:58,500 --> 00:44:00,500
+que um quer acender a memória
+
+1138
+00:44:00,500 --> 00:44:02,500
+os outros não podem
+
+1139
+00:44:02,500 --> 00:44:04,500
+porque o vargamento
+
+1140
+00:44:04,500 --> 00:44:06,500
+não são mais nem menos do que linhas
+
+1141
+00:44:06,500 --> 00:44:08,500
+onde são codificados
+
+1142
+00:44:08,500 --> 00:44:10,500
+os bites usados
+
+1143
+00:44:10,500 --> 00:44:12,500
+portanto
+
+1144
+00:44:12,500 --> 00:44:14,500
+se está um a usar
+
+1145
+00:44:14,500 --> 00:44:16,500
+não pode usar-o
+
+1146
+00:44:16,500 --> 00:44:18,500
+embora na altura
+
+1147
+00:44:18,500 --> 00:44:35,950
+uma outra
+
+1148
+00:44:35,950 --> 00:44:37,950
+abordagem que também surgiu
+
+1149
+00:44:37,950 --> 00:44:39,950
+tem a ver com os sistemas
+
+1150
+00:44:39,950 --> 00:44:41,950
+em que a memória é distribuída
+
+1151
+00:44:41,950 --> 00:44:43,950
+em que no fundo
+
+1152
+00:44:43,950 --> 00:44:45,950
+é como se tivesse
+
+1153
+00:44:45,950 --> 00:44:47,950
+n ou m
+
+1154
+00:44:47,950 --> 00:44:49,950
+computadores individuais
+
+1155
+00:44:49,950 --> 00:44:51,950
+portanto cada
+
+1156
+00:44:51,950 --> 00:44:53,950
+computador
+
+1157
+00:44:53,950 --> 00:44:55,950
+tem o seu bloco de memória
+
+1158
+00:44:55,950 --> 00:44:57,950
+ligado pelo seu vargamento
+
+1159
+00:44:57,950 --> 00:44:59,950
+etc etc
+
+1160
+00:44:59,950 --> 00:45:01,950
+obviamente que quando temos
+
+1161
+00:45:01,950 --> 00:45:03,950
+isto não é porque
+
+1162
+00:45:03,950 --> 00:45:05,950
+no multicore
+
+1163
+00:45:05,950 --> 00:45:07,950
+pode haver necessidade de ver
+
+1164
+00:45:07,950 --> 00:45:09,950
+alguma comunicação entre eles
+
+1165
+00:45:09,950 --> 00:45:11,950
+então precisamos sempre
+
+1166
+00:45:11,950 --> 00:45:13,950
+de ter um mecanismo que permita
+
+1167
+00:45:13,950 --> 00:45:15,950
+comunicar entre eles
+
+1168
+00:45:15,950 --> 00:45:20,580
+isso
+
+1169
+00:45:20,580 --> 00:45:22,580
+por isso é que hoje em dia
+
+1170
+00:45:22,580 --> 00:45:24,580
+e ainda hoje nos sistemas
+
+1171
+00:45:24,580 --> 00:45:26,580
+críticos
+
+1172
+00:45:26,580 --> 00:45:28,580
+os multiplicadores ainda são usados
+
+1173
+00:45:28,580 --> 00:45:30,580
+com algum critério
+
+1174
+00:45:30,580 --> 00:45:32,580
+não é assinhador
+
+1175
+00:45:32,580 --> 00:45:34,580
+porque
+
+1176
+00:45:34,580 --> 00:45:36,580
+quando se falava disto dos multiplicadores
+
+1177
+00:45:36,580 --> 00:45:38,580
+não foi quando eles surgiram
+
+1178
+00:45:38,580 --> 00:45:40,580
+assim em força
+
+1179
+00:45:40,580 --> 00:45:42,580
+toda a vida se falou sobre eles
+
+1180
+00:45:42,580 --> 00:45:44,580
+o inventor
+
+1181
+00:45:44,580 --> 00:45:46,580
+do reto manotónico e do edf
+
+1182
+00:45:46,580 --> 00:45:48,580
+já dizia que
+
+1183
+00:45:48,580 --> 00:45:50,580
+não era fácil
+
+1184
+00:45:50,580 --> 00:45:52,580
+não era fácil
+
+1185
+00:45:52,580 --> 00:45:54,580
+transpor
+
+1186
+00:45:54,580 --> 00:45:56,580
+a teoria associada ao
+
+1187
+00:45:56,580 --> 00:45:58,580
+sistemas uniprocessador para os sistemas
+
+1188
+00:45:58,580 --> 00:46:00,580
+multiplicador
+
+1189
+00:46:00,580 --> 00:46:02,580
+basta uma coisa muito simples
+
+1190
+00:46:02,580 --> 00:46:04,580
+isto é a mesma coisa que nós
+
+1191
+00:46:04,580 --> 00:46:06,580
+temos dois religios
+
+1192
+00:46:06,580 --> 00:46:08,580
+se eles não estiverem certos
+
+1193
+00:46:08,580 --> 00:46:10,580
+em qual é que confiamos
+
+1194
+00:46:10,580 --> 00:46:12,580
+e aqui um pouquinho isso isto é
+
+1195
+00:46:12,580 --> 00:46:14,580
+o facto de ter a decidir
+
+1196
+00:46:14,580 --> 00:46:16,580
+entre dois ou mais
+
+1197
+00:46:16,580 --> 00:46:18,580
+já adiciona alguma
+
+1198
+00:46:18,580 --> 00:46:20,580
+complexidade ao que é que seja
+
+1199
+00:46:20,580 --> 00:46:22,580
+portanto vocês
+
+1200
+00:46:22,580 --> 00:46:24,580
+exatamente na vida já tiveram que escolher
+
+1201
+00:46:24,580 --> 00:46:26,580
+entre partes iguais
+
+1202
+00:46:26,580 --> 00:46:28,580
+portanto entre coisas
+
+1203
+00:46:28,580 --> 00:46:30,580
+iguais
+
+1204
+00:46:30,580 --> 00:46:32,580
+e
+
+1205
+00:46:32,580 --> 00:46:34,580
+às vezes diz olha
+
+1206
+00:46:34,580 --> 00:46:36,580
+porque é que escolhas tiveram que pensar
+
+1207
+00:46:36,580 --> 00:46:38,580
+pelo menos tiveram que usar algo
+
+1208
+00:46:38,580 --> 00:46:40,580
+maiorística e nos computadores
+
+1209
+00:46:40,580 --> 00:46:42,580
+é preciso usar algo maiorística
+
+1210
+00:46:42,580 --> 00:46:44,580
+e quando se utiliza orística
+
+1211
+00:46:44,580 --> 00:46:48,720
+implica processamento
+
+1212
+00:46:48,720 --> 00:46:50,720
+depois a partir do momento
+
+1213
+00:46:50,720 --> 00:46:52,720
+tem que aparecer
+
+1214
+00:46:52,720 --> 00:46:54,720
+temos vários
+
+1215
+00:46:56,720 --> 00:46:58,720
+processadores e vamos para
+
+1216
+00:46:58,720 --> 00:47:00,720
+simplificar assumir
+
+1217
+00:47:00,720 --> 00:47:02,720
+com memória partilhada
+
+1218
+00:47:02,720 --> 00:47:04,720
+portanto memória partilhada
+
+1219
+00:47:04,720 --> 00:47:06,720
+por todos para simplificar
+
+1220
+00:47:06,720 --> 00:47:08,720
+temos
+
+1221
+00:47:08,720 --> 00:47:10,720
+a migração
+
+1222
+00:47:10,720 --> 00:47:12,720
+porque
+
+1223
+00:47:12,720 --> 00:47:14,720
+se eu tenho mais do que um processador
+
+1224
+00:47:16,720 --> 00:47:18,720
+eu posso ter necessidade
+
+1225
+00:47:18,720 --> 00:47:20,720
+eu posso ter um processador
+
+1226
+00:47:20,720 --> 00:47:22,720
+a trabalhar muito
+
+1227
+00:47:22,720 --> 00:47:24,720
+e outro a bater charuto
+
+1228
+00:47:24,720 --> 00:47:26,720
+então
+
+1229
+00:47:26,720 --> 00:47:28,720
+é sempre boa
+
+1230
+00:47:28,720 --> 00:47:30,720
+para fazer um balanceamento
+
+1231
+00:47:30,720 --> 00:47:32,720
+da carga
+
+1232
+00:47:32,720 --> 00:47:34,720
+para não ter um processador
+
+1233
+00:47:34,720 --> 00:47:36,720
+a trabalhar muito
+
+1234
+00:47:36,720 --> 00:47:38,720
+se calhar até
+
+1235
+00:47:38,720 --> 00:47:40,720
+a não conseguir responder
+
+1236
+00:47:40,720 --> 00:47:42,720
+ter um bom throughput
+
+1237
+00:47:42,720 --> 00:47:44,720
+e outro a não fazer nada
+
+1238
+00:47:44,720 --> 00:47:46,720
+portanto
+
+1239
+00:47:46,720 --> 00:47:48,720
+existe a migração de tarefas
+
+1240
+00:47:48,720 --> 00:47:50,720
+entre os processadores
+
+1241
+00:47:50,720 --> 00:47:52,720
+ora eu não quero para já
+
+1242
+00:47:52,720 --> 00:47:54,720
+ou não vou entrar nisso
+
+1243
+00:47:54,720 --> 00:47:56,720
+porque senão isso levaríamos aqui
+
+1244
+00:47:56,720 --> 00:47:58,720
+as questões
+
+1245
+00:47:58,720 --> 00:48:00,720
+não vou
+
+1246
+00:48:00,720 --> 00:48:02,720
+considerar aqui a questão das
+
+1247
+00:48:02,720 --> 00:48:04,720
+quest
+
+1248
+00:48:04,720 --> 00:48:06,720
+para toda a gente sabe o que é que é
+
+1249
+00:48:06,720 --> 00:48:08,720
+uma memória quest etc etc
+
+1250
+00:48:08,720 --> 00:48:10,720
+nem sequer vou falar um pouquinho sobre isto
+
+1251
+00:48:10,720 --> 00:48:12,720
+mas
+
+1252
+00:48:12,720 --> 00:48:14,720
+típicamente quando eu tenho
+
+1253
+00:48:14,720 --> 00:48:16,720
+migração
+
+1254
+00:48:16,720 --> 00:48:18,720
+eu quando um sistema
+
+1255
+00:48:18,720 --> 00:48:20,720
+tem as tarefas que estão ativas
+
+1256
+00:48:20,720 --> 00:48:22,720
+as tarefas têm que estar
+
+1257
+00:48:22,720 --> 00:48:24,720
+na alguma queue
+
+1258
+00:48:24,720 --> 00:48:26,720
+que é de queue ou a run queue
+
+1259
+00:48:26,720 --> 00:48:28,720
+ora essa
+
+1260
+00:48:28,720 --> 00:48:30,720
+run queue
+
+1261
+00:48:30,720 --> 00:48:32,720
+tem as tarefas
+
+1262
+00:48:32,720 --> 00:48:34,720
+e o escalonador vai aí buscar
+
+1263
+00:48:34,720 --> 00:48:36,720
+as tarefas para atribuir
+
+1264
+00:48:36,720 --> 00:48:38,720
+ao cpu
+
+1265
+00:48:38,720 --> 00:48:40,720
+e nesse contexto para já
+
+1266
+00:48:40,720 --> 00:48:42,720
+pois vamos ver aqui outras abordagens
+
+1267
+00:48:42,720 --> 00:48:44,720
+existem algoritmos globais
+
+1268
+00:48:44,720 --> 00:48:46,720
+em que essa queue
+
+1269
+00:48:46,720 --> 00:48:48,720
+é global
+
+1270
+00:48:48,720 --> 00:48:50,720
+e
+
+1271
+00:48:50,720 --> 00:48:52,720
+o escalonador
+
+1272
+00:48:52,720 --> 00:48:54,720
+que é um processador
+
+1273
+00:48:54,720 --> 00:48:56,720
+precisa de uma tarefa
+
+1274
+00:48:56,720 --> 00:48:58,720
+vai a essa queue
+
+1275
+00:48:58,720 --> 00:49:00,720
+buscar uma tarefa
+
+1276
+00:49:00,720 --> 00:49:02,720
+qual é o problema disto
+
+1277
+00:49:02,720 --> 00:49:04,720
+se eu tiver muitos cores
+
+1278
+00:49:04,720 --> 00:49:06,720
+e muitas tarefas
+
+1279
+00:49:06,720 --> 00:49:08,720
+para ir sempre que se manipula
+
+1280
+00:49:08,720 --> 00:49:10,720
+uma queue
+
+1281
+00:49:10,720 --> 00:49:12,720
+uma queue é que nos fosse um recurso
+
+1282
+00:49:12,720 --> 00:49:14,720
+é preciso proteger ser atómico
+
+1283
+00:49:14,720 --> 00:49:16,720
+porque senão o que é que pode acontecer
+
+1284
+00:49:16,720 --> 00:49:18,720
+se eu tirar um elemento
+
+1285
+00:49:18,720 --> 00:49:20,720
+se não for atómico
+
+1286
+00:49:20,720 --> 00:49:22,720
+e a questão de retirar
+
+1287
+00:49:22,720 --> 00:49:24,720
+se um processador está a tirar uma tarefa
+
+1288
+00:49:24,720 --> 00:49:26,720
+e o outro
+
+1289
+00:49:26,720 --> 00:49:28,720
+também selecionou essa tarefa
+
+1290
+00:49:28,720 --> 00:49:30,720
+uma tarefa não pode ser
+
+1291
+00:49:30,720 --> 00:49:32,720
+executada em dois cpu's ao mesmo tempo
+
+1292
+00:49:32,720 --> 00:49:34,720
+ou algo
+
+1293
+00:49:34,720 --> 00:49:36,720
+isto dá
+
+1294
+00:49:36,720 --> 00:49:38,720
+então temos que ter um mecanismo de locking
+
+1295
+00:49:38,720 --> 00:49:40,720
+qual é o problema
+
+1296
+00:49:40,720 --> 00:49:42,720
+se tivermos muitos
+
+1297
+00:49:42,720 --> 00:49:44,720
+processadores
+
+1298
+00:49:44,720 --> 00:49:46,720
+provavelmente
+
+1299
+00:49:46,720 --> 00:49:48,720
+a maior parte do tempo os processadores
+
+1300
+00:49:48,720 --> 00:49:50,720
+esperam
+
+1301
+00:49:50,720 --> 00:49:52,720
+para poder aceder
+
+1302
+00:49:52,720 --> 00:49:54,720
+porque os acessos
+
+1303
+00:49:54,720 --> 00:49:56,720
+são frequentes
+
+1304
+00:49:56,720 --> 00:49:58,720
+aoias hoje em dia
+
+1305
+00:49:58,720 --> 00:50:00,720
+ou logo desde essa altura
+
+1306
+00:50:00,720 --> 00:50:02,720
+as abordagens
+
+1307
+00:50:02,720 --> 00:50:04,720
+adoptadas por exemplo linux faz isso
+
+1308
+00:50:04,720 --> 00:50:06,720
+é uma abordagem particionada
+
+1309
+00:50:06,720 --> 00:50:08,720
+em que
+
+1310
+00:50:08,720 --> 00:50:10,720
+cada processador
+
+1311
+00:50:10,720 --> 00:50:12,720
+tem a sua fila
+
+1312
+00:50:12,720 --> 00:50:14,720
+dos processos nativos
+
+1313
+00:50:14,720 --> 00:50:16,720
+portanto
+
+1314
+00:50:16,720 --> 00:50:18,720
+cada processador tem uma lista
+
+1315
+00:50:18,720 --> 00:50:20,720
+de processos
+
+1316
+00:50:20,720 --> 00:50:22,720
+e sempre que precisa vai alí buscar
+
+1317
+00:50:22,720 --> 00:50:24,720
+quando
+
+1318
+00:50:24,720 --> 00:50:26,720
+o sistema operativo
+
+1319
+00:50:26,720 --> 00:50:28,720
+apercebe-se que
+
+1320
+00:50:28,720 --> 00:50:30,720
+há um processador que tem muita carga
+
+1321
+00:50:30,720 --> 00:50:32,720
+e outro tem menos carga
+
+1322
+00:50:32,720 --> 00:50:34,720
+e ele tenta fazer o valenciamento
+
+1323
+00:50:34,720 --> 00:50:36,720
+portanto, periodicamente
+
+1324
+00:50:36,720 --> 00:50:38,720
+ele vai analisando e diz
+
+1325
+00:50:38,720 --> 00:50:40,720
+vamos tirar uma tarefa aqui
+
+1326
+00:50:40,720 --> 00:50:42,720
+e colocar ali
+
+1327
+00:50:42,720 --> 00:50:44,720
+só que essa operação
+
+1328
+00:50:44,720 --> 00:50:46,720
+é uma operação
+
+1329
+00:50:46,720 --> 00:50:48,720
+de alguma forma complexa
+
+1330
+00:50:48,720 --> 00:50:50,720
+e implica
+
+1331
+00:50:50,720 --> 00:50:52,720
+parar os dois CPUs
+
+1332
+00:50:52,720 --> 00:50:54,720
+para poder mudar uma tarefa de
+
+1333
+00:50:54,720 --> 00:50:56,720
+uma queue para outra queue
+
+1334
+00:50:56,720 --> 00:50:58,720
+porque não se pode estar a mudar
+
+1335
+00:50:58,720 --> 00:51:00,720
+e o processador
+
+1336
+00:51:00,720 --> 00:51:02,720
+estar em execução porque
+
+1337
+00:51:02,720 --> 00:51:04,720
+poderia
+
+1338
+00:51:04,720 --> 00:51:06,720
+levar aqui a uma situação de encueira
+
+1339
+00:51:08,720 --> 00:51:10,720
+depois, no contexto
+
+1340
+00:51:10,720 --> 00:51:12,720
+dos sistemas temporal
+
+1341
+00:51:12,720 --> 00:51:14,720
+das coisas fantásticas que há
+
+1342
+00:51:14,720 --> 00:51:16,720
+eu posso ter
+
+1343
+00:51:16,720 --> 00:51:18,720
+um sistema com uma taxa
+
+1344
+00:51:18,720 --> 00:51:20,720
+de utilização de qual
+
+1345
+00:51:20,720 --> 00:51:22,720
+de 0%
+
+1346
+00:51:22,720 --> 00:51:26,320
+e perder os deadlines
+
+1347
+00:51:26,320 --> 00:51:28,320
+agora, imaginem aqui este contexto
+
+1348
+00:51:28,320 --> 00:51:30,320
+eu tenho aqui um conjunto
+
+1349
+00:51:30,320 --> 00:51:32,320
+de
+
+1350
+00:51:32,320 --> 00:51:34,320
+tarefas
+
+1351
+00:51:34,320 --> 00:51:36,320
+tarefas essas que têm
+
+1352
+00:51:36,320 --> 00:51:38,320
+uma determinada
+
+1353
+00:51:38,320 --> 00:51:40,320
+execução
+
+1354
+00:51:40,320 --> 00:51:42,320
+e tenho
+
+1355
+00:51:42,320 --> 00:51:44,320
+eu tenho M processadores
+
+1356
+00:51:44,320 --> 00:51:46,320
+e tenho
+
+1357
+00:51:46,320 --> 00:51:48,320
+M mais uma
+
+1358
+00:51:48,320 --> 00:51:50,320
+tarefa
+
+1359
+00:51:50,320 --> 00:51:52,320
+portanto, tenho M processadores
+
+1360
+00:51:52,320 --> 00:51:54,320
+e tenho M mais um tarefa
+
+1361
+00:51:54,320 --> 00:51:56,320
+e todas as tarefas
+
+1362
+00:51:56,320 --> 00:51:58,320
+estão muito pequenas
+
+1363
+00:51:58,320 --> 00:52:00,320
+e há uma que tem uma utilização
+
+1364
+00:52:00,320 --> 00:52:02,320
+de quase 100%
+
+1365
+00:52:02,320 --> 00:52:04,320
+isto é, sumando a uma das
+
+1366
+00:52:04,320 --> 00:52:06,320
+pequenas ultrapassos
+
+1367
+00:52:06,320 --> 00:52:08,320
+ou 100%
+
+1368
+00:52:08,320 --> 00:52:10,320
+então esse sistema não é escalonável
+
+1369
+00:52:10,320 --> 00:52:12,320
+porque há uma tarefa que perde
+
+1370
+00:52:12,320 --> 00:52:14,320
+os deadlines
+
+1371
+00:52:14,320 --> 00:52:16,320
+e, se nós considerarmos
+
+1372
+00:52:16,320 --> 00:52:18,320
+o M atender para infinito
+
+1373
+00:52:18,320 --> 00:52:20,320
+a utilização
+
+1374
+00:52:20,320 --> 00:52:22,320
+deste sistema
+
+1375
+00:52:22,320 --> 00:52:24,320
+tende para 0
+
+1376
+00:52:24,320 --> 00:52:26,320
+chama-se isto um
+
+1377
+00:52:26,320 --> 00:52:28,320
+doll effect
+
+1378
+00:52:28,320 --> 00:52:30,320
+depois, temos um outro problema
+
+1379
+00:52:30,320 --> 00:52:32,320
+da partição
+
+1380
+00:52:32,320 --> 00:52:34,320
+que é
+
+1381
+00:52:34,320 --> 00:52:36,320
+imaginem que eu tenho
+
+1382
+00:52:36,320 --> 00:52:38,320
+um conjunto
+
+1383
+00:52:38,320 --> 00:52:40,320
+de tarefas
+
+1384
+00:52:40,320 --> 00:52:42,320
+M
+
+1385
+00:52:42,320 --> 00:52:44,320
+tarefas que têm uma taxa
+
+1386
+00:52:44,320 --> 00:52:46,320
+de utilização de 50%
+
+1387
+00:52:46,320 --> 00:52:48,320
+mais
+
+1388
+00:52:48,320 --> 00:52:50,320
+um cabelinho, mais uma coisa
+
+1389
+00:52:50,320 --> 00:52:52,320
+logo, eu não consigo atribuir
+
+1390
+00:52:52,320 --> 00:52:54,320
+duas tarefas a um processador
+
+1391
+00:52:54,320 --> 00:52:56,320
+porque cada uma tem 50
+
+1392
+00:52:56,320 --> 00:52:58,320
+mais um bocadinho
+
+1393
+00:52:58,320 --> 00:53:00,320
+ora, se eu tiver
+
+1394
+00:53:00,320 --> 00:53:02,320
+M mais uma tarefa
+
+1395
+00:53:02,320 --> 00:53:04,320
+o sistema não é escalonável
+
+1396
+00:53:04,320 --> 00:53:06,320
+naquele conjunto de processadores
+
+1397
+00:53:06,320 --> 00:53:08,320
+e eu não consigo atribuir
+
+1398
+00:53:08,320 --> 00:53:10,320
+esta tarefa a nenhum processador
+
+1399
+00:53:10,320 --> 00:53:12,320
+tão simples quanto isto então
+
+1400
+00:53:12,320 --> 00:53:14,320
+os algoritmos
+
+1401
+00:53:14,320 --> 00:53:16,320
+partitionados
+
+1402
+00:53:16,320 --> 00:53:18,320
+típicamente têm uma taxa
+
+1403
+00:53:18,320 --> 00:53:24,130
+de utilização de 50%
+
+1404
+00:53:24,130 --> 00:53:26,130
+o que é muito mal
+
+1405
+00:53:26,130 --> 00:53:28,130
+depois, temos um outro problema
+
+1406
+00:53:28,130 --> 00:53:30,130
+que é, quando estamos
+
+1407
+00:53:30,130 --> 00:53:32,130
+a fazer a partição
+
+1408
+00:53:32,130 --> 00:53:34,130
+isto é, atribuir tarefas
+
+1409
+00:53:34,130 --> 00:53:36,130
+aos processadores
+
+1410
+00:53:36,130 --> 00:53:38,130
+isto é um problema de
+
+1411
+00:53:38,130 --> 00:53:40,130
+considerado um problema
+
+1412
+00:53:40,130 --> 00:53:42,130
+NP hard disk
+
+1413
+00:53:42,130 --> 00:53:44,130
+não tem uma solução
+
+1414
+00:53:44,130 --> 00:53:46,130
+não é óbvio a solução
+
+1415
+00:53:46,130 --> 00:53:48,130
+então, nós temos que
+
+1416
+00:53:48,130 --> 00:53:50,130
+atribuir as tarefas
+
+1417
+00:53:50,130 --> 00:53:52,130
+aos processadores as tarefas
+
+1418
+00:53:52,130 --> 00:53:54,130
+vamos fazê-lo
+
+1419
+00:53:54,130 --> 00:53:56,130
+usando maior isto que qualquer
+
+1420
+00:53:56,130 --> 00:53:58,130
+mas obviamente não há
+
+1421
+00:53:58,130 --> 00:54:00,130
+uma solução ótima
+
+1422
+00:54:00,130 --> 00:54:02,130
+então, te imaginem aqui
+
+1423
+00:54:02,130 --> 00:54:04,130
+usando o first fit
+
+1424
+00:54:04,130 --> 00:54:06,130
+temos aqui estes elementos
+
+1425
+00:54:06,130 --> 00:54:08,130
+estes são os processadores
+
+1426
+00:54:08,130 --> 00:54:10,130
+assumindo que
+
+1427
+00:54:10,130 --> 00:54:12,130
+a capacidade do processador
+
+1428
+00:54:12,130 --> 00:54:14,130
+ou do cache-shop
+
+1429
+00:54:14,130 --> 00:54:16,130
+é de 15 horas
+
+1430
+00:54:16,130 --> 00:54:18,130
+eu pego neste, tenho um
+
+1431
+00:54:18,130 --> 00:54:20,130
+tamanho de 10 coloco aqui
+
+1432
+00:54:20,130 --> 00:54:22,130
+coloco no primeiro
+
+1433
+00:54:22,130 --> 00:54:24,130
+o first fit é sempre
+
+1434
+00:54:24,130 --> 00:54:26,130
+pegar naqueles em que posso
+
+1435
+00:54:26,130 --> 00:54:28,130
+colocar o elemento
+
+1436
+00:54:28,130 --> 00:54:30,130
+no primeiro que posso
+
+1437
+00:54:30,130 --> 00:54:32,130
+o dois, vou colocar aqui
+
+1438
+00:54:32,130 --> 00:54:34,130
+o 14, já não cabo aqui
+
+1439
+00:54:34,130 --> 00:54:36,130
+só tenho três
+
+1440
+00:54:36,130 --> 00:54:38,130
+o 1, cabo aqui
+
+1441
+00:54:38,130 --> 00:54:40,130
+o 6, não cabe nem aqui
+
+1442
+00:54:40,130 --> 00:54:42,130
+nem aqui, então coloco aqui
+
+1443
+00:54:42,130 --> 00:54:44,130
+o 5, não cabe nem aqui
+
+1444
+00:54:44,130 --> 00:54:46,130
+nem aqui, nem aqui
+
+1445
+00:54:46,130 --> 00:54:48,130
+então coloco ali
+
+1446
+00:54:48,130 --> 00:54:50,130
+o 8, não cabe nem aqui
+
+1447
+00:54:50,130 --> 00:54:52,130
+nem aqui, cabe aqui
+
+1448
+00:54:52,130 --> 00:54:54,130
+mediante estas orísticas
+
+1449
+00:54:54,130 --> 00:54:56,130
+temos aqui o first fit
+
+1450
+00:54:56,130 --> 00:54:58,130
+mediante estas orísticas
+
+1451
+00:54:58,130 --> 00:55:00,130
+e também dependendo do tipo de tarefas
+
+1452
+00:55:00,130 --> 00:55:02,130
+se são pequenas, são maiores
+
+1453
+00:55:02,130 --> 00:55:04,130
+existem orísticas
+
+1454
+00:55:04,130 --> 00:55:06,130
+que produzem melhores
+
+1455
+00:55:06,130 --> 00:55:10,110
+e piores resultados
+
+1456
+00:55:10,110 --> 00:55:12,110
+agora vamos
+
+1457
+00:55:12,110 --> 00:55:14,110
+voltando aos algoritmos com elementos
+
+1458
+00:55:14,110 --> 00:55:16,110
+já falamos sobre os algoritmos
+
+1459
+00:55:16,110 --> 00:55:18,110
+globais, já falamos
+
+1460
+00:55:18,110 --> 00:55:20,110
+sobre os algoritmos particionados
+
+1461
+00:55:20,110 --> 00:55:22,110
+portanto no fundo
+
+1462
+00:55:22,110 --> 00:55:24,110
+depois de termos
+
+1463
+00:55:24,110 --> 00:55:26,110
+uma fila global
+
+1464
+00:55:26,110 --> 00:55:28,110
+podemos aplicar o EDF
+
+1465
+00:55:28,110 --> 00:55:30,110
+podemos aplicar o reto manotónico
+
+1466
+00:55:30,110 --> 00:55:32,110
+podemos aplicar o que isermos
+
+1467
+00:55:32,110 --> 00:55:34,110
+então é, vai
+
+1468
+00:55:34,110 --> 00:55:36,110
+a fila global buscar
+
+1469
+00:55:36,110 --> 00:55:38,110
+a tarefa
+
+1470
+00:55:38,110 --> 00:55:40,110
+para os particionados
+
+1471
+00:55:40,110 --> 00:55:42,110
+a mesma coisa, portanto
+
+1472
+00:55:42,110 --> 00:55:44,110
+atribua a casa de CPU
+
+1473
+00:55:44,110 --> 00:55:46,110
+usando um orística
+
+1474
+00:55:46,110 --> 00:55:48,110
+qualquer, beanpack
+
+1475
+00:55:48,110 --> 00:55:50,110
+atribua a casa de CPU
+
+1476
+00:55:50,110 --> 00:55:52,110
+e depois posso usar o reto manotónico
+
+1477
+00:55:52,110 --> 00:55:54,110
+o EDF, outra coisa qualquer
+
+1478
+00:55:54,110 --> 00:55:56,110
+existem mais duas
+
+1479
+00:55:56,110 --> 00:55:58,110
+mais dois modelos
+
+1480
+00:55:58,110 --> 00:56:00,110
+escognamente
+
+1481
+00:56:00,110 --> 00:56:02,110
+o clúster
+
+1482
+00:56:02,110 --> 00:56:04,110
+o clúster é uma versão global
+
+1483
+00:56:04,110 --> 00:56:06,110
+mas em que é possível
+
+1484
+00:56:06,110 --> 00:56:08,110
+limitar o número de CPUs
+
+1485
+00:56:08,110 --> 00:56:10,110
+portanto
+
+1486
+00:56:10,110 --> 00:56:12,110
+aliás, isto
+
+1487
+00:56:12,110 --> 00:56:14,110
+eu posso dizer que o global
+
+1488
+00:56:14,110 --> 00:56:16,110
+é um caso especial de clúster
+
+1489
+00:56:16,110 --> 00:56:18,110
+e é quando eu só tenho um clúster
+
+1490
+00:56:18,110 --> 00:56:20,110
+mas
+
+1491
+00:56:20,110 --> 00:56:22,110
+o clúster surgiu
+
+1492
+00:56:22,110 --> 00:56:24,110
+por questões de cache
+
+1493
+00:56:24,110 --> 00:56:26,110
+por questões de
+
+1494
+00:56:26,110 --> 00:56:28,110
+otimizar etc
+
+1495
+00:56:28,110 --> 00:56:30,110
+e depois temos
+
+1496
+00:56:30,110 --> 00:56:32,110
+abordagens
+
+1497
+00:56:32,110 --> 00:56:34,110
+semi-particionadas
+
+1498
+00:56:34,110 --> 00:56:36,110
+o que são essas abordagens
+
+1499
+00:56:36,110 --> 00:56:38,110
+semi-particionadas?
+
+1500
+00:56:38,110 --> 00:56:40,110
+nestes algoritmos
+
+1501
+00:56:40,110 --> 00:56:42,110
+a maior parte das tarefas
+
+1502
+00:56:42,110 --> 00:56:44,110
+executa num CPU
+
+1503
+00:56:44,110 --> 00:56:46,110
+portanto
+
+1504
+00:56:46,110 --> 00:56:48,110
+é como se fosse partitionado
+
+1505
+00:56:48,110 --> 00:56:50,110
+e algumas
+
+1506
+00:56:50,110 --> 00:56:52,110
+migram
+
+1507
+00:56:52,110 --> 00:56:54,110
+de CPU
+
+1508
+00:56:54,110 --> 00:56:56,110
+portanto ao contrário que acontece aqui
+
+1509
+00:56:56,110 --> 00:56:58,110
+todas elas
+
+1510
+00:56:58,110 --> 00:57:00,110
+potencialmente migram
+
+1511
+00:57:00,110 --> 00:57:02,110
+aqui só algumas
+
+1512
+00:57:02,110 --> 00:57:04,110
+migram
+
+1513
+00:57:04,110 --> 00:57:06,110
+portanto a maior parte
+
+1514
+00:57:06,110 --> 00:57:08,110
+executa sempre nos mesmos CPUs
+
+1515
+00:57:08,110 --> 00:57:10,110
+e há umas tarefas
+
+1516
+00:57:10,110 --> 00:57:12,110
+que vão migrando
+
+1517
+00:57:12,110 --> 00:57:14,110
+e desta forma
+
+1518
+00:57:14,110 --> 00:57:16,110
+consegue-se resolver
+
+1519
+00:57:16,110 --> 00:57:18,110
+o problema do impact
+
+1520
+00:57:18,110 --> 00:57:20,110
+eu consigo
+
+1521
+00:57:20,110 --> 00:57:22,110
+assumir que o objetivo é atribuir 100%
+
+1522
+00:57:22,110 --> 00:57:24,110
+eu consigo
+
+1523
+00:57:24,110 --> 00:57:26,110
+resolver
+
+1524
+00:57:26,110 --> 00:57:28,110
+esta tarefa
+
+1525
+00:57:28,110 --> 00:57:30,110
+vai executar no máximo X
+
+1526
+00:57:30,110 --> 00:57:32,110
+esta tarefa
+
+1527
+00:57:32,110 --> 00:57:34,110
+vai executar
+
+1528
+00:57:34,110 --> 00:57:36,110
+e consigo completar os minis
+
+1529
+00:57:36,110 --> 00:57:38,110
+qual é o problema disto
+
+1530
+00:57:38,110 --> 00:57:40,110
+que implica
+
+1531
+00:57:40,110 --> 00:57:42,110
+algumas heurísticas mais elaboradas
+
+1532
+00:57:42,110 --> 00:57:44,110
+e como tal
+
+1533
+00:57:44,110 --> 00:57:46,110
+a implementação destes algoritmos
+
+1534
+00:57:46,110 --> 00:57:48,110
+são um pouco mais complexos
+
+1535
+00:57:48,110 --> 00:57:51,520
+do que os outros
+
+1536
+00:57:51,520 --> 00:57:53,520
+depois deixo este exercício
+
+1537
+00:57:53,520 --> 00:57:55,520
+para realizarem
+
+1538
+00:57:55,520 --> 00:57:57,520
+portanto usando
+
+1539
+00:57:57,520 --> 00:57:59,520
+este taço que serve
+
+1540
+00:57:59,520 --> 00:58:01,520
+com dois processadores
+
+1541
+00:58:01,520 --> 00:58:03,520
+portanto se fazerem
+
+1542
+00:58:03,520 --> 00:58:05,520
+a timeline de execução
+
+1543
+00:58:05,520 --> 00:58:07,520
+até 30 milisegundos
+
+1544
+00:58:07,520 --> 00:58:09,520
+assumindo
+
+1545
+00:58:09,520 --> 00:58:11,520
+estes
+
+1546
+00:58:11,520 --> 00:58:13,520
+dados e este arrival time
+
+1547
+00:58:13,520 --> 00:58:15,520
+isto aqui é implícito e deadline
+
+1548
+00:58:15,520 --> 00:58:17,520
+portanto usando o global
+
+1549
+00:58:17,520 --> 00:58:19,520
+edf e o global reitmanotónico
+
+1550
+00:58:19,520 --> 00:58:21,520
+e depois
+
+1551
+00:58:21,520 --> 00:58:23,520
+usando o partitionado
+
+1552
+00:58:23,520 --> 00:58:25,520
+edr e o partitionado reitmanotónico
+
+1553
+00:58:25,520 --> 00:58:27,520
+usando
+
+1554
+00:58:27,520 --> 00:58:29,520
+duas abordagens
+
+1555
+00:58:29,520 --> 00:58:31,520
+de winpacking
+
+1556
+00:58:31,520 --> 00:58:33,520
+o first fit
+
+1557
+00:58:33,520 --> 00:58:35,520
+e o best fit
+
+1558
+00:58:35,520 --> 00:58:37,520
+portanto
+
+1559
+00:58:37,520 --> 00:58:39,520
+usando estas duas abordagens
+
+1560
+00:58:39,520 --> 00:58:41,520
+obviamente
+
+1561
+00:58:41,520 --> 00:58:43,520
+que os sistemas
+
+1562
+00:58:43,520 --> 00:58:45,520
+multipoessador
+
+1563
+00:58:45,520 --> 00:58:47,520
+também sofrem
+
+1564
+00:58:47,520 --> 00:58:49,520
+da questão dos recursos partilhados
+
+1565
+00:58:49,520 --> 00:58:51,520
+aqui o caso ainda é mais complexo
+
+1566
+00:58:51,520 --> 00:58:53,520
+de o fazer
+
+1567
+00:58:53,520 --> 00:58:55,520
+vocês
+
+1568
+00:58:55,520 --> 00:58:57,520
+num dos próximos módulos
+
+1569
+00:58:57,520 --> 00:58:59,520
+até vão ter um
+
+1570
+00:58:59,520 --> 00:59:01,520
+professor que
+
+1571
+00:59:01,520 --> 00:59:03,520
+fez o seu doutoramento
+
+1572
+00:59:03,520 --> 00:59:05,520
+nesta área
+
+1573
+00:59:05,520 --> 00:59:07,520
+de resource sharing
+
+1574
+00:59:07,520 --> 00:59:09,520
+para multipoessador portanto
+
+1575
+00:59:09,520 --> 00:59:11,520
+existem algumas abordagens
+
+1576
+00:59:11,520 --> 00:59:13,520
+algumas são
+
+1577
+00:59:13,520 --> 00:59:15,520
+extensões do que já existe
+
+1578
+00:59:15,520 --> 00:59:17,520
+e existe
+
+1579
+00:59:17,520 --> 00:59:19,520
+pronto, tem surgido novos
+
+1580
+00:59:19,520 --> 00:59:21,520
+e estão sempre a surgir
+
+1581
+00:59:21,520 --> 00:59:23,520
+novas abordagens porque
+
+1582
+00:59:23,520 --> 00:59:25,520
+estas
+
+1583
+00:59:25,520 --> 00:59:27,520
+em termos de
+
+1584
+00:59:27,520 --> 00:59:29,520
+de
+
+1585
+00:59:29,520 --> 00:59:31,520
+multipoessador
+
+1586
+00:59:31,520 --> 00:59:33,520
+não têm os resultados
+
+1587
+00:59:33,520 --> 00:59:35,520
+excelentes portanto
+
+1588
+00:59:35,520 --> 00:59:37,520
+e então têm surgido
+
+1589
+00:59:37,520 --> 00:59:39,520
+novas novas abordagens
+
+1590
+00:59:39,520 --> 00:59:41,520
+ora vai
+
+1591
+00:59:41,520 --> 00:59:43,520
+posto isto
+
+1592
+00:59:43,520 --> 00:59:45,520
+e é para esta
+
+1593
+00:59:45,520 --> 00:59:47,520
+primeira parte da aula
+
+1594
+00:59:47,520 --> 00:59:49,520
+o que eu tenho a seguir
+
+1595
+00:59:49,520 --> 00:59:51,520
+eu não vou conseguir dar isto tudo
+
+1596
+00:59:51,520 --> 00:59:53,520
+tudo hoje
+
+1597
+00:59:53,520 --> 00:59:55,520
+mas
+
+1598
+00:59:55,520 --> 00:59:57,520
+vou tentar dar aqui uma primeira parte
+
+1599
+00:59:57,520 --> 00:59:59,520
+para
+
+1600
+00:59:59,520 --> 01:00:01,520
+falarmos
+
+1601
+01:00:01,520 --> 01:00:03,520
+depois na próxima
+
+1602
+01:00:03,520 --> 01:00:05,520
+no próximo sábado
+
+1603
+01:00:05,520 --> 01:00:07,520
+portanto uma primeira parte
+
+1604
+01:00:07,520 --> 01:00:09,520
+de aula próximo sábado
+
+1605
+01:00:09,520 --> 01:00:11,520
+vai ser olharmos aqui para estas
+
+1606
+01:00:11,520 --> 01:00:13,520
+perguntas
+
+1607
+01:00:13,520 --> 01:00:15,520
+e ver como é que
+
+1608
+01:00:15,520 --> 01:00:17,520
+as coisas
+
+1609
+01:00:17,520 --> 01:00:19,520
+e depois vamos fazer
+
+1610
+01:00:19,520 --> 01:00:21,520
+ali alguma programação
+
+1611
+01:00:21,520 --> 01:00:23,520
+criar processos
+
+1612
+01:00:23,520 --> 01:00:25,520
+criar smartphones e coisas assim
+
+1613
+01:00:25,520 --> 01:00:27,520
+portanto e agora esta parte
+
+1614
+01:00:27,520 --> 01:00:29,520
+tem a ver com isso
+
+1615
+01:00:29,520 --> 01:00:31,520
+ora
+
+1616
+01:00:31,520 --> 01:00:33,520
+deixemos só ver onde é que está
+
+1617
+01:00:33,520 --> 01:00:40,190
+isso
+
+1618
+01:00:40,190 --> 01:00:42,190
+é que de vocês já
+
+1619
+01:00:42,190 --> 01:00:44,190
+sabe o que é que é um processo
+
+1620
+01:00:44,190 --> 01:00:46,190
+de smartphones
+
+1621
+01:00:46,190 --> 01:00:48,190
+coisas assim de gente
+
+1622
+01:00:48,190 --> 01:00:50,190
+alguns de vocês já oitaram isso
+
+1623
+01:00:50,190 --> 01:00:53,660
+o uso aí
+
+1624
+01:00:53,660 --> 01:00:55,660
+e eu já dei essa matéria
+
+1625
+01:00:55,660 --> 01:00:57,660
+na licenciatura
+
+1626
+01:00:57,660 --> 01:00:59,660
+mas depois disso
+
+1627
+01:00:59,660 --> 01:01:01,660
+não voltaste a usar
+
+1628
+01:01:01,660 --> 01:01:03,660
+não
+
+1629
+01:01:05,660 --> 01:01:07,660
+ora vai
+
+1630
+01:01:07,660 --> 01:01:09,660
+então vamos lá tentar perceber
+
+1631
+01:01:09,660 --> 01:01:11,660
+o que é isto do um processo
+
+1632
+01:01:11,660 --> 01:01:13,660
+um processo
+
+1633
+01:01:13,660 --> 01:01:15,660
+é uma aplicação
+
+1634
+01:01:15,660 --> 01:01:17,660
+portanto
+
+1635
+01:01:17,660 --> 01:01:19,660
+primeiro o que é que é um programa
+
+1636
+01:01:21,660 --> 01:01:23,660
+um programa é um ficheiro
+
+1637
+01:01:23,660 --> 01:01:25,660
+portanto um programa
+
+1638
+01:01:25,660 --> 01:01:27,660
+é um ficheiro
+
+1639
+01:01:27,660 --> 01:01:29,660
+ficheiro esse
+
+1640
+01:01:29,660 --> 01:01:31,660
+cujo conteúdo
+
+1641
+01:01:31,660 --> 01:01:33,660
+são instruções para o processador
+
+1642
+01:01:35,660 --> 01:01:37,660
+e quando nós
+
+1643
+01:01:37,660 --> 01:01:39,660
+arrancamos com um programa
+
+1644
+01:01:39,660 --> 01:01:41,660
+isto é nós dizemos ao sistema operativo
+
+1645
+01:01:41,660 --> 01:01:43,660
+põe esse programa a executar
+
+1646
+01:01:43,660 --> 01:01:45,660
+a gente o que é que faz
+
+1647
+01:01:45,660 --> 01:01:47,660
+diz-lhe
+
+1648
+01:01:47,660 --> 01:01:49,660
+qual é o ficheiro que queremos executar
+
+1649
+01:01:49,660 --> 01:01:51,660
+diz olha e este
+
+1650
+01:01:51,660 --> 01:01:53,660
+fazemos isso
+
+1651
+01:01:53,660 --> 01:01:55,660
+dando dois clites
+
+1652
+01:01:55,660 --> 01:01:57,660
+ou fazemos isso usando
+
+1653
+01:01:57,660 --> 01:01:59,660
+a linha de comandos
+
+1654
+01:01:59,660 --> 01:02:01,660
+ou alguma coisa qualquer
+
+1655
+01:02:01,660 --> 01:02:03,660
+para colocar esse
+
+1656
+01:02:03,660 --> 01:02:05,660
+ficheiro em execução
+
+1657
+01:02:05,660 --> 01:02:07,660
+ora o que é que significa
+
+1658
+01:02:07,660 --> 01:02:09,660
+significa que esse
+
+1659
+01:02:09,660 --> 01:02:11,660
+ficheiro
+
+1660
+01:02:11,660 --> 01:02:13,660
+esse programa
+
+1661
+01:02:13,660 --> 01:02:15,660
+é um programa que está ativo
+
+1662
+01:02:15,660 --> 01:02:17,660
+ora quando está ativo
+
+1663
+01:02:17,660 --> 01:02:19,660
+o sistema operativo tem que ter
+
+1664
+01:02:19,660 --> 01:02:21,660
+uma estrutura de dados para
+
+1665
+01:02:21,660 --> 01:02:23,660
+o gerir
+
+1666
+01:02:23,660 --> 01:02:25,660
+tem que ter uma estrutura de dados
+
+1667
+01:02:25,660 --> 01:02:27,660
+que lhe dê um identificador
+
+1668
+01:02:27,660 --> 01:02:29,660
+que é para se a gente quiser
+
+1669
+01:02:29,660 --> 01:02:31,660
+matar o processo
+
+1670
+01:02:31,660 --> 01:02:33,660
+saber qual é o processo
+
+1671
+01:02:33,660 --> 01:02:35,660
+que vamos matar portanto se não tiver
+
+1672
+01:02:35,660 --> 01:02:37,660
+um identificador não sabemos
+
+1673
+01:02:37,660 --> 01:02:39,660
+depois
+
+1674
+01:02:39,660 --> 01:02:41,660
+o sistema operativo
+
+1675
+01:02:41,660 --> 01:02:43,660
+precisa de ter
+
+1676
+01:02:43,660 --> 01:02:45,660
+uma estrutura de dados capaz
+
+1677
+01:02:45,660 --> 01:02:47,660
+de
+
+1678
+01:02:47,660 --> 01:02:49,660
+dizer assim olha
+
+1679
+01:02:49,660 --> 01:02:51,660
+tu vais parar agora a execução
+
+1680
+01:02:51,660 --> 01:02:53,660
+porque tem aqui um processo maior
+
+1681
+01:02:53,660 --> 01:02:55,660
+a prioridade
+
+1682
+01:02:55,660 --> 01:02:57,660
+ora
+
+1683
+01:02:57,660 --> 01:02:59,660
+o sistema operativo tem que ter uma estrutura de dados
+
+1684
+01:02:59,660 --> 01:03:01,660
+que consiga guardar o estado
+
+1685
+01:03:01,660 --> 01:03:03,660
+do processo
+
+1686
+01:03:03,660 --> 01:03:05,660
+que é para depois o que
+
+1687
+01:03:05,660 --> 01:03:07,660
+quando ele retomar
+
+1688
+01:03:07,660 --> 01:03:09,660
+a execução a retomar
+
+1689
+01:03:09,660 --> 01:03:11,660
+a partir daquele ponto e não
+
+1690
+01:03:11,660 --> 01:03:13,660
+começar de início outra vez
+
+1691
+01:03:13,660 --> 01:03:15,660
+portanto
+
+1692
+01:03:15,660 --> 01:03:17,660
+um processo não é
+
+1693
+01:03:17,660 --> 01:03:19,660
+mais nem menos do que um programa
+
+1694
+01:03:19,660 --> 01:03:21,660
+ativo
+
+1695
+01:03:21,660 --> 01:03:23,660
+certo
+
+1696
+01:03:23,660 --> 01:03:25,660
+um programa
+
+1697
+01:03:25,660 --> 01:03:27,660
+portanto em execução
+
+1698
+01:03:27,660 --> 01:03:29,660
+ativo em execução
+
+1699
+01:03:29,660 --> 01:03:31,660
+não quer dizer que esteja executado
+
+1700
+01:03:31,660 --> 01:03:33,660
+mas que está
+
+1701
+01:03:33,660 --> 01:03:37,390
+no sistema
+
+1702
+01:03:37,390 --> 01:03:39,390
+tipicamente as aplicações
+
+1703
+01:03:39,390 --> 01:03:41,390
+os programas estão
+
+1704
+01:03:41,390 --> 01:03:43,390
+no disco
+
+1705
+01:03:43,390 --> 01:03:45,390
+o disco são colocados na memória
+
+1706
+01:03:45,390 --> 01:03:47,390
+depois o cpu
+
+1707
+01:03:47,390 --> 01:03:49,390
+lê as instruções do programa
+
+1708
+01:03:49,390 --> 01:03:51,390
+e vai executar essas instruções
+
+1709
+01:03:51,390 --> 01:03:54,800
+portanto
+
+1710
+01:03:54,800 --> 01:03:56,800
+não é mais nem menos
+
+1711
+01:03:56,800 --> 01:03:58,800
+do que portanto
+
+1712
+01:03:58,800 --> 01:04:00,800
+algo que
+
+1713
+01:04:00,800 --> 01:04:02,800
+está vivo
+
+1714
+01:04:02,800 --> 01:04:04,800
+portanto que está ativo
+
+1715
+01:04:04,800 --> 01:04:06,800
+e vai produzir alguma coisa
+
+1716
+01:04:06,800 --> 01:04:08,800
+ora vai
+
+1717
+01:04:08,800 --> 01:04:10,800
+e agora temos que
+
+1718
+01:04:10,800 --> 01:04:12,800
+ver que uma coisa
+
+1719
+01:04:12,800 --> 01:04:14,800
+muito simples que é como é que se
+
+1720
+01:04:14,800 --> 01:04:18,080
+criam os programas
+
+1721
+01:04:20,080 --> 01:04:22,080
+como é que se criam os programas
+
+1722
+01:04:22,080 --> 01:04:24,080
+como é que os programas com os processos
+
+1723
+01:04:24,080 --> 01:04:26,080
+os programas são fecheios
+
+1724
+01:04:26,080 --> 01:04:28,080
+como é que o sistema operativo
+
+1725
+01:04:28,080 --> 01:04:30,080
+cria processos
+
+1726
+01:04:30,080 --> 01:04:32,080
+ora
+
+1727
+01:04:32,080 --> 01:04:34,080
+quando vocês dão dois cliques
+
+1728
+01:04:34,080 --> 01:04:36,080
+vocês na linha de comandos dizem
+
+1729
+01:04:36,080 --> 01:04:38,080
+para executar um determinado programa
+
+1730
+01:04:38,080 --> 01:04:40,080
+o que é que o sistema operativo faz
+
+1731
+01:04:40,080 --> 01:04:42,080
+o sistema operativo faz
+
+1732
+01:04:42,080 --> 01:04:44,080
+uma coisa muito parecida
+
+1733
+01:04:44,080 --> 01:04:46,080
+com aquilo que nos ensinaram
+
+1734
+01:04:46,080 --> 01:04:48,080
+no nosso
+
+1735
+01:04:48,080 --> 01:04:50,080
+contexto mais religioso
+
+1736
+01:04:50,080 --> 01:04:52,080
+que é
+
+1737
+01:04:52,080 --> 01:04:54,080
+nós somos criados
+
+1738
+01:04:54,080 --> 01:04:56,080
+a imagem semelhante de adan
+
+1739
+01:04:56,080 --> 01:04:58,080
+ou eva
+
+1740
+01:04:58,080 --> 01:05:00,080
+aqui é a mesma coisa
+
+1741
+01:05:00,080 --> 01:05:02,080
+a analogia é a mesma
+
+1742
+01:05:02,080 --> 01:05:04,080
+os processos
+
+1743
+01:05:04,080 --> 01:05:06,080
+são
+
+1744
+01:05:06,080 --> 01:05:08,080
+criados
+
+1745
+01:05:08,080 --> 01:05:10,080
+de que forma
+
+1746
+01:05:10,080 --> 01:05:12,080
+duplicando
+
+1747
+01:05:12,080 --> 01:05:14,080
+o processo pai
+
+1748
+01:05:14,080 --> 01:05:16,080
+isto é
+
+1749
+01:05:16,080 --> 01:05:18,080
+quando eu digo
+
+1750
+01:05:18,080 --> 01:05:20,080
+vou arrancar com um processo
+
+1751
+01:05:20,080 --> 01:05:22,080
+para fazer isto
+
+1752
+01:05:22,080 --> 01:05:24,080
+eu tenho que ser um processo
+
+1753
+01:05:24,080 --> 01:05:26,080
+então o processo que vai ser arrancado
+
+1754
+01:05:26,080 --> 01:05:28,080
+não é mais nem menos
+
+1755
+01:05:28,080 --> 01:05:30,080
+ou que vai ser inicializado
+
+1756
+01:05:30,080 --> 01:05:32,080
+do pai
+
+1757
+01:05:32,080 --> 01:05:34,080
+que está a arrancar aqui o processo
+
+1758
+01:05:34,080 --> 01:05:36,080
+isto
+
+1759
+01:05:36,080 --> 01:05:38,080
+é o que acontece
+
+1760
+01:05:38,080 --> 01:05:40,080
+agora vamos
+
+1761
+01:05:40,080 --> 01:05:42,080
+após associar os processos nós temos
+
+1762
+01:05:42,080 --> 01:05:44,080
+nomeadamente o PIB
+
+1763
+01:05:44,080 --> 01:05:46,080
+que é um identificador
+
+1764
+01:05:46,080 --> 01:05:48,080
+e depois existem outras coisas como recurso etc etc
+
+1765
+01:05:48,080 --> 01:05:50,080
+não quero estar aqui a perder
+
+1766
+01:05:50,080 --> 01:05:52,080
+muito tempo com isto
+
+1767
+01:05:52,080 --> 01:05:54,080
+então
+
+1768
+01:05:54,080 --> 01:05:56,080
+não era bem isto
+
+1769
+01:05:56,080 --> 01:05:58,080
+era aqui
+
+1770
+01:05:58,080 --> 01:06:00,080
+o que é que nós fazemos
+
+1771
+01:06:00,080 --> 01:06:02,080
+quando
+
+1772
+01:06:02,080 --> 01:06:04,080
+eu crio um processo
+
+1773
+01:06:04,080 --> 01:06:06,080
+portanto, se estou a criar um processo
+
+1774
+01:06:06,080 --> 01:06:08,080
+estou a executar
+
+1775
+01:06:08,080 --> 01:06:10,080
+num outro processo
+
+1776
+01:06:10,080 --> 01:06:12,080
+por exemplo quando vocês dão 2 squids
+
+1777
+01:06:12,080 --> 01:06:14,080
+num coisa
+
+1778
+01:06:14,080 --> 01:06:16,080
+quem é responsável
+
+1779
+01:06:16,080 --> 01:06:18,080
+pelos squids
+
+1780
+01:06:18,080 --> 01:06:20,080
+é o sistema de janelas
+
+1781
+01:06:20,080 --> 01:06:22,080
+do windows ou do linux
+
+1782
+01:06:22,080 --> 01:06:24,080
+quando eu numa consola
+
+1783
+01:06:24,080 --> 01:06:26,080
+peço para arrancar um programa
+
+1784
+01:06:26,080 --> 01:06:28,080
+o que é que está em execução
+
+1785
+01:06:28,080 --> 01:06:30,080
+essa consola
+
+1786
+01:06:30,080 --> 01:06:32,080
+então o que é que o sistema operativo
+
+1787
+01:06:32,080 --> 01:06:34,080
+faz
+
+1788
+01:06:34,080 --> 01:06:36,080
+vai criar um processo
+
+1789
+01:06:36,080 --> 01:06:38,080
+igual ao pai
+
+1790
+01:06:38,080 --> 01:06:40,080
+portanto é o que nós temos aqui
+
+1791
+01:06:40,080 --> 01:06:42,080
+criou um processo
+
+1792
+01:06:42,080 --> 01:06:44,080
+como é que ele criou um processo
+
+1793
+01:06:44,080 --> 01:06:46,080
+através da função forte
+
+1794
+01:06:48,080 --> 01:06:50,080
+e a função forte
+
+1795
+01:06:50,080 --> 01:06:52,080
+vai fazer o seguinte
+
+1796
+01:06:52,080 --> 01:06:54,080
+vai
+
+1797
+01:06:54,080 --> 01:06:56,080
+fazer o processo
+
+1798
+01:06:56,080 --> 01:06:58,080
+e vai
+
+1799
+01:06:58,080 --> 01:07:00,080
+o processo que faz o forte
+
+1800
+01:07:00,080 --> 01:07:02,080
+continua a execução
+
+1801
+01:07:02,080 --> 01:07:04,080
+então
+
+1802
+01:07:04,080 --> 01:07:06,080
+a pergunta que se coloca é
+
+1803
+01:07:06,080 --> 01:07:08,080
+se eu crio um processo igual ao pai
+
+1804
+01:07:08,080 --> 01:07:10,080
+o código
+
+1805
+01:07:10,080 --> 01:07:12,080
+as instruções
+
+1806
+01:07:12,080 --> 01:07:14,080
+são igualais ao do pai
+
+1807
+01:07:14,080 --> 01:07:16,080
+são
+
+1808
+01:07:16,080 --> 01:07:18,080
+até
+
+1809
+01:07:18,080 --> 01:07:20,080
+nós invocarmos uma coisa que se chama
+
+1810
+01:07:20,080 --> 01:07:22,080
+as funções exec
+
+1811
+01:07:22,080 --> 01:07:24,080
+e o que é que as funções exec
+
+1812
+01:07:24,080 --> 01:07:26,080
+permitem fazer
+
+1813
+01:07:26,080 --> 01:07:28,080
+permitem
+
+1814
+01:07:28,080 --> 01:07:30,080
+mudar
+
+1815
+01:07:30,080 --> 01:07:32,080
+as instruções
+
+1816
+01:07:32,080 --> 01:07:34,080
+associadas a aquele processo
+
+1817
+01:07:34,080 --> 01:07:36,080
+isto é
+
+1818
+01:07:36,080 --> 01:07:38,080
+eu crio por exemplo imagina
+
+1819
+01:07:38,080 --> 01:07:40,080
+uma consola
+
+1820
+01:07:40,080 --> 01:07:42,080
+é que se tivesse a criar uma outra consola
+
+1821
+01:07:42,080 --> 01:07:44,080
+mas depois
+
+1822
+01:07:44,080 --> 01:07:46,080
+vou mudar o
+
+1823
+01:07:46,080 --> 01:07:48,080
+as instruções que vão ser executadas
+
+1824
+01:07:48,080 --> 01:07:50,080
+por aquelas que eu efectivamente
+
+1825
+01:07:50,080 --> 01:07:52,080
+quero executar
+
+1826
+01:07:52,080 --> 01:07:54,080
+na programação
+
+1827
+01:07:54,080 --> 01:07:56,080
+a função
+
+1828
+01:07:56,080 --> 01:07:58,080
+forte
+
+1829
+01:07:58,080 --> 01:08:00,080
+portanto a partir daqui
+
+1830
+01:08:00,080 --> 01:08:02,080
+quando se executar a função forte
+
+1831
+01:08:02,080 --> 01:08:04,080
+na linha imediatamente
+
+1832
+01:08:04,080 --> 01:08:06,080
+a seguir vai ser executada
+
+1833
+01:08:06,080 --> 01:08:08,080
+por dois processos
+
+1834
+01:08:08,080 --> 01:08:10,080
+portanto até a função forte
+
+1835
+01:08:10,080 --> 01:08:12,080
+só tenho um processo
+
+1836
+01:08:12,080 --> 01:08:14,080
+quando executam a função
+
+1837
+01:08:14,080 --> 01:08:16,080
+forte
+
+1838
+01:08:16,080 --> 01:08:18,080
+ele vai criar um outro processo
+
+1839
+01:08:18,080 --> 01:08:20,080
+que está logo a seguir
+
+1840
+01:08:20,080 --> 01:08:22,080
+vai ser executada
+
+1841
+01:08:22,080 --> 01:08:24,080
+por dois processos
+
+1842
+01:08:24,080 --> 01:08:26,080
+e como é que eu sei quem é o pai e quem é o filho
+
+1843
+01:08:26,080 --> 01:08:28,080
+a função forte
+
+1844
+01:08:28,080 --> 01:08:30,080
+retorna
+
+1845
+01:08:30,080 --> 01:08:34,060
+coloca nesta variável
+
+1846
+01:08:34,060 --> 01:08:36,060
+no processo pai
+
+1847
+01:08:36,060 --> 01:08:38,060
+o pedo do filho
+
+1848
+01:08:38,060 --> 01:08:40,060
+do processo criado
+
+1849
+01:08:40,060 --> 01:08:42,060
+e no processo
+
+1850
+01:08:42,060 --> 01:08:44,060
+filho coloca a variável
+
+1851
+01:08:44,060 --> 01:08:46,060
+a zero por isso é que eu consigo
+
+1852
+01:08:46,060 --> 01:08:48,060
+distinguir
+
+1853
+01:08:48,060 --> 01:08:50,060
+quem é que é o processo pai
+
+1854
+01:08:50,060 --> 01:08:52,060
+e quem é o processo filho
+
+1855
+01:08:52,060 --> 01:08:54,060
+depois
+
+1856
+01:08:54,060 --> 01:08:56,060
+típicamente
+
+1857
+01:08:56,060 --> 01:08:58,060
+o processo pai
+
+1858
+01:08:58,060 --> 01:09:00,060
+fica à espera
+
+1859
+01:09:00,060 --> 01:09:02,060
+que o filho
+
+1860
+01:09:02,060 --> 01:09:04,060
+moja
+
+1861
+01:09:04,060 --> 01:09:06,060
+porque
+
+1862
+01:09:06,060 --> 01:09:08,060
+nos sistemas operativos
+
+1863
+01:09:08,060 --> 01:09:10,060
+quando um processo termina
+
+1864
+01:09:10,060 --> 01:09:12,060
+é preciso o processo pai
+
+1865
+01:09:14,060 --> 01:09:16,060
+ser informado
+
+1866
+01:09:16,060 --> 01:09:18,060
+é libertar os dados
+
+1867
+01:09:18,060 --> 01:09:20,060
+associados ao processo filho
+
+1868
+01:09:20,060 --> 01:09:22,060
+porque
+
+1869
+01:09:22,060 --> 01:09:24,060
+as estruturas as associadas
+
+1870
+01:09:24,060 --> 01:09:26,060
+ao processo filho
+
+1871
+01:09:26,060 --> 01:09:28,060
+e outros recursos
+
+1872
+01:09:28,060 --> 01:09:30,060
+que o processo filho
+
+1873
+01:09:30,060 --> 01:09:32,060
+durante a sua vida tenha alocado
+
+1874
+01:09:32,060 --> 01:09:34,060
+portanto
+
+1875
+01:09:34,060 --> 01:09:36,060
+o modelo é
+
+1876
+01:09:36,060 --> 01:09:38,060
+o processo pai criam um filho
+
+1877
+01:09:38,060 --> 01:09:40,060
+e espera que o filho termine
+
+1878
+01:09:40,060 --> 01:09:42,060
+o filho
+
+1879
+01:09:42,060 --> 01:09:44,060
+durante a sua vida
+
+1880
+01:09:44,060 --> 01:09:46,060
+as instruções que vai executar
+
+1881
+01:09:46,060 --> 01:09:48,060
+para o programa que a gente quer
+
+1882
+01:09:48,060 --> 01:09:50,060
+executar e depois
+
+1883
+01:09:50,060 --> 01:09:52,060
+assim que terminar
+
+1884
+01:09:52,060 --> 01:09:54,060
+o processo do pai
+
+1885
+01:09:54,060 --> 01:09:56,060
+vai aceitar a sua
+
+1886
+01:09:56,060 --> 01:09:58,060
+morte e limpar
+
+1887
+01:09:58,060 --> 01:10:00,060
+os recursos
+
+1888
+01:10:00,060 --> 01:10:02,060
+mais ou menos isto que nós temos
+
+1889
+01:10:02,060 --> 01:10:04,060
+para aqui depois nós vamos ver
+
+1890
+01:10:04,060 --> 01:10:06,060
+um exemplo com isto
+
+1891
+01:10:06,060 --> 01:10:08,060
+portanto
+
+1892
+01:10:08,060 --> 01:10:10,060
+aqui o que é que estou aqui a fazer
+
+1893
+01:10:10,060 --> 01:10:12,060
+isto aqui imaginei um
+
+1894
+01:10:12,060 --> 01:10:14,060
+programinha estou aqui a invocar
+
+1895
+01:10:14,060 --> 01:10:16,060
+o forte
+
+1896
+01:10:16,060 --> 01:10:18,060
+e agora se o pídeo for inferior
+
+1897
+01:10:18,060 --> 01:10:20,060
+a zero o que é que significa que
+
+1898
+01:10:20,060 --> 01:10:22,060
+não foi possível criar nenhum filho
+
+1899
+01:10:22,060 --> 01:10:24,060
+se
+
+1900
+01:10:24,060 --> 01:10:26,060
+e diz que não foi criado
+
+1901
+01:10:26,060 --> 01:10:28,060
+uma coisa aqui no comentário
+
+1902
+01:10:28,060 --> 01:10:30,060
+mas a gente faz o que quer
+
+1903
+01:10:30,060 --> 01:10:32,060
+se o pídeo é igual a zero
+
+1904
+01:10:32,060 --> 01:10:34,060
+significa que
+
+1905
+01:10:34,060 --> 01:10:36,060
+o processo filho
+
+1906
+01:10:36,060 --> 01:10:38,060
+o processo criado vai executar
+
+1907
+01:10:38,060 --> 01:10:40,060
+este código
+
+1908
+01:10:40,060 --> 01:10:42,060
+se o pídeo não é zero
+
+1909
+01:10:42,060 --> 01:10:44,060
+nem inferior a zero
+
+1910
+01:10:44,060 --> 01:10:46,060
+é porque é maior do que zero
+
+1911
+01:10:46,060 --> 01:10:48,060
+porque os pídeos são sempre
+
+1912
+01:10:48,060 --> 01:10:50,060
+maiores do que zero
+
+1913
+01:10:50,060 --> 01:10:54,060
+vai de 1 a 65.535
+
+1914
+01:10:54,060 --> 01:10:56,060
+portanto
+
+1915
+01:10:56,060 --> 01:10:58,060
+então significa
+
+1916
+01:10:58,060 --> 01:11:00,060
+que aqui é o código
+
+1917
+01:11:00,060 --> 01:11:02,060
+do processo pai
+
+1918
+01:11:02,060 --> 01:11:04,060
+o processo pai vai continuar
+
+1919
+01:11:04,060 --> 01:11:06,060
+que na maior parte os casos vai ficar
+
+1920
+01:11:06,060 --> 01:11:08,060
+aqui a espera que o processo filho
+
+1921
+01:11:08,060 --> 01:11:11,820
+termina
+
+1922
+01:11:11,820 --> 01:11:13,820
+cá está a função ectech
+
+1923
+01:11:13,820 --> 01:11:15,820
+o processo é o mesmo
+
+1924
+01:11:15,820 --> 01:11:17,820
+só que agora o filho
+
+1925
+01:11:17,820 --> 01:11:19,820
+o que é que vai fazer neste caso
+
+1926
+01:11:19,820 --> 01:11:21,820
+vai mudar
+
+1927
+01:11:21,820 --> 01:11:23,820
+portanto o pai
+
+1928
+01:11:23,820 --> 01:11:25,820
+não programa qualquer
+
+1929
+01:11:25,820 --> 01:11:27,820
+e o criou um filho
+
+1930
+01:11:27,820 --> 01:11:29,820
+e agora vai dizer o filho
+
+1931
+01:11:29,820 --> 01:11:31,820
+executa este programa
+
+1932
+01:11:31,820 --> 01:11:33,820
+que está neste sítio
+
+1933
+01:11:33,820 --> 01:11:35,820
+este programa que se chama ls
+
+1934
+01:11:35,820 --> 01:11:37,820
+que está dentro da pasta
+
+1935
+01:11:37,820 --> 01:11:39,820
+barra vinde
+
+1936
+01:11:39,820 --> 01:11:41,820
+barra ls
+
+1937
+01:11:41,820 --> 01:11:43,820
+então executa lá isto
+
+1938
+01:11:43,820 --> 01:11:45,820
+e ele vai
+
+1939
+01:11:45,820 --> 01:11:47,820
+alterar as instruções
+
+1940
+01:11:47,820 --> 01:11:49,820
+que tinham que eram iguais a este pai
+
+1941
+01:11:51,820 --> 01:11:53,820
+e vai
+
+1942
+01:11:53,820 --> 01:11:55,820
+substituir pelas instruções
+
+1943
+01:11:55,820 --> 01:11:57,820
+deste programa porque é que
+
+1944
+01:11:57,820 --> 01:11:59,820
+está aqui barra vinde barra ls
+
+1945
+01:11:59,820 --> 01:12:01,820
+porque isto é um fecheiro
+
+1946
+01:12:01,820 --> 01:12:03,820
+é um fecheiro que contém instruções
+
+1947
+01:12:03,820 --> 01:12:05,820
+para o professor
+
+1948
+01:12:05,820 --> 01:12:07,820
+então ele vai ter que carregar
+
+1949
+01:12:07,820 --> 01:12:09,820
+estas instruções
+
+1950
+01:12:09,820 --> 01:12:11,820
+para saber o que é que vai executar
+
+1951
+01:12:11,820 --> 01:12:15,970
+dúvidas
+
+1952
+01:12:15,970 --> 01:12:17,970
+para quem não for informático
+
+1953
+01:12:17,970 --> 01:12:19,970
+ou quem não estiver habituado
+
+1954
+01:12:19,970 --> 01:12:21,970
+os alunos sofrem sempre um bocado com isto
+
+1955
+01:12:21,970 --> 01:12:23,970
+portanto se vocês não conseguirem
+
+1956
+01:12:23,970 --> 01:12:25,970
+acompanhar
+
+1957
+01:12:25,970 --> 01:12:27,970
+não é assim muito dramático
+
+1958
+01:12:27,970 --> 01:12:29,970
+mas nós temos que ir abordando isto
+
+1959
+01:12:29,970 --> 01:12:31,970
+porque falamos de tarefas
+
+1960
+01:12:31,970 --> 01:12:33,970
+e não sei o que mais
+
+1961
+01:12:33,970 --> 01:12:35,970
+uma tarefa é um processo em execução
+
+1962
+01:12:35,970 --> 01:12:39,920
+dúvidas
+
+1963
+01:12:39,920 --> 01:12:41,920
+diz Daniel
+
+1964
+01:12:41,920 --> 01:12:43,920
+sim professor eu
+
+1965
+01:12:43,920 --> 01:12:45,920
+não vim de informática
+
+1966
+01:12:45,920 --> 01:12:47,920
+mas
+
+1967
+01:12:47,920 --> 01:12:49,920
+sei programar-te um programar em Python
+
+1968
+01:12:49,920 --> 01:12:51,920
+mas não estão a baixo nível
+
+1969
+01:12:51,920 --> 01:12:53,920
+de qualquer maneira
+
+1970
+01:12:53,920 --> 01:12:55,920
+a minha dificuldade nesta
+
+1971
+01:12:55,920 --> 01:12:57,920
+tomática em si
+
+1972
+01:12:57,920 --> 01:12:59,920
+está a ser
+
+1973
+01:12:59,920 --> 01:13:01,920
+no contexto dos sistemas
+
+1974
+01:13:01,920 --> 01:13:03,920
+indovidos e tendo em conta que a minha
+
+1975
+01:13:03,920 --> 01:13:05,920
+expectativa é trabalhar com IoT
+
+1976
+01:13:05,920 --> 01:13:07,920
+eu não estou a perceber
+
+1977
+01:13:07,920 --> 01:13:09,920
+onde é que isto se encaixa
+
+1978
+01:13:09,920 --> 01:13:11,920
+e tendo em conta que
+
+1979
+01:13:11,920 --> 01:13:13,920
+toda esta matéria teórica
+
+1980
+01:13:13,920 --> 01:13:15,920
+eu vejo isto mais no sentido de desenvolvimento
+
+1981
+01:13:15,920 --> 01:13:17,920
+de um sistema operativo
+
+1982
+01:13:17,920 --> 01:13:19,920
+tendo em conta que isto é só
+
+1983
+01:13:19,920 --> 01:13:21,920
+não necessariamente
+
+1984
+01:13:21,920 --> 01:13:23,920
+não necessariamente
+
+1985
+01:13:23,920 --> 01:13:25,920
+mas o IoT
+
+1986
+01:13:25,920 --> 01:13:27,920
+seja eu qual for
+
+1987
+01:13:27,920 --> 01:13:31,330
+tem que ter um sistema operativo
+
+1988
+01:13:31,330 --> 01:13:33,330
+o IoT
+
+1989
+01:13:33,330 --> 01:13:35,330
+os sistemas por exemplo
+
+1990
+01:13:35,330 --> 01:13:37,330
+se vocês encontram
+
+1991
+01:13:37,330 --> 01:13:39,330
+o Monserrat Speri
+
+1992
+01:13:39,330 --> 01:13:41,330
+vocês o que é que encontram o Monserrat Speri
+
+1993
+01:13:41,330 --> 01:13:43,330
+Linux
+
+1994
+01:13:43,330 --> 01:13:45,330
+Sim
+
+1995
+01:13:45,330 --> 01:13:48,800
+é isto
+
+1996
+01:13:48,800 --> 01:13:50,800
+para programar-os
+
+1997
+01:13:50,800 --> 01:13:52,800
+se tu quiseres fazer uma aplicação
+
+1998
+01:13:52,800 --> 01:13:54,800
+e no caso
+
+1999
+01:13:54,800 --> 01:13:56,800
+aí no caso dos sistemas
+
+2000
+01:13:56,800 --> 01:13:58,800
+indovidos
+
+2001
+01:13:58,800 --> 01:14:00,800
+a utilização de recursos partilhados
+
+2002
+01:14:00,800 --> 01:14:02,800
+ainda é mais evidente
+
+2003
+01:14:02,800 --> 01:14:04,800
+porque
+
+2004
+01:14:04,800 --> 01:14:06,800
+tu queres ler um sensor
+
+2005
+01:14:06,800 --> 01:14:08,800
+uma coisa do gênero
+
+2006
+01:14:08,800 --> 01:14:10,800
+e no caso
+
+2007
+01:14:10,800 --> 01:14:12,800
+dos Rassos Speri
+
+2008
+01:14:12,800 --> 01:14:14,800
+em que hoje em dia
+
+2009
+01:14:14,800 --> 01:14:16,800
+é muito fácil termos Rassos Speri
+
+2010
+01:14:16,800 --> 01:14:18,800
+com vários cores
+
+2011
+01:14:18,800 --> 01:14:20,800
+ora
+
+2012
+01:14:20,800 --> 01:14:22,800
+se não
+
+2013
+01:14:22,800 --> 01:14:24,800
+usarmos
+
+2014
+01:14:24,800 --> 01:14:26,800
+os recursos
+
+2015
+01:14:26,800 --> 01:14:28,800
+de resources sharing
+
+2016
+01:14:28,800 --> 01:14:30,800
+de forma
+
+2017
+01:14:30,800 --> 01:14:32,800
+não credibiliosa
+
+2018
+01:14:32,800 --> 01:14:34,800
+como se o risco das coisas não funcionara
+
+2019
+01:14:34,800 --> 01:14:36,800
+certo
+
+2020
+01:14:36,800 --> 01:14:38,800
+para nos escalhar
+
+2021
+01:14:38,800 --> 01:14:40,800
+a culpa é minha porque nunca entrei
+
+2022
+01:14:40,800 --> 01:14:42,800
+em tão baixo nível
+
+2023
+01:14:42,800 --> 01:14:44,800
+mas eu diria que nós nunca
+
+2024
+01:14:44,800 --> 01:14:46,800
+quando estamos a fazer uma aplicação
+
+2025
+01:14:46,800 --> 01:14:48,800
+justamente por exemplo a ler dados de
+
+2026
+01:14:48,800 --> 01:14:50,800
+sensors
+
+2027
+01:14:50,800 --> 01:14:52,800
+nós estamos a gerir os recursos
+
+2028
+01:14:52,800 --> 01:14:54,800
+ou são bibliotecas
+
+2029
+01:14:54,800 --> 01:14:56,800
+que já estão no sistema que gerem esses recursos
+
+2030
+01:14:56,800 --> 01:15:00,720
+automaticamente
+
+2031
+01:15:00,720 --> 01:15:02,720
+necessariamente, quando estás a fazer
+
+2032
+01:15:02,720 --> 01:15:04,720
+quando estás a implementar
+
+2033
+01:15:04,720 --> 01:15:06,720
+seja o algoritmo que for
+
+2034
+01:15:06,720 --> 01:15:08,720
+tu podes ter
+
+2035
+01:15:08,720 --> 01:15:10,720
+que
+
+2036
+01:15:10,720 --> 01:15:12,720
+tu podes ter
+
+2037
+01:15:12,720 --> 01:15:14,720
+quando
+
+2038
+01:15:14,720 --> 01:15:16,720
+vocês falam em bibliotecas
+
+2039
+01:15:16,720 --> 01:15:18,720
+as bibliotecas
+
+2040
+01:15:18,720 --> 01:15:20,720
+é código
+
+2041
+01:15:20,720 --> 01:15:22,720
+uma biblioteca é código
+
+2042
+01:15:22,720 --> 01:15:24,720
+como outro qualquer
+
+2043
+01:15:24,720 --> 01:15:26,720
+e o que acontece
+
+2044
+01:15:26,720 --> 01:15:28,720
+é o seguinte, vocês por vezes não sabem
+
+2045
+01:15:28,720 --> 01:15:30,720
+o que está na biblioteca
+
+2046
+01:15:30,720 --> 01:15:32,720
+e o que é que ele faz ou qualquer coisa
+
+2047
+01:15:32,720 --> 01:15:34,720
+que ele pode não estar a fazer bem
+
+2048
+01:15:34,720 --> 01:15:36,720
+mas a questão nem é portanto por aí
+
+2049
+01:15:36,720 --> 01:15:38,720
+numa aplicação
+
+2050
+01:15:38,720 --> 01:15:40,720
+ler dados de um sensor
+
+2051
+01:15:40,720 --> 01:15:42,720
+escrever para
+
+2052
+01:15:42,720 --> 01:15:44,720
+um sensor esperar crescer
+
+2053
+01:15:44,720 --> 01:15:46,720
+em dados
+
+2054
+01:15:46,720 --> 01:15:48,720
+de um determinado elemento
+
+2055
+01:15:48,720 --> 01:15:50,720
+se
+
+2056
+01:15:50,720 --> 01:15:52,720
+tivermos
+
+2057
+01:15:52,720 --> 01:15:54,720
+uma situação
+
+2058
+01:15:54,720 --> 01:15:56,720
+em que existe partilha de dados
+
+2059
+01:15:56,720 --> 01:15:58,720
+partilha de elementos
+
+2060
+01:15:58,720 --> 01:16:00,720
+entre várias pretos
+
+2061
+01:16:00,720 --> 01:16:02,720
+tem que usar mecanismos de resource sharing
+
+2062
+01:16:02,720 --> 01:16:04,720
+tem que saber
+
+2063
+01:16:04,720 --> 01:16:06,720
+se tu quiseres
+
+2064
+01:16:06,720 --> 01:16:08,720
+criar uma aplicação que utiliza
+
+2065
+01:16:08,720 --> 01:16:10,720
+vários processos
+
+2066
+01:16:10,720 --> 01:16:12,720
+embora vários processos
+
+2067
+01:16:12,720 --> 01:16:14,720
+não é muito usual hoje em dia
+
+2068
+01:16:14,720 --> 01:16:16,720
+é mais usual usar
+
+2069
+01:16:16,720 --> 01:16:18,720
+várias pretos
+
+2070
+01:16:18,720 --> 01:16:20,720
+um
+
+2071
+01:16:20,720 --> 01:16:22,720
+conceito parecido mas
+
+2072
+01:16:22,720 --> 01:16:24,720
+não igual
+
+2073
+01:16:24,720 --> 01:16:26,720
+portanto é parecido porque
+
+2074
+01:16:26,720 --> 01:16:28,720
+tem que
+
+2075
+01:16:28,720 --> 01:16:30,720
+criar uma unidade de discussão
+
+2076
+01:16:30,720 --> 01:16:32,720
+criam como se fosse um programa
+
+2077
+01:16:32,720 --> 01:16:34,720
+independente dentro do programa
+
+2078
+01:16:34,720 --> 01:16:36,720
+a partir do momento em que tens
+
+2079
+01:16:36,720 --> 01:16:38,720
+partilha de informação
+
+2080
+01:16:38,720 --> 01:16:40,720
+tu tens que arranjar a forma
+
+2081
+01:16:40,720 --> 01:16:42,720
+dessa informação
+
+2082
+01:16:42,720 --> 01:16:44,720
+ou dessa zona serem
+
+2083
+01:16:44,720 --> 01:16:46,720
+geridas de forma atómica
+
+2084
+01:16:46,720 --> 01:16:48,720
+se não
+
+2085
+01:16:48,720 --> 01:16:50,720
+a informação não vai funcionar
+
+2086
+01:16:50,720 --> 01:16:52,720
+a aplicação não vai funcionar
+
+2087
+01:16:52,720 --> 01:16:54,720
+eu vi esse tipo de funcionalidade
+
+2088
+01:16:54,720 --> 01:16:56,720
+com algo gerido pelo sistema operativo
+
+2089
+01:16:56,720 --> 01:16:58,720
+automaticamente
+
+2090
+01:16:58,720 --> 01:17:00,720
+estou até dificuldade em perceber
+
+2091
+01:17:00,720 --> 01:17:02,720
+onde é que é o nosso papel nisto
+
+2092
+01:17:02,720 --> 01:17:04,720
+não
+
+2093
+01:17:04,720 --> 01:17:06,720
+o sistema operativo
+
+2094
+01:17:06,720 --> 01:17:08,720
+o sistema operativo disponibiliza
+
+2095
+01:17:08,720 --> 01:17:10,720
+aoias o sistema operativo não sabe
+
+2096
+01:17:10,720 --> 01:17:12,720
+não conhece o código das aplicações
+
+2097
+01:17:12,720 --> 01:17:14,720
+mas o sistema operativo
+
+2098
+01:17:14,720 --> 01:17:16,720
+o sistema operativo sabe
+
+2099
+01:17:16,720 --> 01:17:18,720
+o sistema operativo sabe
+
+2100
+01:17:18,720 --> 01:17:20,720
+que programas tem que executar
+
+2101
+01:17:20,720 --> 01:17:22,720
+e que processadores é que são disponíveis
+
+2102
+01:17:22,720 --> 01:17:24,720
+e daí
+
+2103
+01:17:24,720 --> 01:17:26,720
+poder fazer isso estão automaticamente
+
+2104
+01:17:26,720 --> 01:17:28,720
+e daí a minha dúvida
+
+2105
+01:17:28,720 --> 01:17:30,720
+pode estar, mas estamos aqui
+
+2106
+01:17:30,720 --> 01:17:32,720
+do escalonamento
+
+2107
+01:17:32,720 --> 01:17:34,720
+isso faz
+
+2108
+01:17:34,720 --> 01:17:36,720
+mas não faz
+
+2109
+01:17:36,720 --> 01:17:38,720
+primeiro
+
+2110
+01:17:38,720 --> 01:17:40,720
+não faz
+
+2111
+01:17:40,720 --> 01:17:42,720
+se
+
+2112
+01:17:42,720 --> 01:17:44,720
+uma aplicação está a usar um recurso
+
+2113
+01:17:44,720 --> 01:17:46,720
+ou não está a usar um recurso
+
+2114
+01:17:46,720 --> 01:17:48,720
+o recurso sistema operativo
+
+2115
+01:17:48,720 --> 01:17:50,720
+vocês vão ver isso com bastante detalhe
+
+2116
+01:17:50,720 --> 01:17:52,720
+a única coisa que faz
+
+2117
+01:17:52,720 --> 01:17:54,720
+é a tarefa está em condições de discussão
+
+2118
+01:17:54,720 --> 01:17:56,720
+se sim, atribui ao CPU
+
+2119
+01:17:56,720 --> 01:17:58,720
+ou não
+
+2120
+01:17:58,720 --> 01:18:00,720
+agora, se ela não estiver em condições de discussão
+
+2121
+01:18:00,720 --> 01:18:02,720
+o sistema operativo
+
+2122
+01:18:02,720 --> 01:18:04,720
+ou o escalonador
+
+2123
+01:18:04,720 --> 01:18:06,720
+nem sabe onde a tarefa está
+
+2124
+01:18:06,720 --> 01:18:08,720
+tá bem
+
+2125
+01:18:08,720 --> 01:18:10,720
+mas depois vocês vão ver isso condutado
+
+2126
+01:18:10,720 --> 01:18:12,720
+eu tinha
+
+2127
+01:18:12,720 --> 01:18:14,720
+só aqui uma dúvida
+
+2128
+01:18:14,720 --> 01:18:16,720
+ainda aqui é a propósito do Google
+
+2129
+01:18:16,720 --> 01:18:18,720
+eu estava a falar
+
+2130
+01:18:18,720 --> 01:18:20,720
+que há alguns logaritmos
+
+2131
+01:18:20,720 --> 01:18:22,720
+ou seja, existe alguma maneira
+
+2132
+01:18:22,720 --> 01:18:24,720
+ou seja
+
+2133
+01:18:24,720 --> 01:18:26,720
+exceto aqui a parte das bibliotecas
+
+2134
+01:18:26,720 --> 01:18:28,720
+e
+
+2135
+01:18:28,720 --> 01:18:30,720
+tudo o resto
+
+2136
+01:18:30,720 --> 01:18:32,720
+que acabamos aqui a perceber
+
+2137
+01:18:32,720 --> 01:18:34,720
+que são códigos na mesma
+
+2138
+01:18:34,720 --> 01:18:36,720
+em alguns momentos
+
+2139
+01:18:36,720 --> 01:18:38,720
+até podemos ter que implementar
+
+2140
+01:18:40,720 --> 01:18:42,720
+algo similar a essas bibliotecas
+
+2141
+01:18:42,720 --> 01:18:44,720
+para elas não satisfazerem os nossos requisitos
+
+2142
+01:18:44,720 --> 01:18:46,720
+certo?
+
+2143
+01:18:46,720 --> 01:18:48,720
+a minha dúvida era
+
+2144
+01:18:48,720 --> 01:18:50,720
+estes algoritmos, existe alguma forma
+
+2145
+01:18:50,720 --> 01:18:52,720
+de
+
+2146
+01:18:52,720 --> 01:18:54,720
+ou seja, fazermos um pedido
+
+2147
+01:18:54,720 --> 01:18:56,720
+de uma configuração deste tipo
+
+2148
+01:18:56,720 --> 01:18:58,720
+ou somos nós que temos que implementar
+
+2149
+01:18:58,720 --> 01:19:00,720
+este tipo de algoritmos
+
+2150
+01:19:00,720 --> 01:19:02,720
+este aqui é a minha dúvida
+
+2151
+01:19:02,720 --> 01:19:04,720
+ou seja, se isto é quase
+
+2152
+01:19:06,720 --> 01:19:08,720
+ou seja, quase uma espécie
+
+2153
+01:19:08,720 --> 01:19:10,720
+de pedido
+
+2154
+01:19:10,720 --> 01:19:12,720
+ou se existe alguma
+
+2155
+01:19:12,720 --> 01:19:14,720
+ou seja, como é que é feito esta configuração
+
+2156
+01:19:14,720 --> 01:19:16,720
+somos nós que temos que implementar isto tudo
+
+2157
+01:19:16,720 --> 01:19:18,720
+porque dependendo do sistema
+
+2158
+01:19:18,720 --> 01:19:20,720
+até pode
+
+2159
+01:19:20,720 --> 01:19:22,720
+dependendo da complexidade dele
+
+2160
+01:19:22,720 --> 01:19:24,720
+nem sei até que ponto isto é executable
+
+2161
+01:19:24,720 --> 01:19:26,720
+para alguns projetos
+
+2162
+01:19:26,720 --> 01:19:28,720
+isso pode fazer um enquadramento
+
+2163
+01:19:28,720 --> 01:19:30,720
+deste
+
+2164
+01:19:30,720 --> 01:19:32,720
+mas eu não só não estou a perceber
+
+2165
+01:19:32,720 --> 01:19:34,720
+a pergunta, só não estou a perceber
+
+2166
+01:19:34,720 --> 01:19:36,720
+a parte do
+
+2167
+01:19:38,720 --> 01:19:40,720
+isto aqui
+
+2168
+01:19:40,720 --> 01:19:42,720
+essa parte eu não percebi
+
+2169
+01:19:42,720 --> 01:19:44,720
+a minha dúvida era
+
+2170
+01:19:44,720 --> 01:19:46,720
+ou seja, nós temos aqui
+
+2171
+01:19:46,720 --> 01:19:50,350
+vários
+
+2172
+01:19:50,350 --> 01:19:52,350
+alguns algoritmos de escalonamento
+
+2173
+01:19:52,350 --> 01:19:54,350
+várias formas de
+
+2174
+01:19:54,350 --> 01:19:56,350
+gerir recursos entre
+
+2175
+01:19:56,350 --> 01:19:58,350
+entre processadores
+
+2176
+01:19:58,350 --> 01:20:00,350
+tudo mais
+
+2177
+01:20:00,350 --> 01:20:02,350
+entre processos
+
+2178
+01:20:02,350 --> 01:20:04,350
+a minha dúvida era
+
+2179
+01:20:04,350 --> 01:20:06,350
+por exemplo, eu tenho
+
+2180
+01:20:06,350 --> 01:20:08,350
+um sistema, um sistema imbíduo
+
+2181
+01:20:08,350 --> 01:20:10,350
+que tenho um
+
+2182
+01:20:10,350 --> 01:20:12,350
+para o qual eu quero
+
+2183
+01:20:12,350 --> 01:20:14,350
+um determinado sistema operativo
+
+2184
+01:20:14,350 --> 01:20:16,350
+ou configurar um determinado sistema operativo
+
+2185
+01:20:16,350 --> 01:20:18,350
+a minha dúvida é
+
+2186
+01:20:18,350 --> 01:20:20,350
+somos nós que temos que implementar
+
+2187
+01:20:20,350 --> 01:20:22,350
+isto
+
+2188
+01:20:22,350 --> 01:20:24,350
+ou seja, o código
+
+2189
+01:20:24,350 --> 01:20:26,350
+ou se existe alguma interface
+
+2190
+01:20:26,350 --> 01:20:28,350
+que permita esta configuração
+
+2191
+01:20:28,350 --> 01:20:30,350
+mas implementar isto
+
+2192
+01:20:30,350 --> 01:20:32,350
+essa questão é que eu não estou a perceber
+
+2193
+01:20:32,350 --> 01:20:34,350
+isto aqui
+
+2194
+01:20:34,350 --> 01:20:36,350
+eu tenho
+
+2195
+01:20:36,350 --> 01:20:38,350
+dois processos
+
+2196
+01:20:38,350 --> 01:20:40,350
+por exemplo
+
+2197
+01:20:40,350 --> 01:20:42,350
+cada um dos processos
+
+2198
+01:20:42,350 --> 01:20:44,350
+faz leituras
+
+2199
+01:20:44,350 --> 01:20:46,350
+de temperatura, por exemplo
+
+2200
+01:20:46,350 --> 01:20:48,350
+muito bem
+
+2201
+01:20:48,350 --> 01:20:50,350
+deixamos só
+
+2202
+01:20:50,350 --> 01:20:52,350
+tentar sintizar para ser mais fácil
+
+2203
+01:20:52,350 --> 01:20:54,350
+portanto
+
+2204
+01:20:54,350 --> 01:20:56,350
+vamos imaginar, temos um Raspberry
+
+2205
+01:20:56,350 --> 01:20:58,350
+que está a correr
+
+2206
+01:20:58,350 --> 01:21:00,350
+o Linux
+
+2207
+01:21:00,350 --> 01:21:02,350
+e temos aqui uma aplicação
+
+2208
+01:21:02,350 --> 01:21:04,350
+que
+
+2209
+01:21:04,350 --> 01:21:06,350
+neste caso, vamos assumir
+
+2210
+01:21:06,350 --> 01:21:08,350
+que só tem um processo
+
+2211
+01:21:08,350 --> 01:21:10,350
+que é um único processo
+
+2212
+01:21:10,350 --> 01:21:12,350
+e que vai ler um sensor
+
+2213
+01:21:12,350 --> 01:21:14,350
+e depois vai ler o outro
+
+2214
+01:21:14,350 --> 01:21:16,350
+é isto?
+
+2215
+01:21:16,350 --> 01:21:18,350
+sim, exatamente
+
+2216
+01:21:18,350 --> 01:21:20,350
+somos nós que temos que fazer esta gestão
+
+2217
+01:21:20,350 --> 01:21:22,350
+ou se já existe
+
+2218
+01:21:22,350 --> 01:21:24,350
+alguma interface
+
+2219
+01:21:24,350 --> 01:21:26,350
+ou seja, se isto fosse pedido na aula
+
+2220
+01:21:26,350 --> 01:21:28,350
+como é que isto é feito
+
+2221
+01:21:28,350 --> 01:21:30,350
+é feito acreditando
+
+2222
+01:21:30,350 --> 01:21:32,350
+que se vai fazer depois
+
+2223
+01:21:32,350 --> 01:21:34,350
+da forma que será implementado
+
+2224
+01:21:34,350 --> 01:21:36,350
+isto no mundo real
+
+2225
+01:21:36,350 --> 01:21:38,350
+como é que isto é feito
+
+2226
+01:21:38,350 --> 01:21:40,350
+somos nós que implementamos isto
+
+2227
+01:21:40,350 --> 01:21:42,350
+lenha a linha
+
+2228
+01:21:42,350 --> 01:21:44,350
+ou se existe
+
+2229
+01:21:44,350 --> 01:21:46,350
+alguma coisa que se costuma usar
+
+2230
+01:21:46,350 --> 01:21:48,350
+para fazer este tipo de gestão
+
+2231
+01:21:48,350 --> 01:21:50,350
+isto é quase por configuração?
+
+2232
+01:21:50,350 --> 01:21:52,350
+não, isto tem que ser tudo codificado
+
+2233
+01:21:52,350 --> 01:21:54,350
+vamos imaginar
+
+2234
+01:21:54,350 --> 01:21:56,350
+vamos agora
+
+2235
+01:21:56,350 --> 01:21:58,350
+eu tenho um Linux
+
+2236
+01:21:58,350 --> 01:22:00,350
+e quero fazer uma aplicação
+
+2237
+01:22:00,350 --> 01:22:02,350
+tenho um Raspberry
+
+2238
+01:22:02,350 --> 01:22:04,350
+que tenho ali um
+
+2239
+01:22:04,350 --> 01:22:06,350
+uns sensores
+
+2240
+01:22:06,350 --> 01:22:08,350
+tenho uns sensores ligados
+
+2241
+01:22:08,350 --> 01:22:10,350
+portanto
+
+2242
+01:22:10,350 --> 01:22:12,350
+para medir uma temperatura
+
+2243
+01:22:12,350 --> 01:22:14,350
+medir uma coisa qualquer
+
+2244
+01:22:14,350 --> 01:22:16,350
+vamos por aqui um exemplo muito simples
+
+2245
+01:22:16,350 --> 01:22:18,350
+tenho aqui dois sensores
+
+2246
+01:22:18,350 --> 01:22:20,350
+de temperatura e tenho um atuador
+
+2247
+01:22:20,350 --> 01:22:22,350
+que liga
+
+2248
+01:22:22,350 --> 01:22:24,350
+uma ventuína
+
+2249
+01:22:24,350 --> 01:22:26,350
+ora, uma abordagem
+
+2250
+01:22:26,350 --> 01:22:28,350
+uma abordagem seria eu
+
+2251
+01:22:28,350 --> 01:22:30,350
+criar um programa
+
+2252
+01:22:30,350 --> 01:22:32,350
+em que liga um sensor
+
+2253
+01:22:32,350 --> 01:22:34,350
+lia o outro
+
+2254
+01:22:34,350 --> 01:22:36,350
+analisava e
+
+2255
+01:22:36,350 --> 01:22:38,350
+mandava
+
+2256
+01:22:38,350 --> 01:22:40,350
+ligava ou não a ventuína
+
+2257
+01:22:40,350 --> 01:22:42,350
+e
+
+2258
+01:22:42,350 --> 01:22:44,350
+passava algum tempo
+
+2259
+01:22:44,350 --> 01:22:46,350
+voltava a fazer este processo
+
+2260
+01:22:46,350 --> 01:22:48,350
+ora
+
+2261
+01:22:48,350 --> 01:22:50,350
+podia ser
+
+2262
+01:22:50,350 --> 01:22:52,350
+não via mal nenhum
+
+2263
+01:22:52,350 --> 01:22:54,350
+nesta abordagem
+
+2264
+01:22:54,350 --> 01:22:56,350
+mas agora vamos imaginar
+
+2265
+01:22:56,350 --> 01:22:58,350
+se eu tiver aqui requisitos temporais
+
+2266
+01:22:58,350 --> 01:23:00,350
+eu tenho que ler
+
+2267
+01:23:00,350 --> 01:23:02,350
+um sensor de x em x segundos
+
+2268
+01:23:02,350 --> 01:23:04,350
+eu tenho que ler
+
+2269
+01:23:04,350 --> 01:23:06,350
+o atuador tenho que atuar
+
+2270
+01:23:06,350 --> 01:23:08,350
+no caso dos valores
+
+2271
+01:23:08,350 --> 01:23:10,350
+de ser errado em x segundos
+
+2272
+01:23:10,350 --> 01:23:12,350
+ora
+
+2273
+01:23:12,350 --> 01:23:14,350
+então eu já não posso ter esta série
+
+2274
+01:23:14,350 --> 01:23:16,350
+portanto
+
+2275
+01:23:16,350 --> 01:23:18,350
+vamos imaginar que ler um sensor
+
+2276
+01:23:18,350 --> 01:23:20,350
+de mora x
+
+2277
+01:23:20,350 --> 01:23:22,350
+depois ler o outro de mora x
+
+2278
+01:23:22,350 --> 01:23:24,350
+depois ligar o motor
+
+2279
+01:23:24,350 --> 01:23:26,350
+de mora x
+
+2280
+01:23:26,350 --> 01:23:28,350
+se este x
+
+2281
+01:23:28,350 --> 01:23:30,350
+não satisfizer os requisitos
+
+2282
+01:23:30,350 --> 01:23:32,350
+então eu não consigo fazer
+
+2283
+01:23:32,350 --> 01:23:34,350
+isto porque
+
+2284
+01:23:34,350 --> 01:23:36,350
+uma das abordagens
+
+2285
+01:23:36,350 --> 01:23:38,350
+seria
+
+2286
+01:23:38,350 --> 01:23:40,350
+eu vou criar um processo
+
+2287
+01:23:40,350 --> 01:23:42,350
+uma tarefa para ler um sensor
+
+2288
+01:23:42,350 --> 01:23:44,350
+eu vou criar o processo
+
+2289
+01:23:44,350 --> 01:23:46,350
+para ler outro sensor
+
+2290
+01:23:46,350 --> 01:23:48,350
+eu vou criar o processo
+
+2291
+01:23:48,350 --> 01:23:50,350
+para atuar
+
+2292
+01:23:50,350 --> 01:23:52,350
+para ligar a ventuína
+
+2293
+01:23:52,350 --> 01:23:54,350
+e o que é que caso a processo
+
+2294
+01:23:54,350 --> 01:23:56,350
+a única coisa que faziam
+
+2295
+01:23:56,350 --> 01:23:58,350
+era ler
+
+2296
+01:23:58,350 --> 01:24:00,350
+o valor do sensor
+
+2297
+01:24:00,350 --> 01:24:02,350
+e colocar esse valor
+
+2298
+01:24:02,350 --> 01:24:04,350
+num sítio qualquer
+
+2299
+01:24:04,350 --> 01:24:06,350
+o outro processo
+
+2300
+01:24:06,350 --> 01:24:08,350
+ler o valor do sensor
+
+2301
+01:24:08,350 --> 01:24:10,350
+e coloca
+
+2302
+01:24:10,350 --> 01:24:12,350
+num sítio qualquer
+
+2303
+01:24:12,350 --> 01:24:14,350
+o atuador, a tarefa
+
+2304
+01:24:14,350 --> 01:24:16,350
+também periodicamente o que é que tenho que fazer
+
+2305
+01:24:16,350 --> 01:24:18,350
+tem que ir ler os valores
+
+2306
+01:24:18,350 --> 01:24:20,350
+logo
+
+2307
+01:24:20,350 --> 01:24:22,350
+temos aqui um recurso partilhado
+
+2308
+01:24:22,350 --> 01:24:24,350
+então quando um estiver a escrever
+
+2309
+01:24:24,350 --> 01:24:26,350
+o outro não pode estar a ler
+
+2310
+01:24:26,350 --> 01:24:28,350
+então temos aqui um recurso partilhado
+
+2311
+01:24:28,350 --> 01:24:30,350
+para
+
+2312
+01:24:30,350 --> 01:24:32,350
+ler os valores
+
+2313
+01:24:32,350 --> 01:24:34,350
+e depois
+
+2314
+01:24:34,350 --> 01:24:36,350
+mediante o seu algoritmo
+
+2315
+01:24:36,350 --> 01:24:38,350
+ligar ou não ligar a ventuína
+
+2316
+01:24:38,350 --> 01:24:40,350
+quando nós temos
+
+2317
+01:24:40,350 --> 01:24:42,350
+este tipo
+
+2318
+01:24:42,350 --> 01:24:44,350
+de
+
+2319
+01:24:44,350 --> 01:24:46,350
+sistemas
+
+2320
+01:24:46,350 --> 01:24:48,350
+se eu não tiver um algoritmo
+
+2321
+01:24:48,350 --> 01:24:50,350
+de escalonamento por parte do sistema operativo
+
+2322
+01:24:50,350 --> 01:24:52,350
+que me assegure
+
+2323
+01:24:52,350 --> 01:24:54,350
+este comportamento
+
+2324
+01:24:54,350 --> 01:24:56,350
+me assegure
+
+2325
+01:24:56,350 --> 01:24:58,350
+estes timings
+
+2326
+01:24:58,350 --> 01:25:00,350
+o sistema não vai funcionar
+
+2327
+01:25:00,350 --> 01:25:02,350
+sim, mas
+
+2328
+01:25:02,350 --> 01:25:04,350
+no caso então
+
+2329
+01:25:04,350 --> 01:25:06,350
+ou seja, nós faríamos
+
+2330
+01:25:06,350 --> 01:25:08,350
+cada um desses três pequenos programas
+
+2331
+01:25:08,350 --> 01:25:10,350
+e a gestão
+
+2332
+01:25:10,350 --> 01:25:12,350
+ficaria sempre a cargo do sistema operativo
+
+2333
+01:25:14,350 --> 01:25:16,350
+então do escalonamento
+
+2334
+01:25:16,350 --> 01:25:18,350
+pronto, e a minha
+
+2335
+01:25:18,350 --> 01:25:20,350
+pergunta é, existem vários algoritmos
+
+2336
+01:25:20,350 --> 01:25:22,350
+de escalonamento
+
+2337
+01:25:22,350 --> 01:25:24,350
+muito bem
+
+2338
+01:25:24,350 --> 01:25:26,350
+existem vários algoritmos de escalonamento
+
+2339
+01:25:26,350 --> 01:25:28,350
+e esse algoritmo de escalonamento
+
+2340
+01:25:28,350 --> 01:25:30,350
+é da nossa responsabilidade
+
+2341
+01:25:30,350 --> 01:25:32,350
+ou no caso
+
+2342
+01:25:32,350 --> 01:25:34,350
+se nós tivéssemos a correr estes programas
+
+2343
+01:25:34,350 --> 01:25:36,350
+no Linux
+
+2344
+01:25:36,350 --> 01:25:38,350
+e este algoritmo já está
+
+2345
+01:25:38,350 --> 01:25:40,350
+previamente definido e nós nem sequer o conseguimos mudar
+
+2346
+01:25:40,350 --> 01:25:42,350
+por exemplo
+
+2347
+01:25:42,350 --> 01:25:44,350
+não
+
+2348
+01:25:44,350 --> 01:25:46,350
+no caso do Linux
+
+2349
+01:25:46,350 --> 01:25:48,350
+em particular
+
+2350
+01:25:48,350 --> 01:25:50,350
+vocês vão ver que tem vários algoritmos de escalonamento
+
+2351
+01:25:50,350 --> 01:25:52,350
+e vocês é que escolhem
+
+2352
+01:25:52,350 --> 01:25:54,350
+qual é o algoritmo de escalonamento que querem
+
+2353
+01:25:54,350 --> 01:25:56,350
+ou seja, por seleção
+
+2354
+01:25:56,350 --> 01:25:58,350
+ou seja, nós selecionamos um deles
+
+2355
+01:25:58,350 --> 01:26:00,350
+não temos que o implementar manualmente
+
+2356
+01:26:02,350 --> 01:26:04,350
+não, tens que o implementar
+
+2357
+01:26:04,350 --> 01:26:06,350
+no kernel do Linux
+
+2358
+01:26:06,350 --> 01:26:08,350
+não, não tem
+
+2359
+01:26:08,350 --> 01:26:10,350
+quer dizer, não tens, vamos lá ver
+
+2360
+01:26:10,350 --> 01:26:12,350
+vamos supor
+
+2361
+01:26:12,350 --> 01:26:14,350
+e agora eu não
+
+2362
+01:26:14,350 --> 01:26:16,350
+conheço o vosso beco
+
+2363
+01:26:16,350 --> 01:26:18,350
+e eu não conheço a gente
+
+2364
+01:26:18,350 --> 01:26:20,350
+que quer fazer um sistema qualquer
+
+2365
+01:26:20,350 --> 01:26:22,350
+e os algoritmos
+
+2366
+01:26:22,350 --> 01:26:24,350
+que o Linux tem
+
+2367
+01:26:24,350 --> 01:26:26,350
+ou que outro sistema operativo tem
+
+2368
+01:26:26,350 --> 01:26:28,350
+não satisfaz
+
+2369
+01:26:28,350 --> 01:26:30,350
+a 100%
+
+2370
+01:26:30,350 --> 01:26:32,350
+os requisitos
+
+2371
+01:26:32,350 --> 01:26:34,350
+então, nada em perda
+
+2372
+01:26:34,350 --> 01:26:36,350
+é que ele é código como outro qualquer
+
+2373
+01:26:36,350 --> 01:26:38,350
+implementar-se um algoritmo de escalonamento
+
+2374
+01:26:38,350 --> 01:26:40,350
+ok
+
+2375
+01:26:40,350 --> 01:26:42,350
+sim, sim
+
+2376
+01:26:42,350 --> 01:26:44,350
+alguém o implementou
+
+2377
+01:26:44,350 --> 01:26:46,350
+certamente
+
+2378
+01:26:46,350 --> 01:26:48,350
+os clases foram implementados
+
+2379
+01:26:48,350 --> 01:26:50,350
+sim
+
+2380
+01:26:50,350 --> 01:26:52,350
+uma ponta era quase um exemplo
+
+2381
+01:26:52,350 --> 01:26:54,350
+ainda aqui um bocado
+
+2382
+01:26:54,350 --> 01:26:56,350
+para a parte dos micro-consuladores
+
+2383
+01:26:56,350 --> 01:26:58,350
+por exemplo, temos aí
+
+2384
+01:26:58,350 --> 01:27:00,350
+STMs e coisas do género
+
+2385
+01:27:00,350 --> 01:27:02,350
+que podemos ter
+
+2386
+01:27:02,350 --> 01:27:04,350
+várias estradas
+
+2387
+01:27:04,350 --> 01:27:06,350
+a correr, tem lá um FreeRTOS
+
+2388
+01:27:06,350 --> 01:27:08,350
+ali a gerir os recursos
+
+2389
+01:27:10,350 --> 01:27:12,350
+aquilo que nós usarmos
+
+2390
+01:27:12,350 --> 01:27:14,350
+as bibliotecas que já tem
+
+2391
+01:27:14,350 --> 01:27:16,350
+se gerirmos
+
+2392
+01:27:16,350 --> 01:27:18,350
+mais ou menos as prioridades
+
+2393
+01:27:18,350 --> 01:27:20,350
+não temos que ter essa preocupação
+
+2394
+01:27:20,350 --> 01:27:22,350
+de gerir
+
+2395
+01:27:22,350 --> 01:27:24,350
+ao nível do periférico
+
+2396
+01:27:24,350 --> 01:27:26,350
+em parto
+
+2397
+01:27:26,350 --> 01:27:28,350
+minha pergunta é
+
+2398
+01:27:28,350 --> 01:27:30,350
+quase saí e já existia isso no Linux
+
+2399
+01:27:30,350 --> 01:27:32,350
+será um bocado perigoso
+
+2400
+01:27:32,350 --> 01:27:34,350
+é igual, aliás, o FreeRTOS
+
+2401
+01:27:34,350 --> 01:27:36,350
+e outros, na maior parte de cá
+
+2402
+01:27:36,350 --> 01:27:38,350
+são derivados do Linux
+
+2403
+01:27:38,350 --> 01:27:40,350
+os princípios
+
+2404
+01:27:40,350 --> 01:27:42,350
+são muito semelhantes
+
+2405
+01:27:42,350 --> 01:27:44,350
+portanto, tem ali um algoritmo
+
+2406
+01:27:44,350 --> 01:27:46,350
+heurísticas do esclamamento
+
+2407
+01:27:46,350 --> 01:27:48,350
+na altura em que se criam as tarefas
+
+2408
+01:27:48,350 --> 01:27:50,350
+que é uma coisa que nós
+
+2409
+01:27:50,350 --> 01:27:52,350
+vamos, vamos
+
+2410
+01:27:52,350 --> 01:27:54,350
+ver
+
+2411
+01:27:54,350 --> 01:27:56,350
+portanto, uma tarefa
+
+2412
+01:27:56,350 --> 01:27:58,350
+é criada
+
+2413
+01:27:58,350 --> 01:28:00,350
+portanto, eu crio um processo
+
+2414
+01:28:00,350 --> 01:28:02,350
+e eu posso
+
+2415
+01:28:02,350 --> 01:28:04,350
+o processo vamos imaginar
+
+2416
+01:28:04,350 --> 01:28:06,350
+o processo
+
+2417
+01:28:06,350 --> 01:28:08,350
+é de uma prioridade qualquer
+
+2418
+01:28:08,350 --> 01:28:10,350
+vai ser
+
+2419
+01:28:10,350 --> 01:28:12,350
+escalonado usando uma aurística
+
+2420
+01:28:12,350 --> 01:28:14,350
+qualquer
+
+2421
+01:28:14,350 --> 01:28:16,350
+eu posso dizer, não, este processo
+
+2422
+01:28:16,350 --> 01:28:18,350
+vai ser escalonado
+
+2423
+01:28:18,350 --> 01:28:20,350
+por outra aurística
+
+2424
+01:28:20,350 --> 01:28:22,350
+por outro algoritmo de escalonamento
+
+2425
+01:28:22,350 --> 01:28:26,780
+vocês me entenderam nem por isso
+
+2426
+01:28:26,780 --> 01:28:28,780
+sim, sim
+
+2427
+01:28:28,780 --> 01:28:30,780
+portanto, se me perguntarem
+
+2428
+01:28:30,780 --> 01:28:32,780
+se vocês
+
+2429
+01:28:32,780 --> 01:28:34,780
+precisam de implementar
+
+2430
+01:28:34,780 --> 01:28:36,780
+política de escalonamento
+
+2431
+01:28:36,780 --> 01:28:38,780
+num sistema operativo
+
+2432
+01:28:38,780 --> 01:28:40,780
+eu diria que na maior parte dos casos
+
+2433
+01:28:40,780 --> 01:28:42,780
+não
+
+2434
+01:28:42,780 --> 01:28:44,780
+na maior parte dos casos
+
+2435
+01:28:44,780 --> 01:28:46,780
+usa algo, e aliás
+
+2436
+01:28:46,780 --> 01:28:48,780
+a gente quando escolhe um sistema operativo
+
+2437
+01:28:48,780 --> 01:28:50,780
+tem que escolher o sistema operativo
+
+2438
+01:28:50,780 --> 01:28:52,780
+dentro da alguma, aquilo que a gente precisa
+
+2439
+01:28:52,780 --> 01:28:54,780
+portanto
+
+2440
+01:28:54,780 --> 01:28:56,780
+não é
+
+2441
+01:28:56,780 --> 01:28:58,780
+os sistemas operativos não são todos iguais
+
+2442
+01:28:58,780 --> 01:29:00,780
+se fossem iguais, só havia um
+
+2443
+01:29:00,780 --> 01:29:02,780
+existem diferentes versões
+
+2444
+01:29:02,780 --> 01:29:04,780
+dos sistemas operativos que obviamente
+
+2445
+01:29:04,780 --> 01:29:06,780
+tem
+
+2446
+01:29:06,780 --> 01:29:08,780
+algoritmos
+
+2447
+01:29:08,780 --> 01:29:10,780
+de escalonamento
+
+2448
+01:29:10,780 --> 01:29:12,780
+e tocando no algoritmo de escalonamento
+
+2449
+01:29:12,780 --> 01:29:14,780
+de forma diferente
+
+2450
+01:29:14,780 --> 01:29:16,780
+implementam mecanismos
+
+2451
+01:29:16,780 --> 01:29:18,780
+de resource sharing
+
+2452
+01:29:18,780 --> 01:29:20,780
+e nós estamos aqui a falar de algoritmo de escalonamento
+
+2453
+01:29:20,780 --> 01:29:22,780
+e de resource sharing porque
+
+2454
+01:29:22,780 --> 01:29:24,780
+isso tem implicação
+
+2455
+01:29:24,780 --> 01:29:26,780
+direta no desempenho
+
+2456
+01:29:26,780 --> 01:29:30,290
+do sistema
+
+2457
+01:29:30,290 --> 01:29:32,290
+isto é, se
+
+2458
+01:29:32,290 --> 01:29:34,290
+imagina uma situação do género
+
+2459
+01:29:34,290 --> 01:29:36,290
+se tu tens uma tarefa de muita prioridade
+
+2460
+01:29:36,290 --> 01:29:38,290
+um curso partilhado
+
+2461
+01:29:38,290 --> 01:29:40,290
+e pode haver
+
+2462
+01:29:40,290 --> 01:29:42,290
+inversão de prioridade
+
+2463
+01:29:42,290 --> 01:29:44,290
+que não tens garantia em nenhum sistema
+
+2464
+01:29:44,290 --> 01:29:46,290
+que aquela tarefa
+
+2465
+01:29:46,290 --> 01:29:48,290
+pode ser o melhor algoritmo do mundo
+
+2466
+01:29:48,290 --> 01:29:50,290
+mas não tens
+
+2467
+01:29:50,290 --> 01:29:52,290
+garantia que aquela tarefa vá sempre
+
+2468
+01:29:52,290 --> 01:29:54,290
+cumprir o deadline
+
+2469
+01:29:54,290 --> 01:29:56,290
+e imagina que se não cumprir
+
+2470
+01:29:56,290 --> 01:29:58,290
+o deadline é dramático
+
+2471
+01:29:58,290 --> 01:30:02,430
+então esse sistema não é fiável
+
+2472
+01:30:02,430 --> 01:30:04,430
+não, ok
+
+2473
+01:30:04,430 --> 01:30:06,430
+ou seja
+
+2474
+01:30:06,430 --> 01:30:08,430
+aqui na parte
+
+2475
+01:30:08,430 --> 01:30:10,430
+ou seja
+
+2476
+01:30:10,430 --> 01:30:12,430
+das aplicações críticas
+
+2477
+01:30:12,430 --> 01:30:14,430
+de outra vez
+
+2478
+01:30:14,430 --> 01:30:16,430
+eu acho que foi
+
+2479
+01:30:16,430 --> 01:30:18,430
+nesta OCEA
+
+2480
+01:30:18,430 --> 01:30:20,430
+que se falou disso
+
+2481
+01:30:20,430 --> 01:30:22,430
+de
+
+2482
+01:30:22,430 --> 01:30:24,430
+ou seja
+
+2483
+01:30:24,430 --> 01:30:26,430
+para garantir
+
+2484
+01:30:26,430 --> 01:30:28,430
+aqui que
+
+2485
+01:30:28,430 --> 01:30:30,430
+conseguimos cumprir as tarefas críticas
+
+2486
+01:30:30,430 --> 01:30:32,430
+todas
+
+2487
+01:30:32,430 --> 01:30:34,430
+o que se costuma
+
+2488
+01:30:34,430 --> 01:30:36,430
+utilizar
+
+2489
+01:30:36,430 --> 01:30:38,430
+porque
+
+2490
+01:30:38,430 --> 01:30:40,430
+foi dito que o Linux
+
+2491
+01:30:40,430 --> 01:30:42,430
+é um sistema operativo genérico
+
+2492
+01:30:48,430 --> 01:30:50,430
+ou seja
+
+2493
+01:30:50,430 --> 01:30:52,430
+para uma aplicação crítica
+
+2494
+01:30:52,430 --> 01:30:54,430
+partiria pela customização
+
+2495
+01:30:54,430 --> 01:30:56,430
+do Linux
+
+2496
+01:30:56,430 --> 01:30:58,430
+ou o que se costuma utilizar
+
+2497
+01:30:58,430 --> 01:31:00,430
+no mundo empresarial
+
+2498
+01:31:00,430 --> 01:31:02,430
+é outro tipo de sistema operativo
+
+2499
+01:31:04,430 --> 01:31:06,430
+o que é usado são sistemas operativos
+
+2500
+01:31:06,430 --> 01:31:08,430
+por exemplo como o RTM
+
+2501
+01:31:08,430 --> 01:31:10,430
+como o FreeRTOS
+
+2502
+01:31:10,430 --> 01:31:12,430
+que são derivados do Linux
+
+2503
+01:31:12,430 --> 01:31:14,430
+que na maior parte dos casos são
+
+2504
+01:31:14,430 --> 01:31:16,430
+versões como ao Zephyr
+
+2505
+01:31:16,430 --> 01:31:18,430
+que são versões
+
+2506
+01:31:18,430 --> 01:31:20,430
+do Linux
+
+2507
+01:31:20,430 --> 01:31:22,430
+uma grande parte
+
+2508
+01:31:22,430 --> 01:31:24,430
+em que, aliás
+
+2509
+01:31:24,430 --> 01:31:26,430
+nós vamos fazer
+
+2510
+01:31:26,430 --> 01:31:28,430
+uma abordagem
+
+2511
+01:31:28,430 --> 01:31:30,430
+a partir da próxima semana
+
+2512
+01:31:30,430 --> 01:31:32,430
+que vai consistir em recompilar
+
+2513
+01:31:32,430 --> 01:31:34,430
+para vocês perceberem
+
+2514
+01:31:34,430 --> 01:31:36,430
+porque
+
+2515
+01:31:36,430 --> 01:31:38,430
+o Linux é muito usado
+
+2516
+01:31:38,430 --> 01:31:40,430
+porque
+
+2517
+01:31:40,430 --> 01:31:42,430
+o sistema operativo
+
+2518
+01:31:42,430 --> 01:31:44,430
+é o mais usado
+
+2519
+01:31:44,430 --> 01:31:46,430
+do que
+
+2520
+01:31:46,430 --> 01:31:48,430
+qualquer outro sistema operativo
+
+2521
+01:31:48,430 --> 01:31:50,430
+porque nós conseguimos
+
+2522
+01:31:50,430 --> 01:31:52,430
+fazer com que
+
+2523
+01:31:52,430 --> 01:31:54,430
+ele consiga
+
+2524
+01:31:54,430 --> 01:31:56,430
+executar
+
+2525
+01:31:56,430 --> 01:31:58,430
+num sistema com poucos recursos
+
+2526
+01:31:58,430 --> 01:32:00,430
+porque conseguimos dizer
+
+2527
+01:32:00,430 --> 01:32:02,430
+o que é que queremos
+
+2528
+01:32:02,430 --> 01:32:04,430
+colocar
+
+2529
+01:32:04,430 --> 01:32:06,430
+no sistema operativo
+
+2530
+01:32:06,430 --> 01:32:08,430
+pois é que ele é muito usado
+
+2531
+01:32:08,430 --> 01:32:10,430
+na maior parte
+
+2532
+01:32:10,430 --> 01:32:12,430
+grande parte dos sistemas embedos
+
+2533
+01:32:12,430 --> 01:32:14,430
+que tenham o sistema operativo
+
+2534
+01:32:14,430 --> 01:32:16,430
+ou tem Linux
+
+2535
+01:32:16,430 --> 01:32:18,430
+ou só tem derivado de Linux
+
+2536
+01:32:18,430 --> 01:32:22,030
+Ok, isso, obrigado
+
+2537
+01:32:24,030 --> 01:32:26,030
+Pronto, mais alguma questão
+
+2538
+01:32:26,030 --> 01:32:29,980
+Pronto, sendo assim
+
+2539
+01:32:29,980 --> 01:32:31,980
+passando aqui
+
+2540
+01:32:31,980 --> 01:32:33,980
+então, toda a gente percebeu
+
+2541
+01:32:33,980 --> 01:32:35,980
+sempre que se cria um processo
+
+2542
+01:32:35,980 --> 01:32:37,980
+utiliza-se
+
+2543
+01:32:37,980 --> 01:32:39,980
+a função FOR
+
+2544
+01:32:39,980 --> 01:32:41,980
+a função FOR
+
+2545
+01:32:41,980 --> 01:32:43,980
+vai duplicar o seu processo
+
+2546
+01:32:43,980 --> 01:32:45,980
+e depois
+
+2547
+01:32:45,980 --> 01:32:47,980
+vai criar um novo processo
+
+2548
+01:32:47,980 --> 01:32:49,980
+igual a si
+
+2549
+01:32:49,980 --> 01:32:51,980
+obviamente se fossem todos processos iguais
+
+2550
+01:32:51,980 --> 01:32:53,980
+não fazia sentido porque
+
+2551
+01:32:53,980 --> 01:32:55,980
+todos faziam a mesma coisa
+
+2552
+01:32:55,980 --> 01:32:57,980
+então através das funções exec
+
+2553
+01:32:57,980 --> 01:32:59,980
+vamos substituir
+
+2554
+01:32:59,980 --> 01:33:01,980
+o digamos das instruções do processo
+
+2555
+01:33:01,980 --> 01:33:03,980
+por novas
+
+2556
+01:33:03,980 --> 01:33:05,980
+por outras instruções
+
+2557
+01:33:05,980 --> 01:33:07,980
+volta a chamar a atenção
+
+2558
+01:33:07,980 --> 01:33:09,980
+de um aspecto muito importante
+
+2559
+01:33:09,980 --> 01:33:11,980
+um qualquer programa
+
+2560
+01:33:11,980 --> 01:33:13,980
+é um fecheiro
+
+2561
+01:33:13,980 --> 01:33:15,980
+é um fecheiro que cuja
+
+2562
+01:33:15,980 --> 01:33:17,980
+o seu conteúdo não é mais nem menos
+
+2563
+01:33:17,980 --> 01:33:19,980
+do que instruções
+
+2564
+01:33:19,980 --> 01:33:21,980
+para o CPU
+
+2565
+01:33:21,980 --> 01:33:23,980
+a função 8
+
+2566
+01:33:23,980 --> 01:33:25,980
+permite esperar pelo processo
+
+2567
+01:33:25,980 --> 01:33:27,980
+e
+
+2568
+01:33:27,980 --> 01:33:29,980
+depois certamente
+
+2569
+01:33:29,980 --> 01:33:31,980
+que já viram
+
+2570
+01:33:31,980 --> 01:33:33,980
+a system call
+
+2571
+01:33:33,980 --> 01:33:35,980
+exit
+
+2572
+01:33:35,980 --> 01:33:37,980
+portanto, eu não sei
+
+2573
+01:33:37,980 --> 01:33:39,980
+qual é, tenho aqui alguma dificuldade
+
+2574
+01:33:39,980 --> 01:33:41,980
+que eu não sei muito bem
+
+2575
+01:33:41,980 --> 01:33:43,980
+qual é o vosso background
+
+2576
+01:33:43,980 --> 01:33:45,980
+mas
+
+2577
+01:33:45,980 --> 01:33:47,980
+existe uma forma
+
+2578
+01:33:47,980 --> 01:33:49,980
+de terminar um processo
+
+2579
+01:33:49,980 --> 01:33:51,980
+através da função exit
+
+2580
+01:33:51,980 --> 01:33:53,980
+ora, quando termina
+
+2581
+01:33:53,980 --> 01:33:55,980
+um processo com a função
+
+2582
+01:33:55,980 --> 01:33:57,980
+ao melhor
+
+2583
+01:33:57,980 --> 01:33:59,980
+todos os processos terminam
+
+2584
+01:33:59,980 --> 01:34:01,980
+com a função exit
+
+2585
+01:34:01,980 --> 01:34:03,980
+mesmo que quando por exemplo
+
+2586
+01:34:03,980 --> 01:34:05,980
+a gente olha para o main
+
+2587
+01:34:05,980 --> 01:34:07,980
+e a última instrução do main
+
+2588
+01:34:07,980 --> 01:34:09,980
+não a return
+
+2589
+01:34:09,980 --> 01:34:11,980
+mas na verdade a função vai terminar
+
+2590
+01:34:11,980 --> 01:34:13,980
+o programa
+
+2591
+01:34:13,980 --> 01:34:15,980
+quando a função main termina
+
+2592
+01:34:15,980 --> 01:34:17,980
+termina o programa
+
+2593
+01:34:17,980 --> 01:34:19,980
+quando o programa terminar
+
+2594
+01:34:19,980 --> 01:34:21,980
+vai terminar porque executou
+
+2595
+01:34:21,980 --> 01:34:23,980
+a função exit
+
+2596
+01:34:23,980 --> 01:34:25,980
+e quando usamos
+
+2597
+01:34:25,980 --> 01:34:27,980
+a função exit
+
+2598
+01:34:27,980 --> 01:34:29,980
+podemos colocar um código
+
+2599
+01:34:29,980 --> 01:34:31,980
+que pode ser
+
+2600
+01:34:31,980 --> 01:34:33,980
+recebido
+
+2601
+01:34:33,980 --> 01:34:35,980
+pelo pai, pelo processo
+
+2602
+01:34:35,980 --> 01:34:37,980
+pai que está à espera
+
+2603
+01:34:37,980 --> 01:34:39,980
+na função 8
+
+2604
+01:34:39,980 --> 01:34:41,980
+e ao receber isso
+
+2605
+01:34:41,980 --> 01:34:43,980
+esse código pode estabelecer
+
+2606
+01:34:43,980 --> 01:34:45,980
+um protocolo
+
+2607
+01:34:45,980 --> 01:34:47,980
+para se perceber como é que o processo
+
+2608
+01:34:47,980 --> 01:34:49,980
+o filho terminou
+
+2609
+01:34:49,980 --> 01:34:51,980
+porque às vezes há processos
+
+2610
+01:34:51,980 --> 01:34:53,980
+de forma anormal
+
+2611
+01:34:53,980 --> 01:34:55,980
+e quando assim
+
+2612
+01:34:55,980 --> 01:34:57,980
+é possível, por exemplo
+
+2613
+01:34:57,980 --> 01:34:59,980
+num sistema crítico, numa coisa
+
+2614
+01:34:59,980 --> 01:35:01,980
+desse género dizer
+
+2615
+01:35:01,980 --> 01:35:03,980
+o processo terminou por causa disso
+
+2616
+01:35:03,980 --> 01:35:05,980
+então eu vou
+
+2617
+01:35:05,980 --> 01:35:07,980
+arrancar com outro processo
+
+2618
+01:35:07,980 --> 01:35:09,980
+ou então
+
+2619
+01:35:09,980 --> 01:35:11,980
+o processo terminou de forma correta
+
+2620
+01:35:11,980 --> 01:35:13,980
+não sei o que
+
+2621
+01:35:13,980 --> 01:35:15,980
+então eu não vou fazer nada
+
+2622
+01:35:15,980 --> 01:35:17,980
+e isto, esta abordagem
+
+2623
+01:35:17,980 --> 01:35:19,980
+também permite
+
+2624
+01:35:19,980 --> 01:35:21,980
+o processo pai
+
+2625
+01:35:21,980 --> 01:35:23,980
+o processo que iniciou o processo filho
+
+2626
+01:35:23,980 --> 01:35:25,980
+ou os processos filhos podem ser muitos
+
+2627
+01:35:25,980 --> 01:35:27,980
+se consiga saber
+
+2628
+01:35:27,980 --> 01:35:29,980
+de que forma
+
+2629
+01:35:29,980 --> 01:35:31,980
+é que o processo filho terminou
+
+2630
+01:35:31,980 --> 01:35:33,980
+isso é feito, obviamente
+
+2631
+01:35:33,980 --> 01:35:35,980
+não existe
+
+2632
+01:35:35,980 --> 01:35:37,980
+valores, nós
+
+2633
+01:35:37,980 --> 01:35:39,980
+em termos da aplicação
+
+2634
+01:35:39,980 --> 01:35:41,980
+é o que podemos fazer
+
+2635
+01:35:41,980 --> 01:35:43,980
+usar o parâmetro
+
+2636
+01:35:43,980 --> 01:35:45,980
+que passamos aqui no exit
+
+2637
+01:35:45,980 --> 01:35:47,980
+um valor qualquer
+
+2638
+01:35:47,980 --> 01:35:49,980
+em termos da aplicação
+
+2639
+01:35:49,980 --> 01:35:51,980
+tem uma semantica associada
+
+2640
+01:35:51,980 --> 01:35:53,980
+portanto definir aqui um protocolo
+
+2641
+01:35:53,980 --> 01:35:55,980
+para dizer o processo terminou bem
+
+2642
+01:35:55,980 --> 01:35:57,980
+ou não terminou bem
+
+2643
+01:35:57,980 --> 01:35:59,980
+se terminou bem, se calhar não tem nada que fazer
+
+2644
+01:35:59,980 --> 01:36:01,980
+se terminou mal, então eu, se calhar
+
+2645
+01:36:01,980 --> 01:36:03,980
+vou arrancar com o processo
+
+2646
+01:36:03,980 --> 01:36:05,980
+outra vez e obviamente
+
+2647
+01:36:05,980 --> 01:36:07,980
+aqui poderia por
+
+2648
+01:36:07,980 --> 01:36:09,980
+o código
+
+2649
+01:36:09,980 --> 01:36:11,980
+que permitisse voltar a criar
+
+2650
+01:36:11,980 --> 01:36:13,980
+ou a recriar um processo
+
+2651
+01:36:13,980 --> 01:36:15,980
+de cá está a função
+
+2652
+01:36:15,980 --> 01:36:17,980
+exit, portanto
+
+2653
+01:36:17,980 --> 01:36:19,980
+o processo
+
+2654
+01:36:19,980 --> 01:36:21,980
+que
+
+2655
+01:36:21,980 --> 01:36:23,980
+o ciclo é tipicamente
+
+2656
+01:36:23,980 --> 01:36:25,980
+este, portanto
+
+2657
+01:36:25,980 --> 01:36:27,980
+o processo pai
+
+2658
+01:36:27,980 --> 01:36:29,980
+criou o processo filho, o processo pai fica
+
+2659
+01:36:29,980 --> 01:36:31,980
+à espera do processo
+
+2660
+01:36:31,980 --> 01:36:33,980
+filho, que o processo filho termine
+
+2661
+01:36:33,980 --> 01:36:35,980
+o processo pai
+
+2662
+01:36:35,980 --> 01:36:37,980
+no sentido de saber
+
+2663
+01:36:37,980 --> 01:36:39,980
+como é que o processo filho terminou
+
+2664
+01:36:39,980 --> 01:36:41,980
+e também libertar
+
+2665
+01:36:41,980 --> 01:36:43,980
+toda a memória associada
+
+2666
+01:36:43,980 --> 01:36:45,980
+ao processo filho
+
+2667
+01:36:45,980 --> 01:36:47,980
+aí este
+
+2668
+01:36:47,980 --> 01:36:49,980
+o procedimento no linux
+
+2669
+01:36:49,980 --> 01:36:51,980
+e outros sistemas
+
+2670
+01:36:51,980 --> 01:36:53,980
+no caso do linux
+
+2671
+01:36:53,980 --> 01:36:55,980
+se vocês certamente já ouviram falar
+
+2672
+01:36:55,980 --> 01:36:57,980
+no processo initmos aqui
+
+2673
+01:36:57,980 --> 01:36:59,980
+o processo inito é o processo pai
+
+2674
+01:36:59,980 --> 01:37:01,980
+de todos os processos
+
+2675
+01:37:01,980 --> 01:37:03,980
+é um processo que é criado no arranque
+
+2676
+01:37:03,980 --> 01:37:05,980
+e a partir daí todos os processos
+
+2677
+01:37:05,980 --> 01:37:07,980
+são criados pelo inito
+
+2678
+01:37:07,980 --> 01:37:09,980
+portanto o inito é o pai
+
+2679
+01:37:09,980 --> 01:37:11,980
+dos processos, obviamente que depois
+
+2680
+01:37:11,980 --> 01:37:13,980
+também podem criar processos
+
+2681
+01:37:13,980 --> 01:37:15,980
+mas no limite
+
+2682
+01:37:15,980 --> 01:37:17,980
+o inito é o processo pai
+
+2683
+01:37:17,980 --> 01:37:19,980
+de todos os processos
+
+2684
+01:37:19,980 --> 01:37:21,980
+que assim, pode ser pai
+
+2685
+01:37:21,980 --> 01:37:23,980
+avô, vizavô, polivente
+
+2686
+01:37:23,980 --> 01:37:25,980
+mas e este
+
+2687
+01:37:25,980 --> 01:37:27,980
+processo que tem funções
+
+2688
+01:37:27,980 --> 01:37:29,980
+únicamente para gerir
+
+2689
+01:37:29,980 --> 01:37:31,980
+isto fica
+
+2690
+01:37:31,980 --> 01:37:33,980
+é criado quando o sistema arranca
+
+2691
+01:37:33,980 --> 01:37:35,980
+e, em teoria
+
+2692
+01:37:35,980 --> 01:37:37,980
+não sei o que acontece alguma coisa
+
+2693
+01:37:37,980 --> 01:37:39,980
+de mal, mas
+
+2694
+01:37:39,980 --> 01:37:41,980
+quando todos os processos terminam
+
+2695
+01:37:41,980 --> 01:37:43,980
+porque
+
+2696
+01:37:43,980 --> 01:37:45,980
+é ele que aceita a morte
+
+2697
+01:37:45,980 --> 01:37:47,980
+de todos os filhos
+
+2698
+01:37:47,980 --> 01:37:49,980
+se o filho ficar
+
+2699
+01:37:49,980 --> 01:37:51,980
+tem o pai direto, isto é
+
+2700
+01:37:51,980 --> 01:37:53,980
+vamos imaginar o processo inito
+
+2701
+01:37:53,980 --> 01:37:55,980
+criou um processo, esse processo criou outro
+
+2702
+01:37:55,980 --> 01:37:57,980
+obviamente que o segundo
+
+2703
+01:37:57,980 --> 01:37:59,980
+é o pai do terceiro
+
+2704
+01:37:59,980 --> 01:38:01,980
+mas por um motivo qualquer
+
+2705
+01:38:01,980 --> 01:38:03,980
+o segundo terminar
+
+2706
+01:38:03,980 --> 01:38:05,980
+porque por um motivo qualquer
+
+2707
+01:38:05,980 --> 01:38:07,980
+não há programação
+
+2708
+01:38:07,980 --> 01:38:09,980
+o inito assume
+
+2709
+01:38:09,980 --> 01:38:11,980
+a parentalidade do fio
+
+2710
+01:38:11,980 --> 01:38:13,980
+neste caso do neto
+
+2711
+01:38:13,980 --> 01:38:15,980
+logo quando o processo
+
+2712
+01:38:15,980 --> 01:38:17,980
+neto terminar
+
+2713
+01:38:17,980 --> 01:38:19,980
+é o processo inito que vai
+
+2714
+01:38:19,980 --> 01:38:21,980
+aceitar a morte e libertar
+
+2715
+01:38:21,980 --> 01:38:23,980
+os recursos
+
+2716
+01:38:25,980 --> 01:38:27,980
+pronto, todos os
+
+2717
+01:38:27,980 --> 01:38:29,980
+processos
+
+2718
+01:38:29,980 --> 01:38:31,980
+têm um pido associado, um identificador
+
+2719
+01:38:31,980 --> 01:38:33,980
+e nós conseguimos ir buscar
+
+2720
+01:38:33,980 --> 01:38:35,980
+o pido do processo
+
+2721
+01:38:35,980 --> 01:38:37,980
+executando a função
+
+2722
+01:38:37,980 --> 01:38:39,980
+está aqui a mexer no rato
+
+2723
+01:38:39,980 --> 01:38:41,980
+executando a função getpid
+
+2724
+01:38:41,980 --> 01:38:43,980
+todos os processos têm um pai
+
+2725
+01:38:43,980 --> 01:38:45,980
+e nós conseguimos
+
+2726
+01:38:45,980 --> 01:38:47,980
+ir buscar o pido do pai
+
+2727
+01:38:47,980 --> 01:38:49,980
+através da função getpid
+
+2728
+01:38:49,980 --> 01:38:51,980
+portanto
+
+2729
+01:38:51,980 --> 01:38:53,980
+desta forma
+
+2730
+01:38:53,980 --> 01:38:55,980
+nós conseguimos saber
+
+2731
+01:38:55,980 --> 01:38:57,980
+qual é a relação
+
+2732
+01:38:57,980 --> 01:38:59,980
+dos processos, na maior parte
+
+2733
+01:38:59,980 --> 01:39:01,980
+das aplicações
+
+2734
+01:39:01,980 --> 01:39:03,980
+a não ser quando
+
+2735
+01:39:03,980 --> 01:39:05,980
+aqui nós não temos
+
+2736
+01:39:05,980 --> 01:39:07,980
+esta necessidade
+
+2737
+01:39:07,980 --> 01:39:09,980
+salvo
+
+2738
+01:39:09,980 --> 01:39:11,980
+por exemplo imagina
+
+2739
+01:39:11,980 --> 01:39:13,980
+uma aplicação que eu
+
+2740
+01:39:13,980 --> 01:39:15,980
+referi a pouco
+
+2741
+01:39:15,980 --> 01:39:17,980
+temos dois processos
+
+2742
+01:39:17,980 --> 01:39:19,980
+a ler e um processo
+
+2743
+01:39:21,980 --> 01:39:23,980
+para atuar
+
+2744
+01:39:23,980 --> 01:39:25,980
+obviamente que
+
+2745
+01:39:25,980 --> 01:39:27,980
+se houver
+
+2746
+01:39:27,980 --> 01:39:29,980
+aqui alguma partilha
+
+2747
+01:39:29,980 --> 01:39:31,980
+de recursos
+
+2748
+01:39:31,980 --> 01:39:33,980
+para a relação do processo
+
+2749
+01:39:33,980 --> 01:39:35,980
+é necessário
+
+2750
+01:39:35,980 --> 01:39:37,980
+assegurar
+
+2751
+01:39:37,980 --> 01:39:39,980
+a vigência
+
+2752
+01:39:39,980 --> 01:39:41,980
+dos processos
+
+2753
+01:39:41,980 --> 01:39:43,980
+para que depois não exista
+
+2754
+01:39:43,980 --> 01:39:45,980
+situações de incoerência
+
+2755
+01:39:45,980 --> 01:39:47,980
+portanto
+
+2756
+01:39:47,980 --> 01:39:49,980
+provavelmente haverá um processo
+
+2757
+01:39:49,980 --> 01:39:51,980
+qualquer que para ficar a espera
+
+2758
+01:39:51,980 --> 01:39:53,980
+que os processos terminem
+
+2759
+01:39:53,980 --> 01:39:55,980
+ou então
+
+2760
+01:39:55,980 --> 01:39:57,980
+receber alguma indicação
+
+2761
+01:39:57,980 --> 01:39:59,980
+a dizer vou desligar o sistema
+
+2762
+01:39:59,980 --> 01:40:01,980
+não quero continuar com o sistema
+
+2763
+01:40:01,980 --> 01:40:03,980
+tenho que o parar
+
+2764
+01:40:03,980 --> 01:40:05,980
+então ter aqui algum mecanismo
+
+2765
+01:40:05,980 --> 01:40:07,980
+para conseguir terminar
+
+2766
+01:40:07,980 --> 01:40:09,980
+os outros processos
+
+2767
+01:40:09,980 --> 01:40:11,980
+no sentido de
+
+2768
+01:40:11,980 --> 01:40:13,980
+o sistema funcionar
+
+2769
+01:40:13,980 --> 01:40:15,980
+corretamente e não
+
+2770
+01:40:15,980 --> 01:40:17,980
+terminar os processos porque se desligam
+
+2771
+01:40:17,980 --> 01:40:19,980
+a máquina
+
+2772
+01:40:19,980 --> 01:40:21,980
+portanto porque nem sempre
+
+2773
+01:40:21,980 --> 01:40:23,980
+pretendo deciso para qualquer aplicação
+
+2774
+01:40:23,980 --> 01:40:25,980
+obviamente existem aplicações
+
+2775
+01:40:25,980 --> 01:40:27,980
+podem ter interação
+
+2776
+01:40:27,980 --> 01:40:29,980
+por motivos de hardware
+
+2777
+01:40:29,980 --> 01:40:31,980
+que nós queremos arrancar
+
+2778
+01:40:31,980 --> 01:40:33,980
+e por um motivo qualquer
+
+2779
+01:40:33,980 --> 01:40:35,980
+parar agora
+
+2780
+01:40:35,980 --> 01:40:37,980
+se o processo, se essa aplicação
+
+2781
+01:40:37,980 --> 01:40:39,980
+for dividida em vários processos
+
+2782
+01:40:39,980 --> 01:40:41,980
+ou como já não vamos ter muito tempo
+
+2783
+01:40:41,980 --> 01:40:43,980
+ainda vou só dar uma vista de olhos
+
+2784
+01:40:43,980 --> 01:40:45,980
+por várias trechos
+
+2785
+01:40:45,980 --> 01:40:47,980
+obviamente que temos que ter
+
+2786
+01:40:47,980 --> 01:40:49,980
+aqui mecanismos que depois assegurem
+
+2787
+01:40:49,980 --> 01:40:51,980
+assegurem que
+
+2788
+01:40:51,980 --> 01:40:53,980
+todos os processos terminem
+
+2789
+01:40:53,980 --> 01:40:55,980
+de forma correta
+
+2790
+01:40:55,980 --> 01:40:57,980
+não ficam aquilo que se suma a dizer
+
+2791
+01:40:57,980 --> 01:40:59,980
+com memory leaks e coisas assim
+
+2792
+01:40:59,980 --> 01:41:01,980
+de género isto é
+
+2793
+01:41:01,980 --> 01:41:03,980
+memória alucada que não está a ser usada
+
+2794
+01:41:03,980 --> 01:41:05,980
+por ninguém etc etc
+
+2795
+01:41:05,980 --> 01:41:07,980
+coisa que é
+
+2796
+01:41:07,980 --> 01:41:09,980
+sobretudo nos sistemas engubidos
+
+2797
+01:41:09,980 --> 01:41:11,980
+em que por vezes
+
+2798
+01:41:11,980 --> 01:41:13,980
+pessoas não têm bem essa emoção
+
+2799
+01:41:13,980 --> 01:41:15,980
+até porque às vezes fazem isso
+
+2800
+01:41:15,980 --> 01:41:17,980
+de forma
+
+2801
+01:41:17,980 --> 01:41:19,980
+autodidada etc
+
+2802
+01:41:19,980 --> 01:41:21,980
+mas a programação para os sistemas engubidos
+
+2803
+01:41:21,980 --> 01:41:23,980
+tem que ser muito coisado
+
+2804
+01:41:23,980 --> 01:41:25,980
+não pode ser uma programação
+
+2805
+01:41:25,980 --> 01:41:27,980
+qualquer, tem que ser
+
+2806
+01:41:27,980 --> 01:41:29,980
+uma programação cuidável
+
+2807
+01:41:29,980 --> 01:41:31,980
+porque os sistemas engubidos
+
+2808
+01:41:31,980 --> 01:41:33,980
+tipicamente têm pouca memória
+
+2809
+01:41:33,980 --> 01:41:35,980
+os sistemas engubidos tipicamente
+
+2810
+01:41:35,980 --> 01:41:37,980
+os processadores não são
+
+2811
+01:41:37,980 --> 01:41:39,980
+muito fortes
+
+2812
+01:41:39,980 --> 01:41:41,980
+computacionalmente
+
+2813
+01:41:41,980 --> 01:41:43,980
+em termos de velocidade etc etc
+
+2814
+01:41:43,980 --> 01:41:45,980
+portanto é preciso ter sempre algum critério
+
+2815
+01:41:45,980 --> 01:41:47,980
+na programação
+
+2816
+01:41:49,980 --> 01:41:51,980
+não se pode fazer uma programação
+
+2817
+01:41:51,980 --> 01:41:53,980
+e começar a assinhar toa
+
+2818
+01:41:53,980 --> 01:41:55,980
+porque senão obviamente
+
+2819
+01:41:55,980 --> 01:41:57,980
+o sistema até pode funcionar
+
+2820
+01:41:57,980 --> 01:41:59,980
+mas certamente não
+
+2821
+01:41:59,980 --> 01:42:01,980
+se a programação não estiver bem feita
+
+2822
+01:42:01,980 --> 01:42:03,980
+as coisas não funcionam
+
+2823
+01:42:03,980 --> 01:42:05,980
+porque dá a limitação
+
+2824
+01:42:05,980 --> 01:42:07,980
+de recursos que tipicamente
+
+2825
+01:42:07,980 --> 01:42:09,980
+o ar do eftm
+
+2826
+01:42:09,980 --> 01:42:13,230
+ora bem
+
+2827
+01:42:13,230 --> 01:42:15,230
+vou então agora
+
+2828
+01:42:15,230 --> 01:42:17,230
+mas já não vou ter tempo
+
+2829
+01:42:17,230 --> 01:42:19,230
+de abordar tudo
+
+2830
+01:42:19,230 --> 01:42:21,230
+só passar aqui
+
+2831
+01:42:21,230 --> 01:42:23,230
+vou lá só aqui
+
+2832
+01:42:23,230 --> 01:42:25,230
+muito rapidamente
+
+2833
+01:42:25,230 --> 01:42:27,230
+sobre
+
+2834
+01:42:27,230 --> 01:42:29,230
+fredes
+
+2835
+01:42:29,230 --> 01:42:31,230
+portanto o que é que é uma fred?
+
+2836
+01:42:31,230 --> 01:42:34,700
+já algo de vocês ou sou fredes?
+
+2837
+01:42:34,700 --> 01:42:38,400
+sim
+
+2838
+01:42:38,400 --> 01:42:40,400
+sim
+
+2839
+01:42:40,400 --> 01:42:42,400
+muito bem, pronto
+
+2840
+01:42:42,400 --> 01:42:44,400
+ora uma fred não é mais
+
+2841
+01:42:44,400 --> 01:42:46,400
+nem menos do que um processo
+
+2842
+01:42:46,400 --> 01:42:48,400
+aoias internamente
+
+2843
+01:42:48,400 --> 01:42:50,400
+no kernel não há distinção
+
+2844
+01:42:50,400 --> 01:42:52,400
+entre uma fred e um processo
+
+2845
+01:42:52,400 --> 01:42:54,400
+então o que é que os distingue?
+
+2846
+01:42:54,400 --> 01:42:56,400
+muito simples
+
+2847
+01:42:56,400 --> 01:42:58,400
+o que os distingue
+
+2848
+01:42:58,400 --> 01:43:00,400
+é
+
+2849
+01:43:00,400 --> 01:43:02,400
+a sua
+
+2850
+01:43:02,400 --> 01:43:04,400
+a forma como
+
+2851
+01:43:04,400 --> 01:43:06,400
+o kernel
+
+2852
+01:43:06,400 --> 01:43:08,400
+os cria
+
+2853
+01:43:08,400 --> 01:43:10,400
+isto é
+
+2854
+01:43:10,400 --> 01:43:12,400
+quando cria uma fred
+
+2855
+01:43:12,400 --> 01:43:14,400
+ou melhor quando cria um processo
+
+2856
+01:43:14,400 --> 01:43:16,400
+os processos são
+
+2857
+01:43:16,400 --> 01:43:18,400
+unidades, são entidades
+
+2858
+01:43:18,400 --> 01:43:20,400
+isoladas
+
+2859
+01:43:20,400 --> 01:43:22,400
+não existe qualquer interação
+
+2860
+01:43:22,400 --> 01:43:24,400
+entre dois processos
+
+2861
+01:43:24,400 --> 01:43:26,400
+a não ser que a gente utiliza
+
+2862
+01:43:26,400 --> 01:43:28,400
+um mecanismo de memória partilhada
+
+2863
+01:43:28,400 --> 01:43:30,400
+em que a gente pede ao sistema operativo
+
+2864
+01:43:30,400 --> 01:43:32,400
+diz-me
+
+2865
+01:43:32,400 --> 01:43:34,400
+olha, reja-me aí
+
+2866
+01:43:34,400 --> 01:43:36,400
+x bytes
+
+2867
+01:43:36,400 --> 01:43:38,400
+e estes bytes vão ser usados
+
+2868
+01:43:38,400 --> 01:43:40,400
+por este e por aquele processo
+
+2869
+01:43:40,400 --> 01:43:42,400
+ora o que é que isso significa?
+
+2870
+01:43:42,400 --> 01:43:44,400
+significa que quando eu cria
+
+2871
+01:43:44,400 --> 01:43:46,400
+um processo eu tenho que
+
+2872
+01:43:46,400 --> 01:43:48,400
+criar
+
+2873
+01:43:48,400 --> 01:43:50,400
+tudo, inclusive a fazer a locação
+
+2874
+01:43:50,400 --> 01:43:52,400
+da memória para este processo
+
+2875
+01:43:52,400 --> 01:43:54,400
+quando cria
+
+2876
+01:43:54,400 --> 01:43:56,400
+outro, mesmo que seja igual
+
+2877
+01:43:56,400 --> 01:43:58,400
+eu tenho que duplicar aquilo
+
+2878
+01:43:58,400 --> 01:44:00,400
+qual é a vantagem entre estretes?
+
+2879
+01:44:00,400 --> 01:44:02,400
+estretes são sempre criadas
+
+2880
+01:44:02,400 --> 01:44:04,400
+a partir de um processo
+
+2881
+01:44:04,400 --> 01:44:06,400
+que os geralmente quando a gente
+
+2882
+01:44:06,400 --> 01:44:08,400
+chama é isso, não chama
+
+2883
+01:44:08,400 --> 01:44:10,400
+processo, chama ele meio de treto
+
+2884
+01:44:10,400 --> 01:44:12,400
+mas na prática é um processo
+
+2885
+01:44:12,400 --> 01:44:14,400
+então o que é que acontece
+
+2886
+01:44:14,400 --> 01:44:16,400
+com estretes?
+
+2887
+01:44:16,400 --> 01:44:18,400
+estretes
+
+2888
+01:44:18,400 --> 01:44:20,400
+vão partilhar
+
+2889
+01:44:20,400 --> 01:44:22,400
+a memória do processo
+
+2890
+01:44:22,400 --> 01:44:24,400
+quero com isto dizer o que
+
+2891
+01:44:24,400 --> 01:44:26,400
+por isso a gente encontra na documentação
+
+2892
+01:44:26,400 --> 01:44:28,400
+que estretes são processos ligeiros
+
+2893
+01:44:30,400 --> 01:44:32,400
+porquê? porque ao criar
+
+2894
+01:44:32,400 --> 01:44:34,400
+uma trete
+
+2895
+01:44:34,400 --> 01:44:36,400
+eu não vou precisar de andar
+
+2896
+01:44:36,400 --> 01:44:38,400
+a alocar memória
+
+2897
+01:44:38,400 --> 01:44:40,400
+para estretes
+
+2898
+01:44:40,400 --> 01:44:42,400
+ou pelo menos alocar muita memória
+
+2899
+01:44:42,400 --> 01:44:44,400
+para estretes, porquê? porque
+
+2900
+01:44:44,400 --> 01:44:46,400
+a maior parte da memória
+
+2901
+01:44:46,400 --> 01:44:48,400
+vai ser partilhada com um processo
+
+2902
+01:44:48,400 --> 01:44:50,400
+ou com a memória de treto
+
+2903
+01:44:50,400 --> 01:44:52,400
+que dê origem àquela treta
+
+2904
+01:44:52,400 --> 01:44:54,400
+e dessa forma
+
+2905
+01:44:54,400 --> 01:44:56,400
+a criação de estretes
+
+2906
+01:44:56,400 --> 01:44:58,400
+porque não tem que alocar muita memória
+
+2907
+01:44:58,400 --> 01:45:00,400
+é muito mais rápida
+
+2908
+01:45:00,400 --> 01:45:02,400
+do que a criação de processos
+
+2909
+01:45:02,400 --> 01:45:04,400
+e já agora
+
+2910
+01:45:04,400 --> 01:45:06,400
+em qualquer sistema operativo
+
+2911
+01:45:06,400 --> 01:45:08,400
+a parte mais complicada
+
+2912
+01:45:08,400 --> 01:45:10,400
+é a parte de gestão
+
+2913
+01:45:10,400 --> 01:45:12,400
+da memória
+
+2914
+01:45:12,400 --> 01:45:14,400
+é a parte mais complicada logo
+
+2915
+01:45:14,400 --> 01:45:16,400
+e que demora mais tempo
+
+2916
+01:45:16,400 --> 01:45:18,400
+e etc etc
+
+2917
+01:45:18,400 --> 01:45:20,400
+porquê? porque utilizam
+
+2918
+01:45:20,400 --> 01:45:22,400
+o recurso
+
+2919
+01:45:22,400 --> 01:45:24,400
+que é partilhado por todos os processos
+
+2920
+01:45:24,400 --> 01:45:26,400
+e que
+
+2921
+01:45:26,400 --> 01:45:28,400
+ao contrário do que acontece no CPU
+
+2922
+01:45:28,400 --> 01:45:30,400
+está a usar um processo
+
+2923
+01:45:30,400 --> 01:45:32,400
+não o CPU
+
+2924
+01:45:32,400 --> 01:45:34,400
+está a executar um processo
+
+2925
+01:45:34,400 --> 01:45:36,400
+não está a executar outro
+
+2926
+01:45:36,400 --> 01:45:38,400
+a memória tem que ter
+
+2927
+01:45:38,400 --> 01:45:40,400
+todos os processos
+
+2928
+01:45:40,400 --> 01:45:42,400
+a memória para todos os processos
+
+2929
+01:45:42,400 --> 01:45:44,400
+que estão ativos
+
+2930
+01:45:44,400 --> 01:45:46,400
+logo fazer essa gestão
+
+2931
+01:45:46,400 --> 01:45:48,400
+é a parte mais complicada
+
+2932
+01:45:48,400 --> 01:45:50,400
+de qualquer sistema operativo
+
+2933
+01:45:50,400 --> 01:45:52,400
+daí que as tretes
+
+2934
+01:45:52,400 --> 01:45:54,400
+são mais simples
+
+2935
+01:45:54,400 --> 01:45:56,400
+na sua criação
+
+2936
+01:45:56,400 --> 01:45:58,400
+mas internamente
+
+2937
+01:45:58,400 --> 01:46:00,400
+são geridas
+
+2938
+01:46:00,400 --> 01:46:02,400
+como se fossem processos
+
+2939
+01:46:02,400 --> 01:46:04,400
+aliás, não há nenhuma distinção
+
+2940
+01:46:04,400 --> 01:46:06,400
+em termos do kernel
+
+2941
+01:46:06,400 --> 01:46:08,400
+entre um processo e uma treta
+
+2942
+01:46:08,400 --> 01:46:10,400
+de mesma forma
+
+2943
+01:46:10,400 --> 01:46:18,830
+agora vamos
+
+2944
+01:46:18,830 --> 01:46:20,830
+vou estar aqui a falar muito
+
+2945
+01:46:20,830 --> 01:46:22,830
+sobre isto
+
+2946
+01:46:22,830 --> 01:46:24,830
+mas nós temos
+
+2947
+01:46:24,830 --> 01:46:26,830
+concorrência
+
+2948
+01:46:26,830 --> 01:46:28,830
+quando temos um CPU
+
+2949
+01:46:28,830 --> 01:46:30,830
+e temos várias tretes
+
+2950
+01:46:30,830 --> 01:46:32,830
+vários
+
+2951
+01:46:32,830 --> 01:46:34,830
+vários processos
+
+2952
+01:46:34,830 --> 01:46:36,830
+a disputar o CPU
+
+2953
+01:46:36,830 --> 01:46:38,830
+daí a concorrência
+
+2954
+01:46:38,830 --> 01:46:40,830
+temos paralelismo
+
+2955
+01:46:40,830 --> 01:46:42,830
+portanto quando temos um CPU
+
+2956
+01:46:42,830 --> 01:46:44,830
+paralelismo
+
+2957
+01:46:44,830 --> 01:46:46,830
+porque se um CPU executa uma coisa
+
+2958
+01:46:46,830 --> 01:46:48,830
+ou executa outra
+
+2959
+01:46:48,830 --> 01:46:50,830
+quando temos mais do que um CPU
+
+2960
+01:46:50,830 --> 01:46:52,830
+podemos ter paralelismo
+
+2961
+01:46:52,830 --> 01:46:54,830
+e podemos ter concorrentes
+
+2962
+01:46:54,830 --> 01:46:56,830
+isto é
+
+2963
+01:46:56,830 --> 01:46:58,830
+temos mais do que uma tarefa
+
+2964
+01:46:58,830 --> 01:47:00,830
+em execução
+
+2965
+01:47:00,830 --> 01:47:02,830
+e temos as tarefas
+
+2966
+01:47:02,830 --> 01:47:04,830
+a concorrerem pelo CPU
+
+2967
+01:47:04,830 --> 01:47:06,830
+pronto, eu vou passar aqui
+
+2968
+01:47:06,830 --> 01:47:08,830
+para a parte
+
+2969
+01:47:08,830 --> 01:47:10,830
+da criação
+
+2970
+01:47:10,830 --> 01:47:12,830
+para ser mais fácil
+
+2971
+01:47:12,830 --> 01:47:14,830
+e para visualizar
+
+2972
+01:47:14,830 --> 01:47:16,830
+isto, vamos aqui
+
+2973
+01:47:16,830 --> 01:47:18,830
+pronto
+
+2974
+01:47:18,830 --> 01:47:20,830
+como é que se criam as tretes
+
+2975
+01:47:20,830 --> 01:47:22,830
+o processo é o mesmo que
+
+2976
+01:47:22,830 --> 01:47:24,830
+o processo é o mesmo que nos processos
+
+2977
+01:47:24,830 --> 01:47:26,830
+que é
+
+2978
+01:47:26,830 --> 01:47:28,830
+ao invés de usar o forto
+
+2979
+01:47:28,830 --> 01:47:30,830
+usa-se outra função
+
+2980
+01:47:30,830 --> 01:47:32,830
+que é o P3Dcreate
+
+2981
+01:47:32,830 --> 01:47:34,830
+e depois o P3Dcreate
+
+2982
+01:47:34,830 --> 01:47:36,830
+que é que faz, criam uma treta
+
+2983
+01:47:36,830 --> 01:47:38,830
+treta essa
+
+2984
+01:47:38,830 --> 01:47:40,830
+executar num determinado sítio
+
+2985
+01:47:40,830 --> 01:47:42,830
+já vamos ver
+
+2986
+01:47:42,830 --> 01:47:44,830
+vai
+
+2987
+01:47:44,830 --> 01:47:46,830
+fazer o seu trabalho
+
+2988
+01:47:46,830 --> 01:47:48,830
+e depois vai terminar
+
+2989
+01:47:48,830 --> 01:47:50,830
+típicamente a main thread
+
+2990
+01:47:50,830 --> 01:47:52,830
+ou a master thread
+
+2991
+01:47:52,830 --> 01:47:54,830
+agora não se usa muito o termo
+
+2992
+01:47:54,830 --> 01:47:56,830
+master
+
+2993
+01:47:56,830 --> 01:47:58,830
+por causa do master sleigh
+
+2994
+01:47:58,830 --> 01:48:00,830
+nesta imagem ainda parece master
+
+2995
+01:48:00,830 --> 01:48:02,830
+mas típicamente
+
+2996
+01:48:02,830 --> 01:48:04,830
+o termo é main thread
+
+2997
+01:48:04,830 --> 01:48:06,830
+vai ficar à espera
+
+2998
+01:48:06,830 --> 01:48:08,830
+que
+
+2999
+01:48:08,830 --> 01:48:10,830
+as threads terminem
+
+3000
+01:48:10,830 --> 01:48:12,830
+e o procedimento é o mesmo
+
+3001
+01:48:12,830 --> 01:48:14,830
+aceitar, vamos dizer assim
+
+3002
+01:48:14,830 --> 01:48:16,830
+a mortes as threads
+
+3003
+01:48:16,830 --> 01:48:18,830
+e este join
+
+3004
+01:48:18,830 --> 01:48:20,830
+da mesma forma como o 8
+
+3005
+01:48:20,830 --> 01:48:22,830
+é um mecanismo
+
+3006
+01:48:22,830 --> 01:48:24,830
+de sincronização
+
+3007
+01:48:24,830 --> 01:48:26,830
+ou permite, não quer dizer que seja sempre
+
+3008
+01:48:26,830 --> 01:48:28,830
+ou que seja usado por, mas permite
+
+3009
+01:48:28,830 --> 01:48:30,830
+ser um mecanismo de sincronização
+
+3010
+01:48:30,830 --> 01:48:32,830
+e nas threads isso ainda
+
+3011
+01:48:32,830 --> 01:48:34,830
+faz mais sentido
+
+3012
+01:48:34,830 --> 01:48:36,830
+para olhar aqui para este exemplo
+
+3013
+01:48:36,830 --> 01:48:38,830
+eu tenho aqui uma função
+
+3014
+01:48:38,830 --> 01:48:40,830
+do work
+
+3015
+01:48:40,830 --> 01:48:42,830
+esta é a função
+
+3016
+01:48:42,830 --> 01:48:44,830
+ora quando eu crio uma thread
+
+3017
+01:48:44,830 --> 01:48:46,830
+eu digo
+
+3018
+01:48:46,830 --> 01:48:48,830
+em que função
+
+3019
+01:48:48,830 --> 01:48:50,830
+é que essa thread vai cansar a executar
+
+3020
+01:48:50,830 --> 01:48:52,830
+e a thread
+
+3021
+01:48:52,830 --> 01:48:54,830
+vai terminar
+
+3022
+01:48:54,830 --> 01:48:56,830
+quando a função terminar
+
+3023
+01:48:56,830 --> 01:48:58,830
+obviamente
+
+3024
+01:48:58,830 --> 01:49:00,830
+que depende do que colocarmos
+
+3025
+01:49:00,830 --> 01:49:02,830
+dentro da função, pode terminar
+
+3026
+01:49:02,830 --> 01:49:04,830
+mais cedo ou menos cedo
+
+3027
+01:49:04,830 --> 01:49:06,830
+e daí
+
+3028
+01:49:06,830 --> 01:49:08,830
+as threads serem mais simples
+
+3029
+01:49:08,830 --> 01:49:10,830
+e mais fáceis de visualizar
+
+3030
+01:49:10,830 --> 01:49:12,830
+do que os processos
+
+3031
+01:49:12,830 --> 01:49:14,830
+os processos obviamente
+
+3032
+01:49:14,830 --> 01:49:16,830
+são coisas
+
+3033
+01:49:16,830 --> 01:49:18,830
+independentes
+
+3034
+01:49:18,830 --> 01:49:20,830
+portanto aquilo que vão executar
+
+3035
+01:49:20,830 --> 01:49:22,830
+são coisas independentes
+
+3036
+01:49:22,830 --> 01:49:24,830
+aqui não, quero com isto
+
+3037
+01:49:24,830 --> 01:49:26,830
+dizer que
+
+3038
+01:49:26,830 --> 01:49:28,830
+quando crio uma thread
+
+3039
+01:49:28,830 --> 01:49:30,830
+se eu tivesse para aqui variáveis globais
+
+3040
+01:49:30,830 --> 01:49:32,830
+que eu tinha definido
+
+3041
+01:49:32,830 --> 01:49:34,830
+estavam acessíveis
+
+3042
+01:49:34,830 --> 01:49:36,830
+às threads
+
+3043
+01:49:36,830 --> 01:49:38,830
+nos processos isso não existe
+
+3044
+01:49:38,830 --> 01:49:40,830
+a uma separação completa
+
+3045
+01:49:40,830 --> 01:49:42,830
+e esta é a forma
+
+3046
+01:49:42,830 --> 01:49:44,830
+de criar as threads
+
+3047
+01:49:44,830 --> 01:49:46,830
+provavelmente é mais fácil entender
+
+3048
+01:49:46,830 --> 01:49:48,830
+porque nós conseguimos ver
+
+3049
+01:49:48,830 --> 01:49:50,830
+qual é o ponto de
+
+3050
+01:49:50,830 --> 01:49:52,830
+execução
+
+3051
+01:49:52,830 --> 01:49:54,830
+da thread e a thread vai executar isto
+
+3052
+01:49:54,830 --> 01:49:56,830
+obviamente
+
+3053
+01:49:56,830 --> 01:49:58,830
+de que
+
+3054
+01:49:58,830 --> 01:50:00,830
+eu posso criar threads para executar
+
+3055
+01:50:00,830 --> 01:50:02,830
+funções que estão dentro
+
+3056
+01:50:02,830 --> 01:50:04,830
+do meu programa
+
+3057
+01:50:04,830 --> 01:50:06,830
+não posso fazer aquilo que eu tinha
+
+3058
+01:50:06,830 --> 01:50:08,830
+nos processos que é
+
+3059
+01:50:08,830 --> 01:50:10,830
+através das funções exec
+
+3060
+01:50:10,830 --> 01:50:12,830
+mudar as instruções
+
+3061
+01:50:12,830 --> 01:50:14,830
+isso não é possível
+
+3062
+01:50:14,830 --> 01:50:16,830
+as threads têm que estar
+
+3063
+01:50:16,830 --> 01:50:18,830
+associadas a um programa
+
+3064
+01:50:18,830 --> 01:50:20,830
+e aquilo que elas vão executar
+
+3065
+01:50:20,830 --> 01:50:22,830
+tem a ver com aquele programa
+
+3066
+01:50:22,830 --> 01:50:24,830
+os processos têm um outro propósito
+
+3067
+01:50:24,830 --> 01:50:26,830
+são programas independentes
+
+3068
+01:50:26,830 --> 01:50:28,830
+que eu posso ter programas independentes
+
+3069
+01:50:28,830 --> 01:50:30,830
+a contribuir
+
+3070
+01:50:30,830 --> 01:50:32,830
+para um sistema
+
+3071
+01:50:32,830 --> 01:50:34,830
+que eu posso ter
+
+3072
+01:50:34,830 --> 01:50:36,830
+e tenho muitas vezes
+
+3073
+01:50:36,830 --> 01:50:38,830
+mas também posso ter isso
+
+3074
+01:50:38,830 --> 01:50:40,830
+através de threads
+
+3075
+01:50:40,830 --> 01:50:42,830
+isto é, e na maior parte
+
+3076
+01:50:42,830 --> 01:50:44,830
+de casos é mais usado a thread
+
+3077
+01:50:44,830 --> 01:50:46,830
+do que o processo
+
+3078
+01:50:46,830 --> 01:50:48,830
+pelas razões que apresentei
+
+3079
+01:50:48,830 --> 01:50:50,830
+se eu quiser partilhar dados entre as threads
+
+3080
+01:50:50,830 --> 01:50:52,830
+basta definir na memória de thread
+
+3081
+01:50:52,830 --> 01:50:54,830
+variáveis globais
+
+3082
+01:50:54,830 --> 01:50:56,830
+nos processos tenho que pedir
+
+3083
+01:50:56,830 --> 01:50:58,830
+ao sistema operativo para criar
+
+3084
+01:50:58,830 --> 01:51:00,830
+uma zona de memória partilhada
+
+3085
+01:51:00,830 --> 01:51:02,830
+e depois ligar os processos
+
+3086
+01:51:02,830 --> 01:51:04,830
+a essa zona
+
+3087
+01:51:04,830 --> 01:51:06,830
+o que é muito mais complexo
+
+3088
+01:51:06,830 --> 01:51:08,830
+e muito mais chato de fazer
+
+3089
+01:51:08,830 --> 01:51:10,830
+nas threads isso é imediato
+
+3090
+01:51:10,830 --> 01:51:12,830
+pronto, e depois tem para aqui
+
+3091
+01:51:12,830 --> 01:51:14,830
+todas as funções
+
+3092
+01:51:14,830 --> 01:51:16,830
+das instruções que o sistema operativo
+
+3093
+01:51:16,830 --> 01:51:18,830
+aqui a norma após X
+
+3094
+01:51:18,830 --> 01:51:20,830
+para a criação
+
+3095
+01:51:20,830 --> 01:51:22,830
+de threads
+
+3096
+01:51:22,830 --> 01:51:24,830
+e há semelhança
+
+3097
+01:51:24,830 --> 01:51:26,830
+após tenho aqui o join
+
+3098
+01:51:26,830 --> 01:51:28,830
+há semelhança do que
+
+3099
+01:51:28,830 --> 01:51:30,830
+acontece também nos processos
+
+3100
+01:51:30,830 --> 01:51:32,830
+eu nos processos
+
+3101
+01:51:32,830 --> 01:51:34,830
+posso criar um processo
+
+3102
+01:51:34,830 --> 01:51:36,830
+e depois mudar-lhe
+
+3103
+01:51:36,830 --> 01:51:38,830
+a política de escalonamento
+
+3104
+01:51:38,830 --> 01:51:40,830
+posso dizer que este processo
+
+3105
+01:51:40,830 --> 01:51:42,830
+vai ser atribuído àquele CPU
+
+3106
+01:51:42,830 --> 01:51:44,830
+o mesmo também é possível
+
+3107
+01:51:44,830 --> 01:51:46,830
+fazer com as threads
+
+3108
+01:51:46,830 --> 01:51:48,830
+eu posso criar as threads
+
+3109
+01:51:48,830 --> 01:51:50,830
+e dizer esta thread
+
+3110
+01:51:50,830 --> 01:51:52,830
+você pode fazer com esta política de escalonamento
+
+3111
+01:51:52,830 --> 01:51:54,830
+ou esta thread
+
+3112
+01:51:54,830 --> 01:51:56,830
+é para executar naquele CPU
+
+3113
+01:51:56,830 --> 01:51:58,830
+portanto posso fazer
+
+3114
+01:51:58,830 --> 01:52:00,830
+isso como poderia fazer
+
+3115
+01:52:00,830 --> 01:52:02,830
+nos
+
+3116
+01:52:02,830 --> 01:52:04,830
+nos processos
+
+3117
+01:52:04,830 --> 01:52:06,830
+portanto temos aqui
+
+3118
+01:52:06,830 --> 01:52:08,830
+um exemplo em que
+
+3119
+01:52:08,830 --> 01:52:10,830
+portanto eu estou a definir
+
+3120
+01:52:10,830 --> 01:52:12,830
+atributos
+
+3121
+01:52:12,830 --> 01:52:14,830
+para a thread
+
+3122
+01:52:14,830 --> 01:52:16,830
+estou a dizer-se
+
+3123
+01:52:16,830 --> 01:52:18,830
+e no contexto destes atributos
+
+3124
+01:52:18,830 --> 01:52:20,830
+eu posso colocar
+
+3125
+01:52:20,830 --> 01:52:22,830
+muitas coisas entre as quais
+
+3126
+01:52:22,830 --> 01:52:24,830
+prioridades, política de escalonamento
+
+3127
+01:52:24,830 --> 01:52:26,830
+o que eu precisar
+
+3128
+01:52:26,830 --> 01:52:28,830
+para aqui o meu sistema
+
+3129
+01:52:28,830 --> 01:52:30,830
+seja
+
+3130
+01:52:30,830 --> 01:52:32,830
+comprar os requisitos
+
+3131
+01:52:32,830 --> 01:52:34,830
+portanto se eu tenho
+
+3132
+01:52:34,830 --> 01:52:36,830
+várias tarefas
+
+3133
+01:52:36,830 --> 01:52:38,830
+e tenho que atribuir prioridades diferentes
+
+3134
+01:52:38,830 --> 01:52:40,830
+a essas tarefas
+
+3135
+01:52:40,830 --> 01:52:42,830
+e se eu quero implementar
+
+3136
+01:52:42,830 --> 01:52:44,830
+com base em threads
+
+3137
+01:52:44,830 --> 01:52:46,830
+eu crio as threads
+
+3138
+01:52:46,830 --> 01:52:48,830
+e vou configurá-las
+
+3139
+01:52:48,830 --> 01:52:50,830
+para elas terem
+
+3140
+01:52:50,830 --> 01:52:52,830
+as propriedades que permitam
+
+3141
+01:52:52,830 --> 01:52:54,830
+o sistema cumprir
+
+3142
+01:52:54,830 --> 01:52:56,830
+os requisitos
+
+3143
+01:52:56,830 --> 01:53:03,470
+dúvidas
+
+3144
+01:53:03,470 --> 01:53:05,470
+já não temos tempo
+
+3145
+01:53:05,470 --> 01:53:07,470
+de falar sobre os semáforos
+
+3146
+01:53:07,470 --> 01:53:09,470
+falamos
+
+3147
+01:53:09,470 --> 01:53:11,470
+no sábado
+
+3148
+01:53:11,470 --> 01:53:13,470
+sobre isto
+
+3149
+01:53:13,470 --> 01:53:15,470
+digam-me uma coisa, esta aula
+
+3150
+01:53:15,470 --> 01:53:17,470
+é porque eu ainda não tenho
+
+3151
+01:53:17,470 --> 01:53:19,470
+ainda não me aparece o horário
+
+3152
+01:53:19,470 --> 01:53:21,470
+para o próximo sábado
+
+3153
+01:53:21,470 --> 01:53:23,470
+esta aula é a que ora
+
+3154
+01:53:23,470 --> 01:53:25,470
+está as novas lá, João
+
+3155
+01:53:25,470 --> 01:53:27,470
+sabe-me dizer
+
+3156
+01:53:27,470 --> 01:53:29,470
+acho que as novas
+
+3157
+01:53:29,470 --> 01:53:31,470
+é as novas, esta?
+
+3158
+01:53:31,470 --> 01:53:33,470
+sim, as novas
+
+3159
+01:53:33,470 --> 01:53:35,470
+esta aconteceu
+
+3160
+01:53:35,470 --> 01:53:37,470
+uma alteração
+
+3161
+01:53:37,470 --> 01:53:39,470
+não estava previsto
+
+3162
+01:53:39,470 --> 01:53:41,470
+e eu neste momento ainda nem sei bem
+
+3163
+01:53:41,470 --> 01:53:43,470
+eu só tenho acesso
+
+3164
+01:53:43,470 --> 01:53:45,470
+ao time, ainda não tenho acesso ao mundo
+
+3165
+01:53:45,470 --> 01:53:47,470
+portanto
+
+3166
+01:53:47,470 --> 01:53:49,470
+e estas aulas
+
+3167
+01:53:49,470 --> 01:53:51,470
+ainda não aparecem no portal
+
+3168
+01:53:51,470 --> 01:53:53,470
+acho que irão aparecer amanhã
+
+3169
+01:53:53,470 --> 01:53:55,470
+ou depois não sei, mas
+
+3170
+01:53:55,470 --> 01:53:57,470
+se não aparecerem que amanhã é feriado
+
+3171
+01:53:57,470 --> 01:53:59,470
+e depois é sábado
+
+3172
+01:53:59,470 --> 01:54:01,470
+portanto tenho certeza que
+
+3173
+01:54:01,470 --> 01:54:06,960
+é as novas
+
+3174
+01:54:06,960 --> 01:54:08,960
+e agora qual é a sala?
+
+3175
+01:54:08,960 --> 01:54:10,960
+que eu também não sei qual é a sala
+
+3176
+01:54:10,960 --> 01:54:12,960
+e a 209 as fãs
+
+3177
+01:54:12,960 --> 01:54:14,960
+309
+
+3178
+01:54:14,960 --> 01:54:16,960
+sim, 309
+
+3179
+01:54:16,960 --> 01:54:18,960
+e b 309
+
+3180
+01:54:18,960 --> 01:54:20,960
+é no edifício de informática
+
+3181
+01:54:20,960 --> 01:54:25,230
+e que é isso
+
+3182
+01:54:25,230 --> 01:54:27,230
+b 309
+
+3183
+01:54:27,230 --> 01:54:29,230
+tudo bem, pronto
+
+3184
+01:54:29,230 --> 01:54:31,230
+era só porque eu não tenho o horário
+
+3185
+01:54:31,230 --> 01:54:33,230
+não sei a sala
+
+3186
+01:54:33,230 --> 01:54:35,230
+portanto
+
+3187
+01:54:35,230 --> 01:54:37,230
+o que disseram é que talvez amanhã já tenha o horário
+
+3188
+01:54:37,230 --> 01:54:39,230
+mas isto como amanhã é feriado
+
+3189
+01:54:39,230 --> 01:54:41,230
+não sei se vou ter nada
+
+3190
+01:54:41,230 --> 01:54:43,230
+pronto, vemos-nos no sábado
+
+3191
+01:54:43,230 --> 01:54:45,230
+o que é que eu
+
+3192
+01:54:45,230 --> 01:54:47,230
+o que é que eu respeito
+
+3193
+01:54:47,230 --> 01:54:49,230
+olhem para
+
+3194
+01:54:49,230 --> 01:54:51,230
+aquela
+
+3195
+01:54:51,230 --> 01:54:53,230
+teoria sobre
+
+3196
+01:54:53,230 --> 01:54:55,230
+o sistema estampo real
+
+3197
+01:54:55,230 --> 01:54:57,230
+sobre aqueles algoritmos
+
+3198
+01:54:57,230 --> 01:54:59,230
+porque
+
+3199
+01:54:59,230 --> 01:55:01,230
+tentar perceber como é que tendo um conjunto
+
+3200
+01:55:01,230 --> 01:55:03,230
+tarefas como é que
+
+3201
+01:55:03,230 --> 01:55:05,230
+aquilo executa para ganhar ali alguma
+
+3202
+01:55:05,230 --> 01:55:07,230
+sensibilidade
+
+3203
+01:55:07,230 --> 01:55:09,230
+em relação a isso
+
+3204
+01:55:09,230 --> 01:55:11,230
+porque é tendo essa sensibilidade
+
+3205
+01:55:11,230 --> 01:55:13,230
+e quando vamos
+
+3206
+01:55:13,230 --> 01:55:15,230
+desenvolver um sistema qualquer
+
+3207
+01:55:15,230 --> 01:55:17,230
+é que nós vamos ter que terem atenção
+
+3208
+01:55:17,230 --> 01:55:19,230
+e tentar perceber como é que as coisas funcionam
+
+3209
+01:55:19,230 --> 01:55:21,230
+portanto se não tivermos
+
+3210
+01:55:21,230 --> 01:55:23,230
+essa noção de quando é que uma tarefa é pré-emptada
+
+3211
+01:55:23,230 --> 01:55:25,230
+e quando essas coisas assim
+
+3212
+01:55:25,230 --> 01:55:27,230
+tornam-se difícil
+
+3213
+01:55:27,230 --> 01:55:29,230
+fazer o que é que seja
+
+3214
+01:55:29,230 --> 01:55:31,230
+tá bem?
+
+3215
+01:55:31,230 --> 01:55:33,230
+portanto tá aqui
+
+3216
+01:55:33,230 --> 01:55:35,230
+alguém me mandou uma mensagem?
+
+3217
+01:55:35,230 --> 01:55:38,740
+ah não
+
+3218
+01:55:38,740 --> 01:55:40,740
+pronto
+
+3219
+01:55:40,740 --> 01:55:42,740
+posto isto
+
+3220
+01:55:42,740 --> 01:55:44,740
+sendo assim, não havendo dúvidas
+
+3221
+01:55:44,740 --> 01:55:46,740
+bom feriado, bom dia
+
+3222
+01:55:46,740 --> 01:55:48,740
+do trabalhador e vemos-nos no sábado
+
+3223
+01:55:48,740 --> 01:55:50,740
+tá bem?
+
+3224
+01:55:50,740 --> 01:55:52,740
+se puderem, tragam o vosso computador
+
+3225
+01:55:52,740 --> 01:55:54,740
+tá bem?
+
+3226
+01:55:54,740 --> 01:55:56,740
+obrigado
+
