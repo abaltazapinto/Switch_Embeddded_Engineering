@@ -236,6 +236,8 @@ ip route add 186.113.184.0/24 via 186.113.188.1
 
 ![alt text](image-19.png)
 
+![alt text](image-28.png)
+
 ## Ação (1 passo)
 
 No `n1`, testa diretamente o `db1`:
