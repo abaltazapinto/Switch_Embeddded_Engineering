@@ -1,0 +1,2332 @@
+1
+00:00:04,620 --> 00:00:40,920
+Onde temos aqui uma rede, uma rede estilo empresarial, ou seja, é pensada para ligar
+
+2
+00:00:40,920 --> 00:00:50,200
+departamentos e máquinas de utilizadores, mas isso é indiferente de qual é o objetivo,
+
+3
+00:00:50,200 --> 00:00:58,700
+ou seja, para ligar dispositivos, era a mesma coisa, cada uma destes rodinhas com uma letra
+
+4
+00:00:58,700 --> 00:01:11,970
+é uma rede local, ou seja, um link, ou uma nuvem, e cada nuvem pode ter muitas máquinas
+
+5
+00:01:11,970 --> 00:01:17,650
+ligadas, mas agora hoje não estamos preocupados com ligar as máquinas, até porque já vimos
+
+6
+00:01:17,650 --> 00:01:26,850
+que a ideia de ligar máquinas tenta-se fazer sempre de forma automática, temos os encaminhadores
+
+7
+00:01:26,850 --> 00:01:31,730
+e que temos que configurar os encaminhadores para que todos falem com todos e todos falem
+
+8
+00:01:31,730 --> 00:01:41,740
+para a internet também, então esta rede está dividida em duas subredes, uma parte norte
+
+9
+00:01:41,740 --> 00:01:50,980
+e uma parte sul, cada uma das partes norte e parte sul está ligada a um router de entrada,
+
+10
+00:01:50,980 --> 00:02:04,380
+o Border Router, o BR, através de um link dependendo do contexto, é possível considerar
+
+11
+00:02:04,380 --> 00:02:12,220
+que o link pertence à rede norte, que o link pertence à rede norte ou não, mais
+
+12
+00:02:12,220 --> 00:02:19,020
+habitual é considerarmos que as redes de cais começam por um router e não por um link,
+
+13
+00:02:19,020 --> 00:02:26,300
+em nossa casa também a entrada temos um router e não o link que liga ao nosso router
+
+14
+00:02:26,300 --> 00:02:35,970
+não é nosso, não é gerido pela mesma entidade, podia ser, não há problema nenhum disso,
+
+15
+00:02:35,970 --> 00:02:43,050
+é apenas um, podemos fazer como quisermos se nos deixarem e podemos manter a organização
+
+16
+00:02:43,050 --> 00:02:51,850
+como é feita a organização da empresa de entidade que gera rede global, ou que nós
+
+17
+00:02:51,850 --> 00:03:01,170
+vamos considerar, desde o enunciado, que a gama que já já nos para a rede norte não
+
+18
+00:03:01,170 --> 00:03:08,970
+inclui aquele segmento A nem aquele segmento F, aquele segmento F também não vai ter
+
+19
+00:03:08,970 --> 00:03:17,890
+endereços da gama que atribuirmos à rede sul, mas tem endereços, tem que ter endereços
+
+20
+00:03:17,890 --> 00:03:32,650
+que pretensam a rede global, de cada um de vocês deve ter que conseguir arranjar uma gama
+
+21
+00:03:32,650 --> 00:03:47,680
+aqui, aqui temos, dão-nos uma gama IPv6, que é uma gama global, os endereços globais
+
+22
+00:03:47,680 --> 00:03:56,000
+que costumam começar por dois e tudo, como esta, e temos também um identificador global
+
+23
+00:03:56,000 --> 00:04:20,950
+o LA, vou copiar para aqui e aqui vou ter, vou escrever a minha gama para o seu aluno
+
+24
+00:04:20,950 --> 00:04:38,450
+em 234567, vocês fazem isto para o vosso número da luna, mas de esperar próximo passo
+
+25
+00:04:38,450 --> 00:04:48,900
+vamos pedir para atribuir-nos endereços às redes, e a ideia é primeiro atribuir-nos
+
+26
+00:04:48,900 --> 00:05:03,740
+endereços globais, endereços global, utilizando a nossa gama global, e depois vamos pedir
+
+27
+00:05:03,740 --> 00:05:14,620
+para atribuir-nos também endereços do LA, a primeira decisão sobre que tipo de endereços
+
+28
+00:05:14,620 --> 00:05:22,800
+vamos usar, aqui não temos que atomar, porque o enunciado impõe-nos, temos que usar o
+
+29
+00:05:22,800 --> 00:05:33,090
+LA, temos que usar GUA, e depois vamos ter que usar também o LA, mas se percebe aqui
+
+30
+00:05:33,090 --> 00:05:39,250
+para este texto, eles sugerem que ser loco primeiro endereços à párrede norte e párrede
+
+31
+00:05:39,250 --> 00:05:50,780
+sul, e também para a rede AIF, que não fazem parte nem da norte nem da sul, e depois
+
+32
+00:05:50,780 --> 00:06:01,300
+só depois disso é que nos mandam distribuir endereços da rede norte para as redes BCDE
+
+33
+00:06:01,300 --> 00:06:13,240
+e distribuir endereços da rede sul para GHIJ, depois de termos uma gama para a rede norte
+
+34
+00:06:13,240 --> 00:06:17,280
+temos que distribuir para aquelas subrendes, e depois termos endereços para a rede sul
+
+35
+00:06:17,280 --> 00:06:23,520
+distribuímos para aquelas, ou seja, isto pressupõe um trabalho hierárquico em que
+
+36
+00:06:23,520 --> 00:06:29,160
+primeiro distribuímos para as redes grandes, para a norte e para a sul, e depois é que
+
+37
+00:06:29,160 --> 00:06:41,540
+vamos distribuir isso para as redes pequenas, e esta ideia de fazer as coisas de forma
+
+38
+00:06:41,540 --> 00:06:48,180
+hierárquica é aquilo que acontece na realidade, aquilo que normalmente acontece na realidade,
+
+39
+00:06:48,180 --> 00:06:54,460
+ou seja, não há ninguém no mundo que se sente à frente de uma mesa para distribuir
+
+40
+00:06:54,460 --> 00:07:04,830
+os endereços para os laboratórios todos do ISEP, o que faz é trabalhar, que primeiro
+
+41
+00:07:04,830 --> 00:07:10,190
+distribui-se por as regiões, depois regiões por países, países por instituições, ou
+
+42
+00:07:10,190 --> 00:07:18,070
+fornecedores de acesso, depois instituições, instituições, uma instituição como OIPP,
+
+43
+00:07:18,070 --> 00:07:22,070
+depois distribui por escolas, as escolas distribuem por departamentos, e os departamentos
+
+44
+00:07:22,190 --> 00:07:29,310
+distribuem por laboratórios. Esta forma de trabalhar hierárquicamente é aquilo que
+
+45
+00:07:29,310 --> 00:07:34,790
+dá menos trabalho, porque assim ninguém tem o trabalho de fazer tudo para os departamentos
+
+46
+00:07:34,790 --> 00:07:40,830
+todos, podem ser pessoas diferentes a trabalhar em cada lume dos níveis, e também desta
+
+47
+00:07:40,830 --> 00:07:47,230
+forma resultam distribuições hierárquicas em que é possível depois arranjarmos rotas
+
+48
+00:07:47,230 --> 00:07:54,990
+uma paraqueda rede grande e encaminhar o tráfego todo da rede grande só com uma rota, porque
+
+49
+00:07:54,990 --> 00:08:02,830
+a rede grande fica a ser a soma ou a união das redes pequenas. Ontem aqui impõe-nos
+
+50
+00:08:02,830 --> 00:08:08,590
+que façamos a distribuição dessa maneira, e essa também é a maneira mais correta
+
+51
+00:08:08,590 --> 00:08:16,750
+ou mais lógica de fazer as coisas, às vezes em IPv4 foge-se dessa hierarquia para tentar
+
+52
+00:08:16,750 --> 00:08:23,870
+otimizar mais e poupar endereços, em IPv6 que não há falta de endereços, não há razão
+
+53
+00:08:23,870 --> 00:08:29,910
+nenhuma para fugirmos da distribuição hierárquica e devemos fazer distribuição hierárquica.
+
+54
+00:08:29,910 --> 00:08:46,470
+Contesta tabela aqui está, tem aqui uns campos indentados que ajudam a perceber essa hierarquia,
+
+55
+00:08:46,470 --> 00:08:51,590
+ou seja, as redes B, C, D e E que estão mais para a direita, porque fazem parte da rede
+
+56
+00:08:51,590 --> 00:08:59,590
+norte e as redes G, H e I, J fazem parte da Z de Sul, por isso é questão com esta anotação
+
+57
+00:08:59,590 --> 00:09:11,180
+assim mais indentada, mas se não estivessem viajar ao mesmo. Além disso temos aqui mais
+
+58
+00:09:11,180 --> 00:09:20,900
+requisitos e normalmente na prática existem sempre muitas restrições, podem existir sempre
+
+59
+00:09:20,900 --> 00:09:30,260
+muita coisa que tem que se cumprir para além de, por as coisas a funcionar. Dizem-nos que
+
+60
+00:09:30,260 --> 00:09:34,860
+para isto ser mais difícil o bloco atribuir à rede norte deve poder suportar a futura
+
+61
+00:09:34,860 --> 00:09:45,900
+criação de 5 novos departamentos, ou seja, na rede norte temos 1, 2, 3, 4 departamentos
+
+62
+00:09:45,900 --> 00:09:53,220
+ou subredos, mas devemos fazer uma distribuição que não esgote os endereços todos da rede
+
+63
+00:09:53,220 --> 00:09:59,540
+norte nestes 4 departamentos, devemos deixar endereços suficientes para apreceder mais
+
+64
+00:09:59,540 --> 00:10:11,140
+5 departamentos, é uma das restrições que nos ponhem. Para além disso dizem-nos que
+
+65
+00:10:11,140 --> 00:10:16,340
+no departamento da rede norte, portendo-se utilizar a configuração de endereços IPv6
+
+66
+00:10:16,340 --> 00:10:22,980
+nos postes de trabalho por DHCP, normalmente é o administrador da rede que decide que
+
+67
+00:10:23,100 --> 00:10:30,300
+distribui os endereços, ou seja, que alguém superior a nós decidiu isto, não é muito
+
+68
+00:10:30,300 --> 00:10:36,180
+difícil, o DHCP pode ser usado basicamente em qualquer rede, não precisamos muito nos
+
+69
+00:10:36,180 --> 00:10:47,300
+preocupar com esta diretiva. Quanto à rede sul? Ninguém fala em DHCP, mas dizem-se
+
+70
+00:10:47,300 --> 00:10:53,340
+portendo utilizar a auto configuração de endereços Stakeless, e nós já falamos
+
+71
+00:10:53,340 --> 00:11:02,620
+de auto configuração Stakeless e vimos que o principal requisito que temos que cumprir
+
+72
+00:11:02,620 --> 00:11:09,940
+para ser possível fazer este tipo de auto configuração de endereços, é termos não
+
+73
+00:11:09,940 --> 00:11:21,690
+mais do que 64 bits no prefixo, temos que ter prefixo de 64 bits ou menores, prefixo
+
+74
+00:11:21,690 --> 00:11:27,730
+menores do que 64 bits desperdiçam mais endereços, portanto normal quando existe esta restrição
+
+75
+00:11:27,730 --> 00:11:51,120
+ou esta recomendação é usarmos endereços de prefixo de 64 bits. Como já se percebeu
+
+76
+00:11:51,120 --> 00:11:59,400
+também vamos ter que atribuir endereços IPv6, GUA e endereços OLA, isso nem sempre
+
+77
+00:11:59,400 --> 00:12:13,120
+existe essa restrição, essa necessidade, nós vimos que cada máquina ou cada interface
+
+78
+00:12:13,120 --> 00:12:21,800
+tem sempre um endereço link local e depois podemos ter um endereço global que permita
+
+79
+00:12:21,800 --> 00:12:29,480
+aceder a internet e se esse endereço global for fixo, o que significa que também da internet
+
+80
+00:12:29,480 --> 00:12:37,850
+podem aceder a nossa máquina, se o endereço global que nós temos não for fixo, então
+
+81
+00:12:37,850 --> 00:12:45,650
+uma ideia é usar o endereço OLA, que esse pode ser fixo, somos nós que atribuímos e
+
+82
+00:12:45,650 --> 00:12:52,930
+mesmo que não seja adequado a permitir que da internet aceder a nossa máquina, pelo menos
+
+83
+00:12:52,930 --> 00:13:00,930
+é adequado para que as outras pessoas na nossa rede falem com nós porque conhecem
+
+84
+00:13:00,930 --> 00:13:15,780
+o nosso GUA fixo. Além disto, algumas recomendações globais que normalmente se tentam seguir
+
+85
+00:13:15,780 --> 00:13:29,170
+quando se faz distribuição de endereços IPv6, configuração de redes por IPv6, ou seja,
+
+86
+00:13:29,170 --> 00:13:38,610
+normalmente existe um mecanismo de router announcement em cada router e em cada rede
+
+87
+00:13:38,610 --> 00:13:45,050
+existe pelo menos um router, deve-se deixar que os default gateway das máquinas que usam
+
+88
+00:13:45,050 --> 00:13:50,850
+uma determinada rede sejam configurados por R&A do router announcement, ou o router
+
+89
+00:13:50,850 --> 00:13:59,330
+advertisement, assim que se chama. Também normalmente se considera que existe uma
+
+90
+00:13:59,330 --> 00:14:06,730
+recomendação para que as redes do tipo link, as redes não divididas, as redes onde
+
+91
+00:14:06,730 --> 00:14:19,700
+existem postos de trabalho tenham sempre um prefixo de 64 bits. Esta recomendação há
+
+92
+00:14:19,700 --> 00:14:28,420
+quem é considero que é certa, ou seja, que existe de facto essa recomendação, eu acho
+
+93
+00:14:28,420 --> 00:14:34,940
+que aquilo que está escrito de facto nas normas é que os distribuidores de endereço,
+
+94
+00:14:34,940 --> 00:14:41,500
+ou seja, os fornecedores da SESA internet devem sempre distribuir aos seus clientes
+
+95
+00:14:41,500 --> 00:14:49,300
+redes de 64 bits, o permitir que os seus clientes usem redes com prefixes de 64 bits. Dentro
+
+96
+00:14:49,300 --> 00:14:55,940
+de uma rede empresarial nós podemos fazer como quiser, mas não somos obrigados a
+
+97
+00:14:55,940 --> 00:15:01,900
+seguir este conselho até porque, e sobretudo, quando não é possível, por falta de endereços,
+
+98
+00:15:01,900 --> 00:15:10,360
+não temos que seguir este conselho. O por prefixo de 64 bits é bom para permitir-se
+
+99
+00:15:10,360 --> 00:15:19,880
+laque e, portanto, se for possível, devemos por prefixes de 64 bits, mas quando isso
+
+100
+00:15:19,880 --> 00:15:25,840
+não for possível, desde que saibamos o que estamos a fazer, podemos utilizar outro
+
+101
+00:15:25,840 --> 00:15:33,000
+mecanismo de autoconfiguração de endereços que não o se laque e, dessa forma, poupar endereços.
+
+102
+00:15:33,000 --> 00:15:46,300
+Não é proibido, nem funciona mal e não estamos a fugir às normas. Acho que não existe
+
+103
+00:15:46,300 --> 00:15:53,260
+escrito na documentação oficial, mas que normalmente os tutoriais recomendam, que
+
+104
+00:15:53,260 --> 00:16:01,980
+é nas redes que agregam outras redes, que devem sempre tentar usar prefixos com um
+
+105
+00:16:01,980 --> 00:16:10,380
+número de bits que seja múltiplo de 16 ou pelo menos de 4. De 16 é muito difícil,
+
+106
+00:16:10,380 --> 00:16:18,380
+é preciso ter gamas muito grandes normalmente, mas se for possível fazer enders com múltiples
+
+107
+00:16:18,380 --> 00:16:25,020
+de 4, considera-se que é recomendado porque torna as coisas mais simples, mais fáceis
+
+108
+00:16:25,020 --> 00:16:28,620
+de perceber, porque quem for ver as coisas, etc.
+
+109
+00:16:28,740 --> 00:16:36,980
+Então, se nós pudermos, vamos tentar cumprir estas coisas, mas não temos muitos endereços
+
+110
+00:16:36,980 --> 00:16:43,500
+fazer prefixos de 64 bits já, já vimos que pelo inunciado é obrigatório, mas é de
+
+111
+00:16:43,500 --> 00:16:51,300
+sul, mas é de norte, só vamos fazer isso se pudermos e aquelas coisas que também os
+
+112
+00:16:51,300 --> 00:17:08,350
+múltiples de 4 ou de 16, só vamos fazer-se pudermos.
+
+113
+00:17:08,470 --> 00:17:19,060
+Então, vamos começar a atribuir gamas a estas coisas, em IPv4, nesta fase, fizemos
+
+114
+00:17:19,060 --> 00:17:24,100
+dois ou três exercícios de distribuição de gamas IPv4 e vimos que normalmente dava
+
+115
+00:17:24,100 --> 00:17:30,460
+jeito até juntar estas tabelas, ajejar uma coluna adicional para nos ajudar, onde
+
+116
+00:17:30,460 --> 00:17:36,370
+escrevíamos o número de endereços que íamos dar a cada gama.
+
+117
+00:17:36,370 --> 00:17:45,650
+Em IPv6, essa coluna, como nos nessa forma, normalmente não se justifica porque o número
+
+118
+00:17:45,650 --> 00:17:53,530
+de endereços que damos a cada subredo é sempre mais do que o suficiente para o número
+
+119
+00:17:53,530 --> 00:17:57,290
+de utilizadores que existem, ou seja, não temos muito que nos preocupar com o número
+
+120
+00:17:57,290 --> 00:18:02,570
+de endereços, além disso, escrever o número de endereços, o número de endereços normalmente
+
+121
+00:18:02,570 --> 00:18:07,770
+é uma coisa grande, estar a escrever o número de endereços normalmente não vale a pena.
+
+122
+00:18:07,770 --> 00:18:13,810
+Essa coluna que usávamos em IPv4 com o número de endereços, se calhar, poderia ser substituída
+
+123
+00:18:13,810 --> 00:18:20,250
+aqui em IPv6 por uma coluna com o número de bits do perfixo, o número de bits do perfixo
+
+124
+00:18:20,250 --> 00:18:25,690
+que está relacionado com o número de endereços e nós é um número mais pequeno, mais fácil
+
+125
+00:18:25,690 --> 00:18:26,690
+de tratar.
+
+126
+00:18:26,690 --> 00:18:33,690
+Ou seja, em IPv4, nós começávamos a pensar para cada rede quantos endereços aqui íamos
+
+127
+00:18:33,690 --> 00:18:40,010
+dar, e só depois de ter essa coluna preenchida é que começávamos a dar endereços.
+
+128
+00:18:40,010 --> 00:18:48,890
+Aqui vamos trabalhar de forma parecida, vamos primeiro pensar para cada rede qual há de
+
+129
+00:18:48,890 --> 00:18:56,090
+ser o número do perfixo, o comprimento do perfixo, e depois quando tivermos as dimensões
+
+130
+00:18:56,090 --> 00:19:04,290
+dos perfixos todas, então atribuímos endereços, e nos departamentos da rede sul é fácil
+
+131
+00:19:04,290 --> 00:19:12,250
+decidirmos qual há de ser o tamanho do perfixo, porque nos disseram, nos obrigaram a usar
+
+132
+00:19:12,250 --> 00:19:20,170
+SELAC, e já vimos que o SELAC obriga a ter perfixos de 64 bits, então podemos já
+
+133
+00:19:20,170 --> 00:19:27,090
+escrever aqui barra 64, ou se eu estivesse a escrever em papel, me gostava isto já à
+
+134
+00:19:27,090 --> 00:19:39,070
+direita e ficava já aqui o barra 64, e aqui também barra 64, e barra 64, e barra 64.
+
+135
+00:19:47,900 --> 00:19:54,380
+Podia colocar barra 63 ou barra 72, qualquer coisa menor, mas aí estava a atribuir mais
+
+136
+00:19:54,380 --> 00:20:03,180
+endereços e barra 64 é mais deficiente, porque permitem cada uma das redes ter 2 levantado
+
+137
+00:20:03,180 --> 00:20:12,500
+a 64 endereços, que é um número muito grande, não há razão nenhuma para ter mais, além
+
+138
+00:20:12,500 --> 00:20:18,100
+disso, este problema com as restrições que nos ponhem ficava mais ou menos impossível
+
+139
+00:20:18,100 --> 00:20:26,910
+de resolver, com outra coisa que não fosse barra 64 aqui.
+
+140
+00:20:26,910 --> 00:20:34,150
+Se sabemos qual vai ser o tamanho de cada uma destas quatro, a rede sul que eu conjunto
+
+141
+00:20:34,150 --> 00:20:43,830
+destas, ou união destas quatro, tem que ser uma barra 62, uma barra 62 é uma rede que
+
+142
+00:20:43,830 --> 00:20:51,470
+pode ser dividida em duas barras 63 ou em quatro redes barra 64, ou sumando quatro
+
+143
+00:20:51,470 --> 00:21:07,540
+barras 64, o que temos uma barra 62, um tonosso, a nossa gama original, que eu escrevi aqui,
+
+144
+00:21:07,540 --> 00:21:21,820
+era uma barra 61, se eu já estou a alocar aqui uma barra 62 para a rede sul, significa
+
+145
+00:21:21,820 --> 00:21:32,460
+que já estou a alocar metade dos endereços que me deram, e agora para as outras redes
+
+146
+00:21:32,460 --> 00:21:47,390
+todas, vou ter que usar só a outra metade que ainda não usei, que significa que não
+
+147
+00:21:47,390 --> 00:21:53,030
+posso gastar mais endereços, porque senão vou ficar com poucos endereços para a parte
+
+148
+00:21:53,030 --> 00:22:04,340
+de cima, já estou a gastar metade, melhor não gastar mais.
+
+149
+00:22:04,460 --> 00:22:12,660
+Se eu gastei aqui uma barra 62, tenho agora outra barra 62 para distribuir por isto tudo,
+
+150
+00:22:12,660 --> 00:22:21,140
+porque uma barra 61 que eu tenho global só pode se dividir em duas barras 62, então
+
+151
+00:22:21,140 --> 00:22:31,430
+deve ser justo dividir, ou seja, a parra de norte, vou ter que por uma coisa mais pequena
+
+152
+00:22:31,430 --> 00:22:52,520
+do que uma barra 62, poderia ser uma barra 63 ou uma barra 64, então ter uma barra 64
+
+153
+00:22:52,520 --> 00:23:00,200
+pode ser dividida em redes mais pequenas para satisfazer estes departamentos, se o só
+
+154
+00:23:00,200 --> 00:23:09,200
+tivesse estes quatro departamentos, podia por dividir aquela barra 64 em quatro, barra
+
+155
+00:23:09,200 --> 00:23:18,960
+66, mas o inunciado diz-me que deve prever para além destas quatro, deve prever mais
+
+156
+00:23:18,960 --> 00:23:25,790
+pelo menos cinco departamentos aqui na rede norte que podem aparecer nos próximos dias,
+
+157
+00:23:25,790 --> 00:23:31,950
+significa que não posso dividir aquela por quatro, tenho que dividir por quatro mais cinco
+
+158
+00:23:31,950 --> 00:23:40,640
+que são nove, o nove não é bom para estas coisas, para estas coisas só os números,
+
+159
+00:23:40,640 --> 00:23:50,240
+então as potências de dois é que são boas, portanto eu posso dividir por 16, dividir
+
+160
+00:23:50,240 --> 00:24:00,140
+por 16 é usar quatro bites e portanto usar barra 68, portanto com barra 68 já consigo
+
+161
+00:24:00,140 --> 00:24:11,400
+responder a isto, e funciona o barra 68, o barra 69, o 70 e os números todos por aí
+
+162
+00:24:11,400 --> 00:24:23,380
+fora, até levávelmente até o 120 ou 118 ou perto disso, dependendo do número de endereços
+
+163
+00:24:23,380 --> 00:24:28,540
+que a precise para cada uma das redes, posso fazer as redes muito pequenas, e portanto
+
+164
+00:24:28,540 --> 00:24:36,920
+tenho liberdade para escolher a dimensão do prefixo 168 e 118, vou escolher um número
+
+165
+00:24:36,920 --> 00:24:42,600
+que seja simpático e já agora vou aproveitar para cumprir aquela recomendação que diz
+
+166
+00:24:42,600 --> 00:24:51,600
+que se deve usar cumprimentos de prefixo múltiplos de 16, e se não pudermos que sejam múltiplos
+
+167
+00:24:51,600 --> 00:25:00,570
+de quatro, o 68 é múltiplo de quatro, mas não é múltiplo de 16, ou se quer apunhar
+
+168
+00:25:00,570 --> 00:25:13,700
+aqui 80, o 80 é múltiplo de 16 e de 4, e agora aqui apunho também 80, aqui apunho
+
+169
+00:25:13,700 --> 00:25:23,080
+também 80, e aqui apunho também 80, desta forma estou a fazer redes mais pequenas, redes
+
+170
+00:25:23,080 --> 00:25:29,480
+onde não se pode usar slack, porque tenho aqui números maiores do que 64, mas não
+
+171
+00:25:29,480 --> 00:25:36,720
+tenho outra maneira de se desfazer as redes todas, portanto se usar 68 também já não
+
+172
+00:25:36,720 --> 00:25:47,720
+chegava, portanto 68 ou 80 tanto faz, com 80 estou a cumprir o requisito de poder fazer
+
+173
+00:25:47,720 --> 00:26:01,640
+9 departamentos, até mais, estou a usar 16 bits daqui para aqui, posso arranjar 2 levantadas
+
+174
+00:26:01,640 --> 00:26:19,350
+16 departamentos que são 64 mil departamentos, e agora posso atribuir endereços a rede
+
+175
+00:26:19,350 --> 00:26:35,180
+a podem ser também barra 64, ou se eu souber que não preciso de usar slack, até porque
+
+176
+00:26:35,180 --> 00:26:43,500
+o IUF são redes de trânsito e portanto não vão ter máquinas, até poder usar endereços
+
+177
+00:26:43,500 --> 00:26:55,030
+link local para estes links, se quiser também posso por 80, e assim fico com mais endereços
+
+178
+00:26:55,030 --> 00:27:09,410
+disponíveis para outra necessidade que apareça, portanto temos a primeira fase cumprida
+
+179
+00:27:09,410 --> 00:27:15,850
+porque já escolhemos o tamanho de cada uma das redes e fizemos isto de maneira que o
+
+180
+00:27:15,850 --> 00:27:22,530
+número total de endereços chega, cabe, porque temos uma barra 61, e aqui usamos uma barra
+
+181
+00:27:22,530 --> 00:27:33,130
+62 que é metade disso, e depois usamos uma barra 64, mais uns bocadinhos pequenos, tanto
+
+182
+00:27:33,130 --> 00:27:52,060
+que estamos a usar os endereços que chegam. Agora, atribuímos endereços a isto, o David
+
+183
+00:27:52,060 --> 00:27:59,140
+levantou a mão, quer dizer alguma coisa? Sim, pensei, sim, era, qual é que é a mesma
+
+184
+00:27:59,140 --> 00:28:07,420
+razão de ter de ser múltiplo de 4 e 16, ou é só a boa prática? É só a boa prática
+
+185
+00:28:07,420 --> 00:28:18,060
+e comodismo, ou seja, usando... É, é só para ficar mais simples, e se cá quem
+
+186
+00:28:18,060 --> 00:28:27,180
+não estiver muito habituado a isto, esteve melhores números que sejam múltiples de 4
+
+187
+00:28:27,180 --> 00:28:34,180
+e múltiples de 16, porque depois nos endereços os múltiples de 16 aparecem nas fronteiras
+
+188
+00:28:34,180 --> 00:28:40,420
+onde existem dois pontos, no endereço, e os múltiples de 4 aparecem nas fronteiras
+
+189
+00:28:40,420 --> 00:28:47,500
+entre os dígitos hexadecimais, cada dígito hexadecimal é um conjunto de 4 bits, e portanto
+
+190
+00:28:47,500 --> 00:28:52,180
+se só usarmos múltiples de 4, não temos que dividir os dígitos em duas metades,
+
+191
+00:28:52,180 --> 00:28:59,060
+e se usarmos só múltiples de 16, não temos que dividir os grupos de dígitos do endereço
+
+192
+00:28:59,060 --> 00:29:15,020
+em partes, fazemos as divisões só pelos dois pontos, mas se for preciso, o fundamental
+
+193
+00:29:15,020 --> 00:29:21,580
+é por as coisas a funcionar e com números que não sejam múltiples de 4 nem 16 as
+
+194
+00:29:21,580 --> 00:29:29,140
+coisas podem funcionar muito bem, o que é percebido por as coisas a funcionar. Para
+
+195
+00:29:29,140 --> 00:29:38,620
+agora darmos os endereços a estas coisas, podemos seguir a forma de trabalho que usamos
+
+196
+00:29:38,620 --> 00:29:48,370
+também no IPv4, começamos a atribuir endereços de baixo para cima, primeiro as redes maiores,
+
+197
+00:29:48,370 --> 00:29:59,210
+e a rede maior é azul, atribuímos aqui o endereço base igual ao endereço base da rede
+
+198
+00:29:59,210 --> 00:30:18,900
+que nos deram, e para mim é o 2022, 2.3, 2.27, 2.2 pontos, então de próximo passo pode
+
+199
+00:30:18,900 --> 00:30:23,940
+ser 1 de 2, ou porque estamos nesta gama agora e dividimos por esta, ou seja, já
+
+200
+00:30:23,940 --> 00:30:32,700
+rejamos endereços de bases para cada um destes departamentos, ou vamos já para a próxima
+
+201
+00:30:32,700 --> 00:30:45,880
+maior que aquela norte, vamos primeiro dividir por a rede azul naquelas, é um trabalho que
+
+202
+00:30:45,880 --> 00:30:50,760
+até podia ser feito por outra pessoa, se houvesse um gestor da rede azul, que fosse
+
+203
+00:30:50,760 --> 00:31:01,060
+agora dividir os endereços da rede azul, os departamentos da rede azul, vou começar
+
+204
+00:31:01,060 --> 00:31:06,300
+por esta, aqui são todas do mesmo tamanho, portanto podemos começar pela primeira e vou
+
+205
+00:31:06,300 --> 00:31:15,180
+atribuir à primeira o mesmo endereço base que tenho ali, ou seja, o 2022, 2.3, 2.27, 2.2
+
+206
+00:31:15,180 --> 00:31:33,100
+pontos, se o quiseres, ninguém me impede de escrever isto nesta forma, ou seja, agora
+
+207
+00:31:33,100 --> 00:31:41,800
+ali um zero escrito de forma explícita, que é a mesma coisa que 2.2 pontos, é um conjunto
+
+208
+00:31:41,800 --> 00:31:47,240
+de zeros, tantos zeros, quantos passam, faltam, porque com o zero ali fica mais fácil de
+
+209
+00:31:47,240 --> 00:31:55,040
+perceber, porque o prefixo é 64 bits e agora eu sei exatamente onde é que acaba o prefixo,
+
+210
+00:31:55,040 --> 00:32:05,160
+isto são 16 bits, mais 16 são 32, mais 16 são 48, e mais 16 são 64, portanto o prefixo
+
+211
+00:32:05,160 --> 00:32:21,830
+se acaba nestes 2 pontos, e se aqui tem um prefixo de 64 bits, e aqui tem um base 64,
+
+212
+00:32:21,830 --> 00:32:29,910
+para esta, para a próxima rede, já não posso usar aquele prefixo, tenho que usar um prefixo
+
+213
+00:32:29,910 --> 00:32:37,510
+que mude qualquer coisa nos primeiros 64 bits, mas que continuo dentro daqueles primeiros
+
+214
+00:32:37,510 --> 00:32:44,680
+62 bits, ou seja, os primeiros 62 bits têm que ser aqueles, há depois 2 bits que podem
+
+215
+00:32:44,680 --> 00:33:12,900
+mudar daqui para aqui, então vou pôr, vou pôr aqui um 1, e aqui vou pôr um 2, e aqui vou pôr
+
+216
+00:33:12,900 --> 00:33:13,900
+um 3.
+
+217
+00:33:13,900 --> 00:33:30,900
+A área do norte, tenho agora que arranjar uma gama também de 64, já arranjei aqui várias
+
+218
+00:33:31,900 --> 00:33:44,980
+barras 64, e este conjunto destas barras 64 constituem esta barra 62, portanto esta vai acabar
+
+219
+00:33:44,980 --> 00:33:51,660
+no mesmo sítio onde acaba esta, porque faz parte daquela.
+
+220
+00:33:51,660 --> 00:33:58,580
+A próxima rede, barra 64, próxima gama barra 64, porque eu tenho disponível, que ainda
+
+221
+00:33:58,580 --> 00:34:12,640
+não foi atribuída na rede sul, vai ser esta que tem aqui um 5, já não faz parte,
+
+222
+00:34:12,640 --> 00:34:25,400
+porque o 5 em binário é 1, 0, 1, não, pode ser um 4, 4 em binário é 1, 0, 0, e portanto
+
+223
+00:34:25,400 --> 00:34:35,720
+tenho 2 zeros no fim, mas tenho um 1 que já não cabe aqui nestes 62 bits, portanto esta
+
+224
+00:34:35,720 --> 00:34:42,000
+área do norte é independente daquela área do sul, enquanto que estas barras 64 pertencem
+
+225
+00:34:42,000 --> 00:34:43,000
+à área do sul.
+
+226
+00:34:49,970 --> 00:35:06,890
+Bom, e agora posso dividir esta pelos departamentos B, C, D e E, e tenho que ter 2 pontos, 2 pontos,
+
+227
+00:35:06,890 --> 00:35:21,580
+evidentemente, vou dar à rede B o mesmo endereço base que tenho ali, mas posso escrever ali
+
+228
+00:35:21,580 --> 00:35:43,260
+1, 0, aqui posso escrever ali 1, 0, para diferenciar da próxima que vai ser 1, e por aí fora
+
+229
+00:35:43,260 --> 00:35:50,700
+posso começar a atribuir as gamas no endereço 0, 1, 2, 3, por aí fora até aos 9 que eu
+
+230
+00:35:50,700 --> 00:36:01,150
+preciso, mas já vimos que com os 16 bits que eu aloquei para identificar a subredo,
+
+231
+00:36:01,150 --> 00:36:09,550
+eu posso fazer 2 de lantada 16 subredos e portanto não sou obrigado a começar no 0,
+
+232
+00:36:09,550 --> 00:36:18,750
+posso começar outra coisa qualquer, e eu acho que fica simpático por aqui um B e por aqui
+
+233
+00:36:18,750 --> 00:36:46,740
+um C e por aqui um D e aqui um E, não sei se vocês estão empolia por B, B, B, B ou
+
+234
+00:36:46,740 --> 00:36:53,420
+A, A, B ou qualquer coisa, posso por o que quiser, tenho 4 dígitos exércis mais que
+
+235
+00:36:53,420 --> 00:37:14,380
+posso escolher a minha vontade para identificar a rede dentro da rede norte, e faltam agora
+
+236
+00:37:14,380 --> 00:37:32,220
+para arranjar endereços para a rede A e a rede F, daqui apesar de só ter 9 departamentos
+
+237
+00:37:32,220 --> 00:37:40,020
+com rede de barro 80 e portanto não esbotei aquela rede norte, mas aloquei aquela gama
+
+238
+00:37:40,020 --> 00:37:48,100
+para a rede norte, então não devo usar endereços daquela gama para A e para F, então aqui
+
+239
+00:37:48,100 --> 00:38:05,310
+tenho que usar endereços que pretensam a outra barra de 64 e aqui posso por um A, por exemplo,
+
+240
+00:38:05,310 --> 00:38:18,620
+não posso é por 4, aqui vou por 5 para ser de outra rede diferente desta, e aqui posso
+
+241
+00:38:18,620 --> 00:38:45,750
+por 5 F e assim é fácil decorar que estes endereços estão da rede F e pronto está
+
+242
+00:38:45,750 --> 00:39:12,220
+feita esta parte, e vou fazer também esta distribuição de endereços da A usando o meu
+
+243
+00:39:12,220 --> 00:39:53,850
+identificador, vou também começar por escolher o tamanho de cada uma das redes e o que há
+
+244
+00:39:53,850 --> 00:40:01,770
+para aqui é o meu identificador da A para não perder, para a rede sul eu usei redes
+
+245
+00:40:01,770 --> 00:40:11,490
+barras 64 para aqui que não podia escolher outra coisa, queria distribuição de endereços
+
+246
+00:40:11,490 --> 00:40:27,560
+por SELAC, depois como tinha falta de endereços, para aqui usei coisas mais pequenas, mas como
+
+247
+00:40:27,560 --> 00:40:40,980
+endereços da A, agora vamos ter muitos, eu vou usar também barras 64 para aqui e para
+
+248
+00:40:40,980 --> 00:40:51,800
+a rede sul, se a rede sul é a soma daquelas todas vemos que a apicada resolvemos com uma
+
+249
+00:40:51,800 --> 00:41:00,920
+barra 62 e vemos que não podíamos usar barra 61, porque barra 61 era o que nós tínhamos
+
+250
+00:41:00,920 --> 00:41:09,360
+para todos, portanto teve que ser barra 61, no entanto agora temos mais endereços, ninguém
+
+251
+00:41:09,360 --> 00:41:22,990
+nos impede de fazermos uma atribuição mais larga, por exemplo a barra 60 e assim cumprimos
+
+252
+00:41:22,990 --> 00:41:32,190
+o requisito de fazer ou cumprimos a recomendação também de ter prefixos, estejam múltiplos
+
+253
+00:41:32,190 --> 00:41:50,820
+de quatro, então aqui podemos fazer a mesma coisa, agora existe uma diferença mais pequena
+
+254
+00:41:50,820 --> 00:41:56,100
+daqui para aqui, o que significa que o número máximo de departamentos é mais pequeno,
+
+255
+00:41:56,100 --> 00:42:02,860
+com quatro bits que são aqueles que vamos usar para identificar estes departamentos
+
+256
+00:42:02,860 --> 00:42:11,020
+dentro da rede norte, só conseguimos identificar 16 departamentos, portanto só vamos poder
+
+257
+00:42:11,020 --> 00:42:18,740
+ter 16 departamentos na rede norte, mas o enunciado fala em 4 mais 5, em 9, portanto
+
+258
+00:42:18,740 --> 00:42:30,000
+em princípio deve ser suficiente e aqui, se não nos dizem nada, aqui temos muitos
+
+259
+00:42:30,000 --> 00:42:47,460
+endereços que estão aqui, podemos pôr barra 64, vamos então arranjar uma gama para a sul
+
+260
+00:42:47,460 --> 00:43:02,940
+se queremos endereços o LA começam todos por FD e depois vem o prefixo, o identificador
+
+261
+00:43:02,940 --> 00:43:09,780
+aleatório, o LA que nós temos o direito de sortear e que no nosso caso alguém sortiu
+
+262
+00:43:09,780 --> 00:43:19,890
+por nós e nos deu um identificador sortiado, se concatenarmos isto com aqueles 8 bits
+
+263
+00:43:19,890 --> 00:43:30,610
+do FD que resultam que são o prefixo obrigatório para endereços o LA, então juntamos este
+
+264
+00:43:30,610 --> 00:43:45,820
+CC com o FD e fica assim, pegamos no outro grupo de 16 bits e pomos ali uns dois pontos
+
+265
+00:43:45,820 --> 00:43:59,780
+e temos agora aqui outro grupo que não escrevemos em lado nenhum mas se pudessemos escrever
+
+266
+00:43:59,780 --> 00:44:16,800
+a nossa gama o LA rede completa seria isto, barra 48, estes são os endereços que temos
+
+267
+00:44:16,800 --> 00:44:26,210
+para distribuir por isto tudo e dissemos que íamos distribuir uma barra 60 à rede
+
+268
+00:44:26,210 --> 00:44:59,570
+sul, portanto a rede sul fica com este endereço base e prefixo de 60 bits, aqui ficamos com
+
+269
+00:44:59,570 --> 00:45:13,860
+o mesmo endereço, podemos escrever aqui mais uns zeros, aqui temos que ter escrito aqui
+
+270
+00:45:13,860 --> 00:46:06,330
+em cima, 0, 1, 2, 3, por exemplo, não sei se fica mais legível escrever aqui os zeros
+
+271
+00:46:06,330 --> 00:46:31,540
+ou não, para a rede norte, temos que alterar alguma coisa nos primeiros 60 bits, por exemplo
+
+272
+00:46:31,540 --> 00:47:01,180
+assim, não é obrigatório escrever estes zeros, vou pagar estes zeros todos, vou deixar
+
+273
+00:47:01,180 --> 00:47:11,110
+ficar estes mais legível, no que agora dentro do disto, atribuirmos endereços à rede
+
+274
+00:47:11,110 --> 00:47:24,860
+B e pode começar a rede B, pode começar no mesmo endereço em que começa a rede norte
+
+275
+00:47:24,860 --> 00:47:32,020
+ou se quisermos podemos alterar aqui estes últimos 4 bits e nestes 4 bits podemos pôr
+
+276
+00:47:32,020 --> 00:48:06,060
+um B, por exemplo, aqui um C, aqui um D e aqui um E, para a rede A, aqui temos uma
+
+277
+00:48:06,060 --> 00:48:11,740
+barra 60, agora temos que ir para a barra 60 que está depois disto, que é aquela que
+
+278
+00:48:11,740 --> 00:48:18,660
+tem aqui 2 e depois qualquer coisa, esta qualquer coisa pode ser o que eu quiser, pode ser
+
+279
+00:48:18,660 --> 00:48:30,740
+um A e a rede F pode ser alucada da mesma barra 60, portanto manter ali o 2 e pôrmos
+
+280
+00:48:30,740 --> 00:49:04,320
+ali um F e pronto fizemos a dividão dos endereços o L e A, não tive as outras questões deste
+
+281
+00:49:04,320 --> 00:49:10,080
+exercício, vou deixar para vocês fazerem com calma, se for preciso depois, numa das próximas
+
+282
+00:49:10,080 --> 00:49:23,550
+aulas também eu ajudo mais alguma coisa, para aula 2 não sei só prática, vamos falar
+
+283
+00:49:23,550 --> 00:49:29,310
+um bocadinho da alguma coisa, de cinco davises?
+
+284
+00:49:29,310 --> 00:49:39,190
+Pessoas e professores antes de começar só, é possível reabrir a partum, é que eu tinha
+
+285
+00:49:39,190 --> 00:49:47,870
+me enganado num IP, entretanto desde o sábado esqueci de resumir o T, pronto é só se for
+
+286
+00:49:47,870 --> 00:50:03,100
+possível abrir a partum do labo de sábado, depois penso nisso e se abrir abro até sábado,
+
+287
+00:50:03,100 --> 00:50:04,900
+está bem?
+
+288
+00:50:04,900 --> 00:51:12,060
+Está bem, hoje vamos começar a falar dos leites inferiores, até agora temos falado sempre
+
+289
+00:51:12,060 --> 00:51:29,190
+do nível pes, um nível de transporte, onde se encaixa o IP, o IP tratamos de coisas
+
+290
+00:51:29,190 --> 00:51:39,430
+sobre o endereçamento e o IP é importante, o endereçamento é importante, sobretudo
+
+291
+00:51:39,430 --> 00:51:49,720
+se queremos ligar muitas máquinas, obviamente ligar a todas as máquinas do mundo, permitir
+
+292
+00:51:49,720 --> 00:51:55,280
+que todas as máquinas do mundo participem em conversas com as nossas, não há volta
+
+293
+00:51:55,280 --> 00:52:03,440
+a dar a escolha do protocolo para este nível, tem que ser o IP, noutros contextos, quando
+
+294
+00:52:03,440 --> 00:52:11,000
+não queremos endereçamento global, há outras soluções para o nível de rede e em coisas
+
+295
+00:52:11,000 --> 00:52:21,910
+mais simples, nomeadamente quando não queremos endereçar particularmente uma máquina, queremos
+
+296
+00:52:21,910 --> 00:52:26,950
+implementar um sistema que põe máquinas a falar umas com as outras, mas onde todas
+
+297
+00:52:26,950 --> 00:52:36,470
+ouvem tudo de todos, então podemos até suprimir, não usar nenhuma implementação normalizada
+
+298
+00:52:36,470 --> 00:52:45,710
+do nível de rede e podemos, por as nossas aplicações, usar diretamente o nível 2
+
+299
+00:52:45,710 --> 00:52:52,630
+e pôr as coisas a funcionar assim. Hoje vamos falar aqui do nível 1 e do nível 2, onde
+
+300
+00:52:52,630 --> 00:53:00,910
+depois vamos concretizar com normas concretas como a Ethernet e a Rebecam, que é muito
+
+301
+00:53:00,910 --> 00:53:07,470
+usada dentro das máquinas para pôr máquinas a falar com máquinas ou dispositivos a falar
+
+302
+00:53:07,470 --> 00:53:17,430
+com dispositivos e que também usa-se muito dentro dos automóveis para pôr sistemas
+
+303
+00:53:17,430 --> 00:53:27,070
+imbovidos a comunicarem-nos com os outros e também se usa em redes, habitações para
+
+304
+00:53:27,070 --> 00:53:37,350
+pôr as lâmpadas a comunicar com os interruptores ou para controlar as torradeiras e a importância
+
+305
+00:53:37,350 --> 00:53:43,430
+do cano também vem do facto de servir de inspiração a outros protocolos que se usam
+
+306
+00:53:43,430 --> 00:53:52,470
+nesses contextos, portanto, para estes dois níveis, tanto é a Ethernet como o cano tem
+
+307
+00:53:52,470 --> 00:54:02,670
+especificações para estes dois níveis e vamos depois identificar esses dois protocolos.
+
+308
+00:54:02,670 --> 00:54:09,670
+Hoje vamos falar só mais genéricamente o que é que faz, o que é que se faz em cada um
+
+309
+00:54:09,670 --> 00:54:16,510
+dos níveis, sobretudo o que se faz no Datalink e o que é que se faz no nível do Datalink
+
+310
+00:54:16,510 --> 00:54:23,600
+que é o nível de acesso ao meio, portanto, no nível físico, se quiséssemos falar do
+
+311
+00:54:23,600 --> 00:54:36,700
+nível físico, tínhamos que falar de muitas coisas que têm a ver com a eletricidade,
+
+312
+00:54:36,700 --> 00:54:46,590
+a maior parte das comunicações usam sinais elétricos para comunicar, o nível físico
+
+313
+00:54:46,590 --> 00:54:54,270
+pode ser dividido em três subníveis, que trata da codificação de blocos, de organização
+
+314
+00:54:54,270 --> 00:55:03,750
+dos blocos em frames ou em tramas e a sincronização das tramas e depois um acesso ao meio onde
+
+315
+00:55:03,750 --> 00:55:17,590
+se trabalha com mais física, não vamos dedicar-nos muito a isto na escolha do nível físico,
+
+316
+00:55:17,590 --> 00:55:26,590
+na escolha do nível físico, supõe ou está agarrada a escolha da topologia e a topologia
+
+317
+00:55:26,590 --> 00:55:34,390
+de facto é uma escolha que existe em vários níveis mas que existe de forma dominante
+
+318
+00:55:34,390 --> 00:55:42,110
+no nível físico, a maneira de interligar os dispositivos para que eles comuniquem,
+
+319
+00:55:42,230 --> 00:55:47,670
+supõe uma topologia, ou seja, a forma da rede que nós usamos para pôr as coisas
+
+320
+00:55:47,670 --> 00:55:59,350
+da comunicar umas com as outras, mas as formas mais comuns é o barramento ou o base em que
+
+321
+00:55:59,350 --> 00:56:05,030
+existe um meio que é partilhado, normalmente como estas coisas são feitas com eletricidade,
+
+322
+00:56:05,030 --> 00:56:13,670
+existe um meio que é um conjunto de condutores onde todos os dispositivos estão ligados
+
+323
+00:56:13,670 --> 00:56:23,230
+e quando alguém quer falar com os outros coloca sinais elétricos no baseamento e todos os outros
+
+324
+00:56:23,230 --> 00:56:34,380
+recebem esses sinais elétricos, ou seja, não existe privacidade e se não existe nenhum
+
+325
+00:56:34,380 --> 00:56:43,390
+mecanismo superior, também não existe endereçamento. As topologias do tipo barramento funcionam muito
+
+326
+00:56:43,390 --> 00:56:53,190
+bem para redes pequenas e são baratas, internet, é internet original, era um simples barramento,
+
+327
+00:56:53,190 --> 00:57:03,670
+é fácil introduzir mais nós e retirar nós porque a introdução de um nó não quebra a ligação
+
+328
+00:57:03,670 --> 00:57:10,870
+para os outros que estão a funcionar e se houver um dos nós que falha, também o barramento
+
+329
+00:57:10,870 --> 00:57:17,870
+continua a se aportar bem, em princípio, não sei que seja uma falha muito drástica, normalmente
+
+330
+00:57:17,870 --> 00:57:24,710
+se sume um dispositivo morrer e deixar de estar ativo, os outros podem continuar a comunicar-os
+
+331
+00:57:24,710 --> 00:57:33,360
+com os outros porque a comunicação não depende de todos. Desvantagens de coisas destas,
+
+332
+00:57:33,360 --> 00:57:40,480
+os custos de gestão podem ser altos, quando há problemas pode ser difícil descobrir onde
+
+333
+00:57:40,480 --> 00:57:52,500
+estão os problemas, se houver um curto circuito, pode ser difícil encontrar o curto circuito e se houver
+
+334
+00:57:52,500 --> 00:58:04,540
+um fio partido, também pode ser difícil saber onde é que ele está partido, todos podem usar
+
+335
+00:58:04,540 --> 00:58:13,060
+o meio de transmissão, todos os dispositivos podem usar o meio de transmissão, mas este tipo
+
+336
+00:58:13,060 --> 00:58:25,020
+está sujeita a congestionamentos, basta que alguns dos dispositivos aumentem as suas taxas de transmissão
+
+337
+00:58:25,020 --> 00:58:37,230
+para valores não razoáveis e o barramento fica congestionado e deixa de haver comunicação.
+
+338
+00:58:37,230 --> 00:58:50,540
+Sabe-se que em coisas deste tipo, quanto mais nós temos e quanto mais eles falarem, mais problemas
+
+339
+00:58:51,380 --> 00:58:57,940
+e quanto mais comprido for o cabo, também dependendo das metodologias que se usam para
+
+340
+00:58:57,940 --> 00:59:04,140
+gerir as comunicações, mas normalmente quanto maior for o cabo, maior for o basamento, também mais
+
+341
+00:59:04,140 --> 00:59:16,280
+problemas temos. Uma topologia também muito simples e usada frequentemente, mas não tão
+
+342
+00:59:16,280 --> 00:59:26,280
+frequentemente, quando do basamento é a topologia em anel em que cada um dos nossos
+
+343
+00:59:26,280 --> 00:59:38,040
+já pode comunicar com os seus vizinhos ou os seus vizinhos, se for um anel direcional, cada um
+
+344
+00:59:38,040 --> 00:59:48,280
+via só aos seus vizinhos e temos menos problemas de congestionamento porque cada um fala só
+
+345
+00:59:48,280 --> 01:00:00,560
+com os seus vizinhos e quando algum falha, sabemos como é que falhou. Se um cabo falhar,
+
+346
+01:00:00,560 --> 01:00:10,120
+também sabemos onde ele está, é o cabo que ele liga ao outro e para decidir, é mais
+
+347
+01:00:10,120 --> 01:00:18,700
+ou menos para sentir que não há constações, as comunicações têm que passar por todos e,
+
+348
+01:00:18,700 --> 01:00:31,350
+portanto, todos limitam a velocidade das comunicações globais e se conseguirmos pôr todos a falar
+
+349
+01:00:31,350 --> 01:00:39,990
+com os seus vizinhos ao mesmo tempo, então temos muito bom volume de tráfego e é possível
+
+350
+01:00:39,990 --> 01:00:46,950
+saber quanto tempo é que demora a informação ir de um ao outro, que pode não ser muito rápido,
+
+351
+01:00:46,950 --> 01:00:56,030
+porque pode ser preciso várias apetições para dar a volta toda, mas sabemos calcular
+
+352
+01:00:56,030 --> 01:01:06,350
+quanto é esse tempo e que depende do número de estações. Quanto aqui diz que nós adicinais
+
+353
+01:01:06,350 --> 01:01:11,510
+não afetam a performance, não afetam a performance em termos de velocidade, mas podem aumentar o
+
+354
+01:01:11,510 --> 01:01:29,860
+uso, a latência. Desvantagens disto é relativamente caro, é preciso mais cabo do que no barramento,
+
+355
+01:01:29,860 --> 01:01:47,290
+é preciso que todos os nossos estejam ligados e a funcionarem, se um nó falhares para tudo e os
+
+356
+01:01:47,290 --> 01:01:54,210
+vizinhos têm trabalho adicional a transmitir as comunicações que vêm de outros para o outro,
+
+357
+01:01:54,210 --> 01:02:03,010
+num exemplo respeito a um determinado nó, mas esse nó tem que ser capaz de enviar essa informação,
+
+358
+01:02:03,010 --> 01:02:16,190
+fazer seguir essa informação e com isso perde provavelmente o trabalho de CPU a tratar disso.
+
+359
+01:02:16,310 --> 01:02:26,750
+Há menos normas, usam-se menos topologias destas, mas esta topologia é usada em algumas redes
+
+360
+01:02:26,750 --> 01:02:37,930
+específicas de alto débito. Fisicamente temos também a possibilidade de usar uma topologia em estrela,
+
+361
+01:02:37,930 --> 01:02:48,710
+quando todos os nós se ligam a um nó especial central, em princípio diferente dos outros,
+
+362
+01:02:48,990 --> 01:02:56,310
+e que pode ser muita coisa, pode ser um repetidor, pode ser um computador, pode ser um encaminhador,
+
+363
+01:02:56,310 --> 01:03:08,150
+pode ser outra coisa qualquer, a nível físico pode ser um repetidor, mas a nível 2 pode ser
+
+364
+01:03:08,150 --> 01:03:16,990
+um computador que já pode usar alguma inteligência para decidir para onde é que envia as coisas e não
+
+365
+01:03:16,990 --> 01:03:24,860
+precisa de repetir para todos os lados. A Ethernet começou por ser um barramento,
+
+366
+01:03:24,860 --> 01:03:31,580
+depois vamos falar da Ethernet, atualmente no ponto de vista físico é mais uma estrela,
+
+367
+01:03:31,580 --> 01:03:40,260
+apesar de que se não for uma estrela comutada, continua a comportar-se do ponto de vista de
+
+368
+01:03:40,260 --> 01:03:49,260
+ligação como um barramento, ou seja, a informação vai para todos os lados. Podemos ter combinações
+
+369
+01:03:49,260 --> 01:04:03,930
+destas topologias, sobretudo a estrela, é muito boa para criar estes estrelas de estrelas,
+
+370
+01:04:03,930 --> 01:04:12,830
+estrelas de basamentos, estrelas de estrelas que são hierarquias, uma estrela em si, uma estrela
+
+371
+01:04:12,830 --> 01:04:25,990
+simples, tem um conjunto de cabos, mas cada cabo é único dispositivo, e se usar um desses cabos
+
+372
+01:04:25,990 --> 01:04:33,590
+afeta apenas um dos nós, os outros podem continuar a comunicar. Normalmente isto obriga a ter mais
+
+373
+01:04:33,590 --> 01:04:44,060
+cabos do que um barramento simples, por exemplo isto é importante nas pessoas que querem implementar
+
+374
+01:04:44,060 --> 01:04:57,060
+redes em casa, atual de Ethernet, é usado uma topologia estrela, e quando vai lá o eletricista
+
+375
+01:04:57,060 --> 01:05:02,140
+quer dizer que queremos um cabo daqui para aqui, um cabo para cada sítio, ele pergunta
+
+376
+01:05:02,140 --> 01:05:07,460
+logo, então eu não posso esticar o cabo e o pôr o cabo a passar por duas tomadas ao mesmo tempo,
+
+377
+01:05:07,460 --> 01:05:17,980
+e claro que o eletricista que sabe fazer redes serve isso, mas um eletricista que não saiba o que
+
+378
+01:05:17,980 --> 01:05:28,420
+é um cabo de redes pode ser tentado a fazer barramentos em vez de estrelas e depois as
+
+379
+01:05:28,420 --> 01:05:38,950
+coisas não funcionam. O centro da estrela é sempre um equipamento adicional, em princípio terá que
+
+380
+01:05:38,950 --> 01:05:48,990
+ser um equipamento ativo, portanto consome energia e é um ponto de falha, se falhar deixamos ter
+
+381
+01:05:48,990 --> 01:06:01,710
+uma ligação para todos, os nós param todos de comunicar subindo um bocadinho do nível físico
+
+382
+01:06:01,710 --> 01:06:16,590
+para o nível de ligação, o Atalink, o nível 2. Podemos dividir o nível 2 em dois subníveis,
+
+383
+01:06:16,710 --> 01:06:25,150
+os dois tubulheiros, o de ligação lógica e o de acesso ao meio, o controle de acesso ao meio.
+
+384
+01:06:25,150 --> 01:06:43,030
+O nível de ligação permite nos multiplexar vários protocolos no Datalink, é o nível
+
+385
+01:06:43,030 --> 01:06:54,710
+superior àquilo que liga ao IP e o nível MAC é o nível inferior àquilo que se liga ao meio físico.
+
+386
+01:06:59,940 --> 01:07:08,820
+No nível MAC, não é obrigatório, mas podemos eventualmente ter-se endereçamento e no caso da
+
+387
+01:07:08,820 --> 01:07:19,700
+Ethernet, já falamos de endereço da Ethernet, se isso existe, o endereçamento pode permitir algumas
+
+388
+01:07:19,700 --> 01:07:30,920
+funcionalidades que no modelo OSI são específicas do nível 3, mas normalmente os protocolos de
+
+389
+01:07:30,920 --> 01:07:36,040
+nível 2 que implementam endereçamento não implementam as funcionalidades de endereçamento
+
+390
+01:07:36,040 --> 01:07:47,070
+completas e sobretudo não implementam endereçamento global. O endereçamento usado neste nível,
+
+391
+01:07:49,560 --> 01:07:57,280
+no caso da Ethernet, é um endereço por dispositivo, é aquilo que se chama endereçamento
+
+392
+01:07:57,280 --> 01:08:09,030
+direto, tanto quem envia, como quem recebe, tem um identificador, um endereço e esse endereço
+
+393
+01:08:09,030 --> 01:08:17,510
+serve para identificar quem envia e quem recebe. E se o endereçamento for completo, é preciso
+
+394
+01:08:17,510 --> 01:08:25,590
+especificar um endereço concreto para conseguir falar com uma máquina, independentemente de quem
+
+395
+01:08:25,590 --> 01:08:33,350
+envia e vice-versa, quem envia, envia sempre com seu endereço próprio, independentemente do
+
+396
+01:08:33,350 --> 01:08:42,950
+endereço de destino para quem envia. Às vezes, em protocolos deste nível, não se justifica a
+
+397
+01:08:42,950 --> 01:08:50,350
+fazer endereçamento ou porque não queremos de todo o endereçamento, queremos implementar
+
+398
+01:08:50,350 --> 01:08:58,110
+alguma coisa com aplicações que não precisam de endereçamento, ou porque vamos usar por cima
+
+399
+01:08:58,110 --> 01:09:06,310
+algum protocolo de nível 3 que faz endereçamento, nomeadamente o IP. O IP pode funcionar com
+
+400
+01:09:06,310 --> 01:09:14,510
+protocolos de nível 2 que não têm endereçamento. Se usarmos um Ethernet, que é o mais comum,
+
+401
+01:09:14,510 --> 01:09:22,910
+usa-se depois o endereçamento de Ethernet para comunicar com os vizinhos. Mas se não tivéssemos
+
+402
+01:09:22,910 --> 01:09:30,150
+Ethernet por baixo, tivéssemos outra coisa, podíamos pôr na mesma protocolo IP a funcionar e
+
+403
+01:09:30,150 --> 01:09:39,650
+conversar também os vizinhos, porque os vizinhos também têm endereço IP. Endercedes pequenas,
+
+404
+01:09:39,650 --> 01:09:49,930
+às vezes evita-se o endereçamento específico ou o endereçamento direto. O endereçamento direto
+
+405
+01:09:49,930 --> 01:10:00,900
+obriga a ter endereços para a origem hipodestínio. Os endereços, às vezes, são grandes. Caso
+
+406
+01:10:00,900 --> 01:10:06,700
+o Ethernet tem um exemplo que já tem endereços grandes, que são endereços de 48 bits, estar a
+
+407
+01:10:06,700 --> 01:10:17,260
+pôr dois endereços numa frame Ethernet para transportar informação que pode ser só um
+
+408
+01:10:17,260 --> 01:10:24,700
+boleano a dizer se um botão está a ser carregado ou não, pode ser um exagero e, portanto, os protocolos
+
+409
+01:10:24,700 --> 01:10:32,740
+simples evitam ter endereçamento direto. Aquilo que se faz, às vezes, em protocolos deste nível,
+
+410
+01:10:32,740 --> 01:10:40,380
+é termos um endereço ou um identificador da mensagem ou do tipo de mensagem, em vez de termos
+
+411
+01:10:40,380 --> 01:10:49,180
+endereços de quem envia e de quem recebe. É o caso que vamos ver na REDCAN, utiliza-se um
+
+412
+01:10:49,180 --> 01:10:54,660
+identificador que identifica o tipo de mensagem em vez de identificarmos quem envia e quem recebe.
+
+413
+01:10:56,490 --> 01:11:07,850
+E também há protocolos deste nível que separam a informação em slots temporais
+
+414
+01:11:07,850 --> 01:11:17,810
+ou, e com certeza também pode ser por frequência, e o sítio onde se transporta a informação
+
+415
+01:11:17,810 --> 01:11:26,050
+identifica a mensagem ou identifica o destinatário e, portanto, não precisamos ter endereços.
+
+416
+01:11:26,050 --> 01:11:43,980
+O endereço é o sítio onde a informação circula, o slot onde circula ou o canal onde circula.
+
+417
+01:11:43,980 --> 01:11:51,300
+O Sublayer Mac pode tratar do endereçamento sobre o caso disso e te faz outras tarefas,
+
+418
+01:11:51,300 --> 01:11:58,100
+nomeadamente, determinar o ordem do acesso ao meio. Quando o meio é partilhado, como no caso do
+
+419
+01:11:58,100 --> 01:12:05,820
+sublajamento, é preciso ajejar um mecanismo que define quem é que pode falar, quando dois querem
+
+420
+01:12:05,820 --> 01:12:15,420
+falar ao mesmo tempo, que não se pode deixar que um meio partilhado, ou seja, sirva para dois
+
+421
+01:12:15,420 --> 01:12:21,460
+tentarem imitir ao mesmo tempo, porque o nível elétrico isso não funciona, um condutor, só
+
+422
+01:12:21,460 --> 01:12:26,020
+pode ter uma tensão, não podemos ter alguém a pôr uma tensão de um lado e uma tensão
+
+423
+01:12:26,020 --> 01:12:46,300
+de outro. Quando para a implementação do Sublayer Mac, dentro do nível dois, ou se faz ou se usa um
+
+424
+01:12:46,300 --> 01:12:54,860
+canal partilhado, no meio partilhado, por burbo de caso, ou seja, todos comunicam com todos e isso
+
+425
+01:12:54,860 --> 01:13:01,820
+arranja depois uma maneira de conseguir que eles não falem todos ao mesmo tempo, ou temos um mecanismo
+
+426
+01:13:01,820 --> 01:13:10,220
+de acesso em que usamos um algoritmo distribuído para que as máquinas se altam, controlem e não
+
+427
+01:13:10,220 --> 01:13:17,740
+transmitam todas ao mesmo tempo. Isto normalmente resulta em técnicas que dividem o canal de
+
+428
+01:13:17,740 --> 01:13:24,900
+comunicação em partes, essas partes podem ser frequências ou podem ser tempos e depois deixamos
+
+429
+01:13:24,900 --> 01:13:36,180
+em casa uma das estações, uma das partes de forma proprietária e se as partes forem separadas,
+
+430
+01:13:36,180 --> 01:13:46,580
+já não temos conflitos. Podemos arranjar um mecanismo que defina alturas de comunicar e uma
+
+431
+01:13:46,580 --> 01:13:55,660
+forma e se quer comunicar tem que esperar pela sua autorização e a autorização pode ser usando
+
+432
+01:13:55,660 --> 01:14:03,860
+um token ou um testemunho e só a estação que tem posto do testemunho é que fala enquanto que
+
+433
+01:14:03,860 --> 01:14:12,620
+as outras têm que esperar que ele esteja transmitido o testemunho ou que seja transmitida a autorização
+
+434
+01:14:12,620 --> 01:14:25,580
+para falar. Outra alternativa é termos acesso aleatório, gendama access e deixamos as estações
+
+435
+01:14:25,580 --> 01:14:35,060
+comunicarem quando desapetecer e quando houver uma colisão, quando dois falarem ao mesmo
+
+436
+01:14:35,820 --> 01:14:46,380
+momento, resolvemos o problema de uma forma qualquer, normalmente obrigando as estações a repetirem
+
+437
+01:14:46,380 --> 01:14:56,060
+a sua comunicação mais tarde. Para criarmos uma coisa controlada, como está aqui o termo
+
+438
+01:14:56,060 --> 01:15:06,340
+Take In Terms, pode ser implementado arranjando alguém que uma entidade superior que defina
+
+439
+01:15:06,340 --> 01:15:15,940
+o testemunho para as estações transmitirem e isso pode ser feito utilizando um master que
+
+440
+01:15:15,940 --> 01:15:27,780
+controla as alturas de comunicação das estações e tudo funciona bem se as estações cumprirem
+
+441
+01:15:27,780 --> 01:15:37,980
+pelo que o master diz e o master define slot alturas de começar a comunicar e depois
+
+442
+01:15:37,980 --> 01:15:46,300
+do master dizer-se agora esta são a que comuniquem, esta são as alturas de comunicar e a estação
+
+443
+01:15:46,300 --> 01:15:57,330
+B tem que esperar por um orden do slot seguinte onde o master autoriza a estação B a comunicar
+
+444
+01:15:57,330 --> 01:16:05,850
+onde podemos admitir que as estações escolham o tempo durante o qual comuniquem mas tem
+
+445
+01:16:05,850 --> 01:16:12,050
+que ser estações bem comportadas cumprindo as ordens do master e as restrições normalizadas
+
+446
+01:16:12,050 --> 01:16:24,760
+que se usem na rede, onde quando se usam um master ou uma arquitetura master slave, o
+
+447
+01:16:24,760 --> 01:16:38,150
+problema da definição da ordem passa para o master e o master depois pode usar vários
+
+448
+01:16:38,150 --> 01:16:43,750
+mecanismos de dar mais prioridade a uma estações menos prioridade a outras ou a mesma prioridade
+
+449
+01:16:43,750 --> 01:16:51,710
+para todas ou permitir-se ter uma autorizações para transmitir coisas pequenas e autorizações
+
+450
+01:16:51,710 --> 01:16:58,790
+para transmitir coisas grandes mais tarde ou o master até pode permitir coisas tão pequenas
+
+451
+01:16:58,790 --> 01:17:04,790
+como por exemplo só respostas à pergunta quanto é que queres que transmitir ou tens alguma coisa
+
+452
+01:17:04,790 --> 01:17:14,030
+para transmitir e depois em função das necessidades que os slaves informam o master pode decidir
+
+453
+01:17:14,030 --> 01:17:23,240
+e atribuir slot maiores a uma determinada identidade, o tempo podemos conseguir um
+
+454
+01:17:23,240 --> 01:17:33,920
+só meio organizado sem utilizar um master arranjando um testemunho que é partilhado
+
+455
+01:17:33,920 --> 01:17:43,950
+pelas estações e cada uma das estações uma estação que tenha o token ou seja tenha
+
+456
+01:17:43,950 --> 01:17:52,830
+a autorização para transmitir pode ceder esse token ao próximo nó e isto por suponho
+
+457
+01:17:52,830 --> 01:18:01,670
+existir uma ordem dos nós pode ser uma ordem implementada em função dos seus identificadores
+
+458
+01:18:01,670 --> 01:18:13,120
+ou uma ordem de posição no barramento ou outra coisa qualquer mas o nó que tem o token
+
+459
+01:18:13,120 --> 01:18:18,720
+pode transmitir e quando não quer transmitir mais envia o token ao nosso seguinte o nosso
+
+460
+01:18:18,720 --> 01:18:26,000
+seguinte pode enviar os blocos de dados que quer quando não quer transmitir mais passa
+
+461
+01:18:26,000 --> 01:18:38,620
+disponibilidade para transmitir para o outro nó etc. Outra maneira de conseguirmos funcionar
+
+462
+01:18:38,620 --> 01:18:45,020
+com um basalmente partilhado é distribuirmos a capacidade de transmissão do canal em
+
+463
+01:18:45,020 --> 01:18:55,380
+várias partes que podem ser slots temporais e haver uma distribuição dos slots temporais
+
+464
+01:18:55,380 --> 01:19:04,460
+por nós ou seja durante aquele time slot só o nó 1 é que pode comunicar e o nó 1 pode
+
+465
+01:19:04,460 --> 01:19:10,980
+colocar ali os seus blocos de dados a partir daí a um slot para o nó 2 o nó 2 pode colocar
+
+466
+01:19:10,980 --> 01:19:19,060
+ali o slot o bloco de dados que quer enviar se o bloco de dados não ocupar o slot todo
+
+467
+01:19:19,060 --> 01:19:29,460
+e aquele tempo não é usado porque aquele slot estava reservado para o nó 2 e portanto não vai
+
+468
+01:19:29,460 --> 01:19:38,820
+ser usado ali e a mesma coisa pode acontecer ali para o nó 3 etc. Isto tem que haver um sincronismo
+
+469
+01:19:38,820 --> 01:19:45,660
+que todos saibam que naquela fase só não é que pode comunicar naquela fase que o slot está
+
+470
+01:19:45,660 --> 01:19:56,380
+atribuído a nó 2 etc. Também pode ser conseguido isto mesmo sem um master utilizando o identificadores
+
+471
+01:19:56,380 --> 01:20:09,860
+dos dos nós para fazer a inicialização e a alocação dos slots. Sim, só uma pergunta.
+
+472
+01:20:09,860 --> 01:20:19,580
+Neste tipo de controle de acesso ao meio não dá para estabelecermos prioridades ou seja ele tem
+
+473
+01:20:19,580 --> 01:20:28,020
+que fazer sempre na parte do token passing e ele faz sempre por ordem ou dá para estabelecer
+
+474
+01:20:28,020 --> 01:20:31,820
+prioridades por exemplo só um nó que tem informação mais importante eu quero que
+
+475
+01:20:32,260 --> 01:20:42,440
+ele comunique sempre possível. É assim, pode-se tudo, somos nós a implementar protocolo
+
+476
+01:20:42,440 --> 01:20:53,760
+destes, ou seja, uma legenda destas podemos inventar tudo que nós quisermos. Se quisermos usar uma coisa
+
+477
+01:20:53,760 --> 01:21:00,520
+já normalizada que já existe temos que nos limitar às funcionalidades que estão implementadas.
+
+478
+01:21:01,160 --> 01:21:11,620
+Agora o nó pode ter, assim como o nó pode ter duas interfaces, o nó também pode ter
+
+479
+01:21:11,620 --> 01:21:24,340
+dois identificadores e o seu nó responder como nó 2 e como nó 4. Quando o nó 1 passa o token
+
+480
+01:21:24,340 --> 01:21:32,260
+para o nó 2 ele pode comunicar e quando o nó 3 passa o token para o nó 4. Se o nó 4 for o mesmo
+
+481
+01:21:32,340 --> 01:21:44,660
+o nó 2 volta a poder comunicar e portanto nós podemos enganar o protocolo criando identificadores
+
+482
+01:21:44,660 --> 01:21:54,480
+adicionais para os respectivos nós e se tivermos um protocolo destes também baseado na posição
+
+483
+01:21:54,480 --> 01:21:59,880
+do basamento que é mais difícil mas também é possível. Também podemos ter um nó com duas
+
+484
+01:21:59,880 --> 01:22:07,840
+passas no ligado a dois sítios do barramento e ele passa a ter mais capacidade para transmitir.
+
+485
+01:22:07,840 --> 01:22:20,600
+O mais normal é que os tempos não estejam todos ocupados e portanto quando um nó não tem nada
+
+486
+01:22:20,600 --> 01:22:27,280
+para transmitir, não transmite nada e passa logo o token para o seguinte e portanto isto vai
+
+487
+01:22:27,280 --> 01:22:34,700
+ter mais capacidade de transmissão àqueles que têm mais coisas para transmitir porque quem
+
+488
+01:22:34,700 --> 01:22:56,150
+não tem nada para transmitir passa a disponibilidade ao outro. Ok, obrigada.
+
+489
+01:22:56,150 --> 01:23:04,230
+No tanto a divisão, o acesso ao meio por divisão do tempo, que chama-se TDMA Time Division Multiplex
+
+490
+01:23:05,230 --> 01:23:21,260
+ou medium access é usado em várias redes, sobretudo redes de tempo real porque pode se garantir
+
+491
+01:23:21,260 --> 01:23:51,850
+que são usadas nos automóveis, usam coisas deste gênero. Internet e outros protocolos dos anos
+
+492
+01:23:51,850 --> 01:24:10,100
+fazem parte do conjunto de random que quem quer transmitir transmite, gera-se uma colisão
+
+493
+01:24:12,050 --> 01:24:20,750
+e depois há várias maneiras de detectar as colisões e de recuperar da colisão. Para a
+
+494
+01:24:20,750 --> 01:24:31,070
+internet clássica usam uns mecanismos que são designados por CSMA-CD, a Ethernet wireless usamos
+
+495
+01:24:31,070 --> 01:24:49,580
+que é o Wi-Fi, usa também o CSMA-CA e vamos ver só o que são estes nomes. O CS do CSMA significa
+
+496
+01:24:49,580 --> 01:24:55,900
+carrier sensor, ou seja, normalmente quando se fazem coisas destas, as estações antes de
+
+497
+01:24:55,900 --> 01:25:04,020
+comunicar olham para o basamento e vê se está alguém a ocupar o basamento. Se existir, se a portadora,
+
+498
+01:25:04,940 --> 01:25:13,180
+se a onda portadora que transmite os dados estiver ativa, então nós sabemos que alguém está
+
+499
+01:25:13,180 --> 01:25:22,500
+a usar e se alguém está a usar não vamos começar a comunicar também. Nem sempre existe portadora,
+
+500
+01:25:22,500 --> 01:25:28,260
+mas pode-se sempre verificar se alguém está a transmitir, já que agora estes protocolos deste
+
+501
+01:25:28,260 --> 01:25:36,900
+tipo são inspirados primeiro em implementações wireless, sobretudo acho que a primeira vez que
+
+502
+01:25:36,900 --> 01:25:44,020
+se fez coisas destas foi no AVIPE para falar de umas ilhas para as outras, também as estações tinham
+
+503
+01:25:44,020 --> 01:26:21,440
+que ver com a sessão e depois para a ação, ou seja, estava com um tipo, normalmente este tipo, deve
+
+504
+01:26:21,440 --> 01:26:27,360
+estar a olhar para o meio e se vir que alguém está a comunicar, não comunica ao mesmo tempo,
+
+505
+01:26:27,360 --> 01:26:35,790
+porque senão ia estragar a comunicação do outro e sem resolver nada. Há que esperar que a outra
+
+506
+01:26:35,790 --> 01:26:43,190
+comunicação acabe para nós podermos começar a nossa comunicação. Por outro lado, enquanto
+
+507
+01:26:43,190 --> 01:26:50,270
+estamos, se decidimos começar a comunicar, enquanto estamos a colocar coisas no basamento,
+
+508
+01:26:50,270 --> 01:26:58,150
+vamos ver o que se passa no basamento. Em princípio, se nós estamos a transmitir, no basamento deve
+
+509
+01:26:58,150 --> 01:27:04,590
+se ver lá aquilo que nós estamos a enviar. Se virmos alguma coisa diferente, é porque provavelmente
+
+510
+01:27:04,590 --> 01:27:11,070
+está a tentar comunicar ao mesmo tempo que nós e aquilo que está a ficar no basamento não é aquilo
+
+511
+01:27:11,070 --> 01:27:23,560
+que nós lá estamos a pôr, é outra coisa, é uma mistura de dois sinais e em fazer a detecção de
+
+512
+01:27:23,560 --> 01:27:35,620
+colisão ou alguma coisa melhor. Normalmente, para resolver as colisões, utiliza a aliatoria
+
+513
+01:27:35,900 --> 01:27:46,740
+ou seja, duas estações que detectem que tentaram comunicar a uma colisão desistem dessa
+
+514
+01:27:46,740 --> 01:27:55,780
+comunicação e vão tentar transmitir as coisas mais tarde e esse mais tarde convém que seja a horas
+
+515
+01:27:55,780 --> 01:28:05,400
+diferentes para as duas estações que poliviram, porque se tentarem depois voltar a comunicar mais
+
+516
+01:28:05,520 --> 01:28:13,920
+a mesma hora ou mesmo tempo voltam a colidir. Então, as estações vão usar um tempo aliatório
+
+517
+01:28:13,920 --> 01:28:28,760
+e esperar um tempo aliatório antes de voltarem a tentar comunicar. Agora toco algo que se usa nem
+
+518
+01:28:28,760 --> 01:28:37,040
+na internet, chama CSMA, que é Reascense Multiple Access, ou seja, permite múltiplo acesso e as
+
+519
+01:28:37,040 --> 01:28:46,280
+estações fazem detecção da rotadora antes de verificar que não existe portadora no meio,
+
+520
+01:28:46,280 --> 01:28:55,880
+antes de começar a comunicar. E este CSMA é um conjunto de protocolos, onde também se encaixa
+
+521
+01:28:55,880 --> 01:29:08,940
+na internet e muitos outros protocolos, às vezes um bocadinho diferente. Tem todos os CSMAs,
+
+522
+01:29:08,940 --> 01:29:15,420
+pode haver a verificação antes de transmitir, verifica essa portadora e depois pode haver
+
+523
+01:29:15,420 --> 01:29:25,900
+colisões e quando há uma colisão desiste-se da transmissão e aplica-se depois o mecanismo
+
+524
+01:29:25,900 --> 01:29:39,200
+de evolução. Concretamente protocolos que se usa na internet, chama CSMA-CD, e é uma versão ou
+
+525
+01:29:39,200 --> 01:29:48,640
+um conjunto, um protocolo específico que faz CD, faz Collision Detection, tenta detectar a colisão
+
+526
+01:29:48,640 --> 01:29:58,640
+muito cedo, ou que ela existe e desiste logo da comunicação e usa uns slot para detectar a
+
+527
+01:29:58,640 --> 01:30:11,910
+colisão e depois espera um tempo aliatório, pode ser bastante mais longo. E isto tem outras
+
+528
+01:30:11,910 --> 01:30:20,350
+coisas, outros protocolos, outras normas mais ou menos semelhantes, o PRSense Multiple Access,
+
+529
+01:30:20,350 --> 01:30:27,430
+o ID Determinístico Collision Resolution, é uma versão que em vez de obrigar as peras
+
+530
+01:30:27,430 --> 01:30:35,230
+e histórias, usa um algoritmo determinístico para a nova tentativa de transmissão. Isto tenta
+
+531
+01:30:35,230 --> 01:30:47,600
+ter a vantagem de saber aqui horas a comunicação vai poder seguir. Existem também os protocolos
+
+532
+01:30:47,600 --> 01:31:02,240
+que usam Bitwise Arbitration, ou seja, em que as colisões nos pacotes umificador que especifica a
+
+533
+01:31:02,240 --> 01:31:11,000
+prioridade de cada pacote e quando há uma colisão o pacote mais prioritário pode seguir-se
+
+534
+01:31:11,080 --> 01:31:21,760
+o pacote menos prioritário é descartado e dessa maneira evita-se a repetição de um dos dois,
+
+535
+01:31:21,760 --> 01:31:29,880
+o mais prioritário continua o seu caminho enquanto que o menos prioritário é que tem que tentar mais
+
+536
+01:31:29,880 --> 01:31:40,030
+tarde. Por exemplo, fazer de cane, que nós vamos ver, usa uma técnica destas.
+
+537
+01:31:40,150 --> 01:31:54,610
+Então, detecção. Existe também a possibilidade de tentar evitar as colisões antes delas acontecerem,
+
+538
+01:31:54,610 --> 01:32:02,890
+tentando alocar o meio de transmissão durante uns tempos antes de começar a comunicação de um pacote.
+
+539
+01:32:02,890 --> 01:32:12,690
+Isto é o que se usa no Wi-Fi ou no CSMA-CA. Antes de começar a comunicar um nó avisa,
+
+540
+01:32:12,690 --> 01:32:22,950
+faz uma pré-ocupação do meio, mas que pode não gerar colisões e fica uns tempos lá para
+
+541
+01:32:22,950 --> 01:32:29,110
+ver se alguém está a transmitir ao mesmo tempo e só depois é que começa a transmitir e dessa
+
+542
+01:32:29,110 --> 01:32:40,500
+maneira tentam-se evitar que surjam colisões mais tarde. A forma de fazer esta detecção de colisões
+
+543
+01:32:40,500 --> 01:32:53,930
+é sincrona, ou seja, a ver uma hora a que todos verificam a ocupação do meio, dessa forma
+
+544
+01:32:53,930 --> 01:33:05,130
+consegue-se gerir melhor a altura do acesso ao meio, porque se aquela hora ninguém estava a
+
+545
+01:33:05,130 --> 01:33:12,410
+transmitir, então de certeza que agora eu disse que vou transmitir e àquela hora posso transmitir.
+
+546
+01:33:12,410 --> 01:33:35,020
+Isto pode ser feito em slots, ou seja, se eu sei que depois daquele sinal que sincroniza todos
+
+547
+01:33:35,020 --> 01:33:45,260
+ou daquela transmissão, eu tenho direito a transmitir no quarto mini-slot, se nenhuma das
+
+548
+01:33:45,260 --> 01:33:49,980
+sinales mais prioritárias que eu conheço a transmitir nem no primeiro, nem no segundo,
+
+549
+01:33:49,980 --> 01:33:59,180
+nem no terceiro, eu sou do ano do quarto mini-slot e começo a transmitir naquele slot e as estações
+
+550
+01:33:59,180 --> 01:34:06,060
+menos prioritárias que eu tenho que esperar pelo quinto slot para começar a transmitir ou pelo
+
+551
+01:34:06,060 --> 01:34:15,060
+sexto slot para e portanto não transmitem ao mesmo tempo que eu. Isto briga é a ver aqui mais
+
+552
+01:34:15,060 --> 01:34:27,560
+simples sem comunicação. Ontem a internet no início usava barramentos simples onde todos
+
+553
+01:34:27,560 --> 01:34:34,520
+transmitiam e onde se geravam muitas colisões, depois começou a dividir os barramentos por
+
+554
+01:34:34,520 --> 01:34:45,400
+equipamentos ativos com capacidade de comutação e os suítos que nós usamos atualmente são equipamentos
+
+555
+01:34:45,400 --> 01:34:57,360
+que fazem comutação e quando um está a transmitir, transmite só num cabo e não transmite o outro e se
+
+556
+01:34:57,360 --> 01:35:06,120
+chegarem dois pacotes ao mesmo tempo, eles guardam o pacote e enviam o pacote só quando tiverem os
+
+557
+01:35:06,120 --> 01:35:15,360
+link de saída disponíveis. Para além disso ainda podem os suítos modernos, ainda memorizam os endereços
+
+558
+01:35:16,360 --> 01:35:26,360
+e as origens de onde recebem os pacotes e criam tabelas de destinos e se sabem que um pacote é dirigido
+
+559
+01:35:26,360 --> 01:35:33,360
+onde terminou o destino, podem enviá-lo só para esse destino e não para os outros e isto melhora muito
+
+560
+01:35:33,360 --> 01:35:47,510
+a capacidade de comutação. Nem toda a informação vai para todos. Ou seja, os suítos modernos
+
+561
+01:35:48,510 --> 01:35:56,510
+não se usam na internet, mas também se podem usarem outras coisas parecidas nas outras redes, eles recebem
+
+562
+01:35:56,510 --> 01:36:07,510
+as mensagens, interpretam o endereço de destino e se conhecierem o endereço de destino nas suas tabelas
+
+563
+01:36:07,510 --> 01:36:18,240
+e enviam o pacote apenas para a porta onde está esse destino. Os pacotes que não tenham um destino
+
+564
+01:36:18,240 --> 01:36:24,240
+específico, como os pacotes de broadcast ou de multicast ou de endereços desconhecidos, vão para todas as portas ao mesmo
+
+565
+01:36:24,240 --> 01:36:35,490
+tempo. Em princípio, se só tivermos uma máquina que legava a cada porta de um equipamento destes, não temos
+
+566
+01:36:35,490 --> 01:36:45,490
+colisões, porque em cada segmento, cada segmento da rede é um bajamento, mas que é partilhado apenas por dois
+
+567
+01:36:45,490 --> 01:36:56,490
+equipamentos e, portanto, não pode haver colisões, porque o meio de transmissão é pelo duplex e, portanto, não há colisões.
+
+568
+01:36:56,490 --> 01:37:08,830
+Ou seja, só para encerrar os sistemas de controle do acesso ao meio, podem separar as comunicações
+
+569
+01:37:08,830 --> 01:37:17,880
+temporais em tempos diferentes ou em frequências diferentes. A separação em tempos diferentes
+
+570
+01:37:17,880 --> 01:37:29,350
+pode ser com slot descontrolados ou não controlados, não controlados a o que se chama gendarmaccess e temos
+
+571
+01:37:29,350 --> 01:37:39,140
+os CSMAs todos, incluindo o CD que é usado na Ethernet e o CA que é usado no Wi-Fi. Para acessos
+
+572
+01:37:39,140 --> 01:37:46,140
+descontrolados, podemos ter um master a controlar as coisas e, portanto, temos acessos centralizado,
+
+573
+01:37:46,140 --> 01:37:54,140
+ou, então, temos um mecanismo qualquer inteligente que não precisa de masters e, por exemplo, a passagem
+
+574
+01:37:54,140 --> 01:38:05,140
+do token, o TDMA, a divisão por slot de tempo que consegue fazer acessos controlados sem termos
+
+575
+01:38:05,140 --> 01:38:16,140
+um master a controlar as coisas especificamente. Pronto, hoje vamos chegar por aqui, em princípio,
+
+576
+01:38:16,140 --> 01:38:25,140
+na próxima aula que falamos de Ethernet especificamente, que é um exemplo do CSMA-CD e depois vamos falar
+
+577
+01:38:26,140 --> 01:38:38,940
+também é um acesso não controlado, em princípio, deste tipo. Alguma dúvida? Alguma questão?
+
+578
+01:38:38,940 --> 01:38:45,390
+Então, ficamos por aqui. Encontramos-nos na quinta-feira.
+
+579
+01:38:45,390 --> 01:38:46,390
+Obrigado.
+
+580
+01:38:46,390 --> 01:38:47,390
+Boa noite.
+
+581
+01:38:47,390 --> 01:38:48,390
+Boa noite.
+
+582
+01:38:48,390 --> 01:38:49,390
+Obrigado.
+
+583
+01:38:49,390 --> 01:38:50,390
+Adeus, boa noite.
+
