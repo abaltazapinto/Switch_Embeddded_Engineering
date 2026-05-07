@@ -1,0 +1,7996 @@
+1
+00:00:07,570 --> 00:00:40,350
+Alguém me está a ouvir? Sim, sim.
+
+2
+00:00:40,350 --> 00:00:51,500
+Também estou a ouvir, está tudo bem, está a gente em trás.
+
+3
+00:00:51,500 --> 00:01:10,100
+E como combinamos hoje vamos falar um bocadinho de Ethernet, que é a rede dominante para redes locais
+
+4
+00:01:10,100 --> 00:01:18,100
+e a solução que temos de que adotar se quisermos colocar dispositivos numa rede que já existe.
+
+5
+00:01:19,100 --> 00:01:27,100
+Se não queremos construir a nossa para a aplicação que nós pretendemos
+
+6
+00:01:27,100 --> 00:01:34,510
+normalmente a solução é integrar-nos no Ethernet que já exista.
+
+7
+00:01:34,510 --> 00:02:02,970
+Na ultimala já falamos de protocolos de acesso ao meio que permitem um acesso aleatório
+
+8
+00:02:03,970 --> 00:02:09,970
+e portanto quando uma das estações quer transmitir temos um meio partilhado
+
+9
+00:02:09,970 --> 00:02:15,970
+quando uma das estações quer transmitir alguma coisa neste tipo de protocolos
+
+10
+00:02:15,970 --> 00:02:20,970
+normalmente o que faz é tomar conta do meio e transmitir.
+
+11
+00:02:20,970 --> 00:02:26,970
+Se mais do que uma estação tiver transmitir ao mesmo tempo
+
+12
+00:02:26,970 --> 00:02:33,820
+a transmissão fica estragada e gera-se uma colisão
+
+13
+00:02:33,820 --> 00:02:40,820
+e há vários protocolos deste tipo que variam na forma como se detectam as colisões
+
+14
+00:02:40,820 --> 00:02:49,820
+alguns tentam evitar a priori as colisões e depois também variam como se recupera a partir da colisão
+
+15
+00:02:49,820 --> 00:03:01,740
+e este método de funcionamento é aquele que é aplicado nas Ethernets e nas Ethernet Wireless
+
+16
+00:03:01,740 --> 00:03:06,740
+que normalmente se chama o Wi-Fi e quando se diz Ethernet sem dizer mais nada
+
+17
+00:03:06,740 --> 00:03:14,740
+normalmente significa Ethernet com fio mas o Wi-Fi também pode ser considerado
+
+18
+00:03:14,740 --> 00:03:19,740
+um caso especial da Ethernet para maíos sem fios.
+
+19
+00:03:19,740 --> 00:03:33,010
+No momento para evitar que se gera as colisões, as estações monitorizam o meio
+
+20
+00:03:33,010 --> 00:03:38,010
+antes de começarem a transmitir, ou seja, ou vem que se está alguém a falar ou não
+
+21
+00:03:38,010 --> 00:03:47,250
+se estiver alguém a falar não interrompem e depois se começarem a transmitir
+
+22
+00:03:47,250 --> 00:03:54,250
+enquanto estão a transmitir vão continuar monitorizar o meio a ver se aquilo que está a ser transmitido
+
+23
+00:03:54,250 --> 00:03:58,250
+aquilo que está presente na linha é aquilo que nós lá pusemos
+
+24
+00:03:58,250 --> 00:04:03,250
+se não for-se é porque alguém está a transmitir também coisas ao mesmo tempo
+
+25
+00:04:03,250 --> 00:04:06,250
+e chamamos isso uma colisão.
+
+26
+00:04:06,250 --> 00:04:15,250
+Quando há uma colisão habitual as estações não começarem a transmitir ao mesmo tempo
+
+27
+00:04:15,250 --> 00:04:20,250
+ou seja, esperam um período antes de começar a transmitir e esse período não aumenta
+
+28
+00:04:20,250 --> 00:04:28,250
+é aleatório para tentar que os próximos inícios de transmissão não sejam simultâneos.
+
+29
+00:04:28,250 --> 00:04:35,970
+A ideia inicial da Ethernet foi desenhada talvez num garden app
+
+30
+00:04:35,970 --> 00:04:48,760
+um desenho famoso onde consta um cabo partilhado chamado Ether
+
+31
+00:04:48,760 --> 00:05:00,760
+e depois o circuito que permite monitorizar e injetar sinais naquele cabo partilhado
+
+32
+00:05:00,760 --> 00:05:10,100
+e permitir que um controlador receba e envie os dados por aqui.
+
+33
+00:05:10,100 --> 00:05:17,100
+Muitas primeiras Ethernets eram de 100 megabits, funcionavam 100 megabits
+
+34
+00:05:17,100 --> 00:05:23,100
+atualmente usam-se Ethernet, usamos 100 megabits ou 1 gigabit
+
+35
+00:05:23,100 --> 00:05:29,100
+mas também há implementações Ethernet para 10 gigabits e ainda mais do que isso
+
+36
+00:05:29,100 --> 00:05:37,710
+os 40 gigabits também estão aí a aparecer.
+
+37
+00:05:37,710 --> 00:05:44,710
+Ethernet original então funcionava com um cabo partilhado por todas as estações
+
+38
+00:05:44,710 --> 00:05:51,760
+portanto de ponto de vista físico podemos dizer que tem uma topologia em barramento
+
+39
+00:05:51,760 --> 00:05:58,760
+todos os nós estão ligados àquele barramento, atualmente usamos Ethernet mais com este aspecto físico
+
+40
+00:05:58,760 --> 00:06:08,620
+onde há um nó central que é um repetidor e dependendo daquilo de nó o comportamento
+
+41
+00:06:08,620 --> 00:06:13,620
+pode ser exatamente igual àquilo se aquele de nó que está ali no meio repetir
+
+42
+00:06:13,620 --> 00:06:18,620
+aquilo que recebe de alguém para todos os outros
+
+43
+00:06:18,620 --> 00:06:24,620
+então temos uma situação em que todos ouvem tudo o que qualquer um deles diz
+
+44
+00:06:24,620 --> 00:06:29,620
+e portanto comporta-se exatamente como aquilo.
+
+45
+00:06:29,620 --> 00:06:36,620
+Atualmente usam-se arquiteturas ou topologias deste género mas em que o nó central
+
+46
+00:06:36,620 --> 00:06:41,620
+pode não ser um repetidor, pode tentar fazer qualquer coisa melhor
+
+47
+00:06:41,620 --> 00:06:48,620
+do que apenas repetir para os outros todos e portanto temos uma topologia
+
+48
+00:06:48,620 --> 00:06:55,620
+que a nível lógico já não é um barramento mas que é uma estrela ou uma cadeia
+
+49
+00:06:55,620 --> 00:07:11,740
+isto é o desenho da Ethernet de 10 megabits baseado em um cabo coaxial
+
+50
+00:07:11,740 --> 00:07:19,740
+e uma das tecnologias que se podia usar era usar aqui um conector tipo vampiro
+
+51
+00:07:19,740 --> 00:07:29,740
+que se espetava no cabo coaxial e ao espetar ele destruía um bocadinho de plástico
+
+52
+00:07:29,740 --> 00:07:39,740
+e fazia o contacto com o cobre que estava dentro do cabo coaxial
+
+53
+00:07:39,740 --> 00:07:47,300
+e como isso fazia sem interface para ali.
+
+54
+00:07:47,300 --> 00:07:50,300
+A gente usava-se cabo grosso, depois passou a usar-se cabo fino
+
+55
+00:07:50,300 --> 00:07:54,300
+não sei se vocês provavelmente não são do tempo do cabo grosso
+
+56
+00:07:54,300 --> 00:08:01,300
+mas as primeiras redes Ethernet que se usaram cá no Porto, no Inesque
+
+57
+00:08:01,300 --> 00:08:09,300
+e na Faculdade de Engenharia eram de cabo grosso e depois rapidamente mudou-se para cabo fino
+
+58
+00:08:09,300 --> 00:08:14,300
+os cabos no cabo fino havia novamente um conector do tipo T
+
+59
+00:08:14,300 --> 00:08:22,300
+e os cabos tinham fichas que encaixavam no conector tipo T e o conector tipo T
+
+60
+00:08:22,300 --> 00:08:26,300
+fazia a derivação para cada uma das máquinas
+
+61
+00:08:26,300 --> 00:08:35,300
+agora usamos, depois passou-se a usar o repetidor central
+
+62
+00:08:35,300 --> 00:08:40,300
+passamos a ter a arquitetura tipo estrela, uma topologia tipo estrela
+
+63
+00:08:40,300 --> 00:08:46,300
+mas aquilo foi um repetidor e aqueles aparelhos que nós chamávamos ABS
+
+64
+00:08:46,300 --> 00:08:51,300
+que existiam aqui há um tempo eram essencialmente repetidores
+
+65
+00:08:51,300 --> 00:08:57,300
+pelo menos os primeiros e portanto toda a informação que era recebida numa das portas
+
+66
+00:08:57,300 --> 00:09:06,240
+era repetida para as outras portas continuávamos a ter um funcionamento tipo barramento
+
+67
+00:09:06,240 --> 00:09:10,240
+se temos barramento e todos ouvirem todos o que todos dizem
+
+68
+00:09:10,240 --> 00:09:24,780
+então vamos ter colisões na Ethernet, temos as estações a ouvirem o que se passa
+
+69
+00:09:24,780 --> 00:09:32,780
+se não detectarem outras transmissões sentem-se no direito de transmitir
+
+70
+00:09:32,780 --> 00:09:40,780
+quando veem que o barramento está ocupado esperam um tempo até tentar novamente
+
+71
+00:09:40,780 --> 00:09:46,310
+quando estão a transmitir isso verifica uma colisão
+
+72
+00:09:46,310 --> 00:09:56,310
+então as todas as estações que estejam a emitir e que até têm a colisão devem deixar de transmitir
+
+73
+00:09:56,310 --> 00:10:02,310
+às vezes assim injetam os sinais para facilitar a detecção da colisão por parte das outras estações
+
+74
+00:10:02,310 --> 00:10:13,360
+por parte dos vizinhos e depois espera-se algum tempo até começar a voltar a transmitir
+
+75
+00:10:13,360 --> 00:10:17,360
+então tem mais ou menos também o que se passa numa conversa entre várias pessoas
+
+76
+00:10:17,360 --> 00:10:24,360
+quando não há um moderador as pessoas que estão no grupo podem falar sempre que querem
+
+77
+00:10:24,360 --> 00:10:30,360
+se duas pessoas começam a falar ao mesmo tempo alguém tem que parar de falar isso
+
+78
+00:10:30,360 --> 00:10:37,360
+e depois tem que haver uma das pessoas que estão na iniciativa de falar primeiro e a outra espera
+
+79
+00:10:37,360 --> 00:10:48,040
+que o meio de transmissão fique livre para voltar a tentar de falar
+
+80
+00:10:48,040 --> 00:10:53,040
+nos sinais demoram tempo a circular nos cabos ou a serem repetidos nos repetidores
+
+81
+00:10:53,040 --> 00:11:00,040
+ou seja independentemente de termos a topologia em estrela com repetidores ou de termos a topologia em basamento
+
+82
+00:11:00,040 --> 00:11:09,930
+as estações não estão todas no mesmo sítio por isso é que há transmissão local de um lado para o outro
+
+83
+00:11:09,930 --> 00:11:15,930
+e a informação demora algum tempo a circular no cabo
+
+84
+00:11:15,930 --> 00:11:22,930
+neste exemplo temos que ilustrar um cabo que vai daqui até aqui
+
+85
+00:11:22,930 --> 00:11:30,930
+no meio de transmissão partilhado e temos aqui quatro estações ABCD que estão colocadas em sítios diferentes
+
+86
+00:11:30,930 --> 00:11:39,200
+aqui temos o tempo a andar de cima para baixo no instante de tempo T0 a estação B
+
+87
+00:11:39,200 --> 00:11:44,200
+acha que o meio está livre e decide começar a transmitir
+
+88
+00:11:44,200 --> 00:11:52,250
+o sinal que a estação B colocar no barramento partilhado nesta altura
+
+89
+00:11:52,250 --> 00:11:56,250
+vai-se propagar para a esquerda e para a direita e um bocadinho depois
+
+90
+00:11:56,250 --> 00:12:04,250
+vai chegar aos seus vizinhos da esquerda e um bocadinho depois vai chegar ao seu vizinho da direita que eu C
+
+91
+00:12:04,250 --> 00:12:12,720
+enquanto este sinal está a viajar do B para o C e do B para o A
+
+92
+00:12:12,720 --> 00:12:19,720
+estação D que está mais longe ainda não recebeu nenhum destes sinais
+
+93
+00:12:19,720 --> 00:12:23,720
+e no instante T1 que acontece depois do T0
+
+94
+00:12:23,720 --> 00:12:29,720
+a estação D acha ainda que o meio de transmissão está livre
+
+95
+00:12:29,720 --> 00:12:35,720
+e portanto pode decidir também começar a transmitir ao mesmo tempo
+
+96
+00:12:35,720 --> 00:12:40,720
+e o sinal que a estação D coloca no cabo nesta altura
+
+97
+00:12:40,720 --> 00:12:44,720
+propaga-se também para a direita e para a esquerda
+
+98
+00:12:44,720 --> 00:12:51,720
+e na alguma altura vai colidir com aquela transmissão que veio da estação B
+
+99
+00:12:51,720 --> 00:12:57,720
+a colisão não é detectada por todas as estações ao mesmo tempo
+
+100
+00:12:57,720 --> 00:13:05,720
+mas, inevitavelmente, na maior parte dos casos, todas vão detectar a colisão
+
+101
+00:13:05,720 --> 00:13:11,720
+só em casos em que estão muito longe de que pode algo mais char que não houve colisão
+
+102
+00:13:11,720 --> 00:13:21,880
+nesta altura, quando estamos aqui, o C detectou a colisão
+
+103
+00:13:21,880 --> 00:13:24,880
+Daniel, queres ver alguma coisa?
+
+104
+00:13:24,880 --> 00:13:31,880
+Sim, por só ter, é só perguntar como é que os sistemas conseguem detectar uma colisão
+
+105
+00:13:31,880 --> 00:13:38,820
+ou seja, a natureza do sinal é a esquerda de informação
+
+106
+00:13:38,820 --> 00:13:44,820
+Sim, neste nível não existe conceito de informação
+
+107
+00:13:44,820 --> 00:13:51,420
+Existem sinais elétricos que colocamos no cabo
+
+108
+00:13:51,420 --> 00:14:01,420
+se nós aqui estamos a pôr um sinal que vai corresponder, por exemplo, a uma tensão 1010
+
+109
+00:14:01,420 --> 00:14:07,420
+e aquele vai pôr qualquer coisa, que é, por exemplo, 0110
+
+110
+00:14:07,420 --> 00:14:13,420
+quando colidirem uma altura em que esteja um 1 ao mesmo tempo que um 0
+
+111
+00:14:13,420 --> 00:14:21,420
+se um, se os sinais francodificados, como tensões, ter alguém a pôr uma tensão x-voltes
+
+112
+00:14:21,420 --> 00:14:25,420
+correspondendo a um e alguém a pôr uma tensão de 0 voltes
+
+113
+00:14:25,420 --> 00:14:29,420
+aquilo que vai acontecer no cabo é que não fica nenhuma tensão, nem fica a outra
+
+114
+00:14:29,420 --> 00:14:32,420
+fica alguma coisa entre uma coisa e outra
+
+115
+00:14:32,420 --> 00:14:37,420
+e, dependendo das correntes envolvidas, até podemos chamar isso um curto-circuito
+
+116
+00:14:37,420 --> 00:14:44,420
+aqui as correntes são limitadas, não se chama curto-circuito, se chama-se uma colisão
+
+117
+00:14:44,420 --> 00:14:49,420
+mas se estamos a tentar pôr um sinal de 5 voltes no cabo
+
+118
+00:14:49,420 --> 00:14:53,420
+e aquilo que está a aparecer no cabo, são 3 voltes ou 2 voltes
+
+119
+00:14:53,420 --> 00:14:59,120
+é porque alguém está a pôr 0 voltes ao mesmo tempo que nós estamos a pôr 5
+
+120
+00:14:59,120 --> 00:15:05,660
+ok, obrigado
+
+121
+00:15:05,660 --> 00:15:09,660
+essa detecção vai responder à sobreposição dos sinais
+
+122
+00:15:09,660 --> 00:15:14,660
+sempre que há sobreposição dos sinais, chamamos isto uma colisão
+
+123
+00:15:14,660 --> 00:15:20,660
+e a estação C, que provavelmente vai detectar a colisão ali
+
+124
+00:15:20,660 --> 00:15:24,660
+a estação C, o que vê o que se passa nesta coluna ou nesta linha vertical
+
+125
+00:15:24,660 --> 00:15:30,660
+aqui começa a ver a transmissão do B e depois começa a ver
+
+126
+00:15:30,660 --> 00:15:35,660
+coisas que não são nenhumos nem zeros e, portanto, chamar isto de uma colisão
+
+127
+00:15:35,660 --> 00:15:39,660
+é alguma coisa que não se percebe o que é
+
+128
+00:15:39,660 --> 00:15:45,660
+a estação B, a estação D, pouco depois de começar a transmitir
+
+129
+00:15:45,660 --> 00:15:49,660
+nesta fase, vai começar a receber aquilo que vinha do B
+
+130
+00:15:49,660 --> 00:15:52,660
+em conjunto com aquilo que está a transmitir
+
+131
+00:15:52,660 --> 00:15:58,660
+e vai perceber que é uma colisão, pode demorar algum tempo a detectar a colisão
+
+132
+00:15:58,660 --> 00:16:01,660
+nesta altura já percebeu que existe uma colisão
+
+133
+00:16:01,660 --> 00:16:07,660
+então para de transmitir a mencha vermelha para daqui para baixo
+
+134
+00:16:07,660 --> 00:16:11,660
+porque a estação D para de transmitir
+
+135
+00:16:11,660 --> 00:16:15,660
+a estação B continua a transmitir-se até chegar aqui
+
+136
+00:16:15,660 --> 00:16:18,660
+até o sinal vermelho da estação D chegar cá
+
+137
+00:16:18,660 --> 00:16:25,660
+nesta altura a estação B percebe que houve uma colisão
+
+138
+00:16:25,660 --> 00:16:28,660
+então vai também parar de transmitir
+
+139
+00:16:28,660 --> 00:16:31,660
+e vai considerar que tudo o que emitiu até aqui
+
+140
+00:16:31,660 --> 00:16:35,660
+que se perdeu porque se houve uma colisão
+
+141
+00:16:35,660 --> 00:16:41,660
+a colisão só foi detectada agora, ou seja, até pode parecer que isto está tudo enviado
+
+142
+00:16:41,660 --> 00:16:46,660
+mas se houve uma colisão para nós aqui, noutra fase do cabo
+
+143
+00:16:46,660 --> 00:16:52,660
+a colisão pode ter aparecido mais cedo e, portanto, tudo isto é considerado perdido
+
+144
+00:16:53,660 --> 00:17:00,660
+e agora só depois de esperar-nos algum tempo para detectarmos que o cabo está livre
+
+145
+00:17:00,660 --> 00:17:03,660
+e esperar-nos algum tempo porque provavelmente vai ser aleatório
+
+146
+00:17:03,660 --> 00:17:07,660
+ou seja, não sabemos se vai ser o D transmitir primeiro ou o B
+
+147
+00:17:07,660 --> 00:17:14,660
+mas algum vai ter que ter a iniciativa ou ter a sorte de transmitir primeiro
+
+148
+00:17:14,660 --> 00:17:27,280
+ou seja, fazemos carrier sens, vemos se os sinais estão lá
+
+149
+00:17:27,280 --> 00:17:34,840
+se o canal está ocupado nem chegamos a começar a transmitir
+
+150
+00:17:34,840 --> 00:17:42,470
+e enquanto estamos a transmitir vamos lendo o que se passa no cabo
+
+151
+00:17:42,470 --> 00:17:46,470
+enquanto transmitimos para conseguirmos detectar colisões
+
+152
+00:17:46,470 --> 00:17:56,100
+dependendo da tecnologia, às vezes qualquer estação que detecte que houve uma colisão
+
+153
+00:17:56,100 --> 00:18:02,100
+para facilitar a detecção da colisão por parte de outras estações
+
+154
+00:18:02,100 --> 00:18:07,100
+que podem estar na vizinhança mas muito longe de quem está a enviar as coisas
+
+155
+00:18:07,100 --> 00:18:13,100
+podemos emitir também algum lixo
+
+156
+00:18:13,100 --> 00:18:17,100
+se todos emitirem um bocadinho de lixo quando detectam a colisão
+
+157
+00:18:17,100 --> 00:18:20,100
+isso facilita a propagação da colisão
+
+158
+00:18:20,100 --> 00:18:26,650
+ou seja, a detecção da colisão por parte dos outros
+
+159
+00:18:26,650 --> 00:18:31,650
+depois de detectar a colisão esperamos algum tempo
+
+160
+00:18:31,650 --> 00:18:36,650
+o Ethernet usa-se um backoff exponencial
+
+161
+00:18:36,650 --> 00:18:40,650
+ou seja, um tempo de espera que é exponencial
+
+162
+00:18:40,650 --> 00:18:44,650
+ou seja, surta-se um número
+
+163
+00:18:44,650 --> 00:18:47,650
+e depois dois de bandado a esse número
+
+164
+00:18:47,650 --> 00:18:52,860
+dá o tempo que, ou dá o capa
+
+165
+00:18:52,860 --> 00:18:55,860
+e o capa vezes um período pré-establecido
+
+166
+00:18:55,860 --> 00:19:06,880
+dá o tempo de espera que se espera
+
+167
+00:19:06,880 --> 00:19:09,880
+do tempo que se espera também
+
+168
+00:19:09,880 --> 00:19:15,540
+se já for a segunda tentativa
+
+169
+00:19:15,540 --> 00:19:17,540
+se tentamos emitir e houve uma colisão
+
+170
+00:19:17,540 --> 00:19:19,540
+se fazemos uma segunda tentativa mais tarde
+
+171
+00:19:19,540 --> 00:19:22,540
+e se depois fizermos uma outra tentativa e por aí fora
+
+172
+00:19:22,540 --> 00:19:24,540
+o tempo de espera vai crescendo
+
+173
+00:19:24,540 --> 00:19:28,540
+a princípio esperamos de qualquer coisa entre aquilo e aquilo
+
+174
+00:19:28,540 --> 00:19:30,540
+depois aquilo, aquilo, aquilo
+
+175
+00:19:30,540 --> 00:19:33,540
+depois aquilo, aquilo, aquilo
+
+176
+00:19:33,540 --> 00:19:37,540
+podemos também haver
+
+177
+00:19:37,540 --> 00:19:41,540
+um fator aleatório para decidir se o tempo que esperamos
+
+178
+00:19:41,540 --> 00:19:44,540
+é aquilo, é aquilo, é aquilo
+
+179
+00:19:44,540 --> 00:19:47,540
+se houver muitas colisões
+
+180
+00:19:47,540 --> 00:19:50,540
+aquilo que se verifica
+
+181
+00:19:50,540 --> 00:19:55,540
+é que todos adiam os seus envios
+
+182
+00:19:55,540 --> 00:19:59,540
+e portanto a eficiência da rede diminui
+
+183
+00:19:59,540 --> 00:20:02,540
+portanto no Ethernet funciona bem
+
+184
+00:20:02,540 --> 00:20:05,540
+quando o tráfego é pouco
+
+185
+00:20:05,540 --> 00:20:07,540
+quando o tráfego é pouco
+
+186
+00:20:07,540 --> 00:20:09,540
+nós queremos transmitir, transmitimos
+
+187
+00:20:09,540 --> 00:20:13,540
+e se há pouco tráfego, provavelmente até não há colisões
+
+188
+00:20:13,540 --> 00:20:16,540
+quando há muita gente quer transmitir
+
+189
+00:20:16,540 --> 00:20:18,540
+todos colidem com todos
+
+190
+00:20:18,540 --> 00:20:20,540
+e ninguém consegue comunicar com nada
+
+191
+00:20:20,540 --> 00:20:24,540
+ou seja, a soma de todas as transmissões diminui
+
+192
+00:20:24,540 --> 00:20:26,540
+quando todos querem transmitir
+
+193
+00:20:26,540 --> 00:20:29,540
+e quando somos só nós a transmitir
+
+194
+00:20:29,540 --> 00:20:33,540
+conseguimos usar a capacidade de toda transmissão
+
+195
+00:20:33,540 --> 00:20:38,370
+por isso o comportamento do Ethernet às vezes
+
+196
+00:20:38,370 --> 00:20:41,370
+é comparado, por exemplo, com uma retunda
+
+197
+00:20:41,370 --> 00:20:44,370
+as retundas para o tráfego automóvel também são
+
+198
+00:20:44,370 --> 00:20:47,370
+uma estratégia que funciona muito bem
+
+199
+00:20:47,370 --> 00:20:49,370
+quando o tráfego é pouco
+
+200
+00:20:49,370 --> 00:20:51,370
+quando o tráfego é pouco, por exemplo, há noite
+
+201
+00:20:51,370 --> 00:20:53,370
+a retunda está sempre livre
+
+202
+00:20:53,370 --> 00:20:55,370
+qualquer carro que chega à retunda
+
+203
+00:20:55,370 --> 00:20:57,370
+entra na retunda e segue
+
+204
+00:20:57,370 --> 00:21:01,370
+e dois carros que chegam à retunda ao mesmo tempo
+
+205
+00:21:01,370 --> 00:21:03,370
+se for de um sentido ou de outro
+
+206
+00:21:03,370 --> 00:21:06,370
+até cruzam a retunda os dois ao mesmo tempo
+
+207
+00:21:06,370 --> 00:21:09,370
+e, portanto, com muito sucesso
+
+208
+00:21:09,370 --> 00:21:11,370
+a retunda funciona muito bem
+
+209
+00:21:11,370 --> 00:21:13,370
+quando as retundas estão cheias
+
+210
+00:21:13,370 --> 00:21:15,370
+todos os carros estão parados no meio da retunda
+
+211
+00:21:15,370 --> 00:21:17,370
+a espera que o da frente avance
+
+212
+00:21:17,370 --> 00:21:19,370
+e nenhuma avança por cá à frente
+
+213
+00:21:19,370 --> 00:21:21,370
+tem outro carro
+
+214
+00:21:21,370 --> 00:21:24,370
+a retunda deixa de funcionar
+
+215
+00:21:24,370 --> 00:21:30,370
+e perde capacidade para fluir o tráfego
+
+216
+00:21:31,370 --> 00:21:35,370
+e às vezes as soluções são complicadas
+
+217
+00:21:35,370 --> 00:21:38,370
+têm que todos separar e esperar muito tempo
+
+218
+00:21:38,370 --> 00:21:40,370
+para começar a andar
+
+219
+00:21:40,370 --> 00:21:42,370
+já há uns anos como dizia-se
+
+220
+00:21:42,370 --> 00:21:45,370
+que nas retundas da cidade do México
+
+221
+00:21:45,370 --> 00:21:48,370
+onde havia muito trânsito
+
+222
+00:21:48,370 --> 00:21:52,370
+às vezes havia conflitos nas retundas
+
+223
+00:21:52,370 --> 00:21:56,370
+em que os carros ficavam horas nas retundas
+
+224
+00:21:56,370 --> 00:21:59,370
+sem conseguir andar porque todos tinham um carro à frente
+
+225
+00:21:59,370 --> 00:22:01,370
+e aí a solução era...
+
+226
+00:22:01,370 --> 00:22:04,370
+a polícia tinha um helicópter
+
+227
+00:22:04,370 --> 00:22:08,370
+que retiravam os carros que estavam em posição chave
+
+228
+00:22:08,370 --> 00:22:12,370
+para permitir que os outros começassem a andar
+
+229
+00:22:12,370 --> 00:22:15,370
+aqui não há helicópteros para tirar os pacotes
+
+230
+00:22:15,370 --> 00:22:19,620
+mas...
+
+231
+00:22:19,620 --> 00:22:23,620
+devemos ter sempre presente que as internet portam-se pior
+
+232
+00:22:23,620 --> 00:22:28,620
+quanto mais tentativas de transmitir houver
+
+233
+00:22:28,620 --> 00:22:34,300
+então as colisões
+
+234
+00:22:34,300 --> 00:22:37,300
+não são detectadas todos ao mesmo tempo
+
+235
+00:22:37,300 --> 00:22:39,300
+uma detecção, como por exemplo
+
+236
+00:22:39,300 --> 00:22:42,300
+se uma estação A começa a emitir o sinal de A
+
+237
+00:22:42,300 --> 00:22:45,300
+já até a algum lado
+
+238
+00:22:45,300 --> 00:22:47,300
+se perto desse extremo
+
+239
+00:22:47,300 --> 00:22:49,300
+essa zona houver outra estação
+
+240
+00:22:49,300 --> 00:22:51,300
+que começa a transmitir naquela altura
+
+241
+00:22:51,300 --> 00:22:54,300
+nesta altura a estação B ainda não recebeu nada do A
+
+242
+00:22:54,300 --> 00:22:56,300
+portanto acha que o meio está livre
+
+243
+00:22:56,300 --> 00:23:01,190
+começa a transmitir também
+
+244
+00:23:01,190 --> 00:23:04,190
+e a estação B rapidamente vai perceber
+
+245
+00:23:04,190 --> 00:23:07,190
+que houve uma colisão
+
+246
+00:23:07,190 --> 00:23:09,190
+e para de transmitir
+
+247
+00:23:09,190 --> 00:23:11,190
+a estação A
+
+248
+00:23:11,190 --> 00:23:14,190
+vai demorar muito tempo a perceber que há uma colisão
+
+249
+00:23:14,190 --> 00:23:16,190
+a estação A
+
+250
+00:23:16,190 --> 00:23:19,190
+até pode acabar a sua transmissão ali
+
+251
+00:23:19,190 --> 00:23:21,190
+porque não tem mais dados a transmitir
+
+252
+00:23:21,190 --> 00:23:24,190
+mas mesmo quando acaba de transmitir
+
+253
+00:23:24,190 --> 00:23:27,190
+a estação A tem que ver-se
+
+254
+00:23:27,190 --> 00:23:30,190
+há mais transmissões
+
+255
+00:23:30,190 --> 00:23:33,190
+no meio de transmissão
+
+256
+00:23:33,190 --> 00:23:36,190
+e dar um tempo de folga
+
+257
+00:23:36,190 --> 00:23:38,190
+ou seja, durante este tempo
+
+258
+00:23:38,190 --> 00:23:40,190
+se a estação A houver
+
+259
+00:23:40,190 --> 00:23:42,190
+informação a circulares
+
+260
+00:23:42,190 --> 00:23:45,190
+admite que tenha havido colisão
+
+261
+00:23:45,190 --> 00:23:48,190
+e que aquela transmissão não tenha chegado a lado nenhum
+
+262
+00:23:48,190 --> 00:23:51,190
+aquilo deve ser interpretado como uma colisão
+
+263
+00:23:51,190 --> 00:23:54,760
+portanto há um tempo mínimo
+
+264
+00:23:54,760 --> 00:23:58,260
+para detectar
+
+265
+00:23:58,260 --> 00:24:01,260
+se não houve uma colisão
+
+266
+00:24:01,260 --> 00:24:04,260
+e esse tempo está relacionado com o comprimento
+
+267
+00:24:04,260 --> 00:24:07,260
+e portanto as Ethernetes têm sempre
+
+268
+00:24:07,260 --> 00:24:10,260
+limitações de tamanho
+
+269
+00:24:10,260 --> 00:24:12,260
+limitações de comprimento
+
+270
+00:24:12,260 --> 00:24:14,260
+porque quanto mais compridas forem
+
+271
+00:24:14,260 --> 00:24:17,260
+mais tempo demora
+
+272
+00:24:17,260 --> 00:24:20,260
+este tempo de ida e volta
+
+273
+00:24:20,260 --> 00:24:23,260
+e portanto temos que esperar mais tempo
+
+274
+00:24:23,260 --> 00:24:25,260
+para saber se houve uma colisão
+
+275
+00:24:25,260 --> 00:24:28,260
+o que se passa é que normalmente as estações
+
+276
+00:24:28,260 --> 00:24:30,260
+parametrizadas com determinado tempo
+
+277
+00:24:30,260 --> 00:24:33,260
+que é normalizado, está escrito na norma
+
+278
+00:24:33,260 --> 00:24:35,260
+detectam as colisões
+
+279
+00:24:35,260 --> 00:24:37,260
+se a rede for pequena
+
+280
+00:24:37,260 --> 00:24:39,260
+se esticarmos à rede
+
+281
+00:24:39,260 --> 00:24:41,260
+pode começar a haver colisões
+
+282
+00:24:41,260 --> 00:24:44,260
+que as estações não detectam
+
+283
+00:24:44,260 --> 00:24:47,260
+se o B estiver muito longe do A
+
+284
+00:24:47,260 --> 00:24:49,260
+o A chegar a determinada altura
+
+285
+00:24:49,260 --> 00:24:51,260
+dependendo do que está parametrizado
+
+286
+00:24:51,260 --> 00:24:55,260
+considera que não houve colisão
+
+287
+00:24:55,260 --> 00:24:58,260
+e de facto houve
+
+288
+00:24:58,260 --> 00:25:01,260
+porque as estações que estão aqui
+
+289
+00:25:01,260 --> 00:25:04,260
+sentiram a colisão e não conseguiram ler
+
+290
+00:25:04,260 --> 00:25:06,260
+aquela informação que o A enviou
+
+291
+00:25:06,260 --> 00:25:17,430
+quando os sinais dependem do meio
+
+292
+00:25:17,430 --> 00:25:20,430
+e têm um tempo para se propagarem
+
+293
+00:25:20,430 --> 00:25:22,430
+de um sítio até ao outro
+
+294
+00:25:22,430 --> 00:25:25,430
+quando a estação A envia um pacote
+
+295
+00:25:25,430 --> 00:25:28,840
+no instante de T
+
+296
+00:25:28,840 --> 00:25:31,840
+o B vai ver o pacote
+
+297
+00:25:31,840 --> 00:25:34,840
+que veio do A no instante de T mais D
+
+298
+00:25:34,840 --> 00:25:37,840
+em que D é o tempo que demora o pacote
+
+299
+00:25:37,840 --> 00:25:41,410
+a circular de ali para ali
+
+300
+00:25:41,410 --> 00:25:43,410
+se o B não houve
+
+301
+00:25:43,410 --> 00:25:45,410
+antes daquele T mais D
+
+302
+00:25:45,410 --> 00:25:47,410
+o B pode começar a transmitir
+
+303
+00:25:47,410 --> 00:25:51,690
+e o A só vai ver a colisão
+
+304
+00:25:51,690 --> 00:25:54,690
+no instante T mais 2D
+
+305
+00:25:54,690 --> 00:25:58,690
+ou seja, se este D depende do comprimento
+
+306
+00:25:58,690 --> 00:26:01,690
+da rede temos uma rede que é limitada
+
+307
+00:26:01,690 --> 00:26:03,690
+em tamanho não podemos fazer
+
+308
+00:26:03,690 --> 00:26:05,690
+as ethernetes do também que quisermos
+
+309
+00:26:05,690 --> 00:26:09,690
+mesmo que coloquemos equipamento
+
+310
+00:26:09,690 --> 00:26:12,690
+de transmissor ou repetidor
+
+311
+00:26:12,690 --> 00:26:15,690
+e os repetidores vão também de transmitir
+
+312
+00:26:15,690 --> 00:26:17,690
+os pacotes e as colisões podem
+
+313
+00:26:17,690 --> 00:26:19,690
+parecer para lado os repetidores
+
+314
+00:26:19,690 --> 00:26:21,690
+e depois serem propagadas para cá
+
+315
+00:26:21,690 --> 00:26:24,690
+e se a colisão chegar muito tarde
+
+316
+00:26:24,690 --> 00:26:29,020
+não é detectada
+
+317
+00:26:29,020 --> 00:26:30,020
+uma máquina para funcionar bem
+
+318
+00:26:30,020 --> 00:26:32,020
+tem que esperar um tempo de 2D
+
+319
+00:26:32,020 --> 00:26:34,020
+para detectar a colisão
+
+320
+00:26:34,020 --> 00:26:36,020
+e isto faz com que haja
+
+321
+00:26:36,020 --> 00:26:39,020
+também o máximo das ethernetes
+
+322
+00:26:42,020 --> 00:26:44,020
+dependendo da versão da ethernet
+
+323
+00:26:44,020 --> 00:26:46,020
+podemos ter também o máximo
+
+324
+00:26:46,020 --> 00:26:48,020
+de 2.500 metros
+
+325
+00:26:48,020 --> 00:26:54,460
+e estes tempos também estão relacionados
+
+326
+00:26:54,460 --> 00:26:56,460
+com também os pacotes
+
+327
+00:26:57,460 --> 00:26:59,460
+os pacotes grandes
+
+328
+00:26:59,460 --> 00:27:01,460
+colisão pode aparecer
+
+329
+00:27:01,460 --> 00:27:03,460
+a colisão tipicamente aparece
+
+330
+00:27:03,460 --> 00:27:05,460
+antes de acabarmos de transmitir o pacote
+
+331
+00:27:05,460 --> 00:27:07,460
+para pacotes pequenos
+
+332
+00:27:07,460 --> 00:27:09,460
+a colisão pode aparecer muito depois
+
+333
+00:27:09,460 --> 00:27:11,460
+de nós termos enviado o pacote
+
+334
+00:27:11,460 --> 00:27:16,020
+já falamos no 2D
+
+335
+00:27:16,020 --> 00:27:19,020
+nos endereços MAC e Ethernet
+
+336
+00:27:19,020 --> 00:27:22,020
+vimos que falamos nesses endereços
+
+337
+00:27:22,020 --> 00:27:24,020
+quando estávamos a falar do IPv6
+
+338
+00:27:24,020 --> 00:27:26,020
+vimos que tem IPv6
+
+339
+00:27:26,020 --> 00:27:28,020
+uma maneira de auto configurar as máquinas
+
+340
+00:27:28,020 --> 00:27:30,020
+era deixar as máquinas
+
+341
+00:27:30,020 --> 00:27:33,020
+arranjarem o seu endereço
+
+342
+00:27:33,020 --> 00:27:36,020
+IPv6 calculado
+
+343
+00:27:36,020 --> 00:27:39,020
+a partir do endereço MAC Ethernet
+
+344
+00:27:39,020 --> 00:27:41,020
+o endereço MAC Ethernet
+
+345
+00:27:41,020 --> 00:27:43,020
+que nós vimos na altura
+
+346
+00:27:43,020 --> 00:27:45,020
+é um conjunto de 48 bits
+
+347
+00:27:45,020 --> 00:27:48,020
+e que vem escrito na placa
+
+348
+00:27:48,020 --> 00:27:51,020
+a norma para escrever estes endereços
+
+349
+00:27:51,020 --> 00:27:53,020
+é usar hexadecimal
+
+350
+00:27:53,020 --> 00:27:55,020
+com dígitos hexadecimais alfopares
+
+351
+00:27:55,020 --> 00:28:00,710
+e separados pelos ifens
+
+352
+00:28:00,710 --> 00:28:02,710
+onde com 48 bits
+
+353
+00:28:02,710 --> 00:28:05,710
+existir 281 vezes 10 delantado a 12
+
+354
+00:28:05,710 --> 00:28:10,150
+ou seja 281 milhões de milhões
+
+355
+00:28:10,150 --> 00:28:13,150
+de endereços diferentes
+
+356
+00:28:13,150 --> 00:28:16,150
+portanto mais endereços Ethernet
+
+357
+00:28:16,150 --> 00:28:19,150
+de pessoas no mundo
+
+358
+00:28:19,150 --> 00:28:22,150
+em princípio também não haveria problema
+
+359
+00:28:22,150 --> 00:28:25,150
+se nós tivéssemos um endereço Ethernet
+
+360
+00:28:25,150 --> 00:28:28,150
+igual ao outro que se usam na Índia ou na China
+
+361
+00:28:28,150 --> 00:28:32,150
+porque as redes Ethernet não podem ser muito grandes
+
+362
+00:28:32,150 --> 00:28:35,150
+portanto nunca haveria conflitos
+
+363
+00:28:35,150 --> 00:28:38,150
+se os conflitos forem deslocalizados
+
+364
+00:28:40,150 --> 00:28:42,150
+estes endereços estão distribuídos
+
+365
+00:28:42,150 --> 00:28:46,150
+por uma entidade, uma autoridade única
+
+366
+00:28:46,150 --> 00:28:51,150
+que atribui os primeiros 24 bits
+
+367
+00:28:51,150 --> 00:28:56,150
+aos fabricantes de equipamentos
+
+368
+00:28:56,150 --> 00:28:58,150
+ou de controladores Ethernet
+
+369
+00:28:58,150 --> 00:29:01,560
+24 bits
+
+370
+00:29:01,560 --> 00:29:03,560
+são conjuntos de 6 dígitos hexadecimais
+
+371
+00:29:03,560 --> 00:29:05,560
+por exemplo a Dell
+
+372
+00:29:05,560 --> 00:29:08,560
+todas as placas que têm controlador Dell
+
+373
+00:29:08,560 --> 00:29:10,560
+têm um endereço MAC
+
+374
+00:29:10,560 --> 00:29:14,970
+que começa por 0,01565
+
+375
+00:29:14,970 --> 00:29:18,970
+e depois os restantes 24 bits
+
+376
+00:29:18,970 --> 00:29:21,970
+são escolhidos pelo fabricante
+
+377
+00:29:21,970 --> 00:29:24,970
+de maneira a não terem
+
+378
+00:29:24,970 --> 00:29:30,340
+dois controladores com o mesmo endereço
+
+379
+00:29:30,340 --> 00:29:32,340
+não estavam alguns endereços
+
+380
+00:29:32,340 --> 00:29:34,340
+de definições específicos
+
+381
+00:29:34,340 --> 00:29:36,340
+nomeadamente para broadcast
+
+382
+00:29:36,340 --> 00:29:40,340
+este broadcast não é broadcast do IPv4
+
+383
+00:29:40,340 --> 00:29:43,340
+que desapareceu para o IPv6
+
+384
+00:29:43,340 --> 00:29:45,340
+é broadcast Ethernet
+
+385
+00:29:45,340 --> 00:29:49,340
+pacote de broadcast IP
+
+386
+00:29:49,340 --> 00:29:52,340
+pode ser codificado no Ethernet
+
+387
+00:29:52,340 --> 00:29:56,340
+com um destino de broadcast Ethernet
+
+388
+00:29:56,340 --> 00:29:58,340
+que é este endereço de destino
+
+389
+00:29:58,340 --> 00:30:05,600
+com uma gama de endereços
+
+390
+00:30:05,600 --> 00:30:08,600
+que têm sempre ali um NULL
+
+391
+00:30:08,600 --> 00:30:11,600
+também são reservados para
+
+392
+00:30:11,600 --> 00:30:17,480
+endereços de multicast
+
+393
+00:30:17,480 --> 00:30:19,480
+o formato da frame Ethernet
+
+394
+00:30:19,480 --> 00:30:21,480
+ou da trama Ethernet
+
+395
+00:30:21,480 --> 00:30:24,480
+agora existe mais do que um formato normalizado
+
+396
+00:30:24,480 --> 00:30:27,480
+e este chama-se o formato Ethernet 2
+
+397
+00:30:27,480 --> 00:30:32,050
+os outros são semelhantes
+
+398
+00:30:32,050 --> 00:30:34,050
+eu tenho um preâmbulo
+
+399
+00:30:34,050 --> 00:30:36,050
+que é um conjunto de bits fixos
+
+400
+00:30:36,050 --> 00:30:38,050
+e depois tem o fundamental
+
+401
+00:30:38,050 --> 00:30:41,050
+o endereço de destino
+
+402
+00:30:41,050 --> 00:30:45,940
+e o endereço de origem
+
+403
+00:30:45,940 --> 00:30:47,940
+e vai mais uma informação de tipo
+
+404
+00:30:47,940 --> 00:30:49,940
+e aqui vão os dados
+
+405
+00:30:49,940 --> 00:30:52,940
+que nós queremos enviar
+
+406
+00:30:52,940 --> 00:30:55,940
+em tramas deste tipo
+
+407
+00:30:55,940 --> 00:30:57,940
+o máximo que podemos por aqui
+
+408
+00:30:57,940 --> 00:30:59,940
+é 1500 bytes
+
+409
+00:30:59,940 --> 00:31:02,940
+e aqui vai um código controlador de erros
+
+410
+00:31:02,940 --> 00:31:08,630
+para na recepção sabermos se houve alteração
+
+411
+00:31:08,630 --> 00:31:18,180
+perda de dados ou não
+
+412
+00:31:18,180 --> 00:31:21,180
+quando transmitimos IP no Ethernet
+
+413
+00:31:21,180 --> 00:31:23,180
+de facto o pacote IP
+
+414
+00:31:23,180 --> 00:31:26,180
+é aquilo que me parece neste campo verde
+
+415
+00:31:26,180 --> 00:31:29,880
+o conjunto de dados
+
+416
+00:31:29,880 --> 00:31:30,880
+aquele preâmbulo
+
+417
+00:31:30,880 --> 00:31:33,880
+é um conjunto de 8 bytes pré-definidos
+
+418
+00:31:33,880 --> 00:31:37,880
+que são conjuntos de 100, 100, 100
+
+419
+00:31:37,880 --> 00:31:40,880
+ou seja, muitas transições de zero
+
+420
+00:31:40,880 --> 00:31:42,880
+e de um para zero
+
+421
+00:31:42,880 --> 00:31:44,880
+este é bom para detectar
+
+422
+00:31:44,880 --> 00:31:46,880
+que vem aí um pacote
+
+423
+00:31:46,880 --> 00:31:48,880
+e também como tem muitas transições
+
+424
+00:31:48,880 --> 00:31:51,880
+é bom para perceber onde é que começam os bits
+
+425
+00:31:51,880 --> 00:31:53,880
+e onde é que acabam os bits
+
+426
+00:31:53,880 --> 00:31:55,880
+e
+
+427
+00:31:55,880 --> 00:31:58,880
+há sempre uma transição entre um bit e o outro
+
+428
+00:31:58,880 --> 00:32:03,570
+outros bits são transmitidos num código
+
+429
+00:32:03,570 --> 00:32:05,570
+que se chama Man's Sisters
+
+430
+00:32:05,570 --> 00:32:08,570
+e será não vamos ver
+
+431
+00:32:08,570 --> 00:32:10,570
+não vale a pena entrarmos
+
+432
+00:32:11,570 --> 00:32:13,570
+na parte física
+
+433
+00:32:13,570 --> 00:32:15,570
+mas já agora o código Man's Sisters
+
+434
+00:32:15,570 --> 00:32:18,570
+também introduz uma transição dentro de cada bit
+
+435
+00:32:18,570 --> 00:32:21,570
+todos os bits, os uns e os zeros
+
+436
+00:32:21,570 --> 00:32:24,570
+levam sempre uma transição no meio
+
+437
+00:32:24,570 --> 00:32:26,570
+ou é um zero que passa para um
+
+438
+00:32:26,570 --> 00:32:39,190
+que passa para zero
+
+439
+00:32:39,190 --> 00:32:41,190
+já vimos o endereço
+
+440
+00:32:41,190 --> 00:32:43,190
+que são 48 bits ou 6 bytes
+
+441
+00:32:43,190 --> 00:32:49,860
+o controlador Ethernet
+
+442
+00:32:49,860 --> 00:32:54,200
+que está na placa de rede
+
+443
+00:32:54,200 --> 00:32:56,200
+o computador pode estar na motherboard
+
+444
+00:32:56,200 --> 00:33:00,090
+no microcontrollador
+
+445
+00:33:00,090 --> 00:33:02,090
+pode estar integrado
+
+446
+00:33:02,090 --> 00:33:04,090
+mesmo chip do professor
+
+447
+00:33:04,090 --> 00:33:06,090
+encarrega-se de
+
+448
+00:33:06,090 --> 00:33:08,090
+receber
+
+449
+00:33:08,090 --> 00:33:10,090
+a frame
+
+450
+00:33:10,090 --> 00:33:12,090
+e filtrar por endereço
+
+451
+00:33:12,090 --> 00:33:15,560
+a partida as placas recebem
+
+452
+00:33:15,560 --> 00:33:17,560
+todas as frames
+
+453
+00:33:17,560 --> 00:33:19,560
+e depois olham para o endereço de destino
+
+454
+00:33:19,560 --> 00:33:21,560
+e veem se esse endereço de destino
+
+455
+00:33:21,560 --> 00:33:23,560
+é o nosso endereço de destino
+
+456
+00:33:23,560 --> 00:33:27,900
+ou não
+
+457
+00:33:27,900 --> 00:33:29,900
+se for o nosso endereço
+
+458
+00:33:29,900 --> 00:33:31,900
+de broadcast
+
+459
+00:33:31,900 --> 00:33:33,900
+ou um endereço de multicast
+
+460
+00:33:33,900 --> 00:33:35,900
+de um canal que está subscrito
+
+461
+00:33:35,900 --> 00:33:37,900
+o placote
+
+462
+00:33:37,900 --> 00:33:42,520
+é aceito
+
+463
+00:33:42,520 --> 00:33:44,520
+e é tratado
+
+464
+00:33:44,520 --> 00:33:46,520
+pelo protocolo do nível superior
+
+465
+00:33:46,520 --> 00:33:48,520
+e protocolo do nível superior
+
+466
+00:33:48,520 --> 00:33:50,520
+é identificado por este tipo
+
+467
+00:33:50,520 --> 00:33:52,520
+que aqui vem
+
+468
+00:33:52,520 --> 00:33:54,520
+se estes dados
+
+469
+00:33:54,520 --> 00:33:56,520
+são o pacote IP
+
+470
+00:33:56,520 --> 00:33:58,520
+este identificador de tipo
+
+471
+00:33:58,520 --> 00:34:00,520
+é um código que diz
+
+472
+00:34:00,520 --> 00:34:02,520
+qual é o tipo de protocolo que vem aqui
+
+473
+00:34:02,520 --> 00:34:06,150
+no caso do IP
+
+474
+00:34:06,150 --> 00:34:08,150
+é um código que diz respeito ao IP
+
+475
+00:34:10,150 --> 00:34:12,150
+existem tipos normalizados
+
+476
+00:34:12,150 --> 00:34:14,150
+mas
+
+477
+00:34:14,150 --> 00:34:16,150
+nós podemos, se quisermos, criar
+
+478
+00:34:16,150 --> 00:34:18,150
+um protocolo alternativo ao IP
+
+479
+00:34:18,150 --> 00:34:20,150
+ou se quisermos pôr a nossa aplicação
+
+480
+00:34:20,150 --> 00:34:22,150
+a usar diretamente a internet
+
+481
+00:34:22,150 --> 00:34:24,150
+também podemos inventar
+
+482
+00:34:24,150 --> 00:34:26,150
+um tipo
+
+483
+00:34:26,150 --> 00:34:28,150
+que não seja usado na nossa rede
+
+484
+00:34:28,150 --> 00:34:30,150
+e termos
+
+485
+00:34:30,150 --> 00:34:32,150
+o nosso protocolo
+
+486
+00:34:32,150 --> 00:34:34,150
+a funcionar
+
+487
+00:34:34,150 --> 00:34:36,150
+em conjunto com o protocolo IP
+
+488
+00:34:36,150 --> 00:34:45,740
+dentro da mesma internet
+
+489
+00:34:45,740 --> 00:34:47,740
+o que temos ali
+
+490
+00:34:47,740 --> 00:34:49,740
+6 bytes e ali 6 bytes
+
+491
+00:34:49,740 --> 00:34:51,740
+temos aqui sempre um conjunto
+
+492
+00:34:51,740 --> 00:34:53,740
+que no mínimo são 14 bytes
+
+493
+00:34:53,740 --> 00:34:55,740
+o mais
+
+494
+00:34:55,740 --> 00:34:57,740
+aquilo e o preâmbulo
+
+495
+00:34:57,740 --> 00:34:59,740
+uma frame internet tem sempre pelo menos
+
+496
+00:34:59,740 --> 00:35:01,740
+46 bytes
+
+497
+00:35:01,740 --> 00:35:03,740
+quando temos ali 1500
+
+498
+00:35:03,740 --> 00:35:05,740
+temos
+
+499
+00:35:05,740 --> 00:35:10,490
+e pouco
+
+500
+00:35:10,490 --> 00:35:12,490
+o serviço que é internet nos forneçam
+
+501
+00:35:12,490 --> 00:35:14,490
+um serviço
+
+502
+00:35:14,490 --> 00:35:16,490
+sem ligação
+
+503
+00:35:16,490 --> 00:35:18,490
+ou seja, as coisas são transmitidas
+
+504
+00:35:18,490 --> 00:35:20,490
+mas
+
+505
+00:35:20,490 --> 00:35:22,490
+não é preciso estabelecer sessão
+
+506
+00:35:24,490 --> 00:35:26,490
+não é preciso dizer com quem queremos falar
+
+507
+00:35:26,490 --> 00:35:28,490
+usamos o endereço
+
+508
+00:35:28,490 --> 00:35:30,490
+para dizer quem é o destinatário
+
+509
+00:35:30,490 --> 00:35:32,490
+daqueles 1500 bytes
+
+510
+00:35:32,490 --> 00:35:34,490
+e
+
+511
+00:35:34,490 --> 00:35:36,490
+alguém que assume
+
+512
+00:35:36,490 --> 00:35:38,490
+que aquele endereço vai receber
+
+513
+00:35:38,490 --> 00:35:40,490
+os outros podem receber
+
+514
+00:35:40,490 --> 00:35:44,060
+se
+
+515
+00:35:44,060 --> 00:35:46,060
+estarem de ouvir as conversas alheias
+
+516
+00:35:46,060 --> 00:35:48,060
+porque não há nenhum mecanismo que os impeça
+
+517
+00:35:48,060 --> 00:35:50,060
+de ver
+
+518
+00:35:50,060 --> 00:35:52,060
+se
+
+519
+00:35:52,060 --> 00:35:54,060
+se não estiverem interessados
+
+520
+00:35:54,060 --> 00:35:56,060
+o normal é que cada estação
+
+521
+00:35:56,060 --> 00:35:58,060
+só veja os pacotes
+
+522
+00:35:58,060 --> 00:36:00,060
+as frames que eles são enviadas
+
+523
+00:36:00,060 --> 00:36:02,060
+ou destinadas
+
+524
+00:36:02,060 --> 00:36:04,060
+com o endereço de destino correto
+
+525
+00:36:04,060 --> 00:36:06,060
+também não há
+
+526
+00:36:06,060 --> 00:36:08,060
+nenhuma confirmação
+
+527
+00:36:08,060 --> 00:36:10,060
+ou seja, quem recebe
+
+528
+00:36:10,060 --> 00:36:12,060
+num disco que recebeu
+
+529
+00:36:12,060 --> 00:36:14,060
+ou que não recebeu
+
+530
+00:36:14,060 --> 00:36:16,060
+realmente as estações
+
+531
+00:36:16,060 --> 00:36:18,060
+conservam se não houve uma colisão
+
+532
+00:36:18,060 --> 00:36:20,060
+e
+
+533
+00:36:20,060 --> 00:36:22,060
+nem durante o tempo de envio do pacote
+
+534
+00:36:22,060 --> 00:36:24,060
+nem em algum tempo
+
+535
+00:36:24,060 --> 00:36:26,060
+depois do envio do pacote
+
+536
+00:36:26,060 --> 00:36:28,060
+porque o pacote
+
+537
+00:36:28,060 --> 00:36:30,060
+em princípio deve ter chegado ao fim
+
+538
+00:36:30,060 --> 00:36:32,060
+se não trata de o retransmitidos
+
+539
+00:36:32,060 --> 00:36:34,060
+quando for caso disso
+
+540
+00:36:34,060 --> 00:36:44,020
+tudo isto é verdade
+
+541
+00:36:44,020 --> 00:36:46,020
+quando a topologia física
+
+542
+00:36:46,020 --> 00:36:48,020
+é um barramento
+
+543
+00:36:48,020 --> 00:36:50,020
+ou quando a topologia física é uma estrela
+
+544
+00:36:50,020 --> 00:36:52,020
+e aquele no central é um repetidor
+
+545
+00:36:52,020 --> 00:36:55,660
+quando que há uns anos
+
+546
+00:36:55,660 --> 00:36:57,660
+comprávamos equipamentos
+
+547
+00:36:57,660 --> 00:36:59,660
+que se chamavam nubs
+
+548
+00:36:59,660 --> 00:37:01,660
+tipicamente, ou pelo menos os primeiros
+
+549
+00:37:01,660 --> 00:37:03,660
+eram repetidores puros
+
+550
+00:37:03,660 --> 00:37:05,660
+ou seja, repetiam o sinal
+
+551
+00:37:05,660 --> 00:37:07,660
+ao mesmo tempo
+
+552
+00:37:07,660 --> 00:37:09,660
+que o sinal era recebido
+
+553
+00:37:09,660 --> 00:37:11,660
+ou seja, recebido os primeiros bits
+
+554
+00:37:11,660 --> 00:37:13,660
+de uma trama
+
+555
+00:37:13,660 --> 00:37:15,660
+esses primeiros bits saíam logo
+
+556
+00:37:15,660 --> 00:37:17,660
+ao mesmo tempo para ali
+
+557
+00:37:17,660 --> 00:37:19,660
+depois começou a ver
+
+558
+00:37:19,660 --> 00:37:21,660
+repetidores mais inteligentes
+
+559
+00:37:21,660 --> 00:37:23,660
+que recebiam o pacote
+
+560
+00:37:23,660 --> 00:37:25,660
+guardavam em memória
+
+561
+00:37:25,660 --> 00:37:27,660
+ou se não pudessem transmitir
+
+562
+00:37:27,660 --> 00:37:29,660
+guardavam em memória
+
+563
+00:37:29,660 --> 00:37:31,660
+e transmitiam depois
+
+564
+00:37:31,660 --> 00:37:33,660
+não tem esse efeito
+
+565
+00:37:33,660 --> 00:37:35,660
+de guardar
+
+566
+00:37:35,660 --> 00:37:37,660
+e enviar depois
+
+567
+00:37:37,660 --> 00:37:39,660
+que se chamava
+
+568
+00:37:39,660 --> 00:37:41,660
+tors and forward
+
+569
+00:37:41,660 --> 00:37:43,660
+guardar e enviar depois
+
+570
+00:37:43,660 --> 00:37:45,660
+já evita muitas colisões
+
+571
+00:37:49,660 --> 00:37:51,660
+e a ideia é mesmo essa
+
+572
+00:37:51,660 --> 00:37:53,660
+as colisões são aquilo que prejudica
+
+573
+00:37:53,660 --> 00:37:55,660
+a capacidade de transmissão de Metarnet
+
+574
+00:37:55,660 --> 00:37:57,660
+se conseguirmos evitar colisões
+
+575
+00:37:57,660 --> 00:37:59,660
+nem que seja a custa de atrasos
+
+576
+00:38:01,660 --> 00:38:03,660
+normalmente as coisas melhoram
+
+577
+00:38:03,660 --> 00:38:05,660
+no entanto
+
+578
+00:38:05,660 --> 00:38:07,660
+os quais as estações estão à espera
+
+579
+00:38:07,660 --> 00:38:09,660
+a ver se há alguma colisão
+
+580
+00:38:09,660 --> 00:38:11,660
+não sabem se é o repetição
+
+581
+00:38:11,660 --> 00:38:13,660
+ou não, não sabem se é o tors
+
+582
+00:38:13,660 --> 00:38:15,660
+and forward ali
+
+583
+00:38:15,660 --> 00:38:17,660
+e portanto
+
+584
+00:38:17,660 --> 00:38:19,660
+os tempos que os pacotes estejam parados ali
+
+585
+00:38:19,660 --> 00:38:21,660
+contam na detecção
+
+586
+00:38:21,660 --> 00:38:23,660
+das colisões
+
+587
+00:38:23,660 --> 00:38:25,660
+e se houver uma colisão
+
+588
+00:38:25,660 --> 00:38:27,660
+a seguir temos que garantir
+
+589
+00:38:27,660 --> 00:38:29,660
+que quem enviou é
+
+590
+00:38:29,660 --> 00:38:31,660
+avisado
+
+591
+00:38:31,660 --> 00:38:33,660
+em tempo útil
+
+592
+00:38:33,660 --> 00:38:35,660
+senão as estações podem achar
+
+593
+00:38:35,660 --> 00:38:37,660
+que não houve colisões
+
+594
+00:38:37,660 --> 00:38:43,780
+e pode ter havido
+
+595
+00:38:43,780 --> 00:38:45,780
+todos os repetidores podem ser
+
+596
+00:38:45,780 --> 00:38:47,780
+colocados em série
+
+597
+00:38:47,780 --> 00:38:49,780
+e quando são repetidores
+
+598
+00:38:49,780 --> 00:38:51,780
+trabalham em estrela
+
+599
+00:38:51,780 --> 00:38:53,780
+fazem árvores ou cascatas
+
+600
+00:38:53,780 --> 00:38:55,780
+e se
+
+601
+00:38:55,780 --> 00:38:57,780
+uma transmissão daqui for repetida
+
+602
+00:38:57,780 --> 00:38:59,780
+para ali e depois para ali
+
+603
+00:38:59,780 --> 00:39:01,780
+e depois para ali temos
+
+604
+00:39:01,780 --> 00:39:03,780
+a mesma informação
+
+605
+00:39:03,780 --> 00:39:05,780
+percorrer
+
+606
+00:39:05,780 --> 00:39:07,780
+de toda
+
+607
+00:39:07,780 --> 00:39:09,780
+e a chegar a toda a gente
+
+608
+00:39:09,780 --> 00:39:11,780
+portanto do ponto de vista lógico
+
+609
+00:39:11,780 --> 00:39:13,780
+continua a ser um basamento
+
+610
+00:39:13,780 --> 00:39:15,780
+todos ouvem
+
+611
+00:39:15,780 --> 00:39:17,780
+aquilo que todos dizem
+
+612
+00:39:17,780 --> 00:39:19,780
+se
+
+613
+00:39:19,780 --> 00:39:21,780
+aquele transmite
+
+614
+00:39:21,780 --> 00:39:23,780
+e
+
+615
+00:39:23,780 --> 00:39:25,780
+ali
+
+616
+00:39:25,780 --> 00:39:27,780
+quando a informação estiver circular ali
+
+617
+00:39:27,780 --> 00:39:29,780
+aquele transmitir ao mesmo tempo
+
+618
+00:39:29,780 --> 00:39:31,780
+houver uma colisão ali
+
+619
+00:39:31,780 --> 00:39:33,780
+essa colisão também se vai propagar
+
+620
+00:39:33,780 --> 00:39:35,780
+e esta estação tem que estar à espera
+
+621
+00:39:35,780 --> 00:39:37,780
+para saber se houve uma colisão ou não
+
+622
+00:39:37,780 --> 00:39:39,780
+é o tal tempo de 2D
+
+623
+00:39:39,780 --> 00:39:41,780
+o tempo que demora a ir daqui até ali
+
+624
+00:39:41,780 --> 00:39:43,780
+e o tempo que demora a vir daqui até aqui
+
+625
+00:39:43,780 --> 00:39:45,780
+portanto não podemos encadiar
+
+626
+00:39:45,780 --> 00:39:47,780
+aves destes ou repetidores destes
+
+627
+00:39:47,780 --> 00:39:49,780
+ao nosso gosto
+
+628
+00:39:49,780 --> 00:39:51,780
+para todos os
+
+629
+00:39:51,780 --> 00:39:53,780
+para fazer redes grandes
+
+630
+00:39:53,780 --> 00:39:55,780
+porque
+
+631
+00:39:55,780 --> 00:39:57,780
+temos que garantir que os tempos
+
+632
+00:39:57,780 --> 00:39:59,780
+são adequados à detecção das colisões
+
+633
+00:39:59,780 --> 00:40:01,780
+se põe os caminhos muito cumpridos
+
+634
+00:40:01,780 --> 00:40:03,780
+do ponto de vista elétrico
+
+635
+00:40:03,780 --> 00:40:05,780
+não temos problema
+
+636
+00:40:05,780 --> 00:40:07,780
+porque os sinais
+
+637
+00:40:07,780 --> 00:40:09,780
+são regenerados na repetição
+
+638
+00:40:09,780 --> 00:40:11,780
+mas
+
+639
+00:40:11,780 --> 00:40:13,780
+a colisão tem que ser detectada há tempo
+
+640
+00:40:13,780 --> 00:40:15,780
+portanto não podemos ter coisas muito longas
+
+641
+00:40:15,780 --> 00:40:19,830
+atualmente
+
+642
+00:40:19,830 --> 00:40:21,830
+os repetidores que nós usamos
+
+643
+00:40:21,830 --> 00:40:23,830
+são
+
+644
+00:40:23,830 --> 00:40:25,830
+switches
+
+645
+00:40:25,830 --> 00:40:27,830
+que já é um equipamento
+
+646
+00:40:27,830 --> 00:40:29,830
+que não repete só sinais elétricos
+
+647
+00:40:29,830 --> 00:40:31,830
+já conhece o conceito
+
+648
+00:40:31,830 --> 00:40:33,830
+de pacote e de endereço
+
+649
+00:40:33,830 --> 00:40:35,830
+e para além de fazer o storage
+
+650
+00:40:35,830 --> 00:40:37,830
+and forward
+
+651
+00:40:37,830 --> 00:40:39,830
+também faz com mutação de pacotes
+
+652
+00:40:39,830 --> 00:40:41,830
+utilizando os
+
+653
+00:40:41,830 --> 00:40:43,830
+endereços de destino
+
+654
+00:40:43,830 --> 00:40:45,830
+e enviando
+
+655
+00:40:45,830 --> 00:40:47,830
+as tramas
+
+656
+00:40:47,830 --> 00:40:49,830
+só para os segmentos
+
+657
+00:40:49,830 --> 00:40:51,830
+que vêm a seguir
+
+658
+00:40:51,830 --> 00:40:53,830
+onde se espera que eles venham a ser necessários
+
+659
+00:40:53,830 --> 00:40:57,620
+para fazer isso
+
+660
+00:40:57,620 --> 00:40:59,620
+e como
+
+661
+00:40:59,620 --> 00:41:01,620
+normalmente não existe configuração
+
+662
+00:41:01,620 --> 00:41:03,620
+manual
+
+663
+00:41:03,620 --> 00:41:05,620
+por parte do administrador
+
+664
+00:41:05,620 --> 00:41:07,620
+das tabelas de encaminhamento
+
+665
+00:41:07,620 --> 00:41:09,620
+ou seja, não é preciso configurar estes equipamentos
+
+666
+00:41:09,620 --> 00:41:11,620
+e dizer que
+
+667
+00:41:11,620 --> 00:41:13,620
+uns discriminatários estão
+
+668
+00:41:13,620 --> 00:41:15,620
+para aquele lado e os outros estão para o outro lado
+
+669
+00:41:15,620 --> 00:41:17,620
+o que se faz
+
+670
+00:41:17,620 --> 00:41:19,620
+é estes equipamentos
+
+671
+00:41:19,620 --> 00:41:21,620
+aprendem, olham para os endereços
+
+672
+00:41:21,620 --> 00:41:23,620
+de origem
+
+673
+00:41:23,620 --> 00:41:25,620
+e se veem
+
+674
+00:41:25,620 --> 00:41:27,620
+que estão a chegar
+
+675
+00:41:27,620 --> 00:41:29,620
+por uma determinada porta
+
+676
+00:41:29,620 --> 00:41:31,620
+os pacotes com determinado endereço
+
+677
+00:41:31,620 --> 00:41:33,620
+de origem
+
+678
+00:41:33,620 --> 00:41:35,620
+então sabem que o equipamento que tem aquele endereço
+
+679
+00:41:35,620 --> 00:41:37,620
+está naquela porta
+
+680
+00:41:37,620 --> 00:41:39,620
+e quando for preciso enviar
+
+681
+00:41:39,620 --> 00:41:41,620
+informação para aquele endereço
+
+682
+00:41:41,620 --> 00:41:43,620
+enviam para aquela porta
+
+683
+00:41:43,620 --> 00:41:45,620
+ou seja, os suítos
+
+684
+00:41:45,620 --> 00:41:47,620
+aprendem
+
+685
+00:41:47,620 --> 00:41:49,620
+a estrutura da rede
+
+686
+00:41:49,620 --> 00:41:51,620
+não é bem a estrutura, é mais
+
+687
+00:41:51,620 --> 00:41:53,620
+só a porta
+
+688
+00:41:53,620 --> 00:41:55,620
+onde se encontram
+
+689
+00:41:55,620 --> 00:41:57,620
+os determinados suítos
+
+690
+00:41:57,620 --> 00:42:03,400
+os determinados clientes
+
+691
+00:42:03,400 --> 00:42:09,050
+dizendo
+
+692
+00:42:09,050 --> 00:42:11,050
+onde podemos intercalar
+
+693
+00:42:11,050 --> 00:42:13,050
+os repetidores
+
+694
+00:42:13,050 --> 00:42:15,050
+com comutação
+
+695
+00:42:15,050 --> 00:42:17,050
+os repetidores sem comutação
+
+696
+00:42:17,050 --> 00:42:19,050
+e os repetidores puros
+
+697
+00:42:19,050 --> 00:42:21,050
+com
+
+698
+00:42:21,050 --> 00:42:23,050
+comutadores
+
+699
+00:42:25,050 --> 00:42:27,050
+podemos fazer coisas destas
+
+700
+00:42:27,050 --> 00:42:29,050
+a um conjunto destes
+
+701
+00:42:29,050 --> 00:42:31,050
+até a uma porta de um suítos
+
+702
+00:42:31,050 --> 00:42:33,050
+depende, isto pode ser de uma árvore
+
+703
+00:42:33,050 --> 00:42:35,050
+de repetidores
+
+704
+00:42:35,050 --> 00:42:37,050
+chamamos isto de um domínio de colisão
+
+705
+00:42:37,050 --> 00:42:39,050
+porque aqui podem-se verificar colisões
+
+706
+00:42:39,050 --> 00:42:41,050
+se aqueles dois transmitirem ao mesmo tempo
+
+707
+00:42:41,050 --> 00:42:43,050
+as duas transmissões
+
+708
+00:42:43,050 --> 00:42:45,050
+são repetidas para aqui
+
+709
+00:42:45,050 --> 00:42:47,050
+e geram uma colisão aqui
+
+710
+00:42:47,050 --> 00:42:49,050
+os suítos
+
+711
+00:42:49,050 --> 00:42:51,050
+como olha para os pacotes
+
+712
+00:42:51,050 --> 00:42:53,050
+e só retransmete
+
+713
+00:42:53,050 --> 00:42:55,050
+os pacotes que percebe
+
+714
+00:42:55,050 --> 00:42:57,050
+e para onde
+
+715
+00:42:57,050 --> 00:42:59,050
+eles devem ir
+
+716
+00:42:59,050 --> 00:43:01,050
+se vir aqui uma colisão, não repete a colisão para lá
+
+717
+00:43:01,050 --> 00:43:03,050
+e portanto
+
+718
+00:43:03,050 --> 00:43:05,050
+aqui pode haver colisões
+
+719
+00:43:05,050 --> 00:43:07,050
+ao mesmo tempo que aqui
+
+720
+00:43:07,050 --> 00:43:09,050
+mas aqui são umas colisões e ali outras
+
+721
+00:43:09,050 --> 00:43:11,050
+estão um domínio de colisão
+
+722
+00:43:11,050 --> 00:43:17,140
+e aqui o outro domínio de colisão
+
+723
+00:43:17,140 --> 00:43:19,140
+se não usarmos
+
+724
+00:43:19,140 --> 00:43:21,140
+repetidores aqui
+
+725
+00:43:21,140 --> 00:43:23,140
+e usarmos também
+
+726
+00:43:23,140 --> 00:43:25,140
+comutadores aqui
+
+727
+00:43:25,140 --> 00:43:27,140
+conseguimos evitar completamente as colisões
+
+728
+00:43:27,140 --> 00:43:29,140
+ou seja, se
+
+729
+00:43:29,140 --> 00:43:31,140
+os geradores de tráfego
+
+730
+00:43:31,140 --> 00:43:33,140
+estiverem ligados sempre à porta de um suítos
+
+731
+00:43:33,140 --> 00:43:35,140
+em princípio não temos colisões
+
+732
+00:43:35,140 --> 00:43:37,140
+porque temos
+
+733
+00:43:37,140 --> 00:43:39,140
+domínios de colisão que são só um cabo
+
+734
+00:43:39,140 --> 00:43:41,140
+e portanto
+
+735
+00:43:43,140 --> 00:43:45,140
+só tem
+
+736
+00:43:45,140 --> 00:43:47,140
+uma pessoa a enviar da esquerda
+
+737
+00:43:47,140 --> 00:43:49,140
+e outra entidade a enviar da direita
+
+738
+00:43:49,140 --> 00:43:51,140
+com
+
+739
+00:43:51,140 --> 00:43:53,140
+meio-full duplex, não há colisões
+
+740
+00:43:53,140 --> 00:44:00,360
+mesmo com a capacidade
+
+741
+00:44:00,360 --> 00:44:02,360
+de comutação que temos nos suítos a internet
+
+742
+00:44:02,360 --> 00:44:04,360
+que já nos permitem
+
+743
+00:44:04,360 --> 00:44:06,360
+criar redes
+
+744
+00:44:06,360 --> 00:44:08,360
+ligeiramente maiores
+
+745
+00:44:08,360 --> 00:44:10,360
+porque um domínio de colisão
+
+746
+00:44:10,360 --> 00:44:12,360
+é que tem que estar dentro dos limites
+
+747
+00:44:12,360 --> 00:44:14,360
+que fazem com que
+
+748
+00:44:14,360 --> 00:44:16,360
+o tempo de transmissão, aquele 2D
+
+749
+00:44:16,360 --> 00:44:18,360
+seja
+
+750
+00:44:18,360 --> 00:44:21,670
+adequado
+
+751
+00:44:21,670 --> 00:44:23,670
+mesmo com a capacidade
+
+752
+00:44:23,670 --> 00:44:25,670
+dos suítos para
+
+753
+00:44:25,670 --> 00:44:29,850
+criarmos
+
+754
+00:44:29,850 --> 00:44:31,850
+redes compostas por vários domínios de colisão
+
+755
+00:44:31,850 --> 00:44:33,850
+e portanto termos várias distâncias
+
+756
+00:44:33,850 --> 00:44:35,850
+dessas
+
+757
+00:44:35,850 --> 00:44:37,850
+em série
+
+758
+00:44:37,850 --> 00:44:39,850
+que podem usar o internet
+
+759
+00:44:39,850 --> 00:44:43,450
+para fazer magia de global
+
+760
+00:44:43,450 --> 00:44:45,450
+sobretudo com o mecanismo
+
+761
+00:44:45,450 --> 00:44:47,450
+de endereçamento
+
+762
+00:44:47,450 --> 00:44:50,790
+é
+
+763
+00:44:50,790 --> 00:44:52,790
+usar endereços ambiatórios
+
+764
+00:44:52,790 --> 00:44:54,790
+os endereços são flat
+
+765
+00:44:54,790 --> 00:44:56,790
+ou seja
+
+766
+00:44:56,790 --> 00:44:58,790
+os endereços podem ser parecidos
+
+767
+00:44:58,790 --> 00:45:00,790
+podemos ter máquinas com endereços parecidos
+
+768
+00:45:00,790 --> 00:45:02,790
+aqui na China
+
+769
+00:45:02,790 --> 00:45:04,790
+podem ser feitos pelo mesmo fabricante
+
+770
+00:45:04,790 --> 00:45:06,790
+e terem sido feitos no mesmo dia
+
+771
+00:45:06,790 --> 00:45:08,790
+ter levado a
+
+772
+00:45:08,790 --> 00:45:12,070
+um valor muito parecido
+
+773
+00:45:12,070 --> 00:45:14,070
+podemos ter então endereços
+
+774
+00:45:14,070 --> 00:45:16,070
+muito parecidos em sítios muito diferentes
+
+775
+00:45:16,070 --> 00:45:18,070
+e também podemos ter o contrário
+
+776
+00:45:18,070 --> 00:45:20,070
+podemos ter máquinas muito próximas
+
+777
+00:45:20,070 --> 00:45:22,070
+de uma das outras vizinhas
+
+778
+00:45:22,070 --> 00:45:27,590
+mas que têm endereços muito diferentes
+
+779
+00:45:27,590 --> 00:45:29,590
+e
+
+780
+00:45:29,590 --> 00:45:32,870
+se temos endereços muito diferentes
+
+781
+00:45:32,870 --> 00:45:34,870
+se quisermos
+
+782
+00:45:34,870 --> 00:45:36,870
+comotar o tráfego
+
+783
+00:45:36,870 --> 00:45:38,870
+e encaminhar o tráfego
+
+784
+00:45:38,870 --> 00:45:40,870
+com mecanismos de endereçamento deste género
+
+785
+00:45:40,870 --> 00:45:42,870
+tínhamos que ter uma tabela
+
+786
+00:45:42,870 --> 00:45:44,870
+que
+
+787
+00:45:44,870 --> 00:45:46,870
+temos quase uma rota para cada máquina
+
+788
+00:45:46,870 --> 00:45:48,870
+porque não é possível agrupar
+
+789
+00:45:48,870 --> 00:45:50,870
+endereços
+
+790
+00:45:50,870 --> 00:45:52,870
+em ganas que nós fazemos no IP
+
+791
+00:45:52,870 --> 00:45:54,870
+porque os endereços
+
+792
+00:45:54,870 --> 00:45:56,870
+de
+
+793
+00:45:56,870 --> 00:45:58,870
+máquinas que estão no mesmo sítio podem ser
+
+794
+00:45:58,870 --> 00:46:00,870
+muito diferentes
+
+795
+00:46:00,870 --> 00:46:02,870
+e não podemos dizer que esta gama está ali
+
+796
+00:46:02,870 --> 00:46:04,870
+e a outra gama envia-se por ali
+
+797
+00:46:04,870 --> 00:46:06,870
+temos que fazer
+
+798
+00:46:06,870 --> 00:46:08,870
+estes encaminhamentos
+
+799
+00:46:08,870 --> 00:46:10,870
+endereços
+
+800
+00:46:10,870 --> 00:46:14,980
+mas é isso que se faz na internet
+
+801
+00:46:14,980 --> 00:46:16,980
+estes encaminhamentos
+
+802
+00:46:16,980 --> 00:46:18,980
+que se chamam as commutações
+
+803
+00:46:18,980 --> 00:46:20,980
+que são baseadas no endereço MAC
+
+804
+00:46:20,980 --> 00:46:22,980
+e portanto as tabelas
+
+805
+00:46:22,980 --> 00:46:24,980
+de
+
+806
+00:46:24,980 --> 00:46:26,980
+de forwarding
+
+807
+00:46:26,980 --> 00:46:28,980
+dos
+
+808
+00:46:28,980 --> 00:46:30,980
+tabelas de encaminhamento dos suítes
+
+809
+00:46:30,980 --> 00:46:32,980
+são grandes
+
+810
+00:46:32,980 --> 00:46:36,390
+e têm que
+
+811
+00:46:36,390 --> 00:46:38,390
+ser verificadas
+
+812
+00:46:38,390 --> 00:46:40,390
+todas as linhas
+
+813
+00:46:40,390 --> 00:46:42,390
+da tabela cada vez que queremos enviar
+
+814
+00:46:42,390 --> 00:46:44,390
+um pacote
+
+815
+00:46:44,390 --> 00:46:46,390
+os suítes fazem isso
+
+816
+00:46:46,390 --> 00:46:48,390
+por ar-do-ever
+
+817
+00:46:48,390 --> 00:46:50,390
+fazem uma verificação
+
+818
+00:46:50,390 --> 00:46:52,390
+comparação do endereço
+
+819
+00:46:52,390 --> 00:46:54,390
+de destino com todos os endereços que estão na tabela
+
+820
+00:46:54,390 --> 00:46:56,390
+utilizando
+
+821
+00:46:56,390 --> 00:46:58,390
+eletrônica
+
+822
+00:46:58,390 --> 00:47:00,390
+e não um programa que se sequencialmente
+
+823
+00:47:00,390 --> 00:47:04,860
+olha para os endereços todos
+
+824
+00:47:04,860 --> 00:47:06,860
+mesmo assim
+
+825
+00:47:06,860 --> 00:47:08,860
+os suítes como são equipamentos
+
+826
+00:47:08,860 --> 00:47:10,860
+os eletrônicos têm que ter
+
+827
+00:47:10,860 --> 00:47:12,860
+limites
+
+828
+00:47:12,860 --> 00:47:14,860
+no máximo de
+
+829
+00:47:14,860 --> 00:47:16,860
+endereços que um suíte se consegue memorizar
+
+830
+00:47:16,860 --> 00:47:18,860
+é sempre
+
+831
+00:47:18,860 --> 00:47:20,860
+limitável e se quisermos
+
+832
+00:47:20,860 --> 00:47:22,860
+normalmente na literatura de um suíte
+
+833
+00:47:22,860 --> 00:47:24,860
+quando compramos os suítes
+
+834
+00:47:24,860 --> 00:47:26,860
+deve estar publicado
+
+835
+00:47:26,860 --> 00:47:28,860
+o número máximo de equipamentos
+
+836
+00:47:28,860 --> 00:47:40,200
+que ele consegue memorizar
+
+837
+00:47:40,200 --> 00:47:42,200
+a internet é a tecnologia
+
+838
+00:47:42,200 --> 00:47:44,200
+da rede mais comum
+
+839
+00:47:44,200 --> 00:47:46,200
+atualmente
+
+840
+00:47:46,200 --> 00:47:48,200
+e continua a crescer
+
+841
+00:47:48,200 --> 00:47:50,200
+as internet não são todas iguais
+
+842
+00:47:50,200 --> 00:47:52,200
+por isso que eram de 10 megabits
+
+843
+00:47:52,200 --> 00:47:54,200
+que já vimos depois
+
+844
+00:47:54,200 --> 00:47:56,200
+100, atualmente a maior parte são de 1 gigabit
+
+845
+00:47:56,200 --> 00:47:58,200
+e já coisas melhores
+
+846
+00:47:58,200 --> 00:48:02,790
+este gráfico
+
+847
+00:48:02,790 --> 00:48:04,790
+já é antigo
+
+848
+00:48:04,790 --> 00:48:06,790
+este gráfico que mostrava era que
+
+849
+00:48:06,790 --> 00:48:08,790
+no início do nosso século
+
+850
+00:48:08,790 --> 00:48:10,790
+ou seja até 2003
+
+851
+00:48:10,790 --> 00:48:12,790
+a internet de 10 megabits
+
+852
+00:48:12,790 --> 00:48:14,790
+estava a cerca de vez menos usada
+
+853
+00:48:14,790 --> 00:48:16,790
+e a internet de 100 megabits estava a cerca de vez mais usada
+
+854
+00:48:16,790 --> 00:48:20,230
+depois apareceu a internet
+
+855
+00:48:20,230 --> 00:48:22,230
+de 1 gigabit
+
+856
+00:48:22,230 --> 00:48:24,230
+que também
+
+857
+00:48:24,230 --> 00:48:26,230
+esta fase começou a ser cada vez mais usada
+
+858
+00:48:26,230 --> 00:48:28,230
+a partir do início do século
+
+859
+00:48:28,230 --> 00:48:30,230
+enquanto que
+
+860
+00:48:30,230 --> 00:48:32,230
+a internet de 100 megabits mais ou menos se mantive
+
+861
+00:48:32,230 --> 00:48:35,900
+e
+
+862
+00:48:35,900 --> 00:48:37,900
+a evolução natural dos próximos anos
+
+863
+00:48:37,900 --> 00:48:39,900
+é fácil de prever
+
+864
+00:48:39,900 --> 00:48:43,370
+e
+
+865
+00:48:43,370 --> 00:48:46,810
+internet a princípio
+
+866
+00:48:46,810 --> 00:48:48,810
+não teve muito sucesso no mercado industrial
+
+867
+00:48:48,810 --> 00:48:50,810
+que
+
+868
+00:48:50,810 --> 00:48:52,810
+usava equipamento caro
+
+869
+00:48:52,810 --> 00:48:54,810
+e
+
+870
+00:48:54,810 --> 00:48:56,810
+as distâncias
+
+871
+00:48:56,810 --> 00:48:58,810
+não eram adequadas
+
+872
+00:48:58,810 --> 00:49:02,150
+e
+
+873
+00:49:02,150 --> 00:49:04,150
+a capacidade para trabalhar em regimes
+
+874
+00:49:04,150 --> 00:49:06,150
+pouco
+
+875
+00:49:06,150 --> 00:49:08,150
+muito fluidosos
+
+876
+00:49:08,150 --> 00:49:10,150
+nas fábricas
+
+877
+00:49:10,150 --> 00:49:12,150
+ou dentro dos equipamentos
+
+878
+00:49:12,150 --> 00:49:14,150
+não era a melhor
+
+879
+00:49:14,150 --> 00:49:16,150
+mesmo assim desenvolveram-se
+
+880
+00:49:16,150 --> 00:49:18,150
+versões de internet adequadas
+
+881
+00:49:18,150 --> 00:49:20,150
+funcionalmente industrial
+
+882
+00:49:20,150 --> 00:49:22,150
+e até internet também para automóveis
+
+883
+00:49:22,150 --> 00:49:24,150
+é um mercado que também está a crescer
+
+884
+00:49:24,150 --> 00:49:29,930
+e que se espera que bem a crescer
+
+885
+00:49:29,930 --> 00:49:31,930
+metagens de usarmos internet
+
+886
+00:49:31,930 --> 00:49:33,930
+é fácil de manter
+
+887
+00:49:33,930 --> 00:49:35,930
+é fácil de administrar
+
+888
+00:49:35,930 --> 00:49:37,930
+é barato
+
+889
+00:49:37,930 --> 00:49:39,930
+porque toda a gente usa todos os equipamentos
+
+890
+00:49:39,930 --> 00:49:43,370
+que são baratos
+
+891
+00:49:43,370 --> 00:49:45,370
+todos os equipamentos têm portas
+
+892
+00:49:45,370 --> 00:49:47,370
+internet
+
+893
+00:49:47,370 --> 00:49:49,370
+os equipamentos internet
+
+894
+00:49:49,370 --> 00:49:51,370
+são sempre baratos
+
+895
+00:49:51,370 --> 00:49:53,370
+e
+
+896
+00:49:53,370 --> 00:49:55,370
+se usarmos internet
+
+897
+00:49:55,370 --> 00:49:57,370
+há sempre velocidades cada vez
+
+898
+00:49:57,370 --> 00:49:59,370
+maiores
+
+899
+00:49:59,370 --> 00:50:01,370
+que continuam a crescer
+
+900
+00:50:01,370 --> 00:50:05,160
+na publicidade de internet
+
+901
+00:50:05,160 --> 00:50:07,160
+nós vimos
+
+902
+00:50:07,160 --> 00:50:09,160
+os meios de transmissão
+
+903
+00:50:09,160 --> 00:50:11,160
+começaram a ser meios partilhados
+
+904
+00:50:11,160 --> 00:50:13,160
+passaram a ser
+
+905
+00:50:13,160 --> 00:50:15,160
+depois os repetidores
+
+906
+00:50:15,160 --> 00:50:17,160
+e atualmente são computadores
+
+907
+00:50:17,160 --> 00:50:19,160
+e os computadores evitam muitas das colisões
+
+908
+00:50:19,160 --> 00:50:21,160
+e pelo menos
+
+909
+00:50:21,160 --> 00:50:23,160
+segmentam as colisões
+
+910
+00:50:23,160 --> 00:50:28,680
+em dominos diferentes
+
+911
+00:50:28,680 --> 00:50:30,680
+os de internet variam
+
+912
+00:50:30,680 --> 00:50:32,680
+nomeadamente no meio físico
+
+913
+00:50:32,680 --> 00:50:34,680
+o cabo coaxial grosso
+
+914
+00:50:34,680 --> 00:50:36,680
+que se usava no princípio
+
+915
+00:50:36,680 --> 00:50:38,680
+tinha uma determinada
+
+916
+00:50:38,680 --> 00:50:40,680
+característica, relacionava 10 megabits
+
+917
+00:50:40,680 --> 00:50:42,680
+e tinha uma determinada característica
+
+918
+00:50:42,680 --> 00:50:44,680
+que ajudava no máximo 500 metros
+
+919
+00:50:44,680 --> 00:50:46,680
+depois passou-se para o cabo fino
+
+920
+00:50:46,680 --> 00:50:48,680
+que as distâncias
+
+921
+00:50:48,680 --> 00:50:50,680
+eram mais curtas
+
+922
+00:50:50,680 --> 00:50:54,380
+e depois os cabos do TP
+
+923
+00:50:54,380 --> 00:50:56,380
+que são aqueles cabos que nós usamos
+
+924
+00:50:56,380 --> 00:50:58,380
+atualmente
+
+925
+00:50:58,380 --> 00:51:00,380
+são categoria 6
+
+926
+00:51:00,380 --> 00:51:02,380
+ou 7
+
+927
+00:51:02,380 --> 00:51:04,380
+para gigabit
+
+928
+00:51:04,380 --> 00:51:06,380
+e também existem implementações
+
+929
+00:51:06,380 --> 00:51:08,380
+de internet em fibra óptica
+
+930
+00:51:08,380 --> 00:51:10,380
+a fibra óptica
+
+931
+00:51:10,380 --> 00:51:12,380
+também é um meio partilhado
+
+932
+00:51:12,380 --> 00:51:14,380
+que pode ser usado
+
+933
+00:51:14,380 --> 00:51:17,720
+para usar estes algoritmos
+
+934
+00:51:17,720 --> 00:51:19,720
+deixar transmitir quem quer
+
+935
+00:51:19,720 --> 00:51:21,720
+e depois ver se há uma colisão ou não
+
+936
+00:51:21,720 --> 00:51:28,940
+vamos ver já
+
+937
+00:51:28,940 --> 00:51:30,940
+internet
+
+938
+00:51:30,940 --> 00:51:32,940
+40 gigabits
+
+939
+00:51:32,940 --> 00:51:46,810
+provavelmente vocês
+
+940
+00:51:46,810 --> 00:51:48,810
+não vão fazer
+
+941
+00:51:48,810 --> 00:51:50,810
+implementações de internet
+
+942
+00:51:50,810 --> 00:51:52,810
+porque não estão muito interessados
+
+943
+00:51:52,810 --> 00:51:54,810
+em saber
+
+944
+00:51:54,810 --> 00:51:56,810
+em conhecer a codificação
+
+945
+00:51:56,810 --> 00:51:58,810
+dos bits
+
+946
+00:51:58,810 --> 00:52:00,810
+no meio de
+
+947
+00:52:00,810 --> 00:52:05,400
+transmissão
+
+948
+00:52:05,400 --> 00:52:07,400
+e se cá podemos falar
+
+949
+00:52:07,400 --> 00:52:09,400
+antes de
+
+950
+00:52:09,400 --> 00:52:11,400
+uma evolução
+
+951
+00:52:11,400 --> 00:52:13,400
+ou uma aplicação
+
+952
+00:52:13,400 --> 00:52:15,400
+de nível superior
+
+953
+00:52:15,400 --> 00:52:17,400
+de internet
+
+954
+00:52:17,400 --> 00:52:19,400
+que são as velanes
+
+955
+00:52:19,400 --> 00:52:21,400
+mas eu acho que distribuir
+
+956
+00:52:21,400 --> 00:52:23,400
+os slides
+
+957
+00:52:23,400 --> 00:52:25,400
+quem estiver interessado também pode ler
+
+958
+00:52:25,400 --> 00:52:27,400
+sobre a codificação
+
+959
+00:52:27,400 --> 00:52:29,400
+dos bits nos canais
+
+960
+00:52:29,400 --> 00:52:31,400
+já agora
+
+961
+00:52:31,400 --> 00:52:33,400
+aquilo que se faz atualmente
+
+962
+00:52:33,400 --> 00:52:35,400
+é
+
+963
+00:52:35,400 --> 00:52:37,400
+usar tensões
+
+964
+00:52:37,400 --> 00:52:39,400
+discretas
+
+965
+00:52:39,400 --> 00:52:41,400
+que podem
+
+966
+00:52:41,400 --> 00:52:43,400
+quando se transmite nada é zero
+
+967
+00:52:43,400 --> 00:52:45,400
+uma coisa é um daqueles valores
+
+968
+00:52:45,400 --> 00:52:47,400
+e por exemplo este é um mecanismo
+
+969
+00:52:47,400 --> 00:52:49,400
+que é o PIM16 que temos
+
+970
+00:52:49,400 --> 00:52:51,400
+16 níveis de tensão
+
+971
+00:52:51,400 --> 00:52:53,400
+e dividimos
+
+972
+00:52:53,400 --> 00:52:55,400
+os nossos códigos
+
+973
+00:52:55,400 --> 00:52:57,400
+os nossos símbolos em
+
+974
+00:52:57,400 --> 00:52:59,400
+duas secções
+
+975
+00:52:59,400 --> 00:53:01,400
+primeiro
+
+976
+00:53:01,400 --> 00:53:03,400
+uma parte que é um nível escolhido
+
+977
+00:53:03,400 --> 00:53:05,400
+em 16 e ali outro negócio
+
+978
+00:53:05,400 --> 00:53:07,400
+escolhido dentro de 16
+
+979
+00:53:07,400 --> 00:53:09,400
+ligeiramente desfazados
+
+980
+00:53:09,400 --> 00:53:11,400
+verticalmente
+
+981
+00:53:11,400 --> 00:53:13,400
+o que dá
+
+982
+00:53:13,400 --> 00:53:15,400
+ou seja se o primeiro símbolo
+
+983
+00:53:15,400 --> 00:53:17,400
+é um de 16
+
+984
+00:53:17,400 --> 00:53:19,400
+portanto é uma destas bolinhas
+
+985
+00:53:19,400 --> 00:53:21,400
+em conjunto com
+
+986
+00:53:21,400 --> 00:53:23,400
+outro símbolo que é
+
+987
+00:53:23,400 --> 00:53:25,400
+que são outros 16 que são estas bolinhas
+
+988
+00:53:25,400 --> 00:53:27,400
+estudar
+
+989
+00:53:27,400 --> 00:53:29,400
+16 vezes 8 alternativas
+
+990
+00:53:29,400 --> 00:53:31,400
+ou seja 128 bits
+
+991
+00:53:31,400 --> 00:53:33,400
+por cada
+
+992
+00:53:33,400 --> 00:53:35,400
+parte de símbolos
+
+993
+00:53:35,400 --> 00:53:39,700
+cada símbolo PIM
+
+994
+00:53:39,700 --> 00:53:41,700
+não se usa uma tensão para um
+
+995
+00:53:41,700 --> 00:53:43,700
+bito com outra tensão para o bito zero
+
+996
+00:53:43,700 --> 00:53:45,700
+usam-se tensões muito diferentes
+
+997
+00:53:45,700 --> 00:53:47,700
+para o conjunto de 7 bits
+
+998
+00:53:47,700 --> 00:53:53,540
+isso é aquilo que se usa
+
+999
+00:53:53,540 --> 00:53:55,540
+aqui nesta fase
+
+1000
+00:53:55,540 --> 00:53:57,540
+nos 10 gigabits
+
+1001
+00:53:57,540 --> 00:53:59,540
+nos 100 megabits
+
+1002
+00:53:59,540 --> 00:54:01,540
+tipicamente usam-se tensões que são
+
+1003
+00:54:01,540 --> 00:54:03,540
+0 ou mais 1 ou menos 1
+
+1004
+00:54:03,540 --> 00:54:05,540
+nos gigabits
+
+1005
+00:54:05,540 --> 00:54:07,540
+usam-se 5 níveis de tensão
+
+1006
+00:54:07,540 --> 00:54:09,540
+e agora aqui 16 níveis de tensão
+
+1007
+00:54:09,540 --> 00:54:11,540
+em
+
+1008
+00:54:11,540 --> 00:54:13,540
+2 conjuntos para fazer 7 bits
+
+1009
+00:54:13,540 --> 00:54:15,540
+vamos falar um bocadinho de
+
+1010
+00:54:15,540 --> 00:54:17,540
+velanes
+
+1011
+00:54:17,540 --> 00:54:27,540
+que são
+
+1012
+00:54:27,540 --> 00:54:29,540
+uma extensão
+
+1013
+00:54:29,540 --> 00:54:31,540
+das redes layer 2
+
+1014
+00:54:31,540 --> 00:54:33,540
+mas continuam a ser
+
+1015
+00:54:33,540 --> 00:54:46,100
+layer 2
+
+1016
+00:54:46,100 --> 00:54:48,100
+normalmente quando se usam
+
+1017
+00:54:48,100 --> 00:54:50,100
+uma arquitetura tradicional de redes
+
+1018
+00:54:50,100 --> 00:54:52,100
+nós
+
+1019
+00:54:52,100 --> 00:54:55,670
+usamos segmentos
+
+1020
+00:54:55,670 --> 00:54:57,670
+de rede layer 2
+
+1021
+00:54:57,670 --> 00:55:01,850
+por exemplo por piso
+
+1022
+00:55:01,850 --> 00:55:03,850
+postecção ou por sala
+
+1023
+00:55:03,850 --> 00:55:05,850
+ou seja juntamos
+
+1024
+00:55:05,850 --> 00:55:07,850
+na mesma rede layer 2
+
+1025
+00:55:07,850 --> 00:55:09,850
+as máquinas
+
+1026
+00:55:09,850 --> 00:55:11,850
+os clientes ou os dispositivos
+
+1027
+00:55:11,850 --> 00:55:13,850
+que estão geograficamente
+
+1028
+00:55:13,850 --> 00:55:15,850
+perto uns dos outros
+
+1029
+00:55:15,850 --> 00:55:17,850
+e
+
+1030
+00:55:17,850 --> 00:55:19,850
+a hierarquia de endereço IP
+
+1031
+00:55:19,850 --> 00:55:21,850
+as gamas que nós depois
+
+1032
+00:55:21,850 --> 00:55:23,850
+distribuímos para o IP
+
+1033
+00:55:23,850 --> 00:55:25,850
+no IP fazemos uma distribuição
+
+1034
+00:55:25,850 --> 00:55:27,850
+hierarquica
+
+1035
+00:55:27,850 --> 00:55:29,850
+em que damos endereços parecidos
+
+1036
+00:55:29,850 --> 00:55:31,850
+aqueles que estão
+
+1037
+00:55:31,850 --> 00:55:33,850
+em termos da rede layer 2
+
+1038
+00:55:33,850 --> 00:55:35,850
+e
+
+1039
+00:55:35,850 --> 00:55:37,850
+se os que estão próximos
+
+1040
+00:55:37,850 --> 00:55:39,850
+em termos de rede layer 2
+
+1041
+00:55:39,850 --> 00:55:41,850
+estão os que estão próximos geograficamente
+
+1042
+00:55:41,850 --> 00:55:43,850
+então isso significa que damos
+
+1043
+00:55:43,850 --> 00:55:45,850
+gamas de endereços
+
+1044
+00:55:45,850 --> 00:55:47,850
+ou endereços parecidos
+
+1045
+00:55:47,850 --> 00:55:49,850
+endereços IP parecidos
+
+1046
+00:55:49,850 --> 00:55:51,850
+aos dispositivos que estão geograficamente
+
+1047
+00:55:51,850 --> 00:55:53,850
+perto uns dos outros
+
+1048
+00:55:53,850 --> 00:55:55,850
+esta é a arquitetura
+
+1049
+00:55:55,850 --> 00:55:57,850
+típica da rede IP
+
+1050
+00:55:57,850 --> 00:55:59,850
+e que deriva
+
+1051
+00:55:59,850 --> 00:56:01,850
+do facto da arquitetura
+
+1052
+00:56:01,850 --> 00:56:03,850
+da rede layer 2
+
+1053
+00:56:03,850 --> 00:56:05,850
+ser dependente
+
+1054
+00:56:05,850 --> 00:56:07,850
+da física
+
+1055
+00:56:07,850 --> 00:56:09,850
+e portanto da localização geográfica
+
+1056
+00:56:09,850 --> 00:56:11,850
+às vezes
+
+1057
+00:56:11,850 --> 00:56:15,260
+não é isso que interessa fazer
+
+1058
+00:56:15,260 --> 00:56:17,260
+em determinados
+
+1059
+00:56:17,260 --> 00:56:19,260
+ambientes
+
+1060
+00:56:19,260 --> 00:56:21,260
+por exemplo uma empresa que tem vários departamentos
+
+1061
+00:56:21,260 --> 00:56:23,260
+mas que os departamentos não estão localizados
+
+1062
+00:56:23,260 --> 00:56:25,260
+geograficamente
+
+1063
+00:56:25,260 --> 00:56:27,260
+no mesmo piso, na mesma zona
+
+1064
+00:56:27,260 --> 00:56:29,260
+ou no mesmo edifício
+
+1065
+00:56:29,260 --> 00:56:31,260
+podemos querer fazer uma distribuição
+
+1066
+00:56:31,260 --> 00:56:33,260
+de gamas de endereços por departamentos
+
+1067
+00:56:33,260 --> 00:56:35,260
+de maneira
+
+1068
+00:56:35,260 --> 00:56:37,260
+juntando aquele
+
+1069
+00:56:37,260 --> 00:56:39,260
+dispositivo com aquele dispositivo
+
+1070
+00:56:39,260 --> 00:56:41,260
+mesmo que fisicamente
+
+1071
+00:56:41,260 --> 00:56:43,260
+ele esteja no outro edifício ou no outro piso
+
+1072
+00:56:43,260 --> 00:56:45,260
+e se calhar fisicamente era fácil
+
+1073
+00:56:45,260 --> 00:56:47,260
+de juntar com aqueles
+
+1074
+00:56:47,260 --> 00:56:49,260
+mas daqueles são dos outros departamentos
+
+1075
+00:56:49,260 --> 00:56:51,260
+nós podemos não querer juntar com aqueles
+
+1076
+00:56:51,260 --> 00:56:53,260
+queríamos juntar com aqueles
+
+1077
+00:56:53,260 --> 00:56:55,260
+para ficar um departamento
+
+1078
+00:56:55,260 --> 00:56:57,260
+com uma gama IP coerente
+
+1079
+00:56:57,260 --> 00:56:59,260
+e depois ser mais fácil
+
+1080
+00:56:59,260 --> 00:57:01,260
+fazer o encaminhamento
+
+1081
+00:57:01,260 --> 00:57:03,260
+e a gestão dessa gama
+
+1082
+00:57:03,260 --> 00:57:08,550
+isto é o que acontece na segmentação tradicional
+
+1083
+00:57:08,550 --> 00:57:10,550
+ou seja uma empresa
+
+1084
+00:57:10,550 --> 00:57:12,550
+que tenha três departamentos
+
+1085
+00:57:12,550 --> 00:57:14,550
+e tipicamente
+
+1086
+00:57:14,550 --> 00:57:16,550
+o departamento fica
+
+1087
+00:57:16,550 --> 00:57:18,550
+a ficar geograficamente
+
+1088
+00:57:18,550 --> 00:57:20,550
+as máquinas de departamento
+
+1089
+00:57:20,550 --> 00:57:22,550
+a ficar geograficamente perto uns dos outros
+
+1090
+00:57:22,550 --> 00:57:24,550
+e
+
+1091
+00:57:24,550 --> 00:57:26,550
+deve haver ali
+
+1092
+00:57:26,550 --> 00:57:28,550
+um equipamento que interligar
+
+1093
+00:57:28,550 --> 00:57:30,550
+aqueles todos e esse equipamento
+
+1094
+00:57:30,550 --> 00:57:32,550
+depois é que ligam ao nosso
+
+1095
+00:57:32,550 --> 00:57:34,550
+central da empresa
+
+1096
+00:57:34,550 --> 00:57:36,550
+ou do grupo
+
+1097
+00:57:36,550 --> 00:57:38,550
+e mesmo após outros departamentos
+
+1098
+00:57:38,550 --> 00:57:40,550
+e isto funciona bem
+
+1099
+00:57:40,550 --> 00:57:42,550
+sobretudo
+
+1100
+00:57:42,550 --> 00:57:44,550
+se quem divide os espaços
+
+1101
+00:57:44,550 --> 00:57:46,550
+colocou aquelas máquinas
+
+1102
+00:57:46,550 --> 00:57:48,550
+quem fez a instalação colocou aquelas máquinas
+
+1103
+00:57:48,550 --> 00:57:50,550
+todas geograficamente perto umas das outras
+
+1104
+00:57:50,550 --> 00:57:52,550
+se aquelas máquinas não estão perto
+
+1105
+00:57:52,550 --> 00:57:54,550
+isto já é um
+
+1106
+00:57:54,550 --> 00:57:56,550
+caos de ponto de vista de estrutura
+
+1107
+00:57:56,550 --> 00:57:58,550
+física
+
+1108
+00:57:58,550 --> 00:58:00,550
+porque para fazermos isto
+
+1109
+00:58:00,550 --> 00:58:02,550
+temos que ter que para cabos muito compridos
+
+1110
+00:58:02,550 --> 00:58:04,550
+e muitos cabos a passar
+
+1111
+00:58:04,550 --> 00:58:06,550
+de um lado para o outro
+
+1112
+00:58:06,550 --> 00:58:08,550
+e temos que alterar a estrutura
+
+1113
+00:58:08,550 --> 00:58:10,550
+física sempre que se altera a localização
+
+1114
+00:58:10,550 --> 00:58:12,550
+dos utilizadores
+
+1115
+00:58:12,550 --> 00:58:22,200
+se tivermos equipamentos
+
+1116
+00:58:22,200 --> 00:58:24,200
+que conseguem fazer
+
+1117
+00:58:24,200 --> 00:58:26,200
+lanos virtuais
+
+1118
+00:58:26,200 --> 00:58:28,200
+ou seja conseguem
+
+1119
+00:58:28,200 --> 00:58:30,200
+fazer redes layer 2
+
+1120
+00:58:30,200 --> 00:58:32,200
+manipuladas
+
+1121
+00:58:32,200 --> 00:58:34,200
+virtuais são independentes
+
+1122
+00:58:34,200 --> 00:58:37,450
+da estrutura física
+
+1123
+00:58:37,450 --> 00:58:39,450
+nós conseguimos fazer isto
+
+1124
+00:58:39,450 --> 00:58:41,450
+e podemos continuar a trabalhar com
+
+1125
+00:58:41,450 --> 00:58:43,450
+aquele departamento
+
+1126
+00:58:43,450 --> 00:58:45,450
+com aquelas máquinas perto umas das outras
+
+1127
+00:58:45,450 --> 00:58:47,450
+mas também podemos
+
+1128
+00:58:47,450 --> 00:58:49,450
+fazer
+
+1129
+00:58:49,450 --> 00:58:51,450
+coisas diferentes
+
+1130
+00:58:51,450 --> 00:58:53,450
+podemos fazer isto
+
+1131
+00:58:53,450 --> 00:58:55,450
+ou podemos fazer isto que está aqui do lado direito
+
+1132
+00:58:55,450 --> 00:58:57,450
+como nos dar mais jeito
+
+1133
+00:58:57,450 --> 00:58:59,450
+podemos criar uma rede layer 2
+
+1134
+00:58:59,450 --> 00:59:01,450
+que nos junta aquela máquina
+
+1135
+00:59:01,450 --> 00:59:03,450
+com aquela com aquela
+
+1136
+00:59:03,450 --> 00:59:05,450
+mesmo sem que
+
+1137
+00:59:05,450 --> 00:59:07,450
+a estrutura física corresponda
+
+1138
+00:59:07,450 --> 00:59:09,450
+a esta junção
+
+1139
+00:59:09,450 --> 00:59:11,450
+que aqui está
+
+1140
+00:59:11,450 --> 00:59:13,450
+que aquela máquina pode estar fisicamente muito mais daquela
+
+1141
+00:59:13,450 --> 00:59:15,450
+a estrutura física
+
+1142
+00:59:15,450 --> 00:59:17,450
+foi feita dependendo
+
+1143
+00:59:17,450 --> 00:59:19,450
+da localização geográfica
+
+1144
+00:59:19,450 --> 00:59:21,450
+porque alterar a estrutura física
+
+1145
+00:59:21,450 --> 00:59:23,450
+envolve
+
+1146
+00:59:23,450 --> 00:59:25,450
+meios físicos
+
+1147
+00:59:25,450 --> 00:59:27,450
+portanto envolve cabos
+
+1148
+00:59:27,450 --> 00:59:29,450
+e portanto não dá jeito
+
+1149
+00:59:29,450 --> 00:59:31,450
+de mandar a esticar cabos de cima para baixo
+
+1150
+00:59:31,450 --> 00:59:33,450
+a medida que sempre que
+
+1151
+00:59:33,450 --> 00:59:35,450
+se alteram as localizações
+
+1152
+00:59:35,450 --> 00:59:37,450
+fazendo
+
+1153
+00:59:37,450 --> 00:59:39,450
+aqui foi feita uma estrutura física
+
+1154
+00:59:39,450 --> 00:59:41,450
+natural
+
+1155
+00:59:41,450 --> 00:59:43,450
+juntando os equipamentos
+
+1156
+00:59:43,450 --> 00:59:45,450
+que estão no mesmo
+
+1157
+00:59:45,450 --> 00:59:47,450
+próximo ou na mesma localização física
+
+1158
+00:59:47,450 --> 00:59:49,450
+mas depois foi criada uma estrutura
+
+1159
+00:59:49,450 --> 00:59:51,450
+lógica juntando aquela com aquela
+
+1160
+00:59:51,450 --> 00:59:53,450
+com aquilo e separando aquele daquele
+
+1161
+00:59:53,450 --> 00:59:55,450
+e
+
+1162
+00:59:55,450 --> 00:59:57,450
+agora
+
+1163
+00:59:57,450 --> 00:59:59,450
+distribuição de indresos IP
+
+1164
+00:59:59,450 --> 01:00:01,450
+ou de gamas IP
+
+1165
+01:00:01,450 --> 01:00:03,450
+que deve ser feita em função
+
+1166
+01:00:03,450 --> 01:00:05,450
+de topologia lógica
+
+1167
+01:00:05,450 --> 01:00:07,450
+e vamos dar uma gama
+
+1168
+01:00:07,450 --> 01:00:09,450
+estas três máquinas
+
+1169
+01:00:09,450 --> 01:00:11,450
+outra gama aquelas três máquinas
+
+1170
+01:00:11,450 --> 01:00:16,900
+outra gama aquelas três máquinas
+
+1171
+01:00:16,900 --> 01:00:18,900
+se tivermos equipamento
+
+1172
+01:00:18,900 --> 01:00:20,900
+pode fazer isto e isto é a questão de usar uns
+
+1173
+01:00:20,900 --> 01:00:22,900
+suites especiais que têm capacidade
+
+1174
+01:00:22,900 --> 01:00:24,900
+para fazer isto
+
+1175
+01:00:24,900 --> 01:00:26,900
+então isto facilita-nos a instalação
+
+1176
+01:00:26,900 --> 01:00:28,900
+dos postos de trabalho
+
+1177
+01:00:28,900 --> 01:00:30,900
+vamos criar mais um posto de trabalho
+
+1178
+01:00:30,900 --> 01:00:32,900
+para o departamento X
+
+1179
+01:00:32,900 --> 01:00:34,900
+podemos ser postos de trabalho perto
+
+1180
+01:00:34,900 --> 01:00:36,900
+dos colegas do departamento X
+
+1181
+01:00:36,900 --> 01:00:38,900
+ou podemos pô-lo longe
+
+1182
+01:00:38,900 --> 01:00:40,900
+dos colegas do departamento X
+
+1183
+01:00:40,900 --> 01:00:42,900
+porque
+
+1184
+01:00:42,900 --> 01:00:44,900
+eles vão ficar na mesma vela
+
+1185
+01:00:44,900 --> 01:00:46,900
+e vai ficar próximo
+
+1186
+01:00:46,900 --> 01:00:48,900
+em termos de estrutura layer 2
+
+1187
+01:00:48,900 --> 01:00:50,900
+e vai ficar próximo
+
+1188
+01:00:50,900 --> 01:00:52,900
+em termos de distribuição de indresos IP
+
+1189
+01:00:52,900 --> 01:00:54,900
+termos de estrutura IP
+
+1190
+01:00:54,900 --> 01:00:58,890
+assim conseguimos facilmente
+
+1191
+01:00:58,890 --> 01:01:00,890
+mudar os postos de trabalho
+
+1192
+01:01:00,890 --> 01:01:02,890
+entre departamentos
+
+1193
+01:01:02,890 --> 01:01:04,890
+ou entre salas
+
+1194
+01:01:04,890 --> 01:01:06,890
+facilita-se de distribuição lógica
+
+1195
+01:01:06,890 --> 01:01:08,890
+da rede de melhor
+
+1196
+01:01:08,890 --> 01:01:10,890
+o control de trafe
+
+1197
+01:01:10,890 --> 01:01:12,890
+e aumentar a segurança
+
+1198
+01:01:12,890 --> 01:01:14,890
+porque temos
+
+1199
+01:01:14,890 --> 01:01:16,890
+uns departamentos a não verem
+
+1200
+01:01:16,890 --> 01:01:18,890
+em informação que os outros departamentos
+
+1201
+01:01:18,890 --> 01:01:22,520
+comunicam
+
+1202
+01:01:22,520 --> 01:01:24,520
+para criarmos isto
+
+1203
+01:01:24,520 --> 01:01:26,520
+temos que usar um equipamento
+
+1204
+01:01:26,520 --> 01:01:28,520
+especial com capacidade para
+
+1205
+01:01:28,520 --> 01:01:30,520
+criar velanos
+
+1206
+01:01:30,520 --> 01:01:32,520
+um com mais de um
+
+1207
+01:01:32,520 --> 01:01:34,520
+dependendo da
+
+1208
+01:01:34,520 --> 01:01:36,520
+complexidade da nossa rede
+
+1209
+01:01:36,520 --> 01:01:38,520
+e esses equipamentos permitem-nos
+
+1210
+01:01:38,520 --> 01:01:40,520
+fazer a segmentação
+
+1211
+01:01:40,520 --> 01:01:42,520
+ou seja, a divisão
+
+1212
+01:01:44,520 --> 01:01:46,520
+da nossa rede global
+
+1213
+01:01:46,520 --> 01:01:48,520
+em redes layer 2
+
+1214
+01:01:48,520 --> 01:01:50,520
+baseado nas portas
+
+1215
+01:01:50,520 --> 01:01:52,520
+dos nossos equipamentos
+
+1216
+01:01:52,520 --> 01:01:54,520
+ou baseado no endereço MAC
+
+1217
+01:01:54,520 --> 01:01:56,520
+ou baseado
+
+1218
+01:01:56,520 --> 01:01:58,520
+até
+
+1219
+01:01:58,520 --> 01:02:00,520
+num protocolo de nível superior
+
+1220
+01:02:00,520 --> 01:02:02,520
+nomeadamente
+
+1221
+01:02:02,520 --> 01:02:04,520
+o protocolo IP
+
+1222
+01:02:04,520 --> 01:02:06,520
+ou seja, podemos
+
+1223
+01:02:06,520 --> 01:02:08,520
+com alguns equipamentos
+
+1224
+01:02:08,520 --> 01:02:10,520
+nós podemos
+
+1225
+01:02:10,520 --> 01:02:12,520
+preocupar-nos apenas com a distribuição
+
+1226
+01:02:12,520 --> 01:02:14,520
+de endereço IP
+
+1227
+01:02:14,520 --> 01:02:16,520
+sabendo que depois
+
+1228
+01:02:16,520 --> 01:02:18,520
+se aquele equipamento tem um endereço IP
+
+1229
+01:02:18,520 --> 01:02:20,520
+da gama
+
+1230
+01:02:20,520 --> 01:02:22,520
+do departamento X
+
+1231
+01:02:22,520 --> 01:02:24,520
+ele vai ser colocado na rede layer 2
+
+1232
+01:02:24,520 --> 01:02:26,520
+do departamento X
+
+1233
+01:02:26,520 --> 01:02:28,520
+no entanto, estas soluções
+
+1234
+01:02:28,520 --> 01:02:30,520
+são pouco frequentes
+
+1235
+01:02:30,520 --> 01:02:32,520
+o mais normal é fazermos
+
+1236
+01:02:32,520 --> 01:02:34,520
+velanos baseados nas portas
+
+1237
+01:02:34,520 --> 01:02:39,110
+ou seja, na infraestrutura física
+
+1238
+01:02:39,110 --> 01:02:41,110
+há uma administradora
+
+1239
+01:02:41,110 --> 01:02:43,110
+que diz que este cabo que vai para ali
+
+1240
+01:02:43,110 --> 01:02:45,110
+que está ligado a esta porta
+
+1241
+01:02:45,110 --> 01:02:47,110
+este cabo está ligado
+
+1242
+01:02:47,110 --> 01:02:49,110
+àquela máquina ou àquele conjunto de máquinas
+
+1243
+01:02:49,110 --> 01:02:51,110
+que são do departamento X
+
+1244
+01:02:51,110 --> 01:03:03,580
+e portanto devem ficar na velanos X
+
+1245
+01:03:03,580 --> 01:03:05,580
+as velanos funcionam bem
+
+1246
+01:03:05,580 --> 01:03:07,580
+quando
+
+1247
+01:03:07,580 --> 01:03:09,580
+a rede é gerida a alguém
+
+1248
+01:03:09,580 --> 01:03:11,580
+que pode definir
+
+1249
+01:03:11,580 --> 01:03:13,580
+a maneira como
+
+1250
+01:03:13,580 --> 01:03:15,580
+a segmentação da rede é feita
+
+1251
+01:03:17,580 --> 01:03:19,580
+e quando alguém
+
+1252
+01:03:19,580 --> 01:03:21,580
+quer mudar de sítio
+
+1253
+01:03:21,580 --> 01:03:23,580
+mantendo a mesma velane
+
+1254
+01:03:23,580 --> 01:03:25,580
+ou seja, mantendo o mesmo departamento
+
+1255
+01:03:25,580 --> 01:03:27,580
+tem que ser
+
+1256
+01:03:27,580 --> 01:03:29,580
+tem que informar o gestor
+
+1257
+01:03:29,580 --> 01:03:31,580
+da rede
+
+1258
+01:03:31,580 --> 01:03:33,580
+dessa alteração
+
+1259
+01:03:33,580 --> 01:03:35,580
+se alguém controla
+
+1260
+01:03:35,580 --> 01:03:37,580
+onde as pessoas podem estar
+
+1261
+01:03:37,580 --> 01:03:39,580
+e portanto isto é bom para as redes
+
+1262
+01:03:39,580 --> 01:03:41,580
+controladas
+
+1263
+01:03:41,580 --> 01:03:43,580
+se alguém que está num sítio
+
+1264
+01:03:43,580 --> 01:03:45,580
+quer mudar de departamento
+
+1265
+01:03:45,580 --> 01:03:47,580
+também é possível
+
+1266
+01:03:47,580 --> 01:03:49,580
+mais uma vez
+
+1267
+01:03:49,580 --> 01:03:51,580
+tem que ser o gestor da rede
+
+1268
+01:03:51,580 --> 01:03:53,580
+a intervir e a anunciar
+
+1269
+01:03:53,580 --> 01:03:55,580
+ou configurar os sítios
+
+1270
+01:03:55,580 --> 01:03:57,580
+para dizer que
+
+1271
+01:03:57,580 --> 01:03:59,580
+aquele equipamento que está ligado àquela porta
+
+1272
+01:03:59,580 --> 01:04:01,580
+agora passa a ser
+
+1273
+01:04:01,580 --> 01:04:10,390
+o outro departamento
+
+1274
+01:04:10,390 --> 01:04:12,390
+os equipamentos
+
+1275
+01:04:12,390 --> 01:04:16,660
+que suportam velanes
+
+1276
+01:04:16,660 --> 01:04:18,660
+normalmente permitem ter
+
+1277
+01:04:18,660 --> 01:04:20,660
+duas ou mais velanes
+
+1278
+01:04:20,660 --> 01:04:22,660
+no mesmo equipamento
+
+1279
+01:04:22,660 --> 01:04:24,660
+e um suíte
+
+1280
+01:04:24,660 --> 01:04:26,660
+tem muitas portas
+
+1281
+01:04:26,660 --> 01:04:28,660
+o administrador consegue
+
+1282
+01:04:28,660 --> 01:04:30,660
+nesses equipamentos dizer estas portas
+
+1283
+01:04:30,660 --> 01:04:32,660
+a porta 1, 2 e 5
+
+1284
+01:04:32,660 --> 01:04:34,660
+são de um departamento
+
+1285
+01:04:34,660 --> 01:04:36,660
+ou são de uma velane e as outras
+
+1286
+01:04:36,660 --> 01:04:41,930
+são de outro departamento
+
+1287
+01:04:41,930 --> 01:04:43,930
+isso, o suíte é como se ficasse dividido
+
+1288
+01:04:43,930 --> 01:04:45,930
+em dois suítes separados
+
+1289
+01:04:45,930 --> 01:04:47,930
+em dois equipamentos separados
+
+1290
+01:04:47,930 --> 01:04:49,930
+a informação
+
+1291
+01:04:49,930 --> 01:04:51,930
+que
+
+1292
+01:04:51,930 --> 01:04:53,930
+entra numa velane
+
+1293
+01:04:53,930 --> 01:04:55,930
+que circula numa velane, não é transmitida
+
+1294
+01:04:55,930 --> 01:04:57,930
+para o outro
+
+1295
+01:04:57,930 --> 01:04:59,930
+e portanto as máquinas ficam
+
+1296
+01:04:59,930 --> 01:05:01,930
+separadas, não podem comunicar
+
+1297
+01:05:01,930 --> 01:05:03,930
+mais com as outras
+
+1298
+01:05:03,930 --> 01:05:05,930
+departamento não pode comunicar com o outro
+
+1299
+01:05:05,930 --> 01:05:07,930
+a não ser através
+
+1300
+01:05:07,930 --> 01:05:09,930
+de um
+
+1301
+01:05:09,930 --> 01:05:11,930
+encaminhador de nível superior
+
+1302
+01:05:11,930 --> 01:05:13,930
+um encaminhador IP
+
+1303
+01:05:13,930 --> 01:05:18,650
+tem que haver um router
+
+1304
+01:05:18,650 --> 01:05:20,650
+que encaminhe ao trafo
+
+1305
+01:05:20,650 --> 01:05:22,650
+entre as velanes
+
+1306
+01:05:22,650 --> 01:05:24,650
+temos uns suítes, tem várias portas
+
+1307
+01:05:24,650 --> 01:05:26,650
+temos que dizer que estas portas
+
+1308
+01:05:26,650 --> 01:05:28,650
+são
+
+1309
+01:05:28,650 --> 01:05:30,650
+para máquinas de um departamento
+
+1310
+01:05:30,650 --> 01:05:32,650
+aquelas são para máquinas de outro departamento
+
+1311
+01:05:32,650 --> 01:05:34,650
+em princípios estão
+
+1312
+01:05:34,650 --> 01:05:36,650
+todas ligadas ao mesmo suíte
+
+1313
+01:05:36,650 --> 01:05:38,650
+todas estas máquinas estão fisicamente próximas de mais das outras
+
+1314
+01:05:38,650 --> 01:05:40,650
+no anjo do ponto de vista
+
+1315
+01:05:40,650 --> 01:05:42,650
+de informação estão completamente separadas
+
+1316
+01:05:42,650 --> 01:05:44,650
+aquelas falam umas com as outras
+
+1317
+01:05:44,650 --> 01:05:46,650
+aquelas falam umas com as outras
+
+1318
+01:05:46,650 --> 01:05:48,650
+mas as verdes não falam com as laranjas
+
+1319
+01:05:48,650 --> 01:05:58,520
+normalmente nesta situação
+
+1320
+01:05:58,520 --> 01:06:00,520
+chamamos estas portas, as portas de acesso
+
+1321
+01:06:00,520 --> 01:06:02,520
+ou é de esportes
+
+1322
+01:06:02,520 --> 01:06:13,130
+se aqui temos um departamento
+
+1323
+01:06:13,130 --> 01:06:18,070
+e
+
+1324
+01:06:18,070 --> 01:06:20,070
+aquelas portas configuramos com outro departamento
+
+1325
+01:06:22,070 --> 01:06:24,070
+se esta porta está no mesmo departamento
+
+1326
+01:06:24,070 --> 01:06:26,070
+quando aquela
+
+1327
+01:06:26,070 --> 01:06:28,070
+estação transmite alguma coisa
+
+1328
+01:06:28,070 --> 01:06:30,070
+aquela
+
+1329
+01:06:30,070 --> 01:06:32,070
+trama é
+
+1330
+01:06:32,070 --> 01:06:34,070
+deslopetida
+
+1331
+01:06:34,070 --> 01:06:36,070
+para ali e para ali
+
+1332
+01:06:36,070 --> 01:06:38,070
+mas não para ali e para ali
+
+1333
+01:06:38,070 --> 01:06:43,270
+pode haver também capacidade
+
+1334
+01:06:43,270 --> 01:06:45,270
+de computação dos suítes
+
+1335
+01:06:45,270 --> 01:06:47,270
+caso mais pesado é
+
+1336
+01:06:47,270 --> 01:06:49,270
+o broadcast
+
+1337
+01:06:49,270 --> 01:06:51,270
+quando ainda este destino
+
+1338
+01:06:51,270 --> 01:06:53,270
+tudo uns que significa que aquilo é um broadcast
+
+1339
+01:06:53,270 --> 01:06:55,270
+vai para todos
+
+1340
+01:06:55,270 --> 01:06:57,270
+todas as máquinas
+
+1341
+01:06:57,270 --> 01:06:59,270
+agora vai para todas as máquinas
+
+1342
+01:06:59,270 --> 01:07:04,820
+daquela VLAN
+
+1343
+01:07:04,820 --> 01:07:06,820
+tanto se
+
+1344
+01:07:06,820 --> 01:07:10,680
+mesmo que há já agora repetições
+
+1345
+01:07:10,680 --> 01:07:12,680
+mesmo que há já agora
+
+1346
+01:07:12,680 --> 01:07:14,680
+repetições aqui que gerem colisões
+
+1347
+01:07:14,680 --> 01:07:16,680
+essa colisão vai ficar
+
+1348
+01:07:16,680 --> 01:07:18,680
+limitada àquele domínio
+
+1349
+01:07:18,680 --> 01:07:20,680
+não se vai propagar aqueles
+
+1350
+01:07:20,680 --> 01:07:22,680
+aqueles que não veem a colisão
+
+1351
+01:07:22,680 --> 01:07:32,200
+ou depois de configurado
+
+1352
+01:07:32,200 --> 01:07:34,200
+o equipamento, os suítes
+
+1353
+01:07:34,200 --> 01:07:36,200
+associando uma porta
+
+1354
+01:07:36,200 --> 01:07:38,200
+uma VLAN
+
+1355
+01:07:38,200 --> 01:07:40,200
+o equipamento que se liga lá
+
+1356
+01:07:40,200 --> 01:07:42,200
+automaticamente a funcionar naquela VLAN
+
+1357
+01:07:42,200 --> 01:07:44,200
+não é preciso configurar
+
+1358
+01:07:44,200 --> 01:07:46,200
+o equipamento terminal
+
+1359
+01:07:46,200 --> 01:07:48,200
+para que tensa a VLAN
+
+1360
+01:07:48,200 --> 01:07:50,200
+e ele naturalmente vai
+
+1361
+01:07:50,200 --> 01:07:59,210
+usar aquela VLAN
+
+1362
+01:07:59,210 --> 01:08:01,210
+alguns equipamentos
+
+1363
+01:08:01,210 --> 01:08:03,210
+de VLANs
+
+1364
+01:08:03,210 --> 01:08:05,210
+permitem fazer coisas destas
+
+1365
+01:08:05,210 --> 01:08:07,210
+ou seja, podemos criar
+
+1366
+01:08:07,210 --> 01:08:09,210
+um conjunto
+
+1367
+01:08:09,210 --> 01:08:11,210
+de equipamentos
+
+1368
+01:08:11,210 --> 01:08:13,210
+que falam entre eles
+
+1369
+01:08:13,210 --> 01:08:15,210
+e que permitem
+
+1370
+01:08:15,210 --> 01:08:17,210
+configurar as portas
+
+1371
+01:08:17,210 --> 01:08:19,210
+de acesso
+
+1372
+01:08:19,210 --> 01:08:21,210
+para pertencerem
+
+1373
+01:08:21,210 --> 01:08:23,210
+a uma determinada VLAN
+
+1374
+01:08:23,210 --> 01:08:25,210
+e agora podemos ter
+
+1375
+01:08:25,210 --> 01:08:27,210
+as pessoas do
+
+1376
+01:08:27,210 --> 01:08:29,210
+departamento verde
+
+1377
+01:08:29,210 --> 01:08:31,210
+a trabalhar em ali e ali
+
+1378
+01:08:31,210 --> 01:08:33,210
+e
+
+1379
+01:08:33,210 --> 01:08:35,210
+os suítes encarregam-se
+
+1380
+01:08:35,210 --> 01:08:37,210
+de
+
+1381
+01:08:37,210 --> 01:08:39,210
+encaminhar o tráfico
+
+1382
+01:08:39,210 --> 01:08:41,210
+de ali para ali
+
+1383
+01:08:41,210 --> 01:08:43,210
+não é preciso
+
+1384
+01:08:43,210 --> 01:08:45,210
+mas o departamento de cor de rosa
+
+1385
+01:08:45,210 --> 01:08:47,210
+está separado
+
+1386
+01:08:47,210 --> 01:08:49,210
+os verdes não falam com os cor de rosas
+
+1387
+01:08:49,210 --> 01:08:51,210
+e os brancos também não falam
+
+1388
+01:08:51,210 --> 01:08:53,210
+com os cor de rosas nem com os verdes
+
+1389
+01:08:53,210 --> 01:08:55,210
+para conseguirem fazer isto
+
+1390
+01:08:55,210 --> 01:08:57,210
+nem todos os suítes
+
+1391
+01:08:57,210 --> 01:08:59,210
+que dizem que se portam VLANs
+
+1392
+01:08:59,210 --> 01:09:01,210
+permitem fazer isto
+
+1393
+01:09:01,210 --> 01:09:03,210
+para fazer isto
+
+1394
+01:09:03,210 --> 01:09:05,210
+é preciso que estes links
+
+1395
+01:09:05,210 --> 01:09:07,210
+sejam configurados
+
+1396
+01:09:07,210 --> 01:09:09,210
+para
+
+1397
+01:09:09,210 --> 01:09:11,210
+o tráfico de todas as VLANs
+
+1398
+01:09:13,210 --> 01:09:15,210
+para o departamento verde
+
+1399
+01:09:15,210 --> 01:09:17,210
+nós dizemos que chamamos aquilo
+
+1400
+01:09:17,210 --> 01:09:19,210
+a VLAN 1
+
+1401
+01:09:19,210 --> 01:09:21,210
+o departamento verde de trabalho na VLAN 1
+
+1402
+01:09:21,210 --> 01:09:23,210
+para que todos
+
+1403
+01:09:23,210 --> 01:09:25,210
+possam falar com os seus colegas
+
+1404
+01:09:25,210 --> 01:09:27,210
+do mesmo departamento
+
+1405
+01:09:27,210 --> 01:09:29,210
+aquelas ligações internas
+
+1406
+01:09:29,210 --> 01:09:31,210
+o backbone tem que funcionar
+
+1407
+01:09:31,210 --> 01:09:33,210
+com as VLANs 1, 2 e 3
+
+1408
+01:09:33,210 --> 01:09:35,210
+porque quando aquele verde quer falar
+
+1409
+01:09:35,210 --> 01:09:37,210
+com a verde
+
+1410
+01:09:37,210 --> 01:09:39,210
+a VLAN 1 tem que passar por ali
+
+1411
+01:09:41,210 --> 01:09:43,210
+quando
+
+1412
+01:09:43,210 --> 01:09:45,210
+aquele quer falar com aquele
+
+1413
+01:09:45,210 --> 01:09:47,210
+o tráfico tem que passar por ali
+
+1414
+01:09:47,210 --> 01:09:49,210
+portanto aqui tem que
+
+1415
+01:09:49,210 --> 01:09:51,210
+haver tráfico da VLAN 2
+
+1416
+01:09:51,210 --> 01:09:53,210
+mas quando o cor de rosa
+
+1417
+01:09:53,210 --> 01:09:55,210
+quer falar com o cor de rosa
+
+1418
+01:09:55,210 --> 01:09:59,130
+aqui também tem que haver tráfico da VLAN 3
+
+1419
+01:09:59,130 --> 01:10:01,130
+quando este suíte
+
+1420
+01:10:01,130 --> 01:10:03,130
+receba alguma coisa daqui
+
+1421
+01:10:03,130 --> 01:10:05,130
+ele tem que saber
+
+1422
+01:10:05,130 --> 01:10:07,130
+se aquilo que veio daqui
+
+1423
+01:10:07,130 --> 01:10:09,130
+é da VLAN 3
+
+1424
+01:10:09,130 --> 01:10:11,130
+da VLAN 2
+
+1425
+01:10:11,130 --> 01:10:13,130
+ou da VLAN 1
+
+1426
+01:10:13,130 --> 01:10:15,130
+porque se
+
+1427
+01:10:15,130 --> 01:10:17,130
+não for da VLAN 2
+
+1428
+01:10:17,130 --> 01:10:19,130
+não pode enviar isso para ali
+
+1429
+01:10:19,130 --> 01:10:21,130
+e se não for da VLAN 3 não envia para ali
+
+1430
+01:10:21,130 --> 01:10:23,130
+para se conseguir isto
+
+1431
+01:10:23,130 --> 01:10:25,130
+é preciso etiquetar o tráfico
+
+1432
+01:10:25,130 --> 01:10:27,130
+aqui nestes links
+
+1433
+01:10:27,130 --> 01:10:32,810
+portanto às vezes estes links
+
+1434
+01:10:32,810 --> 01:10:34,810
+chamam-se tranques
+
+1435
+01:10:34,810 --> 01:10:36,810
+e etiquetar
+
+1436
+01:10:36,810 --> 01:10:38,810
+é colocar uma etiqueta a dizer
+
+1437
+01:10:38,810 --> 01:10:40,810
+que o tráfico aqui
+
+1438
+01:10:40,810 --> 01:10:42,810
+não precisa de ser etiquetado
+
+1439
+01:10:42,810 --> 01:10:44,810
+este suíte já sabe
+
+1440
+01:10:44,810 --> 01:10:46,810
+que tudo o que vier daqui
+
+1441
+01:10:46,810 --> 01:10:48,810
+é da VLAN 1
+
+1442
+01:10:48,810 --> 01:10:50,810
+a início deste equipamento
+
+1443
+01:10:50,810 --> 01:10:52,810
+pode não saber o que são etiquetas
+
+1444
+01:10:52,810 --> 01:10:54,810
+de VLAN
+
+1445
+01:10:54,810 --> 01:10:56,810
+agora naquele link ali
+
+1446
+01:10:56,810 --> 01:10:58,810
+não se pode usar um Ethernet normal
+
+1447
+01:10:58,810 --> 01:11:00,810
+tem que usar um Ethernet com etiquetas
+
+1448
+01:11:00,810 --> 01:11:02,810
+para sabermos se o tráfico
+
+1449
+01:11:02,810 --> 01:11:04,810
+vai para sabermos
+
+1450
+01:11:04,810 --> 01:11:06,810
+de onde é
+
+1451
+01:11:06,810 --> 01:11:17,990
+o que passa ali
+
+1452
+01:11:17,990 --> 01:11:19,990
+se não tivermos equipamentos
+
+1453
+01:11:19,990 --> 01:11:21,990
+que tenham capacidade de etiquetagem
+
+1454
+01:11:21,990 --> 01:11:23,990
+ou de tagging
+
+1455
+01:11:23,990 --> 01:11:25,990
+podemos sempre resolver
+
+1456
+01:11:25,990 --> 01:11:27,990
+desta maneira
+
+1457
+01:11:27,990 --> 01:11:29,990
+se temos aqui uma máquina
+
+1458
+01:11:29,990 --> 01:11:31,990
+um conjunto de utilizadores
+
+1459
+01:11:31,990 --> 01:11:33,990
+ou um utilizador da VLAN 1
+
+1460
+01:11:33,990 --> 01:11:35,990
+tem que poder falar com este que está aqui
+
+1461
+01:11:35,990 --> 01:11:37,990
+da VLAN 1 mas que está perto
+
+1462
+01:11:37,990 --> 01:11:39,990
+daquilo que é da VLAN 2
+
+1463
+01:11:39,990 --> 01:11:43,400
+este suíte
+
+1464
+01:11:43,400 --> 01:11:45,400
+trabalha dividido em duas metades
+
+1465
+01:11:45,400 --> 01:11:47,400
+e
+
+1466
+01:11:47,400 --> 01:11:49,400
+o tráfico daqui não circula para ali
+
+1467
+01:11:49,400 --> 01:11:51,400
+mas pode circular para aqui
+
+1468
+01:11:51,400 --> 01:11:53,400
+ou seja, se em vez de um cabo
+
+1469
+01:11:53,400 --> 01:11:55,400
+a ligar estes dois suítes
+
+1470
+01:11:55,400 --> 01:11:57,400
+pusermos dois cabos
+
+1471
+01:11:57,400 --> 01:11:59,400
+podemos configurar aquele cabo na VLAN 1
+
+1472
+01:11:59,400 --> 01:12:01,400
+e aquele cabo na VLAN 2
+
+1473
+01:12:01,400 --> 01:12:03,400
+e
+
+1474
+01:12:03,400 --> 01:12:05,400
+agora os que estão ali
+
+1475
+01:12:05,400 --> 01:12:07,400
+falam para aqueles que estão ali
+
+1476
+01:12:07,400 --> 01:12:09,400
+mas não há comunicação na vertical
+
+1477
+01:12:09,400 --> 01:12:13,320
+para fazer isto como tais VLAN
+
+1478
+01:12:13,320 --> 01:12:15,320
+precisavam de muitos cabos aqui
+
+1479
+01:12:15,320 --> 01:12:17,320
+e tem muitas portas nos suítes
+
+1480
+01:12:19,320 --> 01:12:21,320
+e para isso existe
+
+1481
+01:12:21,320 --> 01:12:23,320
+a capacidade de alguns suítes
+
+1482
+01:12:23,320 --> 01:12:25,320
+podem fazer isto só com um cabo
+
+1483
+01:12:25,320 --> 01:12:27,320
+como no desenho que vimos anteriormente
+
+1484
+01:12:27,320 --> 01:12:29,320
+se usarmos etiquetas
+
+1485
+01:12:29,320 --> 01:12:31,320
+aqui
+
+1486
+01:12:31,320 --> 01:12:33,320
+quando se usam etiquetas
+
+1487
+01:12:33,320 --> 01:12:35,320
+chamam-se estes links
+
+1488
+01:12:35,320 --> 01:12:37,320
+trancos ou link trancos
+
+1489
+01:12:37,320 --> 01:12:44,950
+se
+
+1490
+01:12:44,950 --> 01:12:46,950
+os nossos suítes estiverem capacidade
+
+1491
+01:12:46,950 --> 01:12:48,950
+para fazer isto
+
+1492
+01:12:48,950 --> 01:12:50,950
+nós conseguimos
+
+1493
+01:12:50,950 --> 01:12:52,950
+transportar aqui dentro
+
+1494
+01:12:52,950 --> 01:12:54,950
+o tráfico
+
+1495
+01:12:54,950 --> 01:12:56,950
+das duas VLANs
+
+1496
+01:12:56,950 --> 01:12:58,950
+e sem este tráfico se misturar
+
+1497
+01:12:58,950 --> 01:13:00,950
+porque
+
+1498
+01:13:00,950 --> 01:13:02,950
+o tráfico vem dali e é etiquetado
+
+1499
+01:13:02,950 --> 01:13:04,950
+começando da VLAN 1
+
+1500
+01:13:04,950 --> 01:13:06,950
+e quando chegar ali este percebe
+
+1501
+01:13:06,950 --> 01:13:08,950
+com aquela etiqueta que é da VLAN 1
+
+1502
+01:13:08,950 --> 01:13:14,760
+então retira a etiqueta e via para ali
+
+1503
+01:13:14,760 --> 01:13:16,760
+ou seja, dois suítes
+
+1504
+01:13:16,760 --> 01:13:18,760
+podem trocar tráfico entre várias VLANs
+
+1505
+01:13:18,760 --> 01:13:20,760
+se configurarmos
+
+1506
+01:13:20,760 --> 01:13:22,760
+os links como trancos
+
+1507
+01:13:22,760 --> 01:13:24,760
+um tranque
+
+1508
+01:13:24,760 --> 01:13:26,760
+utiliza uma etiqueta
+
+1509
+01:13:26,760 --> 01:13:28,760
+para identificar
+
+1510
+01:13:28,760 --> 01:13:30,760
+a que VLAN
+
+1511
+01:13:30,760 --> 01:13:32,760
+é que o tráfico
+
+1512
+01:13:32,760 --> 01:13:38,860
+pertence
+
+1513
+01:13:38,860 --> 01:13:40,860
+ou seja, estivermos aqui um departamento
+
+1514
+01:13:40,860 --> 01:13:42,860
+de cor de laranja e um departamento de verde
+
+1515
+01:13:42,860 --> 01:13:44,860
+e ali mais utilizadores
+
+1516
+01:13:44,860 --> 01:13:46,860
+do departamento de verde
+
+1517
+01:13:46,860 --> 01:13:48,860
+e mais utilizadores do departamento de laranja
+
+1518
+01:13:48,860 --> 01:13:50,860
+podemos interligar estes dois suítes
+
+1519
+01:13:50,860 --> 01:13:52,860
+um link tranque
+
+1520
+01:13:52,860 --> 01:13:54,860
+e os pacotes cor de laranja
+
+1521
+01:13:54,860 --> 01:13:56,860
+circulam ali misturados com os pacotes verdes
+
+1522
+01:13:56,860 --> 01:13:58,860
+mas eles não se misturam
+
+1523
+01:13:58,860 --> 01:14:00,860
+porque
+
+1524
+01:14:00,860 --> 01:14:10,410
+levam uma etiqueta
+
+1525
+01:14:10,410 --> 01:14:12,410
+outras etiquetas
+
+1526
+01:14:12,410 --> 01:14:14,410
+têm que ser postas por um suíte
+
+1527
+01:14:14,410 --> 01:14:17,880
+e têm que ser interpretadas por outro
+
+1528
+01:14:17,880 --> 01:14:19,880
+felizmente existem normas
+
+1529
+01:14:19,880 --> 01:14:21,880
+se não
+
+1530
+01:14:21,880 --> 01:14:23,880
+um suíte de uma marca
+
+1531
+01:14:23,880 --> 01:14:29,430
+não funcionava com suítes de outra marca
+
+1532
+01:14:29,430 --> 01:14:31,430
+mas existe
+
+1533
+01:14:31,430 --> 01:14:33,430
+que é o 802.1
+
+1534
+01:14:33,430 --> 01:14:35,430
+que
+
+1535
+01:14:35,430 --> 01:14:37,430
+permite ir
+
+1536
+01:14:37,430 --> 01:14:39,430
+a uma trama
+
+1537
+01:14:39,430 --> 01:14:41,430
+esta trama é a internet normal como nós vimos
+
+1538
+01:14:41,430 --> 01:14:43,430
+existe a possibilidade
+
+1539
+01:14:43,430 --> 01:14:45,430
+de esticar a trama
+
+1540
+01:14:45,430 --> 01:14:47,430
+colocando aqui
+
+1541
+01:14:47,430 --> 01:14:49,430
+uma etiqueta
+
+1542
+01:14:51,430 --> 01:14:53,430
+ali um identificador do protocolo
+
+1543
+01:14:53,430 --> 01:14:55,430
+e ali mais uma etiqueta
+
+1544
+01:14:55,430 --> 01:14:57,430
+esta etiqueta
+
+1545
+01:14:57,430 --> 01:14:59,430
+leva um identificador da VLAN
+
+1546
+01:14:59,430 --> 01:15:01,430
+de 12 bits
+
+1547
+01:15:01,430 --> 01:15:03,430
+ou seja com 12 bits
+
+1548
+01:15:03,430 --> 01:15:05,430
+nós podemos ter
+
+1549
+01:15:05,430 --> 01:15:07,430
+2048 VLANs
+
+1550
+01:15:07,430 --> 01:15:09,430
+diferentes
+
+1551
+01:15:09,430 --> 01:15:11,430
+cada VLAN
+
+1552
+01:15:11,430 --> 01:15:13,430
+tem o seu identificador
+
+1553
+01:15:13,430 --> 01:15:15,430
+e portanto o travo que circulam estas tramas
+
+1554
+01:15:15,430 --> 01:15:17,430
+sabe-se de que VLAN
+
+1555
+01:15:17,430 --> 01:15:19,430
+é
+
+1556
+01:15:19,430 --> 01:15:21,430
+não tem isto chama-se uma trama
+
+1557
+01:15:21,430 --> 01:15:23,430
+802.1
+
+1558
+01:15:23,430 --> 01:15:25,430
+que
+
+1559
+01:15:25,430 --> 01:15:27,430
+e em princípio todos os equipamentos que suportam VLAN
+
+1560
+01:15:27,430 --> 01:15:29,430
+se permitirem
+
+1561
+01:15:29,430 --> 01:15:31,430
+etiquetagem suportam estas
+
+1562
+01:15:31,430 --> 01:15:33,430
+tramas
+
+1563
+01:15:33,430 --> 01:15:35,430
+nós podemos
+
+1564
+01:15:35,430 --> 01:15:37,430
+mandar por uma etiqueta
+
+1565
+01:15:37,430 --> 01:15:39,430
+e o suíte que estiver do outro lado
+
+1566
+01:15:39,430 --> 01:15:47,990
+vai perceber a etiqueta
+
+1567
+01:15:47,990 --> 01:15:51,780
+existe mais ali uns bits
+
+1568
+01:15:51,780 --> 01:15:53,780
+para além do fundamental
+
+1569
+01:15:53,780 --> 01:15:55,780
+é aquele VLAN ID que identifica
+
+1570
+01:15:55,780 --> 01:16:00,730
+a VLAN
+
+1571
+01:16:00,730 --> 01:16:02,730
+isto é um standard
+
+1572
+01:16:02,730 --> 01:16:04,730
+e portanto os suítes têm obrigação de perceber
+
+1573
+01:16:04,730 --> 01:16:06,730
+aqueles que
+
+1574
+01:16:06,730 --> 01:16:08,730
+querem usar VLANs
+
+1575
+01:16:08,730 --> 01:16:12,520
+aqueles que suportam VLANs
+
+1576
+01:16:12,520 --> 01:16:14,520
+permitem aquele
+
+1577
+01:16:14,520 --> 01:16:16,520
+esteve em aquele formato de etiquetagem
+
+1578
+01:16:16,520 --> 01:16:18,520
+sabe quando configuramos uma porta
+
+1579
+01:16:18,520 --> 01:16:20,520
+de um suíte destes
+
+1580
+01:16:20,520 --> 01:16:22,520
+temos que configurar a porta
+
+1581
+01:16:22,520 --> 01:16:24,520
+para trabalhar num modo de acesso
+
+1582
+01:16:24,520 --> 01:16:26,520
+ou seja
+
+1583
+01:16:26,520 --> 01:16:28,520
+usando frames ethernet normais
+
+1584
+01:16:28,520 --> 01:16:30,520
+e nesse caso podemos
+
+1585
+01:16:30,520 --> 01:16:32,520
+escolher qual é a VLAN
+
+1586
+01:16:32,520 --> 01:16:34,520
+que associamos a porta
+
+1587
+01:16:34,520 --> 01:16:36,520
+e
+
+1588
+01:16:36,520 --> 01:16:38,520
+a porta destas só pertence a uma VLAN
+
+1589
+01:16:38,520 --> 01:16:41,960
+então podemos configurar
+
+1590
+01:16:41,960 --> 01:16:43,960
+uma porta para trabalhar no modo
+
+1591
+01:16:43,960 --> 01:16:45,960
+de tranque e
+
+1592
+01:16:45,960 --> 01:16:47,960
+nessa porta
+
+1593
+01:16:47,960 --> 01:16:49,960
+vai circular o tráfego de múltiplas VLANs
+
+1594
+01:16:49,960 --> 01:16:51,960
+e etiquetado
+
+1595
+01:16:51,960 --> 01:16:53,960
+se houver capacidade para etiquetar
+
+1596
+01:16:53,960 --> 01:17:01,820
+as portas de acesso e de
+
+1597
+01:17:01,820 --> 01:17:03,820
+esportes não são etiquetadas
+
+1598
+01:17:03,820 --> 01:17:05,820
+portencem a uma VLAN
+
+1599
+01:17:05,820 --> 01:17:10,120
+as portas de tranque
+
+1600
+01:17:10,120 --> 01:17:12,120
+podem ser etiquetadas ou não
+
+1601
+01:17:12,120 --> 01:17:14,120
+se queremos não misturar o tráfego
+
+1602
+01:17:14,120 --> 01:17:16,120
+temos que as etiquetar
+
+1603
+01:17:16,120 --> 01:17:18,120
+não precisamos de etiquetar se sabemos
+
+1604
+01:17:18,120 --> 01:17:20,120
+que só vão ser usadas por uma VLAN
+
+1605
+01:17:20,120 --> 01:17:26,250
+se existe a capacidade
+
+1606
+01:17:26,250 --> 01:17:28,250
+de juntar
+
+1607
+01:17:28,250 --> 01:17:30,250
+tráfego de várias VLANs
+
+1608
+01:17:30,250 --> 01:17:32,250
+num único
+
+1609
+01:17:32,250 --> 01:17:34,250
+um único link
+
+1610
+01:17:36,250 --> 01:17:38,250
+esse link vai ser
+
+1611
+01:17:38,250 --> 01:17:40,250
+pode constituir um bottleneck
+
+1612
+01:17:40,250 --> 01:17:42,250
+ou seja
+
+1613
+01:17:42,250 --> 01:17:44,250
+um estreito, um estreito de ormus
+
+1614
+01:17:44,250 --> 01:17:46,250
+que agora aparece sempre na televisão
+
+1615
+01:17:46,250 --> 01:17:48,250
+por onde
+
+1616
+01:17:48,250 --> 01:17:50,250
+há pouca capacidade de
+
+1617
+01:17:50,250 --> 01:17:52,250
+transmitir
+
+1618
+01:17:52,250 --> 01:17:54,250
+se existe a capacidade de
+
+1619
+01:17:54,250 --> 01:17:56,250
+multiplexar tráfego
+
+1620
+01:17:56,250 --> 01:17:58,250
+numa ligação
+
+1621
+01:17:58,250 --> 01:18:00,250
+também existe a possibilidade de multiplexar
+
+1622
+01:18:00,250 --> 01:18:02,250
+tráfego
+
+1623
+01:18:02,250 --> 01:18:04,250
+um conjunto de links
+
+1624
+01:18:04,250 --> 01:18:06,250
+e temos normalmente a capacidade
+
+1625
+01:18:06,250 --> 01:18:08,250
+os links
+
+1626
+01:18:08,250 --> 01:18:10,250
+deste tipo, tem também a capacidade
+
+1627
+01:18:10,250 --> 01:18:12,250
+de fazer agregação de links
+
+1628
+01:18:12,250 --> 01:18:15,820
+para que é que se faz agregação de links
+
+1629
+01:18:15,820 --> 01:18:17,820
+para aumentar a capacidade
+
+1630
+01:18:17,820 --> 01:18:19,820
+se tivermos dois links agregados
+
+1631
+01:18:19,820 --> 01:18:21,820
+eles funcionam como um link
+
+1632
+01:18:21,820 --> 01:18:23,820
+único
+
+1633
+01:18:23,820 --> 01:18:25,820
+mas com mais capacidade de transmissão
+
+1634
+01:18:25,820 --> 01:18:27,820
+e portanto
+
+1635
+01:18:27,820 --> 01:18:29,820
+como queremos juntar
+
+1636
+01:18:29,820 --> 01:18:31,820
+VLANs num único link
+
+1637
+01:18:33,820 --> 01:18:35,820
+muitas vezes dá jeito de fazer esta agregação
+
+1638
+01:18:35,820 --> 01:18:46,070
+ou dos equipamentos
+
+1639
+01:18:46,070 --> 01:18:48,070
+tem que perceber
+
+1640
+01:18:48,070 --> 01:18:50,070
+que um conjunto de portas
+
+1641
+01:18:50,070 --> 01:18:52,070
+estão agrupadas
+
+1642
+01:18:52,070 --> 01:18:54,070
+e
+
+1643
+01:18:54,070 --> 01:18:56,070
+normalmente só temos que configurar
+
+1644
+01:18:56,070 --> 01:18:58,070
+isso, temos que configurar isso nos switches
+
+1645
+01:18:58,070 --> 01:19:00,070
+e os switches também podem
+
+1646
+01:19:00,070 --> 01:19:02,070
+conversar uns com os outros
+
+1647
+01:19:02,070 --> 01:19:04,070
+porque existe um protocolo
+
+1648
+01:19:04,070 --> 01:19:06,070
+de comunicação
+
+1649
+01:19:06,070 --> 01:19:08,070
+de os links
+
+1650
+01:19:08,070 --> 01:19:10,070
+podem usar
+
+1651
+01:19:10,070 --> 01:19:12,070
+para saberem que
+
+1652
+01:19:12,070 --> 01:19:16,440
+tem um link agregado
+
+1653
+01:19:16,440 --> 01:19:24,200
+quando queremos agregar
+
+1654
+01:19:24,200 --> 01:19:26,200
+dois links entre dois switches
+
+1655
+01:19:26,200 --> 01:19:28,200
+configuramos os switches
+
+1656
+01:19:28,200 --> 01:19:30,200
+com aquele agregado
+
+1657
+01:19:30,200 --> 01:19:32,200
+às vezes isso corresponde
+
+1658
+01:19:32,200 --> 01:19:34,200
+a ligar o protocolo
+
+1659
+01:19:34,200 --> 01:19:36,200
+LACAP
+
+1660
+01:19:36,200 --> 01:19:38,200
+e
+
+1661
+01:19:38,200 --> 01:19:40,200
+depois eles negoceiam
+
+1662
+01:19:40,200 --> 01:19:42,200
+a velocidade da agregação
+
+1663
+01:19:42,200 --> 01:19:44,200
+se tivermos dois links sem megabits
+
+1664
+01:19:44,200 --> 01:19:46,200
+o normal é ficarmos com 200 megabits
+
+1665
+01:19:46,200 --> 01:19:48,200
+por segundo
+
+1666
+01:19:48,200 --> 01:19:56,060
+com dois links agregados
+
+1667
+01:19:56,060 --> 01:19:58,060
+outra separação
+
+1668
+01:19:58,060 --> 01:20:00,060
+do tráfego nos links
+
+1669
+01:20:00,060 --> 01:20:02,060
+o switch trata por nós
+
+1670
+01:20:02,060 --> 01:20:04,060
+separar por endereço MAC
+
+1671
+01:20:04,060 --> 01:20:06,060
+por IP
+
+1672
+01:20:06,060 --> 01:20:08,060
+por número de porto
+
+1673
+01:20:08,060 --> 01:20:10,060
+ou por VLAN
+
+1674
+01:20:10,060 --> 01:20:12,060
+um problema quando se usam
+
+1675
+01:20:12,060 --> 01:20:14,060
+agregações
+
+1676
+01:20:14,060 --> 01:20:18,460
+e ledes imalhadas
+
+1677
+01:20:18,460 --> 01:20:20,460
+é que podemos passar a ter
+
+1678
+01:20:20,460 --> 01:20:22,460
+loops, ou seja
+
+1679
+01:20:22,460 --> 01:20:24,460
+caminhos redondantes
+
+1680
+01:20:24,460 --> 01:20:26,460
+sempre que temos
+
+1681
+01:20:26,460 --> 01:20:28,460
+uma agregação de dois links
+
+1682
+01:20:28,460 --> 01:20:30,460
+temos
+
+1683
+01:20:30,460 --> 01:20:32,460
+caminhos redondantes
+
+1684
+01:20:32,460 --> 01:20:34,460
+temos um loop
+
+1685
+01:20:34,460 --> 01:20:36,460
+os loops são
+
+1686
+01:20:36,460 --> 01:20:38,460
+potencialmente problemáticos
+
+1687
+01:20:38,460 --> 01:20:40,460
+porque
+
+1688
+01:20:40,460 --> 01:20:42,460
+se este equipamento enviar para aquele
+
+1689
+01:20:42,460 --> 01:20:44,460
+e para aquele
+
+1690
+01:20:44,460 --> 01:20:46,460
+e aquele decidir
+
+1691
+01:20:46,460 --> 01:20:48,460
+reenviar tudo que recebe por ali
+
+1692
+01:20:48,460 --> 01:20:50,460
+então temos
+
+1693
+01:20:50,460 --> 01:20:52,460
+esta receber a mesma coisa de dois sítios
+
+1694
+01:20:52,460 --> 01:20:54,460
+e se decidir desapetir
+
+1695
+01:20:54,460 --> 01:20:56,460
+essas coisas para um lado e para o outro
+
+1696
+01:20:56,460 --> 01:20:58,460
+temos os pacotes aqui a circular
+
+1697
+01:20:58,460 --> 01:21:00,460
+e andar à volta
+
+1698
+01:21:00,460 --> 01:21:02,460
+que nunca mais desaparecem
+
+1699
+01:21:04,460 --> 01:21:06,460
+isso ocupam banda, ocupam recursos
+
+1700
+01:21:06,460 --> 01:21:08,460
+e prejudicam a comunicação toda
+
+1701
+01:21:08,460 --> 01:21:12,280
+esse motivo
+
+1702
+01:21:12,280 --> 01:21:14,280
+só se pode fazer
+
+1703
+01:21:14,280 --> 01:21:16,280
+links
+
+1704
+01:21:16,280 --> 01:21:18,280
+em ethernet
+
+1705
+01:21:18,280 --> 01:21:20,280
+um link cuidado
+
+1706
+01:21:20,280 --> 01:21:22,280
+ou quando temos equipamentos
+
+1707
+01:21:22,280 --> 01:21:24,280
+que estão preparados para isto
+
+1708
+01:21:24,280 --> 01:21:26,280
+o problema que existe
+
+1709
+01:21:26,280 --> 01:21:28,280
+acontece sobretudo nos pacotes
+
+1710
+01:21:28,280 --> 01:21:30,280
+enviados para endereços
+
+1711
+01:21:30,280 --> 01:21:32,280
+de broadcast a internet
+
+1712
+01:21:32,280 --> 01:21:34,280
+por exemplo um pacote a ERP
+
+1713
+01:21:34,280 --> 01:21:36,280
+se um nó
+
+1714
+01:21:36,280 --> 01:21:38,280
+faz um pedido a ERP
+
+1715
+01:21:38,280 --> 01:21:40,280
+que é um pedido que é feito por broadcast
+
+1716
+01:21:40,280 --> 01:21:42,280
+envia ao seu pedido para ali
+
+1717
+01:21:42,280 --> 01:21:44,280
+o suíte de C repete
+
+1718
+01:21:44,280 --> 01:21:46,280
+para ali e para ali
+
+1719
+01:21:46,280 --> 01:21:48,280
+o suíte de B se vê que aquilo é um broadcast
+
+1720
+01:21:48,280 --> 01:21:50,280
+envia também para o A e o A
+
+1721
+01:21:50,280 --> 01:21:52,280
+envia também para o B
+
+1722
+01:21:52,280 --> 01:21:54,280
+e depois o B
+
+1723
+01:21:54,280 --> 01:21:56,280
+repete para o C e o A repete para o C
+
+1724
+01:21:56,280 --> 01:21:58,280
+e as coisas começam a andar aqui a circular
+
+1725
+01:21:58,280 --> 01:22:00,280
+e gera aquilo que se chama
+
+1726
+01:22:00,280 --> 01:22:02,280
+uma tempestade
+
+1727
+01:22:02,280 --> 01:22:04,280
+de difusão
+
+1728
+01:22:04,280 --> 01:22:16,100
+um broadcast storm
+
+1729
+01:22:16,100 --> 01:22:18,100
+sim
+
+1730
+01:22:18,100 --> 01:22:20,100
+eu não percebo muito bem
+
+1731
+01:22:20,100 --> 01:22:22,100
+especialmente no caso
+
+1732
+01:22:24,100 --> 01:22:26,100
+do exemplo que deu
+
+1733
+01:22:26,100 --> 01:22:28,100
+dos pedidos broadcast
+
+1734
+01:22:28,100 --> 01:22:30,100
+de que forma é que
+
+1735
+01:22:30,100 --> 01:22:32,100
+se não houvesse o loop
+
+1736
+01:22:32,100 --> 01:22:34,100
+não haveria esse problema
+
+1737
+01:22:34,100 --> 01:22:36,100
+dos pacotes a serem transmitidos
+
+1738
+01:22:36,100 --> 01:22:38,100
+para um período indefinido
+
+1739
+01:22:40,100 --> 01:22:42,100
+assim
+
+1740
+01:22:42,100 --> 01:22:44,100
+o suíte
+
+1741
+01:22:44,100 --> 01:22:46,100
+mesmo que seja um hub
+
+1742
+01:22:46,100 --> 01:22:48,100
+dos mais básicos que repete
+
+1743
+01:22:48,100 --> 01:22:50,100
+sempre tudo para tudo
+
+1744
+01:22:50,100 --> 01:22:52,100
+quando se diz repete tudo para tudo
+
+1745
+01:22:52,100 --> 01:22:54,100
+ele tem uma limitação
+
+1746
+01:22:54,100 --> 01:22:56,100
+é não a repete as coisas
+
+1747
+01:22:56,100 --> 01:22:58,100
+para quem envia as coisas
+
+1748
+01:22:58,100 --> 01:23:00,100
+ou seja
+
+1749
+01:23:00,100 --> 01:23:02,100
+o primeiro pacote que o nó envia para o C
+
+1750
+01:23:02,100 --> 01:23:04,100
+para o suíte de C
+
+1751
+01:23:04,100 --> 01:23:06,100
+volta para o nó 1
+
+1752
+01:23:06,100 --> 01:23:08,100
+ok ok
+
+1753
+01:23:08,100 --> 01:23:10,100
+e quando o C
+
+1754
+01:23:10,100 --> 01:23:14,020
+envia para o B
+
+1755
+01:23:14,020 --> 01:23:16,020
+quando o C envia para o B
+
+1756
+01:23:16,020 --> 01:23:18,020
+o B vai repetir isso para o A
+
+1757
+01:23:18,020 --> 01:23:20,020
+mas não envia para o C
+
+1758
+01:23:20,020 --> 01:23:22,020
+ok
+
+1759
+01:23:22,020 --> 01:23:24,020
+portanto
+
+1760
+01:23:24,020 --> 01:23:26,020
+o C pode vir a receber
+
+1761
+01:23:26,020 --> 01:23:28,020
+uma cópia daquilo que enviou
+
+1762
+01:23:28,020 --> 01:23:30,020
+quando essa cópia chegar ao A
+
+1763
+01:23:30,020 --> 01:23:32,020
+e o A decidir enviar para lá
+
+1764
+01:23:32,020 --> 01:23:34,020
+ou seja
+
+1765
+01:23:34,020 --> 01:23:36,020
+o B pode mandar ao C
+
+1766
+01:23:36,020 --> 01:23:38,020
+aquilo que o C mandou ao A
+
+1767
+01:23:38,020 --> 01:23:40,020
+e o A pode mandar ao C
+
+1768
+01:23:40,020 --> 01:23:42,020
+aquilo que o C mandou para o B
+
+1769
+01:23:42,020 --> 01:23:44,020
+mas
+
+1770
+01:23:44,020 --> 01:23:46,020
+repetições diretas para trás
+
+1771
+01:23:46,020 --> 01:23:48,020
+isso também não há
+
+1772
+01:23:48,020 --> 01:23:50,020
+de facto havia sempre repetições
+
+1773
+01:23:50,020 --> 01:23:52,020
+mas seria
+
+1774
+01:23:52,020 --> 01:23:54,020
+seria correto dizer que
+
+1775
+01:23:54,020 --> 01:23:56,020
+este problema
+
+1776
+01:23:56,020 --> 01:23:58,020
+da transmissão
+
+1777
+01:23:58,020 --> 01:24:00,020
+se deve porque não há
+
+1778
+01:24:00,020 --> 01:24:02,020
+de confirmar que os pacotes
+
+1779
+01:24:02,020 --> 01:24:04,020
+recebidos são iguais
+
+1780
+01:24:04,020 --> 01:24:06,020
+aos recebidos para outros suíte
+
+1781
+01:24:06,020 --> 01:24:08,020
+ou não fará grande sentido
+
+1782
+01:24:10,020 --> 01:24:12,020
+sim
+
+1783
+01:24:12,020 --> 01:24:14,020
+essa capacidade normalmente não existe
+
+1784
+01:24:14,020 --> 01:24:16,020
+porque
+
+1785
+01:24:16,020 --> 01:24:18,020
+não é normalizada na
+
+1786
+01:24:18,020 --> 01:24:20,020
+internet ou seja um suíte
+
+1787
+01:24:20,020 --> 01:24:22,020
+ou um equipamento do petidor
+
+1788
+01:24:22,020 --> 01:24:24,020
+quando transmite um pacote
+
+1789
+01:24:24,020 --> 01:24:26,020
+acha que está transmitido
+
+1790
+01:24:26,020 --> 01:24:28,020
+no guarda
+
+1791
+01:24:28,020 --> 01:24:30,020
+não pode saber se ele já passou por ali
+
+1792
+01:24:30,020 --> 01:24:32,020
+ou não
+
+1793
+01:24:32,020 --> 01:24:34,020
+isso podia eventualmente passar
+
+1794
+01:24:34,020 --> 01:24:36,020
+um pacote igual
+
+1795
+01:24:36,020 --> 01:24:38,020
+não existe um identificador de pacote
+
+1796
+01:24:38,020 --> 01:24:40,020
+para se saber
+
+1797
+01:24:40,020 --> 01:24:42,020
+se é o mesmo ou se é o outro
+
+1798
+01:24:42,020 --> 01:24:44,020
+e
+
+1799
+01:24:44,020 --> 01:24:46,020
+se pudéssemos implementar essa verificação
+
+1800
+01:24:46,020 --> 01:24:48,020
+tínhamos que guardar todos os pacotes que transmitíamos
+
+1801
+01:24:50,020 --> 01:24:52,020
+nem era prático
+
+1802
+01:24:52,020 --> 01:24:54,020
+nem tínhamos memória para isso
+
+1803
+01:24:54,020 --> 01:24:56,020
+ok, obrigado
+
+1804
+01:24:56,020 --> 01:25:02,790
+então
+
+1805
+01:25:02,790 --> 01:25:04,790
+estes problemas
+
+1806
+01:25:04,790 --> 01:25:06,790
+de broadcasts acontecem
+
+1807
+01:25:06,790 --> 01:25:12,310
+quando
+
+1808
+01:25:12,310 --> 01:25:14,310
+existem loops
+
+1809
+01:25:14,310 --> 01:25:16,310
+e
+
+1810
+01:25:16,310 --> 01:25:18,310
+quando não existe nenhuma protecção especial
+
+1811
+01:25:18,310 --> 01:25:20,310
+para isso
+
+1812
+01:25:20,310 --> 01:25:29,450
+nos casos de broadcast
+
+1813
+01:25:29,450 --> 01:25:31,450
+nos casos que não são de broadcast
+
+1814
+01:25:31,450 --> 01:25:35,340
+os suíte
+
+1815
+01:25:35,340 --> 01:25:37,340
+memorizam
+
+1816
+01:25:37,340 --> 01:25:39,340
+os endereços de origem
+
+1817
+01:25:39,340 --> 01:25:41,340
+os suíte têm sempre tendência
+
+1818
+01:25:41,340 --> 01:25:43,340
+a memorizar os endereços de origem
+
+1819
+01:25:43,340 --> 01:25:45,340
+dos pacotes
+
+1820
+01:25:45,340 --> 01:25:47,340
+para depois poderem fazer a comutação
+
+1821
+01:25:47,340 --> 01:25:49,340
+enviar só para as portas que me traçam
+
+1822
+01:25:51,340 --> 01:25:53,340
+por exemplo, num caso destes
+
+1823
+01:25:53,340 --> 01:25:55,340
+temos aqui nos suíte
+
+1824
+01:25:55,340 --> 01:25:57,340
+onde o equipamento tem um endereço
+
+1825
+01:25:57,340 --> 01:25:59,340
+MAC-E ou tem um endereço
+
+1826
+01:25:59,340 --> 01:26:01,340
+F
+
+1827
+01:26:01,340 --> 01:26:03,340
+quando este envia coisas
+
+1828
+01:26:03,340 --> 01:26:05,340
+para ali os endereços de origem
+
+1829
+01:26:05,340 --> 01:26:07,340
+do tráfego que vai por aqui
+
+1830
+01:26:07,340 --> 01:26:09,340
+o que leva
+
+1831
+01:26:09,340 --> 01:26:11,340
+nos seus endereços de origem
+
+1832
+01:26:11,340 --> 01:26:13,340
+os endereços é IF
+
+1833
+01:26:13,340 --> 01:26:15,340
+então
+
+1834
+01:26:15,340 --> 01:26:17,340
+este suíte vai memorizar
+
+1835
+01:26:17,340 --> 01:26:21,320
+que
+
+1836
+01:26:21,320 --> 01:26:23,320
+os equipamentos é IF
+
+1837
+01:26:23,320 --> 01:26:25,320
+estão aqui
+
+1838
+01:26:25,320 --> 01:26:27,320
+da mesma forma quando
+
+1839
+01:26:27,320 --> 01:26:29,320
+estes AIB transmitem alguma coisa
+
+1840
+01:26:29,320 --> 01:26:31,320
+para alguém
+
+1841
+01:26:31,320 --> 01:26:33,320
+os endereços de origem
+
+1842
+01:26:33,320 --> 01:26:35,320
+dessas tramas
+
+1843
+01:26:35,320 --> 01:26:37,320
+quando têm os endereços AIB
+
+1844
+01:26:37,320 --> 01:26:39,320
+vão memorizar
+
+1845
+01:26:39,320 --> 01:26:41,320
+que os AIB estão
+
+1846
+01:26:41,320 --> 01:26:45,780
+para este lado
+
+1847
+01:26:45,780 --> 01:26:47,780
+e se essa comunicação
+
+1848
+01:26:47,780 --> 01:26:49,780
+originada do AI do B
+
+1849
+01:26:49,780 --> 01:26:51,780
+chegar aqui
+
+1850
+01:26:51,780 --> 01:26:53,780
+vai por aqui
+
+1851
+01:26:53,780 --> 01:26:55,780
+nos endereços de origem
+
+1852
+01:26:55,780 --> 01:26:57,780
+continuar a vir o AIB
+
+1853
+01:26:57,780 --> 01:27:01,800
+e este vai memorizar
+
+1854
+01:27:01,800 --> 01:27:03,800
+que o AIB estão ali
+
+1855
+01:27:03,800 --> 01:27:05,800
+e quando os C e o D
+
+1856
+01:27:05,800 --> 01:27:11,350
+também comunicarem com este
+
+1857
+01:27:11,350 --> 01:27:13,350
+este também vai memorizar
+
+1858
+01:27:13,350 --> 01:27:15,350
+também se receber
+
+1859
+01:27:15,350 --> 01:27:17,350
+pacotes dos outros
+
+1860
+01:27:17,350 --> 01:27:19,350
+também vai memorizar que o seu D
+
+1861
+01:27:19,350 --> 01:27:21,350
+e o F estão para esta direção
+
+1862
+01:27:21,350 --> 01:27:23,350
+também é a única direção que tem
+
+1863
+01:27:23,350 --> 01:27:27,430
+se por acaso houver loops
+
+1864
+01:27:27,430 --> 01:27:31,700
+este
+
+1865
+01:27:31,700 --> 01:27:33,700
+este mecanismo de
+
+1866
+01:27:33,700 --> 01:27:35,700
+memorização e de encaminhamento
+
+1867
+01:27:35,700 --> 01:27:37,700
+dos pacotes fica logo baralhado
+
+1868
+01:27:37,700 --> 01:27:39,700
+porque se arranjarmos um caminho por aqui
+
+1869
+01:27:39,700 --> 01:27:43,180
+então agora
+
+1870
+01:27:43,180 --> 01:27:45,180
+este suíte
+
+1871
+01:27:45,180 --> 01:27:47,180
+vai começar a ver a chegar por esta porta
+
+1872
+01:27:47,180 --> 01:27:49,180
+para este lado
+
+1873
+01:27:49,180 --> 01:27:51,180
+pacotes que vêm do E
+
+1874
+01:27:51,180 --> 01:27:53,180
+do F
+
+1875
+01:27:53,180 --> 01:27:55,180
+e que vêm também por aqui
+
+1876
+01:27:55,180 --> 01:27:57,180
+que este caminho já existia
+
+1877
+01:27:57,180 --> 01:27:59,180
+portanto do C e do D
+
+1878
+01:27:59,180 --> 01:28:01,180
+também
+
+1879
+01:28:01,180 --> 01:28:03,180
+e do AI do B
+
+1880
+01:28:03,180 --> 01:28:05,180
+também se a comunicação por ali
+
+1881
+01:28:05,180 --> 01:28:07,180
+andar aqui a circular
+
+1882
+01:28:07,180 --> 01:28:09,180
+e circular até aqui
+
+1883
+01:28:09,180 --> 01:28:11,180
+este suíte também vai ver
+
+1884
+01:28:11,180 --> 01:28:13,180
+que o AIB estão para este lado
+
+1885
+01:28:13,180 --> 01:28:15,180
+e vai se baralhar quando receber um pacote
+
+1886
+01:28:15,180 --> 01:28:17,180
+o AI já não está aqui
+
+1887
+01:28:17,180 --> 01:28:19,180
+está ali
+
+1888
+01:28:19,180 --> 01:28:21,180
+então quando quiser enviar coisas para lá
+
+1889
+01:28:21,180 --> 01:28:23,180
+via por ali
+
+1890
+01:28:23,180 --> 01:28:25,180
+e isto baralha tudo e deixa de funcionar
+
+1891
+01:28:25,180 --> 01:28:28,900
+ou seja se
+
+1892
+01:28:28,900 --> 01:28:30,900
+queremos vários
+
+1893
+01:28:30,900 --> 01:28:34,220
+caminhos temos que ter muito cuidado
+
+1894
+01:28:34,220 --> 01:28:36,220
+temos que ter equipamentos
+
+1895
+01:28:36,220 --> 01:28:38,220
+que suportem isso
+
+1896
+01:28:38,220 --> 01:28:40,220
+porque equipamentos
+
+1897
+01:28:40,220 --> 01:28:42,220
+normais não podemos fazer
+
+1898
+01:28:42,220 --> 01:28:44,220
+essas brincadeiras
+
+1899
+01:28:44,220 --> 01:28:46,220
+quando temos
+
+1900
+01:28:46,220 --> 01:28:48,220
+mais do que um caminho entre dois suíte
+
+1901
+01:28:48,220 --> 01:28:50,220
+temos as tabelas de encaminhamento
+
+1902
+01:28:50,220 --> 01:28:52,220
+instáveis
+
+1903
+01:28:52,220 --> 01:28:54,220
+o A aparece de um lado
+
+1904
+01:28:54,220 --> 01:28:56,220
+e o A aparece do outro
+
+1905
+01:28:56,220 --> 01:28:58,220
+e vamos ter
+
+1906
+01:28:58,220 --> 01:29:01,910
+também as difusões
+
+1907
+01:29:01,910 --> 01:29:03,910
+ou seja os broadcasts
+
+1908
+01:29:03,910 --> 01:29:05,910
+a serem repetidos para todo lado
+
+1909
+01:29:05,910 --> 01:29:07,910
+e
+
+1910
+01:29:07,910 --> 01:29:09,910
+os suíte todos a repetirem
+
+1911
+01:29:09,910 --> 01:29:19,940
+os broadcasts uns dos outros
+
+1912
+01:29:19,940 --> 01:29:21,940
+se conseguirmos ter
+
+1913
+01:29:21,940 --> 01:29:23,940
+loops
+
+1914
+01:29:23,940 --> 01:29:25,940
+ou ter alguma piada
+
+1915
+01:29:25,940 --> 01:29:27,940
+porque
+
+1916
+01:29:27,940 --> 01:29:29,940
+loops radundantes
+
+1917
+01:29:29,940 --> 01:29:31,940
+ou seja ligações radundantes
+
+1918
+01:29:31,940 --> 01:29:33,940
+se funcionarem bem
+
+1919
+01:29:33,940 --> 01:29:35,940
+podemos permitir radundância
+
+1920
+01:29:35,940 --> 01:29:37,940
+ou seja permitir
+
+1921
+01:29:37,940 --> 01:29:39,940
+que uma coisa falhe
+
+1922
+01:29:39,940 --> 01:29:41,940
+e as coisas continuarem a funcionar
+
+1923
+01:29:41,940 --> 01:29:43,940
+para o outro lado
+
+1924
+01:29:43,940 --> 01:29:45,940
+e
+
+1925
+01:29:45,940 --> 01:29:47,940
+também já vemos que outra vantagem de ter
+
+1926
+01:29:47,940 --> 01:29:52,150
+duas ligações
+
+1927
+01:29:52,150 --> 01:29:54,150
+entre dois suíte
+
+1928
+01:29:54,150 --> 01:29:56,150
+os links
+
+1929
+01:29:56,150 --> 01:29:59,460
+e o equipamento que funciona
+
+1930
+01:29:59,460 --> 01:30:01,460
+com isso
+
+1931
+01:30:01,460 --> 01:30:03,460
+não sei que funciona dessa maneira
+
+1932
+01:30:03,460 --> 01:30:05,460
+para termos
+
+1933
+01:30:05,460 --> 01:30:07,460
+links radundantes
+
+1934
+01:30:07,460 --> 01:30:09,460
+ou seja loops
+
+1935
+01:30:09,460 --> 01:30:11,460
+em ethernet
+
+1936
+01:30:11,460 --> 01:30:13,460
+temos que arranjar suítes
+
+1937
+01:30:13,460 --> 01:30:15,460
+que utilizem um protocolo
+
+1938
+01:30:15,460 --> 01:30:17,460
+que é o spanning tree
+
+1939
+01:30:17,460 --> 01:30:19,460
+que permite escolher caminhos
+
+1940
+01:30:19,460 --> 01:30:21,460
+ou seja quando tem caminhos radundantes
+
+1941
+01:30:21,460 --> 01:30:23,460
+ele vai escolher que quais são os caminhos que usa
+
+1942
+01:30:23,460 --> 01:30:25,460
+o caminho e deixa os outros
+
+1943
+01:30:25,460 --> 01:30:27,460
+de backup
+
+1944
+01:30:27,460 --> 01:30:29,460
+para quando for preciso
+
+1945
+01:30:29,460 --> 01:30:31,460
+para hoje não vamos ver isso
+
+1946
+01:30:31,460 --> 01:30:33,460
+pois quando falarmos de redes mesh
+
+1947
+01:30:33,460 --> 01:30:35,460
+damos uma vista de olhos aos protocolos
+
+1948
+01:30:35,460 --> 01:30:37,460
+deste género que tentam encontrar os caminhos
+
+1949
+01:30:37,460 --> 01:30:39,460
+vamos ver também os protocolos
+
+1950
+01:30:39,460 --> 01:30:41,460
+de encaminhamento dinâmico
+
+1951
+01:30:41,460 --> 01:30:43,460
+que é mais ou menos a mesma coisa
+
+1952
+01:30:43,460 --> 01:30:45,460
+e que escolhem o caminho
+
+1953
+01:30:45,460 --> 01:30:47,460
+ideal
+
+1954
+01:30:47,460 --> 01:30:51,420
+quando existem muitos caminhos possíveis
+
+1955
+01:30:51,420 --> 01:30:53,420
+para hoje vamos chegar por aqui
+
+1956
+01:30:53,420 --> 01:30:55,420
+no sábado vamos experimentar
+
+1957
+01:30:55,420 --> 01:30:57,420
+implementar uma rede privada
+
+1958
+01:30:57,420 --> 01:30:59,420
+eu vou vos dar as redes já mais ou menos
+
+1959
+01:30:59,420 --> 01:31:01,420
+implementada e vamos experimentar
+
+1960
+01:31:01,420 --> 01:31:03,420
+a rede privada
+
+1961
+01:31:03,420 --> 01:31:05,420
+e vamos experimentar o mecanismo
+
+1962
+01:31:05,420 --> 01:31:07,420
+de port forward
+
+1963
+01:31:07,420 --> 01:31:09,420
+para permitir as ligações
+
+1964
+01:31:09,420 --> 01:31:11,420
+de fora para dentro
+
+1965
+01:31:13,420 --> 01:31:15,420
+e depois na próxima aula
+
+1966
+01:31:15,420 --> 01:31:19,530
+falamos de mesh
+
+1967
+01:31:19,530 --> 01:31:21,530
+também vai ser no catará
+
+1968
+01:31:21,530 --> 01:31:23,530
+no sábado
+
+1969
+01:31:23,530 --> 01:31:25,530
+vai ser no catará
+
+1970
+01:31:25,530 --> 01:31:30,120
+quem quiser usar o seu portátil
+
+1971
+01:31:30,120 --> 01:31:32,120
+o melhor é levar o catará instalado
+
+1972
+01:31:34,120 --> 01:31:38,460
+mais alguma questão
+
+1973
+01:31:42,760 --> 01:31:44,760
+sábado é cedo
+
+1974
+01:31:46,760 --> 01:31:48,760
+os exercícios que nós vamos fazer no sábado
+
+1975
+01:31:48,760 --> 01:31:50,760
+são com relação ao IPv6
+
+1976
+01:31:50,760 --> 01:31:52,760
+não
+
+1977
+01:31:52,760 --> 01:31:54,760
+vamos experimentar redes privadas
+
+1978
+01:31:54,760 --> 01:31:56,760
+e portanto IPv4
+
+1979
+01:31:56,760 --> 01:31:58,760
+com redes privadas
+
+1980
+01:31:58,760 --> 01:32:00,760
+depois
+
+1981
+01:32:00,760 --> 01:32:02,760
+na semana seguinte
+
+1982
+01:32:02,760 --> 01:32:04,760
+faremos
+
+1983
+01:32:04,760 --> 01:32:06,760
+qualquer coisa com IPv6
+
+1984
+01:32:06,760 --> 01:32:08,760
+e se calhar
+
+1985
+01:32:08,760 --> 01:32:10,760
+uma mesh com IPv6
+
+1986
+01:32:10,760 --> 01:32:12,760
+para vermos logo duas coisas
+
+1987
+01:32:12,760 --> 01:32:14,760
+de uma vez
+
+1988
+01:32:14,760 --> 01:32:16,760
+e deixem uns exercicios
+
+1989
+01:32:16,760 --> 01:32:18,760
+no módulo sobre
+
+1990
+01:32:18,760 --> 01:32:20,760
+internet
+
+1991
+01:32:20,760 --> 01:32:22,760
+é uma coisa muito levezinha
+
+1992
+01:32:22,760 --> 01:32:24,760
+não se esqueçam de
+
+1993
+01:32:24,760 --> 01:32:26,760
+por lá a checkbox
+
+1994
+01:32:26,760 --> 01:32:30,040
+para ver se
+
+1995
+01:32:32,040 --> 01:32:34,040
+se ficou alguma coisa
+
+1996
+01:32:34,040 --> 01:32:39,300
+do que eu falei hoje
+
+1997
+01:32:39,300 --> 01:32:41,300
+tá bem?
+
+1998
+01:32:41,300 --> 01:32:43,300
+até sábado então
+
+1999
+01:32:43,300 --> 01:32:45,300
+até sábado
+
