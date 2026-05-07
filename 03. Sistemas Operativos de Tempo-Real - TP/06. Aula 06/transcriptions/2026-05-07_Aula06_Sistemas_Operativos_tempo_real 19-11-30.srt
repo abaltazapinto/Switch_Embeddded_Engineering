@@ -1,0 +1,10328 @@
+1
+00:00:00,000 --> 00:00:07,000
+uma hora, primeira hora, para vermos aqui uns detalhes sobre o que vamos abordar hoje,
+
+2
+00:00:07,000 --> 00:00:15,000
+uma vez que eu vou disponibilizar um conjunto de exemplos que vocês podem experimentar.
+
+3
+00:00:15,000 --> 00:00:24,000
+Portanto, essa hora será para vermos alguma coisa ou salvar alguma coisa que não esteja a funcionar.
+
+4
+00:00:24,000 --> 00:00:28,000
+Em princípio, está tudo a funcionar, foi tudo estado.
+
+5
+00:00:28,000 --> 00:00:35,000
+Depois, a segunda hora, será para fazer o exercício individual.
+
+6
+00:00:35,000 --> 00:00:40,000
+O exercício individual é em papel e sem consulta.
+
+7
+00:00:40,000 --> 00:00:49,000
+Portanto, e os exercícios são idênticos àqueles que fizemos na última aula.
+
+8
+00:00:49,000 --> 00:00:59,000
+Contudo, deixe-me o que vai chamar-vos a atenção, mas até hoje eu não recebi nenhuma dúvida.
+
+9
+00:00:59,000 --> 00:01:03,000
+E, em si, este lá um ou outro está-se certo que não é escalonado.
+
+10
+00:01:03,000 --> 00:01:12,000
+Portanto, já foi feito com alguma intenção, um sentido de ver se havia dúvidas em relação a isso.
+
+11
+00:01:13,000 --> 00:01:25,000
+Com vos, como não é comigo, é só para vos alertar em relação a estas questões.
+
+12
+00:01:25,000 --> 00:01:30,000
+Ora bem, vamos esperar um pouquinho mais.
+
+13
+00:01:30,000 --> 00:01:37,000
+Há 16 alunos.
+
+14
+00:01:37,000 --> 00:01:45,000
+Vamos acordar um pouquinho mais para começarmos com a aula de hoje.
+
+15
+00:01:45,000 --> 00:01:50,000
+A aula de hoje é a semelhança da aula anterior, um bocado de extensa.
+
+16
+00:01:50,000 --> 00:02:01,000
+Embora aqui, a ideia é vocês ficarem a perceber alguns dos mecanismos que o kernel tem e que são usados.
+
+17
+00:02:01,000 --> 00:02:06,000
+Vamos, por exemplo, ver aqui, eu acho que não sei se é nesta aula, se é na próxima,
+
+18
+00:02:06,000 --> 00:02:15,000
+um mecanismo em que, por exemplo, é usado pelo zéfar para fazê-los pelo namento.
+
+19
+00:02:16,000 --> 00:02:24,410
+Portanto, e depois os outros, a maior parte, usa abordagens mais parecidas com o Linux.
+
+20
+00:02:24,410 --> 00:02:32,680
+Ora, o Gabriel.
+
+21
+00:02:32,680 --> 00:02:35,680
+Ô, Gabriel, vocês quando quiserem falar, falem mesmo.
+
+22
+00:02:35,680 --> 00:02:42,680
+Não há problema nenhum em interromper, porque eu às vezes não olho aqui para o monitor.
+
+23
+00:02:42,680 --> 00:02:46,680
+Agora estou a olhar, porque eu ainda não comecei, mas quando eu comecei,
+
+24
+00:02:46,680 --> 00:02:49,680
+eu vou olhar aqui para o meu monitor e não para o computador.
+
+25
+00:02:49,680 --> 00:02:51,680
+Ok, prosto.
+
+26
+00:02:51,680 --> 00:02:53,680
+Peço desculpa para atrapalhar.
+
+27
+00:02:53,680 --> 00:02:58,680
+A questão é que, neste sábado, eu não vou estar disponível na aula prática.
+
+28
+00:02:58,680 --> 00:03:02,680
+Queria perguntar se é possível fazer atividade na próxima aula,
+
+29
+00:03:02,680 --> 00:03:04,680
+ou se não existe essa possibilidade?
+
+30
+00:03:04,680 --> 00:03:07,680
+Na próxima, vai ser difícil.
+
+31
+00:03:07,680 --> 00:03:10,680
+Provavelmente se teremos de ver lá mais para a frente.
+
+32
+00:03:10,680 --> 00:03:18,680
+Mas na outra, não, porque as outras vão ser um bocado mais intensas em termos de trabalho.
+
+33
+00:03:18,680 --> 00:03:24,680
+Portanto, testarmos, vermos, e provavelmente nas outras,
+
+34
+00:03:24,680 --> 00:03:31,680
+é suposto começarem a fazer alguma codificação durante a aula,
+
+35
+00:03:31,680 --> 00:03:36,680
+ou fora das aulas, e usarmos as duas horas para tirar dúvidas.
+
+36
+00:03:36,680 --> 00:03:40,680
+Aí vai ser um pouco difícil, mas lá para a frente talvez.
+
+37
+00:03:40,680 --> 00:03:46,680
+Eu não sei como são as regras aqui na Porto Gradio da Santa.
+
+38
+00:03:46,680 --> 00:03:50,680
+Tenho que falar com Miguel Pinho.
+
+39
+00:03:50,680 --> 00:03:52,680
+Em princípio, eu não vejo problema.
+
+40
+00:03:52,680 --> 00:03:55,680
+Obrigado. É porque eu estou em viagem agora e, a princípio,
+
+41
+00:03:55,680 --> 00:03:58,680
+esse sábado realmente não consigo estar presente na aula.
+
+42
+00:03:58,680 --> 00:04:00,680
+Tudo bem, tudo bem.
+
+43
+00:04:00,680 --> 00:04:03,680
+Em princípio, não há situação, como quer dizer.
+
+44
+00:04:03,680 --> 00:04:06,680
+Sim, mas esta é a primeira edição.
+
+45
+00:04:06,680 --> 00:04:08,680
+Da minha parte não haverá.
+
+46
+00:04:08,680 --> 00:04:16,680
+Não sei se haverá, mas em princípio não deve haver problema algum em relação a isso.
+
+47
+00:04:16,680 --> 00:04:18,680
+Tem um dia de pressão. Muito obrigado.
+
+48
+00:04:18,680 --> 00:04:22,730
+Tá bem, nada.
+
+49
+00:04:22,730 --> 00:04:26,730
+Ora bem, já passaram os 15 minutos da ordem,
+
+50
+00:04:26,730 --> 00:04:30,730
+vamos então começar com falar sobre os módulos.
+
+51
+00:04:30,730 --> 00:04:36,730
+Ainda e aqui os módulos não é propriamente os módulos que são relevantes.
+
+52
+00:04:36,730 --> 00:04:45,730
+Aliás, eu costumo apresentar os módulos para depois os alunos começarem a entender
+
+53
+00:04:45,730 --> 00:04:51,730
+as estruturas que o CARNEL tem para a programação.
+
+54
+00:04:51,730 --> 00:04:54,730
+Portanto, é mais por aí.
+
+55
+00:04:54,730 --> 00:04:57,730
+Não é tanto os módulos em si que são relevantes,
+
+56
+00:04:57,730 --> 00:05:02,730
+é mais aquilo que vamos abordar aqui.
+
+57
+00:05:02,730 --> 00:05:11,970
+Ora bem, estão a ver a minha... o meu ecrá, certo?
+
+58
+00:05:11,970 --> 00:05:13,970
+Sim.
+
+59
+00:05:13,970 --> 00:05:15,970
+Sim, sim, sim. Prato.
+
+60
+00:05:15,970 --> 00:05:21,050
+Ora bem, vamos então. Prato.
+
+61
+00:05:21,050 --> 00:05:28,050
+Nós já referimos, na aula, o Linux é monolítico.
+
+62
+00:05:28,050 --> 00:05:32,050
+Portanto, é compilado e, a partir do momento que é compilado,
+
+63
+00:05:32,050 --> 00:05:35,050
+portanto, todo o código é conhecido.
+
+64
+00:05:35,050 --> 00:05:41,050
+Portanto, eu, de uma função, consigo chamar outra função, coisa assim do agente.
+
+65
+00:05:41,050 --> 00:05:49,050
+Portanto, é tudo compilado, todos os símbolos são conhecidos.
+
+66
+00:05:49,050 --> 00:06:00,050
+Ora, pronto tudo, o Linux também tem uns mecanismos que permitem
+
+67
+00:06:00,050 --> 00:06:08,050
+estender o CARNEL sem a necessidade de recompilar.
+
+68
+00:06:08,050 --> 00:06:14,050
+Portanto, que é, através dos módulos, nós conseguimos inserir
+
+69
+00:06:14,050 --> 00:06:19,050
+e remover os módulos do CARNEL, do Linux.
+
+70
+00:06:19,050 --> 00:06:25,050
+Isto é, inserir funcionalidades no Linux
+
+71
+00:06:25,050 --> 00:06:32,050
+em tempo de execução sem necessidade de reiniciar,
+
+72
+00:06:32,050 --> 00:06:38,050
+sequer o Linux ou sem necessidade de recompilar o Linux.
+
+73
+00:06:38,050 --> 00:06:42,050
+Portanto, obviamente que o que nós temos aqui
+
+74
+00:06:42,050 --> 00:06:46,050
+é esse código escrito, digamos, em user space.
+
+75
+00:06:46,050 --> 00:06:51,050
+Estamos, compilamos esse código, geramos um binário
+
+76
+00:06:51,050 --> 00:06:56,050
+e vamos inserir esse binário dentro do CARNEL, do Linux,
+
+77
+00:06:56,050 --> 00:07:04,050
+e obviamente, a partir daí, há de haver alguma forma de interação com esse código.
+
+78
+00:07:04,050 --> 00:07:10,050
+Ora, um módulo, eu penso que vocês abordaram isto
+
+79
+00:07:10,050 --> 00:07:14,050
+quando falaram o Nurchard Device Drivers.
+
+80
+00:07:14,050 --> 00:07:20,050
+Portanto, o módulo é o princípio básico de um Device Driver.
+
+81
+00:07:20,050 --> 00:07:28,050
+Não serve só para implementar Device Drivers, mas serve para outras coisas também.
+
+82
+00:07:28,050 --> 00:07:34,050
+Por exemplo, aqui há uns anos atrás, um investigador japonês
+
+83
+00:07:34,050 --> 00:07:42,050
+de nome Ximpei Kato, implementou um algoritmo de esclonamento usando módulos.
+
+84
+00:07:42,050 --> 00:07:50,050
+Portanto, as tarefas tinham que usar as funcionalidades disponibilizadas pelos módulos
+
+85
+00:07:50,050 --> 00:07:57,050
+e ele conseguiu implementar alguns algoritmos de esclonamento para sistemas multiprocedores,
+
+86
+00:07:57,050 --> 00:08:02,050
+embora sejam muito usados no contexto dos Device Drivers.
+
+87
+00:08:02,050 --> 00:08:10,050
+Portanto, típicamente, temos uma função de inicialização e temos uma função de exit.
+
+88
+00:08:10,050 --> 00:08:16,050
+Ora, depois vocês têm aqui as explicações de cada um destes campos.
+
+89
+00:08:16,050 --> 00:08:26,050
+Só aqui, dois a partes, este underscore, underscore init, e este underscore, underscore exit
+
+90
+00:08:26,050 --> 00:08:38,050
+não tem qualquer propósito no contexto dos módulos, que são inseridos e que são removidos.
+
+91
+00:08:38,050 --> 00:08:45,050
+Eles são relevantes quando o módulo é compilado juntamente com o kernel.
+
+92
+00:08:45,050 --> 00:08:50,050
+Estas macros têm interesse.
+
+93
+00:08:50,050 --> 00:08:54,050
+Fora disso, não tem interesse.
+
+94
+00:08:54,050 --> 00:09:04,050
+Porque quando nós temos aquela macro underscore underscore init no nome, na assinatura de uma função,
+
+95
+00:09:04,050 --> 00:09:15,050
+significa que este código vai ser compilado e vai ser colocado na seção de inicialização do kernel.
+
+96
+00:09:15,050 --> 00:09:30,050
+E que depois, assim que o kernel arranca, essa memória é libertada porque não só executa uma vez no instante da inicialização.
+
+97
+00:09:30,050 --> 00:09:40,050
+O underscore underscore exit serve para se colocar no final na seção de exit.
+
+98
+00:09:40,050 --> 00:09:49,050
+E, no caso dos módulos, nem sequer é lá colocado, porque quando o código termina, aquelas funcionalidades deixam de ser relevantes,
+
+99
+00:09:49,050 --> 00:09:57,050
+porque não se pode executar o código do módulo quando o kernel já terminou.
+
+100
+00:09:57,050 --> 00:10:00,050
+Portanto, e o propose trace.
+
+101
+00:10:00,050 --> 00:10:09,050
+Mais uma vez, depois vocês quiserem aprender um pouquinho mais, têm aqui a explicação de cada uma dessas macros.
+
+102
+00:10:09,050 --> 00:10:23,460
+Ora bem, outra coisa que também é, frequente usarmos na programação de módulos e, André, eu ouvi várias vezes, não sei se quer...
+
+103
+00:10:23,460 --> 00:10:27,820
+Como?
+
+104
+00:10:27,820 --> 00:10:33,820
+Eu ouvi um ruído a partir da tua parte, não sei se era para interromper-me, se era...
+
+105
+00:10:33,820 --> 00:10:35,820
+Não, peço de escolha.
+
+106
+00:10:35,820 --> 00:10:37,820
+Deve ser aqui os colegas.
+
+107
+00:10:37,820 --> 00:10:40,820
+Ah, pronto, tudo bem, tudo bem.
+
+108
+00:10:40,820 --> 00:10:42,820
+Era que, pronto.
+
+109
+00:10:42,820 --> 00:10:46,820
+Eu não tinha tido que vocês quisessem intervir, era para falarem, portanto, foi...
+
+110
+00:10:46,820 --> 00:10:57,820
+Ora bem, uma outra funcionalidade que é muito usada, quer que nos envolvimento do kernel, quer que nos envolvimento de módulos,
+
+111
+00:10:57,820 --> 00:11:12,020
+quando precisamos de colocar mensagens na consola, é usar os sprint capas.
+
+112
+00:11:12,020 --> 00:11:17,020
+Os sprint capas funcionam, mais ou menos, como os sprint f's em C.
+
+113
+00:11:17,020 --> 00:11:27,020
+Portanto, permitem descrever na consola e nós conseguimos, quando arrancamos, dependendo do run level,
+
+114
+00:11:27,020 --> 00:11:33,020
+ou quando estamos no boto do sistema que ainda não há interface gráfica, só há consola,
+
+115
+00:11:33,020 --> 00:11:43,020
+conseguimos ver essas mensagens, ou então, acedendo aí a sistema de login, usando o comando d-messages,
+
+116
+00:11:43,020 --> 00:11:50,020
+conseguimos ver as mensagens enviadas aos cretas com o sprint capa.
+
+117
+00:11:50,020 --> 00:11:58,020
+Ao contrário do que acontece no sprint f, aqui existem níveis de criticalidade, portanto,
+
+118
+00:11:58,020 --> 00:12:11,020
+em que a mensagem, digamos, pode ser imediatamente visível, ou não, portanto, tem, aqui existe aqui algumas diferenças em relação a isto.
+
+119
+00:12:11,020 --> 00:12:19,020
+Estas mensagens são implementadas, típicamente, num ring buffer.
+
+120
+00:12:19,020 --> 00:12:29,020
+Um ring buffer, nós vamos ver hoje um exemplo e depois vamos implementar, ou eu vou gostar, uma implementação de um ring buffer.
+
+121
+00:12:29,020 --> 00:12:35,680
+Algum de vocês sabe o que é que é um ring buffer? Um buffer circular?
+
+122
+00:12:35,680 --> 00:12:38,120
+Um pouco.
+
+123
+00:12:38,120 --> 00:12:41,460
+Mas o que é que é um pouco?
+
+124
+00:12:41,460 --> 00:12:51,460
+Eu vi a discussão sobre o ring buffer e, provavelmente, eu vou usar na minha trabalho.
+
+125
+00:12:51,460 --> 00:13:02,840
+Por exemplo, esta é a barra que usa numa informação circular, é um loop.
+
+126
+00:13:02,840 --> 00:13:03,840
+Um pouco.
+
+127
+00:13:03,840 --> 00:13:07,840
+Para a mesa de esquios, também.
+
+128
+00:13:07,840 --> 00:13:19,840
+Mesa de esquios, pode ser, portanto, um buffer circular é um buffer que tenha um tamanho fixo.
+
+129
+00:13:20,840 --> 00:13:27,840
+Em termos de modo de operação, é como se não tivesse um tamanho definido.
+
+130
+00:13:27,840 --> 00:13:35,840
+Isto é, portanto, ele tem qualquer buffer, como qualquer arreio, tem que ter um tamanho definido.
+
+131
+00:13:35,840 --> 00:13:45,840
+Não há arreios sem tamanho, portanto, se pode haver, eu criar um arreio que depois vai aumentando, mas obviamente, tem um tamanho.
+
+132
+00:13:45,840 --> 00:13:51,840
+E a ideia é simular algo que é circular.
+
+133
+00:13:51,840 --> 00:14:00,840
+Isto é, quando o buffer está cheio, ele começa a preencher as posições que já estavam preenchidas.
+
+134
+00:14:00,840 --> 00:14:12,840
+E depois usa dois indexes, um para frente e outro para trás, que é para quando retirar da frente, quando inserir, inserir atrás.
+
+135
+00:14:12,840 --> 00:14:21,840
+E os índices vão, digamos, evoluindo e o buffer, é como se o buffer não tivesse fim.
+
+136
+00:14:21,840 --> 00:14:33,840
+Obviamente que só dá para guardar, usando esta abordagem de reescrever os mais antigos, só dá para guardar o zén, o número de elementos do buffer,
+
+137
+00:14:33,840 --> 00:14:46,840
+os n últimos elementos, ou é muito frequente usar isso nos eventos, só se consegue guardar os n últimos eventos.
+
+138
+00:14:46,840 --> 00:14:56,840
+Embora, dependendo da forma de implementação, pode ser n-1 ou pode ser n, mas isso já tem a ver com o fórmulo que foi implementado.
+
+139
+00:14:56,840 --> 00:15:04,840
+Ora bem, outra coisa que nós quando estamos a desenvolver para o kernel também é fazermos funções.
+
+140
+00:15:04,840 --> 00:15:15,840
+E as funções tipicamente retornam valores. Ora, no caso do Linux, tipicamente as funções retornam o inteiro.
+
+141
+00:15:15,840 --> 00:15:23,840
+E a semântica é a seguinte, zero para sucesso, valor negativo para insuscesso.
+
+142
+00:15:23,840 --> 00:15:32,840
+Valor positivo, quando a função, quando o retorno tem alguma semântica, isto é, número de bytes efetivamente lidos,
+
+143
+00:15:32,840 --> 00:15:40,840
+no caso, por exemplo, do read, número de bytes efetivamente escritos, no caso do write, e coisas assim de gênero.
+
+144
+00:15:40,840 --> 00:15:55,840
+No caso, não tem nenhuma semântica, zero para sucesso, número negativo para insuscesso e positivo, quando tem alguma semântica.
+
+145
+00:15:55,840 --> 00:16:05,840
+Ora, para compilar os módulos, portanto, é necessário nós acedermos ao código do kernel,
+
+146
+00:16:05,840 --> 00:16:17,840
+portanto, para, porque se vamos usar código do kernel para desenvolver módulos, obviamente que temos que compilar,
+
+147
+00:16:17,840 --> 00:16:29,840
+tendem atenção a esse código, nomeadamente os header files, para saber se as funções que estamos a invocar no nosso código existem ou não.
+
+148
+00:16:29,840 --> 00:16:38,840
+Quando compilamos um módulo, e se tudo correr bem, pois vocês têm vários exemplos em que podem experimentar,
+
+149
+00:16:38,840 --> 00:16:46,840
+eles geram fecheiro objeto com a extensão de ponto capital de kernel object.
+
+150
+00:16:46,840 --> 00:16:58,840
+Portanto, é um módulo que tem, basicamente, ou tem no mínimo duas funções, a função de inicialização e a função de término,
+
+151
+00:16:58,840 --> 00:17:05,840
+e depois, obviamente, pode ter mais funções, mas essas duas funções têm obrigatório.
+
+152
+00:17:05,840 --> 00:17:16,840
+Ora, está aqui a explicar o conteúdo da makefile, se vocês quiserem saber mais detalhes sobre isto, tem aqui.
+
+153
+00:17:16,840 --> 00:17:26,840
+Ora, para inserirmos os módulos, usamos o comando em semodo e para remover o rm.
+
+154
+00:17:26,840 --> 00:17:41,840
+Para inserirmos o comando, temos que, usando o comando neste formato que vocês veem aqui, temos que estar com a consola posicionados dentro do diretório,
+
+155
+00:17:41,840 --> 00:17:53,840
+onde compilamos o nosso módulo e fazemos em semodo, o nome do kernel object.
+
+156
+00:17:53,840 --> 00:18:01,840
+Ora, e quando fazemos, ele vai executar a função que está definida para inicialização.
+
+157
+00:18:01,840 --> 00:18:07,840
+Portanto, quando inserimos o módulo, ele executa esta função.
+
+158
+00:18:07,840 --> 00:18:18,840
+Quando removemos o módulo, aí o módulo, a partir do momento que o inserimos, está, digamos, na lista dos módulos, etc., o sistema já o conhece,
+
+159
+00:18:18,840 --> 00:18:30,840
+aí, para o remover, basta só executar o comando rm.mod e indicar o nome do módulo.
+
+160
+00:18:30,840 --> 00:18:46,840
+Portanto, vocês conseguem ver os módulos que estão no sistema através do comando ls.mode, ou então através do casaruncat, ao diretório proc, ao fecheiro, ao módulos,
+
+161
+00:18:46,840 --> 00:19:00,840
+portanto, para, e ele lista isso, existem outras formas de ver os módulos. Portanto, existem várias formas de ver que módulos é que nós temos no sistema.
+
+162
+00:19:00,840 --> 00:19:14,840
+Pois vocês tenham-se exemplos? Sim. Mas, então, eu não sei se percebe muito bem esta parte. Quando nós a fazer o módulo nos diretórios do cat, por exemplo,
+
+163
+00:19:14,840 --> 00:19:20,840
+é sempre criado uma espécie de imagem daquilo que nós fazemos, ou ele tem de ser feito nesse diretório?
+
+164
+00:19:20,840 --> 00:19:26,840
+O cat não é nenhum diretório, o cat é um comando. Sim, sim, mas...
+
+165
+00:19:26,840 --> 00:19:34,840
+A lista, portanto, neste caso, os módulos, por exemplo, o Linux tem um diretório virtual, que é o próprio,
+
+166
+00:19:34,840 --> 00:19:45,840
+tipicamente, tem informações do sistema e tem um fecheiro que é o nome módulos, que tem todos o que é um fecheiro virtual,
+
+167
+00:19:45,840 --> 00:19:52,840
+que tem todos os módulos que estão ativos, que estão inseridos no sistema.
+
+168
+00:19:52,840 --> 00:20:00,840
+Mas era daí que... era daí que vinha a minha pergunta. Se eu chegar aqui e fizer...
+
+169
+00:20:00,840 --> 00:20:12,840
+Este é o meu sistema, cat, pro, módulos, e ele vai listar todos os módulos que eu tenho no meu sistema.
+
+170
+00:20:12,840 --> 00:20:25,840
+Vocês têm um outro fecheiro em que tem a implementação do módulo, e depois a instalação, e conseguem ver todos esses passos.
+
+171
+00:20:25,840 --> 00:20:33,840
+Tá bem? Portanto, se tivermos tempo, ainda vamos a esse fecheiro que tem, digamos,
+
+172
+00:20:33,840 --> 00:20:42,840
+onde vos é dito para vocês fazerem o download de uma série de módulos, e depois extrair os módulos com o pilar,
+
+173
+00:20:42,840 --> 00:20:47,840
+a semelhança do que fizemos na primeira aula prática de mim.
+
+174
+00:20:47,840 --> 00:20:49,840
+Tá bem? Abre.
+
+175
+00:20:49,840 --> 00:20:57,840
+Nada. Ora bem, portanto, os módulos é código que corre em kernel space.
+
+176
+00:20:57,840 --> 00:21:07,840
+Portanto, ele vai aceder, apesar de não ser, nesta abordagem, compilado, juntamente com o kernel do Linux,
+
+177
+00:21:07,840 --> 00:21:16,840
+é compilado à parte inserida, mas consegue aceder a praticamente tudo que está no Linux,
+
+178
+00:21:16,840 --> 00:21:20,840
+ou uma grande parte. Existe aqui umas regras que dizem o que é que está acessível.
+
+179
+00:21:20,840 --> 00:21:30,840
+Por exemplo, se vocês tenham um módulo, que eu vos vou disponibilizar, que vai listar todos os processos que estão no sistema.
+
+180
+00:21:30,840 --> 00:21:38,840
+Portanto, faz o equivalente ao PS, vai listar todos os processos que estão no sistema.
+
+181
+00:21:38,840 --> 00:21:47,840
+Portanto, consegue aceder a tudo que hiciste no kernel, ou praticamente tudo.
+
+182
+00:21:47,840 --> 00:21:54,840
+Portanto, os módulos, obviamente, é preciso ter sempre algum cuidado quando está a codificar,
+
+183
+00:21:54,840 --> 00:21:59,840
+porque o que é que pode acontecer se eu codificar mal, aceder a um apontador no,
+
+184
+00:21:59,840 --> 00:22:05,840
+ou tentar usar um apontador no, se não fizer as vidas verificações, o sistema vai carajar,
+
+185
+00:22:05,840 --> 00:22:09,840
+ainda por cima em kernel space, o mais certo, por acaso não me recordo,
+
+186
+00:22:09,840 --> 00:22:19,840
+já uma vez me aconteceu, o mais certo é carajar o sistema e com tal a máquina parar de funcionar.
+
+187
+00:22:19,840 --> 00:22:25,840
+Ora, como eu estava a referir, na verdade não é todo o código que está definido,
+
+188
+00:22:25,840 --> 00:22:32,840
+é todo o código, todos os símbolos que são exportados através desta macro.
+
+189
+00:22:32,840 --> 00:22:38,840
+Portanto, vocês, pois nós vamos ver ao longo do kernel, nós conseguimos,
+
+190
+00:22:38,840 --> 00:22:44,840
+vamos ver muitas vezes, esta macro, portanto, significa que o símbolo,
+
+191
+00:22:44,840 --> 00:22:49,840
+que pode ser o nome de uma função, uma variável, o que quer que seja,
+
+192
+00:22:49,840 --> 00:22:54,840
+pode ser usado nos módulos, portanto, porque está a ser exportado.
+
+193
+00:22:54,840 --> 00:23:01,840
+O que não for, o que não for exportado, não pode ser, não pode ser utilizado.
+
+194
+00:23:02,840 --> 00:23:08,840
+O que podemos fazer, a maior parte das coisas são exportadas.
+
+195
+00:23:08,840 --> 00:23:17,840
+Por exemplo, no Linux existe uma macro que refere qual é a tarefa que está a executar,
+
+196
+00:23:17,840 --> 00:23:21,840
+qual é a tarefa que está, num dado instante, no CPU.
+
+197
+00:23:21,840 --> 00:23:25,840
+Portanto, qual é a tarefa que está atrivoída ao CPU?
+
+198
+00:23:26,840 --> 00:23:33,840
+Ora, nós conseguimos obter o apontador para essa tarefa através da macro.
+
+199
+00:23:33,840 --> 00:23:40,840
+Você se encontra esta linha de código nos módulos que eu vou disponibilizar
+
+200
+00:23:40,840 --> 00:23:48,840
+e ele vai fazer um print capa em que coloca o PID do processo que está a executar aquele código.
+
+201
+00:23:48,840 --> 00:23:54,840
+Portanto, consegue aceder, portanto, a este nível de coisas.
+
+202
+00:23:56,840 --> 00:24:02,840
+Pró, as funções de inicialização e de exit, como o próprio nome indica,
+
+203
+00:24:02,840 --> 00:24:08,840
+servem para a inicialização, inicializar determinadas estruturas.
+
+204
+00:24:08,840 --> 00:24:12,840
+Nós vamos ver exemplos e nos módulos que eu disponibilizo.
+
+205
+00:24:12,840 --> 00:24:17,840
+Todas elas, com exceção do primeiro e do segundo salveiro, fazem isso.
+
+206
+00:24:17,840 --> 00:24:25,840
+Obviamente, a função de exit tem de fazer o contrário, liberta os recursos.
+
+207
+00:24:25,840 --> 00:24:29,840
+Estamos a falar dos módulos que são inseridos e que são removidos.
+
+208
+00:24:29,840 --> 00:24:33,840
+Quando são compilados, como já vimos, apesar de ter função de exit,
+
+209
+00:24:33,840 --> 00:24:38,840
+é como se não tivesse, porque aquilo nunca vai ser executado,
+
+210
+00:24:38,840 --> 00:24:43,840
+porque quando o kernel terminar, não há código para módulos.
+
+211
+00:24:44,840 --> 00:24:49,840
+Ora, isso é importante termos em atenção uma coisa que é,
+
+212
+00:24:49,840 --> 00:24:56,840
+obviamente que se temos uma função de inicialização e temos uma função de exit,
+
+213
+00:24:56,840 --> 00:25:01,840
+e, tipicamente, se uma função de inicialização inicia qualquer coisa,
+
+214
+00:25:01,840 --> 00:25:09,840
+inicializa qualquer coisa, é normal a função de exit libertar essa coisa, desfazer essa coisa.
+
+215
+00:25:09,840 --> 00:25:12,840
+Ora, quando assim, o que é que acontece?
+
+216
+00:25:12,840 --> 00:25:20,840
+Se não temos forma de passar esses elementos de uma função para a outra,
+
+217
+00:25:20,840 --> 00:25:27,840
+só nos resta uma alternativa, definir essas variáveis como globais.
+
+218
+00:25:27,840 --> 00:25:33,840
+E, para isso, definimos as variáveis fora de qualquer função.
+
+219
+00:25:33,840 --> 00:25:39,840
+E, como vocês podem ver, temos aqui um apontador que vai ser inicializado.
+
+220
+00:25:39,840 --> 00:25:43,840
+Portanto, temos aqui um malloc, ou neste caso um kernel malloc,
+
+221
+00:25:43,840 --> 00:25:51,840
+vai alocar a memória dentro da área reservada para o kernel
+
+222
+00:25:51,840 --> 00:26:00,840
+e, obviamente, essa memória vai ser libertada quando eu removo o módulo.
+
+223
+00:26:00,840 --> 00:26:03,840
+Portanto, vou libertar essa memória.
+
+224
+00:26:03,840 --> 00:26:09,840
+Portanto, aqui faz todo o sentido usarmos isto porque estes módulos vão ser inseridos
+
+225
+00:26:09,840 --> 00:26:12,840
+e removidos durante a execução do kernel.
+
+226
+00:26:12,840 --> 00:26:24,840
+Portanto, não há aqui fim do kernel para o kernel continuar sempre a funcionamento.
+
+227
+00:26:24,840 --> 00:26:28,840
+Nós vamos inserindo e vamos removendo os módulos.
+
+228
+00:26:28,840 --> 00:26:35,840
+Ora, bem, como eu já referi, no Linux existe um diretório que é o diretório próprio,
+
+229
+00:26:35,840 --> 00:26:37,840
+que é um diretório virtual.
+
+230
+00:26:37,840 --> 00:26:46,520
+Na prática, ele não existe quando o sistema termina, termina esse diretório.
+
+231
+00:26:46,520 --> 00:26:54,520
+E é a forma que o Linux e outros sistemas têm de dar informações do sistema.
+
+232
+00:26:54,520 --> 00:27:01,520
+Portanto, é um diretório virtual, os fecheiros são virtuais e que estão em memória
+
+233
+00:27:01,520 --> 00:27:03,520
+e, tipicamente, são atualizados.
+
+234
+00:27:03,520 --> 00:27:10,520
+Por exemplo, se vocês quiserem aquelas ferramentas para verificar a utilização do CPU, etc.
+
+235
+00:27:10,520 --> 00:27:16,520
+Tipicamente, vão a este diretório buscar essa informação.
+
+236
+00:27:16,520 --> 00:27:27,520
+E nós também vamos usar um diretório para criar um fecheiro no diretório próprio
+
+237
+00:27:27,520 --> 00:27:32,520
+e, depois, fazer interações com os nossos módulos.
+
+238
+00:27:32,520 --> 00:27:38,520
+Mas, obviamente, poderíamos ter outra forma de interagir.
+
+239
+00:27:38,520 --> 00:27:46,520
+Eu penso que vocês no XAR Device Driver, ou não sei o que que vocês fizeram em concreto,
+
+240
+00:27:46,520 --> 00:27:50,520
+vocês usaram uma coisa que era o File Operations.
+
+241
+00:27:50,520 --> 00:27:55,520
+Estou a dizer algo mais nele, ou nem por isso?
+
+242
+00:27:55,520 --> 00:28:11,520
+Nós aqui vamos usar uma coisa semelhante, mas específica para trabalhar com o diretório próprio,
+
+243
+00:28:11,520 --> 00:28:17,520
+que é o PROC-FS, já vamos ver isso.
+
+244
+00:28:17,520 --> 00:28:24,520
+Antes de avançarmos para essas coisas, é importante vocês perceberem uma coisa.
+
+245
+00:28:24,520 --> 00:28:35,520
+Todas estas estruturas que existem no cartão têm uma característica, que é, usam apontadores para funções.
+
+246
+00:28:35,520 --> 00:28:42,520
+Hoje em dia, sobretudo, quem programa muito, assim como linguagens tipo Java e coisas assim,
+
+247
+00:28:42,520 --> 00:28:45,520
+de jane fala sem interfaces.
+
+248
+00:28:45,520 --> 00:28:52,520
+Ora, um interface não é mais nem menos do que a definição de uma função que não nos dámos implementação.
+
+249
+00:28:52,520 --> 00:29:02,520
+Ora, isso já vem de trás com a utilização dos apontadores para funções.
+
+250
+00:29:02,520 --> 00:29:06,520
+Os apontadores para funções, o que é que eu vou fazer?
+
+251
+00:29:06,520 --> 00:29:13,520
+Eu vou definir ali uma variável que depois vou atribuir uma função, portanto, o endereço de uma função.
+
+252
+00:29:13,520 --> 00:29:19,520
+As funções, como qualquer outra coisa que esteja no código, têm sempre um endereço.
+
+253
+00:29:19,520 --> 00:29:26,520
+Porque se o código é colocado na memória, se todos os bytes da memória têm um endereço,
+
+254
+00:29:26,520 --> 00:29:34,520
+uma função, que representa o início da função, há de estar num endereço qualquer.
+
+255
+00:29:34,520 --> 00:29:43,520
+E, de essa forma, é possível de ser atribuído a uma variável que guarda endereços, que é o caso de um apontador.
+
+256
+00:29:43,520 --> 00:29:54,520
+Tipicamente, nós na programação usamos muito apontadores para variáveis, mas podemos e devemos usar apontadores para funções,
+
+257
+00:29:54,520 --> 00:29:58,520
+que aqui isto nos permite, permite injetar dependências.
+
+258
+00:29:58,520 --> 00:30:06,520
+Isto é, numa determinada, aqui eu quero a função x, ali quero a função y e o apontador é o mesmo.
+
+259
+00:30:06,520 --> 00:30:09,520
+Portanto, e, entre outras coisas.
+
+260
+00:30:09,520 --> 00:30:12,520
+Ora, a forma de se definir.
+
+261
+00:30:12,520 --> 00:30:14,520
+Só uma pergunta.
+
+262
+00:30:14,520 --> 00:30:19,520
+Ou seja, aquele apontador serve para apontar, ou seja, para aquela função.
+
+263
+00:30:19,520 --> 00:30:24,520
+Aquela função está lá guardada na nossa memória de código.
+
+264
+00:30:24,520 --> 00:30:28,520
+Mas aqui, ou seja, não há nenhum problema.
+
+265
+00:30:28,520 --> 00:30:32,520
+Se nós tivemos outros módulos e eles podem apontar para mesmo a função.
+
+266
+00:30:32,520 --> 00:30:34,520
+Ou serão sempre copias da função.
+
+267
+00:30:34,520 --> 00:30:37,520
+Fiquem na dúvida, ou seja, depois que macaram as variáveis, não é?
+
+268
+00:30:37,520 --> 00:30:40,520
+Por causa de aceder-nos às mesmas variáveis.
+
+269
+00:30:40,520 --> 00:30:41,520
+Certo.
+
+270
+00:30:41,520 --> 00:30:43,520
+Cetando no kernel.
+
+271
+00:30:43,520 --> 00:30:45,520
+Aqui, isto é um exemplo.
+
+272
+00:30:45,520 --> 00:30:48,520
+Cetando no kernel, a função é mesmo.
+
+273
+00:30:48,520 --> 00:30:55,520
+Se passasse o interesse de uma função, que já está definida no kernel, a função é mesmo.
+
+274
+00:30:55,520 --> 00:30:59,520
+Mas então, o que eu estava tentando perceber é,
+
+275
+00:30:59,520 --> 00:31:02,520
+se nós chamássemos ali uma função,
+
+276
+00:31:02,520 --> 00:31:05,520
+ou seja, uma chamada de função normal.
+
+277
+00:31:05,520 --> 00:31:07,520
+Vamos imaginar que estamos aqui a chamar a função.
+
+278
+00:31:07,520 --> 00:31:14,520
+Nós íamos ter variáveis que eram copias das variáveis que nós alipuzermos.
+
+279
+00:31:14,520 --> 00:31:15,520
+Certo.
+
+280
+00:31:15,520 --> 00:31:19,520
+E assim vão atuar todas as mesmas variáveis.
+
+281
+00:31:19,520 --> 00:31:22,520
+O que estou a dizer é que isto não pode,
+
+282
+00:31:22,520 --> 00:31:25,520
+ou seja, deve haver um múltiplo qual isto é melhor e não desencadeia erro nenhum.
+
+283
+00:31:25,520 --> 00:31:27,520
+Eu é que o desconheço.
+
+284
+00:31:27,520 --> 00:31:30,520
+Não, porque quando tu invocas uma função,
+
+285
+00:31:30,520 --> 00:31:34,520
+ele tem, há de estar, tem uma stack.
+
+286
+00:31:34,520 --> 00:31:39,520
+Existe uma stack para agerir aquelas funções.
+
+287
+00:31:39,520 --> 00:31:40,520
+Mas neste caso...
+
+288
+00:31:40,520 --> 00:31:42,520
+No outro contexto.
+
+289
+00:31:42,520 --> 00:31:43,520
+Sim.
+
+290
+00:31:43,520 --> 00:31:47,520
+Mas neste caso, como nós, ou seja, vamos para que temos dois módulos
+
+291
+00:31:47,520 --> 00:31:50,520
+e os dois apontam para aquela função é...
+
+292
+00:31:50,520 --> 00:31:53,520
+Ou seja, só existe uma stack, não é?
+
+293
+00:31:53,520 --> 00:31:54,520
+Para aquela função?
+
+294
+00:31:54,520 --> 00:31:55,520
+Não.
+
+295
+00:31:55,520 --> 00:31:56,520
+Quando?
+
+296
+00:31:56,520 --> 00:31:58,520
+Porque os módulos são código...
+
+297
+00:31:58,520 --> 00:32:00,520
+É código morto.
+
+298
+00:32:00,520 --> 00:32:02,520
+Só é código executável.
+
+299
+00:32:02,520 --> 00:32:04,520
+Quando for invocado para ser invocado,
+
+300
+00:32:04,520 --> 00:32:06,520
+tem que ser invocado dentro de um processo.
+
+301
+00:32:06,520 --> 00:32:11,520
+Logo, se eu estou a usar dois processos,
+
+302
+00:32:11,520 --> 00:32:12,520
+são dois processos...
+
+303
+00:32:12,520 --> 00:32:13,520
+Não, ok.
+
+304
+00:32:13,520 --> 00:32:14,520
+Estão separados, não é?
+
+305
+00:32:14,520 --> 00:32:16,520
+É por aqueles métodos que virmos antes.
+
+306
+00:32:16,520 --> 00:32:17,520
+Ah, ok.
+
+307
+00:32:17,520 --> 00:32:18,520
+Ora nem mais.
+
+308
+00:32:18,520 --> 00:32:19,520
+Ok.
+
+309
+00:32:19,520 --> 00:32:20,520
+As stacks são diferentes.
+
+310
+00:32:20,520 --> 00:32:21,520
+Percebes?
+
+311
+00:32:21,520 --> 00:32:22,520
+Não.
+
+312
+00:32:22,520 --> 00:32:23,520
+Ok, é isso.
+
+313
+00:32:23,520 --> 00:32:27,520
+Para definirmos um apontador para uma função,
+
+314
+00:32:27,520 --> 00:32:31,520
+difere um pouquinho dos apontadores para variáveis,
+
+315
+00:32:31,520 --> 00:32:37,520
+temos que dar aqui o nome e o nome é o que nós quisermos,
+
+316
+00:32:37,520 --> 00:32:41,520
+colocamos qual é o retorno da função
+
+317
+00:32:41,520 --> 00:32:45,520
+e quais são os tipos de dados, os argumentos da função.
+
+318
+00:32:45,520 --> 00:32:49,520
+Portanto, para definirmos um apontador para uma função,
+
+319
+00:32:49,520 --> 00:32:51,520
+temos que respeitar isto.
+
+320
+00:32:51,520 --> 00:32:57,520
+Obviamente, eu só posso atribuir a esta variável um endereço de uma função
+
+321
+00:32:57,520 --> 00:33:01,520
+que receba dois argumentos do tipo 1,
+
+322
+00:33:01,520 --> 00:33:03,520
+tenha dois argumentos,
+
+323
+00:33:03,520 --> 00:33:07,520
+receba dois argumentos do tipo inteiro e que retorne um inteiro.
+
+324
+00:33:07,520 --> 00:33:11,520
+Portanto, isto tem que ter certo,
+
+325
+00:33:11,520 --> 00:33:14,520
+que é o caso aqui desta função n.
+
+326
+00:33:14,520 --> 00:33:19,520
+Portanto, esta função n recebe dois inteiros e retorne um inteiro.
+
+327
+00:33:19,520 --> 00:33:22,520
+Portanto, logo eu consigo atribuir.
+
+328
+00:33:22,520 --> 00:33:26,520
+Eu posso fazer com o sinal de endereço,
+
+329
+00:33:26,520 --> 00:33:28,520
+ou então posso fazer assim,
+
+330
+00:33:28,520 --> 00:33:32,520
+porque o nome de uma função é como o nome de um array,
+
+331
+00:33:32,520 --> 00:33:39,520
+representa o endereço do primeiro byte do conjunto de instruções associadas à função.
+
+332
+00:33:39,520 --> 00:33:44,520
+Portanto, colocar desta forma ou desta é a mesma coisa, certo?
+
+333
+00:33:44,520 --> 00:33:46,520
+Portanto, não há diferença algum.
+
+334
+00:33:46,520 --> 00:33:49,520
+Ora, a partir daqui, como vocês podem ver,
+
+335
+00:33:49,520 --> 00:33:51,520
+a partir do momento em que eu tenho o apontador,
+
+336
+00:33:51,520 --> 00:33:54,520
+eu chamo, utilizo o apontador,
+
+337
+00:33:54,520 --> 00:34:00,520
+obviamente respeitando a assinatura da função atribuída
+
+338
+00:34:00,520 --> 00:34:02,520
+e consigo invocar a função.
+
+339
+00:34:02,520 --> 00:34:04,520
+Portanto, eu aqui, este printf,
+
+340
+00:34:04,520 --> 00:34:07,520
+vai invocar esta função, certo?
+
+341
+00:34:07,520 --> 00:34:11,520
+Portanto, se mais funções é outra coisa qualquer,
+
+342
+00:34:11,520 --> 00:34:16,520
+tivesse, eu poderia, desde que respeitasse esta assinatura,
+
+343
+00:34:16,520 --> 00:34:17,520
+eu podia atribuir.
+
+344
+00:34:17,520 --> 00:34:20,520
+Imaginem que eu tinha aqui uma função sub,
+
+345
+00:34:20,520 --> 00:34:22,520
+eu poderia, aqui mais à frente,
+
+346
+00:34:22,520 --> 00:34:26,520
+ftr igual a sub e voltar a chamar
+
+347
+00:34:26,520 --> 00:34:32,520
+desta forma e ia fazer uma subtração e não uma adição.
+
+348
+00:34:32,520 --> 00:34:33,520
+Pronto.
+
+349
+00:34:33,520 --> 00:34:34,520
+Só para...
+
+350
+00:34:34,520 --> 00:34:36,520
+Por que que eu coloco isto?
+
+351
+00:34:36,520 --> 00:34:40,520
+Porque existem muitas coisas no kernel que usam este princípio
+
+352
+00:34:40,520 --> 00:34:43,520
+dos apontadores para as funções.
+
+353
+00:34:43,520 --> 00:34:45,520
+Ora, vai.
+
+354
+00:34:45,520 --> 00:34:47,520
+E eu já referi o diretório PROC,
+
+355
+00:34:47,520 --> 00:34:49,520
+é um diretório virtual,
+
+356
+00:34:49,520 --> 00:34:51,520
+é um sistema de fecheiros virtual,
+
+357
+00:34:51,520 --> 00:34:58,520
+que serve essencialmente para guardar informação do sistema,
+
+358
+00:34:58,520 --> 00:35:02,520
+que módulos é que estão ativos num dado instante
+
+359
+00:35:02,520 --> 00:35:06,520
+e outras CPU-infos e para tudo.
+
+360
+00:35:06,520 --> 00:35:08,520
+Esse serve essencialmente para isso.
+
+361
+00:35:08,520 --> 00:35:11,520
+Portanto, eu já referi muitas das ferramentas.
+
+362
+00:35:11,520 --> 00:35:16,520
+Às vezes, há pessoas que têm uns widgets
+
+363
+00:35:16,520 --> 00:35:20,520
+na coisa com o CPU, a mostrar o CPU,
+
+364
+00:35:20,520 --> 00:35:24,520
+tudo isso é feito através de interações
+
+365
+00:35:24,520 --> 00:35:26,520
+com o diretório PROC.
+
+366
+00:35:26,520 --> 00:35:30,520
+Portanto, existem dentro do PROC fecheiros
+
+367
+00:35:30,520 --> 00:35:32,520
+que têm essa informação.
+
+368
+00:35:32,520 --> 00:35:34,520
+Ora, vai.
+
+369
+00:35:34,520 --> 00:35:37,520
+Para criar uma entrada no PROC,
+
+370
+00:35:37,520 --> 00:35:39,520
+eu vou avançar aqui um slide,
+
+371
+00:35:39,520 --> 00:35:41,520
+depois volto atrás se for caso disso.
+
+372
+00:35:41,520 --> 00:35:45,520
+Para criar uma entrada no PROC, o que é que a gente faz?
+
+373
+00:35:45,520 --> 00:35:50,520
+A gente cria, existe uma função de nome PROC CREATE.
+
+374
+00:35:50,520 --> 00:35:52,520
+Ora, como o próprio nome indica,
+
+375
+00:35:52,520 --> 00:35:55,520
+serve para criar uma entrada no PROC.
+
+376
+00:35:55,520 --> 00:35:57,520
+Depois, colocamos aqui o nome,
+
+377
+00:35:57,520 --> 00:35:59,520
+portanto, colocamos o nome,
+
+378
+00:35:59,520 --> 00:36:03,520
+ah, está aqui o nome, neste caso, chama-se LO2.
+
+379
+00:36:03,520 --> 00:36:08,520
+Depois, colocamos aqui as permissões desse diretório,
+
+380
+00:36:08,520 --> 00:36:11,520
+que eu digo isto outras vezes,
+
+381
+00:36:11,520 --> 00:36:13,520
+eu aqui tenho zero,
+
+382
+00:36:13,520 --> 00:36:17,520
+significa que não coloco permissões para
+
+383
+00:36:17,520 --> 00:36:21,520
+só para o administrador,
+
+384
+00:36:21,520 --> 00:36:24,520
+o resto não tem...
+
+385
+00:36:24,520 --> 00:36:26,520
+É sério, acho que não tem...
+
+386
+00:36:26,520 --> 00:36:28,520
+Sim, só o administrador é que não segue.
+
+387
+00:36:28,520 --> 00:36:31,520
+Mas eu poderia já colocar aqui as permissões que eu queria.
+
+388
+00:36:31,520 --> 00:36:35,520
+Mas para a frente, eu já tenho com as permissões corretas.
+
+389
+00:36:35,520 --> 00:36:37,520
+O que é que isso significa quando eu faço assim,
+
+390
+00:36:37,520 --> 00:36:40,520
+que depois de criar um módulo,
+
+391
+00:36:40,520 --> 00:36:42,520
+tenho que manualmente alterar as permissões.
+
+392
+00:36:42,520 --> 00:36:44,520
+Mas vocês, no exemplo, têm isto.
+
+393
+00:36:44,520 --> 00:36:46,520
+Depois, coloco aqui,
+
+394
+00:36:46,520 --> 00:36:49,520
+se eu quiser criar um diretório,
+
+395
+00:36:49,520 --> 00:36:58,520
+ou um fecheiro dentro de um determinado diretório,
+
+396
+00:36:58,520 --> 00:37:01,520
+portanto, eu posso ter um árvore de diretórios,
+
+397
+00:37:01,520 --> 00:37:04,520
+eu coloco aqui quem é o diretório e o pai.
+
+398
+00:37:04,520 --> 00:37:07,520
+Neste caso, como não estou a colocar módulo,
+
+399
+00:37:07,520 --> 00:37:09,520
+ele vai criar dentro do PROC.
+
+400
+00:37:09,520 --> 00:37:11,520
+E depois, estamos aqui,
+
+401
+00:37:11,520 --> 00:37:14,520
+uma variável do tipo PROC,
+
+402
+00:37:14,520 --> 00:37:16,520
+que de nome PROC-FOPS,
+
+403
+00:37:16,520 --> 00:37:21,520
+e é esta variável que é deste tipo PROC-OPPS.
+
+404
+00:37:21,520 --> 00:37:24,520
+E esta variável PROC-OPPS
+
+405
+00:37:24,520 --> 00:37:27,520
+tem aqui um conjunto de apontadores.
+
+406
+00:37:27,520 --> 00:37:29,520
+Isto aqui são apontadores.
+
+407
+00:37:29,520 --> 00:37:31,520
+E o que é que eu fiz?
+
+408
+00:37:31,520 --> 00:37:33,520
+Eu implementei estas funções,
+
+409
+00:37:33,520 --> 00:37:35,520
+por acaso, dá-lhes o mesmo nome,
+
+410
+00:37:35,520 --> 00:37:37,520
+mas não tinha que dar.
+
+411
+00:37:37,520 --> 00:37:40,520
+Portanto, eu criei no mesmo fecheiro,
+
+412
+00:37:40,520 --> 00:37:43,520
+que tem aquilo, estas funções,
+
+413
+00:37:43,520 --> 00:37:46,520
+funções estas que têm que ter estes,
+
+414
+00:37:46,520 --> 00:37:48,520
+estas assinaturas.
+
+415
+00:37:48,520 --> 00:37:49,520
+Por que?
+
+416
+00:37:49,520 --> 00:37:52,520
+Porque se nós fomos ver a documentação,
+
+417
+00:37:52,520 --> 00:37:55,520
+estes apontadores,
+
+418
+00:37:55,520 --> 00:37:58,520
+são apontadores para funções
+
+419
+00:37:58,520 --> 00:38:01,520
+com estas assinaturas,
+
+420
+00:38:01,520 --> 00:38:04,520
+logo, se respeita a assinatura,
+
+421
+00:38:04,520 --> 00:38:06,520
+eu consigo atribuir,
+
+422
+00:38:06,520 --> 00:38:08,520
+e como vocês podem ver,
+
+423
+00:38:08,520 --> 00:38:11,520
+aqui não estou a colocar o endereço de nada,
+
+424
+00:38:11,520 --> 00:38:13,520
+portanto, pode ser com o endereço
+
+425
+00:38:13,520 --> 00:38:15,520
+ou sem o endereço,
+
+426
+00:38:15,520 --> 00:38:18,520
+portanto, o sinal de o ícone inicial,
+
+427
+00:38:18,520 --> 00:38:23,520
+estou a atribuir a estes apontadores,
+
+428
+00:38:23,520 --> 00:38:25,520
+portanto, que, no fundo, vão funcionar,
+
+429
+00:38:25,520 --> 00:38:27,520
+como callbacks,
+
+430
+00:38:27,520 --> 00:38:29,520
+que depois vamos ver
+
+431
+00:38:29,520 --> 00:38:33,520
+estas funções vão ser invocadas,
+
+432
+00:38:33,520 --> 00:38:36,520
+não por invocar o nome destas funções,
+
+433
+00:38:36,520 --> 00:38:39,520
+mas por invocar estes apontadores,
+
+434
+00:38:39,520 --> 00:38:41,520
+que obviamente vão invocar os apontadores,
+
+435
+00:38:41,520 --> 00:38:43,520
+vão invocar as funções,
+
+436
+00:38:43,520 --> 00:38:45,520
+uma vez que os apontadores estão a apontar
+
+437
+00:38:45,520 --> 00:38:47,520
+para as funções.
+
+438
+00:38:47,520 --> 00:38:50,520
+Depois, vocês têm aqui a explicação
+
+439
+00:38:50,520 --> 00:38:52,520
+do proc create,
+
+440
+00:38:52,520 --> 00:38:54,520
+essas coisas assim.
+
+441
+00:38:54,520 --> 00:38:56,520
+E depois também, obviamente, existe
+
+442
+00:38:56,520 --> 00:38:58,520
+uma função que permite remover,
+
+443
+00:38:58,520 --> 00:39:00,520
+portanto, que, quando esse erro cria
+
+444
+00:39:00,520 --> 00:39:02,520
+a entrada, quando removo o modo
+
+445
+00:39:02,520 --> 00:39:04,520
+removo a entrada,
+
+446
+00:39:04,520 --> 00:39:06,520
+portanto, em que aqui
+
+447
+00:39:06,520 --> 00:39:08,520
+basta colocar o nome
+
+448
+00:39:08,520 --> 00:39:10,520
+e em que posição
+
+449
+00:39:10,520 --> 00:39:12,520
+na árvore de diretórios
+
+450
+00:39:12,520 --> 00:39:14,520
+no sistema de fecheiros está.
+
+451
+00:39:14,520 --> 00:39:16,520
+Neste caso, como está no
+
+452
+00:39:16,520 --> 00:39:18,520
+diretório root,
+
+453
+00:39:18,520 --> 00:39:22,520
+ele passa daqui novo.
+
+454
+00:39:22,520 --> 00:39:24,520
+Ora, cá está a estrutura.
+
+455
+00:39:24,520 --> 00:39:26,520
+Proc.
+
+456
+00:39:26,520 --> 00:39:28,520
+Ops, muito parecida com
+
+457
+00:39:28,520 --> 00:39:30,520
+file operations que vocês
+
+458
+00:39:30,520 --> 00:39:32,520
+usaram e como podem ver,
+
+459
+00:39:32,520 --> 00:39:34,520
+entre aspas,
+
+460
+00:39:34,520 --> 00:39:36,520
+o asterisco e o nome
+
+461
+00:39:36,520 --> 00:39:38,520
+do apontador,
+
+462
+00:39:38,520 --> 00:39:40,520
+portanto, isto é
+
+463
+00:39:40,520 --> 00:39:42,520
+uma estrutura que concessão
+
+464
+00:39:42,520 --> 00:39:44,520
+deste inteiro,
+
+465
+00:39:44,520 --> 00:39:46,520
+são basicamente
+
+466
+00:39:46,520 --> 00:39:48,520
+apontadores para
+
+467
+00:39:48,520 --> 00:39:51,930
+funções.
+
+468
+00:39:51,930 --> 00:39:53,930
+Está, e que vocês conseguem ver
+
+469
+00:39:53,930 --> 00:39:55,930
+a definição
+
+470
+00:39:55,930 --> 00:39:57,930
+neste
+
+471
+00:39:57,930 --> 00:39:59,930
+diretório.
+
+472
+00:40:01,930 --> 00:40:03,930
+Está aqui uma breve explicação
+
+473
+00:40:03,930 --> 00:40:05,930
+e depois aqui
+
+474
+00:40:05,930 --> 00:40:07,930
+dos argumentos.
+
+475
+00:40:07,930 --> 00:40:09,930
+Tipicamente,
+
+476
+00:40:09,930 --> 00:40:11,930
+até porque o Linux
+
+477
+00:40:11,930 --> 00:40:13,930
+tradicionalmente trata
+
+478
+00:40:13,930 --> 00:40:15,930
+tudo com fecheiros,
+
+479
+00:40:15,930 --> 00:40:17,930
+portanto,
+
+480
+00:40:17,930 --> 00:40:19,930
+tipicamente, os argumentos
+
+481
+00:40:19,930 --> 00:40:21,930
+são fecheiros,
+
+482
+00:40:21,930 --> 00:40:23,930
+portanto, ele vai tratar as coisas
+
+483
+00:40:23,930 --> 00:40:25,930
+como se fossem fecheiros
+
+484
+00:40:25,930 --> 00:40:27,930
+e as interações vão ser
+
+485
+00:40:27,930 --> 00:40:29,930
+como se fossem fecheiros.
+
+486
+00:40:29,930 --> 00:40:31,930
+Portanto, as interações
+
+487
+00:40:31,930 --> 00:40:33,930
+sobre o fecheiro que é
+
+488
+00:40:33,930 --> 00:40:35,930
+criado no Proc
+
+489
+00:40:35,930 --> 00:40:37,930
+é feita como se fosse
+
+490
+00:40:37,930 --> 00:40:39,930
+um fecheiro.
+
+491
+00:40:39,930 --> 00:40:41,930
+Vamos já olhar para
+
+492
+00:40:41,930 --> 00:40:43,930
+isso. Por exemplo,
+
+493
+00:40:43,930 --> 00:40:45,930
+uma
+
+494
+00:40:45,930 --> 00:40:47,930
+programinha, por exemplo, este programa
+
+495
+00:40:47,930 --> 00:40:49,930
+permite-me ler
+
+496
+00:40:49,930 --> 00:40:51,930
+o conteúdo
+
+497
+00:40:51,930 --> 00:40:53,930
+deste fecheiro.
+
+498
+00:40:53,930 --> 00:40:55,930
+Portanto,
+
+499
+00:40:55,930 --> 00:40:57,930
+ora, eu
+
+500
+00:40:57,930 --> 00:40:59,930
+obtive, abre o fecheiro
+
+501
+00:40:59,930 --> 00:41:01,930
+e obtenho um descritor
+
+502
+00:41:01,930 --> 00:41:03,930
+do fecheiro.
+
+503
+00:41:03,930 --> 00:41:05,930
+E depois vou usar
+
+504
+00:41:05,930 --> 00:41:07,930
+esse descritor na função
+
+505
+00:41:07,930 --> 00:41:09,930
+read, vou
+
+506
+00:41:09,930 --> 00:41:11,930
+usar um buffer,
+
+507
+00:41:11,930 --> 00:41:13,930
+portanto, um contentor
+
+508
+00:41:13,930 --> 00:41:15,930
+para colocar
+
+509
+00:41:15,930 --> 00:41:17,930
+os bytes que vou ler
+
+510
+00:41:17,930 --> 00:41:19,930
+do fecheiro, nesta variável
+
+511
+00:41:19,930 --> 00:41:21,930
+que está definido aqui.
+
+512
+00:41:21,930 --> 00:41:23,930
+E depois estou a terminar
+
+513
+00:41:23,930 --> 00:41:25,930
+a string, só porque quero
+
+514
+00:41:25,930 --> 00:41:27,930
+fazer um printf,
+
+515
+00:41:27,930 --> 00:41:29,930
+e estou a imprimir.
+
+516
+00:41:29,930 --> 00:41:31,930
+A minha pergunta é
+
+517
+00:41:31,930 --> 00:41:33,930
+a seguinte.
+
+518
+00:41:33,930 --> 00:41:35,930
+Vamos imaginar que
+
+519
+00:41:35,930 --> 00:41:37,930
+estou a ler 49 bytes
+
+520
+00:41:37,930 --> 00:41:39,930
+de cada vez.
+
+521
+00:41:39,930 --> 00:41:41,930
+Vamos imaginar que o
+
+522
+00:41:41,930 --> 00:41:43,930
+fecheiro tem
+
+523
+00:41:43,930 --> 00:41:45,930
+200 bytes.
+
+524
+00:41:45,930 --> 00:41:47,930
+Então, eu faço o read
+
+525
+00:41:47,930 --> 00:41:49,930
+a primeira vez
+
+526
+00:41:49,930 --> 00:41:51,930
+e ele ler 49 bytes.
+
+527
+00:41:51,930 --> 00:41:53,930
+Chego aqui, imprime-se
+
+528
+00:41:53,930 --> 00:41:55,930
+49 bytes.
+
+529
+00:41:55,930 --> 00:41:57,930
+E ele agora vai
+
+530
+00:41:57,930 --> 00:41:59,930
+voltar a ler.
+
+531
+00:41:59,930 --> 00:42:01,930
+A minha pergunta é
+
+532
+00:42:01,930 --> 00:42:03,930
+porque é que ele ler,
+
+533
+00:42:03,930 --> 00:42:05,930
+vamos pôr aqui por números redondos 50.
+
+534
+00:42:05,930 --> 00:42:07,930
+Vamos imaginar que o
+
+535
+00:42:07,930 --> 00:42:09,930
+número redondos 50
+
+536
+00:42:09,930 --> 00:42:11,930
+e agora quando vai
+
+537
+00:42:11,930 --> 00:42:13,930
+e retorna
+
+538
+00:42:13,930 --> 00:42:15,930
+o número de bytes lidos 50,
+
+539
+00:42:15,930 --> 00:42:17,930
+por isso é que usa essa variável
+
+540
+00:42:17,930 --> 00:42:19,930
+para terminar a string,
+
+541
+00:42:19,930 --> 00:42:21,930
+e agora volta a ler.
+
+542
+00:42:21,930 --> 00:42:23,930
+Por que é que ele agora vai ler
+
+543
+00:42:23,930 --> 00:42:25,930
+os segundos 50 e não os primeiros?
+
+544
+00:42:27,930 --> 00:42:29,930
+Outra vez.
+
+545
+00:42:29,930 --> 00:42:31,930
+Por que é que ele ler sempre
+
+546
+00:42:31,930 --> 00:42:33,930
+seguindo?
+
+547
+00:42:33,930 --> 00:42:35,930
+De forma, não ler o que está para trás.
+
+548
+00:42:35,930 --> 00:42:37,930
+Nós temos aqui
+
+549
+00:42:37,930 --> 00:42:39,930
+que nos indique
+
+550
+00:42:39,930 --> 00:42:47,300
+que ele já leu 50.
+
+551
+00:42:47,300 --> 00:42:49,300
+Como é que ele sabe que já leu 50?
+
+552
+00:42:49,300 --> 00:42:51,300
+É que temos aqui em user space,
+
+553
+00:42:51,300 --> 00:42:53,300
+este é um programinha em user space
+
+554
+00:42:53,300 --> 00:42:55,300
+que o control que indique
+
+555
+00:42:55,300 --> 00:43:02,200
+ele está nesta posição.
+
+556
+00:43:02,200 --> 00:43:04,200
+Algum de vocês sabe?
+
+557
+00:43:04,200 --> 00:43:06,200
+Samalta que usa mais o C,
+
+558
+00:43:06,200 --> 00:43:09,610
+coisa assim de gênero.
+
+559
+00:43:09,610 --> 00:43:11,610
+Como é que ele, efetivamente,
+
+560
+00:43:11,610 --> 00:43:13,610
+ele leu os primeiros 50, pois leu os segundos,
+
+561
+00:43:13,610 --> 00:43:15,610
+pois leu os terceiros e por entente.
+
+562
+00:43:15,610 --> 00:43:17,610
+Eu gostava de saber
+
+563
+00:43:17,610 --> 00:43:19,610
+como é que quando vai?
+
+564
+00:43:19,610 --> 00:43:21,610
+Eu estou a pôr isto aqui no oile,
+
+565
+00:43:21,610 --> 00:43:23,610
+mas eu podia pôr read, read, read, read
+
+566
+00:43:23,610 --> 00:43:25,610
+e o comportamento terá o mesmo.
+
+567
+00:43:25,610 --> 00:43:27,610
+Como é que ele sabe
+
+568
+00:43:27,610 --> 00:43:29,610
+que já leu 50 bytes?
+
+569
+00:43:29,610 --> 00:43:31,610
+Onde é que isso está?
+
+570
+00:43:31,610 --> 00:43:33,610
+Onde é que isso é usado?
+
+571
+00:43:33,610 --> 00:43:35,610
+Ou seja, ele retornou
+
+572
+00:43:35,610 --> 00:43:37,610
+aqui 50, mas o
+
+573
+00:43:37,610 --> 00:43:39,610
+reto não é usado aqui nos argumentos.
+
+574
+00:43:41,610 --> 00:43:43,610
+Como é que ele sabe que
+
+575
+00:43:43,610 --> 00:43:47,210
+já leu 50?
+
+576
+00:43:47,210 --> 00:43:49,210
+Ora vai.
+
+577
+00:43:49,210 --> 00:43:51,210
+O mesmo acontece
+
+578
+00:43:51,210 --> 00:43:53,210
+para a escrita.
+
+579
+00:43:53,210 --> 00:43:55,210
+Portanto, como é que
+
+580
+00:43:55,210 --> 00:43:57,210
+vocês escrevem 50 bytes?
+
+581
+00:43:57,210 --> 00:43:59,210
+A seguir, vão escrever mais 50,
+
+582
+00:43:59,210 --> 00:44:01,210
+porque é que ele não escreve
+
+583
+00:44:01,210 --> 00:44:03,210
+em cima dos primeiros?
+
+584
+00:44:03,210 --> 00:44:05,210
+O que é que está aqui?
+
+585
+00:44:05,210 --> 00:44:07,210
+É indicar que é para escrever
+
+586
+00:44:07,210 --> 00:44:13,270
+nas posições seguintes.
+
+587
+00:44:13,270 --> 00:44:18,180
+Pronto, e?
+
+588
+00:44:18,180 --> 00:44:21,690
+E?
+
+589
+00:44:21,690 --> 00:44:23,690
+Aliás, este
+
+590
+00:44:23,690 --> 00:44:25,690
+buff length nem sequer
+
+591
+00:44:25,690 --> 00:44:27,690
+é usado aqui.
+
+592
+00:44:27,690 --> 00:44:35,260
+Por que o?
+
+593
+00:44:35,260 --> 00:44:37,260
+Não. Já vamos ver
+
+594
+00:44:37,260 --> 00:44:40,570
+sim, certo?
+
+595
+00:44:40,570 --> 00:44:42,570
+Mas agora imagina
+
+596
+00:44:42,570 --> 00:44:44,570
+que quer escrever outra vez o mesmo.
+
+597
+00:44:44,570 --> 00:44:46,570
+E se for ver o fecheiro,
+
+598
+00:44:46,570 --> 00:44:48,570
+ele vai escrever duas vezes,
+
+599
+00:44:48,570 --> 00:44:50,570
+não vai escrever só uma.
+
+600
+00:44:50,570 --> 00:44:52,570
+A minha pergunta é como é que
+
+601
+00:44:52,570 --> 00:44:54,570
+ele vai ler
+
+602
+00:44:54,570 --> 00:44:56,570
+o que leu
+
+603
+00:44:56,570 --> 00:44:58,570
+Portanto,
+
+604
+00:44:58,570 --> 00:45:00,570
+ele tem memória do que
+
+605
+00:45:00,570 --> 00:45:02,570
+aconteceu antes, isto é.
+
+606
+00:45:02,570 --> 00:45:04,570
+Ele leu
+
+607
+00:45:04,570 --> 00:45:06,570
+e agora quando for ler a seguir
+
+608
+00:45:06,570 --> 00:45:08,570
+não lê desde o início,
+
+609
+00:45:08,570 --> 00:45:10,570
+lê desde o que
+
+610
+00:45:10,570 --> 00:45:12,570
+como santo
+
+611
+00:45:12,570 --> 00:45:14,570
+a seguir
+
+612
+00:45:14,570 --> 00:45:16,570
+a última posição que leu anteriormente.
+
+613
+00:45:18,570 --> 00:45:20,570
+O terceiro argumento, a função
+
+614
+00:45:20,570 --> 00:45:22,570
+e o terceiro argumento
+
+615
+00:45:22,570 --> 00:45:24,570
+é só aqui
+
+616
+00:45:24,570 --> 00:45:26,570
+o write isto aqui
+
+617
+00:45:26,570 --> 00:45:28,570
+é para indicar, vai
+
+618
+00:45:28,570 --> 00:45:30,570
+escrever aqui o write
+
+619
+00:45:30,570 --> 00:45:32,570
+neste fecheiro
+
+620
+00:45:32,570 --> 00:45:34,570
+a partir desta
+
+621
+00:45:34,570 --> 00:45:36,570
+variável vai-se escrever
+
+622
+00:45:36,570 --> 00:45:38,570
+strlanbytes.
+
+623
+00:45:38,570 --> 00:45:40,570
+Pronto, não é na variável rete?
+
+624
+00:45:40,570 --> 00:45:42,570
+Não, mas o rete é o retorno.
+
+625
+00:45:42,570 --> 00:45:44,570
+Trai-lhe
+
+626
+00:45:44,570 --> 00:45:46,570
+alguma variável
+
+627
+00:45:46,570 --> 00:45:48,570
+estático e depois ficar
+
+628
+00:45:48,570 --> 00:45:50,570
+ali dentro a saber
+
+629
+00:45:50,570 --> 00:45:52,570
+a posição do último
+
+630
+00:45:52,570 --> 00:45:54,570
+sítio em leu e depois de alguma
+
+631
+00:45:54,570 --> 00:45:56,570
+maneira, depois de outros
+
+632
+00:45:56,570 --> 00:45:58,570
+módulos, isso começa a doser-me.
+
+633
+00:45:58,570 --> 00:46:00,570
+Não sei, só uma ideia.
+
+634
+00:46:00,570 --> 00:46:04,170
+Ora bem, então
+
+635
+00:46:04,170 --> 00:46:06,170
+vamos lá
+
+636
+00:46:06,170 --> 00:46:08,170
+perceber como é que isto funciona.
+
+637
+00:46:08,170 --> 00:46:10,170
+Então é o seguinte,
+
+638
+00:46:10,170 --> 00:46:12,170
+nós em user space
+
+639
+00:46:12,170 --> 00:46:14,170
+usamos este read
+
+640
+00:46:14,170 --> 00:46:16,170
+com estes argumentos.
+
+641
+00:46:16,170 --> 00:46:18,170
+O descritor Dom Fecheiro
+
+642
+00:46:18,170 --> 00:46:20,170
+um
+
+643
+00:46:20,170 --> 00:46:22,170
+um contentor
+
+644
+00:46:22,170 --> 00:46:24,170
+para guardar
+
+645
+00:46:24,170 --> 00:46:26,170
+informação e o número máximo
+
+646
+00:46:26,170 --> 00:46:28,170
+de bytes que vamos ler
+
+647
+00:46:28,170 --> 00:46:30,170
+nesta operação.
+
+648
+00:46:30,170 --> 00:46:32,170
+Ora, mas
+
+649
+00:46:32,170 --> 00:46:34,170
+isto é em user space.
+
+650
+00:46:34,170 --> 00:46:36,170
+Na prática
+
+651
+00:46:36,170 --> 00:46:38,170
+isto vai invocar
+
+652
+00:46:38,170 --> 00:46:40,170
+em kernel space
+
+653
+00:46:40,170 --> 00:46:42,170
+uma função
+
+654
+00:46:42,170 --> 00:46:44,170
+de nome read
+
+655
+00:46:44,170 --> 00:46:46,170
+em que existe
+
+656
+00:46:46,170 --> 00:46:48,170
+este
+
+657
+00:46:48,170 --> 00:46:50,170
+efetivamente, portanto
+
+658
+00:46:50,170 --> 00:46:52,170
+este é um inteiro
+
+659
+00:46:52,170 --> 00:46:54,170
+é um inteiro
+
+660
+00:46:54,170 --> 00:46:56,170
+que representa
+
+661
+00:46:56,170 --> 00:46:58,170
+o índice
+
+662
+00:46:58,170 --> 00:47:00,170
+na tabela de descritores de Fecheiro
+
+663
+00:47:00,170 --> 00:47:02,170
+é que está associado
+
+664
+00:47:02,170 --> 00:47:04,170
+o Fecheiro que nós abrimos, por isso é que
+
+665
+00:47:04,170 --> 00:47:06,170
+ele é retornado pelo open.
+
+666
+00:47:06,170 --> 00:47:08,170
+Portanto, porque
+
+667
+00:47:08,170 --> 00:47:10,170
+isto aqui é um inteiro obviamente
+
+668
+00:47:10,170 --> 00:47:12,170
+para conter
+
+669
+00:47:12,170 --> 00:47:14,170
+informação
+
+670
+00:47:14,170 --> 00:47:16,170
+que nós precisamos sobre um Fecheiro
+
+671
+00:47:16,170 --> 00:47:18,170
+não pode estar num inteiro.
+
+672
+00:47:18,170 --> 00:47:20,170
+Portanto, este inteiro
+
+673
+00:47:20,170 --> 00:47:22,170
+é o índice
+
+674
+00:47:22,170 --> 00:47:24,170
+da tabela
+
+675
+00:47:24,170 --> 00:47:26,170
+de descritores de Fecheiro
+
+676
+00:47:26,170 --> 00:47:28,170
+onde foi colocada
+
+677
+00:47:28,170 --> 00:47:31,580
+a estrutura
+
+678
+00:47:31,580 --> 00:47:33,580
+que identifica
+
+679
+00:47:33,580 --> 00:47:35,580
+aquele Fecheiro.
+
+680
+00:47:35,580 --> 00:47:37,580
+Ora, aquele descritor
+
+681
+00:47:37,580 --> 00:47:39,580
+tem o índice
+
+682
+00:47:39,580 --> 00:47:41,580
+onde existe
+
+683
+00:47:41,580 --> 00:47:43,580
+uma variável
+
+684
+00:47:43,580 --> 00:47:45,580
+que representa o Fecheiro.
+
+685
+00:47:45,580 --> 00:47:47,580
+Ora,
+
+686
+00:47:47,580 --> 00:47:49,580
+depois temos
+
+687
+00:47:49,580 --> 00:47:51,580
+o buffer
+
+688
+00:47:51,580 --> 00:47:53,580
+aqui é o mapeamento de um para um
+
+689
+00:47:53,580 --> 00:47:55,580
+depois temos aqui
+
+690
+00:47:55,580 --> 00:47:57,580
+o contador que é o número máximo
+
+691
+00:47:57,580 --> 00:47:59,580
+de bytes
+
+692
+00:47:59,580 --> 00:48:01,580
+que vamos ler e vamos colocar
+
+693
+00:48:01,580 --> 00:48:03,580
+este número máximo de bytes
+
+694
+00:48:03,580 --> 00:48:05,580
+aqui nesta variável
+
+695
+00:48:05,580 --> 00:48:07,580
+que é o cujo endereço é passado.
+
+696
+00:48:07,580 --> 00:48:09,580
+Ora,
+
+697
+00:48:09,580 --> 00:48:11,580
+e o kernel
+
+698
+00:48:11,580 --> 00:48:13,580
+é uma variável
+
+699
+00:48:13,580 --> 00:48:15,580
+que está ligada
+
+700
+00:48:15,580 --> 00:48:17,580
+aqui ao Fecheiro
+
+701
+00:48:17,580 --> 00:48:19,580
+e indica qual é
+
+702
+00:48:19,580 --> 00:48:21,580
+a posição que vai ler
+
+703
+00:48:21,580 --> 00:48:23,580
+a partir do qual vai ler.
+
+704
+00:48:23,580 --> 00:48:25,580
+Variável
+
+705
+00:48:25,580 --> 00:48:27,580
+essa aqui
+
+706
+00:48:27,580 --> 00:48:29,580
+no read
+
+707
+00:48:29,580 --> 00:48:31,580
+é atualizada
+
+708
+00:48:31,580 --> 00:48:33,580
+em função do número de bytes
+
+709
+00:48:33,580 --> 00:48:35,580
+efetivamente lidos.
+
+710
+00:48:35,580 --> 00:48:37,580
+Isto estiver bem implementado
+
+711
+00:48:37,580 --> 00:48:39,580
+porque quando nós
+
+712
+00:48:39,580 --> 00:48:41,580
+vamos criar os módulos
+
+713
+00:48:41,580 --> 00:48:43,580
+e implementamos isto
+
+714
+00:48:43,580 --> 00:48:45,580
+como quisermos, não quisermos
+
+715
+00:48:45,580 --> 00:48:47,580
+respeitar isto, não respeitamos
+
+716
+00:48:47,580 --> 00:48:49,580
+pode ocorrer-nos mal
+
+717
+00:48:49,580 --> 00:48:51,580
+embora para ler
+
+718
+00:48:51,580 --> 00:48:53,580
+Fecheiros
+
+719
+00:48:53,580 --> 00:48:55,580
+ele faz isto ou deve fazer isto
+
+720
+00:48:55,580 --> 00:48:57,580
+quando nós estamos implementar
+
+721
+00:48:57,580 --> 00:48:59,580
+módulos ou uma coisa qualquer
+
+722
+00:48:59,580 --> 00:49:01,580
+a gente faz como forne quiser
+
+723
+00:49:01,580 --> 00:49:03,580
+às vezes não é relevante
+
+724
+00:49:03,580 --> 00:49:05,580
+esta variável e nem a usamos
+
+725
+00:49:05,580 --> 00:49:07,580
+ou nem atualizamos
+
+726
+00:49:07,580 --> 00:49:09,580
+é relevante, temos de utilizar
+
+727
+00:49:09,580 --> 00:49:11,580
+portanto
+
+728
+00:49:11,580 --> 00:49:13,580
+vocês quando fazem um read
+
+729
+00:49:13,580 --> 00:49:15,580
+e lê 50 bytes
+
+730
+00:49:15,580 --> 00:49:17,580
+e a seguir vai ler
+
+731
+00:49:17,580 --> 00:49:19,580
+os outros 50
+
+732
+00:49:19,580 --> 00:49:21,580
+isso acontece porque
+
+733
+00:49:21,580 --> 00:49:23,580
+esta variável guarda
+
+734
+00:49:23,580 --> 00:49:25,580
+essa informação.
+
+735
+00:49:25,580 --> 00:49:27,580
+Caso contrário, não era
+
+736
+00:49:27,580 --> 00:49:29,580
+possível lermos Fecheiros
+
+737
+00:49:29,580 --> 00:49:31,580
+portanto ele ia sempre do início
+
+738
+00:49:31,580 --> 00:49:33,580
+portanto
+
+739
+00:49:33,580 --> 00:49:35,580
+em user space
+
+740
+00:49:35,580 --> 00:49:37,580
+nada que nos indique
+
+741
+00:49:37,580 --> 00:49:39,580
+nada
+
+742
+00:49:39,580 --> 00:49:41,580
+não há aqui nenhuma variável
+
+743
+00:49:41,580 --> 00:49:43,580
+que nos indique isso
+
+744
+00:49:43,580 --> 00:49:45,580
+nós podemos fazer isto
+
+745
+00:49:45,580 --> 00:49:47,580
+só que em kernel space
+
+746
+00:49:47,580 --> 00:49:49,580
+ele guarda essa informação
+
+747
+00:49:49,580 --> 00:49:51,580
+e por isso é que
+
+748
+00:49:51,580 --> 00:49:53,580
+nos permite
+
+749
+00:49:53,580 --> 00:49:55,580
+ler o conteúdo fecheiro
+
+750
+00:49:55,580 --> 00:49:57,580
+e não estamos sempre a ler
+
+751
+00:49:57,580 --> 00:49:59,580
+os mesmos bytes
+
+752
+00:49:59,580 --> 00:50:01,580
+portanto tem a ver
+
+753
+00:50:01,580 --> 00:50:03,580
+com isto
+
+754
+00:50:03,580 --> 00:50:05,580
+quando eu faço um read
+
+755
+00:50:05,580 --> 00:50:07,580
+ele vai ser mapeado
+
+756
+00:50:07,580 --> 00:50:09,580
+dependendo das bibliotecas
+
+757
+00:50:09,580 --> 00:50:11,580
+vai ser mapeado
+
+758
+00:50:11,580 --> 00:50:13,580
+neste read
+
+759
+00:50:13,580 --> 00:50:15,580
+e este read tem então
+
+760
+00:50:15,580 --> 00:50:17,580
+esta informação
+
+761
+00:50:17,580 --> 00:50:19,580
+uma outra coisa que é relevante
+
+762
+00:50:19,580 --> 00:50:21,580
+é a passagem
+
+763
+00:50:21,580 --> 00:50:23,580
+de informação
+
+764
+00:50:23,580 --> 00:50:25,580
+de user space para
+
+765
+00:50:25,580 --> 00:50:27,580
+kernel space e vice-versa
+
+766
+00:50:27,580 --> 00:50:29,580
+qual é o problema
+
+767
+00:50:29,580 --> 00:50:31,580
+o problema é o seguinte
+
+768
+00:50:31,580 --> 00:50:33,580
+você
+
+769
+00:50:33,580 --> 00:50:35,580
+quando tem um processo
+
+770
+00:50:35,580 --> 00:50:37,580
+a executar
+
+771
+00:50:37,580 --> 00:50:39,580
+e no ambiente preemptivo
+
+772
+00:50:39,580 --> 00:50:41,580
+que é que pode acontecer
+
+773
+00:50:41,580 --> 00:50:43,580
+pode acontecer que
+
+774
+00:50:43,580 --> 00:50:45,580
+uma função esteja a executar
+
+775
+00:50:45,580 --> 00:50:47,580
+ou um processo esteja a executar
+
+776
+00:50:47,580 --> 00:50:49,580
+e seja preemptado
+
+777
+00:50:51,580 --> 00:50:53,580
+e ao ser preemptado vai parar
+
+778
+00:50:53,580 --> 00:50:55,580
+e eventualmente
+
+779
+00:50:55,580 --> 00:50:57,580
+pode acontecer, vimos isso
+
+780
+00:50:57,580 --> 00:50:59,580
+na questão da gestão da memória
+
+781
+00:50:59,580 --> 00:51:01,580
+e este processo
+
+782
+00:51:01,580 --> 00:51:03,580
+possa ser colocado em swap
+
+783
+00:51:03,580 --> 00:51:05,580
+ou a memória
+
+784
+00:51:05,580 --> 00:51:07,580
+deste processo
+
+785
+00:51:07,580 --> 00:51:09,580
+ser colocado em swap
+
+786
+00:51:09,580 --> 00:51:11,580
+por aquelas questões
+
+787
+00:51:11,580 --> 00:51:13,580
+de haver um page falta
+
+788
+00:51:13,580 --> 00:51:15,580
+e ser necessário mudar
+
+789
+00:51:15,580 --> 00:51:17,580
+ora, o que é que faz
+
+790
+00:51:17,580 --> 00:51:19,580
+este copy to user
+
+791
+00:51:19,580 --> 00:51:21,580
+e copy from user
+
+792
+00:51:21,580 --> 00:51:23,580
+este copy to user
+
+793
+00:51:23,580 --> 00:51:25,580
+e copy from user
+
+794
+00:51:25,580 --> 00:51:27,580
+o que é que eles fazem?
+
+795
+00:51:27,580 --> 00:51:29,580
+se o apontador
+
+796
+00:51:29,580 --> 00:51:31,580
+para onde vai
+
+797
+00:51:31,580 --> 00:51:33,580
+escrever ou de onde vai ler
+
+798
+00:51:33,580 --> 00:51:35,580
+se efetivamente
+
+799
+00:51:35,580 --> 00:51:37,580
+está na memória
+
+800
+00:51:37,580 --> 00:51:39,580
+por que pode acontecer
+
+801
+00:51:39,580 --> 00:51:41,580
+quando for executar este
+
+802
+00:51:41,580 --> 00:51:43,580
+código
+
+803
+00:51:43,580 --> 00:51:45,580
+o processo
+
+804
+00:51:45,580 --> 00:51:47,580
+portanto, não estar
+
+805
+00:51:47,580 --> 00:51:49,580
+na memória
+
+806
+00:51:49,580 --> 00:51:51,580
+porquê? por causa daquilo do
+
+807
+00:51:51,580 --> 00:51:53,580
+page falta, então pode estar em swap
+
+808
+00:51:53,580 --> 00:51:55,580
+ele valida
+
+809
+00:51:55,580 --> 00:51:57,580
+se o apontador é valido
+
+810
+00:51:57,580 --> 00:51:59,580
+isto é, se aquele apontador
+
+811
+00:51:59,580 --> 00:52:01,580
+efetivamente
+
+812
+00:52:01,580 --> 00:52:03,580
+está na memória
+
+813
+00:52:03,580 --> 00:52:05,580
+se estiver, copia
+
+814
+00:52:05,580 --> 00:52:07,580
+de um lado para o outro
+
+815
+00:52:07,580 --> 00:52:09,580
+conforme copy user
+
+816
+00:52:09,580 --> 00:52:11,580
+ou copy from
+
+817
+00:52:11,580 --> 00:52:13,580
+copy to user ou copy from user
+
+818
+00:52:13,580 --> 00:52:15,580
+portanto, ele faz
+
+819
+00:52:15,580 --> 00:52:17,580
+essa copy a caso contrário
+
+820
+00:52:17,580 --> 00:52:19,580
+ele não faz
+
+821
+00:52:19,580 --> 00:52:21,580
+ou aguarda
+
+822
+00:52:21,580 --> 00:52:23,580
+portanto faz essa verificação
+
+823
+00:52:23,580 --> 00:52:25,580
+para não
+
+824
+00:52:25,580 --> 00:52:27,580
+dar erro
+
+825
+00:52:27,580 --> 00:52:29,580
+se não, o que poderia acontecer
+
+826
+00:52:29,580 --> 00:52:31,580
+era estar a escrever
+
+827
+00:52:31,580 --> 00:52:33,580
+para um endereço que já não pertencia
+
+828
+00:52:33,580 --> 00:52:35,580
+a aquele processo
+
+829
+00:52:35,580 --> 00:52:37,580
+e isso obviamente
+
+830
+00:52:37,580 --> 00:52:39,580
+daria problemas
+
+831
+00:52:41,580 --> 00:52:43,580
+portanto, quando nós
+
+832
+00:52:43,580 --> 00:52:45,580
+fazemos então
+
+833
+00:52:45,580 --> 00:52:47,580
+a copy
+
+834
+00:52:47,580 --> 00:52:49,580
+o que acontece
+
+835
+00:52:49,580 --> 00:52:51,580
+é um pouquinho isto, portanto nós encarnamos
+
+836
+00:52:51,580 --> 00:52:53,580
+o space, temos então este
+
+837
+00:52:53,580 --> 00:52:55,580
+extract file
+
+838
+00:52:55,580 --> 00:52:57,580
+portanto, quando eu crio
+
+839
+00:52:57,580 --> 00:52:59,580
+quando eu abro um descritor
+
+840
+00:52:59,580 --> 00:53:01,580
+de um fecheiro
+
+841
+00:53:01,580 --> 00:53:03,580
+encarnamos o space
+
+842
+00:53:03,580 --> 00:53:05,580
+vai ser alocado numa variável
+
+843
+00:53:05,580 --> 00:53:07,580
+deste tipo
+
+844
+00:53:07,580 --> 00:53:09,580
+que é mapeado aqui neste
+
+845
+00:53:09,580 --> 00:53:11,580
+argumento e depois a partir
+
+846
+00:53:11,580 --> 00:53:13,580
+daqui para
+
+847
+00:53:13,580 --> 00:53:15,580
+copiarmos
+
+848
+00:53:15,580 --> 00:53:17,580
+para e usar o space
+
+849
+00:53:17,580 --> 00:53:19,580
+obviamente vamos chegar
+
+850
+00:53:19,580 --> 00:53:21,580
+os dados
+
+851
+00:53:21,580 --> 00:53:23,580
+onde é suposto
+
+852
+00:53:23,580 --> 00:53:25,580
+e vamos usar a função copy to user
+
+853
+00:53:25,580 --> 00:53:27,580
+e ele vai escrever
+
+854
+00:53:27,580 --> 00:53:29,580
+no buffer
+
+855
+00:53:29,580 --> 00:53:31,580
+portanto, a partir do endereço
+
+856
+00:53:31,580 --> 00:53:33,580
+que for indicado
+
+857
+00:53:33,580 --> 00:53:35,580
+neste argumento
+
+858
+00:53:35,580 --> 00:53:37,580
+e vai escrever
+
+859
+00:53:37,580 --> 00:53:39,580
+no máximo este número
+
+860
+00:53:39,580 --> 00:53:41,580
+de bytes
+
+861
+00:53:41,580 --> 00:53:43,580
+isto funcionando bem, isto deve atualizar
+
+862
+00:53:43,580 --> 00:53:45,580
+estas variáveis
+
+863
+00:53:45,580 --> 00:53:47,580
+para depois a seguir
+
+864
+00:53:47,580 --> 00:53:49,580
+não
+
+865
+00:53:49,580 --> 00:53:51,580
+haver problemas
+
+866
+00:53:51,580 --> 00:53:53,580
+ora vai
+
+867
+00:53:59,580 --> 00:54:01,580
+não percebi
+
+868
+00:54:01,580 --> 00:54:03,580
+a parte em que
+
+869
+00:54:03,580 --> 00:54:05,580
+como é que, por exemplo
+
+870
+00:54:05,580 --> 00:54:07,580
+ali no
+
+871
+00:54:07,580 --> 00:54:09,580
+no ale, um ciclo ale
+
+872
+00:54:09,580 --> 00:54:11,580
+como é que
+
+873
+00:54:11,580 --> 00:54:13,580
+como é que ele
+
+874
+00:54:13,580 --> 00:54:15,580
+como é que, por exemplo
+
+875
+00:54:15,580 --> 00:54:17,580
+do método read
+
+876
+00:54:17,580 --> 00:54:19,580
+então faz essa gestão
+
+877
+00:54:19,580 --> 00:54:21,580
+para não repetir
+
+878
+00:54:21,580 --> 00:54:23,580
+mas, por exemplo, se eu tivesse
+
+879
+00:54:23,580 --> 00:54:25,580
+outro ale
+
+880
+00:54:27,580 --> 00:54:29,580
+ele não repetiria a mesma
+
+881
+00:54:29,580 --> 00:54:31,580
+cola é
+
+882
+00:54:31,580 --> 00:54:33,580
+não, não repetiria porque
+
+883
+00:54:33,580 --> 00:54:35,580
+a não ser que eu fizesse
+
+884
+00:54:35,580 --> 00:54:37,580
+outro open
+
+885
+00:54:37,580 --> 00:54:39,580
+para outro descritor
+
+886
+00:54:39,580 --> 00:54:41,580
+e ao fazer o open
+
+887
+00:54:41,580 --> 00:54:43,580
+sempre que eu faço o open
+
+888
+00:54:43,580 --> 00:54:45,580
+é um fecheiro
+
+889
+00:54:45,580 --> 00:54:47,580
+ele tem que ter uma estrutura
+
+890
+00:54:47,580 --> 00:54:49,580
+no kernel
+
+891
+00:54:49,580 --> 00:54:51,580
+que vai gerir
+
+892
+00:54:51,580 --> 00:54:53,580
+o fecheiro
+
+893
+00:54:53,580 --> 00:54:55,580
+as interações com o fecheiro
+
+894
+00:54:55,580 --> 00:54:57,580
+ou seja, é
+
+895
+00:54:57,580 --> 00:54:59,580
+sim, sim, fala, fala
+
+896
+00:54:59,580 --> 00:55:01,580
+ou seja, depois do ale
+
+897
+00:55:01,580 --> 00:55:03,580
+se eu fizesse outro ale
+
+898
+00:55:03,580 --> 00:55:05,580
+o que é que aconteceria aqui
+
+899
+00:55:05,580 --> 00:55:07,580
+e ele, neste caso
+
+900
+00:55:07,580 --> 00:55:09,580
+que nos está a ler até o final
+
+901
+00:55:09,580 --> 00:55:11,580
+do fecheiro
+
+902
+00:55:11,580 --> 00:55:13,580
+não haver nada
+
+903
+00:55:13,580 --> 00:55:15,580
+porque o
+
+904
+00:55:15,580 --> 00:55:17,580
+digamos, aquela
+
+905
+00:55:17,580 --> 00:55:19,580
+variável que indica
+
+906
+00:55:19,580 --> 00:55:21,580
+o último byte de lido
+
+907
+00:55:21,580 --> 00:55:23,580
+estava no fim do fecheiro
+
+908
+00:55:23,580 --> 00:55:25,580
+já não tinha mais nada
+
+909
+00:55:25,580 --> 00:55:27,580
+agora, se eu, por exemplo
+
+910
+00:55:27,580 --> 00:55:29,580
+tivesse aqui int fd1
+
+911
+00:55:29,580 --> 00:55:31,580
+open o mesmo fecheiro
+
+912
+00:55:31,580 --> 00:55:33,580
+e depois usasse o fd
+
+913
+00:55:33,580 --> 00:55:35,580
+e o fd1
+
+914
+00:55:35,580 --> 00:55:37,580
+o que é que eu ia ter?
+
+915
+00:55:37,580 --> 00:55:39,580
+ia ter duas estruturas
+
+916
+00:55:39,580 --> 00:55:41,580
+eu ia tentar que
+
+917
+00:55:41,580 --> 00:55:43,580
+fazia isto
+
+918
+00:55:43,580 --> 00:55:45,580
+e tal e qual como aqui está
+
+919
+00:55:45,580 --> 00:55:47,580
+e agora duplicava
+
+920
+00:55:47,580 --> 00:55:49,580
+para o fd1
+
+921
+00:55:49,580 --> 00:55:51,580
+ou então até podia usar a mesma variável
+
+922
+00:55:51,580 --> 00:55:53,580
+podia usar a mesma variável
+
+923
+00:55:53,580 --> 00:55:55,580
+ora, como fiz, invoquei o open
+
+924
+00:55:55,580 --> 00:55:57,580
+o open não quer que vai fazer
+
+925
+00:55:57,580 --> 00:55:59,580
+vai pedir ao kernel que diz
+
+926
+00:55:59,580 --> 00:56:01,580
+olha o kernel
+
+927
+00:56:01,580 --> 00:56:03,580
+eu quero trabalhar com este fecheiro
+
+928
+00:56:03,580 --> 00:56:05,580
+o kernel tem que ter
+
+929
+00:56:05,580 --> 00:56:07,580
+uma estrutura qualquer
+
+930
+00:56:07,580 --> 00:56:09,580
+para gerir as ações sobre aquele
+
+931
+00:56:09,580 --> 00:56:11,580
+fecheiro
+
+932
+00:56:11,580 --> 00:56:13,580
+essa estrutura
+
+933
+00:56:13,580 --> 00:56:15,580
+é do tipo structfile
+
+934
+00:56:15,580 --> 00:56:17,580
+em que
+
+935
+00:56:17,580 --> 00:56:19,580
+nessa estrutura
+
+936
+00:56:19,580 --> 00:56:21,580
+ele consegue
+
+937
+00:56:21,580 --> 00:56:23,580
+gerir
+
+938
+00:56:23,580 --> 00:56:25,580
+em que posição
+
+939
+00:56:25,580 --> 00:56:27,580
+é que, digamos, o
+
+940
+00:56:27,580 --> 00:56:29,580
+cursor está a apontar
+
+941
+00:56:29,580 --> 00:56:31,580
+por isso é que
+
+942
+00:56:31,580 --> 00:56:33,580
+quando eu em user space
+
+943
+00:56:33,580 --> 00:56:35,580
+não tenho que me preocupar com isso
+
+944
+00:56:35,580 --> 00:56:37,580
+e esse que peço para ler
+
+945
+00:56:37,580 --> 00:56:39,580
+50
+
+946
+00:56:39,580 --> 00:56:41,580
+e é sumido que
+
+947
+00:56:41,580 --> 00:56:43,580
+ele vai dar os próximos
+
+948
+00:56:43,580 --> 00:56:45,580
+50 porque?
+
+949
+00:56:45,580 --> 00:56:47,580
+porque a variável
+
+950
+00:56:47,580 --> 00:56:49,580
+fpos aponta para
+
+951
+00:56:49,580 --> 00:56:51,580
+essa posição
+
+952
+00:56:51,580 --> 00:56:53,580
+e eu li 50 e atualizo a variável
+
+953
+00:56:53,580 --> 00:56:55,580
+fpos e ele está a apontar para
+
+954
+00:56:55,580 --> 00:56:57,580
+posição 100
+
+955
+00:56:57,580 --> 00:56:59,580
+e assim por diante
+
+956
+00:56:59,580 --> 00:57:01,580
+para cada open
+
+957
+00:57:01,580 --> 00:57:03,580
+ele vai criar uma estrutura deste tipo
+
+958
+00:57:05,580 --> 00:57:07,580
+para gerir
+
+959
+00:57:07,580 --> 00:57:09,580
+obviamente se eu fizer sobre o mesmo
+
+960
+00:57:09,580 --> 00:57:11,580
+fecheiro, isto tiverem posições
+
+961
+00:57:11,580 --> 00:57:13,580
+diferentes
+
+962
+00:57:13,580 --> 00:57:15,580
+obviamente que
+
+963
+00:57:15,580 --> 00:57:17,580
+e se fizer writes e reads
+
+964
+00:57:17,580 --> 00:57:19,580
+ele vai
+
+965
+00:57:19,580 --> 00:57:21,580
+escrever e vai
+
+966
+00:57:21,580 --> 00:57:23,580
+digamos
+
+967
+00:57:23,580 --> 00:57:25,580
+mais do que um processo
+
+968
+00:57:25,580 --> 00:57:27,580
+a interação com o fecheiro
+
+969
+00:57:27,580 --> 00:57:29,580
+provavelmente vai obter coisas diferentes
+
+970
+00:57:29,580 --> 00:57:31,580
+ok, bom, obrigado por ser
+
+971
+00:57:31,580 --> 00:57:35,430
+certo
+
+972
+00:57:35,430 --> 00:57:37,430
+então
+
+973
+00:57:37,430 --> 00:57:39,430
+se tivermos tempo de chegarmos
+
+974
+00:57:39,430 --> 00:57:41,430
+aos módulos
+
+975
+00:57:41,430 --> 00:57:43,430
+a parte em que implemento e mostro-vos
+
+976
+00:57:43,430 --> 00:57:45,430
+se não depois na aula
+
+977
+00:57:45,430 --> 00:57:47,430
+eu vou-vos mostrar um exemplo
+
+978
+00:57:47,430 --> 00:57:49,430
+e até vamos ver uma forma de crachar isto
+
+979
+00:57:49,430 --> 00:57:51,430
+ora
+
+980
+00:57:51,430 --> 00:57:53,430
+conto
+
+981
+00:57:53,430 --> 00:57:55,430
+conceitos avançados, nós já vimos
+
+982
+00:57:55,430 --> 00:57:57,430
+no exemplo o mal open
+
+983
+00:57:57,430 --> 00:57:59,430
+e o capa free
+
+984
+00:57:59,430 --> 00:58:01,430
+pronto, não vamos voltar aqui
+
+985
+00:58:01,430 --> 00:58:03,430
+entrar muito em detalhes
+
+986
+00:58:03,430 --> 00:58:05,430
+não é isso, mas pronto
+
+987
+00:58:05,430 --> 00:58:07,430
+existe forma de fazer
+
+988
+00:58:07,430 --> 00:58:09,430
+alocação
+
+989
+00:58:09,430 --> 00:58:11,430
+de memória
+
+990
+00:58:11,430 --> 00:58:13,430
+para encarnal space
+
+991
+00:58:13,430 --> 00:58:15,430
+e depois essa alocação
+
+992
+00:58:15,430 --> 00:58:17,430
+até porque essa zona tipicamente
+
+993
+00:58:17,430 --> 00:58:19,430
+é mais pequena, por vezes
+
+994
+00:58:19,430 --> 00:58:21,430
+nós podemos
+
+995
+00:58:21,430 --> 00:58:23,430
+pode ser bloquiano, pode ser não bloquiano
+
+996
+00:58:23,430 --> 00:58:25,430
+coisas assim de gente, portanto
+
+997
+00:58:25,430 --> 00:58:27,430
+existe
+
+998
+00:58:27,430 --> 00:58:29,430
+através destas fleques
+
+999
+00:58:29,430 --> 00:58:31,430
+formas de
+
+1000
+00:58:31,430 --> 00:58:33,430
+instruir o capa malloc
+
+1001
+00:58:33,430 --> 00:58:35,430
+para ter determinado comportamento
+
+1002
+00:58:35,430 --> 00:58:37,430
+depois
+
+1003
+00:58:37,430 --> 00:58:39,430
+temos, e agora aqui geralmente
+
+1004
+00:58:39,430 --> 00:58:41,430
+esta parte é mais difícil de vocês
+
+1005
+00:58:41,430 --> 00:58:43,430
+perceberam, e por isso é que eu
+
+1006
+00:58:43,430 --> 00:58:45,430
+como já vos disse, eu não gosto de detalhes
+
+1007
+00:58:45,430 --> 00:58:47,430
+aulas online
+
+1008
+00:58:47,430 --> 00:58:49,430
+ora bem
+
+1009
+00:58:49,430 --> 00:58:51,430
+vocês
+
+1010
+00:58:51,430 --> 00:58:53,430
+tipicamente, o que é que a gente faz
+
+1011
+00:58:53,430 --> 00:58:55,430
+você é sil
+
+1012
+00:58:55,430 --> 00:58:57,430
+quando nós definimos uma estrutura
+
+1013
+00:58:57,430 --> 00:58:59,430
+quando definimos uma estrutura
+
+1014
+00:58:59,430 --> 00:59:01,430
+e se eu quero implementar
+
+1015
+00:59:01,430 --> 00:59:03,430
+uma lista ligada, por exemplo
+
+1016
+00:59:03,430 --> 00:59:05,430
+isto é, ter um nó
+
+1017
+00:59:05,430 --> 00:59:07,430
+que vai ligar ao outro
+
+1018
+00:59:07,430 --> 00:59:09,430
+e assim por diante
+
+1019
+00:59:09,430 --> 00:59:11,430
+tipicamente o que é que eu tenho
+
+1020
+00:59:11,430 --> 00:59:13,430
+eu tenho o típico
+
+1021
+00:59:13,430 --> 00:59:15,430
+campo next
+
+1022
+00:59:15,430 --> 00:59:17,430
+portanto tem que
+
+1023
+00:59:17,430 --> 00:59:19,430
+é um apontador
+
+1024
+00:59:19,430 --> 00:59:21,430
+da própria estrutura
+
+1025
+00:59:21,430 --> 00:59:23,430
+eu estou aqui a escrever
+
+1026
+00:59:23,430 --> 00:59:25,430
+e a escrever de papel
+
+1027
+00:59:25,430 --> 00:59:27,430
+portanto é um apontador
+
+1028
+00:59:27,430 --> 00:59:29,430
+para a própria estrutura
+
+1029
+00:59:29,430 --> 00:59:31,430
+portanto significa que o next
+
+1030
+00:59:31,430 --> 00:59:33,430
+vai ter o endereço
+
+1031
+00:59:33,430 --> 00:59:35,430
+da
+
+1032
+00:59:35,430 --> 00:59:37,430
+variável que está a seguir
+
+1033
+00:59:37,430 --> 00:59:39,430
+daquela estrutura, uma variável de uma determinada
+
+1034
+00:59:39,430 --> 00:59:41,430
+estrutura que está a seguir aquela
+
+1035
+00:59:41,430 --> 00:59:43,430
+portanto, e nós quando queremos
+
+1036
+00:59:43,430 --> 00:59:45,430
+percorrer uma lista ligada
+
+1037
+00:59:45,430 --> 00:59:47,430
+começamos na cabeça
+
+1038
+00:59:47,430 --> 00:59:49,430
+next, next, next, next até
+
+1039
+00:59:49,430 --> 00:59:51,430
+o último, tipicamente
+
+1040
+00:59:51,430 --> 00:59:53,430
+tenho o apontador next
+
+1041
+00:59:53,430 --> 00:59:55,430
+anul, e é assim que percorremos
+
+1042
+00:59:55,430 --> 00:59:57,430
+a lista ligada
+
+1043
+00:59:57,430 --> 00:59:59,430
+ora, só que no kernel
+
+1044
+00:59:59,430 --> 01:00:01,430
+o que é que acontece?
+
+1045
+01:00:01,430 --> 01:00:03,430
+no kernel
+
+1046
+01:00:03,430 --> 01:00:05,430
+existe
+
+1047
+01:00:05,430 --> 01:00:07,430
+uma abordagem
+
+1048
+01:00:07,430 --> 01:00:09,430
+diferente que ele
+
+1049
+01:00:09,430 --> 01:00:11,430
+obviamente quando eu tenho o next
+
+1050
+01:00:11,430 --> 01:00:13,430
+eu o next aponta para que
+
+1051
+01:00:13,430 --> 01:00:15,430
+tenho o endereço
+
+1052
+01:00:15,430 --> 01:00:17,430
+da variável logo
+
+1053
+01:00:17,430 --> 01:00:19,430
+eu através
+
+1054
+01:00:19,430 --> 01:00:21,430
+dessa apontador eu consigo aceder
+
+1055
+01:00:21,430 --> 01:00:23,430
+aos diferentes campos
+
+1056
+01:00:23,430 --> 01:00:25,430
+que estão naquela estrutura
+
+1057
+01:00:25,430 --> 01:00:27,430
+ora
+
+1058
+01:00:27,430 --> 01:00:29,430
+o container
+
+1059
+01:00:29,430 --> 01:00:31,430
+é uma macro
+
+1060
+01:00:31,430 --> 01:00:33,430
+extraordinária
+
+1061
+01:00:33,430 --> 01:00:35,430
+me permite o que?
+
+1062
+01:00:35,430 --> 01:00:37,430
+permite-me dizer assim
+
+1063
+01:00:37,430 --> 01:00:39,430
+olha, eu tenho
+
+1064
+01:00:39,430 --> 01:00:41,430
+esta estrutura
+
+1065
+01:00:43,430 --> 01:00:45,430
+e tenho
+
+1066
+01:00:45,430 --> 01:00:47,430
+para não dizer as maneiras
+
+1067
+01:00:47,430 --> 01:00:49,430
+não, melhor
+
+1068
+01:00:49,430 --> 01:00:51,430
+eu tenho este apontador
+
+1069
+01:00:51,430 --> 01:00:53,430
+é um número
+
+1070
+01:00:53,430 --> 01:00:55,430
+este apontador
+
+1071
+01:00:55,430 --> 01:00:57,430
+é
+
+1072
+01:00:57,430 --> 01:00:59,430
+um apontador
+
+1073
+01:00:59,430 --> 01:01:01,430
+de um campo
+
+1074
+01:01:01,430 --> 01:01:03,430
+de uma determinada estrutura
+
+1075
+01:01:03,430 --> 01:01:05,430
+e esse campo
+
+1076
+01:01:05,430 --> 01:01:07,430
+ou esse membro
+
+1077
+01:01:07,430 --> 01:01:09,430
+é este
+
+1078
+01:01:09,430 --> 01:01:11,430
+tenta lá perceber
+
+1079
+01:01:11,430 --> 01:01:13,430
+vamos imaginar aqui
+
+1080
+01:01:13,430 --> 01:01:15,430
+este caso aqui
+
+1081
+01:01:15,430 --> 01:01:17,430
+eu tenho, portanto
+
+1082
+01:01:17,430 --> 01:01:19,430
+temos aqui esta variável
+
+1083
+01:01:19,430 --> 01:01:21,430
+obj1
+
+1084
+01:01:21,430 --> 01:01:23,430
+é uma variável
+
+1085
+01:01:23,430 --> 01:01:25,430
+e eu estou a passar
+
+1086
+01:01:25,430 --> 01:01:27,430
+o endereço do campo
+
+1087
+01:01:27,430 --> 01:01:29,430
+3, do membro 3
+
+1088
+01:01:29,430 --> 01:01:31,430
+estou a dizer que este
+
+1089
+01:01:31,430 --> 01:01:33,430
+endereço é de uma variável
+
+1090
+01:01:33,430 --> 01:01:38,250
+deste tipo
+
+1091
+01:01:38,250 --> 01:01:40,250
+estou a dizer que este
+
+1092
+01:01:40,250 --> 01:01:42,250
+endereço é do
+
+1093
+01:01:42,250 --> 01:01:44,250
+membro 3
+
+1094
+01:01:44,250 --> 01:01:47,560
+e o que que o container
+
+1095
+01:01:47,560 --> 01:01:49,560
+vai mudar? vai mudar
+
+1096
+01:01:49,560 --> 01:01:51,560
+o endereço do início
+
+1097
+01:01:51,560 --> 01:01:53,560
+é de uma variável
+
+1098
+01:01:53,560 --> 01:01:55,560
+portanto eu estou a passar
+
+1099
+01:01:55,560 --> 01:01:57,560
+um endereço
+
+1100
+01:01:57,560 --> 01:01:59,560
+que está aqui
+
+1101
+01:01:59,560 --> 01:02:01,560
+o endereço desta variável
+
+1102
+01:02:01,560 --> 01:02:03,560
+estou a dizer que
+
+1103
+01:02:03,560 --> 01:02:05,560
+este endereço
+
+1104
+01:02:05,560 --> 01:02:07,560
+é de uma variável deste tipo
+
+1105
+01:02:07,560 --> 01:02:09,560
+este
+
+1106
+01:02:09,560 --> 01:02:11,560
+é só o endereço
+
+1107
+01:02:11,560 --> 01:02:13,560
+e
+
+1108
+01:02:13,560 --> 01:02:15,560
+o tipo
+
+1109
+01:02:15,560 --> 01:02:17,560
+ele não sabia
+
+1110
+01:02:17,560 --> 01:02:21,830
+então eu tenho que dizer
+
+1111
+01:02:21,830 --> 01:02:23,830
+é de uma variável deste tipo
+
+1112
+01:02:23,830 --> 01:02:25,830
+nomeadamente
+
+1113
+01:02:25,830 --> 01:02:27,830
+da variável membro 3
+
+1114
+01:02:27,830 --> 01:02:29,830
+e o que é que ele vai fazer?
+
+1115
+01:02:29,830 --> 01:02:31,830
+ele vai retornar o apontador
+
+1116
+01:02:31,830 --> 01:02:33,830
+do início da variável
+
+1117
+01:02:33,830 --> 01:02:35,830
+e dessa forma
+
+1118
+01:02:35,830 --> 01:02:37,830
+eu consigo
+
+1119
+01:02:37,830 --> 01:02:39,830
+usando esse apontador
+
+1120
+01:02:39,830 --> 01:02:41,830
+eu depois consigo aceder a todos os membros
+
+1121
+01:02:41,830 --> 01:02:43,830
+dúvidas
+
+1122
+01:02:43,830 --> 01:02:50,250
+portanto, isto é muito usado no kernel
+
+1123
+01:02:50,250 --> 01:02:52,250
+depois já vamos
+
+1124
+01:02:52,250 --> 01:02:54,250
+perceber porque
+
+1125
+01:02:54,250 --> 01:02:56,250
+é muito usado no kernel
+
+1126
+01:02:56,250 --> 01:02:58,250
+porque
+
+1127
+01:02:58,250 --> 01:03:00,250
+é muito usado
+
+1128
+01:03:00,250 --> 01:03:02,250
+porque as estruturas de dados
+
+1129
+01:03:02,250 --> 01:03:04,250
+são colocadas em muitas listas
+
+1130
+01:03:04,250 --> 01:03:06,250
+e coisas assim do tempo
+
+1131
+01:03:06,250 --> 01:03:13,370
+não
+
+1132
+01:03:13,370 --> 01:03:15,370
+não percebi, desculpa, não percebi a primeira parte
+
+1133
+01:03:15,370 --> 01:03:22,870
+onde começa a estrutura
+
+1134
+01:03:22,870 --> 01:03:24,870
+onde começa a estrutura
+
+1135
+01:03:24,870 --> 01:03:26,870
+portanto
+
+1136
+01:03:26,870 --> 01:03:28,870
+como aqui está
+
+1137
+01:03:28,870 --> 01:03:30,870
+vamos esquecer
+
+1138
+01:03:30,870 --> 01:03:32,870
+o qual assim
+
+1139
+01:03:32,870 --> 01:03:34,870
+sei
+
+1140
+01:03:34,870 --> 01:03:36,870
+o endereço
+
+1141
+01:03:36,870 --> 01:03:38,870
+tem o endereço de um campo
+
+1142
+01:03:38,870 --> 01:03:40,870
+se conheça a estrutura
+
+1143
+01:03:40,870 --> 01:03:42,870
+sei, esse endereço
+
+1144
+01:03:42,870 --> 01:03:44,870
+é de que membro
+
+1145
+01:03:44,870 --> 01:03:46,870
+dessa estrutura
+
+1146
+01:03:46,870 --> 01:03:48,870
+e ele devolve-nos o apontador
+
+1147
+01:03:48,870 --> 01:03:50,870
+do início da estrutura
+
+1148
+01:03:50,870 --> 01:03:52,870
+como podem ver
+
+1149
+01:03:52,870 --> 01:03:54,870
+eu a partir desse apontador consigo aceder
+
+1150
+01:03:54,870 --> 01:03:56,870
+a todos os membros
+
+1151
+01:03:56,870 --> 01:04:00,980
+nós já vamos perceber
+
+1152
+01:04:00,980 --> 01:04:02,980
+até do membro 1
+
+1153
+01:04:02,980 --> 01:04:04,980
+eu consigo aceder a todos
+
+1154
+01:04:04,980 --> 01:04:06,980
+portanto, eu sei
+
+1155
+01:04:06,980 --> 01:04:08,980
+qualquer coisa que está no meio
+
+1156
+01:04:08,980 --> 01:04:10,980
+e através do container of
+
+1157
+01:04:10,980 --> 01:04:12,980
+eu consigo saber o endereço
+
+1158
+01:04:12,980 --> 01:04:14,980
+do primeiro byte
+
+1159
+01:04:14,980 --> 01:04:16,980
+daquela variável
+
+1160
+01:04:16,980 --> 01:04:18,980
+e a partir daí
+
+1161
+01:04:18,980 --> 01:04:20,980
+posso aceder aos diferentes campers
+
+1162
+01:04:20,980 --> 01:04:22,980
+obviamente que se eu
+
+1163
+01:04:22,980 --> 01:04:24,980
+soubesse os offsetos
+
+1164
+01:04:24,980 --> 01:04:26,980
+eu aqui também a partir
+
+1165
+01:04:26,980 --> 01:04:28,980
+do membro 3 também conseguia fazer isso
+
+1166
+01:04:28,980 --> 01:04:30,980
+mas, tipicamente
+
+1167
+01:04:30,980 --> 01:04:32,980
+e assim
+
+1168
+01:04:32,980 --> 01:04:34,980
+que o container of
+
+1169
+01:04:34,980 --> 01:04:36,980
+funciona, o container of
+
+1170
+01:04:36,980 --> 01:04:38,980
+sabe como é que a estrutura está definida
+
+1171
+01:04:38,980 --> 01:04:40,980
+e
+
+1172
+01:04:40,980 --> 01:04:42,980
+é como
+
+1173
+01:04:42,980 --> 01:04:44,980
+o que está agora nas Nações Unidas
+
+1174
+01:04:44,980 --> 01:04:46,980
+disse aqui uns anos atrás
+
+1175
+01:04:46,980 --> 01:04:48,980
+para vocês sequerar não se lembro
+
+1176
+01:04:48,980 --> 01:04:50,980
+é só fazer contas
+
+1177
+01:04:50,980 --> 01:04:52,980
+portanto, ele sabe
+
+1178
+01:04:52,980 --> 01:04:54,980
+esta posição
+
+1179
+01:04:54,980 --> 01:04:56,980
+sabe
+
+1180
+01:04:56,980 --> 01:04:58,980
+em que, ele tem um endereço
+
+1181
+01:04:58,980 --> 01:05:00,980
+sabe em que posição é que está
+
+1182
+01:05:00,980 --> 01:05:02,980
+esse endereço
+
+1183
+01:05:02,980 --> 01:05:04,980
+logo
+
+1184
+01:05:04,980 --> 01:05:06,980
+é só fazer contas para chegar
+
+1185
+01:05:06,980 --> 01:05:10,520
+ao início da estrutura
+
+1186
+01:05:10,520 --> 01:05:12,520
+e vocês já vão perceber
+
+1187
+01:05:12,520 --> 01:05:14,520
+melhor a utilização disso
+
+1188
+01:05:14,520 --> 01:05:16,520
+ora bem
+
+1189
+01:05:16,520 --> 01:05:18,520
+listas ligadas
+
+1190
+01:05:18,520 --> 01:05:20,520
+o kernel usa muitas listas
+
+1191
+01:05:20,520 --> 01:05:22,520
+ligadas e por
+
+1192
+01:05:22,520 --> 01:05:24,520
+incrível que pareça
+
+1193
+01:05:24,520 --> 01:05:26,520
+ele já tem um API para
+
+1194
+01:05:26,520 --> 01:05:32,940
+as listas ligadas
+
+1195
+01:05:32,940 --> 01:05:34,940
+como vocês podem ver
+
+1196
+01:05:34,940 --> 01:05:36,940
+a estrutura que se chama ListEd
+
+1197
+01:05:36,940 --> 01:05:38,940
+podia-se chamar outra coisa qualquer
+
+1198
+01:05:38,940 --> 01:05:40,940
+tem só dois apontadores
+
+1199
+01:05:40,940 --> 01:05:42,940
+o Next e o Preve
+
+1200
+01:05:42,940 --> 01:05:44,940
+portanto, como vocês podem ver
+
+1201
+01:05:44,940 --> 01:05:46,940
+não tem aqui mais nenhum campo
+
+1202
+01:05:46,940 --> 01:05:51,080
+portanto, a lista
+
+1203
+01:05:51,080 --> 01:05:53,080
+esta lista ligada
+
+1204
+01:05:53,080 --> 01:05:55,080
+permite-nos andar
+
+1205
+01:05:55,080 --> 01:05:57,080
+de um lado para o outro
+
+1206
+01:05:57,080 --> 01:05:59,080
+o que é que ele vai ter
+
+1207
+01:05:59,080 --> 01:06:01,080
+o Next aponta para a próxima
+
+1208
+01:06:01,080 --> 01:06:03,080
+variável do tipo ListEd
+
+1209
+01:06:03,080 --> 01:06:05,080
+o Preve
+
+1210
+01:06:05,080 --> 01:06:07,080
+para anterior
+
+1211
+01:06:07,080 --> 01:06:09,080
+nada mais do que isso
+
+1212
+01:06:09,080 --> 01:06:13,030
+ora
+
+1213
+01:06:13,030 --> 01:06:15,030
+imagine isto
+
+1214
+01:06:15,030 --> 01:06:17,030
+por exemplo
+
+1215
+01:06:17,030 --> 01:06:19,030
+um módulo que eu vos vou disponibilizar
+
+1216
+01:06:19,030 --> 01:06:21,030
+que permite listar
+
+1217
+01:06:21,030 --> 01:06:23,030
+todas as tarefas que estão ativas
+
+1218
+01:06:23,030 --> 01:06:25,030
+no sistema
+
+1219
+01:06:25,030 --> 01:06:27,030
+as tarefas
+
+1220
+01:06:27,030 --> 01:06:29,030
+são cada
+
+1221
+01:06:29,030 --> 01:06:31,030
+tarefa
+
+1222
+01:06:31,030 --> 01:06:33,030
+ou cada processo ativo no sistema
+
+1223
+01:06:33,030 --> 01:06:35,030
+é representado
+
+1224
+01:06:35,030 --> 01:06:37,030
+através de uma variável
+
+1225
+01:06:37,030 --> 01:06:39,030
+de um tipo de dados
+
+1226
+01:06:39,030 --> 01:06:41,030
+no caso
+
+1227
+01:06:41,030 --> 01:06:43,030
+TaskStruck
+
+1228
+01:06:43,030 --> 01:06:45,030
+e
+
+1229
+01:06:45,030 --> 01:06:47,030
+nesta estrutura
+
+1230
+01:06:47,030 --> 01:06:49,030
+existe um campo do tipo
+
+1231
+01:06:49,030 --> 01:06:52,280
+ListEd
+
+1232
+01:06:52,280 --> 01:06:54,280
+ora
+
+1233
+01:06:54,280 --> 01:06:56,280
+quando acessente uma nova
+
+1234
+01:06:56,280 --> 01:06:58,280
+estrutura
+
+1235
+01:06:58,280 --> 01:07:00,280
+ele vai ligar
+
+1236
+01:07:00,280 --> 01:07:02,280
+a lista de processos
+
+1237
+01:07:02,280 --> 01:07:04,280
+ligando-se só
+
+1238
+01:07:04,280 --> 01:07:06,280
+os campos do tipo ListEd
+
+1239
+01:07:06,280 --> 01:07:08,280
+ora
+
+1240
+01:07:08,280 --> 01:07:10,280
+eu através daqui consigo ir até aqui
+
+1241
+01:07:10,280 --> 01:07:12,280
+daqui consigo ir até aqui
+
+1242
+01:07:12,280 --> 01:07:14,280
+para aqui e assim por diante
+
+1243
+01:07:14,280 --> 01:07:16,280
+mas
+
+1244
+01:07:16,280 --> 01:07:18,280
+eu não sei
+
+1245
+01:07:18,280 --> 01:07:20,280
+quando estou aqui qual é
+
+1246
+01:07:20,280 --> 01:07:22,280
+a estrutura de dados
+
+1247
+01:07:22,280 --> 01:07:24,280
+vamos imaginar que eu quero buscar
+
+1248
+01:07:24,280 --> 01:07:26,280
+o PID
+
+1249
+01:07:26,280 --> 01:07:28,280
+de um campo
+
+1250
+01:07:28,280 --> 01:07:30,280
+qualquer que está aqui
+
+1251
+01:07:30,280 --> 01:07:32,280
+o que eu tenho
+
+1252
+01:07:32,280 --> 01:07:34,280
+é o apontador deste campo
+
+1253
+01:07:34,280 --> 01:07:36,280
+não é
+
+1254
+01:07:36,280 --> 01:07:38,280
+através do container of
+
+1255
+01:07:38,280 --> 01:07:40,280
+eu vou conseguir chegar aqui
+
+1256
+01:07:40,280 --> 01:07:42,280
+e depois ir buscar
+
+1257
+01:07:42,280 --> 01:07:44,280
+os campos
+
+1258
+01:07:44,280 --> 01:07:46,280
+portanto o ListEd
+
+1259
+01:07:46,280 --> 01:07:48,280
+vai me permitir
+
+1260
+01:07:48,280 --> 01:07:50,280
+ter aquelas estruturas
+
+1261
+01:07:50,280 --> 01:07:52,280
+numa determinada lista
+
+1262
+01:07:52,280 --> 01:07:54,280
+ordenada de uma determinada forma
+
+1263
+01:07:54,280 --> 01:07:56,280
+mas
+
+1264
+01:07:56,280 --> 01:07:58,280
+isso não dá nada
+
+1265
+01:07:58,280 --> 01:08:00,280
+eu tenho dois apontadores
+
+1266
+01:08:00,280 --> 01:08:02,280
+eu quero é saber
+
+1267
+01:08:02,280 --> 01:08:04,280
+a informação
+
+1268
+01:08:04,280 --> 01:08:06,280
+associada àquela estrutura
+
+1269
+01:08:06,280 --> 01:08:08,280
+então para isso
+
+1270
+01:08:08,280 --> 01:08:10,280
+eu tenho que usar o container of
+
+1271
+01:08:10,280 --> 01:08:12,280
+para ir buscar
+
+1272
+01:08:12,280 --> 01:08:14,280
+os dados que quero
+
+1273
+01:08:14,280 --> 01:08:16,280
+para fazer alguma coisa
+
+1274
+01:08:16,280 --> 01:08:18,280
+por exemplo este aqui
+
+1275
+01:08:18,280 --> 01:08:20,280
+é uma
+
+1276
+01:08:20,280 --> 01:08:22,280
+o exemplo
+
+1277
+01:08:22,280 --> 01:08:24,280
+do código que vocês encontram
+
+1278
+01:08:24,280 --> 01:08:26,280
+no modo portanto
+
+1279
+01:08:26,280 --> 01:08:28,280
+e isso já existe
+
+1280
+01:08:28,280 --> 01:08:30,280
+uma API
+
+1281
+01:08:30,280 --> 01:08:32,280
+com as funções
+
+1282
+01:08:32,280 --> 01:08:34,280
+para inserir, para percorrer
+
+1283
+01:08:34,280 --> 01:08:36,280
+o arreio
+
+1284
+01:08:36,280 --> 01:08:38,280
+e neste exemplo em concreto
+
+1285
+01:08:38,280 --> 01:08:40,280
+neste exemplo em concreto
+
+1286
+01:08:40,280 --> 01:08:42,280
+nós temos aqui
+
+1287
+01:08:42,280 --> 01:08:44,280
+uma estrutura
+
+1288
+01:08:44,280 --> 01:08:46,280
+e temos aqui algo
+
+1289
+01:08:46,280 --> 01:08:48,280
+que vai conter dados
+
+1290
+01:08:48,280 --> 01:08:50,280
+não importa, vai conter uma mensagem
+
+1291
+01:08:50,280 --> 01:08:52,280
+qualquer hora
+
+1292
+01:08:52,280 --> 01:08:54,280
+e vou ter aqui este campo
+
+1293
+01:08:54,280 --> 01:08:56,280
+para permitir
+
+1294
+01:08:56,280 --> 01:08:58,280
+ter organizar
+
+1295
+01:08:58,280 --> 01:09:00,280
+as variáveis
+
+1296
+01:09:00,280 --> 01:09:02,280
+deste tipo
+
+1297
+01:09:02,280 --> 01:09:04,280
+numa lista
+
+1298
+01:09:04,280 --> 01:09:06,280
+mas
+
+1299
+01:09:06,280 --> 01:09:08,280
+e eu tenho funções
+
+1300
+01:09:08,280 --> 01:09:10,280
+que me permito percorrer
+
+1301
+01:09:10,280 --> 01:09:12,280
+essa lista toda, eu quando adiciono
+
+1302
+01:09:12,280 --> 01:09:14,280
+eu vou buscar
+
+1303
+01:09:14,280 --> 01:09:16,280
+o elemento
+
+1304
+01:09:16,280 --> 01:09:18,280
+e adiciono, então a ver aqui
+
+1305
+01:09:18,280 --> 01:09:20,280
+eu tenho aqui um red
+
+1306
+01:09:20,280 --> 01:09:22,280
+e vou
+
+1307
+01:09:22,280 --> 01:09:24,280
+aqui um novo nó
+
+1308
+01:09:24,280 --> 01:09:26,280
+e vou adicionar este novo nó
+
+1309
+01:09:26,280 --> 01:09:28,280
+na prática o que é que
+
+1310
+01:09:28,280 --> 01:09:30,280
+vai fazer este list
+
+1311
+01:09:30,280 --> 01:09:32,280
+vai ligar os apontadores
+
+1312
+01:09:32,280 --> 01:09:34,280
+deste tipo
+
+1313
+01:09:34,280 --> 01:09:36,280
+portanto o prev
+
+1314
+01:09:36,280 --> 01:09:38,280
+e o next
+
+1315
+01:09:38,280 --> 01:09:40,280
+de forma a criar uma lista ligada
+
+1316
+01:09:40,280 --> 01:09:42,280
+mas essa lista ligada é só de arames
+
+1317
+01:09:42,280 --> 01:09:44,280
+que eu gosto de dizer
+
+1318
+01:09:44,280 --> 01:09:46,280
+a informação, se eu quiser
+
+1319
+01:09:46,280 --> 01:09:48,280
+ir buscar esta informação
+
+1320
+01:09:48,280 --> 01:09:50,280
+eu tenho que usar
+
+1321
+01:09:50,280 --> 01:09:52,280
+uma variável, tenho que usar
+
+1322
+01:09:52,280 --> 01:09:54,280
+o container of
+
+1323
+01:09:54,280 --> 01:09:56,280
+para ir buscar
+
+1324
+01:09:56,280 --> 01:09:58,280
+ir ao início da variável
+
+1325
+01:09:58,280 --> 01:10:00,280
+para depois ir buscar aqui o buffer
+
+1326
+01:10:00,280 --> 01:10:02,280
+o conteúdo que está no buffer
+
+1327
+01:10:02,280 --> 01:10:04,280
+no caso das listas
+
+1328
+01:10:04,280 --> 01:10:06,280
+ligadas
+
+1329
+01:10:06,280 --> 01:10:08,280
+ele já tem uma função, uma macro
+
+1330
+01:10:08,280 --> 01:10:10,280
+que usa o container of
+
+1331
+01:10:10,280 --> 01:10:12,280
+que é o list entre
+
+1332
+01:10:12,280 --> 01:10:14,280
+e tem os mesmos argumentos
+
+1333
+01:10:14,280 --> 01:10:16,280
+cá está o ptr
+
+1334
+01:10:16,280 --> 01:10:18,280
+portanto o ptr
+
+1335
+01:10:18,280 --> 01:10:20,280
+é uma variável do tipo
+
+1336
+01:10:20,280 --> 01:10:22,280
+list add
+
+1337
+01:10:22,280 --> 01:10:24,280
+está dentro desta estrutura
+
+1338
+01:10:24,280 --> 01:10:26,280
+e que é o camp node
+
+1339
+01:10:26,280 --> 01:10:28,280
+e desta forma ele consegue
+
+1340
+01:10:28,280 --> 01:10:30,280
+ir buscar o
+
+1341
+01:10:30,280 --> 01:10:32,280
+endereço da variável
+
+1342
+01:10:32,280 --> 01:10:34,280
+que contém
+
+1343
+01:10:34,280 --> 01:10:36,280
+esta apontador, desta estrutura
+
+1344
+01:10:36,280 --> 01:10:38,280
+e que o apontador
+
+1345
+01:10:38,280 --> 01:10:40,280
+é o membro node
+
+1346
+01:10:40,280 --> 01:10:42,280
+e ele consegue ir buscar
+
+1347
+01:10:42,280 --> 01:10:44,280
+o elemento
+
+1348
+01:10:44,280 --> 01:10:46,280
+e o item
+
+1349
+01:10:46,280 --> 01:10:48,280
+e esta forma consegue
+
+1350
+01:10:48,280 --> 01:10:50,280
+depois a partir daqui
+
+1351
+01:10:50,280 --> 01:10:52,280
+conseguir ir buscar a informação
+
+1352
+01:10:52,280 --> 01:10:54,280
+do buffer porque é um apontador
+
+1353
+01:10:54,280 --> 01:10:56,280
+do tipo que o item
+
+1354
+01:10:56,280 --> 01:10:58,280
+e isto é muito usado
+
+1355
+01:10:58,280 --> 01:11:00,280
+nós vamos ver no kernel
+
+1356
+01:11:00,280 --> 01:11:02,280
+do Linux
+
+1357
+01:11:02,280 --> 01:11:04,280
+existe toda uma API
+
+1358
+01:11:04,280 --> 01:11:06,280
+que permite
+
+1359
+01:11:06,280 --> 01:11:08,280
+que já está implementada
+
+1360
+01:11:08,280 --> 01:11:10,280
+que obviamente podemos usar
+
+1361
+01:11:10,280 --> 01:11:12,280
+e usamos muito no desenvolvimento
+
+1362
+01:11:12,280 --> 01:11:14,280
+esta explicação
+
+1363
+01:11:14,280 --> 01:11:16,280
+do list entre
+
+1364
+01:11:16,280 --> 01:11:18,280
+é igual
+
+1365
+01:11:18,280 --> 01:11:20,280
+ao container of
+
+1366
+01:11:20,280 --> 01:11:22,280
+aliás na sua implementação
+
+1367
+01:11:22,280 --> 01:11:24,280
+utiliza o container of
+
+1368
+01:11:24,280 --> 01:11:26,280
+portanto o list entre
+
+1369
+01:11:26,280 --> 01:11:28,280
+é só um
+
+1370
+01:11:28,280 --> 01:11:30,280
+wrapper
+
+1371
+01:11:30,280 --> 01:11:32,280
+para o container of
+
+1372
+01:11:32,280 --> 01:11:34,280
+no contexto das listas
+
+1373
+01:11:34,280 --> 01:11:36,280
+para de alguma forma
+
+1374
+01:11:36,280 --> 01:11:38,280
+o nome ser equivalente
+
+1375
+01:11:38,280 --> 01:11:40,280
+às outras funções
+
+1376
+01:11:40,280 --> 01:11:42,280
+do
+
+1377
+01:11:42,280 --> 01:11:44,280
+da API de listas
+
+1378
+01:11:44,280 --> 01:11:46,280
+portanto é sempre o list
+
+1379
+01:11:46,280 --> 01:11:48,280
+empty
+
+1380
+01:11:48,280 --> 01:11:50,280
+é o list add e prudente
+
+1381
+01:11:50,280 --> 01:11:52,280
+portanto mas no fundo isto
+
+1382
+01:11:52,280 --> 01:11:54,280
+invoca o container of
+
+1383
+01:11:54,280 --> 01:11:57,980
+um outro conceito
+
+1384
+01:11:57,980 --> 01:11:59,980
+muito importante no kernel
+
+1385
+01:11:59,980 --> 01:12:01,980
+são as árvores binárias
+
+1386
+01:12:01,980 --> 01:12:03,980
+ninhadamente
+
+1387
+01:12:03,980 --> 01:12:05,980
+as red flag tree
+
+1388
+01:12:05,980 --> 01:12:07,980
+o que é que é uma red flag tree?
+
+1389
+01:12:07,980 --> 01:12:09,980
+uma red flag tree
+
+1390
+01:12:09,980 --> 01:12:11,980
+é uma árvore que está
+
+1391
+01:12:11,980 --> 01:12:13,980
+sempre
+
+1392
+01:12:13,980 --> 01:12:15,980
+balanceada
+
+1393
+01:12:15,980 --> 01:12:17,980
+porque obviamente se as árvores
+
+1394
+01:12:17,980 --> 01:12:19,980
+não estiverem balanceadas
+
+1395
+01:12:19,980 --> 01:12:21,980
+no limite temos uma lista ligada
+
+1396
+01:12:21,980 --> 01:12:23,980
+ora não é o caso
+
+1397
+01:12:23,980 --> 01:12:25,980
+destas
+
+1398
+01:12:25,980 --> 01:12:27,980
+destas árvores que como o próprio
+
+1399
+01:12:27,980 --> 01:12:29,980
+nome indica são self balancing
+
+1400
+01:12:29,980 --> 01:12:31,980
+significa
+
+1401
+01:12:31,980 --> 01:12:33,980
+que sempre que se realizam
+
+1402
+01:12:33,980 --> 01:12:35,980
+operações sobre
+
+1403
+01:12:35,980 --> 01:12:37,980
+esta árvore e
+
+1404
+01:12:37,980 --> 01:12:39,980
+executa funções para
+
+1405
+01:12:39,980 --> 01:12:41,980
+balanciar
+
+1406
+01:12:41,980 --> 01:12:43,980
+sem sermos
+
+1407
+01:12:43,980 --> 01:12:45,980
+sem nós a explícita
+
+1408
+01:12:45,980 --> 01:12:47,980
+mais ou menos
+
+1409
+01:12:47,980 --> 01:12:49,980
+mas temos que
+
+1410
+01:12:49,980 --> 01:12:51,980
+invocar as funções para fazer isso
+
+1411
+01:12:51,980 --> 01:12:53,980
+portanto
+
+1412
+01:12:53,980 --> 01:12:55,980
+a ideia é obviamente
+
+1413
+01:12:55,980 --> 01:12:57,980
+invocarmos essas funções para fazer
+
+1414
+01:12:57,980 --> 01:12:59,980
+o balanceamento
+
+1415
+01:12:59,980 --> 01:13:01,980
+portanto a ideia das red flag tree
+
+1416
+01:13:01,980 --> 01:13:03,980
+é ela estarem sempre
+
+1417
+01:13:03,980 --> 01:13:05,980
+balanceadas para se poder
+
+1418
+01:13:05,980 --> 01:13:07,980
+tirar o proveito
+
+1419
+01:13:07,980 --> 01:13:09,980
+de uma árvore binária
+
+1420
+01:13:09,980 --> 01:13:11,980
+portanto e
+
+1421
+01:13:11,980 --> 01:13:13,980
+o
+
+1422
+01:13:13,980 --> 01:13:15,980
+o kernel já tem
+
+1423
+01:13:15,980 --> 01:13:17,980
+um API para isso portanto
+
+1424
+01:13:17,980 --> 01:13:19,980
+as árvores binárias
+
+1425
+01:13:19,980 --> 01:13:21,980
+estas árvores binárias portanto
+
+1426
+01:13:21,980 --> 01:13:23,980
+que usam
+
+1427
+01:13:23,980 --> 01:13:25,980
+isto é da outra red flag
+
+1428
+01:13:25,980 --> 01:13:27,980
+digamos um tipo de
+
+1429
+01:13:27,980 --> 01:13:29,980
+árvores binárias
+
+1430
+01:13:29,980 --> 01:13:31,980
+em que
+
+1431
+01:13:31,980 --> 01:13:33,980
+ele já tem
+
+1432
+01:13:33,980 --> 01:13:35,980
+os mecanismos para fazer esse balanceamento
+
+1433
+01:13:35,980 --> 01:13:37,980
+aqui
+
+1434
+01:13:37,980 --> 01:13:39,980
+as estruturas de dados
+
+1435
+01:13:39,980 --> 01:13:41,980
+temos
+
+1436
+01:13:41,980 --> 01:13:43,980
+portanto uma estrutura
+
+1437
+01:13:43,980 --> 01:13:45,980
+para a raiz da árvore
+
+1438
+01:13:45,980 --> 01:13:47,980
+temos uma estrutura para a raiz
+
+1439
+01:13:47,980 --> 01:13:49,980
+e temos uma estrutura para
+
+1440
+01:13:49,980 --> 01:13:51,980
+cada novo
+
+1441
+01:13:51,980 --> 01:13:53,980
+cada novo tem dois filhos
+
+1442
+01:13:53,980 --> 01:13:55,980
+o esquerdo e o direito
+
+1443
+01:13:55,980 --> 01:13:57,980
+e depois tem aqui uma variável
+
+1444
+01:13:57,980 --> 01:13:59,980
+de controle para gerir a cor
+
+1445
+01:13:59,980 --> 01:14:01,980
+portanto tem a ver com a semântica
+
+1446
+01:14:01,980 --> 01:14:03,980
+e com as regras
+
+1447
+01:14:03,980 --> 01:14:05,980
+da árvore binária
+
+1448
+01:14:05,980 --> 01:14:07,980
+ora
+
+1449
+01:14:07,980 --> 01:14:09,980
+para criarmos portanto
+
+1450
+01:14:09,980 --> 01:14:11,980
+imaginem aqui este caso
+
+1451
+01:14:11,980 --> 01:14:13,980
+cá está um node
+
+1452
+01:14:13,980 --> 01:14:15,980
+é uma estrutura
+
+1453
+01:14:15,980 --> 01:14:17,980
+tem aqui um campo
+
+1454
+01:14:17,980 --> 01:14:19,980
+que contém informação
+
+1455
+01:14:19,980 --> 01:14:21,980
+e tem aqui um
+
+1456
+01:14:21,980 --> 01:14:23,980
+um campo para
+
+1457
+01:14:23,980 --> 01:14:25,980
+poder usar isto
+
+1458
+01:14:25,980 --> 01:14:27,980
+numa árvore binária
+
+1459
+01:14:27,980 --> 01:14:29,980
+obviamente que a árvore binária
+
+1460
+01:14:29,980 --> 01:14:31,980
+vai ser ligada
+
+1461
+01:14:31,980 --> 01:14:33,980
+nos campos que estão aqui
+
+1462
+01:14:33,980 --> 01:14:35,980
+da mesma forma
+
+1463
+01:14:35,980 --> 01:14:37,980
+se eu precisar de aceder ao ID
+
+1464
+01:14:37,980 --> 01:14:39,980
+eu tenho que usar o container of
+
+1465
+01:14:39,980 --> 01:14:41,980
+há semelhança do que acontece
+
+1466
+01:14:41,980 --> 01:14:43,980
+temos aqui um exemplo
+
+1467
+01:14:43,980 --> 01:14:45,980
+imaginem aqui este exemplo
+
+1468
+01:14:45,980 --> 01:14:47,980
+obviamente que eu
+
+1469
+01:14:47,980 --> 01:14:49,980
+para conseguir
+
+1470
+01:14:49,980 --> 01:14:51,980
+inserir
+
+1471
+01:14:51,980 --> 01:14:53,980
+e as árvores binárias
+
+1472
+01:14:53,980 --> 01:14:55,980
+quando eu tenho uma árvore binária
+
+1473
+01:14:55,980 --> 01:14:57,980
+tenho que ter
+
+1474
+01:14:57,980 --> 01:14:59,980
+uma ordenação, um critério qualquer
+
+1475
+01:14:59,980 --> 01:15:01,980
+portanto por isso é que
+
+1476
+01:15:01,980 --> 01:15:03,980
+como vocês podem ver aqui
+
+1477
+01:15:03,980 --> 01:15:05,980
+eu estou a ir buscar
+
+1478
+01:15:05,980 --> 01:15:07,980
+o elemento
+
+1479
+01:15:07,980 --> 01:15:09,980
+para depois poder usar o ID
+
+1480
+01:15:09,980 --> 01:15:11,980
+como é que eu faço isso
+
+1481
+01:15:11,980 --> 01:15:13,980
+através do RB entry
+
+1482
+01:15:13,980 --> 01:15:15,980
+que é igual ao list entry
+
+1483
+01:15:15,980 --> 01:15:17,980
+ememos os casos
+
+1484
+01:15:17,980 --> 01:15:19,980
+utilizam container of
+
+1485
+01:15:19,980 --> 01:15:21,980
+se vocês prepararem
+
+1486
+01:15:21,980 --> 01:15:23,980
+apontador, estrutura
+
+1487
+01:15:23,980 --> 01:15:25,980
+membro e ele vai nos devolver
+
+1488
+01:15:25,980 --> 01:15:27,980
+o endereço da variável
+
+1489
+01:15:27,980 --> 01:15:29,980
+e isso é que a partir desta variável
+
+1490
+01:15:29,980 --> 01:15:31,980
+eu consigo aceder ao ID
+
+1491
+01:15:31,980 --> 01:15:33,980
+portanto isto é muito usado
+
+1492
+01:15:33,980 --> 01:15:35,980
+no kernel
+
+1493
+01:15:35,980 --> 01:15:37,980
+e
+
+1494
+01:15:37,980 --> 01:15:39,980
+em
+
+1495
+01:15:39,980 --> 01:15:41,980
+nos sistemas operativos
+
+1496
+01:15:41,980 --> 01:15:43,980
+porque
+
+1497
+01:15:43,980 --> 01:15:45,980
+porque
+
+1498
+01:15:45,980 --> 01:15:47,980
+estas
+
+1499
+01:15:47,980 --> 01:15:49,980
+é muito frequente
+
+1500
+01:15:49,980 --> 01:15:54,180
+os processos
+
+1501
+01:15:54,180 --> 01:15:56,180
+e outras coisas
+
+1502
+01:15:56,180 --> 01:15:58,180
+estarem
+
+1503
+01:15:58,180 --> 01:16:00,180
+em diferentes listas
+
+1504
+01:16:00,180 --> 01:16:02,180
+ou ao invés de estar a duplicar
+
+1505
+01:16:02,180 --> 01:16:04,180
+a informação
+
+1506
+01:16:04,180 --> 01:16:06,180
+o que é que a gente faz
+
+1507
+01:16:06,180 --> 01:16:08,180
+coloca
+
+1508
+01:16:08,180 --> 01:16:10,180
+vai inserir campos nas estruturas
+
+1509
+01:16:10,180 --> 01:16:12,180
+que permitam usar
+
+1510
+01:16:12,180 --> 01:16:14,180
+usar esse campo
+
+1511
+01:16:14,180 --> 01:16:16,180
+para o colocar em diferentes listas
+
+1512
+01:16:16,180 --> 01:16:18,180
+portanto a estrutura é
+
+1513
+01:16:18,180 --> 01:16:20,180
+mesma mas
+
+1514
+01:16:20,180 --> 01:16:22,180
+está em listas diferentes
+
+1515
+01:16:22,180 --> 01:16:24,180
+ou em árvores diferentes
+
+1516
+01:16:24,180 --> 01:16:26,180
+e sem haver duplicação
+
+1517
+01:16:26,180 --> 01:16:28,180
+qual é que é o problema
+
+1518
+01:16:28,180 --> 01:16:30,180
+os elementos de ligação
+
+1519
+01:16:30,180 --> 01:16:32,180
+não têm informação
+
+1520
+01:16:32,180 --> 01:16:34,180
+como é que obtemos informação
+
+1521
+01:16:34,180 --> 01:16:36,180
+só para criar aquela estrutura
+
+1522
+01:16:36,180 --> 01:16:38,180
+digamos
+
+1523
+01:16:38,180 --> 01:16:40,180
+de ligação
+
+1524
+01:16:40,180 --> 01:16:42,180
+como é que a gente obtém a informação
+
+1525
+01:16:42,180 --> 01:16:44,180
+usando o container of
+
+1526
+01:16:44,180 --> 01:16:46,180
+ou então
+
+1527
+01:16:46,180 --> 01:16:48,180
+nestes casos o rp entry
+
+1528
+01:16:48,180 --> 01:16:50,180
+ou o list entry
+
+1529
+01:16:50,180 --> 01:16:52,180
+também tem código
+
+1530
+01:16:52,180 --> 01:16:54,180
+que explica
+
+1531
+01:16:54,180 --> 01:16:56,180
+com isto
+
+1532
+01:16:58,180 --> 01:17:00,180
+para usar os binários
+
+1533
+01:17:00,180 --> 01:17:02,180
+portanto tem aqui
+
+1534
+01:17:02,180 --> 01:17:04,180
+um api permito fazer tudo
+
+1535
+01:17:04,180 --> 01:17:06,180
+ora bem
+
+1536
+01:17:06,180 --> 01:17:08,180
+concorrência
+
+1537
+01:17:08,180 --> 01:17:10,180
+portanto nós já falamos sobre concorrência
+
+1538
+01:17:10,180 --> 01:17:12,180
+já falamos sobre semáfios
+
+1539
+01:17:12,180 --> 01:17:14,180
+já falamos sobre moteques
+
+1540
+01:17:14,180 --> 01:17:16,180
+obviamente que no kernel
+
+1541
+01:17:16,180 --> 01:17:18,180
+do linux também existe concorrência
+
+1542
+01:17:18,180 --> 01:17:25,340
+portanto quando nós estamos a codificar
+
+1543
+01:17:25,340 --> 01:17:27,340
+para o kernel do linux
+
+1544
+01:17:27,340 --> 01:17:29,340
+nós temos que ter
+
+1545
+01:17:29,340 --> 01:17:31,340
+algum cuidado porque obviamente
+
+1546
+01:17:31,340 --> 01:17:33,340
+existem partes de código
+
+1547
+01:17:33,340 --> 01:17:35,340
+que só devem ser acedidos
+
+1548
+01:17:41,340 --> 01:17:43,340
+vamos dizer por uma instância
+
+1549
+01:17:43,340 --> 01:17:45,340
+e volto a chamar os atenção
+
+1550
+01:17:45,340 --> 01:17:47,340
+que é o kernel
+
+1551
+01:17:47,340 --> 01:17:49,340
+típicamente
+
+1552
+01:17:49,340 --> 01:17:51,340
+é código morto
+
+1553
+01:17:51,340 --> 01:17:53,340
+o kernel
+
+1554
+01:17:53,340 --> 01:17:55,340
+só é executado quando é invocado
+
+1555
+01:17:55,340 --> 01:17:57,340
+se vocês repararem nós
+
+1556
+01:17:57,340 --> 01:17:59,340
+na última aula falamos que o kernel
+
+1557
+01:17:59,340 --> 01:18:01,340
+executa
+
+1558
+01:18:01,340 --> 01:18:03,340
+no contexto do processo isto é
+
+1559
+01:18:03,340 --> 01:18:05,340
+é quando o processo está a executar
+
+1560
+01:18:05,340 --> 01:18:07,340
+e retire serviços ao kernel
+
+1561
+01:18:07,340 --> 01:18:09,340
+é aí que
+
+1562
+01:18:09,340 --> 01:18:11,340
+vai executar código do kernel
+
+1563
+01:18:11,340 --> 01:18:13,340
+em
+
+1564
+01:18:13,340 --> 01:18:15,340
+contexto do processo
+
+1565
+01:18:15,340 --> 01:18:17,340
+só vimos uma situação em que
+
+1566
+01:18:17,340 --> 01:18:19,340
+ele não executa nem esse contexto
+
+1567
+01:18:19,340 --> 01:18:21,340
+que é no contexto do interrupt
+
+1568
+01:18:21,340 --> 01:18:23,340
+quando acontece um interrupt
+
+1569
+01:18:23,340 --> 01:18:25,340
+ele vai executar código
+
+1570
+01:18:25,340 --> 01:18:27,340
+e aí já não é
+
+1571
+01:18:27,340 --> 01:18:29,340
+no contexto do processo
+
+1572
+01:18:29,340 --> 01:18:31,340
+porque um interrupt não tem
+
+1573
+01:18:31,340 --> 01:18:33,340
+um processo ativo
+
+1574
+01:18:33,340 --> 01:18:35,340
+portanto é
+
+1575
+01:18:35,340 --> 01:18:37,340
+um ligar
+
+1576
+01:18:37,340 --> 01:18:39,340
+de uma corrente
+
+1577
+01:18:39,340 --> 01:18:41,340
+num fio que vai
+
+1578
+01:18:41,340 --> 01:18:43,340
+fazer com que o professor
+
+1579
+01:18:43,340 --> 01:18:45,340
+para o que está a fazer
+
+1580
+01:18:45,340 --> 01:18:47,340
+e salte para
+
+1581
+01:18:47,340 --> 01:18:49,340
+a rotina que está associada
+
+1582
+01:18:49,340 --> 01:18:51,340
+a esse interrupt
+
+1583
+01:18:51,340 --> 01:18:53,340
+agora e obviamente isso não tem a ver
+
+1584
+01:18:53,340 --> 01:18:55,340
+com um processo que está a executar
+
+1585
+01:18:55,340 --> 01:18:57,340
+portanto e aí
+
+1586
+01:18:57,340 --> 01:18:59,340
+é que está a executar um outro contexto
+
+1587
+01:18:59,340 --> 01:19:01,340
+de resto executa sempre
+
+1588
+01:19:01,340 --> 01:19:03,340
+em contexto do processo logo
+
+1589
+01:19:03,340 --> 01:19:05,340
+significa que pode
+
+1590
+01:19:05,340 --> 01:19:07,340
+ser interrompido
+
+1591
+01:19:07,340 --> 01:19:09,340
+pode ser premeditado essas coisas
+
+1592
+01:19:09,340 --> 01:19:11,340
+ora se nós não queremos que isso aconteça
+
+1593
+01:19:11,340 --> 01:19:13,340
+teremos de
+
+1594
+01:19:13,340 --> 01:19:15,340
+assegurar esse
+
+1595
+01:19:15,340 --> 01:19:17,340
+comportamento
+
+1596
+01:19:17,340 --> 01:19:19,340
+ora
+
+1597
+01:19:19,340 --> 01:19:21,340
+nós já falamos sobre o que é
+
+1598
+01:19:21,340 --> 01:19:23,340
+o que é que é um context switch
+
+1599
+01:19:23,340 --> 01:19:25,340
+portanto um context switch
+
+1600
+01:19:25,340 --> 01:19:27,340
+é quando
+
+1601
+01:19:27,340 --> 01:19:29,340
+se muda o processo
+
+1602
+01:19:29,340 --> 01:19:31,340
+que está em execução por outro
+
+1603
+01:19:31,340 --> 01:19:33,340
+os motivos que podem
+
+1604
+01:19:33,340 --> 01:19:35,340
+levar a isso são muitos
+
+1605
+01:19:35,340 --> 01:19:37,340
+um processo termina, ora quando o processo está a executar
+
+1606
+01:19:37,340 --> 01:19:39,340
+e termina, tem que se mudar por outro
+
+1607
+01:19:39,340 --> 01:19:41,340
+por um motivo qualquer
+
+1608
+01:19:41,340 --> 01:19:43,340
+o escalador
+
+1609
+01:19:43,340 --> 01:19:45,340
+imaginemos que temos uma situação
+
+1610
+01:19:45,340 --> 01:19:47,340
+de run robin
+
+1611
+01:19:47,340 --> 01:19:49,340
+que vai executar
+
+1612
+01:19:49,340 --> 01:19:51,340
+durante determinado tempo
+
+1613
+01:19:51,340 --> 01:19:53,340
+e não só existem outras em que usa o tempo
+
+1614
+01:19:53,340 --> 01:19:55,340
+como critério
+
+1615
+01:19:55,340 --> 01:19:57,340
+se já esgotou o seu time switch
+
+1616
+01:19:57,340 --> 01:19:59,340
+tem que mudar e assim potente
+
+1617
+01:19:59,340 --> 01:20:01,340
+ou então se um processo está à espera
+
+1618
+01:20:01,340 --> 01:20:03,340
+num scanf
+
+1619
+01:20:03,340 --> 01:20:05,340
+ou numa coisa qualquer que o utilizador digite
+
+1620
+01:20:05,340 --> 01:20:07,340
+um
+
+1621
+01:20:07,340 --> 01:20:09,340
+um input de qualquer não pode estar a executar
+
+1622
+01:20:09,340 --> 01:20:11,340
+ou
+
+1623
+01:20:11,340 --> 01:20:13,340
+num socket uma coisa qualquer
+
+1624
+01:20:13,340 --> 01:20:15,340
+se está bloqueado
+
+1625
+01:20:15,340 --> 01:20:17,340
+ou se está à espera de alguma coisa
+
+1626
+01:20:17,340 --> 01:20:19,340
+de um input de qualquer
+
+1627
+01:20:19,340 --> 01:20:21,340
+não pode
+
+1628
+01:20:21,340 --> 01:20:23,340
+ficar atribuido ao cpu
+
+1629
+01:20:23,340 --> 01:20:25,340
+se não consegue executar mais nada
+
+1630
+01:20:25,340 --> 01:20:27,340
+porque depende de outros
+
+1631
+01:20:27,340 --> 01:20:29,340
+tem que
+
+1632
+01:20:29,340 --> 01:20:31,340
+sair do cpu e ser atribuido
+
+1633
+01:20:31,340 --> 01:20:33,340
+a outro processo
+
+1634
+01:20:33,340 --> 01:20:35,340
+ora
+
+1635
+01:20:35,340 --> 01:20:37,340
+no kernel
+
+1636
+01:20:37,340 --> 01:20:39,340
+o que é que nós podemos fazer
+
+1637
+01:20:39,340 --> 01:20:41,340
+uma das coisas que se pode fazer
+
+1638
+01:20:41,340 --> 01:20:43,340
+e faz muitas vezes
+
+1639
+01:20:43,340 --> 01:20:45,340
+é desabilitar as preemptões
+
+1640
+01:20:45,340 --> 01:20:47,340
+isto é
+
+1641
+01:20:47,340 --> 01:20:49,340
+não tornar
+
+1642
+01:20:49,340 --> 01:20:51,340
+o código não preemptível
+
+1643
+01:20:51,340 --> 01:20:53,340
+para isso temos
+
+1644
+01:20:53,340 --> 01:20:55,340
+o preempt disable
+
+1645
+01:20:55,340 --> 01:20:57,340
+e o preempt enable
+
+1646
+01:20:57,340 --> 01:20:59,340
+quando as operações
+
+1647
+01:20:59,340 --> 01:21:01,340
+que vamos realizar
+
+1648
+01:21:01,340 --> 01:21:03,340
+são relevantes
+
+1649
+01:21:03,340 --> 01:21:05,340
+e devem ser realizadas
+
+1650
+01:21:05,340 --> 01:21:07,340
+de forma atómica
+
+1651
+01:21:07,340 --> 01:21:09,340
+devemos fazer isto
+
+1652
+01:21:09,340 --> 01:21:13,800
+por vezes também temos a questão
+
+1653
+01:21:13,800 --> 01:21:15,800
+dos interrupts
+
+1654
+01:21:15,800 --> 01:21:17,800
+ora
+
+1655
+01:21:17,800 --> 01:21:19,800
+nomeadamente
+
+1656
+01:21:19,800 --> 01:21:21,800
+nós já vimos o contexto
+
+1657
+01:21:21,800 --> 01:21:23,800
+de um interrupt deve ser atómico
+
+1658
+01:21:23,800 --> 01:21:25,800
+ora se deve ser
+
+1659
+01:21:25,800 --> 01:21:27,800
+atómico nós deveríamos
+
+1660
+01:21:27,800 --> 01:21:29,800
+durante a execução
+
+1661
+01:21:29,800 --> 01:21:31,800
+daquela parte que é atómica
+
+1662
+01:21:31,800 --> 01:21:33,800
+também poderemos
+
+1663
+01:21:33,800 --> 01:21:35,800
+desabilitar os interrupts
+
+1664
+01:21:35,800 --> 01:21:37,800
+portanto
+
+1665
+01:21:37,800 --> 01:21:39,800
+desabilitar eu posso desabilitar
+
+1666
+01:21:39,800 --> 01:21:41,800
+os interrupts
+
+1667
+01:21:41,800 --> 01:21:43,800
+e quando eu desabilito os interrupts
+
+1668
+01:21:43,800 --> 01:21:45,800
+se acontecer um interrupt
+
+1669
+01:21:45,800 --> 01:21:47,800
+no entretanto
+
+1670
+01:21:47,800 --> 01:21:49,800
+o interrupt não é perdido
+
+1671
+01:21:49,800 --> 01:21:51,800
+hoje em dia
+
+1672
+01:21:51,800 --> 01:21:53,800
+a maior parte dos gestores
+
+1673
+01:21:53,800 --> 01:21:55,800
+de interrupts
+
+1674
+01:21:55,800 --> 01:21:57,800
+fazem
+
+1675
+01:21:57,800 --> 01:21:59,800
+nesta de interrupts
+
+1676
+01:21:59,800 --> 01:22:01,800
+isto é
+
+1677
+01:22:01,800 --> 01:22:03,800
+ele guarda a informação
+
+1678
+01:22:03,800 --> 01:22:05,800
+e diz olha eu vejo este interrupt
+
+1679
+01:22:05,800 --> 01:22:07,800
+é para executar aquela função
+
+1680
+01:22:07,800 --> 01:22:09,800
+e assim que os interrupts ficam habilitados
+
+1681
+01:22:09,800 --> 01:22:11,800
+vamos dizer assim
+
+1682
+01:22:11,800 --> 01:22:13,800
+entrega o interrupt
+
+1683
+01:22:13,800 --> 01:22:17,530
+ao CPU
+
+1684
+01:22:17,530 --> 01:22:19,530
+isto é o exemplo típico
+
+1685
+01:22:19,530 --> 01:22:21,530
+do que é um recurso partilhado
+
+1686
+01:22:21,530 --> 01:22:23,530
+portanto
+
+1687
+01:22:23,530 --> 01:22:25,530
+se eu tiver duas trades
+
+1688
+01:22:25,530 --> 01:22:27,530
+a tentar aceder a uma variável
+
+1689
+01:22:27,530 --> 01:22:29,530
+e incrementar
+
+1690
+01:22:29,530 --> 01:22:31,530
+se eu não garantir
+
+1691
+01:22:31,530 --> 01:22:33,530
+que a operação é atómica
+
+1692
+01:22:33,530 --> 01:22:35,530
+o que pode acontecer é algo de acheno
+
+1693
+01:22:35,530 --> 01:22:37,530
+eu tenho um 7
+
+1694
+01:22:37,530 --> 01:22:39,530
+e duas trades incrementarem
+
+1695
+01:22:39,530 --> 01:22:41,530
+portanto deveria ter ficado com o valor 9
+
+1696
+01:22:41,530 --> 01:22:43,530
+e na verdade
+
+1697
+01:22:43,530 --> 01:22:45,530
+tenho o valor 8 porque
+
+1698
+01:22:45,530 --> 01:22:47,530
+ambos leram ao mesmo tempo
+
+1699
+01:22:47,530 --> 01:22:49,530
+uma incrementou, outra incrementou
+
+1700
+01:22:49,530 --> 01:22:51,530
+mas escreveu 8, outra escreveu 8 por cima
+
+1701
+01:22:51,530 --> 01:22:53,530
+este não é o comportamento adequado
+
+1702
+01:22:53,530 --> 01:22:55,530
+o que nós queremos é isto
+
+1703
+01:22:55,530 --> 01:22:57,530
+ora queremos operações atômicas
+
+1704
+01:22:57,530 --> 01:22:59,530
+isto é
+
+1705
+01:22:59,530 --> 01:23:01,530
+ler, incrementa e guardar
+
+1706
+01:23:01,530 --> 01:23:03,530
+ora o kernel
+
+1707
+01:23:05,530 --> 01:23:07,530
+isto é questão do deadlock
+
+1708
+01:23:07,530 --> 01:23:09,530
+se você
+
+1709
+01:23:09,530 --> 01:23:11,530
+fez, tem um determinado loco
+
+1710
+01:23:11,530 --> 01:23:13,530
+ou tem outro e depois não está à espera
+
+1711
+01:23:13,530 --> 01:23:15,530
+do que o outro tem
+
+1712
+01:23:15,530 --> 01:23:17,530
+temos aqui uma situação de deadlock
+
+1713
+01:23:17,530 --> 01:23:19,530
+como é que se previne
+
+1714
+01:23:19,530 --> 01:23:21,530
+os deadlocks acedendo
+
+1715
+01:23:21,530 --> 01:23:23,530
+aos locos
+
+1716
+01:23:23,530 --> 01:23:25,530
+aos semáforos, aos mecanismos
+
+1717
+01:23:25,530 --> 01:23:27,530
+pela mesma ordem
+
+1718
+01:23:27,530 --> 01:23:29,530
+se todos os processos acederem
+
+1719
+01:23:29,530 --> 01:23:31,530
+pela mesma ordem, todos os processos
+
+1720
+01:23:31,530 --> 01:23:33,530
+que utilizam aqueles recursos
+
+1721
+01:23:33,530 --> 01:23:35,530
+evitamos
+
+1722
+01:23:35,530 --> 01:23:37,530
+os deadlocks
+
+1723
+01:23:37,530 --> 01:23:39,530
+caso contrário corremos sempre o risco
+
+1724
+01:23:39,530 --> 01:23:41,530
+de termos situações de
+
+1725
+01:23:41,530 --> 01:23:43,530
+deadlock
+
+1726
+01:23:43,530 --> 01:23:45,530
+pronto
+
+1727
+01:23:45,530 --> 01:23:51,500
+no linux
+
+1728
+01:23:53,500 --> 01:23:55,500
+existe
+
+1729
+01:23:55,500 --> 01:23:57,500
+um tipo de dados
+
+1730
+01:23:57,500 --> 01:23:59,500
+em que todas as operações
+
+1731
+01:23:59,500 --> 01:24:01,500
+sobre esse tipo de dados é atómico
+
+1732
+01:24:01,500 --> 01:24:03,500
+o tipo de dados como o próprio
+
+1733
+01:24:03,500 --> 01:24:05,500
+nome indica é atómico t
+
+1734
+01:24:05,500 --> 01:24:07,500
+portanto e todas as operações
+
+1735
+01:24:07,500 --> 01:24:09,500
+não deixa de ser um inteiro
+
+1736
+01:24:09,500 --> 01:24:11,500
+em vez de ser um inteiro
+
+1737
+01:24:11,500 --> 01:24:13,500
+por exemplo de 32 bits
+
+1738
+01:24:13,500 --> 01:24:15,500
+é um inteiro que
+
+1739
+01:24:15,500 --> 01:24:17,500
+só consegue
+
+1740
+01:24:17,500 --> 01:24:19,500
+se portar valores até 24 bits
+
+1741
+01:24:19,500 --> 01:24:21,500
+uma vez que
+
+1742
+01:24:21,500 --> 01:24:23,500
+os outros bits são para
+
+1743
+01:24:23,500 --> 01:24:25,500
+controlar a atomicidade
+
+1744
+01:24:25,500 --> 01:24:27,500
+das operações
+
+1745
+01:24:27,500 --> 01:24:29,500
+mas o que é certo é que
+
+1746
+01:24:29,500 --> 01:24:31,500
+usando
+
+1747
+01:24:31,500 --> 01:24:33,500
+este tipo de dados
+
+1748
+01:24:33,500 --> 01:24:35,500
+eu consigo incrementar
+
+1749
+01:24:35,500 --> 01:24:37,500
+etc
+
+1750
+01:24:37,500 --> 01:24:39,500
+de forma atómica
+
+1751
+01:24:39,500 --> 01:24:41,500
+isso é quando um processo está a ler
+
+1752
+01:24:41,500 --> 01:24:43,500
+uma determinada variável
+
+1753
+01:24:43,500 --> 01:24:45,500
+ler o valor
+
+1754
+01:24:45,500 --> 01:24:47,500
+se outro tenta ler não vai
+
+1755
+01:24:47,500 --> 01:24:49,500
+não ao escrever, não há interferência
+
+1756
+01:24:49,500 --> 01:24:51,500
+porque o sistema assegura
+
+1757
+01:24:51,500 --> 01:24:53,500
+a atomicidade das variáveis
+
+1758
+01:24:53,500 --> 01:24:57,260
+um outro
+
+1759
+01:24:57,260 --> 01:24:59,260
+mecanismo
+
+1760
+01:24:59,260 --> 01:25:01,260
+também muito usado no kernel
+
+1761
+01:25:01,260 --> 01:25:03,260
+são os spinlocks
+
+1762
+01:25:03,260 --> 01:25:05,260
+o que é que é o spinlock?
+
+1763
+01:25:05,260 --> 01:25:07,260
+o nome indica é um spin
+
+1764
+01:25:07,260 --> 01:25:09,260
+quando é que nós usamos
+
+1765
+01:25:09,260 --> 01:25:11,260
+isto? quando prevemos
+
+1766
+01:25:11,260 --> 01:25:13,260
+que o tempo de bloqueio
+
+1767
+01:25:13,260 --> 01:25:15,260
+vai ser muito pequeno
+
+1768
+01:25:15,260 --> 01:25:17,260
+então se vai ser muito pequeno
+
+1769
+01:25:17,260 --> 01:25:19,260
+em que não compensa
+
+1770
+01:25:19,260 --> 01:25:21,260
+retirar o processo do CPU
+
+1771
+01:25:21,260 --> 01:25:23,260
+e colocar lá o outro
+
+1772
+01:25:23,260 --> 01:25:25,260
+então fazemos um spinlock
+
+1773
+01:25:25,260 --> 01:25:27,260
+o que é que o
+
+1774
+01:25:27,260 --> 01:25:29,260
+esse processo vai fazer? como o próprio nome indica
+
+1775
+01:25:29,260 --> 01:25:31,260
+vai estar a verificar
+
+1776
+01:25:31,260 --> 01:25:33,260
+já posso entrar, já posso, já posso
+
+1777
+01:25:33,260 --> 01:25:35,260
+portanto vai estar a consumir CPU
+
+1778
+01:25:35,260 --> 01:25:37,260
+para nada
+
+1779
+01:25:37,260 --> 01:25:39,260
+obviamente que isto só compensa
+
+1780
+01:25:39,260 --> 01:25:41,260
+se o que estamos a perder
+
+1781
+01:25:41,260 --> 01:25:43,260
+que vai demorar pouco tempo
+
+1782
+01:25:43,260 --> 01:25:45,260
+se tiver muito tempo infinidamente
+
+1783
+01:25:45,260 --> 01:25:47,260
+estamos a queimar CPU
+
+1784
+01:25:47,260 --> 01:25:49,260
+para nada
+
+1785
+01:25:49,260 --> 01:25:51,260
+portanto, típicamente isto
+
+1786
+01:25:51,260 --> 01:25:53,260
+deve ser usado em situações
+
+1787
+01:25:53,260 --> 01:25:55,260
+ou para proteger
+
+1788
+01:25:55,260 --> 01:25:57,260
+ou para entrar
+
+1789
+01:25:57,260 --> 01:25:59,260
+em secções
+
+1790
+01:25:59,260 --> 01:26:01,260
+em que não seja possível
+
+1791
+01:26:01,260 --> 01:26:03,260
+estar dentro destas secções a ver bloqueio
+
+1792
+01:26:03,260 --> 01:26:05,260
+porque
+
+1793
+01:26:05,260 --> 01:26:07,260
+se eu faço um spin
+
+1794
+01:26:07,260 --> 01:26:09,260
+obtive o lock
+
+1795
+01:26:09,260 --> 01:26:11,260
+e
+
+1796
+01:26:11,260 --> 01:26:13,260
+durante nesta zona eu posso adormecer
+
+1797
+01:26:13,260 --> 01:26:15,260
+significa que todas as outras
+
+1798
+01:26:15,260 --> 01:26:17,260
+que estão ali a espera
+
+1799
+01:26:17,260 --> 01:26:19,260
+estão a fazer spin
+
+1800
+01:26:19,260 --> 01:26:21,260
+estão a queimar CPU
+
+1801
+01:26:21,260 --> 01:26:23,260
+portanto só pode ser usado em secções
+
+1802
+01:26:23,260 --> 01:26:25,260
+que típicamente vão executar
+
+1803
+01:26:25,260 --> 01:26:27,260
+de forma rápida
+
+1804
+01:26:27,260 --> 01:26:29,260
+portanto
+
+1805
+01:26:29,260 --> 01:26:31,260
+como no resto também existe uma API
+
+1806
+01:26:31,260 --> 01:26:33,260
+para podermos
+
+1807
+01:26:33,260 --> 01:26:35,260
+usar o spin
+
+1808
+01:26:35,260 --> 01:26:37,260
+os spin locks
+
+1809
+01:26:37,260 --> 01:26:39,260
+tá
+
+1810
+01:26:39,260 --> 01:26:41,260
+olha bem
+
+1811
+01:26:41,260 --> 01:26:43,260
+tarefas
+
+1812
+01:26:43,260 --> 01:26:45,260
+no kernel
+
+1813
+01:26:45,260 --> 01:26:47,260
+típicamente nós temos
+
+1814
+01:26:47,260 --> 01:26:49,260
+este ciclo de vida
+
+1815
+01:26:49,260 --> 01:26:51,260
+nós criamos uma tarefa através do for
+
+1816
+01:26:53,260 --> 01:26:55,260
+tarefa é essa
+
+1817
+01:26:55,260 --> 01:26:57,260
+se nós criamos uma tarefa
+
+1818
+01:26:57,260 --> 01:26:59,260
+é porque a tarefa está em execução
+
+1819
+01:26:59,260 --> 01:27:01,260
+portanto no linux
+
+1820
+01:27:01,260 --> 01:27:03,260
+e na maior parte dos sistemas isto é
+
+1821
+01:27:03,260 --> 01:27:05,260
+as tarefas são criadas
+
+1822
+01:27:05,260 --> 01:27:07,260
+por tarefas que estão a executar
+
+1823
+01:27:07,260 --> 01:27:09,260
+ora
+
+1824
+01:27:09,260 --> 01:27:11,260
+se está a executar a tarefa é criada
+
+1825
+01:27:11,260 --> 01:27:13,260
+no estado de task running
+
+1826
+01:27:13,260 --> 01:27:16,500
+e depois
+
+1827
+01:27:16,500 --> 01:27:18,500
+pode, essa tarefa
+
+1828
+01:27:18,500 --> 01:27:20,500
+a partir de momento que foi criada
+
+1829
+01:27:20,500 --> 01:27:22,500
+pode ser selecionada
+
+1830
+01:27:22,500 --> 01:27:24,500
+escalonada para
+
+1831
+01:27:24,500 --> 01:27:26,500
+executar
+
+1832
+01:27:26,500 --> 01:27:28,500
+ora no linux
+
+1833
+01:27:28,500 --> 01:27:30,500
+não existe diferença alguma
+
+1834
+01:27:30,500 --> 01:27:32,500
+não existe nenhum estado
+
+1835
+01:27:32,500 --> 01:27:34,500
+específico
+
+1836
+01:27:34,500 --> 01:27:36,500
+para a tarefa que está em execução
+
+1837
+01:27:36,500 --> 01:27:38,500
+as tarefas que estão à espera
+
+1838
+01:27:38,500 --> 01:27:40,500
+mas que estão em condições de executar
+
+1839
+01:27:40,500 --> 01:27:42,500
+e as tarefas
+
+1840
+01:27:42,500 --> 01:27:44,500
+e a tarefa que está no CPU
+
+1841
+01:27:44,500 --> 01:27:46,500
+ambas têm o mesmo estado
+
+1842
+01:27:46,500 --> 01:27:48,500
+task running
+
+1843
+01:27:48,500 --> 01:27:50,500
+a partir daqui
+
+1844
+01:27:50,500 --> 01:27:52,500
+se houver uma preempreção
+
+1845
+01:27:52,500 --> 01:27:54,500
+sai do CPU mas continua
+
+1846
+01:27:54,500 --> 01:27:56,500
+o estado de task running
+
+1847
+01:27:56,500 --> 01:27:58,500
+ou então
+
+1848
+01:27:58,500 --> 01:28:00,500
+estando a executar
+
+1849
+01:28:00,500 --> 01:28:02,500
+pode terminar
+
+1850
+01:28:02,500 --> 01:28:04,500
+só as tarefas que estão em execução
+
+1851
+01:28:04,500 --> 01:28:06,500
+podem terminar
+
+1852
+01:28:06,500 --> 01:28:08,500
+salvo umas exceções com os sinais
+
+1853
+01:28:08,500 --> 01:28:10,500
+vamos
+
+1854
+01:28:10,500 --> 01:28:12,500
+considerar o epic case
+
+1855
+01:28:12,500 --> 01:28:14,500
+ou caso mais genérico
+
+1856
+01:28:14,500 --> 01:28:16,500
+ou então se a tarefa estiver em execução
+
+1857
+01:28:16,500 --> 01:28:18,500
+pode
+
+1858
+01:28:18,500 --> 01:28:20,500
+ser colocada
+
+1859
+01:28:20,500 --> 01:28:22,500
+numa await queue
+
+1860
+01:28:22,500 --> 01:28:24,500
+portanto
+
+1861
+01:28:24,500 --> 01:28:26,500
+e nesse caso
+
+1862
+01:28:26,500 --> 01:28:28,500
+esse evento
+
+1863
+01:28:28,500 --> 01:28:30,500
+essa tarefa pode ser
+
+1864
+01:28:30,500 --> 01:28:32,500
+possível acordá-la
+
+1865
+01:28:32,500 --> 01:28:34,500
+através de uma interrupção
+
+1866
+01:28:34,500 --> 01:28:36,500
+qualquer, de um sinal qualquer
+
+1867
+01:28:36,500 --> 01:28:38,500
+ou não é possível ser através de um sinal qualquer
+
+1868
+01:28:38,500 --> 01:28:40,500
+não interessa
+
+1869
+01:28:40,500 --> 01:28:42,500
+quando está nesse estado
+
+1870
+01:28:42,500 --> 01:28:44,500
+o que é que nós vamos
+
+1871
+01:28:44,500 --> 01:28:46,500
+a tarefa vai acordar
+
+1872
+01:28:46,500 --> 01:28:48,500
+e acordar
+
+1873
+01:28:48,500 --> 01:28:50,500
+vai ser acordada
+
+1874
+01:28:50,500 --> 01:28:52,500
+e vai mudar de estado
+
+1875
+01:28:52,500 --> 01:28:54,500
+e vai deixar de estar na await queue
+
+1876
+01:28:54,500 --> 01:28:56,500
+a espera de um evento
+
+1877
+01:28:56,500 --> 01:28:58,500
+de uma situação qualquer
+
+1878
+01:28:58,500 --> 01:29:00,500
+e passa para o estado de running
+
+1879
+01:29:00,500 --> 01:29:02,500
+e depois a partir daqui
+
+1880
+01:29:02,500 --> 01:29:04,500
+vamos
+
+1881
+01:29:04,500 --> 01:29:06,500
+o que eu referi anteriormente
+
+1882
+01:29:06,500 --> 01:29:08,500
+ora
+
+1883
+01:29:08,500 --> 01:29:10,500
+então
+
+1884
+01:29:10,500 --> 01:29:12,500
+quando, e isto
+
+1885
+01:29:12,500 --> 01:29:14,500
+é o que acontece no semáforo que nós vamos ver
+
+1886
+01:29:14,500 --> 01:29:16,500
+já a seguir
+
+1887
+01:29:16,500 --> 01:29:18,500
+quando uma tarefa
+
+1888
+01:29:18,500 --> 01:29:20,500
+está em execução
+
+1889
+01:29:20,500 --> 01:29:22,500
+e, quero obter
+
+1890
+01:29:22,500 --> 01:29:24,500
+um semáforo
+
+1891
+01:29:24,500 --> 01:29:26,500
+e não pode
+
+1892
+01:29:26,500 --> 01:29:28,500
+então, essa tarefa
+
+1893
+01:29:28,500 --> 01:29:30,500
+é removida
+
+1894
+01:29:30,500 --> 01:29:32,500
+da que nós chamamos
+
+1895
+01:29:32,500 --> 01:29:34,500
+a run queue porque ela deixou
+
+1896
+01:29:34,500 --> 01:29:36,500
+de estar em condições de ser
+
+1897
+01:29:36,500 --> 01:29:38,500
+executável
+
+1898
+01:29:38,500 --> 01:29:40,500
+o seu estado é alterado
+
+1899
+01:29:40,500 --> 01:29:42,500
+e ela é colocada
+
+1900
+01:29:42,500 --> 01:29:44,500
+numa await queue
+
+1901
+01:29:44,500 --> 01:29:46,500
+quando
+
+1902
+01:29:46,500 --> 01:29:48,500
+um processo qualquer
+
+1903
+01:29:48,500 --> 01:29:50,500
+faz up
+
+1904
+01:29:50,500 --> 01:29:52,500
+ao semáforo
+
+1905
+01:29:52,500 --> 01:29:54,500
+o que é que o up vai fazer
+
+1906
+01:29:54,500 --> 01:29:56,500
+vai obviamente
+
+1907
+01:29:56,500 --> 01:29:58,500
+incrementar o valor do semáforo
+
+1908
+01:29:58,500 --> 01:30:00,500
+e vai ao await queue
+
+1909
+01:30:00,500 --> 01:30:02,500
+associado ao semáforo
+
+1910
+01:30:02,500 --> 01:30:04,500
+e vai acordar o processo
+
+1911
+01:30:04,500 --> 01:30:06,500
+o que é que é acordar o processo
+
+1912
+01:30:06,500 --> 01:30:08,500
+é alterar o processo para
+
+1913
+01:30:08,500 --> 01:30:10,500
+task running e colocá-lo
+
+1914
+01:30:10,500 --> 01:30:12,500
+na fila
+
+1915
+01:30:12,500 --> 01:30:14,500
+onde estão todos os processos
+
+1916
+01:30:14,500 --> 01:30:16,500
+que são
+
+1917
+01:30:16,500 --> 01:30:18,500
+é assim que funciona
+
+1918
+01:30:18,500 --> 01:30:20,500
+o kernel
+
+1919
+01:30:20,500 --> 01:30:22,500
+e é assim que funciona um sistema de operativos
+
+1920
+01:30:22,500 --> 01:30:24,500
+não, porque é isto
+
+1921
+01:30:24,500 --> 01:30:26,500
+portanto, o que é que é uma
+
+1922
+01:30:26,500 --> 01:30:28,500
+await queue?
+
+1923
+01:30:28,500 --> 01:30:30,500
+uma await queue
+
+1924
+01:30:30,500 --> 01:30:32,500
+é um contentor
+
+1925
+01:30:32,500 --> 01:30:34,500
+que pode ser implementado por uma lista ligada
+
+1926
+01:30:34,500 --> 01:30:36,500
+pode ser implementada por uma
+
+1927
+01:30:36,500 --> 01:30:38,500
+árvore binária
+
+1928
+01:30:38,500 --> 01:30:40,500
+pode ser implementado por
+
+1929
+01:30:40,500 --> 01:30:42,500
+aquilo que a gente quiser
+
+1930
+01:30:42,500 --> 01:30:44,500
+é um contentor
+
+1931
+01:30:44,500 --> 01:30:46,500
+em que
+
+1932
+01:30:46,500 --> 01:30:48,500
+quando
+
+1933
+01:30:48,500 --> 01:30:50,500
+a tarefa é adicionada ao await queue
+
+1934
+01:30:50,500 --> 01:30:52,500
+é
+
+1935
+01:30:52,500 --> 01:30:54,500
+o seu estado
+
+1936
+01:30:54,500 --> 01:30:56,500
+é alterado
+
+1937
+01:30:56,500 --> 01:30:58,500
+e depois, quando
+
+1938
+01:30:58,500 --> 01:31:00,500
+permitindo qualquer
+
+1939
+01:31:00,500 --> 01:31:02,500
+a tarefa é acordada
+
+1940
+01:31:02,500 --> 01:31:04,500
+o que é que vai acontecer?
+
+1941
+01:31:04,500 --> 01:31:06,500
+nós vamos invocar o wake up
+
+1942
+01:31:06,500 --> 01:31:08,500
+que vai mudar o estado da tarefa
+
+1943
+01:31:08,500 --> 01:31:10,500
+para task running
+
+1944
+01:31:10,500 --> 01:31:12,500
+na run queue, portanto, vai ser
+
+1945
+01:31:12,500 --> 01:31:14,500
+removida da
+
+1946
+01:31:14,500 --> 01:31:16,500
+await queue
+
+1947
+01:31:16,500 --> 01:31:18,500
+o que é que é uma await queue?
+
+1948
+01:31:18,500 --> 01:31:20,500
+Hora
+
+1949
+01:31:20,500 --> 01:31:22,500
+há pouco
+
+1950
+01:31:22,500 --> 01:31:24,500
+tinha lá uma nota, mas eu por acaso esqueci
+
+1951
+01:31:24,500 --> 01:31:26,500
+me de referir
+
+1952
+01:31:26,500 --> 01:31:28,500
+quer as await queue
+
+1953
+01:31:28,500 --> 01:31:30,500
+quer
+
+1954
+01:31:30,500 --> 01:31:32,500
+quer as árvores binárias
+
+1955
+01:31:32,500 --> 01:31:34,500
+não tem mecanismos de login
+
+1956
+01:31:34,500 --> 01:31:36,500
+isto é
+
+1957
+01:31:36,500 --> 01:31:38,500
+tem que ser, quem as usa
+
+1958
+01:31:38,500 --> 01:31:40,500
+a segurar a atomicidade das operações
+
+1959
+01:31:40,500 --> 01:31:42,500
+por isso é que
+
+1960
+01:31:42,500 --> 01:31:44,500
+é frequente termos
+
+1961
+01:31:44,500 --> 01:31:46,500
+um spin lock
+
+1962
+01:31:46,500 --> 01:31:48,500
+ou uma coisa qualquer
+
+1963
+01:31:48,500 --> 01:31:50,500
+para assegurar as operações
+
+1964
+01:31:50,500 --> 01:31:52,500
+a atomicidade das operações
+
+1965
+01:31:52,500 --> 01:31:57,800
+nas listas ou nas árvores
+
+1966
+01:31:57,800 --> 01:31:59,800
+portanto, o que é que nós temos aqui?
+
+1967
+01:31:59,800 --> 01:32:01,800
+temos aqui uma
+
+1968
+01:32:01,800 --> 01:32:03,800
+await queue, que é deste tipo
+
+1969
+01:32:03,800 --> 01:32:05,800
+tem aqui uma list ad
+
+1970
+01:32:05,800 --> 01:32:07,800
+para ter o que? para conseguir
+
+1971
+01:32:07,800 --> 01:32:09,800
+ter
+
+1972
+01:32:09,800 --> 01:32:11,800
+os apontadores
+
+1973
+01:32:11,800 --> 01:32:13,800
+para formar a await queue
+
+1974
+01:32:13,800 --> 01:32:15,800
+e depois
+
+1975
+01:32:15,800 --> 01:32:17,800
+o que é que nós
+
+1976
+01:32:17,800 --> 01:32:19,800
+vamos ter?
+
+1977
+01:32:19,800 --> 01:32:21,800
+cada entrada
+
+1978
+01:32:21,800 --> 01:32:23,800
+tem uma variável do tipo
+
+1979
+01:32:23,800 --> 01:32:25,800
+list ad
+
+1980
+01:32:25,800 --> 01:32:27,800
+portanto, a cabeça
+
+1981
+01:32:27,800 --> 01:32:29,800
+da await queue
+
+1982
+01:32:29,800 --> 01:32:31,800
+tem, é do mesmo tipo
+
+1983
+01:32:31,800 --> 01:32:33,800
+aqui em diferente
+
+1984
+01:32:33,800 --> 01:32:35,800
+e temos depois aqui o entry
+
+1985
+01:32:35,800 --> 01:32:37,800
+que vai permitir
+
+1986
+01:32:37,800 --> 01:32:39,800
+saber quais são os processos
+
+1987
+01:32:39,800 --> 01:32:41,800
+que estão
+
+1988
+01:32:41,800 --> 01:32:43,800
+dentro
+
+1989
+01:32:43,800 --> 01:32:45,800
+a espera nesta await queue
+
+1990
+01:32:45,800 --> 01:32:47,800
+portanto, isto é implementado
+
+1991
+01:32:47,800 --> 01:32:49,800
+usando o list ad
+
+1992
+01:32:49,800 --> 01:32:53,340
+também
+
+1993
+01:32:53,340 --> 01:32:55,340
+existe aqui
+
+1994
+01:32:55,340 --> 01:32:57,340
+a explicação
+
+1995
+01:32:57,340 --> 01:32:59,340
+dos tempos
+
+1996
+01:32:59,340 --> 01:33:01,340
+api, permite criar
+
+1997
+01:33:01,340 --> 01:33:03,340
+as await queues
+
+1998
+01:33:05,340 --> 01:33:07,340
+as await queues
+
+1999
+01:33:07,340 --> 01:33:09,340
+são muito usadas
+
+2000
+01:33:09,340 --> 01:33:11,340
+no sistema
+
+2001
+01:33:11,340 --> 01:33:13,340
+mas curiosamente
+
+2002
+01:33:13,340 --> 01:33:15,340
+não usando a await queue
+
+2003
+01:33:15,340 --> 01:33:17,340
+mas usando o list ad
+
+2004
+01:33:17,340 --> 01:33:19,340
+e fazendo as coisas
+
+2005
+01:33:19,340 --> 01:33:21,340
+mais
+
+2006
+01:33:21,340 --> 01:33:23,340
+personalizadas
+
+2007
+01:33:23,340 --> 01:33:25,340
+como vamos ver já aqui no semáforo
+
+2008
+01:33:25,340 --> 01:33:27,340
+claro, pois
+
+2009
+01:33:27,340 --> 01:33:29,340
+tem as funções que permitem acordar
+
+2010
+01:33:29,340 --> 01:33:31,340
+etc etc
+
+2011
+01:33:31,340 --> 01:33:33,340
+semáforo, ora o que é que é um semáforo?
+
+2012
+01:33:33,340 --> 01:33:35,340
+eu vou passar já para aqui, o que é que é um semáforo?
+
+2013
+01:33:35,340 --> 01:33:37,340
+ah, ser role spinlock
+
+2014
+01:33:37,340 --> 01:33:39,340
+ao ser spinlock
+
+2015
+01:33:39,340 --> 01:33:41,340
+é basicamente a mesma coisa
+
+2016
+01:33:41,340 --> 01:33:43,340
+tinha a ver com as versões
+
+2017
+01:33:43,340 --> 01:33:45,340
+de causa do prêmio TRT
+
+2018
+01:33:45,340 --> 01:33:47,340
+mas agora é tudo a mesma coisa
+
+2019
+01:33:47,340 --> 01:33:49,340
+portanto podemos usar os dois na prática
+
+2020
+01:33:49,340 --> 01:33:51,340
+é a mesma coisa, ora o que é que é um semáforo?
+
+2021
+01:33:51,340 --> 01:33:53,340
+temos um log
+
+2022
+01:33:53,340 --> 01:33:55,340
+temos um computador e temos uma
+
+2023
+01:33:55,340 --> 01:33:57,340
+lista
+
+2024
+01:33:57,340 --> 01:33:59,340
+para ter os processos
+
+2025
+01:33:59,340 --> 01:34:01,340
+que estão à espera do semáforo
+
+2026
+01:34:01,340 --> 01:34:03,340
+ora quando
+
+2027
+01:34:03,340 --> 01:34:05,340
+temos um semáforo
+
+2028
+01:34:05,340 --> 01:34:07,340
+o que é que nós vamos ter
+
+2029
+01:34:07,340 --> 01:34:09,340
+que ter processos
+
+2030
+01:34:09,340 --> 01:34:11,340
+à espera, ora
+
+2031
+01:34:11,340 --> 01:34:13,340
+aqui o que é que nós vamos ter?
+
+2032
+01:34:13,340 --> 01:34:15,340
+quando os semáforos
+
+2033
+01:34:15,340 --> 01:34:17,340
+eu posso definir os semáforos
+
+2034
+01:34:17,340 --> 01:34:19,340
+que eu quiser, quando eu cria
+
+2035
+01:34:19,340 --> 01:34:21,340
+um semáforo através do sem
+
+2036
+01:34:23,340 --> 01:34:25,340
+aquilo que eu vou fazer é criar
+
+2037
+01:34:25,340 --> 01:34:28,620
+uma estrutura deste tipo
+
+2038
+01:34:28,620 --> 01:34:30,620
+quando
+
+2039
+01:34:30,620 --> 01:34:32,620
+o processo
+
+2040
+01:34:32,620 --> 01:34:34,620
+tenta aceder
+
+2041
+01:34:34,620 --> 01:34:36,620
+a um semáforo, tenta fazer
+
+2042
+01:34:36,620 --> 01:34:38,620
+sem
+
+2043
+01:34:38,620 --> 01:34:40,620
+post
+
+2044
+01:34:40,620 --> 01:34:42,620
+ora, obviamente
+
+2045
+01:34:42,620 --> 01:34:44,620
+que
+
+2046
+01:34:44,620 --> 01:34:46,620
+antes de fazer isso
+
+2047
+01:34:46,620 --> 01:34:48,620
+ele tem que fazer o sem open
+
+2048
+01:34:48,620 --> 01:34:50,620
+e como nós vimos
+
+2049
+01:34:50,620 --> 01:34:52,620
+ele, se o semáforo
+
+2050
+01:34:52,620 --> 01:34:54,620
+com aquele nome já existir
+
+2051
+01:34:54,620 --> 01:34:56,620
+ele liga-se
+
+2052
+01:34:56,620 --> 01:34:58,620
+portanto ele recebe o apontador
+
+2053
+01:34:58,620 --> 01:35:00,620
+da cabeça do semáforo
+
+2054
+01:35:00,620 --> 01:35:02,620
+de
+
+2055
+01:35:02,620 --> 01:35:04,620
+o semáforo não existir
+
+2056
+01:35:04,620 --> 01:35:06,620
+ele vai criar em kernel space
+
+2057
+01:35:06,620 --> 01:35:08,620
+portanto no kernel ele vai criar isso
+
+2058
+01:35:08,620 --> 01:35:10,620
+ora
+
+2059
+01:35:10,620 --> 01:35:12,620
+depois a partir daí o que é que ele vai fazer?
+
+2060
+01:35:12,620 --> 01:35:14,620
+ele vai ter que, ele vai querer
+
+2061
+01:35:14,620 --> 01:35:16,620
+usando o sem
+
+2062
+01:35:16,620 --> 01:35:18,620
+vamos começar pelo sem 8
+
+2063
+01:35:18,620 --> 01:35:20,620
+ele vai tentar decrementar
+
+2064
+01:35:20,620 --> 01:35:22,620
+este valor
+
+2065
+01:35:22,620 --> 01:35:24,620
+ou então incrementar este valor
+
+2066
+01:35:24,620 --> 01:35:26,620
+vamos ao decrementar
+
+2067
+01:35:26,620 --> 01:35:28,620
+quando ele faz o sem down
+
+2068
+01:35:28,620 --> 01:35:30,620
+ora, portanto
+
+2069
+01:35:30,620 --> 01:35:32,620
+nós temos que proteger as operações
+
+2070
+01:35:32,620 --> 01:35:34,620
+com o spinlop
+
+2071
+01:35:34,620 --> 01:35:36,620
+e aqui até desabilitando os interrupts
+
+2072
+01:35:36,620 --> 01:35:38,620
+ele vai verificar
+
+2073
+01:35:38,620 --> 01:35:40,620
+se o count é superior a zero
+
+2074
+01:35:40,620 --> 01:35:42,620
+se for superior a zero
+
+2075
+01:35:42,620 --> 01:35:44,620
+o que é que ele faz?
+
+2076
+01:35:44,620 --> 01:35:46,620
+decrementa o valor do count
+
+2077
+01:35:46,620 --> 01:35:48,620
+e continua
+
+2078
+01:35:48,620 --> 01:35:50,620
+o problema é quando o valor do count
+
+2079
+01:35:50,620 --> 01:35:52,620
+é zero
+
+2080
+01:35:52,620 --> 01:35:54,620
+se é zero não pode decrementar
+
+2081
+01:35:54,620 --> 01:35:56,620
+então vamos seguir aqui isto
+
+2082
+01:35:56,620 --> 01:35:58,620
+ora ele executa aqui
+
+2083
+01:35:58,620 --> 01:36:00,620
+esta função down
+
+2084
+01:36:00,620 --> 01:36:02,620
+em que recebe o semáforo
+
+2085
+01:36:02,620 --> 01:36:04,620
+para saber qual é o semáforo
+
+2086
+01:36:04,620 --> 01:36:06,620
+o que é que faz este down?
+
+2087
+01:36:06,620 --> 01:36:08,620
+este down vai
+
+2088
+01:36:08,620 --> 01:36:10,620
+dizer qual é
+
+2089
+01:36:10,620 --> 01:36:12,620
+o estado para o qual vai passar
+
+2090
+01:36:12,620 --> 01:36:14,620
+a tarefa e vai entrar aqui
+
+2091
+01:36:14,620 --> 01:36:16,620
+no kernel tem muito isto
+
+2092
+01:36:16,620 --> 01:36:18,620
+funções, atrás de funções
+
+2093
+01:36:18,620 --> 01:36:20,620
+pronto
+
+2094
+01:36:20,620 --> 01:36:22,620
+isto vai nos levar aqui
+
+2095
+01:36:22,620 --> 01:36:24,620
+a este
+
+2096
+01:36:24,620 --> 01:36:26,620
+underscore underscore
+
+2097
+01:36:26,620 --> 01:36:28,620
+down underscore comma
+
+2098
+01:36:28,620 --> 01:36:30,620
+e se vocês
+
+2099
+01:36:30,620 --> 01:36:32,620
+repararem o que é que ele está aqui a fazer
+
+2100
+01:36:32,620 --> 01:36:34,620
+ele está a criar uma variável
+
+2101
+01:36:34,620 --> 01:36:36,620
+do tipo waiter
+
+2102
+01:36:36,620 --> 01:36:38,620
+e vai adicionar
+
+2103
+01:36:38,620 --> 01:36:40,620
+este waiter
+
+2104
+01:36:40,620 --> 01:36:42,620
+à lista do semáforo
+
+2105
+01:36:42,620 --> 01:36:44,620
+ora se vocês repararem
+
+2106
+01:36:44,620 --> 01:36:46,620
+está aqui waitlist
+
+2107
+01:36:48,620 --> 01:36:50,620
+está aqui waitlist
+
+2108
+01:36:50,620 --> 01:36:52,620
+o campo do waiter é o list
+
+2109
+01:36:52,620 --> 01:36:54,620
+o campo
+
+2110
+01:36:54,620 --> 01:36:56,620
+o campo no waiter é o list
+
+2111
+01:36:56,620 --> 01:36:58,620
+e o que é que falta aqui?
+
+2112
+01:36:58,620 --> 01:37:00,620
+falta
+
+2113
+01:37:00,620 --> 01:37:02,620
+colocar aqui no apontador
+
+2114
+01:37:02,620 --> 01:37:04,620
+a tarefa corrente
+
+2115
+01:37:04,620 --> 01:37:06,620
+a tarefa que vai adormecer
+
+2116
+01:37:06,620 --> 01:37:08,620
+que vai ficar no semáforo
+
+2117
+01:37:12,620 --> 01:37:14,620
+e nesta
+
+2118
+01:37:14,620 --> 01:37:16,620
+nesta altura o que é que aconteceu?
+
+2119
+01:37:16,620 --> 01:37:18,620
+a tarefa foi mudada
+
+2120
+01:37:18,620 --> 01:37:20,620
+o estado para
+
+2121
+01:37:20,620 --> 01:37:22,620
+ser interrepetível
+
+2122
+01:37:22,620 --> 01:37:24,620
+deixou de estar no estado de execução
+
+2123
+01:37:24,620 --> 01:37:26,620
+e foi colocada
+
+2124
+01:37:26,620 --> 01:37:28,620
+na lista do semáforo
+
+2125
+01:37:28,620 --> 01:37:30,620
+deixou de estar
+
+2126
+01:37:30,620 --> 01:37:32,620
+em condições de ser
+
+2127
+01:37:32,620 --> 01:37:34,620
+executado
+
+2128
+01:37:34,620 --> 01:37:36,620
+quando se faz o up
+
+2129
+01:37:36,620 --> 01:37:38,620
+ele vai incrementar
+
+2130
+01:37:38,620 --> 01:37:40,620
+ora
+
+2131
+01:37:40,620 --> 01:37:42,620
+se a lista
+
+2132
+01:37:42,620 --> 01:37:44,620
+estiver
+
+2133
+01:37:44,620 --> 01:37:46,620
+vazia
+
+2134
+01:37:46,620 --> 01:37:48,620
+se a lista tiver
+
+2135
+01:37:48,620 --> 01:37:50,620
+vazia
+
+2136
+01:37:50,620 --> 01:37:52,620
+ele incrementa
+
+2137
+01:37:52,620 --> 01:37:54,620
+não está ninguém à espera
+
+2138
+01:37:54,620 --> 01:37:56,620
+não tem que fazer nada
+
+2139
+01:37:56,620 --> 01:37:58,620
+mas se a lista não estiver vazia
+
+2140
+01:37:58,620 --> 01:38:00,620
+o que é que ele vai ter que fazer?
+
+2141
+01:38:00,620 --> 01:38:02,620
+vai ter que acordar
+
+2142
+01:38:02,620 --> 01:38:04,620
+um dos processos que está lá
+
+2143
+01:38:04,620 --> 01:38:06,620
+na lista
+
+2144
+01:38:06,620 --> 01:38:08,620
+ora se a lista não estiver vazia
+
+2145
+01:38:08,620 --> 01:38:10,620
+ele vai fazer aqui
+
+2146
+01:38:10,620 --> 01:38:12,620
+se vocês repararem
+
+2147
+01:38:12,620 --> 01:38:14,620
+ele vai remover
+
+2148
+01:38:14,620 --> 01:38:16,620
+o processo
+
+2149
+01:38:16,620 --> 01:38:18,620
+e vai incrementar
+
+2150
+01:38:18,620 --> 01:38:20,620
+e vai
+
+2151
+01:38:20,620 --> 01:38:22,620
+incrementar
+
+2152
+01:38:22,620 --> 01:38:24,620
+e vai acordar
+
+2153
+01:38:24,620 --> 01:38:26,620
+este wake up process
+
+2154
+01:38:26,620 --> 01:38:28,620
+é uma função
+
+2155
+01:38:28,620 --> 01:38:30,620
+que altera o estado
+
+2156
+01:38:30,620 --> 01:38:32,620
+para a task running
+
+2157
+01:38:32,620 --> 01:38:34,620
+e vai acordar o processo
+
+2158
+01:38:34,620 --> 01:38:36,620
+portanto
+
+2159
+01:38:36,620 --> 01:38:38,620
+é assim que o semáforo funciona
+
+2160
+01:38:38,620 --> 01:38:40,620
+depois falta aqui algum código
+
+2161
+01:38:40,620 --> 01:38:42,620
+que obviamente
+
+2162
+01:38:42,620 --> 01:38:44,620
+quando ele faz o up
+
+2163
+01:38:44,620 --> 01:38:46,620
+vai incrementar
+
+2164
+01:38:46,620 --> 01:38:48,620
+o contador
+
+2165
+01:38:48,620 --> 01:38:52,220
+motex
+
+2166
+01:38:52,220 --> 01:38:54,220
+muito parecido com
+
+2167
+01:38:54,220 --> 01:38:56,220
+os semáforos
+
+2168
+01:38:56,220 --> 01:38:58,220
+para ser praticamente iguais
+
+2169
+01:38:58,220 --> 01:39:00,220
+a grande diferença
+
+2170
+01:39:00,220 --> 01:39:02,220
+é que o motex
+
+2171
+01:39:02,220 --> 01:39:04,220
+tem um oner
+
+2172
+01:39:04,220 --> 01:39:06,220
+por isso aqui só o processo
+
+2173
+01:39:06,220 --> 01:39:08,220
+que faz logo é que pode fazer ano logo
+
+2174
+01:39:08,220 --> 01:39:10,220
+tudo o resto é muito parecido
+
+2175
+01:39:10,220 --> 01:39:12,220
+salvo
+
+2176
+01:39:12,220 --> 01:39:14,220
+essas
+
+2177
+01:39:14,220 --> 01:39:16,220
+aqui
+
+2178
+01:39:16,220 --> 01:39:18,220
+curiosamente aqui no motex
+
+2179
+01:39:18,220 --> 01:39:20,220
+por questões de desempenho
+
+2180
+01:39:20,220 --> 01:39:22,220
+ele utiliza um atómico
+
+2181
+01:39:22,220 --> 01:39:24,220
+long t para guardar um apontador
+
+2182
+01:39:26,220 --> 01:39:28,220
+esta é uma variável de 64 bits
+
+2183
+01:39:28,220 --> 01:39:30,220
+utiliza isso em vez de um apontador
+
+2184
+01:39:30,220 --> 01:39:32,220
+porque é para
+
+2185
+01:39:32,220 --> 01:39:34,220
+poder alterar o valor
+
+2186
+01:39:34,220 --> 01:39:36,220
+dessa variável
+
+2187
+01:39:36,220 --> 01:39:38,220
+de forma mais
+
+2188
+01:39:38,220 --> 01:39:40,220
+mais eficiente
+
+2189
+01:39:40,220 --> 01:39:42,220
+mas conseguia se fazer
+
+2190
+01:39:42,220 --> 01:39:44,220
+sem ter isso portanto
+
+2191
+01:39:44,220 --> 01:39:46,220
+ter aqui um apontador do tipo
+
+2192
+01:39:46,220 --> 01:39:48,220
+do tipo task
+
+2193
+01:39:48,220 --> 01:39:50,220
+estranho
+
+2194
+01:39:50,220 --> 01:39:52,220
+o que é que é
+
+2195
+01:39:52,220 --> 01:39:54,220
+diferente nos motex
+
+2196
+01:39:54,220 --> 01:39:56,220
+em relação aos semáforos
+
+2197
+01:39:56,220 --> 01:39:58,220
+os motex
+
+2198
+01:39:58,220 --> 01:40:00,220
+tem três possibilidades
+
+2199
+01:40:00,220 --> 01:40:02,220
+de adquirir o motex
+
+2200
+01:40:02,220 --> 01:40:04,220
+isto é
+
+2201
+01:40:04,220 --> 01:40:06,220
+o que é que ele faz
+
+2202
+01:40:06,220 --> 01:40:08,220
+ele tem, digamos, três caminhos
+
+2203
+01:40:08,220 --> 01:40:10,220
+ele
+
+2204
+01:40:10,220 --> 01:40:12,220
+tem três caminhos
+
+2205
+01:40:12,220 --> 01:40:14,220
+o que é que
+
+2206
+01:40:14,220 --> 01:40:16,220
+ele vai fazer
+
+2207
+01:40:16,220 --> 01:40:18,220
+portanto
+
+2208
+01:40:18,220 --> 01:40:20,220
+ele vai
+
+2209
+01:40:20,220 --> 01:40:22,220
+fazer um caminho mais rápido
+
+2210
+01:40:22,220 --> 01:40:24,220
+em que usa um spin lock
+
+2211
+01:40:24,220 --> 01:40:26,220
+e
+
+2212
+01:40:26,220 --> 01:40:28,220
+no sentido de que
+
+2213
+01:40:28,220 --> 01:40:30,220
+no sentido de assumir que
+
+2214
+01:40:30,220 --> 01:40:32,220
+vai ser rápido obter o motex
+
+2215
+01:40:32,220 --> 01:40:34,220
+esgotando
+
+2216
+01:40:34,220 --> 01:40:36,220
+essa possibilidade
+
+2217
+01:40:36,220 --> 01:40:38,220
+ele vai para
+
+2218
+01:40:38,220 --> 01:40:40,220
+um mid path
+
+2219
+01:40:40,220 --> 01:40:42,220
+portanto o que é que ele vai
+
+2220
+01:40:42,220 --> 01:40:44,220
+também é um spinning
+
+2221
+01:40:44,220 --> 01:40:46,220
+otimística
+
+2222
+01:40:46,220 --> 01:40:48,220
+ele tenta
+
+2223
+01:40:48,220 --> 01:40:50,220
+ele assume que
+
+2224
+01:40:50,220 --> 01:40:52,220
+se alguém
+
+2225
+01:40:52,220 --> 01:40:54,220
+se o owner tem
+
+2226
+01:40:54,220 --> 01:40:56,220
+se alguém que tem um motex
+
+2227
+01:40:56,220 --> 01:40:58,220
+então ele vai
+
+2228
+01:40:58,220 --> 01:41:00,220
+é porque está em execução
+
+2229
+01:41:00,220 --> 01:41:02,220
+ou está em condições de executar
+
+2230
+01:41:02,220 --> 01:41:04,220
+então vai ser rápido a libertar
+
+2231
+01:41:04,220 --> 01:41:06,220
+ou no último caso
+
+2232
+01:41:06,220 --> 01:41:08,220
+portanto estas duas possibilidades
+
+2233
+01:41:08,220 --> 01:41:10,220
+ele vai adotar o comportamento
+
+2234
+01:41:10,220 --> 01:41:12,220
+de um semáforo e vai logo
+
+2235
+01:41:12,220 --> 01:41:14,220
+para uma wait queue
+
+2236
+01:41:14,220 --> 01:41:16,220
+portanto nas duas primeiras
+
+2237
+01:41:16,220 --> 01:41:18,220
+ele faz um delay
+
+2238
+01:41:18,220 --> 01:41:20,220
+para ir para a wait queue
+
+2239
+01:41:20,220 --> 01:41:22,220
+no caso do slow path
+
+2240
+01:41:22,220 --> 01:41:24,220
+ele vai logo para uma wait
+
+2241
+01:41:24,220 --> 01:41:26,220
+portanto esgotando
+
+2242
+01:41:26,220 --> 01:41:28,220
+ele vai para a wait queue
+
+2243
+01:41:28,220 --> 01:41:30,220
+depois estamos aqui
+
+2244
+01:41:30,220 --> 01:41:32,220
+uma coisa que tem a ver com barreiras
+
+2245
+01:41:32,220 --> 01:41:34,220
+eu só coloco aqui
+
+2246
+01:41:34,220 --> 01:41:36,220
+portanto é muito frequente
+
+2247
+01:41:36,220 --> 01:41:38,220
+termos mecanismos de sincronização
+
+2248
+01:41:38,220 --> 01:41:40,220
+de várias
+
+2249
+01:41:40,220 --> 01:41:42,220
+vamos dizer
+
+2250
+01:41:42,220 --> 01:41:44,220
+várias direitos portanto
+
+2251
+01:41:44,220 --> 01:41:46,220
+fazer com que criar ali uma barreira
+
+2252
+01:41:46,220 --> 01:41:48,220
+em que todos chegam ali
+
+2253
+01:41:48,220 --> 01:41:50,220
+quando chegam ali são notificados
+
+2254
+01:41:50,220 --> 01:41:52,220
+e eu gostava de te chamar
+
+2255
+01:41:52,220 --> 01:41:54,220
+atenção para isto
+
+2256
+01:41:54,220 --> 01:41:56,220
+ora as
+
+2257
+01:41:56,220 --> 01:41:58,220
+complexas são mecanismos de sincronização
+
+2258
+01:41:58,220 --> 01:42:00,220
+como os semáforos
+
+2259
+01:42:00,220 --> 01:42:02,220
+muito parecidas
+
+2260
+01:42:02,220 --> 01:42:04,220
+permitem criar ali uma barreira
+
+2261
+01:42:04,220 --> 01:42:06,220
+isto é
+
+2262
+01:42:06,220 --> 01:42:08,220
+ficam todos à espera até
+
+2263
+01:42:08,220 --> 01:42:10,220
+uma determinada condição
+
+2264
+01:42:10,220 --> 01:42:12,220
+ser verdade
+
+2265
+01:42:12,220 --> 01:42:14,220
+e chamamos atenção para uma coisa
+
+2266
+01:42:14,220 --> 01:42:16,220
+apesar de ter aqui
+
+2267
+01:42:16,220 --> 01:42:18,220
+vamos esquecer
+
+2268
+01:42:18,220 --> 01:42:20,220
+este S
+
+2269
+01:42:20,220 --> 01:42:22,220
+a ideia é que isto seja uma wait queue
+
+2270
+01:42:22,220 --> 01:42:24,220
+em que todos estão à espera
+
+2271
+01:42:24,220 --> 01:42:26,220
+que esta variável
+
+2272
+01:42:26,220 --> 01:42:28,220
+passe para
+
+2273
+01:42:28,220 --> 01:42:30,220
+um determinado estado
+
+2274
+01:42:30,220 --> 01:42:32,220
+só que
+
+2275
+01:42:32,220 --> 01:42:34,220
+e daí
+
+2276
+01:42:34,220 --> 01:42:36,220
+isto não é uma wait queue
+
+2277
+01:42:36,220 --> 01:42:38,220
+não é aquela wait queue que nós vimos
+
+2278
+01:42:38,220 --> 01:42:40,220
+é uma S wait queue
+
+2279
+01:42:40,220 --> 01:42:42,220
+e por que?
+
+2280
+01:42:42,220 --> 01:42:44,220
+porque as wait queue tinham alguns problemas
+
+2281
+01:42:44,220 --> 01:42:46,220
+por isso e então
+
+2282
+01:42:46,220 --> 01:42:48,220
+eles resolveram fazer
+
+2283
+01:42:48,220 --> 01:42:50,220
+fazer uma wait queue
+
+2284
+01:42:50,220 --> 01:42:52,220
+mais
+
+2285
+01:42:52,220 --> 01:42:54,220
+digamos mais simples
+
+2286
+01:42:54,220 --> 01:42:56,220
+no sentido de facilitar
+
+2287
+01:42:56,220 --> 01:42:58,220
+isto
+
+2288
+01:42:58,220 --> 01:43:00,220
+portanto
+
+2289
+01:43:00,220 --> 01:43:02,220
+as wait queue
+
+2290
+01:43:02,220 --> 01:43:04,220
+têm o mesmo propósito de as wait queue
+
+2291
+01:43:04,220 --> 01:43:06,220
+têm uma implementação diferente
+
+2292
+01:43:06,220 --> 01:43:08,220
+por questões de desempenho
+
+2293
+01:43:08,220 --> 01:43:10,220
+e as wait queue
+
+2294
+01:43:10,220 --> 01:43:12,220
+há uns contextos em que elas têm alguns problemas
+
+2295
+01:43:12,220 --> 01:43:14,220
+portanto
+
+2296
+01:43:14,220 --> 01:43:16,220
+mas uma complication
+
+2297
+01:43:16,220 --> 01:43:18,220
+no fundo é suportada por uma wait queue
+
+2298
+01:43:18,220 --> 01:43:20,220
+não com a implementação do wait queue
+
+2299
+01:43:20,220 --> 01:43:22,220
+mas com uma outra
+
+2300
+01:43:22,220 --> 01:43:24,220
+implementação mais aligarada
+
+2301
+01:43:24,220 --> 01:43:26,220
+os semáforos também têm uma wait queue
+
+2302
+01:43:26,220 --> 01:43:28,220
+não implementado como a wait queue
+
+2303
+01:43:28,220 --> 01:43:30,220
+implementada por uma liste
+
+2304
+01:43:30,220 --> 01:43:32,220
+os motecs têm uma wait queue
+
+2305
+01:43:32,220 --> 01:43:34,220
+não implementado através das wait queue
+
+2306
+01:43:34,220 --> 01:43:36,220
+mas
+
+2307
+01:43:36,220 --> 01:43:38,220
+usando uma liste
+
+2308
+01:43:38,220 --> 01:43:40,220
+é usando uma liste
+
+2309
+01:43:40,220 --> 01:43:42,220
+e isto acontece
+
+2310
+01:43:42,220 --> 01:43:44,220
+muito no kernel
+
+2311
+01:43:44,220 --> 01:43:46,220
+e não acontece
+
+2312
+01:43:46,220 --> 01:43:48,220
+tanto
+
+2313
+01:43:48,220 --> 01:43:50,220
+nas versões
+
+2314
+01:43:50,220 --> 01:43:52,220
+melhoradas do linux
+
+2315
+01:43:52,220 --> 01:43:54,220
+e quando digo melhoradas
+
+2316
+01:43:54,220 --> 01:43:56,220
+melhoradas adaptadas
+
+2317
+01:43:56,220 --> 01:43:58,220
+para
+
+2318
+01:43:58,220 --> 01:44:00,220
+sistemas temporiais
+
+2319
+01:44:00,220 --> 01:44:02,220
+em que todo este código
+
+2320
+01:44:02,220 --> 01:44:04,220
+redundante e todo este código
+
+2321
+01:44:04,220 --> 01:44:06,220
+que existe para assegurar a compatibilidade
+
+2322
+01:44:06,220 --> 01:44:08,220
+é por isso simplesmente iluminado
+
+2323
+01:44:08,220 --> 01:44:10,220
+por isso é que
+
+2324
+01:44:10,220 --> 01:44:12,220
+o linux
+
+2325
+01:44:12,220 --> 01:44:14,220
+é muito usado
+
+2326
+01:44:14,220 --> 01:44:16,220
+nos sistemas embedos, raspers
+
+2327
+01:44:16,220 --> 01:44:18,220
+e coisas assim do género
+
+2328
+01:44:18,220 --> 01:44:20,220
+mas existem versões
+
+2329
+01:44:20,220 --> 01:44:22,220
+não com o nome
+
+2330
+01:44:22,220 --> 01:44:24,220
+de linux com outro nome
+
+2331
+01:44:24,220 --> 01:44:26,220
+que são muito derivados de isto
+
+2332
+01:44:26,220 --> 01:44:28,220
+em que aí
+
+2333
+01:44:28,220 --> 01:44:30,220
+consegue-se ter liberdade
+
+2334
+01:44:30,220 --> 01:44:32,220
+para limpar estes mecanismos
+
+2335
+01:44:32,220 --> 01:44:34,220
+no linux
+
+2336
+01:44:34,220 --> 01:44:36,220
+dado a sua
+
+2337
+01:44:36,220 --> 01:44:38,220
+utilização
+
+2338
+01:44:38,220 --> 01:44:40,220
+não existe
+
+2339
+01:44:40,220 --> 01:44:42,220
+essa liberdade
+
+2340
+01:44:42,220 --> 01:44:44,220
+e por vezes existe estas coisas
+
+2341
+01:44:44,220 --> 01:44:46,220
+de termos de alguma forma
+
+2342
+01:44:46,220 --> 01:44:48,220
+coisas que são redundantes
+
+2343
+01:44:48,220 --> 01:44:50,220
+e que por vezes nem se percebe
+
+2344
+01:44:50,220 --> 01:44:52,220
+muito bem
+
+2345
+01:44:52,220 --> 01:44:54,220
+mas a ideia e a explicação
+
+2346
+01:44:54,220 --> 01:44:56,220
+têm a ver com isto
+
+2347
+01:44:56,220 --> 01:44:58,220
+e obviamente
+
+2348
+01:44:58,220 --> 01:45:00,220
+também existe
+
+2349
+01:45:00,220 --> 01:45:02,220
+um API
+
+2350
+01:45:02,220 --> 01:45:04,220
+portanto só temos que usar
+
+2351
+01:45:04,220 --> 01:45:06,220
+para terminar
+
+2352
+01:45:06,220 --> 01:45:08,220
+vamos só
+
+2353
+01:45:08,220 --> 01:45:10,220
+vocês
+
+2354
+01:45:10,220 --> 01:45:12,220
+no módulo
+
+2355
+01:45:12,220 --> 01:45:14,220
+tem este
+
+2356
+01:45:14,220 --> 01:45:16,220
+fecheiro
+
+2357
+01:45:16,220 --> 01:45:18,220
+em que tem aqui um conjunto de módulos
+
+2358
+01:45:18,220 --> 01:45:20,220
+vocês podem fazer
+
+2359
+01:45:20,220 --> 01:45:22,220
+o download
+
+2360
+01:45:22,220 --> 01:45:24,220
+dos módulos
+
+2361
+01:45:24,220 --> 01:45:26,220
+tem a explicar como é que compilam
+
+2362
+01:45:26,220 --> 01:45:28,220
+como é que extraem
+
+2363
+01:45:28,220 --> 01:45:30,220
+o fecheiro
+
+2364
+01:45:30,220 --> 01:45:32,220
+como é que os inserem
+
+2365
+01:45:32,220 --> 01:45:34,220
+como é que conseguem ver
+
+2366
+01:45:34,220 --> 01:45:36,220
+as mensagens portanto
+
+2367
+01:45:36,220 --> 01:45:38,220
+os primeiros são muito simples
+
+2368
+01:45:38,220 --> 01:45:40,220
+depois
+
+2369
+01:45:40,220 --> 01:45:42,220
+a partir daqui
+
+2370
+01:45:42,220 --> 01:45:44,220
+eles começam a ser um pouco mais complexos
+
+2371
+01:45:44,220 --> 01:45:46,220
+portanto
+
+2372
+01:45:46,220 --> 01:45:48,220
+eles aumentam o ring buffer
+
+2373
+01:45:48,220 --> 01:45:50,220
+em que se coloca
+
+2374
+01:45:50,220 --> 01:45:52,220
+mensagens
+
+2375
+01:45:52,220 --> 01:45:54,220
+tem um outro
+
+2376
+01:45:54,220 --> 01:45:56,220
+em que
+
+2377
+01:45:56,220 --> 01:45:58,220
+se implementa
+
+2378
+01:45:58,220 --> 01:46:00,220
+um fifo
+
+2379
+01:46:00,220 --> 01:46:02,220
+portanto à medida que se vai colocando
+
+2380
+01:46:02,220 --> 01:46:04,220
+ele vai adicionando
+
+2381
+01:46:04,220 --> 01:46:06,220
+elementos pelo ordem
+
+2382
+01:46:06,220 --> 01:46:08,220
+que é inserido
+
+2383
+01:46:08,220 --> 01:46:10,220
+tem uma outra
+
+2384
+01:46:10,220 --> 01:46:12,220
+que usa uma árvore binária
+
+2385
+01:46:12,220 --> 01:46:14,220
+o propósito aqui é ordenação
+
+2386
+01:46:14,220 --> 01:46:16,220
+e para termos ordenação
+
+2387
+01:46:16,220 --> 01:46:18,220
+no kernel
+
+2388
+01:46:18,220 --> 01:46:20,220
+seja para o que for
+
+2389
+01:46:20,220 --> 01:46:22,220
+usamos sempre uma árvore binária
+
+2390
+01:46:22,220 --> 01:46:24,220
+para fazer ordenação
+
+2391
+01:46:24,220 --> 01:46:26,220
+e depois
+
+2392
+01:46:26,220 --> 01:46:28,220
+tem aqui
+
+2393
+01:46:28,220 --> 01:46:30,220
+este que permite listar
+
+2394
+01:46:30,220 --> 01:46:32,220
+todas as tarefas
+
+2395
+01:46:32,220 --> 01:46:34,220
+que estão ativas
+
+2396
+01:46:34,220 --> 01:46:36,220
+portanto é uma questão
+
+2397
+01:46:36,220 --> 01:46:38,220
+depois tem aqui um conjunto
+
+2398
+01:46:38,220 --> 01:46:40,220
+de módulos
+
+2399
+01:46:40,220 --> 01:46:42,220
+que utilizam aquelas
+
+2400
+01:46:42,220 --> 01:46:44,220
+primitivas
+
+2401
+01:46:44,220 --> 01:46:46,220
+e obviamente de
+
+2402
+01:46:46,220 --> 01:46:48,220
+de sincronização
+
+2403
+01:46:48,220 --> 01:46:50,220
+que só se consegue
+
+2404
+01:46:50,220 --> 01:46:52,220
+ver as tarefas
+
+2405
+01:46:52,220 --> 01:46:54,220
+a esperar e não sei o que
+
+2406
+01:46:54,220 --> 01:46:56,220
+olhando uma vez que no código tem para lá um sprint
+
+2407
+01:46:56,220 --> 01:46:58,220
+de capas
+
+2408
+01:46:58,220 --> 01:47:00,220
+depois acedendo
+
+2409
+01:47:00,220 --> 01:47:02,220
+as mensagens se consegue ver
+
+2410
+01:47:02,220 --> 01:47:04,220
+qual é que esperou, qual é que executou
+
+2411
+01:47:04,220 --> 01:47:06,220
+coisa assim de jeito
+
+2412
+01:47:06,220 --> 01:47:08,220
+portanto tem
+
+2413
+01:47:08,220 --> 01:47:10,220
+para tudo o que foi
+
+2414
+01:47:10,220 --> 01:47:12,220
+que tem um módulo
+
+2415
+01:47:12,220 --> 01:47:14,220
+para vocês verem por um lado a API
+
+2416
+01:47:14,220 --> 01:47:16,220
+como é que se utilizam aquelas
+
+2417
+01:47:16,220 --> 01:47:18,220
+aquelas funções
+
+2418
+01:47:18,220 --> 01:47:20,220
+e depois para ver qual é que é o comportamento
+
+2419
+01:47:20,220 --> 01:47:22,220
+embora aqui na alguns
+
+2420
+01:47:22,220 --> 01:47:24,220
+é um bocado difícil ver
+
+2421
+01:47:24,220 --> 01:47:26,220
+ver o comportamento
+
+2422
+01:47:26,220 --> 01:47:28,220
+porque é difícil por vezes
+
+2423
+01:47:28,220 --> 01:47:30,220
+criar em vários processos
+
+2424
+01:47:30,220 --> 01:47:32,220
+ao mesmo tempo
+
+2425
+01:47:32,220 --> 01:47:34,220
+porque tem que abrir vários terminais
+
+2426
+01:47:34,220 --> 01:47:36,220
+e por executar
+
+2427
+01:47:36,220 --> 01:47:38,220
+em todos quase em simultâneo
+
+2428
+01:47:38,220 --> 01:47:40,220
+uma das abordagens
+
+2429
+01:47:40,220 --> 01:47:42,220
+seria usar
+
+2430
+01:47:42,220 --> 01:47:44,220
+uma abordagem parecida com o Lancer
+
+2431
+01:47:44,220 --> 01:47:46,220
+que fizemos na UGMAL
+
+2432
+01:47:46,220 --> 01:47:48,220
+que era o Lancer que cria
+
+2433
+01:47:48,220 --> 01:47:50,220
+as tarefas
+
+2434
+01:47:50,220 --> 01:47:52,220
+e depois as tarefas é que vão executar
+
+2435
+01:47:52,220 --> 01:47:54,220
+esse código
+
+2436
+01:47:54,220 --> 01:47:56,220
+podem experimentar, tentar fazer uma coisa desse jeito
+
+2437
+01:47:56,220 --> 01:47:58,220
+e por hoje
+
+2438
+01:47:58,220 --> 01:48:00,220
+é o que nós
+
+2439
+01:48:00,220 --> 01:48:02,220
+temos portanto a ideia
+
+2440
+01:48:02,220 --> 01:48:04,220
+foi dar-vos um overview
+
+2441
+01:48:04,220 --> 01:48:06,220
+daquilo que o kernel tem
+
+2442
+01:48:06,220 --> 01:48:08,220
+para fazer o desenvolvimento
+
+2443
+01:48:08,220 --> 01:48:10,220
+na próxima
+
+2444
+01:48:10,220 --> 01:48:12,220
+ainda nos falta aqui algumas coisas relacionadas
+
+2445
+01:48:12,220 --> 01:48:14,220
+com timers
+
+2446
+01:48:14,220 --> 01:48:16,220
+portanto como é que o kernel
+
+2447
+01:48:16,220 --> 01:48:18,220
+gera o tempo
+
+2448
+01:48:18,220 --> 01:48:20,220
+vamos ver isso na próxima aula
+
+2449
+01:48:20,220 --> 01:48:22,220
+também vos vou disponibilizar
+
+2450
+01:48:22,220 --> 01:48:24,220
+uns
+
+2451
+01:48:24,220 --> 01:48:26,220
+uns módulos
+
+2452
+01:48:26,220 --> 01:48:28,220
+para vocês quiserem experimentar
+
+2453
+01:48:28,220 --> 01:48:30,220
+aconselhos a fazer alterações
+
+2454
+01:48:30,220 --> 01:48:32,220
+a mudar
+
+2455
+01:48:32,220 --> 01:48:34,220
+para obtiver
+
+2456
+01:48:34,220 --> 01:48:36,220
+a máquina virtual, não há problema nenhum
+
+2457
+01:48:36,220 --> 01:48:38,220
+podem reiniciar
+
+2458
+01:48:38,220 --> 01:48:40,220
+ou pode ter que acontecer
+
+2459
+01:48:40,220 --> 01:48:42,220
+a vocês terminarem
+
+2460
+01:48:42,220 --> 01:48:44,220
+portanto fazerem aí
+
+2461
+01:48:44,220 --> 01:48:46,220
+algumas coisas
+
+2462
+01:48:46,220 --> 01:48:48,220
+tentar aprender um pouquinho com isso
+
+2463
+01:48:48,220 --> 01:48:50,220
+portanto
+
+2464
+01:48:50,220 --> 01:48:52,220
+na próxima aula
+
+2465
+01:48:52,220 --> 01:48:54,220
+vamos ver isto
+
+2466
+01:48:54,220 --> 01:48:56,220
+e esclasei aqui algumas coisas
+
+2467
+01:48:56,220 --> 01:48:58,220
+depois
+
+2468
+01:48:58,220 --> 01:49:00,220
+vamos voltar aos módulos
+
+2469
+01:49:00,220 --> 01:49:02,220
+e depois na 2 ao 8
+
+2470
+01:49:02,220 --> 01:49:04,220
+vamos começar com o kernel
+
+2471
+01:49:04,220 --> 01:49:06,220
+compilar o kernel
+
+2472
+01:49:06,220 --> 01:49:08,220
+fazer algumas coisas no kernel
+
+2473
+01:49:08,220 --> 01:49:10,220
+e começar a mexer no kernel por um minuto
+
+2474
+01:49:10,220 --> 01:49:12,220
+tá bem?
+
+2475
+01:49:12,220 --> 01:49:17,190
+hoje visto
+
+2476
+01:49:17,190 --> 01:49:19,190
+os módulos é para sábado
+
+2477
+01:49:19,190 --> 01:49:21,190
+estes módulos
+
+2478
+01:49:21,190 --> 01:49:23,190
+o recompilar o kernel é só para
+
+2479
+01:49:23,190 --> 01:49:25,190
+2 ao 8
+
+2480
+01:49:25,190 --> 01:49:27,190
+desculpa professor
+
+2481
+01:49:27,190 --> 01:49:29,190
+última pergunta nós estamos desta
+
+2482
+01:49:29,190 --> 01:49:31,190
+esta semana ou próxima?
+
+2483
+01:49:31,190 --> 01:49:33,190
+esta semana
+
+2484
+01:49:33,190 --> 01:49:35,190
+aulas
+
+2485
+01:49:35,190 --> 01:49:37,190
+primeiras
+
+2486
+01:49:37,190 --> 01:49:39,190
+vamos
+
+2487
+01:49:39,190 --> 01:49:41,190
+nós temos aula as 11
+
+2488
+01:49:41,190 --> 01:49:43,190
+das 11 ao meio dia
+
+2489
+01:49:43,190 --> 01:49:45,190
+vamos
+
+2490
+01:49:45,190 --> 01:49:47,190
+fazer
+
+2491
+01:49:47,190 --> 01:49:49,190
+ver estes módulos a correr
+
+2492
+01:49:49,190 --> 01:49:51,190
+vamos olhar
+
+2493
+01:49:51,190 --> 01:49:53,190
+portanto se vocês estiverem dúvidas
+
+2494
+01:49:53,190 --> 01:49:55,190
+as clareças dúvidas, se vocês não tiverem dúvidas
+
+2495
+01:49:55,190 --> 01:49:57,190
+eu vou mostrar aqui algumas coisas
+
+2496
+01:49:57,190 --> 01:49:59,190
+para realçar aqui algumas coisas
+
+2497
+01:49:59,190 --> 01:50:01,190
+e depois
+
+2498
+01:50:01,190 --> 01:50:03,190
+ao meio dia
+
+2499
+01:50:03,190 --> 01:50:05,190
+há uma hora fazemos
+
+2500
+01:50:05,190 --> 01:50:07,190
+o exercício individual
+
+2501
+01:50:07,190 --> 01:50:09,190
+já agora
+
+2502
+01:50:09,190 --> 01:50:11,190
+deixe-me fazer uma pergunta
+
+2503
+01:50:11,190 --> 01:50:13,190
+e por acaso
+
+2504
+01:50:13,190 --> 01:50:15,190
+estava a fazer isto
+
+2505
+01:50:15,190 --> 01:50:17,190
+em português
+
+2506
+01:50:17,190 --> 01:50:19,190
+penso que se calhar é melhor
+
+2507
+01:50:19,190 --> 01:50:21,190
+também ter uma versão inglesa
+
+2508
+01:50:21,190 --> 01:50:23,190
+sim por favor porque português é um
+
+2509
+01:50:23,190 --> 01:50:25,190
+um bocadinho difícil para mim
+
+2510
+01:50:25,190 --> 01:50:33,820
+tá bem?
+
+2511
+01:50:33,820 --> 01:50:35,820
+para o exercício individual
+
+2512
+01:50:35,820 --> 01:50:37,820
+é tudo o que tem a ver
+
+2513
+01:50:37,820 --> 01:50:39,820
+até a semana passada
+
+2514
+01:50:39,820 --> 01:50:41,820
+desta semana não sai nada
+
+2515
+01:50:41,820 --> 01:50:43,820
+desta semana e para a frente
+
+2516
+01:50:43,820 --> 01:50:45,820
+será na última aula
+
+2517
+01:50:45,820 --> 01:50:50,120
+tá bem?
+
+2518
+01:50:50,120 --> 01:50:53,780
+não
+
+2519
+01:50:53,780 --> 01:50:55,780
+vamos lá
+
+2520
+01:50:55,780 --> 01:50:57,780
+a ideia do Cardinal Char
+
+2521
+01:50:57,780 --> 01:50:59,780
+é vocês estudarem
+
+2522
+01:50:59,780 --> 01:51:01,780
+olhar, por isso é que eu vos dei aqueles exemplos
+
+2523
+01:51:01,780 --> 01:51:03,780
+olharem para
+
+2524
+01:51:03,780 --> 01:51:05,780
+que eles tais que sete
+
+2525
+01:51:05,780 --> 01:51:07,780
+e verem-se
+
+2526
+01:51:07,780 --> 01:51:09,780
+para ajustar os valores
+
+2527
+01:51:09,780 --> 01:51:11,780
+e tentarem ver
+
+2528
+01:51:11,780 --> 01:51:13,780
+se o
+
+2529
+01:51:13,780 --> 01:51:15,780
+escalonamento produzido
+
+2530
+01:51:15,780 --> 01:51:25,400
+a ideia
+
+2531
+01:51:25,400 --> 01:51:27,400
+porque a ideia do Cardinal Char
+
+2532
+01:51:27,400 --> 01:51:29,400
+era
+
+2533
+01:51:29,400 --> 01:51:31,400
+vocês terem uma implementação
+
+2534
+01:51:31,400 --> 01:51:33,400
+de algo que
+
+2535
+01:51:33,400 --> 01:51:35,400
+pudesse
+
+2536
+01:51:35,400 --> 01:51:37,400
+imagina o seguinte, te diz assim
+
+2537
+01:51:37,400 --> 01:51:39,400
+eu agora tenho aqui
+
+2538
+01:51:39,400 --> 01:51:41,400
+estas que sete, eu faço este escalonamento
+
+2539
+01:51:41,400 --> 01:51:43,400
+eu desenho
+
+2540
+01:51:43,400 --> 01:51:45,400
+a tangline
+
+2541
+01:51:45,400 --> 01:51:47,400
+agora deixe-me lá ver se isto for
+
+2542
+01:51:47,400 --> 01:51:49,400
+para o sistema operativo, se vai produzir
+
+2543
+01:51:49,400 --> 01:51:51,400
+o mesmo resultado
+
+2544
+01:51:51,400 --> 01:51:53,400
+ou não, em que os parâmetros sejam
+
+2545
+01:51:53,400 --> 01:51:55,400
+equivalentes
+
+2546
+01:51:55,400 --> 01:51:57,400
+para o tempo de discussão
+
+2547
+01:51:57,400 --> 01:51:59,400
+o período
+
+2548
+01:51:59,400 --> 01:52:01,400
+para ver se aquilo dava o mesmo resultado
+
+2549
+01:52:01,400 --> 01:52:03,400
+a ideia era
+
+2550
+01:52:03,400 --> 01:52:05,400
+a minha ideia ao disponibilizar
+
+2551
+01:52:05,400 --> 01:52:07,400
+é que ele foi este
+
+2552
+01:52:07,400 --> 01:52:20,310
+sim
+
+2553
+01:52:20,310 --> 01:52:22,310
+o exercício
+
+2554
+01:52:22,310 --> 01:52:24,310
+é fazer
+
+2555
+01:52:24,310 --> 01:52:26,310
+mas temos que poder mostrar
+
+2556
+01:52:26,310 --> 01:52:28,310
+assim muito rapidamente
+
+2557
+01:52:28,310 --> 01:52:30,310
+isto é o inocente
+
+2558
+01:52:30,310 --> 01:52:32,310
+é fazer umas tanglines
+
+2559
+01:52:32,310 --> 01:52:34,310
+está bem, que têm
+
+2560
+01:52:34,310 --> 01:52:36,310
+portanto são duas
+
+2561
+01:52:36,310 --> 01:52:38,310
+sobre
+
+2562
+01:52:38,310 --> 01:52:40,310
+escalonamento com prioridades
+
+2563
+01:52:40,310 --> 01:52:42,310
+fixas
+
+2564
+01:52:42,310 --> 01:52:44,310
+duas com
+
+2565
+01:52:44,310 --> 01:52:46,310
+escalonamento para
+
+2566
+01:52:46,310 --> 01:52:48,310
+ambientes multipressador com prioridades
+
+2567
+01:52:48,310 --> 01:52:50,310
+dinâmicas
+
+2568
+01:52:50,310 --> 01:52:52,310
+com recursos patelados
+
+2569
+01:52:52,310 --> 01:52:54,310
+coisas muito simples
+
+2570
+01:52:54,310 --> 01:52:56,310
+portanto
+
+2571
+01:52:56,310 --> 01:52:58,310
+não tenho
+
+2572
+01:52:58,310 --> 01:53:00,310
+coisas muito rápidas de fazer
+
+2573
+01:53:00,310 --> 01:53:06,540
+acho meu
+
+2574
+01:53:06,540 --> 01:53:08,540
+está bem
+
+2575
+01:53:08,540 --> 01:53:10,540
+sempre assim, não me esporta
+
+2576
+01:53:10,540 --> 01:53:14,170
+sim
+
+2577
+01:53:14,170 --> 01:53:16,170
+nos vemos no
+
+2578
+01:53:16,170 --> 01:53:18,170
+próximo sábado
+
+2579
+01:53:18,170 --> 01:53:20,170
+está bem
+
+2580
+01:53:20,170 --> 01:53:22,170
+até sábado
+
+2581
+01:53:22,170 --> 01:53:24,170
+obrigado por fora, até sábado
+
+2582
+01:53:24,170 --> 01:53:26,170
+até sábado
+
