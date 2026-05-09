@@ -1,0 +1,251 @@
+#!/bin/bash
+#
+# kathara-get
+#
+# Get config data from running node.
+#
+# Miguel Leitao, 2024
+#
+
+Version=1.2.6
+RepoUrl=http://miguelleitao.gitlab.io/labcheck
+
+usage () {
+    echo "Usage:"
+    echo "    $0 {node_name|all} {file|option}"
+    echo "          Option:"
+    echo "            -v        : Show version number and quit."
+    echo "            -V        : Check new releases."
+    echo "            -u        : Upgrade $0 to last release."
+    echo "            -n        : Show network interface configuration."
+    echo "            -N        : Script usable network interface configuration."
+    echo "            -r        : IPv4 static routes."
+    echo "            -r6       : IPv6 static routes."
+    echo "            -t        : iptables rules."
+    echo "            -a        : All: -N, -r, -r6, and -t."
+    echo "            -A        : Like -a but adds output to node.startup file(s)."
+    echo "            -C        : Clear added lines from node.startup file(s)."
+    echo "            -f file   : Get file from node."
+    echo "            -F file   : Get file from node and store it into local ./node/ directory."
+    echo "            -m        : List modified files."
+    #echo "            -M file   : Get modified files from node and store them into local ./node/ directory."
+    exit
+}
+kathara-get-single () {
+  # Get file (or exec command) in single node.
+  node=$1
+  file=$2
+  #echo "#node $node"
+  #echo "#file: $file"
+  if [ "$file" == "-N" ]; then
+    prefix="\"ifconfig\","
+    file="-n"
+  fi
+  acmd="    /^CRITICAL/         { print \$0; exit }
+           "
+  if [ "$file" == "-n" ]; then
+    title="# Network interface configuration for node $node"
+    acmd+="/^eth/            { DEV=substr(\$1,1,4); next }
+           /^lo/             { DEV=0; next }
+           //                { if (!DEV) next }
+	       /inet6 fe80::/    { next }
+           /inet 172.17.0./  { next }
+           /inet6/           { print $prefix DEV, \"inet6 add\", \$2 \"/\" \$4; next }
+           /inet/            { print $prefix DEV,\$2,\$3,\$4 } "
+    icmd="ifconfig"
+  else
+    if [ "$file" == "-r" ]; then
+      title="# IPv4 Routing table for node $node"
+      acmd+="/proto kernel/     { next }
+             /proto zebra/  	{ next }
+			 /via 172.17.0./    { if (\$1==\"default\") next }
+             /via/              { print \"route add -net\", \$1, \"gw\", \$3, \"dev\", \$5 } "
+      icmd="ip route"
+    else
+      if [ "$file" == "-t" ]; then
+        title="# Iptables rules for node $node"
+        acmd+="/^#/	    { next }
+               /127.0.0.11/  { next }
+               /^*/	    { TABLE=substr(\$1,2); next }
+               /^:/	    { CHAIN=substr(\$1,2); next }
+               /DOCKER/      { next }
+               /^COMMIT/	    { next }	
+               //	    { print \"iptables -t\", TABLE, \$0 } "
+        icmd="iptables-save"
+      else
+        if [ "$file" == "-r6" ]; then
+          title="# IPv6 Routing table for node $node"
+          acmd+="/proto kernel/     { next }
+                 /proto zebra/    	{ next }
+                 /via/              { print \"route -6 add\", \$1, \"gw\", \$3, \"dev\", \$5 } "
+          icmd="ip -6 route"
+        else
+          if [[ $file == "-"* ]]; then
+              echo "Invalid Option: $file"
+              usage
+          fi
+          icmd="cat $file"
+          acmd+="{ print }"
+        fi
+      fi
+    fi
+  fi
+  #echo "#icmd: $icmd"
+  #echo "#acmd: $acmd"
+  #(kathara exec $node $icmd ) 2>/dev/null | awk "$acmd" 
+  output=$((kathara exec $node $icmd ) 2>&1 | awk "$acmd")
+  #output=$((kathara exec $node $icmd ) | awk "$acmd")
+  if [ "$output" != "" ]; then
+    echo "$title"
+    echo "$output"
+  fi
+}
+
+kathara-get-node () {
+  dest="/dev/stdout"
+  reqNode=$1
+  reqFile=$2
+  if [ "$reqFile" == "-C" ]; then
+    dest="$reqNode.startup"
+    trunc_startup_file $dest
+    return
+  fi
+  if [ "$reqFile" == "-m" ]; then
+    referFile="/var/log/startup.log"
+    [ -r $referFile ] || referFile="/init.log"
+    [ -r $referFile ] || referFile="/etc"
+    ref=`kathara exec $reqNode -- stat --format %Y $referFile`
+    res=$?
+    if [ $res != 0 ]; then
+        #echo "failed"
+	return
+    fi
+    re='^[0-9]+$'
+    if ! [[ $ref =~ $re ]] ; then
+        echo "error: Not a number" >&2 
+        return
+    fi
+    #echo "$reqNode ref:$ref"
+    kathara exec $reqNode -- touch -d @$(($ref + 14)) /tmp/ref
+    flist=`kathara exec $reqNode -- find / -type d ! -readable -prune -type f -o -path /sys -prune -type f -o -path /proc -prune -type f -o -newer /tmp/ref -type f -size +1c ! -name '.*'`
+    #echo "Modified files from node $reqNode"
+    for iFile in $flist; do
+        echo "${reqNode}${iFile}"
+        #kathara-get-node $iNode $cmdFile
+    done
+    return
+  fi
+
+  if [ "$reqFile" == "-F" ]; then
+    reqFile=$3 
+    dest=${reqNode}/${reqFile}
+    #echo "destfile: $dest"
+    ddir=`dirname $dest`
+    mkdir -p $ddir
+  fi
+  if [ "$reqFile" == "-f" ]; then
+    reqFile=$3
+  fi 
+  if [ "$reqFile" == "-A" ]; then
+    reqFile="-a"
+    dest="$reqNode.startup"
+    echo "Processing $dest"
+    touch $dest
+    trunc_startup_file $dest
+    #echo "" >> $dest
+    echo "# _KATHARA-GET_: Lines added by kathara-get" >> $dest
+  fi
+  if [ "$reqFile" == "-a" ]; then
+    kathara-get-single $reqNode -N >> $dest
+    kathara-get-single $reqNode -r >> $dest
+    kathara-get-single $reqNode -r6 >> $dest
+    kathara-get-single $reqNode -t >> $dest
+  else
+    #echo "#reqNode: $reqNode"
+    #echo "#reqFile: $reqFile"
+    #echo "#dest: $dest"
+    #kathara-get-single $reqNode $reqFile >$dest
+    if [ "${dest}" != "/dev/stdout" ]; then
+	    out=`kathara-get-single $reqNode $reqFile`
+	    #echo "out:$out"
+	    if [[ $out == ?CRITICAL* ]] || [[ $out == ?cat:* ]]; then
+		echo "$out"
+	    else
+		echo "$out" > $dest
+	    	destsize=$(wc -c <"$dest")
+	    	echo "File ${dest} saved: ${destsize} Bytes."
+	    fi
+    else
+	    kathara-get-single $reqNode $reqFile
+    fi
+  fi
+}
+
+trunc_startup_file () {
+  tawk="/_KATHARA-GET_/	{ exit }
+        //			    { print }";
+  cat $dest | awk "$tawk" > $dest.new
+  mv $dest.new $dest
+}
+
+check_wget () {
+  if ! command -v wget &> /dev/null
+  then
+    echo "Upgrading requires 'wget'."
+    exit 1
+  fi
+}
+
+# Main block
+
+if [ "$1" == "-q" ]; then
+  shift
+else
+  echo "kathara-get v$Version" >/dev/stderr
+fi
+if [ "$1" == "-v" ]; then
+  exit
+fi
+if [ "$1" == "-V" ]; then
+  check_wget
+  ver=`wget -q -O - ${RepoUrl}/version |cut -c9-`
+  if [ "$Version" == "$ver" ]; then
+    echo "$0 is up to date."
+    exit
+  fi
+  echo "Enter '$0 -u' to upgrade kathara-get to version $ver."
+  exit
+fi
+if [ "$1" == "-u" ]; then
+  check_wget
+  mv $0 ${0}.backup
+  wget -q ${RepoUrl}/kathara-get
+  chmod 755 $0
+  echo "$0 upgraded"
+  $0 -v
+  exit
+fi
+if [[ "$1" == "-"* ]]; then
+  echo "invalid option: $1"
+  exit
+fi
+ 
+if [ "$#" -lt "2" ]; then 
+  usage
+fi
+if ! command -v kathara &> /dev/null
+then
+    echo "kathara could not be found."
+    exit 1
+fi
+cmdNode=$1
+cmdFile="$2 $3"
+if [ "$cmdNode" == "all" ]; then
+  klist=`COLUMNS=150 kathara list |grep running |cut -d' ' -f4`
+  for iNode in $klist; do
+    #echo $iNode
+    kathara-get-node $iNode $cmdFile
+  done
+else
+  kathara-get-node $cmdNode $cmdFile
+fi

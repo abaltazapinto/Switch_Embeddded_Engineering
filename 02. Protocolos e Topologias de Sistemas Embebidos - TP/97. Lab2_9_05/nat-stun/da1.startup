@@ -1,0 +1,5 @@
+ifconfig eth0 10.0.10.1/24
+hostname da1.stun-turn.net
+/etc/init.d/apache2 start
+
+
