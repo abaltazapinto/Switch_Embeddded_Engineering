@@ -4,3 +4,25 @@
 *.tsv
 *.vtt
 *.tar.gz
+
+# Local videos / audio recordings
+VIDEOS/
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.mkv
+*.mp4
+*.mov
+*.avi
+
+# Kathara / lab runtime artifacts
+*.startup
+*.pid
+*.log
+*.pcap
+*.lock
+lab.conf.bak
+shared/
