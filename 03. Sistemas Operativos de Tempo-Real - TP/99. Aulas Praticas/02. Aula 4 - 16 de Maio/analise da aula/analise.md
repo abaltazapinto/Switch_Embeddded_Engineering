@@ -94,5 +94,76 @@ Este reboot ainda não muda o kernel. Vais continuar, em princípio, no:
 
 6.17.0-23-generic
 
+O reboot aqui serve para começar a fase seguinte com o sistema estável antes de mexer no GRUB e no código-fonte do kernel.
+
 #####
+
+Ação — 1 passo 🚀
+Agora ativa o menu do GRUB para poderes escolher kernels no boot:
+sudo nano /etc/default/grub
+Dentro do ficheiro, procura estas linhas:
+GRUB_TIMEOUT_STYLE=hiddenGRUB_TIMEOUT=0
+Altera para:
+#GRUB_TIMEOUT_STYLE=hiddenGRUB_TIMEOUT=10
+
+# Objectivo
+
+Objetivo
+
+Quando compilares e instalares o kernel -moker, vais precisar escolher entre:
+
+Ubuntu normal kernel
+Ubuntu kernel -moker
+
+O TT4 manda comentar GRUB_TIMEOUT_STYLE=hidden e mudar GRUB_TIMEOUT de 0 para 10, para o menu GRUB aparecer durante o arranque.
+
+# como pensar 
+
+Como pensar
+
+Ainda não estás a instalar kernel. Estás só a preparar o “seletor de kernels”.
+
+kernel atual existe
+   ↓
+futuro kernel -moker será instalado
+   ↓
+GRUB precisa mostrar os dois
+   ↓
+tu escolhes no boot
+
+
+################
+
+![alt text](image-1.png)
+
+
+O PDF usa gedit, mas o objetivo real não é usar esse editor; é editar o ficheiro /etc/default/grub para o menu GRUB aparecer no arranque. O TT4 diz para comentar GRUB_TIMEOUT_STYLE=hidden, mudar GRUB_TIMEOUT para 10, guardar, e depois atualizar o GRUB.
+
+Como pensar
+gedit = editor gráfico
+nano  = editor de terminal
+
+Ambos editam o mesmo ficheiro. O resultado final é igual.
+
+####################################
+
+Falta só comentar a primeira linha com #. Assim o GRUB deixa de estar escondido e fica visível durante 10 segundos no arranque, como pedido no TT4.
+
+Como pensar
+
+GRUB_TIMEOUT=10 sozinho define tempo, mas se GRUB_TIMEOUT_STYLE=hidden continuar ativo, o menu pode continuar escondido. O # transforma essa linha em comentário.
+
+
+####################
+
+Agora atualiza o GRUB:
+
+sudo update-grub2
+
+
+Objetivo
+
+Aplicar a alteração feita em:
+
+/etc/default/grub
 
