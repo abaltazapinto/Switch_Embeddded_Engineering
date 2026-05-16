@@ -1,0 +1,40 @@
+# Network interface configuration for node gwi
+ifconfig eth0 203.0.113.254 netmask 255.255.255.0
+# Network interface configuration for node da1
+ifconfig eth0 10.0.10.1 netmask 255.255.255.0
+# IPv4 Routing table for node da1
+route add -net default gw 10.0.10.254 dev eth0
+# Network interface configuration for node ra
+ifconfig eth0 10.0.10.254 netmask 255.255.255.0
+ifconfig eth1 203.0.113.10 netmask 255.255.255.0
+# IPv4 Routing table for node ra
+route add -net default gw 203.0.113.254 dev eth1
+# Network interface configuration for node db1
+ifconfig eth0 10.0.11.1 netmask 255.255.255.0
+# IPv4 Routing table for node db1
+route add -net default gw 10.0.11.254 dev eth0
+# Network interface configuration for node stun
+ifconfig eth0 203.0.113.99 netmask 255.255.255.0
+# IPv4 Routing table for node stun
+route add -net default gw 203.0.113.254 dev eth0
+# Network interface configuration for node da3
+ifconfig eth0 10.0.10.3 netmask 255.255.255.0
+# IPv4 Routing table for node da3
+route add -net default gw 10.0.10.254 dev eth0
+# Network interface configuration for node da2
+ifconfig eth0 10.0.10.2 netmask 255.255.255.0
+# IPv4 Routing table for node da2
+route add -net default gw 10.0.10.254 dev eth0
+# Network interface configuration for node rb
+ifconfig eth0 10.0.11.254 netmask 255.255.255.0
+ifconfig eth1 203.0.113.11 netmask 255.255.255.0
+# IPv4 Routing table for node rb
+route add -net default gw 203.0.113.254 dev eth1
+# Network interface configuration for node db2
+ifconfig eth0 10.0.11.2 netmask 255.255.255.0
+# IPv4 Routing table for node db2
+route add -net default gw 10.0.11.254 dev eth0
+# Network interface configuration for node db3
+ifconfig eth0 10.0.11.3 netmask 255.255.255.0
+# IPv4 Routing table for node db3
+route add -net default gw 10.0.11.254 dev eth0
