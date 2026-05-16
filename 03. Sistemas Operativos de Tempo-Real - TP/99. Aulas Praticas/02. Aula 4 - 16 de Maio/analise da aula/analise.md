@@ -167,3 +167,122 @@ Aplicar a alteração feita em:
 
 /etc/default/grub
 
+#######################
+
+Como pensar
+
+Ainda não criaste o kernel MOKER. Só preparaste o sistema para, mais tarde, poderes escolher entre kernels.
+
+GRUB visível
+   ↓
+mais tarde: kernel normal + kernel -moker
+   ↓
+escolha segura no boot
+
+########################################
+
+# Ponto 4 - makemenu config
+
+
+
+Sim, está certo. Agora abre o menu de configuração e sai sem alterar nada:
+
+make menuconfig
+
+Quando abrir o ecrã azul/cinzento:
+
+Exit
+Save? → Yes
+Objetivo
+
+Validar que o sistema consegue abrir o configurador do kernel baseado em ncurses e guardar a configuração .config.
+
+O output que tens está correto:
+
+*** Default configuration is based on 'x86_64_defconfig'
+#
+# configuration written to .config
+#
+
+Isto significa que o .config foi criado com sucesso.
+
+Como pensar
+
+O defconfig criou uma configuração base. O menuconfig permite editar opções do kernel, mas nesta aula o TT4 diz para abrir e escolher Exit, sem alterar opções.
+
+defconfig
+   ↓
+.config criado
+   ↓
+menuconfig
+   ↓
+validar interface/configuração
+   ↓
+guardar
+
+###########################
+
+# Ponto 6.
+
+Ação — 1 passo 🚀
+
+Agora começa a compilação do kernel:
+
+cd linux-6.19.9-moker
+make -j$(nproc)
+Objetivo
+
+Compilar o kernel 6.19.9-moker.
+
+No PDF, o ponto 6 usa simplesmente:
+
+make
+
+Mas make -j$(nproc) usa os cores disponíveis da máquina e normalmente é mais rápido. O resultado final é o mesmo: compilar o kernel antes de instalar módulos e kernel.
+
+Como pensar
+
+Agora entramos na fase pesada:
+
+source code + .config + EXTRAVERSION
+   ↓
+make
+   ↓
+kernel compilado
+
+Só depois disto faz sentido executar:
+
+sudo make modules_install
+sudo make install
+
+
+###############
+
+Objetivo
+
+O kernel já foi compilado e instalado. A imagem mostra:
+
+Found linux image: /boot/vmlinuz-6.19.9-moker
+Found initrd image: /boot/initrd.img-6.19.9-moker
+done
+
+Isto significa que o GRUB já detetou o teu kernel 6.19.9-moker. É exatamente o resultado esperado depois de sudo make modules_install e sudo make install, passos indicados no ponto 6 do TT4.
+
+Como pensar
+
+Agora o fluxo está assim:
+
+compilação             ✅
+modules_install        ✅
+make install           ✅
+GRUB atualizado        ✅
+reboot                 ← agora
+validar uname -r       ← depois
+
+Depois do reboot, a validação será:
+
+uname -r
+
+Esperado:
+
+6.19.9-moker
