@@ -7,7 +7,7 @@
 # Miguel Leitao, 2024
 #
 
-Version=1.3.1
+Version=1.2.6
 RepoUrl=http://miguelleitao.gitlab.io/labcheck
 
 usage () {
@@ -66,7 +66,7 @@ kathara-get-single () {
         title="# Iptables rules for node $node"
         acmd+="/^#/	    { next }
                /127.0.0.11/  { next }
-               /^\*/	    { TABLE=substr(\$1,2); next }
+               /^*/	    { TABLE=substr(\$1,2); next }
                /^:/	    { CHAIN=substr(\$1,2); next }
                /DOCKER/      { next }
                /^COMMIT/	    { next }	
@@ -110,43 +110,39 @@ kathara-get-node () {
     trunc_startup_file $dest
     return
   fi
-  if [ "$reqFile" == "-m" ] || [ "$reqFile" == "-M" ] || [ "$reqFile" == "-mv" ]; then
-    referFiles="/init.log /hostlab/${reqNode}.startup /var/log/startup.log lixo"
-    referFile=`kathara exec $reqNode -- ls -tr $referFiles 2>/dev/null |tail -1`
-    flist=`kathara exec $reqNode -- find / -type d ! -readable -prune -type f -o -path /sys -prune -type f -o -path /proc -prune -type f -o -newer $referFile -type f -size +1c ! -name '.*'`
+  if [ "$reqFile" == "-m" ]; then
+    referFile="/var/log/startup.log"
+    [ -r $referFile ] || referFile="/init.log"
+    [ -r $referFile ] || referFile="/etc"
+    ref=`kathara exec $reqNode -- stat --format %Y $referFile`
     res=$?
     if [ $res != 0 ]; then
         #echo "failed"
+	return
+    fi
+    re='^[0-9]+$'
+    if ! [[ $ref =~ $re ]] ; then
+        echo "error: Not a number" >&2 
         return
     fi
-    [ "$flist" == "" ] && return; 
-    [ "$reqFile" == "-mv" ] && echo "Modified files from node $reqNode:"
-    #echo "Modified files from node $reqNode: $flist."
-    ref=`kathara exec $reqNode -- stat --format %Y $referFile`
+    #echo "$reqNode ref:$ref"
+    kathara exec $reqNode -- touch -d @$(($ref + 14)) /tmp/ref
+    flist=`kathara exec $reqNode -- find / -type d ! -readable -prune -type f -o -path /sys -prune -type f -o -path /proc -prune -type f -o -newer /tmp/ref -type f -size +1c ! -name '.*'`
+    #echo "Modified files from node $reqNode"
     for iFile in $flist; do
-        if [ "$reqFile" == "-M" ]; then
-            kathara-get-node $reqNode -F $iFile
-        else
-            echo "${reqNode}${iFile}"
-        fi
+        echo "${reqNode}${iFile}"
+        #kathara-get-node $iNode $cmdFile
     done
     return
   fi
 
-  if [ "$reqFile" == "-F" ] || [ "$reFile" == "-Fo" ]; then
+  if [ "$reqFile" == "-F" ]; then
     reqFile=$3 
     dest=${reqNode}/${reqFile}
     #echo "destfile: $dest"
     ddir=`dirname $dest`
     mkdir -p $ddir
-    if [ "$reqFile" == "-F" ]; then
-	if [ -r $dest ]; then
-	    # warning, $dest file exists
-	    echo $dest file exists
-	fi
-    fi
   fi
-
   if [ "$reqFile" == "-f" ]; then
     reqFile=$3
   fi 
