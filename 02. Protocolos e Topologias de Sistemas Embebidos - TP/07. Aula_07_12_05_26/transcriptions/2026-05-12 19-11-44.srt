@@ -1,0 +1,7176 @@
+1
+00:00:01,200 --> 00:02:46,560
+Para bem, hoje nós vamos salvar, no mesmo sentido, o Kahn.
+
+2
+00:02:46,560 --> 00:02:53,560
+O Kahn é uma arma de uniação que define os dois leires de inferiores do modelo Z,
+
+3
+00:02:53,560 --> 00:02:58,560
+ou seja, o nível físico e o nível de ligação de dados.
+
+4
+00:02:58,560 --> 00:03:23,310
+O Kahn utiliza sobretudo, em vez de automóveis, ou em vez de sistemas de controle,
+
+5
+00:03:23,310 --> 00:03:35,310
+e normalmente em um momento guado a usar IP, existem outras normas de dinhefes superiores,
+
+6
+00:03:35,310 --> 00:03:46,670
+a das normas mais conhecidas é o Kahn Open, mas nós não vamos falar de Kahn Open,
+
+7
+00:03:46,670 --> 00:03:52,670
+o Kahn Open é outra norma e existem outras alternativas dos meios superiores,
+
+8
+00:03:52,670 --> 00:03:57,670
+nós vamos falar do nível físico e do nível de ligação de dados.
+
+9
+00:03:57,670 --> 00:04:04,900
+O Kahn são os ideais de controlares à área network,
+
+10
+00:04:04,900 --> 00:04:10,900
+ou seja, uma rede de frequensada para ligar entre si uma série de controlares
+
+11
+00:04:10,900 --> 00:04:16,900
+que estão causados na mesma área, portanto, de distâncias pequenas.
+
+12
+00:04:16,900 --> 00:04:23,900
+É ocasionado para transmissão de dados entre ideais e eletrônicas dos veículos
+
+13
+00:04:23,900 --> 00:04:30,900
+e a rede mais aplicada em veículos, mas também é aplicada em outras situações.
+
+14
+00:04:30,900 --> 00:04:51,900
+O Kahn é um sistema que utiliza Kahn, temos que fazer os sistemas indicados a falar Kahn também,
+
+15
+00:04:51,900 --> 00:04:57,900
+mais concretamente se quisermos fazer um dispositivo para integrar no veículo,
+
+16
+00:04:57,900 --> 00:05:02,900
+temos que garantir que não seguimos falar com os estantes componentes do veículo,
+
+17
+00:05:02,900 --> 00:05:07,900
+sejam necessários e muitas das vezes se possuem falar Kahn.
+
+18
+00:05:07,900 --> 00:05:17,370
+O Kahn é interessante porque utiliza soluções ilugantes que servem de base
+
+19
+00:05:17,370 --> 00:05:23,370
+para outras normas de comunicação, sobretudo no nível físico.
+
+20
+00:05:23,370 --> 00:05:28,410
+O que é que o Kahn faz?
+
+21
+00:05:28,410 --> 00:05:36,410
+Utiliza um barramento de dados para o casso, não é a Kahn, é quando fala,
+
+22
+00:05:36,410 --> 00:05:41,410
+fala para os estus, todos ouvem a comunicação.
+
+23
+00:05:41,410 --> 00:05:47,410
+Aqui o que nós estamos a dizer, tal como acontecia na internet,
+
+24
+00:05:47,410 --> 00:05:57,410
+e também tal como acontecia na internet, no Kahn não temos um mestre, um chefe a tomar conta
+
+25
+00:05:57,410 --> 00:06:07,410
+das coisas nem a definir qual é o ordem porque cada um fala, todos podem, sempre que decidirem,
+
+26
+00:06:07,410 --> 00:06:12,410
+podem tentar e enviar as coisas que têm para enviar.
+
+27
+00:06:13,410 --> 00:06:18,410
+Os voceados de transmissão do Kahn são tipicamente um megabit por segundo,
+
+28
+00:06:18,410 --> 00:06:27,520
+o voceado do Kahn clássico, depois a alternativa de fora disto.
+
+29
+00:06:27,520 --> 00:06:31,520
+Uma particularidade interessante e que é que um dos losos para o que a comunicação
+
+30
+00:06:31,520 --> 00:06:35,520
+desta camada, como os mesmos los objetivos, é que não existe um interessamento,
+
+31
+00:06:35,520 --> 00:06:43,120
+ou seja, não existe um endereço a definir quem envia,
+
+32
+00:06:43,120 --> 00:06:47,120
+e a nenhum endereço a definir qual é o discriminatário,
+
+33
+00:06:47,120 --> 00:06:55,120
+em vez disso existe uma alternativa mais econômica, que é o identificador de mensagem,
+
+34
+00:06:55,120 --> 00:07:03,120
+que no caso do Kahn são apenas 11 bits, e que forne o mensagem para identificar a mensagem,
+
+35
+00:07:03,120 --> 00:07:08,120
+ou o tipo de mensagem, ou mensagem que nós quisermos.
+
+36
+00:07:08,120 --> 00:07:16,120
+Nós depois convencionarmos que as mensagens deste tipo são sempre enviadas pelo nó no número x,
+
+37
+00:07:16,120 --> 00:07:23,120
+então olhando para o tipo da mensagem, podemos saber que ela veio do nó no número x,
+
+38
+00:07:23,120 --> 00:07:35,120
+e termos de convencionarmos que o número da mensagem, depende do número do discriminatário,
+
+39
+00:07:35,120 --> 00:07:39,120
+então olhando para o tipo da mensagem, vamos identificar a mensagem,
+
+40
+00:07:39,120 --> 00:07:46,120
+nós sabemos a quem aquela se destina, porque sabemos que temos um dispositivo
+
+41
+00:07:46,120 --> 00:07:52,120
+que tem a atribuição de receber as mensagens daquele tipo.
+
+42
+00:07:52,120 --> 00:07:55,120
+Para disso, identificar a mensagem.
+
+43
+00:07:55,120 --> 00:08:00,120
+Tem também umas funções importantes em termos de prioridade, como vamos ver,
+
+44
+00:08:00,120 --> 00:08:06,120
+ou seja, as mensagens com o identificador mais baixo têm mais prioridade,
+
+45
+00:08:06,120 --> 00:08:13,120
+e no caso de haver um conflito, é a mensagem com a prioridade mais baixa que chega ao destino.
+
+46
+00:08:13,120 --> 00:08:27,350
+O protocolo implementado pela área de Kahn é similhante ao CSMA-CD que vimos na PASATA para Ethernet,
+
+47
+00:08:28,350 --> 00:08:36,350
+ou seja, permite múltiplo acesso na situação ou dispositivo que quer transmitir transmit,
+
+48
+00:08:36,350 --> 00:08:45,350
+mas agora em vez de detectarmos os visões, temos uma alternativa baseada em arbitragem,
+
+49
+00:08:45,350 --> 00:08:55,630
+que decide qual é a mensagem mais prioritaria, e em princípio essa continua o seu caminho,
+
+50
+00:08:55,630 --> 00:09:01,630
+enquanto que menos prioritaria mesmo que tenha sido unilhada a rigorosamente ao mesmo tempo,
+
+51
+00:09:01,630 --> 00:09:12,620
+ou até um bíceps antes, perde o direito a continuar e depois perde-se.
+
+52
+00:09:12,620 --> 00:09:20,620
+Ou temos um aparelhamento assim como, ou seja, as máquinas podem começar a trabalhar no mesmo instante,
+
+53
+00:09:20,620 --> 00:09:28,620
+ou nos microsecundos depois, não sabe como é que está o lojo das outras,
+
+54
+00:09:28,620 --> 00:09:32,620
+não há nenhuma necessidade de sincronizmentar as coisas.
+
+55
+00:09:32,620 --> 00:09:39,620
+O nível físico faz-se um aparelhamento de dois fios, dois condutudos,
+
+56
+00:09:39,620 --> 00:09:46,540
+e isto é relacionado para mensagens pequenas de 0 a 64 bits.
+
+57
+00:09:46,540 --> 00:09:50,540
+As mensagens são pequenas, de 0 a 64 bits.
+
+58
+00:09:50,540 --> 00:09:57,540
+Vevemos logo que não é compatível usar IP, mas aducando-me.
+
+59
+00:09:57,540 --> 00:10:05,540
+Não só pode usar IP, só aducando-me, porque IP supõe transportar os cabeçados IP juntos para os dados,
+
+60
+00:10:05,540 --> 00:10:12,540
+e os cabeçados IP têm dois indireços de 32 bits sobre IPv4,
+
+61
+00:10:12,540 --> 00:10:18,540
+e dois vezes 32 bits já há 104 bits, portanto não conseguimos transportar,
+
+62
+00:10:18,540 --> 00:10:29,540
+se quer, o cabeçado IP com o leito, de menos os dados, que são encapsulados no dado de gram IP.
+
+63
+00:10:29,540 --> 00:10:36,540
+Há alternativas da EDCAN que podem transportar mais do que os 64 bits, mas também pouco mais.
+
+64
+00:10:36,540 --> 00:10:50,650
+Para além de ser usado dentro de almovas, para ter ligado as unidades eletrônicas,
+
+65
+00:10:50,650 --> 00:11:02,650
+que fazem parte do almoval da EDCAN, estão em uso para ligar máquinas em um tipo de material,
+
+66
+00:11:03,650 --> 00:11:14,650
+ou dentro de centenas de almovas em que é disponível por vários módulos, a diminucar uns dos outros.
+
+67
+00:11:14,650 --> 00:11:26,650
+Por exemplo, módulos, caminhões, convoias motivas, casalagens, convoias, tratores, etc.
+
+68
+00:11:26,650 --> 00:11:34,650
+E, típicamente, usam coisas da EDCAN, e também sistemas de control de elevadores,
+
+69
+00:11:34,650 --> 00:11:44,650
+de almovisionados, de ventilações, de control de predios, também, muitas vezes usam CAN,
+
+70
+00:11:44,650 --> 00:11:53,650
+e dentro de departamentos para a política para acender os lusos, também há utilização da EDCAN.
+
+71
+00:11:53,650 --> 00:12:09,340
+Há várias justiões do CAN, algumas delas submetem várias alternativas,
+
+72
+00:12:09,340 --> 00:12:19,340
+aqui estão listadas as três mais conhecidas, que, em conjunto com a particularidade de variar o comprimento da frema,
+
+73
+00:12:19,340 --> 00:12:30,910
+o comprimento identificador que implica uma variação de comprimento da frema, fazem seis justiões diferentes,
+
+74
+00:12:30,910 --> 00:12:36,910
+por que podemos combinar qualquer também identificador, como qualquer, de lucidade de transmissão.
+
+75
+00:12:36,910 --> 00:12:42,910
+A maior parte, das vezes, quando se fala em CAN, fala-se do CAN Ice Speed,
+
+76
+00:12:42,910 --> 00:12:50,910
+que também pode designar por CAN 2.0, e quando se fala em CAN Classic,
+
+77
+00:12:50,910 --> 00:12:53,910
+que também, a maior parte, das vezes fala-se desta linha,
+
+78
+00:12:53,910 --> 00:13:02,910
+muitas vezes, o termo CAN Classic, também, se quiser para designares o CAN Lusos Speed, o CAN Ice Speed,
+
+79
+00:13:02,910 --> 00:13:06,910
+ou seja, qualquer coisa que não seja o flexibilidade da EDC.
+
+80
+00:13:06,910 --> 00:13:17,630
+O flexibilidade da EDC apareceu depois, e é aquilo que se chama não clássico.
+
+81
+00:13:17,630 --> 00:13:24,630
+Nós falamos em também máximo visitados de 64 bits, 64 bits são 8 bytes,
+
+82
+00:13:24,630 --> 00:13:26,630
+e isso é o que acontece no CAN Clássico.
+
+83
+00:13:26,630 --> 00:13:35,630
+No flexibilidade da EDC, existe esta possibilidade de transportarmos 8 vezes mais informação,
+
+84
+00:13:35,630 --> 00:13:38,630
+e a uma velocidade superior.
+
+85
+00:13:38,630 --> 00:13:44,630
+Quero no flexibilidade da EDC, quero no Lusos Speed,
+
+86
+00:13:44,630 --> 00:13:54,630
+que dizem que podemos variar a taxa de transmissão, e as distâncias para que podemos transmitir,
+
+87
+00:13:54,630 --> 00:14:03,540
+dependem das usadas de transmissão, para que a maior for a taxa de transmissão,
+
+88
+00:14:03,540 --> 00:14:13,270
+mais curta é a distância máxima que podemos usar.
+
+89
+00:14:13,270 --> 00:14:20,270
+O CAN é um aparelhamento muito bem sucedido, porque é simples,
+
+90
+00:14:21,270 --> 00:14:25,270
+tem relativamente boa imunidade ao ruído elatromagnético,
+
+91
+00:14:25,270 --> 00:14:32,270
+ou seja, transportado em dois condutores com tensões diferenciais,
+
+92
+00:14:32,270 --> 00:14:39,270
+o ruído que afeta aos dois condutores simultaneamente não causa problema nenhum.
+
+93
+00:14:39,270 --> 00:14:46,270
+A CAN será fiável, tem prioridade às mensagens configurável,
+
+94
+00:14:46,270 --> 00:14:53,270
+podemos configurar as que os EDCs estão relacionados à prioridade,
+
+95
+00:14:53,270 --> 00:14:57,270
+é de baixuros com potência reduzida, porque normalmente na estação,
+
+96
+00:14:57,270 --> 00:15:02,270
+quando queres transmitir e transmitir, vamos poder educar as pedas da autorização,
+
+97
+00:15:02,270 --> 00:15:14,570
+volume os dedos reduzidos, e sempre portanto, a uma vez ou para aquela coisa móvel,
+
+98
+00:15:14,570 --> 00:15:19,570
+e adaptar o bobalhamento para, basicamente, todos os fabricantes top móveis usam as EDCs CAN,
+
+99
+00:15:19,570 --> 00:15:24,570
+e muitas vezes, instalações intermediárias também usam as EDCs CAN.
+
+100
+00:15:24,570 --> 00:15:32,910
+Outro que tenho na tabela, que permite comparar o CAN com outras duas soluções do mesmo nível,
+
+101
+00:15:32,910 --> 00:15:41,910
+que estamos disponíveis, estas coisas do preço da ilíquia sempre muito mais muito relevantes,
+
+102
+00:15:41,910 --> 00:15:53,910
+mas temos bitereitos comparáveis com outras soluções, mensagens pequenas,
+
+103
+00:15:53,910 --> 00:15:58,910
+mais pequenas às vezes das soluções que temos aqui, mas temos uma velocidade de movimentagens,
+
+104
+00:15:58,910 --> 00:16:11,450
+por segundo, resolável, e muito boa eficiência.
+
+105
+00:16:11,450 --> 00:16:20,450
+Vamos tentarmos o DELOSI, cada norma CAN, define apenas estes dois níveis debaixo do DELOSI,
+
+106
+00:16:20,450 --> 00:16:31,920
+e o CAN define apenas estes dois níveis, e podemos dividir o nível de agressão de dados,
+
+107
+00:16:31,920 --> 00:16:38,920
+também entre as camadas que fizemos, a Ethernet, e o nível físico também é definido pelo CAN.
+
+108
+00:16:38,920 --> 00:16:53,460
+Quanto queremos usar CAN, ou seja, temos um microcontrolador, um módulo, um contacional,
+
+109
+00:16:53,460 --> 00:17:02,460
+que já tem a Interface CAN, e em Interface CAN existem alguns módulos contacionais,
+
+110
+00:17:02,460 --> 00:17:11,460
+os contacionais normais não existes, mas existem módulos contacionais tipificamente usados no desenvolvimento
+
+111
+00:17:11,460 --> 00:17:15,460
+se temos embrijos que podem trazer já um controlador CAN.
+
+112
+00:17:15,460 --> 00:17:23,160
+Se não tivermos um controlador dos professores sem Interface CAN,
+
+113
+00:17:23,160 --> 00:17:31,160
+temos que comparar, em princípio, os nossos embrijos com um microcontrolador CAN,
+
+114
+00:17:31,160 --> 00:17:37,160
+e independentemente termos um controlador ou não, termos que rever um transgiro CAN,
+
+115
+00:17:37,160 --> 00:17:42,160
+que faz a adaptação dos módulos em tensão, mas pode também já ser integrado
+
+116
+00:17:42,160 --> 00:17:48,160
+de levar-nos não um controlador, mas um módulo de um controlador transgiro,
+
+117
+00:17:48,160 --> 00:17:52,160
+já pode vir isso disponível, e podemos ter uma ficha CAN.
+
+118
+00:17:52,160 --> 00:18:03,530
+O tocando define apenas os dois níveis de baixo, há dois módulos,
+
+119
+00:18:03,530 --> 00:18:08,530
+um junto de i, leias, protocolos, ou seja, protocolos de alto nível,
+
+120
+00:18:08,530 --> 00:18:17,530
+que o que permitem usar o CAN e implementar serviços de transporte
+
+121
+00:18:17,530 --> 00:18:23,530
+possivelmente o CAN e poderem implementar um protocolo de luxo,
+
+122
+00:18:23,530 --> 00:18:30,530
+e de intensificação da informação, de ordenação, de controladeus, etc.
+
+123
+00:18:30,530 --> 00:18:39,610
+Temos de defeses protocolos de alto nível, mais conhecidos é o CAN Open,
+
+124
+00:18:39,610 --> 00:18:44,610
+mas existem outros, também são usados, e aqui há mais variado
+
+125
+00:18:44,610 --> 00:18:49,610
+do que os níveis de baixo, como o CAN do Bumbina,
+
+126
+00:18:49,610 --> 00:18:55,400
+e eles sabem o conjunto de mais tecnologias todas.
+
+127
+00:18:55,400 --> 00:19:03,680
+O conjunto de nível físico tipicamente usa-se para fabricar-nos um sistema computacional,
+
+128
+00:19:03,680 --> 00:19:11,680
+qualquer parâmetro CAN usamos um transgiro que faz a adaptação das tensões
+
+129
+00:19:11,680 --> 00:19:16,680
+e um controlador CAN, que é um circuito integrado,
+
+130
+00:19:16,680 --> 00:19:24,680
+que trata de fazer o encoding e decoding para a codificação e a codificação da informação,
+
+131
+00:19:24,680 --> 00:19:34,680
+a sincronização com o barramento, trata as falhas do barramento, etc.
+
+132
+00:19:34,680 --> 00:19:45,900
+Nos jorna-semos estando um parâmetro partilhado, onde podemos ligar vários normas,
+
+133
+00:19:45,900 --> 00:19:53,900
+mais ou menos os tantos que nós quisermos, e qualquer nó pode iniciar uma transmissão quanto quiseres,
+
+134
+00:19:53,900 --> 00:19:57,900
+como qualquer nó pode começar a transmissão quanto quiseres.
+
+135
+00:19:57,900 --> 00:20:03,900
+Podemos chamar isto de event trigger, ou seja, um nó, quando tem alguma coisa para dizer,
+
+136
+00:20:03,900 --> 00:20:09,900
+quando surgiu um evento que quer comunicar, comunica, e é multi-master,
+
+137
+00:20:09,900 --> 00:20:16,900
+porque não há aqui nenhum, todos eles são master, não há nenhuma da ordem dos adultos para comunicar.
+
+138
+00:20:16,900 --> 00:20:33,570
+Existem outras soluções de nível físico, onde podemos pôr o CAN a correr,
+
+139
+00:20:33,570 --> 00:20:42,570
+mas o CAN tipicamente utiliza uma solução de dois fios,
+
+140
+00:20:42,570 --> 00:20:48,570
+normalmente em parâmetro transado, se os fios são envolvados para ficarem perto do outro,
+
+141
+00:20:48,570 --> 00:20:54,570
+e para as influências electromagnéticas afetarem da mesma forma os dois,
+
+142
+00:20:54,570 --> 00:20:59,570
+não haver um dos fios afetados de uma maneira e outra de outra.
+
+143
+00:20:59,570 --> 00:21:07,570
+Estas duas linhas chamam-se de uma delas, o CAN e o outro CAN-LOAD.
+
+144
+00:21:07,570 --> 00:21:21,990
+Aqueles dois fios podem ser encapsulados num cabo onde existe também uma terra protetiva,
+
+145
+00:21:21,990 --> 00:21:29,990
+uma terra de proteção e mais uma blindagem, mas não é obrigatório.
+
+146
+00:21:29,990 --> 00:21:37,740
+Nós esperemos que utilizam-se umas resistências para evitar reflexões.
+
+147
+00:21:37,740 --> 00:21:46,230
+O do importante na rede CAN é a tensão entre as duas linhas.
+
+148
+00:21:46,230 --> 00:21:57,930
+Existem aquelas resistências nas pontas, podemos verificar que o parâmetro está a funcionar bem,
+
+149
+00:21:57,930 --> 00:22:04,930
+ou não está a partir, mudindo a resistência elétrica entre as duas linhas.
+
+150
+00:22:04,930 --> 00:22:14,670
+Existem várias normas de conectores que podem usar com CAN,
+
+151
+00:22:16,400 --> 00:22:22,400
+uma das mais conhecidas, mas que não é muito usada em altemóveis,
+
+152
+00:22:22,400 --> 00:22:28,400
+é a ficha DB9, a ficha DB9 também é usada para outras coisas,
+
+153
+00:22:28,400 --> 00:22:39,400
+a ficha de nove pinos, e isto é uma norma para escolhermos os pinos para podermos os sinais CAN-I e CAN-LOAD,
+
+154
+00:22:39,400 --> 00:22:49,400
+e também se pode usar CAN com conectores naqueles ZJ45 que usamos na Ethernet,
+
+155
+00:22:49,400 --> 00:23:01,830
+e existem os conectores do do tipo CAN-I e CAN-LOAD, assim.
+
+156
+00:23:01,830 --> 00:23:11,340
+Dos sinais elétricos, que estão codificados sob tudo de tensão diferencial,
+
+157
+00:23:11,340 --> 00:23:19,340
+existem também várias alternativas e existem CAN implementados a simboles de IA3 ou IA3,
+
+158
+00:23:19,340 --> 00:23:25,340
+o estado da linha pode ser o estado de H ou do acessivo,
+
+159
+00:23:25,340 --> 00:23:31,340
+em que as duas linhas estão a mesma tensão, uma tensão média,
+
+160
+00:23:31,340 --> 00:23:35,340
+e que o estado do dominante, o estado do LOAD,
+
+161
+00:23:35,340 --> 00:23:44,830
+corresponde a podermos uma diferença de tensão positiva entre o CAN-I e o CAN-LOAD.
+
+162
+00:23:44,830 --> 00:23:50,830
+O sector só tem que medir a tendência de vivência potencial entre as duas,
+
+163
+00:23:50,830 --> 00:23:56,830
+e se exigir um valor semelhante àqueles,
+
+164
+00:23:56,830 --> 00:24:09,290
+é porque se trata de um sinal lógico do LOAD, um sinal lógico de H.
+
+165
+00:24:09,290 --> 00:24:14,700
+As distâncias que conseguimos transportar coisas com CAN,
+
+166
+00:24:14,700 --> 00:24:23,480
+dependem com a evidente da taxa de transmissão,
+
+167
+00:24:23,480 --> 00:24:30,890
+da taxa de transmissão a altas, temos distâncias baixas,
+
+168
+00:24:30,890 --> 00:24:38,650
+se baixarmos a taxa de transmissão conseguimos chegar mais longe,
+
+169
+00:24:38,650 --> 00:24:43,650
+no momento que não ser a solidimita aceitável os milímetros
+
+170
+00:24:43,650 --> 00:24:51,650
+para as taxas de transmissão baixas de 50 kilóbitros por segundo,
+
+171
+00:24:51,650 --> 00:25:08,840
+um megabito por segundo conseguimos chegar a 40 metros.
+
+172
+00:25:08,840 --> 00:25:13,840
+A CAN-IS que utiliza as taxas de transmissão mais lentas,
+
+173
+00:25:13,840 --> 00:25:18,840
+tem algumas especificações do meio físico eléctrico
+
+174
+00:25:18,840 --> 00:25:25,840
+para ser usadas em situações que exigem alta tolerância a falhas,
+
+175
+00:25:25,840 --> 00:25:30,840
+e que são mais imunos ao LOAD,
+
+176
+00:25:30,840 --> 00:25:39,540
+e que podem funcionar sem ampliência dos materiais,
+
+177
+00:25:39,540 --> 00:25:42,540
+quando por estado da linha.
+
+178
+00:25:42,540 --> 00:25:49,540
+Só estamos na capacidade de ver que a linha pode estar no estado boa,
+
+179
+00:25:49,540 --> 00:25:56,980
+não vamos dizer que não seja o estado dominante e o estado recivo,
+
+180
+00:25:56,980 --> 00:25:59,980
+o estado dominante se chama-se dominante,
+
+181
+00:25:59,980 --> 00:26:03,980
+porque basta que um dispositivo coloque a linha no estado dominante
+
+182
+00:26:03,980 --> 00:26:06,980
+e a linha toda fica no estado dominante.
+
+183
+00:26:06,980 --> 00:26:09,980
+Para a linha estar no estado recivo,
+
+184
+00:26:09,980 --> 00:26:14,980
+é preciso que todos os dispositivos ligados ao vagamento
+
+185
+00:26:14,980 --> 00:26:18,980
+estejam no estado recivo, que é esta situação aqui,
+
+186
+00:26:18,980 --> 00:26:22,980
+se temos três nós, os três estão no estado recivo,
+
+187
+00:26:22,980 --> 00:26:26,980
+os dois estão em repouso, a linha está também no estado recivo.
+
+188
+00:26:26,980 --> 00:26:30,980
+Diz-lhes que um dos nós o borca-linha no estado dominante,
+
+189
+00:26:30,980 --> 00:26:33,980
+o vagamento fica no estado dominante,
+
+190
+00:26:33,980 --> 00:26:37,980
+quem estiver era recebido, o que é esta problema,
+
+191
+00:26:37,980 --> 00:26:43,980
+e quando estiver esta, quando estiver o vagamento no estado dominante,
+
+192
+00:26:43,980 --> 00:26:49,980
+não sabe qual é o nó, que está a colocar o estado dominante do vagamento,
+
+193
+00:26:49,980 --> 00:26:52,980
+e que se avemos aqui há pelo menos um dos nós,
+
+194
+00:26:52,980 --> 00:26:55,980
+a colocar o vagamento no estado dominante.
+
+195
+00:26:55,980 --> 00:27:08,320
+Todos os bíblios são codificados de forma assim como o código se chama,
+
+196
+00:27:08,320 --> 00:27:12,320
+em NSD, que é non-eternal do zero,
+
+197
+00:27:12,320 --> 00:27:17,320
+ou seja, isso significa que durante o tempo de um bíte,
+
+198
+00:27:17,320 --> 00:27:21,320
+o estado da linha permanece constante a um ou a zero,
+
+199
+00:27:21,320 --> 00:27:26,320
+dependendo do bíte que queremos transmitir,
+
+200
+00:27:26,320 --> 00:27:31,320
+e isto é de forma mais simples que há de codificar bítes numa linha,
+
+201
+00:27:31,320 --> 00:27:37,320
+mas sabe-se que tem um problema que é dificulta a sincronização
+
+202
+00:27:37,320 --> 00:27:40,320
+entre o emissor e o setor,
+
+203
+00:27:40,320 --> 00:27:46,320
+e isso só funciona bem quando os erros de velocidade
+
+204
+00:27:46,320 --> 00:27:49,320
+dentro do emissor e o setor são muito pequenos,
+
+205
+00:27:49,320 --> 00:27:54,320
+porque senão, sobretudo, quando há períodos
+
+206
+00:27:54,320 --> 00:27:58,320
+em que temos muitos bíte de zero, ou períodos em que temos muitos bíte de um,
+
+207
+00:27:58,320 --> 00:28:03,320
+os setores têm dificuldade em saber onde é que começa um bíte,
+
+208
+00:28:03,320 --> 00:28:06,320
+onde é que acaba, e portanto uma sequência grande
+
+209
+00:28:06,320 --> 00:28:09,320
+pode ter dificuldade em saber quantos bíte de zero
+
+210
+00:28:09,320 --> 00:28:13,320
+é que o que responde a aquele tempo são quatro, são cinco bítes,
+
+211
+00:28:13,320 --> 00:28:18,320
+porque os valores podem não estar completamente adivinados.
+
+212
+00:28:18,320 --> 00:28:24,320
+Então, no Cannes, para evitar estes problemas de falta de sincronismo,
+
+213
+00:28:24,320 --> 00:28:30,320
+faz-se uma interessação de um bíte extra de setor de bíte,
+
+214
+00:28:31,320 --> 00:28:34,320
+sempre que há cinco bítes desdivisos,
+
+215
+00:28:34,320 --> 00:28:37,320
+até mesmo cinco bítes desdivisos de um,
+
+216
+00:28:37,320 --> 00:28:43,320
+introduz-se um bíte adicional, aquele bíte, que se chama um setafíbit,
+
+217
+00:28:43,320 --> 00:28:48,320
+que não tem significado em termos de informação,
+
+218
+00:28:48,320 --> 00:28:53,320
+e a informação que nós estamos transmitindo é aquilo,
+
+219
+00:28:53,320 --> 00:28:56,320
+há muitos zeros, mas ao fim de cinco zeros,
+
+220
+00:28:56,320 --> 00:29:01,320
+nós mobilizamos um bíte adicional, um setafíbit,
+
+221
+00:29:01,320 --> 00:29:04,320
+com um valor diferente do anterior,
+
+222
+00:29:04,320 --> 00:29:10,320
+para permitir que as transições assinhassem para uma transição zero para um,
+
+223
+00:29:10,320 --> 00:29:14,320
+e portanto, dá para perceber que ele acabou um bíte e que o outro,
+
+224
+00:29:14,320 --> 00:29:20,320
+e portanto agora conseguimos acertar o nosso robógio
+
+225
+00:29:20,320 --> 00:29:25,320
+para conseguirmos sincronizar os bítes desdivisos.
+
+226
+00:29:27,320 --> 00:29:32,320
+Então ali também houve um, dois, três, quatro, cinco bítes a zero,
+
+227
+00:29:32,320 --> 00:29:36,320
+ao fim de cinco bítes a zero, incluímos um, um, um,
+
+228
+00:29:36,320 --> 00:29:39,320
+para invôr-lo em uma transição,
+
+229
+00:29:39,320 --> 00:29:47,140
+aqui se não houvesse esta descrição,
+
+230
+00:29:47,140 --> 00:29:49,140
+haveria outra transição ali, portanto,
+
+231
+00:29:49,140 --> 00:29:53,140
+o sistema era muito importante, mas a maior medida que é assim,
+
+232
+00:29:53,140 --> 00:29:55,140
+e é assim que faz.
+
+233
+00:29:55,140 --> 00:29:59,580
+Ali depois de cinco bítes a um,
+
+234
+00:29:59,580 --> 00:30:06,580
+também foi introduzido um novo bíte, um setafíbit ali,
+
+235
+00:30:06,580 --> 00:30:09,580
+que não nos representa qualquer informação,
+
+236
+00:30:09,580 --> 00:30:15,580
+mas o status foi metido só para criar transições no final.
+
+237
+00:30:15,580 --> 00:30:25,460
+No início de uma transmissão,
+
+238
+00:30:25,460 --> 00:30:32,940
+no início de uma frame, can, e existe sempre um bíte,
+
+239
+00:30:32,940 --> 00:30:35,940
+que é o start of frame, o SOF,
+
+240
+00:30:35,940 --> 00:30:40,730
+normalmente a linha está no estado idle,
+
+241
+00:30:40,730 --> 00:30:43,730
+ou seja, no estado ressesivo,
+
+242
+00:30:43,730 --> 00:30:46,730
+quando uma estação quer transmitir,
+
+243
+00:30:46,730 --> 00:30:49,730
+coloca aqui durante o tempo de um bíte,
+
+244
+00:30:49,730 --> 00:30:53,730
+aqui no estado dominante, em um zero,
+
+245
+00:30:53,730 --> 00:30:56,730
+e a altura em que acontece aquela transição,
+
+246
+00:30:56,730 --> 00:30:59,730
+deve ser, tanto quanto possível,
+
+247
+00:30:59,730 --> 00:31:02,730
+detectado por todas as estações,
+
+248
+00:31:02,730 --> 00:31:05,730
+são potenciais, setores, testes da mensagem,
+
+249
+00:31:05,730 --> 00:31:09,730
+para a partir daí saber encontrar o tempo,
+
+250
+00:31:09,730 --> 00:31:13,730
+para saber onde devem estar os bíteis seguintes,
+
+251
+00:31:13,730 --> 00:31:17,730
+para que os bíteis depois possam ser bíteis.
+
+252
+00:31:17,730 --> 00:31:35,270
+O tempo de um bíte pode ser dividido em quatro fases,
+
+253
+00:31:35,270 --> 00:31:38,270
+em princípio, durante o tempo do bíte,
+
+254
+00:31:38,270 --> 00:31:40,270
+a linha está sempre estável,
+
+255
+00:31:40,270 --> 00:31:43,270
+ou o estado dominante, ou o estado ressesivo,
+
+256
+00:31:43,270 --> 00:31:46,270
+e estamos a transmitir um zero,
+
+257
+00:31:46,270 --> 00:31:48,270
+no entanto, a norma diz que,
+
+258
+00:31:48,270 --> 00:31:50,270
+em aquela altura,
+
+259
+00:31:50,270 --> 00:31:53,270
+que deve ser a mostrar final,
+
+260
+00:31:53,270 --> 00:31:56,270
+e que devemos olhar o estado da linha,
+
+261
+00:31:56,270 --> 00:31:59,270
+para ver se este tempo todo responde a um zero,
+
+262
+00:31:59,270 --> 00:32:01,270
+ou se responde a um um.
+
+263
+00:32:01,270 --> 00:32:03,270
+O nível da linha são dados,
+
+264
+00:32:03,270 --> 00:32:14,010
+é implementado pelo controle do organ,
+
+265
+00:32:14,010 --> 00:32:18,010
+que é um tipo que nós queremos juntar
+
+266
+00:32:18,010 --> 00:32:20,010
+ao nosso professor,
+
+267
+00:32:20,010 --> 00:32:23,010
+para termos um sistema contextual,
+
+268
+00:32:23,010 --> 00:32:25,010
+um porta-can.
+
+269
+00:32:25,010 --> 00:32:28,010
+Trata-te a fazer, muito pessoalmente,
+
+270
+00:32:28,010 --> 00:32:31,010
+de lados, a codificação de freios,
+
+271
+00:32:31,010 --> 00:32:33,010
+faz o staffing,
+
+272
+00:32:33,010 --> 00:32:36,010
+e o contrário, os bíteis do staffing,
+
+273
+00:32:36,010 --> 00:32:39,010
+que faz o trato do controle do acesso ao meio,
+
+274
+00:32:39,010 --> 00:32:42,010
+detecção de erros, sinalização dos erros,
+
+275
+00:32:42,010 --> 00:32:44,010
+e confirmação.
+
+276
+00:32:44,010 --> 00:32:46,010
+Vamos criar frames,
+
+277
+00:32:46,010 --> 00:32:55,340
+que tenham este formato,
+
+278
+00:32:55,340 --> 00:32:57,340
+já vimos que começam com o bíte,
+
+279
+00:32:57,340 --> 00:33:00,340
+ali que é o start of frame,
+
+280
+00:33:00,340 --> 00:33:03,340
+e depois vem um campo,
+
+281
+00:33:03,340 --> 00:33:06,340
+com 11 bíte que é o identificador,
+
+282
+00:33:06,340 --> 00:33:09,340
+já dissemos que era o lançamento,
+
+283
+00:33:09,340 --> 00:33:11,340
+que é o identificador,
+
+284
+00:33:11,340 --> 00:33:13,340
+já dissemos que as mensagens são identificadas
+
+285
+00:33:13,340 --> 00:33:15,340
+com o identificador de 11 bíteis,
+
+286
+00:33:15,340 --> 00:33:22,630
+vem ali depois um bíte que é o RTS,
+
+287
+00:33:22,630 --> 00:33:29,250
+que é o Revolta de Transmissions Requests,
+
+288
+00:33:29,250 --> 00:33:32,910
+e outros bíteis,
+
+289
+00:33:32,910 --> 00:33:35,910
+que eu disse que estamos num formato extendível ou não,
+
+290
+00:33:35,910 --> 00:33:37,910
+e este campo foi muito importante,
+
+291
+00:33:37,910 --> 00:33:39,910
+que eu tenho que estar relacionado
+
+292
+00:33:39,910 --> 00:33:41,910
+com o comprimento,
+
+293
+00:33:41,910 --> 00:33:43,910
+é o data link hold,
+
+294
+00:33:43,910 --> 00:33:45,910
+não é exatamente o comprimento,
+
+295
+00:33:45,910 --> 00:33:47,910
+não é um número,
+
+296
+00:33:47,910 --> 00:33:49,910
+mas é um código,
+
+297
+00:33:49,910 --> 00:33:52,910
+e esse código identifica
+
+298
+00:33:52,910 --> 00:33:54,910
+o comprimento da mensagem.
+
+299
+00:33:54,910 --> 00:33:56,910
+Os dados transportados estão aqui,
+
+300
+00:33:56,910 --> 00:33:59,910
+estão aqui, que são 0 ou 8 bítes,
+
+301
+00:33:59,910 --> 00:34:01,910
+portanto ali,
+
+302
+00:34:01,910 --> 00:34:03,910
+temos um código,
+
+303
+00:34:03,910 --> 00:34:05,910
+que diz se ali estão 0 bítes,
+
+304
+00:34:05,910 --> 00:34:07,910
+está um, são 2, ou são 8,
+
+305
+00:34:07,910 --> 00:34:09,910
+ou outra coisa qual que é.
+
+306
+00:34:09,910 --> 00:34:20,250
+Hoje temos um código controlador de erros,
+
+307
+00:34:20,250 --> 00:34:22,250
+que acaba com confirmação
+
+308
+00:34:22,250 --> 00:34:24,250
+no momento de off-frame,
+
+309
+00:34:24,250 --> 00:34:26,250
+e depois um tempo de espera
+
+310
+00:34:26,250 --> 00:34:28,250
+até que possa aparecer outra frame.
+
+311
+00:34:28,250 --> 00:34:32,300
+Estão juntos todo,
+
+312
+00:34:32,300 --> 00:34:34,300
+daqui até aqui,
+
+313
+00:34:34,300 --> 00:34:36,300
+dependendo de aqui termos
+
+314
+00:34:36,300 --> 00:34:38,300
+bíteis,
+
+315
+00:34:38,300 --> 00:34:40,300
+ou não termos bíteis,
+
+316
+00:34:40,300 --> 00:34:42,300
+pode variar entre 47 e 111,
+
+317
+00:34:42,300 --> 00:34:46,300
+um daqui que devemos ter entre 0 e 64,
+
+318
+00:34:46,300 --> 00:34:48,300
+se não nos 64 há aquilo,
+
+319
+00:34:48,300 --> 00:34:50,300
+devemos poder ter aquilo.
+
+320
+00:34:55,230 --> 00:34:58,230
+Isto tem um outro desenho,
+
+321
+00:34:58,230 --> 00:35:00,230
+exatamente o mesmo informação,
+
+322
+00:35:00,230 --> 00:35:02,230
+um bíte ali, um bíte ali,
+
+323
+00:35:02,230 --> 00:35:07,230
+6 bítes para o comprimento,
+
+324
+00:35:07,230 --> 00:35:10,230
+que são uns bíteis de controle,
+
+325
+00:35:10,230 --> 00:35:15,300
+mais 4 para o comprimento,
+
+326
+00:35:15,300 --> 00:35:17,300
+e depois ali temos
+
+327
+00:35:17,300 --> 00:35:19,300
+os dados transportados
+
+328
+00:35:19,300 --> 00:35:26,060
+de 0 a 64 bítes.
+
+329
+00:35:26,060 --> 00:35:28,060
+Vamos ver o que eles vão dizer neste canto,
+
+330
+00:35:28,060 --> 00:35:30,060
+no separado, o SOF é só um bíte,
+
+331
+00:35:30,060 --> 00:35:32,060
+é muito fácil, nós já vimos,
+
+332
+00:35:32,060 --> 00:35:37,100
+marca o início da mensagem,
+
+333
+00:35:37,100 --> 00:35:39,100
+todos os nossos devem se synchronizar
+
+334
+00:35:39,100 --> 00:35:42,790
+do início deste bíte,
+
+335
+00:35:42,790 --> 00:35:44,790
+devem detectar o início do bíte,
+
+336
+00:35:44,790 --> 00:35:46,790
+e saber que a partida aí
+
+337
+00:35:46,790 --> 00:35:50,170
+vem nos outros bíteis todos.
+
+338
+00:35:50,170 --> 00:35:53,480
+O identificador
+
+339
+00:35:53,480 --> 00:35:55,480
+é um número de 11 bítes
+
+340
+00:35:55,480 --> 00:35:57,480
+que identifica a mensagem,
+
+341
+00:35:57,480 --> 00:35:59,480
+11 bítes para 244,
+
+342
+00:35:59,480 --> 00:36:01,480
+2048,
+
+343
+00:36:01,480 --> 00:36:03,480
+mensagens diferentes,
+
+344
+00:36:03,480 --> 00:36:06,820
+a identificação da mensagem
+
+345
+00:36:06,820 --> 00:36:08,820
+também vai definir a prioridade,
+
+346
+00:36:08,820 --> 00:36:10,820
+quanto mais pequeno
+
+347
+00:36:10,820 --> 00:36:12,820
+for o identificador,
+
+348
+00:36:12,820 --> 00:36:14,820
+maior é a prioridade,
+
+349
+00:36:14,820 --> 00:36:19,480
+por norma,
+
+350
+00:36:19,480 --> 00:36:21,480
+o identificador,
+
+351
+00:36:21,480 --> 00:36:23,480
+não me identifica nós,
+
+352
+00:36:23,480 --> 00:36:25,480
+nem quem enviou,
+
+353
+00:36:25,480 --> 00:36:27,480
+nem quem vai receber,
+
+354
+00:36:27,480 --> 00:36:29,480
+identifica a mensagem.
+
+355
+00:36:29,480 --> 00:36:31,480
+Nós é que devemos criar,
+
+356
+00:36:31,480 --> 00:36:33,480
+pois o outro é uma norma,
+
+357
+00:36:33,480 --> 00:36:35,480
+e a partir da identificação da mensagem,
+
+358
+00:36:35,480 --> 00:36:37,480
+com quem enviou,
+
+359
+00:36:37,480 --> 00:36:39,480
+com quem deve receber.
+
+360
+00:36:39,480 --> 00:36:43,340
+Este bíte, RTR,
+
+361
+00:36:43,340 --> 00:36:45,340
+e noutro transmissão de request
+
+362
+00:36:45,340 --> 00:36:47,340
+é muito importante,
+
+363
+00:36:47,340 --> 00:36:49,340
+e ele define se esta mensagem
+
+364
+00:36:49,340 --> 00:36:51,340
+é uma pergunta
+
+365
+00:36:51,340 --> 00:36:53,340
+ou se é uma resposta.
+
+366
+00:36:53,340 --> 00:36:57,480
+Nós poderemos usar o CAN
+
+367
+00:36:57,480 --> 00:36:59,480
+para pedir dados,
+
+368
+00:37:01,480 --> 00:37:03,480
+e usamos
+
+369
+00:37:03,480 --> 00:37:05,480
+o identificador
+
+370
+00:37:05,480 --> 00:37:07,480
+para identificar o que queremos pedir,
+
+371
+00:37:07,480 --> 00:37:09,480
+e podermos dizer este bíte
+
+372
+00:37:09,480 --> 00:37:11,480
+quando
+
+373
+00:37:11,480 --> 00:37:13,480
+queremos pedir
+
+374
+00:37:13,480 --> 00:37:15,480
+sobre solicitados
+
+375
+00:37:15,480 --> 00:37:17,480
+e informação
+
+376
+00:37:17,480 --> 00:37:19,480
+sobre
+
+377
+00:37:19,480 --> 00:37:21,480
+a outra norma.
+
+378
+00:37:21,480 --> 00:37:23,480
+Não é importante a que norma acreditemos,
+
+379
+00:37:23,480 --> 00:37:25,480
+não é importante
+
+380
+00:37:25,480 --> 00:37:27,480
+que tipo de dados queremos,
+
+381
+00:37:27,480 --> 00:37:29,480
+ou seja, que mensagem é
+
+382
+00:37:29,480 --> 00:37:31,480
+queremos receber uma resposta.
+
+383
+00:37:31,480 --> 00:37:40,070
+Quando se perguntar alguma coisa,
+
+384
+00:37:40,070 --> 00:37:42,070
+a resposta,
+
+385
+00:37:42,070 --> 00:37:44,070
+a resposta,
+
+386
+00:37:44,070 --> 00:37:46,070
+estamos no basamento,
+
+387
+00:37:46,070 --> 00:37:48,070
+pode ser dita por todos,
+
+388
+00:37:48,070 --> 00:37:50,070
+e
+
+389
+00:37:50,070 --> 00:37:52,070
+não tem todo o direito
+
+390
+00:37:52,070 --> 00:37:54,070
+de receber as mensagens de um determinado bíte,
+
+391
+00:37:54,070 --> 00:37:56,070
+que sejam enviadas,
+
+392
+00:37:56,070 --> 00:37:58,070
+mesmo que tenham sido enviadas
+
+393
+00:37:58,070 --> 00:38:00,070
+para pedir-lhe
+
+394
+00:38:00,070 --> 00:38:06,300
+um terceiro bíte.
+
+395
+00:38:06,300 --> 00:38:08,300
+A gente tenta aqui
+
+396
+00:38:08,300 --> 00:38:10,300
+sempre identificar
+
+397
+00:38:10,300 --> 00:38:12,300
+um formato de treino alternativo,
+
+398
+00:38:12,300 --> 00:38:14,300
+que é o formato
+
+399
+00:38:14,300 --> 00:38:16,300
+com
+
+400
+00:38:16,300 --> 00:38:18,300
+extensão do identificador,
+
+401
+00:38:18,300 --> 00:38:22,600
+o que é normal.
+
+402
+00:38:22,600 --> 00:38:26,170
+Este bíte
+
+403
+00:38:26,170 --> 00:38:28,170
+está no estado do receivo,
+
+404
+00:38:28,170 --> 00:38:30,170
+e significa que o formato é este,
+
+405
+00:38:30,170 --> 00:38:32,170
+que está aqui.
+
+406
+00:38:32,170 --> 00:38:34,170
+Quando aquele bíte está no estado dominante,
+
+407
+00:38:34,170 --> 00:38:36,170
+o formato é outro,
+
+408
+00:38:36,170 --> 00:38:38,170
+vamos ver as vezes.
+
+409
+00:38:38,170 --> 00:38:40,170
+Este bíte é zero, não sai para nada,
+
+410
+00:38:40,170 --> 00:38:42,170
+para já.
+
+411
+00:38:42,170 --> 00:38:44,170
+Aqui temos um
+
+412
+00:38:44,170 --> 00:38:46,170
+data-led code
+
+413
+00:38:46,170 --> 00:38:48,170
+que contém um número
+
+414
+00:38:48,170 --> 00:38:50,170
+que está relacionado
+
+415
+00:38:50,170 --> 00:38:52,170
+com um número de bytes
+
+416
+00:38:52,170 --> 00:38:54,170
+que vão ser transmitidos.
+
+417
+00:38:54,170 --> 00:38:56,170
+Para que um 4-bit
+
+418
+00:38:56,170 --> 00:38:58,170
+nós não pudemos
+
+419
+00:39:00,170 --> 00:39:02,170
+especificar
+
+420
+00:39:02,170 --> 00:39:04,170
+um número entre 0 e 16.
+
+421
+00:39:06,170 --> 00:39:08,170
+Mas aqui só temos
+
+422
+00:39:08,170 --> 00:39:10,170
+0 a 74 bits, ou seja,
+
+423
+00:39:10,170 --> 00:39:12,170
+0 e bytes.
+
+424
+00:39:12,170 --> 00:39:14,170
+Portanto, nem todos os códigos
+
+425
+00:39:14,170 --> 00:39:16,170
+são aplicáveis
+
+426
+00:39:16,170 --> 00:39:18,170
+para especificar
+
+427
+00:39:18,170 --> 00:39:20,170
+dimensões
+
+428
+00:39:20,170 --> 00:39:22,170
+neste formato.
+
+429
+00:39:22,170 --> 00:39:26,540
+Se este número for entre 0 e 8,
+
+430
+00:39:26,540 --> 00:39:30,040
+então
+
+431
+00:39:30,040 --> 00:39:32,040
+esse número corresponde
+
+432
+00:39:32,040 --> 00:39:34,040
+ao número de bytes que vão aparecer
+
+433
+00:39:34,040 --> 00:39:36,040
+aqui.
+
+434
+00:39:36,040 --> 00:39:38,040
+Se for outra coisa diferente,
+
+435
+00:39:38,040 --> 00:39:40,040
+se for outra coisa maior do que 8,
+
+436
+00:39:40,040 --> 00:39:42,040
+então trata-se de um
+
+437
+00:39:42,040 --> 00:39:44,040
+comprimento diferente.
+
+438
+00:39:44,040 --> 00:39:49,460
+O CSCE serve
+
+439
+00:39:49,460 --> 00:39:54,730
+para
+
+440
+00:39:54,730 --> 00:39:56,730
+permitir a verificação de erros
+
+441
+00:39:56,730 --> 00:40:00,460
+de uma frame for recebida
+
+442
+00:40:00,460 --> 00:40:02,460
+com um erro neste campo
+
+443
+00:40:02,460 --> 00:40:04,460
+CSCE,
+
+444
+00:40:04,460 --> 00:40:06,460
+então ela é aceitada
+
+445
+00:40:06,460 --> 00:40:08,460
+exatamente de um CVS
+
+446
+00:40:08,460 --> 00:40:10,460
+não existido
+
+447
+00:40:10,460 --> 00:40:12,460
+ou um CVS
+
+448
+00:40:12,460 --> 00:40:14,460
+sido
+
+449
+00:40:14,460 --> 00:40:16,460
+transmitida
+
+450
+00:40:16,460 --> 00:40:18,460
+por cima de outra mais prioritária.
+
+451
+00:40:18,460 --> 00:40:27,500
+Aqui temos dois bits
+
+452
+00:40:27,500 --> 00:40:29,500
+que servem para implementar
+
+453
+00:40:29,500 --> 00:40:37,580
+a confirmação
+
+454
+00:40:37,580 --> 00:40:39,580
+quando
+
+455
+00:40:39,580 --> 00:40:41,580
+alguém, quando não recebe
+
+456
+00:40:41,580 --> 00:40:43,580
+uma mensagem correta
+
+457
+00:40:43,580 --> 00:40:45,580
+ou seja, na transmissão
+
+458
+00:40:45,580 --> 00:40:47,580
+estes dois bits
+
+459
+00:40:47,580 --> 00:40:49,580
+estão aqui que são transmitidos
+
+460
+00:40:49,580 --> 00:40:51,580
+no estado recivo,
+
+461
+00:40:51,580 --> 00:40:53,580
+então tem que ser um teorecinado,
+
+462
+00:40:53,580 --> 00:40:55,580
+uma gestação
+
+463
+00:40:55,580 --> 00:40:57,580
+que receba esta mensagem
+
+464
+00:40:57,580 --> 00:40:59,580
+e que goste
+
+465
+00:40:59,580 --> 00:41:01,580
+da mensagem, ou considera mensagem correta,
+
+466
+00:41:01,580 --> 00:41:03,580
+sinaliza
+
+467
+00:41:03,580 --> 00:41:05,580
+aqui pondo
+
+468
+00:41:05,580 --> 00:41:07,580
+uns dos bits
+
+469
+00:41:07,580 --> 00:41:09,580
+no estado binanante
+
+470
+00:41:09,580 --> 00:41:11,580
+e assim todos os outros
+
+471
+00:41:11,580 --> 00:41:13,580
+vem que
+
+472
+00:41:13,580 --> 00:41:18,040
+quando um bipito no estado binanante
+
+473
+00:41:18,040 --> 00:41:20,040
+e assim vê-se que
+
+474
+00:41:20,040 --> 00:41:22,040
+quem enviou
+
+475
+00:41:22,040 --> 00:41:24,040
+e os outros
+
+476
+00:41:24,040 --> 00:41:31,290
+percebem que a mensagem foi recebida
+
+477
+00:41:31,290 --> 00:41:33,290
+depois vem cagando
+
+478
+00:41:33,290 --> 00:41:35,290
+com 7 bits
+
+479
+00:41:35,290 --> 00:41:37,290
+que identificam o fim da frame
+
+480
+00:41:37,290 --> 00:41:39,290
+e mais um tempo
+
+481
+00:41:39,290 --> 00:41:41,290
+que serve para
+
+482
+00:41:41,290 --> 00:41:43,290
+esperar
+
+483
+00:41:43,290 --> 00:41:45,290
+que
+
+484
+00:41:45,290 --> 00:41:51,830
+possa aparecer uma nova frame.
+
+485
+00:41:51,830 --> 00:41:53,830
+A parte mais criada do cano
+
+486
+00:41:53,830 --> 00:41:55,830
+é a arbitragem
+
+487
+00:41:55,830 --> 00:42:00,780
+que
+
+488
+00:42:00,780 --> 00:42:02,780
+o que resolve o problema
+
+489
+00:42:02,780 --> 00:42:04,780
+que acontece quando duas sessões
+
+490
+00:42:04,780 --> 00:42:06,780
+querem transmitir ao mesmo tempo.
+
+491
+00:42:06,780 --> 00:42:10,340
+Enquanto está a transmitir
+
+492
+00:42:10,340 --> 00:42:12,340
+uma sessão que está a transmitir
+
+493
+00:42:12,340 --> 00:42:14,340
+deve
+
+494
+00:42:14,340 --> 00:42:16,340
+olhar para o aposamento
+
+495
+00:42:16,340 --> 00:42:18,340
+e verificar
+
+496
+00:42:18,340 --> 00:42:20,340
+se aquilo que está no aposamento
+
+497
+00:42:20,340 --> 00:42:22,340
+é aquilo que nós gostamos de ver.
+
+498
+00:42:22,340 --> 00:42:27,000
+Quando transmitimos
+
+499
+00:42:27,000 --> 00:42:29,000
+um bipito
+
+500
+00:42:29,000 --> 00:42:31,000
+ressivo
+
+501
+00:42:31,000 --> 00:42:33,000
+é muito natural
+
+502
+00:42:33,000 --> 00:42:35,000
+ou pode acontecer que alguma sessão
+
+503
+00:42:35,000 --> 00:42:37,000
+em simultâneo
+
+504
+00:42:37,000 --> 00:42:39,000
+o aposamento no estado binanante
+
+505
+00:42:39,000 --> 00:42:41,000
+então apesar de nós estarmos a transmitir
+
+506
+00:42:41,000 --> 00:42:43,000
+um estado ressivo
+
+507
+00:42:43,000 --> 00:42:45,000
+podemos olhar para o aposamento
+
+508
+00:42:45,000 --> 00:42:47,000
+e ver um estado binanante
+
+509
+00:42:47,000 --> 00:42:49,000
+que alguém está a transmitir ao mesmo tempo que nós.
+
+510
+00:42:49,000 --> 00:42:55,260
+E
+
+511
+00:42:55,260 --> 00:42:57,260
+quando nós verificamos isso o que devemos fazer
+
+512
+00:42:57,260 --> 00:42:59,260
+é pararmos a transmissão.
+
+513
+00:42:59,260 --> 00:43:08,550
+E
+
+514
+00:43:08,550 --> 00:43:10,550
+devido à uma maneira como
+
+515
+00:43:10,550 --> 00:43:12,550
+devido à ordem dos bits
+
+516
+00:43:12,550 --> 00:43:14,550
+do identificador
+
+517
+00:43:14,550 --> 00:43:16,550
+o identificador é aquele cano que é transmitido
+
+518
+00:43:16,550 --> 00:43:18,550
+logo depois do start of frame.
+
+519
+00:43:20,550 --> 00:43:22,550
+O identificador começa a ser transmitido
+
+520
+00:43:22,550 --> 00:43:24,550
+pelos bits
+
+521
+00:43:24,550 --> 00:43:26,550
+mais significativos
+
+522
+00:43:28,550 --> 00:43:30,550
+e portanto
+
+523
+00:43:30,550 --> 00:43:32,550
+um
+
+524
+00:43:32,550 --> 00:43:34,550
+lógico
+
+525
+00:43:34,550 --> 00:43:36,550
+mais significativo
+
+526
+00:43:36,550 --> 00:43:38,550
+significa um número
+
+527
+00:43:38,550 --> 00:43:40,550
+identificador de mensagem superior
+
+528
+00:43:40,550 --> 00:43:42,550
+e portanto menor prioridade
+
+529
+00:43:42,550 --> 00:43:44,550
+e portanto
+
+530
+00:43:44,550 --> 00:43:46,550
+se vivermos
+
+531
+00:43:46,550 --> 00:43:48,550
+numa situação dessas
+
+532
+00:43:48,550 --> 00:43:50,550
+se sabemos que alguém
+
+533
+00:43:50,550 --> 00:43:52,550
+com mais prioridade
+
+534
+00:43:52,550 --> 00:43:54,550
+vai querer transmitir
+
+535
+00:43:54,550 --> 00:43:59,270
+e nos pararmos a transmissão.
+
+536
+00:43:59,270 --> 00:44:02,970
+É isso, está aqui ilustrado.
+
+537
+00:44:02,970 --> 00:44:04,970
+Temos 3 nós
+
+538
+00:44:04,970 --> 00:44:06,970
+os 3 decidem ao mesmo tempo
+
+539
+00:44:06,970 --> 00:44:08,970
+de estar a transmitir
+
+540
+00:44:08,970 --> 00:44:10,970
+e transmitem ali um start of frame
+
+541
+00:44:10,970 --> 00:44:12,970
+bits
+
+542
+00:44:12,970 --> 00:44:14,970
+por exemplo o estado binanante
+
+543
+00:44:14,970 --> 00:44:16,970
+é o zero
+
+544
+00:44:16,970 --> 00:44:18,970
+3 transmitem zero
+
+545
+00:44:18,970 --> 00:44:20,970
+ali.
+
+546
+00:44:20,970 --> 00:44:22,970
+Quem estiver a ver o basamento
+
+547
+00:44:22,970 --> 00:44:24,970
+vai ver isto
+
+548
+00:44:24,970 --> 00:44:26,970
+quando o basamento no estado é acessível
+
+549
+00:44:26,970 --> 00:44:28,970
+quando
+
+550
+00:44:28,970 --> 00:44:30,970
+o menos um dos nós
+
+551
+00:44:30,970 --> 00:44:32,970
+o basamento no estado binanante
+
+552
+00:44:32,970 --> 00:44:34,970
+nós vemos o basamento no estado binanante
+
+553
+00:44:34,970 --> 00:44:39,910
+depois daquele bit
+
+554
+00:44:39,910 --> 00:44:41,910
+cada um dos nós começa a transmitir
+
+555
+00:44:41,910 --> 00:44:43,910
+o identificador da sua mensagem
+
+556
+00:44:43,910 --> 00:44:45,910
+aquele conjunto de uns bits
+
+557
+00:44:45,910 --> 00:44:47,910
+e que começa a transmitir o bit mais significativo
+
+558
+00:44:47,910 --> 00:44:49,910
+que é o bit 10
+
+559
+00:44:49,910 --> 00:44:51,910
+que é o bit 0
+
+560
+00:44:51,910 --> 00:44:55,580
+que é o bit menos significativo
+
+561
+00:44:55,580 --> 00:44:59,780
+aqui todos os 3 nós
+
+562
+00:44:59,780 --> 00:45:01,780
+queriam transmitir e transmitem os mesmos bits
+
+563
+00:45:01,780 --> 00:45:03,780
+que é o identificador
+
+564
+00:45:03,780 --> 00:45:05,780
+que começa
+
+565
+00:45:05,780 --> 00:45:07,780
+os mesmos bits
+
+566
+00:45:07,780 --> 00:45:16,020
+até aqui
+
+567
+00:45:16,020 --> 00:45:18,020
+quando chegamos a esta fase
+
+568
+00:45:18,020 --> 00:45:20,020
+do bit 6
+
+569
+00:45:20,020 --> 00:45:22,020
+aquele nó 2
+
+570
+00:45:22,020 --> 00:45:25,620
+coloca o basamento
+
+571
+00:45:25,620 --> 00:45:27,620
+no estado binanante
+
+572
+00:45:27,620 --> 00:45:29,620
+e aquele nó 3 também
+
+573
+00:45:29,620 --> 00:45:31,620
+o nó 1
+
+574
+00:45:31,620 --> 00:45:33,620
+tenta manter
+
+575
+00:45:33,620 --> 00:45:35,620
+o basamento no estado acessível
+
+576
+00:45:35,620 --> 00:45:37,620
+mas o que vai acontecer
+
+577
+00:45:37,620 --> 00:45:39,620
+é que o basamento vai ficar
+
+578
+00:45:39,620 --> 00:45:41,620
+no estado binanante
+
+579
+00:45:41,620 --> 00:45:43,620
+basta que um esteja no estado binanante
+
+580
+00:45:43,620 --> 00:45:45,620
+e ele fica no estado binanante
+
+581
+00:45:45,620 --> 00:45:47,620
+tenta ver que o nó 1
+
+582
+00:45:47,620 --> 00:45:49,620
+está a ver isto ao mesmo tempo
+
+583
+00:45:49,620 --> 00:45:51,620
+para transmitir aquilo
+
+584
+00:45:51,620 --> 00:45:53,620
+eu percebo que houve um nozito
+
+585
+00:45:53,620 --> 00:45:55,620
+a alguém mais estabilitário
+
+586
+00:45:55,620 --> 00:45:57,620
+para transmitir
+
+587
+00:45:57,620 --> 00:45:59,620
+então para a sua transmissão
+
+588
+00:45:59,620 --> 00:46:01,620
+e a partir daí fica só o vírus
+
+589
+00:46:01,620 --> 00:46:03,620
+que passa no transmite mais nada
+
+590
+00:46:03,620 --> 00:46:05,620
+os outros dois nós
+
+591
+00:46:05,620 --> 00:46:07,620
+continuou a sua transmissão
+
+592
+00:46:07,620 --> 00:46:09,620
+e continuou a
+
+593
+00:46:09,620 --> 00:46:11,620
+inviar os bits
+
+594
+00:46:11,620 --> 00:46:13,620
+do seu identificador
+
+595
+00:46:13,620 --> 00:46:15,620
+que são iguais
+
+596
+00:46:15,620 --> 00:46:17,620
+até esta fase
+
+597
+00:46:17,620 --> 00:46:19,620
+em que
+
+598
+00:46:19,620 --> 00:46:21,620
+o nó 2 coloca o basamento
+
+599
+00:46:21,620 --> 00:46:23,620
+no estado binanante
+
+600
+00:46:23,620 --> 00:46:25,620
+enquanto o nó 3 tenta manter
+
+601
+00:46:25,620 --> 00:46:27,620
+o basamento no estado acessível
+
+602
+00:46:27,620 --> 00:46:29,620
+o basamento fica no estado binanante
+
+603
+00:46:29,620 --> 00:46:31,620
+o nó 2
+
+604
+00:46:31,620 --> 00:46:33,620
+tenta ver isto
+
+605
+00:46:33,620 --> 00:46:35,620
+então a partir daí passa
+
+606
+00:46:35,620 --> 00:46:37,620
+para a sua transmissão
+
+607
+00:46:37,620 --> 00:46:39,620
+e fica só o vírus
+
+608
+00:46:39,620 --> 00:46:41,620
+quando o nó 2
+
+609
+00:46:41,620 --> 00:46:43,620
+acabar
+
+610
+00:46:43,620 --> 00:46:45,620
+transmitir o seu
+
+611
+00:46:45,620 --> 00:46:47,620
+identificador
+
+612
+00:46:47,620 --> 00:46:49,620
+transmitir os bits
+
+613
+00:46:49,620 --> 00:46:51,620
+e os bits
+
+614
+00:46:51,620 --> 00:46:53,620
+de dados
+
+615
+00:46:53,620 --> 00:46:55,620
+e aquilo que aparece
+
+616
+00:46:55,620 --> 00:46:57,620
+no estado transmitido
+
+617
+00:46:57,620 --> 00:47:00,900
+pelo nó 2
+
+618
+00:47:00,900 --> 00:47:02,900
+o nó 2 não sofreu nada
+
+619
+00:47:04,900 --> 00:47:06,900
+porque o mensagem do nó 2
+
+620
+00:47:06,900 --> 00:47:08,900
+não sofreu nada por o facto
+
+621
+00:47:08,900 --> 00:47:10,900
+de haver outras mensagens
+
+622
+00:47:10,900 --> 00:47:12,900
+a serem transmitidas ao mesmo tempo
+
+623
+00:47:14,900 --> 00:47:16,900
+as mensagens do nó 1 e do nó 3
+
+624
+00:47:16,900 --> 00:47:18,900
+que foram
+
+625
+00:47:18,900 --> 00:47:20,900
+descartadas
+
+626
+00:47:20,900 --> 00:47:22,900
+e vão ter que ser transmitidas mais tarde
+
+627
+00:47:26,900 --> 00:47:28,900
+usando também um mecanismo
+
+628
+00:47:28,900 --> 00:47:30,900
+que espera de tempo aleatório
+
+629
+00:47:30,900 --> 00:47:32,900
+como vimos
+
+630
+00:47:32,900 --> 00:47:34,900
+na internet
+
+631
+00:47:34,900 --> 00:47:36,900
+e se voltar a ver
+
+632
+00:47:36,900 --> 00:47:38,900
+uma colisão acessível
+
+633
+00:47:38,900 --> 00:47:40,900
+ganha a colisão
+
+634
+00:47:40,900 --> 00:47:42,900
+aquilo que tiver o
+
+635
+00:47:42,900 --> 00:47:44,900
+identificador
+
+636
+00:47:44,900 --> 00:47:46,900
+mais baixo
+
+637
+00:47:46,900 --> 00:47:48,900
+e há sempre um
+
+638
+00:47:48,900 --> 00:47:50,900
+que consegue
+
+639
+00:47:50,900 --> 00:47:52,900
+transmitir alguma colisão
+
+640
+00:47:52,900 --> 00:47:54,900
+e o processo pode continuar
+
+641
+00:47:54,900 --> 00:47:56,900
+e
+
+642
+00:47:56,900 --> 00:47:58,900
+uma maneira de dizer alguma coisa
+
+643
+00:47:58,900 --> 00:48:00,900
+sim
+
+644
+00:48:00,900 --> 00:48:02,900
+eu queria fazer
+
+645
+00:48:02,900 --> 00:48:04,900
+só uma coisa
+
+646
+00:48:04,900 --> 00:48:06,900
+e aqui nesta explicação
+
+647
+00:48:06,900 --> 00:48:08,900
+nós estamos a assumir que os 3 nós
+
+648
+00:48:08,900 --> 00:48:10,900
+transmitem exatamente ao mesmo tempo
+
+649
+00:48:12,900 --> 00:48:14,900
+ou seja, isto depois
+
+650
+00:48:14,900 --> 00:48:16,900
+na prática como isto é
+
+651
+00:48:16,900 --> 00:48:18,900
+um barramento
+
+652
+00:48:18,900 --> 00:48:20,900
+em que não existe aqui um atras
+
+653
+00:48:20,900 --> 00:48:22,900
+a estar um botão
+
+654
+00:48:22,900 --> 00:48:24,900
+de todos os desencronizados
+
+655
+00:48:24,900 --> 00:48:26,900
+entre os cinco
+
+656
+00:48:26,900 --> 00:48:28,900
+o que eu vou dizer é
+
+657
+00:48:28,900 --> 00:48:30,900
+ou seja
+
+658
+00:48:30,900 --> 00:48:32,900
+nesta edição que nós estamos todos
+
+659
+00:48:32,900 --> 00:48:34,900
+completamente desencronizados
+
+660
+00:48:34,900 --> 00:48:36,900
+e isto é mesmo a hipótese
+
+661
+00:48:36,900 --> 00:48:38,900
+de chegarmos até o último beat
+
+662
+00:48:38,900 --> 00:48:40,900
+e só aí se persevera
+
+663
+00:48:42,900 --> 00:48:44,900
+ou seja, que um deles é dominante
+
+664
+00:48:44,900 --> 00:48:46,900
+em relação ao outro
+
+665
+00:48:46,900 --> 00:48:48,900
+mas isto na prática
+
+666
+00:48:48,900 --> 00:48:50,900
+como nós estamos todos desencronizados
+
+667
+00:48:50,900 --> 00:48:52,900
+e eles vão se aperceber primeiro
+
+668
+00:48:52,900 --> 00:48:54,900
+por causa daquela
+
+669
+00:48:54,900 --> 00:48:56,900
+ou seja, o tal beat
+
+670
+00:48:56,900 --> 00:48:58,900
+de stuffing
+
+671
+00:48:58,900 --> 00:49:00,900
+se eles se marrem
+
+672
+00:49:00,900 --> 00:49:02,900
+eu não vou deixar de nos basamento
+
+673
+00:49:02,900 --> 00:49:04,900
+ainda que sejam ali
+
+674
+00:49:04,900 --> 00:49:06,900
+mas o beat de stuffing
+
+675
+00:49:06,900 --> 00:49:08,900
+que não é pra aqui chamado
+
+676
+00:49:08,900 --> 00:49:10,900
+não faz falta
+
+677
+00:49:10,900 --> 00:49:12,900
+o beat de stuffing
+
+678
+00:49:12,900 --> 00:49:14,900
+só vai
+
+679
+00:49:16,900 --> 00:49:18,900
+mais pra ali
+
+680
+00:49:18,900 --> 00:49:20,900
+aqui são beats
+
+681
+00:49:20,900 --> 00:49:22,900
+alguns destes beats podem ser de stuffing
+
+682
+00:49:22,900 --> 00:49:24,900
+não interessa
+
+683
+00:49:24,900 --> 00:49:26,900
+agora o problema de facto
+
+684
+00:49:26,900 --> 00:49:28,900
+que falou existe
+
+685
+00:49:28,900 --> 00:49:30,900
+ou seja, isto
+
+686
+00:49:30,900 --> 00:49:32,900
+nos está aqui ilustrado
+
+687
+00:49:32,900 --> 00:49:34,900
+isto é muito direitinho
+
+688
+00:49:34,900 --> 00:49:36,900
+estes beats estarem sofrendo
+
+689
+00:49:36,900 --> 00:49:38,900
+começam todos exatamente no mesmo sítio
+
+690
+00:49:38,900 --> 00:49:40,900
+e portanto isto bate tudo muito certo
+
+691
+00:49:40,900 --> 00:49:42,900
+na prática
+
+692
+00:49:42,900 --> 00:49:44,900
+isso pode não acontecer
+
+693
+00:49:44,900 --> 00:49:46,900
+e é por causa disso que existe
+
+694
+00:49:46,900 --> 00:49:48,900
+uma limitação do comprimento do basamento do cano
+
+695
+00:49:48,900 --> 00:49:50,900
+o que não se consegue por o cano
+
+696
+00:49:50,900 --> 00:49:52,900
+trabalhar com coisas maiores
+
+697
+00:49:52,900 --> 00:49:54,900
+sobretudo
+
+698
+00:49:54,900 --> 00:49:56,900
+porque
+
+699
+00:49:56,900 --> 00:49:58,900
+esta arbitragem é delicada
+
+700
+00:49:58,900 --> 00:50:00,900
+e é preciso
+
+701
+00:50:00,900 --> 00:50:02,900
+conseguirmos detectar
+
+702
+00:50:02,900 --> 00:50:04,900
+os estáres sofrendo
+
+703
+00:50:04,900 --> 00:50:06,900
+antes de
+
+704
+00:50:06,900 --> 00:50:08,900
+já ter nos enviado
+
+705
+00:50:08,900 --> 00:50:10,900
+dois ou três beats
+
+706
+00:50:10,900 --> 00:50:12,900
+não a coisa não funciona
+
+707
+00:50:12,900 --> 00:50:14,900
+mas
+
+708
+00:50:14,900 --> 00:50:16,900
+em princípio
+
+709
+00:50:16,900 --> 00:50:18,900
+nós vamos sempre resolver
+
+710
+00:50:18,900 --> 00:50:20,900
+por que
+
+711
+00:50:20,900 --> 00:50:22,900
+seja qual for o novo
+
+712
+00:50:22,900 --> 00:50:24,900
+mesmo que ele esteja muito longe
+
+713
+00:50:24,900 --> 00:50:26,900
+ele vai começar a transmitir
+
+714
+00:50:26,900 --> 00:50:28,900
+um beat dominante
+
+715
+00:50:28,900 --> 00:50:30,900
+o start off frame é um beat dominante
+
+716
+00:50:30,900 --> 00:50:32,900
+e se ele estiver longe
+
+717
+00:50:32,900 --> 00:50:34,900
+nós podemos já poder mostrar
+
+718
+00:50:34,900 --> 00:50:36,900
+a transmitir aqueles beats
+
+719
+00:50:36,900 --> 00:50:38,900
+se
+
+720
+00:50:38,900 --> 00:50:40,900
+nesta altura nos aperceba
+
+721
+00:50:40,900 --> 00:50:42,900
+o start off frame do outro nó
+
+722
+00:50:42,900 --> 00:50:44,900
+estava muito longe
+
+723
+00:50:44,900 --> 00:50:46,900
+nós vamos perceber que
+
+724
+00:50:46,900 --> 00:50:50,280
+temos que parar
+
+725
+00:50:50,280 --> 00:50:52,280
+e a minha percepção é que
+
+726
+00:50:52,280 --> 00:50:54,280
+e ele é sempre ser interferido
+
+727
+00:50:54,280 --> 00:50:56,280
+antes porque
+
+728
+00:50:56,280 --> 00:50:58,280
+menos que isto fosse mesmo tudo em simultâneo
+
+729
+00:50:58,280 --> 00:51:00,280
+uma escala mesmo
+
+730
+00:51:00,280 --> 00:51:02,280
+ou seja, parecia muito difícil
+
+731
+00:51:02,280 --> 00:51:04,280
+que
+
+732
+00:51:04,280 --> 00:51:06,280
+ou seja, sobre ficar aqui até o fim do exemplo
+
+733
+00:51:06,280 --> 00:51:08,280
+eu sei que o exemplo
+
+734
+00:51:08,280 --> 00:51:10,280
+tem o propósito
+
+735
+00:51:10,280 --> 00:51:12,280
+é explicar aqui
+
+736
+00:51:12,280 --> 00:51:14,280
+a prioridade entre eles
+
+737
+00:51:14,280 --> 00:51:16,280
+como é que é definir aqui a prioridade
+
+738
+00:51:16,280 --> 00:51:18,280
+mas
+
+739
+00:51:18,280 --> 00:51:20,280
+ou seja
+
+740
+00:51:20,280 --> 00:51:22,280
+parecia difícil como é que
+
+741
+00:51:22,280 --> 00:51:24,280
+ia-me conseguir chegar ao fim
+
+742
+00:51:24,280 --> 00:51:26,280
+que é o propósito da mesma escala
+
+743
+00:51:28,280 --> 00:51:30,280
+ou seja, se o barramento
+
+744
+00:51:30,280 --> 00:51:32,280
+for mesmo muito grande
+
+745
+00:51:32,280 --> 00:51:34,280
+mais do que na hora na permite
+
+746
+00:51:34,280 --> 00:51:36,280
+aí não vai funcionar-se
+
+747
+00:51:36,280 --> 00:51:39,720
+se nos limitarmos
+
+748
+00:51:39,720 --> 00:51:41,720
+só o comprimento que a hora
+
+749
+00:51:41,720 --> 00:51:43,720
+na permite
+
+750
+00:51:43,720 --> 00:51:45,720
+estar demonstrado que isto não se aluna
+
+751
+00:51:45,720 --> 00:51:47,720
+porque existem implementações
+
+752
+00:51:47,720 --> 00:51:49,720
+e pode acontecer que
+
+753
+00:51:49,720 --> 00:51:51,720
+se percam as duas transmissões
+
+754
+00:51:51,720 --> 00:51:53,720
+de dois nós
+
+755
+00:51:53,720 --> 00:51:55,720
+que tentam transmitir ao mesmo tempo
+
+756
+00:51:55,720 --> 00:51:57,720
+porque o prioridade é muito longe
+
+757
+00:51:57,720 --> 00:51:59,720
+mas, em princípio isso não acontece
+
+758
+00:51:59,720 --> 00:52:01,720
+é assim
+
+759
+00:52:01,720 --> 00:52:03,720
+sucessamente o arquino
+
+760
+00:52:03,720 --> 00:52:05,720
+então
+
+761
+00:52:05,720 --> 00:52:07,720
+o nó que está mais atrasado
+
+762
+00:52:07,720 --> 00:52:11,320
+se detectar
+
+763
+00:52:11,320 --> 00:52:13,320
+que já apareceu o start-off-frame
+
+764
+00:52:13,320 --> 00:52:15,320
+do outro nó
+
+765
+00:52:15,320 --> 00:52:17,320
+não chega a começar a transmitir
+
+766
+00:52:17,320 --> 00:52:19,320
+e portanto não há sequer poluição
+
+767
+00:52:21,320 --> 00:52:23,320
+se o outro nó estiver muito bom
+
+768
+00:52:23,320 --> 00:52:25,320
+e já começou a transmitir
+
+769
+00:52:25,320 --> 00:52:27,320
+quando nós vamos transmitir e nós ainda não sabemos
+
+770
+00:52:27,320 --> 00:52:29,320
+o start-off-frame do outro nó
+
+771
+00:52:29,320 --> 00:52:31,320
+vem muito bom
+
+772
+00:52:31,320 --> 00:52:33,320
+e pode superpor ao nosso
+
+773
+00:52:33,320 --> 00:52:35,320
+bits, destes
+
+774
+00:52:37,320 --> 00:52:39,320
+mas vai sempre superpor um deles
+
+775
+00:52:39,320 --> 00:52:41,320
+e
+
+776
+00:52:41,320 --> 00:52:43,320
+nós vamos parar a transmissão
+
+777
+00:52:43,320 --> 00:52:45,320
+quando isso acontecer
+
+778
+00:52:45,320 --> 00:52:47,320
+então ok
+
+779
+00:52:49,320 --> 00:52:51,320
+e o parar a transmissão
+
+780
+00:52:51,320 --> 00:52:53,320
+significa que a coisa funciona
+
+781
+00:52:53,320 --> 00:52:55,320
+porque a seguida vai haver oportunidade
+
+782
+00:52:55,320 --> 00:52:57,320
+para transmitir-nos sangulizão
+
+783
+00:52:57,320 --> 00:53:15,990
+quando vemos
+
+784
+00:53:15,990 --> 00:53:20,740
+a trama
+
+785
+00:53:20,740 --> 00:53:22,740
+vimos os fólogos daquele bit
+
+786
+00:53:22,740 --> 00:53:24,740
+daquele bit IDE
+
+787
+00:53:24,740 --> 00:53:26,740
+que existe ali
+
+788
+00:53:26,740 --> 00:53:28,740
+o IDE é
+
+789
+00:53:28,740 --> 00:53:30,740
+identifier extension
+
+790
+00:53:30,740 --> 00:53:32,740
+permite definir
+
+791
+00:53:32,740 --> 00:53:34,740
+uma extensão
+
+792
+00:53:34,740 --> 00:53:36,740
+do
+
+793
+00:53:36,740 --> 00:53:38,740
+identificador
+
+794
+00:53:40,740 --> 00:53:42,740
+e por consequência
+
+795
+00:53:42,740 --> 00:53:46,470
+tem uma extensão também da frame
+
+796
+00:53:46,470 --> 00:53:49,910
+se usarmos
+
+797
+00:53:49,910 --> 00:53:51,910
+aquele bit
+
+798
+00:53:51,910 --> 00:53:53,910
+ativo
+
+799
+00:53:53,910 --> 00:53:55,910
+então a frame em vez de ser assim
+
+800
+00:53:55,910 --> 00:53:57,910
+quando nós vimos
+
+801
+00:53:57,910 --> 00:53:59,910
+passa a ser assim
+
+802
+00:53:59,910 --> 00:54:01,910
+em que o identificador
+
+803
+00:54:01,910 --> 00:54:03,910
+é dividido em duas partes
+
+804
+00:54:03,910 --> 00:54:05,910
+uma parte de 11 bits
+
+805
+00:54:05,910 --> 00:54:07,910
+uma aquela e mais
+
+806
+00:54:07,910 --> 00:54:09,910
+uma parte de 18 bits
+
+807
+00:54:09,910 --> 00:54:11,910
+11 mais 18 a 29 bits
+
+808
+00:54:11,910 --> 00:54:13,910
+e portanto passamos a ter
+
+809
+00:54:13,910 --> 00:54:19,660
+um identificador
+
+810
+00:54:19,660 --> 00:54:21,660
+de 29 bits
+
+811
+00:54:21,660 --> 00:54:23,660
+e a arbitragem
+
+812
+00:54:23,660 --> 00:54:25,660
+arbitragem é feita
+
+813
+00:54:25,660 --> 00:54:27,660
+um destes bits todos
+
+814
+00:54:27,660 --> 00:54:31,610
+e portanto temos
+
+815
+00:54:31,610 --> 00:54:33,610
+mais flexibilidade
+
+816
+00:54:33,610 --> 00:54:35,610
+ou
+
+817
+00:54:35,610 --> 00:54:37,610
+mais disponibilidade para especificar
+
+818
+00:54:37,610 --> 00:54:39,610
+mensagens diferentes e portanto
+
+819
+00:54:39,610 --> 00:54:46,440
+prioridades diferentes
+
+820
+00:54:46,440 --> 00:54:48,440
+aqui quando se faz isto
+
+821
+00:54:48,440 --> 00:54:50,440
+para evitar conflitos
+
+822
+00:54:50,440 --> 00:54:52,440
+um formato anterior
+
+823
+00:54:52,440 --> 00:54:54,440
+ali é convocado um bit
+
+824
+00:54:54,440 --> 00:54:56,440
+que só serve para substituir
+
+825
+00:54:56,440 --> 00:54:58,440
+aquilo, para dizer que aquilo não existe
+
+826
+00:54:58,440 --> 00:55:00,440
+e depois aquilo
+
+827
+00:55:00,440 --> 00:55:02,440
+o RTR facto aparece ali
+
+828
+00:55:02,440 --> 00:55:09,020
+e também
+
+829
+00:55:09,020 --> 00:55:11,020
+ali temos um bit
+
+830
+00:55:11,020 --> 00:55:13,020
+que era reservado
+
+831
+00:55:13,020 --> 00:55:15,020
+não sei para nada, agora aqui temos
+
+832
+00:55:15,020 --> 00:55:17,020
+dois bits reservados
+
+833
+00:55:17,020 --> 00:55:19,020
+mas no detalhe isto é passido
+
+834
+00:55:28,740 --> 00:55:33,140
+com aquele bit
+
+835
+00:55:33,140 --> 00:55:35,140
+a zero com o RTR a zero
+
+836
+00:55:35,140 --> 00:55:37,140
+temos uma frame normal
+
+837
+00:55:37,140 --> 00:55:39,140
+para transportar
+
+838
+00:55:39,140 --> 00:55:41,140
+quando queremos fazer um pedido
+
+839
+00:55:41,140 --> 00:55:43,140
+vamos fazer aquele bit um
+
+840
+00:55:43,140 --> 00:55:45,140
+e nesse caso
+
+841
+00:55:45,140 --> 00:55:47,140
+estamos fazendo um pedido
+
+842
+00:55:47,140 --> 00:55:49,140
+e não colocamos dados
+
+843
+00:55:49,140 --> 00:55:51,140
+estas são as frames normais
+
+844
+00:55:51,140 --> 00:55:53,140
+e depois outras frames do outro tipo
+
+845
+00:55:55,140 --> 00:55:57,140
+estas frames de erro
+
+846
+00:55:57,140 --> 00:55:59,140
+no momento quando
+
+847
+00:55:59,140 --> 00:56:01,140
+uma estação detecta um erro
+
+848
+00:56:03,140 --> 00:56:05,140
+e aí houve uma frame destas
+
+849
+00:56:05,140 --> 00:56:07,140
+para assimilizar as outras
+
+850
+00:56:07,140 --> 00:56:09,140
+e nos dar errado
+
+851
+00:56:09,140 --> 00:56:11,140
+e existe também uma frame
+
+852
+00:56:11,140 --> 00:56:13,140
+de overload
+
+853
+00:56:13,140 --> 00:56:15,140
+que serve para uma estação
+
+854
+00:56:15,140 --> 00:56:17,140
+dizer que ainda não está pronta
+
+855
+00:56:17,140 --> 00:56:19,140
+para receber isso
+
+856
+00:56:19,140 --> 00:56:21,140
+eu tive que tratar um frame
+
+857
+00:56:21,140 --> 00:56:23,140
+recentemente
+
+858
+00:56:23,140 --> 00:56:25,140
+e ver se precisava de um tempo
+
+859
+00:56:27,140 --> 00:56:29,140
+para receber mais dados
+
+860
+00:56:29,140 --> 00:56:31,140
+então se a estação não estiver pronta
+
+861
+00:56:31,140 --> 00:56:33,140
+e quiser adiar
+
+862
+00:56:33,140 --> 00:56:35,140
+o início
+
+863
+00:56:35,140 --> 00:56:37,140
+da próxima mensagem
+
+864
+00:56:37,140 --> 00:56:39,140
+pode adiar uma frame destas
+
+865
+00:56:39,140 --> 00:56:41,140
+a pedir mais tempo
+
+866
+00:56:41,140 --> 00:56:43,140
+e isto faz uma espécie
+
+867
+00:56:43,140 --> 00:56:45,140
+de controle de evolução
+
+868
+00:56:45,140 --> 00:56:47,140
+que as situações mais lentas podem
+
+869
+00:56:47,140 --> 00:56:49,140
+solicitar
+
+870
+00:56:49,140 --> 00:56:51,140
+a quem me viu
+
+871
+00:56:51,140 --> 00:56:53,140
+com as rapidez que estava a cansar
+
+872
+00:56:53,140 --> 00:56:55,140
+no grande
+
+873
+00:56:55,140 --> 00:56:57,140
+pois começou a perceber
+
+874
+00:56:57,140 --> 00:56:59,140
+que não era um pc da câmera
+
+875
+00:56:59,140 --> 00:57:01,140
+e eu disse não
+
+876
+00:57:01,140 --> 00:57:03,140
+as datas frames
+
+877
+00:57:03,140 --> 00:57:05,140
+estão identificadas
+
+878
+00:57:05,140 --> 00:57:07,140
+por aquele bit
+
+879
+00:57:07,140 --> 00:57:09,140
+para coisas que às vezes não dá para fazer
+
+880
+00:57:09,140 --> 00:57:11,140
+e também para adiantar coisas
+
+881
+00:57:11,140 --> 00:57:13,140
+mas durante a hora
+
+882
+00:57:13,140 --> 00:57:15,140
+a gente viu que os frames têm
+
+883
+00:57:15,140 --> 00:57:17,140
+aquele bit ressivo
+
+884
+00:57:17,140 --> 00:57:19,140
+mas isto por uma questão de segurança
+
+885
+00:57:19,140 --> 00:57:21,140
+a gente tem cedo da câmera
+
+886
+00:57:21,140 --> 00:57:23,140
+a gente tem tudo a ver
+
+887
+00:57:23,140 --> 00:57:25,140
+as nova frames
+
+888
+00:57:25,140 --> 00:57:27,140
+tem um problema atrópico
+
+889
+00:57:27,140 --> 00:57:29,140
+e as frames overload
+
+890
+00:57:29,140 --> 00:57:31,140
+não sonhando as frames
+
+891
+00:57:31,140 --> 00:57:33,140
+de erro
+
+892
+00:57:33,140 --> 00:57:35,140
+todos os erros podem ser erros de DR
+
+893
+00:57:35,140 --> 00:57:37,140
+e erros de bits
+
+894
+00:57:37,140 --> 00:57:39,140
+não apareceu lá um bit
+
+895
+00:57:39,140 --> 00:57:41,140
+com um estado diferente
+
+896
+00:57:41,140 --> 00:57:43,140
+como se fosse um erro de bits
+
+897
+00:57:43,140 --> 00:57:45,140
+um erro de bits
+
+898
+00:57:45,140 --> 00:57:47,140
+algum
+
+899
+00:57:47,140 --> 00:57:49,140
+para ver erros de bits
+
+900
+00:57:49,140 --> 00:57:51,140
+de formar
+
+901
+00:57:51,140 --> 00:57:53,140
+erros de resta-confirmação
+
+902
+00:57:57,140 --> 00:57:59,140
+isto temos a ver até aqui
+
+903
+00:57:59,140 --> 00:58:01,140
+escondendo-nos ao canto clássico
+
+904
+00:58:01,140 --> 00:58:03,140
+e o canto clássico
+
+905
+00:58:03,140 --> 00:58:05,140
+tem algumas limitações
+
+906
+00:58:09,140 --> 00:58:11,140
+e o canto clássico
+
+907
+00:58:11,140 --> 00:58:13,140
+tem algumas limitações
+
+908
+00:58:21,140 --> 00:58:23,140
+limitações
+
+909
+00:58:23,140 --> 00:58:25,140
+na taxa de transmissão das
+
+910
+00:58:25,140 --> 00:58:27,140
+não consegue fazer
+
+911
+00:58:27,140 --> 00:58:29,140
+taxa de transmissão
+
+912
+00:58:29,140 --> 00:58:31,140
+muito altas
+
+913
+00:58:31,140 --> 00:58:33,140
+porque
+
+914
+00:58:33,140 --> 00:58:35,140
+nem tem tempo
+
+915
+00:58:35,140 --> 00:58:37,140
+de propagação muito grandes
+
+916
+00:58:37,140 --> 00:58:39,140
+porque
+
+917
+00:58:39,140 --> 00:58:41,140
+o tempo do bit
+
+918
+00:58:41,140 --> 00:58:43,140
+tem que ser maior do que o tempo de propagação
+
+919
+00:58:43,140 --> 00:58:45,140
+para isto poder ser erros de resta-confirmação
+
+920
+00:58:45,140 --> 00:58:47,140
+um bit desde o extremo
+
+921
+00:58:49,140 --> 00:58:51,140
+estamos a transmitir um bit
+
+922
+00:58:51,140 --> 00:58:53,140
+o início do bit já tem que ter chegado
+
+923
+00:58:53,140 --> 00:58:55,140
+ao fim do abajamento
+
+924
+00:58:55,140 --> 00:58:57,140
+quando nós acabamos de transmitir o bit
+
+925
+00:58:57,140 --> 00:58:59,140
+não há arbitragem
+
+926
+00:58:59,140 --> 00:59:01,140
+a decepção
+
+927
+00:59:01,140 --> 00:59:03,140
+de
+
+928
+00:59:03,140 --> 00:59:05,140
+estar ofreendo
+
+929
+00:59:05,140 --> 00:59:07,140
+já não
+
+930
+00:59:07,140 --> 00:59:09,140
+pode não funcionar
+
+931
+00:59:09,140 --> 00:59:11,140
+bem porque não é feita naquele bit
+
+932
+00:59:11,140 --> 00:59:13,140
+pode depois sobrevôr ao outro
+
+933
+00:59:13,140 --> 00:59:15,140
+para funcionar bem
+
+934
+00:59:15,140 --> 00:59:17,140
+temos que limitar muito
+
+935
+00:59:17,140 --> 00:59:19,140
+o tempo de propagação
+
+936
+00:59:19,140 --> 00:59:21,140
+e não aumentar
+
+937
+00:59:21,140 --> 00:59:23,140
+muita taxa de transmissão
+
+938
+00:59:23,140 --> 00:59:25,140
+de trabalho
+
+939
+00:59:25,140 --> 00:59:27,140
+ao aumentar muito tempo
+
+940
+00:59:27,140 --> 00:59:29,140
+da transmissão
+
+941
+00:59:29,140 --> 00:59:31,140
+e portanto temos
+
+942
+00:59:31,140 --> 00:59:33,140
+uma limitação séria
+
+943
+00:59:33,140 --> 00:59:35,140
+aqui no CAN
+
+944
+00:59:35,140 --> 00:59:37,140
+por causa da metodologia de arbitragem
+
+945
+00:59:37,140 --> 00:59:39,140
+o totalimitação que temos
+
+946
+00:59:39,140 --> 00:59:41,140
+é
+
+947
+00:59:41,140 --> 00:59:43,140
+também das mensagens são pequenas
+
+948
+00:59:43,140 --> 00:59:45,140
+8 bytes os 64 bits
+
+949
+00:59:47,140 --> 00:59:49,140
+a variação can fd
+
+950
+00:59:49,140 --> 00:59:51,140
+na hora do superior ao CAN
+
+951
+00:59:51,140 --> 00:59:53,140
+não substituir o CAN
+
+952
+00:59:53,140 --> 00:59:55,140
+clássico
+
+953
+00:59:55,140 --> 00:59:57,140
+o CAN clássico continua a resultar
+
+954
+00:59:57,140 --> 00:59:59,140
+será a maior parte das vezes
+
+955
+00:59:59,140 --> 01:00:01,140
+e isto é uma alternativa
+
+956
+01:00:01,140 --> 01:00:03,140
+que o CAN fd tenta resolver
+
+957
+01:00:03,140 --> 01:00:05,140
+estas duas limitações
+
+958
+01:00:05,140 --> 01:00:07,140
+pelo menos
+
+959
+01:00:07,140 --> 01:00:09,140
+com bater
+
+960
+01:00:09,140 --> 01:00:11,140
+alguma coisa das limitações
+
+961
+01:00:11,140 --> 01:00:13,140
+permitindo usar
+
+962
+01:00:13,140 --> 01:00:15,140
+uma taxa de transmissão maior
+
+963
+01:00:15,140 --> 01:00:17,140
+mais bits por segundo
+
+964
+01:00:17,140 --> 01:00:19,140
+e
+
+965
+01:00:19,140 --> 01:00:21,140
+com mais bits por segundo
+
+966
+01:00:21,140 --> 01:00:23,140
+também é possível
+
+967
+01:00:23,140 --> 01:00:25,140
+termos mensagens melhores
+
+968
+01:00:25,140 --> 01:00:27,140
+com mais bits
+
+969
+01:00:27,140 --> 01:00:29,140
+que se aliado podem mudar o mesmo tempo
+
+970
+01:00:29,140 --> 01:00:31,140
+e
+
+971
+01:00:31,140 --> 01:00:33,140
+serem mais compridas em membro de bits
+
+972
+01:00:37,140 --> 01:00:39,140
+qual é a ideia
+
+973
+01:00:39,140 --> 01:00:41,140
+da data rate?
+
+974
+01:00:41,140 --> 01:00:43,140
+problema da limitação
+
+975
+01:00:43,140 --> 01:00:45,140
+de velocidade de arriva
+
+976
+01:00:45,140 --> 01:00:47,140
+sobretudo da arbitragem
+
+977
+01:00:49,140 --> 01:00:51,140
+a arbitragem
+
+978
+01:00:51,140 --> 01:00:53,140
+indeliga que o tempo de um bit
+
+979
+01:00:53,140 --> 01:00:55,140
+seja suficiente para se detectar
+
+980
+01:00:55,140 --> 01:00:57,140
+onde a mensagem da cacava
+
+981
+01:00:57,140 --> 01:00:59,140
+mais ou menos bem
+
+982
+01:00:59,140 --> 01:01:01,140
+então nós vamos manter
+
+983
+01:01:01,140 --> 01:01:03,140
+a velocidade
+
+984
+01:01:03,140 --> 01:01:05,140
+da transmissão do identificador
+
+985
+01:01:05,140 --> 01:01:07,140
+para não
+
+986
+01:01:07,140 --> 01:01:09,140
+usarmos mais problemas
+
+987
+01:01:09,140 --> 01:01:11,140
+porque não é fácil
+
+988
+01:01:11,140 --> 01:01:13,140
+fazer aquela comparação
+
+989
+01:01:13,140 --> 01:01:15,140
+dos bits do identificador
+
+990
+01:01:15,140 --> 01:01:17,140
+a um novo rato por segundo
+
+991
+01:01:17,140 --> 01:01:19,140
+e o rato por segundo
+
+992
+01:01:19,140 --> 01:01:21,140
+e o rato por segundo
+
+993
+01:01:21,140 --> 01:01:23,140
+mantenemos essa velocidade
+
+994
+01:01:23,140 --> 01:01:25,140
+e vamos ter
+
+995
+01:01:25,140 --> 01:01:27,140
+a aumentar a taxa de transmissão
+
+996
+01:01:27,140 --> 01:01:29,140
+dos dados
+
+997
+01:01:33,140 --> 01:01:35,140
+e portanto vamos ter
+
+998
+01:01:35,140 --> 01:01:37,140
+coisas a funcionarem de duas velocidades
+
+999
+01:01:37,140 --> 01:01:39,140
+primeiro o identificador
+
+1000
+01:01:39,140 --> 01:01:41,140
+com uma velocidade baixa
+
+1001
+01:01:41,140 --> 01:01:43,140
+e depois a aumentar a velocidade
+
+1002
+01:01:43,140 --> 01:01:45,140
+para transmitir os dados
+
+1003
+01:01:45,140 --> 01:01:47,140
+e portanto a velocidade
+
+1004
+01:01:47,140 --> 01:01:49,140
+da transmissão dos dados
+
+1005
+01:01:49,140 --> 01:01:51,140
+permitindo o alegramento
+
+1006
+01:01:51,140 --> 01:01:53,140
+das mensagens
+
+1007
+01:01:53,140 --> 01:01:55,140
+porque as mensagens
+
+1008
+01:01:55,140 --> 01:01:57,140
+já não vão ser muito boas
+
+1009
+01:01:57,140 --> 01:01:59,140
+não vão morar muito mais tempo
+
+1010
+01:01:59,140 --> 01:02:01,140
+mais bits
+
+1011
+01:02:01,140 --> 01:02:03,140
+uma taxa maior
+
+1012
+01:02:03,140 --> 01:02:05,140
+demora mais tempo
+
+1013
+01:02:05,140 --> 01:02:07,140
+mas eu não lhe liguei nenhum
+
+1014
+01:02:07,140 --> 01:02:09,140
+isso está a estar aqui
+
+1015
+01:02:09,140 --> 01:02:11,140
+quando o canto normal
+
+1016
+01:02:11,140 --> 01:02:13,140
+ou o canto clássico
+
+1017
+01:02:13,140 --> 01:02:15,140
+que estivemos a ver
+
+1018
+01:02:15,140 --> 01:02:17,140
+temos aqui uma fase de arbitragem
+
+1019
+01:02:17,140 --> 01:02:19,140
+onde se transmite o identificador
+
+1020
+01:02:19,140 --> 01:02:21,140
+da mensagem
+
+1021
+01:02:21,140 --> 01:02:23,140
+e esse identificador que é usado
+
+1022
+01:02:23,140 --> 01:02:25,140
+para decidir
+
+1023
+01:02:25,140 --> 01:02:27,140
+quem é que tem mais prioridade
+
+1024
+01:02:27,140 --> 01:02:29,140
+e aqui é difícil fazer-nos
+
+1025
+01:02:29,140 --> 01:02:31,140
+isto de forma mais rápida
+
+1026
+01:02:31,140 --> 01:02:33,140
+porque temos que estar a comparar coisas
+
+1027
+01:02:33,140 --> 01:02:35,140
+e emitir as poscações diferentes
+
+1028
+01:02:35,140 --> 01:02:37,140
+não são se synchronizadas
+
+1029
+01:02:37,140 --> 01:02:39,140
+e temos que manter essa velocidade
+
+1030
+01:02:39,140 --> 01:02:41,140
+eu estava a esperar outras respostas
+
+1031
+01:02:41,140 --> 01:02:43,140
+os dados
+
+1032
+01:02:43,140 --> 01:02:45,140
+são transmitidos
+
+1033
+01:02:45,140 --> 01:02:47,140
+aqui
+
+1034
+01:02:47,140 --> 01:02:49,140
+aquilo que vamos fazer agora
+
+1035
+01:02:49,140 --> 01:02:51,140
+qualquer NFD
+
+1036
+01:02:51,140 --> 01:02:53,140
+é cumprimimos os dados
+
+1037
+01:02:53,140 --> 01:02:55,140
+aumentamos a velocidade
+
+1038
+01:02:55,140 --> 01:02:57,140
+de maneira a que os bits
+
+1039
+01:02:57,140 --> 01:02:59,140
+sejam transmitidos mais rapidamente
+
+1040
+01:02:59,140 --> 01:03:01,140
+e portanto morarem menos tempo
+
+1041
+01:03:01,140 --> 01:03:03,140
+por acaso os pontinhos
+
+1042
+01:03:03,140 --> 01:03:05,140
+acessam os bits
+
+1043
+01:03:05,140 --> 01:03:07,140
+adicionais
+
+1044
+01:03:07,140 --> 01:03:09,140
+começaram a verificar isso
+
+1045
+01:03:09,140 --> 01:03:11,140
+e portanto
+
+1046
+01:03:11,140 --> 01:03:13,140
+deve ser transmitidos
+
+1047
+01:03:13,140 --> 01:03:15,140
+lentamente
+
+1048
+01:03:15,140 --> 01:03:17,140
+e vamos manter a velocidade
+
+1049
+01:03:17,140 --> 01:03:19,140
+daqueles bits dos CSEs
+
+1050
+01:03:19,140 --> 01:03:21,140
+dos acanólogos
+
+1051
+01:03:21,140 --> 01:03:23,140
+as outras coisas que aparecem ali
+
+1052
+01:03:23,140 --> 01:03:25,140
+e hoje temos que esperar entre os bits
+
+1053
+01:03:25,140 --> 01:03:27,140
+de uns tirados
+
+1054
+01:03:27,140 --> 01:03:29,140
+é isto que faz o KNFB
+
+1055
+01:03:29,140 --> 01:03:31,140
+aumentar a traça de transmissão
+
+1056
+01:03:31,140 --> 01:03:33,140
+dos dados
+
+1057
+01:03:33,140 --> 01:03:35,140
+se temos que ter a velocidade
+
+1058
+01:03:35,140 --> 01:03:37,140
+para transportar os dados
+
+1059
+01:03:37,140 --> 01:03:39,140
+naquela taxa
+
+1060
+01:03:39,140 --> 01:03:41,140
+então
+
+1061
+01:03:41,140 --> 01:03:43,140
+não custa muito deixar
+
+1062
+01:03:43,140 --> 01:03:45,140
+permitir que os dados
+
+1063
+01:03:45,140 --> 01:03:47,140
+sejam
+
+1064
+01:03:47,140 --> 01:03:49,140
+maiores, mais rapidos
+
+1065
+01:03:49,140 --> 01:03:51,140
+mais bits
+
+1066
+01:03:51,140 --> 01:03:53,140
+e passamos a ter freios
+
+1067
+01:03:53,140 --> 01:03:55,140
+mais ou menos do tamanho daquelas
+
+1068
+01:03:55,140 --> 01:03:57,140
+em termos de tempo
+
+1069
+01:03:57,140 --> 01:03:59,140
+mas agora com mais dados
+
+1070
+01:03:59,140 --> 01:04:02,940
+aqui no meio
+
+1071
+01:04:02,940 --> 01:04:04,940
+deve ter sido lá
+
+1072
+01:04:04,940 --> 01:04:09,180
+mas só tirou depois de ter o manual
+
+1073
+01:04:09,180 --> 01:04:11,180
+porque ela nem conseguia programalar
+
+1074
+01:04:11,180 --> 01:04:13,180
+aliás
+
+1075
+01:04:13,180 --> 01:04:15,180
+o formar
+
+1076
+01:04:15,180 --> 01:04:17,180
+normal
+
+1077
+01:04:17,180 --> 01:04:19,180
+da freia de KNFB
+
+1078
+01:04:19,180 --> 01:04:21,180
+é isto que está aqui
+
+1079
+01:04:21,180 --> 01:04:23,180
+esta parte até aqui
+
+1080
+01:04:23,180 --> 01:04:25,180
+é aquela que
+
+1081
+01:04:25,180 --> 01:04:27,180
+usamos a mesma velocidade
+
+1082
+01:04:27,180 --> 01:04:29,180
+aqui
+
+1083
+01:04:29,180 --> 01:04:31,180
+esta parte
+
+1084
+01:04:31,180 --> 01:04:33,180
+os CSEs e os dados de mais um dos bits
+
+1085
+01:04:33,180 --> 01:04:35,180
+aqui podem ser transportados
+
+1086
+01:04:35,180 --> 01:04:37,180
+numa taxa de períodos
+
+1087
+01:04:37,180 --> 01:04:39,180
+já garantimos
+
+1088
+01:04:39,180 --> 01:04:41,180
+que só está uma estação a transmitido
+
+1089
+01:04:41,180 --> 01:04:43,180
+porque
+
+1090
+01:04:43,180 --> 01:04:45,180
+as outras já perceberam
+
+1091
+01:04:45,180 --> 01:04:47,180
+que
+
+1092
+01:04:47,180 --> 01:04:49,180
+a mensagem mais prioritária
+
+1093
+01:04:49,180 --> 01:04:51,180
+é esta
+
+1094
+01:04:51,180 --> 01:04:53,180
+ou esta que vai ser transmitida
+
+1095
+01:04:53,180 --> 01:04:55,180
+ali mantém essa velocidade
+
+1096
+01:04:55,180 --> 01:04:57,180
+que
+
+1097
+01:04:57,180 --> 01:04:59,180
+se considera que é mais seguro
+
+1098
+01:04:59,180 --> 01:05:01,180
+para ser detectado o fim da freia
+
+1099
+01:05:01,180 --> 01:05:03,180
+e as estações
+
+1100
+01:05:03,180 --> 01:05:05,180
+que não percebem aquilo
+
+1101
+01:05:05,180 --> 01:05:07,180
+as estações podem não estar preparadas
+
+1102
+01:05:07,180 --> 01:05:09,180
+para quem é FDI
+
+1103
+01:05:09,180 --> 01:05:11,180
+então não sabem ler isto
+
+1104
+01:05:11,180 --> 01:05:13,180
+se não tiverem que receber mensagem
+
+1105
+01:05:13,180 --> 01:05:15,180
+destas isso não é problema
+
+1106
+01:05:15,180 --> 01:05:17,180
+mas precisam de saber
+
+1107
+01:05:17,180 --> 01:05:19,180
+que a freia me acabou
+
+1108
+01:05:19,180 --> 01:05:21,180
+portanto
+
+1109
+01:05:21,180 --> 01:05:23,180
+precisam de conseguir rever
+
+1110
+01:05:23,180 --> 01:05:25,180
+aqueles bits do end of frame
+
+1111
+01:05:25,180 --> 01:05:27,180
+isto não significa
+
+1112
+01:05:27,180 --> 01:05:29,180
+que podemos ter
+
+1113
+01:05:29,180 --> 01:05:31,180
+na mesma área de KNFB
+
+1114
+01:05:31,180 --> 01:05:33,180
+as estações a transmitidos
+
+1115
+01:05:33,180 --> 01:05:35,180
+KNFD
+
+1116
+01:05:35,180 --> 01:05:37,180
+e outras a transmitir
+
+1117
+01:05:37,180 --> 01:05:39,180
+KNCLASSIC
+
+1118
+01:05:39,180 --> 01:05:41,180
+as transmissões
+
+1119
+01:05:41,180 --> 01:05:43,180
+KNFD
+
+1120
+01:05:43,180 --> 01:05:45,180
+só podem ser recebidas
+
+1121
+01:05:45,180 --> 01:05:47,180
+pelos nós que suportam KNFD
+
+1122
+01:05:47,180 --> 01:05:49,180
+enquanto
+
+1123
+01:05:49,180 --> 01:05:51,180
+que as outras podem receber
+
+1124
+01:05:51,180 --> 01:05:53,180
+mensagens dos dois tipos
+
+1125
+01:05:53,180 --> 01:05:57,450
+então mas pronto, olha
+
+1126
+01:05:57,450 --> 01:05:59,450
+isso é o que é
+
+1127
+01:05:59,450 --> 01:06:01,450
+o comprimento da mensagem
+
+1128
+01:06:01,450 --> 01:06:03,450
+vimos que era um conjunto de 4 bits
+
+1129
+01:06:03,450 --> 01:06:05,450
+é tranquilo, eu vou continuar a fazer
+
+1130
+01:06:05,450 --> 01:06:07,450
+o meu trabalho
+
+1131
+01:06:07,450 --> 01:06:09,450
+e as mensagens clássicas só usavam
+
+1132
+01:06:09,450 --> 01:06:11,450
+o comprimento de 0 e 8 bytes
+
+1133
+01:06:11,450 --> 01:06:13,450
+portanto
+
+1134
+01:06:13,450 --> 01:06:15,450
+usavam-se aqui essencialmente 3 bits
+
+1135
+01:06:15,450 --> 01:06:17,450
+o máximo era termos
+
+1136
+01:06:17,450 --> 01:06:19,450
+um mundo aqui por exemplo
+
+1137
+01:06:19,450 --> 01:06:21,450
+e também acho que aqui
+
+1138
+01:06:21,450 --> 01:06:23,450
+há um conjunto de
+
+1139
+01:06:23,450 --> 01:06:25,450
+7 códigos
+
+1140
+01:06:25,450 --> 01:06:27,450
+e não eram usados no KNCLASSIC
+
+1141
+01:06:29,450 --> 01:06:31,450
+e esses códigos agora
+
+1142
+01:06:31,450 --> 01:06:33,450
+foram utilizados para especificar
+
+1143
+01:06:33,450 --> 01:06:35,450
+outros comprimentos maiores
+
+1144
+01:06:35,450 --> 01:06:37,450
+estás a perceber, vou tentar
+
+1145
+01:06:37,450 --> 01:06:39,450
+especificar comprimentos
+
+1146
+01:06:39,450 --> 01:06:41,450
+de 12 bytes de 16, 24,
+
+1147
+01:06:41,450 --> 01:06:43,450
+32, 48 e 74
+
+1148
+01:06:43,450 --> 01:06:45,450
+não podemos ter
+
+1149
+01:06:45,450 --> 01:06:47,450
+mensagens com 9 bytes
+
+1150
+01:06:47,450 --> 01:06:49,450
+de comprimento
+
+1151
+01:06:49,450 --> 01:06:51,450
+nem com 10 bytes
+
+1152
+01:06:51,450 --> 01:06:53,450
+ou temos 8, ou temos 12, ou temos 16
+
+1153
+01:06:53,450 --> 01:06:55,450
+ou outro
+
+1154
+01:06:55,450 --> 01:06:57,450
+número destes que aqui está
+
+1155
+01:06:57,450 --> 01:06:59,450
+não temos
+
+1156
+01:06:59,450 --> 01:07:03,450
+60, nem 56, nem 52, nem 75
+
+1157
+01:07:03,450 --> 01:07:05,450
+só temos estes comprimentos
+
+1158
+01:07:05,450 --> 01:07:07,450
+possíveis, ou usamos
+
+1159
+01:07:07,450 --> 01:07:09,450
+um comprimento de 3, 8
+
+1160
+01:07:09,450 --> 01:07:11,450
+e pode ser um valor qualquer
+
+1161
+01:07:11,450 --> 01:07:13,450
+inteiro em número bytes
+
+1162
+01:07:13,450 --> 01:07:15,450
+ou temos um daqueles números
+
+1163
+01:07:15,450 --> 01:07:17,450
+portanto, também não tinha um interesse
+
+1164
+01:07:17,450 --> 01:07:19,450
+então, mas por que?
+
+1165
+01:07:19,450 --> 01:07:21,450
+eu disse, pergunto ao comento que ele é posado o nome
+
+1166
+01:07:21,450 --> 01:07:23,450
+no KNFD, também é possível utilizar
+
+1167
+01:07:23,450 --> 01:07:25,450
+identificadores extendidos
+
+1168
+01:07:25,450 --> 01:07:27,450
+ou seja, identificadores
+
+1169
+01:07:27,450 --> 01:07:29,450
+devem ser em 11 bytes
+
+1170
+01:07:29,450 --> 01:07:31,450
+de 28 bytes
+
+1171
+01:07:31,450 --> 01:07:33,450
+ou 29 bytes
+
+1172
+01:07:33,450 --> 01:07:35,450
+exatamente, mas e se eu tenho?
+
+1173
+01:07:35,450 --> 01:07:37,450
+e que utilizam
+
+1174
+01:07:37,450 --> 01:07:39,450
+uma frame com um formato
+
+1175
+01:07:39,450 --> 01:07:41,450
+tipo a cena, estás a ver
+
+1176
+01:07:41,450 --> 01:07:43,450
+estar equivalente
+
+1177
+01:07:43,450 --> 01:07:45,450
+eu estou lá de manhã e depois já estar vindo para casa
+
+1178
+01:07:45,450 --> 01:07:47,450
+por causa da velocidade de transmissão
+
+1179
+01:07:47,450 --> 01:07:49,450
+só é aumentada para
+
+1180
+01:07:49,450 --> 01:07:51,450
+os bytes de dados
+
+1181
+01:07:51,450 --> 01:07:53,450
+e não para os bytes de control
+
+1182
+01:07:53,450 --> 01:07:55,450
+ou
+
+1183
+01:07:55,450 --> 01:07:57,450
+só isso
+
+1184
+01:07:57,450 --> 01:07:59,450
+o identificador
+
+1185
+01:07:59,450 --> 01:08:01,450
+significa que a velocidade
+
+1186
+01:08:01,450 --> 01:08:03,450
+média
+
+1187
+01:08:03,450 --> 01:08:05,450
+não vai ser exatamente a velocidade
+
+1188
+01:08:05,450 --> 01:08:07,450
+que nós usamos para transmitir os dados
+
+1189
+01:08:07,450 --> 01:08:09,450
+normalmente os dados
+
+1190
+01:08:09,450 --> 01:08:11,450
+são transmitidos a uma taxa
+
+1191
+01:08:11,450 --> 01:08:13,450
+que no máximo vai até os 8 megabits por segundo
+
+1192
+01:08:13,450 --> 01:08:15,450
+ou seja, 8 vezes mais rápido
+
+1193
+01:08:15,450 --> 01:08:17,450
+que o KNFD normal
+
+1194
+01:08:17,450 --> 01:08:19,450
+mas não é assim muito
+
+1195
+01:08:19,450 --> 01:08:21,450
+permanente
+
+1196
+01:08:21,450 --> 01:08:23,450
+mas
+
+1197
+01:08:23,450 --> 01:08:25,450
+para a velocidade média
+
+1198
+01:08:25,450 --> 01:08:27,450
+pois é possível
+
+1199
+01:08:27,450 --> 01:08:29,450
+tudo uma frame
+
+1200
+01:08:29,450 --> 01:08:31,450
+e se dermos a média
+
+1201
+01:08:31,450 --> 01:08:33,450
+o tempo que duramos a transmitir
+
+1202
+01:08:33,450 --> 01:08:35,450
+o identificador e o tempo que
+
+1203
+01:08:35,450 --> 01:08:37,450
+não será do tempo que duramos a
+
+1204
+01:08:37,450 --> 01:08:39,450
+transmitir o identificador e o tempo que
+
+1205
+01:08:39,450 --> 01:08:41,450
+duramos a transmitir os dados
+
+1206
+01:08:41,450 --> 01:08:43,450
+vamos ter um tempo médio
+
+1207
+01:08:43,450 --> 01:08:45,450
+por um byte
+
+1208
+01:08:45,450 --> 01:08:47,450
+que não chega
+
+1209
+01:08:47,450 --> 01:08:49,450
+aos 6 megabits por segundo
+
+1210
+01:08:49,450 --> 01:08:54,580
+e se usarmos
+
+1211
+01:08:54,580 --> 01:08:56,580
+e isto é tanto maior quanto
+
+1212
+01:08:56,580 --> 01:08:58,580
+mais dados transportarmos
+
+1213
+01:08:58,580 --> 01:09:00,580
+numa frame
+
+1214
+01:09:00,580 --> 01:09:02,580
+quanto maior for a frame
+
+1215
+01:09:02,580 --> 01:09:04,580
+menor é o peso
+
+1216
+01:09:04,580 --> 01:09:06,580
+do identificador
+
+1217
+01:09:06,580 --> 01:09:08,580
+o mais eficiente é a frame
+
+1218
+01:09:08,580 --> 01:09:10,580
+se usarmos frames pequenas
+
+1219
+01:09:10,580 --> 01:09:12,580
+vamos acelerar
+
+1220
+01:09:12,580 --> 01:09:14,580
+a transmissão
+
+1221
+01:09:14,580 --> 01:09:16,580
+em um pouco de bytes
+
+1222
+01:09:16,580 --> 01:09:18,580
+se usarmos os dados grandes
+
+1223
+01:09:18,580 --> 01:09:20,580
+vamos usar a velocidade aumentada
+
+1224
+01:09:20,580 --> 01:09:26,870
+em muitos bytes
+
+1225
+01:09:26,870 --> 01:09:31,880
+o KNFD
+
+1226
+01:09:31,880 --> 01:09:33,880
+é um agredido do KNFD
+
+1227
+01:09:33,880 --> 01:09:35,880
+tem os estudiantes
+
+1228
+01:09:35,880 --> 01:09:37,880
+ao KNFD
+
+1229
+01:09:37,880 --> 01:09:39,880
+mas tem a largura de bandas
+
+1230
+01:09:39,880 --> 01:09:41,880
+e para mim
+
+1231
+01:09:41,880 --> 01:09:47,820
+mensagens melhores
+
+1232
+01:09:47,820 --> 01:09:49,820
+se queramos evoluir
+
+1233
+01:09:49,820 --> 01:09:51,820
+um sistema qualquer de KNFD
+
+1234
+01:09:51,820 --> 01:09:53,820
+para o KNFD
+
+1235
+01:09:53,820 --> 01:09:58,220
+os níveis superiores
+
+1236
+01:09:58,220 --> 01:10:00,220
+ou a software de as aplicações
+
+1237
+01:10:00,220 --> 01:10:02,220
+tem que
+
+1238
+01:10:02,220 --> 01:10:04,220
+ser alterados
+
+1239
+01:10:04,220 --> 01:10:06,220
+para mudar o nível físico
+
+1240
+01:10:06,220 --> 01:10:08,220
+tem que estudar os controladores
+
+1241
+01:10:08,220 --> 01:10:10,220
+o nível físico
+
+1242
+01:10:10,220 --> 01:10:12,220
+o seu cabo
+
+1243
+01:10:12,220 --> 01:10:14,220
+pode ser apetido
+
+1244
+01:10:14,220 --> 01:10:16,220
+a tecnologia do cabo
+
+1245
+01:10:16,220 --> 01:10:18,220
+o que temos a estudar
+
+1246
+01:10:18,220 --> 01:10:22,520
+o que temos a estudar
+
+1247
+01:10:22,520 --> 01:10:24,520
+os controladores
+
+1248
+01:10:24,520 --> 01:10:26,520
+do KNFD
+
+1249
+01:10:26,520 --> 01:10:36,040
+do KNFD
+
+1250
+01:10:36,040 --> 01:10:38,040
+pode ser comparado
+
+1251
+01:10:38,040 --> 01:10:40,040
+com outras tecnologias
+
+1252
+01:10:40,040 --> 01:11:11,160
+semelhantes
+
+1253
+01:11:11,160 --> 01:11:13,160
+para as outras coisas
+
+1254
+01:11:13,160 --> 01:12:00,060
+partidas
+
+1255
+01:12:00,060 --> 01:12:02,060
+o que temos nos carros
+
+1256
+01:12:02,060 --> 01:12:04,060
+atualmente os 11 redes
+
+1257
+01:12:04,060 --> 01:12:06,060
+KN
+
+1258
+01:12:06,060 --> 01:12:08,060
+KN, autoridade
+
+1259
+01:12:08,060 --> 01:12:20,040
+KN, baixa velocidade
+
+1260
+01:12:20,040 --> 01:12:22,040
+as redes estão muito importantes
+
+1261
+01:12:22,040 --> 01:12:24,040
+nos carros porque
+
+1262
+01:12:24,040 --> 01:12:27,290
+há muitas unidades a ligarmos
+
+1263
+01:12:27,290 --> 01:12:29,290
+às outras
+
+1264
+01:12:29,290 --> 01:12:31,290
+às vezes não se fazem
+
+1265
+01:12:31,290 --> 01:12:33,290
+as unidades de um ser menos
+
+1266
+01:12:33,290 --> 01:12:35,290
+mais complexas e termos de unicação
+
+1267
+01:12:35,290 --> 01:12:37,290
+e diminuir a flexibilidade
+
+1268
+01:12:37,290 --> 01:12:39,290
+de termos
+
+1269
+01:12:39,290 --> 01:12:41,290
+mais funções
+
+1270
+01:12:41,290 --> 01:12:43,290
+ou menos funções no cargo
+
+1271
+01:12:43,290 --> 01:12:45,290
+e
+
+1272
+01:12:45,290 --> 01:12:47,290
+a localização dos dispositivos
+
+1273
+01:12:47,290 --> 01:12:49,290
+alguma também imposta
+
+1274
+01:12:49,290 --> 01:12:51,290
+por outras razões
+
+1275
+01:12:51,290 --> 01:12:53,290
+e portanto temos muitas
+
+1276
+01:12:53,290 --> 01:12:55,290
+minicações e muitos cabos
+
+1277
+01:12:55,290 --> 01:12:57,290
+se não usásemos
+
+1278
+01:12:57,290 --> 01:12:59,290
+as minicações que ainda temos mais cabos
+
+1279
+01:13:01,290 --> 01:13:03,290
+mas há tentativa de integrar
+
+1280
+01:13:03,290 --> 01:13:05,290
+mais possível as minicações
+
+1281
+01:13:05,290 --> 01:13:07,290
+para termos menos cabos
+
+1282
+01:13:07,290 --> 01:13:10,730
+em termos de agarrar as coisas
+
+1283
+01:13:10,730 --> 01:13:12,730
+ao menos considera-se que
+
+1284
+01:13:12,730 --> 01:13:28,360
+os cabos representam
+
+1285
+01:13:28,360 --> 01:13:30,360
+uma parte significativa
+
+1286
+01:13:30,360 --> 01:13:34,280
+de peso ao almoço
+
+1287
+01:13:34,280 --> 01:13:36,280
+a parte mais pesada é o doze
+
+1288
+01:13:36,280 --> 01:13:38,280
+depois é o chasi nos carros e elétrons
+
+1289
+01:13:38,280 --> 01:13:40,280
+provavelmente é a bateria
+
+1290
+01:13:40,280 --> 01:13:42,280
+que domina
+
+1291
+01:13:42,280 --> 01:13:44,280
+e
+
+1292
+01:13:44,280 --> 01:13:46,280
+os cabos
+
+1293
+01:13:46,280 --> 01:13:48,280
+o terceiro componente mais pesado
+
+1294
+01:13:48,280 --> 01:13:50,280
+é isso
+
+1295
+01:13:50,280 --> 01:13:52,280
+às vezes motiva
+
+1296
+01:13:52,280 --> 01:13:54,280
+até tentativa de usar
+
+1297
+01:13:54,280 --> 01:13:56,280
+ou de tecnologias diferentes
+
+1298
+01:13:56,280 --> 01:13:58,280
+para transmissão como que são fibras ópticas
+
+1299
+01:13:58,280 --> 01:14:00,280
+que as fibras ópticas são de plástico
+
+1300
+01:14:00,280 --> 01:14:02,280
+portanto são mais leves
+
+1301
+01:14:02,280 --> 01:14:04,280
+tem muito mais que pesada a transmitir
+
+1302
+01:14:04,280 --> 01:14:06,280
+mas
+
+1303
+01:14:06,280 --> 01:14:08,280
+para coisas pequenas são uma solução cara
+
+1304
+01:14:08,280 --> 01:14:19,020
+as unidades eletrónicas
+
+1305
+01:14:19,020 --> 01:14:21,020
+também são muito diferentes
+
+1306
+01:14:21,020 --> 01:14:24,330
+os funções que temos no carro
+
+1307
+01:14:24,330 --> 01:14:26,330
+temos mais informação para termos mais informação
+
+1308
+01:14:26,330 --> 01:14:28,330
+mas informação de um tipo
+
+1309
+01:14:28,330 --> 01:14:30,330
+a taxas de transmissão
+
+1310
+01:14:30,330 --> 01:14:32,330
+são muito diferentes
+
+1311
+01:14:32,330 --> 01:14:34,330
+o atraso primitivo também é muito diferente
+
+1312
+01:14:38,330 --> 01:14:40,330
+e a feria de ligado também
+
+1313
+01:14:40,330 --> 01:14:42,330
+ou seja, componentes
+
+1314
+01:14:42,330 --> 01:14:44,330
+que aplicam com a segurança
+
+1315
+01:14:44,330 --> 01:14:46,330
+e que praticamente têm os requisitos de ligado
+
+1316
+01:14:46,330 --> 01:14:48,330
+muito altos
+
+1317
+01:14:48,330 --> 01:14:50,330
+coisas que influenciam
+
+1318
+01:14:50,330 --> 01:14:52,330
+o movimento do carro
+
+1319
+01:14:54,330 --> 01:14:56,330
+e que têm a ver com segurança
+
+1320
+01:14:56,330 --> 01:14:58,330
+têm provavelmente atrasos
+
+1321
+01:14:58,330 --> 01:15:00,330
+também
+
+1322
+01:15:00,330 --> 01:15:02,330
+atrasos máximos
+
+1323
+01:15:02,330 --> 01:15:04,330
+muito limitados
+
+1324
+01:15:04,330 --> 01:15:06,330
+e sobretudo têm que ser muito princípios
+
+1325
+01:15:06,330 --> 01:15:08,330
+e isso vai para que se usem
+
+1326
+01:15:08,330 --> 01:15:10,330
+muitas agentes de diferentes
+
+1327
+01:15:10,330 --> 01:15:12,330
+esportes civis e de diferentes
+
+1328
+01:15:12,330 --> 01:15:14,330
+ideologias e protocolos
+
+1329
+01:15:14,330 --> 01:15:21,160
+também diferentes
+
+1330
+01:15:21,160 --> 01:15:23,160
+essas tecnologias mais usadas atualmente
+
+1331
+01:15:23,160 --> 01:15:25,160
+para além do Cam
+
+1332
+01:15:25,160 --> 01:15:27,160
+utilizam-se redes
+
+1333
+01:15:27,160 --> 01:15:29,160
+ainda mais simples que o Cam
+
+1334
+01:15:29,160 --> 01:15:31,160
+como por exemplo o Lean
+
+1335
+01:15:31,160 --> 01:15:33,160
+para coisas muito pequenas
+
+1336
+01:15:33,160 --> 01:15:35,160
+como por exemplo para os modos
+
+1337
+01:15:35,160 --> 01:15:37,160
+podem ser até só dois botões
+
+1338
+01:15:37,160 --> 01:15:39,160
+ou até só um botão
+
+1339
+01:15:39,160 --> 01:15:41,160
+ou
+
+1340
+01:15:41,160 --> 01:15:43,160
+componentes que podem ter
+
+1341
+01:15:43,160 --> 01:15:45,160
+só um pequeno despleio
+
+1342
+01:15:45,160 --> 01:15:47,160
+uma luz ou um botão e uma luz
+
+1343
+01:15:47,160 --> 01:15:49,160
+e que sequer é uma coisa muito barata
+
+1344
+01:15:49,160 --> 01:15:51,160
+e muito pouca informação
+
+1345
+01:15:51,160 --> 01:15:53,160
+para transportar o estado de um botão
+
+1346
+01:15:53,160 --> 01:15:55,160
+para a tonbite
+
+1347
+01:15:55,160 --> 01:15:57,160
+para transportar o estado de uma luz
+
+1348
+01:15:57,160 --> 01:15:59,160
+que só sendo apaga
+
+1349
+01:15:59,160 --> 01:16:01,160
+também para a tonbite
+
+1350
+01:16:01,160 --> 01:16:03,160
+e portanto o Lean é um
+
+1351
+01:16:03,160 --> 01:16:05,160
+exemplo de uma coisa mais simples
+
+1352
+01:16:05,160 --> 01:16:07,160
+que o Cam
+
+1353
+01:16:07,160 --> 01:16:09,160
+e
+
+1354
+01:16:09,160 --> 01:16:11,160
+provavelmente temos aqui o Flexi
+
+1355
+01:16:13,160 --> 01:16:15,160
+que é uma
+
+1356
+01:16:15,160 --> 01:16:17,160
+inspirada no Cam mas
+
+1357
+01:16:17,160 --> 01:16:19,160
+mais
+
+1358
+01:16:19,160 --> 01:16:21,160
+para aplicações maiores
+
+1359
+01:16:21,160 --> 01:16:23,160
+com maiores taxas de transmissão
+
+1360
+01:16:23,160 --> 01:16:25,160
+maior no número de taxações
+
+1361
+01:16:25,160 --> 01:16:27,160
+e mais
+
+1362
+01:16:27,160 --> 01:16:29,160
+mais taxas a ter transportados
+
+1363
+01:16:29,160 --> 01:16:31,160
+por um tempo
+
+1364
+01:16:31,160 --> 01:16:33,160
+para coisas que querem ainda maior
+
+1365
+01:16:33,160 --> 01:16:37,560
+na cultura de banda
+
+1366
+01:16:37,560 --> 01:16:39,560
+tem estado no modo de
+
+1367
+01:16:39,560 --> 01:16:41,560
+fazer de mousse
+
+1368
+01:16:41,560 --> 01:16:43,560
+para, sobretudo para vídeo
+
+1369
+01:16:43,560 --> 01:16:47,290
+de
+
+1370
+01:16:47,290 --> 01:16:49,290
+mousse
+
+1371
+01:16:49,290 --> 01:16:51,290
+funcionava sobre fio robótica
+
+1372
+01:16:51,290 --> 01:16:53,290
+e a tonbite está a passar
+
+1373
+01:16:53,290 --> 01:16:55,290
+para suporte físico
+
+1374
+01:16:55,290 --> 01:16:57,290
+de cobre
+
+1375
+01:16:57,290 --> 01:16:59,290
+e
+
+1376
+01:16:59,290 --> 01:17:01,290
+provavelmente
+
+1377
+01:17:01,290 --> 01:17:03,290
+quero flexi, quero mousse
+
+1378
+01:17:03,290 --> 01:17:05,290
+não
+
+1379
+01:17:05,290 --> 01:17:07,290
+usar, ou seja, estubstituíto
+
+1380
+01:17:07,290 --> 01:17:09,290
+vou passar a usar
+
+1381
+01:17:09,290 --> 01:17:11,290
+internet
+
+1382
+01:17:11,290 --> 01:17:13,290
+uma internet semelhante aquela que nós vimos
+
+1383
+01:17:13,290 --> 01:17:15,290
+mas pesada para
+
+1384
+01:17:15,290 --> 01:17:17,290
+1099
+
+1385
+01:17:17,290 --> 01:17:23,450
+não sei se
+
+1386
+01:17:23,450 --> 01:17:25,450
+como se pudesse automatizar
+
+1387
+01:17:25,450 --> 01:17:27,450
+um sistema qualquer que fosse um hardware
+
+1388
+01:17:27,450 --> 01:17:29,450
+de porta de mala
+
+1389
+01:17:29,450 --> 01:17:34,040
+de um automóvel
+
+1390
+01:17:34,040 --> 01:17:36,040
+que simulica um motor
+
+1391
+01:17:36,040 --> 01:17:38,040
+que faça subir e descer a porta de mala
+
+1392
+01:17:38,040 --> 01:17:39,040
+como um zelaé
+
+1393
+01:17:39,040 --> 01:17:41,040
+com controlados motores
+
+1394
+01:17:41,040 --> 01:17:43,040
+com controlado por
+
+1395
+01:17:43,040 --> 01:17:45,040
+uma unidade eletrônica com controlador
+
+1396
+01:17:45,040 --> 01:17:47,040
+mas tem que receber
+
+1397
+01:17:47,040 --> 01:17:49,040
+informação de um botão
+
+1398
+01:17:49,040 --> 01:17:51,040
+que está no interior do veículo
+
+1399
+01:17:51,040 --> 01:17:53,040
+o botão que está na porta de mala
+
+1400
+01:17:53,040 --> 01:17:55,040
+um sensor de pinturos que se detecta que a porta está fechada
+
+1401
+01:17:55,040 --> 01:17:57,040
+o sensor que detecta
+
+1402
+01:17:57,040 --> 01:17:59,040
+que a porta está completamente
+
+1403
+01:17:59,040 --> 01:18:01,040
+aperta
+
+1404
+01:18:01,040 --> 01:18:03,040
+estas comunicações
+
+1405
+01:18:03,040 --> 01:18:05,040
+podem ser feitas em banda base
+
+1406
+01:18:05,040 --> 01:18:07,040
+ou seja, ser um fio dedicado ao botão
+
+1407
+01:18:07,040 --> 01:18:09,040
+mas aí
+
+1408
+01:18:09,040 --> 01:18:11,040
+vai fazer com que haja muitos fios
+
+1409
+01:18:11,040 --> 01:18:13,040
+em vez de terem destes fios todos
+
+1410
+01:18:13,040 --> 01:18:15,040
+cada vez mais
+
+1411
+01:18:15,040 --> 01:18:17,040
+temos soluções deste género
+
+1412
+01:18:17,040 --> 01:18:19,040
+de ter um aparelhamento
+
+1413
+01:18:19,040 --> 01:18:21,040
+de uma rede de comunicação
+
+1414
+01:18:21,040 --> 01:18:23,040
+que muda e diga
+
+1415
+01:18:23,040 --> 01:18:25,040
+estes dispositivos todos
+
+1416
+01:18:25,040 --> 01:18:27,040
+e agora isso não pode ser só um botão
+
+1417
+01:18:27,040 --> 01:18:29,040
+que possa ser um sistema imbebido
+
+1418
+01:18:29,040 --> 01:18:31,040
+um sistema conversador imbebido
+
+1419
+01:18:31,040 --> 01:18:33,040
+que lê o estado do botão
+
+1420
+01:18:33,040 --> 01:18:35,040
+e comunica
+
+1421
+01:18:35,040 --> 01:18:37,040
+no aparelhamento
+
+1422
+01:18:37,040 --> 01:18:39,040
+com o controlador
+
+1423
+01:18:39,040 --> 01:18:41,040
+e com o controlador
+
+1424
+01:18:41,040 --> 01:18:43,040
+pois manda abrir a mala ou fechar
+
+1425
+01:18:43,040 --> 01:18:45,040
+dependendo do estado
+
+1426
+01:18:45,040 --> 01:18:47,040
+e dependendo da situação do veículo
+
+1427
+01:18:47,040 --> 01:19:08,750
+tenta as soluções
+
+1428
+01:19:08,750 --> 01:19:10,750
+que permitem ter coisas
+
+1429
+01:19:10,750 --> 01:19:14,100
+mais simples do que o género
+
+1430
+01:19:14,100 --> 01:19:16,100
+para componentes
+
+1431
+01:19:16,100 --> 01:19:18,100
+que também tem que ser mais leves
+
+1432
+01:19:20,100 --> 01:19:22,100
+utiliza-se
+
+1433
+01:19:22,100 --> 01:19:24,100
+às vezes um
+
+1434
+01:19:24,100 --> 01:19:26,100
+movimento
+
+1435
+01:19:26,100 --> 01:19:28,100
+que se chama o SENSE
+
+1436
+01:19:28,100 --> 01:19:30,100
+no SENSE
+
+1437
+01:19:30,100 --> 01:19:32,100
+simulado de Nibble Transmission
+
+1438
+01:19:32,100 --> 01:19:34,100
+se chama Nibble
+
+1439
+01:19:34,100 --> 01:19:36,100
+porque
+
+1440
+01:19:36,100 --> 01:19:38,100
+ele não transporta bytes
+
+1441
+01:19:38,100 --> 01:19:40,100
+transporta meios bytes
+
+1442
+01:19:40,100 --> 01:19:42,100
+e um meio byte chama-se Nibble
+
+1443
+01:19:42,100 --> 01:19:44,100
+Nibble é um meio byte
+
+1444
+01:19:44,100 --> 01:19:48,020
+que se chama Nibble
+
+1445
+01:19:48,020 --> 01:19:50,020
+e o Nibble
+
+1446
+01:19:50,020 --> 01:19:52,020
+tem 16
+
+1447
+01:19:52,020 --> 01:19:54,020
+valores diferentes
+
+1448
+01:19:59,580 --> 01:20:01,580
+o Nibble
+
+1449
+01:20:01,580 --> 01:20:03,580
+o SENSE também é uma norma
+
+1450
+01:20:03,580 --> 01:20:05,580
+usada em veículos
+
+1451
+01:20:05,580 --> 01:20:07,580
+é uma alternativa all-in
+
+1452
+01:20:07,580 --> 01:20:09,580
+que vamos falar
+
+1453
+01:20:09,580 --> 01:20:11,580
+a seguir-se só muito rapidamente
+
+1454
+01:20:11,580 --> 01:20:13,580
+para sabermos que existe
+
+1455
+01:20:13,580 --> 01:20:15,580
+funcione em unidades de tempo
+
+1456
+01:20:19,580 --> 01:20:21,580
+para o protocolo que se desenha em tempo
+
+1457
+01:20:21,580 --> 01:20:23,580
+ou seja
+
+1458
+01:20:23,580 --> 01:20:25,580
+as mensagens podem durar mais tempo
+
+1459
+01:20:25,580 --> 01:20:27,580
+ou menos tempo
+
+1460
+01:20:27,580 --> 01:20:34,800
+é que fina a mensagem
+
+1461
+01:20:34,800 --> 01:20:36,800
+conseguimos perceber aqui
+
+1462
+01:20:36,800 --> 01:20:38,800
+aqui um
+
+1463
+01:20:38,800 --> 01:20:40,800
+período de 56 unidades de tempo
+
+1464
+01:20:42,800 --> 01:20:44,800
+esta é uma freia
+
+1465
+01:20:44,800 --> 01:20:46,800
+para uma
+
+1466
+01:20:46,800 --> 01:20:48,800
+SENSE
+
+1467
+01:20:48,800 --> 01:20:50,800
+aqui é um período de sincronismo
+
+1468
+01:20:50,800 --> 01:20:52,800
+de 56 bytes
+
+1469
+01:20:52,800 --> 01:20:54,800
+ou 56 unidades de tempo
+
+1470
+01:20:54,800 --> 01:20:56,800
+que serve para as máquinas
+
+1471
+01:20:56,800 --> 01:20:58,800
+sincronizarem as suas lojas
+
+1472
+01:20:58,800 --> 01:21:00,800
+e há muitas transições de tempo
+
+1473
+01:21:00,800 --> 01:21:02,800
+para 0 e 0 e para 1
+
+1474
+01:21:02,800 --> 01:21:04,800
+permite saber
+
+1475
+01:21:04,800 --> 01:21:06,800
+quanto é que vale um tempo, uma unidade de tempo
+
+1476
+01:21:06,800 --> 01:21:08,800
+e depois
+
+1477
+01:21:08,800 --> 01:21:10,800
+transmissão de um estado
+
+1478
+01:21:10,800 --> 01:21:12,800
+e depois daves
+
+1479
+01:21:12,800 --> 01:21:14,800
+os daves são conjuntos de 4 bytes
+
+1480
+01:21:14,800 --> 01:21:16,800
+mais 4 bytes
+
+1481
+01:21:16,800 --> 01:21:18,800
+o tempo demora
+
+1482
+01:21:18,800 --> 01:21:20,800
+cada conjunto de 4 bytes
+
+1483
+01:21:20,800 --> 01:21:22,800
+é um tempo que varia entre 12 e 27
+
+1484
+01:21:22,800 --> 01:21:24,800
+unidades de tempo
+
+1485
+01:21:26,800 --> 01:21:28,800
+ou seja, há conjuntos de 4 bytes
+
+1486
+01:21:28,800 --> 01:21:30,800
+que demoram mais ou menos
+
+1487
+01:21:30,800 --> 01:21:34,080
+e depois ao final
+
+1488
+01:21:34,080 --> 01:21:36,080
+pode controlar os erros mais uma pausa
+
+1489
+01:21:36,080 --> 01:21:41,180
+o tempo de sincronismo
+
+1490
+01:21:41,180 --> 01:21:43,180
+não são destas transições
+
+1491
+01:21:43,180 --> 01:21:45,180
+é uma transição
+
+1492
+01:21:45,180 --> 01:21:48,820
+e depois de um tempo
+
+1493
+01:21:48,820 --> 01:21:50,820
+as máquinas devem detectar
+
+1494
+01:21:50,820 --> 01:21:52,820
+aquela transição
+
+1495
+01:21:52,820 --> 01:21:54,820
+e depois contar aquelas 56 unidades de tempo
+
+1496
+01:21:54,820 --> 01:21:56,820
+para saber quanto é que vale
+
+1497
+01:21:56,820 --> 01:21:58,820
+uma unidade de tempo
+
+1498
+01:21:58,820 --> 01:22:00,820
+de forma precisa
+
+1499
+01:22:00,820 --> 01:22:06,590
+os níveis
+
+1500
+01:22:06,590 --> 01:22:08,590
+ou seja, os conjuntos de 4 bytes
+
+1501
+01:22:08,590 --> 01:22:10,590
+são transmitidos com
+
+1502
+01:22:10,590 --> 01:22:12,590
+aquele sinal de sincronismo de níveis
+
+1503
+01:22:12,590 --> 01:22:16,700
+mais um
+
+1504
+01:22:16,700 --> 01:22:18,700
+um tempo de espera
+
+1505
+01:22:18,700 --> 01:22:20,700
+mais aqui o da um
+
+1506
+01:22:20,700 --> 01:22:22,700
+um tempo de 12 unidades de tempo
+
+1507
+01:22:22,700 --> 01:22:24,700
+e depois
+
+1508
+01:22:24,700 --> 01:22:26,700
+há nenhum conjunto
+
+1509
+01:22:26,700 --> 01:22:28,700
+de
+
+1510
+01:22:28,700 --> 01:22:30,700
+de bits
+
+1511
+01:22:30,700 --> 01:22:32,700
+naquele estado
+
+1512
+01:22:34,700 --> 01:22:36,700
+uma transição de 1 para 0
+
+1513
+01:22:36,700 --> 01:22:38,700
+que pode ocorrer mais parte
+
+1514
+01:22:38,700 --> 01:22:40,700
+ou mais cedo o tempo do valor
+
+1515
+01:22:40,700 --> 01:22:42,700
+do nível
+
+1516
+01:22:42,700 --> 01:22:44,700
+temos aqui as 6 possibilidades
+
+1517
+01:22:44,700 --> 01:22:46,700
+que são os de 6 valores primeiros
+
+1518
+01:22:46,700 --> 01:22:48,700
+para o nível
+
+1519
+01:22:48,700 --> 01:22:50,700
+ou seja, o tempo do nível
+
+1520
+01:22:50,700 --> 01:22:52,700
+de 12 unidades de tempo
+
+1521
+01:22:52,700 --> 01:22:54,700
+se o nível for todo a 0
+
+1522
+01:22:54,700 --> 01:22:56,700
+e o nível é só visto
+
+1523
+01:22:56,700 --> 01:22:58,700
+se o nível todo uns
+
+1524
+01:22:58,700 --> 01:23:00,700
+é preciso esperar aquele tempo todo
+
+1525
+01:23:00,700 --> 01:23:02,700
+se tiver uns
+
+1526
+01:23:02,700 --> 01:23:04,700
+uns perigos
+
+1527
+01:23:04,700 --> 01:23:06,700
+de
+
+1528
+01:23:06,700 --> 01:23:08,700
+tem
+
+1529
+01:23:08,700 --> 01:23:10,700
+outro valor 0 a 15
+
+1530
+01:23:10,700 --> 01:23:12,700
+e portanto espera-se outro valor
+
+1531
+01:23:12,700 --> 01:23:14,700
+espera-se outro tempo diferente
+
+1532
+01:23:14,700 --> 01:23:20,450
+uma mensagem
+
+1533
+01:23:20,450 --> 01:23:22,450
+é um conjunto de níveis
+
+1534
+01:23:22,450 --> 01:23:24,450
+e depois há alguma coisa
+
+1535
+01:23:24,450 --> 01:23:26,450
+para controlar os erros
+
+1536
+01:23:26,450 --> 01:23:28,450
+e o tempo
+
+1537
+01:23:28,450 --> 01:23:30,450
+que dura uma frame
+
+1538
+01:23:30,450 --> 01:23:32,450
+então é qualquer coisa de 100 que fica de 2
+
+1539
+01:23:32,450 --> 01:23:34,450
+e de 172 unidades
+
+1540
+01:23:34,450 --> 01:23:44,830
+de tempo
+
+1541
+01:23:44,830 --> 01:23:46,830
+vamos falar um pouco também do lino
+
+1542
+01:23:46,830 --> 01:23:48,830
+o lino
+
+1543
+01:23:48,830 --> 01:23:50,830
+também aparece aqui como sendo
+
+1544
+01:23:50,830 --> 01:23:52,830
+um basamento de
+
+1545
+01:23:52,830 --> 01:23:54,830
+baixo nível
+
+1546
+01:23:54,830 --> 01:23:56,830
+para coisas em que se considera que o can
+
+1547
+01:23:56,830 --> 01:23:58,830
+é demasiado
+
+1548
+01:23:58,830 --> 01:24:00,830
+caro, então vamos usar
+
+1549
+01:24:00,830 --> 01:24:02,830
+um
+
+1550
+01:24:02,830 --> 01:24:06,210
+basamento de lino
+
+1551
+01:24:06,210 --> 01:24:08,210
+mais ou menos ao mesmo nível que você sente
+
+1552
+01:24:08,210 --> 01:24:10,210
+o lino
+
+1553
+01:24:10,210 --> 01:24:12,210
+pode começar
+
+1554
+01:24:12,210 --> 01:24:14,210
+até que mais preciso é ser mais elevado do que você sente
+
+1555
+01:24:14,210 --> 01:24:16,210
+é uma maior moral especial
+
+1556
+01:24:16,210 --> 01:24:18,210
+para todos os carros
+
+1557
+01:24:18,210 --> 01:24:21,680
+o lino
+
+1558
+01:24:21,680 --> 01:24:26,050
+e sobre todo na Europa
+
+1559
+01:24:26,050 --> 01:24:28,050
+no lino temos sempre mastas
+
+1560
+01:24:28,050 --> 01:24:30,050
+e
+
+1561
+01:24:30,050 --> 01:24:32,050
+depois até 16
+
+1562
+01:24:32,050 --> 01:24:34,050
+as asas extravas
+
+1563
+01:24:34,050 --> 01:24:36,050
+distâncias pequenas
+
+1564
+01:24:36,050 --> 01:24:38,050
+datas regras
+
+1565
+01:24:38,050 --> 01:24:40,050
+também pequenas
+
+1566
+01:24:40,050 --> 01:24:42,050
+o lino pode funcionar só com
+
+1567
+01:24:42,050 --> 01:24:44,050
+um fio
+
+1568
+01:24:44,050 --> 01:24:46,050
+em relação a culpa
+
+1569
+01:24:46,050 --> 01:24:48,050
+a metade do peso
+
+1570
+01:24:48,050 --> 01:24:50,050
+dentro de um carro
+
+1571
+01:24:50,050 --> 01:24:54,830
+e pode funcionar
+
+1572
+01:24:54,830 --> 01:24:56,830
+com um basamento
+
+1573
+01:24:56,830 --> 01:24:58,830
+de forma hierárquica
+
+1574
+01:24:58,830 --> 01:25:00,830
+e na hierarquia podemos ter hierarquia
+
+1575
+01:25:00,830 --> 01:25:02,830
+do lino ou hierarquia can
+
+1576
+01:25:02,830 --> 01:25:04,830
+ou ter can em cima de lino em baixo
+
+1577
+01:25:04,830 --> 01:25:06,830
+ou ter do lino
+
+1578
+01:25:06,830 --> 01:25:10,460
+tem uma comparação
+
+1579
+01:25:10,460 --> 01:25:12,460
+do lino com o can
+
+1580
+01:25:12,460 --> 01:25:14,460
+isto é para tentar
+
+1581
+01:25:14,460 --> 01:25:16,460
+ilustrar que o lino é mais simples
+
+1582
+01:25:16,460 --> 01:25:18,460
+aqui temos um basamento
+
+1583
+01:25:18,460 --> 01:25:20,460
+a grande diferença é que
+
+1584
+01:25:20,460 --> 01:25:22,460
+aqui temos um basamento
+
+1585
+01:25:22,460 --> 01:25:24,460
+que pode ser só na linha
+
+1586
+01:25:24,460 --> 01:25:26,460
+enquanto que no can
+
+1587
+01:25:26,460 --> 01:25:28,460
+temos sempre duas linhas
+
+1588
+01:25:28,460 --> 01:25:30,460
+que interessa a tensão diferencial
+
+1589
+01:25:30,460 --> 01:25:32,460
+todos os controladores
+
+1590
+01:25:32,460 --> 01:25:34,460
+e no can
+
+1591
+01:25:34,460 --> 01:25:36,460
+também temos que ter sempre um tranche
+
+1592
+01:25:36,460 --> 01:25:38,460
+agora por ter a adaptação
+
+1593
+01:25:38,460 --> 01:25:40,460
+das tensões no lino
+
+1594
+01:25:40,460 --> 01:25:42,460
+que são mais simples
+
+1595
+01:25:42,460 --> 01:25:44,460
+e os controladores também são mais simples
+
+1596
+01:25:44,460 --> 01:25:46,460
+portanto as a ter um massa
+
+1597
+01:25:46,460 --> 01:25:48,460
+e o massa
+
+1598
+01:25:48,460 --> 01:25:50,460
+de as vezes penso o massa
+
+1599
+01:25:50,460 --> 01:25:52,460
+para falar can para aqui
+
+1600
+01:25:52,460 --> 01:25:54,460
+e a falar lino para ali
+
+1601
+01:25:54,460 --> 01:25:56,460
+portanto ocupamos
+
+1602
+01:25:56,460 --> 01:25:58,460
+aqui
+
+1603
+01:25:58,460 --> 01:26:00,460
+aqui temos um basamento
+
+1604
+01:26:00,460 --> 01:26:02,460
+para as meninações de três de nós
+
+1605
+01:26:02,460 --> 01:26:04,460
+não passam para o basamento principal
+
+1606
+01:26:04,460 --> 01:26:06,460
+enquanto aqui
+
+1607
+01:26:06,460 --> 01:26:08,460
+se aquele basamento for mesmo que aquele
+
+1608
+01:26:08,460 --> 01:26:10,460
+as meninações passam para fora
+
+1609
+01:26:10,460 --> 01:26:12,460
+e
+
+1610
+01:26:12,460 --> 01:26:14,460
+vamos procurar também os outros
+
+1611
+01:26:14,460 --> 01:26:21,230
+temas
+
+1612
+01:26:21,230 --> 01:26:23,230
+com o lino
+
+1613
+01:26:23,230 --> 01:26:25,230
+ou com outra coisa bem
+
+1614
+01:26:25,230 --> 01:26:27,230
+consegue reduzir
+
+1615
+01:26:27,230 --> 01:26:32,050
+reduzir o peso
+
+1616
+01:26:32,050 --> 01:26:34,050
+de transmissão
+
+1617
+01:26:34,050 --> 01:26:37,900
+nos basamentos principais
+
+1618
+01:26:37,900 --> 01:26:39,900
+então já que falamos destes basamentos
+
+1619
+01:26:39,900 --> 01:26:44,340
+mais simples
+
+1620
+01:26:44,340 --> 01:26:46,340
+tentamos também só referir
+
+1621
+01:26:46,340 --> 01:26:48,340
+o flex rei
+
+1622
+01:26:48,340 --> 01:26:50,340
+que é o lado
+
+1623
+01:26:50,340 --> 01:26:52,340
+que tem coisas mais pesadas
+
+1624
+01:26:52,340 --> 01:26:54,340
+do que o can
+
+1625
+01:26:54,340 --> 01:26:56,340
+é um basamento
+
+1626
+01:26:56,340 --> 01:26:58,340
+tem que ter um logicamente inspirado no can
+
+1627
+01:26:58,340 --> 01:27:00,340
+mas
+
+1628
+01:27:00,340 --> 01:27:02,340
+melhorado para ser do lado da falhas
+
+1629
+01:27:02,340 --> 01:27:04,340
+e permitir
+
+1630
+01:27:04,340 --> 01:27:06,340
+taxas de transmissão
+
+1631
+01:27:06,340 --> 01:27:12,140
+elevadas
+
+1632
+01:27:12,140 --> 01:27:14,140
+são transmitidas a 10gb
+
+1633
+01:27:14,140 --> 01:27:16,140
+segundo para ser do lado da falhas
+
+1634
+01:27:16,140 --> 01:27:18,140
+o flex rei pode trabalhar
+
+1635
+01:27:18,140 --> 01:27:20,140
+com dois canais do do danos
+
+1636
+01:27:20,140 --> 01:27:22,140
+e os dois canais do do danos
+
+1637
+01:27:22,140 --> 01:27:24,140
+podem permitir maior fiabilidade
+
+1638
+01:27:24,140 --> 01:27:26,140
+ou aumentar a taxa de transmissão
+
+1639
+01:27:26,140 --> 01:27:32,530
+de dados
+
+1640
+01:27:32,530 --> 01:27:34,530
+os dois canais
+
+1641
+01:27:34,530 --> 01:27:36,530
+se o ministro seja podido publicar
+
+1642
+01:27:36,530 --> 01:27:38,530
+o meio físico
+
+1643
+01:27:38,530 --> 01:27:40,530
+ligar as unidades com dois canais
+
+1644
+01:27:40,530 --> 01:27:42,530
+e depois os dois canais
+
+1645
+01:27:42,530 --> 01:27:44,530
+transportam um transporte antado
+
+1646
+01:27:44,530 --> 01:27:46,530
+e conseguimos
+
+1647
+01:27:46,530 --> 01:27:48,530
+o dobro
+
+1648
+01:27:48,530 --> 01:27:50,530
+da largura de banda
+
+1649
+01:27:50,530 --> 01:27:52,530
+ou então que transmitimos a mesma coisa
+
+1650
+01:27:52,530 --> 01:27:54,530
+e temos uma melhor fiabilidade
+
+1651
+01:27:54,530 --> 01:27:58,290
+porque
+
+1652
+01:27:58,290 --> 01:28:00,290
+não deu-nos a descar
+
+1653
+01:28:00,290 --> 01:28:02,290
+quando temos os dois canais
+
+1654
+01:28:02,290 --> 01:28:04,290
+quando temos os dois falos dos dois canais
+
+1655
+01:28:04,290 --> 01:28:06,290
+e nós falamos só com um canal
+
+1656
+01:28:06,290 --> 01:28:08,290
+para serem mais parados
+
+1657
+01:28:08,290 --> 01:28:10,290
+para deducações
+
+1658
+01:28:10,290 --> 01:28:12,290
+que não são
+
+1659
+01:28:12,290 --> 01:28:14,290
+tão exigentes
+
+1660
+01:28:14,290 --> 01:28:16,290
+em nível de fiabilidade
+
+1661
+01:28:16,290 --> 01:28:18,290
+ou de taxa de transmissão
+
+1662
+01:28:18,290 --> 01:28:20,290
+podemos ter arquitetura de apartamento
+
+1663
+01:28:20,290 --> 01:28:22,290
+como estar aqui
+
+1664
+01:28:22,290 --> 01:28:24,290
+ou
+
+1665
+01:28:24,290 --> 01:28:26,290
+indistrela usando os repetidores
+
+1666
+01:28:26,290 --> 01:28:28,290
+que repetem as indicações
+
+1667
+01:28:28,290 --> 01:28:30,290
+para os outros
+
+1668
+01:28:30,290 --> 01:28:32,290
+e podemos ter combinações
+
+1669
+01:28:32,290 --> 01:28:34,290
+destas coisas
+
+1670
+01:28:34,290 --> 01:28:36,290
+basamentos
+
+1671
+01:28:36,290 --> 01:28:38,290
+estrelas
+
+1672
+01:28:38,290 --> 01:28:40,290
+estrelas, basamentos
+
+1673
+01:28:40,290 --> 01:28:42,290
+estrelas, ligação
+
+1674
+01:28:42,290 --> 01:28:44,290
+ponta-ponto
+
+1675
+01:28:44,290 --> 01:28:46,290
+concentradores etc
+
+1676
+01:28:46,290 --> 01:28:48,290
+e podemos fazer coisas destas
+
+1677
+01:28:48,290 --> 01:28:50,290
+ou seja, ter as indicações diferentes
+
+1678
+01:28:50,290 --> 01:28:52,290
+as
+
+1679
+01:28:52,290 --> 01:28:54,290
+tupologias diferentes nos basamentos
+
+1680
+01:28:54,290 --> 01:28:56,290
+de aludantes
+
+1681
+01:28:56,290 --> 01:28:58,290
+com o objetivo de aumentar a aludância
+
+1682
+01:28:58,290 --> 01:29:00,290
+ou facilitar a comunicação
+
+1683
+01:29:00,290 --> 01:29:02,290
+para outros dispositivos
+
+1684
+01:29:02,290 --> 01:29:04,290
+que depois só usam nos basamentos
+
+1685
+01:29:04,290 --> 01:29:08,720
+e que estão utilizando
+
+1686
+01:29:08,720 --> 01:29:10,720
+um basamento
+
+1687
+01:29:10,720 --> 01:29:12,720
+de aldoma estrela
+
+1688
+01:29:12,720 --> 01:29:14,720
+e
+
+1689
+01:29:14,720 --> 01:29:16,720
+uma combinação de aludantes
+
+1690
+01:29:16,720 --> 01:29:18,720
+com o basamento de estrela
+
+1691
+01:29:18,720 --> 01:29:24,020
+comparando o CAN
+
+1692
+01:29:24,020 --> 01:29:26,020
+com o FlexSray
+
+1693
+01:29:26,020 --> 01:29:29,390
+o CAN, nós vimos na versão clássica
+
+1694
+01:29:29,390 --> 01:29:31,390
+é um megabit por segundo
+
+1695
+01:29:31,390 --> 01:29:33,390
+ter essa transmissão
+
+1696
+01:29:33,390 --> 01:29:35,390
+equivando aos 10 megabits
+
+1697
+01:29:35,390 --> 01:29:37,390
+o CAN
+
+1698
+01:29:37,390 --> 01:29:39,390
+não transmite coisas pequenas
+
+1699
+01:29:39,390 --> 01:29:41,390
+de três pequenas
+
+1700
+01:29:41,390 --> 01:29:43,390
+e em cada frame
+
+1701
+01:29:43,390 --> 01:29:45,390
+é preciso um cabeçalho
+
+1702
+01:29:45,390 --> 01:29:47,390
+que se identifica a dois
+
+1703
+01:29:47,390 --> 01:29:49,390
+temos muito ovarete
+
+1704
+01:29:49,390 --> 01:29:51,390
+transmitimos muitos bits por cada bit de dados
+
+1705
+01:29:56,900 --> 01:29:58,900
+aqui
+
+1706
+01:29:58,900 --> 01:30:00,900
+conseguimos
+
+1707
+01:30:00,900 --> 01:30:02,900
+garantir o prazo de entrega
+
+1708
+01:30:02,900 --> 01:30:06,210
+e portanto é mais adequado
+
+1709
+01:30:06,210 --> 01:30:08,210
+o FlexSray
+
+1710
+01:30:08,210 --> 01:30:10,210
+é adequado
+
+1711
+01:30:10,210 --> 01:30:12,210
+a condição autónoma
+
+1712
+01:30:12,210 --> 01:30:14,210
+ou outros
+
+1713
+01:30:14,210 --> 01:30:16,210
+sistemas que têm que responder
+
+1714
+01:30:16,210 --> 01:30:18,210
+em que é útil
+
+1715
+01:30:18,210 --> 01:30:24,980
+uma comparação
+
+1716
+01:30:24,980 --> 01:30:26,980
+então uma comparação entre a frame
+
+1717
+01:30:26,980 --> 01:30:28,980
+CAN
+
+1718
+01:30:28,980 --> 01:30:30,980
+e a frame FlexSray
+
+1719
+01:30:30,980 --> 01:30:32,980
+um dos problemas
+
+1720
+01:30:32,980 --> 01:30:34,980
+que se pode apontar
+
+1721
+01:30:34,980 --> 01:30:36,980
+em termos de derivado ao CAN
+
+1722
+01:30:36,980 --> 01:30:38,980
+é que existe
+
+1723
+01:30:38,980 --> 01:30:40,980
+no CAN existe um CRC
+
+1724
+01:30:40,980 --> 01:30:42,980
+mas
+
+1725
+01:30:42,980 --> 01:30:44,980
+o CRC
+
+1726
+01:30:44,980 --> 01:30:46,980
+está colocado no fim
+
+1727
+01:30:46,980 --> 01:30:48,980
+e portanto
+
+1728
+01:30:48,980 --> 01:30:50,980
+ele não recebe
+
+1729
+01:30:50,980 --> 01:30:52,980
+depois do ler o identificador
+
+1730
+01:30:52,980 --> 01:30:54,980
+vê o comprimento dos dados
+
+1731
+01:30:54,980 --> 01:30:56,980
+e está a espera que
+
+1732
+01:30:56,980 --> 01:30:58,980
+o código-controller de erros apareça
+
+1733
+01:30:58,980 --> 01:31:00,980
+no fim dos dados
+
+1734
+01:31:00,980 --> 01:31:02,980
+e no fim dos dados tendo aquele comprimento
+
+1735
+01:31:02,980 --> 01:31:04,980
+se houver um erro naquele comprimento
+
+1736
+01:31:04,980 --> 01:31:06,980
+se for recebido com um bit trocado
+
+1737
+01:31:06,980 --> 01:31:08,980
+então isto vai ser mal interpretado
+
+1738
+01:31:08,980 --> 01:31:10,980
+o comprimento vai ser mal interpretado
+
+1739
+01:31:10,980 --> 01:31:12,980
+e o CRC vai ser livre
+
+1740
+01:31:12,980 --> 01:31:14,980
+dali
+
+1741
+01:31:14,980 --> 01:31:16,980
+e pode acontecer
+
+1742
+01:31:16,980 --> 01:31:18,980
+que até dê certo
+
+1743
+01:31:18,980 --> 01:31:20,980
+mas será um acaso
+
+1744
+01:31:20,980 --> 01:31:22,980
+e
+
+1745
+01:31:22,980 --> 01:31:24,980
+provavelmente os dados estão errados
+
+1746
+01:31:24,980 --> 01:31:26,980
+não são aqueles que nós queremos saber
+
+1747
+01:31:28,980 --> 01:31:30,980
+no FlexSray o CRC
+
+1748
+01:31:30,980 --> 01:31:32,980
+está aqui no princípio da frame
+
+1749
+01:31:32,980 --> 01:31:34,980
+e portanto
+
+1750
+01:31:34,980 --> 01:31:39,760
+não sei que se
+
+1751
+01:31:39,760 --> 01:31:41,760
+controlar que não houve erros
+
+1752
+01:31:41,760 --> 01:31:43,760
+nesta parte
+
+1753
+01:31:43,760 --> 01:31:45,760
+enquanto que aquele CRC
+
+1754
+01:31:45,760 --> 01:31:51,280
+qualificou os erros naquela parte
+
+1755
+01:31:51,280 --> 01:31:53,280
+da batagem do FlexSray
+
+1756
+01:31:53,280 --> 01:31:55,280
+é bom para pôs
+
+1757
+01:31:55,280 --> 01:31:58,620
+condução by wires
+
+1758
+01:32:00,620 --> 01:32:02,620
+qualquer coisa a by wires
+
+1759
+01:32:02,620 --> 01:32:04,620
+é por isso que foi feito
+
+1760
+01:32:04,620 --> 01:32:06,620
+mas é mais caro que o can
+
+1761
+01:32:06,620 --> 01:32:09,900
+é uma norma
+
+1762
+01:32:09,900 --> 01:32:11,900
+maior parte os fabricantes
+
+1763
+01:32:11,900 --> 01:32:13,900
+para usar isto
+
+1764
+01:32:15,900 --> 01:32:17,900
+tenta até complexo
+
+1765
+01:32:17,900 --> 01:32:19,900
+tenta até caro
+
+1766
+01:32:19,900 --> 01:32:21,900
+não estão previstas
+
+1767
+01:32:21,900 --> 01:32:23,900
+portanto as evoluções do FlexSray
+
+1768
+01:32:23,900 --> 01:32:25,900
+para tentar baixar o preço
+
+1769
+01:32:25,900 --> 01:32:27,900
+mas
+
+1770
+01:32:27,900 --> 01:32:29,900
+estão a partir de soluções
+
+1771
+01:32:29,900 --> 01:32:31,900
+baseadas
+
+1772
+01:32:31,900 --> 01:32:33,900
+em
+
+1773
+01:32:33,900 --> 01:32:35,900
+suporte físico e internet
+
+1774
+01:32:35,900 --> 01:32:39,250
+e são essas que devem
+
+1775
+01:32:39,250 --> 01:32:41,250
+devem
+
+1776
+01:32:41,250 --> 01:32:43,250
+ganhar no futuro
+
+1777
+01:32:43,250 --> 01:32:45,250
+vamos usar coisas baseadas em ganhar internet
+
+1778
+01:32:45,250 --> 01:32:47,250
+Hala uma dúvida
+
+1779
+01:32:47,250 --> 01:32:52,350
+então
+
+1780
+01:32:52,350 --> 01:32:54,350
+vamos chegar por aqui hoje
+
+1781
+01:32:54,350 --> 01:32:56,350
+e na quinta feira
+
+1782
+01:32:56,350 --> 01:32:58,350
+vamos falar de
+
+1783
+01:32:58,350 --> 01:33:00,350
+tupologias, dinâmicas
+
+1784
+01:33:00,350 --> 01:33:02,350
+de desmeshe
+
+1785
+01:33:02,350 --> 01:33:04,350
+e adaptação
+
+1786
+01:33:04,350 --> 01:33:06,350
+a avaliações do meio físico
+
+1787
+01:33:06,350 --> 01:33:08,350
+que são importantes
+
+1788
+01:33:08,350 --> 01:33:10,350
+sobretudo quando temos
+
+1789
+01:33:10,350 --> 01:33:14,300
+dispositivos móveis
+
+1790
+01:33:14,300 --> 01:33:17,650
+voltando para entrarmos na quinta
+
+1791
+01:33:17,650 --> 01:33:19,650
+está quinta
+
+1792
+01:33:19,650 --> 01:33:21,650
+está quinta
+
+1793
+01:33:21,650 --> 01:33:23,650
+está quinta então
+
+1794
+01:33:23,650 --> 01:33:25,650
+está cala
+
