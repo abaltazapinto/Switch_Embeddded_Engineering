@@ -1,0 +1,8780 @@
+1
+00:00:00,000 --> 00:00:08,720
+assim, nem sempre se consegue apanhar isto, portanto, na próxima quinta-feira, não
+
+2
+00:00:08,720 --> 00:00:17,240
+quer dizer que vá presente que siga a mesma ordem, mas vou voltar a repetir os conceitos
+
+3
+00:00:17,240 --> 00:00:22,520
+e esclarecer dúvidas, portanto, eu peço, se vocês até lá tiverem a oportunidade de
+
+4
+00:00:22,520 --> 00:00:29,560
+olhar para isto e também para os tutoriais, para na quinta-feira esclarecermos essas
+
+5
+00:00:29,560 --> 00:00:36,000
+dúvidas todas, porque, se não entenderem isto, torna-se muito difícil depois entenderem
+
+6
+00:00:36,000 --> 00:00:42,280
+como é que as coisas efetivamente funcionam, porque hoje vamos falar como é que o Linux
+
+7
+00:00:42,280 --> 00:00:47,360
+faz o esclaminamento das tarefas e o que é que está envolvido, e são muitos detalhes
+
+8
+00:00:47,360 --> 00:00:55,140
+que é sempre complicado de absorver logo à primeira.
+
+9
+00:00:55,300 --> 00:01:02,060
+Ora, ora bem, já passou, já estamos nos cinco minutos, conseguem ver a apresentação,
+
+10
+00:01:02,060 --> 00:01:04,980
+certo?
+
+11
+00:01:04,980 --> 00:01:06,980
+Sim.
+
+12
+00:01:06,980 --> 00:01:07,980
+Muito obrigado.
+
+13
+00:01:07,980 --> 00:01:15,460
+Ora bem, vamos então falar sobre o esclaminamento, e isso quando nós falamos de esclaminamento
+
+14
+00:01:15,460 --> 00:01:25,780
+também está implícito falarmos sobre resource sharing, portanto, as duas coisas estão interligadas,
+
+15
+00:01:25,780 --> 00:01:35,140
+portanto, porque tipicamente vocês já têm essa noção, quando, por exemplo, uma tarefa
+
+16
+00:01:35,140 --> 00:01:42,140
+quer obter o mutex, se ela quer obter o mutex, é porque está em execução, não há tarefas
+
+17
+00:01:42,140 --> 00:01:47,460
+a tentar fazer alguma coisa se não estiverem no CPU, isso não existe, uma tarefa para
+
+18
+00:01:47,460 --> 00:01:53,780
+fazer algo tem que estar no CPU, não há outra, portanto, se está no CPU e quer fazer
+
+19
+00:01:53,780 --> 00:02:02,100
+algo e não consegue, porque existe um mecanismo qualquer que impede de perseguir, porque tem
+
+20
+00:02:02,100 --> 00:02:10,140
+que adquirir uma permissão e não lhe é concedida, então, isso tem a ver com resource sharing,
+
+21
+00:02:10,140 --> 00:02:15,140
+portanto, tem a ver com o esclaminamento, por isso é que os dois conceitos estão muito
+
+22
+00:02:15,140 --> 00:02:16,140
+associados.
+
+23
+00:02:16,140 --> 00:02:25,020
+Ora bem, vamos então começar aqui pela frame.
+
+24
+00:02:25,020 --> 00:02:40,980
+O esclaminador do Linux é uma parte do kernel que tem como responsabilidade alocar o CPU
+
+25
+00:02:40,980 --> 00:02:46,900
+às tarefas, portanto, e vamos assumir para ser mais fácil o entendimento que só temos
+
+26
+00:02:46,900 --> 00:02:53,700
+um CPU, portanto, se só temos um CPU só pode estar uma tarefa atribuída ao CPU.
+
+27
+00:02:54,700 --> 00:03:05,380
+E o scheduler, aquilo que faz é atribuir a tarefa ao CPU e retirar a tarefa do CPU,
+
+28
+00:03:05,380 --> 00:03:12,540
+mas quem tem a responsabilidade de selecionar a tarefa que vai ser atribuída ao CPU não
+
+29
+00:03:12,540 --> 00:03:22,340
+é o scheduler core, essa responsabilidade é delegada nas scheduling classes, portanto,
+
+30
+00:03:22,340 --> 00:03:29,940
+existe este conceito de scheduling classes e scheduling classes que estão organizadas
+
+31
+00:03:29,940 --> 00:03:40,740
+numa determinada hierarquia e que cada scheduling class implementa uma ou mais políticas ou
+
+32
+00:03:40,740 --> 00:03:45,180
+heurísticas de esclaminamento.
+
+33
+00:03:45,180 --> 00:03:53,100
+Então obedece a esta regra de uma ou mais políticas de esclaminamento, a classe stop
+
+34
+00:03:53,100 --> 00:04:01,060
+e a classe idle porque elas só têm uma tarefa atribuída, portanto, são scheduling classes
+
+35
+00:04:01,060 --> 00:04:06,820
+que só têm uma tarefa, portanto, só têm que escalonar uma tarefa, não tem mais nenhuma
+
+36
+00:04:06,820 --> 00:04:11,620
+log, não há nenhuma heurística, é aquela, pronto, ainda por cima ela está sempre em
+
+37
+00:04:11,620 --> 00:04:17,780
+condições de execução, portanto, está sempre, quer dizer, mais ou menos, a stop,
+
+38
+00:04:17,780 --> 00:04:21,940
+da stop nem sempre está em condições de execução, a idle está sempre em condições
+
+39
+00:04:21,940 --> 00:04:22,940
+de execução.
+
+40
+00:04:22,940 --> 00:04:31,100
+Ora, ora vai, como é que isto funciona, é muito simples, quando o scheduler core quer
+
+41
+00:04:31,100 --> 00:04:37,180
+uma tarefa e depois vamos ver em que circunstâncias é que isso acontece, ele vai perguntar à
+
+42
+00:04:37,180 --> 00:04:47,220
+classe stop, deixa-me ver aqui, ele vai perguntar à classe stop, tens uma tarefa em condições
+
+43
+00:04:47,220 --> 00:04:53,900
+de execução, se disser que sim retorna o apontador dessa tarefa, portanto, um apontador
+
+44
+00:04:53,900 --> 00:05:02,260
+do tipo task straight, se não tiver o scheduler core passa para a próxima scheduling class
+
+45
+00:05:02,260 --> 00:05:09,500
+que é a deadline, tens alguma tarefa e o procedimento é o mesmo, vai passando por
+
+46
+00:05:09,500 --> 00:05:19,220
+aqui, vai depois passa o RT, passa o CFS, depois temos aqui esta classe que foi introducida
+
+47
+00:05:19,220 --> 00:05:27,660
+a relativamente pouco tempo, que na prática não é nenhuma classe, é, digamos, um conjunto
+
+48
+00:05:27,660 --> 00:05:34,820
+de úcleos, portanto, de ganchos que permite, vai permitir ou que neste momento permite
+
+49
+00:05:34,820 --> 00:05:41,500
+que eu desenvolva algoritmos de escolinamento, tenho user space e os consigam inserir à
+
+50
+00:05:41,500 --> 00:05:47,460
+semelhança do que aquilo que nós fizemos nos módulos, portanto, sem recompilar o
+
+51
+00:05:47,460 --> 00:05:48,460
+kernel.
+
+52
+00:05:48,460 --> 00:05:54,780
+Pronto, na maior parte dos casos, a não ser nesses casos particulares que se implementam
+
+53
+00:05:54,780 --> 00:06:05,740
+uma classe e associa a esta scheduling class, mas na maior parte dos casos não temos isto,
+
+54
+00:06:05,740 --> 00:06:10,620
+por menos por omissão não temos isto, então, isto aqui também não vai retornar nada
+
+55
+00:06:10,620 --> 00:06:19,460
+e por fim temos a class idle, a class idle tem sempre uma classe disponível, por exemplo,
+
+56
+00:06:19,460 --> 00:06:25,500
+nos ambientes windows é o equivalente ao processo inativo, portanto, é uma tarefa
+
+57
+00:06:25,500 --> 00:06:31,420
+que está sempre no estado de task running, nunca muda de estado, está sempre em condições
+
+58
+00:06:31,420 --> 00:06:32,420
+de executar.
+
+59
+00:06:32,420 --> 00:06:41,500
+Ora bem, cada uma destas políticas, cada uma destas classes de escolinamento implementam
+
+60
+00:06:41,500 --> 00:06:50,020
+esta, volta a referir, concessão do stop e do idle, implementam várias, uma ou mais
+
+61
+00:06:50,020 --> 00:06:52,780
+políticas de escolinamento.
+
+62
+00:06:52,780 --> 00:06:59,500
+No caso do deadline, implementam-se, que é deadline, nomeadamente, basicamente, implementam-se
+
+63
+00:06:59,500 --> 00:07:06,700
+o CBS, já como nesses últimos versões já introduziam mais uns melhoramentos, mas
+
+64
+00:07:06,700 --> 00:07:16,060
+até poderemos dizer, inicialmente, ele implementava só o EDF, depois evoluiu para o CBS e agora
+
+65
+00:07:16,060 --> 00:07:23,580
+já tem mais umas features no escalonamento.
+
+66
+00:07:23,580 --> 00:07:30,780
+Na classe real time, implementam duas políticas, o FIF, portanto, a primeira a chegar é que
+
+67
+00:07:30,780 --> 00:07:40,140
+tem mais prioridade, e a run-robin que vai executar durante algum tempo e depois troca.
+
+68
+00:07:40,140 --> 00:07:48,020
+O completly fair scheduler, o CFS, implementa várias, ou neste caso três políticas de
+
+69
+00:07:48,020 --> 00:07:55,140
+escolinamento, sendo digamos a mais relevante a schedule normal, as outras duas são para
+
+70
+00:07:55,140 --> 00:08:05,540
+situações muito particulares, para processos ou situações em que o processamento tem muito
+
+71
+00:08:05,540 --> 00:08:13,260
+baixa prioridade, portanto, tem pouca prioridade, tipicamente tarefas em background, que só
+
+72
+00:08:13,260 --> 00:08:18,620
+mesmo quando o sistema não tem mais nada para fazer, é que elas são escolinadas.
+
+73
+00:08:18,620 --> 00:08:25,100
+E depois temos aqui o schedule S, que serve para identificar as tarefas que vão ser escolinadas
+
+74
+00:08:25,100 --> 00:08:33,220
+de acordo com isto, caso exista, caso não exista, portanto, em sequer é considerado.
+
+75
+00:08:33,220 --> 00:08:37,900
+Ora bem, vamos então aqui à schedule in class e vamos ver como é que cada uma da schedule
+
+76
+00:08:37,900 --> 00:08:47,510
+in class se trabalha.
+
+77
+00:08:47,510 --> 00:08:56,430
+Ora bem, a classe top, cuja tarefa que tem, associada é a tarefa migration, o N tem a
+
+78
+00:08:56,430 --> 00:09:06,030
+ver com o número do core, só existe em sistemas multicore, porque uma das suas funções
+
+79
+00:09:06,030 --> 00:09:12,510
+ilucidativo pelo nome da tarefa, tem a ver com migração de tarefas, ajuda no processo
+
+80
+00:09:12,510 --> 00:09:23,110
+de migração de tarefas entre os processadores, quando é necessário balancear os processadores,
+
+81
+00:09:23,110 --> 00:09:33,710
+mas tem outras funções, portanto, só funciona neste contexto de multiprocedor,
+
+82
+00:09:33,710 --> 00:09:41,110
+contudo é a tarefa de mais alta prioridade, portanto, se elas tiverem condições de executar,
+
+83
+00:09:41,110 --> 00:09:46,660
+executa, pronto.
+
+84
+00:09:46,660 --> 00:09:55,460
+Depois temos o schedule deadline, que originalmente implementou o EDF, como já referi hoje em
+
+85
+00:09:55,460 --> 00:10:02,020
+dia, implementa mais coisas como o CVS, e mesmo dentro do CVS já tem aí mais uma
+
+86
+00:10:02,020 --> 00:10:12,460
+característica, portanto, esta classe de esclamamento surgiu para apresentar o melhor desempenho
+
+87
+00:10:12,460 --> 00:10:20,460
+para tarefas que têm requisitos temporais, apesar do linux já ter uma classe RT onde
+
+88
+00:10:20,460 --> 00:10:27,980
+tínhamos fixe priority, como vamos ver, ou podemos ter fixe priority, conseguimos atribuir
+
+89
+00:10:27,980 --> 00:10:36,940
+diferentes prioridades às tarefas, mas eram tarefas, as prioridades eram estáticas, o
+
+90
+00:10:36,940 --> 00:10:44,940
+schedule deadline adicionou o dinamismo associado ao EDF no linux, portanto, não existia, este
+
+91
+00:10:44,940 --> 00:10:51,100
+caso tem relativamente poucos anos, existe, portanto, e é muito usado para aplicações
+
+92
+00:10:51,100 --> 00:10:58,240
+que têm esses requisitos, como áudio, vídeo e etc.
+
+93
+00:10:58,240 --> 00:11:07,960
+Depois a classe RT, a classe RT que tem duas políticas de esclamamento.
+
+94
+00:11:07,960 --> 00:11:19,760
+A classe, esta classe de esclamamento organiza as tarefas em antigamente, eram utilizava
+
+95
+00:11:19,760 --> 00:11:27,040
+sem níveis, agora utiliza somente noventa e nove, porque existe um nível que, apesar
+
+96
+00:11:27,040 --> 00:11:35,320
+de não ser usado, é atribuído ao schedule deadline, portanto, todas as tarefas do schedule
+
+97
+00:11:35,320 --> 00:11:46,120
+deadline têm com prioridade zero, as do RT têm com prioridade de um ao noventa e nove.
+
+98
+00:11:46,120 --> 00:11:48,520
+Ora o que é que isto significa?
+
+99
+00:11:48,520 --> 00:11:54,840
+Significa, deixe-me só ver aqui uma coisa que eu, e depois venho aqui atrás, deixe-me
+
+100
+00:11:54,840 --> 00:12:07,360
+só ver o que só tem aqui outra imagem, não tem, estava andando aqui, pensava que não
+
+101
+00:12:07,360 --> 00:12:11,760
+tinha aqui uma imagem mas não tem, o que é que significa?
+
+102
+00:12:11,760 --> 00:12:23,200
+O schedule, o RT organiza as tarefas num arrei com noventa e nove posições, portanto, e
+
+103
+00:12:23,200 --> 00:12:33,560
+em função do nível de prioridade, essas tarefas são penduradas nesse nível, e depois
+
+104
+00:12:33,560 --> 00:12:41,480
+dentro desse nível as tarefas estão ligadas, estão dentro de uma lista ligada, portanto,
+
+105
+00:12:41,480 --> 00:12:56,800
+elas é assim que a classe RT organiza as tarefas, e dentro de cada nível, portanto,
+
+106
+00:12:56,800 --> 00:13:04,440
+quando o schedule recorde, pergunta a classe schedule link classe RT, tens alguma tarefa
+
+107
+00:13:04,440 --> 00:13:10,480
+para executar, ele procura, começa a procurar dos níveis mais altos para os níveis mais
+
+108
+00:13:10,480 --> 00:13:17,480
+baixos, portanto, se houver alguma tarefa num dos níveis, retorne essa tarefa, caso
+
+109
+00:13:17,480 --> 00:13:29,200
+contrário, passa para o CFS, o schedule FIF se no mesmo nível houver schedule FIF
+
+110
+00:13:29,200 --> 00:13:37,120
+e schedule RR, tipicamente o schedule FIF tem prioridade sobre o RR, certo, tem prioridade
+
+111
+00:13:37,120 --> 00:13:50,400
+sobre o RR, ora bem, depois temos o CFS, que utiliza também prioridades, mas não
+
+112
+00:13:50,400 --> 00:13:59,400
+as utiliza, como é que elas utilizam? De uma forma que não tenha ver com níveis, portanto,
+
+113
+00:13:59,400 --> 00:14:12,760
+as tarefas CFS têm uma prioridade entre 100 e 139, portanto, o Linux tem 140 níveis
+
+114
+00:14:12,760 --> 00:14:25,040
+de prioridade, mas na prática, só a classe RT é que utiliza esses níveis, a classe CFS
+
+115
+00:14:25,040 --> 00:14:35,600
+utiliza a prioridade para aqui, portanto, a prioridade mais alta, ou sem, a prioridade
+
+116
+00:14:35,600 --> 00:14:44,120
+mais baixa é o 139, valores esses que nós conseguimos alterar através do comando NICE,
+
+117
+00:14:44,120 --> 00:14:50,960
+que vai de menos 20 a mais de 19, portanto, o que é que ele faz tipicamente, a prioridade
+
+118
+00:14:50,960 --> 00:14:57,720
+é calculada do valor médio que é o 120, menos 20 vai para o 100, mais 19 vai para
+
+119
+00:14:57,720 --> 00:15:06,400
+o 139, portanto, e como é que funciona esta, como é que isto funciona? Na verdade, isto
+
+120
+00:15:06,400 --> 00:15:15,720
+não funciona como um nível de prioridade, funciona como um peso, uma percentagem, ora
+
+121
+00:15:15,720 --> 00:15:24,640
+como é que, para isso, como é que as tarefas CFS são escalonadas? A tarefa CFS com mais
+
+122
+00:15:24,640 --> 00:15:34,440
+prioridade é aquela que tiver um virtual runtime mais pequeno. Então, e como é que é feito
+
+123
+00:15:34,440 --> 00:15:41,960
+o cálculo do virtual runtime? Ora, quando a tarefa é atribuída ao CPU, é contabilizado
+
+124
+00:15:41,960 --> 00:15:52,080
+o tempo em que está no CPU, portanto, e depois esse tempo é exado, é factorizado em função
+
+125
+00:15:52,080 --> 00:15:58,560
+da prioridade, o que é que eu quero com isto dizer? Vou obviamente exagerar, se uma tarefa
+
+126
+00:15:58,560 --> 00:16:08,280
+esteve no CPU um segundo, reais, e se tiver um nível prioridade 100, o que é que vai
+
+127
+00:16:08,280 --> 00:16:16,800
+acontecer? Esse segundo vai contar como um meio segundo para o virtual runtime, mas
+
+128
+00:16:16,800 --> 00:16:27,520
+se a tarefa tiver prioridade 139, esse segundo vai contar como 2 segundos. Ora, o que é
+
+129
+00:16:27,520 --> 00:16:35,440
+que acontece desta forma? As tarefas que têm um nível de prioridade mais alto vão ter
+
+130
+00:16:35,440 --> 00:16:43,040
+mais tempo de CPU. Por quê? Porque as tarefas são organizadas pelo virtual runtime, portanto,
+
+131
+00:16:43,040 --> 00:16:52,840
+é um atributo, é um inteiro, um inteiro, um longo, pelo virtual runtime e na contabilização
+
+132
+00:16:52,840 --> 00:17:00,560
+do virtual runtime utiliza-se esses pesos em função do nível prioridade. Duvidas em
+
+133
+00:17:00,560 --> 00:17:12,220
+relação a isto. Pessoal, eu tenho uma dúvida. Onde é que vieram estes valores 120 e mais
+
+134
+00:17:12,220 --> 00:17:21,580
+19 e mais 20? Isso já, desde que o Linux nasceu. Antes de que uma lógica foram arbitrários.
+
+135
+00:17:21,580 --> 00:17:28,420
+Deve ter aviso alguma lógica, mas desde que eu conheço o Linux sempre tiveram estes 140
+
+136
+00:17:28,420 --> 00:17:37,380
+níveis de prioridade. Ok. Não sei dizer qual é que foi o racional para ter 140 e não ter
+
+137
+00:17:37,380 --> 00:17:45,260
+150, isso não sei dizer. Vávelmente existe algum racional, mas isto já tem estes níveis desde
+
+138
+00:17:45,260 --> 00:17:54,060
+que eu conheço o Linux. Ok. Está bem? Portanto, isto foi assim. Certamente haverá algum racional
+
+139
+00:17:54,060 --> 00:18:35,320
+para terem estes níveis, mas não consigo dizer qual é. Está bem? Ok. Ora, bem. Depois, o problema,
+
+140
+00:18:35,320 --> 00:18:54,890
+eu não percebi bem o que tu disse, mas pronto, se tiver o 139, o que acontece, portanto, o elemento
+
+141
+00:18:54,890 --> 00:19:03,970
+de ordenação é o virtual runtime. É este campo. Portanto, as tarefas são ordenadas por este
+
+142
+00:19:03,970 --> 00:19:12,410
+atributo. Portanto, imagina, este é o atributo para fazer a ordenação das tarefas e, com base
+
+143
+00:19:12,410 --> 00:19:18,530
+nesse atributo, a tarefa que tem mais prioridade é aquela que tiver o virtual runtime mais pequeno.
+
+144
+00:19:18,930 --> 00:19:26,650
+Isto é a regra. A questão agora é como é que se calcula, como é que se calcula o virtual
+
+145
+00:19:26,650 --> 00:19:35,410
+runtime? Da seguinte forma, sempre que uma tarefa vai ao CPU, é contado o tempo que lá esteve.
+
+146
+00:19:36,610 --> 00:19:44,090
+Portanto, que isso vamos, para ser sincero, deixe-me ver se eu tenho aqui o nome do campo que guarda
+
+147
+00:19:44,850 --> 00:19:54,130
+deixe-me, não tenho. Os atos e os diabos só tenho, só tenho aqui um deadline, não tenho, não tenho aqui
+
+148
+00:19:54,130 --> 00:20:02,850
+qual é o campo em que isso é, portanto, esse, o tempo que vai ao CPU, ele é, ele é contabilizado,
+
+149
+00:20:02,850 --> 00:20:12,450
+certo? Portanto, vai ao CPU e está lá um segundo, é um segundo, só que cada tarefa tem um nível de prioridade.
+
+150
+00:20:12,530 --> 00:20:22,290
+Ora, para o cálculo do virtual runtime, a prioridade vai ter um peso, eu dei aquele exemplo exagerado,
+
+151
+00:20:22,290 --> 00:20:31,650
+se uma tarefa estiver no CPU um segundo e tiver uma prioridade 100, portanto, de mais alta prioridade
+
+152
+00:20:31,650 --> 00:20:40,890
+dentro do CFS, vai ser contabilizado só meio segundo. Eu não sei se a relação é esta, mas se
+
+153
+00:20:40,890 --> 00:20:54,770
+uma tarefa estiver no CPU um segundo e tiver um virtual runtime de 139, uma prioridade de 139,
+
+154
+00:20:55,730 --> 00:21:05,170
+o cálculo vai ser adicionado ao virtual runtime, dois segundos. Desta forma, uma vez que as tarefas
+
+155
+00:21:05,170 --> 00:21:14,010
+são sempre ordenadas pelo virtual runtime, as tarefas que têm níveis de prioridade mais alto vão ter mais
+
+156
+00:21:14,010 --> 00:21:21,170
+tempo do CPU, porque? Porque sempre que lá estão, conta menos tempo, logo vão ter mais prioridade.
+
+157
+00:21:21,890 --> 00:21:32,490
+Contudo, a ideia é evitar o Starvation. Isto é, desta forma, há de chegar uma altura que mesmo a
+
+158
+00:21:32,490 --> 00:21:40,130
+tarefa que vai lá um segundo e conta dois, ao fim de algum tempo, vai ser a que tenha o virtual
+
+159
+00:21:40,130 --> 00:21:46,890
+runtime mais pequeno, porque já não vai ao CPU há algum tempo, e à medida que o tempo vai passando
+
+160
+00:21:46,890 --> 00:21:52,850
+ou ela não vai ao CPU, o virtual runtime mantém-se. Obviamente, se os outros vão incrementando,
+
+161
+00:21:52,850 --> 00:21:57,370
+aquilo continua com o mesmo valor e há de chegar a altura de ser escabonado.
+
+162
+00:21:58,730 --> 00:22:27,540
+Não sei se era esta dúvida. Virtualmente, virtualmente, virtualmente esteve no CPU mais tempo, mas
+
+163
+00:22:27,820 --> 00:22:39,980
+em termos de accounting e, sobretudo, conta mais, e dessa forma diminui a prioridade, diminui a
+
+164
+00:22:39,980 --> 00:22:49,900
+possibilidade de ir ao CPU, porque sempre que lá vai, conta muito. E se o elemento que determina
+
+165
+00:22:49,900 --> 00:22:58,220
+essa seleção, é esse virtual runtime, obviamente que essas tarefas vão ter menos tempo de ser
+
+166
+00:22:58,220 --> 00:23:10,340
+pelo que as outras. Tá bem? Pronto. Então, o virtual runtime é acumulativo?
+
+167
+00:23:10,340 --> 00:23:20,580
+O virtual runtime é acumulativo. E então, numa primeira fase, num primeiro momento, as tarefas
+
+168
+00:23:20,580 --> 00:23:36,570
+no CFS correm pela prioridade, mesmo, ou não? É assim, pela... Isso, quando tens muitas com o
+
+169
+00:23:36,570 --> 00:23:45,450
+mesmo, com a mesma prioridade, ele vai pegar numa na primeira que estiver ali. A minha questão
+
+170
+00:23:45,450 --> 00:23:52,530
+muito é, Sera, eu estou pensando no cenário em que ainda nenhuma teve foi atribuída ao CPU,
+
+171
+00:23:52,530 --> 00:24:00,290
+aí é com base só na prioridade, certo? Não, é com base na ordem que estiverem na fila.
+
+172
+00:24:00,290 --> 00:24:06,610
+Ah, ok. Nesses casos é uma árvore binária. Portanto, quando tens, isto é a mesma coisa quando
+
+173
+00:24:06,610 --> 00:24:15,410
+tu não arrei, procuras um determinado valor. Qual é a posição que tu vais retornar? A primeira,
+
+174
+00:24:16,170 --> 00:24:23,330
+aqui é a mesma coisa. A partir daí, a coisa vai andando. É evidente que quando começam,
+
+175
+00:24:23,330 --> 00:24:33,290
+todos têm o virtual runtime na série. Mas, Vosta, a minha questão é, é mais por coincidência que,
+
+176
+00:24:33,290 --> 00:24:40,250
+porque elas estão ordenadas num arrei quase como pela prioridade, ou não? E só acontece como...
+
+177
+00:24:40,250 --> 00:24:48,050
+Elas estão ordenadas numa árvore binária pelo virtual runtime, que inicialmente é zero,
+
+178
+00:24:48,050 --> 00:24:56,690
+estão todas a zero. A questão do arrei só se põe nas RT, então. A questão do arrei só se coloca nas RT.
+
+179
+00:24:56,690 --> 00:25:09,850
+Nas RT, aquelas têm um arrei. Portanto, existem, agora neste momento, 99 níveis. E uma tarefa,
+
+180
+00:25:09,850 --> 00:25:16,290
+numa posição mais alta, tem sempre mais prioridade do que... Não é até mais prioridade, é executada
+
+181
+00:25:16,290 --> 00:25:25,450
+em teoria, em teoria. E no caso da classe FT, eu não afirmo 100%, mas tenho quase a certeza,
+
+182
+00:25:25,450 --> 00:25:32,570
+que em teoria, se tu estivesse sempre uma tarefa de mais alta prioridade, tarefas FIFO,
+
+183
+00:25:32,570 --> 00:25:39,250
+num nível de mais alta prioridade, sempre a executar, as outras não executam.
+
+184
+00:25:40,330 --> 00:25:46,690
+Porque eu também precisava que o mecanismo de Starvation que ele tem, só abrange o CFS,
+
+185
+00:25:46,690 --> 00:26:00,050
+não abrange as RT. Mas eu não tenho a certeza a 100% disso. Mas, em teoria, pode acontecer isso.
+
+186
+00:26:00,050 --> 00:26:04,610
+Portanto, ele depois tem um mecanismo de Starvation, que depois nós vamos ver isso nos
+
+187
+00:26:04,610 --> 00:26:12,810
+tutoriais e eu permito o que? Permita as tarefas que nunca são executadas, poderem ser executadas.
+
+188
+00:26:12,810 --> 00:26:22,130
+E o que é que acontece nesse caso? As tarefas, nomeadamente CFS, vão ser escalonadas como se fosse
+
+189
+00:26:22,130 --> 00:26:32,130
+SCADEDLINE, para terem algum tempo de CPU, para evitar o Starvation. No CFS, o Starvation está
+
+190
+00:26:32,130 --> 00:26:45,450
+implicitamente resolvido. Como o Virtual Runtime é acumulativo, uma tarefa de muito baixa prioridade,
+
+191
+00:26:45,450 --> 00:26:53,930
+que sempre lá vai, conta muito para o Virtual Runtime, mas o valor que tem a chegar a uma
+
+192
+00:26:53,930 --> 00:27:02,290
+tarefa que vai ser o mais pequeno de todas as costas. Portanto, o Starvation está resolvido de forma
+
+193
+00:27:02,290 --> 00:27:13,250
+implícita. O Starvation, para quem é quando uma tarefa está em condições de executar e nunca vai ao CPU.
+
+194
+00:27:13,250 --> 00:27:20,610
+Portanto, isso é que é o Starvation. Portanto, evitar o Starvation é evitar que exista tarefas no
+
+195
+00:27:20,610 --> 00:27:34,530
+sistema em condições de serem atribuídas ao CPU e nunca são. Portanto, e o CFS, isso implicitamente
+
+196
+00:27:34,530 --> 00:27:41,850
+está resolvido. Não está, por exemplo, no RT, eu tenho quase a certeza que não existe nenhum
+
+197
+00:27:41,850 --> 00:27:50,410
+mecanismo de a Starvation. Portanto, se tivesse uma tarefa num determinado nível, ela vai sempre
+
+198
+00:27:50,410 --> 00:27:56,570
+executar e não vai deixar as outras executadas. Obviamente, se tivesse sempre a consumir, o CPU
+
+199
+00:27:56,570 --> 00:28:04,690
+se tivesse a fazer ali um círculo infinito ou uma coisa qualquer. Eu não me recordo de ver nenhum mecanismo
+
+200
+00:28:04,690 --> 00:28:17,330
+relacionado com as tarefas RT para o Starvation. Para o CFS, existe. Para o Starvation, eu não me recordo.
+
+201
+00:28:17,330 --> 00:28:24,690
+Mas é natural que exista, porque depois ali há um tempo, mas eu, pronto, em detalhe não conheço esse mecanismo.
+
+202
+00:28:24,690 --> 00:28:41,170
+Se existe, não conheço esse mecanismo. Ora, bem, no caso do CFS, existe, existe, portanto, agora nesta,
+
+203
+00:28:41,170 --> 00:28:53,090
+já não me recordo há quanto tempo, mas foi adicionado o conceito do Deadline por convirtual runtime, era por esse tempo.
+
+204
+00:28:53,850 --> 00:29:02,410
+Mas, por vezes, e no sentido de quando tínhamos tarefas em que estavam todas no mesmo contexto,
+
+205
+00:29:02,410 --> 00:29:13,810
+isto é, que tinham o virtual runtime iguais, portanto, havia aí alguma dificuldade em selecionar as tarefas.
+
+206
+00:29:13,810 --> 00:29:25,690
+Então, nestas últimas versões, adicionaram um campo para ter um Deadline, portanto, que é calculado de uma forma usando
+
+207
+00:29:25,690 --> 00:29:35,570
+o meorística, e depois nós vamos ver que, de alguma forma, vai ajudar entre aquelas que estão em condições de ser
+
+208
+00:29:35,570 --> 00:29:47,810
+escalonadas, e escalonar aquela que tem mais urgência. E isso é feito usando um outro atributo, que é um Deadline,
+
+209
+00:29:47,810 --> 00:29:56,730
+que não é atribuído pelo utilizador quando criar tarefa, é calculado internamente, como vamos ver aqui, no mais à frente,
+
+210
+00:29:56,730 --> 00:30:04,890
+nas estruturas de dados. Própio, aliás, está aqui o, como é que ele faz, faz, faz isso.
+
+211
+00:30:05,570 --> 00:30:20,850
+Portanto, ele vai calcular esse, digamos, esse nível de urgência, portanto, para fazer uma distinção entre as tarefas que podem ser utilizadas,
+
+212
+00:30:20,850 --> 00:30:33,490
+que podem ser escalonadas. Ora, depois, temos, então, aqui, esta classe de extensão, que permite adicionar estas classes de escalonamento,
+
+213
+00:30:33,490 --> 00:30:43,170
+casurísticas de escalonamento, a partir de User Space, e, por exemplo, isto pode-se até desenvolver em Rust, não tem que ser em C,
+
+214
+00:30:43,170 --> 00:30:55,090
+portanto, é uma abordagem. Eu não conheço muito bem os detalhes disto, assumo que deve ser algo parecido com aquilo que nós vamos fazer,
+
+215
+00:30:55,090 --> 00:31:02,970
+ter um conjunto de callbacks em que temos que escudificar, mas eu não conheço em detalhes como é que isto é feito.
+
+216
+00:31:03,050 --> 00:31:12,690
+Depois, temos até o idle, portanto, o idle, portanto, é a classe de menor, a scheduling class, de menor prioridade,
+
+217
+00:31:12,690 --> 00:31:22,490
+não implementa nenhuma política de escalonamento, tem só uma kernel thread, que é a kernel thread Swapr, que tem o PID 0.
+
+218
+00:31:22,490 --> 00:31:32,890
+Portanto, tem sempre o PID 0 e é atribuído ao CPU, quando não existe mais nenhuma tarefa. E o que é que ela faz? Nada.
+
+219
+00:31:33,890 --> 00:31:49,810
+Não executa, não faz nenhuma tarefa, portanto, só está ali a queimar o CPU e tem mecanismos para se implementar o sistema T-class, isto é,
+
+220
+00:31:49,810 --> 00:32:02,410
+é muito frequente, sobretudo, nos portáteis, quando não existe carga, o sistema deixa de ter o T-class, deixa de estar ativo.
+
+221
+00:32:02,410 --> 00:32:06,690
+E o idle task facilita esse mecanismo.
+
+222
+00:32:06,690 --> 00:32:17,580
+Ora bem, vamos então agora olhar para as estruturas de dados que estão envolvidas no processo de escalonamento.
+
+223
+00:32:17,580 --> 00:32:33,380
+Ora bem, nós já vimos que cada processo no sistema é, portanto, cada processo ativo, cada programa,
+
+224
+00:32:33,860 --> 00:32:41,340
+é cheirido pelo sistema operativo, conhecendo uma instância da estrutura task-strapped.
+
+225
+00:32:41,340 --> 00:32:48,740
+Portanto, para cada processo, o sistema operativo criou uma variável daquele tipo, top.
+
+226
+00:32:48,740 --> 00:32:58,340
+E nós já vimos nessa estrutura, temos o Loupid, temos o Terride, temos o Prio, temos essas coisas, o Status,
+
+227
+00:32:58,340 --> 00:33:06,900
+o State, Undersecure, Undersecure, ação 2 Undersecure, State, pronto, e por aí diante.
+
+228
+00:33:06,900 --> 00:33:18,180
+Depois, portanto, para cada tarefa, para cada CPU existe uma Rank U, o que é que é uma Rank U?
+
+229
+00:33:18,180 --> 00:33:27,460
+Uma Rank U é uma estrutura de dados para guardar, para ter uma lista, o que é que é que seja,
+
+230
+00:33:27,460 --> 00:33:34,460
+dos processos que estão em condições de ser atribuídos ao CPU.
+
+231
+00:33:34,460 --> 00:33:43,860
+Somente esses, ilumidamente, aqueles cujo o seu State é Task Running.
+
+232
+00:33:43,860 --> 00:33:51,580
+Portanto, uma Rank U só tem processos que estão em condições de ser atribuídos ao CPU
+
+233
+00:33:51,580 --> 00:33:59,700
+e depois será atribuído àquilo que tiver maior prioridade num dado instante.
+
+234
+00:33:59,700 --> 00:34:13,900
+Ora bem, como nós já referimos, o escalador do Linux, portanto, tem esta abordagem modelar, isto é,
+
+235
+00:34:13,900 --> 00:34:23,580
+tem um Corde e depois delega nas classes de escalonamento, a implementação dos algoritmos de escalonamento,
+
+236
+00:34:23,660 --> 00:34:29,860
+portanto, no fundo, o que é que nós vamos ter aqui?
+
+237
+00:34:29,860 --> 00:34:37,660
+Vamos ter aqui um conjunto de callbacks, se temos várias classes de escalonamento,
+
+238
+00:34:37,660 --> 00:34:46,180
+vamos ter callbacks que vão invocar os métodos, as funções dessas classes de escalonamento.
+
+239
+00:34:46,180 --> 00:34:56,580
+Portanto, o que é que isso vai fazer? Vamos ter, portanto, o Scheduler Core vai aceder ao MAPI
+
+240
+00:34:56,580 --> 00:35:06,100
+e vai, num dado instante, estar mapeado no stop, no outro dado instante, estar mapeado no deadline,
+
+241
+00:35:06,100 --> 00:35:15,820
+e assim, portanto, porque a forma como ele chama, como ele vai inquirir as classes de escalonamento,
+
+242
+00:35:15,820 --> 00:35:24,020
+é sempre da mesma forma. Portanto, ele pergunta, não passa para a seguinte, pergunta, e assim, portanto.
+
+243
+00:35:24,020 --> 00:35:36,020
+Ora bem, vamos então olhar para a class extract, task extract, aquela que tem a ver com os processos,
+
+244
+00:35:36,940 --> 00:35:43,140
+e o que é que nós podemos ver? Se vocês forem aqui no source code a este fecheiro,
+
+245
+00:35:43,140 --> 00:35:55,100
+encontram lá a definição do task extract e tem aqui vários, vários atributos do tipo
+
+246
+00:35:55,100 --> 00:36:07,660
+SchedEntity, SchedRTEntity, SchedDLEntity, vamos passar aqui estes dois elementos e SchedClass.
+
+247
+00:36:07,660 --> 00:36:14,940
+Então, o que é que isto significa? Vamos esquecer para já esta parte de cima, vamos aqui a este aqui,
+
+248
+00:36:14,940 --> 00:36:27,740
+este aqui é um apontador. O que é que isto significa? Significa que cada tarefa vai estar atribuída a uma SchedClass.
+
+249
+00:36:27,740 --> 00:36:41,940
+Portanto, quando uma tarefa é criada, ela é atribuída a uma SchedClass, em desacordo com o pai da classe que a cria.
+
+250
+00:36:41,940 --> 00:36:52,940
+Se é uma classe FS, o apontador, que é o valor deste apontador, vai ser o da classe de escalamento de pai.
+
+251
+00:36:52,940 --> 00:37:00,940
+Quando mudamos a política de escalamento, vamos ter que mudar o valor deste apontador.
+
+252
+00:37:00,940 --> 00:37:18,340
+Isto aqui, SchedEntity, SchedRTEntity, SchedDLEntity. O SchedEntity, e para seguir isto de forma correta,
+
+253
+00:37:18,340 --> 00:37:33,280
+deveria se chamar SchedCFSEntity. As outras têm SchedRTEntity, SchedDLEntity.
+
+254
+00:37:33,280 --> 00:37:38,280
+Vamos esquecer a este aqui, não são muito relevantes para o caso.
+
+255
+00:37:38,280 --> 00:37:51,280
+O que é que isto significa? Isto são estruturas de dados que vão conter os campos e vão permitir aplicar a política de escalamento.
+
+256
+00:37:51,280 --> 00:38:01,690
+Portanto, por exemplo, o virtual runtime está definido aqui dentro do SchedEntity.
+
+257
+00:38:01,690 --> 00:38:15,610
+No DL, vocês se recordam da primeira aula, quer dizer, acho eu, da primeira aula prática em que eu disponibilizei uma série de exemplos.
+
+258
+00:38:15,610 --> 00:38:28,610
+Naquilo do DL, nós tínhamos lá o runtime, o deadline, hora, como nós vamos ver, na SchedDLEntity,
+
+259
+00:38:28,610 --> 00:38:43,610
+tem parâmetros, tem atributos para ter essa informação e essa informação é usado para fazer o escalonamento.
+
+260
+00:38:43,610 --> 00:38:49,610
+Portanto, para saber qual é a tarefa, qual é o deadline absoluto de uma tarefa.
+
+261
+00:38:49,610 --> 00:38:58,610
+A mesma coisa, qual é o deadline, o virtual runtime de uma tarefa. Portanto, isto está aqui neste SchedEntity.
+
+262
+00:38:58,610 --> 00:39:05,610
+E o mesmo acontece com o RT, também tem essa informação para fazer a gestão.
+
+263
+00:39:05,610 --> 00:39:13,610
+Por exemplo, no caso do RR, é preciso ter definido qual é o time slice.
+
+264
+00:39:13,610 --> 00:39:21,610
+Para saber se a tarefa já escutou o seu tempo e tem outros campos em que eu não pus aqui.
+
+265
+00:39:21,610 --> 00:39:26,610
+Portanto, como vocês podem consultar estas estruturas aqui.
+
+266
+00:39:26,610 --> 00:39:37,610
+E também tem, como podemos ver, o CFS, como eu referi há pouco, organiza as tarefas numa árvore binária.
+
+267
+00:39:37,610 --> 00:39:46,610
+Aqui está, cada tarefe vai ser incluída, se ela for escalonada de acordo com o CFS,
+
+268
+00:39:46,610 --> 00:39:55,610
+ela vai ser inserida numa árvore binária e cá está o campo UNODO para permitir usar essas estruturas de dados.
+
+269
+00:39:55,610 --> 00:40:04,210
+O mesmo acontece aqui com o DEL. Já não acontece isso com o RT.
+
+270
+00:40:04,210 --> 00:40:11,210
+Por quê? Porque o RT usa uma lista ligada para ligar as tarefas que estão no mesmo nível.
+
+271
+00:40:11,210 --> 00:40:17,210
+Já não usa uma árvore binária, usa uma lista ligada por níveis.
+
+272
+00:40:17,210 --> 00:40:30,710
+Porque não tem outro campo para fazer essa ordenação, não usa nenhuma ordenação em específico a não ser os níveis
+
+273
+00:40:30,710 --> 00:40:35,710
+e depois dentro de cada nível tem que ligar as tarefas que estão nesse nível.
+
+274
+00:40:35,710 --> 00:40:39,710
+Para isso, usa uma lista duplamente ligada.
+
+275
+00:40:39,710 --> 00:40:50,710
+Portanto, o SCAD entity é uma estrutura de dados que contém a informação associada à tarefa
+
+276
+00:40:50,710 --> 00:40:57,600
+que é usada para tomar as decisões de escalonamento, certo?
+
+277
+00:40:57,600 --> 00:41:09,650
+Duvidas. Continuando, vocês não têm dúvidas, são muito simpáticos.
+
+278
+00:41:09,650 --> 00:41:13,650
+Ora, nós já vimos isto, mas isto aparece aqui.
+
+279
+00:41:13,650 --> 00:41:23,650
+No Linux, cada RUNQ é definida através da estrutura extractRQ.
+
+280
+00:41:23,650 --> 00:41:31,650
+E a RQ tem todos os processos que estão no estado de Task Running,
+
+281
+00:41:31,650 --> 00:41:40,280
+inclusive a tarefa que está a correr no CPU e não altera o estado.
+
+282
+00:41:40,280 --> 00:41:42,280
+O estado é o mesmo.
+
+283
+00:41:42,280 --> 00:41:47,280
+Depois, vamos ver como é que nós sabemos qual é a tarefa que está atrevida ao CPU.
+
+284
+00:41:47,280 --> 00:41:53,280
+Como também já falamos sobre isso, as tarefas, quando não estão em condições de serem executadas,
+
+285
+00:41:53,280 --> 00:41:56,280
+estão numa O8Q.
+
+286
+00:41:56,280 --> 00:42:04,280
+Pois, falamos nisso quando falamos das O8Qs, portanto, entre os semáforos e coisas assim.
+
+287
+00:42:04,280 --> 00:42:08,280
+Ora, vamos então olhar para RUNQ.
+
+288
+00:42:08,280 --> 00:42:13,280
+E na RUNQ, portanto, o que é que nós temos aqui?
+
+289
+00:42:13,280 --> 00:42:17,280
+Vamos para já esquecer aqui algumas coisas, por exemplo.
+
+290
+00:42:17,280 --> 00:42:23,280
+Temos aqui a estrutura de dados ou apontador para a idle task.
+
+291
+00:42:23,280 --> 00:42:28,280
+Por quê? Porque cada processador tem uma idle task.
+
+292
+00:42:28,280 --> 00:42:33,280
+Apesar de ter sempre o mesmo pido, elas são diferentes.
+
+293
+00:42:33,280 --> 00:42:39,280
+Todos os processadores têm uma stop, uma migration task.
+
+294
+00:42:39,280 --> 00:42:42,280
+Portanto, cá estão os apontadores.
+
+295
+00:42:42,280 --> 00:42:49,280
+Mas antes de passarmos aqui para a parte de cima, vamos olhar para aqui.
+
+296
+00:42:49,280 --> 00:42:54,280
+Vamos esquecer este Donor. Vamos esquecer isto.
+
+297
+00:42:54,280 --> 00:42:56,280
+O que é que nós temos aqui?
+
+298
+00:42:56,280 --> 00:43:02,280
+Uma variável que diz Curent, ou é a abregriatura de Curent.
+
+299
+00:43:02,280 --> 00:43:06,280
+Para que vai servir este apontador?
+
+300
+00:43:06,280 --> 00:43:14,280
+Para apontar para a tarefa que está atribuída ao CPU.
+
+301
+00:43:14,280 --> 00:43:25,280
+As tarefas que estão em condições de ser executadas e não estão atribuídas ao CPU estão no outro sítio.
+
+302
+00:43:25,280 --> 00:43:33,280
+A tarefa que está atribuída ao CPU é apontada por este Curent.
+
+303
+00:43:33,280 --> 00:43:44,280
+E agora, na verdade, nós temos para o CFS as tarefas organizadas em uma árvore binária.
+
+304
+00:43:44,280 --> 00:43:52,280
+Para o RT, num arrei e depois portanto por níveis e ligados por uma lista ligada.
+
+305
+00:43:52,280 --> 00:43:57,280
+O DL também temos uma árvore binária.
+
+306
+00:43:57,280 --> 00:44:05,280
+Ora, na verdade, as tarefas não estão na estrutura RT.
+
+307
+00:44:05,280 --> 00:44:10,280
+Estão dentro de uma sub-RQ.
+
+308
+00:44:10,280 --> 00:44:18,280
+Isto é, existe uma RQ para cada uma das políticas de escalonamento.
+
+309
+00:44:18,280 --> 00:44:25,280
+Portanto, para cada uma das classes de escalonamento.
+
+310
+00:44:25,280 --> 00:44:33,280
+A CFS utiliza isto, a RT utiliza isto e a DL utiliza isto.
+
+311
+00:44:33,280 --> 00:44:35,280
+O que é que isto significa?
+
+312
+00:44:35,280 --> 00:44:44,280
+Que as tarefas CFS que estão atribuídas a um determinado CPU estão nesta RQ.
+
+313
+00:44:44,280 --> 00:44:48,280
+As RT estão aqui, as DL estão aqui.
+
+314
+00:44:48,280 --> 00:44:52,280
+E depois temos a idle e a stop aqui.
+
+315
+00:44:52,280 --> 00:44:56,200
+Tu ouvidas?
+
+316
+00:44:56,200 --> 00:45:01,440
+Sim.
+
+317
+00:45:01,440 --> 00:45:04,440
+Uma questão.
+
+318
+00:45:04,440 --> 00:45:13,440
+A pessoa ia dizer que ela está na política de escalonamento e depois corrigiu-se para e disse classe.
+
+319
+00:45:13,440 --> 00:45:17,440
+Neste caso, qual é a diferença entre a classe e a política de escalonamento?
+
+320
+00:45:17,440 --> 00:45:19,440
+A classe implementa ação da política?
+
+321
+00:45:19,440 --> 00:45:24,440
+A classe implementa uma ou mais política de escalonamento.
+
+322
+00:45:24,440 --> 00:45:26,440
+OK.
+
+323
+00:45:26,440 --> 00:45:32,440
+Nomeadamente, por exemplo, o RT implementa o SCAD FIFA e o SCAD RF.
+
+324
+00:45:32,440 --> 00:45:34,440
+OK.
+
+325
+00:45:34,440 --> 00:45:37,440
+O CFS tem três níveis.
+
+326
+00:45:37,440 --> 00:45:41,440
+Por exemplo, no deadline, o que é, efetivamente, é a mesma coisa.
+
+327
+00:45:41,440 --> 00:45:45,440
+Clases de escalonamento e política de escalonamento é a mesma, porque só tem níveis.
+
+328
+00:45:45,440 --> 00:45:47,440
+Tá bem?
+
+329
+00:45:47,440 --> 00:45:49,440
+Tá.
+
+330
+00:45:49,440 --> 00:45:53,440
+Nós entretanto, temos quatro run-cues por CPU.
+
+331
+00:45:53,440 --> 00:45:58,440
+Na verdade, temos três run-cues por CPU.
+
+332
+00:45:58,440 --> 00:46:01,440
+Temos estas três run-cues.
+
+333
+00:46:01,440 --> 00:46:04,440
+O que é SCAD?
+
+334
+00:46:04,440 --> 00:46:12,440
+Eventualmente, mas teríamos aqui, eu não sei se por acaso não sei porque eu retirei, se tem aqui alguma coisa,
+
+335
+00:46:12,440 --> 00:46:15,440
+mas eu acho que não tem, mas já não tenho a certeza.
+
+336
+00:46:15,440 --> 00:46:20,440
+É uma questão de vermos aqui se tem aqui alguma coisa para aquela classe de extensão,
+
+337
+00:46:20,440 --> 00:46:27,440
+que eu não estou a considerar, porque provavelmente há de ter para aqui alguma estrutura para isso.
+
+338
+00:46:28,440 --> 00:46:37,440
+Ignorando essa, portanto que é um caso especial e relativamente recente, nós temos três run-cues dentro de uma run-cue.
+
+339
+00:46:37,440 --> 00:46:44,440
+Então, eu digo que nós temos três sobre run-cues dentro de uma run-cue.
+
+340
+00:46:44,440 --> 00:47:03,660
+Cada processo tem uma prioridade e tem uma política de escalonamento.
+
+341
+00:47:03,660 --> 00:47:09,660
+Vocês se recordam, naquele mecanismo de tracing,
+
+342
+00:47:09,660 --> 00:47:15,660
+cada processo tem uma política, tem um nível de prioridade, que é o campo PRIO,
+
+343
+00:47:15,660 --> 00:47:24,660
+tem uma polícia, portanto, todos os processos têm um nível de prioridade e uma política de escalonamento.
+
+344
+00:47:24,660 --> 00:47:30,660
+Logo, cada processo, os processos são atribuídos ao CPU e cada processo,
+
+345
+00:47:30,660 --> 00:47:36,660
+em função da sua política, vai ser colocada na run-cue correspondente.
+
+346
+00:47:36,660 --> 00:48:08,630
+Sim, claro, as tarefas RT têm que ter o campo PRIO, tem que ter um valor entre 1 e 99.
+
+347
+00:48:08,630 --> 00:48:13,630
+E depois, em função desse valor invertido, e ele é o contrário,
+
+348
+00:48:13,630 --> 00:48:23,400
+vai colocar isso num arrei na posição adequada.
+
+349
+00:48:23,400 --> 00:48:31,400
+E as tarefas CFS vão ser colocadas numa árvore binária em função do virtual runtime,
+
+350
+00:48:31,400 --> 00:48:34,400
+que é calculado daquela forma que nós fizemos.
+
+351
+00:48:34,400 --> 00:48:41,400
+As tarefas deadline vão ser colocadas na ERP, na DEL,
+
+352
+00:48:43,780 --> 00:48:53,880
+vão ser colocadas numa árvore binária ordenadas pelo deadline absoluto.
+
+353
+00:48:53,880 --> 00:48:58,880
+Sempre assim, cada tarefa num dado instante pertence a uma política de escalonamento.
+
+354
+00:48:58,880 --> 00:49:02,880
+E em função disso, vai ser colocada num sítio adequado.
+
+355
+00:49:02,880 --> 00:49:13,880
+E cada política de escalonamento usa uma estrutura de dados adequada para melhor gerir a sua política de escalonamento.
+
+356
+00:49:13,880 --> 00:49:19,880
+Por exemplo, se nós temos ordenação, quando temos algum tipo de ordenação,
+
+357
+00:49:19,880 --> 00:49:24,880
+a melhor estrutura de dados para isso é uma árvore binária.
+
+358
+00:49:24,880 --> 00:49:30,880
+Por isso é que o CFS e o deadline usam árvores binárias.
+
+359
+00:49:30,880 --> 00:49:34,880
+O RT não tem ordenação.
+
+360
+00:49:34,880 --> 00:49:40,880
+A sua ordenação é com base nos níveis, portanto que é feita de forma estática.
+
+361
+00:49:40,880 --> 00:49:43,880
+Atribuiz uma prioridade a uma tarefa.
+
+362
+00:49:43,880 --> 00:49:51,880
+É para ali, nos outros casos, o fator de ordenação vai evoluindo ao longo do tempo.
+
+363
+00:49:51,880 --> 00:49:54,880
+Por isso é que deve-se usar uma árvore binária.
+
+364
+00:49:54,880 --> 00:49:57,880
+Porque por causa do balanceamento, etc., etc.
+
+365
+00:49:57,880 --> 00:50:02,280
+Eu ouvi disso.
+
+366
+00:50:02,280 --> 00:50:09,180
+Ora, vamos lá continuar.
+
+367
+00:50:09,180 --> 00:50:11,180
+Vamos ver porque eu repito isto.
+
+368
+00:50:11,180 --> 00:50:15,180
+Isto não vai entrar agora, portanto vamos ter que voltar a falar sobre isto.
+
+369
+00:50:15,180 --> 00:50:17,180
+Ora, vai.
+
+370
+00:50:17,180 --> 00:50:21,180
+Ah, depois há aqui mais dois campos.
+
+371
+00:50:21,180 --> 00:50:23,180
+O meu mais três.
+
+372
+00:50:23,180 --> 00:50:32,180
+Temos obviamente aqui um spin log para controlar o acesso a esta estrutura de dados.
+
+373
+00:50:32,180 --> 00:50:40,180
+Nomeadamente, aqui há algumas operações, precisam de alguma atomicidade.
+
+374
+00:50:40,180 --> 00:50:42,180
+Logo, é preciso um log.
+
+375
+00:50:42,180 --> 00:50:44,180
+Depois temos aqui um campo.
+
+376
+00:50:44,180 --> 00:50:48,180
+Indica quantas tarefas é que estão dentro da run queue.
+
+377
+00:50:48,180 --> 00:50:54,180
+Portanto que será o somatório de as tarefas que estão aqui nas sub run queues.
+
+378
+00:50:54,180 --> 00:50:58,180
+E depois tem aqui uma máscara.
+
+379
+00:50:58,180 --> 00:51:10,180
+Portanto, uma máscara que serve para indicar se existem tarefas nesta run queue ou não.
+
+380
+00:51:10,180 --> 00:51:16,180
+Portanto, facilita o acesso.
+
+381
+00:51:16,180 --> 00:51:24,180
+Portanto, isto aqui funciona como, ou vai ser usado como em operações bitwise.
+
+382
+00:51:24,180 --> 00:51:30,180
+Isto é bit a bit e ajuda para saber se tem tarefas, se não tem tarefas,
+
+383
+00:51:30,180 --> 00:51:41,180
+que níveis dentro das sub run queues e tarefas é que têm tarefas.
+
+384
+00:51:41,180 --> 00:51:45,180
+Portanto, e depois facilita o processo de pesquisa.
+
+385
+00:51:45,180 --> 00:51:50,180
+Portanto, tem a ver com formas de otimização.
+
+386
+00:51:50,180 --> 00:51:52,180
+Pronto.
+
+387
+00:51:52,180 --> 00:51:55,180
+Isto foi o que...
+
+388
+00:51:55,180 --> 00:52:00,180
+Ah, depois temos aqui este fair server.
+
+389
+00:52:00,180 --> 00:52:04,180
+Fair que vem de CFS, completo e fair.
+
+390
+00:52:04,180 --> 00:52:10,180
+Mas se vocês repararem isto, o tipo de dados é um schedule DL entity.
+
+391
+00:52:10,180 --> 00:52:17,180
+Então este fair server é um mecanismo que o Inux tem
+
+392
+00:52:17,180 --> 00:52:24,180
+para evitar para resolver o problema do starvation das tarefas CFS.
+
+393
+00:52:24,180 --> 00:52:27,180
+O que é que isto faz?
+
+394
+00:52:27,180 --> 00:52:29,180
+No fundo isto vai.
+
+395
+00:52:29,180 --> 00:52:34,180
+Quando as tarefas CFS estão no sistema há muito tempo,
+
+396
+00:52:34,180 --> 00:52:40,180
+sem poderem ir ao CPU porque as tarefas RT não permitem,
+
+397
+00:52:40,180 --> 00:52:46,180
+porque estão a usar muito o CPU.
+
+398
+00:52:46,180 --> 00:52:53,180
+Então, nesse caso, o sistema, quando obtenho o controle da máquina,
+
+399
+00:52:53,180 --> 00:53:00,180
+vai colocar estas tarefas que já estão há muito tempo sem executar,
+
+400
+00:53:00,180 --> 00:53:08,180
+numa, vão transformá-las de forma feita em tarefas DL e como tal,
+
+401
+00:53:08,180 --> 00:53:14,180
+vão passar à frente das classes RT e vão executar durante algum tempo.
+
+402
+00:53:14,180 --> 00:53:26,480
+E depois voltam para a sua posição original e o processo se repete periodicamente.
+
+403
+00:53:26,480 --> 00:53:29,480
+Sim.
+
+404
+00:53:29,480 --> 00:53:38,480
+Supostamente no CFS, a questão do starvation já não estava resolvida com o virtual runtime.
+
+405
+00:53:38,480 --> 00:53:40,480
+Está dentro do CFS.
+
+406
+00:53:40,480 --> 00:53:42,480
+Ah, só dentro do CFS.
+
+407
+00:53:42,480 --> 00:53:44,480
+Entre classes?
+
+408
+00:53:44,480 --> 00:53:48,480
+Entre classes não, porque as outras classes, nomeadas a classe RT,
+
+409
+00:53:48,480 --> 00:53:50,480
+têm mais prioridade que o CFS.
+
+410
+00:53:50,480 --> 00:53:57,480
+Em teoria, se tivesse sempre uma classe de RT a execução, o CFS não cheira.
+
+411
+00:53:57,480 --> 00:53:59,480
+Não vai ao CPU.
+
+412
+00:53:59,480 --> 00:54:01,480
+Percebes?
+
+413
+00:54:01,480 --> 00:54:10,480
+Pronto, depois existe o Linux agora já implementa
+
+414
+00:54:10,480 --> 00:54:15,480
+o protocolo de irença de prioridades associadas aos notecs.
+
+415
+00:54:15,480 --> 00:54:20,480
+Portanto, te permite fazer isso.
+
+416
+00:54:20,480 --> 00:54:28,480
+Aliás, se vocês repararem aqui no task, no RT,
+
+417
+00:54:28,480 --> 00:54:31,480
+vocês sabem o que é que é uma union?
+
+418
+00:54:31,480 --> 00:54:38,330
+Sabem qual a diferença entre uma struct e uma union?
+
+419
+00:54:38,330 --> 00:54:39,330
+Não.
+
+420
+00:54:39,330 --> 00:54:43,330
+Quando temos este config, se quer de proxy, o que é que vai acontecer?
+
+421
+00:54:43,330 --> 00:54:46,330
+Nós temos aqui uma compilação condicional.
+
+422
+00:54:46,330 --> 00:54:50,330
+Ou vai compilar isto ou vai compilar isto?
+
+423
+00:54:50,330 --> 00:54:55,330
+Qual é a diferença entre isto e isto?
+
+424
+00:54:55,330 --> 00:54:59,120
+Ela também.
+
+425
+00:54:59,120 --> 00:55:00,120
+Sim.
+
+426
+00:55:00,120 --> 00:55:05,120
+Em cima temos duas variáveis e embaixo o que é que temos?
+
+427
+00:55:05,120 --> 00:55:09,120
+Apenas uma, que é a união entre as duas structs, ou seja,
+
+428
+00:55:09,120 --> 00:55:17,120
+a união vai transformar duas numas e juntar todos os,
+
+429
+00:55:17,120 --> 00:55:22,120
+neste caso todos os operantes, não sei qual o nome,
+
+430
+00:55:22,120 --> 00:55:26,120
+o que eu não tenho vai passar até aqui.
+
+431
+00:55:26,120 --> 00:55:29,120
+Na verdade, o que isto está aqui a fazer,
+
+432
+00:55:29,120 --> 00:55:32,120
+uma vez que estas variáveis são do mesmo tipo,
+
+433
+00:55:32,120 --> 00:55:38,120
+na prática, isto significa uma única variável que pode ser acedida
+
+434
+00:55:38,120 --> 00:55:42,120
+por estes dois nomes, por estes dois apontadores.
+
+435
+00:55:42,120 --> 00:55:44,120
+Ou por este, ou por aquele.
+
+436
+00:55:44,120 --> 00:55:45,120
+Por que?
+
+437
+00:55:45,120 --> 00:55:50,120
+Porque, na verdade, isto é só uma variável do tipo das structs.
+
+438
+00:55:50,120 --> 00:55:56,120
+Aqui, não, temos duas variáveis, portanto, do tipo das structs.
+
+439
+00:55:56,120 --> 00:55:58,120
+Neste caso, apontadores.
+
+440
+00:55:58,120 --> 00:56:01,120
+Portanto, temos dois apontadores, aqui só temos um,
+
+441
+00:56:01,120 --> 00:56:06,120
+mas consegue aceder à mesma posição,
+
+442
+00:56:06,120 --> 00:56:10,120
+portanto, é esse apontador usando este nome ou usando aquilo.
+
+443
+00:56:10,120 --> 00:56:14,120
+Aqui são variáveis completamente diferentes.
+
+444
+00:56:14,120 --> 00:56:15,120
+Certo?
+
+445
+00:56:15,120 --> 00:56:16,120
+Não.
+
+446
+00:56:16,120 --> 00:56:24,720
+Portanto, eu fiquei ali numa dúvida que é,
+
+447
+00:56:24,720 --> 00:56:26,720
+mas então nós também podemos estar,
+
+448
+00:56:26,720 --> 00:56:29,720
+ou seja, sempre como o primeiro caso,
+
+449
+00:56:29,720 --> 00:56:33,190
+e apontar para o mesmo sítio, não é?
+
+450
+00:56:33,190 --> 00:56:35,190
+Primeiro caso, o que quer dizer com o primeiro caso?
+
+451
+00:56:35,190 --> 00:56:39,190
+Ali naquela que diz if define, no if def.
+
+452
+00:56:39,190 --> 00:56:40,190
+Sim, este.
+
+453
+00:56:40,190 --> 00:56:45,190
+Nesta situação, temos dois apontadores, não é?
+
+454
+00:56:45,190 --> 00:56:48,190
+Ou seja, por que é que se fez o outro caso, não é?
+
+455
+00:56:48,190 --> 00:56:51,190
+Porque podemos também apontar para o mesmo sítio, não é?
+
+456
+00:56:51,190 --> 00:56:58,190
+Não, fez-se o outro caso porque, quando tens, sim, poderia, certo,
+
+457
+00:56:58,190 --> 00:57:03,190
+mas qual era o interesse de duas variáveis desta forma,
+
+458
+00:57:03,190 --> 00:57:08,190
+é muito mais simpático, porque, quando usas uma união,
+
+459
+00:57:08,190 --> 00:57:12,190
+acabo a usar os dois nomes na mesma, não é?
+
+460
+00:57:12,190 --> 00:57:14,190
+Pode-se usar na mesma, os dois nomes,
+
+461
+00:57:14,190 --> 00:57:17,190
+não tens que andar a alterar-me no código,
+
+462
+00:57:17,190 --> 00:57:20,190
+e refere-se à mesma coisa, portanto,
+
+463
+00:57:20,190 --> 00:57:24,190
+aqui só vai-se ter, na verdade, só vai-se ter um apontador,
+
+464
+00:57:24,190 --> 00:57:29,190
+que podes referi-lo de duas formas, usando dois nomes.
+
+465
+00:57:29,190 --> 00:57:34,190
+Os dois apontadores refere que são completamente diferentes.
+
+466
+00:57:34,190 --> 00:57:38,190
+É uma questão, agora, obviamente, o que tu me estás a dizer é,
+
+467
+00:57:38,190 --> 00:57:45,190
+eu não precisava disso, e, quando, neste determinado contexto,
+
+468
+00:57:45,190 --> 00:57:50,190
+inicializava, igualava um apontador ao outro.
+
+469
+00:57:50,190 --> 00:57:52,190
+É o que me estás a dizer?
+
+470
+00:57:52,190 --> 00:57:53,190
+Sim.
+
+471
+00:57:53,190 --> 00:57:57,190
+Eu não sei se isso era viável ou etc.
+
+472
+00:57:57,190 --> 00:58:03,940
+É uma forma mais simpática, não tens que estar preocupado,
+
+473
+00:58:03,940 --> 00:58:07,940
+não fica com nada, portanto, é só uma variável,
+
+474
+00:58:07,940 --> 00:58:13,940
+só que tem duas alias para a mesma posição.
+
+475
+00:58:13,940 --> 00:58:16,260
+Certo?
+
+476
+00:58:16,260 --> 00:58:19,700
+Ora bem, continua ano?
+
+477
+00:58:19,700 --> 00:58:20,700
+Sim.
+
+478
+00:58:20,700 --> 00:58:22,700
+Também fiquei com uma dúvida.
+
+479
+00:58:26,070 --> 00:58:29,070
+Porque, no caso, se eu uso uma união,
+
+480
+00:58:29,070 --> 00:58:32,070
+só uma situação pode existir,
+
+481
+00:58:32,070 --> 00:58:35,070
+eu não poderia ter as duas situações ao mesmo tempo, certo?
+
+482
+00:58:35,070 --> 00:58:37,070
+Não poderia ter...
+
+483
+00:58:37,070 --> 00:58:39,070
+Quando tens uma...
+
+484
+00:58:39,070 --> 00:58:46,070
+Espera, eu vou-vos mostrar a diferença entre uma união e uma...
+
+485
+00:58:46,070 --> 00:58:49,070
+Porque a dúvida que eu fiquei foi,
+
+486
+00:58:49,070 --> 00:58:52,070
+teoricamente, eu poderia definir só o Schedule in Context,
+
+487
+00:58:52,070 --> 00:58:53,070
+só o Execution Context,
+
+488
+00:58:53,070 --> 00:58:57,070
+eu não precisaria definir os dois...
+
+489
+00:58:57,070 --> 00:58:59,070
+A questão aqui é,
+
+490
+00:58:59,070 --> 00:59:01,070
+tu com o Convix, que é de Proxy,
+
+491
+00:59:01,070 --> 00:59:05,070
+é que ele adiciona herança de prioridades,
+
+492
+00:59:05,070 --> 00:59:09,070
+e para isso ele precisa de dois apontadores.
+
+493
+00:59:09,070 --> 00:59:12,070
+Eu não conheço o detalhe da implementação
+
+494
+00:59:12,070 --> 00:59:14,070
+para te dar uma justificação
+
+495
+00:59:14,070 --> 00:59:17,070
+porque é que ele precisa de dois apontadores.
+
+496
+00:59:17,070 --> 00:59:20,070
+Eu penso que tem a ver com o seguinte,
+
+497
+00:59:20,070 --> 00:59:26,070
+que é, o Donor tem a ver com o processo que é o Dono,
+
+498
+00:59:26,070 --> 00:59:28,070
+do MoTeX,
+
+499
+00:59:28,070 --> 00:59:34,070
+e o Current é o processo que está a executar,
+
+500
+00:59:34,070 --> 00:59:38,070
+e que provavelmente vai herdar,
+
+501
+00:59:38,070 --> 00:59:40,070
+portanto, uma questão de...
+
+502
+00:59:40,070 --> 00:59:42,070
+Vai buscar a prioridade,
+
+503
+00:59:42,070 --> 00:59:46,070
+vai herdar a prioridade deste Donor.
+
+504
+00:59:46,070 --> 00:59:49,070
+Eu não conheço ainda o detalhe para vos dizer que é assim,
+
+505
+00:59:49,070 --> 00:59:51,070
+é o que eu suspeito.
+
+506
+00:59:51,070 --> 00:59:53,070
+Portanto, e nesse contexto,
+
+507
+00:59:53,070 --> 00:59:56,070
+ele precisa destes dois apontadores.
+
+508
+00:59:56,070 --> 01:00:01,070
+Aqui, quando não tem essa feature no Linux,
+
+509
+01:00:01,070 --> 01:00:03,070
+ele não precisa dos dois apontadores,
+
+510
+01:00:03,070 --> 01:00:05,070
+só que qual é o problema?
+
+511
+01:00:05,070 --> 01:00:09,070
+Para não andar a gerir no meio do código,
+
+512
+01:00:09,070 --> 01:00:11,070
+porque o que pode acontecer
+
+513
+01:00:11,070 --> 01:00:14,070
+é que provavelmente em muitas situações,
+
+514
+01:00:14,070 --> 01:00:18,070
+o Donor e o Current são a mesma,
+
+515
+01:00:18,070 --> 01:00:20,070
+então se são a mesma,
+
+516
+01:00:20,070 --> 01:00:24,070
+provavelmente será...
+
+517
+01:00:24,070 --> 01:00:28,070
+E então, para não ter que andar a gerir isso,
+
+518
+01:00:28,070 --> 01:00:32,070
+definiram ou usaram esta abordagem.
+
+519
+01:00:32,070 --> 01:00:34,070
+Ok, agora está claro.
+
+520
+01:00:34,070 --> 01:00:36,070
+De ter uma coisa.
+
+521
+01:00:36,070 --> 01:00:39,070
+Você está aqui a ver se tinha aqui uma...
+
+522
+01:00:39,070 --> 01:00:44,080
+Deve ser para aqui.
+
+523
+01:00:44,080 --> 01:00:49,080
+Se eu tenho aqui uma imagem que explico...
+
+524
+01:00:49,080 --> 01:00:51,080
+Pronto, tenho.
+
+525
+01:00:51,080 --> 01:00:59,390
+Tenho aqui uma imagem que explico que aqui é uma união.
+
+526
+01:00:59,390 --> 01:01:06,130
+Portanto, uma união é isto.
+
+527
+01:01:06,130 --> 01:01:08,130
+Uma estrutura...
+
+528
+01:01:08,130 --> 01:01:10,130
+Uma estrutura, por exemplo,
+
+529
+01:01:10,130 --> 01:01:13,130
+cada campo, o Linux,
+
+530
+01:01:13,130 --> 01:01:16,130
+ocupa o seu número de bytes.
+
+531
+01:01:16,130 --> 01:01:18,130
+E o tamanho de uma estrutura,
+
+532
+01:01:18,130 --> 01:01:20,130
+o sumatório, mais ou menos,
+
+533
+01:01:20,130 --> 01:01:23,130
+dos bytes ocupados por isto.
+
+534
+01:01:23,130 --> 01:01:28,130
+Uma união, o tamanho de uma união
+
+535
+01:01:28,130 --> 01:01:31,130
+é igual ao tamanho do maior campo.
+
+536
+01:01:31,130 --> 01:01:34,130
+Por exemplo, vamos imaginar que aqui
+
+537
+01:01:34,130 --> 01:01:36,130
+um int ocupa 4 bytes,
+
+538
+01:01:36,130 --> 01:01:38,130
+um float ocupa 4 bytes,
+
+539
+01:01:38,130 --> 01:01:40,130
+um char ocupa 1 byte.
+
+540
+01:01:40,130 --> 01:01:44,130
+O tamanho desta união é de 4 bytes.
+
+541
+01:01:44,130 --> 01:01:47,130
+E eu consigo referenciar esses 4 bytes
+
+542
+01:01:47,130 --> 01:01:49,130
+com a palavra A,
+
+543
+01:01:49,130 --> 01:01:51,130
+com a palavra B
+
+544
+01:01:51,130 --> 01:01:52,130
+e com a palavra C.
+
+545
+01:01:52,130 --> 01:01:55,130
+Só que, por exemplo, no caso de quando uso o C,
+
+546
+01:01:55,130 --> 01:01:58,130
+eu só vai trabalhar sobre o primeiro byte.
+
+547
+01:01:58,130 --> 01:01:59,130
+Por quê?
+
+548
+01:01:59,130 --> 01:02:01,130
+Porque o C é do tipo char.
+
+549
+01:02:01,130 --> 01:02:07,130
+Quando uso a variável B, o campo B,
+
+550
+01:02:07,130 --> 01:02:11,130
+eu vai trabalhar sobre 4 bytes,
+
+551
+01:02:11,130 --> 01:02:16,130
+mas assumindo uma codificação float,
+
+552
+01:02:16,130 --> 01:02:18,130
+para números com vírgula.
+
+553
+01:02:18,130 --> 01:02:22,130
+Quando eu aceito isto,
+
+554
+01:02:22,130 --> 01:02:24,130
+através do A,
+
+555
+01:02:24,130 --> 01:02:28,130
+ele vai codificar os valores como sendo inteiros.
+
+556
+01:02:28,130 --> 01:02:30,130
+Qual é o problema da união?
+
+557
+01:02:30,130 --> 01:02:33,130
+Obviamente que o problema de uma união,
+
+558
+01:02:33,130 --> 01:02:35,130
+onde é que está?
+
+559
+01:02:35,130 --> 01:02:37,130
+Eu acho que tenho aqui a CZ.
+
+560
+01:02:37,130 --> 01:02:38,130
+É isto.
+
+561
+01:02:38,130 --> 01:02:41,130
+Se eu colocar, por exemplo,
+
+562
+01:02:41,130 --> 01:02:45,130
+se eu usar o valor B,
+
+563
+01:02:45,130 --> 01:02:47,130
+se usar aqui a variável B
+
+564
+01:02:47,130 --> 01:02:49,130
+e colocar algum valor,
+
+565
+01:02:49,130 --> 01:02:52,130
+e depois a seguir, usar a variável C,
+
+566
+01:02:52,130 --> 01:02:55,130
+estraguei o valor que estava no B.
+
+567
+01:02:55,130 --> 01:02:56,130
+Por quê?
+
+568
+01:02:56,130 --> 01:02:58,130
+Porque eu escrevi um byte.
+
+569
+01:02:58,130 --> 01:03:00,130
+Portanto, este é o tamanho.
+
+570
+01:03:00,130 --> 01:03:01,130
+É isto.
+
+571
+01:03:01,130 --> 01:03:04,130
+Os bytes são os mesmos para as 3 variáveis.
+
+572
+01:03:04,130 --> 01:03:07,130
+Ou para as 3 potenciais variáveis.
+
+573
+01:03:07,130 --> 01:03:14,130
+O cabo ao programador utilizar isto de forma correta.
+
+574
+01:03:14,130 --> 01:03:16,130
+Obviamente que se eu usar o B
+
+575
+01:03:16,130 --> 01:03:19,130
+e ver uma coisa, e a seguir usar o I,
+
+576
+01:03:19,130 --> 01:03:20,130
+e escrever,
+
+577
+01:03:20,130 --> 01:03:22,130
+eu estraguei o que estava no B.
+
+578
+01:03:22,130 --> 01:03:25,130
+Eu não sei se tem para aqui um exemplo com isto.
+
+579
+01:03:25,130 --> 01:03:28,130
+Tenha para aqui um exemplo em que notava isto.
+
+580
+01:03:28,130 --> 01:03:30,130
+É aqui.
+
+581
+01:03:30,130 --> 01:03:31,130
+Por exemplo,
+
+582
+01:03:31,130 --> 01:03:33,130
+eu tenho aqui esta união.
+
+583
+01:03:33,130 --> 01:03:35,130
+Eu escrevo no I o 10.
+
+584
+01:03:35,130 --> 01:03:38,130
+A seguir, uso o F para escrever isto.
+
+585
+01:03:38,130 --> 01:03:45,130
+Depois uso para escrever aqui no STR isto.
+
+586
+01:03:45,130 --> 01:03:48,130
+Se eu for imprimir o valor do I,
+
+587
+01:03:48,130 --> 01:03:50,130
+que supostamente era 10,
+
+588
+01:03:50,130 --> 01:03:51,130
+já não é 10,
+
+589
+01:03:51,130 --> 01:03:55,130
+porque ele vai me apresentar o valor numérico
+
+590
+01:03:55,130 --> 01:03:59,130
+em função dos primeiros 4 bytes,
+
+591
+01:03:59,130 --> 01:04:01,130
+e com isto que está lá.
+
+592
+01:04:01,130 --> 01:04:05,130
+E com isto que está lá,
+
+593
+01:04:05,130 --> 01:04:07,130
+ele dá este valor.
+
+594
+01:04:07,130 --> 01:04:10,130
+Se olhar para aquilo como sendo um float,
+
+595
+01:04:10,130 --> 01:04:12,130
+dá isto.
+
+596
+01:04:12,130 --> 01:04:16,130
+Eu coloco o que foi 220.
+
+597
+01:04:16,130 --> 01:04:20,130
+E olhando para aquilo como sendo uma string,
+
+598
+01:04:20,130 --> 01:04:24,130
+ele vai buscar porque foi a última coisa que foi escrita.
+
+599
+01:04:24,130 --> 01:04:29,540
+Se eu escrevesse isto depois,
+
+600
+01:04:29,540 --> 01:04:35,540
+a string também está corrompida.
+
+601
+01:04:35,540 --> 01:04:42,540
+Uma união é equivalente ao tamanho máximo do seu elemento.
+
+602
+01:04:42,540 --> 01:04:44,540
+Naquele caso, em particular,
+
+603
+01:04:44,540 --> 01:04:48,300
+o tamanho é igual.
+
+604
+01:04:48,300 --> 01:04:50,300
+Já era igual.
+
+605
+01:04:50,300 --> 01:04:52,300
+Não tinha a ver com isto,
+
+606
+01:04:52,300 --> 01:04:54,300
+tinha a ver com o facto de ser apontador.
+
+607
+01:04:54,300 --> 01:04:56,300
+Os apontadores são todos iguais,
+
+608
+01:04:56,300 --> 01:04:58,300
+porque são variáveis que vão conter endereços.
+
+609
+01:04:58,300 --> 01:05:00,300
+E os endereços são todos iguais.
+
+610
+01:05:00,300 --> 01:05:02,300
+Portanto,
+
+611
+01:05:02,300 --> 01:05:08,300
+o tamanho desta união é correspondente a um apontador.
+
+612
+01:05:08,300 --> 01:05:10,300
+E que eu posso referenciar
+
+613
+01:05:10,300 --> 01:05:12,300
+esses bytes,
+
+614
+01:05:12,300 --> 01:05:14,300
+usando isto ou usando aquilo.
+
+615
+01:05:14,300 --> 01:05:18,300
+Os apontadores são do mesmo tipo.
+
+616
+01:05:18,300 --> 01:05:20,300
+Sempre que eu faça uma operação de leitura ou de escrita,
+
+617
+01:05:20,300 --> 01:05:22,300
+vou quer com um, quero com outro,
+
+618
+01:05:22,300 --> 01:05:24,300
+vou ler a mesma coisa.
+
+619
+01:05:24,300 --> 01:05:28,060
+Porque são iguais.
+
+620
+01:05:28,060 --> 01:05:35,300
+Percebido?
+
+621
+01:05:35,300 --> 01:05:37,300
+Então, temos agora aqui um resumo.
+
+622
+01:05:37,300 --> 01:05:39,300
+A estrutura ERQ
+
+623
+01:05:39,300 --> 01:05:41,300
+existe por
+
+624
+01:05:41,300 --> 01:05:43,300
+CPU
+
+625
+01:05:43,300 --> 01:05:45,300
+Nática,
+
+626
+01:05:45,300 --> 01:05:49,300
+cada estrutura ERQ
+
+627
+01:05:49,300 --> 01:05:51,300
+é constituída por
+
+628
+01:05:51,300 --> 01:05:53,300
+várias subestruturas,
+
+629
+01:05:53,300 --> 01:05:55,300
+subestruturas,
+
+630
+01:05:55,300 --> 01:05:57,300
+subestruturas,
+
+631
+01:05:57,300 --> 01:05:59,300
+uma para o CFS,
+
+632
+01:05:59,300 --> 01:06:01,300
+outra para o RT,
+
+633
+01:06:01,300 --> 01:06:03,300
+outra para o deadline.
+
+634
+01:06:03,300 --> 01:06:05,300
+E cada uma delas
+
+635
+01:06:05,300 --> 01:06:07,300
+tem
+
+636
+01:06:07,300 --> 01:06:09,300
+depois a sua forma,
+
+637
+01:06:09,300 --> 01:06:11,300
+as suas estruturas
+
+638
+01:06:11,300 --> 01:06:13,300
+para organizar as tarefas.
+
+639
+01:06:13,300 --> 01:06:15,300
+Obviamente que, por exemplo,
+
+640
+01:06:15,300 --> 01:06:17,300
+se vocês se recordam,
+
+641
+01:06:17,300 --> 01:06:19,300
+aqui o CFS
+
+642
+01:06:19,300 --> 01:06:21,300
+tem aqui uma root,
+
+643
+01:06:21,300 --> 01:06:23,300
+obviamente que as tarefas
+
+644
+01:06:23,300 --> 01:06:25,300
+para serem incluídas aqui na root
+
+645
+01:06:25,300 --> 01:06:27,300
+têm que ter um campo rbnode.
+
+646
+01:06:27,300 --> 01:06:29,300
+Se vocês se recordem,
+
+647
+01:06:29,300 --> 01:06:31,300
+o SCAD Entity
+
+648
+01:06:31,300 --> 01:06:33,300
+tinha um campo rbnode.
+
+649
+01:06:33,300 --> 01:06:35,300
+O mesmo acontecia com
+
+650
+01:06:35,300 --> 01:06:37,300
+o deadline,
+
+651
+01:06:37,300 --> 01:06:39,300
+também tinha lá um rbnode.
+
+652
+01:06:39,300 --> 01:06:41,300
+No caso do RT,
+
+653
+01:06:41,300 --> 01:06:43,300
+como temos vários
+
+654
+01:06:43,300 --> 01:06:45,300
+níveis,
+
+655
+01:06:45,300 --> 01:06:47,300
+nós tínhamos um campo list
+
+656
+01:06:47,300 --> 01:06:49,300
+AD para que
+
+657
+01:06:49,300 --> 01:06:51,300
+cada nível vai ter
+
+658
+01:06:51,300 --> 01:06:53,300
+uma lista ligada.
+
+659
+01:06:53,300 --> 01:06:55,300
+Portanto, as coisas têm que bater
+
+660
+01:06:55,300 --> 01:06:57,300
+a bota com a portigota, porque senão isso não funciona.
+
+661
+01:06:57,300 --> 01:07:01,190
+Ora bem, continuando.
+
+662
+01:07:03,190 --> 01:07:05,190
+Aqui está a classe
+
+663
+01:07:05,190 --> 01:07:07,190
+ERQ, portanto,
+
+664
+01:07:07,190 --> 01:07:09,190
+estão a ver, tenho aqui
+
+665
+01:07:09,190 --> 01:07:11,190
+um conjunto
+
+666
+01:07:11,190 --> 01:07:13,190
+de campos
+
+667
+01:07:13,190 --> 01:07:15,190
+que vai permitir
+
+668
+01:07:15,190 --> 01:07:17,190
+gerir
+
+669
+01:07:17,190 --> 01:07:19,190
+as tarefas que estão
+
+670
+01:07:19,190 --> 01:07:21,190
+colocadas
+
+671
+01:07:23,190 --> 01:07:25,190
+nesta ERQ.
+
+672
+01:07:25,190 --> 01:07:27,190
+Portanto, tenho aqui campos de control,
+
+673
+01:07:27,190 --> 01:07:29,190
+número de tarefas que estão
+
+674
+01:07:29,190 --> 01:07:31,190
+inseridas, etc.
+
+675
+01:07:31,190 --> 01:07:33,190
+Depois, outras que
+
+676
+01:07:33,190 --> 01:07:35,190
+portanto, aqui um conjunto
+
+677
+01:07:35,190 --> 01:07:37,190
+de campos
+
+678
+01:07:37,190 --> 01:07:39,190
+que são necessários para aqui,
+
+679
+01:07:39,190 --> 01:07:41,190
+para a classe
+
+680
+01:07:41,190 --> 01:07:43,190
+conseguir fazer o escalonamento
+
+681
+01:07:43,190 --> 01:07:45,190
+das tarefas.
+
+682
+01:07:45,190 --> 01:07:47,190
+Tem, inclusive, aqui, portanto,
+
+683
+01:07:47,190 --> 01:07:49,190
+uns apontadores
+
+684
+01:07:49,190 --> 01:07:51,190
+que certamente servirão
+
+685
+01:07:51,190 --> 01:07:53,190
+para otimizar algum
+
+686
+01:07:53,190 --> 01:07:55,190
+procedimento, portanto,
+
+687
+01:07:55,190 --> 01:07:57,190
+ter aqui qual é a tarefa
+
+688
+01:07:57,190 --> 01:07:59,190
+corrente, qual é que é a próxima,
+
+689
+01:07:59,190 --> 01:08:01,190
+provavelmente isso depois vai
+
+690
+01:08:01,190 --> 01:08:03,190
+otimizar, ao invés de ir à procura
+
+691
+01:08:03,190 --> 01:08:05,190
+na árvore urbinaria,
+
+692
+01:08:05,190 --> 01:08:07,190
+já esse apontador, se calhar,
+
+693
+01:08:07,190 --> 01:08:09,190
+ajuda no processo.
+
+694
+01:08:09,190 --> 01:08:11,190
+Portanto, é muito frequente
+
+695
+01:08:11,190 --> 01:08:13,190
+ter esse
+
+696
+01:08:13,190 --> 01:08:15,190
+tipo de otimizações.
+
+697
+01:08:15,190 --> 01:08:17,190
+Ou, às vezes, até, por exemplo,
+
+698
+01:08:17,190 --> 01:08:19,190
+quando não tem nenhuma tarefa,
+
+699
+01:08:19,190 --> 01:08:21,190
+ao invés de andar à procura
+
+700
+01:08:21,190 --> 01:08:23,190
+do número de tarefas que estão
+
+701
+01:08:23,190 --> 01:08:25,190
+lá,
+
+702
+01:08:25,190 --> 01:08:27,190
+olhar para esse apontador, se tiver a nul,
+
+703
+01:08:27,190 --> 01:08:29,190
+significa que não tem nenhuma
+
+704
+01:08:29,190 --> 01:08:31,190
+tarefa. Se estiver diferente de nul,
+
+705
+01:08:31,190 --> 01:08:33,190
+significa que tem tarefas,
+
+706
+01:08:33,190 --> 01:08:35,190
+coisas assim dos anos.
+
+707
+01:08:35,190 --> 01:08:37,190
+A classe RT
+
+708
+01:08:37,190 --> 01:08:39,190
+ora, a classe RT, o que é que ela
+
+709
+01:08:39,190 --> 01:08:41,190
+faz? A classe RT
+
+710
+01:08:41,190 --> 01:08:43,190
+tem aqui
+
+711
+01:08:43,190 --> 01:08:45,190
+uma estrutura
+
+712
+01:08:45,190 --> 01:08:47,190
+de dados, que é
+
+713
+01:08:47,190 --> 01:08:49,190
+uma, este RT
+
+714
+01:08:49,190 --> 01:08:51,190
+perio, arrei,
+
+715
+01:08:51,190 --> 01:08:53,190
+que vai ter,
+
+716
+01:08:53,190 --> 01:08:55,190
+como vocês podem ver,
+
+717
+01:08:55,190 --> 01:08:57,190
+tem aqui
+
+718
+01:08:57,190 --> 01:08:59,190
+uma
+
+719
+01:08:59,190 --> 01:09:01,190
+lista, portanto, um arrei,
+
+720
+01:09:01,190 --> 01:09:03,190
+isto é um arrei
+
+721
+01:09:03,190 --> 01:09:05,190
+de
+
+722
+01:09:05,190 --> 01:09:07,190
+cabeças de lista, portanto,
+
+723
+01:09:07,190 --> 01:09:09,190
+se vocês forem ver esta macro,
+
+724
+01:09:09,190 --> 01:09:11,190
+o valor dela, acho que é
+
+725
+01:09:11,190 --> 01:09:13,190
+99, assim uma coisa,
+
+726
+01:09:15,190 --> 01:09:17,190
+acho que não, tenho
+
+727
+01:09:17,190 --> 01:09:19,190
+certeza que é 99.
+
+728
+01:09:19,190 --> 01:09:21,190
+Não tenho, 100%
+
+729
+01:09:21,190 --> 01:09:23,190
+não tenho, mas pera,
+
+730
+01:09:23,190 --> 01:09:25,190
+tem os níveis
+
+731
+01:09:25,190 --> 01:09:27,190
+da classe RT, acho que
+
+732
+01:09:27,190 --> 01:09:29,190
+99, pois, aqui
+
+733
+01:09:29,190 --> 01:09:31,190
+é que utiliza mais um.
+
+734
+01:09:31,190 --> 01:09:33,190
+Impedentemente, isto aqui é
+
+735
+01:09:33,190 --> 01:09:35,190
+um número de níveis, portanto,
+
+736
+01:09:35,190 --> 01:09:37,190
+o que é que nós temos? Uma lista,
+
+737
+01:09:37,190 --> 01:09:39,190
+um arrei de cabeças
+
+738
+01:09:39,190 --> 01:09:41,190
+de lista, portanto, para
+
+739
+01:09:41,190 --> 01:09:43,190
+depois o que? Pendurar as
+
+740
+01:09:43,190 --> 01:09:45,190
+tarefas que estão em cada um
+
+741
+01:09:45,190 --> 01:09:47,190
+dos níveis.
+
+742
+01:09:47,190 --> 01:09:49,190
+Depois, ele também utiliza aqui um
+
+743
+01:09:49,190 --> 01:09:51,190
+bitmap, um bitmap
+
+744
+01:09:51,190 --> 01:09:53,190
+para ser usado
+
+745
+01:09:53,190 --> 01:09:55,190
+com operações bituais, isto é
+
+746
+01:09:55,190 --> 01:09:57,190
+bitabit, portanto, este bitmap
+
+747
+01:09:57,190 --> 01:09:59,190
+é uma variável que contém
+
+748
+01:09:59,190 --> 01:10:01,190
+o número de 90,
+
+749
+01:10:01,190 --> 01:10:03,190
+neste caso, contém,
+
+750
+01:10:03,190 --> 01:10:05,190
+se tem
+
+751
+01:10:05,190 --> 01:10:07,190
+bits para
+
+752
+01:10:07,190 --> 01:10:09,190
+aqui, para controlar
+
+753
+01:10:09,190 --> 01:10:11,190
+ao invés de
+
+754
+01:10:11,190 --> 01:10:13,190
+começar no nível mais alto
+
+755
+01:10:13,190 --> 01:10:15,190
+da prioridade
+
+756
+01:10:15,190 --> 01:10:17,190
+e verificar. Tem tarefas,
+
+757
+01:10:17,190 --> 01:10:19,190
+não tem, e por isso dizer,
+
+758
+01:10:19,190 --> 01:10:21,190
+invés de estar a fazer
+
+759
+01:10:21,190 --> 01:10:23,190
+esse percurso,
+
+760
+01:10:23,190 --> 01:10:25,190
+analisa
+
+761
+01:10:25,190 --> 01:10:27,190
+este bitmap
+
+762
+01:10:27,190 --> 01:10:29,190
+e, sempre que é
+
+763
+01:10:29,190 --> 01:10:31,190
+inserido uma variável,
+
+764
+01:10:31,190 --> 01:10:33,190
+o bit associado a
+
+765
+01:10:33,190 --> 01:10:35,190
+essa posição é colocado a um
+
+766
+01:10:35,190 --> 01:10:37,190
+e, quando não tem
+
+767
+01:10:37,190 --> 01:10:39,190
+tarefas, neste nível é
+
+768
+01:10:39,190 --> 01:10:41,190
+colocado a zero, portanto, e para
+
+769
+01:10:41,190 --> 01:10:43,190
+otimizar, utiliza este bitmap.
+
+770
+01:10:43,190 --> 01:10:45,190
+Pronto, depois
+
+771
+01:10:51,540 --> 01:10:53,540
+Não se importam falar que
+
+772
+01:10:53,540 --> 01:10:55,540
+o que é que nos bônus,
+
+773
+01:10:55,540 --> 01:10:59,080
+não sei se desliguei isto,
+
+774
+01:10:59,080 --> 01:11:01,080
+muito obrigado.
+
+775
+01:11:01,080 --> 01:11:03,080
+Pronto, depois vocês têm isto aqui a
+
+776
+01:11:03,080 --> 01:11:05,080
+escolher. Pronto, do zero
+
+777
+01:11:05,080 --> 01:11:07,080
+eu tenho
+
+778
+01:11:07,080 --> 01:11:09,080
+aqui aparecem, mas
+
+779
+01:11:09,080 --> 01:11:11,080
+por analise do pódigo
+
+780
+01:11:11,080 --> 01:11:13,080
+porque agora
+
+781
+01:11:13,080 --> 01:11:15,080
+eu dei a impressão que não são 100,
+
+782
+01:11:15,080 --> 01:11:17,080
+que vai do 1 ao 99
+
+783
+01:11:17,080 --> 01:11:19,080
+e aqui são 99 posições.
+
+784
+01:11:19,080 --> 01:11:21,080
+Isto era o que existia antes, agora
+
+785
+01:11:21,080 --> 01:11:23,080
+mas, pronto,
+
+786
+01:11:23,080 --> 01:11:25,080
+também é uma questão de
+
+787
+01:11:25,080 --> 01:11:27,080
+porque eu digo
+
+788
+01:11:27,080 --> 01:11:29,080
+a minha dúvida tem a ver com a
+
+789
+01:11:29,080 --> 01:11:31,080
+análise do pódigo o que eu tive aqui a fazer
+
+790
+01:11:31,080 --> 01:11:33,080
+aqui há uns tempos atrás e não tenho bem
+
+791
+01:11:33,080 --> 01:11:35,080
+a certeza que sejam 100
+
+792
+01:11:35,080 --> 01:11:37,080
+que
+
+793
+01:11:37,080 --> 01:11:39,080
+atualmente são 99.
+
+794
+01:11:39,080 --> 01:11:41,080
+Mas, pronto, muitas vezes aqui
+
+795
+01:11:41,080 --> 01:11:43,080
+na documentação aparece 100 porque era o que
+
+796
+01:11:43,080 --> 01:11:45,080
+existia antes, antes da classe
+
+797
+01:11:45,080 --> 01:11:47,080
+de existir a classe Deadline
+
+798
+01:11:47,080 --> 01:11:49,080
+agora com a classe Deadline, uma vez
+
+799
+01:11:49,080 --> 01:11:51,080
+que atribui a prioridade
+
+800
+01:11:51,080 --> 01:11:53,080
+zero, apesar de
+
+801
+01:11:53,080 --> 01:11:55,080
+não
+
+802
+01:11:55,080 --> 01:11:57,080
+existir, não usar isso
+
+803
+01:11:57,080 --> 01:11:59,080
+para nada, daí
+
+804
+01:11:59,080 --> 01:12:02,460
+é a minha confusão.
+
+805
+01:12:02,460 --> 01:12:04,460
+Aqui temos a estrutura
+
+806
+01:12:04,460 --> 01:12:06,460
+para a classe do
+
+807
+01:12:06,460 --> 01:12:08,460
+Deadline, cá está
+
+808
+01:12:08,460 --> 01:12:12,120
+a rupe da
+
+809
+01:12:12,120 --> 01:12:14,120
+árvore binária e depois
+
+810
+01:12:14,120 --> 01:12:16,120
+tenho aqui outros campos
+
+811
+01:12:16,120 --> 01:12:18,120
+com um número de tarefas que estão aqui
+
+812
+01:12:18,120 --> 01:12:20,120
+pois estão aqui a ver, por exemplo,
+
+813
+01:12:20,120 --> 01:12:22,120
+uma
+
+814
+01:12:22,120 --> 01:12:24,120
+tarefa, provavelmente, para controlar
+
+815
+01:12:24,120 --> 01:12:26,120
+qual é a tarefa
+
+816
+01:12:26,120 --> 01:12:28,120
+que tem o Deadline mais próximo,
+
+817
+01:12:28,120 --> 01:12:30,120
+coisa assim de gente, portanto
+
+818
+01:12:30,120 --> 01:12:32,120
+toda
+
+819
+01:12:32,120 --> 01:12:34,120
+a semelhança do que acontece
+
+820
+01:12:34,120 --> 01:12:36,120
+no SCAD Entity
+
+821
+01:12:36,120 --> 01:12:38,120
+ou no SCAD DL Entity Air
+
+822
+01:12:38,120 --> 01:12:40,120
+tem todos os campos
+
+823
+01:12:40,120 --> 01:12:42,120
+associados a cada
+
+824
+01:12:42,120 --> 01:12:44,120
+tarefa que são importantes
+
+825
+01:12:44,120 --> 01:12:46,120
+para o
+
+826
+01:12:46,120 --> 01:12:48,120
+escalonamento, nas RQS
+
+827
+01:12:48,120 --> 01:12:50,120
+também tem todos os campos
+
+828
+01:12:50,120 --> 01:12:52,120
+que são relevantes
+
+829
+01:12:52,120 --> 01:12:54,120
+para tomar as decisões
+
+830
+01:12:54,120 --> 01:12:57,500
+de escalonamento.
+
+831
+01:13:01,500 --> 01:13:03,500
+Pronto, já agora
+
+832
+01:13:03,500 --> 01:13:07,320
+o
+
+833
+01:13:07,320 --> 01:13:09,320
+Deadline, na verdade
+
+834
+01:13:09,320 --> 01:13:11,320
+apesar de
+
+835
+01:13:13,320 --> 01:13:15,320
+existir uma variável
+
+836
+01:13:15,320 --> 01:13:17,320
+da RQ por
+
+837
+01:13:17,320 --> 01:13:19,320
+CPU, na verdade
+
+838
+01:13:19,320 --> 01:13:21,320
+ele utiliza uma abordagem global,
+
+839
+01:13:21,320 --> 01:13:23,320
+portanto
+
+840
+01:13:23,320 --> 01:13:25,320
+utiliza uma RQ distribuída
+
+841
+01:13:25,320 --> 01:13:27,320
+mas
+
+842
+01:13:27,320 --> 01:13:29,320
+ele faz a gestão
+
+843
+01:13:29,320 --> 01:13:31,320
+dessas RQ
+
+844
+01:13:31,320 --> 01:13:33,320
+que estão por cada um dos CPUs
+
+845
+01:13:33,320 --> 01:13:35,320
+de forma global, portanto
+
+846
+01:13:35,320 --> 01:13:37,320
+utiliza aqui umas push
+
+847
+01:13:37,320 --> 01:13:39,320
+e umas pull operations
+
+848
+01:13:39,320 --> 01:13:41,320
+para assegurar isso.
+
+849
+01:13:41,320 --> 01:13:43,320
+Portanto
+
+850
+01:13:43,320 --> 01:13:45,320
+eu assumo que não deve ser
+
+851
+01:13:45,320 --> 01:13:47,320
+coisa fácil e que por vez
+
+852
+01:13:47,320 --> 01:13:49,320
+o resultado não seja
+
+853
+01:13:49,320 --> 01:13:51,320
+100% correto porque
+
+854
+01:13:51,320 --> 01:13:53,320
+quando temos algo que
+
+855
+01:13:53,320 --> 01:13:55,320
+é gerido de forma global
+
+856
+01:13:55,320 --> 01:13:57,320
+e que está
+
+857
+01:13:57,320 --> 01:13:59,320
+distribuído por vários CPUs
+
+858
+01:13:59,320 --> 01:14:01,320
+pode haver uma situação
+
+859
+01:14:01,320 --> 01:14:03,320
+a outra que as coisas não funcionam
+
+860
+01:14:03,320 --> 01:14:05,320
+em 100%
+
+861
+01:14:05,320 --> 01:14:07,320
+mas em teoria, e se vocês
+
+862
+01:14:07,320 --> 01:14:09,320
+lerem a documentação, o SCAD
+
+863
+01:14:09,320 --> 01:14:11,320
+Deadline utiliza o Global
+
+864
+01:14:11,320 --> 01:14:13,320
+EDF
+
+865
+01:14:13,320 --> 01:14:15,320
+mas utiliza o Global EDF
+
+866
+01:14:15,320 --> 01:14:17,320
+com uma implementação
+
+867
+01:14:17,320 --> 01:14:19,320
+com RQS
+
+868
+01:14:19,320 --> 01:14:21,320
+de CPU
+
+869
+01:14:21,320 --> 01:14:23,320
+depois usam estas push
+
+870
+01:14:23,320 --> 01:14:25,320
+e pull operations
+
+871
+01:14:25,320 --> 01:14:27,320
+para assegurar o correto
+
+872
+01:14:27,320 --> 01:14:29,320
+esclamamento.
+
+873
+01:14:29,320 --> 01:14:31,320
+Assumo que por vez de nem sempre
+
+874
+01:14:31,320 --> 01:14:33,320
+isso seja possível.
+
+875
+01:14:33,320 --> 01:14:35,320
+Depois chegamos a SCAD
+
+876
+01:14:35,320 --> 01:14:37,320
+Deadline Class
+
+877
+01:14:37,320 --> 01:14:39,320
+portanto já vimos duas estruturas
+
+878
+01:14:39,320 --> 01:14:41,320
+de dados principais
+
+879
+01:14:41,320 --> 01:14:43,320
+TaskStruck
+
+880
+01:14:43,320 --> 01:14:45,320
+e a RQ.
+
+881
+01:14:45,320 --> 01:14:47,320
+Dentro da TaskStruck, portanto
+
+882
+01:14:47,320 --> 01:14:49,320
+para ver com o processo
+
+883
+01:14:49,320 --> 01:14:51,320
+temos
+
+884
+01:14:51,320 --> 01:14:53,320
+SCAD entities
+
+885
+01:14:53,320 --> 01:14:55,320
+para cada uma das políticas
+
+886
+01:14:55,320 --> 01:14:57,320
+de esclamamento que o processo
+
+887
+01:14:57,320 --> 01:14:59,320
+pode ser
+
+888
+01:14:59,320 --> 01:15:01,320
+pode estar incluído.
+
+889
+01:15:01,320 --> 01:15:03,320
+E depois temos a
+
+890
+01:15:03,320 --> 01:15:05,320
+RQ. A RQ é RANQ
+
+891
+01:15:05,320 --> 01:15:07,320
+para ter todos os processos que estão
+
+892
+01:15:07,320 --> 01:15:09,320
+em condições de discussão.
+
+893
+01:15:09,320 --> 01:15:11,320
+Mas na verdade o que nós temos são
+
+894
+01:15:11,320 --> 01:15:13,320
+sub-RQS
+
+895
+01:15:13,320 --> 01:15:15,320
+uma por cada classe de esclamamento
+
+896
+01:15:15,320 --> 01:15:17,320
+e obviamente
+
+897
+01:15:17,320 --> 01:15:19,320
+tem os campos necessários para fazer
+
+898
+01:15:19,320 --> 01:15:25,320
+a sua gestão.
+
+899
+01:15:25,320 --> 01:15:27,320
+E agora temos as classes
+
+900
+01:15:27,320 --> 01:15:29,320
+de esclamamento.
+
+901
+01:15:29,320 --> 01:15:31,320
+Portanto, cada classe
+
+902
+01:15:31,320 --> 01:15:33,320
+de esclamamento
+
+903
+01:15:33,320 --> 01:15:35,320
+não é mais nem menos
+
+904
+01:15:35,320 --> 01:15:37,320
+do que uma estrutura de dados
+
+905
+01:15:37,320 --> 01:15:39,320
+que tem
+
+906
+01:15:39,320 --> 01:15:41,320
+um campo
+
+907
+01:15:41,320 --> 01:15:43,320
+que é
+
+908
+01:15:43,320 --> 01:15:45,320
+que vai ser usado, que vocês já vão ver
+
+909
+01:15:45,320 --> 01:15:47,320
+isso como mais detalhe, que vai ser
+
+910
+01:15:47,320 --> 01:15:49,320
+usado para operações bitwise,
+
+911
+01:15:49,320 --> 01:15:51,320
+bit-a-bit, como uma máscara
+
+912
+01:15:51,320 --> 01:15:53,320
+e um conjunto de apontadores
+
+913
+01:15:53,320 --> 01:15:55,320
+equivalente
+
+914
+01:15:55,320 --> 01:15:57,320
+ao
+
+915
+01:15:57,320 --> 01:15:59,320
+ao
+
+916
+01:15:59,320 --> 01:16:01,320
+PROC-OPS.
+
+917
+01:16:03,320 --> 01:16:05,320
+Portanto, em que nós vamos atribuir
+
+918
+01:16:05,320 --> 01:16:07,320
+funções.
+
+919
+01:16:07,320 --> 01:16:09,320
+Portanto, aqui
+
+920
+01:16:09,320 --> 01:16:11,320
+neste apontador, vamos atribuir
+
+921
+01:16:11,320 --> 01:16:13,320
+uma função que
+
+922
+01:16:13,320 --> 01:16:15,320
+tem estes argumentos.
+
+923
+01:16:15,320 --> 01:16:17,320
+Aqui
+
+924
+01:16:17,320 --> 01:16:19,320
+outro apontador
+
+925
+01:16:19,320 --> 01:16:21,320
+que vai ter
+
+926
+01:16:21,320 --> 01:16:23,320
+uma função que implementa
+
+927
+01:16:23,320 --> 01:16:25,320
+estes argumentos.
+
+928
+01:16:25,320 --> 01:16:27,320
+E por aí diante, vamos já ver
+
+929
+01:16:27,320 --> 01:16:29,320
+o propósito de cada uma destas.
+
+930
+01:16:29,320 --> 01:16:31,320
+Ora,
+
+931
+01:16:31,320 --> 01:16:33,320
+o que o MASC
+
+932
+01:16:33,320 --> 01:16:35,320
+é uma bit-masc,
+
+933
+01:16:35,320 --> 01:16:37,320
+portanto, para operações bitwise,
+
+934
+01:16:37,320 --> 01:16:39,320
+que de alguma forma
+
+935
+01:16:39,320 --> 01:16:41,320
+representa
+
+936
+01:16:41,320 --> 01:16:43,320
+uma classe.
+
+937
+01:16:43,320 --> 01:16:45,320
+E
+
+938
+01:16:45,320 --> 01:16:47,320
+quando
+
+939
+01:16:47,320 --> 01:16:49,320
+essa classe
+
+940
+01:16:49,320 --> 01:16:51,320
+tem tarefas
+
+941
+01:16:51,320 --> 01:16:53,320
+atribuídas,
+
+942
+01:16:53,320 --> 01:16:55,320
+portanto,
+
+943
+01:16:55,320 --> 01:16:57,320
+o valor
+
+944
+01:16:57,320 --> 01:16:59,320
+que está aqui neste
+
+945
+01:16:59,320 --> 01:17:01,320
+que o MASC
+
+946
+01:17:01,320 --> 01:17:03,320
+é colocado
+
+947
+01:17:03,320 --> 01:17:05,320
+no que o MASC
+
+948
+01:17:05,320 --> 01:17:07,320
+da ERQ do CPU.
+
+949
+01:17:07,320 --> 01:17:09,320
+Portanto, é uma forma de saber,
+
+950
+01:17:09,320 --> 01:17:11,320
+portanto, é tipo um bit-map
+
+951
+01:17:11,320 --> 01:17:13,320
+que contém a classe RT
+
+952
+01:17:13,320 --> 01:17:15,320
+que vai ajudar
+
+953
+01:17:15,320 --> 01:17:17,320
+a perceber qual é a tarefa
+
+954
+01:17:17,320 --> 01:17:19,320
+que tem, a classe escalonamento
+
+955
+01:17:19,320 --> 01:17:21,320
+que tem tarefas.
+
+956
+01:17:21,320 --> 01:17:23,320
+Depois temos aqui o Enqueu
+
+957
+01:17:23,320 --> 01:17:25,320
+TASC. Ora
+
+958
+01:17:25,320 --> 01:17:27,320
+tem a ver com isto.
+
+959
+01:17:27,320 --> 01:17:29,320
+Nós aqui
+
+960
+01:17:29,320 --> 01:17:31,320
+esta função
+
+961
+01:17:31,320 --> 01:17:33,320
+vai ser invocado
+
+962
+01:17:33,320 --> 01:17:35,320
+à função que nós atribuímos a este apontador
+
+963
+01:17:35,320 --> 01:17:37,320
+quando uma tarefa
+
+964
+01:17:37,320 --> 01:17:40,700
+passa para o estado
+
+965
+01:17:40,700 --> 01:17:42,700
+de TASC running.
+
+966
+01:17:42,700 --> 01:17:44,700
+Assim que a tarefa
+
+967
+01:17:44,700 --> 01:17:46,700
+passa para o estado
+
+968
+01:17:46,700 --> 01:17:48,700
+de TASC running
+
+969
+01:17:48,700 --> 01:17:50,700
+é feito em que
+
+970
+01:17:50,700 --> 01:17:52,700
+isto é,
+
+971
+01:17:52,700 --> 01:17:54,700
+a tarefa é colocada
+
+972
+01:17:54,700 --> 01:17:56,700
+na RAN que o
+
+973
+01:17:56,700 --> 01:17:58,700
+da política de escalonamento que está
+
+974
+01:17:58,700 --> 01:18:00,700
+associada.
+
+975
+01:18:00,700 --> 01:18:02,700
+O DQ TASC
+
+976
+01:18:02,700 --> 01:18:04,700
+código é que vai ter esta função.
+
+977
+01:18:04,700 --> 01:18:06,700
+O código que vai
+
+978
+01:18:06,700 --> 01:18:08,700
+permitir retirar
+
+979
+01:18:08,700 --> 01:18:10,700
+a tarefa
+
+980
+01:18:10,700 --> 01:18:12,700
+da RAN que o
+
+981
+01:18:12,700 --> 01:18:14,700
+porque significa que a tarefa
+
+982
+01:18:14,700 --> 01:18:16,700
+já não está em condições de discussão.
+
+983
+01:18:16,700 --> 01:18:18,700
+Depois temos aqui
+
+984
+01:18:18,700 --> 01:18:20,700
+o WAKEUP PREEMP
+
+985
+01:18:20,700 --> 01:18:22,700
+que é sempre invocado
+
+986
+01:18:22,700 --> 01:18:24,700
+depois
+
+987
+01:18:24,700 --> 01:18:26,700
+do Enqueu.
+
+988
+01:18:26,700 --> 01:18:28,700
+Ora, o que é que vai fazer o WAKEUP PREEMP?
+
+989
+01:18:28,700 --> 01:18:30,700
+E antes tinha um nome
+
+990
+01:18:30,700 --> 01:18:32,700
+mais ilucidativo, não sei por que
+
+991
+01:18:32,700 --> 01:18:34,700
+que agora chamam isto.
+
+992
+01:18:34,700 --> 01:18:36,700
+Se der para aqui,
+
+993
+01:18:36,700 --> 01:18:38,700
+portanto, uma tarefa
+
+994
+01:18:38,700 --> 01:18:40,700
+é intuito, portanto,
+
+995
+01:18:40,700 --> 01:18:42,700
+quando uma tarefa chega ao sistema
+
+996
+01:18:42,700 --> 01:18:44,700
+e está em condições de discussão
+
+997
+01:18:44,700 --> 01:18:46,700
+o que é que isso significa?
+
+998
+01:18:46,700 --> 01:18:48,700
+Significa que
+
+999
+01:18:48,700 --> 01:18:50,700
+o estado atual do sistema alterou.
+
+1000
+01:18:50,700 --> 01:18:52,700
+Chegou uma nova tarefa
+
+1001
+01:18:52,700 --> 01:18:54,700
+que pode ser aquela que
+
+1002
+01:18:54,700 --> 01:18:56,700
+tem mais prioridade.
+
+1003
+01:18:56,700 --> 01:18:58,700
+Então, o que
+
+1004
+01:18:58,700 --> 01:19:00,700
+faz isto WAKEUP PREEMP
+
+1005
+01:19:00,700 --> 01:19:02,700
+e antes se chamava
+
+1006
+01:19:02,700 --> 01:19:04,700
+SHAKE PREEMPT CURAN
+
+1007
+01:19:04,700 --> 01:19:06,700
+verifica
+
+1008
+01:19:06,700 --> 01:19:08,700
+se é preciso preventar a tarefa corrente
+
+1009
+01:19:08,700 --> 01:19:10,700
+a tarefa que está atribuída ao CPU
+
+1010
+01:19:10,700 --> 01:19:12,700
+e agora chama-se
+
+1011
+01:19:12,700 --> 01:19:14,700
+WAKEUP PREEMPT
+
+1012
+01:19:14,700 --> 01:19:16,700
+e é uma vez que é invocado
+
+1013
+01:19:16,700 --> 01:19:18,700
+sempre quando há um acordar
+
+1014
+01:19:18,700 --> 01:19:20,700
+de uma tarefa. Isto é, quando uma
+
+1015
+01:19:20,700 --> 01:19:22,700
+tarefa é inquieto.
+
+1016
+01:19:22,700 --> 01:19:24,700
+Portanto, esta tarefa
+
+1017
+01:19:24,700 --> 01:19:26,700
+é esta função
+
+1018
+01:19:26,700 --> 01:19:28,700
+vibrificada, sim,
+
+1019
+01:19:28,700 --> 01:19:30,700
+para a relação
+
+1020
+01:19:30,700 --> 01:19:32,700
+entre a tarefa que está no CPU
+
+1021
+01:19:32,700 --> 01:19:34,700
+e a tarefa
+
+1022
+01:19:34,700 --> 01:19:36,700
+que acabou de ser inquieta.
+
+1023
+01:19:36,700 --> 01:19:38,700
+Se a tarefa
+
+1024
+01:19:38,700 --> 01:19:40,700
+que acabou de ser inquieta
+
+1025
+01:19:40,700 --> 01:19:42,700
+tiver mais prioridade
+
+1026
+01:19:42,700 --> 01:19:44,700
+do que a tarefa CURAN
+
+1027
+01:19:44,700 --> 01:19:46,700
+o que é que é preciso fazer
+
+1028
+01:19:46,700 --> 01:19:48,700
+é dizer ao exclamador
+
+1029
+01:19:48,700 --> 01:19:50,700
+muda a tarefa.
+
+1030
+01:19:50,700 --> 01:19:53,980
+Depois, temos aqui
+
+1031
+01:19:53,980 --> 01:19:55,980
+uma função que é o PICNEXTAS
+
+1032
+01:19:55,980 --> 01:19:57,980
+que
+
+1033
+01:19:57,980 --> 01:19:59,980
+vai, como o próprio
+
+1034
+01:19:59,980 --> 01:20:01,980
+nome indica,
+
+1035
+01:20:01,980 --> 01:20:03,980
+buscar
+
+1036
+01:20:03,980 --> 01:20:05,980
+dientes de tarefas
+
+1037
+01:20:05,980 --> 01:20:07,980
+que têm
+
+1038
+01:20:07,980 --> 01:20:09,980
+a maior prioridade.
+
+1039
+01:20:09,980 --> 01:20:11,980
+A próxima tarefa
+
+1040
+01:20:11,980 --> 01:20:13,980
+vai executar.
+
+1041
+01:20:13,980 --> 01:20:15,980
+Tem a maior prioridade, de acordo
+
+1042
+01:20:15,980 --> 01:20:17,980
+com o logística.
+
+1043
+01:20:17,980 --> 01:20:19,980
+Se não tiver nenhuma, vai retornar
+
+1044
+01:20:19,980 --> 01:20:21,980
+no, se vocês repararem,
+
+1045
+01:20:21,980 --> 01:20:23,980
+o PICNEXTAS
+
+1046
+01:20:23,980 --> 01:20:25,980
+que retorna um apontador
+
+1047
+01:20:25,980 --> 01:20:27,980
+do tipo TASC estranho.
+
+1048
+01:20:27,980 --> 01:20:29,980
+PICNEXTAS
+
+1049
+01:20:29,980 --> 01:20:31,980
+embora o PICNEXTAS
+
+1050
+01:20:31,980 --> 01:20:33,980
+é mais antigo, agora também
+
+1051
+01:20:33,980 --> 01:20:35,980
+existe o PICTASC, mas
+
+1052
+01:20:35,980 --> 01:20:37,980
+são basicamente
+
+1053
+01:20:37,980 --> 01:20:39,980
+a mesma coisa.
+
+1054
+01:20:39,980 --> 01:20:41,980
+Como podem ver, retorna
+
+1055
+01:20:41,980 --> 01:20:43,980
+apontadores do tipo TASC estranho.
+
+1056
+01:20:43,980 --> 01:20:45,980
+O que é que isso significa?
+
+1057
+01:20:45,980 --> 01:20:47,980
+Se tiver alguma tarefa, retorna
+
+1058
+01:20:47,980 --> 01:20:49,980
+um apontador, válido.
+
+1059
+01:20:49,980 --> 01:20:51,980
+Se não tiver nenhuma tarefa,
+
+1060
+01:20:51,980 --> 01:20:53,980
+retorna o que?
+
+1061
+01:20:53,980 --> 01:20:57,320
+E o exclamador diz
+
+1062
+01:20:57,320 --> 01:20:59,320
+O DEL
+
+1063
+01:20:59,320 --> 01:21:01,320
+PICNEXTAS
+
+1064
+01:21:01,320 --> 01:21:03,320
+e ele no, passa para o RT
+
+1065
+01:21:03,320 --> 01:21:05,320
+PICNEXTAS
+
+1066
+01:21:05,320 --> 01:21:07,320
+passa para, e ele no
+
+1067
+01:21:07,320 --> 01:21:09,320
+passa para o CFS
+
+1068
+01:21:09,320 --> 01:21:11,320
+e assim por ti, chega a IDLE
+
+1069
+01:21:11,320 --> 01:21:13,320
+TASC, a classe IDLE
+
+1070
+01:21:13,320 --> 01:21:15,320
+e retorna sempre a IDLE
+
+1071
+01:21:15,320 --> 01:21:20,070
+TASC.
+
+1072
+01:21:20,070 --> 01:21:22,070
+Depois também temos o TASC TIK,
+
+1073
+01:21:22,070 --> 01:21:24,070
+portanto, quando
+
+1074
+01:21:24,070 --> 01:21:26,070
+a função, quando acontece
+
+1075
+01:21:26,070 --> 01:21:28,070
+o SKED TIK,
+
+1076
+01:21:28,070 --> 01:21:30,070
+portanto, quando acontece o TIK,
+
+1077
+01:21:30,070 --> 01:21:32,070
+e se vocês forem
+
+1078
+01:21:32,070 --> 01:21:34,070
+analisar o código
+
+1079
+01:21:34,070 --> 01:21:36,070
+do SKED TIK,
+
+1080
+01:21:36,070 --> 01:21:38,070
+ele vai invocar
+
+1081
+01:21:38,070 --> 01:21:40,070
+o TASC TIK da tarefa
+
+1082
+01:21:40,070 --> 01:21:42,070
+que está em execução.
+
+1083
+01:21:42,070 --> 01:21:44,070
+Que cedo para fazer a counting,
+
+1084
+01:21:44,070 --> 01:21:46,070
+que cedo para fazer, imagina
+
+1085
+01:21:46,070 --> 01:21:48,070
+no RR, no SKED RR
+
+1086
+01:21:48,070 --> 01:21:50,070
+se é para verificar se o time
+
+1087
+01:21:50,070 --> 01:21:53,670
+slide já inspirou.
+
+1088
+01:21:53,670 --> 01:21:55,670
+Ora, as classes
+
+1089
+01:21:55,670 --> 01:21:57,670
+de esclonamento estão
+
+1090
+01:21:57,670 --> 01:21:59,670
+num array.
+
+1091
+01:21:59,670 --> 01:22:01,670
+As classes de esclonamento são definidas
+
+1092
+01:22:01,670 --> 01:22:03,670
+desta forma.
+
+1093
+01:22:03,670 --> 01:22:05,670
+Portanto, isto que está aqui a
+
+1094
+01:22:05,670 --> 01:22:07,670
+fazer é criar
+
+1095
+01:22:07,670 --> 01:22:09,670
+uma variável
+
+1096
+01:22:09,670 --> 01:22:11,670
+para cada
+
+1097
+01:22:11,670 --> 01:22:13,670
+uma das
+
+1098
+01:22:13,670 --> 01:22:15,670
+melhor
+
+1099
+01:22:15,670 --> 01:22:17,670
+o que esta estrutura está aqui a
+
+1100
+01:22:17,670 --> 01:22:19,670
+fazer está a colocar
+
+1101
+01:22:19,670 --> 01:22:21,670
+as variáveis
+
+1102
+01:22:21,670 --> 01:22:23,670
+que representam
+
+1103
+01:22:23,670 --> 01:22:25,670
+cada uma das classes de esclonamento
+
+1104
+01:22:25,670 --> 01:22:27,670
+num array
+
+1105
+01:22:27,670 --> 01:22:29,670
+por esta ordem.
+
+1106
+01:22:29,670 --> 01:22:31,670
+Como vocês podem ver
+
+1107
+01:22:31,670 --> 01:22:33,670
+SKED Class Highest
+
+1108
+01:22:33,670 --> 01:22:35,670
+começa aqui
+
+1109
+01:22:35,670 --> 01:22:37,670
+e depois
+
+1110
+01:22:37,670 --> 01:22:39,670
+temos o STOP, DL, RT,
+
+1111
+01:22:39,670 --> 01:22:41,670
+até.
+
+1112
+01:22:41,670 --> 01:22:43,670
+E depois temos aqui macros
+
+1113
+01:22:43,670 --> 01:22:45,670
+que nos permitem
+
+1114
+01:22:45,670 --> 01:22:47,670
+percorrer
+
+1115
+01:22:47,670 --> 01:22:49,670
+esta array
+
+1116
+01:22:49,670 --> 01:22:51,670
+usando estas macros.
+
+1117
+01:22:51,670 --> 01:22:53,670
+Portanto, ele vai percorrer
+
+1118
+01:22:53,670 --> 01:22:55,670
+o array
+
+1119
+01:22:55,670 --> 01:22:57,670
+da classe mais alta a prioridade
+
+1120
+01:22:57,670 --> 01:22:59,670
+até a de mais baixa a prioridade.
+
+1121
+01:22:59,670 --> 01:23:01,670
+Portanto, as variáveis
+
+1122
+01:23:01,670 --> 01:23:03,670
+já vamos ver como é que elas são definidas.
+
+1123
+01:23:03,670 --> 01:23:05,670
+São definidas
+
+1124
+01:23:05,670 --> 01:23:07,670
+são
+
+1125
+01:23:07,670 --> 01:23:09,670
+anunciadas
+
+1126
+01:23:09,670 --> 01:23:11,670
+ao kernel
+
+1127
+01:23:11,670 --> 01:23:13,670
+e o kernel organizas
+
+1128
+01:23:13,670 --> 01:23:15,670
+desta forma.
+
+1129
+01:23:15,670 --> 01:23:17,670
+Antigamente, se vocês procurarem
+
+1130
+01:23:17,670 --> 01:23:19,670
+antigamente
+
+1131
+01:23:19,670 --> 01:23:21,670
+as classes de esclonamento eram ordenadas
+
+1132
+01:23:21,670 --> 01:23:23,670
+numa lista ligada.
+
+1133
+01:23:23,670 --> 01:23:25,670
+A unha longamp, que era o NEXT
+
+1134
+01:23:25,670 --> 01:23:27,670
+hoje em dia
+
+1135
+01:23:27,670 --> 01:23:29,670
+são organizadas, obviamente, por questões
+
+1136
+01:23:29,670 --> 01:23:31,670
+de desempenho, num array.
+
+1137
+01:23:31,670 --> 01:23:33,670
+Portanto, como vocês podem ver
+
+1138
+01:23:33,670 --> 01:23:35,670
+temos aqui um array de apontadores
+
+1139
+01:23:35,670 --> 01:23:41,990
+e ele
+
+1140
+01:23:41,990 --> 01:23:43,990
+eu vou passar aqui, está a frente
+
+1141
+01:23:43,990 --> 01:23:45,990
+e depois volto
+
+1142
+01:23:45,990 --> 01:23:47,990
+aqui.
+
+1143
+01:23:47,990 --> 01:23:49,990
+Só para
+
+1144
+01:23:49,990 --> 01:23:51,990
+vos mostrar como é que
+
+1145
+01:23:51,990 --> 01:23:53,990
+as classes de
+
+1146
+01:23:53,990 --> 01:23:55,990
+aqui se está
+
+1147
+01:23:55,990 --> 01:23:57,990
+deixando-me só ver aqui
+
+1148
+01:23:57,990 --> 01:24:01,460
+digamos que não tenho aqui
+
+1149
+01:24:01,460 --> 01:24:03,460
+essa parte.
+
+1150
+01:24:03,460 --> 01:24:07,830
+Ah, está aqui.
+
+1151
+01:24:07,830 --> 01:24:09,830
+As classes de esclonamento
+
+1152
+01:24:09,830 --> 01:24:11,830
+são definidas através
+
+1153
+01:24:11,830 --> 01:24:13,830
+desta macro.
+
+1154
+01:24:13,830 --> 01:24:15,830
+Portanto, isto define
+
+1155
+01:24:15,830 --> 01:24:17,830
+a variável, por exemplo, esta classe
+
+1156
+01:24:17,830 --> 01:24:19,830
+esta aqui está a definir
+
+1157
+01:24:19,830 --> 01:24:21,830
+a
+
+1158
+01:24:21,830 --> 01:24:23,830
+IdleSquad class variable.
+
+1159
+01:24:23,830 --> 01:24:25,830
+Portanto, é desta forma
+
+1160
+01:24:25,830 --> 01:24:27,830
+que ele define
+
+1161
+01:24:27,830 --> 01:24:29,830
+a classe de esclonamento.
+
+1162
+01:24:29,830 --> 01:24:31,830
+E como vocês podem ver
+
+1163
+01:24:31,830 --> 01:24:33,830
+está a ser atribuídos aos apontadores
+
+1164
+01:24:33,830 --> 01:24:35,830
+funções
+
+1165
+01:24:35,830 --> 01:24:37,830
+que é onde está definidas
+
+1166
+01:24:37,830 --> 01:24:39,830
+dentro deste fisteiro
+
+1167
+01:24:39,830 --> 01:24:41,830
+e que são atribuídos. Depois nós vamos ver isto
+
+1168
+01:24:41,830 --> 01:24:43,830
+com mais detalhe, até porque nós vamos
+
+1169
+01:24:43,830 --> 01:24:45,830
+fazer a nossa classe de esclonamento.
+
+1170
+01:24:45,830 --> 01:24:47,830
+Agora vamos então
+
+1171
+01:24:47,830 --> 01:24:49,830
+aqui
+
+1172
+01:24:49,830 --> 01:24:51,830
+falar aqui de outras
+
+1173
+01:24:51,830 --> 01:24:53,830
+coisas.
+
+1174
+01:24:53,830 --> 01:24:58,070
+E é.
+
+1175
+01:24:58,070 --> 01:25:00,070
+Ora bem
+
+1176
+01:25:03,700 --> 01:25:05,700
+quando nós temos
+
+1177
+01:25:07,700 --> 01:25:09,700
+uma
+
+1178
+01:25:09,700 --> 01:25:11,700
+tarefa
+
+1179
+01:25:11,700 --> 01:25:13,700
+e
+
+1180
+01:25:13,700 --> 01:25:15,700
+em execução, ou quando acontece
+
+1181
+01:25:15,700 --> 01:25:17,700
+alguma coisa no sistema
+
+1182
+01:25:19,700 --> 01:25:21,700
+é por vezes é preciso
+
+1183
+01:25:21,700 --> 01:25:23,700
+sinalizar
+
+1184
+01:25:23,700 --> 01:25:25,700
+que o esclonador
+
+1185
+01:25:25,700 --> 01:25:27,700
+tem de ser invocado.
+
+1186
+01:25:27,700 --> 01:25:29,700
+Ora,
+
+1187
+01:25:29,700 --> 01:25:31,700
+nem sempre
+
+1188
+01:25:31,700 --> 01:25:33,700
+eu posso invocar
+
+1189
+01:25:33,700 --> 01:25:35,700
+a função do esclonador
+
+1190
+01:25:35,700 --> 01:25:37,700
+quem fez
+
+1191
+01:25:37,700 --> 01:25:39,700
+um mecanismo de tracing que colocou
+
+1192
+01:25:39,700 --> 01:25:41,700
+dentro dessa função,
+
+1193
+01:25:41,700 --> 01:25:43,700
+que é a função schedule
+
+1194
+01:25:43,700 --> 01:25:45,700
+aquele
+
+1195
+01:25:45,700 --> 01:25:47,700
+o switch2 e o switchaway
+
+1196
+01:25:47,700 --> 01:25:49,700
+o registro do switch2 e o switchaway.
+
+1197
+01:25:49,700 --> 01:25:51,700
+Ora,
+
+1198
+01:25:51,700 --> 01:25:53,700
+nem sempre
+
+1199
+01:25:53,700 --> 01:25:55,700
+é possível chamar a função
+
+1200
+01:25:55,700 --> 01:25:57,700
+do schedule.
+
+1201
+01:25:57,700 --> 01:25:59,700
+Porque a função
+
+1202
+01:25:59,700 --> 01:26:01,700
+schedule, se vocês analisarem
+
+1203
+01:26:01,700 --> 01:26:03,700
+faz um lock, a run queue
+
+1204
+01:26:03,700 --> 01:26:05,700
+ora, quando
+
+1205
+01:26:05,700 --> 01:26:07,700
+por exemplo
+
+1206
+01:26:07,700 --> 01:26:09,700
+o kernel está
+
+1207
+01:26:09,700 --> 01:26:11,700
+em interrupt context
+
+1208
+01:26:11,700 --> 01:26:13,700
+eu não posso dentro
+
+1209
+01:26:13,700 --> 01:26:15,700
+do código do interrupt context
+
+1210
+01:26:15,700 --> 01:26:17,700
+chamar
+
+1211
+01:26:17,700 --> 01:26:19,700
+o schedule porque se não ia dar
+
+1212
+01:26:19,700 --> 01:26:21,700
+deadlock.
+
+1213
+01:26:21,700 --> 01:26:23,700
+Se
+
+1214
+01:26:23,700 --> 01:26:25,700
+ela tem o lock
+
+1215
+01:26:25,700 --> 01:26:27,700
+o interrupt acontece, tem o lock
+
+1216
+01:26:27,700 --> 01:26:29,700
+ao chamar a função schedule
+
+1217
+01:26:29,700 --> 01:26:31,700
+tínhamos aqui
+
+1218
+01:26:31,700 --> 01:26:33,700
+um duplock e a dar
+
+1219
+01:26:33,700 --> 01:26:35,700
+deadlock.
+
+1220
+01:26:35,700 --> 01:26:37,700
+Então, qual é que é a abordagem?
+
+1221
+01:26:37,700 --> 01:26:39,700
+Ora,
+
+1222
+01:26:39,700 --> 01:26:41,700
+a abordagem é muito simples.
+
+1223
+01:26:41,700 --> 01:26:43,700
+Uma forma muito simples
+
+1224
+01:26:43,700 --> 01:26:45,700
+de resolvermos isto era
+
+1225
+01:26:45,700 --> 01:26:47,700
+aconteceu um interrupt
+
+1226
+01:26:47,700 --> 01:26:49,700
+e
+
+1227
+01:26:49,700 --> 01:26:51,700
+dentro do código do interrupt
+
+1228
+01:26:51,700 --> 01:26:53,700
+chega-se à conclusão que a tarefa
+
+1229
+01:26:53,700 --> 01:26:55,700
+corrente tem que ser preemptada.
+
+1230
+01:26:55,700 --> 01:26:57,700
+A forma
+
+1231
+01:26:57,700 --> 01:26:59,700
+simples de fazer isso
+
+1232
+01:26:59,700 --> 01:27:01,700
+era ter uma variável
+
+1233
+01:27:01,700 --> 01:27:03,700
+qualquer, global
+
+1234
+01:27:03,700 --> 01:27:05,700
+e fazer o sete
+
+1235
+01:27:05,700 --> 01:27:07,700
+dessa variável.
+
+1236
+01:27:07,700 --> 01:27:09,700
+É necessário chamar
+
+1237
+01:27:09,700 --> 01:27:11,700
+o escondador. Para que? Para quando
+
+1238
+01:27:11,700 --> 01:27:13,700
+sair-se do
+
+1239
+01:27:13,700 --> 01:27:15,700
+interrupt context
+
+1240
+01:27:15,700 --> 01:27:17,700
+analisar o valor dessa variável
+
+1241
+01:27:17,700 --> 01:27:19,700
+e chamar então a função schedule
+
+1242
+01:27:19,700 --> 01:27:21,700
+porque nessa altura já
+
+1243
+01:27:21,700 --> 01:27:23,700
+não está
+
+1244
+01:27:23,700 --> 01:27:25,700
+no contexto
+
+1245
+01:27:25,700 --> 01:27:27,700
+do interrupt.
+
+1246
+01:27:27,700 --> 01:27:29,700
+Na verdade
+
+1247
+01:27:29,700 --> 01:27:31,700
+é isso que é feito
+
+1248
+01:27:31,700 --> 01:27:39,370
+mas
+
+1249
+01:27:39,370 --> 01:27:41,370
+o que o escalonador, o que o linux
+
+1250
+01:27:41,370 --> 01:27:43,370
+faz ao invés de ter
+
+1251
+01:27:43,370 --> 01:27:45,370
+uma variável global
+
+1252
+01:27:47,370 --> 01:27:49,370
+tem na estrutura
+
+1253
+01:27:49,370 --> 01:27:51,370
+de cada processo
+
+1254
+01:27:51,370 --> 01:27:53,370
+portanto
+
+1255
+01:27:53,370 --> 01:27:55,370
+como vocês podem ver aqui
+
+1256
+01:27:55,370 --> 01:27:57,370
+tem
+
+1257
+01:27:57,370 --> 01:27:59,370
+um campo
+
+1258
+01:27:59,370 --> 01:28:01,370
+chamado
+
+1259
+01:28:01,370 --> 01:28:03,370
+thread info
+
+1260
+01:28:03,370 --> 01:28:05,370
+que não são mais nem menos do que
+
+1261
+01:28:05,370 --> 01:28:07,370
+um conjunto de flags
+
+1262
+01:28:07,370 --> 01:28:09,370
+e mais aqui alguma informação
+
+1263
+01:28:09,370 --> 01:28:11,370
+que vai permitir
+
+1264
+01:28:11,370 --> 01:28:13,370
+e
+
+1265
+01:28:13,370 --> 01:28:15,370
+no caso existe
+
+1266
+01:28:15,370 --> 01:28:17,370
+uma que vai ter
+
+1267
+01:28:17,370 --> 01:28:19,370
+esse papel isto é
+
+1268
+01:28:19,370 --> 01:28:21,370
+se a tarefa
+
+1269
+01:28:21,370 --> 01:28:23,370
+que
+
+1270
+01:28:23,370 --> 01:28:25,370
+está atribuído ao CPU
+
+1271
+01:28:25,370 --> 01:28:27,370
+precisa de ser preemptado
+
+1272
+01:28:27,370 --> 01:28:29,370
+então
+
+1273
+01:28:29,370 --> 01:28:31,370
+vai-se colocar na estrutura
+
+1274
+01:28:31,370 --> 01:28:33,370
+dessa tarefa portanto
+
+1275
+01:28:33,370 --> 01:28:35,370
+o CPU tem sempre uma tarefa
+
+1276
+01:28:35,370 --> 01:28:37,370
+atribuída
+
+1277
+01:28:37,370 --> 01:28:39,370
+mesmo quando está a executar
+
+1278
+01:28:39,370 --> 01:28:41,370
+uma função
+
+1279
+01:28:41,370 --> 01:28:43,370
+do interrupt
+
+1280
+01:28:43,370 --> 01:28:45,370
+na verdade se nós pensarmos um pouco
+
+1281
+01:28:45,370 --> 01:28:47,370
+o que está a ser executado não é
+
+1282
+01:28:47,370 --> 01:28:49,370
+a tarefa
+
+1283
+01:28:49,370 --> 01:28:51,370
+uma função do interrupt
+
+1284
+01:28:51,370 --> 01:28:53,370
+mas no CPU
+
+1285
+01:28:53,370 --> 01:28:55,370
+tem uma tarefa atribuída
+
+1286
+01:28:55,370 --> 01:28:57,370
+uma vez que esta função
+
+1287
+01:28:57,370 --> 01:28:59,370
+é uma função que está a ser executado
+
+1288
+01:28:59,370 --> 01:29:01,370
+por causa do interrupt
+
+1289
+01:29:01,370 --> 01:29:03,370
+o que é feito
+
+1290
+01:29:03,370 --> 01:29:05,370
+aí é colocado
+
+1291
+01:29:05,370 --> 01:29:07,370
+na tarefa corrente
+
+1292
+01:29:07,370 --> 01:29:09,370
+feito o set
+
+1293
+01:29:09,370 --> 01:29:11,370
+de
+
+1294
+01:29:11,370 --> 01:29:13,370
+de uma flag
+
+1295
+01:29:13,370 --> 01:29:15,370
+tive, ni de riscade
+
+1296
+01:29:15,370 --> 01:29:17,370
+é feito o set
+
+1297
+01:29:17,370 --> 01:29:19,370
+dessa flag
+
+1298
+01:29:19,370 --> 01:29:21,370
+e quando
+
+1299
+01:29:21,370 --> 01:29:23,370
+é feito o set dessa flag
+
+1300
+01:29:23,370 --> 01:29:25,370
+quando acaba
+
+1301
+01:29:25,370 --> 01:29:27,370
+o interrupt context
+
+1302
+01:29:27,370 --> 01:29:29,370
+essa flag é analisada
+
+1303
+01:29:29,370 --> 01:29:31,370
+e se for
+
+1304
+01:29:31,370 --> 01:29:33,370
+a forma de fazer o set
+
+1305
+01:29:33,370 --> 01:29:35,370
+dessa flag é invocar
+
+1306
+01:29:35,370 --> 01:29:37,370
+a função riscade
+
+1307
+01:29:37,370 --> 01:29:39,370
+e quando
+
+1308
+01:29:39,370 --> 01:29:41,370
+o interrupt
+
+1309
+01:29:41,370 --> 01:29:43,370
+context
+
+1310
+01:29:43,370 --> 01:29:45,370
+termina portanto quando acaba
+
+1311
+01:29:45,370 --> 01:29:47,370
+do interrupt context
+
+1312
+01:29:47,370 --> 01:29:49,370
+portanto a execução
+
+1313
+01:29:49,370 --> 01:29:51,370
+volta ao estado normal
+
+1314
+01:29:51,370 --> 01:29:53,370
+ou process context
+
+1315
+01:29:53,370 --> 01:29:55,370
+o que é que vai
+
+1316
+01:29:55,370 --> 01:29:57,370
+conhecer? Essa flag
+
+1317
+01:29:57,370 --> 01:29:59,370
+vai ser analisada
+
+1318
+01:29:59,370 --> 01:30:01,370
+e caso esteja
+
+1319
+01:30:01,370 --> 01:30:03,370
+ativa, tenha o valor 1
+
+1320
+01:30:03,370 --> 01:30:05,370
+o escalonador
+
+1321
+01:30:05,370 --> 01:30:07,370
+é invocado
+
+1322
+01:30:07,370 --> 01:30:09,370
+por que?
+
+1323
+01:30:09,370 --> 01:30:11,370
+pela razão que já presentei
+
+1324
+01:30:11,370 --> 01:30:13,370
+porque não é possível chamar a função schedule
+
+1325
+01:30:13,370 --> 01:30:15,370
+num interrupt context
+
+1326
+01:30:15,370 --> 01:30:17,370
+então
+
+1327
+01:30:17,370 --> 01:30:19,370
+mas a detecção
+
+1328
+01:30:19,370 --> 01:30:21,370
+que a tarefa
+
+1329
+01:30:21,370 --> 01:30:23,370
+corrente deveria ser preemptada
+
+1330
+01:30:23,370 --> 01:30:25,370
+é feita dentro disso então
+
+1331
+01:30:25,370 --> 01:30:27,370
+a forma de
+
+1332
+01:30:27,370 --> 01:30:29,370
+conseguir passar essa informação
+
+1333
+01:30:29,370 --> 01:30:31,370
+do interrupt context
+
+1334
+01:30:31,370 --> 01:30:33,370
+para o process context
+
+1335
+01:30:33,370 --> 01:30:35,370
+é ativar uma flag
+
+1336
+01:30:35,370 --> 01:30:37,370
+num campo do processo
+
+1337
+01:30:37,370 --> 01:30:39,370
+que está atribuido ao CPU
+
+1338
+01:30:39,370 --> 01:30:41,370
+mas podia ser uma variável global
+
+1339
+01:30:41,370 --> 01:30:43,370
+obviamente
+
+1340
+01:30:43,370 --> 01:30:45,370
+deve haver razões porque é que
+
+1341
+01:30:45,370 --> 01:30:47,370
+eles utilizam este mecanismo
+
+1342
+01:30:47,370 --> 01:30:49,370
+obviamente que deve ser muito mais
+
+1343
+01:30:49,370 --> 01:30:51,370
+eficiente, como já tem ali o apontador
+
+1344
+01:30:51,370 --> 01:30:53,370
+coisa assim de gente
+
+1345
+01:30:53,370 --> 01:30:55,370
+não sei o racional
+
+1346
+01:30:55,370 --> 01:30:57,370
+que está associado consigo entender a lógica
+
+1347
+01:30:57,370 --> 01:30:59,370
+mas
+
+1348
+01:30:59,370 --> 01:31:01,370
+é esta a forma que é usada
+
+1349
+01:31:01,370 --> 01:31:03,370
+portanto
+
+1350
+01:31:03,370 --> 01:31:05,370
+vamos então agora
+
+1351
+01:31:05,370 --> 01:31:07,370
+olhar para
+
+1352
+01:31:07,370 --> 01:31:09,370
+o
+
+1353
+01:31:09,370 --> 01:31:11,370
+o corde do escalonador
+
+1354
+01:31:11,370 --> 01:31:13,370
+e para isso eu vou fazer
+
+1355
+01:31:13,370 --> 01:31:15,370
+fazer aqui
+
+1356
+01:31:15,370 --> 01:31:17,370
+só daqui está
+
+1357
+01:31:17,370 --> 01:31:19,370
+está, está, está
+
+1358
+01:31:19,370 --> 01:31:21,370
+estava aqui
+
+1359
+01:31:21,370 --> 01:31:23,370
+muito bem
+
+1360
+01:31:23,370 --> 01:31:25,370
+ora bem, portanto
+
+1361
+01:31:25,370 --> 01:31:27,370
+as
+
+1362
+01:31:27,370 --> 01:31:29,370
+tarefas
+
+1363
+01:31:29,370 --> 01:31:31,370
+as tarefas
+
+1364
+01:31:31,370 --> 01:31:33,370
+os processos são
+
+1365
+01:31:33,370 --> 01:31:35,370
+geridos em termos de escalonamento
+
+1366
+01:31:35,370 --> 01:31:37,370
+por uma abordagem
+
+1367
+01:31:37,370 --> 01:31:39,370
+modelar
+
+1368
+01:31:39,370 --> 01:31:41,370
+distribuída pelas diferentes
+
+1369
+01:31:43,370 --> 01:31:45,370
+classes de escalonamento
+
+1370
+01:31:45,370 --> 01:31:47,370
+portanto pelas diferentes
+
+1371
+01:31:47,370 --> 01:31:49,370
+runqs
+
+1372
+01:31:49,370 --> 01:31:51,370
+volto a referir
+
+1373
+01:31:51,370 --> 01:31:53,370
+cada processo num dado instante
+
+1374
+01:31:53,370 --> 01:31:55,370
+pretensa uma classe de escalonamento
+
+1375
+01:31:55,370 --> 01:31:57,370
+e tem uma política
+
+1376
+01:31:57,370 --> 01:31:59,370
+de escalonamento e tem uma prioridade
+
+1377
+01:31:59,370 --> 01:32:02,620
+que
+
+1378
+01:32:02,620 --> 01:32:04,620
+quando se altera ele valida
+
+1379
+01:32:04,620 --> 01:32:06,620
+se aquilo está consistente
+
+1380
+01:32:06,620 --> 01:32:08,620
+ora
+
+1381
+01:32:08,620 --> 01:32:10,620
+e
+
+1382
+01:32:10,620 --> 01:32:12,620
+as tarefas
+
+1383
+01:32:12,620 --> 01:32:14,620
+portanto
+
+1384
+01:32:14,620 --> 01:32:16,620
+o linux
+
+1385
+01:32:16,620 --> 01:32:18,620
+utiliza a função schedule
+
+1386
+01:32:18,620 --> 01:32:20,620
+que é o corde
+
+1387
+01:32:20,620 --> 01:32:22,620
+que delega nessas classes
+
+1388
+01:32:22,620 --> 01:32:24,620
+digamos
+
+1389
+01:32:24,620 --> 01:32:26,620
+os critérios
+
+1390
+01:32:26,620 --> 01:32:28,620
+para selecionar
+
+1391
+01:32:28,620 --> 01:32:30,620
+as tarefas
+
+1392
+01:32:30,620 --> 01:32:32,620
+ora bem
+
+1393
+01:32:32,620 --> 01:32:34,620
+contudo
+
+1394
+01:32:34,620 --> 01:32:36,620
+existem dois tipos de operações
+
+1395
+01:32:36,620 --> 01:32:38,620
+neste contexto
+
+1396
+01:32:38,620 --> 01:32:40,620
+operações
+
+1397
+01:32:40,620 --> 01:32:42,620
+que eu chamo system wide
+
+1398
+01:32:42,620 --> 01:32:44,620
+e operações
+
+1399
+01:32:44,620 --> 01:32:46,620
+task
+
+1400
+01:32:46,620 --> 01:32:48,620
+que são específicas das tarefas
+
+1401
+01:32:48,620 --> 01:32:50,620
+portanto temos estes dois
+
+1402
+01:32:50,620 --> 01:32:52,620
+contas
+
+1403
+01:32:52,620 --> 01:32:54,620
+ah
+
+1404
+01:32:54,620 --> 01:32:56,620
+esqueci de dizer isso
+
+1405
+01:32:56,620 --> 01:32:58,620
+obviamente que
+
+1406
+01:32:58,620 --> 01:33:00,620
+o core
+
+1407
+01:33:00,620 --> 01:33:02,620
+vai invocar
+
+1408
+01:33:02,620 --> 01:33:04,620
+as callbacks
+
+1409
+01:33:04,620 --> 01:33:06,620
+que estão associadas
+
+1410
+01:33:06,620 --> 01:33:08,620
+dentro de cada schedule
+
+1411
+01:33:08,620 --> 01:33:10,620
+em classe
+
+1412
+01:33:10,620 --> 01:33:12,620
+usando aquela ordem que eu referi
+
+1413
+01:33:12,620 --> 01:33:14,620
+portanto quando ele vai inquirir
+
+1414
+01:33:14,620 --> 01:33:16,620
+as classes
+
+1415
+01:33:16,620 --> 01:33:18,620
+ele usa essas callbacks
+
+1416
+01:33:18,620 --> 01:33:20,620
+vamos então olhar
+
+1417
+01:33:20,620 --> 01:33:22,620
+para
+
+1418
+01:33:22,620 --> 01:33:24,620
+estas abordagens
+
+1419
+01:33:24,620 --> 01:33:29,140
+ora
+
+1420
+01:33:29,140 --> 01:33:31,140
+isto eu já falei
+
+1421
+01:33:31,140 --> 01:33:33,140
+várias vezes
+
+1422
+01:33:33,140 --> 01:33:35,140
+o escolenador
+
+1423
+01:33:35,140 --> 01:33:37,140
+é código morto
+
+1424
+01:33:37,140 --> 01:33:39,140
+o escolenador
+
+1425
+01:33:39,140 --> 01:33:41,140
+só executa quando é invocado
+
+1426
+01:33:41,140 --> 01:33:43,140
+portanto
+
+1427
+01:33:43,140 --> 01:33:45,140
+a função schedule
+
+1428
+01:33:45,140 --> 01:33:47,140
+tem de ser invocada
+
+1429
+01:33:47,140 --> 01:33:49,140
+e é sempre invocada
+
+1430
+01:33:49,140 --> 01:33:51,140
+no contexto de um processo
+
+1431
+01:33:51,140 --> 01:33:53,140
+nunca é invocada
+
+1432
+01:33:53,140 --> 01:33:55,140
+no contexto de um interredo
+
+1433
+01:33:55,140 --> 01:33:57,140
+para isso
+
+1434
+01:33:59,140 --> 01:34:01,140
+já vimos
+
+1435
+01:34:01,140 --> 01:34:03,140
+que é invocada
+
+1436
+01:34:03,140 --> 01:34:05,140
+esta flag
+
+1437
+01:34:05,140 --> 01:34:07,140
+que está
+
+1438
+01:34:07,140 --> 01:34:09,140
+na estrutura do processo
+
+1439
+01:34:09,140 --> 01:34:11,140
+e sempre que
+
+1440
+01:34:11,140 --> 01:34:13,140
+essa flag
+
+1441
+01:34:13,140 --> 01:34:15,140
+é ativa
+
+1442
+01:34:15,140 --> 01:34:17,140
+e ela é ativa
+
+1443
+01:34:17,140 --> 01:34:19,140
+quando
+
+1444
+01:34:19,140 --> 01:34:21,140
+não é possível chamar o escolenador
+
+1445
+01:34:21,140 --> 01:34:23,140
+quando sai desse contexto
+
+1446
+01:34:23,140 --> 01:34:25,140
+essa flag é verificada
+
+1447
+01:34:25,140 --> 01:34:27,140
+portanto
+
+1448
+01:34:27,140 --> 01:34:29,140
+é verificada
+
+1449
+01:34:29,140 --> 01:34:31,140
+de outras formas
+
+1450
+01:34:31,140 --> 01:34:33,140
+para
+
+1451
+01:34:33,140 --> 01:34:35,140
+em situações que se coloca
+
+1452
+01:34:35,140 --> 01:34:37,140
+faz-se este
+
+1453
+01:34:37,140 --> 01:34:39,140
+set
+
+1454
+01:34:39,140 --> 01:34:41,140
+do Tiff
+
+1455
+01:34:41,140 --> 01:34:43,140
+de risquete
+
+1456
+01:34:43,140 --> 01:34:45,140
+portanto desta flag
+
+1457
+01:34:45,140 --> 01:34:47,140
+por exemplo, a cada tick
+
+1458
+01:34:47,140 --> 01:34:49,140
+o que é que é um tick?
+
+1459
+01:34:49,140 --> 01:34:51,140
+um interrupt
+
+1460
+01:34:51,140 --> 01:34:53,140
+um interrupt handler
+
+1461
+01:34:53,140 --> 01:34:55,140
+que é executado quando que?
+
+1462
+01:34:55,140 --> 01:34:57,140
+quando há uma interrupção
+
+1463
+01:34:57,140 --> 01:34:59,140
+quando temos
+
+1464
+01:34:59,140 --> 01:35:01,140
+o wake up
+
+1465
+01:35:01,140 --> 01:35:03,140
+do processo
+
+1466
+01:35:03,140 --> 01:35:05,140
+se isto é
+
+1467
+01:35:05,140 --> 01:35:07,140
+quando o processo
+
+1468
+01:35:07,140 --> 01:35:09,140
+estava
+
+1469
+01:35:09,140 --> 01:35:11,140
+numa situação
+
+1470
+01:35:11,140 --> 01:35:13,140
+que não podia
+
+1471
+01:35:13,140 --> 01:35:15,140
+executar e por um motivo
+
+1472
+01:35:15,140 --> 01:35:17,140
+qualquer acordou
+
+1473
+01:35:17,140 --> 01:35:19,140
+ora, vamos assumir que
+
+1474
+01:35:19,140 --> 01:35:21,140
+neste
+
+1475
+01:35:21,140 --> 01:35:23,140
+e este é um dos casos
+
+1476
+01:35:23,140 --> 01:35:25,140
+neste contexto
+
+1477
+01:35:25,140 --> 01:35:27,140
+houve
+
+1478
+01:35:27,140 --> 01:35:29,140
+a execução
+
+1479
+01:35:29,140 --> 01:35:31,140
+de um interrupt
+
+1480
+01:35:31,140 --> 01:35:33,140
+portanto
+
+1481
+01:35:33,140 --> 01:35:35,140
+o terminar de um input
+
+1482
+01:35:35,140 --> 01:35:37,140
+portanto quando um processo
+
+1483
+01:35:37,140 --> 01:35:39,140
+está à espera
+
+1484
+01:35:39,140 --> 01:35:41,140
+de um determinado
+
+1485
+01:35:41,140 --> 01:35:43,140
+input
+
+1486
+01:35:43,140 --> 01:35:45,140
+e esse input
+
+1487
+01:35:45,140 --> 01:35:47,140
+é feito
+
+1488
+01:35:47,140 --> 01:35:49,140
+ora
+
+1489
+01:35:49,140 --> 01:35:51,140
+o CPU é notificado
+
+1490
+01:35:51,140 --> 01:35:53,140
+disse tipicamente através de um interrupt
+
+1491
+01:35:53,140 --> 01:35:55,140
+mais uma vez
+
+1492
+01:35:55,140 --> 01:35:57,140
+é feito desta forma
+
+1493
+01:35:57,140 --> 01:35:59,140
+quando as tarefas são
+
+1494
+01:35:59,140 --> 01:36:01,140
+criadas portanto
+
+1495
+01:36:01,140 --> 01:36:03,140
+quando nós temos
+
+1496
+01:36:03,140 --> 01:36:05,140
+a invocação de um
+
+1497
+01:36:05,140 --> 01:36:07,140
+fazemos um fork
+
+1498
+01:36:07,140 --> 01:36:09,140
+ora, nessa altura
+
+1499
+01:36:09,140 --> 01:36:11,140
+se porventura
+
+1500
+01:36:11,140 --> 01:36:13,140
+entender que
+
+1501
+01:36:13,140 --> 01:36:15,140
+é necessário fazer alguma preempoção
+
+1502
+01:36:15,140 --> 01:36:17,140
+é usado isto
+
+1503
+01:36:17,140 --> 01:36:19,140
+sempre que
+
+1504
+01:36:19,140 --> 01:36:21,140
+uma tarefa
+
+1505
+01:36:21,140 --> 01:36:23,140
+uma tarefa muda
+
+1506
+01:36:23,140 --> 01:36:25,140
+de prioridade ou muda
+
+1507
+01:36:25,140 --> 01:36:27,140
+de política de escolhamento
+
+1508
+01:36:27,140 --> 01:36:29,140
+também
+
+1509
+01:36:29,140 --> 01:36:31,140
+é necessário
+
+1510
+01:36:31,140 --> 01:36:33,140
+ou pode ser necessário
+
+1511
+01:36:33,140 --> 01:36:35,140
+fazer ativar
+
+1512
+01:36:35,140 --> 01:36:37,140
+isto para depois invocar
+
+1513
+01:36:37,140 --> 01:36:39,140
+os interrupts
+
+1514
+01:36:39,140 --> 01:36:41,140
+isto porque
+
+1515
+01:36:41,140 --> 01:36:43,140
+isto são system calls
+
+1516
+01:36:43,140 --> 01:36:45,140
+ora a system calls implicam
+
+1517
+01:36:45,140 --> 01:36:47,140
+interrupts portanto quando volta
+
+1518
+01:36:47,140 --> 01:36:49,140
+quando vai para o kernel
+
+1519
+01:36:49,140 --> 01:36:51,140
+implica interrupts
+
+1520
+01:36:51,140 --> 01:36:53,140
+portanto
+
+1521
+01:36:53,140 --> 01:36:55,140
+quando retorna
+
+1522
+01:36:55,140 --> 01:36:57,140
+portanto esta
+
+1523
+01:36:57,140 --> 01:36:59,140
+variável vai ser verificada
+
+1524
+01:36:59,140 --> 01:37:01,140
+quando retorna de uma
+
+1525
+01:37:01,140 --> 01:37:03,140
+system call
+
+1526
+01:37:03,140 --> 01:37:05,140
+quando retorna de um interrupt
+
+1527
+01:37:05,140 --> 01:37:07,140
+e também
+
+1528
+01:37:07,140 --> 01:37:09,140
+sempre que
+
+1529
+01:37:09,140 --> 01:37:11,140
+nós falamos nisso quando falamos
+
+1530
+01:37:11,140 --> 01:37:13,140
+nos mecanismos de concorrência
+
+1531
+01:37:13,140 --> 01:37:15,140
+no kernel é possível
+
+1532
+01:37:15,140 --> 01:37:17,140
+preemptar
+
+1533
+01:37:17,140 --> 01:37:19,140
+desabilitar as preempoções
+
+1534
+01:37:19,140 --> 01:37:21,140
+ora
+
+1535
+01:37:21,140 --> 01:37:23,140
+sempre que é feito
+
+1536
+01:37:23,140 --> 01:37:25,140
+preemption enable
+
+1537
+01:37:25,140 --> 01:37:27,140
+portanto primeiro tem que se fazer um disable
+
+1538
+01:37:27,140 --> 01:37:29,140
+e depois faça um preemption
+
+1539
+01:37:29,140 --> 01:37:31,140
+enable
+
+1540
+01:37:31,140 --> 01:37:33,140
+esta flag
+
+1541
+01:37:33,140 --> 01:37:35,140
+é verificada
+
+1542
+01:37:35,140 --> 01:37:37,140
+porque durante
+
+1543
+01:37:37,140 --> 01:37:39,140
+o tempo em que
+
+1544
+01:37:39,140 --> 01:37:41,140
+as preempoções foram desabilitadas
+
+1545
+01:37:41,140 --> 01:37:43,140
+se chegar à conclusão
+
+1546
+01:37:43,140 --> 01:37:45,140
+de que a tarefa corrente deve ser preemptada
+
+1547
+01:37:45,140 --> 01:37:47,140
+não se pode chamar
+
+1548
+01:37:47,140 --> 01:37:49,140
+e o escalonador
+
+1549
+01:37:49,140 --> 01:37:51,140
+tem que ser chamado
+
+1550
+01:37:51,140 --> 01:37:53,140
+depois de habilitar as preempoções
+
+1551
+01:37:53,140 --> 01:37:55,140
+então nesse caso
+
+1552
+01:37:55,140 --> 01:37:57,140
+usa-se este mecanismo
+
+1553
+01:37:57,140 --> 01:37:59,140
+a função
+
+1554
+01:37:59,140 --> 01:38:01,140
+sequerzo
+
+1555
+01:38:01,140 --> 01:38:03,140
+pode ser invocada
+
+1556
+01:38:03,140 --> 01:38:05,140
+e é invocada porque se ela não for
+
+1557
+01:38:05,140 --> 01:38:07,140
+invocada não é executada
+
+1558
+01:38:07,140 --> 01:38:09,140
+é invocada
+
+1559
+01:38:09,140 --> 01:38:11,140
+sempre no contexto
+
+1560
+01:38:11,140 --> 01:38:13,140
+de um processo
+
+1561
+01:38:13,140 --> 01:38:15,140
+de movimento executar
+
+1562
+01:38:15,140 --> 01:38:17,140
+em kernel
+
+1563
+01:38:17,140 --> 01:38:19,140
+mas por exemplo quando um processo
+
+1564
+01:38:19,140 --> 01:38:21,140
+termina
+
+1565
+01:38:21,140 --> 01:38:23,140
+a sua execução
+
+1566
+01:38:23,140 --> 01:38:25,140
+quando um
+
+1567
+01:38:25,140 --> 01:38:27,140
+processo
+
+1568
+01:38:27,140 --> 01:38:29,140
+fica inativo
+
+1569
+01:38:29,140 --> 01:38:31,140
+portanto
+
+1570
+01:38:31,140 --> 01:38:33,140
+muda de estado para a task interruptible
+
+1571
+01:38:33,140 --> 01:38:35,140
+portanto já não tem mais
+
+1572
+01:38:35,140 --> 01:38:37,140
+condições de
+
+1573
+01:38:37,140 --> 01:38:39,140
+execução
+
+1574
+01:38:39,140 --> 01:38:41,140
+é o próprio processo
+
+1575
+01:38:41,140 --> 01:38:43,140
+que não pode executar
+
+1576
+01:38:43,140 --> 01:38:45,140
+se é o próprio processo que não pode executar
+
+1577
+01:38:45,140 --> 01:38:47,140
+tem de se invocar o sequerzo
+
+1578
+01:38:47,140 --> 01:38:49,140
+para ele escolher uma nova tarefa
+
+1579
+01:38:49,140 --> 01:38:51,140
+pronto
+
+1580
+01:38:51,140 --> 01:38:53,140
+vamos então agora olhar
+
+1581
+01:38:53,140 --> 01:38:55,140
+para a system wide operations
+
+1582
+01:38:55,140 --> 01:38:57,140
+e depois
+
+1583
+01:38:57,140 --> 01:38:59,140
+se tivermos tempo para a task
+
+1584
+01:38:59,140 --> 01:39:01,140
+ora
+
+1585
+01:39:01,140 --> 01:39:03,140
+system wide, quando é que nós vamos
+
+1586
+01:39:03,140 --> 01:39:05,140
+quando é que o kernel
+
+1587
+01:39:05,140 --> 01:39:07,140
+vai olhar para
+
+1588
+01:39:07,140 --> 01:39:09,140
+todas as classes de escalonamento
+
+1589
+01:39:09,140 --> 01:39:11,140
+ora
+
+1590
+01:39:11,140 --> 01:39:13,140
+vou por aqui este exemplo
+
+1591
+01:39:13,140 --> 01:39:15,140
+quando
+
+1592
+01:39:15,140 --> 01:39:17,140
+a função schedule
+
+1593
+01:39:17,140 --> 01:39:19,140
+é
+
+1594
+01:39:19,140 --> 01:39:21,140
+invocado
+
+1595
+01:39:21,140 --> 01:39:23,140
+ele vai
+
+1596
+01:39:23,140 --> 01:39:25,140
+realizar uma operação system wide
+
+1597
+01:39:25,140 --> 01:39:27,140
+e como é que faz isso
+
+1598
+01:39:27,140 --> 01:39:29,140
+uma forma muito simples
+
+1599
+01:39:29,140 --> 01:39:31,140
+ele vai
+
+1600
+01:39:31,140 --> 01:39:33,140
+invocar
+
+1601
+01:39:33,140 --> 01:39:35,140
+vai percorrer
+
+1602
+01:39:35,140 --> 01:39:37,140
+o
+
+1603
+01:39:37,140 --> 01:39:39,140
+todas as classes de
+
+1604
+01:39:39,140 --> 01:39:41,140
+escalonamento
+
+1605
+01:39:41,140 --> 01:39:43,140
+à procura
+
+1606
+01:39:43,140 --> 01:39:45,140
+de uma tarefa
+
+1607
+01:39:45,140 --> 01:39:47,140
+usando seguindo
+
+1608
+01:39:47,140 --> 01:39:49,140
+a hierarquia definida
+
+1609
+01:39:49,140 --> 01:39:51,140
+para isso
+
+1610
+01:39:51,140 --> 01:39:53,140
+deixe-me ver se eu tenho aqui, se não tiver
+
+1611
+01:39:53,140 --> 01:39:55,140
+eu volto atrás
+
+1612
+01:39:55,140 --> 01:39:57,140
+para isso
+
+1613
+01:39:57,140 --> 01:39:59,140
+ele vai, pois vocês analisarem o crótico
+
+1614
+01:39:59,140 --> 01:40:01,140
+ele vai usar
+
+1615
+01:40:01,140 --> 01:40:03,140
+esta
+
+1616
+01:40:03,140 --> 01:40:05,140
+macro
+
+1617
+01:40:05,140 --> 01:40:07,140
+para percorrer
+
+1618
+01:40:07,140 --> 01:40:09,140
+desde a classe de mais alta
+
+1619
+01:40:09,140 --> 01:40:11,140
+prioridade até de mais baixa
+
+1620
+01:40:11,140 --> 01:40:13,140
+ele vai
+
+1621
+01:40:13,140 --> 01:40:16,550
+invocar
+
+1622
+01:40:16,550 --> 01:40:18,550
+em cada uma
+
+1623
+01:40:18,550 --> 01:40:20,550
+das classes
+
+1624
+01:40:20,550 --> 01:40:22,550
+a função
+
+1625
+01:40:22,550 --> 01:40:24,550
+pick next task
+
+1626
+01:40:24,550 --> 01:40:26,550
+portanto se vocês
+
+1627
+01:40:26,550 --> 01:40:28,550
+analisarem esta função
+
+1628
+01:40:28,550 --> 01:40:30,550
+pick next task
+
+1629
+01:40:30,550 --> 01:40:32,550
+que está no
+
+1630
+01:40:32,550 --> 01:40:34,550
+fecheiro
+
+1631
+01:40:34,550 --> 01:40:36,550
+core.c do kernel
+
+1632
+01:40:36,550 --> 01:40:38,550
+que tem, o que é que faz
+
+1633
+01:40:38,550 --> 01:40:40,550
+essa pick next task?
+
+1634
+01:40:40,550 --> 01:40:42,550
+utiliza aquela macro
+
+1635
+01:40:42,550 --> 01:40:44,550
+para invocar
+
+1636
+01:40:44,550 --> 01:40:46,550
+de cada uma das schedule
+
+1637
+01:40:46,550 --> 01:40:48,550
+em classe
+
+1638
+01:40:48,550 --> 01:40:50,550
+a função
+
+1639
+01:40:50,550 --> 01:40:52,550
+pick next task
+
+1640
+01:40:56,550 --> 01:40:58,550
+está aqui
+
+1641
+01:40:58,550 --> 01:41:00,550
+que vai, portanto
+
+1642
+01:41:00,550 --> 01:41:02,550
+executar
+
+1643
+01:41:02,550 --> 01:41:04,550
+o pick next task do stock
+
+1644
+01:41:04,550 --> 01:41:06,550
+e ele vai retornar
+
+1645
+01:41:06,550 --> 01:41:08,550
+no, ou um apontador
+
+1646
+01:41:08,550 --> 01:41:10,550
+pick next task
+
+1647
+01:41:10,550 --> 01:41:12,550
+e por aí abaixo até chegar aqui
+
+1648
+01:41:12,550 --> 01:41:14,550
+já sabemos que se chegar aqui
+
+1649
+01:41:14,550 --> 01:41:16,550
+vai retornar uma tarefa
+
+1650
+01:41:16,550 --> 01:41:18,550
+portanto
+
+1651
+01:41:18,550 --> 01:41:20,550
+ora, o, aqui
+
+1652
+01:41:20,550 --> 01:41:22,550
+o que é que nós temos? temos uma
+
+1653
+01:41:22,550 --> 01:41:24,550
+função
+
+1654
+01:41:24,550 --> 01:41:26,550
+pick next task
+
+1655
+01:41:26,550 --> 01:41:28,550
+que vai percorrer
+
+1656
+01:41:28,550 --> 01:41:30,550
+as classes de escalonamento
+
+1657
+01:41:30,550 --> 01:41:32,550
+e invocar
+
+1658
+01:41:32,550 --> 01:41:34,550
+a callback associado
+
+1659
+01:41:34,550 --> 01:41:36,550
+ao atributo
+
+1660
+01:41:36,550 --> 01:41:38,550
+pick next task
+
+1661
+01:41:38,550 --> 01:41:40,550
+e essa callback, essa função
+
+1662
+01:41:40,550 --> 01:41:42,550
+que está em, tem implementações
+
+1663
+01:41:42,550 --> 01:41:44,550
+diferentes
+
+1664
+01:41:44,550 --> 01:41:46,550
+mediante as classes de escalonamento
+
+1665
+01:41:46,550 --> 01:41:48,550
+e mediante as suas estruturas
+
+1666
+01:41:48,550 --> 01:41:50,550
+vai retornar
+
+1667
+01:41:50,550 --> 01:41:52,550
+a tarefa adequada
+
+1668
+01:41:52,550 --> 01:41:54,550
+isto são operações
+
+1669
+01:41:54,550 --> 01:41:56,550
+system-wide
+
+1670
+01:41:56,550 --> 01:41:58,550
+agora
+
+1671
+01:41:58,550 --> 01:42:02,730
+depois vocês têm aqui
+
+1672
+01:42:02,730 --> 01:42:04,730
+o
+
+1673
+01:42:04,730 --> 01:42:06,730
+para explicar
+
+1674
+01:42:06,730 --> 01:42:08,730
+o entreponho por onde aqui isto
+
+1675
+01:42:08,730 --> 01:42:10,730
+anda
+
+1676
+01:42:10,730 --> 01:42:12,730
+e cá está, se vocês verem
+
+1677
+01:42:12,730 --> 01:42:14,730
+isto aqui é a função
+
+1678
+01:42:14,730 --> 01:42:16,730
+schedule
+
+1679
+01:42:16,730 --> 01:42:18,730
+temos aqui
+
+1680
+01:42:18,730 --> 01:42:20,730
+se vocês, nós já chegamos a falar
+
+1681
+01:42:20,730 --> 01:42:22,730
+nisto quando falamos sobre o
+
+1682
+01:42:22,730 --> 01:42:24,730
+preve
+
+1683
+01:42:24,730 --> 01:42:26,730
+sobre o suíto stew e suíto sway
+
+1684
+01:42:26,730 --> 01:42:28,730
+dois apontadores o preve
+
+1685
+01:42:28,730 --> 01:42:30,730
+o nex, o que é que ele está a fazer
+
+1686
+01:42:30,730 --> 01:42:32,730
+está atribuído aqui ao preve
+
+1687
+01:42:32,730 --> 01:42:34,730
+a tarefa que está no cpu neste momento
+
+1688
+01:42:34,730 --> 01:42:36,730
+e agora vai fazer o
+
+1689
+01:42:36,730 --> 01:42:38,730
+pick next task
+
+1690
+01:42:38,730 --> 01:42:40,730
+esta função internamente
+
+1691
+01:42:40,730 --> 01:42:42,730
+vai
+
+1692
+01:42:42,730 --> 01:42:44,730
+iterar, vai fazer
+
+1693
+01:42:44,730 --> 01:42:46,730
+isto
+
+1694
+01:42:46,730 --> 01:42:48,730
+que eu estou aqui representado
+
+1695
+01:42:48,730 --> 01:42:50,730
+vai percorrer
+
+1696
+01:42:50,730 --> 01:42:52,730
+cada uma das classes
+
+1697
+01:42:52,730 --> 01:42:54,730
+e invocar
+
+1698
+01:42:54,730 --> 01:42:56,730
+o pick next task de cada uma das classes
+
+1699
+01:42:56,730 --> 01:42:58,730
+a primeira
+
+1700
+01:42:58,730 --> 01:43:00,730
+para esta ordem que retornar
+
+1701
+01:43:00,730 --> 01:43:02,730
+diferente de nulo
+
+1702
+01:43:02,730 --> 01:43:04,730
+é aquela que vai passar a ser
+
+1703
+01:43:04,730 --> 01:43:06,730
+aqui está
+
+1704
+01:43:06,730 --> 01:43:08,730
+mais para frente
+
+1705
+01:43:08,730 --> 01:43:10,730
+é aquela que vai passar a ser
+
+1706
+01:43:10,730 --> 01:43:12,730
+o next
+
+1707
+01:43:12,730 --> 01:43:14,730
+e que depois é usado aqui no context switch
+
+1708
+01:43:14,730 --> 01:43:16,730
+para substituir
+
+1709
+01:43:16,730 --> 01:43:18,730
+a tarefa
+
+1710
+01:43:18,730 --> 01:43:20,730
+quem implementou o mecanismo de tracing
+
+1711
+01:43:20,730 --> 01:43:22,730
+viu isso
+
+1712
+01:43:22,730 --> 01:43:26,360
+ora bem, pronto, e depois aqui está a explicar
+
+1713
+01:43:26,360 --> 01:43:28,360
+está a explicar
+
+1714
+01:43:28,360 --> 01:43:30,360
+o
+
+1715
+01:43:30,360 --> 01:43:32,360
+a função schedule
+
+1716
+01:43:32,360 --> 01:43:34,360
+só que eu queria chamar-vos aqui a atenção
+
+1717
+01:43:34,360 --> 01:43:36,360
+para uma
+
+1718
+01:43:36,360 --> 01:43:38,360
+coisa aqui, é
+
+1719
+01:43:38,360 --> 01:43:41,670
+aqui, sempre que
+
+1720
+01:43:41,670 --> 01:43:45,110
+embora aqui não esteja visível
+
+1721
+01:43:45,110 --> 01:43:47,110
+porque eu estou aqui trezentinho
+
+1722
+01:43:47,110 --> 01:43:49,110
+significa que tenha este de código
+
+1723
+01:43:49,110 --> 01:43:51,110
+sempre que
+
+1724
+01:43:51,110 --> 01:43:53,110
+a tarefa preve
+
+1725
+01:43:53,110 --> 01:43:56,360
+é invocado
+
+1726
+01:43:56,360 --> 01:44:00,410
+e
+
+1727
+01:44:00,410 --> 01:44:02,410
+ela
+
+1728
+01:44:02,410 --> 01:44:04,410
+tem o seu estado
+
+1729
+01:44:04,410 --> 01:44:06,410
+é diferente de task
+
+1730
+01:44:06,410 --> 01:44:08,410
+running
+
+1731
+01:44:08,410 --> 01:44:10,410
+isto é, a tarefa preve
+
+1732
+01:44:10,410 --> 01:44:12,410
+o escalonador está a ser invocado
+
+1733
+01:44:12,410 --> 01:44:14,410
+porque a tarefa preve, aquela que estava
+
+1734
+01:44:14,410 --> 01:44:16,410
+atribuído ao CPU
+
+1735
+01:44:16,410 --> 01:44:18,410
+e já não tem condições para executar
+
+1736
+01:44:18,410 --> 01:44:20,410
+o que é que vai
+
+1737
+01:44:20,410 --> 01:44:22,410
+acontecer, ele vai invocar
+
+1738
+01:44:22,410 --> 01:44:24,410
+o DQ
+
+1739
+01:44:24,410 --> 01:44:26,410
+o que é que isso significa
+
+1740
+01:44:26,410 --> 01:44:28,410
+vai retirar
+
+1741
+01:44:28,410 --> 01:44:30,410
+a tarefa
+
+1742
+01:44:30,410 --> 01:44:35,960
+da run queue
+
+1743
+01:44:35,960 --> 01:44:37,960
+mas aqui está a explicar
+
+1744
+01:44:37,960 --> 01:44:39,960
+as diferentes, ah, cá está o pick next task
+
+1745
+01:44:39,960 --> 01:44:41,960
+estão a ver
+
+1746
+01:44:41,960 --> 01:44:43,960
+eu começo na tarefa de mais alta prioridade
+
+1747
+01:44:43,960 --> 01:44:45,960
+e vai
+
+1748
+01:44:45,960 --> 01:44:47,960
+percorrer
+
+1749
+01:44:47,960 --> 01:44:49,960
+todas e depois
+
+1750
+01:44:49,960 --> 01:44:51,960
+cá está o pick next task
+
+1751
+01:44:51,960 --> 01:44:53,960
+ou pick task
+
+1752
+01:44:53,960 --> 01:44:55,960
+portanto, ele executa um
+
+1753
+01:44:55,960 --> 01:44:57,960
+ou executa outro dependendo
+
+1754
+01:44:57,960 --> 01:44:59,960
+do que se tiver
+
+1755
+01:44:59,960 --> 01:45:01,960
+atribuído a uma função
+
+1756
+01:45:01,960 --> 01:45:03,960
+e ele utiliza o pick next task
+
+1757
+01:45:03,960 --> 01:45:05,960
+se não tiver nenhuma função
+
+1758
+01:45:05,960 --> 01:45:07,960
+e ele utiliza o pick task
+
+1759
+01:45:07,960 --> 01:45:09,960
+portanto
+
+1760
+01:45:09,960 --> 01:45:11,960
+se o apontador estiver a nulo
+
+1761
+01:45:11,960 --> 01:45:13,960
+não é por aqui
+
+1762
+01:45:13,960 --> 01:45:15,960
+antigamente aqui
+
+1763
+01:45:15,960 --> 01:45:17,960
+algumas versões atrás não existia o pick task
+
+1764
+01:45:17,960 --> 01:45:19,960
+agora existe o pick next task
+
+1765
+01:45:19,960 --> 01:45:21,960
+obviamente deve haver diferenças
+
+1766
+01:45:21,960 --> 01:45:23,960
+e algum racional para que isso exista
+
+1767
+01:45:23,960 --> 01:45:28,100
+tarefa específica
+
+1768
+01:45:28,100 --> 01:45:30,100
+operações específicas à tarefa
+
+1769
+01:45:30,100 --> 01:45:32,100
+ora
+
+1770
+01:45:32,100 --> 01:45:34,100
+nós, quando definimos
+
+1771
+01:45:34,100 --> 01:45:36,100
+queríamos uma classe
+
+1772
+01:45:36,100 --> 01:45:38,100
+já vimos que estas classes
+
+1773
+01:45:38,100 --> 01:45:40,100
+são atribu... são organizadas
+
+1774
+01:45:40,100 --> 01:45:42,100
+num array
+
+1775
+01:45:42,100 --> 01:45:44,100
+as classes têm
+
+1776
+01:45:44,100 --> 01:45:46,100
+são definidas
+
+1777
+01:45:46,100 --> 01:45:48,100
+funções que são atribuídas aos apontadores
+
+1778
+01:45:50,100 --> 01:45:52,100
+são definidas aos apontadores
+
+1779
+01:45:52,100 --> 01:45:54,100
+já vimos também
+
+1780
+01:45:54,100 --> 01:45:56,100
+que cada tarefa
+
+1781
+01:45:56,100 --> 01:45:58,100
+está atribuída
+
+1782
+01:45:58,100 --> 01:46:00,100
+a uma
+
+1783
+01:46:00,100 --> 01:46:02,100
+classe de aqui
+
+1784
+01:46:02,100 --> 01:46:04,100
+o endereço
+
+1785
+01:46:04,100 --> 01:46:06,100
+de uma das variáveis
+
+1786
+01:46:06,100 --> 01:46:08,100
+do
+
+1787
+01:46:08,100 --> 01:46:10,100
+da
+
+1788
+01:46:10,100 --> 01:46:12,100
+scheduling class
+
+1789
+01:46:12,100 --> 01:46:14,100
+e
+
+1790
+01:46:14,100 --> 01:46:16,100
+portanto
+
+1791
+01:46:16,100 --> 01:46:18,100
+quando precisa de realizar
+
+1792
+01:46:18,100 --> 01:46:20,100
+operações que são específicas
+
+1793
+01:46:20,100 --> 01:46:22,100
+da tarefa, vai usar
+
+1794
+01:46:22,100 --> 01:46:24,100
+esse apontador
+
+1795
+01:46:24,100 --> 01:46:26,100
+por exemplo
+
+1796
+01:46:26,100 --> 01:46:28,100
+imagine quanto nós
+
+1797
+01:46:28,100 --> 01:46:30,100
+mudamos a política de escalamento
+
+1798
+01:46:30,100 --> 01:46:32,100
+se você se recorda nós usamos
+
+1799
+01:46:32,100 --> 01:46:34,100
+o schedule set scheduler
+
+1800
+01:46:34,100 --> 01:46:36,100
+para mudar para o RT
+
+1801
+01:46:36,100 --> 01:46:38,100
+no caso para o schedule FIFA
+
+1802
+01:46:38,100 --> 01:46:40,100
+acho eu
+
+1803
+01:46:40,100 --> 01:46:42,100
+ora
+
+1804
+01:46:42,100 --> 01:46:44,100
+como vocês podem ver
+
+1805
+01:46:44,100 --> 01:46:46,100
+portanto isto é um cachado
+
+1806
+01:46:46,100 --> 01:46:48,100
+porque às vezes tem funções
+
+1807
+01:46:48,100 --> 01:46:50,100
+tem aqui uma função
+
+1808
+01:46:50,100 --> 01:46:52,100
+que implementa a system call
+
+1809
+01:46:52,100 --> 01:46:54,100
+chamar esta que tem um underscore
+
+1810
+01:46:54,100 --> 01:46:56,100
+que vai chamar esta que tem dois
+
+1811
+01:46:56,100 --> 01:46:58,100
+underscore
+
+1812
+01:46:58,100 --> 01:47:00,100
+algum racional lado da v para isto
+
+1813
+01:47:00,100 --> 01:47:02,100
+não quer estar a discutir isto
+
+1814
+01:47:02,100 --> 01:47:04,100
+e o que nós temos aqui
+
+1815
+01:47:04,100 --> 01:47:06,100
+o que é que nós temos aqui?
+
+1816
+01:47:06,100 --> 01:47:08,100
+a tarefa que nós pretendemos
+
+1817
+01:47:08,100 --> 01:47:10,100
+mudar a política de escalamento
+
+1818
+01:47:10,100 --> 01:47:12,100
+e o que é que ele está aqui a fazer?
+
+1819
+01:47:12,100 --> 01:47:14,100
+está a atribuir
+
+1820
+01:47:14,100 --> 01:47:16,100
+primeiro vai buscar aqui este
+
+1821
+01:47:16,100 --> 01:47:18,100
+next class
+
+1822
+01:47:18,100 --> 01:47:20,100
+aqui esta função
+
+1823
+01:47:20,100 --> 01:47:22,100
+vai revir ao campo
+
+1824
+01:47:22,100 --> 01:47:24,100
+da tarefa
+
+1825
+01:47:24,100 --> 01:47:26,100
+o campo schedule class
+
+1826
+01:47:26,100 --> 01:47:28,100
+e o que é que faz este set
+
+1827
+01:47:28,100 --> 01:47:30,100
+schedule class?
+
+1828
+01:47:30,100 --> 01:47:32,100
+que leva a policy
+
+1829
+01:47:32,100 --> 01:47:34,100
+e a nova prioridade
+
+1830
+01:47:34,100 --> 01:47:36,100
+o campo o valor
+
+1831
+01:47:36,100 --> 01:47:38,100
+da prioridade se vocês repararem
+
+1832
+01:47:38,100 --> 01:47:40,100
+está aqui a política e a prioridade
+
+1833
+01:47:40,100 --> 01:47:42,100
+ele verifica
+
+1834
+01:47:42,100 --> 01:47:44,100
+se
+
+1835
+01:47:44,100 --> 01:47:46,100
+o valor da prioridade
+
+1836
+01:47:46,100 --> 01:47:48,100
+está de acordo com
+
+1837
+01:47:48,100 --> 01:47:50,100
+a política de escalamento
+
+1838
+01:47:50,100 --> 01:47:52,100
+se a coisa
+
+1839
+01:47:52,100 --> 01:47:54,100
+não estiver
+
+1840
+01:47:54,100 --> 01:47:56,100
+portanto se não
+
+1841
+01:47:56,100 --> 01:47:58,100
+neste caso aqui ele está só
+
+1842
+01:47:58,100 --> 01:48:00,100
+aqui a controlar a prioridade
+
+1843
+01:48:00,100 --> 01:48:02,100
+se a prioridade
+
+1844
+01:48:02,100 --> 01:48:04,100
+não estiver
+
+1845
+01:48:04,100 --> 01:48:06,100
+de acordo
+
+1846
+01:48:06,100 --> 01:48:08,100
+deixe-me só ver
+
+1847
+01:48:08,100 --> 01:48:10,100
+eu usar o policy aqui
+
+1848
+01:48:18,150 --> 01:48:20,150
+estamos aqui a faltar porque
+
+1849
+01:48:20,150 --> 01:48:22,150
+de ter aqui este policy
+
+1850
+01:48:22,150 --> 01:48:24,150
+não sei se eu usar o tomate
+
+1851
+01:48:24,150 --> 01:48:26,150
+mas pronto o interesse
+
+1852
+01:48:26,150 --> 01:48:28,150
+o que é que ele faz aqui?
+
+1853
+01:48:28,150 --> 01:48:30,150
+isto aqui é uma função que vai verificar
+
+1854
+01:48:30,150 --> 01:48:32,150
+se este valor
+
+1855
+01:48:32,150 --> 01:48:34,150
+é um valor aceitado para
+
+1856
+01:48:34,150 --> 01:48:36,150
+a classe
+
+1857
+01:48:36,150 --> 01:48:38,150
+deadline
+
+1858
+01:48:38,150 --> 01:48:40,150
+se este valor é um valor aceitável
+
+1859
+01:48:40,150 --> 01:48:42,150
+para a classe
+
+1860
+01:48:42,150 --> 01:48:44,150
+e assim por diante
+
+1861
+01:48:44,150 --> 01:48:46,150
+em limite se o valor for aceitável
+
+1862
+01:48:46,150 --> 01:48:48,150
+para aqui que é o zero
+
+1863
+01:48:48,150 --> 01:48:50,150
+muito bem
+
+1864
+01:48:50,150 --> 01:48:52,150
+se não for para nenhum
+
+1865
+01:48:52,150 --> 01:48:54,150
+vai ser para ofer
+
+1866
+01:48:54,150 --> 01:48:56,150
+e então ele está a retornar
+
+1867
+01:48:56,150 --> 01:48:58,150
+o interesse
+
+1868
+01:48:58,150 --> 01:49:00,150
+da scheduling class
+
+1869
+01:49:00,150 --> 01:49:02,150
+que vai ser atribuído
+
+1870
+01:49:02,150 --> 01:49:04,150
+ao campo
+
+1871
+01:49:04,150 --> 01:49:06,150
+ao atributo schedule class
+
+1872
+01:49:06,150 --> 01:49:08,150
+da taskstrike
+
+1873
+01:49:08,150 --> 01:49:10,150
+e a partir daqui
+
+1874
+01:49:10,150 --> 01:49:12,150
+eu tenho um apontador
+
+1875
+01:49:12,150 --> 01:49:14,150
+na estrutura schedule class
+
+1876
+01:49:14,150 --> 01:49:16,150
+que me permita ceder
+
+1877
+01:49:16,150 --> 01:49:18,150
+as funções
+
+1878
+01:49:18,150 --> 01:49:20,150
+para a scheduling class
+
+1879
+01:49:20,150 --> 01:49:23,620
+daquela tarefa
+
+1880
+01:49:23,620 --> 01:49:25,620
+vamos olhar aqui para um caso
+
+1881
+01:49:25,620 --> 01:49:27,620
+quando nós fazemos o wakeup process
+
+1882
+01:49:27,620 --> 01:49:29,620
+portanto quando um
+
+1883
+01:49:29,620 --> 01:49:31,620
+um processo
+
+1884
+01:49:31,620 --> 01:49:33,620
+estava adormecido
+
+1885
+01:49:33,620 --> 01:49:35,620
+e vai acordar
+
+1886
+01:49:35,620 --> 01:49:37,620
+nós devíamos invocar esta função
+
+1887
+01:49:37,620 --> 01:49:39,620
+wakeup process
+
+1888
+01:49:39,620 --> 01:49:41,620
+volta a ter aqui a mesma coisa
+
+1889
+01:49:41,620 --> 01:49:43,620
+tem para aqui uma série de
+
+1890
+01:49:43,620 --> 01:49:45,620
+funções
+
+1891
+01:49:45,620 --> 01:49:47,620
+vamos então chegar
+
+1892
+01:49:47,620 --> 01:49:49,620
+aqui a esta
+
+1893
+01:49:49,620 --> 01:49:51,620
+a esta função
+
+1894
+01:49:51,620 --> 01:49:53,620
+do
+
+1895
+01:49:53,620 --> 01:49:55,620
+ttw do activate
+
+1896
+01:49:55,620 --> 01:49:57,620
+e o que faz
+
+1897
+01:49:57,620 --> 01:49:59,620
+esta
+
+1898
+01:49:59,620 --> 01:50:01,620
+função
+
+1899
+01:50:01,620 --> 01:50:03,620
+vai invocar o activate
+
+1900
+01:50:03,620 --> 01:50:05,620
+e o activate task
+
+1901
+01:50:05,620 --> 01:50:07,620
+o que faz
+
+1902
+01:50:07,620 --> 01:50:09,620
+chama o inqueue task
+
+1903
+01:50:09,620 --> 01:50:11,620
+e o que faz o inqueue task
+
+1904
+01:50:11,620 --> 01:50:13,620
+o inqueue task
+
+1905
+01:50:13,620 --> 01:50:15,620
+vai chamar a função
+
+1906
+01:50:15,620 --> 01:50:17,620
+em que o task
+
+1907
+01:50:17,620 --> 01:50:19,620
+da scheduling class
+
+1908
+01:50:19,620 --> 01:50:21,620
+da tarefa
+
+1909
+01:50:21,620 --> 01:50:23,620
+do processo
+
+1910
+01:50:23,620 --> 01:50:25,620
+portanto isto para que
+
+1911
+01:50:25,620 --> 01:50:27,620
+para adicionar aquela tarefa
+
+1912
+01:50:27,620 --> 01:50:29,620
+na run queue
+
+1913
+01:50:29,620 --> 01:50:31,620
+da scheduling class
+
+1914
+01:50:31,620 --> 01:50:33,620
+ao qual o processo está atribuido
+
+1915
+01:50:33,620 --> 01:50:35,620
+além disso
+
+1916
+01:50:35,620 --> 01:50:37,620
+vocês repararem aqui a seguir ao activate
+
+1917
+01:50:37,620 --> 01:50:39,620
+ele invoca esta
+
+1918
+01:50:39,620 --> 01:50:41,620
+função wakeup preample
+
+1919
+01:50:41,620 --> 01:50:43,620
+o que faz
+
+1920
+01:50:43,620 --> 01:50:45,620
+o wakeup preample
+
+1921
+01:50:45,620 --> 01:50:47,620
+vai invocar
+
+1922
+01:50:47,620 --> 01:50:49,620
+tem aqui umas validações
+
+1923
+01:50:49,620 --> 01:50:51,620
+vai invocar
+
+1924
+01:50:51,620 --> 01:50:53,620
+portanto o doner
+
+1925
+01:50:53,620 --> 01:50:55,620
+é o
+
+1926
+01:50:55,620 --> 01:50:57,620
+o processo corrente
+
+1927
+01:50:57,620 --> 01:50:59,620
+vão ver ele aqui já na doner
+
+1928
+01:50:59,620 --> 01:51:01,620
+no outro chamar para o queue
+
+1929
+01:51:01,620 --> 01:51:03,620
+ele vai invocar
+
+1930
+01:51:05,620 --> 01:51:07,620
+a função
+
+1931
+01:51:07,620 --> 01:51:09,620
+o wakeup
+
+1932
+01:51:09,620 --> 01:51:11,620
+preample
+
+1933
+01:51:11,620 --> 01:51:13,620
+da scheduling class
+
+1934
+01:51:13,620 --> 01:51:15,620
+portanto
+
+1935
+01:51:15,620 --> 01:51:17,620
+isto permite
+
+1936
+01:51:17,620 --> 01:51:19,620
+esta abordagem
+
+1937
+01:51:19,620 --> 01:51:21,620
+operações
+
+1938
+01:51:21,620 --> 01:51:23,620
+digamos relacionadas
+
+1939
+01:51:23,620 --> 01:51:25,620
+com o kernel
+
+1940
+01:51:25,620 --> 01:51:27,620
+gerais
+
+1941
+01:51:27,620 --> 01:51:29,620
+em que ele vai invocar
+
+1942
+01:51:29,620 --> 01:51:31,620
+isso quando quer
+
+1943
+01:51:31,620 --> 01:51:33,620
+a tarefa de mais alta prioridade
+
+1944
+01:51:33,620 --> 01:51:35,620
+que está no sistema
+
+1945
+01:51:35,620 --> 01:51:37,620
+por exemplo através do picnic task
+
+1946
+01:51:37,620 --> 01:51:39,620
+mas quando são operações específicas
+
+1947
+01:51:39,620 --> 01:51:41,620
+ele
+
+1948
+01:51:41,620 --> 01:51:43,620
+parte, ele vai invocar
+
+1949
+01:51:43,620 --> 01:51:45,620
+estas funções a partir do apontador
+
+1950
+01:51:45,620 --> 01:51:47,620
+que tem na tarefa
+
+1951
+01:51:47,620 --> 01:51:49,620
+por exemplo o in queue
+
+1952
+01:51:49,620 --> 01:51:51,620
+para fazer o in queue
+
+1953
+01:51:51,620 --> 01:51:53,620
+da tarefa
+
+1954
+01:51:53,620 --> 01:51:55,620
+e se vocês
+
+1955
+01:51:55,620 --> 01:51:57,620
+repararem
+
+1956
+01:51:57,620 --> 01:51:59,620
+nós temos aqui
+
+1957
+01:51:59,620 --> 01:52:01,620
+portanto, embora aqui
+
+1958
+01:52:01,620 --> 01:52:03,620
+temos aqui
+
+1959
+01:52:03,620 --> 01:52:05,620
+se houve o in queue
+
+1960
+01:52:05,620 --> 01:52:07,620
+vamos voltar aqui
+
+1961
+01:52:07,620 --> 01:52:09,620
+está aqui o wakeup process
+
+1962
+01:52:09,620 --> 01:52:11,620
+ele leva o apontador
+
+1963
+01:52:11,620 --> 01:52:13,620
+da tarefa corrente
+
+1964
+01:52:13,620 --> 01:52:15,620
+depois o que é que
+
+1965
+01:52:15,620 --> 01:52:17,620
+ele passa esse apontador
+
+1966
+01:52:17,620 --> 01:52:19,620
+para aqui
+
+1967
+01:52:19,620 --> 01:52:21,620
+depois
+
+1968
+01:52:23,620 --> 01:52:25,620
+daqui passa para aqui
+
+1969
+01:52:25,620 --> 01:52:27,620
+e se vocês repararem
+
+1970
+01:52:27,620 --> 01:52:29,620
+a uma dada altura
+
+1971
+01:52:29,620 --> 01:52:31,620
+o que é que nós temos?
+
+1972
+01:52:31,620 --> 01:52:33,620
+já temos aqui
+
+1973
+01:52:33,620 --> 01:52:35,620
+a erque
+
+1974
+01:52:35,620 --> 01:52:37,620
+e ele foi buscar
+
+1975
+01:52:37,620 --> 01:52:39,620
+a erque
+
+1976
+01:52:39,620 --> 01:52:41,620
+e passou a erque
+
+1977
+01:52:41,620 --> 01:52:43,620
+portanto neste momento temos a erque
+
+1978
+01:52:43,620 --> 01:52:45,620
+e temos a tarefa que acordou
+
+1979
+01:52:45,620 --> 01:52:47,620
+e o que é que
+
+1980
+01:52:47,620 --> 01:52:49,620
+a partir daqui o que é que vamos fazer?
+
+1981
+01:52:49,620 --> 01:52:51,620
+então a ver, faz aqui
+
+1982
+01:52:51,620 --> 01:52:53,620
+está activado
+
+1983
+01:52:53,620 --> 01:52:55,620
+e o activate leva
+
+1984
+01:52:55,620 --> 01:52:57,620
+já a erque e a tarefa que acordou
+
+1985
+01:52:57,620 --> 01:52:59,620
+ele chama aqui o in queue
+
+1986
+01:52:59,620 --> 01:53:01,620
+que leva a erque e a tarefa que acordou
+
+1987
+01:53:01,620 --> 01:53:03,620
+se repararem
+
+1988
+01:53:03,620 --> 01:53:05,620
+e ele está a chamar
+
+1989
+01:53:05,620 --> 01:53:07,620
+a partir do p
+
+1990
+01:53:07,620 --> 01:53:09,620
+o in queue
+
+1991
+01:53:09,620 --> 01:53:11,620
+passa ali a erque
+
+1992
+01:53:11,620 --> 01:53:13,620
+e passa ali a própria tarefa
+
+1993
+01:53:15,620 --> 01:53:17,620
+portanto para aqui
+
+1994
+01:53:17,620 --> 01:53:19,620
+e se vocês forem ver
+
+1995
+01:53:19,620 --> 01:53:21,620
+a implementação de qualquer in queue
+
+1996
+01:53:21,620 --> 01:53:23,620
+ele vai pegar neste apontador
+
+1997
+01:53:25,620 --> 01:53:27,620
+da tarefa que está a invocar isto
+
+1998
+01:53:27,620 --> 01:53:29,620
+para a inserir
+
+1999
+01:53:29,620 --> 01:53:31,620
+na run queue
+
+2000
+01:53:31,620 --> 01:53:33,620
+e a run queue
+
+2001
+01:53:33,620 --> 01:53:35,620
+ou a sub run queue
+
+2002
+01:53:35,620 --> 01:53:37,620
+há de estar aqui nesta variável
+
+2003
+01:53:37,620 --> 01:53:39,620
+não
+
+2004
+01:53:39,620 --> 01:53:41,620
+vamos ver isto como está
+
+2005
+01:53:41,620 --> 01:53:43,620
+pronto e aqui a mesma
+
+2006
+01:53:43,620 --> 01:53:45,620
+a mesma coisa
+
+2007
+01:53:45,620 --> 01:53:47,620
+situação do skeptique
+
+2008
+01:53:47,620 --> 01:53:49,620
+já falamos
+
+2009
+01:53:49,620 --> 01:53:51,620
+o skeptique comum
+
+2010
+01:53:51,620 --> 01:53:53,620
+podemos ver
+
+2011
+01:53:53,620 --> 01:53:55,620
+também vai
+
+2012
+01:53:55,620 --> 01:53:57,620
+invocar a função
+
+2013
+01:53:57,620 --> 01:53:59,620
+da classe
+
+2014
+01:53:59,620 --> 01:54:01,620
+a tarefa que está
+
+2015
+01:54:01,620 --> 01:54:03,620
+em execução que está no cpu
+
+2016
+01:54:03,620 --> 01:54:05,620
+naquele instante
+
+2017
+01:54:05,620 --> 01:54:07,620
+quando há o task tick
+
+2018
+01:54:07,620 --> 01:54:09,620
+vai chamar a callback
+
+2019
+01:54:09,620 --> 01:54:11,620
+da scheduling class
+
+2020
+01:54:11,620 --> 01:54:13,620
+task tick
+
+2021
+01:54:13,620 --> 01:54:15,620
+por exemplo no caso do rr
+
+2022
+01:54:15,620 --> 01:54:17,620
+para verificar
+
+2023
+01:54:17,620 --> 01:54:19,620
+se já terminou o time slice
+
+2024
+01:54:19,620 --> 01:54:21,620
+no caso do cfs
+
+2025
+01:54:21,620 --> 01:54:23,620
+para sumar
+
+2026
+01:54:23,620 --> 01:54:25,620
+o
+
+2027
+01:54:25,620 --> 01:54:27,620
+valor ao virtual runtime
+
+2028
+01:54:27,620 --> 01:54:29,620
+no caso do deadline
+
+2029
+01:54:29,620 --> 01:54:31,620
+para
+
+2030
+01:54:31,620 --> 01:54:33,620
+verificar
+
+2031
+01:54:33,620 --> 01:54:35,620
+se o deadline
+
+2032
+01:54:35,620 --> 01:54:37,620
+absoluto
+
+2033
+01:54:37,620 --> 01:54:39,620
+ou no caso do cfs
+
+2034
+01:54:39,620 --> 01:54:41,620
+por exemplo
+
+2035
+01:54:41,620 --> 01:54:43,620
+mas pronto
+
+2036
+01:54:43,620 --> 01:54:45,620
+ele vai usar isto
+
+2037
+01:54:45,620 --> 01:54:47,620
+para fazer
+
+2038
+01:54:47,620 --> 01:54:49,620
+accounting e eventualmente
+
+2039
+01:54:49,620 --> 01:54:51,620
+tomar medidas
+
+2040
+01:54:51,620 --> 01:54:53,620
+de dizer
+
+2041
+01:54:53,620 --> 01:54:55,620
+olha, esta tarefa
+
+2042
+01:54:55,620 --> 01:54:57,620
+precisa de ser preemptada
+
+2043
+01:54:57,620 --> 01:54:59,620
+portanto e como vocês
+
+2044
+01:54:59,620 --> 01:55:01,620
+vão ver é muito frequente neste
+
+2045
+01:55:01,620 --> 01:55:03,620
+task tick nós invocarmos
+
+2046
+01:55:03,620 --> 01:55:05,620
+o riscad
+
+2047
+01:55:05,620 --> 01:55:07,620
+curent porque
+
+2048
+01:55:07,620 --> 01:55:09,620
+por algum motivo a tarefa
+
+2049
+01:55:09,620 --> 01:55:11,620
+que está em execução já não é
+
+2050
+01:55:11,620 --> 01:55:13,620
+de maior prioridade no sistema
+
+2051
+01:55:13,620 --> 01:55:15,620
+pronto
+
+2052
+01:55:15,620 --> 01:55:17,620
+cá está um desenho
+
+2053
+01:55:17,620 --> 01:55:19,620
+equivalente ao outro
+
+2054
+01:55:19,620 --> 01:55:21,620
+pronto
+
+2055
+01:55:21,620 --> 01:55:23,620
+olá
+
+2056
+01:55:23,620 --> 01:55:25,620
+na hora vocês vão matar
+
+2057
+01:55:25,620 --> 01:55:27,620
+pronto
+
+2058
+01:55:27,620 --> 01:55:29,620
+como vocês podem ver eu empolgo
+
+2059
+01:55:29,620 --> 01:55:31,620
+um pouquinho quando estou a falar
+
+2060
+01:55:31,620 --> 01:55:33,620
+destas coisas
+
+2061
+01:55:33,620 --> 01:55:35,620
+nós vamos voltar a repetir isto
+
+2062
+01:55:35,620 --> 01:55:37,620
+isto são muitas coisas
+
+2063
+01:55:37,620 --> 01:55:39,620
+é
+
+2064
+01:55:39,620 --> 01:55:41,620
+se puderem dar uma vista de olhos
+
+2065
+01:55:41,620 --> 01:55:43,620
+a isto, ler isto
+
+2066
+01:55:43,620 --> 01:55:45,620
+voltar a ler
+
+2067
+01:55:45,620 --> 01:55:47,620
+voltar não, ler isto
+
+2068
+01:55:47,620 --> 01:55:49,620
+olhar para isto tirar dúvidas
+
+2069
+01:55:49,620 --> 01:55:51,620
+e tentar esclarecer algumas dúvidas
+
+2070
+01:55:51,620 --> 01:55:53,620
+isto vai ajudar
+
+2071
+01:55:53,620 --> 01:55:55,620
+na próxima aula
+
+2072
+01:55:55,620 --> 01:55:57,620
+porque depois há aqui três tutoriais
+
+2073
+01:55:57,620 --> 01:55:59,620
+que eu gostava que vocês
+
+2074
+01:55:59,620 --> 01:56:01,620
+de vos apresentar
+
+2075
+01:56:01,620 --> 01:56:03,620
+e que também tem algum nível
+
+2076
+01:56:03,620 --> 01:56:05,620
+complexidade porque tem a ver com todas
+
+2077
+01:56:05,620 --> 01:56:07,620
+estas coisas
+
+2078
+01:56:07,620 --> 01:56:09,620
+era importante vocês conseguirem capturar
+
+2079
+01:56:09,620 --> 01:56:11,620
+estes conceitos
+
+2080
+01:56:11,620 --> 01:56:13,620
+esta forma de operação
+
+2081
+01:56:13,620 --> 01:56:15,620
+para depois ser mais fácil
+
+2082
+01:56:15,620 --> 01:56:17,620
+entenderem os tutoriais
+
+2083
+01:56:17,620 --> 01:56:19,620
+e aquilo que têm que
+
+2084
+01:56:19,620 --> 01:56:21,620
+fazer é que eles quiserem
+
+2085
+01:56:21,620 --> 01:56:23,620
+implementar
+
+2086
+01:56:23,620 --> 01:56:25,620
+a nova classe de escalonamento
+
+2087
+01:56:25,620 --> 01:56:27,620
+e o novo
+
+2088
+01:56:27,620 --> 01:56:29,620
+mecanismo de resource sharing
+
+2089
+01:56:29,620 --> 01:56:31,620
+que tem nos tutoriais
+
+2090
+01:56:31,620 --> 01:56:54,840
+está bem
+
+2091
+01:56:54,840 --> 01:56:56,840
+não vamos precisar
+
+2092
+01:56:56,840 --> 01:56:58,840
+disso porque nós temos
+
+2093
+01:56:58,840 --> 01:57:00,840
+o nosso mecanismo de tracing
+
+2094
+01:57:02,840 --> 01:57:04,840
+nós temos
+
+2095
+01:57:04,840 --> 01:57:06,840
+portanto
+
+2096
+01:57:06,840 --> 01:57:08,840
+já não me recordo qual dos TTS
+
+2097
+01:57:08,840 --> 01:57:10,840
+a um dos TTS
+
+2098
+01:57:10,840 --> 01:57:12,840
+que
+
+2099
+01:57:12,840 --> 01:57:14,840
+apresenta como implementar
+
+2100
+01:57:14,840 --> 01:57:16,840
+o mecanismo de tracing
+
+2101
+01:57:16,840 --> 01:57:18,840
+onde vamos depois registrar
+
+2102
+01:57:18,840 --> 01:57:20,840
+os eventos de escalonamento
+
+2103
+01:57:20,840 --> 01:57:22,840
+os eventos quando uma tarefa é em Q
+
+2104
+01:57:22,840 --> 01:57:24,840
+quando a tarefa é de Q
+
+2105
+01:57:24,840 --> 01:57:26,840
+quando a tarefa é atribuído ao CPU
+
+2106
+01:57:26,840 --> 01:57:28,840
+quando a tarefa é removida ao CPU
+
+2107
+01:57:28,840 --> 01:57:30,840
+tem esses eventos
+
+2108
+01:57:30,840 --> 01:57:32,840
+é uma questão de vocês seguirem os tutoriais
+
+2109
+01:57:32,840 --> 01:57:37,590
+está bem
+
+2110
+01:57:37,590 --> 01:57:39,590
+mas pronto
+
+2111
+01:57:39,590 --> 01:57:41,590
+mais do que isso, acho que é importante
+
+2112
+01:57:41,590 --> 01:57:43,590
+ler em isto
+
+2113
+01:57:43,590 --> 01:57:45,590
+e na hora de almoço
+
+2114
+01:57:45,590 --> 01:57:47,590
+quando estiverem a fazer a distão
+
+2115
+01:57:47,590 --> 01:57:49,590
+pega o notável e te vão andar um pouquinho
+
+2116
+01:57:49,590 --> 01:57:51,590
+e dão listado
+
+2117
+01:57:53,590 --> 01:58:09,800
+certo
+
+2118
+01:58:09,800 --> 01:58:19,610
+certo
+
+2119
+01:58:19,610 --> 01:58:21,610
+mas nós recumo
+
+2120
+01:58:21,610 --> 01:58:23,610
+nessas ferramentas
+
+2121
+01:58:23,610 --> 01:58:25,610
+nós não temos controle sobre os eventos
+
+2122
+01:58:25,610 --> 01:58:27,610
+nós podemos dizer que eventos é que queremos
+
+2123
+01:58:27,610 --> 01:58:29,610
+então
+
+2124
+01:58:29,610 --> 01:58:31,610
+e como estamos a fazer
+
+2125
+01:58:31,610 --> 01:58:33,610
+a programação
+
+2126
+01:58:33,610 --> 01:58:35,610
+é necessário termos mais algum
+
+2127
+01:58:35,610 --> 01:58:37,610
+controle sobre isso
+
+2128
+01:58:37,610 --> 01:58:39,610
+portanto é preferível
+
+2129
+01:58:39,610 --> 01:58:41,610
+eu
+
+2130
+01:58:41,610 --> 01:58:43,610
+decidi que era mais fácil
+
+2131
+01:58:43,610 --> 01:58:45,610
+percebermos
+
+2132
+01:58:45,610 --> 01:58:47,610
+se eu registrei os eventos
+
+2133
+01:58:47,610 --> 01:58:49,610
+do que estar
+
+2134
+01:58:49,610 --> 01:58:51,610
+a usar uma ferramenta
+
+2135
+01:58:51,610 --> 01:58:53,610
+que eu não sei muito bem como é que está implementada
+
+2136
+01:58:53,610 --> 01:58:55,610
+que obviamente
+
+2137
+01:58:55,610 --> 01:58:57,610
+quando eu não tenho conhecimento no kernel
+
+2138
+01:58:57,610 --> 01:58:59,610
+eu achei-te os aulas
+
+2139
+01:58:59,610 --> 01:59:01,610
+o TIC-CM
+
+2140
+01:59:01,610 --> 01:59:03,610
+o
+
+2141
+01:59:03,610 --> 01:59:05,610
+TIC-CM
+
+2142
+01:59:05,610 --> 01:59:07,610
+o SCAD-CM
+
+2143
+01:59:07,610 --> 01:59:09,610
+aquele comando que era usado
+
+2144
+01:59:09,610 --> 01:59:11,610
+para depois
+
+2145
+01:59:11,610 --> 01:59:13,610
+gerar um fecheiro
+
+2146
+01:59:13,610 --> 01:59:15,610
+que era usado pelo kernel shark
+
+2147
+01:59:15,610 --> 01:59:17,610
+para
+
+2148
+01:59:17,610 --> 01:59:19,610
+desenhar o escalonamento
+
+2149
+01:59:19,610 --> 01:59:21,610
+eu não
+
+2150
+01:59:21,610 --> 01:59:23,610
+não controlo bem os eventos
+
+2151
+01:59:23,610 --> 01:59:25,610
+eu posso dizer que eventos é que quero
+
+2152
+01:59:25,610 --> 01:59:27,610
+mas não controlo muito bem
+
+2153
+01:59:27,610 --> 01:59:29,610
+não sei que informação é que guarda
+
+2154
+01:59:29,610 --> 01:59:31,610
+etc etc
+
+2155
+01:59:31,610 --> 01:59:33,610
+não sei porque nunca me dei
+
+2156
+01:59:33,610 --> 01:59:35,610
+muito ao trabalho de estudar isso
+
+2157
+01:59:35,610 --> 01:59:37,610
+mas
+
+2158
+01:59:37,610 --> 01:59:39,610
+esses devem-se ter usado
+
+2159
+01:59:39,610 --> 01:59:41,610
+quando tu não queres implementar
+
+2160
+01:59:41,610 --> 01:59:43,610
+um cheiro de recompilar o kernel
+
+2161
+01:59:43,610 --> 01:59:45,610
+a partir do momento que vais recompilar
+
+2162
+01:59:45,610 --> 01:59:47,610
+o kernel
+
+2163
+01:59:47,610 --> 01:59:49,610
+torna-se mais simples se tu
+
+2164
+01:59:49,610 --> 01:59:51,610
+tivesse uma coisa feita por ti
+
+2165
+01:59:51,610 --> 01:59:53,610
+e sabes que eventos
+
+2166
+01:59:53,610 --> 01:59:55,610
+você quer guardar
+
+2167
+01:59:55,610 --> 01:59:57,610
+e que informação
+
+2168
+01:59:57,610 --> 01:59:59,610
+e queres fazer, vamos dizer, debug
+
+2169
+01:59:59,610 --> 02:00:01,610
+e colocas ali alguma informação
+
+2170
+02:00:01,610 --> 02:00:03,610
+mas assim do gênero
+
+2171
+02:00:03,610 --> 02:00:05,610
+por isso é que nós
+
+2172
+02:00:05,610 --> 02:00:07,610
+implementamos esse mecanismo
+
+2173
+02:00:07,610 --> 02:00:10,920
+de 3,5
+
+2174
+02:00:10,920 --> 02:00:12,920
+aliás até o vão colega vosso
+
+2175
+02:00:12,920 --> 02:00:14,920
+já me recordo
+
+2176
+02:00:14,920 --> 02:00:16,920
+os vão lá cheveu
+
+2177
+02:00:16,920 --> 02:00:18,920
+que detectam umas gralhas
+
+2178
+02:00:18,920 --> 02:00:20,920
+nesse mecanismo
+
+2179
+02:00:20,920 --> 02:00:22,920
+mas eu entretanto já coloquei
+
+2180
+02:00:22,920 --> 02:00:24,920
+os tutoriais
+
+2181
+02:00:24,920 --> 02:00:26,920
+tá bem
+
+2182
+02:00:26,920 --> 02:00:28,920
+pronto, tentem fazer isso
+
+2183
+02:00:28,920 --> 02:00:30,920
+se fizerem isso, vai vos ajudar
+
+2184
+02:00:30,920 --> 02:00:32,920
+se não fizerem, pá
+
+2185
+02:00:32,920 --> 02:00:34,920
+algumas coisas vão-vos escapar
+
+2186
+02:00:34,920 --> 02:00:39,100
+tá bem
+
+2187
+02:00:39,100 --> 02:00:41,100
+tá bem, percebi
+
+2188
+02:00:41,100 --> 02:00:43,100
+tá, vemos-nos
+
+2189
+02:00:43,100 --> 02:00:45,100
+na quinta-feira
+
+2190
+02:00:45,100 --> 02:00:47,100
+ah, tentem
+
+2191
+02:00:47,100 --> 02:00:49,100
+veja um bocadinho mais
+
+2192
+02:00:49,100 --> 02:00:51,100
+com mais conhecimento
+
+2193
+02:00:51,100 --> 02:00:53,100
+para ajudar aqui no processo
+
+2194
+02:00:53,100 --> 02:00:55,100
+pá, até quinta
+
+2195
+02:00:55,100 --> 02:01:17,580
+até quinta, pessoal
+
