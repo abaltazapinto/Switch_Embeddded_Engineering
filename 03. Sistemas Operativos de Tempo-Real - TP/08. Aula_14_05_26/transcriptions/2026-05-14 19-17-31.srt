@@ -1,0 +1,7024 @@
+1
+00:00:00,400 --> 00:00:08,920
+E no fundo, claro, embora esteja refocado no menu, que por acaso, nessa área que está
+
+2
+00:00:08,920 --> 00:00:14,800
+da quantidade que agora fica mais difícil do que nos sistemas operativos, mas espero
+
+3
+00:00:14,800 --> 00:00:22,320
+que o menu, que, sobretudo, é usado em muitos contextos, sobretudo como fora na linha
+
+4
+00:00:22,320 --> 00:00:29,880
+e fora na linha de aprendizagem, que daí nós estamos refocados neste menu.
+
+5
+00:00:29,880 --> 00:00:36,680
+Agora vai. Para isso, o que é que nós vamos ter que fazer?
+
+6
+00:00:36,680 --> 00:00:41,560
+O que é que nós vamos fazer? Nós vamos precisar, se nós não estamos a desdicionar alguma
+
+7
+00:00:41,560 --> 00:00:47,160
+coisa, ao contrário do que fiz, sobretudo, até agora aqui, desenvolvermos encarnos em
+
+8
+00:00:47,160 --> 00:00:53,880
+oitas países e inserimos no kernel. Agora vai ser um pouquinho diferente, nós vamos
+
+9
+00:00:53,880 --> 00:01:01,040
+desdicionar coisas ao kernel. Então, nós vamos desdicionar, nós vamos desdicionar
+
+10
+00:01:01,040 --> 00:01:07,800
+funcionalidades ao kernel. Ora, para isso, para fazermos isso, os teremos de
+
+11
+00:01:07,800 --> 00:01:15,640
+rompilar, é que estas são funcionalidades juntamente com o kernel. Portanto, os farófimos
+
+12
+00:01:15,640 --> 00:01:23,760
+slides serão em relação à forma como se compilam o kernel e como é que o que está
+
+13
+00:01:23,760 --> 00:01:32,800
+envolvido neste contexto. Ora, vamos estar a referir o divino que
+
+14
+00:01:32,800 --> 00:01:37,880
+foi proponível de determinado. É monolítico, mas não é puro monolítico. O que é que
+
+15
+00:01:37,880 --> 00:01:43,800
+é a verdade de protegermos e inserir os modos que podem. Portanto, tem a possibilidade
+
+16
+00:01:43,800 --> 00:01:49,480
+de exceder as suas funcionalidades sem haver necessidade de recompilar.
+
+17
+00:01:50,480 --> 00:01:58,400
+Ora, podemos compilar-nos o kernel. Portanto, queremos desdicionar ao mesmo ao kernel,
+
+18
+00:01:58,400 --> 00:02:06,520
+portanto, como não um modo, ao digamos, em teoria com mais potencial. O que é que
+
+19
+00:02:06,520 --> 00:02:14,120
+estamos vivendo? Precisamos de obter o software do Linux, está disponível. Depois, o que
+
+20
+00:02:14,120 --> 00:02:24,880
+é que teremos de fazer? Teremos de configurar. Portanto, nós vamos ter que configurar o
+
+21
+00:02:24,880 --> 00:02:34,000
+kernel, porque o Linux é um sistema operativo general propósito e monolítico até fora.
+
+22
+00:02:34,000 --> 00:02:42,200
+Portanto, nós, por exemplo, estamos a compilar, o objetivo é cobrir o Linux de uma máquina
+
+23
+00:02:42,200 --> 00:02:52,520
+x86 para x86. Se nós não precisamos compilar para a árvore, para a hora, para a vez
+
+24
+00:02:52,520 --> 00:03:01,160
+que faz, para o que é que quer, você deixa por favor. Se a nossa máquina x86 não é
+
+25
+00:03:01,160 --> 00:03:09,640
+entendido numa máquina que não seja x86. Para isso, nós vamos apresentar-nos um cheiro
+
+26
+00:03:09,640 --> 00:03:18,320
+de ponto-config. Nós conseguimos fazer o cheiro de um ponto-config, o santo de uma
+
+27
+00:03:18,320 --> 00:03:26,080
+programa de configuração do caso, no caso nós vamos usar um meio-menino-config para
+
+28
+00:03:26,080 --> 00:03:35,120
+se definar o que devemos. E, também, aqui, o que não devemos.
+
+29
+00:03:35,120 --> 00:03:41,680
+Hoje, estamos a falar da compilação. Para isso, precisamos cobrir o comando do
+
+30
+00:03:41,680 --> 00:03:48,600
+Meiko. A social, o comando do Meiko, existe que lembram um cheiro de nome Makefile.
+
+31
+00:03:48,600 --> 00:03:57,360
+Para vocês nos modos, nós temos sempre um cheiro Makefile. Esse cheiro é automaticamente
+
+32
+00:03:57,360 --> 00:04:05,960
+invocado quando eu faço o Meiko. Eu só fazia file do Meiko e pedi o nome do cheiro porque
+
+33
+00:04:05,960 --> 00:04:14,080
+eu gosto do Meiko, dos modos. Eu seguia cobrir o comando, qual era o cheiro que ia compilar.
+
+34
+00:04:14,080 --> 00:04:22,040
+Tipicamente, num projeto, não temos visto o que, porque o cheiro vai compilar o cheiro.
+
+35
+00:04:22,040 --> 00:04:28,110
+Não é essa a necessidade. Então basta-me só fazer Make.
+
+36
+00:04:28,110 --> 00:04:39,950
+Depois, obviamente, existe a necessidade de instalar os modos. O código vai ser compilado,
+
+37
+00:04:39,950 --> 00:04:49,230
+mas existe parte do processo de compilação. Apesar de estar dentro do processo de compilação
+
+38
+00:04:49,230 --> 00:04:55,590
+do carno, existem elementos que estão compilados e nós compilamos os modos, portanto, como
+
+39
+00:04:55,590 --> 00:05:04,670
+elementos isolados. São elementos isolados, ou se eles vão ter instalados, que vão ter
+
+40
+00:05:04,670 --> 00:05:15,710
+instalaridos, para depois ter instalaridos o carno. Depois de termos, e isso vamos instalar
+
+41
+00:05:15,710 --> 00:05:27,350
+o carno. Para instalar o carno, o que consiste na prática, é colocar uns cheiros no veratório
+
+42
+00:05:27,350 --> 00:05:39,110
+do cheiro, para depois poder arrancar esse carno. Portanto, no mundo, nós temos que colocar
+
+43
+00:05:39,110 --> 00:05:47,950
+no veratório, aqui há uns 6, incluindo o cheiro executável do carno, portanto, o cheiro
+
+44
+00:05:47,950 --> 00:05:54,430
+objeto do carno, que tem no código, que depois vai ser carregado para memória, mas também
+
+45
+00:05:54,430 --> 00:06:02,190
+fazá-lo a mais uns cheiros que são colocados no voo, não precisamos de fazer manualmente
+
+46
+00:06:02,190 --> 00:06:11,190
+o documento inicial, para fazer isso por nós. Por fim, teremos que adiantar o voo de
+
+47
+00:06:11,190 --> 00:06:21,670
+lota, no sentido de nos fazer, para ser a nova versão do carno. Portanto, o voo de
+
+48
+00:06:21,670 --> 00:06:29,150
+lota, do faixa, é ir à paixa do voo, ver o que lá está, e depois, quando em edução,
+
+49
+00:06:29,150 --> 00:06:36,670
+a presidenta da missaulista, de todas as versões do carno, está no voo do sistema, e nós
+
+50
+00:06:36,670 --> 00:06:52,090
+podemos escolher a versão que entendemos. Só para até poder ver o exemplo, a máquina
+
+51
+00:06:52,090 --> 00:06:59,490
+vai, e isso é o voo de lota, e eu consigo escolher a versão do minuto, que eu quero,
+
+52
+00:06:59,490 --> 00:07:05,130
+que eu quero arrancado. Portanto, vamos ver aqui, as minuocas, é o que nós estamos
+
+53
+00:07:05,130 --> 00:07:12,730
+seguido, mas eu tenho aqui o voo de duas versões genéricas, a versão 6,8 ou 101, e a versão
+
+54
+00:07:12,730 --> 00:07:21,770
+6,8 ou 110. Também tenho aqui o moca, que é o de antigos, a versão 5, não estou
+
+55
+00:07:21,770 --> 00:07:27,810
+sabendo o que vamos fazer, é criar a versão naturalizada do nosso sistema para a versão
+
+56
+00:07:27,810 --> 00:07:36,610
+6,9. Imaginem-nos que, quando eu sou a programar, eu fiz qualquer coisa e o sistema se estoura.
+
+57
+00:07:36,610 --> 00:07:43,010
+Portanto, eu o fiz nas alterações, e quando eu arranco aqui com a versão 6,9, o não
+
+58
+00:07:43,010 --> 00:07:49,210
+arranca. Então, como é que eu vou fazer a máquina? Vire e me fio a máquina, e escolho
+
+59
+00:07:49,210 --> 00:07:56,170
+uma das ajustações do Cardinal, que funcionam. Portanto, convém-nos a ter sempre uma versão
+
+60
+00:07:56,170 --> 00:08:02,010
+que nos permita arrancar com a máquina, caso contrário, ficamos sem necessidade a máquina.
+
+61
+00:08:02,010 --> 00:08:08,730
+Se o único óbvio que estiver rompido, depois eu não consigo arrancar. Portanto, a abordagem
+
+62
+00:08:08,730 --> 00:08:18,670
+é sempre prestes. Vamos esperar, e precisamos de isto. Vamos tentar, vamos ter mais aqui.
+
+63
+00:08:19,670 --> 00:08:30,780
+Ora vai. Então, vejamos os componentes que fazem parte deste processo. Temos Configuration
+
+64
+00:08:30,780 --> 00:08:38,780
+and Signals of Films de Configuração. Temos fecheiros de determinados fecheiros capa
+
+65
+00:08:38,780 --> 00:08:49,780
+com fim. Portanto, fecheiros que definem opções de Configuração que definem
+
+66
+00:08:49,780 --> 00:08:56,780
+os símbolos de Configuração. Depois temos o sotão para o que eu amado, fecheio no
+
+67
+00:08:56,780 --> 00:09:04,780
+ponto de Configuração que deve estar na raiz do sostenco, ou isto é, dentro do primeiro
+
+68
+00:09:04,780 --> 00:09:13,780
+diretório que tem o código do urino. Depois temos as make files, que o certem para indicar
+
+69
+00:09:13,780 --> 00:09:24,780
+que código é que vai ser incluído no processo de Configuração. Ora, temos Configuração.
+
+70
+00:09:24,780 --> 00:09:33,780
+Nós nos fecheiros capa com fim, portanto, vou passar aqui à frente. Portanto, os fecheiros
+
+71
+00:09:33,780 --> 00:09:42,780
+capa com fim são fecheiros que têm símbolos de Configuração. Já lá estamos. E os símbolos
+
+72
+00:09:42,780 --> 00:09:49,780
+de Configuração são estes. Nós, tipicamente, definimos um símbolo desta forma. Se queremos
+
+73
+00:09:49,780 --> 00:09:56,780
+nos fecheiros capa com fim. Confinir e o que nós queremos dar. Obviamente isso tem
+
+74
+00:09:56,780 --> 00:10:06,780
+que ser único no sistema. E depois colocamos aqui uma descrição. E depois nós vamos ver
+
+75
+00:10:06,780 --> 00:10:14,780
+como é que fazemos isto. E depois estes símbolos, tipicamente, podem ser de dois símbolos.
+
+76
+00:10:14,780 --> 00:10:21,780
+Imaginem que são variáveis. Podem ser de dois símbolos. Os símbolos boianos são mais
+
+77
+00:10:21,780 --> 00:10:29,780
+símbolos, mas a maior parte são de dois símbolos boianos, em que a gente diz sim ou não.
+
+78
+00:10:29,780 --> 00:10:34,780
+Isto é, é para incluir, ou não é para incluir, é para dar considerado, ou não é para
+
+79
+00:10:34,780 --> 00:10:44,780
+considerar. E então os estabilistas. São valores, são símbolos que podem ser limitados.
+
+80
+00:10:44,780 --> 00:10:50,780
+Sim, não, ou com um módulo. Portanto, sim, não, ou com um módulo.
+
+81
+00:10:50,780 --> 00:10:54,780
+Eu acho que a comunidade tem parado por dia.
+
+82
+00:10:54,780 --> 00:11:05,790
+E isso, com tanta boa cancada aqui, com uma máquina. E depois a gente só vê a cancada,
+
+83
+00:11:05,790 --> 00:11:11,790
+aqui, como uma obsessão. Mas, vou pôr aqui a cancada e depois.
+
+84
+00:11:11,790 --> 00:11:21,790
+Portanto, vamos insistir a certa possibilidade. Então, quando o, o, o, aquele ilumimento é
+
+85
+00:11:21,790 --> 00:11:29,790
+definitivo ao ser no módulo, eu posso, ou querer, ou logo no código kernel, ou então,
+
+86
+00:11:29,790 --> 00:11:38,790
+ter algo como um módulo, que depois será instalado através do, do módulo mental.
+
+87
+00:11:38,790 --> 00:11:47,790
+Ora, isso está. Portanto, temos aqui, depois, quando nós definimos símbolos,
+
+88
+00:11:47,790 --> 00:11:53,790
+podemos vermos qual é a opção possível. Estou aqui a dizer que este símbolo era do tipo
+
+89
+00:11:53,790 --> 00:11:59,790
+BUL. E, por default, está, não. Portanto, revolve.
+
+90
+00:11:59,790 --> 00:12:06,790
+Então, também é possível, nestes séries de definir dependências, que estou a dizer
+
+91
+00:12:06,790 --> 00:12:14,790
+que este símbolo aqui, depende deste. Se este não existir, não faz sentido termo deste.
+
+92
+00:12:14,790 --> 00:12:29,580
+Vou. Depois, também é possível o que para fazer, menos. Portanto, temos que ter menos
+
+93
+00:12:29,580 --> 00:12:37,580
+para melhor, para agrupar os símbolos numa determinada área, no, no, no, no menu.
+
+94
+00:12:37,580 --> 00:12:52,290
+Ora, vamos lá ver aqui. Ora, por exemplo, sou aqui, meio, menu, no menu.
+
+95
+00:12:52,290 --> 00:13:07,500
+É, cá está a opção. Se eu entrar, estou aqui para fazer. Entra, portanto, está
+
+96
+00:13:07,500 --> 00:13:14,500
+aqui a parte selecionada. Eu, e depois eu, aqui, através dos passos, posso dizer
+
+97
+00:13:14,500 --> 00:13:19,500
+se eu quero, reparar-me quando eu, o que eu diria, que ele é para fazer mais opções.
+
+98
+00:13:19,500 --> 00:13:24,500
+Por quê? Porque estas dependem de aquilo. Se eu retirar, desapareceram opções.
+
+99
+00:13:24,500 --> 00:13:29,500
+Portanto, isto vai definir símbolos de configuridade.
+
+100
+00:13:29,500 --> 00:13:36,500
+Vamos aqui ao nosso, nós vamos criar, a medida que, para você, implementar-lhes,
+
+101
+00:13:36,500 --> 00:13:46,500
+vamos criar aqui uma entrada no, digamos, no símbolos, este Mocha Framework.
+
+102
+00:13:46,500 --> 00:13:55,500
+Portanto, este Mocha Framework, como ver, tem aqui várias opções, que foi o que eu,
+
+103
+00:13:55,500 --> 00:14:00,500
+que eu fiz, é dificilante. Portanto, se o senhor quiser saber qual é o símbolo,
+
+104
+00:14:00,500 --> 00:14:07,500
+eu baixo a ver aqui, o álbum, e eu mostro-me. Portanto, o meu, o símbolo,
+
+105
+00:14:07,500 --> 00:14:14,500
+que está chamando-se Mocha Framework, e que, por a volumização, está, e é-se.
+
+106
+00:14:14,500 --> 00:14:21,500
+Portanto, o default está, está, é para incluir. Portanto, é isso que,
+
+107
+00:14:21,500 --> 00:14:27,500
+é desta forma que os símbolos, estão, são utilitados. Portanto, se eu vou usando
+
+108
+00:14:27,500 --> 00:14:34,500
+desta raimenta, não se deve fazer, manualmente, eu vou usando esta
+
+109
+00:14:34,500 --> 00:14:41,500
+ferramenta para dividir um cheiro. Vou agora abrir este cheiro, o tal cheiro,
+
+110
+00:14:41,500 --> 00:14:52,550
+ponto de config. Vou ver o cheiro, ponto de config, que tem as opções de configuridade.
+
+111
+00:14:52,550 --> 00:14:57,550
+Só para vocês repararem, entre os, entre aquilo que nós colocamos,
+
+112
+00:14:57,550 --> 00:15:05,550
+a pouco, cmp, por exemplo, o pm, vou procurar aqui o pm, control fpm,
+
+113
+00:15:05,550 --> 00:15:10,550
+vou procurar aqui no espaço, para vocês ver mais fácil.
+
+114
+00:15:10,550 --> 00:15:30,140
+Portanto, para vocês ver mais fácil. Portanto, para vocês repararem,
+
+115
+00:15:30,140 --> 00:15:38,140
+eu não apazia-se com o fi, naquela descrição, aqui no meio-membé,
+
+116
+00:15:38,140 --> 00:15:44,140
+e também nos feios, nós não colocamos o confi. Eu, o sistema adiciona,
+
+117
+00:15:44,140 --> 00:15:56,140
+portanto, eu adiciona o confi, portanto, nós só definimos o símbolo,
+
+118
+00:15:56,140 --> 00:16:03,140
+mas depois, no código, e sempre programaticamente,
+
+119
+00:16:03,140 --> 00:16:11,140
+vamos nos apreender, e estes símbolos, temos que nos apreender com o confi,
+
+120
+00:16:11,140 --> 00:16:18,800
+e nos adicionar o nome que aparece. 7% de índios.
+
+121
+00:16:18,800 --> 00:16:24,800
+Os símbolos são de um cabo e, dentro de um cheiro, capa com o fi, portanto,
+
+122
+00:16:24,800 --> 00:16:52,860
+eu posso mostrar, o cheiro, capa com o fi do moca,
+
+123
+00:16:52,860 --> 00:16:59,860
+mas existem seis estes por todo o código, portanto, são seis estes que,
+
+124
+00:16:59,860 --> 00:17:04,860
+simplesmente, existem seis estes por diretório, por área,
+
+125
+00:17:04,860 --> 00:17:10,860
+em que vai identificar quais são os índios associados naquela área,
+
+126
+00:17:10,860 --> 00:17:17,860
+que nós o devemos configurar, portanto, nós podemos fazer a configuração.
+
+127
+00:17:17,860 --> 00:17:27,860
+Portanto, indivíduo extremamente, quando o fato de um meio-membé no confi,
+
+128
+00:17:27,860 --> 00:17:34,860
+o que é que o fato de um meio-membé no confi, vai ao diretório, o arco, buscar,
+
+129
+00:17:34,860 --> 00:17:41,860
+vou já mostrar, que depois vocês vão ver isso, e vai ao diretório.
+
+130
+00:17:41,860 --> 00:17:53,350
+Portanto, cdd, arco.
+
+131
+00:17:53,350 --> 00:18:03,350
+Vai ao diretório, no meio-membé, a arquitetura, a arquitetura,
+
+132
+00:18:03,350 --> 00:18:14,350
+e eu acho que e цветa, e sete centenadas de 40, eu 104 do coelho das décadas da reluctância?
+
+133
+00:18:14,350 --> 00:18:24,710
+Isso e temos de aqui, em capa com o fi,
+
+134
+00:18:24,710 --> 00:18:28,710
+neste ano ou outro, capa-me convido.
+
+135
+00:18:28,710 --> 00:18:38,310
+Vamos ver se é partido daqui e o meio-meno confio começa a ver todos, começa a ver os
+
+136
+00:18:38,310 --> 00:18:47,310
+ríngulos a partir deste saíro, portanto este saíro vai condenar todos os capos a confir
+
+137
+00:18:47,310 --> 00:18:52,470
+que são necessários para esta arquitetura, que vamos ver, estamos galerando, deixando
+
+138
+00:18:52,470 --> 00:19:01,830
+só ver se é este, é este, vamos ver e eu, é que sentei, portanto entra aí mais insusões,
+
+139
+00:19:01,830 --> 00:19:11,430
+é que sentei o capa-me confio, nós vamos ver o que é isso, do Mócar, nesta arquitetura
+
+140
+00:19:11,430 --> 00:19:21,430
+porque estou a compilar, estou a adicionar no Mócar a arquitetura 186, se tivesse a adicionar
+
+141
+00:19:21,430 --> 00:19:28,430
+a outra arquitetura seria 5 iris nota a arquitetura e depois na programação, provavelmente
+
+142
+00:19:28,430 --> 00:19:33,430
+haveria algumas coisas diferentes de uma forma programada porque esta arquitetura não
+
+143
+00:19:33,430 --> 00:19:46,100
+é o que nós temos, temos então isto, nos capos a confir, depois os capos a confir
+
+144
+00:19:46,100 --> 00:19:52,100
+estão sendo de dúvida a arquitetura, incluindo todos os capos a confir e depois alguns que
+
+145
+00:19:52,100 --> 00:19:59,100
+incluíam outros dias cumpriantes, decisão que fazem tempado, que permitem configurar
+
+146
+00:19:59,100 --> 00:20:08,100
+aquela arquitetura e, com isso, nós obtemos o tal fichiceiro em um ponto com confir, fichiceiro
+
+147
+00:20:08,100 --> 00:20:23,060
+é ele que tem estado obrigatoriamente na raiz do sistema, estamos aqui para dar isto,
+
+148
+00:20:23,060 --> 00:20:38,210
+vamos dizer que esta naqueles está o Mócar a confirir, sempre que nós a compilar
+
+149
+00:20:38,210 --> 00:20:45,210
+nos estes aqui, ao sempre que a alta dá, dá-me uma versão, então a gente está aqui na raiz
+
+150
+00:20:45,210 --> 00:20:54,210
+portanto do Sosco, isto aqui é raiz do Sosco, quando tem o corte de todos os minutos e
+
+151
+00:20:54,210 --> 00:21:07,530
+tem estado obrigatoriamente naqueles diretores, mas faz, eu também, de uma forma, também
+
+152
+00:21:07,530 --> 00:21:16,530
+tem um ponto de partida, também faz-la se a alta está no diretório arte, portanto,
+
+153
+00:21:16,530 --> 00:21:21,530
+é lógico que as coisas têm de bater uma coisa com outra, é, portanto, é a partida
+
+154
+00:21:21,530 --> 00:21:28,530
+do Sosco. Como é que as minhas falhas são tão violadas? De uma forma similirante aos
+
+155
+00:21:28,530 --> 00:21:36,530
+capas de confir, que, tipicamente, por cada diretório existe uma mãe que fala, portanto,
+
+156
+00:21:36,530 --> 00:21:43,530
+por cada diretório existe uma mãe que fala, e as minhas falhas aqui, o que é que nós
+
+157
+00:21:43,530 --> 00:21:51,530
+colocamos em uma indicação que é para incluir, portanto, para dizer que vai ser incluído
+
+158
+00:21:51,530 --> 00:22:02,530
+OBJ menos, portanto, OBJ e S, e vamos colocar aqui ponto OS e ele vai compilar o cheiro
+
+159
+00:22:02,530 --> 00:22:13,530
+forte, ponto C, ou forte, ponto S, dependendo se está incrementado em C ou em exemplo. Portanto,
+
+160
+00:22:13,530 --> 00:22:21,530
+eu vou poner aqui o nome do objeto e ele, a partir do nome do objeto, vai buscar o
+
+161
+00:22:21,530 --> 00:22:27,530
+Sosco, em que tem casca escrita da mesma forma, mas com extensão, o ponto C, o ponto
+
+162
+00:22:27,530 --> 00:22:33,530
+D, o ponto C, o ponto C, o ponto A. E agora, onde é que entra no número 7 de confirtação,
+
+163
+00:22:33,530 --> 00:22:44,530
+onde entrarão os símbolos de confirtação aqui? Este cheiro só vai ser compilado se
+
+164
+00:22:44,530 --> 00:22:50,530
+essa opção de confirtação estiver a E. Deixe-me só voltar, então, vamos ver aqui
+
+165
+00:22:50,530 --> 00:22:56,530
+as opções no ponto de confir, vai ter o E, portanto aqui só estamos a E, e temos estas
+
+166
+00:22:56,530 --> 00:23:03,210
+situações de numeros que são excepções. Não tem aqui nenhum NOU, nem nenhum M, mas
+
+167
+00:23:03,210 --> 00:23:12,130
+pode ter tempo. E então, o que vai acontecer é que este aqui só vai ser incluído se
+
+168
+00:23:12,130 --> 00:23:20,090
+estiver verdade. Se for verdade, que há um contrário, não será incluído.
+
+169
+00:23:20,090 --> 00:23:28,410
+Depois de eu solicar isto aqui mais pra frente, o mesmo não acontece aqui em que eu sou adicionar
+
+170
+00:23:28,410 --> 00:23:33,210
+diretorios, que tipicamente não tem bem qual, e de verdade isso eu tenho que fazer o mais
+
+171
+00:23:33,210 --> 00:23:41,330
+igual. O mais igual é a mesma coisa que vou, ao mesmo tempo, ao mesmo tempo, ao mesmo
+
+172
+00:23:41,330 --> 00:23:46,130
+tempo, ao mesmo tempo, ao mesmo tempo, mais... Portanto, o mais igual é uma forma avaliada
+
+173
+00:23:46,130 --> 00:23:53,490
+de fazer qualquer coisa igual a essa coisa mais... Outra coisa qualquer, portanto, é
+
+174
+00:23:53,490 --> 00:24:02,490
+o significado mais igual. Ora, ia aparecer daqui, portanto, o código vai ser compilado
+
+175
+00:24:02,490 --> 00:24:13,410
+em função dos status no ponto com fi. Portanto, o sumindo, os capas com fi servem para gerar
+
+176
+00:24:13,410 --> 00:24:20,890
+o ponto com fi. O ponto com fi tem a lista de sumindo que tem determinado valor, e
+
+177
+00:24:20,890 --> 00:24:32,850
+casse novo, M, a memória que vai fazer vai ler esse cheiro, ponto com fi, e vai ver
+
+178
+00:24:32,850 --> 00:24:38,050
+o que é que vai concluir no processo de concluição e o que é que não vai concluir no processo
+
+179
+00:24:38,050 --> 00:24:46,170
+de concluição. Ora, o processo de concluição, portanto,
+
+180
+00:24:46,170 --> 00:24:52,810
+que o meu já referi, é incluído, portanto, se os cheiros estão incluídos, se tiverem
+
+181
+00:24:52,810 --> 00:25:01,370
+do ipland ou se o valor da opção de concluição for yes, também pode ser, se tiver um M
+
+182
+00:25:01,370 --> 00:25:10,690
+é compilado em algum modo, se tiver, se nós, quando estamos a configurar, se é
+
+183
+00:25:10,690 --> 00:25:16,690
+um M que não, e ele aparece no ponto com fi, e com no certo, portanto, como não é
+
+184
+00:25:16,690 --> 00:25:21,730
+um atribuído, então, se não é atribuído, não existe, logo, isso aqui vai assumir
+
+185
+00:25:21,730 --> 00:25:29,090
+com um M, portanto, ele não vai ser incluído. Como é que funciona a compilação?
+
+186
+00:25:29,090 --> 00:25:37,250
+No oferi, existe um M por diretório, que se só se vê uma, mas tipicamente, temos
+
+187
+00:25:37,250 --> 00:25:44,730
+um M por diretório, em capa de config, um M. Ora, o que é que significa? Significa que
+
+188
+00:25:44,730 --> 00:25:55,050
+em cada diretório vai ser compilado para uma forma corrente, portanto, bastante diretório,
+
+189
+00:25:55,050 --> 00:26:00,370
+em cada diretório vai ser compilado o código de todo, e em cada diretório vai criar um
+
+190
+00:26:00,370 --> 00:26:09,930
+código objeto, com todo o código de aceleratório, portanto, todos estes pontos vão depois
+
+191
+00:26:09,930 --> 00:26:21,050
+ser colocados dentro deste built-in.org. Ora, em mais em final, aqui aparece, em mais
+
+192
+00:26:21,050 --> 00:26:34,330
+em final, portanto, todos estes built-in.org vão ser combinados, nem mais em no código
+
+193
+00:26:34,330 --> 00:26:41,250
+do cano, e é isso que depois vai ser colocado no diretório do bot.
+
+194
+00:26:41,250 --> 00:26:53,010
+Alguma dúvida, alguma chão? Não, agora tem uma devida.
+
+195
+00:26:53,010 --> 00:26:58,250
+Nós geralmente usamos o micfalto a gerar esses cheios, quando sendo, e aqui ele vai incluir
+
+196
+00:26:58,250 --> 00:27:02,690
+os cheios. Não, ponto C, estima, ponto C, foi o código de testem.
+
+197
+00:27:02,690 --> 00:27:06,370
+Sim, sim. Não, ponto C, foi o código de código.
+
+198
+00:27:06,370 --> 00:27:13,370
+Os cheios, é como se o taba gerar, não, todo o micfalto não.
+
+199
+00:27:13,370 --> 00:27:17,370
+Os cheios taba gerar, é ponto capó.
+
+200
+00:27:17,370 --> 00:27:20,370
+Ah, estou falando isso.
+
+201
+00:27:20,370 --> 00:27:26,370
+Os cheios vão ser os cheios de código, os cheios de texto.
+
+202
+00:27:27,370 --> 00:27:29,370
+Ok.
+
+203
+00:27:29,370 --> 00:27:41,100
+Tudo depois, existem os símbolos que também podem ter usados dentro do código.
+
+204
+00:27:41,100 --> 00:27:47,100
+Portanto, temos até agora os símbolos até usados para incluir, ou não incluir, os cheios.
+
+205
+00:27:47,100 --> 00:27:51,100
+Mas dentro do código, eu também posso usar os símbolos.
+
+206
+00:27:51,100 --> 00:27:55,100
+E o que é que significa este símbolo?
+
+207
+00:27:55,100 --> 00:28:04,100
+Se este símbolo estiver a truco, portanto, se estiver 7, seja como um óbvio, seja como
+
+208
+00:28:04,100 --> 00:28:08,100
+este, este código vai ser compilado.
+
+209
+00:28:08,100 --> 00:28:11,100
+Nesses casos, eles serão complementados.
+
+210
+00:28:11,100 --> 00:28:15,100
+Claro, não seja, vai ser compilado este.
+
+211
+00:28:15,100 --> 00:28:23,100
+Portanto, eu dentro do código, também posso usar os símbolos de configuração.
+
+212
+00:28:23,100 --> 00:28:29,100
+Para te ver, partes do código que vão ser incluídas no certo compilamento e partes
+
+213
+00:28:29,100 --> 00:28:31,100
+que não vão ser incluídas.
+
+214
+00:28:31,100 --> 00:28:34,100
+Portanto, os símbolos são usados.
+
+215
+00:28:34,100 --> 00:28:37,100
+Seleciona, não, não colecione.
+
+216
+00:28:37,100 --> 00:28:40,100
+Cheios, e até mesmo diretórios.
+
+217
+00:28:40,100 --> 00:28:45,100
+E depois, dentro do código, para te ver, isto vai ser compilado.
+
+218
+00:28:45,100 --> 00:28:47,100
+Isto não vai ser compilado.
+
+219
+00:28:47,100 --> 00:28:54,100
+Se estiver 7, e esta parte aqui é como se não ia ser compilado.
+
+220
+00:28:54,100 --> 00:28:58,100
+Se estiver 7, não estiver 7.
+
+221
+00:28:58,100 --> 00:29:02,100
+Esta parte aqui é como se não ia ser compilado.
+
+222
+00:29:03,100 --> 00:29:07,820
+Duplicas.
+
+223
+00:29:07,820 --> 00:29:20,820
+Também, é frequente nós, nos seios, numeradamente, naqueles seios dinâmicos, diétrafios,
+
+224
+00:29:20,820 --> 00:29:25,820
+em que definem, por exemplo, as sobretudoras de dados, coisas assim estendo,
+
+225
+00:29:25,820 --> 00:29:31,820
+é frequente a gente ter que os incluir em vários seios.
+
+226
+00:29:31,820 --> 00:29:38,820
+Ora, para evitar as inclusões de multiplações,
+
+227
+00:29:38,820 --> 00:29:46,820
+quando inclui um de seiro, o seu conteúdo vai ser acrescentado naqueles seios.
+
+228
+00:29:46,820 --> 00:29:52,820
+Então, para evitar múltiplas cópias do mesmo seiro,
+
+229
+00:29:52,820 --> 00:29:58,820
+nós protegemos os que seiros, numerados, diétrafios, desta forma.
+
+230
+00:29:58,820 --> 00:30:00,820
+O que é que isto quer dizer?
+
+231
+00:30:00,820 --> 00:30:07,820
+Se não está dessenido, se este segundo não está dessenido, definem.
+
+232
+00:30:07,820 --> 00:30:12,820
+E, então, vai executar, vai incluir este óbvio.
+
+233
+00:30:12,820 --> 00:30:18,820
+No segundo, no segundo de cheiro, para ter a inclusão deste cheiro,
+
+234
+00:30:18,820 --> 00:30:21,820
+isto vai falhar, e isto não é o debo.
+
+235
+00:30:21,820 --> 00:30:23,820
+Já está dessenido.
+
+236
+00:30:23,820 --> 00:30:27,820
+Portanto, quando eu faço um define, eu criei a macro.
+
+237
+00:30:27,820 --> 00:30:30,820
+Portanto, se eu distribuir um valor, o que será o mínimo?
+
+238
+00:30:30,820 --> 00:30:32,820
+Não sei, qual é o valor?
+
+239
+00:30:32,820 --> 00:30:36,820
+Mas, vai ter esta macro, vai ter este tipo.
+
+240
+00:30:36,820 --> 00:30:38,820
+Logo, o que é que vai acontecer?
+
+241
+00:30:38,820 --> 00:30:40,820
+Antes de uma vez, isso não deve.
+
+242
+00:30:40,820 --> 00:30:41,820
+Não é verdade?
+
+243
+00:30:41,820 --> 00:30:44,820
+Então, o salto está para o entivo.
+
+244
+00:30:44,820 --> 00:30:48,820
+E desta forma, só inclui uma vez o cheiro.
+
+245
+00:30:48,820 --> 00:30:49,820
+Por quê?
+
+246
+00:30:49,820 --> 00:30:53,820
+Isto pode ter problemas quando nós definirmos, por exemplo,
+
+247
+00:30:53,820 --> 00:30:59,820
+que as estruturas de água, terra a terra, não precisarmos incluir o cheiro.
+
+248
+00:30:59,820 --> 00:31:05,820
+Em vários vídeos, ele vai dar rede de definição de tipos de dados.
+
+249
+00:31:05,820 --> 00:31:10,820
+Por que, mas, a propriedade de dados não é mais nem menos do que definir um tipo de dados.
+
+250
+00:31:10,820 --> 00:31:13,820
+Duvidas da desenvolvação ou de processo de compilação.
+
+251
+00:31:13,820 --> 00:31:26,610
+Vamos agora olhar porque, na aula de hoje,
+
+252
+00:31:26,610 --> 00:31:30,610
+não marvia a aula de hoje.
+
+253
+00:31:30,610 --> 00:31:36,610
+Porque, se não for falar antes disso, o problema é que eu vou tentar mostrar-me,
+
+254
+00:31:36,610 --> 00:31:38,610
+mas não sei se eu vou ter que mostrar tudo.
+
+255
+00:31:38,610 --> 00:31:40,610
+Vou gostar de falar-me.
+
+256
+00:31:40,610 --> 00:31:46,610
+Na aula de hoje, nós vamos falar sobre os setores.
+
+257
+00:31:46,610 --> 00:31:48,610
+E os setores.
+
+258
+00:31:48,610 --> 00:31:52,610
+Ora, os setores, no caso do Inus,
+
+259
+00:31:52,610 --> 00:31:56,610
+é uma estrutura de multitasking.
+
+260
+00:31:56,610 --> 00:31:58,610
+O que é que isso significa?
+
+261
+00:31:58,610 --> 00:32:04,610
+Pode ter múltiplas tarefas, múltiplos sucessos,
+
+262
+00:32:04,610 --> 00:32:08,610
+múltiplos hologramas ativos ao mesmo tempo.
+
+263
+00:32:08,610 --> 00:32:11,610
+E vamos focar-nos num ponto.
+
+264
+00:32:11,610 --> 00:32:13,610
+Temos só um CPU.
+
+265
+00:32:13,610 --> 00:32:19,610
+Se eu tenho só um CPU, se tenho vários testes,
+
+266
+00:32:19,610 --> 00:32:22,610
+só posso dificultar um de cada vez.
+
+267
+00:32:22,610 --> 00:32:25,610
+Não posso dificultar mais do que um.
+
+268
+00:32:25,610 --> 00:32:31,610
+Posso ter muitos ativos, mas só está um direito de dificultar cada vez.
+
+269
+00:32:31,610 --> 00:32:33,610
+Ora, vai.
+
+270
+00:32:33,610 --> 00:32:37,610
+Ora, isso significa que é que é preciso aqui alguma chão.
+
+271
+00:32:38,610 --> 00:32:41,610
+Depois, nós já falamos, o CPU,
+
+272
+00:32:41,610 --> 00:32:44,610
+faz a invisibilização do CPU,
+
+273
+00:32:44,610 --> 00:32:51,610
+no sentido de dar a ideia de que existem muitos nestas coisas
+
+274
+00:32:51,610 --> 00:32:53,610
+que precisam ocultar ao mesmo tempo.
+
+275
+00:32:53,610 --> 00:32:58,610
+Ora, sempre é um trobo do CPU,
+
+276
+00:32:58,610 --> 00:33:01,610
+porque não vale nada.
+
+277
+00:33:01,610 --> 00:33:03,610
+Por exemplo, se eu ter o CPU,
+
+278
+00:33:03,610 --> 00:33:07,610
+ao lugar de sempre sendo um imeditor do texto,
+
+279
+00:33:07,610 --> 00:33:11,610
+porque um imeditor do texto está mais tempo parado.
+
+280
+00:33:11,610 --> 00:33:13,610
+Espera que eu carregue nas séculos.
+
+281
+00:33:13,610 --> 00:33:17,610
+E, portanto, e assim sendo,
+
+282
+00:33:17,610 --> 00:33:20,610
+eu posso, enquanto não carregue nas séculos,
+
+283
+00:33:20,610 --> 00:33:22,610
+por tempo.
+
+284
+00:33:22,610 --> 00:33:27,610
+Mas já vi um CPU que trabalha no 1G,
+
+285
+00:33:27,610 --> 00:33:31,610
+a sua unidade de tempo, de tal maneira pequena,
+
+286
+00:33:31,610 --> 00:33:35,610
+que é um nano-nose que consegue fazer algo
+
+287
+00:33:35,610 --> 00:33:37,610
+numa grandeza de nano-nose.
+
+288
+00:33:37,610 --> 00:33:39,610
+Não estou a ser falo de 1 nano-nose,
+
+289
+00:33:39,610 --> 00:33:41,610
+mas 10, 15, 20,
+
+290
+00:33:41,610 --> 00:33:45,610
+e eu já referi e desigistei de nano-nose.
+
+291
+00:33:45,610 --> 00:33:48,610
+No nosso mundo, como se os segundos,
+
+292
+00:33:48,610 --> 00:33:50,610
+em 32 anos.
+
+293
+00:33:50,610 --> 00:33:54,610
+Portanto, o estado de se carregar nas séculos
+
+294
+00:33:54,610 --> 00:33:57,610
+muito rápido que a gente fecha
+
+295
+00:33:57,610 --> 00:34:01,610
+é uma eternidade para o sistema computacional.
+
+296
+00:34:01,610 --> 00:34:05,610
+Portanto, é uma eternidade para o sistema computacional.
+
+297
+00:34:05,610 --> 00:34:08,610
+E, por isso, é que você,
+
+298
+00:34:08,610 --> 00:34:11,610
+quando tem a música,
+
+299
+00:34:11,610 --> 00:34:13,610
+para tocar,
+
+300
+00:34:13,610 --> 00:34:15,610
+vocês não se percebem que é impossível.
+
+301
+00:34:15,610 --> 00:34:17,610
+A música não está sempre...
+
+302
+00:34:17,610 --> 00:34:19,610
+A música não está sempre por cá.
+
+303
+00:34:19,610 --> 00:34:21,610
+Quando estão a ver um piano,
+
+304
+00:34:21,610 --> 00:34:24,610
+o piano não está sempre no CPU.
+
+305
+00:34:24,610 --> 00:34:28,610
+A nossa noção de tempo
+
+306
+00:34:28,610 --> 00:34:30,610
+não é a grande elota,
+
+307
+00:34:30,610 --> 00:34:34,950
+ou não nos percebemos das falhas.
+
+308
+00:34:34,950 --> 00:34:37,950
+Ora, a primeira coisa.
+
+309
+00:34:37,950 --> 00:34:39,950
+Se você tem vários testes,
+
+310
+00:34:39,950 --> 00:34:41,950
+você tem que dar uma identificadora
+
+311
+00:34:41,950 --> 00:34:43,950
+daquilo que está certo.
+
+312
+00:34:43,950 --> 00:34:46,950
+O total de um setão de bíblio,
+
+313
+00:34:46,950 --> 00:34:48,950
+de um forte,
+
+314
+00:34:48,950 --> 00:34:51,950
+e o total de um identificador,
+
+315
+00:34:51,950 --> 00:34:53,950
+não é mais o mesmo do que
+
+316
+00:34:53,950 --> 00:34:57,950
+o identificador do processo,
+
+317
+00:34:57,950 --> 00:34:59,950
+que depois é para muitas coisas,
+
+318
+00:34:59,950 --> 00:35:01,950
+mas é um identificador.
+
+319
+00:35:01,950 --> 00:35:04,950
+Ora,
+
+320
+00:35:04,950 --> 00:35:06,950
+também,
+
+321
+00:35:06,950 --> 00:35:09,950
+quando um processo tem várias testes,
+
+322
+00:35:09,950 --> 00:35:11,950
+também temos aqui
+
+323
+00:35:11,950 --> 00:35:13,950
+uma coisa que se chama o télido,
+
+324
+00:35:13,950 --> 00:35:15,950
+que é o télido grupal,
+
+325
+00:35:15,950 --> 00:35:17,950
+que faria sentido
+
+326
+00:35:17,950 --> 00:35:19,950
+se os testes,
+
+327
+00:35:19,950 --> 00:35:21,950
+os testes,
+
+328
+00:35:21,950 --> 00:35:23,950
+se tem a real de uma coletão,
+
+329
+00:35:23,950 --> 00:35:25,950
+temos que realizar a coletão.
+
+330
+00:35:25,950 --> 00:35:27,950
+Ora,
+
+331
+00:35:27,950 --> 00:35:32,220
+as testes,
+
+332
+00:35:32,220 --> 00:35:34,220
+e os testes,
+
+333
+00:35:34,220 --> 00:35:37,220
+para o caso, não estão a mesma coisa.
+
+334
+00:35:37,220 --> 00:35:39,220
+Em termos de coletão,
+
+335
+00:35:39,220 --> 00:35:41,220
+não são de nada da mesma coisa.
+
+336
+00:35:41,220 --> 00:35:44,220
+Em termos de identificação,
+
+337
+00:35:44,220 --> 00:35:46,220
+funciona a festa da voz.
+
+338
+00:35:46,220 --> 00:35:48,220
+Quando,
+
+339
+00:35:48,220 --> 00:35:50,220
+eu a partir de um processo,
+
+340
+00:35:50,220 --> 00:35:52,220
+iria ir em outro,
+
+341
+00:35:52,220 --> 00:35:54,220
+portanto, através do suporte,
+
+342
+00:35:54,220 --> 00:35:56,220
+ele vai atribuir
+
+343
+00:35:56,220 --> 00:35:58,220
+um novo pedido,
+
+344
+00:35:58,220 --> 00:36:00,220
+ou um novo teste,
+
+345
+00:36:00,220 --> 00:36:02,220
+tem que ter uma nova identificação,
+
+346
+00:36:02,220 --> 00:36:04,220
+e também vai atribuir
+
+347
+00:36:04,220 --> 00:36:06,220
+um grupo do télido,
+
+348
+00:36:06,220 --> 00:36:08,220
+que é o télido grupal,
+
+349
+00:36:08,220 --> 00:36:10,220
+e também de diferente
+
+350
+00:36:10,220 --> 00:36:12,220
+do que
+
+351
+00:36:12,220 --> 00:36:14,220
+o processo faz.
+
+352
+00:36:14,220 --> 00:36:16,220
+Mas,
+
+353
+00:36:16,220 --> 00:36:18,220
+quando eu queria uma télida,
+
+354
+00:36:18,220 --> 00:36:20,220
+a partir de um teste,
+
+355
+00:36:20,220 --> 00:36:22,220
+ele vai dar
+
+356
+00:36:22,220 --> 00:36:24,220
+um pedido de diferente
+
+357
+00:36:24,220 --> 00:36:26,220
+à tarefa,
+
+358
+00:36:26,220 --> 00:36:28,220
+um identificador de diferente.
+
+359
+00:36:28,220 --> 00:36:30,220
+Mas, o télido
+
+360
+00:36:30,220 --> 00:36:33,860
+vai ser o mesmo,
+
+361
+00:36:33,860 --> 00:36:35,860
+porque as tarefes
+
+362
+00:36:35,860 --> 00:36:37,860
+estão relacionadas
+
+363
+00:36:37,860 --> 00:36:39,860
+com um processo,
+
+364
+00:36:39,860 --> 00:36:41,860
+ou melhor,
+
+365
+00:36:41,860 --> 00:36:43,860
+geralmente, o processo principal
+
+366
+00:36:43,860 --> 00:36:45,860
+é determinado de mente para ele.
+
+367
+00:36:45,860 --> 00:36:47,860
+Portanto,
+
+368
+00:36:47,860 --> 00:36:49,860
+e as tarefes existem,
+
+369
+00:36:49,860 --> 00:36:51,860
+e o que treta
+
+370
+00:36:51,860 --> 00:36:53,860
+é que o teto tem, digamos,
+
+371
+00:36:53,860 --> 00:36:55,860
+daquilo de classe.
+
+372
+00:36:55,860 --> 00:36:57,860
+A forma que o teto tem de uma base
+
+373
+00:36:57,860 --> 00:36:59,860
+é esta.
+
+374
+00:36:59,860 --> 00:37:01,860
+Ora,
+
+375
+00:37:01,860 --> 00:37:05,100
+pelo menos,
+
+376
+00:37:05,100 --> 00:37:07,100
+se eu tenho vários
+
+377
+00:37:07,100 --> 00:37:09,100
+processos,
+
+378
+00:37:09,100 --> 00:37:11,100
+eu vou ter que ter uma tracação
+
+379
+00:37:11,100 --> 00:37:13,100
+para esses processos.
+
+380
+00:37:13,100 --> 00:37:15,100
+Eu vou ter que ter
+
+381
+00:37:15,100 --> 00:37:17,100
+uma estrutura de dados
+
+382
+00:37:17,100 --> 00:37:19,100
+para o qual que o presente
+
+383
+00:37:19,100 --> 00:37:21,100
+seja aquele,
+
+384
+00:37:21,100 --> 00:37:24,420
+ou essas três.
+
+385
+00:37:24,420 --> 00:37:26,420
+Em minutos,
+
+386
+00:37:26,420 --> 00:37:28,420
+esse processo está ativo
+
+387
+00:37:28,420 --> 00:37:30,420
+e é gerido no caso,
+
+388
+00:37:30,420 --> 00:37:32,420
+no caso de um inútil como uma
+
+389
+00:37:32,420 --> 00:37:34,420
+enxerrância de estrutura
+
+390
+00:37:34,420 --> 00:37:36,420
+atractive.
+
+391
+00:37:36,420 --> 00:37:38,420
+Seja um atractive,
+
+392
+00:37:38,420 --> 00:37:40,420
+seja um processo,
+
+393
+00:37:40,420 --> 00:37:42,420
+não há diferença a alguma.
+
+394
+00:37:42,420 --> 00:37:44,420
+Portanto, se é um, porque se você queria
+
+395
+00:37:44,420 --> 00:37:46,420
+um processo na prática,
+
+396
+00:37:46,420 --> 00:37:48,420
+queria-se
+
+397
+00:37:48,420 --> 00:37:50,420
+um atractive.
+
+398
+00:37:50,420 --> 00:37:52,420
+O que contém todo um conjunto de campos
+
+399
+00:37:52,420 --> 00:37:54,420
+que vai permitir
+
+400
+00:37:54,420 --> 00:37:56,420
+gerir o processo
+
+401
+00:37:56,420 --> 00:37:58,420
+durante o seu ciclo de vida?
+
+402
+00:37:58,420 --> 00:38:01,790
+Ora,
+
+403
+00:38:01,790 --> 00:38:03,790
+caixa, por exemplo,
+
+404
+00:38:03,790 --> 00:38:05,790
+o peso e o terrido.
+
+405
+00:38:05,790 --> 00:38:07,790
+Caixa, por exemplo,
+
+406
+00:38:07,790 --> 00:38:09,790
+o campo prioridade.
+
+407
+00:38:09,790 --> 00:38:11,790
+Vocês já ouviram falar
+
+408
+00:38:11,790 --> 00:38:13,790
+no que
+
+409
+00:38:13,790 --> 00:38:15,790
+o RT tem prioridades
+
+410
+00:38:15,790 --> 00:38:17,790
+do um,
+
+411
+00:38:17,790 --> 00:38:19,790
+ou noventa e nove,
+
+412
+00:38:19,790 --> 00:38:21,790
+ou noventa e nove,
+
+413
+00:38:21,790 --> 00:38:23,790
+ou noventa e nove.
+
+414
+00:38:23,790 --> 00:38:25,790
+Portanto,
+
+415
+00:38:25,790 --> 00:38:27,790
+todos esses,
+
+416
+00:38:27,790 --> 00:38:29,790
+todos esses,
+
+417
+00:38:29,790 --> 00:38:31,790
+assim ao vosso tempo,
+
+418
+00:38:31,790 --> 00:38:33,790
+tem que estar
+
+419
+00:38:33,790 --> 00:38:35,790
+em algum momento, então,
+
+420
+00:38:35,790 --> 00:38:37,790
+estar no menu de estrutura.
+
+421
+00:38:37,790 --> 00:38:39,790
+Para cada processo,
+
+422
+00:38:39,790 --> 00:38:43,040
+vai existir
+
+423
+00:38:43,040 --> 00:38:45,040
+uma variável bestia.
+
+424
+00:38:45,040 --> 00:38:47,040
+Caixa, por exemplo,
+
+425
+00:38:47,040 --> 00:38:49,040
+vocês, sobre o que lembrarem,
+
+426
+00:38:49,040 --> 00:38:51,040
+e se olharam para a incrementação
+
+427
+00:38:51,040 --> 00:38:53,040
+do tácio lixo,
+
+428
+00:38:53,040 --> 00:38:55,040
+ora, para,
+
+429
+00:38:55,040 --> 00:38:57,040
+de uma tarefa,
+
+430
+00:38:57,040 --> 00:38:59,040
+para ir para a outra tarefa,
+
+431
+00:38:59,040 --> 00:39:01,040
+nós usávamos este campo
+
+432
+00:39:01,040 --> 00:39:03,040
+no list entre.
+
+433
+00:39:03,040 --> 00:39:05,040
+Para depois mudarmos
+
+434
+00:39:05,040 --> 00:39:07,040
+de tarefa,
+
+435
+00:39:07,040 --> 00:39:09,040
+portanto,
+
+436
+00:39:09,040 --> 00:39:11,040
+porque a posição uma lixo
+
+437
+00:39:11,040 --> 00:39:13,040
+é que nós falamos
+
+438
+00:39:13,040 --> 00:39:15,040
+o que existem.
+
+439
+00:39:15,040 --> 00:39:17,040
+O que é que,
+
+440
+00:39:17,040 --> 00:39:19,040
+para o limite,
+
+441
+00:39:19,040 --> 00:39:21,040
+colocar essas estruturas
+
+442
+00:39:21,040 --> 00:39:23,040
+de base numa lista,
+
+443
+00:39:23,040 --> 00:39:25,040
+obviamente,
+
+444
+00:39:25,040 --> 00:39:27,040
+que depois, para ir buscar
+
+445
+00:39:27,040 --> 00:39:29,040
+o pídeo,
+
+446
+00:39:29,040 --> 00:39:31,040
+o que é que eu tenho que fazer?
+
+447
+00:39:31,040 --> 00:39:33,040
+Saltar para o início da estrutura,
+
+448
+00:39:33,040 --> 00:39:35,040
+para depois ir buscar o pídeo,
+
+449
+00:39:35,040 --> 00:39:37,040
+e assim por viajar.
+
+450
+00:39:37,040 --> 00:39:39,040
+Depois também temos a gestão do pai,
+
+451
+00:39:39,040 --> 00:39:41,040
+o que nos estábamos todos esperando
+
+452
+00:39:41,040 --> 00:39:43,040
+em um pai.
+
+453
+00:39:43,040 --> 00:39:45,040
+Cá está.
+
+454
+00:39:45,040 --> 00:39:47,040
+Ora, para o sucesso,
+
+455
+00:39:47,040 --> 00:39:49,040
+se o pai morrer antes do fino,
+
+456
+00:39:49,040 --> 00:39:51,040
+e visite, o sistema vai atribuir
+
+457
+00:39:51,040 --> 00:39:53,040
+o pai do pai.
+
+458
+00:39:53,040 --> 00:39:55,040
+Portanto, não quer parar,
+
+459
+00:39:55,040 --> 00:39:57,040
+manter sempre
+
+460
+00:39:57,040 --> 00:39:59,040
+essa relação.
+
+461
+00:39:59,040 --> 00:40:01,040
+E por viajar.
+
+462
+00:40:01,040 --> 00:40:03,040
+Ora, por exemplo,
+
+463
+00:40:03,040 --> 00:40:05,040
+o sucesso em limite,
+
+464
+00:40:05,040 --> 00:40:07,040
+que eu tenho ocupido um,
+
+465
+00:40:07,040 --> 00:40:09,040
+é o primeiro sucesso a ser,
+
+466
+00:40:09,040 --> 00:40:11,040
+que já tinha partido aí,
+
+467
+00:40:11,040 --> 00:40:13,040
+todos os que persam
+
+468
+00:40:13,040 --> 00:40:15,040
+e limitam os dados.
+
+469
+00:40:15,040 --> 00:40:17,040
+Inclusive,
+
+470
+00:40:17,040 --> 00:40:19,040
+o sucesso
+
+471
+00:40:19,040 --> 00:40:21,040
+sobra o que tenho compido,
+
+472
+00:40:21,040 --> 00:40:23,040
+zero.
+
+473
+00:40:23,040 --> 00:40:25,040
+O que tenho compido,
+
+474
+00:40:25,040 --> 00:40:27,040
+o zero.
+
+475
+00:40:27,040 --> 00:40:29,040
+Ora,
+
+476
+00:40:29,040 --> 00:40:31,040
+gastar,
+
+477
+00:40:31,040 --> 00:40:33,040
+portanto, o que você esteve,
+
+478
+00:40:33,040 --> 00:40:35,040
+naquele modo,
+
+479
+00:40:35,040 --> 00:40:37,040
+que o misto a todas as tarefas
+
+480
+00:40:37,040 --> 00:40:39,040
+não é mais nem menos do que isto.
+
+481
+00:40:39,040 --> 00:40:41,040
+A través do dado,
+
+482
+00:40:41,040 --> 00:40:43,040
+isto é que está simplesmente
+
+483
+00:40:43,040 --> 00:40:45,040
+ligado,
+
+484
+00:40:45,040 --> 00:40:47,040
+mas na verdade,
+
+485
+00:40:47,040 --> 00:40:49,040
+isto tem que ligar-se um pau
+
+486
+00:40:49,040 --> 00:40:51,040
+à frente e para trás,
+
+487
+00:40:51,040 --> 00:40:53,040
+é totalmente ligado.
+
+488
+00:40:53,040 --> 00:40:55,040
+Por isso é que
+
+489
+00:40:55,040 --> 00:40:57,040
+nós, partindo de uma tarefa,
+
+490
+00:40:57,040 --> 00:40:59,040
+conseguimos procurar todas, por que?
+
+491
+00:40:59,040 --> 00:41:03,820
+Porque elas são todas ligadas.
+
+492
+00:41:03,820 --> 00:41:05,820
+Ora, bom,
+
+493
+00:41:05,820 --> 00:41:07,820
+isto foi o que...
+
+494
+00:41:07,820 --> 00:41:09,820
+E, quanto um sucesso é criado,
+
+495
+00:41:09,820 --> 00:41:11,820
+nós já havíamos visto, portanto,
+
+496
+00:41:11,820 --> 00:41:13,820
+tipicamente, um sucesso
+
+497
+00:41:13,820 --> 00:41:15,820
+de designado pai, que dizia um filho,
+
+498
+00:41:15,820 --> 00:41:17,820
+o filho
+
+499
+00:41:17,820 --> 00:41:19,820
+muda o seu uso culpável,
+
+500
+00:41:19,820 --> 00:41:21,820
+portanto, o seu urinário
+
+501
+00:41:21,820 --> 00:41:23,820
+não muda a sua identificação,
+
+502
+00:41:23,820 --> 00:41:25,820
+não muda
+
+503
+00:41:25,820 --> 00:41:27,820
+o seu pai, não muda nada,
+
+504
+00:41:27,820 --> 00:41:29,820
+só muda as instruções
+
+505
+00:41:29,820 --> 00:41:31,820
+que vai uso culpável.
+
+506
+00:41:31,820 --> 00:41:33,820
+Através das funções de TechTech,
+
+507
+00:41:33,820 --> 00:41:35,820
+faz o que tem que fazer,
+
+508
+00:41:35,820 --> 00:41:37,820
+moque, através da função
+
+509
+00:41:37,820 --> 00:41:39,820
+é acredito.
+
+510
+00:41:39,820 --> 00:41:41,820
+E o pai ficar espera
+
+511
+00:41:41,820 --> 00:41:43,820
+que ele morre quando morrer,
+
+512
+00:41:43,820 --> 00:41:45,820
+aceita a morte do seu filho,
+
+513
+00:41:45,820 --> 00:41:47,820
+que, na prática, o que eu vais fazer
+
+514
+00:41:47,820 --> 00:41:49,820
+é libertar os recursos
+
+515
+00:41:49,820 --> 00:41:51,820
+associados ao filho
+
+516
+00:41:51,820 --> 00:41:53,820
+para o sistema, não ficar.
+
+517
+00:41:53,820 --> 00:41:55,820
+Não ficar.
+
+518
+00:41:55,820 --> 00:41:57,820
+Inclusive, vamos imaginar
+
+519
+00:41:57,820 --> 00:41:59,820
+que, por um motivo qualquer,
+
+520
+00:41:59,820 --> 00:42:01,820
+há que um sucesso, o filho
+
+521
+00:42:01,820 --> 00:42:03,820
+ficou com um smartphone
+
+522
+00:42:03,820 --> 00:42:05,820
+pendurado.
+
+523
+00:42:05,820 --> 00:42:07,820
+Então, o sistema
+
+524
+00:42:07,820 --> 00:42:09,820
+que ele estava, então,
+
+525
+00:42:09,820 --> 00:42:11,820
+é o filho recuperado
+
+526
+00:42:11,820 --> 00:42:13,820
+de satisfação.
+
+527
+00:42:13,820 --> 00:42:15,820
+Não.
+
+528
+00:42:17,820 --> 00:42:19,820
+Ora, vai.
+
+529
+00:42:19,820 --> 00:42:21,820
+Então, o que está a ter que dizer?
+
+530
+00:42:21,820 --> 00:42:23,820
+Isso é,
+
+531
+00:42:23,820 --> 00:42:25,820
+que os voadores vão ser
+
+532
+00:42:25,820 --> 00:42:27,820
+distribuídos a essa variável,
+
+533
+00:42:27,820 --> 00:42:32,060
+que é um inteiro.
+
+534
+00:42:32,060 --> 00:42:34,060
+Os voadores são estes.
+
+535
+00:42:34,060 --> 00:42:36,060
+Pois já, vamos ver.
+
+536
+00:42:36,060 --> 00:42:38,060
+Vamos ver.
+
+537
+00:42:38,060 --> 00:42:40,060
+O tácte running
+
+538
+00:42:40,060 --> 00:42:42,060
+tem o valor zero.
+
+539
+00:42:42,060 --> 00:42:44,060
+O introdutivo
+
+540
+00:42:44,060 --> 00:42:46,060
+tem o valor um.
+
+541
+00:42:46,060 --> 00:42:48,060
+Na prática, assim,
+
+542
+00:42:48,060 --> 00:42:50,060
+se uma tarefa
+
+543
+00:42:50,060 --> 00:42:52,060
+tem o estado zero, significa que
+
+544
+00:42:52,060 --> 00:42:54,060
+está em condições
+
+545
+00:42:54,060 --> 00:42:56,060
+de discussão.
+
+546
+00:42:56,060 --> 00:42:58,060
+Se é maior do que zero, significa
+
+547
+00:42:58,060 --> 00:43:00,060
+que está a espera de algum evento,
+
+548
+00:43:00,060 --> 00:43:02,060
+ou que já terminou.
+
+549
+00:43:02,060 --> 00:43:05,950
+Ora, uma tarefa
+
+550
+00:43:05,950 --> 00:43:07,950
+de
+
+551
+00:43:07,950 --> 00:43:09,950
+pelo port,
+
+552
+00:43:09,950 --> 00:43:11,950
+significa que está a escutar
+
+553
+00:43:11,950 --> 00:43:13,950
+logo o processo que acabou de ser
+
+554
+00:43:13,950 --> 00:43:15,950
+criado, que também vai ser
+
+555
+00:43:15,950 --> 00:43:17,950
+criado no estado de discussão.
+
+556
+00:43:17,950 --> 00:43:19,950
+Portanto, uma tarefa
+
+557
+00:43:19,950 --> 00:43:21,950
+é sempre
+
+558
+00:43:21,950 --> 00:43:23,950
+criada no estado de discussão.
+
+559
+00:43:23,950 --> 00:43:27,260
+Tácte running.
+
+560
+00:43:27,260 --> 00:43:29,260
+Depois, essa tarefa,
+
+561
+00:43:29,260 --> 00:43:31,260
+o valor zero
+
+562
+00:43:31,260 --> 00:43:33,260
+tácte running, não significa
+
+563
+00:43:33,260 --> 00:43:35,260
+que esteja no CPU.
+
+564
+00:43:35,260 --> 00:43:37,260
+Só uma é
+
+565
+00:43:37,260 --> 00:43:39,260
+quando está no CPU.
+
+566
+00:43:39,260 --> 00:43:41,260
+Aquela que estiver escondida
+
+567
+00:43:41,260 --> 00:43:43,260
+para estar no CPU.
+
+568
+00:43:43,260 --> 00:43:45,260
+Apesar de podermos ser
+
+569
+00:43:45,260 --> 00:43:47,260
+N
+
+570
+00:43:47,260 --> 00:43:49,260
+no estado do TAC.
+
+571
+00:43:49,260 --> 00:43:51,260
+Mas só uma é que está aí no TAC.
+
+572
+00:43:51,260 --> 00:43:53,260
+Do TAC,
+
+573
+00:43:53,260 --> 00:43:55,260
+do TAC, este aqui,
+
+574
+00:43:55,260 --> 00:43:57,260
+já é da teoria,
+
+575
+00:43:57,260 --> 00:43:59,260
+deste TAC, que está no CPU,
+
+576
+00:43:59,260 --> 00:44:01,260
+pode eliminar
+
+577
+00:44:01,260 --> 00:44:03,260
+ou pode
+
+578
+00:44:03,260 --> 00:44:05,260
+ser
+
+579
+00:44:05,260 --> 00:44:07,260
+ficar agoteado as pernas de um
+
+580
+00:44:07,260 --> 00:44:09,260
+semáforo ou as pernas
+
+581
+00:44:09,260 --> 00:44:11,260
+de uma coisa qualquer. Então,
+
+582
+00:44:11,260 --> 00:44:13,260
+muda o seu estado para
+
+583
+00:44:13,260 --> 00:44:15,260
+indivíduo
+
+584
+00:44:15,260 --> 00:44:17,260
+ou indivíduo.
+
+585
+00:44:17,260 --> 00:44:19,260
+Os seus estados são os mesmos,
+
+586
+00:44:19,260 --> 00:44:21,260
+pode ser acordado do seu sinal
+
+587
+00:44:21,260 --> 00:44:23,260
+ou não pode ser acordado do seu sinal.
+
+588
+00:44:23,260 --> 00:44:25,260
+Numa, e isso vai para
+
+589
+00:44:25,260 --> 00:44:27,260
+um, para uma
+
+590
+00:44:27,260 --> 00:44:29,260
+O8Q.
+
+591
+00:44:29,260 --> 00:44:31,260
+Vai para um O8Q ao estado
+
+592
+00:44:31,260 --> 00:44:33,260
+o O8Q e verifica
+
+593
+00:44:33,260 --> 00:44:35,260
+ali as pernas.
+
+594
+00:44:35,260 --> 00:44:37,260
+Estando no TAC
+
+595
+00:44:37,260 --> 00:44:39,260
+que está no CPU,
+
+596
+00:44:39,260 --> 00:44:41,260
+pode passar para
+
+597
+00:44:41,260 --> 00:44:43,260
+deixar no CPU.
+
+598
+00:44:43,260 --> 00:44:45,260
+Por exemplo, você juro de estar
+
+599
+00:44:45,260 --> 00:44:51,040
+no seu tempo de processamento.
+
+600
+00:44:51,040 --> 00:44:53,040
+Se já
+
+601
+00:44:53,040 --> 00:44:55,040
+você está no TAC,
+
+602
+00:44:55,040 --> 00:44:57,040
+tem que sair do CPU
+
+603
+00:44:57,040 --> 00:44:59,040
+e passar e ficar
+
+604
+00:44:59,040 --> 00:45:02,480
+as pernas no O8Q.
+
+605
+00:45:02,480 --> 00:45:04,480
+Estando no O8Q
+
+606
+00:45:04,480 --> 00:45:06,480
+Quando o evento do que
+
+607
+00:45:06,480 --> 00:45:08,480
+há um evento que lhes desfue
+
+608
+00:45:08,480 --> 00:45:10,480
+que faz com que essa
+
+609
+00:45:10,480 --> 00:45:12,480
+tarefa acorde, vamos imaginar
+
+610
+00:45:12,480 --> 00:45:14,480
+por causa de um semáforo
+
+611
+00:45:14,480 --> 00:45:16,480
+que se fez do up.
+
+612
+00:45:16,480 --> 00:45:18,480
+Então, quando se faz do up,
+
+613
+00:45:18,480 --> 00:45:20,480
+o que é que faz o semáforo?
+
+614
+00:45:20,480 --> 00:45:22,480
+Vai para editar, ter as pernas,
+
+615
+00:45:22,480 --> 00:45:24,480
+tarefas no O8Q
+
+616
+00:45:24,480 --> 00:45:26,480
+e vai ao estado
+
+617
+00:45:26,480 --> 00:45:28,480
+verano e colocá-lo na
+
+618
+00:45:28,480 --> 00:45:30,480
+rendue.
+
+619
+00:45:30,480 --> 00:45:32,480
+E aí
+
+620
+00:45:32,480 --> 00:45:34,480
+você tem que ouvir
+
+621
+00:45:34,480 --> 00:45:37,760
+de um processo.
+
+622
+00:45:37,760 --> 00:45:39,760
+Obviamente, para examificar
+
+623
+00:45:39,760 --> 00:45:41,760
+este estado, nós temos que
+
+624
+00:45:41,760 --> 00:45:43,760
+utilizar o valor.
+
+625
+00:45:43,760 --> 00:45:47,840
+Ora, os valores são estes.
+
+626
+00:45:47,840 --> 00:45:49,840
+Uma tarefa
+
+627
+00:45:49,840 --> 00:45:51,840
+está a discussão
+
+628
+00:45:51,840 --> 00:45:53,840
+quando tem o valor certo
+
+629
+00:45:53,840 --> 00:45:55,840
+e por aí via.
+
+630
+00:45:55,840 --> 00:45:57,840
+Se estiver em modo de bug,
+
+631
+00:45:57,840 --> 00:45:59,840
+acerta também tem os valores.
+
+632
+00:45:59,840 --> 00:46:01,840
+E isso aqui está
+
+633
+00:46:01,840 --> 00:46:03,840
+dentro deste cheque.
+
+634
+00:46:03,840 --> 00:46:05,840
+O cheque
+
+635
+00:46:05,840 --> 00:46:07,840
+do Solarscope
+
+636
+00:46:07,840 --> 00:46:09,840
+consegue chegar
+
+637
+00:46:09,840 --> 00:46:11,840
+a ele.
+
+638
+00:46:11,840 --> 00:46:13,840
+Esta tarefa
+
+639
+00:46:13,840 --> 00:46:15,840
+está a estudar tudo isso.
+
+640
+00:46:15,840 --> 00:46:17,840
+Agora,
+
+641
+00:46:17,840 --> 00:46:19,840
+ou vou trucá-lo,
+
+642
+00:46:19,840 --> 00:46:23,150
+o que nós tínhamos aqui
+
+643
+00:46:23,150 --> 00:46:25,150
+era o Pólesi
+
+644
+00:46:25,150 --> 00:46:27,150
+que tem a ver com a política
+
+645
+00:46:27,150 --> 00:46:29,150
+que é que chorou no momento.
+
+646
+00:46:29,150 --> 00:46:31,150
+Ora, o Linux
+
+647
+00:46:31,150 --> 00:46:33,150
+implementa
+
+648
+00:46:33,150 --> 00:46:35,150
+várias políticas de chorou no momento.
+
+649
+00:46:35,150 --> 00:46:37,150
+FIF,
+
+650
+00:46:37,150 --> 00:46:39,150
+RANDROBING,
+
+651
+00:46:39,150 --> 00:46:41,150
+SCADED BLANK,
+
+652
+00:46:41,150 --> 00:46:43,150
+são tudo políticas de chorou no momento.
+
+653
+00:46:43,150 --> 00:46:45,150
+Obviamente,
+
+654
+00:46:45,150 --> 00:46:47,150
+que o SCAD normal também
+
+655
+00:46:47,150 --> 00:46:49,150
+é uma política de chorou no momento.
+
+656
+00:46:49,150 --> 00:46:51,150
+O SCAD idle
+
+657
+00:46:51,150 --> 00:46:53,150
+também é assim como o SCAD batch.
+
+658
+00:46:53,150 --> 00:46:55,150
+O SCAD
+
+659
+00:46:55,150 --> 00:46:57,150
+ESC,
+
+660
+00:46:57,150 --> 00:46:59,150
+de extensão.
+
+661
+00:46:59,150 --> 00:47:01,150
+Tem um propósito muito específico
+
+662
+00:47:01,150 --> 00:47:03,150
+e também está relacionado
+
+663
+00:47:03,150 --> 00:47:05,150
+a uma política de chorou no momento.
+
+664
+00:47:05,150 --> 00:47:07,150
+Então, o que é que é muito importante
+
+665
+00:47:07,150 --> 00:47:09,150
+para os testes que se viverem?
+
+666
+00:47:09,150 --> 00:47:11,150
+Uma tarefa
+
+667
+00:47:11,150 --> 00:47:13,150
+tem uma política.
+
+668
+00:47:13,150 --> 00:47:15,150
+Não sabe, entende,
+
+669
+00:47:15,150 --> 00:47:18,660
+tem uma política de chorou no momento social.
+
+670
+00:47:18,660 --> 00:47:20,660
+Obviamente,
+
+671
+00:47:20,660 --> 00:47:22,660
+que no seu ciclo de vida
+
+672
+00:47:22,660 --> 00:47:24,660
+pode mudar de política de chorou no momento.
+
+673
+00:47:24,660 --> 00:47:26,660
+Mas, aqui,
+
+674
+00:47:26,660 --> 00:47:28,660
+você precisa de uma única política
+
+675
+00:47:28,660 --> 00:47:30,660
+de chorou no momento.
+
+676
+00:47:30,660 --> 00:47:32,660
+O valor
+
+677
+00:47:32,660 --> 00:47:34,660
+está atribuído
+
+678
+00:47:34,660 --> 00:47:36,660
+a isso,
+
+679
+00:47:36,660 --> 00:47:40,640
+que é um continuado.
+
+680
+00:47:40,640 --> 00:47:54,350
+Vamos lá, vamos lá.
+
+681
+00:47:54,350 --> 00:47:56,350
+Políticas de chorou no momento
+
+682
+00:47:56,350 --> 00:47:58,350
+obviamente, ter um identificador
+
+683
+00:47:58,350 --> 00:48:00,350
+não virá nada.
+
+684
+00:48:00,350 --> 00:48:02,350
+Um identificador
+
+685
+00:48:02,350 --> 00:48:04,350
+deve aproximar que ele é um inteiro.
+
+686
+00:48:04,350 --> 00:48:06,350
+Um inteiro
+
+687
+00:48:06,350 --> 00:48:08,350
+se deve só parar de dizer
+
+688
+00:48:08,350 --> 00:48:10,350
+é que
+
+689
+00:48:10,350 --> 00:48:12,350
+aquela tarefa
+
+690
+00:48:12,350 --> 00:48:14,350
+deve ser calculada de acordo
+
+691
+00:48:14,350 --> 00:48:16,350
+com aquela política de chorou no momento.
+
+692
+00:48:16,350 --> 00:48:18,350
+Mas,
+
+693
+00:48:18,350 --> 00:48:20,350
+para
+
+694
+00:48:20,350 --> 00:48:22,350
+ser calculado
+
+695
+00:48:22,350 --> 00:48:24,350
+de acordo com política de chorou no momento,
+
+696
+00:48:24,350 --> 00:48:26,350
+para isso
+
+697
+00:48:26,350 --> 00:48:28,350
+é atribuído
+
+698
+00:48:28,350 --> 00:48:30,350
+uma classe de chorou no momento,
+
+699
+00:48:30,350 --> 00:48:32,350
+que é o que nós entendemos aqui.
+
+700
+00:48:32,350 --> 00:48:34,350
+Portanto,
+
+701
+00:48:34,350 --> 00:48:36,350
+as claras de chorou no momento
+
+702
+00:48:36,350 --> 00:48:38,350
+não mudam políticas
+
+703
+00:48:38,350 --> 00:48:40,350
+de chorou no momento.
+
+704
+00:48:40,350 --> 00:48:42,350
+Obviamente,
+
+705
+00:48:42,350 --> 00:48:44,350
+estes dois têm que bater perto.
+
+706
+00:48:44,350 --> 00:48:46,350
+E o cara não avisa,
+
+707
+00:48:46,350 --> 00:48:48,350
+não pode ser uma política de chorou no momento,
+
+708
+00:48:48,350 --> 00:48:50,350
+que seja de frente
+
+709
+00:48:50,350 --> 00:48:52,350
+da claras de chorou no momento.
+
+710
+00:48:52,350 --> 00:48:54,350
+Tem que ser igual,
+
+711
+00:48:54,350 --> 00:48:56,350
+não, as claras não vão funcionar.
+
+712
+00:48:56,350 --> 00:48:58,350
+E o que claras de chorou no momento
+
+713
+00:48:58,350 --> 00:49:00,350
+é que existem.
+
+714
+00:49:00,350 --> 00:49:02,350
+Existem todas as testas.
+
+715
+00:49:02,350 --> 00:49:04,350
+Existem até que
+
+716
+00:49:04,350 --> 00:49:06,350
+se tome
+
+717
+00:49:06,350 --> 00:49:08,350
+a classe de chorou no momento
+
+718
+00:49:08,350 --> 00:49:10,350
+que é eu que não falar,
+
+719
+00:49:10,350 --> 00:49:12,350
+a clase RT,
+
+720
+00:49:12,350 --> 00:49:14,350
+a classe CFS
+
+721
+00:49:14,350 --> 00:49:16,350
+a classe extensão
+
+722
+00:49:16,350 --> 00:49:18,350
+e a classe ISEL.
+
+723
+00:49:22,350 --> 00:49:24,350
+E tudo que é que nós temos?
+
+724
+00:49:24,350 --> 00:49:26,350
+A classe só
+
+725
+00:49:26,350 --> 00:49:28,350
+é uma classe muito específica,
+
+726
+00:49:28,350 --> 00:49:30,350
+que tem um grupo de profósitos
+
+727
+00:49:30,350 --> 00:49:32,350
+muito específicos e que só
+
+728
+00:49:32,350 --> 00:49:34,350
+tem uma tarefa
+
+729
+00:49:34,350 --> 00:49:36,350
+de nome e mais curação.
+
+730
+00:49:36,350 --> 00:49:54,350
+Esta classe é usada para coisas muito específicas, como, por exemplo, migrar tarefas de um CPU
+
+731
+00:49:54,350 --> 00:49:55,350
+para o outro.
+
+732
+00:49:55,350 --> 00:50:03,350
+Daí que esta classe não existe nos sistemas multipressadores, não existe nos sistemas
+
+733
+00:50:03,350 --> 00:50:05,350
+multipressadores.
+
+734
+00:50:05,350 --> 00:50:09,350
+Depois temos esta classe Deadline.
+
+735
+00:50:09,350 --> 00:50:25,170
+Agora a classe Deadline incrementa o EDF, para a mais alta prioridade.
+
+736
+00:50:25,170 --> 00:50:29,170
+Depois temos a classe Real Timing.
+
+737
+00:50:29,170 --> 00:50:49,170
+Agora não é de nova, é de 1 ano, por exemplo, um servo para incrementar tarefas como alguns repetidos.
+
+738
+00:50:50,170 --> 00:50:59,170
+A primeira versão do Deadline foi apresentada em uma conferência que eu coloquei no EDF em 2 milhões,
+
+739
+00:50:59,170 --> 00:51:02,170
+só por isso acho que 2 milímetros.
+
+740
+00:51:02,170 --> 00:51:05,170
+É que foi incluído na Mainline.
+
+741
+00:51:05,170 --> 00:51:14,170
+Para os requeridos do Deadline, como o áudio e o fio, usava-se o RF.
+
+742
+00:51:14,170 --> 00:51:18,170
+Agora é que passou para o Deadline as que acrescentam.
+
+743
+00:51:18,170 --> 00:51:29,170
+E o RF, aqui da Real Timing, tem esse conceito de as tarefas que nós conseguimos incrementar fix
+
+744
+00:51:29,170 --> 00:51:32,170
+para EODP, portanto, prioridade fix.
+
+745
+00:51:32,170 --> 00:51:39,170
+Não com base no período, mas com base no número de uma ordem.
+
+746
+00:51:39,170 --> 00:51:49,170
+O Deadline, como vocês viram no setup, nós colocamos o período e colocamos também o Deadline.
+
+747
+00:51:49,170 --> 00:51:53,170
+Eu utilizo o Deadline para fazer o seu incremento.
+
+748
+00:51:53,170 --> 00:52:04,220
+Para as tarefas, nós mais temos a totalar CFS, que usa as prioridades do 100 ao 139.
+
+749
+00:52:04,220 --> 00:52:23,220
+O 0, hoje em dia, é usado para o Deadline, do 1 ao 999 para fixar o mal para o FIM, do 100 ao 139 para o CFS.
+
+750
+00:52:23,220 --> 00:52:31,220
+E agora, que estamos a ver, ele não utiliza o RISC uma forma por dormir.
+
+751
+00:52:31,220 --> 00:52:34,220
+Depois, eu já me explico como é que funciona.
+
+752
+00:52:34,220 --> 00:52:40,220
+Mas aqui agora tem uma dúvida.
+
+753
+00:52:40,220 --> 00:52:51,220
+Porque ali iam as prioridades e um do 0 ao 99 e aqui, quando saem até o 139, a minha dúvida é
+
+754
+00:52:51,220 --> 00:52:57,220
+que nós não podemos ter, ou seja, a política que nós vamos selecionar.
+
+755
+00:52:57,220 --> 00:53:03,220
+Ou seja, ela vai ter um computamento diferente para o que nós não selecionamos.
+
+756
+00:53:03,220 --> 00:53:09,220
+Eu não sei a ver aqui uma lógica de por que é que é de 0 a 99 aqui.
+
+757
+00:53:09,220 --> 00:53:13,220
+Não havia de ser de 0 a 40, por exemplo, com o outro.
+
+758
+00:53:14,220 --> 00:53:22,220
+Ou seja, o outro tipo de escalonamento, caso existam tarefas a ser escalonadas de outra maneira,
+
+759
+00:53:22,220 --> 00:53:27,220
+é menos prioritário, ou, no caso mais prioritário, ser um número mais elevado.
+
+760
+00:53:27,220 --> 00:53:29,220
+Fiquei com uma dúvida.
+
+761
+00:53:29,220 --> 00:53:34,220
+A maior prioridade são os números mais baixos.
+
+762
+00:53:34,220 --> 00:53:39,100
+A maior prioridade são os números mais baixos.
+
+763
+00:53:39,100 --> 00:53:52,100
+E o que eu conheci é que antigamente usavam estes níveis para determinar as prioridades, mesmo no CFS.
+
+764
+00:53:52,100 --> 00:53:56,100
+Agora usam-se de uma outra forma para detener as prioridades.
+
+765
+00:53:56,100 --> 00:54:00,100
+Eu não estaria previsto de me cagar depois do contexto de saber.
+
+766
+00:54:00,100 --> 00:54:06,100
+Depois, se nunca estás a dar o detalhe todo, nós vamos falar nisso com a loja do detalhe
+
+767
+00:54:06,100 --> 00:54:10,100
+e tal fazer a ajuda do CFS.
+
+768
+00:54:14,100 --> 00:54:18,100
+Depois, temos aqui a classe de extensão.
+
+769
+00:54:18,100 --> 00:54:27,100
+Existe uma aportagem que vai permitir-te desenvolver escalonadores
+
+770
+00:54:27,100 --> 00:54:32,100
+que encarrem os espais e incluí-los em cada nosso país.
+
+771
+00:54:32,100 --> 00:54:38,100
+Então, antigamente, só com o CFS de serviço, com módulos, agora vai-te com o sexo de serviço.
+
+772
+00:54:38,100 --> 00:54:50,100
+E, no caso particular, é porque é a prova de fazer o serviço usando o RAS, programar essa política de escalonamento em RAS.
+
+773
+00:54:50,100 --> 00:55:04,100
+Portanto, no mundo, essa classe é um gancho para eu poder me mobilizá-la em os espais e que eu possa incluir
+
+774
+00:55:04,100 --> 00:55:12,100
+sem ter que complicar e sem ter que iniciar o sistema de dinâmica que acontece com os módulos.
+
+775
+00:55:12,100 --> 00:55:17,100
+Depois, temos o fim de classe ISO.
+
+776
+00:55:17,100 --> 00:55:26,100
+Também, na prática, não é bem número 4, mas só tem uma tarefa, que é o seu óbvio,
+
+777
+00:55:26,100 --> 00:55:30,100
+o seu termo de movimentos, a tarefa, o certo inativo.
+
+778
+00:55:30,100 --> 00:55:33,100
+Só tem essa tarefa.
+
+779
+00:55:33,100 --> 00:55:35,100
+Depois, vamos ver como é que isso não funciona.
+
+780
+00:55:35,100 --> 00:55:42,100
+Ora, em termos de política de escalonamento, portanto, isto são os claros,
+
+781
+00:55:42,100 --> 00:55:49,100
+e isto são as políticas de escalonamento.
+
+782
+00:55:49,100 --> 00:55:55,100
+E como podem ver, quer da classe, põe em momento a uma ou mais política de escalonamento.
+
+783
+00:55:55,100 --> 00:56:02,100
+Confeição da classe, óbvio, da classe ISO, que cada uma só tem uma tarefa, não é preciso de política nenhuma.
+
+784
+00:56:02,100 --> 00:56:08,100
+Quando você diz que aquela tarefa são quer um, quer outro, estão duas caras, não os tarefes.
+
+785
+00:56:09,100 --> 00:56:17,100
+Os outros não têm, portanto, as tarefas cujo política que seja, que seja, quer deadline.
+
+786
+00:56:44,880 --> 00:56:47,880
+Eu acho que isso é fácil de durar, então, em algum tempo, certo?
+
+787
+00:56:47,880 --> 00:56:49,880
+Sim.
+
+788
+00:56:49,880 --> 00:56:53,880
+Já estou de volta, não sei o que é que eu estou, mas tá bom.
+
+789
+00:56:53,880 --> 00:56:57,880
+Vamos tentar, agora, aqui, olhar para isto.
+
+790
+00:56:57,880 --> 00:57:02,880
+Então, o que é que ter dado um fácil, certo?
+
+791
+00:57:02,880 --> 00:57:11,880
+O deadline, implementa o Rf com o CDF, portanto, isto é, escalona as tarefas de acordo com o deadline absoluto.
+
+792
+00:57:11,880 --> 00:57:23,880
+E, também, aqui, as tarefas não excedam um de determinado runtime, para não, como podem ver, ser,
+
+793
+00:57:23,880 --> 00:57:33,880
+o RT, Rf, portanto, tarefas que têm um de determinado runtime de life e que vão mudando,
+
+794
+00:57:33,880 --> 00:57:40,880
+ou, então, o FIF, um XFREP, em meio de que o roteque se joga mais tempo e depois de escutar outro e assim por diante.
+
+795
+00:57:40,880 --> 00:57:47,880
+Os CFS têm estas tarefas políticas, um era normal para as tarefas normais,
+
+796
+00:57:47,880 --> 00:57:55,880
+as outras duas, o VES, o Idle, foram para situações menos importantes, mas não deixam ser tarefas normais,
+
+797
+00:57:55,880 --> 00:58:03,880
+sem, por exemplo, o que não sejam mudadas as suas políticas de desenvolvimento, portanto,
+
+798
+00:58:03,880 --> 00:58:14,880
+são tarefas, tipiramente, as tarefas VES são aquelas tarefas que precisam de fazer algum trabalho em background,
+
+799
+00:58:14,880 --> 00:58:22,880
+por exemplo, mas que não são muito urgentes, portanto, tipiramente, estas outras políticas são atribuídas
+
+800
+00:58:22,880 --> 00:58:27,880
+a tarefas que precisam de estar no sistema, mas que não são muito urgentes,
+
+801
+00:58:27,880 --> 00:58:33,880
+que podem inifiar tanto o seu trabalho, que, de quando, não terem feito o sistema.
+
+802
+00:58:33,880 --> 00:58:43,880
+Ora, vamos, então, ver como é que o bocano representa a prioridade.
+
+803
+00:58:43,880 --> 00:58:51,880
+O dia a dia, eu utilizo o zero para o deadline, mas não uso isso para nada, não uso esse campo para nada.
+
+804
+00:58:51,880 --> 00:59:04,880
+Para o real time, eu utilizo do 1 ao 99, e para o CFS, eu utilizo do 100 ao 131.
+
+805
+00:59:04,880 --> 00:59:10,880
+E nós conseguimos alterar o valor no CFS através do comando do NICE,
+
+806
+00:59:10,880 --> 00:59:17,880
+menos em até mais da 9, que é para dar os reais do 100 ao 139.
+
+807
+00:59:17,880 --> 00:59:22,880
+Vamos agora ver como é que as coisas estão funcionando.
+
+808
+00:59:22,880 --> 00:59:25,880
+Vamos ver.
+
+809
+00:59:25,880 --> 00:59:29,880
+Então, como é que o lino funciona?
+
+810
+00:59:29,880 --> 00:59:31,880
+Uma forma muito simples.
+
+811
+00:59:31,880 --> 00:59:39,880
+O lino que tem um esquelo as portas, portanto, muda a função principal de seu momento.
+
+812
+00:59:39,880 --> 00:59:47,880
+Função é essa, que tem, obviamente, uma lógica de desenvolvimento,
+
+813
+00:59:47,880 --> 00:59:52,880
+associado a cada sequela de cor.
+
+814
+00:59:52,880 --> 01:00:00,880
+E, em vez de um grande tipo, isso é uma fila que tem os processos que são ativos,
+
+815
+01:00:00,880 --> 01:00:07,880
+e em condições de dificuldade, e depois tem política de classes de desenvolvimento,
+
+816
+01:00:07,880 --> 01:00:11,880
+o que vão ter que funcionar as tarefas.
+
+817
+01:00:11,880 --> 01:00:13,880
+Como é que isso funciona?
+
+818
+01:00:13,880 --> 01:00:17,880
+Vamos olhar e ver se eu tenho aqui.
+
+819
+01:00:17,880 --> 01:00:19,880
+Estava pensando, estava aqui, mas não vou pensar.
+
+820
+01:00:19,880 --> 01:00:21,880
+Então, como é que isso funciona?
+
+821
+01:00:21,880 --> 01:00:23,880
+Mas se olhar e passar por aqui, é mais fácil.
+
+822
+01:00:23,880 --> 01:00:25,880
+Muito simples.
+
+823
+01:00:25,880 --> 01:00:28,880
+A função principal é a função schedule.
+
+824
+01:00:28,880 --> 01:00:31,880
+Portanto, isso é o schedule, o recorde.
+
+825
+01:00:31,880 --> 01:00:34,880
+E essa é a função principal do lino.
+
+826
+01:00:34,880 --> 01:00:38,880
+E agora, é fácil de vocês perceberem isso.
+
+827
+01:00:38,880 --> 01:00:41,880
+Vamos olhar para isto.
+
+828
+01:00:41,880 --> 01:00:44,880
+Tem aqui, breve, um apontador...
+
+829
+01:00:44,880 --> 01:00:47,880
+Préve e um apontador nexo.
+
+830
+01:00:47,880 --> 01:00:49,880
+Obrigado.
+
+831
+01:00:49,880 --> 01:00:53,880
+Quando esta função é invocada, volta a se chamar.
+
+832
+01:00:53,880 --> 01:00:57,880
+O kernel é corte-morto, a função tem que ser invocada.
+
+833
+01:00:57,880 --> 01:01:00,880
+Quando ela é invocada, ela vai correr no CPU.
+
+834
+01:01:00,880 --> 01:01:08,880
+E ela vai buscar o identificador deste CPU.
+
+835
+01:01:08,880 --> 01:01:12,880
+Depois de ir buscar o identificador do CPU,
+
+836
+01:01:12,880 --> 01:01:16,880
+vai buscar o ranking do CPU.
+
+837
+01:01:16,880 --> 01:01:19,880
+Cada CPU tem uma ranking.
+
+838
+01:01:19,880 --> 01:01:26,880
+E nesta ranking, tem o apontador para as tarefas
+
+839
+01:01:26,880 --> 01:01:29,880
+do CPU.
+
+840
+01:01:29,880 --> 01:01:32,880
+Que está atribuído ao CPU.
+
+841
+01:01:32,880 --> 01:01:35,880
+Obviamente, está e esta função é executar.
+
+842
+01:01:35,880 --> 01:01:38,880
+É porque está e irá executar.
+
+843
+01:01:38,880 --> 01:01:41,880
+Não se faz muito com o texto do CPU.
+
+844
+01:01:41,880 --> 01:01:46,880
+Então, é atribuído ao CPU.
+
+845
+01:01:46,880 --> 01:01:49,880
+É atribuído ao CPU.
+
+846
+01:01:49,880 --> 01:01:52,880
+É atribuído ao CPU.
+
+847
+01:01:52,880 --> 01:01:55,880
+Qual é o próximo passo?
+
+848
+01:01:55,880 --> 01:01:58,880
+E é preguntar ao tema,
+
+849
+01:01:58,880 --> 01:02:01,880
+dar-me uma tarefa.
+
+850
+01:02:01,880 --> 01:02:04,880
+E como é que eu vou usar esta nova tarefa?
+
+851
+01:02:04,880 --> 01:02:06,880
+Já vamos ver.
+
+852
+01:02:06,880 --> 01:02:08,880
+Então, eu vou usar uma tarefa.
+
+853
+01:02:08,880 --> 01:02:10,880
+Vai ter o nexo.
+
+854
+01:02:10,880 --> 01:02:14,880
+E depois, vamos saber o contexto do CPU.
+
+855
+01:02:14,880 --> 01:02:18,880
+Isso é, tirar o aparelho do CPU
+
+856
+01:02:18,880 --> 01:02:21,880
+e colocar o nexo no CPU.
+
+857
+01:02:21,880 --> 01:02:24,880
+Vamos olhar se não funciona o PIT.
+
+858
+01:02:24,880 --> 01:02:27,880
+Não, não.
+
+859
+01:02:27,880 --> 01:02:30,880
+Vou cortar aqui a frente.
+
+860
+01:02:30,880 --> 01:02:33,880
+Está a nuvar.
+
+861
+01:02:33,880 --> 01:02:36,880
+Está a nuvar.
+
+862
+01:02:36,880 --> 01:02:39,880
+Está a nuvar.
+
+863
+01:02:39,880 --> 01:02:42,880
+Está a nuvar.
+
+864
+01:02:42,880 --> 01:02:45,880
+Está a nuvar.
+
+865
+01:02:45,880 --> 01:02:48,880
+Está a nuvar.
+
+866
+01:02:48,880 --> 01:02:52,880
+Está a nuvar.
+
+867
+01:02:52,880 --> 01:02:56,880
+Está a nuvar.
+
+868
+01:02:56,880 --> 01:03:11,880
+Está a nuvar.
+
+869
+01:03:11,880 --> 01:03:20,440
+Se não haver nenhuma tarefa para executar, há sempre uma tarefa para executar, que é o que?
+
+870
+01:03:20,440 --> 01:03:27,240
+A idoltação, que nunca fica no saldo um diferente de Running.
+
+871
+01:03:27,240 --> 01:03:33,080
+A tarefa a idoltação é sempre preparada para executar, por isso a tarefa é que, por
+
+872
+01:03:33,080 --> 01:03:38,880
+isso você tem que ter sempre uma tarefa distribuída, e, no caso, é a idoltação.
+
+873
+01:03:38,880 --> 01:03:44,800
+Portanto, e dessa forma, nós levamos o que é coulindo para o União Unido?
+
+874
+01:03:44,800 --> 01:03:53,120
+Incluindo a prioridade ao nível das classes de acolamamento, que é isso, e depois, dentro
+
+875
+01:03:53,120 --> 01:03:59,840
+das classes de acolamamento, devia coulir com a política e também termos tarefas com
+
+876
+01:03:59,840 --> 01:04:01,760
+diferentes níveis de prioridade.
+
+877
+01:04:01,760 --> 01:04:05,600
+E ainda bem que não é um estático, porque o cancro da pele é um estático, e o cancro
+
+878
+01:04:05,600 --> 01:04:09,360
+da manha é mais duvido a uma questão.
+
+879
+01:04:09,360 --> 01:04:13,600
+Mas ela disse que não, disse que se fosse estar vislata, a política a partir da cirurgia
+
+880
+01:04:13,600 --> 01:04:14,600
+resolveria-se.
+
+881
+01:04:14,600 --> 01:04:18,800
+É isso mesmo, mas que se nem conta que a escola também ia estar rata, a favela.
+
+882
+01:04:18,800 --> 01:04:22,880
+Falou de confiançar, de confiançar em uma criança, em um lugar muito claro, mas lá
+
+883
+01:04:22,880 --> 01:04:27,760
+já tem um jeito de dizer que também vai desco-contexta, mas já a possibilidade e
+
+884
+01:04:27,760 --> 01:04:35,560
+de desenho de alterar a prioridade das tarefas que existem no caso do Aéu.
+
+885
+01:04:35,600 --> 01:04:36,600
+Sim.
+
+886
+01:04:36,600 --> 01:04:37,600
+Escavaram que?
+
+887
+01:04:37,600 --> 01:04:45,160
+Em um caso, em um caso pequeno, ou não é propriamente um risco que exista, quando
+
+888
+01:04:45,160 --> 01:04:47,160
+tentamos alterar o acolamamento.
+
+889
+01:04:47,160 --> 01:04:50,160
+E doem-boé, doem-tipo da mão até o rumo.
+
+890
+01:04:50,160 --> 01:04:56,960
+Eu diria que me diz sempre agora, se eu dar-me a API, que é o INUX, que é muito bonita,
+
+891
+01:04:56,960 --> 01:05:04,760
+que é a futboleta aqui, a vota vai com uma preta vota, explique-me, que é o da futboleta
+
+892
+01:05:04,760 --> 01:05:13,760
+e, se a política é, se quer a deadline, acela-se o acolamamento da deadline.
+
+893
+01:05:13,760 --> 01:05:20,760
+Agora, se quiser dar-me a API, não dar-me a API, isso iria acontecer.
+
+894
+01:05:20,760 --> 01:05:25,760
+Então, dois campos, isso são dois campos diferentes, não é?
+
+895
+01:05:25,760 --> 01:05:26,760
+Sim.
+
+896
+01:05:26,760 --> 01:05:32,760
+Então, dois campos diferentes, eu posso atribuir um local que quer um campo da vossa.
+
+897
+01:05:32,760 --> 01:05:40,760
+Se quiser dar-me a API, ao dos caras, ao que você pode atribuir uma clássica acolamamento,
+
+898
+01:05:40,760 --> 01:05:44,760
+que seja de frente à política ou ao risório, é um fio.
+
+899
+01:05:44,760 --> 01:05:45,760
+Ok.
+
+900
+01:05:45,760 --> 01:05:48,760
+Agora, já conseguiram ter a maior parte de que o fio consiga.
+
+901
+01:05:48,760 --> 01:05:49,760
+O fio consiga.
+
+902
+01:05:49,760 --> 01:05:50,760
+O fio consiga.
+
+903
+01:05:50,760 --> 01:05:51,760
+O fio consiga.
+
+904
+01:05:51,760 --> 01:05:52,760
+O fio consiga.
+
+905
+01:05:52,760 --> 01:05:53,760
+O fio consiga.
+
+906
+01:05:53,760 --> 01:05:54,760
+O fio consiga.
+
+907
+01:05:54,760 --> 01:05:55,760
+O fio consiga.
+
+908
+01:05:55,760 --> 01:05:56,760
+O fio consiga.
+
+909
+01:05:56,760 --> 01:05:57,760
+O fio consiga.
+
+910
+01:05:57,760 --> 01:05:58,760
+O fio consiga.
+
+911
+01:05:58,760 --> 01:05:59,760
+O fio consiga.
+
+912
+01:05:59,760 --> 01:06:00,760
+O fio consiga.
+
+913
+01:06:00,760 --> 01:06:01,760
+O fio consiga.
+
+914
+01:06:01,760 --> 01:06:02,760
+O fio consiga.
+
+915
+01:06:02,760 --> 01:06:07,760
+ERI-
+
+916
+01:06:07,760 --> 01:06:09,720
+O fio consiga.
+
+917
+01:06:09,720 --> 01:06:10,800
+O fio consiga.
+
+918
+01:06:10,800 --> 01:06:11,940
+O fio consiga.
+
+919
+01:06:11,940 --> 01:06:13,780
+O fio consiga.
+
+920
+01:06:13,780 --> 01:06:15,520
+O fio consiga.
+
+921
+01:06:15,520 --> 01:06:17,580
+O fio consiga.
+
+922
+01:06:17,580 --> 01:06:18,580
+ächa.
+
+923
+01:06:23,080 --> 01:06:25,600
+Por que eu sou me talentáfico?
+
+924
+01:06:25,600 --> 01:06:37,480
+Quando é que aqui o jogador é invocado?
+
+925
+01:06:37,480 --> 01:06:42,960
+Quando uma tarefa termina, quando uma tarefa vai ficar dormindo por um motivo qualquer,
+
+926
+01:06:42,960 --> 01:06:52,160
+ou está à espera de um limbo de dor, ou quando uma tarefa está a surgir, depois de fazer
+
+927
+01:06:52,160 --> 01:06:53,160
+os tratamentos.
+
+928
+01:06:53,160 --> 01:07:08,000
+Quando uma tarefa é acreditada, geralmente o jogador é invocado, ou pode ser invocado,
+
+929
+01:07:38,000 --> 01:07:48,520
+ou pode ser invocado, ou pode ser invocado, ou pode ser invocado, ou pode ser invocado.
+
+930
+01:07:48,520 --> 01:07:59,880
+Agora, também existe uma coisa que é o certifico, que é um interrupt periodicum, que é usado
+
+931
+01:07:59,880 --> 01:08:07,640
+pelo operativo para querer o controle do sistema, portanto, quando ele vai mudar outra
+
+932
+01:08:07,640 --> 01:08:16,480
+vez a medicação, portanto, ele é uma montanha com durastão, nós nem vimos qual é o tamanho
+
+933
+01:08:16,480 --> 01:08:24,880
+do intervalo do tipo, sempre porque ele, a espira, é escutada, está fundado, que é
+
+934
+01:09:24,880 --> 01:09:31,720
+bem durifica, e também durifica, que é o que está a ser feito aqui, e a tarefa está
+
+935
+01:09:31,720 --> 01:09:34,880
+em função, deve ter fermentado ou não.
+
+936
+01:09:34,880 --> 01:09:39,160
+Só que acontece que eu não consegui mesmo dizer rascado, e inclui-se nas ruedas, e as
+
+937
+01:09:39,160 --> 01:09:50,440
+donas, esta tarefa está em função, donas ou curian, é a mesma coisa, a pouco vimos
+
+938
+01:09:50,440 --> 01:09:57,440
+que o curio do curian, o seu Rf, e dona, é a mesma coisa, a única diferença é que
+
+939
+01:09:57,440 --> 01:10:04,480
+ele tem a ver, quando o segmento aumenta, ele aumenta a prioridade, quando não aumenta
+
+940
+01:10:04,480 --> 01:10:11,200
+o solo curian, mas depois de nós vamos ver, e isso tudo na verdade é a mesma coisa, porque
+
+941
+01:10:11,200 --> 01:10:17,400
+nós não temos nem exatamente uma forma, e portanto, eu vou fazer esta verificação
+
+942
+01:10:17,400 --> 01:10:24,040
+quando tudo acontece, enfim, é a forma que o sistema tem de adquirir o seu tempo
+
+943
+01:10:24,040 --> 01:10:33,160
+operativo, adquirir o control do sistema, e eu não vou contribuir a explicar agora
+
+944
+01:10:33,160 --> 01:10:40,320
+as áreas das ruedades, definitivamente claros, da próxima aula, para isso, por
+
+945
+01:10:40,320 --> 01:10:43,320
+que isso está a ser, por que isso está a ser, por que isso está a ser, por que é
+
+946
+01:10:43,320 --> 01:10:50,160
+a ver, e tudo o que é o mesmo, mas qual será o próximo, eu vou fazer isso, aqui,
+
+947
+01:10:50,160 --> 01:10:54,040
+umos as tarefas para o movimento da prioridade, para verificar o alto, para avançar agora
+
+948
+01:10:54,040 --> 01:10:59,960
+aqui em um outro área, já vimos como é que, o que é que tem envolvido na gestão de
+
+949
+01:10:59,960 --> 01:11:04,400
+um certo, quanto está no caso, em termos prioridade, que é sobre o abandonamento,
+
+950
+01:11:04,400 --> 01:11:10,320
+do classes, do desenvolvimento, e agora vamos para o valor da parte do que é importante,
+
+951
+01:11:10,320 --> 01:11:15,760
+no que é que é feito aos tutoriais, que, como vocês têm que ver, que é uma ótima
+
+952
+01:11:15,760 --> 01:11:16,760
+comunidade.
+
+953
+01:11:16,760 --> 01:11:25,000
+Se eles andam goals, se eles andam goals, fazem parte do API que o kernel disponibiliza
+
+954
+01:11:25,000 --> 01:11:34,040
+as aplicações, portanto, as aplicações usam exercícios da goals para repetidar para
+
+955
+01:11:34,040 --> 01:11:37,640
+isso que está a cótico do kernel.
+
+956
+01:11:37,640 --> 01:11:43,560
+Agora vai, como é que se indurmentam a uma melhora, o que é que é, só para poder
+
+957
+01:11:43,560 --> 01:11:49,600
+apreciar, portanto, a raciocíncia da comunicação, a raciocíncia de goals, é a API disponibilizada
+
+958
+01:11:49,600 --> 01:11:55,000
+pelo kernel, do Linux, que não está a ser em particular.
+
+959
+01:11:55,000 --> 01:12:00,320
+Por exemplo, quando você chega em uma nova comunção para o originário, como este,
+
+960
+01:12:00,320 --> 01:12:07,560
+que tem aqui um pentefe, ora, tipicamente, se você tem pentefe, imprime na consola,
+
+961
+01:12:07,680 --> 01:12:16,720
+medida, o pentefe não imprime na consola, porque a consola é hardware, quem acerta
+
+962
+01:12:16,720 --> 01:12:18,720
+o hardware é o kernel.
+
+963
+01:12:18,720 --> 01:12:28,160
+O que o pentefe faz é invocar uma civilização de goals que é, até assim, excreta na consola.
+
+964
+01:12:28,160 --> 01:12:34,640
+Aliás, vocês explicarem neste código, que dificiliserem-se, conclutarem-se no código,
+
+965
+01:12:34,720 --> 01:12:41,560
+e depois excretarem-se num traiço da civilização de goals, através do comando, esse traiço,
+
+966
+01:12:41,560 --> 01:12:49,680
+não vão encontrar lá nenhum pentefe, que podem encontrar no código, mas quando
+
+967
+01:12:49,680 --> 01:12:56,680
+excreve na consola, é através deste traiço da civilização de goals.
+
+968
+01:12:56,720 --> 01:13:05,720
+Temos aqui o identificador, o descreveitor, e depois excrevemos aquilo que vamos descrever.
+
+969
+01:13:05,720 --> 01:13:16,720
+Aliás, eu não posso ter o mesmo comportamento invocando diretamente a civilização de goals.
+
+970
+01:13:16,720 --> 01:13:25,720
+Portanto, se eu invocar diretamente a civilização de goals, o resultado é o mesmo que tenho aqui atrás.
+
+971
+01:13:25,760 --> 01:13:33,260
+E a menina, como é que é que isso significa que não é o pentefe que se inscreve na consola.
+
+972
+01:13:33,260 --> 01:13:40,260
+O que se inscreve na consola é a civilização de goals, porque a consola é hardware, e
+
+973
+01:13:40,260 --> 01:13:43,260
+as aplicações não acerta em hardware.
+
+974
+01:13:43,260 --> 01:13:49,260
+Quem acerta o hardware é o sistema operativo, então o pentefe que o faz é invocar uma civilização
+
+975
+01:13:49,260 --> 01:13:53,260
+de goals que nós estamos a fazer aqui.
+
+976
+01:13:53,300 --> 01:13:58,300
+O que é que se adicionam a civilização de goals no sistema operativo?
+
+977
+01:13:58,300 --> 01:14:05,300
+Muito simples. Portanto, a civilização de goals, obviamente, são dependentes da arquitetura.
+
+978
+01:14:05,300 --> 01:14:17,300
+Portanto, então nós temos que ir à parte relacionada com a arquitetura e temos que adicionar a civilização de goals.
+
+979
+01:14:17,340 --> 01:14:23,340
+Digitalmente, os sucessos que contem a civilização de goals têm a tensão de um ponto de um pentefe de TBL.
+
+980
+01:14:23,340 --> 01:14:24,340
+Por que?
+
+981
+01:14:24,340 --> 01:14:29,340
+Porque, antigamente, a civilização de goals estavam numa tabela.
+
+982
+01:14:29,340 --> 01:14:31,340
+Estavam numa tabela.
+
+983
+01:14:31,340 --> 01:14:37,340
+Agora também, mas nós podemos definir o número que queríamos.
+
+984
+01:14:37,340 --> 01:14:43,340
+Antigamente, não. O número da civilização de goals era a sua posição na tabela.
+
+985
+01:14:43,380 --> 01:14:45,380
+Existe porquê?
+
+986
+01:14:45,380 --> 01:14:48,380
+Já está o tal cheio.
+
+987
+01:14:48,380 --> 01:14:55,380
+Estamos aqui o número, depois estamos aqui mais uns tempos, e o nome da civilização de goals.
+
+988
+01:14:55,380 --> 01:15:05,380
+Portanto, o nome da civilização de goals e a função que implementa, digamos, esta civilização de goals.
+
+989
+01:15:05,380 --> 01:15:09,380
+Portanto, temos aqui o número aqui especificado.
+
+990
+01:15:09,420 --> 01:15:19,420
+Se é especifico de uma arquitetura ou se é comum a todas, o nome da civilização de goals e a função que está no carnalo aqui em Torneando da civilização de goals.
+
+991
+01:15:19,420 --> 01:15:21,420
+Ora, não.
+
+992
+01:15:21,420 --> 01:15:24,420
+Por isso eu tenho que explicar.
+
+993
+01:15:24,420 --> 01:15:26,420
+Aí está bem.
+
+994
+01:15:26,420 --> 01:15:28,420
+Depois eu já volto.
+
+995
+01:15:28,420 --> 01:15:32,420
+Aí isto, eu quero me ensinarmos aqui.
+
+996
+01:15:32,420 --> 01:15:38,420
+Então, as civiliza de goals são identificadas por os números, por exemplo.
+
+997
+01:15:38,460 --> 01:15:42,460
+No caso dos fios 86.
+
+998
+01:15:42,460 --> 01:15:44,460
+Se nós, o que é que a gente faz?
+
+999
+01:15:44,460 --> 01:15:52,460
+Coloca o número da civilização de goals num revisto, no revisto, e axis, e gera uma introdução.
+
+1000
+01:15:52,460 --> 01:15:58,460
+E ao gerar essa introdução, o que é que o sistema vai fazer?
+
+1001
+01:15:58,460 --> 01:16:01,460
+Vai insultar a função.
+
+1002
+01:16:01,500 --> 01:16:07,500
+Que hoje, o identificador está no revisto, é axis.
+
+1003
+01:16:07,500 --> 01:16:13,500
+Portanto, a introdução vai gerar a redução de a civilização de goals.
+
+1004
+01:16:13,500 --> 01:16:24,500
+Essa função vai pegar neste argumento para identificar, na tabela, qual a dificuldade de goals que está.
+
+1005
+01:16:24,500 --> 01:16:30,500
+Portanto, por isso que a civilização de goals são identificadas por os números.
+
+1006
+01:16:30,540 --> 01:16:33,540
+Não estão identificadas por os números.
+
+1007
+01:16:33,540 --> 01:16:34,540
+Por que?
+
+1008
+01:16:34,540 --> 01:16:40,540
+Porque nós colocamos o número num revisto e geramos no momento de introdução.
+
+1009
+01:16:40,540 --> 01:16:43,540
+E o conceito da tabela tem a ver com isto.
+
+1010
+01:16:43,540 --> 01:16:49,540
+Hoje em dia, que eu posso usar o número que tem, ele é exercitivo.
+
+1011
+01:16:49,540 --> 01:16:51,540
+Portanto, não é obrigatório.
+
+1012
+01:16:51,540 --> 01:16:58,540
+E antigamente, o número era em função da ordem que estava no fio.
+
+1013
+01:16:58,580 --> 01:17:00,580
+Vou voltando atrás.
+
+1014
+01:17:00,580 --> 01:17:06,580
+No sentido de não identificar o nome das funções de a civilização de goals,
+
+1015
+01:17:06,580 --> 01:17:11,580
+ou das funções que vão implementar a civilização de goals,
+
+1016
+01:17:11,580 --> 01:17:15,580
+ora um canal de definiões mas mágicos.
+
+1017
+01:17:15,580 --> 01:17:20,580
+Fisco goals de define 0, de define 1, de define 2 e de primeirante.
+
+1018
+01:17:20,580 --> 01:17:26,580
+O número tem a ver com o número de argumentos que a função tem.
+
+1019
+01:17:26,620 --> 01:17:36,620
+E eu vou colocar, ao fazer isso, ele vai criar um seino com essa,
+
+1020
+01:17:36,620 --> 01:17:39,620
+de uma função com essa, da civilização.
+
+1021
+01:17:39,620 --> 01:17:46,620
+Portanto, para criar a civilização de goals, para o ruído,
+
+1022
+01:17:46,620 --> 01:17:50,620
+eu vou usar algo de este termo.
+
+1023
+01:17:50,620 --> 01:17:54,620
+E ele vai automaticamente criar
+
+1024
+01:17:54,660 --> 01:17:57,660
+exercitivo...
+
+1025
+01:17:57,660 --> 01:18:02,660
+Aquela é essa assinatura, com esse nome, que eu mostrei há pouco.
+
+1026
+01:18:02,660 --> 01:18:12,420
+6, 74, baixa exercício e depois do resto.
+
+1027
+01:18:12,420 --> 01:18:15,420
+Como é que nós invocamos exercícios no goals?
+
+1028
+01:18:15,420 --> 01:18:21,420
+Já viram, nós podemos, aquilo que fazemos, é colocar um número
+
+1029
+01:18:21,420 --> 01:18:24,420
+e depois ele invoca.
+
+1030
+01:18:24,460 --> 01:18:29,460
+Obviamente, isso não vou fazer aqui.
+
+1031
+01:18:29,460 --> 01:18:31,460
+Não fiz aqui.
+
+1032
+01:18:31,460 --> 01:18:33,460
+Em C.
+
+1033
+01:18:33,460 --> 01:18:36,460
+Porque o que é que você vai fazer?
+
+1034
+01:18:36,460 --> 01:18:40,460
+Vai colocar o 1, vai colocar um número.
+
+1035
+01:18:40,460 --> 01:18:46,460
+Não registrar isso e vai dar muito russa.
+
+1036
+01:18:46,460 --> 01:18:50,460
+De todos os nomes, e a mina, e mais a carro, e assim.
+
+1037
+01:18:50,500 --> 01:18:56,500
+Depois, a questão de ficoca é,
+
+1038
+01:18:56,500 --> 01:18:59,500
+como é que os parâmetros de uma civilização de goals
+
+1039
+01:18:59,500 --> 01:19:02,500
+estão passados para os dentes do goals?
+
+1040
+01:19:02,500 --> 01:19:06,500
+Se eu colocar a ESM, linkas,
+
+1041
+01:19:06,500 --> 01:19:10,500
+os parâmetros são passados via spec.
+
+1042
+01:19:10,500 --> 01:19:15,500
+Se eu não colocar, os parâmetros são passados via registros.
+
+1043
+01:19:15,500 --> 01:19:19,500
+Ora, qual é o problema dos registros?
+
+1044
+01:19:19,540 --> 01:19:21,540
+Só tem uns 6.
+
+1045
+01:19:21,540 --> 01:19:24,540
+Então, o que é que significa que alguns são passados?
+
+1046
+01:19:24,540 --> 01:19:27,540
+Nos registros, todos têm que ter passados na ESM.
+
+1047
+01:19:27,540 --> 01:19:31,540
+Portanto, tipicamente, na maior parte,
+
+1048
+01:19:31,540 --> 01:19:36,540
+os cálculos passam-se a engolonar-se através da ESM.
+
+1049
+01:19:36,540 --> 01:19:41,540
+Já está, o exemplo de como é que as coisas funcionam,
+
+1050
+01:19:41,540 --> 01:19:44,540
+portanto, ambas de fazer a transição,
+
+1051
+01:19:44,540 --> 01:19:46,540
+colocam o número, por exemplo,
+
+1052
+01:19:46,580 --> 01:19:48,580
+o que eu faço daquela ficha de goal,
+
+1053
+01:19:48,580 --> 01:19:50,580
+coloca no registro, é a ficha,
+
+1054
+01:19:50,580 --> 01:19:53,580
+e depois, geralmente, o registro.
+
+1055
+01:19:53,580 --> 01:19:55,580
+Ou os carnes que o registraram,
+
+1056
+01:19:55,580 --> 01:19:57,580
+passam-se para o canal do Facebook,
+
+1057
+01:19:57,580 --> 01:20:02,580
+e vai secretar o código daquela ficha de goal.
+
+1058
+01:20:02,580 --> 01:20:06,580
+E como nós vimos aqui, em mesmos meses,
+
+1059
+01:20:06,580 --> 01:20:08,580
+dúvidos.
+
+1060
+01:20:08,580 --> 01:20:10,580
+E depois, hoje, não consigo,
+
+1061
+01:20:10,580 --> 01:20:12,580
+não vou dar uma aula sobre o liquido das linearidades,
+
+1062
+01:20:12,580 --> 01:20:14,580
+porque senão não tenho tempo
+
+1063
+01:20:14,620 --> 01:20:16,620
+para ver o que nos trabalhados,
+
+1064
+01:20:16,620 --> 01:20:18,620
+os que eu sou filiais,
+
+1065
+01:20:18,620 --> 01:20:20,620
+para ele, esta semana, não.
+
+1066
+01:20:20,620 --> 01:20:23,620
+Para vocês, concordem-me fazer alguma coisa,
+
+1067
+01:20:23,620 --> 01:20:26,620
+até a sábada, não é?
+
+1068
+01:20:26,620 --> 01:20:30,620
+Não, veremos o que habermos no sábado.
+
+1069
+01:20:30,620 --> 01:20:32,620
+Ora, ora, vai.
+
+1070
+01:20:32,620 --> 01:20:36,620
+Vocês têm aqui três tubos sociais,
+
+1071
+01:20:36,620 --> 01:20:39,620
+dos sublimais os quais émos ímples,
+
+1072
+01:20:39,620 --> 01:20:41,620
+portanto, tudo o que nós estamos a fazer
+
+1073
+01:20:41,620 --> 01:20:43,620
+é canviar a nossa transição do corpo, não?
+
+1074
+01:20:43,660 --> 01:20:48,660
+Para isso, se vocês partirem daquela máquina virtual,
+
+1075
+01:20:48,660 --> 01:20:51,660
+vocês têm que, portanto,
+
+1076
+01:20:51,660 --> 01:20:54,660
+abrem a máquina virtual,
+
+1077
+01:20:54,660 --> 01:20:58,660
+e já vão instalar estas programas.
+
+1078
+01:20:58,660 --> 01:21:03,660
+Depois, vão ter que editar para isso,
+
+1079
+01:21:03,660 --> 01:21:05,660
+através de um terminal, para isso,
+
+1080
+01:21:05,660 --> 01:21:07,660
+portanto,
+
+1081
+01:21:07,700 --> 01:21:09,700
+e quando fazem o subo,
+
+1082
+01:21:09,700 --> 01:21:11,700
+eu peço a passouro,
+
+1083
+01:21:11,700 --> 01:21:13,700
+vocês têm que colocar elkaps,
+
+1084
+01:21:13,700 --> 01:21:15,700
+e o que é que tem que fazer?
+
+1085
+01:21:15,700 --> 01:21:17,700
+Isso, o que eu queria era,
+
+1086
+01:21:17,700 --> 01:21:19,700
+o que eu queria é que eu não devia,
+
+1087
+01:21:19,700 --> 01:21:21,700
+é isso, o que é que vocês vão ter que fazer?
+
+1088
+01:21:21,700 --> 01:21:23,700
+E agora, tentem perceber-me,
+
+1089
+01:21:23,700 --> 01:21:25,700
+os tutoriais.
+
+1090
+01:21:25,700 --> 01:21:27,700
+O que eu queria é,
+
+1091
+01:21:27,700 --> 01:21:29,700
+o que eu queria é que eu não devia,
+
+1092
+01:21:29,700 --> 01:21:31,700
+é isso, o que é que vocês vão ter que fazer?
+
+1093
+01:21:31,700 --> 01:21:33,700
+E agora, tentem perceber-me,
+
+1094
+01:21:33,700 --> 01:21:35,700
+os tutoriais.
+
+1095
+01:21:35,740 --> 01:21:37,740
+O que eu queria é que esses tutoriais
+
+1096
+01:21:37,740 --> 01:21:39,740
+estará centrado
+
+1097
+01:21:39,740 --> 01:21:41,740
+quando é no meio de outro.
+
+1098
+01:21:41,740 --> 01:21:43,740
+Quando não é,
+
+1099
+01:21:43,740 --> 01:21:45,740
+está a aprender.
+
+1100
+01:21:45,740 --> 01:21:47,740
+Adicione-me, este cheiro.
+
+1101
+01:21:47,740 --> 01:21:49,740
+É para me definir este cheiro,
+
+1102
+01:21:49,740 --> 01:21:51,740
+quando eu continue.
+
+1103
+01:21:51,740 --> 01:21:53,740
+Quando eu perfeito a alguma alteração,
+
+1104
+01:21:53,740 --> 01:21:55,740
+eu deixo sempre,
+
+1105
+01:21:55,740 --> 01:21:57,740
+o óbvio que me permite
+
+1106
+01:21:57,740 --> 01:21:59,740
+identificar a posibilitão
+
+1107
+01:21:59,740 --> 01:22:01,740
+e que coloco as alterações
+
+1108
+01:22:01,740 --> 01:22:03,740
+é azul.
+
+1109
+01:22:03,780 --> 01:22:05,780
+Então, o que é que eu aqui quero fazer?
+
+1110
+01:22:05,780 --> 01:22:07,780
+Eu quero comentar isto.
+
+1111
+01:22:07,780 --> 01:22:09,780
+Para quê? Para fazer para vocês,
+
+1112
+01:22:09,780 --> 01:22:11,780
+se vocês se prepararem,
+
+1113
+01:22:11,780 --> 01:22:13,780
+vocês, quando arrancam
+
+1114
+01:22:13,780 --> 01:22:15,780
+uma maneira visual,
+
+1115
+01:22:15,780 --> 01:22:17,780
+não aparecem menos do que o que eu quero.
+
+1116
+01:22:17,780 --> 01:22:19,780
+E o que é que eu estou querendo dizer?
+
+1117
+01:22:19,780 --> 01:22:21,780
+Se eu se preparar para este mundo,
+
+1118
+01:22:21,780 --> 01:22:23,780
+cada vez eu me primeri a escolher
+
+1119
+01:22:23,780 --> 01:22:25,780
+o qual eu quero entrar.
+
+1120
+01:22:25,780 --> 01:22:27,780
+Portanto, é isto que está a ser feito aqui.
+
+1121
+01:22:27,780 --> 01:22:29,780
+Se façam os desejos,
+
+1122
+01:22:29,820 --> 01:22:31,820
+façam o reboot
+
+1123
+01:22:31,820 --> 01:22:33,820
+e já se aparecem.
+
+1124
+01:22:33,820 --> 01:22:35,820
+E vocês podem entrar aqui
+
+1125
+01:22:35,820 --> 01:22:37,820
+em adentro
+
+1126
+01:22:37,820 --> 01:22:39,820
+e já se aparecem
+
+1127
+01:22:39,820 --> 01:22:41,820
+as várias versões do cano
+
+1128
+01:22:41,820 --> 01:22:43,820
+que têm instaladas.
+
+1129
+01:22:43,820 --> 01:22:45,820
+E isto é a primeira fase
+
+1130
+01:22:45,820 --> 01:22:47,820
+e a segunda fase.
+
+1131
+01:22:47,820 --> 01:22:49,820
+O que é que vocês vão fazer?
+
+1132
+01:22:49,820 --> 01:22:51,820
+Vão buscar
+
+1133
+01:22:51,820 --> 01:22:53,820
+o código do cano
+
+1134
+01:22:53,820 --> 01:22:55,820
+para ver o que está acontecendo.
+
+1135
+01:22:55,820 --> 01:22:57,820
+Vão buscar
+
+1136
+01:22:57,820 --> 01:22:59,820
+o código do cano
+
+1137
+01:22:59,820 --> 01:23:01,820
+para ver o que está acontecendo.
+
+1138
+01:23:01,820 --> 01:23:05,610
+6.9
+
+1139
+01:23:05,610 --> 01:23:07,610
+E isto vem de um cheiro
+
+1140
+01:23:07,610 --> 01:23:09,610
+comprimido com esta tensão.
+
+1141
+01:23:09,610 --> 01:23:11,610
+Os desejos que mandam
+
+1142
+01:23:11,610 --> 01:23:13,610
+vão extrair isto
+
+1143
+01:23:13,610 --> 01:23:15,610
+e vão ficar com um diretório.
+
+1144
+01:23:15,610 --> 01:23:17,610
+Um diretório
+
+1145
+01:23:17,610 --> 01:23:19,610
+que se chama
+
+1146
+01:23:19,610 --> 01:23:21,610
+Limino, que será 6.9.9.
+
+1147
+01:23:21,610 --> 01:23:23,610
+O que é que nós vamos fazer?
+
+1148
+01:23:23,610 --> 01:23:25,610
+Vamos renuniar
+
+1149
+01:23:25,610 --> 01:23:27,610
+o diretório.
+
+1150
+01:23:27,610 --> 01:23:29,610
+Vamos chamar MOCA.
+
+1151
+01:23:29,610 --> 01:23:31,610
+Então fazemos
+
+1152
+01:23:31,610 --> 01:23:33,610
+MB, Limino,
+
+1153
+01:23:33,610 --> 01:23:35,610
+o diretório atual,
+
+1154
+01:23:35,610 --> 01:23:38,860
+um novo nome.
+
+1155
+01:23:38,860 --> 01:23:40,860
+Depois,
+
+1156
+01:23:40,860 --> 01:23:42,860
+o que é que nós vamos
+
+1157
+01:23:42,860 --> 01:23:44,860
+fazer?
+
+1158
+01:23:44,860 --> 01:23:46,860
+Eu sou atumido
+
+1159
+01:23:46,860 --> 01:23:48,860
+que vocês tenham um diretório
+
+1160
+01:23:48,860 --> 01:23:50,860
+que eu acho que ligo aqui.
+
+1161
+01:23:50,860 --> 01:23:52,860
+Que vocês tenham o software
+
+1162
+01:23:52,860 --> 01:23:54,860
+dentro de um diretório
+
+1163
+01:23:54,860 --> 01:23:56,860
+que se chama Limino, que será 6.9.9.
+
+1164
+01:23:56,860 --> 01:23:58,860
+E dentro do texto Limino, que será 6.9.9.
+
+1165
+01:23:58,860 --> 01:24:00,860
+Vou refletir
+
+1166
+01:24:00,860 --> 01:24:02,860
+o
+
+1167
+01:24:02,860 --> 01:24:04,860
+software
+
+1168
+01:24:04,860 --> 01:24:06,860
+code.
+
+1169
+01:24:06,860 --> 01:24:08,860
+Então
+
+1170
+01:24:08,860 --> 01:24:10,860
+vão para dentro do Limino, que será 6.9.9.
+
+1171
+01:24:10,860 --> 01:24:12,860
+Obviamente, já lá ficaram e não precisam.
+
+1172
+01:24:12,860 --> 01:24:14,860
+E depois vão para
+
+1173
+01:24:14,860 --> 01:24:16,860
+dentro do
+
+1174
+01:24:16,860 --> 01:24:18,860
+software code.
+
+1175
+01:24:18,860 --> 01:24:20,860
+E o que é que
+
+1176
+01:24:20,860 --> 01:24:22,860
+vamos fazer?
+
+1177
+01:24:22,860 --> 01:24:24,860
+Um ar que mais eu acho
+
+1178
+01:24:24,860 --> 01:24:26,860
+igual a 6.866df.
+
+1179
+01:24:26,860 --> 01:24:28,860
+Para aqui,
+
+1180
+01:24:28,860 --> 01:24:30,860
+para criarem um bordo
+
+1181
+01:24:30,860 --> 01:24:32,860
+para um config.
+
+1182
+01:24:32,860 --> 01:24:34,860
+Porque o software, ou quando um
+
+1183
+01:24:34,860 --> 01:24:36,860
+vem, não tem bordo para um config.
+
+1184
+01:24:36,860 --> 01:24:38,860
+Nós precisamos criar um
+
+1185
+01:24:38,860 --> 01:24:40,860
+bordo dentro do diretório.
+
+1186
+01:24:40,860 --> 01:24:44,650
+Depois,
+
+1187
+01:24:44,650 --> 01:24:46,650
+se teremos meio-menino
+
+1188
+01:24:46,650 --> 01:24:48,650
+para esse direto,
+
+1189
+01:24:48,650 --> 01:24:50,650
+não vamos fazer nada
+
+1190
+01:24:50,650 --> 01:24:52,650
+para estarmos sem nada.
+
+1191
+01:24:52,650 --> 01:24:54,650
+Podemos, por isso, induzimento
+
+1192
+01:24:54,650 --> 01:24:56,650
+a fazer é positivo e pronto.
+
+1193
+01:24:56,650 --> 01:24:58,650
+Depois, o que é que vamos fazer?
+
+1194
+01:24:58,650 --> 01:25:00,650
+Vamos
+
+1195
+01:25:00,650 --> 01:25:02,650
+alterar a makefile.
+
+1196
+01:25:02,650 --> 01:25:04,650
+Portanto,
+
+1197
+01:25:04,650 --> 01:25:06,650
+vamos
+
+1198
+01:25:06,650 --> 01:25:08,650
+acrescentar o canto
+
+1199
+01:25:08,650 --> 01:25:10,650
+no elemento
+
+1200
+01:25:10,650 --> 01:25:12,650
+do extra version.
+
+1201
+01:25:12,650 --> 01:25:14,650
+Vamos acrescentar a palavra
+
+1202
+01:25:14,650 --> 01:25:16,650
+mocha.
+
+1203
+01:25:16,650 --> 01:25:18,650
+Para identificar o nosso canto.
+
+1204
+01:25:18,650 --> 01:25:20,650
+Grabarmos o
+
+1205
+01:25:20,650 --> 01:25:22,650
+cheiro.
+
+1206
+01:25:22,650 --> 01:25:24,650
+Não sei o que é que está aqui.
+
+1207
+01:25:24,650 --> 01:25:26,650
+Está aqui um erro.
+
+1208
+01:25:26,650 --> 01:25:28,650
+Não é nada.
+
+1209
+01:25:28,650 --> 01:25:30,650
+Grabarmos o cheiro.
+
+1210
+01:25:30,650 --> 01:25:32,650
+A partir daí, o que é que
+
+1211
+01:25:32,650 --> 01:25:34,650
+vamos fazer?
+
+1212
+01:25:34,650 --> 01:25:36,650
+Vamos parar dentro
+
+1213
+01:25:36,650 --> 01:25:38,650
+do software
+
+1214
+01:25:38,650 --> 01:25:40,650
+e vamos compilar o canto.
+
+1215
+01:25:40,650 --> 01:25:42,650
+Depois de
+
+1216
+01:25:42,650 --> 01:25:44,650
+compilar, vamos, aqui já precisamos
+
+1217
+01:25:44,650 --> 01:25:46,650
+de previsões
+
+1218
+01:25:46,650 --> 01:25:48,650
+de administrador,
+
+1219
+01:25:48,650 --> 01:25:50,650
+vamos instalar os motos.
+
+1220
+01:25:50,650 --> 01:25:52,650
+Depois, vamos instalar
+
+1221
+01:25:52,650 --> 01:25:54,650
+o
+
+1222
+01:25:54,650 --> 01:25:56,650
+carnaval.
+
+1223
+01:25:56,650 --> 01:25:58,650
+Depois, saímos e vamos
+
+1224
+01:25:58,650 --> 01:26:00,650
+atualizar o alapagrave.
+
+1225
+01:26:00,650 --> 01:26:02,650
+E depois, já temos o reboot.
+
+1226
+01:26:02,650 --> 01:26:07,180
+Eu,
+
+1227
+01:26:07,180 --> 01:26:09,180
+no reputitório,
+
+1228
+01:26:09,180 --> 01:26:11,180
+tenho lá
+
+1229
+01:26:11,180 --> 01:26:13,180
+um makefile,
+
+1230
+01:26:13,180 --> 01:26:15,180
+um secreto,
+
+1231
+01:26:15,180 --> 01:26:17,180
+que inclui isso tudo.
+
+1232
+01:26:17,180 --> 01:26:19,180
+Fora ser a única coisa que
+
+1233
+01:26:19,180 --> 01:26:21,180
+vamos fazer,
+
+1234
+01:26:21,180 --> 01:26:23,180
+que é fazer os alôs de
+
+1235
+01:26:23,180 --> 01:26:25,180
+o script.
+
+1236
+01:26:25,180 --> 01:26:27,180
+Portanto, fazem os alôs do script.
+
+1237
+01:26:27,180 --> 01:26:29,180
+Alteram as previsões
+
+1238
+01:26:29,180 --> 01:26:31,180
+do script
+
+1239
+01:26:31,180 --> 01:26:33,180
+e depois basta
+
+1240
+01:26:33,180 --> 01:26:35,180
+invocarem o script
+
+1241
+01:26:35,180 --> 01:26:38,740
+desta forma.
+
+1242
+01:26:38,740 --> 01:26:40,740
+Todos governem,
+
+1243
+01:26:40,740 --> 01:26:42,740
+que é que vocês podem fazer
+
+1244
+01:26:42,740 --> 01:26:44,740
+reboot ao sistema.
+
+1245
+01:26:44,740 --> 01:26:46,740
+E ao fazer o reboot ao sistema,
+
+1246
+01:26:46,740 --> 01:26:48,740
+vão poder ir para
+
+1247
+01:26:48,740 --> 01:26:50,740
+entrar,
+
+1248
+01:26:50,740 --> 01:26:52,740
+quando chegar aqui,
+
+1249
+01:26:52,740 --> 01:26:54,740
+escolhem a opção Advanced
+
+1250
+01:26:54,740 --> 01:26:56,740
+e vão escolher
+
+1251
+01:26:56,740 --> 01:26:58,740
+a vossa versão do carnaval.
+
+1252
+01:26:58,740 --> 01:27:00,740
+O Moca.
+
+1253
+01:27:00,740 --> 01:27:02,740
+E ele vai arrancar.
+
+1254
+01:27:02,740 --> 01:27:04,740
+A senhora vai ficar mais quente,
+
+1255
+01:27:04,740 --> 01:27:06,740
+porque tem menos módulos
+
+1256
+01:27:06,740 --> 01:27:08,740
+e não tem os módulos
+
+1257
+01:27:08,740 --> 01:27:10,740
+da placa gráfica,
+
+1258
+01:27:10,740 --> 01:27:12,740
+que a polícia fica mais quente.
+
+1259
+01:27:14,740 --> 01:27:16,740
+Depois de arrancarem,
+
+1260
+01:27:16,740 --> 01:27:18,740
+este entra em normalmente,
+
+1261
+01:27:18,740 --> 01:27:20,740
+com o utilizador de LKPS,
+
+1262
+01:27:20,740 --> 01:27:22,740
+para as portas de LKPS,
+
+1263
+01:27:22,740 --> 01:27:24,740
+abre-lhe na consola
+
+1264
+01:27:24,740 --> 01:27:26,740
+e pede aos temas o nome
+
+1265
+01:27:26,740 --> 01:27:28,740
+da versão do carnaval.
+
+1266
+01:27:28,740 --> 01:27:30,740
+Vá através do comando
+
+1267
+01:27:30,740 --> 01:27:32,740
+unem-menotep.
+
+1268
+01:27:32,740 --> 01:27:34,740
+E ele vai nos apresentar.
+
+1269
+01:27:34,740 --> 01:27:36,740
+Vai desdivider que a vossa versão
+
+1270
+01:27:36,740 --> 01:27:38,740
+vai recortar o carnaval no Moca.
+
+1271
+01:27:38,740 --> 01:27:40,740
+6.9.9.
+
+1272
+01:27:40,740 --> 01:27:42,740
+Moca.
+
+1273
+01:27:42,740 --> 01:27:44,740
+Portanto, este é base
+
+1274
+01:27:44,740 --> 01:27:46,740
+da nossa versão
+
+1275
+01:27:46,740 --> 01:27:48,740
+do carnaval.
+
+1276
+01:27:48,740 --> 01:27:50,740
+Depois,
+
+1277
+01:27:50,740 --> 01:27:52,740
+o que é que vocês vão fazer?
+
+1278
+01:27:52,740 --> 01:27:54,740
+Vão,
+
+1279
+01:27:54,740 --> 01:27:56,740
+portanto,
+
+1280
+01:27:56,740 --> 01:27:58,740
+fazer aquela parte,
+
+1281
+01:27:58,740 --> 01:28:00,740
+sobretudo a parte da compilação
+
+1282
+01:28:00,740 --> 01:28:02,740
+da primeira vez.
+
+1283
+01:28:02,740 --> 01:28:04,740
+E depois, o que é que nós vamos fazer?
+
+1284
+01:28:04,740 --> 01:28:06,740
+Vamos criar
+
+1285
+01:28:06,740 --> 01:28:08,740
+dentro da paixa carnaval,
+
+1286
+01:28:08,740 --> 01:28:10,740
+do softcode.
+
+1287
+01:28:10,740 --> 01:28:12,740
+Vamos criar
+
+1288
+01:28:12,740 --> 01:28:14,740
+uma paixa de nome Moca.
+
+1289
+01:28:14,740 --> 01:28:16,740
+E vamos,
+
+1290
+01:28:16,740 --> 01:28:18,740
+depois, também, criar um cheiro
+
+1291
+01:28:18,740 --> 01:28:20,740
+dentro da paixa,
+
+1292
+01:28:20,740 --> 01:28:22,740
+a capa com fi.
+
+1293
+01:28:22,740 --> 01:28:24,740
+E vamos colocar,
+
+1294
+01:28:24,740 --> 01:28:26,740
+criar um menu para
+
+1295
+01:28:26,740 --> 01:28:28,740
+um Moca.
+
+1296
+01:28:28,740 --> 01:28:30,740
+Portanto,
+
+1297
+01:28:30,740 --> 01:28:32,740
+o que é que nós vamos fazer?
+
+1298
+01:28:32,740 --> 01:28:34,740
+Porque esse conteúdo vai ser
+
+1299
+01:28:34,740 --> 01:28:36,740
+para este cheiro.
+
+1300
+01:28:36,740 --> 01:28:38,740
+E depois, o que é que a gente vai fazer?
+
+1301
+01:28:38,740 --> 01:28:40,740
+Vai
+
+1302
+01:28:40,740 --> 01:28:42,740
+fazer,
+
+1303
+01:28:42,740 --> 01:28:44,740
+o cheiro do arquitetura
+
+1304
+01:28:44,740 --> 01:28:46,740
+6.6
+
+1305
+01:28:46,740 --> 01:28:48,740
+e vamos incluir
+
+1306
+01:28:48,740 --> 01:28:50,740
+o nosso
+
+1307
+01:28:50,740 --> 01:28:52,740
+capa com fi.
+
+1308
+01:28:52,740 --> 01:28:54,740
+Depois, para fazer um sisto,
+
+1309
+01:28:54,740 --> 01:28:56,740
+num terminal
+
+1310
+01:28:56,740 --> 01:28:58,740
+fizermes
+
+1311
+01:28:58,740 --> 01:29:00,740
+menu
+
+1312
+01:29:00,740 --> 01:29:02,740
+dentro do softcode
+
+1313
+01:29:02,740 --> 01:29:04,740
+se fizermes menu
+
+1314
+01:29:04,740 --> 01:29:06,740
+com fi,
+
+1315
+01:29:06,740 --> 01:29:08,740
+vão ver lá o nosso menu
+
+1316
+01:29:08,740 --> 01:29:10,740
+para um Moca.
+
+1317
+01:29:10,740 --> 01:29:12,740
+Neste momento,
+
+1318
+01:29:12,740 --> 01:29:14,740
+não tem nada,
+
+1319
+01:29:14,740 --> 01:29:16,740
+mas vai ver.
+
+1320
+01:29:16,740 --> 01:29:18,740
+Se nós
+
+1321
+01:29:18,740 --> 01:29:20,740
+compilá-nos,
+
+1322
+01:29:20,740 --> 01:29:22,740
+eu vai compilar
+
+1323
+01:29:22,740 --> 01:29:24,740
+a.
+
+1324
+01:29:24,740 --> 01:29:26,740
+Depois, o que é que vamos fazer?
+
+1325
+01:29:26,740 --> 01:29:28,740
+Vamos colocar dentro
+
+1326
+01:29:28,740 --> 01:29:30,740
+do Moca,
+
+1327
+01:29:30,740 --> 01:29:32,740
+do direitório Moca,
+
+1328
+01:29:32,740 --> 01:29:34,740
+um menu de file.
+
+1329
+01:29:34,740 --> 01:29:36,740
+Quando, no caso,
+
+1330
+01:29:36,740 --> 01:29:38,740
+não temos código.
+
+1331
+01:29:38,740 --> 01:29:40,740
+E vamos incluir
+
+1332
+01:29:40,740 --> 01:29:42,740
+a nossa makefile
+
+1333
+01:29:42,740 --> 01:29:44,740
+para ser compilada
+
+1334
+01:29:44,740 --> 01:29:46,740
+pelo kernel.
+
+1335
+01:29:46,740 --> 01:29:48,740
+Então, vamos com
+
+1336
+01:29:48,740 --> 01:29:50,740
+o nosso direitório
+
+1337
+01:29:50,740 --> 01:29:52,740
+estar dentro do
+
+1338
+01:29:52,740 --> 01:29:54,740
+direitório kernel.
+
+1339
+01:29:54,740 --> 01:29:56,740
+Vamos
+
+1340
+01:29:56,740 --> 01:29:58,740
+a makefile do kernel,
+
+1341
+01:29:58,740 --> 01:30:00,740
+está no direitório kernel,
+
+1342
+01:30:00,740 --> 01:30:02,740
+incluir
+
+1343
+01:30:02,740 --> 01:30:04,740
+a nossa
+
+1344
+01:30:04,740 --> 01:30:06,740
+makefile,
+
+1345
+01:30:06,740 --> 01:30:08,740
+como podem ver,
+
+1346
+01:30:08,740 --> 01:30:10,740
+portanto, o nosso direitório.
+
+1347
+01:30:10,740 --> 01:30:12,740
+Ao bj,
+
+1348
+01:30:12,740 --> 01:30:14,740
+se estiver e esse,
+
+1349
+01:30:14,740 --> 01:30:16,740
+eu vai compilar
+
+1350
+01:30:16,740 --> 01:30:18,740
+o que estiver dentro do direitório.
+
+1351
+01:30:18,740 --> 01:30:20,740
+Que, neste caso,
+
+1352
+01:30:20,740 --> 01:30:24,150
+não tem nada.
+
+1353
+01:30:24,150 --> 01:30:26,150
+Depois,
+
+1354
+01:30:26,150 --> 01:30:28,150
+o que é que a gente faz?
+
+1355
+01:30:28,150 --> 01:30:30,150
+Para criar um novo config,
+
+1356
+01:30:30,150 --> 01:30:32,150
+um menu config,
+
+1357
+01:30:32,150 --> 01:30:34,150
+é incrível compilar-nos
+
+1358
+01:30:34,150 --> 01:30:36,150
+e reviver-te.
+
+1359
+01:30:36,150 --> 01:30:38,150
+Não há nada, porque
+
+1360
+01:30:38,150 --> 01:30:40,150
+ainda não acreditamos com a lógica.
+
+1361
+01:30:40,150 --> 01:30:42,150
+Por fim,
+
+1362
+01:30:42,150 --> 01:30:47,100
+o que é que nós vamos fazer aqui?
+
+1363
+01:30:47,100 --> 01:30:49,100
+Implementar o 3CMD.
+
+1364
+01:30:49,100 --> 01:30:51,100
+Mas,
+
+1365
+01:30:51,100 --> 01:30:53,100
+da nossa maneira,
+
+1366
+01:30:53,100 --> 01:30:55,100
+não vai ser
+
+1367
+01:30:55,100 --> 01:30:57,100
+o que a gente quer.
+
+1368
+01:30:57,100 --> 01:30:59,100
+Para a imitação, o que é que
+
+1369
+01:30:59,100 --> 01:31:01,100
+vamos fazer?
+
+1370
+01:31:01,100 --> 01:31:03,100
+Nós vamos
+
+1371
+01:31:03,100 --> 01:31:05,100
+criar aqui algo convivente.
+
+1372
+01:31:05,100 --> 01:31:07,100
+Sente-me,
+
+1373
+01:31:07,100 --> 01:31:09,100
+vamos resistar o TIC.
+
+1374
+01:31:09,100 --> 01:31:11,100
+Sente-me,
+
+1375
+01:31:11,100 --> 01:31:13,100
+vamos resistar.
+
+1376
+01:31:13,100 --> 01:31:15,100
+Sente-me, que uma tarefa for ao CPU,
+
+1377
+01:31:15,100 --> 01:31:17,100
+vamos resistar.
+
+1378
+01:31:17,100 --> 01:31:19,100
+Sente-me, que a tarefa sai do CPU.
+
+1379
+01:31:19,100 --> 01:31:21,100
+É complementar.
+
+1380
+01:31:21,100 --> 01:31:23,100
+Vamos resistar.
+
+1381
+01:31:23,100 --> 01:31:25,100
+E, depois, nós temos aqui
+
+1382
+01:31:25,100 --> 01:31:27,100
+um identificador para eventos
+
+1383
+01:31:27,100 --> 01:31:29,100
+quaisquer.
+
+1384
+01:31:29,100 --> 01:31:31,100
+E,
+
+1385
+01:31:31,100 --> 01:31:33,100
+para a canta,
+
+1386
+01:31:33,100 --> 01:31:35,100
+vamos criar isso
+
+1387
+01:31:35,100 --> 01:31:37,100
+criando uma entrada
+
+1388
+01:31:37,100 --> 01:31:39,100
+de nome
+
+1389
+01:31:39,100 --> 01:31:41,100
+para o CPU.
+
+1390
+01:31:41,100 --> 01:31:43,100
+Ora, o que é que nós
+
+1391
+01:31:43,100 --> 01:31:45,100
+vamos resistar?
+
+1392
+01:31:45,100 --> 01:31:47,100
+Vamos resistar muita
+
+1393
+01:31:47,100 --> 01:31:49,100
+informação relacionada
+
+1394
+01:31:49,100 --> 01:31:51,100
+essencialmente com a tarefa.
+
+1395
+01:31:51,100 --> 01:31:53,100
+Nomeadamente,
+
+1396
+01:31:53,100 --> 01:31:55,100
+a política, a publicidade,
+
+1397
+01:31:55,100 --> 01:31:57,100
+o PIB, o estado
+
+1398
+01:31:57,100 --> 01:31:59,100
+e o nome do processo.
+
+1399
+01:31:59,100 --> 01:32:01,100
+Além disso, vamos ser
+
+1400
+01:32:01,100 --> 01:32:03,100
+um event type,
+
+1401
+01:32:03,100 --> 01:32:05,100
+são os eventos aqui,
+
+1402
+01:32:05,100 --> 01:32:07,100
+e um event type sempre
+
+1403
+01:32:07,100 --> 01:32:09,100
+para resistar o tempo.
+
+1404
+01:32:09,100 --> 01:32:11,100
+E, depois, temos aqui um identificador
+
+1405
+01:32:11,100 --> 01:32:13,100
+que nos vai permitir
+
+1406
+01:32:13,100 --> 01:32:15,100
+que nós possamos
+
+1407
+01:32:15,100 --> 01:32:17,100
+ter identificadores diferentes
+
+1408
+01:32:17,100 --> 01:32:19,100
+quando
+
+1409
+01:32:19,100 --> 01:32:21,100
+permitem-nos colocar um
+
+1410
+01:32:21,100 --> 01:32:23,100
+número
+
+1411
+01:32:23,100 --> 01:32:25,100
+para fazer aqui uma diferença.
+
+1412
+01:32:25,100 --> 01:32:27,100
+Isso é, eu posso
+
+1413
+01:32:27,100 --> 01:32:29,100
+resistar o evento A
+
+1414
+01:32:29,100 --> 01:32:31,100
+e dar um número
+
+1415
+01:32:31,100 --> 01:32:33,100
+que logo se vier, resistar
+
+1416
+01:32:33,100 --> 01:32:35,100
+o mesmo evento A e dar outro número.
+
+1417
+01:32:35,100 --> 01:32:37,100
+Porque me interessa saber
+
+1418
+01:32:37,100 --> 01:32:39,100
+o que é que aconteceu
+
+1419
+01:32:39,100 --> 01:32:41,100
+neste estado.
+
+1420
+01:32:41,100 --> 01:32:43,100
+Na maior parte, caso, nós até fomos
+
+1421
+01:32:43,100 --> 01:32:45,100
+um favorito também mesmo.
+
+1422
+01:32:45,100 --> 01:32:47,100
+Ora, nós queremos
+
+1423
+01:32:47,100 --> 01:32:49,100
+ter isso, então vamos ter que adicionar a cópica.
+
+1424
+01:32:49,100 --> 01:32:51,100
+A primeira coisa que nós vamos fazer
+
+1425
+01:32:51,100 --> 01:32:53,100
+é adicionar
+
+1426
+01:32:53,100 --> 01:32:55,100
+uma opção de configuração
+
+1427
+01:32:55,100 --> 01:32:57,100
+no
+
+1428
+01:32:57,100 --> 01:32:59,100
+capa-confio.
+
+1429
+01:32:59,100 --> 01:33:01,100
+Depois, nós vamos criar
+
+1430
+01:33:01,100 --> 01:33:03,100
+o cheio, 3.h,
+
+1431
+01:33:03,100 --> 01:33:05,100
+3.c, dentro do Tomócar.
+
+1432
+01:33:05,100 --> 01:33:07,100
+Todos os
+
+1433
+01:33:07,100 --> 01:33:09,100
+cheios novos são criados
+
+1434
+01:33:09,100 --> 01:33:11,100
+dentro do diretor
+
+1435
+01:33:11,100 --> 01:33:13,100
+do Tomócar.
+
+1436
+01:33:13,100 --> 01:33:15,100
+E vamos colocar isso
+
+1437
+01:33:15,100 --> 01:33:17,100
+no 3.h
+
+1438
+01:33:19,100 --> 01:33:21,100
+e isso no
+
+1439
+01:33:21,100 --> 01:33:23,100
+3.c.
+
+1440
+01:33:23,100 --> 01:33:25,100
+Depois, vocês vão analitarem
+
+1441
+01:33:25,100 --> 01:33:27,100
+o que está a fazer
+
+1442
+01:33:27,100 --> 01:33:29,100
+é criar uma entrada
+
+1443
+01:33:29,100 --> 01:33:31,100
+no moca, no bloco
+
+1444
+01:33:31,100 --> 01:33:33,100
+e já
+
+1445
+01:33:33,100 --> 01:33:35,100
+vai implementar um buffer circular
+
+1446
+01:33:35,100 --> 01:33:37,100
+para aguardar os clientes.
+
+1447
+01:33:37,100 --> 01:33:41,180
+E agora, o que é que eu tenho que fazer?
+
+1448
+01:33:41,180 --> 01:33:43,180
+Depois de ter isso,
+
+1449
+01:33:43,180 --> 01:33:45,180
+eu tenho que pôr
+
+1450
+01:33:45,180 --> 01:33:47,180
+disto no nível de estado e isto
+
+1451
+01:33:47,180 --> 01:33:49,180
+para o canal. Então,
+
+1452
+01:33:49,180 --> 01:33:51,180
+eu tenho que incluir isto
+
+1453
+01:33:51,180 --> 01:33:53,180
+para que o resto do
+
+1454
+01:33:53,180 --> 01:33:55,180
+do canal não conheça.
+
+1455
+01:33:55,180 --> 01:33:57,180
+Depois para eu, pois vou poder usar isto no Tomócar.
+
+1456
+01:33:57,180 --> 01:33:59,180
+Depois de fazer isto,
+
+1457
+01:33:59,180 --> 01:34:01,180
+tanto você tem que
+
+1458
+01:34:01,180 --> 01:34:03,180
+ir no cheiro, ou não tenho que ir para o teio,
+
+1459
+01:34:03,180 --> 01:34:05,180
+tanto você tem que ir lá
+
+1460
+01:34:05,180 --> 01:34:07,180
+para a loucura destas meninas
+
+1461
+01:34:07,180 --> 01:34:09,180
+e tenho que incluir isto
+
+1462
+01:34:09,180 --> 01:34:11,180
+dentro destas meninas,
+
+1463
+01:34:11,180 --> 01:34:13,180
+portanto, a budagem é sempre esta.
+
+1464
+01:34:13,180 --> 01:34:15,180
+E agora, o que é que tenho que fazer?
+
+1465
+01:34:15,180 --> 01:34:17,180
+Tenho que resistar os clientes.
+
+1466
+01:34:17,180 --> 01:34:19,180
+Por exemplo, o TIC
+
+1467
+01:34:19,180 --> 01:34:21,180
+vou resistar o dentro do Tomócar TIC.
+
+1468
+01:34:21,180 --> 01:34:23,180
+E o que é que a suaquia resistar?
+
+1469
+01:34:23,180 --> 01:34:25,180
+Eu vou resistar o evento TIC
+
+1470
+01:34:25,180 --> 01:34:27,180
+e que qual é a tarefa
+
+1471
+01:34:27,180 --> 01:34:29,180
+para se estar a escutar
+
+1472
+01:34:29,180 --> 01:34:31,180
+naquele instante?
+
+1473
+01:34:31,180 --> 01:34:33,180
+E também vou resistar
+
+1474
+01:34:33,180 --> 01:34:35,180
+no nosso schedule
+
+1475
+01:34:35,180 --> 01:34:37,180
+o subsistente Tomócar
+
+1476
+01:34:37,180 --> 01:34:39,180
+e o subsistente Tu.
+
+1477
+01:34:39,180 --> 01:34:41,180
+Isto é, a tarefa que está a sair
+
+1478
+01:34:41,180 --> 01:34:43,180
+do CPU, que é a Preve,
+
+1479
+01:34:43,180 --> 01:34:45,180
+e a tarefa que está a ser
+
+1480
+01:34:45,180 --> 01:34:49,740
+revivido ao CPU.
+
+1481
+01:34:49,740 --> 01:34:51,740
+Você tem que ver
+
+1482
+01:34:51,740 --> 01:34:53,740
+o que é que é para acrescentar isto.
+
+1483
+01:34:53,740 --> 01:34:55,740
+Depois, o que é que vou fazer?
+
+1484
+01:34:55,740 --> 01:34:57,740
+Vou dizer que agora quero cumpilar
+
+1485
+01:34:57,740 --> 01:34:59,740
+aquele código
+
+1486
+01:34:59,740 --> 01:35:01,740
+para isso, tenho que ver.
+
+1487
+01:35:01,740 --> 01:35:03,740
+A minha main file, o Tomócar
+
+1488
+01:35:03,740 --> 01:35:05,740
+era acrescentada, dizer
+
+1489
+01:35:05,740 --> 01:35:07,740
+se isto estiver
+
+1490
+01:35:07,740 --> 01:35:09,740
+e este é para cumpilar
+
+1491
+01:35:09,740 --> 01:35:11,740
+o código 3.
+
+1492
+01:35:11,740 --> 01:35:13,740
+E ele vai cumpilar
+
+1493
+01:35:13,740 --> 01:35:15,740
+o 3, o nome C, que inclui o 3, o nome H.
+
+1494
+01:35:17,740 --> 01:35:19,740
+Depois, o que é que vou fazer?
+
+1495
+01:35:19,740 --> 01:35:21,740
+Volto
+
+1496
+01:35:21,740 --> 01:35:23,740
+ao nosso schedule
+
+1497
+01:35:23,740 --> 01:35:25,740
+mais ou menos no config
+
+1498
+01:35:25,740 --> 01:35:27,740
+para ele gravar
+
+1499
+01:35:27,740 --> 01:35:29,740
+esta nova opção
+
+1500
+01:35:29,740 --> 01:35:31,740
+que está para o default.
+
+1501
+01:35:31,740 --> 01:35:33,740
+E ele vai cumpir a bala
+
+1502
+01:35:33,740 --> 01:35:35,740
+no .conf
+
+1503
+01:35:35,740 --> 01:35:37,740
+e depois eu vou cumpilar
+
+1504
+01:35:37,740 --> 01:35:39,740
+e fazer revivido ao sistema.
+
+1505
+01:35:41,740 --> 01:35:43,740
+Quando vá revivido ao sistema,
+
+1506
+01:35:43,740 --> 01:35:45,740
+se eu fizer isto, que é de Proc,
+
+1507
+01:35:45,740 --> 01:35:47,740
+se quiser afinar para não cê.
+
+1508
+01:35:47,740 --> 01:35:49,740
+Portanto, ele vai
+
+1509
+01:35:49,740 --> 01:35:51,740
+ter um conteúdo que está aqui
+
+1510
+01:35:51,740 --> 01:35:53,740
+e vai enviar para não cê.
+
+1511
+01:35:53,740 --> 01:35:55,740
+E depois, se eu fizer,
+
+1512
+01:35:55,740 --> 01:35:57,740
+o que é que vou cumprimentar
+
+1513
+01:35:57,740 --> 01:35:59,740
+o revivido sem,
+
+1514
+01:35:59,740 --> 01:36:01,740
+eu vou encontrar isto
+
+1515
+01:36:01,740 --> 01:36:03,740
+e o que é que eu tenho aqui?
+
+1516
+01:36:03,740 --> 01:36:05,740
+Ora, neste distante
+
+1517
+01:36:05,740 --> 01:36:07,740
+há 9 segundos.
+
+1518
+01:36:07,740 --> 01:36:09,740
+Neste instante
+
+1519
+01:36:09,740 --> 01:36:11,740
+esta tarefa
+
+1520
+01:36:11,740 --> 01:36:13,740
+estava com este
+
+1521
+01:36:15,740 --> 01:36:17,740
+que...
+
+1522
+01:36:17,740 --> 01:36:19,740
+O 0 é
+
+1523
+01:36:19,740 --> 01:36:21,740
+a política de
+
+1524
+01:36:21,740 --> 01:36:23,740
+escalonamento.
+
+1525
+01:36:25,740 --> 01:36:27,740
+O 0 é
+
+1526
+01:36:27,740 --> 01:36:29,740
+o que é normal.
+
+1527
+01:36:29,740 --> 01:36:31,740
+O 0 é o que é normal.
+
+1528
+01:36:31,740 --> 01:36:33,740
+É o que é normal.
+
+1529
+01:36:40,100 --> 01:36:42,100
+O 0 é o que é normal.
+
+1530
+01:36:42,100 --> 01:36:44,100
+Portanto,
+
+1531
+01:36:44,100 --> 01:36:46,100
+é aqui.
+
+1532
+01:36:46,100 --> 01:36:48,100
+Portanto, o 0 é
+
+1533
+01:36:48,100 --> 01:36:50,100
+a tarefa
+
+1534
+01:36:50,100 --> 01:36:52,100
+tem a nível de prioridade
+
+1535
+01:36:52,100 --> 01:36:54,100
+de 20
+
+1536
+01:36:54,100 --> 01:36:56,100
+e isto é o pino
+
+1537
+01:36:56,100 --> 01:36:58,100
+e chapa
+
+1538
+01:36:58,100 --> 01:37:00,100
+em exceção
+
+1539
+01:37:00,100 --> 01:37:03,990
+e o nome
+
+1540
+01:37:03,990 --> 01:37:05,990
+da tarefa é
+
+1541
+01:37:05,990 --> 01:37:07,990
+foi substituída por esta tarefa
+
+1542
+01:37:07,990 --> 01:37:09,990
+que também tem o mesmo nível
+
+1543
+01:37:09,990 --> 01:37:11,990
+de prioridade,
+
+1544
+01:37:11,990 --> 01:37:13,990
+tem a espírita, mas está em exceção.
+
+1545
+01:37:13,990 --> 01:37:15,990
+Quando aconteceu
+
+1546
+01:37:15,990 --> 01:37:17,990
+de equipe, era esta tarefa
+
+1547
+01:37:17,990 --> 01:37:19,990
+para estar em exceção.
+
+1548
+01:37:19,990 --> 01:37:21,990
+Por algum motivo, a tarefa
+
+1549
+01:37:21,990 --> 01:37:23,990
+deixou de estar no estado de exceção
+
+1550
+01:37:23,990 --> 01:37:25,990
+para estar para o estado
+
+1551
+01:37:25,990 --> 01:37:27,990
+de waiting
+
+1552
+01:37:27,990 --> 01:37:29,990
+de intervalo.
+
+1553
+01:37:29,990 --> 01:37:31,990
+Então, temos um suíte.
+
+1554
+01:37:31,990 --> 01:37:33,990
+O suíte, se ela já não está entrando
+
+1555
+01:37:33,990 --> 01:37:35,990
+em distância de ocupar
+
+1556
+01:37:35,990 --> 01:37:37,990
+e um suíte para o outro da tarefa
+
+1557
+01:37:37,990 --> 01:37:39,990
+e a 5%
+
+1558
+01:37:39,990 --> 01:37:41,990
+Quando não existe
+
+1559
+01:37:41,990 --> 01:37:43,990
+nenhuma tarefa para ocupar
+
+1560
+01:37:43,990 --> 01:37:45,990
+o suíte operativo
+
+1561
+01:37:45,990 --> 01:37:47,990
+vai ficar o seu suópar.
+
+1562
+01:37:47,990 --> 01:37:49,990
+Existe um suópar porque
+
+1563
+01:37:49,990 --> 01:37:51,990
+já sepiu.
+
+1564
+01:37:51,990 --> 01:37:53,990
+Pronto.
+
+1565
+01:37:53,990 --> 01:37:55,990
+Em ideia, no sábado
+
+1566
+01:37:55,990 --> 01:37:57,990
+embora
+
+1567
+01:37:57,990 --> 01:37:59,990
+não tivesse nada até lá
+
+1568
+01:37:59,990 --> 01:38:01,990
+dificil, mas conseguimos fazer
+
+1569
+01:38:01,990 --> 01:38:03,990
+um estudo no sábado
+
+1570
+01:38:03,990 --> 01:38:05,990
+porque o suíte é certo, uma compilação
+
+1571
+01:38:05,990 --> 01:38:07,990
+inicial, mora sempre.
+
+1572
+01:38:07,990 --> 01:38:09,990
+Um tempo apesar de eu ser
+
+1573
+01:38:09,990 --> 01:38:11,990
+removido ou através daquela opção
+
+1574
+01:38:11,990 --> 01:38:13,990
+Maintain
+
+1575
+01:38:13,990 --> 01:38:15,990
+ARC-686
+
+1576
+01:38:15,990 --> 01:38:17,990
+DECON-CONFI
+
+1577
+01:38:17,990 --> 01:38:19,990
+vai sontobicar os módulos
+
+1578
+01:38:19,990 --> 01:38:21,990
+iniciales, mas
+
+1579
+01:38:21,990 --> 01:38:23,990
+compilar isso pela primeira vez
+
+1580
+01:38:23,990 --> 01:38:25,990
+demota sempre
+
+1581
+01:38:25,990 --> 01:38:27,990
+bastante tempo
+
+1582
+01:38:29,990 --> 01:38:31,990
+portanto
+
+1583
+01:38:31,990 --> 01:38:33,990
+não nada há tempo.
+
+1584
+01:38:33,990 --> 01:38:35,990
+Se puderem, eles dão alguma coisa
+
+1585
+01:38:35,990 --> 01:38:37,990
+melhor, portanto
+
+1586
+01:38:37,990 --> 01:38:39,990
+não sabe muito o que mostrar
+
+1587
+01:38:39,990 --> 01:38:41,990
+explicado e algumas coisas
+
+1588
+01:38:41,990 --> 01:38:43,990
+e as dúvidas para se sepirem
+
+1589
+01:38:43,990 --> 01:38:45,990
+eu te vou adiantar.
+
+1590
+01:38:45,990 --> 01:38:47,990
+Acabo com o contrário
+
+1591
+01:38:47,990 --> 01:38:49,990
+que vocês tenham tempo,
+
+1592
+01:38:49,990 --> 01:38:51,990
+façam-se o que se puder
+
+1593
+01:38:51,990 --> 01:38:53,990
+no sábado e para vocês
+
+1594
+01:38:53,990 --> 01:38:55,990
+para terem isto a funcionar
+
+1595
+01:38:55,990 --> 01:38:57,990
+será diferente de um módulo
+
+1596
+01:38:57,990 --> 01:38:59,990
+ou qualquer.
+
+1597
+01:38:59,990 --> 01:39:04,710
+dúvidos
+
+1598
+01:39:04,710 --> 01:39:06,710
+eu estou tuto, mas isto é um
+
+1599
+01:39:06,710 --> 01:39:08,710
+mais curioso.
+
+1600
+01:39:08,710 --> 01:39:10,710
+Sem o suópar
+
+1601
+01:39:10,710 --> 01:39:12,710
+sem ganhar ver com o suópar
+
+1602
+01:39:12,710 --> 01:39:14,710
+de memória que existe o suópar
+
+1603
+01:39:14,710 --> 01:39:16,710
+do Linux
+
+1604
+01:39:16,710 --> 01:39:18,710
+não
+
+1605
+01:39:18,710 --> 01:39:20,710
+o suópar é o sessinário
+
+1606
+01:39:20,710 --> 01:39:22,710
+do Linux
+
+1607
+01:39:22,710 --> 01:39:24,710
+eu não sei
+
+1608
+01:39:24,710 --> 01:39:26,710
+qual é a erradão
+
+1609
+01:39:26,710 --> 01:39:28,710
+do sessinário do Linux
+
+1610
+01:39:28,710 --> 01:39:30,710
+porque eu na verdade
+
+1611
+01:39:30,710 --> 01:39:32,710
+não faço nada
+
+1612
+01:39:32,710 --> 01:39:34,710
+é uma carta alterada
+
+1613
+01:39:34,710 --> 01:39:36,710
+muito simples, que tem um cíclico
+
+1614
+01:39:36,710 --> 01:39:38,710
+que está sempre em cíclico infinito
+
+1615
+01:39:38,710 --> 01:39:40,710
+e
+
+1616
+01:39:40,710 --> 01:39:42,710
+permite a única funcionalidade
+
+1617
+01:39:42,710 --> 01:39:44,710
+que tem em sessinário
+
+1618
+01:39:44,710 --> 01:39:46,710
+permite
+
+1619
+01:39:48,710 --> 01:39:50,710
+a todos nos ser
+
+1620
+01:39:50,710 --> 01:39:52,710
+no sentido de evitar
+
+1621
+01:39:52,710 --> 01:39:54,710
+estar a ser dificultado
+
+1622
+01:39:54,710 --> 01:39:56,710
+nomeadamente para o poupante
+
+1623
+01:39:56,710 --> 01:39:58,710
+a ter energia
+
+1624
+01:39:58,710 --> 01:40:00,710
+mas
+
+1625
+01:40:00,710 --> 01:40:02,710
+não está a ser dificultado
+
+1626
+01:40:02,710 --> 01:40:04,710
+não está a ter vividos no sessinário do CPU
+
+1627
+01:40:04,710 --> 01:40:06,710
+de alguma forma
+
+1628
+01:40:06,710 --> 01:40:08,710
+não tem nada para dificultar
+
+1629
+01:40:08,710 --> 01:40:10,710
+e só consegue fazer isso
+
+1630
+01:40:10,710 --> 01:40:12,710
+quando você tem o suópar
+
+1631
+01:40:12,710 --> 01:40:14,710
+atribuído com tarefa
+
+1632
+01:40:14,710 --> 01:40:18,380
+ocorrendo
+
+1633
+01:40:18,380 --> 01:40:20,380
+mas não tem nada a ver com isso da memória
+
+1634
+01:40:20,380 --> 01:40:22,380
+do suópar
+
+1635
+01:40:22,380 --> 01:40:24,380
+não tem nada a ver com isso
+
+1636
+01:40:24,380 --> 01:40:26,380
+essa memória suóps
+
+1637
+01:40:26,380 --> 01:40:28,380
+é a memória que é usada
+
+1638
+01:40:28,380 --> 01:40:30,380
+que é quando
+
+1639
+01:40:30,380 --> 01:40:32,380
+os temas não têm memória
+
+1640
+01:40:32,380 --> 01:40:34,380
+física, que é para o sessinário
+
+1641
+01:40:34,380 --> 01:40:36,380
+e o que acontece
+
+1642
+01:40:36,380 --> 01:40:38,380
+é que você tem que retirar
+
+1643
+01:40:38,380 --> 01:40:40,380
+algumas páginas
+
+1644
+01:40:40,380 --> 01:40:42,380
+da memória
+
+1645
+01:40:42,380 --> 01:40:44,380
+e colocar em suópar
+
+1646
+01:40:44,380 --> 01:40:46,380
+e colocar para o outro
+
+1647
+01:40:46,380 --> 01:40:48,380
+porque você já não tem memória a dizer que é para isso
+
+1648
+01:40:48,380 --> 01:40:50,380
+não tem nada a ver com isso
+
+1649
+01:40:50,380 --> 01:40:52,380
+memória rara
+
+1650
+01:40:52,380 --> 01:40:54,380
+memória rara
+
+1651
+01:40:56,380 --> 01:40:58,380
+se vocês concordam
+
+1652
+01:40:58,380 --> 01:41:00,380
+de uma arquitectura de 32 vividos
+
+1653
+01:41:00,380 --> 01:41:02,380
+se quer saber se
+
+1654
+01:41:02,380 --> 01:41:04,380
+tem em teoria
+
+1655
+01:41:04,380 --> 01:41:06,380
+o que acontece
+
+1656
+01:41:06,380 --> 01:41:08,380
+com a memória atribuído
+
+1657
+01:41:08,380 --> 01:41:10,380
+mesmo que o sistema
+
+1658
+01:41:10,380 --> 01:41:12,380
+não tenha quatro fígis
+
+1659
+01:41:12,380 --> 01:41:14,380
+mas mesmo que tenha quatro
+
+1660
+01:41:14,380 --> 01:41:16,380
+ou tenha mais
+
+1661
+01:41:16,380 --> 01:41:18,380
+se tiver 50 fígis
+
+1662
+01:41:18,380 --> 01:41:20,380
+não tem certeza de que a memória física
+
+1663
+01:41:20,380 --> 01:41:22,380
+não tem 50 fígis a ver de quatro
+
+1664
+01:41:22,380 --> 01:41:24,380
+então o que acontece
+
+1665
+01:41:24,380 --> 01:41:26,380
+a memória fígica
+
+1666
+01:41:26,380 --> 01:41:28,380
+é parcialhada
+
+1667
+01:41:28,380 --> 01:41:30,380
+pelos vários fígis
+
+1668
+01:41:30,380 --> 01:41:32,380
+que é aquelas histórias
+
+1669
+01:41:32,380 --> 01:41:34,380
+de apaixonação com fígis
+
+1670
+01:41:34,380 --> 01:41:36,380
+para a memória vivida em páginas
+
+1671
+01:41:36,380 --> 01:41:38,380
+a memória virtual também é vivida
+
+1672
+01:41:38,380 --> 01:41:40,380
+em páginas de igual tamanho
+
+1673
+01:41:40,380 --> 01:41:44,380
+e isso porque as apostéficas
+
+1674
+01:41:44,380 --> 01:41:46,380
+um país
+
+1675
+01:41:46,380 --> 01:41:48,380
+table que relaciona
+
+1676
+01:41:48,380 --> 01:41:50,380
+a memória
+
+1677
+01:41:50,380 --> 01:41:52,380
+visual com a memória fígida
+
+1678
+01:41:52,380 --> 01:41:54,380
+essa memória visual
+
+1679
+01:41:54,380 --> 01:41:56,380
+está mapeada na memória fígica 6
+
+1680
+01:41:56,380 --> 01:41:58,380
+por isso é que
+
+1681
+01:41:58,380 --> 01:42:00,380
+na verdade
+
+1682
+01:42:00,380 --> 01:42:02,380
+quando você está em sessão
+
+1683
+01:42:02,380 --> 01:42:04,380
+e ele não carrega toda a memória
+
+1684
+01:42:04,380 --> 01:42:06,380
+para a memória
+
+1685
+01:42:06,380 --> 01:42:08,380
+porque
+
+1686
+01:42:08,380 --> 01:42:10,380
+pelo menos carrega só o que é essencial
+
+1687
+01:42:10,380 --> 01:42:12,380
+por isso é que as pessoas
+
+1688
+01:42:12,380 --> 01:42:14,380
+não sabem o que as pessoas querem
+
+1689
+01:42:14,380 --> 01:42:16,380
+vocês carregam na memória
+
+1690
+01:42:16,380 --> 01:42:18,380
+e ele mora ao longo tempo
+
+1691
+01:42:18,380 --> 01:42:20,380
+a arrancar essa funcionalidade
+
+1692
+01:42:20,380 --> 01:42:22,380
+por que? porque provavelmente
+
+1693
+01:42:22,380 --> 01:42:24,380
+o código social e essa funcionalidade
+
+1694
+01:42:24,380 --> 01:42:26,380
+não estava na memória
+
+1695
+01:42:26,380 --> 01:42:28,380
+agora então é fisicical
+
+1696
+01:42:28,380 --> 01:42:30,380
+ao disco e colocar na memória
+
+1697
+01:42:30,380 --> 01:42:32,380
+por isso é que é a mente
+
+1698
+01:42:32,380 --> 01:42:34,380
+e também o que acontece
+
+1699
+01:42:34,380 --> 01:42:36,380
+com um swap
+
+1700
+01:42:36,380 --> 01:42:38,380
+imagina que a memória fígica já está
+
+1701
+01:42:38,380 --> 01:42:40,380
+ajudada
+
+1702
+01:42:40,380 --> 01:42:42,380
+e o que carregaste numa opção
+
+1703
+01:42:42,380 --> 01:42:44,380
+cuja memória
+
+1704
+01:42:44,380 --> 01:42:46,380
+o código social não está na memória
+
+1705
+01:42:46,380 --> 01:42:48,380
+então se não está na memória
+
+1706
+01:42:48,380 --> 01:42:50,380
+fisicical ao disco
+
+1707
+01:42:50,380 --> 01:42:52,380
+se é fisicical ao disco e quando a memória
+
+1708
+01:42:52,380 --> 01:42:54,380
+está cheia
+
+1709
+01:42:54,380 --> 01:42:56,380
+tem que saber o que
+
+1710
+01:42:56,380 --> 01:42:58,380
+terá a memória que colocar no disco
+
+1711
+01:42:58,380 --> 01:43:00,380
+e as donas do disco
+
+1712
+01:43:00,380 --> 01:43:02,380
+quando se coloquem e terminarem
+
+1713
+01:43:02,380 --> 01:43:08,120
+de swap
+
+1714
+01:43:08,120 --> 01:43:10,120
+e é por isso que é quando vocês instalam
+
+1715
+01:43:10,120 --> 01:43:12,120
+um linux e ouvirem uma participação
+
+1716
+01:43:12,120 --> 01:43:14,120
+de swap
+
+1717
+01:43:14,120 --> 01:43:16,120
+que é para quê?
+
+1718
+01:43:16,120 --> 01:43:18,120
+para ter
+
+1719
+01:43:18,120 --> 01:43:20,120
+que é usada para quando
+
+1720
+01:43:20,120 --> 01:43:22,120
+não há mais memória fígica
+
+1721
+01:43:22,120 --> 01:43:29,180
+e eu uso a terceira parte
+
+1722
+01:43:29,180 --> 01:43:31,180
+viu? por favor
+
+1723
+01:43:31,180 --> 01:43:33,180
+sim sim sim
+
+1724
+01:43:33,180 --> 01:43:35,180
+eu não sei quem é que me perguntou a pouco
+
+1725
+01:43:35,180 --> 01:43:37,180
+mas na próxima aula
+
+1726
+01:43:37,180 --> 01:43:39,180
+eu falo sobre as prioridades
+
+1727
+01:43:39,180 --> 01:43:41,180
+eu estava a dizer que
+
+1728
+01:43:41,180 --> 01:43:43,180
+tinha um slide ou outro sobre
+
+1729
+01:43:43,180 --> 01:43:45,180
+sobre
+
+1730
+01:43:45,180 --> 01:43:47,180
+as diferentes prioridades
+
+1731
+01:43:47,180 --> 01:43:49,180
+mas nós vamos ver isso com um detalhe
+
+1732
+01:43:49,180 --> 01:43:51,180
+e eu vou falar lá sobre isso com um contaral
+
+1733
+01:43:51,180 --> 01:43:53,180
+está bem?
+
+1734
+01:43:53,180 --> 01:43:56,900
+pois já não temos tempo
+
+1735
+01:43:56,900 --> 01:43:58,900
+está bom
+
+1736
+01:43:58,900 --> 01:44:00,900
+está?
+
+1737
+01:44:00,900 --> 01:44:02,900
+pronto
+
+1738
+01:44:02,900 --> 01:44:04,900
+pensamos
+
+1739
+01:44:04,900 --> 01:44:06,900
+no próximo
+
+1740
+01:44:06,900 --> 01:44:08,900
+não sei se vocês acham
+
+1741
+01:44:08,900 --> 01:44:10,900
+mas vocês acham que é uma proposta
+
+1742
+01:44:10,900 --> 01:44:12,900
+da resultação do exercício individual
+
+1743
+01:44:12,900 --> 01:44:14,900
+se encontrar real ou não é
+
+1744
+01:44:14,900 --> 01:44:16,900
+digam está bem?
+
+1745
+01:44:16,900 --> 01:44:18,900
+eu uso aqui um cadáver
+
+1746
+01:44:18,900 --> 01:44:20,900
+eu acho que não tenham tempo
+
+1747
+01:44:20,900 --> 01:44:22,900
+mas se ver
+
+1748
+01:44:22,900 --> 01:44:24,900
+digam
+
+1749
+01:44:24,900 --> 01:44:26,900
+só para dar alguma coisa que não nos descobrirem
+
+1750
+01:44:26,900 --> 01:44:28,900
+para dar algum erro
+
+1751
+01:44:28,900 --> 01:44:30,900
+para dar algum erro
+
+1752
+01:44:30,900 --> 01:44:32,900
+para conseguir
+
+1753
+01:44:32,900 --> 01:44:34,900
+está bem?
+
+1754
+01:44:34,900 --> 01:44:36,900
+por favor
+
+1755
+01:44:36,900 --> 01:44:38,900
+boa noite
+
+1756
+01:44:38,900 --> 01:44:40,900
+veremos o resultado e a próxima noite
+
