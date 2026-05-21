@@ -510,3 +510,5 @@ Após recompilar, instalar e reiniciar, o sistema arrancou corretamente com:
 ```
 
 Conclusão: o framework MOKER ficou integrado no sistema de configuração e build do kernel.
+
+
