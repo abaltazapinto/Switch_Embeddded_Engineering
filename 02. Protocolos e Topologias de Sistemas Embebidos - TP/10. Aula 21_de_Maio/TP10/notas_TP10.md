@@ -437,3 +437,123 @@ Antes disso, garante só que corrigiste:
 ```text
 Pergunta 6 = Falso
 ```
+
+
+---
+
+## Resultado do TP10
+
+Ficaste com:
+
+```text
+12,75 / 15,00
+8,50 / 10,00
+```
+
+Boa nota ✅ Mas houve **3 pontos importantes** a corrigir para aprendizagem.
+
+---
+
+## Ação — guardar estas correções no teu resumo
+
+### Pergunta 1 — parcialmente correta
+
+O erro foi no `Ack` da segunda linha:
+
+```text
+B -> A   Seq = 232   Ack = 375   Len = 143
+```
+
+O Moodle marcou errado porque o `Ack` correto era:
+
+```text
+Ack = 354
+```
+
+Porquê?
+
+B está a confirmar o que recebeu de A:
+
+```text
+A começou em Seq 203
+A enviou Len 151
+203 + 151 = 354
+```
+
+Logo:
+
+```text
+Ack de B = 354
+```
+
+---
+
+### Pergunta 2 — parcialmente correta
+
+O erro visível foi o primeiro `Len`.
+
+Tu deixaste:
+
+```text
+Len = 169
+```
+
+Mas o correto era:
+
+```text
+Len = 165
+```
+
+Porque:
+
+```text
+Próximo Seq de A = 306
+Seq atual de A = 141
+306 - 141 = 165
+```
+
+---
+
+### Pergunta 5 — eu tinha-te orientado mal
+
+A resposta correta era:
+
+```text
+Verdadeiro
+```
+
+A frase era:
+
+```text
+Uma janela de controlo de fluxo pode ser mantida a zero durante toda a sessão TCP.
+```
+
+Pelo critério do teste, isto é considerado verdadeiro porque o TCP permite anunciar **janela zero** enquanto o recetor não tem espaço no buffer. Tecnicamente, isso bloqueia o envio de dados, mas a sessão TCP pode continuar estabelecida através de mecanismos como persist probes / zero-window probing.
+
+---
+
+## Regra mental final para TCP
+
+```text
+Seq novo = Seq antigo + Len enviado pelo mesmo lado
+Ack = próximo byte esperado do outro lado
+```
+
+Separar sempre:
+
+```text
+Fluxo A -> B
+Fluxo B -> A
+```
+
+Nunca fazer:
+
+```text
+Seq + Ack
+```
+
+---
+
+## Pergunta de decisão
+
+Queres que eu faça agora um **resumo TP10 pronto para colar no Git**, incluindo estas correções e as regras de TCP/UDP?
