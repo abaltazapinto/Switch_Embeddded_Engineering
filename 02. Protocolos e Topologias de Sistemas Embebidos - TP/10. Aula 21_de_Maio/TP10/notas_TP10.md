@@ -170,3 +170,270 @@ B -> A	554	610	180
 A -> B	610	734	130
 
 Depois disso podes avançar para Página seguinte.
+
+----
+
+# 2a pergunta
+
+próximo Seq desse emissor = Seq anterior desse emissor + Len anterior desse emissor
+
+# mijnhas respostas
+
+![alt text](image.png)
+
+    ERRADO 
+
+    Len = próximo Seq de A - Seq atual de A
+    Len = 306 - 141
+    Len = 165
+
+## Validação — Pergunta 2
+
+Tens **quase tudo certo** ✅
+
+Há **1 erro**:
+
+```text
+A -> B   Seq 141   Ack 158   Len = 169
+```
+
+O correto é:
+
+```text
+Len = 165
+```
+
+---
+
+## Ação — corrige só o primeiro `Len`
+
+Troca:
+
+```text
+169
+```
+
+por:
+
+```text
+165
+```
+
+---
+
+## Porquê?
+
+O próximo `Seq` de A aparece aqui:
+
+```text
+A -> B   Seq = 306
+```
+
+Então:
+
+```text
+Len = próximo Seq de A - Seq atual de A
+Len = 306 - 141
+Len = 165
+```
+
+---
+
+## Tabela final correta
+
+| Direção | Seq | Ack |     Len |
+| ------- | --: | --: | ------: |
+| A -> B  | 141 | 158 | **165** |
+| B -> A  | 158 | 306 |     169 |
+| A -> B  | 306 | 327 |     161 |
+| B -> A  | 327 | 467 |     135 |
+| A -> B  | 467 | 462 |       0 |
+| A -> B  | 467 | 462 |     145 |
+| B -> A  | 462 | 612 |     120 |
+| A -> B  | 612 | 582 |     134 |
+
+Depois desta correção, podes avançar.
+
+
+# PERGUINTA 3 E 4 
+
+![alt text](image-1.png)
+
+ERRADO 
+
+## Pergunta 3
+
+A resposta correta é:
+
+```text
+Falso
+```
+
+### Objetivo
+
+TCP **não tem campo `SessionID`** no cabeçalho.
+
+A sessão TCP é identificada pelo conjunto:
+
+```text
+IP origem + porta origem + IP destino + porta destino + protocolo TCP
+```
+
+---
+
+## Pergunta 4
+
+A resposta correta é:
+
+```text
+Falso
+```
+
+### Objetivo
+
+UDP **não tem campo `SEQ`** no cabeçalho.
+
+O cabeçalho UDP é muito simples:
+
+```text
+Source Port
+Destination Port
+Length
+Checksum
+```
+
+---
+
+## Ação
+
+Corrige ambas para:
+
+```text
+Pergunta 3 = Falso
+Pergunta 4 = Falso
+```
+
+Depois podes avançar.
+
+
+---
+
+# pERGUNTA 5 & 6
+
+![alt text](image-2.png)
+
+- TODOS OS SEGMENTOS tcp recebido nao tem de ser confirmados indicidualmentre usa ACK cumulativo.
+
+## Pergunta 5
+
+A tua resposta está **certa** ✅
+
+```text
+Falso
+```
+
+Uma janela de controlo de fluxo **pode ficar temporariamente a zero**, quando o recetor não tem espaço no buffer.
+Mas dizer que pode ser mantida a zero **durante toda a sessão TCP** é errado, porque isso bloqueava a comunicação permanentemente.
+
+---
+
+## Pergunta 6
+
+A tua resposta está **errada**.
+
+A resposta correta é:
+
+```text
+Falso
+```
+
+TCP usa **ACK cumulativo**. Não precisa confirmar cada segmento individualmente.
+
+Exemplo:
+
+```text
+Segmento 1: bytes 100–199
+Segmento 2: bytes 200–299
+Segmento 3: bytes 300–399
+```
+
+O recetor pode enviar só:
+
+```text
+ACK = 400
+```
+
+Isto significa:
+
+```text
+Recebi tudo até ao byte 399.
+Agora espero o byte 400.
+```
+
+---
+
+## Ação
+
+Corrige apenas:
+
+```text
+Pergunta 6 = Falso
+```
+
+Depois podes avançar.
+---
+
+# Pergunta 7 e 8
+
+![alt text](image-3.png)
+
+CERTOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!
+
+## Pergunta 7
+
+A tua resposta está **certa** ✅
+
+```text
+Verdadeiro
+```
+
+O cabeçalho TCP tem:
+
+```text
+Source Port
+Destination Port
+Sequence Number
+Acknowledgment Number
+Window Size
+...
+```
+
+Logo, TCP especifica o **porto de origem**.
+
+---
+
+## Pergunta 8
+
+A tua resposta está **certa** ✅
+
+```text
+Verdadeiro
+```
+
+TCP inclui o campo **Window Size**, usado no **controlo de fluxo**.
+
+---
+
+## Ação
+
+Podes carregar em:
+
+```text
+Terminar tentativa
+```
+
+Antes disso, garante só que corrigiste:
+
+```text
+Pergunta 6 = Falso
+```
