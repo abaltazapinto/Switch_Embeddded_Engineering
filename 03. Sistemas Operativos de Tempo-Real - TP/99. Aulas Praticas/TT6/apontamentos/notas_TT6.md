@@ -680,3 +680,200 @@ Conseguiste adicionar o include em `kernel/sched/sched.h`?
 SIM
 
 ---
+
+voltaei a fazer isto ja tinha feito na verdade. 
+
+cd ~/linux-kernel/linux-6.19.9-moker
+nano kernel/sched/sched.h
+
+No nano, procura:
+
+Ctrl + W
+#include "cpupri.h"
+Enter
+
+Logo abaixo desta zona:
+
+#include "cpupri.h"
+#include "cpudeadline.h"
+
+adiciona:
+
+#ifdef CONFIG_MOKER_TRACING
+#include "../moker/trace.h"
+#endif
+
+
+---
+5. 
+
+Isto permite que core.c conheça moker_trace() e os eventos SCHED_TICK, SWITCH_AWAY, SWITCH_TO.
+
+Como pensar
+
+Até agora:
+
+trace.c / trace.h existem
+Makefile compila trace.o
+Kconfig ativa MOKER_TRACING
+sched.h torna trace.h visível ao scheduler
+
+Próximo ponto será instrumentar sched_tick() em kernel/sched/core.c.
+
+---
+
+Agora abre o ficheiro crítico core.c:
+
+nano kernel/sched/core.c
+
+Procura a função sched_tick:
+
+Ctrl + W
+void sched_tick
+Enter
+
+Dentro da função, procura esta zona:
+
+rq_lock(rq, &rf);
+donor = rq->donor;
+
+Logo abaixo de donor = rq->donor;, adiciona:
+
+#ifdef CONFIG_MOKER_TRACING
+        moker_trace(SCHED_TICK, -1, donor);
+#endif
+
+---
+
+Objetivo
+
+Registar eventos SCHED_TICK. O TT6 diz que SCHED_TICK acontece sempre que o interrupt periódico do kernel, o tick, dispara, e que há sempre uma task em execução nesse momento .
+
+Como pensar
+
+Este é o primeiro ponto real de instrumentação:
+
+timer tick
+   ↓
+sched_tick()
+   ↓
+moker_trace(SCHED_TICK, -1, donor)
+   ↓
+ring buffer
+
+Ainda não estamos a registar trocas de tarefa. Só estamos a registar “batimentos” do scheduler.
+
+
+![alt text](image.png)
+
+---
+
+WOWOOWOWOW
+
+Lê isto como regra mental:
+
+#ifdef CONFIG_MOKER_TRACING
+        moker_trace(SWITCH_AWAY, -1, prev);
+        moker_trace(SWITCH_TO, -1, next);
+#endif
+
+significa:
+
+Se CONFIG_MOKER_TRACING estiver definida durante a compilação,
+inclui este código no kernel.
+
+Caso contrário,
+ignora completamente este bloco.
+Objetivo
+
+Perceber que #ifdef não define nada. Ele só pergunta ao pré-processador:
+
+“este símbolo existe?”
+
+Se existir, o código entre #ifdef e #endif entra na compilação.
+Se não existir, esse código desaparece antes do compilador C sequer o ver.
+
+---
+6.
+
+Ação (1 passo)
+
+O erro do menuconfig é só terminal pequeno. Como o grep mostra que falta CONFIG_MOKER_TRACING, usa o método não-interativo:
+
+make olddefconfig
+
+Depois valida:
+
+grep MOKER .config
+Objetivo
+
+Atualizar automaticamente a .config com a nova opção do Kconfig, sem abrir o menu gráfico. Como colocámos default y, o esperado é passar a aparecer:
+
+CONFIG_MOKER_FRAMEWORK=y
+CONFIG_MOKER_TRACING=y
+Como pensar
+
+O problema não é o kernel nem o TT6. É só isto:
+
+make menuconfig
+        ↓
+precisa de terminal >= 19 linhas x 80 colunas
+        ↓
+falhou antes de atualizar .config
+
+Então usamos:
+
+make olddefconfig
+        ↓
+lê Kconfig
+        ↓
+adiciona novas opções com default
+        ↓
+reescreve .config
+
+---
+
+7. Getting data
+
+![alt text](image-1.png)
+
+A tua saída prova que o tracing funciona:
+
+SWT_AY  → task saiu do CPU
+SWT_TO  → task entrou no CPU
+SCH_TK  → tick do scheduler
+
+Agora confirma se o ficheiro ficou com dados:
+
+wc -l trace.csv
+Objetivo
+
+Ver se o comando anterior realmente gravou uma amostra do /proc/moker_trace.
+
+Se wc -l der algo como:
+
+100 trace.csv
+
+ou qualquer valor > 0, está suficiente para evidência do TT6.
+
+Como pensar
+
+O comando que fizeste:
+
+timeout --foreground 1s cat /proc/moker_trace > trace.csv
+
+funcionou melhor porque:
+
+cat lê /proc/moker_trace
+        ↓
+timeout força paragem após 1 segundo
+        ↓
+trace.csv fica fechado
+        ↓
+prompt volta
+
+Isto evita o “ficar preso” do cat normal.
+
+---
+![alt text](image-2.png)
+
