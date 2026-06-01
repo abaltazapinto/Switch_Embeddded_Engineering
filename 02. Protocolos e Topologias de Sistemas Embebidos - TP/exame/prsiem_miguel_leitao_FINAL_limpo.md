@@ -123,10 +123,10 @@ A lista seguinte apresenta um extrato da saida produzida pelo `tcpdump` durante 
 ```text
 pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [P.], seq 382,  ack 891,  win 115, length 16
 srv.porto.pt.ftp  > pc1.myhome.pt.2387: Flags [P.], seq 891,  ack SSSS, win 91,  length XXXX
-pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [.],  seq YYYY, ack WWWW, win 115, length 0
-srv.porto.pt.ftp  > pc1.myhome.pt.2387: Flags [P.], seq RRRR, ack WWWW, win 115, length 3
-pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [P.], seq 94,   ack ZZZZ, win 91,  length 23
-srv.porto.pt.ftp  > pc1.myhome.pt.2387: Flags [.],  seq ZZZZ, ack 1021, win 115, length 0
+pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [.],  seq YYYY, ack WWWW, win 115, length 3
+pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [.],  seq RRRR, ack WWWW, win 115, length 23
+srv.porto.pt.ftp  > pc1.myhome.pt.2387: Flags [P.], seq 942, ack ZZZZ, win 91, length 79
+pc1.myhome.pt.2387 > srv.porto.pt.ftp: Flags [P.], seq ZZZZZ,   ack 1021, win 115,  length 0
 ```
 
 **Determine os valores em falta:**
