@@ -189,9 +189,9 @@ Para os seguintes enderecos, indique quais pertencem (`E`) e quais nao pertencem
 | Endereco IPv6 | E | F |
 |---|---:|---:|
 | `2002:1c20::b46:aaaa:bbbb:cccc:dd` | [ ] | [ ] |
-| `2002:1c20:b46e:8800:1:22cc:eeee` | [ ] | [ ] |
+| `2002:1c2:0:b46e:8800:1:22cc:eeee` | [ ] | [ ] |
 | `2002:1c2::b4c0:dddd:cccc:bbbb` | [ ] | [ ] |
-| `2002:1c20:b476:b928:cc:bbaa` | [ ] | [ ] |
+| `2002:1c2:0:b476::b928:cc:bbaa` | [ ] | [ ] |
 
 ### 3.4
 
