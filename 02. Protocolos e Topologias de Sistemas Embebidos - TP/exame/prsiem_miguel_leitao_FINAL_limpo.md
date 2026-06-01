@@ -16,40 +16,43 @@
 | Afirmacao | V | F |
 |---|---:|---:|
 | O endereco MAC Ethernet possui 64 bits. | [ ] | [ ] |
-| O protocolo MQTT e frequentemente usado em sistemas IoT e sistemas embebidos. | [ ] | [ ] |
-| O MQTT utiliza normalmente um broker para intermediar publicacoes e subscricoes. | [ ] | [ ] |
+|A Ethernet é uma tecnologia de rede utilizada principalmente em redes locais (LAN); | [ ] | [ ] |
+| Numa rede Ethernet, todos os dispositivos partilham o mesmo endereço MAC; | [ ] | [ ] |
+| As VLANs permitem implementar uma rede Ethernet física em múltiplas redes Ethernet virtuais; | [ ] | [ ] |
+|As VLANs complementam a necessidade de routers em redes empresariais.| [ ] | [ ] |
 
-### 1.1 - Modelo OSI e topologias
+## 1.2
 
-| Afirmacao | V | F |
-|---|---:|---:|
-| O modelo OSI organiza a comunicacao em camadas. | [ ] | [ ] |
-| Protocolos diferentes podem operar em camadas diferentes do modelo OSI. | [ ] | [ ] |
-| A escolha da topologia influencia latencia, tolerancia a falhas e complexidade de cablagem. | [ ] | [ ] |
+| Afirmação | V | F |
+|---|---|---|
+| Um cabeçalho IPv4 inclui um campo Next Header; | [ ] | [ ] |
+| Um cabeçalho IPv6 tem 320 bits; | [ ] | [ ] |
+| O protocolo NDP não se utiliza em IPv6; | [ ] | [ ] |
+| "FE80::aaaa:9999" é um endereço IPv6 do tipo Link Local; | [ ] | [ ] |
+| O protocolo NDP define um mecanismo de deteção de endereços duplicados; | [ ] | [ ] |
+| Uma mensagem de Router Solicitation pode ser endereçada a um endereço de unicast; | [ ] | [ ] |
+| Uma mensagem de Router Advertisement é normalmente enviada por um encaminhador (router); | [ ] | [ ] |
 
-### 1.2 - Cliente/servidor e publish/subscribe
+## 1.3
 
-| Afirmacao | V | F |
-|---|---:|---:|
-| No modelo cliente/servidor, um cliente inicia pedidos a um servidor. | [ ] | [ ] |
-| No modelo publish/subscribe, produtores e consumidores podem ficar desacoplados. | [ ] | [ ] |
-| O broker e um elemento tipico em arquiteturas publish/subscribe como MQTT. | [ ] | [ ] |
+| Afirmação | V | F |
+|---|---|---|
+| Os pedidos HTTP/1.1 pelo método GET incluem sempre o cabeçalho (header) `content-length`; | [ ] | [ ] |
+| O mecanismo de Protocol Upgrade do HTTP/1.1 permite que o cliente solicite a mudança para um protocolo diferente; | [ ] | [ ] |
+| Os pedidos HTTP/2 podem utilizar o método POST; | [ ] | [ ] |
+| A utilização de HTTP/2 sobre TCP evita o problema de head-of-line blocking; | [ ] | [ ] |
+| Os pedidos HTTP/1.0 identificam o método na primeira linha; | [ ] | [ ] |
+| Uma resposta HTTP/1.1 é normalmente transportada na mesma sessão TCP do pedido respetivo; | [ ] | [ ] |
 
-### 1.3 - Ethernet / encaminhamento / redes
+## 1.4
 
-| Afirmacao | V | F |
-|---|---:|---:|
-| Switches Ethernet operam essencialmente na camada 2. | [ ] | [ ] |
-| Routers encaminham pacotes entre redes IP distintas. | [ ] | [ ] |
-| Enderecos MAC e enderecos IP pertencem ao mesmo nivel de abstracao. | [ ] | [ ] |
-
-### 1.4 - Sistemas embebidos e comunicacao
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| Sistemas embebidos podem usar protocolos de rede standard como TCP/IP, HTTP e MQTT. | [ ] | [ ] |
-| A escolha do protocolo deve considerar latencia, fiabilidade, consumo e complexidade. | [ ] | [ ] |
-| Protocolos de barramento como CAN sao comuns em sistemas automoveis e industriais. | [ ] | [ ] |
+| Afirmação | V | F |
+|---|---|---|
+| Para configurar um encaminhador com protocolo RIP (Routing Information Protocol), é necessário definir a tabela de encaminhamento; | [ ] | [ ] |
+| Os protocolos de encaminhamento do tipo Link State requerem mais recursos computacionais do que os protocolos do tipo Distance Vector; | [ ] | [ ] |
+| Os protocolos de encaminhamento do tipo Link State apresentam tempos de convergência mais longos do que os protocolos do tipo Distance Vector; | [ ] | [ ] |
+| O protocolo RIP (Routing Information Protocol) utiliza multicast para enviar informação aos encaminhadores seus vizinhos; | [ ] | [ ] |
+| A técnica de Split Horizon só se justifica em protocolos de encaminhamento do tipo Link State; | [ ] | [ ] |
 
 ---
 
