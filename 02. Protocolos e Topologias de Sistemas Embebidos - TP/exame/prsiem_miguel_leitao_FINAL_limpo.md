@@ -56,6 +56,66 @@
 
 ---
 
+
+## Questoes 1.5 a 1.9 - Verdadeiro / Falso
+
+### 1.5 - TCP
+
+| Afirmacao | V | F |
+|---|---:|---:|
+| A aplicacao do algoritmo de Nagle pode aumentar a latencia de uma transmissao. | [ ] | [ ] |
+| No mecanismo de confirmacao seletiva, **Selective Acknowledgement**, utilizam-se 64 bits para identificar cada um dos blocos a confirmar explicitamente. | [ ] | [ ] |
+| A flag SYN e utilizada no processo de encerramento de uma ligacao TCP. | [ ] | [ ] |
+| Numa ligacao TCP, a aplicacao do controlo de congestionamento depende de um acordo previo entre os extremos da ligacao. | [ ] | [ ] |
+| O numero de sequencia, **Sequence number**, incluido num cabecalho TCP, tem 64 bits. | [ ] | [ ] |
+| Um cabecalho TCP inclui um campo com o numero de sequencia, **Sequence number**. | [ ] | [ ] |
+| Um cabecalho TCP inclui um campo **Window** com a dimensao da janela de controlo de fluxo. | [ ] | [ ] |
+
+### 1.6 - NAT / NAPT
+
+| Afirmacao | V | F |
+|---|---:|---:|
+| A utilizacao de NAT, **Network Address Translation**, elimina a necessidade de utilizacao de DHCP. | [ ] | [ ] |
+| O mecanismo de **Port Forward** destina-se a permitir o acesso a servicos privados, a partir da rede publica. | [ ] | [ ] |
+| Um encaminhador NAT substitui o endereco de destino dos datagramas dirigidos a rede privada. | [ ] | [ ] |
+| O cabecalho de um datagrama IP numa rede publica pode conter um endereco de origem privado. | [ ] | [ ] |
+| Os router IP que efetuam NAPT, **Network Address and Port Translation**, nao sao compativeis com QUIC. | [ ] | [ ] |
+
+### 1.7 - STP / RSTP
+
+| Afirmacao | V | F |
+|---|---:|---:|
+| O Rapid Spanning Tree Protocol, **RSTP**, foi desenvolvido para reduzir o tempo de convergencia relativamente ao STP classico. | [ ] | [ ] |
+| O protocolo STP opera na camada de rede, **Layer 3**, do modelo OSI. | [ ] | [ ] |
+| O STP, **Spanning Tree Protocol**, utiliza mensagens BPDU para trocar informacao entre switches. | [ ] | [ ] |
+| O protocolo STP foi concebido para evitar loops de camada 2 em redes Ethernet com caminhos redundantes. | [ ] | [ ] |
+
+### 1.8 - MQTT
+
+| Afirmacao | V | F |
+|---|---:|---:|
+| O protocolo MQTT segue um modelo de comunicacao **publish/subscribe**. | [ ] | [ ] |
+| Em MQTT, os clientes publicam mensagens diretamente para outros clientes sem intervencao de um broker. | [ ] | [ ] |
+| O broker MQTT pode armazenar mensagens retidas para novos subscritores, **subscribers**. | [ ] | [ ] |
+| O QoS 0 em MQTT garante a entrega exata de uma mensagem uma unica vez. | [ ] | [ ] |
+| Um unico pacote MQTT `SUBSCRIBE` pode incluir multiplos topicos/subscricoes. | [ ] | [ ] |
+| O protocolo MQTT segue um modelo de comunicacao **publish/subscribe**. | [ ] | [ ] |
+
+### 1.9 - CAN / CAN-FD
+
+| Afirmacao | V | F |
+|---|---:|---:|
+| Em CAN classico com trama extendida, **extended frame**, e possivel utilizar identificadores de 29 bits. | [ ] | [ ] |
+| O identificador de uma trama CAN serve apenas para identificar o destinatario da mensagem. | [ ] | [ ] |
+| Em CAN, mensagens com identificadores numericamente mais altos tem maior prioridade. | [ ] | [ ] |
+| O protocolo CAN implementa automaticamente retransmissao quando deteta erros numa trama. | [ ] | [ ] |
+| O CAN Low-Speed Fault-Tolerant foi concebido para operar tipicamente a velocidades mais baixas do que o CAN High-Speed. | [ ] | [ ] |
+| O protocolo CAN depende obrigatoriamente de um endereco MAC unico por dispositivo. | [ ] | [ ] |
+| CAN-FD permite taxas de transmissao superiores as do CAN classico durante a fase de dados. | [ ] | [ ] |
+| Em CAN-FD, o campo de dados pode transportar ate 64 bytes. | [ ] | [ ] |
+
+---
+
 ## Questao 2 - TCP / `tcpdump`
 
 A lista seguinte apresenta um extrato da saida produzida pelo `tcpdump` durante uma sessao TCP estabelecida entre 2 maquinas.
@@ -155,60 +215,3 @@ Utilizando as gamas propostas para os edificios respetivos, defina gamas IPv6 pa
 | Piso B.1 | ____________________ |
 
 ---
-
-## Questoes 1.5 a 1.9 - Verdadeiro / Falso
-
-### 1.5 - TCP
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| A aplicacao do algoritmo de Nagle pode aumentar a latencia de uma transmissao. | [ ] | [ ] |
-| No mecanismo de confirmacao seletiva, **Selective Acknowledgement**, utilizam-se 64 bits para identificar cada um dos blocos a confirmar explicitamente. | [ ] | [ ] |
-| A flag SYN e utilizada no processo de encerramento de uma ligacao TCP. | [ ] | [ ] |
-| Numa ligacao TCP, a aplicacao do controlo de congestionamento depende de um acordo previo entre os extremos da ligacao. | [ ] | [ ] |
-| O numero de sequencia, **Sequence number**, incluido num cabecalho TCP, tem 64 bits. | [ ] | [ ] |
-| Um cabecalho TCP inclui um campo com o numero de sequencia, **Sequence number**. | [ ] | [ ] |
-| Um cabecalho TCP inclui um campo **Window** com a dimensao da janela de controlo de fluxo. | [ ] | [ ] |
-
-### 1.6 - NAT / NAPT
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| A utilizacao de NAT, **Network Address Translation**, elimina a necessidade de utilizacao de DHCP. | [ ] | [ ] |
-| O mecanismo de **Port Forward** destina-se a permitir o acesso a servicos privados, a partir da rede publica. | [ ] | [ ] |
-| Um encaminhador NAT substitui o endereco de destino dos datagramas dirigidos a rede privada. | [ ] | [ ] |
-| O cabecalho de um datagrama IP numa rede publica pode conter um endereco de origem privado. | [ ] | [ ] |
-| Os router IP que efetuam NAPT, **Network Address and Port Translation**, nao sao compativeis com QUIC. | [ ] | [ ] |
-
-### 1.7 - STP / RSTP
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| O Rapid Spanning Tree Protocol, **RSTP**, foi desenvolvido para reduzir o tempo de convergencia relativamente ao STP classico. | [ ] | [ ] |
-| O protocolo STP opera na camada de rede, **Layer 3**, do modelo OSI. | [ ] | [ ] |
-| O STP, **Spanning Tree Protocol**, utiliza mensagens BPDU para trocar informacao entre switches. | [ ] | [ ] |
-| O protocolo STP foi concebido para evitar loops de camada 2 em redes Ethernet com caminhos redundantes. | [ ] | [ ] |
-
-### 1.8 - MQTT
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| O protocolo MQTT segue um modelo de comunicacao **publish/subscribe**. | [ ] | [ ] |
-| Em MQTT, os clientes publicam mensagens diretamente para outros clientes sem intervencao de um broker. | [ ] | [ ] |
-| O broker MQTT pode armazenar mensagens retidas para novos subscritores, **subscribers**. | [ ] | [ ] |
-| O QoS 0 em MQTT garante a entrega exata de uma mensagem uma unica vez. | [ ] | [ ] |
-| Um unico pacote MQTT `SUBSCRIBE` pode incluir multiplos topicos/subscricoes. | [ ] | [ ] |
-| O protocolo MQTT segue um modelo de comunicacao **publish/subscribe**. | [ ] | [ ] |
-
-### 1.9 - CAN / CAN-FD
-
-| Afirmacao | V | F |
-|---|---:|---:|
-| Em CAN classico com trama extendida, **extended frame**, e possivel utilizar identificadores de 29 bits. | [ ] | [ ] |
-| O identificador de uma trama CAN serve apenas para identificar o destinatario da mensagem. | [ ] | [ ] |
-| Em CAN, mensagens com identificadores numericamente mais altos tem maior prioridade. | [ ] | [ ] |
-| O protocolo CAN implementa automaticamente retransmissao quando deteta erros numa trama. | [ ] | [ ] |
-| O CAN Low-Speed Fault-Tolerant foi concebido para operar tipicamente a velocidades mais baixas do que o CAN High-Speed. | [ ] | [ ] |
-| O protocolo CAN depende obrigatoriamente de um endereco MAC unico por dispositivo. | [ ] | [ ] |
-| CAN-FD permite taxas de transmissao superiores as do CAN classico durante a fase de dados. | [ ] | [ ] |
-| Em CAN-FD, o campo de dados pode transportar ate 64 bytes. | [ ] | [ ] |
