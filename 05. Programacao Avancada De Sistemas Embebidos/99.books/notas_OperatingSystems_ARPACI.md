@@ -1,4 +1,4 @@
-# OSTEP — Parte II: Concurrency
+/# OSTEP — Parte II: Concurrency
 
 ## Cap. 26 — Concurrency: An Introduction
 
@@ -28,3 +28,43 @@ Se duas threads podem aceder ao mesmo estado, tenho de perguntar:
 2. Quem escreve?
 3. Em que ordem?
 4. Essa ordem é garantida?
+
+
+
+
+
+---
+
+# homework
+
+    page 276
+
+python3 x86.py -p loop.s -t 1 -i 100 -R dx -c
+
+| Coisa         | Função                           |
+| ------------- | -------------------------------- |
+| `-R dx`       | mostra o registo `%dx`           |
+| `-c`          | calcula/revela os valores        |
+| `sub $1,%dx`  | altera `%dx`                     |
+| `test $0,%dx` | testa condição; não altera `%dx` |
+| `jgte .top`   | decide se volta ao loop          |
+
+
+![alt text](image-1.png)
+
+
+
+![alt text](image-2.png)
+
+%
+
+![alt text](image-3.png)
+
+2. Now run the same code but with these flags:
+./x86.py -p loop.s -t 2 -i 100 -a dx=3,dx=3 -R dx
+Tthis specifies two threads, and initializes each %dx register to 3.
+What values will %dx see? Run with the -c flag to see the answers.
+Does the presence of multiple threads affect anything about your
+calculations? Is there a race condition in this code?
+
+**A:** i dont think so, there are not race condition,. uma vez que sao independentes as threads,...
