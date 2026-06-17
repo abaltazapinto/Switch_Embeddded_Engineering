@@ -32,5 +32,11 @@ void *worker(void *arg)
 
 int main(void)
 {
+    printf("initial shared_array = [%d, %d, %d]\n",
+           shared_array[0],
+           shared_array[1],
+           shared_array[2]);
+
     return 0;
 }
+
