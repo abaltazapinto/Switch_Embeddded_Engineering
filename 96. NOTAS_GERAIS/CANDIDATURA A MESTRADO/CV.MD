@@ -335,9 +335,7 @@ Certificado de participação em evento técnico sobre prospetividade de hidroca
 **Data:** 12 de abril de 2019
 
 Participação no Europe PetroBowl Regional Qualifier 2019, demonstrando envolvimento em atividades internacionais ligadas à engenharia de petróleos, geociências, energia e competição técnica entre estudantes.
-
 ---
-
 # 6. Participação em projetos, programas e atividades técnico-científicas
 
 ## SEG EVOLVE 2018 — Society of Exploration Geophysicists
@@ -360,21 +358,6 @@ Esta experiência contribuiu para o desenvolvimento de competências em análise
 
 Projeto pessoal de sistemas embebidos e IoT orientado para monitorização agrícola, com o objetivo de evoluir de uma abordagem de eletrónica de hobby para uma arquitetura mais próxima de sistemas embebidos reais.
 
-**Áreas técnicas exploradas:**
-
-* Sensor nodes
-* Wi-Fi
-* TCP/IP
-* SSH
-* Linux
-* Firmware
-* Monitorização remota
-* Diagnóstico remoto
-* Estratégias de watchdog
-* Recuperação de falhas
-* Arquitetura de sistema
-* Gestão de energia
-* Robustez e fiabilidade
 
 **Relevância para a candidatura:**
 Este projeto é diretamente relevante para sistemas embebidos e sistemas computacionais críticos, pois permite explorar comunicação, fiabilidade, diagnóstico, tolerância a falhas, integração hardware/software e comportamento de sistemas em ambiente real.
