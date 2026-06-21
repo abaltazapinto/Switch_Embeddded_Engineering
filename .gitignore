@@ -31,3 +31,8 @@ shared/
 
 *pw_proxmox.md
 *credenciais_guiao2.md
+# Browser partial downloads
+*.crdownload
+
+# Large local book - keep on disk, not in Git
+04. Confiabilidade e Ciberseguranca/books/*Nmap Network Scanning*.pdf
