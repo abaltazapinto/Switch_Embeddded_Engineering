@@ -8984,3 +8984,3365 @@ porque no mínimo
 
 2247
 01:25:15,780 --> 01:25:17,780
+eu retiro 20
+
+2248
+01:25:17,780 --> 01:25:19,780
+e se retirar sempre o mínimo 20
+
+2249
+01:25:19,780 --> 01:25:21,780
+eu vou conseguir chegar do zero
+
+2250
+01:25:21,780 --> 01:25:23,780
+aos 100
+
+2251
+01:25:23,780 --> 01:25:25,780
+em cinco
+
+2252
+01:25:25,780 --> 01:25:27,780
+passos do ciclo
+
+2253
+01:25:27,780 --> 01:25:32,050
+e também
+
+2254
+01:25:32,050 --> 01:25:34,050
+garantir que
+
+2255
+01:25:34,050 --> 01:25:36,050
+todos
+
+2256
+01:25:36,050 --> 01:25:38,050
+todos os pontos de saída
+
+2257
+01:25:38,050 --> 01:25:40,050
+libertam o motex
+
+2258
+01:25:40,050 --> 01:25:42,050
+ok
+
+2259
+01:25:42,050 --> 01:25:44,050
+se vocês têm um motex
+
+2260
+01:25:44,050 --> 01:25:46,050
+nunca façam um return
+
+2261
+01:25:46,050 --> 01:25:48,050
+sem libertar o motex
+
+2262
+01:25:48,050 --> 01:25:50,050
+porque se estão o motex fica lá
+
+2263
+01:25:50,050 --> 01:25:52,050
+perdido
+
+2264
+01:25:52,050 --> 01:25:54,050
+é como
+
+2265
+01:25:54,050 --> 01:25:56,050
+um livro que me emprestam
+
+2266
+01:25:56,050 --> 01:25:58,050
+é pai emprestam esse livro
+
+2267
+01:25:58,050 --> 01:26:00,050
+emprestaram o meu livro
+
+2268
+01:26:00,050 --> 01:26:02,050
+e depois eu acabo de ler o livro
+
+2269
+01:26:02,050 --> 01:26:04,050
+guardo naquela pratuleira
+
+2270
+01:26:04,050 --> 01:26:06,050
+que raramente olho para ela
+
+2271
+01:26:06,050 --> 01:26:08,050
+o livro está lá
+
+2272
+01:26:08,050 --> 01:26:10,050
+eu não leio o livro
+
+2273
+01:26:10,050 --> 01:26:12,050
+havia mais pessoal que queria ler o livro
+
+2274
+01:26:12,050 --> 01:26:14,050
+mas eu não olho para ele e ele ficou perdido
+
+2275
+01:26:14,050 --> 01:26:16,050
+ok
+
+2276
+01:26:16,050 --> 01:26:18,050
+portanto é muito importante
+
+2277
+01:26:18,050 --> 01:26:20,050
+e atenção que este erro é muito frequente
+
+2278
+01:26:20,050 --> 01:26:22,050
+é vocês
+
+2279
+01:26:22,050 --> 01:26:24,050
+adquirem o look
+
+2280
+01:26:24,050 --> 01:26:26,050
+e depois têm pontos de saída
+
+2281
+01:26:26,050 --> 01:26:28,050
+em que
+
+2282
+01:26:28,050 --> 01:26:31,680
+não libertam o look
+
+2283
+01:26:31,680 --> 01:26:33,680
+portanto
+
+2284
+01:26:33,680 --> 01:26:35,680
+nestes casos vocês têm sempre que pensar
+
+2285
+01:26:35,680 --> 01:26:37,680
+que se você tiver um break
+
+2286
+01:26:37,680 --> 01:26:39,680
+de um ciclo
+
+2287
+01:26:39,680 --> 01:26:41,680
+ou souber um return
+
+2288
+01:26:41,680 --> 01:26:43,680
+e se não se sairmos
+
+2289
+01:26:43,680 --> 01:26:45,680
+da secção crítica
+
+2290
+01:26:45,680 --> 01:26:47,680
+temos sempre de
+
+2291
+01:26:47,680 --> 01:26:49,680
+libertar o motex
+
+2292
+01:26:49,680 --> 01:26:53,280
+ok
+
+2293
+01:26:53,280 --> 01:26:59,890
+dúvidas
+
+2294
+01:26:59,890 --> 01:27:01,890
+não há
+
+2295
+01:27:01,890 --> 01:27:03,890
+pronto
+
+2296
+01:27:03,890 --> 01:27:05,890
+nunca colocar dentro
+
+2297
+01:27:05,890 --> 01:27:09,140
+de uma secção crítica
+
+2298
+01:27:09,140 --> 01:27:11,140
+ciclos infinitos
+
+2299
+01:27:11,140 --> 01:27:13,140
+bloqueado
+
+2300
+01:27:13,140 --> 01:27:15,140
+também
+
+2301
+01:27:15,140 --> 01:27:17,140
+evitar
+
+2302
+01:27:17,140 --> 01:27:19,140
+colocar operações
+
+2303
+01:27:19,140 --> 01:27:21,140
+de entrada e saída
+
+2304
+01:27:21,140 --> 01:27:23,140
+ok
+
+2305
+01:27:23,140 --> 01:27:25,140
+por exemplo
+
+2306
+01:27:25,140 --> 01:27:27,140
+tem que mandar qualquer coisa pelo wi-fi
+
+2307
+01:27:27,140 --> 01:27:29,140
+se for preciso
+
+2308
+01:27:29,140 --> 01:27:31,140
+sim
+
+2309
+01:27:31,140 --> 01:27:33,140
+se bem que
+
+2310
+01:27:33,140 --> 01:27:35,140
+em sistemas mais completos
+
+2311
+01:27:35,140 --> 01:27:37,140
+eu quando mando
+
+2312
+01:27:37,140 --> 01:27:39,140
+qualquer coisa pelo wi-fi
+
+2313
+01:27:39,140 --> 01:27:41,140
+qualquer não de sistema operativo
+
+2314
+01:27:41,140 --> 01:27:43,140
+já tem mecanismos de sincronização
+
+2315
+01:27:43,140 --> 01:27:45,140
+sistema operativo
+
+2316
+01:27:45,140 --> 01:27:47,140
+recebe tudo
+
+2317
+01:27:47,140 --> 01:27:49,140
+mas impõe em ordem
+
+2318
+01:27:49,140 --> 01:27:51,140
+nos dispositivos que estão por baixo
+
+2319
+01:27:51,140 --> 01:27:54,670
+ok
+
+2320
+01:27:54,670 --> 01:27:56,670
+mas o exemplo que eu coloquei aqui
+
+2321
+01:27:56,670 --> 01:27:58,670
+imaginem que ele fica à espera de um valor
+
+2322
+01:27:58,670 --> 01:28:00,670
+que vem do teclado
+
+2323
+01:28:00,670 --> 01:28:02,670
+é pá
+
+2324
+01:28:02,670 --> 01:28:04,670
+a pessoa até pode ser muito rápida
+
+2325
+01:28:04,670 --> 01:28:06,670
+a inserir os valores no teclado
+
+2326
+01:28:06,670 --> 01:28:08,670
+ou então podemos ter alguém que é um azelha
+
+2327
+01:28:08,670 --> 01:28:10,670
+que carrega numa tecla
+
+2328
+01:28:10,670 --> 01:28:12,670
+e depois anda à procura da outra
+
+2329
+01:28:12,670 --> 01:28:14,670
+para carregar na segunda tecla
+
+2330
+01:28:14,670 --> 01:28:16,670
+e o que é que acontece?
+
+2331
+01:28:16,670 --> 01:28:18,670
+estamos ali necessariamente a bloquear
+
+2332
+01:28:18,670 --> 01:28:20,670
+outras tarefas
+
+2333
+01:28:20,670 --> 01:28:22,670
+a velocidade
+
+2334
+01:28:22,670 --> 01:28:24,670
+pior possível que a velocidade do humano
+
+2335
+01:28:24,670 --> 01:28:26,670
+certo?
+
+2336
+01:28:26,670 --> 01:28:28,670
+para um computador
+
+2337
+01:28:28,670 --> 01:28:30,670
+para um processador humano
+
+2338
+01:28:30,670 --> 01:28:32,670
+extraordinariamente
+
+2339
+01:28:32,670 --> 01:28:34,670
+portanto
+
+2340
+01:28:34,670 --> 01:28:36,670
+tudo que for esse tipo de cargas
+
+2341
+01:28:36,670 --> 01:28:38,670
+é colocar fora
+
+2342
+01:28:38,670 --> 01:28:40,670
+manter fora das secções críticas
+
+2343
+01:28:40,670 --> 01:28:42,670
+ok
+
+2344
+01:28:42,670 --> 01:28:44,670
+pronto
+
+2345
+01:28:44,670 --> 01:28:46,670
+cóvigo que
+
+2346
+01:28:46,670 --> 01:28:48,670
+falhe a libertação do mutex
+
+2347
+01:28:48,670 --> 01:28:50,670
+resulta
+
+2348
+01:28:50,670 --> 01:28:52,670
+num devlog
+
+2349
+01:28:52,670 --> 01:28:54,670
+ou seja
+
+2350
+01:28:54,670 --> 01:28:56,670
+é um mutex
+
+2351
+01:28:56,670 --> 01:28:58,670
+que fica na posse de alguém
+
+2352
+01:29:00,670 --> 01:29:02,670
+e que depois não passa para mais ninguém
+
+2353
+01:29:02,670 --> 01:29:04,670
+tá bom?
+
+2354
+01:29:04,670 --> 01:29:06,670
+dúvidas no ar?
+
+2355
+01:29:06,670 --> 01:29:12,000
+não
+
+2356
+01:29:12,000 --> 01:29:14,000
+percebo que tem uma da língua
+
+2357
+01:29:14,000 --> 01:29:16,000
+grato
+
+2358
+01:29:16,000 --> 01:29:18,000
+por exemplo
+
+2359
+01:29:18,000 --> 01:29:20,000
+dentro do mutex, por isso eu disse
+
+2360
+01:29:20,000 --> 01:29:22,000
+não se deve colocar nenhuma operação de leitura
+
+2361
+01:29:22,000 --> 01:29:24,000
+de um fecheiro
+
+2362
+01:29:24,000 --> 01:29:26,000
+essas opações são muito demoradas
+
+2363
+01:29:26,000 --> 01:29:28,000
+mas quando nós fazemos
+
+2364
+01:29:28,000 --> 01:29:30,000
+a escrita para um fecheiro
+
+2365
+01:29:30,000 --> 01:29:34,300
+a operação de leitura também não é executada
+
+2366
+01:29:34,300 --> 01:29:36,300
+espere lá
+
+2367
+01:29:36,300 --> 01:29:38,300
+nós estamos a escrever para um fecheiro
+
+2368
+01:29:38,300 --> 01:29:40,300
+sério?
+
+2369
+01:29:40,300 --> 01:29:42,300
+porque eu lembro de
+
+2370
+01:29:42,300 --> 01:29:44,300
+acho que foi a professora de sistemas operativos que nos explicou
+
+2371
+01:29:44,300 --> 01:29:46,300
+que
+
+2372
+01:29:46,300 --> 01:29:48,300
+mesmo durante uma escrita
+
+2373
+01:29:48,300 --> 01:29:50,300
+a operação de escrita
+
+2374
+01:29:50,300 --> 01:29:52,300
+também tinha que primeiro ler
+
+2375
+01:29:52,300 --> 01:29:54,300
+escrever e libertar o fecheiro
+
+2376
+01:29:54,300 --> 01:29:56,300
+algo assim desse cheiro
+
+2377
+01:29:56,300 --> 01:29:58,300
+eu estou a confundir
+
+2378
+01:29:58,300 --> 01:30:00,300
+ok, está-me a faltar o contexto
+
+2379
+01:30:00,300 --> 01:30:02,300
+posso começar a especular sobre o contexto?
+
+2380
+01:30:02,300 --> 01:30:06,100
+o contexto era só
+
+2381
+01:30:06,100 --> 01:30:08,100
+mesmo a operação de leite de escrita
+
+2382
+01:30:08,100 --> 01:30:10,100
+de um fecheiro
+
+2383
+01:30:10,100 --> 01:30:12,100
+descrita no fecheiro?
+
+2384
+01:30:12,100 --> 01:30:14,100
+eu só quero escrever no fecheiro
+
+2385
+01:30:14,100 --> 01:30:16,100
+espere
+
+2386
+01:30:16,100 --> 01:30:18,100
+isso foi no contexto do kernel
+
+2387
+01:30:18,100 --> 01:30:20,100
+talvez faça defensa
+
+2388
+01:30:20,100 --> 01:30:22,100
+é o seguinte
+
+2389
+01:30:22,100 --> 01:30:24,100
+se eu fizer um write
+
+2390
+01:30:24,100 --> 01:30:26,100
+eu quando faço
+
+2391
+01:30:26,100 --> 01:30:28,100
+quando chama a função write
+
+2392
+01:30:28,100 --> 01:30:30,100
+eu vou parar
+
+2393
+01:30:30,100 --> 01:30:32,100
+suspender a execução do meu programa
+
+2394
+01:30:32,100 --> 01:30:34,100
+e vou passar a execução
+
+2395
+01:30:34,100 --> 01:30:36,100
+para o código kernel
+
+2396
+01:30:36,100 --> 01:30:38,100
+ok
+
+2397
+01:30:38,100 --> 01:30:40,100
+isso é o que se chamam as chamadas
+
+2398
+01:30:40,100 --> 01:30:42,100
+ao sistema, system call
+
+2399
+01:30:42,100 --> 01:30:44,100
+uma system call
+
+2400
+01:30:44,100 --> 01:30:46,100
+quer dizer que eu tenho código
+
+2401
+01:30:46,100 --> 01:30:48,100
+em que uma data altura
+
+2402
+01:30:48,100 --> 01:30:50,100
+transferir a minha execução
+
+2403
+01:30:50,100 --> 01:30:52,100
+para o código kernel
+
+2404
+01:30:52,100 --> 01:30:54,100
+se eu fizer um write
+
+2405
+01:30:54,100 --> 01:30:56,100
+o que acontece é que
+
+2406
+01:30:56,100 --> 01:30:58,100
+eu antes de chamar o sistema
+
+2407
+01:30:58,100 --> 01:31:00,100
+eu vou colocar os dados
+
+2408
+01:31:00,100 --> 01:31:02,100
+e eu quero enviar
+
+2409
+01:31:02,100 --> 01:31:04,100
+num buffer na memória
+
+2410
+01:31:04,100 --> 01:31:06,100
+uma variável por exemplo
+
+2411
+01:31:06,100 --> 01:31:08,100
+e depois eu quando faço write
+
+2412
+01:31:08,100 --> 01:31:10,100
+eu passo o endereço dessa variável
+
+2413
+01:31:10,100 --> 01:31:12,100
+ou seja
+
+2414
+01:31:12,100 --> 01:31:14,100
+eu estou a dizer
+
+2415
+01:31:14,100 --> 01:31:16,100
+ao sistema operativo
+
+2416
+01:31:16,100 --> 01:31:18,100
+onde é que está aquilo
+
+2417
+01:31:18,100 --> 01:31:20,100
+que ele deve de
+
+2418
+01:31:20,100 --> 01:31:22,100
+pegar
+
+2419
+01:31:22,100 --> 01:31:24,100
+para escrever no fecheiro
+
+2420
+01:31:24,100 --> 01:31:26,100
+ok
+
+2421
+01:31:26,100 --> 01:31:28,100
+uma outra indicação
+
+2422
+01:31:28,100 --> 01:31:30,100
+do sistema operativo é quantos bytes
+
+2423
+01:31:30,100 --> 01:31:32,100
+o write normalmente
+
+2424
+01:31:32,100 --> 01:31:34,100
+tem a partir de onde
+
+2425
+01:31:34,100 --> 01:31:36,100
+e quantos
+
+2426
+01:31:36,100 --> 01:31:38,100
+ok, portanto
+
+2427
+01:31:38,100 --> 01:31:40,100
+é a partir de que endereço
+
+2428
+01:31:40,100 --> 01:31:42,100
+é que estão os bytes
+
+2429
+01:31:42,100 --> 01:31:44,100
+e depois um segundo número que é
+
+2430
+01:31:44,100 --> 01:31:46,100
+e quantos bytes é que eu tenho que buscar
+
+2431
+01:31:46,100 --> 01:31:48,100
+a partir desse endereço
+
+2432
+01:31:48,100 --> 01:31:50,100
+o kernel quando entra em ação
+
+2433
+01:31:50,100 --> 01:31:52,100
+recebe esses dois dados
+
+2434
+01:31:52,100 --> 01:31:54,100
+e também recebe a indicação de qual é
+
+2435
+01:31:54,100 --> 01:31:56,100
+o fecheiro
+
+2436
+01:31:56,100 --> 01:31:58,100
+do fecheiro
+
+2437
+01:31:58,100 --> 01:32:00,100
+mas vamos focar no endereço e no tamanho
+
+2438
+01:32:00,100 --> 01:32:02,100
+aquilo que ele vai fazer
+
+2439
+01:32:02,100 --> 01:32:04,100
+é
+
+2440
+01:32:04,100 --> 01:32:06,100
+ok, tenho agora este pedido
+
+2441
+01:32:06,100 --> 01:32:08,100
+de write
+
+2442
+01:32:08,100 --> 01:32:10,100
+então vou pegar no que está
+
+2443
+01:32:10,100 --> 01:32:12,100
+aqui
+
+2444
+01:32:12,100 --> 01:32:14,100
+neste endereço
+
+2445
+01:32:14,100 --> 01:32:16,100
+este número de bytes
+
+2446
+01:32:16,100 --> 01:32:20,690
+e vou copiar para um buffer interno
+
+2447
+01:32:20,690 --> 01:32:22,690
+ok
+
+2448
+01:32:22,690 --> 01:32:24,690
+eu copio para um buffer interno
+
+2449
+01:32:24,690 --> 01:32:26,690
+do kernel
+
+2450
+01:32:26,690 --> 01:32:28,690
+e vou copiar
+
+2451
+01:32:28,690 --> 01:32:30,690
+daquilo que é para ser enviado
+
+2452
+01:32:30,690 --> 01:32:34,640
+para o fecheiro
+
+2453
+01:32:34,640 --> 01:32:36,640
+e vai colocar
+
+2454
+01:32:36,640 --> 01:32:39,920
+essa cópia em lista de espera
+
+2455
+01:32:39,920 --> 01:32:41,920
+se houver outras operações
+
+2456
+01:32:41,920 --> 01:32:43,920
+de fecheiro
+
+2457
+01:32:43,920 --> 01:32:45,920
+de disco
+
+2458
+01:32:45,920 --> 01:32:47,920
+que estão pendentes
+
+2459
+01:32:47,920 --> 01:32:49,920
+é organizada uma lista de espera
+
+2460
+01:32:49,920 --> 01:32:51,920
+e elas são realizadas uma a uma
+
+2461
+01:32:51,920 --> 01:32:53,920
+é dessa forma que o sistema operativo
+
+2462
+01:32:53,920 --> 01:32:55,920
+organiza
+
+2463
+01:32:55,920 --> 01:32:57,920
+ou impõe uma ordem
+
+2464
+01:32:57,920 --> 01:32:59,920
+ele cria
+
+2465
+01:32:59,920 --> 01:33:01,920
+filas
+
+2466
+01:33:01,920 --> 01:33:03,920
+internas
+
+2467
+01:33:03,920 --> 01:33:05,920
+e depois ele faz a gestão dessas filas
+
+2468
+01:33:05,920 --> 01:33:07,920
+ele é que sabe quando é que
+
+2469
+01:33:07,920 --> 01:33:09,920
+aquela operação vai ser realizada
+
+2470
+01:33:11,920 --> 01:33:13,920
+e quando ele termina
+
+2471
+01:33:13,920 --> 01:33:15,920
+de fazer essa cópia
+
+2472
+01:33:15,920 --> 01:33:17,920
+e organizar o trabalho
+
+2473
+01:33:17,920 --> 01:33:19,920
+o write
+
+2474
+01:33:19,920 --> 01:33:21,920
+desbloqueia
+
+2475
+01:33:21,920 --> 01:33:23,920
+e continue a executar o código
+
+2476
+01:33:23,920 --> 01:33:27,360
+da nossa aplicação
+
+2477
+01:33:27,360 --> 01:33:29,360
+e quando o sistema operativo tiver
+
+2478
+01:33:29,360 --> 01:33:31,360
+oportunidade
+
+2479
+01:33:31,360 --> 01:33:33,360
+e achar conveniente
+
+2480
+01:33:33,360 --> 01:33:35,360
+ele vai tratar de guardar
+
+2481
+01:33:35,360 --> 01:33:37,360
+aqueles dados no fecheiro
+
+2482
+01:33:37,360 --> 01:33:39,360
+é assim que acontece
+
+2483
+01:33:39,360 --> 01:33:41,360
+agora eu não sei
+
+2484
+01:33:41,360 --> 01:33:43,360
+como é que isto encaixa
+
+2485
+01:33:43,360 --> 01:33:45,360
+no cenário que estava
+
+2486
+01:33:45,360 --> 01:33:47,360
+a tentar recordar
+
+2487
+01:33:47,360 --> 01:33:50,990
+mas eu lembro que o professor fez
+
+2488
+01:33:50,990 --> 01:33:52,990
+uns printes
+
+2489
+01:33:52,990 --> 01:33:54,990
+era educado, não era?
+
+2490
+01:33:54,990 --> 01:33:56,990
+sim, exatamente
+
+2491
+01:33:56,990 --> 01:33:58,990
+e onde a leitura do fecheiro
+
+2492
+01:33:58,990 --> 01:34:00,990
+também ocorria durante uma escrita
+
+2493
+01:34:00,990 --> 01:34:02,990
+agora eu não sei se tenho a ver
+
+2494
+01:34:02,990 --> 01:34:04,990
+com o que foi escutar o programa o cat
+
+2495
+01:34:04,990 --> 01:34:06,990
+então para marcar com ele a descrever e...
+
+2496
+01:34:06,990 --> 01:34:08,990
+digam-me uma coisa, o cat estava
+
+2497
+01:34:08,990 --> 01:34:10,990
+a escrever para o ecrã?
+
+2498
+01:34:10,990 --> 01:34:12,990
+sim
+
+2499
+01:34:12,990 --> 01:34:14,990
+sim, sim
+
+2500
+01:34:14,990 --> 01:34:16,990
+então o que é que acontece? o comando cat
+
+2501
+01:34:16,990 --> 01:34:18,990
+faz read
+
+2502
+01:34:18,990 --> 01:34:20,990
+e write
+
+2503
+01:34:20,990 --> 01:34:22,990
+faz o read de um fecheiro
+
+2504
+01:34:22,990 --> 01:34:24,990
+e faz o write
+
+2505
+01:34:24,990 --> 01:34:26,990
+puto, normalmente está orientado
+
+2506
+01:34:26,990 --> 01:34:28,990
+para o ecrã
+
+2507
+01:34:28,990 --> 01:34:30,990
+para o terminal
+
+2508
+01:34:30,990 --> 01:34:32,990
+foi esse o problema
+
+2509
+01:34:36,990 --> 01:34:38,990
+vou dizer uma coisa
+
+2510
+01:34:38,990 --> 01:34:40,990
+o cat tem um buffer
+
+2511
+01:34:40,990 --> 01:34:42,990
+grandinho
+
+2512
+01:34:42,990 --> 01:34:44,990
+e ele é bastante
+
+2513
+01:34:44,990 --> 01:34:46,990
+do fecheiro
+
+2514
+01:34:46,990 --> 01:34:48,990
+e depois vai despaixando para o ecrã
+
+2515
+01:34:50,990 --> 01:34:52,990
+então vai ligar, está me ajudando para a grana
+
+2516
+01:34:52,990 --> 01:34:59,820
+sim, sim
+
+2517
+01:34:59,820 --> 01:35:01,820
+quase de certeza
+
+2518
+01:35:01,820 --> 01:35:03,820
+porque o kernel também
+
+2519
+01:35:03,820 --> 01:35:05,820
+não tem
+
+2520
+01:35:05,820 --> 01:35:07,820
+espaço infinito de memória
+
+2521
+01:35:07,820 --> 01:35:09,820
+para aqueles seus buffers internos
+
+2522
+01:35:11,820 --> 01:35:16,930
+mas
+
+2523
+01:35:16,930 --> 01:35:20,910
+operações em disco
+
+2524
+01:35:20,910 --> 01:35:22,910
+não sei
+
+2525
+01:35:24,910 --> 01:35:26,910
+eu queria dizer-vos
+
+2526
+01:35:26,910 --> 01:35:28,910
+por exemplo
+
+2527
+01:35:28,910 --> 01:35:30,910
+fazer um pedido de leitura de disco
+
+2528
+01:35:30,910 --> 01:35:32,910
+é uma operação demorada
+
+2529
+01:35:34,910 --> 01:35:36,910
+então uma das estratégias
+
+2530
+01:35:36,910 --> 01:35:38,910
+para não perdermos muito tempo
+
+2531
+01:35:38,910 --> 01:35:40,910
+é
+
+2532
+01:35:40,910 --> 01:35:42,910
+se eu quero ler 4 bytes
+
+2533
+01:35:42,910 --> 01:35:44,910
+daquele fecheiro
+
+2534
+01:35:44,910 --> 01:35:46,910
+eu demoro quase tanto tempo a ler 4 bytes
+
+2535
+01:35:46,910 --> 01:35:48,910
+como a ler 512 bytes
+
+2536
+01:35:52,910 --> 01:35:54,910
+então eu leio logo por atacado
+
+2537
+01:35:54,910 --> 01:35:56,910
+uma quantidade maior
+
+2538
+01:35:56,910 --> 01:35:58,910
+e da próxima vez que eu quiser ler
+
+2539
+01:35:58,910 --> 01:36:00,910
+4 bytes seguintes
+
+2540
+01:36:00,910 --> 01:36:06,720
+eles já estão em memória
+
+2541
+01:36:06,720 --> 01:36:08,720
+e agora já nem sei como é que isso te responde
+
+2542
+01:36:08,720 --> 01:36:10,720
+à sua questão
+
+2543
+01:36:10,720 --> 01:36:12,720
+a sua questão era
+
+2544
+01:36:12,720 --> 01:36:19,140
+relembre-me lá
+
+2545
+01:36:19,140 --> 01:36:21,140
+já não se lembra também da questão da delvida
+
+2546
+01:36:21,140 --> 01:36:23,140
+acho que foi o André porque você sabia
+
+2547
+01:36:23,140 --> 01:36:25,140
+um limite para o buffer com os
+
+2548
+01:36:25,140 --> 01:36:27,140
+ah, ok
+
+2549
+01:36:27,140 --> 01:36:33,620
+e a resposta
+
+2550
+01:36:33,620 --> 01:36:35,620
+ah, ok, sim
+
+2551
+01:36:35,620 --> 01:36:37,620
+opa, mas ah
+
+2552
+01:36:37,620 --> 01:36:39,620
+ah
+
+2553
+01:36:39,620 --> 01:36:41,620
+a forma prática de construir sistemas
+
+2554
+01:36:41,620 --> 01:36:43,620
+é
+
+2555
+01:36:43,620 --> 01:36:45,620
+impor limites
+
+2556
+01:36:45,620 --> 01:36:47,620
+a muitos dos buffers
+
+2557
+01:36:47,620 --> 01:36:49,620
+agora
+
+2558
+01:36:49,620 --> 01:36:51,620
+qual é que é o limite
+
+2559
+01:36:51,620 --> 01:36:53,620
+mais uma vez a uma questão de equilíbrio
+
+2560
+01:36:53,620 --> 01:37:15,620
+e as vezes
+
+2561
+01:37:15,620 --> 01:37:17,620
+o resultado não é muito bonito
+
+2562
+01:37:17,620 --> 01:37:19,620
+mas
+
+2563
+01:37:19,620 --> 01:37:21,620
+porque é um fecheiro binário
+
+2564
+01:37:21,620 --> 01:37:23,620
+opa, mas é o seguinte
+
+2565
+01:37:23,620 --> 01:37:25,620
+as operações de leitura
+
+2566
+01:37:25,620 --> 01:37:27,620
+normalmente
+
+2567
+01:37:27,620 --> 01:37:29,620
+o sistema operativo leia por blogs
+
+2568
+01:37:29,620 --> 01:37:31,620
+uma pessoa
+
+2569
+01:37:31,620 --> 01:37:33,620
+tem a ideia, ou a fantasia de que
+
+2570
+01:37:33,620 --> 01:37:35,620
+ah, eu só li 4 bytes
+
+2571
+01:37:35,620 --> 01:37:37,620
+queria ler um int
+
+2572
+01:37:37,620 --> 01:37:39,620
+daquele fecheiro binário
+
+2573
+01:37:39,620 --> 01:37:41,620
+e li
+
+2574
+01:37:41,620 --> 01:37:43,620
+4 bytes
+
+2575
+01:37:43,620 --> 01:37:45,620
+e depois se eu quiser ler uma série de inteiros
+
+2576
+01:37:45,620 --> 01:37:47,620
+eu ponho aquilo no ciclo 4
+
+2577
+01:37:47,620 --> 01:37:49,620
+com um read de 4 bytes
+
+2578
+01:37:49,620 --> 01:37:51,620
+e pensamos que aquilo está a sacar
+
+2579
+01:37:51,620 --> 01:37:53,620
+4, 4, 4, 4, 4
+
+2580
+01:37:53,620 --> 01:37:55,620
+mas os sistemas operativos
+
+2581
+01:37:55,620 --> 01:37:57,620
+normalmente têm estratégias
+
+2582
+01:37:57,620 --> 01:37:59,620
+para
+
+2583
+01:37:59,620 --> 01:38:01,620
+otimizar o desempenho
+
+2584
+01:38:01,620 --> 01:38:03,620
+e uma delas é
+
+2585
+01:38:03,620 --> 01:38:05,620
+se tu estás a ler estes 4 bytes
+
+2586
+01:38:05,620 --> 01:38:07,620
+muito possivelmente
+
+2587
+01:38:07,620 --> 01:38:09,620
+tu vais querer também ler mais qualquer coisa
+
+2588
+01:38:09,620 --> 01:38:11,620
+aqui na vizinhança
+
+2589
+01:38:11,620 --> 01:38:13,620
+então, eu leo logo por atacado
+
+2590
+01:38:13,620 --> 01:38:15,620
+uma boa quantidade de bytes
+
+2591
+01:38:15,620 --> 01:38:17,620
+qual é
+
+2592
+01:38:17,620 --> 01:38:19,620
+a boa quantidade de bytes
+
+2593
+01:38:19,620 --> 01:38:21,620
+é algo que
+
+2594
+01:38:21,620 --> 01:38:23,620
+normalmente quem desenvolve estes sistemas
+
+2595
+01:38:23,620 --> 01:38:25,620
+estuda
+
+2596
+01:38:25,620 --> 01:38:27,620
+e vê qual é a melhor
+
+2597
+01:38:27,620 --> 01:38:29,620
+ok
+
+2598
+01:38:29,620 --> 01:38:31,620
+obviamente que ler 4 bytes
+
+2599
+01:38:31,620 --> 01:38:33,620
+demora menos tempo do que ler 512
+
+2600
+01:38:33,620 --> 01:38:35,620
+mas se calhar
+
+2601
+01:38:35,620 --> 01:38:37,620
+ler 512
+
+2602
+01:38:37,620 --> 01:38:39,620
+a ler
+
+2603
+01:38:39,620 --> 01:38:41,620
+4 mais 4
+
+2604
+01:38:41,620 --> 01:38:43,620
+logo 4 mais 4 mais 4, não é?
+
+2605
+01:38:43,620 --> 01:38:45,620
+portanto fazer, eu nem sei
+
+2606
+01:38:45,620 --> 01:38:47,620
+deixe-me pegar na calculadora mas 512
+
+2607
+01:38:47,620 --> 01:38:51,150
+é divisível por 4
+
+2608
+01:38:51,150 --> 01:38:53,150
+ora, 512
+
+2609
+01:38:53,150 --> 01:38:55,150
+a dividir por 4
+
+2610
+01:38:55,150 --> 01:38:57,150
+demora menos tempo
+
+2611
+01:38:57,150 --> 01:38:59,150
+fazer uma leitura
+
+2612
+01:38:59,150 --> 01:39:01,150
+de 512 bytes
+
+2613
+01:39:01,150 --> 01:39:03,150
+do que fazer
+
+2614
+01:39:03,150 --> 01:39:05,150
+128 leituras
+
+2615
+01:39:05,150 --> 01:39:10,160
+de 4 bytes
+
+2616
+01:39:10,160 --> 01:39:13,950
+estou a falar de discos duros
+
+2617
+01:39:13,950 --> 01:39:15,950
+ok, agora precisava de por esta resala
+
+2618
+01:39:15,950 --> 01:39:17,950
+esta resala, eu sou um bocado jurássico
+
+2619
+01:39:17,950 --> 01:39:19,950
+ainda sou de tempo dos discos
+
+2620
+01:39:19,950 --> 01:39:21,950
+magnéticos em que têm discos a rodar
+
+2621
+01:39:21,950 --> 01:39:23,950
+e têm
+
+2622
+01:39:23,950 --> 01:39:25,950
+discos a rodar por baixo da agulha magnéticas
+
+2623
+01:39:25,950 --> 01:39:27,950
+e o que é que acontece
+
+2624
+01:39:27,950 --> 01:39:29,950
+a partir do momento em que
+
+2625
+01:39:29,950 --> 01:39:31,950
+a agulha está em cima
+
+2626
+01:39:31,950 --> 01:39:33,950
+do sítio certo
+
+2627
+01:39:33,950 --> 01:39:35,950
+ele pode ler 512 bytes
+
+2628
+01:39:35,950 --> 01:39:37,950
+só numa
+
+2629
+01:39:37,950 --> 01:39:39,950
+passagem
+
+2630
+01:39:39,950 --> 01:39:41,950
+certo? enquanto que se eu fizer
+
+2631
+01:39:41,950 --> 01:39:43,950
+dá-me 4 bytes, agora dá-me outros 4 bytes
+
+2632
+01:39:43,950 --> 01:39:45,950
+dá-me outros 4 bytes
+
+2633
+01:39:47,950 --> 01:39:49,950
+nos primeiros 4 bytes nós temos que ficar a espera
+
+2634
+01:39:49,950 --> 01:39:51,950
+que o disco passe
+
+2635
+01:39:51,950 --> 01:39:53,950
+no sítio certo por baixo da agulha
+
+2636
+01:39:53,950 --> 01:39:55,950
+e depois quando voltamos a pedir
+
+2637
+01:39:55,950 --> 01:39:57,950
+os 4 bytes seguintes temos que voltar
+
+2638
+01:39:57,950 --> 01:39:59,950
+a ficar a espera que o disco
+
+2639
+01:39:59,950 --> 01:40:01,950
+volta a passar por baixo da agulha
+
+2640
+01:40:01,950 --> 01:40:03,950
+no sítio certo
+
+2641
+01:40:03,950 --> 01:40:05,950
+ok, era por isso que estas
+
+2642
+01:40:05,950 --> 01:40:07,950
+estratégias eram muito úteis
+
+2643
+01:40:07,950 --> 01:40:09,950
+quando tínhamos discos magnéticos
+
+2644
+01:40:09,950 --> 01:40:11,950
+porque nos discos magnéticos
+
+2645
+01:40:11,950 --> 01:40:13,950
+o pior tempo
+
+2646
+01:40:13,950 --> 01:40:15,950
+de acesso
+
+2647
+01:40:15,950 --> 01:40:17,950
+dependia de levar
+
+2648
+01:40:17,950 --> 01:40:19,950
+a agulha ao sítio certo
+
+2649
+01:40:19,950 --> 01:40:21,950
+e depois levar o disco
+
+2650
+01:40:21,950 --> 01:40:23,950
+a passar por baixo da agulha
+
+2651
+01:40:23,950 --> 01:40:25,950
+ou levar o sítio certo do disco
+
+2652
+01:40:25,950 --> 01:40:27,950
+a passar por baixo da agulha
+
+2653
+01:40:27,950 --> 01:40:29,950
+portanto, eram tempos
+
+2654
+01:40:29,950 --> 01:40:31,950
+que dependiam mesmo
+
+2655
+01:40:31,950 --> 01:40:33,950
+de factores mecânicos
+
+2656
+01:40:33,950 --> 01:40:35,950
+agora com discos ssd
+
+2657
+01:40:35,950 --> 01:40:37,950
+com flash
+
+2658
+01:40:37,950 --> 01:40:39,950
+a coisa em princípio
+
+2659
+01:40:39,950 --> 01:40:41,950
+não é tão dramática quanto isso
+
+2660
+01:40:41,950 --> 01:40:46,580
+até porque não temos que levar
+
+2661
+01:40:46,580 --> 01:40:48,580
+a cabeça ao sítio certo
+
+2662
+01:40:48,580 --> 01:40:50,580
+a agulha ao sítio certo e depois levar o disco
+
+2663
+01:40:50,580 --> 01:40:52,580
+a passar por baixo da agulha
+
+2664
+01:40:52,580 --> 01:40:54,580
+é quase como uma memória RAM
+
+2665
+01:40:54,580 --> 01:40:56,580
+só que mais lenta
+
+2666
+01:40:56,580 --> 01:40:58,580
+tamo que está neste endereço
+
+2667
+01:40:58,580 --> 01:41:00,580
+aquilo
+
+2668
+01:41:00,580 --> 01:41:02,580
+devolve o que está naquele endereço
+
+2669
+01:41:02,580 --> 01:41:04,580
+é muito mais rápido
+
+2670
+01:41:04,580 --> 01:41:06,580
+e seja qual for o endereço
+
+2671
+01:41:06,580 --> 01:41:08,580
+demora basicamente o mesmo tempo
+
+2672
+01:41:08,580 --> 01:41:10,580
+é que mais memória RAM
+
+2673
+01:41:10,580 --> 01:41:12,580
+como é que mais discos
+
+2674
+01:41:12,580 --> 01:41:14,580
+os discos dependiam do sítio onde estiver
+
+2675
+01:41:14,580 --> 01:41:16,580
+o disco físico e a agulha
+
+2676
+01:41:16,580 --> 01:41:20,080
+a posição da agulha
+
+2677
+01:41:20,080 --> 01:41:22,080
+eles continuam a fazer assim algumas
+
+2678
+01:41:24,080 --> 01:41:26,080
+leituras por atacado
+
+2679
+01:41:26,080 --> 01:41:28,080
+porque mesmo assim
+
+2680
+01:41:28,080 --> 01:41:30,080
+ganhamos o tempo
+
+2681
+01:41:30,080 --> 01:41:32,080
+mais vale perdemos algum tempo
+
+2682
+01:41:32,080 --> 01:41:34,080
+a ler muito
+
+2683
+01:41:34,080 --> 01:41:36,080
+e depois sempre que fazemos pedidos
+
+2684
+01:41:36,080 --> 01:41:38,080
+curtos
+
+2685
+01:41:38,080 --> 01:41:40,080
+estando em memória
+
+2686
+01:41:40,080 --> 01:41:42,080
+é tempo que já não perdemos
+
+2687
+01:41:42,080 --> 01:41:44,080
+mesmo um disco ssd é lenta
+
+2688
+01:41:44,080 --> 01:41:46,080
+em relação a memória RAM
+
+2689
+01:41:46,080 --> 01:41:48,080
+e a memória RAM é lenta em relação a caixa
+
+2690
+01:41:48,080 --> 01:41:50,080
+portanto se estiverem na caixa
+
+2691
+01:41:50,080 --> 01:41:53,360
+tanto melhor
+
+2692
+01:41:53,360 --> 01:41:57,470
+dúvidas não há?
+
+2693
+01:41:57,470 --> 01:42:00,820
+mais dúvidas não há?
+
+2694
+01:42:00,820 --> 01:42:02,820
+ok, pronto
+
+2695
+01:42:02,820 --> 01:42:04,820
+deixe-me cá agora então
+
+2696
+01:42:04,820 --> 01:42:06,820
+parar
+
+2697
+01:42:08,820 --> 01:42:10,820
+ora bem
+
+2698
+01:42:10,820 --> 01:42:12,820
+eu estou agora olhar já faltam 10 minutos
+
+2699
+01:42:12,820 --> 01:42:14,820
+isso demora muito tempo
+
+2700
+01:42:14,820 --> 01:42:18,350
+convosco pessoal
+
+2701
+01:42:18,350 --> 01:42:20,350
+eu devo ser uma grande seca convosco
+
+2702
+01:42:20,350 --> 01:42:23,700
+eu não falo demasiado
+
+2703
+01:42:23,700 --> 01:42:25,700
+é melhor não responder
+
+2704
+01:42:27,700 --> 01:42:29,700
+também ajudamos
+
+2705
+01:42:29,700 --> 01:42:33,200
+a perder tempo
+
+2706
+01:42:33,200 --> 01:42:35,200
+ah pá, sim
+
+2707
+01:42:35,200 --> 01:42:37,200
+mas eu acho que se calhar
+
+2708
+01:42:37,200 --> 01:42:39,200
+demora algum tempo mais
+
+2709
+01:42:39,200 --> 01:42:42,700
+de qual que devia
+
+2710
+01:42:42,700 --> 01:42:44,700
+pelo menos a mensagem está a ser passada
+
+2711
+01:42:46,700 --> 01:42:48,700
+se a matéria não for toda vala
+
+2712
+01:42:50,700 --> 01:42:52,700
+esse é que é o problema
+
+2713
+01:42:52,700 --> 01:42:54,700
+ganha-se de um lado perto do outro
+
+2714
+01:42:54,700 --> 01:42:56,700
+eu espero ganhar de um lado que estamos a ganhar
+
+2715
+01:42:56,700 --> 01:42:58,700
+sinceramente
+
+2716
+01:42:58,700 --> 01:43:00,700
+mas pronto
+
+2717
+01:43:00,700 --> 01:43:02,700
+também
+
+2718
+01:43:02,700 --> 01:43:04,700
+pronto
+
+2719
+01:43:04,700 --> 01:43:06,700
+tenho que ter mais cuidado com o equilíbrio
+
+2720
+01:43:06,700 --> 01:43:08,700
+ok, isto aqui faz parte
+
+2721
+01:43:08,700 --> 01:43:10,700
+daqueles slides que eu ando a reformar
+
+2722
+01:43:10,700 --> 01:43:12,700
+tudo
+
+2723
+01:43:12,700 --> 01:43:14,700
+mas esta era outra matéria que eu queria falar
+
+2724
+01:43:14,700 --> 01:43:16,700
+que são variáveis condicionais
+
+2725
+01:43:16,700 --> 01:43:18,700
+deixe-me cá só por isto
+
+2726
+01:43:18,700 --> 01:43:20,700
+aqui
+
+2727
+01:43:20,700 --> 01:43:22,700
+que eu acho que isto está também
+
+2728
+01:43:22,700 --> 01:43:24,700
+a minha
+
+2729
+01:43:24,700 --> 01:43:26,700
+assim já se vê o slide todo
+
+2730
+01:43:26,700 --> 01:43:28,700
+então, variáveis condicionais
+
+2731
+01:43:28,700 --> 01:43:30,700
+o que é que acontece
+
+2732
+01:43:30,700 --> 01:43:32,700
+os moteques
+
+2733
+01:43:32,700 --> 01:43:34,700
+são purreiros para
+
+2734
+01:43:34,700 --> 01:43:36,700
+impor exclusão mútua
+
+2735
+01:43:36,700 --> 01:43:38,700
+ou seja, se estiver alguém a utilizar
+
+2736
+01:43:38,700 --> 01:43:40,700
+os outros tem que esperar
+
+2737
+01:43:40,700 --> 01:43:42,700
+certo? mas
+
+2738
+01:43:42,700 --> 01:43:44,700
+há outros tipos de problemas mais complexos
+
+2739
+01:43:44,700 --> 01:43:46,700
+em que o moteque se processou
+
+2740
+01:43:46,700 --> 01:43:48,700
+não resolve
+
+2741
+01:43:48,700 --> 01:43:50,700
+suponho que vocês tenham 2 direitos
+
+2742
+01:43:50,700 --> 01:43:52,700
+uma thread
+
+2743
+01:43:52,700 --> 01:43:54,700
+coloca um valor
+
+2744
+01:43:54,700 --> 01:43:56,700
+numa variável
+
+2745
+01:43:56,700 --> 01:43:58,700
+e a segunda thread
+
+2746
+01:43:58,700 --> 01:44:00,700
+tem de
+
+2747
+01:44:00,700 --> 01:44:02,700
+ler o valor
+
+2748
+01:44:02,700 --> 01:44:04,700
+que está nessa variável
+
+2749
+01:44:04,700 --> 01:44:06,700
+mas a segunda thread
+
+2750
+01:44:06,700 --> 01:44:08,700
+não pode ler
+
+2751
+01:44:08,700 --> 01:44:10,700
+duas vezes o mesmo valor
+
+2752
+01:44:10,700 --> 01:44:12,700
+o que é que eu quero dizer
+
+2753
+01:44:14,700 --> 01:44:16,700
+temos uma thread que produza
+
+2754
+01:44:16,700 --> 01:44:18,700
+os novos valores
+
+2755
+01:44:18,700 --> 01:44:20,700
+e a segunda thread
+
+2756
+01:44:20,700 --> 01:44:22,700
+consome novos valores
+
+2757
+01:44:22,700 --> 01:44:24,700
+ou seja, não pode consumir
+
+2758
+01:44:24,700 --> 01:44:26,700
+duas vezes o mesmo valor
+
+2759
+01:44:26,700 --> 01:44:28,700
+que a mesma
+
+2760
+01:44:28,700 --> 01:44:30,700
+versão
+
+2761
+01:44:30,700 --> 01:44:32,700
+não sei se me estou a fazer entender
+
+2762
+01:44:32,700 --> 01:44:34,700
+por exemplo, suponho que tenho uma thread
+
+2763
+01:44:34,700 --> 01:44:36,700
+que produza os números 1
+
+2764
+01:44:36,700 --> 01:44:38,700
+depois o 2
+
+2765
+01:44:38,700 --> 01:44:40,700
+e depois o 7
+
+2766
+01:44:40,700 --> 01:44:42,700
+a segunda thread
+
+2767
+01:44:42,700 --> 01:44:44,700
+tem de consumir o 1
+
+2768
+01:44:44,700 --> 01:44:46,700
+mas não pode voltar a consumir o 1
+
+2769
+01:44:46,700 --> 01:44:48,700
+só vai consumir
+
+2770
+01:44:48,700 --> 01:44:50,700
+quando a primeira thread
+
+2771
+01:44:50,700 --> 01:44:52,700
+a produtora colocar um 2
+
+2772
+01:44:52,700 --> 01:44:54,700
+e ela souber que
+
+2773
+01:44:54,700 --> 01:44:56,700
+ok, então já posso ir consumir
+
+2774
+01:44:56,700 --> 01:44:58,700
+porque tenho outra coisa nova para consumir
+
+2775
+01:44:58,700 --> 01:45:00,700
+faz sentido
+
+2776
+01:45:00,700 --> 01:45:04,850
+agora este cenário
+
+2777
+01:45:04,850 --> 01:45:06,850
+nesse caso
+
+2778
+01:45:06,850 --> 01:45:08,850
+o facto de eu adquirir o acesso
+
+2779
+01:45:08,850 --> 01:45:10,850
+à variável não me garante
+
+2780
+01:45:10,850 --> 01:45:12,850
+que eu vá consumir
+
+2781
+01:45:14,850 --> 01:45:16,850
+porque
+
+2782
+01:45:16,850 --> 01:45:18,850
+aquilo que pode estar lá
+
+2783
+01:45:18,850 --> 01:45:20,850
+não é aquilo que eu quero consumir
+
+2784
+01:45:20,850 --> 01:45:22,850
+ainda não está pronto
+
+2785
+01:45:22,850 --> 01:45:24,850
+ou seja
+
+2786
+01:45:24,850 --> 01:45:26,850
+eu posso
+
+2787
+01:45:26,850 --> 01:45:28,850
+precisar de olhar
+
+2788
+01:45:28,850 --> 01:45:30,850
+para
+
+2789
+01:45:30,850 --> 01:45:32,850
+olhar para variáveis
+
+2790
+01:45:32,850 --> 01:45:34,850
+para determinar se está no estado
+
+2791
+01:45:34,850 --> 01:45:36,850
+para eu avançar para as minhas operações
+
+2792
+01:45:36,850 --> 01:45:38,850
+na secção crítica
+
+2793
+01:45:38,850 --> 01:45:40,850
+para isto agora embrulhemos um bocadinho
+
+2794
+01:45:40,850 --> 01:45:42,850
+se não fui claro
+
+2795
+01:45:42,850 --> 01:45:47,310
+digam-me
+
+2796
+01:45:47,310 --> 01:45:49,310
+o que eu quero dizer é que
+
+2797
+01:45:49,310 --> 01:45:51,310
+o facto de eu adquirir o motex
+
+2798
+01:45:51,310 --> 01:45:53,310
+não me garante
+
+2799
+01:45:53,310 --> 01:45:55,310
+que eu estou em condições para executar
+
+2800
+01:45:55,310 --> 01:45:57,310
+a minha secção crítica
+
+2801
+01:45:57,310 --> 01:45:59,310
+eu para executar a minha secção crítica
+
+2802
+01:45:59,310 --> 01:46:01,310
+eu tenho de verificar se estou no estado
+
+2803
+01:46:01,310 --> 01:46:03,310
+em que a minha secção crítica
+
+2804
+01:46:03,310 --> 01:46:05,310
+deva ser executada
+
+2805
+01:46:05,310 --> 01:46:09,490
+ok
+
+2806
+01:46:09,490 --> 01:46:11,490
+por exemplo
+
+2807
+01:46:11,490 --> 01:46:13,490
+e era nisto que eu gostava de ter
+
+2808
+01:46:13,490 --> 01:46:15,490
+era nisto que eu gostava
+
+2809
+01:46:15,490 --> 01:46:17,490
+de ter já os meus slides
+
+2810
+01:46:17,490 --> 01:46:20,770
+nos
+
+2811
+01:46:20,770 --> 01:46:22,770
+suponham que
+
+2812
+01:46:22,770 --> 01:46:24,770
+se o número
+
+2813
+01:46:24,770 --> 01:46:26,770
+de elementos for igual a zero
+
+2814
+01:46:26,770 --> 01:46:30,400
+então
+
+2815
+01:46:30,400 --> 01:46:32,400
+não, pera
+
+2816
+01:46:32,400 --> 01:46:34,400
+esqueça-me
+
+2817
+01:46:34,400 --> 01:46:36,400
+está péssimo isto
+
+2818
+01:46:36,400 --> 01:46:38,400
+falta mesmo código
+
+2819
+01:46:38,400 --> 01:46:40,400
+e se pode ser um caso de
+
+2820
+01:46:40,400 --> 01:46:42,400
+ir buscar valores
+
+2821
+01:46:42,400 --> 01:46:44,400
+de algum lado e estar a ler-los
+
+2822
+01:46:44,400 --> 01:46:46,400
+no momento do errado
+
+2823
+01:46:46,400 --> 01:46:48,400
+sim
+
+2824
+01:46:48,400 --> 01:46:50,400
+seja um sensor que esteja a mandar valores
+
+2825
+01:46:50,400 --> 01:46:52,400
+e nós vamos lá buscar-los
+
+2826
+01:46:52,400 --> 01:46:54,400
+sim
+
+2827
+01:46:54,400 --> 01:46:56,400
+eu só vou buscar um valor
+
+2828
+01:46:56,400 --> 01:46:58,400
+quando chegar um valor novo
+
+2829
+01:46:58,400 --> 01:47:00,400
+enquanto não houver um valor novo
+
+2830
+01:47:00,400 --> 01:47:02,400
+eu não vou lá buscar-lo
+
+2831
+01:47:04,400 --> 01:47:06,400
+ok
+
+2832
+01:47:06,400 --> 01:47:08,400
+por acaso
+
+2833
+01:47:08,400 --> 01:47:10,400
+ficou fácil entender assim
+
+2834
+01:47:12,400 --> 01:47:14,400
+suponham que vocês tenham uma flag
+
+2835
+01:47:14,400 --> 01:47:16,400
+a dizer valor novo
+
+2836
+01:47:16,400 --> 01:47:19,810
+ok, uma variável
+
+2837
+01:47:19,810 --> 01:47:21,810
+que se for zero
+
+2838
+01:47:21,810 --> 01:47:23,810
+não tem um valor novo
+
+2839
+01:47:23,810 --> 01:47:25,810
+se for um, tem um valor novo
+
+2840
+01:47:25,810 --> 01:47:27,810
+e posso consumir
+
+2841
+01:47:27,810 --> 01:47:29,810
+ok, por outro lado
+
+2842
+01:47:29,810 --> 01:47:31,810
+quem está a produzir
+
+2843
+01:47:31,810 --> 01:47:33,810
+não vai colocar lá um valor novo
+
+2844
+01:47:33,810 --> 01:47:35,810
+se o valor
+
+2845
+01:47:35,810 --> 01:47:37,810
+que lá estava ainda não tivesse sido consumido
+
+2846
+01:47:37,810 --> 01:47:41,340
+eu vou ligar a câmera
+
+2847
+01:47:41,340 --> 01:47:43,340
+para vocês verem as minhas mãos
+
+2848
+01:47:43,340 --> 01:47:48,000
+ok
+
+2849
+01:47:48,000 --> 01:47:50,000
+estou na câmera
+
+2850
+01:47:50,000 --> 01:47:52,000
+provavelmente eu agora não me estou a ver
+
+2851
+01:47:52,000 --> 01:47:54,000
+eu queria ver-se
+
+2852
+01:47:54,000 --> 01:47:56,000
+só que eu queria ver
+
+2853
+01:47:56,000 --> 01:47:58,000
+é o que é que eu consigo ter na câmera
+
+2854
+01:47:58,000 --> 01:48:00,000
+ou não
+
+2855
+01:48:02,000 --> 01:48:04,000
+a ver se conseguia aparecer
+
+2856
+01:48:04,000 --> 01:48:06,000
+como é que eu consigo ver-me
+
+2857
+01:48:06,000 --> 01:48:08,000
+a mim próprio aqui
+
+2858
+01:48:08,000 --> 01:48:10,000
+eu vou deixar de partilhar
+
+2859
+01:48:10,000 --> 01:48:12,000
+se deixar de partilhar
+
+2860
+01:48:12,000 --> 01:48:14,000
+apareço
+
+2861
+01:48:14,000 --> 01:48:17,890
+pronto
+
+2862
+01:48:17,890 --> 01:48:19,890
+então
+
+2863
+01:48:19,890 --> 01:48:21,890
+uma variável
+
+2864
+01:48:21,890 --> 01:48:26,030
+que é zero
+
+2865
+01:48:26,030 --> 01:48:28,030
+não há nada de novo
+
+2866
+01:48:30,030 --> 01:48:32,030
+e um
+
+2867
+01:48:32,030 --> 01:48:34,030
+há algo de novo
+
+2868
+01:48:34,030 --> 01:48:36,030
+ok, e tenho
+
+2869
+01:48:36,030 --> 01:48:38,030
+aqui uma variável
+
+2870
+01:48:38,030 --> 01:48:40,030
+onde eu vou colocar o valor novo
+
+2871
+01:48:40,030 --> 01:48:42,030
+depois tem de ser consumido pela segunda fred
+
+2872
+01:48:42,030 --> 01:48:45,700
+eu para colocar
+
+2873
+01:48:45,700 --> 01:48:47,700
+algo de novo
+
+2874
+01:48:47,700 --> 01:48:49,700
+aqui
+
+2875
+01:48:49,700 --> 01:48:51,700
+na minha variável
+
+2876
+01:48:51,700 --> 01:48:53,700
+eu tenho de ter
+
+2877
+01:48:53,700 --> 01:48:55,700
+zero
+
+2878
+01:48:55,700 --> 01:48:57,700
+a minha flag tem que indicar
+
+2879
+01:48:57,700 --> 01:48:59,700
+não há nada de novo
+
+2880
+01:48:59,700 --> 01:49:01,700
+se não haver nada de novo
+
+2881
+01:49:01,700 --> 01:49:03,700
+eu tenho permissão para colocar algo de novo
+
+2882
+01:49:03,700 --> 01:49:05,700
+e então
+
+2883
+01:49:05,700 --> 01:49:07,700
+eu, produtor
+
+2884
+01:49:07,700 --> 01:49:09,700
+adquiro motex
+
+2885
+01:49:09,700 --> 01:49:11,700
+o facto de eu ter motex
+
+2886
+01:49:11,700 --> 01:49:13,700
+não me quer dizer que eu posso colocar um valor novo
+
+2887
+01:49:13,700 --> 01:49:15,700
+aquilo que me diz
+
+2888
+01:49:15,700 --> 01:49:17,700
+que eu posso colocar um valor novo
+
+2889
+01:49:17,700 --> 01:49:19,700
+é o estado
+
+2890
+01:49:19,700 --> 01:49:21,700
+e vou modificar esta flag
+
+2891
+01:49:21,700 --> 01:49:23,700
+e dizer zero
+
+2892
+01:49:23,700 --> 01:49:25,700
+então eu posso colocar
+
+2893
+01:49:25,700 --> 01:49:27,700
+certo
+
+2894
+01:49:27,700 --> 01:49:29,700
+e vou modificar esta flag
+
+2895
+01:49:29,700 --> 01:49:33,200
+para algo de novo
+
+2896
+01:49:33,200 --> 01:49:35,200
+e posso sair
+
+2897
+01:49:35,200 --> 01:49:37,200
+certo
+
+2898
+01:49:37,200 --> 01:49:39,200
+reparem que olhar para esta variável
+
+2899
+01:49:39,200 --> 01:49:41,200
+e modificar esta variável
+
+2900
+01:49:41,200 --> 01:49:43,200
+também é crítico
+
+2901
+01:49:43,200 --> 01:49:46,830
+eu tenho que olhar para esta variável
+
+2902
+01:49:46,830 --> 01:49:48,830
+dentro do motex
+
+2903
+01:49:48,830 --> 01:49:50,830
+porque
+
+2904
+01:49:50,830 --> 01:49:52,830
+vou olhar para fora do motex
+
+2905
+01:49:52,830 --> 01:49:54,830
+nada me garante que depois de eu ter
+
+2906
+01:49:54,830 --> 01:49:56,830
+olhado para o valor da variável
+
+2907
+01:49:56,830 --> 01:49:58,830
+ela já não mudou por outro
+
+2908
+01:49:58,830 --> 01:50:00,830
+por outra fred
+
+2909
+01:50:00,830 --> 01:50:04,080
+portanto eu preciso ter o motex
+
+2910
+01:50:04,080 --> 01:50:06,080
+é meu
+
+2911
+01:50:06,080 --> 01:50:08,080
+agora tendo motex
+
+2912
+01:50:08,080 --> 01:50:10,080
+eu posso olhar para esta variável
+
+2913
+01:50:10,080 --> 01:50:12,080
+e saber que daqui a dois instantes
+
+2914
+01:50:12,080 --> 01:50:14,080
+ou três instantes
+
+2915
+01:50:14,080 --> 01:50:16,080
+ou quatro instantes enquanto o motex for meu
+
+2916
+01:50:16,080 --> 01:50:18,080
+o valor desta variável
+
+2917
+01:50:18,080 --> 01:50:20,080
+não foi alterado porque
+
+2918
+01:50:20,080 --> 01:50:22,080
+a mesma política
+
+2919
+01:50:22,080 --> 01:50:24,080
+de
+
+2920
+01:50:24,080 --> 01:50:26,080
+de sincronização
+
+2921
+01:50:26,080 --> 01:50:28,080
+então eu olho para aqui
+
+2922
+01:50:28,080 --> 01:50:30,080
+posso
+
+2923
+01:50:30,080 --> 01:50:34,350
+coloco
+
+2924
+01:50:34,350 --> 01:50:36,350
+e tenho algo de novo
+
+2925
+01:50:36,350 --> 01:50:38,350
+e vou memória
+
+2926
+01:50:38,350 --> 01:50:40,350
+suponho agora que a mesma fred
+
+2927
+01:50:40,350 --> 01:50:42,350
+tem um novo valor para produzir
+
+2928
+01:50:42,350 --> 01:50:44,350
+para colocar aqui
+
+2929
+01:50:44,350 --> 01:50:46,350
+adquirir o motex
+
+2930
+01:50:46,350 --> 01:50:49,730
+certo?
+
+2931
+01:50:49,730 --> 01:50:51,730
+vai olhar para a variável
+
+2932
+01:50:51,730 --> 01:50:53,730
+ou vai determinar o estado
+
+2933
+01:50:53,730 --> 01:50:55,730
+olha para aqui e diz
+
+2934
+01:50:55,730 --> 01:50:57,730
+há bolas
+
+2935
+01:50:57,730 --> 01:50:59,730
+está aqui um elemento novo que ainda não foi consumido
+
+2936
+01:50:59,730 --> 01:51:01,730
+eu não posso colocar aqui nada de novo
+
+2937
+01:51:01,730 --> 01:51:03,730
+então
+
+2938
+01:51:03,730 --> 01:51:05,730
+tem de desistir
+
+2939
+01:51:05,730 --> 01:51:07,730
+problema que se for persistente
+
+2940
+01:51:07,730 --> 01:51:09,730
+volta a adquirir o motex
+
+2941
+01:51:09,730 --> 01:51:11,730
+ah não posso
+
+2942
+01:51:11,730 --> 01:51:13,730
+ah não posso
+
+2943
+01:51:13,730 --> 01:51:15,730
+agora vamos para o lado da outra fred
+
+2944
+01:51:15,730 --> 01:51:17,730
+adquirir o motex
+
+2945
+01:51:17,730 --> 01:51:19,730
+a que quer consumir
+
+2946
+01:51:19,730 --> 01:51:21,730
+olha para aqui
+
+2947
+01:51:21,730 --> 01:51:23,730
+e diz sim há algo de novo
+
+2948
+01:51:23,730 --> 01:51:25,730
+com som
+
+2949
+01:51:25,730 --> 01:51:27,730
+que é como quem diz
+
+2950
+01:51:27,730 --> 01:51:29,730
+copia este valor para este valor
+
+2951
+01:51:29,730 --> 01:51:33,490
+e coloca a
+
+2952
+01:51:33,490 --> 01:51:37,820
+coloca a zero
+
+2953
+01:51:37,820 --> 01:51:39,820
+nesta situação o estado
+
+2954
+01:51:39,820 --> 01:51:41,820
+virou outra vez para o lado dos produtores
+
+2955
+01:51:41,820 --> 01:51:45,070
+nesta situação
+
+2956
+01:51:45,070 --> 01:51:47,070
+o estado está para o lado dos produtores
+
+2957
+01:51:47,070 --> 01:51:49,070
+nesta situação
+
+2958
+01:51:49,070 --> 01:51:51,070
+o estado está para o lado dos consumidores
+
+2959
+01:51:51,070 --> 01:51:53,070
+o problema é que
+
+2960
+01:51:53,070 --> 01:51:55,070
+se eu estiver constantemente a perguntar
+
+2961
+01:51:55,070 --> 01:51:57,070
+dá-me um motex
+
+2962
+01:51:57,070 --> 01:51:59,070
+e qual é o valor? ah não quero
+
+2963
+01:51:59,070 --> 01:52:01,070
+dá-me um motex e qual é o valor? ah não quero
+
+2964
+01:52:01,070 --> 01:52:03,070
+dá-me um motex
+
+2965
+01:52:03,070 --> 01:52:05,070
+ah qual é o valor? ah afinal interesse
+
+2966
+01:52:05,070 --> 01:52:07,070
+estou a perder
+
+2967
+01:52:07,070 --> 01:52:09,070
+tempo
+
+2968
+01:52:09,070 --> 01:52:11,070
+e tempo e tempo de processador
+
+2969
+01:52:11,070 --> 01:52:13,070
+a fazer operações que
+
+2970
+01:52:13,070 --> 01:52:15,070
+não
+
+2971
+01:52:15,070 --> 01:52:17,070
+produzem qualquer trabalho
+
+2972
+01:52:17,070 --> 01:52:19,070
+ok
+
+2973
+01:52:19,070 --> 01:52:21,070
+a solução é utilizar
+
+2974
+01:52:21,070 --> 01:52:23,070
+as variáveis de condição
+
+2975
+01:52:23,070 --> 01:52:25,070
+vamos ficar por aqui
+
+2976
+01:52:25,070 --> 01:52:27,070
+vamos ver isso depois na quinta-feira
+
+2977
+01:52:27,070 --> 01:52:29,070
+mais um atraso
+
+2978
+01:52:29,070 --> 01:52:31,070
+acho que
+
+2979
+01:52:31,070 --> 01:52:33,070
+começa a fazer parte
+
+2980
+01:52:33,070 --> 01:52:35,070
+daqui do
+
+2981
+01:52:35,070 --> 01:52:37,070
+do nosso
+
+2982
+01:52:37,070 --> 01:52:39,070
+mas pronto
+
+2983
+01:52:39,070 --> 01:52:41,070
+a pessoa que está satisfeita ainda bem
+
+2984
+01:52:41,070 --> 01:52:43,070
+as variáveis de condição
+
+2985
+01:52:43,070 --> 01:52:45,070
+só para dar um pequeno spoiler
+
+2986
+01:52:45,070 --> 01:52:47,070
+são umas variáveis em que nós
+
+2987
+01:52:47,070 --> 01:52:49,070
+emprestamos o motex
+
+2988
+01:52:49,070 --> 01:52:51,070
+temporariamente a quem
+
+2989
+01:52:51,070 --> 01:52:53,070
+possa continuar
+
+2990
+01:52:53,070 --> 01:52:55,070
+ou seja, eu
+
+2991
+01:52:55,070 --> 01:52:57,070
+motex é meu
+
+2992
+01:52:57,070 --> 01:52:59,070
+e eu agora não posso
+
+2993
+01:52:59,070 --> 01:53:01,070
+consumir nada
+
+2994
+01:53:01,070 --> 01:53:03,070
+no caso de consumidor
+
+2995
+01:53:03,070 --> 01:53:05,070
+agora não posso consumir nada
+
+2996
+01:53:05,070 --> 01:53:07,070
+então quem quiser usar
+
+2997
+01:53:07,070 --> 01:53:09,070
+o motex pode usar
+
+2998
+01:53:09,070 --> 01:53:11,070
+mas eu vou voltar até ele
+
+2999
+01:53:11,070 --> 01:53:14,930
+ok
+
+3000
+01:53:14,930 --> 01:53:16,930
+e quando voltar até ele?
+
+3001
+01:53:16,930 --> 01:53:18,930
+é que começou a se partilhar?
+
+3002
+01:53:18,930 --> 01:53:20,930
+sim, emprestava
+
+3003
+01:53:20,930 --> 01:53:22,930
+emprestava
+
+3004
+01:53:22,930 --> 01:53:24,930
+o caso mais
+
+3005
+01:53:24,930 --> 01:53:26,930
+que o que costumo usar nas minhas aulas
+
+3006
+01:53:26,930 --> 01:53:28,930
+é a fila de supermercado
+
+3007
+01:53:28,930 --> 01:53:30,930
+quem nunca
+
+3008
+01:53:30,930 --> 01:53:32,930
+estava na fila de supermercado
+
+3009
+01:53:32,930 --> 01:53:34,930
+já tinha pousado
+
+3010
+01:53:34,930 --> 01:53:36,930
+já tinha assim
+
+3011
+01:53:36,930 --> 01:53:38,930
+estava mesmo em quase
+
+3012
+01:53:38,930 --> 01:53:40,930
+a chegar lá, não é?
+
+3013
+01:53:40,930 --> 01:53:42,930
+e de repente a pessoa que está
+
+3014
+01:53:42,930 --> 01:53:44,930
+com nós que diz
+
+3015
+01:53:44,930 --> 01:53:46,930
+é pá, acho que acima do shampoo
+
+3016
+01:53:46,930 --> 01:53:48,930
+aqui na fila e eu vou buscar o shampoo
+
+3017
+01:53:48,930 --> 01:53:50,930
+o que é que nunca aconteceu isto?
+
+3018
+01:53:50,930 --> 01:53:52,930
+a mim já me aconteceu
+
+3019
+01:53:52,930 --> 01:53:54,930
+eu era miúdo e a minha mãe fazia isso
+
+3020
+01:53:54,930 --> 01:53:56,930
+é isso que eu não sei o que é
+
+3021
+01:53:56,930 --> 01:53:58,930
+criança com o saco das compras
+
+3022
+01:53:58,930 --> 01:54:00,930
+e ali tudo cheio
+
+3023
+01:54:00,930 --> 01:54:02,930
+suores frios
+
+3024
+01:54:02,930 --> 01:54:04,930
+a minha mãe nunca mais vinha com o shampoo
+
+3025
+01:54:04,930 --> 01:54:06,930
+e eu cada vez a chegar mais
+
+3026
+01:54:06,930 --> 01:54:08,930
+a caixa registadora, não é?
+
+3027
+01:54:08,930 --> 01:54:10,930
+e o que é que acontecia se a minha mãe
+
+3028
+01:54:10,930 --> 01:54:12,930
+demorasse mesmo com o shampoo?
+
+3029
+01:54:12,930 --> 01:54:14,930
+eu chegava a caixa registadora
+
+3030
+01:54:14,930 --> 01:54:16,930
+e o motex era miú
+
+3031
+01:54:16,930 --> 01:54:18,930
+e eu dizia
+
+3032
+01:54:18,930 --> 01:54:20,930
+pode passar a minha frente, falta-me o shampoo
+
+3033
+01:54:20,930 --> 01:54:22,930
+o que é que acontecia?
+
+3034
+01:54:22,930 --> 01:54:24,930
+o Tolkien era miú
+
+3035
+01:54:24,930 --> 01:54:26,930
+e eu emprestava a quem viesse a seguir
+
+3036
+01:54:26,930 --> 01:54:28,930
+mas eu não era urso, eu ficava alí colado
+
+3037
+01:54:28,930 --> 01:54:30,930
+naquele sítio
+
+3038
+01:54:30,930 --> 01:54:32,930
+se a minha mãe chegasse
+
+3039
+01:54:32,930 --> 01:54:34,930
+o Tolkien passava a ser
+
+3040
+01:54:34,930 --> 01:54:36,930
+logo miú, mal eu pudesse
+
+3041
+01:54:36,930 --> 01:54:38,930
+certo?
+
+3042
+01:54:38,930 --> 01:54:40,930
+se a minha mãe demorasse mais um bocado
+
+3043
+01:54:40,930 --> 01:54:42,930
+e o Tolkien voltasse para mim
+
+3044
+01:54:42,930 --> 01:54:44,930
+pronto, pode passar a frente
+
+3045
+01:54:44,930 --> 01:54:46,930
+que ainda me falta o shampoo
+
+3046
+01:54:46,930 --> 01:54:48,930
+as variáveis condicionais são um mecanismo
+
+3047
+01:54:48,930 --> 01:54:50,930
+que nos permitem fazer isso
+
+3048
+01:54:50,930 --> 01:54:52,930
+é, o motex é miú
+
+3049
+01:54:52,930 --> 01:54:54,930
+eu verifico o estado
+
+3050
+01:54:54,930 --> 01:54:56,930
+dentro do motex
+
+3051
+01:54:56,930 --> 01:54:58,930
+para garantir que o estado não muda
+
+3052
+01:54:58,930 --> 01:55:00,930
+depois de eu ter avaliado
+
+3053
+01:55:00,930 --> 01:55:02,930
+e se eu não puder fazer a minha
+
+3054
+01:55:02,930 --> 01:55:04,930
+secção crítica e eu empresto
+
+3055
+01:55:04,930 --> 01:55:06,930
+o motex
+
+3056
+01:55:06,930 --> 01:55:08,930
+fico
+
+3057
+01:55:08,930 --> 01:55:10,930
+ali a dormir durante um bocado
+
+3058
+01:55:10,930 --> 01:55:12,930
+mas eu sei que o motex
+
+3059
+01:55:12,930 --> 01:55:14,930
+se vai voltar a mim
+
+3060
+01:55:14,930 --> 01:55:16,930
+e quando o motex voltar a mim
+
+3061
+01:55:16,930 --> 01:55:18,930
+eu vou ver se tenho o shampoo ou não
+
+3062
+01:55:18,930 --> 01:55:20,930
+se tiver o shampoo
+
+3063
+01:55:20,930 --> 01:55:22,930
+eu vou executar meu código
+
+3064
+01:55:22,930 --> 01:55:24,930
+se não tiver o shampoo
+
+3065
+01:55:24,930 --> 01:55:26,930
+se tiver o motex
+
+3066
+01:55:26,930 --> 01:55:28,930
+e fica à espera da próxima
+
+3067
+01:55:28,930 --> 01:55:30,930
+mas quando precisamos do motex
+
+3068
+01:55:32,930 --> 01:55:34,930
+a outra operação não é muito rompida?
+
+3069
+01:55:36,930 --> 01:55:38,930
+não, pois temos que esperar
+
+3070
+01:55:38,930 --> 01:55:40,930
+se a pessoa passeu à minha frente
+
+3071
+01:55:40,930 --> 01:55:42,930
+para registrar as compras
+
+3072
+01:55:42,930 --> 01:55:44,930
+e eu só volto a ter o motex
+
+3073
+01:55:44,930 --> 01:55:46,930
+quando ela acabar de registrar as compras
+
+3074
+01:55:46,930 --> 01:55:48,930
+eu aí já não tenho imposto, tenho que ficar à espera
+
+3075
+01:55:48,930 --> 01:55:50,930
+tá bem?
+
+3076
+01:55:50,930 --> 01:55:52,930
+é só quando a outra treta
+
+3077
+01:55:52,930 --> 01:55:54,930
+fizeram no local
+
+3078
+01:55:54,930 --> 01:55:56,930
+exatamente, certo?
+
+3079
+01:55:56,930 --> 01:55:58,930
+e vamos ver esse mecanismo na próxima quinta-feira
+
+3080
+01:55:58,930 --> 01:56:00,930
+tá bem? conto com vos
+
+3081
+01:56:00,930 --> 01:56:02,930
+e se eu estiver a ser chato
+
+3082
+01:56:02,930 --> 01:56:04,930
+digam o professor, passa à frente
+
+3083
+01:56:04,930 --> 01:56:06,930
+que isso vai estar mais percebido
+
+3084
+01:56:06,930 --> 01:56:08,930
+muito bem
+
+3085
+01:56:08,930 --> 01:56:10,930
+só, bom presentar, fiquem bem
+
+3086
+01:56:10,930 --> 01:56:12,930
+e bom sábado
+
+3087
+01:56:12,930 --> 01:56:14,930
+e bom sábado
+
