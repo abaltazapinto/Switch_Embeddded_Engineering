@@ -1,0 +1,8986 @@
+1
+00:04:00,620 --> 00:04:02,620
+Bom dia. Boa tarde.
+
+2
+00:04:04,120 --> 00:04:06,120
+Boa tarde.
+
+3
+00:04:06,120 --> 00:04:07,120
+Boa tarde.
+
+4
+00:04:07,120 --> 00:04:08,620
+Boa tarde.
+
+5
+00:04:08,620 --> 00:04:12,620
+Primeiro de tudo, minha desculpa.
+
+6
+00:04:12,620 --> 00:04:19,120
+Eu não consegui postar os slides de hoje antes da mão.
+
+7
+00:04:19,120 --> 00:04:23,120
+Até agora, eu estava terminando de retouchar eles.
+
+8
+00:04:23,120 --> 00:04:24,120
+Mas...
+
+9
+00:04:24,120 --> 00:04:26,620
+Ok, tudo bem.
+
+10
+00:04:26,620 --> 00:04:29,120
+Obrigado por tentar.
+
+11
+00:04:29,120 --> 00:04:33,120
+Tenho um dia de semana, última semana.
+
+12
+00:04:33,120 --> 00:04:35,120
+Qual é o problema?
+
+13
+00:04:35,120 --> 00:04:38,120
+Eu estou tentando, mas...
+
+14
+00:04:38,120 --> 00:04:41,120
+Eu acho que o próximo...
+
+15
+00:04:41,120 --> 00:04:43,120
+Terça-feira?
+
+16
+00:04:43,120 --> 00:04:44,120
+Espero.
+
+17
+00:04:44,120 --> 00:04:46,120
+Bem, aqui está a Holidays.
+
+18
+00:04:46,120 --> 00:04:47,120
+Em...
+
+19
+00:04:47,120 --> 00:04:49,120
+Em Montenegro, certo?
+
+20
+00:04:49,120 --> 00:04:51,120
+Isso é o problema.
+
+21
+00:04:51,120 --> 00:04:55,120
+Eu tenho trabalho, weekendas e Holidays
+
+22
+00:04:55,120 --> 00:04:57,620
+ruindo meu trabalho.
+
+23
+00:04:57,620 --> 00:04:59,620
+Oh, que horrível.
+
+24
+00:04:59,620 --> 00:05:01,620
+Mas eu vou continuar.
+
+25
+00:05:01,620 --> 00:05:03,620
+Ok, obrigado.
+
+26
+00:05:03,620 --> 00:05:05,620
+Muito bem.
+
+27
+00:05:05,620 --> 00:05:09,620
+Espero que tenham-te uma boa semana de descanso da minha pessoa.
+
+28
+00:05:09,620 --> 00:05:13,620
+E também tenham-te uma boa oportunidade
+
+29
+00:05:13,620 --> 00:05:17,620
+de aprender tópicos sobre cibercegurança.
+
+30
+00:05:17,620 --> 00:05:21,620
+É cibercegurança o outro modo que estão a ter neste momento, certo?
+
+31
+00:05:21,620 --> 00:05:23,620
+Sim.
+
+32
+00:05:23,620 --> 00:05:24,620
+Ok.
+
+33
+00:05:24,620 --> 00:05:25,620
+Pronto.
+
+34
+00:05:25,620 --> 00:05:28,620
+Então, hoje, só vão ter que me aturar
+
+35
+00:05:28,620 --> 00:05:33,620
+durante quase duas horas, até às nove.
+
+36
+00:05:33,620 --> 00:05:37,620
+E vamos lá ver, então, o seu partilho aqui.
+
+37
+00:05:43,160 --> 00:05:45,160
+A janela com os slides.
+
+38
+00:05:47,160 --> 00:05:49,160
+Desculpe lá, vocês não estão a ver,
+
+39
+00:05:49,160 --> 00:05:54,160
+mas isto está a mostrar os slides em...
+
+40
+00:05:54,160 --> 00:05:58,160
+Continuo, eu quero ter apenas um slide na janela.
+
+41
+00:05:58,160 --> 00:06:06,160
+E isto está melhor que se consiga.
+
+42
+00:06:06,160 --> 00:06:12,800
+Muito bem, pronto.
+
+43
+00:06:12,800 --> 00:06:15,800
+Hoje, vamos começar por falar de...
+
+44
+00:06:15,800 --> 00:06:19,800
+em moteques e variáveis condicionais.
+
+45
+00:06:19,800 --> 00:06:22,800
+Neste momento, eu conforme...
+
+46
+00:06:22,800 --> 00:06:25,800
+Vou só desligar aqui a minha câmera.
+
+47
+00:06:25,800 --> 00:06:30,800
+Eu conforme avancei,
+
+48
+00:06:30,800 --> 00:06:33,800
+tenho aqui um conjunto de slides antigos,
+
+49
+00:06:33,800 --> 00:06:36,800
+em que eu também participei na elaboração,
+
+50
+00:06:36,800 --> 00:06:39,800
+só que eu estou a refazer isto tudo,
+
+51
+00:06:39,800 --> 00:06:44,800
+porque, pronto, dando esta matéria várias vezes,
+
+52
+00:06:44,800 --> 00:06:46,800
+eu vou encontrando algumas maneiras
+
+53
+00:06:46,800 --> 00:06:48,800
+que, se calhar, podem ser melhoradas,
+
+54
+00:06:48,800 --> 00:06:50,800
+e eu estou a fazer este trabalho agora.
+
+55
+00:06:50,800 --> 00:06:52,800
+Começou um otimista,
+
+56
+00:06:52,800 --> 00:06:59,800
+pensava que conseguia fazer isto a tempo das sessões,
+
+57
+00:06:59,800 --> 00:07:03,800
+mas, hoje, o plano se homoforado,
+
+58
+00:07:03,800 --> 00:07:05,800
+para a sessão 2, o plano se homoforado.
+
+59
+00:07:05,800 --> 00:07:07,800
+Portanto, vamos começar com os slides novos,
+
+60
+00:07:07,800 --> 00:07:09,800
+e eventualmente vamos acabar com os slides antigos.
+
+61
+00:07:09,800 --> 00:07:10,800
+Está bom?
+
+62
+00:07:10,800 --> 00:07:12,800
+Ora bem, em relação...
+
+63
+00:07:12,800 --> 00:07:16,800
+Antes de começarmos, em relação à matéria anterior,
+
+64
+00:07:16,800 --> 00:07:21,800
+ficaram algumas dúvidas que queiram conversar e esclarecer
+
+65
+00:07:21,800 --> 00:07:22,800
+antes de avançarmos?
+
+66
+00:07:22,800 --> 00:07:28,930
+Tivem alguma questão?
+
+67
+00:07:28,930 --> 00:07:29,930
+Podem colocar-se.
+
+68
+00:07:29,930 --> 00:07:30,930
+Também não tiverem questões,
+
+69
+00:07:30,930 --> 00:07:32,930
+as questões forem aparecendo.
+
+70
+00:07:32,930 --> 00:07:34,930
+À medida que vamos avançando,
+
+71
+00:07:34,930 --> 00:07:36,930
+também podemos fazer isso.
+
+72
+00:07:36,930 --> 00:07:38,930
+Sem estresse.
+
+73
+00:07:38,930 --> 00:07:39,930
+Muito bem.
+
+74
+00:07:39,930 --> 00:07:43,930
+Então, hoje vamos falar sobre motexes.
+
+75
+00:07:43,930 --> 00:07:47,930
+Se vocês conseguiram fazer todos os exercícios
+
+76
+00:07:47,930 --> 00:07:49,930
+da primeira...
+
+77
+00:07:49,930 --> 00:07:51,930
+do primeiro guião, não é?
+
+78
+00:07:51,930 --> 00:07:55,930
+Havia ali um exercício na parte final,
+
+79
+00:07:55,930 --> 00:07:58,930
+em que vocês tinham duas stretes
+
+80
+00:07:58,930 --> 00:08:02,930
+que tentavam incrementar um contador partilhado,
+
+81
+00:08:02,930 --> 00:08:04,930
+um determinado número de vezes.
+
+82
+00:08:04,930 --> 00:08:06,930
+Já não lembro se era 100 mil vezes,
+
+83
+00:08:06,930 --> 00:08:08,930
+ou se era 10 mil,
+
+84
+00:08:08,930 --> 00:08:09,930
+eu tenho a ideia que era 100 mil.
+
+85
+00:08:09,930 --> 00:08:11,930
+E o que é que acontecer?
+
+86
+00:08:11,930 --> 00:08:14,930
+Se cada thread vai incrementar esse contador,
+
+87
+00:08:14,930 --> 00:08:16,930
+digamos, 100 mil vezes,
+
+88
+00:08:16,930 --> 00:08:18,930
+temos duas stretes,
+
+89
+00:08:18,930 --> 00:08:21,930
+vai haver 200 mil incrementos,
+
+90
+00:08:21,930 --> 00:08:25,930
+2 vezes 100 mil incrementos, certo?
+
+91
+00:08:25,930 --> 00:08:27,930
+Portanto, estamos a contar que,
+
+92
+00:08:27,930 --> 00:08:29,930
+se o contador comece a 100,
+
+93
+00:08:29,930 --> 00:08:33,930
+vamos terminar com o contador a valer 200 mil,
+
+94
+00:08:33,930 --> 00:08:35,930
+porque é um número de vezes
+
+95
+00:08:35,930 --> 00:08:39,930
+que incrementamos um a esse contador.
+
+96
+00:08:39,930 --> 00:08:42,930
+Na prática, correndo esse programa,
+
+97
+00:08:42,930 --> 00:08:45,930
+verificamos que raras são as vezes,
+
+98
+00:08:45,930 --> 00:08:47,930
+se não for de nenhum mais mesmo,
+
+99
+00:08:47,930 --> 00:08:50,930
+em que temos o resultado 200 mil.
+
+100
+00:08:50,930 --> 00:08:52,930
+O mais frequente,
+
+101
+00:08:52,930 --> 00:08:53,930
+ou habitual,
+
+102
+00:08:53,930 --> 00:08:55,930
+é termos um resultado,
+
+103
+00:08:55,930 --> 00:08:58,930
+que é sempre inferior a 200 mil.
+
+104
+00:08:58,930 --> 00:09:00,930
+O que é que acontece?
+
+105
+00:09:00,930 --> 00:09:04,930
+Então, é isso que vamos começar a postular hoje,
+
+106
+00:09:04,930 --> 00:09:08,930
+e ver como é que podemos também evitar este efeito.
+
+107
+00:09:08,930 --> 00:09:15,930
+Quando temos threates
+
+108
+00:09:15,930 --> 00:09:20,930
+que partilham recursos
+
+109
+00:09:20,930 --> 00:09:22,930
+que podem ser manipulados
+
+110
+00:09:22,930 --> 00:09:26,930
+de uma forma concorrente no tempo, ok?
+
+111
+00:09:26,930 --> 00:09:31,930
+Nós podemos chegar a casos
+
+112
+00:09:31,930 --> 00:09:34,930
+em que os dados que estão guardados,
+
+113
+00:09:34,930 --> 00:09:36,930
+nessas variáveis partilhadas,
+
+114
+00:09:36,930 --> 00:09:39,930
+ou em recursos partilhados,
+
+115
+00:09:39,930 --> 00:09:43,930
+vão ficar inconsistentes ou incorretos.
+
+116
+00:09:43,930 --> 00:09:45,930
+Se não quisermos pensar em variáveis,
+
+117
+00:09:45,930 --> 00:09:49,930
+podemos, por exemplo, pensar numa impressora.
+
+118
+00:09:49,930 --> 00:09:51,930
+Se eu tiver uma impressora
+
+119
+00:09:51,930 --> 00:09:55,930
+e mandar em primeiro dois documentos diferentes,
+
+120
+00:09:55,930 --> 00:09:58,930
+por exemplo, um documento do Acrobat Reader,
+
+121
+00:09:58,930 --> 00:09:59,930
+um PDF,
+
+122
+00:09:59,930 --> 00:10:02,930
+e um documento que estamos a escrever no Word,
+
+123
+00:10:02,930 --> 00:10:04,930
+um doc, ok?
+
+124
+00:10:04,930 --> 00:10:07,930
+Se eles tiverem bastantes páginas,
+
+125
+00:10:07,930 --> 00:10:10,930
+eu consigo mandar em primeiro o PDF
+
+126
+00:10:10,930 --> 00:10:12,930
+e, cinco segundos depois,
+
+127
+00:10:12,930 --> 00:10:17,930
+estar a mandar em primeiro o documento do Word, certo?
+
+128
+00:10:17,930 --> 00:10:20,930
+Nesses cinco segundos que passaram,
+
+129
+00:10:20,930 --> 00:10:21,930
+se for uma impressora boa,
+
+130
+00:10:21,930 --> 00:10:24,930
+se calhar, lá conseguiu imprimir duas páginas.
+
+131
+00:10:24,930 --> 00:10:27,930
+Mas se forem documentos de 30 páginas, digamos,
+
+132
+00:10:27,930 --> 00:10:30,930
+não vai conseguir imprimir tudo.
+
+133
+00:10:30,930 --> 00:10:33,930
+O que é que acontece na realidade com a impressora?
+
+134
+00:10:33,930 --> 00:10:35,930
+Se eu mandar em primeiro dois documentos
+
+135
+00:10:35,930 --> 00:10:39,270
+praticamente em simultâneo,
+
+136
+00:10:39,270 --> 00:10:43,270
+os dois documentos saem
+
+137
+00:10:43,270 --> 00:10:46,270
+perfeitamente organizados
+
+138
+00:10:46,270 --> 00:10:48,270
+só um momento
+
+139
+00:10:48,270 --> 00:10:51,270
+que eu tenho aqui um gato a tentar matar muito.
+
+140
+00:10:51,270 --> 00:11:13,210
+Desculpem lá.
+
+141
+00:11:13,210 --> 00:11:16,210
+Estive aqui uma hora com os meus gatos e eles adormirem.
+
+142
+00:11:16,210 --> 00:11:19,210
+Comece esta sessão.
+
+143
+00:11:19,210 --> 00:11:22,210
+Eles acordam e o meu gato mais novo
+
+144
+00:11:22,210 --> 00:11:25,210
+vai logo massacrar o mais velho.
+
+145
+00:11:25,210 --> 00:11:28,210
+Então, está a dizer,
+
+146
+00:11:28,210 --> 00:11:30,210
+se eu enviar dois documentos
+
+147
+00:11:30,210 --> 00:11:33,210
+praticamente em simultâneo para a impressora,
+
+148
+00:11:33,210 --> 00:11:36,210
+o resultado que nós vemos a ser da impressora
+
+149
+00:11:36,210 --> 00:11:38,210
+é, primeiro, sai um documento,
+
+150
+00:11:38,210 --> 00:11:40,210
+todas as páginas de um documento
+
+151
+00:11:40,210 --> 00:11:43,210
+e depois saem todas as páginas do outro documento.
+
+152
+00:11:43,210 --> 00:11:46,210
+Apesar de termos enviado os dois documentos
+
+153
+00:11:46,210 --> 00:11:48,210
+de uma forma concorrente,
+
+154
+00:11:48,210 --> 00:11:51,210
+praticamente em simultâneo,
+
+155
+00:11:51,210 --> 00:11:54,210
+o resultado é sincronizado.
+
+156
+00:11:54,210 --> 00:11:57,210
+Ou seja, não existe
+
+157
+00:11:57,210 --> 00:12:00,210
+interferência dos dois documentos
+
+158
+00:12:00,210 --> 00:12:02,210
+na impressora.
+
+159
+00:12:02,210 --> 00:12:04,210
+A impressora, primeiro, trata de um
+
+160
+00:12:04,210 --> 00:12:06,210
+e depois trata de outro.
+
+161
+00:12:06,210 --> 00:12:08,210
+Se não fosse assim, o resultado
+
+162
+00:12:08,210 --> 00:12:10,210
+ia ser
+
+163
+00:12:10,210 --> 00:12:12,210
+incorreto.
+
+164
+00:12:12,210 --> 00:12:14,210
+Iamos ter ambos os documentos
+
+165
+00:12:14,210 --> 00:12:16,210
+mostrados uns nos outros
+
+166
+00:12:16,210 --> 00:12:18,210
+e o resultado era
+
+167
+00:12:18,210 --> 00:12:20,210
+40 folhas de papel para o lixo.
+
+168
+00:12:20,210 --> 00:12:22,210
+Certo?
+
+169
+00:12:22,210 --> 00:12:24,210
+Ok, isso quer dizer que
+
+170
+00:12:24,210 --> 00:12:26,210
+há muitas operações
+
+171
+00:12:26,210 --> 00:12:28,210
+que têm de ser tratadas
+
+172
+00:12:28,210 --> 00:12:30,210
+como se fossem atómicas,
+
+173
+00:12:30,210 --> 00:12:32,210
+ou seja, livros de interferência
+
+174
+00:12:32,210 --> 00:12:34,210
+de outros processos concorrentes
+
+175
+00:12:34,210 --> 00:12:36,210
+e outras operações concorrentes.
+
+176
+00:12:36,210 --> 00:12:38,210
+Ok?
+
+177
+00:12:38,210 --> 00:12:40,210
+Temos que garantir
+
+178
+00:12:40,210 --> 00:12:42,210
+uma atomicidade
+
+179
+00:12:42,210 --> 00:12:44,210
+mesmo que essa operação
+
+180
+00:12:44,210 --> 00:12:46,210
+seja constituída
+
+181
+00:12:46,210 --> 00:12:48,210
+de várias instruções
+
+182
+00:12:48,210 --> 00:12:50,210
+que são independentes
+
+183
+00:12:50,210 --> 00:12:52,210
+umas das outras.
+
+184
+00:12:52,210 --> 00:12:54,210
+Portanto, são distintas.
+
+185
+00:12:54,210 --> 00:12:56,210
+Ok? Ou seja, temos que conseguir
+
+186
+00:12:56,210 --> 00:12:58,210
+em instruções
+
+187
+00:12:58,210 --> 00:13:00,210
+que são
+
+188
+00:13:00,210 --> 00:13:02,210
+todas elas independentes
+
+189
+00:13:02,210 --> 00:13:04,210
+e colocar uma espécie
+
+190
+00:13:04,210 --> 00:13:06,210
+de cola
+
+191
+00:13:06,210 --> 00:13:08,210
+uma extração, uma cola
+
+192
+00:13:08,210 --> 00:13:10,210
+em que parecem que todas essas instruções
+
+193
+00:13:10,210 --> 00:13:12,210
+são uma só.
+
+194
+00:13:12,210 --> 00:13:14,210
+Ok?
+
+195
+00:13:14,210 --> 00:13:17,780
+E isto, sincronizar
+
+196
+00:13:19,780 --> 00:13:21,780
+Ok?
+
+197
+00:13:21,780 --> 00:13:23,780
+Este é o problema que nós tínhamos
+
+198
+00:13:23,780 --> 00:13:25,780
+um programa
+
+199
+00:13:25,780 --> 00:13:27,780
+que lança duas estretes, cada uma delas
+
+200
+00:13:27,780 --> 00:13:29,780
+incrementa um contador
+
+201
+00:13:29,780 --> 00:13:31,780
+um milhão de vezes.
+
+202
+00:13:31,780 --> 00:13:33,780
+Ok? Temos aqui
+
+203
+00:13:33,780 --> 00:13:35,780
+um contador
+
+204
+00:13:35,780 --> 00:13:37,780
+numa variável global
+
+205
+00:13:37,780 --> 00:13:39,780
+inicializada a zero.
+
+206
+00:13:39,780 --> 00:13:41,780
+Nós colocamos aqui o volatile
+
+207
+00:13:41,780 --> 00:13:43,780
+para dar uma indicação
+
+208
+00:13:43,780 --> 00:13:45,780
+ao compilador de que não deve haver
+
+209
+00:13:45,780 --> 00:13:47,780
+qualquer tipo de
+
+210
+00:13:47,780 --> 00:13:49,780
+otimização do código.
+
+211
+00:13:49,780 --> 00:13:51,780
+Por quê?
+
+212
+00:13:51,780 --> 00:13:53,780
+Pronto, nós podemos
+
+213
+00:13:53,780 --> 00:13:55,780
+ter uma opção
+
+214
+00:13:55,780 --> 00:13:57,780
+de não otimização
+
+215
+00:13:57,780 --> 00:13:59,780
+no caso
+
+216
+00:13:59,780 --> 00:14:01,780
+de
+
+217
+00:14:01,780 --> 00:14:03,780
+agolas.
+
+218
+00:14:03,780 --> 00:14:05,780
+Do GCC, é menos
+
+219
+00:14:05,780 --> 00:14:07,780
+ao maiúsculo
+
+220
+00:14:07,780 --> 00:14:09,780
+e um zero.
+
+221
+00:14:09,780 --> 00:14:11,780
+Optimization zero.
+
+222
+00:14:11,780 --> 00:14:13,780
+Neste caso
+
+223
+00:14:13,780 --> 00:14:15,780
+ele não tenta fazer
+
+224
+00:14:15,780 --> 00:14:17,780
+qualquer tipo de otimização.
+
+225
+00:14:17,780 --> 00:14:19,780
+As otimizações que o GCC faz
+
+226
+00:14:19,780 --> 00:14:21,780
+muitas das vezes permitem reorganizar o código
+
+227
+00:14:21,780 --> 00:14:23,780
+de maneiras inteligentes
+
+228
+00:14:23,780 --> 00:14:25,780
+e os programas
+
+229
+00:14:25,780 --> 00:14:27,780
+executam mais depressa.
+
+230
+00:14:27,780 --> 00:14:29,780
+Mas neste caso
+
+231
+00:14:29,780 --> 00:14:31,780
+desta variável
+
+232
+00:14:31,780 --> 00:14:33,780
+nós não vamos querer nenhuma otimização
+
+233
+00:14:33,780 --> 00:14:35,780
+porque
+
+234
+00:14:35,780 --> 00:14:37,780
+vamos contar o segredo, não é?
+
+235
+00:14:37,780 --> 00:14:39,780
+O GCC
+
+236
+00:14:39,780 --> 00:14:41,780
+pode olhar para este ciclo
+
+237
+00:14:41,780 --> 00:14:43,780
+Ok?
+
+238
+00:14:43,780 --> 00:14:45,780
+E ver que
+
+239
+00:14:45,780 --> 00:14:47,780
+esta variável
+
+240
+00:14:47,780 --> 00:14:49,780
+vai ser incrementada
+
+241
+00:14:49,780 --> 00:14:51,780
+um milhão de vezes.
+
+242
+00:14:51,780 --> 00:14:53,780
+Então nem vale a pena fazer o ciclo.
+
+243
+00:14:53,780 --> 00:14:55,780
+Punha-lo ao counter igual a 1 milhão.
+
+244
+00:14:55,780 --> 00:14:57,780
+Ok?
+
+245
+00:14:57,780 --> 00:14:59,780
+Num nível
+
+246
+00:14:59,780 --> 00:15:01,780
+mais elevado de otimização
+
+247
+00:15:01,780 --> 00:15:03,780
+os compiladores conseguem fazer
+
+248
+00:15:03,780 --> 00:15:05,780
+estes truques.
+
+249
+00:15:05,780 --> 00:15:07,780
+Portanto, nós colocamos o volatile
+
+250
+00:15:07,780 --> 00:15:09,780
+para indicar
+
+251
+00:15:09,780 --> 00:15:11,780
+não faças qualquer otimização
+
+252
+00:15:11,780 --> 00:15:13,780
+de código
+
+253
+00:15:13,780 --> 00:15:15,780
+que envolva o uso desta variável.
+
+254
+00:15:15,780 --> 00:15:17,780
+Tá bem?
+
+255
+00:15:17,780 --> 00:15:19,780
+Existem outros efeitos
+
+256
+00:15:19,780 --> 00:15:21,780
+quando nós temos uma variável
+
+257
+00:15:21,780 --> 00:15:23,780
+sobretudo global
+
+258
+00:15:23,780 --> 00:15:25,780
+que pode ser alterada
+
+259
+00:15:25,780 --> 00:15:27,780
+em vários pontos de código
+
+260
+00:15:27,780 --> 00:15:29,780
+sem que uma pessoa parecê-la.
+
+261
+00:15:29,780 --> 00:15:31,780
+Isso é crítico nos efeitos.
+
+262
+00:15:31,780 --> 00:15:33,780
+Mas
+
+263
+00:15:33,780 --> 00:15:35,780
+isso fica para depois.
+
+264
+00:15:35,780 --> 00:15:37,780
+Ou não fica mesmo.
+
+265
+00:15:37,780 --> 00:15:39,780
+Isso já tem a ver mais com compiladores
+
+266
+00:15:39,780 --> 00:15:41,780
+e não necessariamente com programação.
+
+267
+00:15:41,780 --> 00:15:43,780
+Mas nós que os compiladores
+
+268
+00:15:43,780 --> 00:15:45,780
+temos que estar sempre um bocadinho
+
+269
+00:15:45,780 --> 00:15:47,780
+que vocês podem fazer.
+
+270
+00:15:47,780 --> 00:15:49,780
+Tá bom?
+
+271
+00:15:49,780 --> 00:15:54,980
+Duvidas no A?
+
+272
+00:15:54,980 --> 00:15:56,980
+Ok, vamos continuar.
+
+273
+00:15:56,980 --> 00:15:58,980
+Agora temos aqui a nossa função principal.
+
+274
+00:15:58,980 --> 00:16:00,980
+Esta rei de dois
+
+275
+00:16:00,980 --> 00:16:02,980
+thread types
+
+276
+00:16:02,980 --> 00:16:04,980
+para guardar dois identificadores de threads
+
+277
+00:16:04,980 --> 00:16:06,980
+e vamos lançar duas threads.
+
+278
+00:16:08,980 --> 00:16:10,980
+Um momento.
+
+279
+00:16:10,980 --> 00:16:12,980
+Admitir
+
+280
+00:16:12,980 --> 00:16:14,980
+e admitir.
+
+281
+00:16:14,980 --> 00:16:16,980
+Ok?
+
+282
+00:16:16,980 --> 00:16:18,980
+Temos agora este ciclo
+
+283
+00:16:18,980 --> 00:16:20,980
+em que vamos lançar
+
+284
+00:16:20,980 --> 00:16:22,980
+duas threads.
+
+285
+00:16:22,980 --> 00:16:24,980
+Ambas as threads vão
+
+286
+00:16:24,980 --> 00:16:26,980
+correr a partir da mesma função.
+
+287
+00:16:26,980 --> 00:16:28,980
+Que é este um incremento de counter.
+
+288
+00:16:28,980 --> 00:16:30,980
+Então eu vou lançar duas threads
+
+289
+00:16:30,980 --> 00:16:32,980
+exatamente iguais
+
+290
+00:16:32,980 --> 00:16:34,980
+mas independentes, uma da outra
+
+291
+00:16:34,980 --> 00:16:36,980
+ou autónomas
+
+292
+00:16:36,980 --> 00:16:38,980
+e ambas vão tentar incrementar
+
+293
+00:16:38,980 --> 00:16:40,980
+este contador
+
+294
+00:16:40,980 --> 00:16:42,980
+partilhado.
+
+295
+00:16:42,980 --> 00:16:44,980
+Um milhão de vezes.
+
+296
+00:16:44,980 --> 00:16:46,980
+A thread principal
+
+297
+00:16:46,980 --> 00:16:48,980
+depois de lançar as duas threads trabalhadoras
+
+298
+00:16:48,980 --> 00:16:50,980
+aquilo que vai fazer é
+
+299
+00:16:50,980 --> 00:16:52,980
+aguardar que elas terminem.
+
+300
+00:16:52,980 --> 00:16:54,980
+Portanto, tenho aqui um ciclo for
+
+301
+00:16:54,980 --> 00:16:56,980
+vai fazer dois olhos.
+
+302
+00:16:56,980 --> 00:16:58,980
+Lança duas threads, espera que as duas threads terminem.
+
+303
+00:16:58,980 --> 00:17:00,980
+Por fim,
+
+304
+00:17:00,980 --> 00:17:02,980
+quando ambas as threads tiverem terminado
+
+305
+00:17:02,980 --> 00:17:04,980
+o resultado estará disponível
+
+306
+00:17:04,980 --> 00:17:06,980
+e ele apresente esse resultado
+
+307
+00:17:06,980 --> 00:17:08,980
+no aircraft, certo?
+
+308
+00:17:08,980 --> 00:17:10,980
+O suposto
+
+309
+00:17:10,980 --> 00:17:12,980
+era se isto corresse bem
+
+310
+00:17:12,980 --> 00:17:14,980
+era este
+
+311
+00:17:14,980 --> 00:17:16,980
+computador que começava do zero
+
+312
+00:17:16,980 --> 00:17:18,980
+ser incrementado um milhão de vezes
+
+313
+00:17:18,980 --> 00:17:20,980
+e mais um milhão de vezes.
+
+314
+00:17:20,980 --> 00:17:22,980
+Portanto, no final
+
+315
+00:17:22,980 --> 00:17:24,980
+é suposto eu esperar aqui
+
+316
+00:17:24,980 --> 00:17:26,980
+dois milhões, certo?
+
+317
+00:17:26,980 --> 00:17:30,580
+O problema
+
+318
+00:17:30,580 --> 00:17:32,580
+é que
+
+319
+00:17:32,580 --> 00:17:34,580
+se corrermos algumas vezes este programa
+
+320
+00:17:34,580 --> 00:17:36,580
+nós vamos ver que
+
+321
+00:17:36,580 --> 00:17:38,580
+é muito difícil chegarmos
+
+322
+00:17:38,580 --> 00:17:40,580
+aos dois milhões no meu computador
+
+323
+00:17:40,580 --> 00:17:44,850
+até
+
+324
+00:17:44,850 --> 00:17:46,850
+cheguei a se calhar
+
+325
+00:17:46,850 --> 00:17:48,850
+a
+
+326
+00:17:48,850 --> 00:17:50,850
+60%, 60 e tal por cento
+
+327
+00:17:50,850 --> 00:17:52,850
+do melhor dos casos.
+
+328
+00:17:52,850 --> 00:17:54,850
+Ou seja, há aqui algo
+
+329
+00:17:54,850 --> 00:17:56,850
+que não está a funcionar bem.
+
+330
+00:17:56,850 --> 00:18:00,260
+Ok?
+
+331
+00:18:00,260 --> 00:18:02,260
+Isto aqui são mesmo resultados da vida real
+
+332
+00:18:02,260 --> 00:18:04,260
+eu corri mesmo aquele programa
+
+333
+00:18:04,260 --> 00:18:06,260
+três vezes
+
+334
+00:18:06,260 --> 00:18:08,260
+e eu até fiquei um bocado desanimado porque eu pensei
+
+335
+00:18:08,260 --> 00:18:10,260
+que chegasse um pouco mais perto dos dois milhões
+
+336
+00:18:10,260 --> 00:18:12,260
+mas não, isto correu mesmo mal.
+
+337
+00:18:12,260 --> 00:18:14,260
+O que não é mal, por exemplo.
+
+338
+00:18:14,260 --> 00:18:16,260
+O que é que acontece?
+
+339
+00:18:16,260 --> 00:18:18,260
+O que acontece
+
+340
+00:18:18,260 --> 00:18:20,260
+é que nós estamos a programar
+
+341
+00:18:20,260 --> 00:18:22,260
+numa linguagem de alto nível.
+
+342
+00:18:22,260 --> 00:18:24,260
+Uma linguagem de alto nível
+
+343
+00:18:24,260 --> 00:18:26,260
+é uma linguagem de um nível de abstração
+
+344
+00:18:26,260 --> 00:18:28,260
+bastante
+
+345
+00:18:28,260 --> 00:18:30,260
+longínquo
+
+346
+00:18:30,260 --> 00:18:32,260
+do nível concreto da máquina.
+
+347
+00:18:32,260 --> 00:18:34,260
+Se olharmos para esta única instrução
+
+348
+00:18:34,260 --> 00:18:36,260
+counter, mais mais
+
+349
+00:18:36,260 --> 00:18:38,260
+nós pensamos a é uma única instrução
+
+350
+00:18:38,260 --> 00:18:40,260
+e em C é verdade
+
+351
+00:18:40,260 --> 00:18:42,260
+é uma instrução
+
+352
+00:18:42,260 --> 00:18:44,260
+só que isto, quando é compilado
+
+353
+00:18:44,260 --> 00:18:46,260
+o processador
+
+354
+00:18:46,260 --> 00:18:48,260
+vai na realidade
+
+355
+00:18:48,260 --> 00:18:50,260
+executar três instruções
+
+356
+00:18:50,260 --> 00:18:52,260
+a executar
+
+357
+00:18:52,260 --> 00:18:54,260
+esta em que vai buscar
+
+358
+00:18:54,260 --> 00:18:56,260
+o valor da memória
+
+359
+00:18:56,260 --> 00:18:58,260
+para
+
+360
+00:18:58,260 --> 00:19:00,260
+um registro interno
+
+361
+00:19:00,260 --> 00:19:02,260
+vamos fazer o load
+
+362
+00:19:02,260 --> 00:19:04,260
+de um valor da memória
+
+363
+00:19:04,260 --> 00:19:06,260
+para o registro T1
+
+364
+00:19:06,260 --> 00:19:08,260
+dentro do CPU
+
+365
+00:19:08,260 --> 00:19:10,260
+ok?
+
+366
+00:19:10,260 --> 00:19:12,260
+Nós vamos fazer aqui um AD
+
+367
+00:19:12,260 --> 00:19:14,260
+do valor
+
+368
+00:19:14,260 --> 00:19:16,260
+que está
+
+369
+00:19:16,260 --> 00:19:18,260
+no registro T1
+
+370
+00:19:18,260 --> 00:19:20,260
+e do valor 1
+
+371
+00:19:20,260 --> 00:19:22,260
+portanto, se o T1 vale zero
+
+372
+00:19:22,260 --> 00:19:24,260
+vamos estar aqui a sumar zero como 1
+
+373
+00:19:24,260 --> 00:19:26,260
+e vamos guardar o resultado
+
+374
+00:19:26,260 --> 00:19:28,260
+no registro T1 de novo
+
+375
+00:19:28,260 --> 00:19:30,260
+ok?
+
+376
+00:19:30,260 --> 00:19:32,260
+Portanto, quando nós tínhamos ali aquele zero
+
+377
+00:19:32,260 --> 00:19:34,260
+passaremos a ter um 1
+
+378
+00:19:34,260 --> 00:19:36,260
+e por fim temos aqui uma operação de store
+
+379
+00:19:36,260 --> 00:19:38,260
+que é
+
+380
+00:19:38,260 --> 00:19:40,260
+nesta memória
+
+381
+00:19:40,260 --> 00:19:42,260
+neste endereço de memória
+
+382
+00:19:42,260 --> 00:19:44,260
+o que está
+
+383
+00:19:44,260 --> 00:19:46,260
+neste registro
+
+384
+00:19:46,260 --> 00:19:48,260
+ou seja, o resultado
+
+385
+00:19:48,260 --> 00:19:50,260
+já agora, LWSW
+
+386
+00:19:50,260 --> 00:19:52,260
+quer dizer
+
+387
+00:19:52,260 --> 00:19:54,260
+load word
+
+388
+00:19:54,260 --> 00:19:56,260
+e store word
+
+389
+00:19:56,260 --> 00:19:58,260
+Portanto, se for uma máquina
+
+390
+00:19:58,260 --> 00:20:00,260
+de
+
+391
+00:20:00,260 --> 00:20:02,260
+32 bits
+
+392
+00:20:02,260 --> 00:20:04,260
+é um word a 32 bits
+
+393
+00:20:04,260 --> 00:20:06,260
+ok?
+
+394
+00:20:06,260 --> 00:20:08,260
+Pronto, mas basicamente
+
+395
+00:20:08,260 --> 00:20:10,260
+vai buscar um valor
+
+396
+00:20:10,260 --> 00:20:12,260
+abiciona 1
+
+397
+00:20:12,260 --> 00:20:14,260
+guarda de novo o valor
+
+398
+00:20:14,260 --> 00:20:16,260
+vamos ver que esta operação
+
+399
+00:20:16,260 --> 00:20:18,260
+que parece ser única
+
+400
+00:20:18,260 --> 00:20:20,260
+e atómica
+
+401
+00:20:20,260 --> 00:20:22,260
+na realidade, de atómico não tem nada
+
+402
+00:20:22,260 --> 00:20:24,260
+e eu posso
+
+403
+00:20:24,260 --> 00:20:26,260
+executar esta instrução
+
+404
+00:20:26,260 --> 00:20:28,260
+e depois
+
+405
+00:20:28,260 --> 00:20:30,260
+retirar o processador
+
+406
+00:20:30,260 --> 00:20:32,260
+a esta thread
+
+407
+00:20:32,260 --> 00:20:34,260
+ou até posso executar estas duas instruções
+
+408
+00:20:34,260 --> 00:20:36,260
+e antes de executar a terceira
+
+409
+00:20:36,260 --> 00:20:38,260
+retirar o processador da thread
+
+410
+00:20:38,260 --> 00:20:40,260
+ou até posso ter sorte
+
+411
+00:20:40,260 --> 00:20:42,260
+e executar
+
+412
+00:20:42,260 --> 00:20:44,260
+as três
+
+413
+00:20:44,260 --> 00:20:46,260
+instruções
+
+414
+00:20:46,260 --> 00:20:48,260
+umas a seguir as outras
+
+415
+00:20:48,260 --> 00:20:50,260
+sem retirar o processador
+
+416
+00:20:50,260 --> 00:20:52,260
+da thread
+
+417
+00:20:52,260 --> 00:20:54,260
+o problema é que eu não tenho
+
+418
+00:20:54,260 --> 00:20:56,260
+qualquer garantia
+
+419
+00:20:56,260 --> 00:20:58,260
+certo?
+
+420
+00:20:58,260 --> 00:21:00,260
+Há vezes em que
+
+421
+00:21:00,260 --> 00:21:02,260
+o processador é capaz de executar
+
+422
+00:21:02,260 --> 00:21:04,260
+as três instruções
+
+423
+00:21:04,260 --> 00:21:06,260
+de seguida
+
+424
+00:21:06,260 --> 00:21:08,260
+e há outras situações
+
+425
+00:21:08,260 --> 00:21:10,260
+em que o processador
+
+426
+00:21:10,260 --> 00:21:12,260
+é retirado a thread
+
+427
+00:21:12,260 --> 00:21:14,260
+antes de chegarmos a terceira
+
+428
+00:21:14,260 --> 00:21:16,260
+e o problema
+
+429
+00:21:16,260 --> 00:21:18,260
+está aí
+
+430
+00:21:18,260 --> 00:21:20,260
+o que que acontece?
+
+431
+00:21:20,260 --> 00:21:22,260
+Já agora, a race condition
+
+432
+00:21:22,260 --> 00:21:24,260
+acontece quando as threads
+
+433
+00:21:24,260 --> 00:21:26,260
+intercalam durante estes
+
+434
+00:21:26,260 --> 00:21:28,260
+vários passos
+
+435
+00:21:28,260 --> 00:21:30,260
+daquilo que parecia ser uma operação atómica
+
+436
+00:21:30,260 --> 00:21:32,260
+e o resultado final
+
+437
+00:21:32,260 --> 00:21:34,260
+depende
+
+438
+00:21:34,260 --> 00:21:36,260
+da ordem de discussão
+
+439
+00:21:36,260 --> 00:21:38,260
+que nem sempre é
+
+440
+00:21:38,260 --> 00:21:40,260
+provisiva
+
+441
+00:21:40,260 --> 00:21:42,260
+portanto temos aqui uma corrida
+
+442
+00:21:42,260 --> 00:21:44,260
+e basicamente é isso que
+
+443
+00:21:44,260 --> 00:21:46,260
+faz as empresas de apostas
+
+444
+00:21:46,260 --> 00:21:48,260
+também ganhar dinheiro
+
+445
+00:21:48,260 --> 00:21:50,260
+em provisibilidade
+
+446
+00:21:50,260 --> 00:21:52,260
+dos resultados
+
+447
+00:21:52,260 --> 00:21:54,260
+das competições
+
+448
+00:21:54,260 --> 00:21:56,260
+só que no caso
+
+449
+00:21:56,260 --> 00:21:58,260
+os sistemas em bebidos
+
+450
+00:21:58,260 --> 00:22:00,260
+são uma coisa boa
+
+451
+00:22:00,260 --> 00:22:03,700
+muito pelo contrário, é mau
+
+452
+00:22:03,700 --> 00:22:05,700
+temos aqui um exemplo
+
+453
+00:22:05,700 --> 00:22:07,700
+em que
+
+454
+00:22:07,700 --> 00:22:09,700
+estas três
+
+455
+00:22:09,700 --> 00:22:11,700
+operações
+
+456
+00:22:11,700 --> 00:22:13,700
+são intercaladas
+
+457
+00:22:13,700 --> 00:22:15,700
+ao longo do tempo
+
+458
+00:22:15,700 --> 00:22:17,700
+por exemplo na thread 1
+
+459
+00:22:17,700 --> 00:22:19,700
+ela consegue ir buscar o valor
+
+460
+00:22:19,700 --> 00:22:21,700
+à memória e consegue buscar um zero
+
+461
+00:22:21,700 --> 00:22:23,700
+mas entretanto
+
+462
+00:22:23,700 --> 00:22:27,580
+perdeu o CPU
+
+463
+00:22:27,580 --> 00:22:29,580
+a thread 2
+
+464
+00:22:29,580 --> 00:22:31,580
+consegue ir buscar à memória
+
+465
+00:22:31,580 --> 00:22:33,580
+o mesmo valor zero
+
+466
+00:22:33,580 --> 00:22:35,580
+porque na memória o valor continua a ser zero
+
+467
+00:22:35,580 --> 00:22:37,580
+enquanto ninguém mudar
+
+468
+00:22:37,580 --> 00:22:39,580
+o valor que está na memória
+
+469
+00:22:39,580 --> 00:22:41,580
+continuamos a ter o mesmo valor
+
+470
+00:22:41,580 --> 00:22:43,580
+só que a thread 2
+
+471
+00:22:43,580 --> 00:22:45,580
+tem a sorte de conseguir fazer um incremento
+
+472
+00:22:45,580 --> 00:22:47,580
+incrementa
+
+473
+00:22:47,580 --> 00:22:49,580
+e o zero
+
+474
+00:22:49,580 --> 00:22:51,580
+incrementar zero resulta em um
+
+475
+00:22:51,580 --> 00:22:53,580
+e depois guarda esse resultado
+
+476
+00:22:53,580 --> 00:22:55,580
+na mesma posição memória
+
+477
+00:22:55,580 --> 00:22:57,580
+na mesma variável
+
+478
+00:22:57,580 --> 00:22:59,580
+portanto a nossa variável
+
+479
+00:22:59,580 --> 00:23:01,580
+que era zero inicialmente
+
+480
+00:23:01,580 --> 00:23:03,580
+passa a ser um
+
+481
+00:23:03,580 --> 00:23:05,580
+entretanto a thread 1
+
+482
+00:23:05,580 --> 00:23:07,580
+quando continua
+
+483
+00:23:07,580 --> 00:23:09,580
+quando consegue resumir
+
+484
+00:23:09,580 --> 00:23:11,580
+a sua execução
+
+485
+00:23:11,580 --> 00:23:13,580
+ela conhecia o zero
+
+486
+00:23:13,580 --> 00:23:15,580
+que era aquilo que tinha aí buscar à memória
+
+487
+00:23:15,580 --> 00:23:17,580
+há algum tempo atrás
+
+488
+00:23:17,580 --> 00:23:19,580
+incrementa passamos a ter um
+
+489
+00:23:19,580 --> 00:23:21,580
+e vai guardar um
+
+490
+00:23:21,580 --> 00:23:23,580
+o problema aqui
+
+491
+00:23:23,580 --> 00:23:25,580
+é que a nossa thread 1
+
+492
+00:23:25,580 --> 00:23:27,580
+conhece que o valor que está na variável
+
+493
+00:23:27,580 --> 00:23:29,580
+já tinha sido modificado
+
+494
+00:23:29,580 --> 00:23:31,580
+ok
+
+495
+00:23:31,580 --> 00:23:33,580
+e o resultado
+
+496
+00:23:33,580 --> 00:23:35,580
+é que em vez de termos um 2
+
+497
+00:23:35,580 --> 00:23:37,580
+porque nós incrementamos duas vezes
+
+498
+00:23:37,580 --> 00:23:39,580
+o resultado final vai ser um 1
+
+499
+00:23:39,580 --> 00:23:41,580
+porque houve uma operação
+
+500
+00:23:41,580 --> 00:23:43,580
+que se perdeu
+
+501
+00:23:43,580 --> 00:23:47,090
+certo?
+
+502
+00:23:47,090 --> 00:23:54,750
+dúvidas? não há?
+
+503
+00:23:54,750 --> 00:23:56,750
+não há mãos no ar?
+
+504
+00:23:56,750 --> 00:23:58,750
+posso continuar?
+
+505
+00:23:58,750 --> 00:24:00,750
+ok obrigado
+
+506
+00:24:00,750 --> 00:24:02,750
+pronto
+
+507
+00:24:02,750 --> 00:24:04,750
+o que é que acontece?
+
+508
+00:24:04,750 --> 00:24:06,750
+aquele incremento
+
+509
+00:24:06,750 --> 00:24:08,750
+é uma secção crítica
+
+510
+00:24:08,750 --> 00:24:10,750
+e eu queria que aquele
+
+511
+00:24:10,750 --> 00:24:12,750
+counter mais mais
+
+512
+00:24:12,750 --> 00:24:14,750
+fosse executado
+
+513
+00:24:14,750 --> 00:24:16,750
+de uma forma atômica
+
+514
+00:24:16,750 --> 00:24:18,750
+o problema é que
+
+515
+00:24:18,750 --> 00:24:20,750
+se nós desmiosarmos o counter mais mais
+
+516
+00:24:20,750 --> 00:24:22,750
+e formos ver ao nível
+
+517
+00:24:22,750 --> 00:24:24,750
+do processador
+
+518
+00:24:24,750 --> 00:24:26,750
+aquilo não é atômico
+
+519
+00:24:26,750 --> 00:24:28,750
+são 3 instruções
+
+520
+00:24:28,750 --> 00:24:30,750
+do processador
+
+521
+00:24:30,750 --> 00:24:32,750
+cada instrução sim é atômica
+
+522
+00:24:32,750 --> 00:24:34,750
+quando eu mando fazer uma instrução
+
+523
+00:24:34,750 --> 00:24:36,750
+ela é executada
+
+524
+00:24:36,750 --> 00:24:38,750
+e não há nada que interrompa
+
+525
+00:24:38,750 --> 00:24:40,750
+até concluir
+
+526
+00:24:40,750 --> 00:24:42,750
+o problema é que quando tenho 3
+
+527
+00:24:42,750 --> 00:24:44,750
+eu tenho 2 pontos
+
+528
+00:24:44,750 --> 00:24:46,750
+em que posso interromper
+
+529
+00:24:46,750 --> 00:24:48,750
+a tomicidade
+
+530
+00:24:48,750 --> 00:24:50,750
+do counter mais mais
+
+531
+00:24:50,750 --> 00:24:52,750
+do nível da abstração mais alto
+
+532
+00:24:52,750 --> 00:24:54,750
+como é que eu posso
+
+533
+00:24:54,750 --> 00:24:56,750
+resolver esta questão?
+
+534
+00:24:56,750 --> 00:24:58,750
+uma das formas de resolver
+
+535
+00:24:58,750 --> 00:25:00,750
+esta questão
+
+536
+00:25:00,750 --> 00:25:02,750
+é garantir
+
+537
+00:25:02,750 --> 00:25:04,750
+a explosão mútua
+
+538
+00:25:04,750 --> 00:25:06,750
+ou seja
+
+539
+00:25:06,750 --> 00:25:08,750
+quando estiver a executar
+
+540
+00:25:08,750 --> 00:25:10,750
+algo que deveria ser visto como atômico
+
+541
+00:25:10,750 --> 00:25:12,750
+então eu tenho que impedir
+
+542
+00:25:12,750 --> 00:25:14,750
+que outras tarefas concorrentes
+
+543
+00:25:14,750 --> 00:25:16,750
+possam
+
+544
+00:25:16,750 --> 00:25:18,750
+realizar operações
+
+545
+00:25:18,750 --> 00:25:20,750
+também concorrentes
+
+546
+00:25:20,750 --> 00:25:22,750
+sobre o mesmo recurso
+
+547
+00:25:22,750 --> 00:25:24,750
+que é partilhado
+
+548
+00:25:24,750 --> 00:25:26,750
+isto
+
+549
+00:25:26,750 --> 00:25:28,750
+é
+
+550
+00:25:28,750 --> 00:25:30,750
+crítico
+
+551
+00:25:30,750 --> 00:25:32,750
+sempre que nós tentamos
+
+552
+00:25:32,750 --> 00:25:34,750
+modificar
+
+553
+00:25:34,750 --> 00:25:36,750
+o valor de algo
+
+554
+00:25:38,750 --> 00:25:40,750
+se eu tiver por exemplo
+
+555
+00:25:40,750 --> 00:25:42,750
+uma variável
+
+556
+00:25:42,750 --> 00:25:44,750
+e desculpem lá
+
+557
+00:25:44,750 --> 00:25:46,750
+estou aqui arranjar-me
+
+558
+00:25:46,750 --> 00:25:48,750
+na posição da cadeira
+
+559
+00:25:48,750 --> 00:25:50,750
+e isto às vezes rende um bocado
+
+560
+00:25:50,750 --> 00:25:52,750
+se
+
+561
+00:25:52,750 --> 00:25:54,750
+tiver uma variável
+
+562
+00:25:54,750 --> 00:25:56,750
+e tiver 10 stress
+
+563
+00:25:56,750 --> 00:25:58,750
+que precisem de ler a variável
+
+564
+00:25:58,750 --> 00:26:00,750
+a leitura
+
+565
+00:26:00,750 --> 00:26:02,750
+não modifica
+
+566
+00:26:02,750 --> 00:26:04,750
+portanto eu ainda não tenho problema nenhum
+
+567
+00:26:04,750 --> 00:26:06,750
+certo?
+
+568
+00:26:06,750 --> 00:26:08,750
+se a variável valer 15
+
+569
+00:26:08,750 --> 00:26:10,750
+eu tiver 10 stress
+
+570
+00:26:10,750 --> 00:26:12,750
+que vão ler o valor 15
+
+571
+00:26:12,750 --> 00:26:14,750
+a variável continua a ter o valor 15
+
+572
+00:26:14,750 --> 00:26:16,750
+todas as stress leram o valor 15
+
+573
+00:26:16,750 --> 00:26:18,750
+e não há problema nenhum
+
+574
+00:26:18,750 --> 00:26:20,750
+o problema acontece
+
+575
+00:26:20,750 --> 00:26:22,750
+quando tentamos modificar
+
+576
+00:26:22,750 --> 00:26:24,750
+o valor da variável
+
+577
+00:26:24,750 --> 00:26:26,750
+sobretudo
+
+578
+00:26:26,750 --> 00:26:28,750
+se o valor da variável
+
+579
+00:26:28,750 --> 00:26:30,750
+for consequência de um cálculo
+
+580
+00:26:30,750 --> 00:26:34,930
+ok?
+
+581
+00:26:34,930 --> 00:26:36,930
+nesse caso
+
+582
+00:26:36,930 --> 00:26:38,930
+convém
+
+583
+00:26:38,930 --> 00:26:40,930
+bloquear as modificações
+
+584
+00:26:40,930 --> 00:26:42,930
+a essa variável
+
+585
+00:26:42,930 --> 00:26:44,930
+até que o cálculo
+
+586
+00:26:44,930 --> 00:26:46,930
+e o resultado do cálculo
+
+587
+00:26:46,930 --> 00:26:48,930
+termine
+
+588
+00:26:48,930 --> 00:26:50,930
+o cálculo termine e o resultado esteja pronto
+
+589
+00:26:50,930 --> 00:26:54,620
+ok?
+
+590
+00:26:54,620 --> 00:26:56,620
+vamos lá então ver como é que
+
+591
+00:26:56,620 --> 00:26:58,620
+solução é que nós temos
+
+592
+00:27:00,620 --> 00:27:02,620
+para moteques
+
+593
+00:27:02,620 --> 00:27:04,620
+pelo POSIX
+
+594
+00:27:04,620 --> 00:27:06,620
+nós temos os moteques
+
+595
+00:27:06,620 --> 00:27:08,620
+moteques que vêm de Mutual Exclusion
+
+596
+00:27:08,620 --> 00:27:10,620
+portanto é uma contração
+
+597
+00:27:10,620 --> 00:27:12,620
+de Mutual Exclusion
+
+598
+00:27:12,620 --> 00:27:14,620
+moteques
+
+599
+00:27:14,620 --> 00:27:16,620
+e é um mecanismo que nos permite
+
+600
+00:27:16,620 --> 00:27:18,620
+proteger as secções críticas
+
+601
+00:27:18,620 --> 00:27:20,620
+de que forma
+
+602
+00:27:20,620 --> 00:27:22,620
+nós podemos pedir autorização
+
+603
+00:27:22,620 --> 00:27:24,620
+a um moteques
+
+604
+00:27:24,620 --> 00:27:26,620
+para avançar
+
+605
+00:27:26,620 --> 00:27:28,620
+e se obtivermos
+
+606
+00:27:28,620 --> 00:27:30,620
+essa autorização
+
+607
+00:27:30,620 --> 00:27:32,620
+nós continuamos
+
+608
+00:27:32,620 --> 00:27:34,620
+para a instrução seguinte
+
+609
+00:27:34,620 --> 00:27:39,250
+para seguir
+
+610
+00:27:39,250 --> 00:27:41,250
+para a instrução seguinte
+
+611
+00:27:41,250 --> 00:27:43,250
+eu tenho que deter o LOC
+
+612
+00:27:43,250 --> 00:27:45,250
+deter o moteques
+
+613
+00:27:45,250 --> 00:27:47,250
+ok?
+
+614
+00:27:47,250 --> 00:27:49,250
+o moteques é quase como se fosse
+
+615
+00:27:49,250 --> 00:27:51,250
+sei lá um objeto que me garante
+
+616
+00:27:51,250 --> 00:27:53,250
+esse acesso
+
+617
+00:27:53,250 --> 00:27:55,250
+quem tem
+
+618
+00:27:55,250 --> 00:27:57,250
+este
+
+619
+00:27:57,250 --> 00:27:59,250
+este testemunho
+
+620
+00:27:59,250 --> 00:28:01,250
+quem tem este palo de vassoura
+
+621
+00:28:01,250 --> 00:28:03,250
+pode
+
+622
+00:28:03,250 --> 00:28:05,250
+realizar uma operação
+
+623
+00:28:05,250 --> 00:28:07,250
+só existe um palo de vassoura
+
+624
+00:28:07,250 --> 00:28:09,250
+e esse palo de vassoura só pode ser segurado
+
+625
+00:28:09,250 --> 00:28:11,250
+por uma pessoa de cada vez
+
+626
+00:28:11,250 --> 00:28:13,250
+quem tem um palo de vassoura
+
+627
+00:28:13,250 --> 00:28:15,250
+pode avançar para a secção crítica
+
+628
+00:28:15,250 --> 00:28:17,250
+quem não tem um palo de vassoura
+
+629
+00:28:17,250 --> 00:28:19,250
+tem de ficar à espera
+
+630
+00:28:19,250 --> 00:28:21,250
+que a palo de vassoura na mão
+
+631
+00:28:21,250 --> 00:28:23,250
+poder avançar para
+
+632
+00:28:23,250 --> 00:28:25,250
+a sua secção crítica
+
+633
+00:28:25,250 --> 00:28:27,250
+ok? portanto
+
+634
+00:28:27,250 --> 00:28:29,250
+o moteques acaba por ser algo
+
+635
+00:28:29,250 --> 00:28:31,250
+que eu preciso
+
+636
+00:28:31,250 --> 00:28:33,250
+de obter
+
+637
+00:28:33,250 --> 00:28:35,250
+para poder prosseguir
+
+638
+00:28:35,250 --> 00:28:37,250
+o moteques LOC
+
+639
+00:28:37,250 --> 00:28:39,250
+é bloqueante
+
+640
+00:28:39,250 --> 00:28:41,250
+se eu não adquirir o moteques
+
+641
+00:28:41,250 --> 00:28:43,250
+porque alguém tem um moteques
+
+642
+00:28:43,250 --> 00:28:45,250
+então eu vou aguardar
+
+643
+00:28:45,250 --> 00:28:47,250
+até que o moteques seja meu
+
+644
+00:28:47,250 --> 00:28:49,250
+um exemplo
+
+645
+00:28:49,250 --> 00:28:51,250
+muito
+
+646
+00:28:51,250 --> 00:28:53,250
+da vida real
+
+647
+00:28:53,250 --> 00:28:55,250
+muito semelhante aos moteques
+
+648
+00:28:55,250 --> 00:28:57,250
+são as portas das casas de bem
+
+649
+00:28:57,250 --> 00:28:59,250
+eu adoro
+
+650
+00:28:59,250 --> 00:29:01,250
+este exemplo
+
+651
+00:29:01,250 --> 00:29:03,250
+chegamos a uma casa de bem
+
+652
+00:29:03,250 --> 00:29:05,250
+uma porta está fechada
+
+653
+00:29:05,250 --> 00:29:07,250
+como é que eu sei se posso
+
+654
+00:29:07,250 --> 00:29:09,250
+abrir a porta ou não
+
+655
+00:29:09,250 --> 00:29:11,250
+olhe para aquele indicador
+
+656
+00:29:11,250 --> 00:29:13,250
+que muitas das vezes
+
+657
+00:29:13,250 --> 00:29:15,250
+está verde ou está vermelho
+
+658
+00:29:15,250 --> 00:29:19,040
+se estiver verde
+
+659
+00:29:19,040 --> 00:29:21,040
+quer dizer que o moteques
+
+660
+00:29:21,040 --> 00:29:25,090
+está disponível
+
+661
+00:29:25,090 --> 00:29:27,090
+se estiver verde eu abro a porta
+
+662
+00:29:27,090 --> 00:29:29,090
+entro na casa de bem
+
+663
+00:29:29,090 --> 00:29:31,090
+fecha a porta
+
+664
+00:29:31,090 --> 00:29:33,090
+e rolo de manipulo
+
+665
+00:29:33,090 --> 00:29:35,090
+quando rolo de manipulo
+
+666
+00:29:35,090 --> 00:29:37,090
+o indicador fica vermelho
+
+667
+00:29:37,090 --> 00:29:39,090
+nesse momento
+
+668
+00:29:39,090 --> 00:29:41,090
+eu adquiri o moteques
+
+669
+00:29:41,090 --> 00:29:43,090
+o moteques é meu
+
+670
+00:29:43,090 --> 00:29:45,090
+e o que acontece a alguém que entretanto
+
+671
+00:29:45,090 --> 00:29:47,090
+chega à casa de bem
+
+672
+00:29:47,090 --> 00:29:49,090
+vai também pedir autorização
+
+673
+00:29:49,090 --> 00:29:51,090
+ao moteques
+
+674
+00:29:51,090 --> 00:29:53,090
+e vai olhar para
+
+675
+00:29:53,090 --> 00:29:55,090
+o indicador e ver vermelho
+
+676
+00:29:55,090 --> 00:29:57,090
+apesar de ter pedido autorização
+
+677
+00:29:57,090 --> 00:29:59,090
+para entrar
+
+678
+00:29:59,090 --> 00:30:01,090
+não pode entrar porque o moteques
+
+679
+00:30:01,090 --> 00:30:03,090
+não está na sua posse
+
+680
+00:30:03,090 --> 00:30:05,090
+está na posse de outra alguém
+
+681
+00:30:05,090 --> 00:30:08,590
+e fica ali à espera
+
+682
+00:30:08,590 --> 00:30:10,590
+quando
+
+683
+00:30:10,590 --> 00:30:12,590
+eu
+
+684
+00:30:12,590 --> 00:30:14,590
+sair da casa de bem
+
+685
+00:30:14,590 --> 00:30:16,590
+e para sair da casa de bem
+
+686
+00:30:16,590 --> 00:30:18,590
+que seja um grande acrobate
+
+687
+00:30:18,590 --> 00:30:20,590
+e consiga saltar por cima da porta
+
+688
+00:30:20,590 --> 00:30:22,590
+eu tenho que abrir
+
+689
+00:30:22,590 --> 00:30:24,590
+o moteques
+
+690
+00:30:24,590 --> 00:30:26,590
+passar o de vermelho para verde
+
+691
+00:30:26,590 --> 00:30:28,590
+e quando isso acontece
+
+692
+00:30:28,590 --> 00:30:30,590
+a porta abre e eu saio
+
+693
+00:30:30,590 --> 00:30:32,590
+e a primeira pessoa que estiver na fila
+
+694
+00:30:32,590 --> 00:30:34,590
+à espera do moteques
+
+695
+00:30:34,590 --> 00:30:36,590
+desbloqueia
+
+696
+00:30:36,590 --> 00:30:38,590
+entra e adquire por sua vez o moteques
+
+697
+00:30:38,590 --> 00:30:45,330
+faz sentido?
+
+698
+00:30:45,330 --> 00:30:47,330
+não há dúvidas?
+
+699
+00:30:47,330 --> 00:30:49,330
+boa
+
+700
+00:30:49,330 --> 00:30:51,330
+é uma questão
+
+701
+00:30:51,330 --> 00:30:53,330
+sim sim
+
+702
+00:30:53,330 --> 00:30:55,330
+o moteques é associado à tread
+
+703
+00:30:55,330 --> 00:31:00,020
+ou uma secção da tread?
+
+704
+00:31:00,020 --> 00:31:02,020
+boa
+
+705
+00:31:02,020 --> 00:31:04,020
+pergunta creio-me
+
+706
+00:31:04,020 --> 00:31:06,020
+o moteques
+
+707
+00:31:06,020 --> 00:31:08,020
+não é
+
+708
+00:31:08,020 --> 00:31:10,020
+como é que é dizer?
+
+709
+00:31:10,020 --> 00:31:12,020
+a thread
+
+710
+00:31:12,020 --> 00:31:15,620
+adquire temporariamente o moteques
+
+711
+00:31:15,620 --> 00:31:17,620
+e depois liberta-o
+
+712
+00:31:17,620 --> 00:31:19,620
+mas
+
+713
+00:31:19,620 --> 00:31:21,620
+e é o exemplo que agora temos aqui
+
+714
+00:31:21,620 --> 00:31:23,620
+a falar a seguir
+
+715
+00:31:23,620 --> 00:31:25,620
+nós temos as funções pthread
+
+716
+00:31:25,620 --> 00:31:27,620
+moteques lock que é pedir
+
+717
+00:31:27,620 --> 00:31:29,620
+para adquirir o moteques
+
+718
+00:31:29,620 --> 00:31:31,620
+e o unlock que é para pedir
+
+719
+00:31:31,620 --> 00:31:33,620
+para libertar o moteques
+
+720
+00:31:33,620 --> 00:31:35,620
+para quem vier a seguir
+
+721
+00:31:35,620 --> 00:31:37,620
+no meu código
+
+722
+00:31:37,620 --> 00:31:39,620
+eu quando tiver
+
+723
+00:31:39,620 --> 00:31:41,620
+uma secção crítica, por exemplo esta
+
+724
+00:31:41,620 --> 00:31:43,620
+que quer que decorra sem interferências
+
+725
+00:31:43,620 --> 00:31:45,620
+dos concorrentes
+
+726
+00:31:45,620 --> 00:31:47,620
+eu primeiro
+
+727
+00:31:47,620 --> 00:31:49,620
+vou pedir acesso
+
+728
+00:31:49,620 --> 00:31:51,620
+vou pedir a posse
+
+729
+00:31:51,620 --> 00:31:53,620
+de um moteques
+
+730
+00:31:53,620 --> 00:31:55,620
+com o lock
+
+731
+00:31:55,620 --> 00:31:57,620
+e tenho que indicar qual é que é o moteques
+
+732
+00:31:59,180 --> 00:32:01,180
+nós podemos ter várias moteques
+
+733
+00:32:01,180 --> 00:32:03,180
+a controlar
+
+734
+00:32:03,180 --> 00:32:05,180
+ou a sincronizar
+
+735
+00:32:05,180 --> 00:32:07,180
+vários recursos
+
+736
+00:32:07,180 --> 00:32:09,180
+só que eu para poder
+
+737
+00:32:09,180 --> 00:32:11,180
+em boa consciência
+
+738
+00:32:11,180 --> 00:32:13,180
+manipular
+
+739
+00:32:13,180 --> 00:32:15,180
+este recurso partilhado
+
+740
+00:32:15,180 --> 00:32:17,180
+eu tenho primeiro que
+
+741
+00:32:17,180 --> 00:32:19,180
+pedir a posse
+
+742
+00:32:19,180 --> 00:32:23,010
+de um moteques
+
+743
+00:32:23,010 --> 00:32:25,010
+sim Daniel
+
+744
+00:32:25,010 --> 00:32:27,010
+o senhor chama agora uma questão
+
+745
+00:32:27,010 --> 00:32:29,010
+o senhor agora disse que
+
+746
+00:32:29,010 --> 00:32:31,010
+o moteques serve para sincronizar o código
+
+747
+00:32:31,010 --> 00:32:33,010
+o join não faz a mesma coisa
+
+748
+00:32:33,010 --> 00:32:35,010
+o join
+
+749
+00:32:35,010 --> 00:32:37,010
+sim
+
+750
+00:32:37,010 --> 00:32:39,010
+não, também sincroniza
+
+751
+00:32:39,010 --> 00:32:41,010
+mas faz uma sincronização diferente
+
+752
+00:32:41,010 --> 00:32:43,010
+o join também bloqueia
+
+753
+00:32:43,010 --> 00:32:45,010
+sim, mas é para outro fim
+
+754
+00:32:45,010 --> 00:32:47,010
+o join
+
+755
+00:32:47,010 --> 00:32:49,010
+é para esperar que o mothread
+
+756
+00:32:49,010 --> 00:32:51,010
+termine a execução definitivamente
+
+757
+00:32:51,010 --> 00:32:53,010
+eu como o tex
+
+758
+00:32:53,010 --> 00:32:55,010
+sincronizo
+
+759
+00:32:55,010 --> 00:32:57,010
+colocando ordem
+
+760
+00:32:57,010 --> 00:32:59,010
+no acesso a um recurso
+
+761
+00:32:59,010 --> 00:33:01,010
+em que eles esperam
+
+762
+00:33:01,010 --> 00:33:03,010
+mas não esperam
+
+763
+00:33:03,010 --> 00:33:05,010
+pela morte de uma thread
+
+764
+00:33:05,010 --> 00:33:07,010
+eles esperam que uma thread
+
+765
+00:33:07,010 --> 00:33:09,010
+saia da casa do bem
+
+766
+00:33:09,010 --> 00:33:11,010
+para lá
+
+767
+00:33:11,010 --> 00:33:13,010
+mas por exemplo
+
+768
+00:33:13,010 --> 00:33:15,010
+no código anterior
+
+769
+00:33:15,010 --> 00:33:17,010
+o join não devia de paramétricas dos threads
+
+770
+00:33:17,010 --> 00:33:19,010
+ou melhor, que chegasse por exemplo aos dois milhões
+
+771
+00:33:19,010 --> 00:33:21,010
+no contador
+
+772
+00:33:21,010 --> 00:33:23,010
+não, agora vamos girar
+
+773
+00:33:23,010 --> 00:33:25,010
+quando você espera que a thread não acabe
+
+774
+00:33:25,010 --> 00:33:27,010
+sim
+
+775
+00:33:27,010 --> 00:33:29,010
+devia de um menos um counter
+
+776
+00:33:29,010 --> 00:33:31,010
+devia ter um milhão
+
+777
+00:33:31,010 --> 00:33:33,010
+e só depois é que começaram a segunda thread
+
+778
+00:33:33,010 --> 00:33:36,740
+não, repare
+
+779
+00:33:36,740 --> 00:33:38,740
+aqui lança duas threads
+
+780
+00:33:38,740 --> 00:33:40,740
+e a partir daqui
+
+781
+00:33:40,740 --> 00:33:42,740
+é a selva
+
+782
+00:33:42,740 --> 00:33:44,740
+tenhas duas threads a correr
+
+783
+00:33:44,740 --> 00:33:46,740
+a tentar incrementar
+
+784
+00:33:46,740 --> 00:33:48,740
+um milhão de vez o contador
+
+785
+00:33:48,740 --> 00:33:50,740
+se tiver
+
+786
+00:33:50,740 --> 00:33:52,740
+dois processadores disponíveis
+
+787
+00:33:52,740 --> 00:33:54,740
+até pode ter as duas threads
+
+788
+00:33:54,740 --> 00:33:56,740
+a cavalgar cada um
+
+789
+00:33:56,740 --> 00:33:58,740
+no seu processador
+
+790
+00:33:58,740 --> 00:34:00,740
+certo?
+
+791
+00:34:00,740 --> 00:34:02,740
+o join
+
+792
+00:34:02,740 --> 00:34:04,740
+é quase como alguém
+
+793
+00:34:04,740 --> 00:34:06,740
+que fica sentado
+
+794
+00:34:06,740 --> 00:34:08,740
+na varanda
+
+795
+00:34:08,740 --> 00:34:10,740
+a espera de receber
+
+796
+00:34:10,740 --> 00:34:15,490
+a notícia de que alguém morreu
+
+797
+00:34:15,490 --> 00:34:17,490
+o join espera
+
+798
+00:34:17,490 --> 00:34:19,490
+pela notícia da morte de alguém
+
+799
+00:34:19,490 --> 00:34:21,490
+e enquanto não morrer
+
+800
+00:34:21,490 --> 00:34:23,490
+esse alguém, ele fica quieto
+
+801
+00:34:23,490 --> 00:34:25,490
+e parado, não se mexe
+
+802
+00:34:25,490 --> 00:34:28,860
+aqui neste caso
+
+803
+00:34:28,860 --> 00:34:30,860
+o mutex lock
+
+804
+00:34:30,860 --> 00:34:32,860
+o que acontece
+
+805
+00:34:32,860 --> 00:34:34,860
+é também uma sincronização
+
+806
+00:34:34,860 --> 00:34:36,860
+só que eu peço
+
+807
+00:34:36,860 --> 00:34:38,860
+autorização
+
+808
+00:34:38,860 --> 00:34:40,860
+para
+
+809
+00:34:40,860 --> 00:34:42,860
+para realizar algo
+
+810
+00:34:42,860 --> 00:34:46,460
+desde que eu tenho essa autorização
+
+811
+00:34:46,460 --> 00:34:48,460
+enquanto não tiver autorização
+
+812
+00:34:48,460 --> 00:34:50,460
+eu bloqueio
+
+813
+00:34:50,460 --> 00:34:52,460
+e fica à espera
+
+814
+00:34:52,460 --> 00:34:54,460
+que o outro alguém
+
+815
+00:34:54,460 --> 00:34:56,460
+que tenha posse
+
+816
+00:34:56,460 --> 00:34:58,460
+desse pau de vaçoura
+
+817
+00:34:58,460 --> 00:35:00,460
+o pau de vaçoura é o poder
+
+818
+00:35:00,460 --> 00:35:02,460
+o liberto
+
+819
+00:35:02,460 --> 00:35:04,460
+neste caso eu não estou à espera que ninguém morra
+
+820
+00:35:04,460 --> 00:35:06,460
+só estou à espera que alguém se despache
+
+821
+00:35:06,460 --> 00:35:08,460
+mas eu pensava que
+
+822
+00:35:08,460 --> 00:35:10,460
+o join iria bloquear
+
+823
+00:35:10,460 --> 00:35:12,460
+uma thread
+
+824
+00:35:12,460 --> 00:35:14,460
+mas não, o join bloqueia o processo
+
+825
+00:35:14,460 --> 00:35:16,460
+onde estão os threads
+
+826
+00:35:16,460 --> 00:35:18,460
+aqui
+
+827
+00:35:18,460 --> 00:35:20,460
+tem que pensar em três threads
+
+828
+00:35:20,460 --> 00:35:22,460
+tem a thread principal
+
+829
+00:35:22,460 --> 00:35:24,460
+e a thread principal é que vai parar
+
+830
+00:35:24,460 --> 00:35:26,460
+e vai ter duas threads
+
+831
+00:35:26,460 --> 00:35:28,460
+a executar este código
+
+832
+00:35:28,460 --> 00:35:30,460
+tem três threads
+
+833
+00:35:30,460 --> 00:35:32,460
+mas estas duas
+
+834
+00:35:32,460 --> 00:35:34,460
+estão em alta competição
+
+835
+00:35:34,460 --> 00:35:36,460
+certo?
+
+836
+00:35:36,460 --> 00:35:40,900
+pronto
+
+837
+00:35:40,900 --> 00:35:42,900
+voltando aqui
+
+838
+00:35:42,900 --> 00:35:44,900
+assim que eu tenho
+
+839
+00:35:44,900 --> 00:35:46,900
+este
+
+840
+00:35:46,900 --> 00:35:48,900
+após este motex
+
+841
+00:35:48,900 --> 00:35:50,900
+então eu desbloqueio
+
+842
+00:35:50,900 --> 00:35:52,900
+se é que bloqueiei
+
+843
+00:35:52,900 --> 00:35:54,900
+e executo a minha secção crítica
+
+844
+00:35:54,900 --> 00:35:56,900
+por fim, quando estiver terminado
+
+845
+00:35:56,900 --> 00:35:58,900
+fazemos aquilo que também fazemos nas casas de banho
+
+846
+00:35:58,900 --> 00:36:00,900
+libertamos
+
+847
+00:36:00,900 --> 00:36:02,900
+o motex
+
+848
+00:36:02,900 --> 00:36:04,900
+é sempre importante
+
+849
+00:36:04,900 --> 00:36:06,900
+emparalhar isto
+
+850
+00:36:06,900 --> 00:36:08,900
+quando temos um lock
+
+851
+00:36:08,900 --> 00:36:10,900
+depois temos que ter um unlock
+
+852
+00:36:10,900 --> 00:36:12,900
+não se esqueçam de fazer um unlock
+
+853
+00:36:12,900 --> 00:36:14,900
+senão é muito triste
+
+854
+00:36:14,900 --> 00:36:16,900
+estar ali uma casa de banho sem ninguém
+
+855
+00:36:16,900 --> 00:36:18,900
+e ninguém pode entrar e usá-la
+
+856
+00:36:18,900 --> 00:36:25,020
+é sentido?
+
+857
+00:36:25,020 --> 00:36:27,020
+então, eu para usar motex
+
+858
+00:36:27,020 --> 00:36:29,020
+primeiro tenho que os criar
+
+859
+00:36:29,020 --> 00:36:31,020
+tá bom?
+
+860
+00:36:31,020 --> 00:36:33,020
+para poder criar um motex
+
+861
+00:36:33,020 --> 00:36:35,020
+eu devo usar a função pfread
+
+862
+00:36:35,020 --> 00:36:37,020
+motex init
+
+863
+00:36:37,020 --> 00:36:39,020
+é uma função
+
+864
+00:36:39,020 --> 00:36:41,020
+que me cria
+
+865
+00:36:41,020 --> 00:36:43,020
+um node thread
+
+866
+00:36:43,020 --> 00:36:45,020
+e recebe dois argumentos
+
+867
+00:36:45,020 --> 00:36:47,020
+o primeiro argumento
+
+868
+00:36:47,020 --> 00:36:49,020
+isso é uma variável
+
+869
+00:36:49,020 --> 00:36:51,020
+do tipo pfreadmotex
+
+870
+00:36:51,020 --> 00:36:53,020
+type
+
+871
+00:36:53,020 --> 00:36:55,020
+e essa variável
+
+872
+00:36:55,020 --> 00:36:57,020
+vai passar a guardar
+
+873
+00:36:57,020 --> 00:36:59,020
+a informação
+
+874
+00:36:59,020 --> 00:37:01,020
+do thread do motex
+
+875
+00:37:01,020 --> 00:37:04,370
+essa informação
+
+876
+00:37:04,370 --> 00:37:06,370
+é necessária para depois podermos operá-lo
+
+877
+00:37:06,370 --> 00:37:08,370
+ok?
+
+878
+00:37:08,370 --> 00:37:10,370
+basicamente
+
+879
+00:37:10,370 --> 00:37:12,370
+é uma variável
+
+880
+00:37:12,370 --> 00:37:14,370
+que vai receber
+
+881
+00:37:14,370 --> 00:37:16,370
+o novo motex
+
+882
+00:37:16,370 --> 00:37:18,370
+é uma espécie de invólocro
+
+883
+00:37:18,370 --> 00:37:20,370
+o node
+
+884
+00:37:20,370 --> 00:37:22,370
+um invólocro vazio
+
+885
+00:37:22,370 --> 00:37:24,370
+e nós vamos criar um motex
+
+886
+00:37:24,370 --> 00:37:26,370
+e vamos guardá-lo dentro dessa variável
+
+887
+00:37:26,370 --> 00:37:28,370
+podemos imaginar assim
+
+888
+00:37:28,370 --> 00:37:30,370
+é que depois as implementações podem variar
+
+889
+00:37:30,370 --> 00:37:32,370
+de sistemas para sistemas
+
+890
+00:37:32,370 --> 00:37:34,370
+mas a definição posix
+
+891
+00:37:34,370 --> 00:37:36,370
+diz que isto é uma variável
+
+892
+00:37:36,370 --> 00:37:38,370
+deste tipo
+
+893
+00:37:38,370 --> 00:37:40,370
+que nos permite manipular o motex
+
+894
+00:37:40,370 --> 00:37:42,370
+também temos um segundo argumento
+
+895
+00:37:42,370 --> 00:37:44,370
+que é o interesse
+
+896
+00:37:44,370 --> 00:37:46,370
+de uma variável
+
+897
+00:37:46,370 --> 00:37:48,370
+onde podemos colocar as opções deste motex
+
+898
+00:37:48,370 --> 00:37:50,370
+está bom?
+
+899
+00:37:50,370 --> 00:37:52,370
+neste momento
+
+900
+00:37:52,370 --> 00:37:54,370
+vamos trabalhar com motexes
+
+901
+00:37:54,370 --> 00:37:56,370
+perfeitamente normais
+
+902
+00:37:56,370 --> 00:37:58,370
+portanto, se for um motex
+
+903
+00:37:58,370 --> 00:38:00,370
+de série sem opções especiais
+
+904
+00:38:00,370 --> 00:38:02,370
+nós podemos utilizar
+
+905
+00:38:02,370 --> 00:38:04,370
+nul
+
+906
+00:38:04,370 --> 00:38:06,370
+ou seja, a vez de passarmos uma variável
+
+907
+00:38:06,370 --> 00:38:08,370
+em que definimos opções especiais
+
+908
+00:38:08,370 --> 00:38:10,370
+passamos nul
+
+909
+00:38:10,370 --> 00:38:12,370
+e a função pfreadmotexinit
+
+910
+00:38:12,370 --> 00:38:14,370
+já sabe que
+
+911
+00:38:14,370 --> 00:38:16,370
+é um motex
+
+912
+00:38:16,370 --> 00:38:18,370
+de série
+
+913
+00:38:18,370 --> 00:38:20,370
+se isto correr bem
+
+914
+00:38:20,370 --> 00:38:22,370
+temos aqui um zero
+
+915
+00:38:22,370 --> 00:38:24,370
+zero erros
+
+916
+00:38:24,370 --> 00:38:26,370
+se correr mal temos um número que não é zero
+
+917
+00:38:26,370 --> 00:38:28,370
+e esse número vai significar
+
+918
+00:38:28,370 --> 00:38:30,370
+que tipo de azar
+
+919
+00:38:30,370 --> 00:38:32,370
+é que ocorreu
+
+920
+00:38:32,370 --> 00:38:34,370
+está bom?
+
+921
+00:38:34,370 --> 00:38:39,280
+dúvidas não há?
+
+922
+00:38:39,280 --> 00:38:41,280
+este motex
+
+923
+00:38:41,280 --> 00:38:43,280
+quando usamos o pfreadmotexinit
+
+924
+00:38:43,280 --> 00:38:45,280
+é criado na hip
+
+925
+00:38:45,280 --> 00:38:47,280
+ok?
+
+926
+00:38:47,280 --> 00:38:49,280
+sem estresse
+
+927
+00:38:49,280 --> 00:38:51,280
+nós também podemos
+
+928
+00:38:51,280 --> 00:38:53,280
+criar um
+
+929
+00:38:53,280 --> 00:38:55,280
+motex
+
+930
+00:38:55,280 --> 00:38:57,280
+estático
+
+931
+00:38:57,280 --> 00:38:59,280
+naquela zona
+
+932
+00:38:59,280 --> 00:39:01,280
+das variáveis globais
+
+933
+00:39:01,280 --> 00:39:03,280
+ok? se o quiser
+
+934
+00:39:03,280 --> 00:39:05,280
+criar um motex desses eu posso criar
+
+935
+00:39:05,280 --> 00:39:07,280
+de uma forma muito mais simples
+
+936
+00:39:07,280 --> 00:39:09,280
+que é utilizando esta macro
+
+937
+00:39:09,280 --> 00:39:11,280
+pfreadmotexinit
+
+938
+00:39:11,280 --> 00:39:13,280
+e aquilo que eu faço
+
+939
+00:39:13,280 --> 00:39:15,280
+é criar uma variável
+
+940
+00:39:15,280 --> 00:39:17,280
+do tipo, esta variável loco
+
+941
+00:39:17,280 --> 00:39:19,280
+do tipo pfreadmotextype
+
+942
+00:39:19,280 --> 00:39:21,280
+e simplesmente
+
+943
+00:39:21,280 --> 00:39:23,280
+colocar aqui
+
+944
+00:39:23,280 --> 00:39:25,280
+igual pfreadmotexinit
+
+945
+00:39:25,280 --> 00:39:27,280
+quando um compilador
+
+946
+00:39:27,280 --> 00:39:29,280
+pega numa linha destas
+
+947
+00:39:29,280 --> 00:39:31,280
+o compilador vai
+
+948
+00:39:31,280 --> 00:39:33,280
+automaticamente
+
+949
+00:39:33,280 --> 00:39:35,280
+criar a variável loco
+
+950
+00:39:35,280 --> 00:39:37,280
+naquela zona do data segment
+
+951
+00:39:37,280 --> 00:39:39,280
+onde temos as variáveis globais
+
+952
+00:39:39,280 --> 00:39:41,280
+e poc poc
+
+953
+00:39:41,280 --> 00:39:43,280
+coloca logo lá um motex
+
+954
+00:39:43,280 --> 00:39:45,280
+pronto a funcionar
+
+955
+00:39:45,280 --> 00:39:47,280
+ok? e esse motex
+
+956
+00:39:47,280 --> 00:39:49,280
+vai estar disponível
+
+957
+00:39:49,280 --> 00:39:51,280
+como tudo que é estático
+
+958
+00:39:51,280 --> 00:39:53,280
+desde o princípio até ao fim
+
+959
+00:39:53,280 --> 00:39:57,330
+da execução do programa
+
+960
+00:39:57,330 --> 00:39:59,330
+ok? no entanto
+
+961
+00:39:59,330 --> 00:40:01,330
+há uma
+
+962
+00:40:01,330 --> 00:40:03,330
+restrição
+
+963
+00:40:03,330 --> 00:40:05,330
+se utilizar o pfreadmotexinit
+
+964
+00:40:05,330 --> 00:40:07,330
+eu não posso definir
+
+965
+00:40:07,330 --> 00:40:09,330
+opções especiais do meu motex
+
+966
+00:40:09,330 --> 00:40:11,330
+portanto, é um motex
+
+967
+00:40:11,330 --> 00:40:13,330
+de série
+
+968
+00:40:13,330 --> 00:40:15,330
+opções
+
+969
+00:40:15,330 --> 00:40:17,330
+zero ok?
+
+970
+00:40:17,330 --> 00:40:24,000
+sim
+
+971
+00:40:24,000 --> 00:40:26,000
+sim, é isso
+
+972
+00:40:26,000 --> 00:40:28,000
+é por default mesmo
+
+973
+00:40:28,000 --> 00:40:30,000
+é exatamente a mesma história
+
+974
+00:40:30,000 --> 00:40:32,000
+neste momento, até calhar bem
+
+975
+00:40:32,000 --> 00:40:34,000
+porque neste momento nós ainda estamos a trabalhar
+
+976
+00:40:34,000 --> 00:40:36,000
+ou estamos a ver motexes
+
+977
+00:40:36,000 --> 00:40:38,000
+na sua forma mais simples
+
+978
+00:40:38,000 --> 00:40:40,000
+certo?
+
+979
+00:40:40,000 --> 00:40:42,000
+portanto, se eu quiser
+
+980
+00:40:42,000 --> 00:40:44,000
+sentir que o meu programa compilado
+
+981
+00:40:44,000 --> 00:40:46,000
+tem toda a memória
+
+982
+00:40:46,000 --> 00:40:48,000
+para albergar estes motexes
+
+983
+00:40:48,000 --> 00:40:50,000
+o que que eu faço?
+
+984
+00:40:50,000 --> 00:40:52,000
+e se forem motexes
+
+985
+00:40:52,000 --> 00:40:54,000
+sem qualquer tipo de opção
+
+986
+00:40:54,000 --> 00:40:56,000
+eu posso criar assim
+
+987
+00:40:56,000 --> 00:40:58,000
+no entanto, estou a usar pfreadmotexinit
+
+988
+00:40:58,000 --> 00:41:00,000
+o anterior
+
+989
+00:41:00,000 --> 00:41:02,000
+que é criado na hip
+
+990
+00:41:02,000 --> 00:41:04,000
+também não há grande problema
+
+991
+00:41:04,000 --> 00:41:06,000
+desde que eu saiba
+
+992
+00:41:06,000 --> 00:41:08,000
+a partida quanto os motexes
+
+993
+00:41:08,000 --> 00:41:10,000
+no máximo eu vou criar
+
+994
+00:41:10,000 --> 00:41:12,000
+ok?
+
+995
+00:41:12,000 --> 00:41:14,000
+isso também é típico nos programas
+
+996
+00:41:14,000 --> 00:41:16,000
+no software em bebido
+
+997
+00:41:16,000 --> 00:41:18,000
+é, eu saber a partida
+
+998
+00:41:18,000 --> 00:41:20,000
+quanto é que vou ter de tudo
+
+999
+00:41:20,000 --> 00:41:22,000
+certo? portanto
+
+1000
+00:41:22,000 --> 00:41:24,000
+também não há stress nenhum em utilizar pfreadmotexinit
+
+1001
+00:41:26,000 --> 00:41:28,000
+só há perigo, é se eu precisar
+
+1002
+00:41:28,000 --> 00:41:30,000
+se usar pfreadmotexinit
+
+1003
+00:41:30,000 --> 00:41:32,000
+um número indeterminado de vezes
+
+1004
+00:41:32,000 --> 00:41:34,000
+que não soubesse na altura em que estou a
+
+1005
+00:41:34,000 --> 00:41:36,000
+projetar o meu software
+
+1006
+00:41:36,000 --> 00:41:38,000
+ou a compilar o meu software
+
+1007
+00:41:38,000 --> 00:41:40,000
+portanto, se precisarmos de opções
+
+1008
+00:41:40,000 --> 00:41:42,000
+também não há stress nenhum em utilizar pfreadmotexinit
+
+1009
+00:41:42,000 --> 00:41:44,000
+ok?
+
+1010
+00:41:44,000 --> 00:41:46,000
+estou simplesmente
+
+1011
+00:41:46,000 --> 00:41:48,000
+a dizer isto porque
+
+1012
+00:41:48,000 --> 00:41:50,000
+há duas semanas atrás eu falei
+
+1013
+00:41:50,000 --> 00:41:52,000
+é pá, não se utiliza muita hip
+
+1014
+00:41:52,000 --> 00:41:54,000
+a não ser
+
+1015
+00:41:54,000 --> 00:41:56,000
+que uma pessoa tenha certeza que a coisa
+
+1016
+00:41:56,000 --> 00:41:58,000
+não vai mudar
+
+1017
+00:41:58,000 --> 00:42:00,000
+e vai ter um problema
+
+1018
+00:42:00,000 --> 00:42:02,000
+e vai ter um problema
+
+1019
+00:42:02,000 --> 00:42:04,000
+e vai ter um problema
+
+1020
+00:42:04,000 --> 00:42:06,000
+e vai ter um problema
+
+1021
+00:42:06,000 --> 00:42:08,000
+que a coisa não vai mudar
+
+1022
+00:42:08,000 --> 00:42:10,000
+e vamos ter sempre memória suficiente
+
+1023
+00:42:10,000 --> 00:42:12,000
+para a nossa aplicação correr
+
+1024
+00:42:12,000 --> 00:42:14,000
+até o fim dos tempos
+
+1025
+00:42:14,000 --> 00:42:16,000
+este é um caso desses
+
+1026
+00:42:16,000 --> 00:42:18,000
+ele cria um motex na hip
+
+1027
+00:42:18,000 --> 00:42:20,000
+mas também se eu criar um motex no início do
+
+1028
+00:42:20,000 --> 00:42:22,000
+programa e nunca mais o iluminar
+
+1029
+00:42:22,000 --> 00:42:24,000
+ele está ocupando aquele espaço
+
+1030
+00:42:24,000 --> 00:42:26,000
+o problema é se eu a cada minuto
+
+1031
+00:42:26,000 --> 00:42:28,000
+acrescentar mais um motex
+
+1032
+00:42:28,000 --> 00:42:30,000
+mais um motex, a uma dada altura
+
+1033
+00:42:30,000 --> 00:42:32,000
+deixo de ter memória para tantos motexs
+
+1034
+00:42:32,000 --> 00:42:34,000
+mas também um programa desses
+
+1035
+00:42:34,000 --> 00:42:36,000
+é assim um bocado
+
+1036
+00:42:36,000 --> 00:42:38,000
+irrealista
+
+1037
+00:42:38,000 --> 00:42:41,500
+certo?
+
+1038
+00:42:41,500 --> 00:42:43,500
+pronto, agora
+
+1039
+00:42:43,500 --> 00:42:45,500
+o que se cria também se destrói
+
+1040
+00:42:45,500 --> 00:42:47,500
+certo? e
+
+1041
+00:42:47,500 --> 00:42:49,500
+em programação mais genérica
+
+1042
+00:42:49,500 --> 00:42:51,500
+eu posso também precisar
+
+1043
+00:42:51,500 --> 00:42:53,500
+de destruir motexs
+
+1044
+00:42:53,500 --> 00:42:55,500
+em embedded
+
+1045
+00:42:55,500 --> 00:42:57,500
+não acontece isso, nós criamos
+
+1046
+00:42:57,500 --> 00:42:59,500
+e é para a coisa ficar a correr até o final
+
+1047
+00:42:59,500 --> 00:43:01,500
+certo? mas
+
+1048
+00:43:01,500 --> 00:43:03,500
+se for necessário destruir
+
+1049
+00:43:03,500 --> 00:43:05,500
+vamos saber que existe o contraponto
+
+1050
+00:43:05,500 --> 00:43:07,500
+do init
+
+1051
+00:43:07,500 --> 00:43:09,500
+que é um destrói
+
+1052
+00:43:09,500 --> 00:43:11,500
+o destrói, aquilo que precisa receber
+
+1053
+00:43:11,500 --> 00:43:13,500
+é o endereço da tal variável
+
+1054
+00:43:13,500 --> 00:43:15,500
+que funciona como um
+
+1055
+00:43:15,500 --> 00:43:17,500
+vaso do motex
+
+1056
+00:43:17,500 --> 00:43:19,500
+e aquele motex
+
+1057
+00:43:19,500 --> 00:43:21,500
+é destruído
+
+1058
+00:43:21,500 --> 00:43:23,500
+aquilo que estava a ser
+
+1059
+00:43:23,500 --> 00:43:25,500
+que estava a ocupar espaço na hip
+
+1060
+00:43:25,500 --> 00:43:27,500
+deixa de ocupar espaço na hip
+
+1061
+00:43:27,500 --> 00:43:29,500
+se correr tudo bem
+
+1062
+00:43:29,500 --> 00:43:31,500
+temos um zero
+
+1063
+00:43:31,500 --> 00:43:33,500
+se não tivermos um zero
+
+1064
+00:43:33,500 --> 00:43:35,500
+é porque não correu tudo bem
+
+1065
+00:43:35,500 --> 00:43:38,940
+certo? não devemos destruir
+
+1066
+00:43:38,940 --> 00:43:40,940
+o motex
+
+1067
+00:43:40,940 --> 00:43:42,940
+que esteja a ser
+
+1068
+00:43:42,940 --> 00:43:44,940
+esteja na posse de alguma fred
+
+1069
+00:43:44,940 --> 00:43:46,940
+porque o resultado pode ser
+
+1070
+00:43:46,940 --> 00:43:48,940
+interferido
+
+1071
+00:43:48,940 --> 00:43:50,940
+tá bom? em embedded
+
+1072
+00:43:50,940 --> 00:43:52,940
+e se não se coloca porque embedded
+
+1073
+00:43:52,940 --> 00:43:54,940
+não estou a ver
+
+1074
+00:43:54,940 --> 00:43:56,940
+nós estamos a destruir motexs
+
+1075
+00:43:56,940 --> 00:43:58,940
+é porque eles estarem a rodar
+
+1076
+00:43:58,940 --> 00:44:00,940
+e deixem estar, tá bom?
+
+1077
+00:44:00,940 --> 00:44:02,940
+agora, operações
+
+1078
+00:44:02,940 --> 00:44:04,940
+eu quando tenho um motex
+
+1079
+00:44:04,940 --> 00:44:06,940
+é porque quero usar e operar
+
+1080
+00:44:06,940 --> 00:44:08,940
+para sentir
+
+1081
+00:44:08,940 --> 00:44:10,940
+então, aquelas duas funções
+
+1082
+00:44:10,940 --> 00:44:12,940
+que nós já tínhamos visto
+
+1083
+00:44:12,940 --> 00:44:14,940
+estão agora aqui formalmente
+
+1084
+00:44:14,940 --> 00:44:16,940
+apresentadas
+
+1085
+00:44:16,940 --> 00:44:18,940
+temos o lock e temos o unlock
+
+1086
+00:44:18,940 --> 00:44:20,940
+o lock precisa
+
+1087
+00:44:20,940 --> 00:44:22,940
+receber um endereço da variável
+
+1088
+00:44:22,940 --> 00:44:24,940
+que alberga
+
+1089
+00:44:24,940 --> 00:44:26,940
+o motex
+
+1090
+00:44:26,940 --> 00:44:28,940
+e o unlock igual
+
+1091
+00:44:28,940 --> 00:44:30,940
+portanto, normalmente nós temos
+
+1092
+00:44:30,940 --> 00:44:32,940
+e comercial
+
+1093
+00:44:32,940 --> 00:44:36,610
+e o nome da variável do motex
+
+1094
+00:44:36,610 --> 00:44:38,610
+às vezes, nós esquecemos de pôr o e-commercial
+
+1095
+00:44:38,610 --> 00:44:40,610
+mas quando fomos compilar
+
+1096
+00:44:40,610 --> 00:44:42,610
+compiladores chamam-nos logo a atenção
+
+1097
+00:44:42,610 --> 00:44:44,610
+e uma pessoa diz, ah bolas
+
+1098
+00:44:44,610 --> 00:44:46,610
+vou vos dizer uma coisa, isso acontece muitas vezes
+
+1099
+00:44:46,610 --> 00:44:48,610
+eu estou tão entusiasmado, faço motex
+
+1100
+00:44:48,610 --> 00:44:50,610
+lock e põe só o nome da variável
+
+1101
+00:44:50,610 --> 00:44:52,610
+esqueço de pôr o e-commercial
+
+1102
+00:44:52,610 --> 00:44:54,610
+vou compilar, bolas
+
+1103
+00:44:54,610 --> 00:44:56,610
+lá vou eu à linha e coloco o e-commercial
+
+1104
+00:44:56,610 --> 00:44:58,610
+tá bem? é sempre o endereço da variável
+
+1105
+00:44:58,610 --> 00:45:00,610
+porque? porque
+
+1106
+00:45:00,610 --> 00:45:02,610
+o motex que está dentro dessa variável
+
+1107
+00:45:02,610 --> 00:45:04,610
+vai ser alterado
+
+1108
+00:45:04,610 --> 00:45:06,610
+por qualquer uma destas funções
+
+1109
+00:45:06,610 --> 00:45:08,610
+certo? esta função
+
+1110
+00:45:08,610 --> 00:45:10,610
+e esta função
+
+1111
+00:45:10,610 --> 00:45:12,610
+vão alterar o estado do motex
+
+1112
+00:45:12,610 --> 00:45:14,610
+possivelmente
+
+1113
+00:45:14,610 --> 00:45:16,610
+portanto, eu tenho de conhecer onde é que está o motex
+
+1114
+00:45:16,610 --> 00:45:18,610
+para poder operá-lo
+
+1115
+00:45:18,610 --> 00:45:20,610
+tá bom?
+
+1116
+00:45:20,610 --> 00:45:22,610
+lock
+
+1117
+00:45:22,610 --> 00:45:24,610
+a bekir o motex
+
+1118
+00:45:24,610 --> 00:45:26,610
+se o motex já estiver adquirido
+
+1119
+00:45:26,610 --> 00:45:28,610
+a outra thread
+
+1120
+00:45:28,610 --> 00:45:30,610
+então a thread que acabou de fazer
+
+1121
+00:45:30,610 --> 00:45:32,610
+acabou de pedir o lock
+
+1122
+00:45:32,610 --> 00:45:34,610
+vai bloquear até que eventualmente
+
+1123
+00:45:34,610 --> 00:45:36,610
+consiga adquirir a posse
+
+1124
+00:45:36,610 --> 00:45:38,610
+desse motex
+
+1125
+00:45:38,610 --> 00:45:40,610
+tal e qual como as casas de bem
+
+1126
+00:45:40,610 --> 00:45:42,610
+uma pessoa
+
+1127
+00:45:42,610 --> 00:45:44,610
+se chegar a casa de bem e ela estiver em uso
+
+1128
+00:45:44,610 --> 00:45:46,610
+fica na fila, mais cedo ou mais tarde
+
+1129
+00:45:46,610 --> 00:45:48,610
+a vermos de conseguir entrar
+
+1130
+00:45:48,610 --> 00:45:50,610
+certo? a uma questão de esperar
+
+1131
+00:45:50,610 --> 00:45:52,610
+o unlock
+
+1132
+00:45:52,610 --> 00:45:54,610
+é aquela parte em que nós libertamos
+
+1133
+00:45:54,610 --> 00:45:56,610
+o motex
+
+1134
+00:45:56,610 --> 00:45:58,610
+já não preciso mais, liberta-se
+
+1135
+00:45:58,610 --> 00:46:00,610
+e dessa forma
+
+1136
+00:46:00,610 --> 00:46:02,610
+outras threads que estejam executar
+
+1137
+00:46:02,610 --> 00:46:04,610
+que estejam bloqueadas a espera do motex
+
+1138
+00:46:04,610 --> 00:46:06,610
+podem progredir
+
+1139
+00:46:06,610 --> 00:46:08,610
+tá bom?
+
+1140
+00:46:08,610 --> 00:46:10,610
+paramos
+
+1141
+00:46:10,610 --> 00:46:12,610
+retorno zero se correu tudo bem
+
+1142
+00:46:12,610 --> 00:46:14,610
+não zero
+
+1143
+00:46:14,610 --> 00:46:16,610
+correu tudo mal
+
+1144
+00:46:16,610 --> 00:46:18,610
+uma coisa muito importante
+
+1145
+00:46:18,610 --> 00:46:20,610
+nunca liberta-se
+
+1146
+00:46:20,610 --> 00:46:22,610
+um motex
+
+1147
+00:46:22,610 --> 00:46:26,020
+que não é nosso
+
+1148
+00:46:26,020 --> 00:46:28,020
+a norma após e que se diz
+
+1149
+00:46:28,020 --> 00:46:30,020
+que o comportamento não é definido
+
+1150
+00:46:30,020 --> 00:46:32,020
+ou seja, deixa ao critério
+
+1151
+00:46:32,020 --> 00:46:34,020
+de quem implementa
+
+1152
+00:46:34,020 --> 00:46:37,740
+o sistema
+
+1153
+00:46:37,740 --> 00:46:39,740
+mas, a não ser que vocês sejam
+
+1154
+00:46:39,740 --> 00:46:41,740
+fanáticos em ler a documentação
+
+1155
+00:46:41,740 --> 00:46:43,740
+de quem implementa o sistema
+
+1156
+00:46:43,740 --> 00:46:45,740
+e queiram ver o que é que acontece
+
+1157
+00:46:45,740 --> 00:46:47,740
+ou então se quiserem experimentar
+
+1158
+00:46:47,740 --> 00:46:49,740
+se quiserem fazer software seguro
+
+1159
+00:46:49,740 --> 00:46:51,740
+nunca faça um unlock
+
+1160
+00:46:51,740 --> 00:46:53,740
+de um motex
+
+1161
+00:46:53,740 --> 00:46:55,740
+que não é nosso
+
+1162
+00:46:55,740 --> 00:46:57,740
+ok? portanto
+
+1163
+00:46:57,740 --> 00:46:59,740
+o vosso código vai ter sempre
+
+1164
+00:46:59,740 --> 00:47:01,740
+lock, section crítica
+
+1165
+00:47:01,740 --> 00:47:03,740
+unlock
+
+1166
+00:47:03,740 --> 00:47:05,740
+certo? até uma boa estratégia
+
+1167
+00:47:05,740 --> 00:47:07,740
+é fazer unlock
+
+1168
+00:47:07,740 --> 00:47:09,740
+mal escreve um lock
+
+1169
+00:47:09,740 --> 00:47:11,740
+escrever logo em baixo o unlock
+
+1170
+00:47:11,740 --> 00:47:13,740
+e depois voltam para trás
+
+1171
+00:47:13,740 --> 00:47:15,740
+e preenchiam-me o olo com a section crítica
+
+1172
+00:47:15,740 --> 00:47:19,220
+dúvidas não há?
+
+1173
+00:47:19,220 --> 00:47:21,220
+sim
+
+1174
+00:47:21,220 --> 00:47:23,220
+sim? ok então
+
+1175
+00:47:23,220 --> 00:47:25,220
+eu não estou a perceber porque é que nós criamos
+
+1176
+00:47:25,220 --> 00:47:27,220
+vários motex
+
+1177
+00:47:27,220 --> 00:47:29,220
+se ele está a bloquear
+
+1178
+00:47:29,220 --> 00:47:31,220
+aquele código e só vai ser
+
+1179
+00:47:31,220 --> 00:47:33,220
+executado aquele código
+
+1180
+00:47:33,220 --> 00:47:35,220
+ou seja, ele vai libertá-lo
+
+1181
+00:47:35,220 --> 00:47:39,580
+e ele pode ser usado de outra seção
+
+1182
+00:47:39,580 --> 00:47:41,580
+ou seja, como é que podem estar dois motex
+
+1183
+00:47:41,580 --> 00:47:43,580
+bloqueados ao mesmo tempo?
+
+1184
+00:47:43,580 --> 00:47:45,580
+dois motex bloqueados ao mesmo tempo
+
+1185
+00:47:45,580 --> 00:47:47,580
+está a falar aqui
+
+1186
+00:47:49,580 --> 00:47:51,580
+se eu colocar
+
+1187
+00:47:51,580 --> 00:47:53,580
+os motex aqui
+
+1188
+00:47:53,580 --> 00:47:55,580
+o professor falou que nós já tínhamos que saber
+
+1189
+00:47:55,580 --> 00:47:57,580
+no início
+
+1190
+00:47:57,580 --> 00:47:59,580
+quantos motex é que temos a usar
+
+1191
+00:47:59,580 --> 00:48:01,580
+ou seja, porque
+
+1192
+00:48:01,580 --> 00:48:03,580
+é que
+
+1193
+00:48:03,580 --> 00:48:05,580
+você tinha que definir logo ao início
+
+1194
+00:48:05,580 --> 00:48:07,580
+não
+
+1195
+00:48:07,580 --> 00:48:09,580
+o que eu estava a dizer era que se estiveram a fazer
+
+1196
+00:48:09,580 --> 00:48:11,580
+software
+
+1197
+00:48:11,580 --> 00:48:13,580
+para sistemas embedded
+
+1198
+00:48:13,580 --> 00:48:15,580
+normalmente eu tenho que ter garantias
+
+1199
+00:48:15,580 --> 00:48:17,580
+da utilização da memória
+
+1200
+00:48:17,580 --> 00:48:19,580
+que eu não quero escrever uma aplicação
+
+1201
+00:48:19,580 --> 00:48:21,580
+que uma dá de altura
+
+1202
+00:48:21,580 --> 00:48:23,580
+porque faltou memória
+
+1203
+00:48:23,580 --> 00:48:25,580
+certo?
+
+1204
+00:48:25,580 --> 00:48:27,580
+e ele, há duas semanas atrás
+
+1205
+00:48:27,580 --> 00:48:29,580
+disse que
+
+1206
+00:48:29,580 --> 00:48:31,580
+para utilizar a heap
+
+1207
+00:48:31,580 --> 00:48:33,580
+coisas como maloques
+
+1208
+00:48:33,580 --> 00:48:35,580
+não é muito seguro porque
+
+1209
+00:48:35,580 --> 00:48:37,580
+podemos ter problemas de faltar
+
+1210
+00:48:37,580 --> 00:48:39,580
+a memória e a aplicação
+
+1211
+00:48:39,580 --> 00:48:41,580
+falhar por falta de memória
+
+1212
+00:48:41,580 --> 00:48:43,580
+e agora hoje eu disse
+
+1213
+00:48:43,580 --> 00:48:45,580
+que quando fazemos o pethread
+
+1214
+00:48:45,580 --> 00:48:47,580
+pethread motex init
+
+1215
+00:48:47,580 --> 00:48:49,580
+o motex
+
+1216
+00:48:49,580 --> 00:48:51,580
+é criado na heap
+
+1217
+00:48:51,580 --> 00:48:53,580
+ok?
+
+1218
+00:48:53,580 --> 00:48:55,580
+eu basicamente isto é um contrassenso
+
+1219
+00:48:55,580 --> 00:48:57,580
+há duas semanas atrás estava a dizer
+
+1220
+00:48:57,580 --> 00:48:59,580
+não usem a heap
+
+1221
+00:48:59,580 --> 00:49:01,580
+e agora estou-vos a dizer
+
+1222
+00:49:01,580 --> 00:49:03,580
+isto utiliza a heap
+
+1223
+00:49:03,580 --> 00:49:05,580
+era quase, é passe, não é para usar a heap
+
+1224
+00:49:05,580 --> 00:49:07,580
+então eu não deveria de utilizar motexes
+
+1225
+00:49:07,580 --> 00:49:09,580
+mas o que eu estou a dizer
+
+1226
+00:49:09,580 --> 00:49:11,580
+é que o facto de eu não aconselhar a usar a heap
+
+1227
+00:49:11,580 --> 00:49:13,580
+nós podemos usar
+
+1228
+00:49:13,580 --> 00:49:15,580
+pethread motex init
+
+1229
+00:49:15,580 --> 00:49:17,580
+mas para garantir
+
+1230
+00:49:17,580 --> 00:49:19,580
+que nunca vou ter um problema
+
+1231
+00:49:19,580 --> 00:49:21,580
+da minha aplicação falhar
+
+1232
+00:49:21,580 --> 00:49:23,580
+de falta de memória
+
+1233
+00:49:23,580 --> 00:49:25,580
+eu tenho de garantir que o meu número de motexes
+
+1234
+00:49:25,580 --> 00:49:27,580
+vai ser limitado
+
+1235
+00:49:27,580 --> 00:49:29,580
+nunca vai ultrapassar um determinado valor
+
+1236
+00:49:29,580 --> 00:49:31,580
+e isso acontece
+
+1237
+00:49:31,580 --> 00:49:33,580
+com frequência
+
+1238
+00:49:33,580 --> 00:49:35,580
+quando estou a fazer um projeto em beta
+
+1239
+00:49:35,580 --> 00:49:37,580
+eu sei quais são os recursos
+
+1240
+00:49:37,580 --> 00:49:39,580
+que vou precisar
+
+1241
+00:49:39,580 --> 00:49:41,580
+motexes incluídos
+
+1242
+00:49:41,580 --> 00:49:43,580
+por exemplo eu posso definir
+
+1243
+00:49:43,580 --> 00:49:45,580
+que para esta minha aplicação
+
+1244
+00:49:45,580 --> 00:49:47,580
+eu no máximo vou usar 5 motexes
+
+1245
+00:49:47,580 --> 00:49:49,580
+porque eu vou estar a proteger
+
+1246
+00:49:49,580 --> 00:49:51,580
+5 recursos
+
+1247
+00:49:51,580 --> 00:49:53,580
+distintos
+
+1248
+00:49:53,580 --> 00:49:55,580
+para que acabamos a proteger-los
+
+1249
+00:49:55,580 --> 00:49:57,580
+a todos ao mesmo tempo
+
+1250
+00:49:57,580 --> 00:49:59,580
+não, para proteger-los todos
+
+1251
+00:49:59,580 --> 00:50:01,580
+não necessariamente ao mesmo tempo
+
+1252
+00:50:01,580 --> 00:50:03,580
+e não podemos
+
+1253
+00:50:03,580 --> 00:50:05,580
+proteger um, libertar um motex
+
+1254
+00:50:05,580 --> 00:50:07,580
+e usar-se para proteger outro?
+
+1255
+00:50:07,580 --> 00:50:09,580
+o ver pode
+
+1256
+00:50:09,580 --> 00:50:12,990
+mas às vezes não é boa ideia
+
+1257
+00:50:12,990 --> 00:50:14,990
+porque
+
+1258
+00:50:14,990 --> 00:50:16,990
+para pensar-se, ponha que tenho um motex
+
+1259
+00:50:16,990 --> 00:50:18,990
+para
+
+1260
+00:50:18,990 --> 00:50:23,040
+proteger a variável X
+
+1261
+00:50:23,040 --> 00:50:25,040
+e também precisa
+
+1262
+00:50:25,040 --> 00:50:27,040
+proteger a variável A
+
+1263
+00:50:27,040 --> 00:50:29,040
+mas a variável A
+
+1264
+00:50:29,040 --> 00:50:31,040
+e a variável X
+
+1265
+00:50:31,040 --> 00:50:33,040
+não têm nada uma a ver com a outra
+
+1266
+00:50:33,040 --> 00:50:35,040
+quem utiliza a variável X
+
+1267
+00:50:35,040 --> 00:50:37,040
+utiliza a variável X
+
+1268
+00:50:37,040 --> 00:50:39,040
+para um determinado efeito
+
+1269
+00:50:39,040 --> 00:50:41,040
+quem utiliza a variável A
+
+1270
+00:50:41,040 --> 00:50:43,040
+utiliza a variável A para outro efeito
+
+1271
+00:50:43,040 --> 00:50:45,040
+se eu tiver
+
+1272
+00:50:45,040 --> 00:50:47,040
+um motex
+
+1273
+00:50:47,040 --> 00:50:49,040
+que me sincronize
+
+1274
+00:50:49,040 --> 00:50:51,040
+ambas as variáveis
+
+1275
+00:50:51,040 --> 00:50:53,040
+o que é que acontece
+
+1276
+00:50:53,040 --> 00:50:55,040
+se alguém precisar do X
+
+1277
+00:50:55,040 --> 00:50:57,040
+vai obter um motex
+
+1278
+00:50:57,040 --> 00:50:59,040
+e enquanto estiver a operar o X
+
+1279
+00:50:59,040 --> 00:51:01,040
+se outra fred precisar
+
+1280
+00:51:01,040 --> 00:51:03,040
+de operar o A
+
+1281
+00:51:03,040 --> 00:51:05,040
+não vai conseguir fazer
+
+1282
+00:51:05,040 --> 00:51:07,040
+porque
+
+1283
+00:51:07,040 --> 00:51:09,040
+vai pedir o mesmo motex
+
+1284
+00:51:09,040 --> 00:51:11,040
+e esse motex já está na posta de alguém
+
+1285
+00:51:11,040 --> 00:51:13,040
+que está a operar o X
+
+1286
+00:51:13,040 --> 00:51:16,770
+eu até podia operar o A
+
+1287
+00:51:16,770 --> 00:51:18,770
+sem problema
+
+1288
+00:51:18,770 --> 00:51:20,770
+de interferir
+
+1289
+00:51:20,770 --> 00:51:22,770
+com quem está a operar o X
+
+1290
+00:51:22,770 --> 00:51:24,770
+só que não consigo porque
+
+1291
+00:51:24,770 --> 00:51:26,770
+o único motex que existe
+
+1292
+00:51:26,770 --> 00:51:28,770
+controla ambos os recursos
+
+1293
+00:51:30,770 --> 00:51:32,770
+eu se quiser
+
+1294
+00:51:32,770 --> 00:51:34,770
+permitir mais paralelismo
+
+1295
+00:51:34,770 --> 00:51:36,770
+eu posso ir
+
+1296
+00:51:36,770 --> 00:51:38,770
+para uma opção
+
+1297
+00:51:38,770 --> 00:51:40,770
+em que utilizo mais motex
+
+1298
+00:51:40,770 --> 00:51:42,770
+em que tenho um motex
+
+1299
+00:51:42,770 --> 00:51:44,770
+que me protege a variável X
+
+1300
+00:51:44,770 --> 00:51:46,770
+e tenho um segundo motex
+
+1301
+00:51:46,770 --> 00:51:48,770
+que me protege a variável A
+
+1302
+00:51:48,770 --> 00:51:50,770
+neste caso
+
+1303
+00:51:50,770 --> 00:51:52,770
+há uma fred
+
+1304
+00:51:52,770 --> 00:51:54,770
+que pega no motex que protege X
+
+1305
+00:51:54,770 --> 00:51:56,770
+e começa a operar a variável X
+
+1306
+00:51:56,770 --> 00:51:58,770
+outra fred
+
+1307
+00:51:58,770 --> 00:52:00,770
+que precisa de operar a variável A
+
+1308
+00:52:00,770 --> 00:52:02,770
+pede o motex
+
+1309
+00:52:02,770 --> 00:52:04,770
+que protege a variável A
+
+1310
+00:52:04,770 --> 00:52:06,770
+e pode operar a variável A
+
+1311
+00:52:06,770 --> 00:52:08,770
+enquanto o outro está a operar a variável X
+
+1312
+00:52:08,770 --> 00:52:10,770
+ou seja, temos aqui
+
+1313
+00:52:10,770 --> 00:52:12,770
+um ganho
+
+1314
+00:52:12,770 --> 00:52:14,770
+devido a paralelismo
+
+1315
+00:52:16,770 --> 00:52:18,770
+mas perdemos uma coisa
+
+1316
+00:52:18,770 --> 00:52:20,770
+perdemos em simplicidade
+
+1317
+00:52:20,770 --> 00:52:22,770
+passamos para
+
+1318
+00:52:22,770 --> 00:52:24,770
+uma opção
+
+1319
+00:52:24,770 --> 00:52:26,770
+em que eu tenho
+
+1320
+00:52:26,770 --> 00:52:28,770
+mais motex
+
+1321
+00:52:28,770 --> 00:52:30,770
+ou seja, eu vou ter
+
+1322
+00:52:30,770 --> 00:52:32,770
+de controlar melhor
+
+1323
+00:52:32,770 --> 00:52:34,770
+o meu desenvolvimento de software
+
+1324
+00:52:34,770 --> 00:52:39,230
+e será algo que depois iremos
+
+1325
+00:52:39,230 --> 00:52:41,230
+conversar mais para a frente
+
+1326
+00:52:41,230 --> 00:52:43,230
+mas pronto, já tenho aqui o spoiler
+
+1327
+00:52:45,230 --> 00:52:47,230
+a primeira opção
+
+1328
+00:52:47,230 --> 00:52:49,230
+em que eu tenho
+
+1329
+00:52:49,230 --> 00:52:51,230
+um motex
+
+1330
+00:52:51,230 --> 00:52:53,230
+que controla
+
+1331
+00:52:53,230 --> 00:52:55,230
+várias
+
+1332
+00:52:55,230 --> 00:52:57,230
+recursos
+
+1333
+00:52:57,230 --> 00:52:59,230
+e que possivelmente
+
+1334
+00:52:59,230 --> 00:53:01,230
+pode penalizar
+
+1335
+00:53:01,230 --> 00:53:03,230
+a eficiência
+
+1336
+00:53:03,230 --> 00:53:05,230
+ao desempenho porque impede
+
+1337
+00:53:05,230 --> 00:53:07,230
+paralelismos que podiam decorrer
+
+1338
+00:53:07,230 --> 00:53:09,230
+sem
+
+1339
+00:53:09,230 --> 00:53:11,230
+qualquer problema nenhum
+
+1340
+00:53:11,230 --> 00:53:13,230
+na literatura chama-se isso
+
+1341
+00:53:13,230 --> 00:53:15,230
+course grained locking
+
+1342
+00:53:15,230 --> 00:53:17,230
+ou seja
+
+1343
+00:53:17,230 --> 00:53:19,230
+nós estamos aqui a trencar
+
+1344
+00:53:19,230 --> 00:53:21,230
+mas
+
+1345
+00:53:21,230 --> 00:53:23,230
+com
+
+1346
+00:53:23,230 --> 00:53:25,230
+uma
+
+1347
+00:53:25,230 --> 00:53:27,230
+uma política, uma estratégia
+
+1348
+00:53:27,230 --> 00:53:29,230
+que é
+
+1349
+00:53:29,230 --> 00:53:32,740
+bruta
+
+1350
+00:53:32,740 --> 00:53:34,740
+um lock bloqueia tudo
+
+1351
+00:53:34,740 --> 00:53:36,740
+é super seguro
+
+1352
+00:53:36,740 --> 00:53:38,740
+é super simples
+
+1353
+00:53:38,740 --> 00:53:40,740
+o problema é que podíamos escalhar
+
+1354
+00:53:40,740 --> 00:53:42,740
+ter diferentes que podiam avançar em paralelo
+
+1355
+00:53:42,740 --> 00:53:44,740
+mas não podem
+
+1356
+00:53:44,740 --> 00:53:46,740
+resultado
+
+1357
+00:53:46,740 --> 00:53:48,740
+o programa demora mais tempo a executar
+
+1358
+00:53:48,740 --> 00:53:50,740
+desnecessariamente
+
+1359
+00:53:50,740 --> 00:53:52,740
+mas
+
+1360
+00:53:52,740 --> 00:53:54,740
+ponto forte, o programa é muito mais simples
+
+1361
+00:53:54,740 --> 00:53:56,740
+a parte da sincronização é super simples
+
+1362
+00:53:56,740 --> 00:53:58,740
+só precisa adquirir o lock
+
+1363
+00:53:58,740 --> 00:54:00,740
+e libertar o lock
+
+1364
+00:54:00,740 --> 00:54:02,740
+a outra abordagem
+
+1365
+00:54:02,740 --> 00:54:04,740
+é fine grained
+
+1366
+00:54:04,740 --> 00:54:06,740
+locking
+
+1367
+00:54:06,740 --> 00:54:08,740
+ou seja
+
+1368
+00:54:08,740 --> 00:54:10,740
+é trencar
+
+1369
+00:54:10,740 --> 00:54:12,740
+através de uma estratégia mais fina
+
+1370
+00:54:12,740 --> 00:54:14,740
+eu tenho
+
+1371
+00:54:14,740 --> 00:54:16,740
+um motex
+
+1372
+00:54:16,740 --> 00:54:18,740
+que me controla o
+
+1373
+00:54:18,740 --> 00:54:20,740
+acesso a menos recursos
+
+1374
+00:54:20,740 --> 00:54:22,740
+o problema é que se eu tiver
+
+1375
+00:54:22,740 --> 00:54:24,740
+vários recursos vou precisar de muitos motex
+
+1376
+00:54:26,740 --> 00:54:28,740
+e eu quando estiver a programar
+
+1377
+00:54:28,740 --> 00:54:30,740
+eu tenho que saber sempre bem
+
+1378
+00:54:30,740 --> 00:54:32,740
+qual é o motex
+
+1379
+00:54:32,740 --> 00:54:34,740
+que me controla
+
+1380
+00:54:34,740 --> 00:54:36,740
+o sincroniza
+
+1381
+00:54:36,740 --> 00:54:38,740
+este recurso
+
+1382
+00:54:38,740 --> 00:54:40,740
+normalmente
+
+1383
+00:54:40,740 --> 00:54:42,740
+faz-se uma opção de equilíbrio
+
+1384
+00:54:42,740 --> 00:54:44,740
+nem muitos motex nem poucos motex
+
+1385
+00:54:44,740 --> 00:54:49,260
+mas isso ai
+
+1386
+00:54:49,260 --> 00:54:51,260
+depois é necessário estudar casa a casa
+
+1387
+00:54:51,260 --> 00:54:53,260
+e estudar antes de passar
+
+1388
+00:54:53,260 --> 00:54:55,260
+para a parte do programa em si
+
+1389
+00:54:55,260 --> 00:54:57,260
+essas coisas têm que ficar definidas
+
+1390
+00:54:57,260 --> 00:54:59,260
+para depois toda a gente que for programar
+
+1391
+00:54:59,260 --> 00:55:01,260
+aderir
+
+1392
+00:55:01,260 --> 00:55:03,260
+a política
+
+1393
+00:55:03,260 --> 00:55:05,260
+de trancamento
+
+1394
+00:55:05,260 --> 00:55:09,020
+tá bom
+
+1395
+00:55:09,020 --> 00:55:11,020
+apesar
+
+1396
+00:55:11,020 --> 00:55:13,020
+mas esse estudo é feito
+
+1397
+00:55:13,020 --> 00:55:15,020
+principalmente
+
+1398
+00:55:15,020 --> 00:55:17,020
+com base no tempo
+
+1399
+00:55:17,020 --> 00:55:19,020
+esperado de execução
+
+1400
+00:55:19,020 --> 00:55:21,020
+ou é mais considerando
+
+1401
+00:55:21,020 --> 00:55:23,020
+outras condições
+
+1402
+00:55:23,020 --> 00:55:25,020
+como
+
+1403
+00:55:25,020 --> 00:55:27,020
+normas de boas práticas ou algo do gênio
+
+1404
+00:55:27,020 --> 00:55:29,020
+as normas de boas práticas
+
+1405
+00:55:29,020 --> 00:55:31,020
+é garantido porque
+
+1406
+00:55:31,020 --> 00:55:33,020
+porque quando nós passamos a utilizar
+
+1407
+00:55:33,020 --> 00:55:35,020
+motex
+
+1408
+00:55:35,020 --> 00:55:37,020
+ou semáforos
+
+1409
+00:55:37,020 --> 00:55:39,020
+já nos estamos a arriscar
+
+1410
+00:55:39,020 --> 00:55:41,020
+a criar
+
+1411
+00:55:41,020 --> 00:55:43,020
+condições em que nossa aplicação
+
+1412
+00:55:43,020 --> 00:55:45,020
+vai encravar
+
+1413
+00:55:45,020 --> 00:55:47,020
+um deadlock
+
+1414
+00:55:49,020 --> 00:55:51,020
+ou seja
+
+1415
+00:55:51,020 --> 00:55:53,020
+às vezes o nosso código até parece
+
+1416
+00:55:53,020 --> 00:55:55,020
+bem
+
+1417
+00:55:55,020 --> 00:55:57,020
+mas
+
+1418
+00:55:57,020 --> 00:55:59,020
+quando pudermos a correr
+
+1419
+00:55:59,020 --> 00:56:01,020
+aquilo vai correr mal
+
+1420
+00:56:01,020 --> 00:56:03,020
+existem estratégias
+
+1421
+00:56:03,020 --> 00:56:05,020
+ou boas práticas
+
+1422
+00:56:05,020 --> 00:56:07,020
+para evitar que isso aconteça
+
+1423
+00:56:07,020 --> 00:56:09,020
+uma estratégia é
+
+1424
+00:56:09,020 --> 00:56:11,020
+utilizar um único lock
+
+1425
+00:56:11,020 --> 00:56:13,020
+um único motex
+
+1426
+00:56:13,020 --> 00:56:15,020
+aí é muito difícil falhar
+
+1427
+00:56:15,020 --> 00:56:17,020
+é
+
+1428
+00:56:17,020 --> 00:56:19,020
+adquirir este lock, divertir este lock
+
+1429
+00:56:19,020 --> 00:56:21,020
+o problema é que isso tem o tal efeito
+
+1430
+00:56:21,020 --> 00:56:23,020
+de penalizar o paralelismo
+
+1431
+00:56:23,020 --> 00:56:25,020
+ok
+
+1432
+00:56:25,020 --> 00:56:27,020
+quando nós penalizamos o paralelismo
+
+1433
+00:56:27,020 --> 00:56:29,020
+pode acontecer
+
+1434
+00:56:29,020 --> 00:56:31,020
+porque o tempo de resposta
+
+1435
+00:56:31,020 --> 00:56:33,020
+no pior caso possível
+
+1436
+00:56:33,020 --> 00:56:35,020
+de uma tarefa
+
+1437
+00:56:35,020 --> 00:56:37,020
+vai ser muito aumentado
+
+1438
+00:56:37,020 --> 00:56:39,020
+desnecessariamente aumentado
+
+1439
+00:56:39,020 --> 00:56:42,690
+ok
+
+1440
+00:56:42,690 --> 00:56:44,690
+e nesses casos
+
+1441
+00:56:44,690 --> 00:56:46,690
+das duas uma é desnecessariamente
+
+1442
+00:56:46,690 --> 00:56:48,690
+aumentado mas eu vivo bem com isso
+
+1443
+00:56:48,690 --> 00:56:50,690
+pronto então fico apenas com motex
+
+1444
+00:56:50,690 --> 00:56:52,690
+que vá para tudo
+
+1445
+00:56:52,690 --> 00:56:54,690
+se for desnecessariamente
+
+1446
+00:56:54,690 --> 00:56:56,690
+aumentado mas para além
+
+1447
+00:56:56,690 --> 00:56:58,690
+do razoável
+
+1448
+00:56:58,690 --> 00:57:00,690
+eu admito
+
+1449
+00:57:00,690 --> 00:57:02,690
+vou ter que arranjar aqui outra solução
+
+1450
+00:57:02,690 --> 00:57:04,690
+certo
+
+1451
+00:57:04,690 --> 00:57:06,690
+portanto, cada caso é um caso
+
+1452
+00:57:06,690 --> 00:57:08,690
+mas então
+
+1453
+00:57:08,690 --> 00:57:10,690
+isto é
+
+1454
+00:57:10,690 --> 00:57:12,690
+a decisão é um caso
+
+1455
+00:57:12,690 --> 00:57:14,690
+quase um palpite informado
+
+1456
+00:57:14,690 --> 00:57:16,690
+não há propriamente
+
+1457
+00:57:16,690 --> 00:57:18,690
+uma
+
+1458
+00:57:18,690 --> 00:57:20,690
+forma
+
+1459
+00:57:20,690 --> 00:57:22,690
+objetiva se calhar não é palavra
+
+1460
+00:57:22,690 --> 00:57:24,690
+mas
+
+1461
+00:57:24,690 --> 00:57:26,690
+uma solução universal
+
+1462
+00:57:26,690 --> 00:57:28,690
+sim sim
+
+1463
+00:57:28,690 --> 00:57:30,690
+é por isso que somos engenheiros
+
+1464
+00:57:30,690 --> 00:57:32,690
+pois era isso que estava a tentar perceber
+
+1465
+00:57:32,690 --> 00:57:34,690
+se havia uma espécie de fórmula por trás
+
+1466
+00:57:34,690 --> 00:57:36,690
+do número que se chegava
+
+1467
+00:57:36,690 --> 00:57:38,690
+ou se é mais um palpite informado
+
+1468
+00:57:38,690 --> 00:57:40,690
+é
+
+1469
+00:57:40,690 --> 00:57:42,690
+uma gestão
+
+1470
+00:57:42,690 --> 00:57:44,690
+uma gestão
+
+1471
+00:57:44,690 --> 00:57:46,690
+de
+
+1472
+00:57:46,690 --> 00:57:48,690
+de equilíbrio
+
+1473
+00:57:48,690 --> 00:57:50,690
+ok
+
+1474
+00:57:50,690 --> 00:57:52,690
+certo mas isso também acontece
+
+1475
+00:57:52,690 --> 00:57:54,690
+em todos os ramos da engenharia
+
+1476
+00:57:54,690 --> 00:57:56,690
+sim claro sim
+
+1477
+00:57:56,690 --> 00:57:58,690
+engenharia mecânica às vezes
+
+1478
+00:57:58,690 --> 00:58:00,690
+é pá, eu coloco aqui mais
+
+1479
+00:58:00,690 --> 00:58:02,690
+metal
+
+1480
+00:58:02,690 --> 00:58:04,690
+isto fica mais pesado
+
+1481
+00:58:04,690 --> 00:58:06,690
+ou então vou arranjar outra liga
+
+1482
+00:58:06,690 --> 00:58:08,690
+que é bastante mais cara
+
+1483
+00:58:08,690 --> 00:58:10,690
+mas isto fica
+
+1484
+00:58:10,690 --> 00:58:12,690
+mais leve e tem outra
+
+1485
+00:58:12,690 --> 00:58:14,690
+propriedade mecânica
+
+1486
+00:58:14,690 --> 00:58:16,690
+engenharia civil
+
+1487
+00:58:16,690 --> 00:58:18,690
+é igual
+
+1488
+00:58:18,690 --> 00:58:20,690
+a minha estrutura
+
+1489
+00:58:20,690 --> 00:58:22,690
+vou meter aqui mais ferro, menos ferro
+
+1490
+00:58:22,690 --> 00:58:24,690
+certo
+
+1491
+00:58:24,690 --> 00:58:26,690
+é tudo uma gestão de equilíbrio
+
+1492
+00:58:26,690 --> 00:58:28,690
+a engenharia é um jogo de equilíbrio
+
+1493
+00:58:28,690 --> 00:58:30,690
+somos na realidade
+
+1494
+00:58:30,690 --> 00:58:32,690
+molavaristas
+
+1495
+00:58:32,690 --> 00:58:34,690
+da natureza
+
+1496
+00:58:34,690 --> 00:58:36,690
+e da técnica
+
+1497
+00:58:36,690 --> 00:58:38,690
+está bom?
+
+1498
+00:58:38,690 --> 00:58:40,690
+está bom, obrigado
+
+1499
+00:58:40,690 --> 00:58:42,690
+pá, eu sei que às vezes
+
+1500
+00:58:42,690 --> 00:58:44,690
+isto é um bocado desesperante, uma pessoa gostava de ter uma receita
+
+1501
+00:58:44,690 --> 00:58:46,690
+que funcionasse sempre
+
+1502
+00:58:46,690 --> 00:58:48,690
+o problema é que na vida real
+
+1503
+00:58:48,690 --> 00:58:50,690
+nós temos que fazer escolhas
+
+1504
+00:58:50,690 --> 00:58:52,690
+a diferença
+
+1505
+00:58:52,690 --> 00:58:54,690
+é que
+
+1506
+00:58:54,690 --> 00:58:56,690
+um engenheiro
+
+1507
+00:58:56,690 --> 00:58:58,690
+pode fazer
+
+1508
+00:58:58,690 --> 00:59:00,690
+escolhas informadas
+
+1509
+00:59:00,690 --> 00:59:02,690
+ou palpites informados
+
+1510
+00:59:02,690 --> 00:59:04,690
+que é uma vantagem
+
+1511
+00:59:04,690 --> 00:59:06,690
+e tem outra desvantagem
+
+1512
+00:59:06,690 --> 00:59:08,690
+que é se
+
+1513
+00:59:08,690 --> 00:59:10,690
+a estrada ruir
+
+1514
+00:59:10,690 --> 00:59:12,690
+ou se o carro se partir
+
+1515
+00:59:12,690 --> 00:59:14,690
+alguém vai parar o tribunal
+
+1516
+00:59:14,690 --> 00:59:16,690
+e normalmente é que não tem responsabilidade
+
+1517
+00:59:16,690 --> 00:59:21,090
+que é um engenheiro
+
+1518
+00:59:21,090 --> 00:59:24,980
+vamos lá, então é o seguinte
+
+1519
+00:59:24,980 --> 00:59:26,980
+vamos lá ver
+
+1520
+00:59:26,980 --> 00:59:28,980
+uma solução para
+
+1521
+00:59:28,980 --> 00:59:30,980
+o nosso problema
+
+1522
+00:59:30,980 --> 00:59:32,980
+do contador
+
+1523
+00:59:32,980 --> 00:59:34,980
+partilhado
+
+1524
+00:59:34,980 --> 00:59:36,980
+eu tenho aqui a minha secção crítica
+
+1525
+00:59:38,980 --> 00:59:40,980
+é aquela operação
+
+1526
+00:59:40,980 --> 00:59:42,980
+que parece atómica em ser
+
+1527
+00:59:42,980 --> 00:59:44,980
+mas já vimos que não é
+
+1528
+00:59:44,980 --> 00:59:46,980
+em código-máquina
+
+1529
+00:59:46,980 --> 00:59:48,980
+então eu quero proteger
+
+1530
+00:59:48,980 --> 00:59:50,980
+esta secção da interferência
+
+1531
+00:59:50,980 --> 00:59:52,980
+de outras direitos
+
+1532
+00:59:52,980 --> 00:59:54,980
+que também possam querer mexer aqui neste counter
+
+1533
+00:59:54,980 --> 00:59:56,980
+então o que é que eu vou fazer
+
+1534
+00:59:56,980 --> 00:59:58,980
+vou criar um
+
+1535
+00:59:58,980 --> 01:00:00,980
+motex
+
+1536
+01:00:00,980 --> 01:00:02,980
+que me vai
+
+1537
+01:00:02,980 --> 01:00:04,980
+proteger ou sincronizar
+
+1538
+01:00:04,980 --> 01:00:06,980
+esta variável counter
+
+1539
+01:00:06,980 --> 01:00:08,980
+vou criar
+
+1540
+01:00:08,980 --> 01:00:10,980
+um statique motex
+
+1541
+01:00:10,980 --> 01:00:12,980
+não preciso de um motex com opções especiais
+
+1542
+01:00:12,980 --> 01:00:14,980
+portanto, eu vou criar
+
+1543
+01:00:14,980 --> 01:00:16,980
+como variável
+
+1544
+01:00:16,980 --> 01:00:18,980
+global
+
+1545
+01:00:18,980 --> 01:00:20,980
+a variável motex counter
+
+1546
+01:00:20,980 --> 01:00:22,980
+e vou
+
+1547
+01:00:22,980 --> 01:00:24,980
+arrancá-la
+
+1548
+01:00:24,980 --> 01:00:26,980
+ou gerá-la
+
+1549
+01:00:26,980 --> 01:00:28,980
+com o perfred motex initializer
+
+1550
+01:00:28,980 --> 01:00:30,980
+portanto, passa a ter um motex
+
+1551
+01:00:30,980 --> 01:00:32,980
+estático
+
+1552
+01:00:32,980 --> 01:00:34,980
+e na próxima uma variável global
+
+1553
+01:00:34,980 --> 01:00:36,980
+qualquer código
+
+1554
+01:00:36,980 --> 01:00:38,980
+neste ficheiro
+
+1555
+01:00:38,980 --> 01:00:40,980
+consegue ter acesso a esta variável
+
+1556
+01:00:40,980 --> 01:00:42,980
+e agora o que é que eu faço
+
+1557
+01:00:42,980 --> 01:00:44,980
+tenho aqui a mesma
+
+1558
+01:00:44,980 --> 01:00:46,980
+a mesma função
+
+1559
+01:00:46,980 --> 01:00:48,980
+que arranca as direitos
+
+1560
+01:00:48,980 --> 01:00:50,980
+só que eu acrescentei aqui
+
+1561
+01:00:50,980 --> 01:00:52,980
+o pedido
+
+1562
+01:00:52,980 --> 01:00:54,980
+do motex
+
+1563
+01:00:54,980 --> 01:00:56,980
+e reparem, eu faço a superfarea de motex
+
+1564
+01:00:56,980 --> 01:00:58,980
+e coloco o endereço
+
+1565
+01:00:58,980 --> 01:01:00,980
+da variável
+
+1566
+01:01:00,980 --> 01:01:02,980
+mtx counter
+
+1567
+01:01:02,980 --> 01:01:04,980
+motex counter
+
+1568
+01:01:04,980 --> 01:01:06,980
+este, eu há pouco quando falei
+
+1569
+01:01:06,980 --> 01:01:08,980
+é isto que eu muitas vezes me esqueço
+
+1570
+01:01:08,980 --> 01:01:10,980
+claro
+
+1571
+01:01:10,980 --> 01:01:12,980
+e acho que a ir para a velha
+
+1572
+01:01:12,980 --> 01:01:14,980
+ainda me esqueço mais vezes
+
+1573
+01:01:14,980 --> 01:01:16,980
+mas
+
+1574
+01:01:16,980 --> 01:01:18,980
+se eu me esquecer de isto o compilador
+
+1575
+01:01:18,980 --> 01:01:20,980
+lembra-me logo, dá logo
+
+1576
+01:01:20,980 --> 01:01:22,980
+uma mensagem de erro a esta linha
+
+1577
+01:01:22,980 --> 01:01:24,980
+depois de eu terminar a minha
+
+1578
+01:01:24,980 --> 01:01:26,980
+secção crítica
+
+1579
+01:01:26,980 --> 01:01:28,980
+eu já não preciso
+
+1580
+01:01:28,980 --> 01:01:30,980
+de impedir interferência
+
+1581
+01:01:30,980 --> 01:01:32,980
+de direitos concorrentes
+
+1582
+01:01:32,980 --> 01:01:34,980
+ao manipular este recurso
+
+1583
+01:01:34,980 --> 01:01:36,980
+então, eu liberto
+
+1584
+01:01:36,980 --> 01:01:38,980
+o motex que me
+
+1585
+01:01:38,980 --> 01:01:40,980
+sincroniza aquele recurso
+
+1586
+01:01:40,980 --> 01:01:42,980
+certo?
+
+1587
+01:01:42,980 --> 01:01:46,830
+eu fiz isto um milhão de vezes
+
+1588
+01:01:46,830 --> 01:01:48,830
+e em princípio
+
+1589
+01:01:48,830 --> 01:01:50,830
+o milhão de vezes que eu vou
+
+1590
+01:01:50,830 --> 01:01:52,830
+incrementar este computador
+
+1591
+01:01:52,830 --> 01:01:54,830
+vai estar livre da interferência
+
+1592
+01:01:54,830 --> 01:01:59,140
+da outra thread
+
+1593
+01:01:59,140 --> 01:02:01,140
+na minha main, fica tudo igual
+
+1594
+01:02:01,140 --> 01:02:03,140
+eu lance
+
+1595
+01:02:03,140 --> 01:02:05,140
+duas threads que vão competir
+
+1596
+01:02:05,140 --> 01:02:07,140
+uma com a outra
+
+1597
+01:02:07,140 --> 01:02:09,140
+eu fico a aguardar que ambas as threads
+
+1598
+01:02:09,140 --> 01:02:11,140
+terminem e quando ambas as threads
+
+1599
+01:02:11,140 --> 01:02:13,140
+terminarem eu vou mostrar
+
+1600
+01:02:13,140 --> 01:02:15,140
+o valor deste computador
+
+1601
+01:02:15,140 --> 01:02:17,140
+e termino também por mim
+
+1602
+01:02:17,140 --> 01:02:19,140
+não há mais nada a fazer
+
+1603
+01:02:19,140 --> 01:02:21,140
+e o resultado
+
+1604
+01:02:21,140 --> 01:02:23,140
+é diferente agora
+
+1605
+01:02:23,140 --> 01:02:25,140
+eu aqui correi também
+
+1606
+01:02:25,140 --> 01:02:27,140
+3 vezes
+
+1607
+01:02:27,140 --> 01:02:29,140
+o programa
+
+1608
+01:02:29,140 --> 01:02:31,140
+com aqueles
+
+1609
+01:02:31,140 --> 01:02:33,140
+com motex
+
+1610
+01:02:33,140 --> 01:02:35,140
+e das 3 vezes
+
+1611
+01:02:35,140 --> 01:02:37,140
+já tive o resultado esperado
+
+1612
+01:02:37,140 --> 01:02:41,500
+2 milhões dovidas
+
+1613
+01:02:41,500 --> 01:02:46,350
+até agora, não há?
+
+1614
+01:02:46,350 --> 01:02:50,110
+é nem que eu puxo para aqui
+
+1615
+01:02:50,110 --> 01:02:52,110
+portanto, tudo aquilo que eu faço
+
+1616
+01:02:52,110 --> 01:02:54,110
+entre
+
+1617
+01:02:54,110 --> 01:02:56,110
+esta linha
+
+1618
+01:02:56,110 --> 01:02:58,110
+e esta linha
+
+1619
+01:02:58,110 --> 01:03:00,110
+ou seja, tudo que está aqui
+
+1620
+01:03:00,110 --> 01:03:02,110
+entre este bloco
+
+1621
+01:03:02,110 --> 01:03:04,110
+eu garanto que
+
+1622
+01:03:04,110 --> 01:03:06,110
+outras threads
+
+1623
+01:03:06,110 --> 01:03:08,110
+que aviram
+
+1624
+01:03:08,110 --> 01:03:10,110
+a mesma política de sincronização
+
+1625
+01:03:10,110 --> 01:03:12,110
+não interferem
+
+1626
+01:03:12,110 --> 01:03:14,110
+e atenção que isto que eu agora
+
+1627
+01:03:14,110 --> 01:03:16,110
+disse é muito importante
+
+1628
+01:03:16,110 --> 01:03:18,110
+outras threads
+
+1629
+01:03:18,110 --> 01:03:20,110
+que aviram
+
+1630
+01:03:20,110 --> 01:03:22,110
+a mesma política de sincronização
+
+1631
+01:03:22,110 --> 01:03:24,110
+é responsabilidade
+
+1632
+01:03:24,110 --> 01:03:26,110
+do programador
+
+1633
+01:03:26,110 --> 01:03:28,110
+lembrar-se que
+
+1634
+01:03:28,110 --> 01:03:30,110
+quando eu vou manipular este recurso
+
+1635
+01:03:30,110 --> 01:03:32,110
+é pá, eu tenho que
+
+1636
+01:03:32,110 --> 01:03:34,110
+pedir
+
+1637
+01:03:34,110 --> 01:03:36,110
+acesso exclusivo
+
+1638
+01:03:36,110 --> 01:03:38,110
+e libertar o acesso exclusivo
+
+1639
+01:03:38,110 --> 01:03:40,110
+suponham que vocês tinham
+
+1640
+01:03:40,110 --> 01:03:42,110
+uma outra variável
+
+1641
+01:03:42,110 --> 01:03:44,110
+que modificava o counter
+
+1642
+01:03:44,110 --> 01:03:46,110
+só que não usava este motex
+
+1643
+01:03:46,110 --> 01:03:48,110
+certo?
+
+1644
+01:03:48,110 --> 01:03:50,110
+não fazia motex lock
+
+1645
+01:03:50,110 --> 01:03:52,110
+nem motex unlock
+
+1646
+01:03:52,110 --> 01:03:54,110
+essa thread era uma thread rebelde
+
+1647
+01:03:54,110 --> 01:03:56,110
+não estava a aderir a política
+
+1648
+01:03:56,110 --> 01:03:58,110
+de sincronização
+
+1649
+01:03:58,110 --> 01:04:00,110
+com o motex counter
+
+1650
+01:04:00,110 --> 01:04:02,110
+e o que é que acontecia?
+
+1651
+01:04:02,110 --> 01:04:04,110
+ia
+
+1652
+01:04:04,110 --> 01:04:06,110
+interferir com as outras
+
+1653
+01:04:06,110 --> 01:04:08,110
+que aderiam a estratégia
+
+1654
+01:04:08,110 --> 01:04:10,110
+basicamente
+
+1655
+01:04:10,110 --> 01:04:12,110
+a estratégia de sincronização
+
+1656
+01:04:12,110 --> 01:04:14,110
+basicamente
+
+1657
+01:04:14,110 --> 01:04:16,110
+é como vocês todos
+
+1658
+01:04:16,110 --> 01:04:18,110
+tiram a carta
+
+1659
+01:04:18,110 --> 01:04:20,110
+e aderem a política de sincronização
+
+1660
+01:04:20,110 --> 01:04:22,110
+que são os semáforos
+
+1661
+01:04:22,110 --> 01:04:24,110
+se estiver verde, vocês avançam
+
+1662
+01:04:24,110 --> 01:04:26,110
+se estiver vermelho, vocês param
+
+1663
+01:04:26,110 --> 01:04:28,110
+e de repente aparece alguém
+
+1664
+01:04:28,110 --> 01:04:30,110
+no meio do trânsito
+
+1665
+01:04:30,110 --> 01:04:32,110
+que não tirou a carta
+
+1666
+01:04:32,110 --> 01:04:34,110
+e não segue as regras
+
+1667
+01:04:34,110 --> 01:04:36,110
+pode acontecer
+
+1668
+01:04:36,110 --> 01:04:38,110
+que vocês estão a passar com o vermelho
+
+1669
+01:04:38,110 --> 01:04:40,110
+e vem da outra rua
+
+1670
+01:04:40,110 --> 01:04:42,110
+quem tem o sinal vermelho
+
+1671
+01:04:42,110 --> 01:04:44,110
+batem-nos no carro
+
+1672
+01:04:44,110 --> 01:04:46,110
+e há ali um acidente
+
+1673
+01:04:46,110 --> 01:04:49,420
+certo?
+
+1674
+01:04:49,420 --> 01:04:51,420
+a responsabilidade
+
+1675
+01:04:51,420 --> 01:04:53,420
+de aderir esta política
+
+1676
+01:04:53,420 --> 01:04:55,420
+de sincronização
+
+1677
+01:04:55,420 --> 01:04:57,420
+é sempre do programador
+
+1678
+01:04:57,420 --> 01:04:59,420
+ok?
+
+1679
+01:04:59,420 --> 01:05:01,420
+às vezes
+
+1680
+01:05:01,420 --> 01:05:03,420
+em projetos grandes
+
+1681
+01:05:03,420 --> 01:05:05,420
+pode haver uma parte ao outro
+
+1682
+01:05:05,420 --> 01:05:07,420
+em que uma pessoa
+
+1683
+01:05:07,420 --> 01:05:09,420
+se já tiver com poucas horas de sono
+
+1684
+01:05:09,420 --> 01:05:11,420
+se esqueça de meter ali um thread
+
+1685
+01:05:11,420 --> 01:05:13,420
+um log
+
+1686
+01:05:13,420 --> 01:05:15,420
+e aí o que é que estamos
+
+1687
+01:05:15,420 --> 01:05:17,420
+a fomentar
+
+1688
+01:05:17,420 --> 01:05:19,420
+possibilidade de eles
+
+1689
+01:05:19,420 --> 01:05:21,420
+certo?
+
+1690
+01:05:21,420 --> 01:05:25,570
+dúvidas até agora, não há?
+
+1691
+01:05:25,570 --> 01:05:27,570
+isso é que servem as testes também
+
+1692
+01:05:27,570 --> 01:05:29,570
+não
+
+1693
+01:05:29,570 --> 01:05:38,860
+gostava de dar uma resposta de
+
+1694
+01:05:38,860 --> 01:05:40,860
+sim sim
+
+1695
+01:05:40,860 --> 01:05:42,860
+é para isso mesmo que os testes
+
+1696
+01:05:42,860 --> 01:05:44,860
+se for isso mesmo
+
+1697
+01:05:44,860 --> 01:05:46,860
+mas
+
+1698
+01:05:46,860 --> 01:05:48,860
+na realidade
+
+1699
+01:05:48,860 --> 01:05:50,860
+opa
+
+1700
+01:05:50,860 --> 01:05:52,860
+testar
+
+1701
+01:05:52,860 --> 01:05:54,860
+semáforos
+
+1702
+01:05:54,860 --> 01:05:56,860
+ou testar moteques
+
+1703
+01:05:56,860 --> 01:05:58,860
+por testes de discussão de código
+
+1704
+01:05:58,860 --> 01:06:00,860
+é difícil
+
+1705
+01:06:00,860 --> 01:06:02,860
+é difícil porque
+
+1706
+01:06:02,860 --> 01:06:04,860
+é necessário
+
+1707
+01:06:04,860 --> 01:06:06,860
+verificar como é que
+
+1708
+01:06:06,860 --> 01:06:08,860
+este pedaço de código
+
+1709
+01:06:08,860 --> 01:06:10,860
+interage com outros pedaços de código
+
+1710
+01:06:10,860 --> 01:06:12,860
+e isso é muito complicado
+
+1711
+01:06:12,860 --> 01:06:14,860
+de testar
+
+1712
+01:06:14,860 --> 01:06:16,860
+é mais fácil por exemplo
+
+1713
+01:06:16,860 --> 01:06:18,860
+fazer uma inspeção estática
+
+1714
+01:06:18,860 --> 01:06:20,860
+do código
+
+1715
+01:06:20,860 --> 01:06:22,860
+dizer que esta variável
+
+1716
+01:06:22,860 --> 01:06:24,860
+tem de ser sincronizada por
+
+1717
+01:06:24,860 --> 01:06:26,860
+este moteques
+
+1718
+01:06:26,860 --> 01:06:28,860
+e depois lá há uma ferramenta
+
+1719
+01:06:28,860 --> 01:06:30,860
+qualquer que anda à procura
+
+1720
+01:06:30,860 --> 01:06:32,860
+de todas as vezes que utilizamos
+
+1721
+01:06:32,860 --> 01:06:34,860
+esta variável
+
+1722
+01:06:34,860 --> 01:06:36,860
+e se a utilização desta variável
+
+1723
+01:06:36,860 --> 01:06:38,860
+está dentro de um bloco
+
+1724
+01:06:38,860 --> 01:06:42,850
+de lock and lock
+
+1725
+01:06:42,850 --> 01:06:44,850
+mas lá está
+
+1726
+01:06:44,850 --> 01:06:46,850
+por ter
+
+1727
+01:06:46,850 --> 01:06:48,850
+aquela ideia de testes unitários
+
+1728
+01:06:48,850 --> 01:06:50,850
+e testes
+
+1729
+01:06:50,850 --> 01:06:52,850
+de integração
+
+1730
+01:06:52,850 --> 01:06:54,850
+e tal
+
+1731
+01:06:54,850 --> 01:06:59,380
+e end to end
+
+1732
+01:06:59,380 --> 01:07:01,380
+quando temos sincronização as coisas
+
+1733
+01:07:01,380 --> 01:07:03,380
+começam a tornar-se muito complexas
+
+1734
+01:07:03,380 --> 01:07:08,100
+mas não digo nada
+
+1735
+01:07:08,100 --> 01:07:10,100
+pode haver ferramentas
+
+1736
+01:07:10,100 --> 01:07:12,100
+que já funcionem muito bem
+
+1737
+01:07:12,100 --> 01:07:15,630
+mas já agora a pergunta
+
+1738
+01:07:15,630 --> 01:07:17,630
+quando falo em testes
+
+1739
+01:07:17,630 --> 01:07:19,630
+eu vou direto para os testes unitários
+
+1740
+01:07:19,630 --> 01:07:21,630
+testes de integração
+
+1741
+01:07:21,630 --> 01:07:23,630
+era esse tipo de testes que estava a falar?
+
+1742
+01:07:23,630 --> 01:07:25,630
+sim, exatamente
+
+1743
+01:07:25,630 --> 01:07:27,630
+o comportamento
+
+1744
+01:07:27,630 --> 01:07:29,630
+tem que ser esse
+
+1745
+01:07:29,630 --> 01:07:31,630
+sim
+
+1746
+01:07:31,630 --> 01:07:33,630
+não
+
+1747
+01:07:33,630 --> 01:07:35,630
+tem que ser por análise estática
+
+1748
+01:07:35,630 --> 01:07:37,630
+de código
+
+1749
+01:07:37,630 --> 01:07:39,630
+e uma pessoa estar a dizer que este recurso
+
+1750
+01:07:39,630 --> 01:07:41,630
+precisa de ser sincronizado
+
+1751
+01:07:41,630 --> 01:07:43,630
+por este mecanismo
+
+1752
+01:07:43,630 --> 01:07:45,630
+e ter aí qualquer coisa que anda a ler
+
+1753
+01:07:45,630 --> 01:07:47,630
+o código e verificar-se
+
+1754
+01:07:47,630 --> 01:07:49,630
+essa regra se aplica ou não
+
+1755
+01:07:49,630 --> 01:07:53,260
+certo?
+
+1756
+01:07:53,260 --> 01:07:55,260
+o problema
+
+1757
+01:07:55,260 --> 01:07:57,260
+de código que tem de ser sincronizado
+
+1758
+01:07:57,260 --> 01:07:59,260
+através destes mecanismos
+
+1759
+01:07:59,260 --> 01:08:01,260
+de exclusão mútua
+
+1760
+01:08:01,260 --> 01:08:03,260
+é precisamente
+
+1761
+01:08:03,260 --> 01:08:05,260
+que
+
+1762
+01:08:05,260 --> 01:08:07,260
+um segmento de código
+
+1763
+01:08:07,260 --> 01:08:09,260
+pode estar funcionalmente correto
+
+1764
+01:08:09,260 --> 01:08:11,260
+mas depois quando interas
+
+1765
+01:08:11,260 --> 01:08:13,260
+com um segmento de código concorrentes
+
+1766
+01:08:13,260 --> 01:08:15,260
+falha
+
+1767
+01:08:15,260 --> 01:08:17,260
+podemos ter
+
+1768
+01:08:17,260 --> 01:08:19,260
+código que está funcionalmente
+
+1769
+01:08:19,260 --> 01:08:21,260
+correto
+
+1770
+01:08:21,260 --> 01:08:23,260
+analisando a função
+
+1771
+01:08:23,260 --> 01:08:25,260
+isto está correto
+
+1772
+01:08:25,260 --> 01:08:27,260
+isto está correto
+
+1773
+01:08:27,260 --> 01:08:29,260
+e depois quando podemos tudo
+
+1774
+01:08:29,260 --> 01:08:31,260
+a concorrer
+
+1775
+01:08:31,260 --> 01:08:33,260
+e a concorrer
+
+1776
+01:08:33,260 --> 01:08:35,260
+podemos chegar a um estado
+
+1777
+01:08:35,260 --> 01:08:37,260
+em que falha
+
+1778
+01:08:37,260 --> 01:08:39,260
+temos software correto
+
+1779
+01:08:39,260 --> 01:08:41,260
+e temos
+
+1780
+01:08:41,260 --> 01:08:43,260
+funções corretas
+
+1781
+01:08:43,260 --> 01:08:45,260
+e uma aplicação
+
+1782
+01:08:45,260 --> 01:08:51,840
+errada
+
+1783
+01:08:51,840 --> 01:08:55,150
+é complicado
+
+1784
+01:08:55,150 --> 01:08:59,040
+mais alguma questão pessoal
+
+1785
+01:08:59,040 --> 01:09:01,040
+Lance, se você tem questões
+
+1786
+01:09:01,040 --> 01:09:05,920
+você pode lutar
+
+1787
+01:09:05,920 --> 01:09:07,920
+você está bem?
+
+1788
+01:09:07,920 --> 01:09:09,920
+senhor
+
+1789
+01:09:09,920 --> 01:09:11,920
+sim
+
+1790
+01:09:11,920 --> 01:09:13,920
+eu acho que ainda não percebi muito bem
+
+1791
+01:09:13,920 --> 01:09:15,920
+o porquê que nós utilizamos
+
+1792
+01:09:15,920 --> 01:09:17,920
+o pessoal estava a falar sobre
+
+1793
+01:09:17,920 --> 01:09:19,920
+criar vários motecs
+
+1794
+01:09:19,920 --> 01:09:21,920
+durante antes do código
+
+1795
+01:09:21,920 --> 01:09:23,920
+porquê não utilizar apenas um genérico
+
+1796
+01:09:23,920 --> 01:09:25,920
+e
+
+1797
+01:09:25,920 --> 01:09:27,920
+já que normalmente só
+
+1798
+01:09:27,920 --> 01:09:29,920
+se utiliza
+
+1799
+01:09:29,920 --> 01:09:31,920
+no único momento do código
+
+1800
+01:09:31,920 --> 01:09:33,920
+porquê não utilizar sempre o mesmo
+
+1801
+01:09:33,920 --> 01:09:35,920
+durante o código
+
+1802
+01:09:35,920 --> 01:09:37,920
+ok, vou lhe dar um exemplo
+
+1803
+01:09:37,920 --> 01:09:39,920
+e vou lhe dar um exemplo com
+
+1804
+01:09:39,920 --> 01:09:41,920
+um exemplo
+
+1805
+01:09:41,920 --> 01:09:43,920
+que não é muito bom
+
+1806
+01:09:43,920 --> 01:09:45,920
+mas com dispositivos
+
+1807
+01:09:45,920 --> 01:09:47,920
+tem
+
+1808
+01:09:47,920 --> 01:09:49,920
+um dispositivo que é a placa de rede
+
+1809
+01:09:49,920 --> 01:09:51,920
+tem outro dispositivo
+
+1810
+01:09:51,920 --> 01:09:53,920
+que é o bluetooth
+
+1811
+01:09:53,920 --> 01:09:55,920
+e tem outro dispositivo
+
+1812
+01:09:55,920 --> 01:09:57,920
+que é por exemplo
+
+1813
+01:09:57,920 --> 01:09:59,920
+a placa de rede
+
+1814
+01:09:59,920 --> 01:10:01,920
+bluetooth
+
+1815
+01:10:01,920 --> 01:10:03,920
+portanto wi-fi, bluetooth
+
+1816
+01:10:03,920 --> 01:10:05,920
+e aí outros, um usb
+
+1817
+01:10:05,920 --> 01:10:07,920
+com uma impressora
+
+1818
+01:10:07,920 --> 01:10:09,920
+um usb
+
+1819
+01:10:09,920 --> 01:10:11,920
+em que tem ligado uma impressora
+
+1820
+01:10:11,920 --> 01:10:13,920
+tem esses três dispositivos
+
+1821
+01:10:13,920 --> 01:10:15,920
+e quero garantir
+
+1822
+01:10:15,920 --> 01:10:17,920
+que quando uma thread estiver a utilizar
+
+1823
+01:10:17,920 --> 01:10:19,920
+o wi-fi
+
+1824
+01:10:19,920 --> 01:10:21,920
+porquê está a transmitir um pacote
+
+1825
+01:10:21,920 --> 01:10:23,920
+outra thread
+
+1826
+01:10:23,920 --> 01:10:25,920
+não pode usar
+
+1827
+01:10:25,920 --> 01:10:27,920
+também o wi-fi
+
+1828
+01:10:27,920 --> 01:10:29,920
+o que é que faz?
+
+1829
+01:10:29,920 --> 01:10:31,920
+coloca o motecs
+
+1830
+01:10:31,920 --> 01:10:33,920
+a sincronizar o wi-fi
+
+1831
+01:10:33,920 --> 01:10:35,920
+certo?
+
+1832
+01:10:35,920 --> 01:10:37,920
+só que depois lembra-se
+
+1833
+01:10:37,920 --> 01:10:39,920
+é pá, também tem ali o bluetooth
+
+1834
+01:10:39,920 --> 01:10:41,920
+então se calhar este motecs
+
+1835
+01:10:41,920 --> 01:10:43,920
+pode sincronizar o wi-fi
+
+1836
+01:10:43,920 --> 01:10:47,970
+e o bluetooth ao mesmo tempo
+
+1837
+01:10:47,970 --> 01:10:49,970
+também tem ali o que é que era o usb
+
+1838
+01:10:49,970 --> 01:10:51,970
+com uma impressora
+
+1839
+01:10:51,970 --> 01:10:53,970
+é pá, a impressora
+
+1840
+01:10:53,970 --> 01:10:55,970
+também não pode ter aqui duas threads
+
+1841
+01:10:55,970 --> 01:10:57,970
+a mandar coisas para a impressora ao mesmo tempo
+
+1842
+01:10:57,970 --> 01:10:59,970
+porque se não sai tudo uma salgallada
+
+1843
+01:10:59,970 --> 01:11:01,970
+então vamos fazer o seguinte
+
+1844
+01:11:01,970 --> 01:11:03,970
+aquele motecs que está
+
+1845
+01:11:03,970 --> 01:11:05,970
+a sincronizar o wi-fi e o bluetooth
+
+1846
+01:11:05,970 --> 01:11:07,970
+também vamos por a sincronizar o usb
+
+1847
+01:11:07,970 --> 01:11:09,970
+ok?
+
+1848
+01:11:09,970 --> 01:11:11,970
+e agora tem
+
+1849
+01:11:11,970 --> 01:11:13,970
+uma thread que precisava de mandar um pacote
+
+1850
+01:11:13,970 --> 01:11:15,970
+para o wi-fi
+
+1851
+01:11:15,970 --> 01:11:17,970
+e ao mesmo tempo
+
+1852
+01:11:17,970 --> 01:11:19,970
+outra thread precisava de mandar
+
+1853
+01:11:19,970 --> 01:11:21,970
+qualquer coisa para o usb
+
+1854
+01:11:21,970 --> 01:11:23,970
+mandar um dispositivo para o usb
+
+1855
+01:11:23,970 --> 01:11:25,970
+ambas as threads
+
+1856
+01:11:25,970 --> 01:11:27,970
+iam pedir
+
+1857
+01:11:27,970 --> 01:11:29,970
+a posse
+
+1858
+01:11:29,970 --> 01:11:31,970
+do motecs
+
+1859
+01:11:31,970 --> 01:11:33,970
+certo?
+
+1860
+01:11:33,970 --> 01:11:35,970
+e vamos supor que era
+
+1861
+01:11:35,970 --> 01:11:37,970
+a thread
+
+1862
+01:11:37,970 --> 01:11:39,970
+que ia usar o wi-fi
+
+1863
+01:11:39,970 --> 01:11:41,970
+que conseguia adquirir o motecs
+
+1864
+01:11:41,970 --> 01:11:43,970
+em primeiro lugar
+
+1865
+01:11:43,970 --> 01:11:45,970
+a thread que ia
+
+1866
+01:11:45,970 --> 01:11:47,970
+usar o usb
+
+1867
+01:11:47,970 --> 01:11:49,970
+chegou a estar
+
+1868
+01:11:49,970 --> 01:11:51,970
+e tem de ficar à espera de motecs
+
+1869
+01:11:51,970 --> 01:11:55,540
+essa thread
+
+1870
+01:11:55,540 --> 01:11:57,540
+que ia utilizar o usb
+
+1871
+01:11:57,540 --> 01:11:59,540
+podiam não poder usar o usb sem estarem
+
+1872
+01:11:59,540 --> 01:12:01,540
+a incomodar
+
+1873
+01:12:01,540 --> 01:12:03,540
+a interferir
+
+1874
+01:12:03,540 --> 01:12:05,540
+a thread
+
+1875
+01:12:05,540 --> 01:12:07,540
+que está a utilizar o wi-fi neste momento
+
+1876
+01:12:07,540 --> 01:12:12,420
+pode
+
+1877
+01:12:12,420 --> 01:12:14,420
+só que vai ter de ficar à espera
+
+1878
+01:12:14,420 --> 01:12:16,420
+porque? porque temos um único motecs
+
+1879
+01:12:16,420 --> 01:12:18,420
+a controlar
+
+1880
+01:12:18,420 --> 01:12:20,420
+três dispositivos diferentes
+
+1881
+01:12:20,420 --> 01:12:22,420
+três dispositivos distintos
+
+1882
+01:12:22,420 --> 01:12:24,420
+e independentes
+
+1883
+01:12:24,420 --> 01:12:28,370
+podemos manter
+
+1884
+01:12:28,370 --> 01:12:30,370
+um motecs
+
+1885
+01:12:30,370 --> 01:12:32,370
+para sincronizar estes vários recursos
+
+1886
+01:12:32,370 --> 01:12:34,370
+de uma vez só
+
+1887
+01:12:34,370 --> 01:12:36,370
+as custas de
+
+1888
+01:12:36,370 --> 01:12:38,370
+termos
+
+1889
+01:12:38,370 --> 01:12:40,370
+threads que eventualmente
+
+1890
+01:12:40,370 --> 01:12:42,370
+vão esperar mais um bocadinho
+
+1891
+01:12:42,370 --> 01:12:44,370
+do que aquilo que era necessário
+
+1892
+01:12:44,370 --> 01:12:46,370
+ganhamos
+
+1893
+01:12:46,370 --> 01:12:48,370
+essa implicidade
+
+1894
+01:12:48,370 --> 01:12:50,370
+perdemos
+
+1895
+01:12:50,370 --> 01:12:52,370
+em desempenho
+
+1896
+01:12:52,370 --> 01:12:54,370
+mas eu não posso
+
+1897
+01:12:54,370 --> 01:12:56,370
+porque
+
+1898
+01:12:56,370 --> 01:12:58,370
+aquela thread que tem de mandar
+
+1899
+01:12:58,370 --> 01:13:00,370
+comandar qualquer coisa
+
+1900
+01:13:00,370 --> 01:13:02,370
+por usb
+
+1901
+01:13:02,370 --> 01:13:04,370
+não pode arriscar-se
+
+1902
+01:13:04,370 --> 01:13:06,370
+isto aqui é quase sempre nas probabilidades
+
+1903
+01:13:06,370 --> 01:13:08,370
+que nós falamos
+
+1904
+01:13:08,370 --> 01:13:10,370
+não pode arriscar-se
+
+1905
+01:13:10,370 --> 01:13:12,370
+a demorar tanto tempo
+
+1906
+01:13:12,370 --> 01:13:14,370
+a ter acesso ao usb
+
+1907
+01:13:14,370 --> 01:13:16,370
+que nós dizemos
+
+1908
+01:13:16,370 --> 01:13:18,370
+se o pior caso possível
+
+1909
+01:13:18,370 --> 01:13:21,620
+não é admissível
+
+1910
+01:13:21,620 --> 01:13:23,620
+então temos que arranjar aqui outra solução
+
+1911
+01:13:23,620 --> 01:13:25,620
+uma solução possível
+
+1912
+01:13:25,620 --> 01:13:27,620
+é
+
+1913
+01:13:27,620 --> 01:13:29,620
+separar a sincronização
+
+1914
+01:13:29,620 --> 01:13:31,620
+do wi-fi e bluetooth
+
+1915
+01:13:31,620 --> 01:13:33,620
+da sincronização
+
+1916
+01:13:33,620 --> 01:13:35,620
+com o usb
+
+1917
+01:13:35,620 --> 01:13:37,620
+de que forma
+
+1918
+01:13:37,620 --> 01:13:39,620
+tenho um motecs para wi-fi e bluetooth
+
+1919
+01:13:39,620 --> 01:13:41,620
+e tenho agora um motecs
+
+1920
+01:13:41,620 --> 01:13:43,620
+para o usb
+
+1921
+01:13:43,620 --> 01:13:45,620
+de uma forma
+
+1922
+01:13:45,620 --> 01:13:47,620
+se a primeira thread conseguir o motecs
+
+1923
+01:13:47,620 --> 01:13:49,620
+para wi-fi
+
+1924
+01:13:49,620 --> 01:13:51,620
+e começar a usar wi-fi
+
+1925
+01:13:51,620 --> 01:13:53,620
+a segunda thread pede o motecs
+
+1926
+01:13:53,620 --> 01:13:55,620
+para o usb
+
+1927
+01:13:55,620 --> 01:13:57,620
+e já não fica a espera da outra
+
+1928
+01:13:57,620 --> 01:13:59,620
+por que? porque vai
+
+1929
+01:13:59,620 --> 01:14:01,620
+pedir acesso ao outro motecs
+
+1930
+01:14:01,620 --> 01:14:04,900
+faz sentido?
+
+1931
+01:14:04,900 --> 01:14:06,900
+sim
+
+1932
+01:14:06,900 --> 01:14:10,240
+problema
+
+1933
+01:14:10,240 --> 01:14:12,240
+tenho dois motecs
+
+1934
+01:14:12,240 --> 01:14:14,240
+e aquela nossa situação que era muito simples
+
+1935
+01:14:14,240 --> 01:14:16,240
+um polícia sinaleiro
+
+1936
+01:14:16,240 --> 01:14:18,240
+que controlava todos os cruzamentos
+
+1937
+01:14:18,240 --> 01:14:20,240
+passou a ser mais complexa
+
+1938
+01:14:20,240 --> 01:14:22,240
+eu já tenho dois motecs
+
+1939
+01:14:22,240 --> 01:14:24,240
+e eu tenho que me lembrar
+
+1940
+01:14:24,240 --> 01:14:26,240
+que este motecs controla
+
+1941
+01:14:26,240 --> 01:14:28,240
+wi-fi e bluetooth
+
+1942
+01:14:28,240 --> 01:14:30,240
+e este outro
+
+1943
+01:14:30,240 --> 01:14:32,240
+motecs
+
+1944
+01:14:32,240 --> 01:14:34,240
+controla-me
+
+1945
+01:14:34,240 --> 01:14:36,240
+o usb
+
+1946
+01:14:36,240 --> 01:14:38,240
+eu perco
+
+1947
+01:14:38,240 --> 01:14:40,240
+em simplicidade
+
+1948
+01:14:40,240 --> 01:14:42,240
+mas ganho
+
+1949
+01:14:42,240 --> 01:14:47,860
+um bem
+
+1950
+01:14:47,860 --> 01:14:49,860
+percebi
+
+1951
+01:14:49,860 --> 01:14:51,860
+não é uma coisa exclusiva da engenharia informática
+
+1952
+01:14:51,860 --> 01:14:53,860
+por exemplo
+
+1953
+01:14:53,860 --> 01:14:55,860
+pegue no motor de um
+
+1954
+01:14:55,860 --> 01:14:57,860
+Renault Clio
+
+1955
+01:14:57,860 --> 01:14:59,860
+um motor de um Renault Clio
+
+1956
+01:14:59,860 --> 01:15:01,860
+ainda existe o Renault Clio
+
+1957
+01:15:01,860 --> 01:15:03,860
+não existe
+
+1958
+01:15:03,860 --> 01:15:05,860
+ainda existem Renault Clio
+
+1959
+01:15:05,860 --> 01:15:07,860
+a gadolir
+
+1960
+01:15:07,860 --> 01:15:09,860
+vamos arranjar
+
+1961
+01:15:09,860 --> 01:15:11,860
+um que se vê mais nas ruas agora
+
+1962
+01:15:11,860 --> 01:15:13,860
+um base
+
+1963
+01:15:13,860 --> 01:15:15,860
+também é da Renault um base a sandero
+
+1964
+01:15:15,860 --> 01:15:17,860
+um motor
+
+1965
+01:15:17,860 --> 01:15:19,860
+de um base a sandero é simples
+
+1966
+01:15:19,860 --> 01:15:21,860
+um motor mil, gasolina
+
+1967
+01:15:21,860 --> 01:15:23,860
+não sei o que eu não sei o que mais
+
+1968
+01:15:23,860 --> 01:15:25,860
+agora passamos para um motor
+
+1969
+01:15:25,860 --> 01:15:27,860
+de um fórmula 1
+
+1970
+01:15:27,860 --> 01:15:29,860
+por acaso não há fórmulas da Renault
+
+1971
+01:15:29,860 --> 01:15:31,860
+há os Alpine
+
+1972
+01:15:31,860 --> 01:15:33,860
+os Alpine tem motor Renault
+
+1973
+01:15:33,860 --> 01:15:35,860
+ainda existe Alpine na fórmula 1
+
+1974
+01:15:35,860 --> 01:15:37,860
+para o pessoal que vê a fórmula 1
+
+1975
+01:15:37,860 --> 01:15:39,860
+não é passado a vir
+
+1976
+01:15:39,860 --> 01:15:41,860
+a gente não pode acompanhar
+
+1977
+01:15:41,860 --> 01:15:43,860
+vamos depor que ainda estamos no ano passado
+
+1978
+01:15:43,860 --> 01:15:45,860
+pegamos no motor de um Alpine
+
+1979
+01:15:45,860 --> 01:15:47,860
+da fórmula 1
+
+1980
+01:15:47,860 --> 01:15:49,860
+esse motor
+
+1981
+01:15:49,860 --> 01:15:51,860
+garantidamente não é tão simples como o motor
+
+1982
+01:15:51,860 --> 01:15:53,860
+do base a sandero
+
+1983
+01:15:53,860 --> 01:15:55,860
+certo?
+
+1984
+01:15:55,860 --> 01:15:57,860
+perdemos em simplicidade
+
+1985
+01:15:57,860 --> 01:15:59,860
+mas ganhamos em
+
+1986
+01:15:59,860 --> 01:16:01,860
+desempenho
+
+1987
+01:16:01,860 --> 01:16:03,860
+um fórmula 1 anda muito mais depressa
+
+1988
+01:16:03,860 --> 01:16:05,860
+do que um
+
+1989
+01:16:05,860 --> 01:16:07,860
+base a sandero
+
+1990
+01:16:07,860 --> 01:16:09,860
+de um Renault Clio
+
+1991
+01:16:09,860 --> 01:16:11,860
+é muito mais fácil dizer
+
+1992
+01:16:11,860 --> 01:16:13,860
+certo?
+
+1993
+01:16:13,860 --> 01:16:15,860
+é algo que é como uma engenharia
+
+1994
+01:16:15,860 --> 01:16:17,860
+às vezes nós para conseguirmos
+
+1995
+01:16:17,860 --> 01:16:19,860
+ter soluções mais otimizadas
+
+1996
+01:16:19,860 --> 01:16:21,860
+temos que sacrificar a simplicidade
+
+1997
+01:16:21,860 --> 01:16:25,360
+está bom?
+
+1998
+01:16:25,360 --> 01:16:27,360
+apesar de que eu sou
+
+1999
+01:16:27,360 --> 01:16:29,360
+grande fada a simplicidade
+
+2000
+01:16:29,360 --> 01:16:39,260
+podemos continuar pessoal?
+
+2001
+01:16:39,260 --> 01:16:41,260
+ok então agora
+
+2002
+01:16:41,260 --> 01:16:43,260
+boas práticas
+
+2003
+01:16:43,260 --> 01:16:46,830
+para a utilização de moteques
+
+2004
+01:16:46,830 --> 01:16:48,830
+primeiro
+
+2005
+01:16:48,830 --> 01:16:50,830
+em moteques
+
+2006
+01:16:50,830 --> 01:16:52,830
+inicialmente a coisa é simples
+
+2007
+01:16:52,830 --> 01:16:54,830
+nós vimos aqui esta race condition
+
+2008
+01:16:54,830 --> 01:16:56,830
+eu só precisava do moteques
+
+2009
+01:16:56,830 --> 01:16:58,830
+para sincronizar as operações
+
+2010
+01:16:58,830 --> 01:17:00,830
+pelo counter certo?
+
+2011
+01:17:00,830 --> 01:17:02,830
+mas quando as coisas começarem a ficar
+
+2012
+01:17:02,830 --> 01:17:04,830
+mais complexas e tivemos
+
+2013
+01:17:04,830 --> 01:17:06,830
+mais recursos que precisam de ser
+
+2014
+01:17:06,830 --> 01:17:08,830
+sincronizados
+
+2015
+01:17:08,830 --> 01:17:10,830
+vocês devem
+
+2016
+01:17:10,830 --> 01:17:12,830
+de estabelecer
+
+2017
+01:17:12,830 --> 01:17:14,830
+um mapeamento entre
+
+2018
+01:17:14,830 --> 01:17:16,830
+o que é que cada moteques
+
+2019
+01:17:16,830 --> 01:17:20,530
+sincroniza
+
+2020
+01:17:20,530 --> 01:17:22,530
+este moteques
+
+2021
+01:17:22,530 --> 01:17:24,530
+sincroniza
+
+2022
+01:17:24,530 --> 01:17:26,530
+este recurso
+
+2023
+01:17:26,530 --> 01:17:28,530
+certo?
+
+2024
+01:17:28,530 --> 01:17:33,340
+outra boa prática
+
+2025
+01:17:33,340 --> 01:17:35,340
+é
+
+2026
+01:17:35,340 --> 01:17:37,340
+a partir do momento em que vocês fazem o lock
+
+2027
+01:17:37,340 --> 01:17:39,340
+até o unlock
+
+2028
+01:17:39,340 --> 01:17:41,340
+devem de ter
+
+2029
+01:17:41,340 --> 01:17:43,340
+devem de reduzir
+
+2030
+01:17:43,340 --> 01:17:45,340
+as operações ao mínimo
+
+2031
+01:17:45,340 --> 01:17:47,340
+essencial
+
+2032
+01:17:47,340 --> 01:17:49,340
+e quando eu digo mínimo essencial
+
+2033
+01:17:49,340 --> 01:17:51,340
+apenas as operações
+
+2034
+01:17:51,340 --> 01:17:53,340
+que são sensíveis
+
+2035
+01:17:53,340 --> 01:17:55,340
+se houver interferência
+
+2036
+01:17:55,340 --> 01:17:57,340
+de concorrentes
+
+2037
+01:17:57,340 --> 01:17:59,340
+ok?
+
+2038
+01:17:59,340 --> 01:18:01,340
+não coloquem lá código
+
+2039
+01:18:01,340 --> 01:18:03,340
+desnecessário
+
+2040
+01:18:03,340 --> 01:18:05,340
+porquê? porque
+
+2041
+01:18:05,340 --> 01:18:07,340
+quando vocês estão a impedir
+
+2042
+01:18:07,340 --> 01:18:09,340
+que outras direitos progredam
+
+2043
+01:18:09,340 --> 01:18:11,340
+essas direitos vão ficar
+
+2044
+01:18:11,340 --> 01:18:13,340
+a perder tempo
+
+2045
+01:18:13,340 --> 01:18:15,340
+e se vocês tiverem
+
+2046
+01:18:15,340 --> 01:18:17,340
+impedir que outras direitos progredam
+
+2047
+01:18:17,340 --> 01:18:19,340
+sem necessidade
+
+2048
+01:18:19,340 --> 01:18:21,340
+porque já estão a realizar
+
+2049
+01:18:21,340 --> 01:18:23,340
+código que não é
+
+2050
+01:18:23,340 --> 01:18:25,340
+sensível a interferências
+
+2051
+01:18:25,340 --> 01:18:27,340
+ou se as simplesmente estão a escrever ali uma aplicação
+
+2052
+01:18:27,340 --> 01:18:29,340
+que perde
+
+2053
+01:18:29,340 --> 01:18:31,340
+tempo de forma inútil
+
+2054
+01:18:31,340 --> 01:18:33,340
+ou desperdício a tempo
+
+2055
+01:18:33,340 --> 01:18:35,340
+portanto, as secções críticas devem de ser
+
+2056
+01:18:35,340 --> 01:18:37,340
+o menor
+
+2057
+01:18:37,340 --> 01:18:39,340
+ou mais curtas possíveis
+
+2058
+01:18:39,340 --> 01:18:41,340
+isso também não quero dizer
+
+2059
+01:18:41,340 --> 01:18:43,340
+que tem de ser curtas
+
+2060
+01:18:43,340 --> 01:18:45,340
+mais curtas do que
+
+2061
+01:18:45,340 --> 01:18:48,690
+necessário
+
+2062
+01:18:48,690 --> 01:18:50,690
+está bom?
+
+2063
+01:18:50,690 --> 01:18:52,690
+isto aqui também não é como a anorexia
+
+2064
+01:18:52,690 --> 01:18:54,690
+não é saudável
+
+2065
+01:18:54,690 --> 01:18:56,690
+vocês não tentam tirar o peso todo por si
+
+2066
+01:18:56,690 --> 01:18:58,690
+o máximo de peso
+
+2067
+01:18:58,690 --> 01:19:00,690
+para além daquilo que é o peso
+
+2068
+01:19:00,690 --> 01:19:02,690
+necessário
+
+2069
+01:19:02,690 --> 01:19:04,690
+não retirem
+
+2070
+01:19:04,690 --> 01:19:06,690
+operações sensíveis
+
+2071
+01:19:06,690 --> 01:19:08,690
+de uma secção crítica
+
+2072
+01:19:08,690 --> 01:19:12,540
+dúvidas
+
+2073
+01:19:12,540 --> 01:19:14,540
+não há
+
+2074
+01:19:14,540 --> 01:19:16,540
+até agora parecem boas recomendações
+
+2075
+01:19:16,540 --> 01:19:18,540
+depois na prática é como a pessoa vai
+
+2076
+01:19:18,540 --> 01:19:20,540
+ganhando
+
+2077
+01:19:20,540 --> 01:19:22,540
+a sensibilidade
+
+2078
+01:19:22,540 --> 01:19:24,540
+mas parecem boas práticas
+
+2079
+01:19:24,540 --> 01:19:28,620
+ok
+
+2080
+01:19:28,620 --> 01:19:32,420
+mas
+
+2081
+01:19:32,420 --> 01:19:34,420
+não é aconselhável
+
+2082
+01:19:34,420 --> 01:19:36,420
+provocar
+
+2083
+01:19:36,420 --> 01:19:38,420
+código
+
+2084
+01:19:38,420 --> 01:19:40,420
+dentro
+
+2085
+01:19:40,420 --> 01:19:42,420
+de uma secção crítica
+
+2086
+01:19:42,420 --> 01:19:44,420
+que afeta a segurança e o determinismo
+
+2087
+01:19:44,420 --> 01:19:46,420
+sobretudo determinismo
+
+2088
+01:19:46,420 --> 01:19:48,420
+porque a falta de determinismo
+
+2089
+01:19:48,420 --> 01:19:50,420
+pode ter implicações na segurança
+
+2090
+01:19:50,420 --> 01:19:52,420
+o que é que não devem de colocar
+
+2091
+01:19:52,420 --> 01:19:54,420
+dentro de uma secção crítica
+
+2092
+01:19:54,420 --> 01:19:56,420
+algo que me faça
+
+2093
+01:19:56,420 --> 01:19:58,420
+não prever
+
+2094
+01:19:58,420 --> 01:20:00,420
+quanto tempo é que vou estar nessa secção crítica
+
+2095
+01:20:00,420 --> 01:20:02,420
+logo
+
+2096
+01:20:02,420 --> 01:20:04,420
+quanto tempo é que vou estar
+
+2097
+01:20:04,420 --> 01:20:06,420
+a impedir o progresso
+
+2098
+01:20:06,420 --> 01:20:08,420
+de trechos concorrentes
+
+2099
+01:20:08,420 --> 01:20:10,420
+não devem de colocar
+
+2100
+01:20:10,420 --> 01:20:12,420
+chamadas a funções
+
+2101
+01:20:12,420 --> 01:20:14,420
+que coloquei por exemplo
+
+2102
+01:20:14,420 --> 01:20:16,420
+porque
+
+2103
+01:20:16,420 --> 01:20:18,420
+vocês não fazem ideia
+
+2104
+01:20:18,420 --> 01:20:20,420
+quando é que essa função
+
+2105
+01:20:20,420 --> 01:20:22,420
+vai
+
+2106
+01:20:22,420 --> 01:20:24,420
+continuar
+
+2107
+01:20:24,420 --> 01:20:26,420
+em direção
+
+2108
+01:20:26,420 --> 01:20:28,420
+quando é que essa função
+
+2109
+01:20:28,420 --> 01:20:30,420
+vai responder
+
+2110
+01:20:30,420 --> 01:20:32,420
+e o nosso código vai continuar a progredir
+
+2111
+01:20:32,420 --> 01:20:34,420
+em direção ao unlock
+
+2112
+01:20:34,420 --> 01:20:36,420
+o slip
+
+2113
+01:20:36,420 --> 01:20:38,420
+vocês fizerem slip 1
+
+2114
+01:20:38,420 --> 01:20:40,420
+estão automaticamente
+
+2115
+01:20:40,420 --> 01:20:42,420
+a
+
+2116
+01:20:42,420 --> 01:20:44,420
+atrasar
+
+2117
+01:20:44,420 --> 01:20:46,420
+em um segundo
+
+2118
+01:20:46,420 --> 01:20:48,420
+todas as outras
+
+2119
+01:20:48,420 --> 01:20:50,420
+possíveis trechos concorrentes
+
+2120
+01:20:50,420 --> 01:20:52,420
+que estejam à espera do unlock
+
+2121
+01:20:52,420 --> 01:20:54,420
+certo?
+
+2122
+01:20:54,420 --> 01:20:56,420
+para esperar um um
+
+2123
+01:20:56,420 --> 01:20:58,420
+espera fora dos moteques
+
+2124
+01:20:58,420 --> 01:21:00,420
+certo?
+
+2125
+01:21:00,420 --> 01:21:02,420
+o read
+
+2126
+01:21:02,420 --> 01:21:04,420
+o read permite-nos ler
+
+2127
+01:21:04,420 --> 01:21:06,420
+de um fecheiro
+
+2128
+01:21:06,420 --> 01:21:08,420
+abstrato
+
+2129
+01:21:08,420 --> 01:21:10,420
+ou seja, permite-nos ler qualquer coisa
+
+2130
+01:21:10,420 --> 01:21:12,420
+que seja representável
+
+2131
+01:21:12,420 --> 01:21:14,420
+na pause x
+
+2132
+01:21:14,420 --> 01:21:16,420
+eu posso ler de um fecheiro
+
+2133
+01:21:16,420 --> 01:21:18,420
+e ler de um fecheiro
+
+2134
+01:21:18,420 --> 01:21:20,420
+é uma tarefa que é bastante demorada
+
+2135
+01:21:20,420 --> 01:21:22,420
+mesmo que seja de um disco
+
+2136
+01:21:22,420 --> 01:21:24,420
+ssd
+
+2137
+01:21:24,420 --> 01:21:26,420
+ou de um cartão flash
+
+2138
+01:21:26,420 --> 01:21:28,420
+a leitura de um cartão flash
+
+2139
+01:21:28,420 --> 01:21:30,420
+demora muito tempo
+
+2140
+01:21:30,420 --> 01:21:32,420
+quando comparada com as operações
+
+2141
+01:21:32,420 --> 01:21:34,420
+as instruções de
+
+2142
+01:21:34,420 --> 01:21:36,420
+um processador
+
+2143
+01:21:36,420 --> 01:21:38,420
+ok?
+
+2144
+01:21:38,420 --> 01:21:40,420
+eu colocar um read
+
+2145
+01:21:40,420 --> 01:21:42,420
+em uma secção crítica
+
+2146
+01:21:42,420 --> 01:21:44,420
+é estar logo à partida
+
+2147
+01:21:44,420 --> 01:21:46,420
+a garantir que
+
+2148
+01:21:46,420 --> 01:21:48,420
+possíveis concorrentes
+
+2149
+01:21:48,420 --> 01:21:50,420
+vão ficar muito tempo à espera
+
+2150
+01:21:50,420 --> 01:21:52,420
+vocês não mesmo perder
+
+2151
+01:21:52,420 --> 01:21:54,420
+num read perdem a oportunidade
+
+2152
+01:21:54,420 --> 01:21:56,420
+de discutar centenas
+
+2153
+01:21:56,420 --> 01:21:58,420
+de milhares ou milhões
+
+2154
+01:21:58,420 --> 01:22:00,420
+de instruções
+
+2155
+01:22:00,420 --> 01:22:02,420
+num segundo
+
+2156
+01:22:02,420 --> 01:22:04,420
+ok?
+
+2157
+01:22:04,420 --> 01:22:06,420
+portanto
+
+2158
+01:22:06,420 --> 01:22:08,420
+o que eu devo de colocar
+
+2159
+01:22:08,420 --> 01:22:10,420
+em uma secção crítica
+
+2160
+01:22:10,420 --> 01:22:12,420
+instruções
+
+2161
+01:22:12,420 --> 01:22:14,420
+aritméticas
+
+2162
+01:22:14,420 --> 01:22:16,420
+fazer somas, multiplicações
+
+2163
+01:22:16,420 --> 01:22:18,420
+atribuições
+
+2164
+01:22:18,420 --> 01:22:20,420
+operações
+
+2165
+01:22:20,420 --> 01:22:22,420
+lógicas
+
+2166
+01:22:24,080 --> 01:22:26,080
+e verificações
+
+2167
+01:22:26,080 --> 01:22:28,080
+lógicas, condicionais
+
+2168
+01:22:28,080 --> 01:22:30,080
+se for esta situação
+
+2169
+01:22:30,080 --> 01:22:32,080
+se for este resultado
+
+2170
+01:22:32,080 --> 01:22:34,080
+então eu faço isto
+
+2171
+01:22:34,080 --> 01:22:36,080
+senão eu vou fazer outra coisa qualquer
+
+2172
+01:22:36,080 --> 01:22:38,080
+certo? mas
+
+2173
+01:22:38,080 --> 01:22:45,620
+um agro possível
+
+2174
+01:22:45,620 --> 01:22:47,620
+o que que eu coloquei aqui
+
+2175
+01:22:47,620 --> 01:22:51,540
+com prodíctaba lógica
+
+2176
+01:22:51,540 --> 01:22:53,540
+ah ok
+
+2177
+01:22:53,540 --> 01:22:55,540
+por acaso fiz tu
+
+2178
+01:22:55,540 --> 01:22:57,540
+escrevi e agora que estou a relever
+
+2179
+01:22:57,540 --> 01:22:59,540
+está um bocado esquisito porque eu tenho ali em cima
+
+2180
+01:22:59,540 --> 01:23:01,540
+ah ok
+
+2181
+01:23:01,540 --> 01:23:03,540
+é a voz non deterministic
+
+2182
+01:23:03,540 --> 01:23:05,540
+code
+
+2183
+01:23:05,540 --> 01:23:07,540
+ok, está mesmo mal
+
+2184
+01:23:07,540 --> 01:23:09,540
+agora estou a olhar para isto
+
+2185
+01:23:09,540 --> 01:23:11,540
+realmente
+
+2186
+01:23:11,540 --> 01:23:13,540
+deu-me um nó no servo
+
+2187
+01:23:13,540 --> 01:23:15,540
+quando escrevi isto, escrevi mal
+
+2188
+01:23:15,540 --> 01:23:17,540
+e agora estava a ler
+
+2189
+01:23:17,540 --> 01:23:19,540
+peraí, o que que eu escrevi
+
+2190
+01:23:19,540 --> 01:23:21,540
+nós temos que garantir
+
+2191
+01:23:21,540 --> 01:23:23,540
+que o caminho de discussão
+
+2192
+01:23:23,540 --> 01:23:25,540
+dentro de uma secção crítica
+
+2193
+01:23:25,540 --> 01:23:27,540
+é finito
+
+2194
+01:23:27,540 --> 01:23:31,780
+e determinístico
+
+2195
+01:23:31,780 --> 01:23:33,780
+não punham
+
+2196
+01:23:33,780 --> 01:23:35,780
+ciclos
+
+2197
+01:23:35,780 --> 01:23:37,780
+lá dentro
+
+2198
+01:23:37,780 --> 01:23:39,780
+que cujo número de interações
+
+2199
+01:23:39,780 --> 01:23:41,780
+é indeterminado
+
+2200
+01:23:41,780 --> 01:23:43,780
+ok? por exemplo
+
+2201
+01:23:43,780 --> 01:23:45,780
+um aile
+
+2202
+01:23:45,780 --> 01:23:47,780
+saldo
+
+2203
+01:23:47,780 --> 01:23:49,780
+maior que zero
+
+2204
+01:23:49,780 --> 01:23:51,780
+a pessoal que gasta dinheiro
+
+2205
+01:23:51,780 --> 01:23:53,780
+rapidamente e o saldo
+
+2206
+01:23:53,780 --> 01:23:55,780
+chega a zero rapidamente
+
+2207
+01:23:55,780 --> 01:23:57,780
+a outro pessoal que não gasta
+
+2208
+01:23:57,780 --> 01:23:59,780
+dinheiro nenhum e o saldo
+
+2209
+01:23:59,780 --> 01:24:01,780
+vai rendendo, rendendo, rendendo
+
+2210
+01:24:01,780 --> 01:24:03,780
+e ao fim de um mês ainda temos saldo
+
+2211
+01:24:03,780 --> 01:24:05,780
+ok? portanto
+
+2212
+01:24:05,780 --> 01:24:07,780
+evitem situações
+
+2213
+01:24:07,780 --> 01:24:09,780
+que não são determináveis
+
+2214
+01:24:09,780 --> 01:24:11,780
+por exemplo um ciclo for
+
+2215
+01:24:11,780 --> 01:24:13,780
+a partida vocês olham para o ciclo for
+
+2216
+01:24:13,780 --> 01:24:15,780
+e já sabem quantas vezes
+
+2217
+01:24:15,780 --> 01:24:17,780
+no máximo ele vai executar
+
+2218
+01:24:17,780 --> 01:24:19,780
+porque é um ciclo contado
+
+2219
+01:24:19,780 --> 01:24:21,780
+mesmo com o aile
+
+2220
+01:24:21,780 --> 01:24:23,780
+vocês podem ter código
+
+2221
+01:24:23,780 --> 01:24:25,780
+em que vocês têm um ciclo
+
+2222
+01:24:25,780 --> 01:24:27,780
+o aile e sabem
+
+2223
+01:24:27,780 --> 01:24:29,780
+a partida qual é que é o número máximo de
+
+2224
+01:24:29,780 --> 01:24:31,780
+vezes que ele vai executar
+
+2225
+01:24:31,780 --> 01:24:33,780
+porque? porque
+
+2226
+01:24:33,780 --> 01:24:35,780
+aquilo baseia-se
+
+2227
+01:24:35,780 --> 01:24:37,780
+numa variável
+
+2228
+01:24:37,780 --> 01:24:39,780
+que constantemente
+
+2229
+01:24:39,780 --> 01:24:41,780
+vai dividir em direção
+
+2230
+01:24:41,780 --> 01:24:43,780
+a um valor
+
+2231
+01:24:43,780 --> 01:24:45,780
+que é o valor
+
+2232
+01:24:45,780 --> 01:24:47,780
+do limite por exemplo tal saldo
+
+2233
+01:24:47,780 --> 01:24:49,780
+maior que zero
+
+2234
+01:24:49,780 --> 01:24:51,780
+se eu tiver um saldo
+
+2235
+01:24:51,780 --> 01:24:53,780
+que vale
+
+2236
+01:24:53,780 --> 01:24:55,780
+sei lá
+
+2237
+01:24:55,780 --> 01:24:57,780
+100
+
+2238
+01:24:57,780 --> 01:24:59,780
+mas eu vou
+
+2239
+01:24:59,780 --> 01:25:01,780
+em cada interação do ciclo
+
+2240
+01:25:01,780 --> 01:25:03,780
+retirar ao saldo
+
+2241
+01:25:03,780 --> 01:25:05,780
+um valor entre 20 a 50
+
+2242
+01:25:05,780 --> 01:25:07,780
+é pai eu já sei
+
+2243
+01:25:07,780 --> 01:25:09,780
+que no máximo
+
+2244
+01:25:09,780 --> 01:25:11,780
+vou executar aquele ciclo
+
+2245
+01:25:11,780 --> 01:25:13,780
+cinco vezes
+
+2246
+01:25:13,780 --> 01:25:15,780
+porque no mínimo
+
+2247
+01:25:15,780 --> 01:25:17,780
