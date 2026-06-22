@@ -1,0 +1,11704 @@
+1
+00:00:00,000 --> 00:00:01,700
+Não, não, não, não. Reversa-te-o.
+
+2
+00:00:01,700 --> 00:00:02,700
+Ok.
+
+3
+00:00:02,700 --> 00:00:04,400
+Ah, bem, boa tarde a todos.
+
+4
+00:00:04,400 --> 00:00:08,200
+Boa noite, Rafael Masidrato, desde sábado de manhã.
+
+5
+00:00:08,200 --> 00:00:15,700
+Eu tive a conversar com minha colega e achamos que também não era desinteressante
+
+6
+00:00:15,700 --> 00:00:21,400
+fazermos aqui uma ponta-situação relativamente ao que aconteceu na aula de sábado,
+
+7
+00:00:21,400 --> 00:00:28,000
+para tentarmos aqui encontrar um mecanismo que nos permita a vocês
+
+8
+00:00:28,000 --> 00:00:33,000
+refletir um bocadinho mais, porque a aula de sábado foi um bocadinho intenso, não é?
+
+9
+00:00:33,000 --> 00:00:34,300
+Muita...
+
+10
+00:00:34,300 --> 00:00:37,300
+Estivemos a instalar muitas coisas, a pôr muita coisa a funcionar,
+
+11
+00:00:37,300 --> 00:00:39,100
+mas depois, se calhar, não conseguimos refletir.
+
+12
+00:00:39,100 --> 00:00:45,700
+Portanto, tentámos refletir um bocadinho antes de avançarmos simplesmente na matéria 2.
+
+13
+00:00:45,700 --> 00:00:50,500
+E a matéria 2 é proteção para a inspeção.
+
+14
+00:00:50,500 --> 00:00:53,500
+Mas tu queres fazer a reflexão?
+
+15
+00:00:53,500 --> 00:00:59,500
+A bocado percebi que tu querias sedimentar as coisas
+
+16
+00:00:59,500 --> 00:01:03,000
+e ficávamos com uma reflexão para quita-feira, mas...
+
+17
+00:01:03,000 --> 00:01:05,300
+Não, não, não, era sedimentar as coisas.
+
+18
+00:01:05,300 --> 00:01:16,800
+Sementar o que se deu no sábado para permitir que os romanos percebam melhor o que é que estamos aqui a falar.
+
+19
+00:01:17,300 --> 00:01:23,600
+Pronto, e olhámos outra vez o que tivemos a fazer no sábado
+
+20
+00:01:23,600 --> 00:01:26,300
+para que todos sementassem um bocadinho melhor,
+
+21
+00:01:26,300 --> 00:01:32,000
+mas já percebi que alguns de vocês conseguiram seguir aquelas quinoas
+
+22
+00:01:32,000 --> 00:01:35,300
+em que os permitem instalar isto nos vossos próprios portáteis
+
+23
+00:01:35,300 --> 00:01:37,900
+e conseguiram fazer os trabalhos.
+
+24
+00:01:37,900 --> 00:01:43,500
+Houve algumas perguntas sobre a questão dos IPs.
+
+25
+00:01:43,600 --> 00:01:47,400
+É verdade, eu penso que isso não estava lá explícito.
+
+26
+00:01:47,400 --> 00:01:51,800
+Às vezes sabem que para nós as coisas são evidentes
+
+27
+00:01:51,800 --> 00:01:56,100
+e, portanto, não colocamos lá, mas houve algumas perguntas sobre a questão dos IPs.
+
+28
+00:01:56,100 --> 00:01:59,300
+Qualquer uma das duas soluções que eu apresentei,
+
+29
+00:01:59,300 --> 00:02:03,800
+que era baseada para instalar o Proximox, que era baseada em... é para ver,
+
+30
+00:02:03,800 --> 00:02:11,500
+que era baseada em WSL2 que não permitem ter IPs dinâmicos nas máquinas virtuais,
+
+31
+00:02:11,500 --> 00:02:15,600
+ou seja, nós temos que manualmente determinar qual é o IP de cada máquina,
+
+32
+00:02:15,600 --> 00:02:17,600
+ou seja, quando queríamos a máquina,
+
+33
+00:02:17,600 --> 00:02:20,600
+temos que ter no sábado que a máquina...
+
+34
+00:02:20,600 --> 00:02:26,900
+vamos ter que colocar manualmente o IP da máquina e a gateway da máquina.
+
+35
+00:02:26,900 --> 00:02:29,200
+Eu, pessoalmente, quando me acontece isso,
+
+36
+00:02:29,200 --> 00:02:32,600
+cada um tem o seu processo, o meu processo natural é
+
+37
+00:02:32,600 --> 00:02:34,600
+olho para o número da máquina,
+
+38
+00:02:34,600 --> 00:02:40,200
+e vamos começar, se calhar, já que é projetado umas coisas para nos lembrarmos.
+
+39
+00:02:40,200 --> 00:02:44,500
+Eu tenho sempre aqui um problema de gráfico com projeção,
+
+40
+00:02:44,500 --> 00:02:49,800
+mas penso que vocês já estão a ver o meu Proximox, não é?
+
+41
+00:02:49,800 --> 00:02:50,700
+Pronto.
+
+42
+00:02:50,700 --> 00:02:55,700
+Como eu vejo, antes de muitos vocês chegarem,
+
+43
+00:02:55,700 --> 00:02:59,200
+portanto, como quem estava às aqui em meio lá, que comecei a falar disto,
+
+44
+00:02:59,200 --> 00:03:05,800
+depois, entretanto, fomos avançando um bocado mais de uma explicação para a aula laboratorial,
+
+45
+00:03:05,800 --> 00:03:12,000
+mas, se vocês vejam, se lembram, eu mostrei-vos na altura o meu Proximox,
+
+46
+00:03:12,000 --> 00:03:15,400
+e uma das soluções que eu tenho pessoais
+
+47
+00:03:15,400 --> 00:03:17,900
+é olhando para o número da máquina,
+
+48
+00:03:17,900 --> 00:03:21,400
+que começa no que, tipicamente, tem 100 e vai para aí fora,
+
+49
+00:03:21,400 --> 00:03:29,600
+e é esse o número que eu utilizo para admitir os IPs, ok?
+
+50
+00:03:29,600 --> 00:03:34,300
+E, portanto, tipicamente, imagina que é a máquina 101,
+
+51
+00:03:34,300 --> 00:03:42,900
+tem a máquina 101 e o IP será, se for por trás da OpenSense, 192, 168, 101.
+
+52
+00:03:42,900 --> 00:03:46,500
+Então, e as minhas Gateway são sempre a começar em um.
+
+53
+00:03:46,500 --> 00:03:50,000
+Por exemplo, no caso do IZEP, muitas de elas começam em 150,
+
+54
+00:03:50,000 --> 00:03:52,100
+não me perguntem porquê, mas começam.
+
+55
+00:03:52,100 --> 00:03:57,400
+No meu caso, é sempre, na Gateway, é sempre a começar a perguntar.
+
+56
+00:03:57,400 --> 00:04:01,500
+Neste caso, seria 192, 168, 1.
+
+57
+00:04:02,400 --> 00:04:06,700
+Espero que, nesta aula, vocês intervenham mais um bocato, não é?
+
+58
+00:04:06,700 --> 00:04:10,600
+Portanto, se não voltar aqui duas horas a conversar,
+
+59
+00:04:10,600 --> 00:04:14,200
+e que não é, assim, o mais agradável de tudo.
+
+60
+00:04:14,200 --> 00:04:18,800
+Na aula laboratorial, vocês instalaram a firewall,
+
+61
+00:04:18,800 --> 00:04:21,100
+mas chama aqui, ok?
+
+62
+00:04:21,100 --> 00:04:27,400
+Vocês chegaram a este ponto, todos, ou praticamente todos,
+
+63
+00:04:27,400 --> 00:04:30,100
+por como eu percebi praticamente todos.
+
+64
+00:04:31,000 --> 00:04:35,800
+Vejam aqui, neste caso específico, da minha OpenSense.
+
+65
+00:04:37,000 --> 00:04:40,100
+Mais uma vez, vejam o que eu tenho a minha UAN.
+
+66
+00:04:40,100 --> 00:04:44,400
+Lembram-se daquela questão da BTNET 0 versus a BTNET 1,
+
+67
+00:04:44,400 --> 00:04:46,900
+ou seja, do cuidado que nós temos de ter
+
+68
+00:04:46,900 --> 00:04:54,200
+para garantir que a nossa interface de rede é interface de rede actuada.
+
+69
+00:04:54,200 --> 00:04:56,900
+E uma das maneiras que nós temos de desprestar isso
+
+70
+00:04:56,900 --> 00:05:00,300
+é quando a OpenSense está a arrancar,
+
+71
+00:05:00,300 --> 00:05:03,100
+verificarmos se a interface,
+
+72
+00:05:03,100 --> 00:05:05,600
+quando ela chega à parte da configuração da interface o ano,
+
+73
+00:05:05,600 --> 00:05:08,700
+se aquilo é praticamente imediato ou se demora,
+
+74
+00:05:08,700 --> 00:05:11,000
+ou seja, se ele demorar, quer dizer,
+
+75
+00:05:11,000 --> 00:05:14,000
+que não está a conseguir contactar o servidor da HCP,
+
+76
+00:05:14,000 --> 00:05:19,700
+e se quer dizer, tipicamente, que nós estamos com as interfaces trucadas.
+
+77
+00:05:19,700 --> 00:05:23,900
+Também gostávamos de lembrar-se da questão que nós tivemos,
+
+78
+00:05:23,900 --> 00:05:25,900
+que foi enquanto vocês estavam a configurar
+
+79
+00:05:25,900 --> 00:05:29,300
+e estavam vários de vocês com interfaces trucadas.
+
+80
+00:05:29,300 --> 00:05:33,900
+De repente, ficamos com o redo laboratório todo a feita no muito,
+
+81
+00:05:33,900 --> 00:05:38,900
+até que todos vocês conseguissem ter essas interfaces corretas
+
+82
+00:05:38,900 --> 00:05:42,200
+e deixássemos de ter, portanto, o que estava a acontecer?
+
+83
+00:05:42,200 --> 00:05:45,200
+O que estava a acontecer é que muitos de vocês,
+
+84
+00:05:45,200 --> 00:05:48,100
+quando estavam a arrancar as vossas máquinas,
+
+85
+00:05:48,100 --> 00:05:51,400
+não é necessariamente OpenSense, uma máquina qualquer,
+
+86
+00:05:51,400 --> 00:05:54,300
+que estivesse a pedir o IP por DHCP,
+
+87
+00:05:54,300 --> 00:06:00,600
+ele fornecer sempre um IP por DHCP da Gama192, 168, 1, qualquer coisa,
+
+88
+00:06:00,600 --> 00:06:05,100
+isso, desculpem lá, isto não sei porque saiu,
+
+89
+00:06:05,100 --> 00:06:10,900
+e isso queria-me dizer que, lembra-te na altura o despisto que eu fiz,
+
+90
+00:06:10,900 --> 00:06:15,100
+que foi, isso quer dizer que há uma OpenSense qualquer aqui no meio,
+
+91
+00:06:15,100 --> 00:06:19,500
+que vai, que está com as interfaces trucadas.
+
+92
+00:06:19,500 --> 00:06:22,000
+E lembra-te que eu vos disse, ok, vamos esperar um bocado,
+
+93
+00:06:22,000 --> 00:06:24,300
+a ver se vocês conseguem por as interfaces direitas,
+
+94
+00:06:24,300 --> 00:06:26,500
+não vamos ter que começar a se pegar computador ou computador
+
+95
+00:06:26,500 --> 00:06:29,800
+até descobrir quem era o culpado.
+
+96
+00:06:29,800 --> 00:06:33,300
+Neste caso específico, obviamente está tudo a funcionar,
+
+97
+00:06:33,300 --> 00:06:42,300
+e portanto, vocês veem que eu tenho a minha One na Gama192, 168, 7, 0, 24,
+
+98
+00:06:42,300 --> 00:06:47,000
+quer dizer que temos os 56 endereços IPs na Gama 7, 0,
+
+99
+00:06:47,000 --> 00:06:51,000
+e que, eu não sei se está a cobrir ou não,
+
+100
+00:06:51,000 --> 00:06:54,000
+eu tenho uma certa faculdade, ok, agora já não está a cobrir.
+
+101
+00:06:54,000 --> 00:06:57,300
+Ok, vocês veem que tem a minha LAN,
+
+102
+00:06:57,300 --> 00:07:00,400
+lembram-se, por defeito a LAN na OpenSense,
+
+103
+00:07:00,400 --> 00:07:07,300
+é sempre 192, 168, 1, 0, 24, mais 256 endereços IPs,
+
+104
+00:07:07,300 --> 00:07:12,000
+e neste caso específico, eu tenho mais duas interfaces,
+
+105
+00:07:12,000 --> 00:07:15,500
+que eu as criei, não vamos chegar lá,
+
+106
+00:07:15,500 --> 00:07:18,200
+quer dizer a LAN 2, vamos, mas não a WG,
+
+107
+00:07:18,700 --> 00:07:20,400
+LAN 2 é uma interface,
+
+108
+00:07:20,400 --> 00:07:24,400
+quando está, obviamente, o próprio nome indica que está do lado da LAN,
+
+109
+00:07:24,400 --> 00:07:29,500
+e portanto, vejam que eu tenho 192, 168, 2, 0, 24,
+
+110
+00:07:29,500 --> 00:07:33,900
+portanto, é uma segunda interface que OpenSense tem do lado da LAN,
+
+111
+00:07:33,900 --> 00:07:38,700
+e tenho também uma interface do lado da LAN para poder ter VLANs,
+
+112
+00:07:38,700 --> 00:07:44,300
+neste caso, eu uso pessoalmente a nome das interfaces,
+
+113
+00:07:44,400 --> 00:07:48,200
+é o número da tag da VLAN, neste caso,
+
+114
+00:07:48,200 --> 00:07:52,800
+vejam que eu pujo o nome da interface do lado da LAN,
+
+115
+00:07:52,800 --> 00:07:57,400
+como VLAN 101, porque a tag que eu estou a usar é 101,
+
+116
+00:07:57,400 --> 00:08:01,800
+e tipicamente, faça para a escondência para a gama de endereços IPs,
+
+117
+00:08:01,800 --> 00:08:07,400
+isso é só para, quando estou a tratar das coisas, não fazer confusão, ok,
+
+118
+00:08:07,400 --> 00:08:11,100
+para depois eu saber, se eu tenho a tag 101,
+
+119
+00:08:11,100 --> 00:08:15,000
+quer dizer que eu vou ter a subredo 101.0 barra 24,
+
+120
+00:08:15,000 --> 00:08:18,800
+e, na mesma maneira, a interface vai ser a VLAN 0101,
+
+121
+00:08:18,800 --> 00:08:21,200
+ou seja, eu uso sempre estas monomónicas,
+
+122
+00:08:21,200 --> 00:08:23,400
+mas, depois, quando estou a tratar das coisas,
+
+123
+00:08:23,400 --> 00:08:25,600
+isto, realmente, não está,
+
+124
+00:08:25,600 --> 00:08:27,100
+desde enquanto, deixe-me declarar comigo,
+
+125
+00:08:27,100 --> 00:08:28,600
+não me perguntei porquê,
+
+126
+00:08:28,600 --> 00:08:31,900
+para me garantir,
+
+127
+00:08:31,900 --> 00:08:35,200
+para garantir que não vou fazer as negras a seguir,
+
+128
+00:08:35,200 --> 00:08:40,100
+a interface WG não é uma interface do lado da LAN,
+
+129
+00:08:40,200 --> 00:08:42,600
+é uma interface do lado da LAN,
+
+130
+00:08:42,600 --> 00:08:49,700
+e, neste caso, é uma interface onde está a minha VPN, ok?
+
+131
+00:08:49,700 --> 00:08:53,000
+Neste caso, lembro-se que eu falei disso,
+
+132
+00:08:53,000 --> 00:08:55,000
+alguns devem se lembrar disso,
+
+133
+00:08:55,000 --> 00:08:58,700
+que eu uso como VPNs a guard guard,
+
+134
+00:08:58,700 --> 00:09:01,200
+mais uma vez, a minha interface,
+
+135
+00:09:01,200 --> 00:09:06,100
+se chama de WG, que é para me lembrar que é uma interface da guard guard,
+
+136
+00:09:06,100 --> 00:09:07,700
+ou seja, que é uma VPN,
+
+137
+00:09:07,700 --> 00:09:11,800
+da mesma maneira, para não me esquecer e não armar,
+
+138
+00:09:11,800 --> 00:09:15,300
+depois, quando vou trabalhar com a minha Farol,
+
+139
+00:09:15,300 --> 00:09:16,900
+criar confusão,
+
+140
+00:09:16,900 --> 00:09:18,300
+porque é muito fácil nós,
+
+141
+00:09:18,300 --> 00:09:20,600
+depois, confundirmos estúdios, regras,
+
+142
+00:09:20,600 --> 00:09:24,200
+e essas coisas todas, ok?
+
+143
+00:09:24,200 --> 00:09:27,200
+Pronto, diga.
+
+144
+00:09:27,200 --> 00:09:33,900
+Mas, eu tenho alguma dificuldade em perceber a leitura do Pestaque,
+
+145
+00:09:34,300 --> 00:09:37,300
+as primeiras duas colunas,
+
+146
+00:09:37,300 --> 00:09:39,500
+qual delas é que é a TAG,
+
+147
+00:09:39,500 --> 00:09:41,200
+e qual delas, e o que é que...
+
+148
+00:09:41,200 --> 00:09:43,700
+Não, a TAG não aparece aqui em lá nenhum.
+
+149
+00:09:43,700 --> 00:09:44,700
+Ah, ok, ok.
+
+150
+00:09:44,700 --> 00:09:46,800
+Ok, a TAG,
+
+151
+00:09:46,800 --> 00:09:50,500
+para nós, vemos a TAG,
+
+152
+00:09:50,500 --> 00:09:52,900
+desculpa lá, que morrar também decidiu agora,
+
+153
+00:09:52,900 --> 00:09:54,900
+de dizer-te, estou sem bateria,
+
+154
+00:09:54,900 --> 00:09:56,800
+eu posto-me nessas letras, né?
+
+155
+00:09:56,800 --> 00:09:58,300
+Ok, vamos aqui,
+
+156
+00:09:58,300 --> 00:09:59,800
+se vocês formam,
+
+157
+00:09:59,800 --> 00:10:04,380
+vamos aqui no centro até que usaram o...
+
+158
+00:10:04,480 --> 00:10:10,710
+Eu não gosto, tenho um problema grave com ratos no...
+
+159
+00:10:10,710 --> 00:10:11,710
+Ok.
+
+160
+00:10:11,710 --> 00:10:16,210
+Se nós formos aqui a minha Opensense,
+
+161
+00:10:16,210 --> 00:10:18,810
+como é que está, para aqui, a luz...
+
+162
+00:10:18,810 --> 00:10:20,110
+115.
+
+163
+00:10:20,110 --> 00:10:22,710
+111, 111.
+
+164
+00:10:22,710 --> 00:10:25,710
+Se formos aqui a Ardué, ok?
+
+165
+00:10:25,710 --> 00:10:27,510
+Vejam o que eu tenho,
+
+166
+00:10:27,510 --> 00:10:29,310
+se nos lembramos, não é?
+
+167
+00:10:29,310 --> 00:10:32,010
+Vocês na Album Laboratarial usaram,
+
+168
+00:10:32,010 --> 00:10:35,010
+net0 e net1, ok?
+
+169
+00:10:35,010 --> 00:10:36,010
+Certo.
+
+170
+00:10:36,010 --> 00:10:40,010
+E eu aqui vejo que eu também tenho
+
+171
+00:10:40,010 --> 00:10:45,010
+uma segunda, uma terceira interface, ok?
+
+172
+00:10:45,010 --> 00:10:50,110
+E mesmo aqui eu não consigo ver a minha VELANTEQ, ok?
+
+173
+00:10:50,110 --> 00:10:51,510
+Eu poderia vê-la,
+
+174
+00:10:51,510 --> 00:10:53,510
+bastava clicar aqui,
+
+175
+00:10:53,510 --> 00:10:56,510
+e colocar aqui qual era a minha VELANTEQ,
+
+176
+00:10:56,510 --> 00:10:57,910
+mas eu não optei por fazer isso,
+
+177
+00:10:57,910 --> 00:11:01,510
+eu estou a fazer isso diretamente na Opensense, ok?
+
+178
+00:11:01,510 --> 00:11:03,910
+Aqui tenho alguma liberdade,
+
+179
+00:11:03,910 --> 00:11:05,510
+mas não é, por exemplo,
+
+180
+00:11:05,510 --> 00:11:08,510
+vejam, na One,
+
+181
+00:11:08,510 --> 00:11:10,510
+na minha casa,
+
+182
+00:11:10,510 --> 00:11:12,510
+no meu laboratório,
+
+183
+00:11:12,510 --> 00:11:14,510
+que é minha casa também, não é?
+
+184
+00:11:14,510 --> 00:11:18,510
+Eu tenho aqui a One, em si,
+
+185
+00:11:18,510 --> 00:11:21,010
+está com a TEQ, vamos ver?
+
+186
+00:11:21,010 --> 00:11:22,510
+TEQ7.
+
+187
+00:11:22,510 --> 00:11:26,010
+E é por isso, quando vocês vão aqui,
+
+188
+00:11:26,010 --> 00:11:30,010
+e se fomos ver a minha One,
+
+189
+00:11:30,010 --> 00:11:32,010
+onde ver que a minha One,
+
+190
+00:11:32,010 --> 00:11:35,240
+por acaso, não está a fazer isso,
+
+191
+00:11:35,240 --> 00:11:38,240
+mas devia, já agora,
+
+192
+00:11:38,240 --> 00:11:40,240
+devia estar a fazer isso,
+
+193
+00:11:40,240 --> 00:11:43,240
+a minha One devia estar com a IPA7,
+
+194
+00:11:43,240 --> 00:11:45,240
+e não está,
+
+195
+00:11:45,240 --> 00:11:47,240
+está-se em cima da peça,
+
+196
+00:11:47,240 --> 00:11:49,240
+está, está, está, está.
+
+197
+00:11:49,240 --> 00:11:53,240
+Vejam, como eu meti, como eu uso como monomónica,
+
+198
+00:11:53,240 --> 00:11:55,240
+as TEQs das VELANTES,
+
+199
+00:11:55,240 --> 00:11:57,240
+eu respondo, faço-os responder,
+
+200
+00:11:57,240 --> 00:11:59,240
+num obrigatório, não é bom,
+
+201
+00:11:59,240 --> 00:12:01,240
+eu só uso essa monomónica pessoalmente,
+
+202
+00:12:01,240 --> 00:12:03,240
+em que uso as TEQs das VELANTES,
+
+203
+00:12:03,240 --> 00:12:05,240
+que respondem à gama,
+
+204
+00:12:05,240 --> 00:12:07,240
+no segundo octeto,
+
+205
+00:12:07,240 --> 00:12:09,240
+vejam, se a VELANTE é 7,
+
+206
+00:12:09,240 --> 00:12:11,240
+viram que eu mostrei, porque a VELANTE era 7,
+
+207
+00:12:11,240 --> 00:12:13,240
+a TEQ era 7,
+
+208
+00:12:13,240 --> 00:12:15,240
+tá aqui um 7, ok?
+
+209
+00:12:15,240 --> 00:12:17,240
+Num obrigatório,
+
+210
+00:12:17,240 --> 00:12:19,240
+eu uso isso, porque quando nós começamos a ter
+
+211
+00:12:19,240 --> 00:12:21,240
+5, 6, 7, 10 VELANTES,
+
+212
+00:12:21,240 --> 00:12:23,240
+nós perdemos, ok?
+
+213
+00:12:23,240 --> 00:12:25,240
+E por isso eu tenho um monomónico interno,
+
+214
+00:12:25,240 --> 00:12:27,240
+que eu uso,
+
+215
+00:12:27,240 --> 00:12:29,240
+penso que consegui responder
+
+216
+00:12:29,240 --> 00:12:31,240
+a questão.
+
+217
+00:12:31,240 --> 00:12:33,240
+Sim, mas lá está,
+
+218
+00:12:33,240 --> 00:12:35,240
+no segmento,
+
+219
+00:12:35,240 --> 00:12:37,240
+é só para perceber, as primeiras duas colunas,
+
+220
+00:12:37,240 --> 00:12:39,240
+então representam o que?
+
+221
+00:12:39,240 --> 00:12:41,240
+A primeira coluna,
+
+222
+00:12:41,240 --> 00:12:43,240
+todos os lados esquerdo,
+
+223
+00:12:43,240 --> 00:12:45,240
+simplesmente
+
+224
+00:12:45,240 --> 00:12:47,240
+corresponde
+
+225
+00:12:47,240 --> 00:12:49,240
+ao nome que eu dei,
+
+226
+00:12:49,240 --> 00:12:51,240
+o nome que eu dei,
+
+227
+00:12:51,240 --> 00:12:53,240
+nas interfaces da open-sense.
+
+228
+00:12:53,240 --> 00:12:55,240
+Ah, ok.
+
+229
+00:12:55,240 --> 00:12:57,240
+Quando eu criei,
+
+230
+00:12:57,240 --> 00:12:59,240
+interface 1, interface LAN,
+
+231
+00:12:59,240 --> 00:13:01,240
+estas duas primeiras interfaces,
+
+232
+00:13:01,240 --> 00:13:03,240
+são automaticamente geradas,
+
+233
+00:13:03,240 --> 00:13:05,240
+quando você instalar uma open-sense,
+
+234
+00:13:05,240 --> 00:13:07,240
+ele automaticamente criou interface 1
+
+235
+00:13:07,240 --> 00:13:09,240
+e interface LAN,
+
+236
+00:13:09,240 --> 00:13:11,240
+ok?
+
+237
+00:13:11,240 --> 00:13:13,240
+Se eu criar interfaces
+
+238
+00:13:13,240 --> 00:13:15,240
+adicionais,
+
+239
+00:13:15,240 --> 00:13:17,240
+e num carro neste módulo,
+
+240
+00:13:17,240 --> 00:13:19,240
+estamos a
+
+241
+00:13:19,240 --> 00:13:21,240
+um modo de super segurança,
+
+242
+00:13:21,240 --> 00:13:23,240
+não um modo de rejas, não é?
+
+243
+00:13:23,240 --> 00:13:25,240
+Se eu criar
+
+244
+00:13:25,240 --> 00:13:27,240
+interfaces adicionais na minha open-sense,
+
+245
+00:13:27,240 --> 00:13:29,240
+como é normal,
+
+246
+00:13:29,240 --> 00:13:31,240
+por exemplo, quando eu quero fazer
+
+247
+00:13:31,240 --> 00:13:33,240
+separação de tráfico, eu vou criar
+
+248
+00:13:33,240 --> 00:13:35,240
+interfaces adicionais,
+
+249
+00:13:35,240 --> 00:13:37,240
+eu posso dar o nome que quiser,
+
+250
+00:13:37,240 --> 00:13:39,240
+e esta primeira coluna é
+
+251
+00:13:39,240 --> 00:13:41,240
+essas interfaces adicionais
+
+252
+00:13:41,240 --> 00:13:43,240
+que eu criei, na open-sense.
+
+253
+00:13:43,240 --> 00:13:45,240
+O que está em parentes,
+
+254
+00:13:45,240 --> 00:13:47,240
+o que está em parentes,
+
+255
+00:13:47,240 --> 00:13:49,240
+é o nome
+
+256
+00:13:49,240 --> 00:13:51,240
+que o próximo, são nomes derivados
+
+257
+00:13:51,240 --> 00:13:53,240
+das interfaces que o próximo
+
+258
+00:13:53,240 --> 00:13:55,240
+criei no proxy-box.
+
+259
+00:13:55,240 --> 00:13:57,240
+Lembram-se na aula de laboratório
+
+260
+00:13:57,240 --> 00:13:59,240
+em que nós estamos
+
+261
+00:13:59,240 --> 00:14:01,240
+à procura destes nomes,
+
+262
+00:14:01,240 --> 00:14:03,240
+não é diretamente o nome da interface,
+
+263
+00:14:03,240 --> 00:14:05,240
+estou a estar mesmo mal,
+
+264
+00:14:05,240 --> 00:14:07,240
+tem mania salta fora,
+
+265
+00:14:07,240 --> 00:14:09,240
+ok?
+
+266
+00:14:09,240 --> 00:14:11,240
+Não é diretamente os nomes que eu criei
+
+267
+00:14:11,240 --> 00:14:13,240
+no proxy-box, mas está derivado
+
+268
+00:14:13,240 --> 00:14:15,240
+dos nomes do proxy-box, ok?
+
+269
+00:14:15,240 --> 00:14:17,240
+Ok. O que está
+
+270
+00:14:17,240 --> 00:14:19,240
+à direita da seta,
+
+271
+00:14:19,240 --> 00:14:21,240
+são as subredes,
+
+272
+00:14:21,240 --> 00:14:23,240
+ok?
+
+273
+00:14:23,240 --> 00:14:25,240
+A subrede da one,
+
+274
+00:14:25,240 --> 00:14:27,240
+a IP da one,
+
+275
+00:14:27,240 --> 00:14:29,240
+é diretamente
+
+276
+00:14:29,240 --> 00:14:31,240
+derivado por DHCP,
+
+277
+00:14:31,240 --> 00:14:33,240
+e isto é o standard
+
+278
+00:14:33,240 --> 00:14:35,240
+em quase todas as situações
+
+279
+00:14:35,240 --> 00:14:37,240
+que nós usamos firewall, e setoando
+
+280
+00:14:37,240 --> 00:14:39,240
+no caso muito específico
+
+281
+00:14:39,240 --> 00:14:41,240
+que vocês que querem instalar o proxy-box
+
+282
+00:14:41,240 --> 00:14:43,240
+usando um dos meus dois
+
+283
+00:14:43,240 --> 00:14:45,240
+documentos que eu coloquei lá,
+
+284
+00:14:45,240 --> 00:14:47,240
+que é por WSL2,
+
+285
+00:14:47,240 --> 00:14:49,240
+porque...
+
+286
+00:14:49,240 --> 00:14:51,240
+Nesse caso atribuímos à mão, certo?
+
+287
+00:14:51,240 --> 00:14:53,240
+Nesse caso atribuímos à mão.
+
+288
+00:14:53,240 --> 00:14:55,240
+Ok?
+
+289
+00:14:55,240 --> 00:14:57,240
+Se vocês que eu já tenho
+
+290
+00:14:57,240 --> 00:14:59,240
+comecei, eu não tive tempo
+
+291
+00:14:59,240 --> 00:15:01,240
+ainda de acabar, eu vou-vos preparar
+
+292
+00:15:01,240 --> 00:15:03,240
+uma máquina virtual
+
+293
+00:15:03,240 --> 00:15:05,240
+naquela brincadeira
+
+294
+00:15:05,240 --> 00:15:07,240
+da Oracle,
+
+295
+00:15:07,240 --> 00:15:09,240
+para vocês poderem dar um load instalar,
+
+296
+00:15:09,240 --> 00:15:11,240
+e nesse caso o DHCP também funciona,
+
+297
+00:15:11,240 --> 00:15:13,240
+ok?
+
+298
+00:15:13,240 --> 00:15:15,240
+No caso que eu vos dei até agora atualmente,
+
+299
+00:15:15,240 --> 00:15:17,240
+e eu expliquei-vos porque eu vos dei
+
+300
+00:15:17,240 --> 00:15:19,240
+porque era mais leve para a vossa máquina,
+
+301
+00:15:19,240 --> 00:15:21,240
+ok?
+
+302
+00:15:21,240 --> 00:15:23,240
+Tinha menos recursos a serem utilizados
+
+303
+00:15:23,240 --> 00:15:25,240
+na vossa máquina,
+
+304
+00:15:25,240 --> 00:15:27,240
+e por isso que eu optei por uma daquelas duas soluções,
+
+305
+00:15:27,240 --> 00:15:29,240
+não entendo
+
+306
+00:15:29,240 --> 00:15:31,240
+para quem tira máquinas mais potentes
+
+307
+00:15:31,240 --> 00:15:33,240
+com mais humor e mais pressador,
+
+308
+00:15:33,240 --> 00:15:35,240
+eu vou-vos fazer uma máquina virtual
+
+309
+00:15:35,240 --> 00:15:37,240
+em virtual-box,
+
+310
+00:15:37,240 --> 00:15:39,240
+e nessa máquina virtual
+
+311
+00:15:39,240 --> 00:15:41,240
+em virtual-box, a eSIM
+
+312
+00:15:41,240 --> 00:15:43,240
+já é possível que a 1,
+
+313
+00:15:43,240 --> 00:15:45,240
+a eSIM a 1 já é para o DHCP também.
+
+314
+00:15:45,240 --> 00:15:47,240
+Mas fiquem-se,
+
+315
+00:15:47,240 --> 00:15:49,240
+fiquem só cientes
+
+316
+00:15:49,240 --> 00:15:51,240
+que em 99% dos casos
+
+317
+00:15:51,240 --> 00:15:53,240
+a 1 é dada por DHCP,
+
+318
+00:15:53,240 --> 00:16:03,750
+ok?
+
+319
+00:16:03,750 --> 00:16:09,590
+E conseguiu para funcionar já?
+
+320
+00:16:09,590 --> 00:16:11,590
+Não me diga que eu tenho no guião
+
+321
+00:16:11,590 --> 00:16:13,590
+já para virtual-box
+
+322
+00:16:13,590 --> 00:16:15,590
+e tudo.
+
+323
+00:16:15,590 --> 00:16:17,590
+Ah, ok, agora fiquei confuso.
+
+324
+00:16:17,590 --> 00:16:26,250
+Não, mas fez para virtual-box
+
+325
+00:16:26,250 --> 00:16:28,250
+e aí na solução
+
+326
+00:16:28,250 --> 00:16:30,250
+virtual-box conseguiu ter o IP
+
+327
+00:16:30,250 --> 00:16:34,100
+da 1 por DHCP, correto?
+
+328
+00:16:34,100 --> 00:16:36,100
+Sim, sim. Conceito.
+
+329
+00:16:36,100 --> 00:16:38,100
+Sim, sim, sim, sim, sim.
+
+330
+00:16:38,100 --> 00:16:40,100
+E aí consegue-se, ok?
+
+331
+00:16:40,100 --> 00:16:42,100
+Também se consegue
+
+332
+00:16:42,100 --> 00:16:44,100
+fazendo umas alturas hoje no Proximox
+
+333
+00:16:44,100 --> 00:16:46,100
+mas mais uma vez
+
+334
+00:16:46,100 --> 00:16:48,100
+são coisas bastante mais complexas
+
+335
+00:16:48,100 --> 00:16:50,100
+e não vão estar aqui
+
+336
+00:16:50,100 --> 00:16:52,100
+este não é reto, não é? Mais uma vez, não é?
+
+337
+00:16:52,100 --> 00:16:54,100
+E portanto,
+
+338
+00:16:54,100 --> 00:16:56,100
+não optei por
+
+339
+00:16:56,100 --> 00:16:58,100
+não explicar
+
+340
+00:16:58,100 --> 00:17:00,100
+como é que se pode ter no servidor
+
+341
+00:17:00,100 --> 00:17:02,100
+DHCP no próprio Proximox, ok?
+
+342
+00:17:02,100 --> 00:17:04,100
+Portanto, ficamos com essa
+
+343
+00:17:04,100 --> 00:17:06,100
+com essa ideia
+
+344
+00:17:06,100 --> 00:17:08,100
+do
+
+345
+00:17:08,100 --> 00:17:10,100
+relativamente isto, desculpem lá
+
+346
+00:17:10,100 --> 00:17:12,100
+isto hoje não está,
+
+347
+00:17:12,100 --> 00:17:14,100
+hoje é o rato, lembra-se
+
+348
+00:17:14,100 --> 00:17:16,100
+no sábado foi televisão, hoje é o rato
+
+349
+00:17:16,100 --> 00:17:18,100
+até sempre um problema grave
+
+350
+00:17:18,100 --> 00:17:26,600
+com estas coisas todos.
+
+351
+00:17:26,600 --> 00:17:28,600
+Da mesma maneira,
+
+352
+00:17:28,600 --> 00:17:30,600
+continuando
+
+353
+00:17:30,600 --> 00:17:32,600
+relembrá-nos e assentar
+
+354
+00:17:32,600 --> 00:17:34,600
+ideias relativamente à la passada
+
+355
+00:17:34,600 --> 00:17:36,600
+uma coisa que vocês também
+
+356
+00:17:36,600 --> 00:17:38,600
+fizeram foi instalar
+
+357
+00:17:38,600 --> 00:17:40,600
+o Kali
+
+358
+00:17:40,600 --> 00:17:42,600
+eu também utilizo como
+
+359
+00:17:42,600 --> 00:17:44,600
+mnemónica em minha
+
+360
+00:17:44,600 --> 00:17:46,600
+que é tudo que está no lado
+
+361
+00:17:46,600 --> 00:17:48,600
+da LAN, ok? Tudo que está
+
+362
+00:17:48,600 --> 00:17:50,600
+na parte interna da Firewall
+
+363
+00:17:50,600 --> 00:17:52,600
+tem sempre um nome
+
+364
+00:17:52,600 --> 00:17:54,600
+OpenSense, que é para não
+
+365
+00:17:54,600 --> 00:17:56,600
+ou seja, para poder
+
+366
+00:17:56,600 --> 00:17:58,600
+não confundir, por exemplo, esta
+
+367
+00:17:58,600 --> 00:18:00,600
+máquina que está
+
+368
+00:18:00,600 --> 00:18:02,600
+que não está dentro do OpenSense
+
+369
+00:18:02,600 --> 00:18:04,600
+com outra máquina, portanto,
+
+370
+00:18:04,600 --> 00:18:06,600
+OpenSense neste caso do Kali
+
+371
+00:18:06,600 --> 00:18:08,600
+que vocês também instalaram
+
+372
+00:18:08,600 --> 00:18:10,600
+se bem se
+
+373
+00:18:10,600 --> 00:18:12,600
+lembram da la passada, ok?
+
+374
+00:18:12,600 --> 00:18:14,600
+E é aqui que vamos começar
+
+375
+00:18:14,600 --> 00:18:16,600
+a entrar na matéria
+
+376
+00:18:16,600 --> 00:18:19,850
+ok?
+
+377
+00:18:19,850 --> 00:18:21,850
+Esta o Kali
+
+378
+00:18:21,850 --> 00:18:23,850
+algo que vocês
+
+379
+00:18:23,850 --> 00:18:25,850
+já reconhecem
+
+380
+00:18:25,850 --> 00:18:27,850
+da la passada, ok?
+
+381
+00:18:27,850 --> 00:18:29,850
+Obviamente que eu já
+
+382
+00:18:29,850 --> 00:18:31,850
+arranquei tudo, está tudo preparadinho
+
+383
+00:18:31,850 --> 00:18:33,850
+que é para termos aqui.
+
+384
+00:18:33,850 --> 00:18:35,850
+E o André
+
+385
+00:18:35,850 --> 00:18:37,850
+é que eu não vejo, André
+
+386
+00:18:37,850 --> 00:18:39,850
+é que eu tenho aqui
+
+387
+00:18:39,850 --> 00:18:41,850
+uma questão que era
+
+388
+00:18:41,850 --> 00:18:43,850
+o objetivo
+
+389
+00:18:43,850 --> 00:18:45,850
+ou seja, desta parte da OpenSense
+
+390
+00:18:45,850 --> 00:18:47,850
+era nós instalarmos a Firewall
+
+391
+00:18:47,850 --> 00:18:49,850
+mas eu fiquei com uma dúvida
+
+392
+00:18:49,850 --> 00:18:51,850
+que é como é que nós estabelecemos aquelas
+
+393
+00:18:51,850 --> 00:18:53,850
+regras, não é? Então outra vez
+
+394
+00:18:53,850 --> 00:18:55,850
+eu mostrei aqui, ou seja,
+
+395
+00:18:55,850 --> 00:18:57,850
+que estabelecemos umas regras na Firewall
+
+396
+00:18:57,850 --> 00:18:59,850
+Ah, não estamos lá!
+
+397
+00:18:59,850 --> 00:19:01,850
+Ah, ok, pensei o que eu estava perdendo
+
+398
+00:19:01,850 --> 00:19:03,850
+Não, não, não
+
+399
+00:19:03,850 --> 00:19:05,850
+e agora
+
+400
+00:19:05,850 --> 00:19:07,850
+em termos de laboratório, não
+
+401
+00:19:07,850 --> 00:19:09,850
+aquele
+
+402
+00:19:09,850 --> 00:19:11,850
+que era o laboratório, eu presente
+
+403
+00:19:11,850 --> 00:19:13,850
+duas coisas completamente
+
+404
+00:19:13,850 --> 00:19:15,850
+novas, não é?
+
+405
+00:19:15,850 --> 00:19:17,850
+Mesmo em quatro horas vocês viram
+
+406
+00:19:17,850 --> 00:19:19,850
+que ele dava algum trabalho, não é?
+
+407
+00:19:19,850 --> 00:19:21,850
+E portanto na próxima aula
+
+408
+00:19:21,850 --> 00:19:23,850
+assim vamos fazer algumas regras
+
+409
+00:19:23,850 --> 00:19:25,850
+e hoje iria falar, e agora
+
+410
+00:19:25,850 --> 00:19:27,850
+nós tínhamos a falar até agora um
+
+411
+00:19:27,850 --> 00:19:29,850
+bocadinho do
+
+412
+00:19:29,850 --> 00:19:31,850
+pente de ciência já
+
+413
+00:19:31,850 --> 00:19:33,850
+na interface gráfica
+
+414
+00:19:33,850 --> 00:19:35,850
+muitos de vocês já conseguiram
+
+415
+00:19:35,850 --> 00:19:37,850
+chegar a esta parte
+
+416
+00:19:37,850 --> 00:19:39,850
+aqui já foi para aí 50% da turma
+
+417
+00:19:39,850 --> 00:19:41,850
+que conseguiu chegar
+
+418
+00:19:41,850 --> 00:19:43,850
+a esta zona
+
+419
+00:19:43,850 --> 00:19:45,850
+da
+
+420
+00:19:45,850 --> 00:19:47,850
+ui
+
+421
+00:19:47,850 --> 00:19:49,850
+já agora
+
+422
+00:19:49,850 --> 00:19:51,850
+tinha aqui outra dúvida
+
+423
+00:19:51,850 --> 00:19:53,850
+eu sei
+
+424
+00:19:53,850 --> 00:19:55,850
+que o professor explicou lá no quadro
+
+425
+00:19:55,850 --> 00:19:57,850
+aquela parte
+
+426
+00:19:57,850 --> 00:19:59,850
+das bridges
+
+427
+00:19:59,850 --> 00:20:01,850
+que ligavam as várias máquinas
+
+428
+00:20:01,850 --> 00:20:03,850
+mas eu fiquei lá
+
+429
+00:20:03,850 --> 00:20:05,850
+eu percebi, ou seja
+
+430
+00:20:05,850 --> 00:20:07,850
+que entre
+
+431
+00:20:07,850 --> 00:20:09,850
+tinha lá um ou dois containers que davam para
+
+432
+00:20:09,850 --> 00:20:11,850
+comunicar dependendo das bridges onde ele estava
+
+433
+00:20:11,850 --> 00:20:13,850
+mas eu não percebi muito bem o que é que aquilo
+
+434
+00:20:13,850 --> 00:20:15,850
+fazia, nem o que é que aquilo era
+
+435
+00:20:15,850 --> 00:20:19,700
+Ok, não tem problema, voltando para trás
+
+436
+00:20:19,700 --> 00:20:21,700
+para bem, vamos aqui
+
+437
+00:20:21,700 --> 00:20:27,100
+neste caso
+
+438
+00:20:27,100 --> 00:20:29,100
+estamos a ver as bridges
+
+439
+00:20:29,100 --> 00:20:31,100
+ok?
+
+440
+00:20:31,100 --> 00:20:33,100
+e o que acontece
+
+441
+00:20:33,100 --> 00:20:35,100
+as bridges funcionam
+
+442
+00:20:35,100 --> 00:20:37,100
+para todos os efeitos que vocês têm que pensar
+
+443
+00:20:37,100 --> 00:20:39,100
+que não fosse um suíte
+
+444
+00:20:39,100 --> 00:20:41,100
+não um suíte em nível 2
+
+445
+00:20:41,100 --> 00:20:43,100
+ou seja um suíte que faz
+
+446
+00:20:43,100 --> 00:20:45,100
+as ligações
+
+447
+00:20:45,100 --> 00:20:47,100
+a nível do mach
+
+448
+00:20:47,100 --> 00:20:49,100
+mas um suíte de nível 3
+
+449
+00:20:49,100 --> 00:20:51,100
+quando faz as ligações de nível de IP
+
+450
+00:20:51,100 --> 00:20:53,100
+mas embora não seja
+
+451
+00:20:53,100 --> 00:20:55,100
+completamente verdade o que eu estou a dizer
+
+452
+00:20:55,100 --> 00:20:57,100
+é uma imagem muito aproximada
+
+453
+00:20:57,100 --> 00:20:59,100
+para não haver dúvidas
+
+454
+00:20:59,100 --> 00:21:01,100
+e neste caso específico
+
+455
+00:21:01,100 --> 00:21:03,100
+que a minha máquina não estou a correr o Proxmox
+
+456
+00:21:03,100 --> 00:21:05,100
+as 4 primeiras entradas
+
+457
+00:21:05,100 --> 00:21:07,100
+as 4 primeiras linhas
+
+458
+00:21:07,100 --> 00:21:09,100
+são as 4 interfaces físicas
+
+459
+00:21:09,100 --> 00:21:11,100
+que eu tenho no meu Proxmox
+
+460
+00:21:11,100 --> 00:21:13,100
+e as
+
+461
+00:21:13,100 --> 00:21:15,100
+4 entradas seguintes
+
+462
+00:21:15,100 --> 00:21:17,100
+são as 4 bridges
+
+463
+00:21:17,100 --> 00:21:19,100
+que eu tenho
+
+464
+00:21:19,100 --> 00:21:21,100
+em minha casa
+
+465
+00:21:21,100 --> 00:21:23,100
+desculpe só que em nível 1
+
+466
+00:21:23,100 --> 00:21:25,100
+só se olharem
+
+467
+00:21:25,100 --> 00:21:27,100
+se virem com cuidado
+
+468
+00:21:27,100 --> 00:21:29,100
+que a brides
+
+469
+00:21:29,100 --> 00:21:31,100
+chamada VLAN
+
+470
+00:21:31,100 --> 00:21:33,100
+e a brides chamada VMBR0
+
+471
+00:21:33,100 --> 00:21:35,100
+estas 2 brides
+
+472
+00:21:35,100 --> 00:21:37,100
+e a brides VMBR0
+
+473
+00:21:37,100 --> 00:21:39,100
+a brides por defeito
+
+474
+00:21:39,100 --> 00:21:41,100
+quando nós instalamos o Proxmox
+
+475
+00:21:41,100 --> 00:21:43,100
+ela fica logo lá a funcionar
+
+476
+00:21:43,100 --> 00:21:45,100
+e por defeito
+
+477
+00:21:45,100 --> 00:21:47,100
+esta brides VMBR0
+
+478
+00:21:47,100 --> 00:21:49,100
+está ligada
+
+479
+00:21:49,100 --> 00:21:51,100
+ou está ligada a uma das interfaces físicas
+
+480
+00:21:51,100 --> 00:21:53,100
+neste caso específico
+
+481
+00:21:53,100 --> 00:21:55,100
+está ligada a interface física
+
+482
+00:21:55,100 --> 00:21:57,100
+de NPD2-S0
+
+483
+00:21:57,100 --> 00:21:59,100
+depois queria
+
+484
+00:21:59,100 --> 00:22:01,100
+uma segunda
+
+485
+00:22:01,100 --> 00:22:03,100
+brides
+
+486
+00:22:03,100 --> 00:22:05,100
+chamada VLAN
+
+487
+00:22:05,100 --> 00:22:07,100
+e disse que esta segunda brides
+
+488
+00:22:07,100 --> 00:22:09,100
+chamada VLAN
+
+489
+00:22:09,100 --> 00:22:11,100
+está diretamente ligada
+
+490
+00:22:11,100 --> 00:22:13,100
+a uma segunda interface física
+
+491
+00:22:13,100 --> 00:22:15,100
+chamada 3-S0
+
+492
+00:22:15,100 --> 00:22:17,100
+se quer dizer que fisicamente
+
+493
+00:22:17,100 --> 00:22:19,100
+se você olhar assim para esta máquina
+
+494
+00:22:19,100 --> 00:22:21,100
+para a máquina que eu tenho aqui
+
+495
+00:22:21,100 --> 00:22:23,100
+no escritório
+
+496
+00:22:23,100 --> 00:22:25,100
+um cabo de rede
+
+497
+00:22:25,100 --> 00:22:27,100
+ligada a interface 2-S0
+
+498
+00:22:27,100 --> 00:22:29,100
+e um cabo de rede ligado a interface física 3-S0
+
+499
+00:22:29,100 --> 00:22:31,100
+e eu fiz a ligação
+
+500
+00:22:31,100 --> 00:22:33,100
+1 para 1
+
+501
+00:22:33,100 --> 00:22:35,100
+destas duas brides
+
+502
+00:22:35,100 --> 00:22:37,100
+ou notar que eu tenho mais duas brides a seguir
+
+503
+00:22:37,100 --> 00:22:39,100
+que eu chamo
+
+504
+00:22:39,100 --> 00:22:41,100
+OPNS-LAN
+
+505
+00:22:41,100 --> 00:22:43,100
+e OPNS-OPT1
+
+506
+00:22:43,100 --> 00:22:45,100
+que não estão ligadas a nenhuma interface
+
+507
+00:22:45,100 --> 00:22:47,100
+física do Proxmox
+
+508
+00:22:47,100 --> 00:22:49,100
+ou seja
+
+509
+00:22:49,100 --> 00:22:51,100
+ligada a uma interface física do osso
+
+510
+00:22:51,100 --> 00:22:53,100
+estas duas interfaces
+
+511
+00:22:53,100 --> 00:22:55,100
+no fundo é que me fosse o switch
+
+512
+00:22:55,100 --> 00:22:57,100
+que neste momento
+
+513
+00:22:57,100 --> 00:22:59,100
+para todos os efeitos antes andamos um bocadinho mais para frente
+
+514
+00:22:59,100 --> 00:23:01,100
+é um switch que não está ligado a lá nenhum
+
+515
+00:23:01,100 --> 00:23:03,100
+ou seja, eu posso ligar as máquinas
+
+516
+00:23:03,100 --> 00:23:05,100
+a esse switch
+
+517
+00:23:05,100 --> 00:23:07,100
+quando estamos a atualar as comunicações IP
+
+518
+00:23:07,100 --> 00:23:09,100
+nas comunicações IP
+
+519
+00:23:09,100 --> 00:23:11,100
+eu posso, mesmo que não tenha uma gateway
+
+520
+00:23:11,100 --> 00:23:13,100
+ou seja,
+
+521
+00:23:13,100 --> 00:23:15,100
+mesmo que não tenha uma gateway
+
+522
+00:23:15,100 --> 00:23:17,100
+eu consigo sempre fazer uma comunicação
+
+523
+00:23:17,100 --> 00:23:19,100
+máquina para máquina desde que eu saiba
+
+524
+00:23:19,100 --> 00:23:21,100
+os IPs das duas máquinas
+
+525
+00:23:21,100 --> 00:23:23,100
+e se estas brides funcionam
+
+526
+00:23:23,100 --> 00:23:25,100
+como o switch de nível 3
+
+527
+00:23:25,100 --> 00:23:27,100
+ou seja, o switch em IP
+
+528
+00:23:27,100 --> 00:23:29,100
+quer dizer que quando ligo
+
+529
+00:23:29,100 --> 00:23:31,100
+duas máquinas, por exemplo, a esta brides
+
+530
+00:23:31,100 --> 00:23:33,100
+OPNS-LAN
+
+531
+00:23:33,100 --> 00:23:35,100
+isso é o sobre o IP
+
+532
+00:23:35,100 --> 00:23:37,100
+e que não tem que fixar o IP
+
+533
+00:23:37,100 --> 00:23:39,100
+porque não tem servidor da HACP
+
+534
+00:23:39,100 --> 00:23:41,100
+neste momento só tem uma brides
+
+535
+00:23:41,100 --> 00:23:43,100
+e ligar lá duas máquinas
+
+536
+00:23:43,100 --> 00:23:45,100
+desde que eu fixo
+
+537
+00:23:45,100 --> 00:23:47,100
+o IP dessas duas máquinas
+
+538
+00:23:47,100 --> 00:23:49,100
+eu consigo fazer ping
+
+539
+00:23:49,100 --> 00:23:51,100
+ou qualquer outra operação
+
+540
+00:23:51,100 --> 00:23:53,100
+em TCPP
+
+541
+00:23:53,100 --> 00:23:55,100
+ou ECNP
+
+542
+00:23:55,100 --> 00:23:57,100
+eu consigo fazer qualquer uma destas operações
+
+543
+00:23:57,100 --> 00:23:59,100
+desde que eu saiba os IPs das máquinas
+
+544
+00:23:59,100 --> 00:24:01,100
+ok
+
+545
+00:24:01,100 --> 00:24:03,100
+e portanto isso quer dizer que
+
+546
+00:24:03,100 --> 00:24:05,100
+para todos os efeitos, eles são switches
+
+547
+00:24:05,100 --> 00:24:07,100
+e portanto
+
+548
+00:24:07,100 --> 00:24:09,100
+que não estão ligados a nenhuma interface física
+
+549
+00:24:09,100 --> 00:24:11,100
+agora
+
+550
+00:24:11,100 --> 00:24:13,100
+o que eu fiz a seguir
+
+551
+00:24:13,100 --> 00:24:15,100
+foi chegar à minha open-sense
+
+552
+00:24:15,100 --> 00:24:17,100
+e disse que
+
+553
+00:24:17,100 --> 00:24:19,100
+esta brides OPNS-LAN
+
+554
+00:24:19,100 --> 00:24:21,100
+que não está ligada ao exterior
+
+555
+00:24:21,100 --> 00:24:23,100
+e esta brides OPNS-OPT-1
+
+556
+00:24:23,100 --> 00:24:25,100
+que também não está ligada ao exterior
+
+557
+00:24:25,100 --> 00:24:27,100
+estavam ligadas
+
+558
+00:24:27,100 --> 00:24:29,100
+à minha open-sense
+
+559
+00:24:29,100 --> 00:24:31,100
+ok
+
+560
+00:24:31,100 --> 00:24:33,100
+estão ligadas na parte interna
+
+561
+00:24:33,100 --> 00:24:35,100
+da minha open-sense
+
+562
+00:24:35,100 --> 00:24:37,100
+ou seja, a minha open-sense
+
+563
+00:24:37,100 --> 00:24:39,100
+tem dois switches
+
+564
+00:24:39,100 --> 00:24:41,100
+para todos os efeitos imaginem
+
+565
+00:24:41,100 --> 00:24:43,100
+tenho um servidor
+
+566
+00:24:43,100 --> 00:24:45,100
+em Farwell
+
+567
+00:24:45,100 --> 00:24:47,100
+e depois tenho dois switches que estão ligados
+
+568
+00:24:47,100 --> 00:24:49,100
+ao meu servidor
+
+569
+00:24:49,100 --> 00:24:51,100
+da onde o ponto de vista interno
+
+570
+00:24:51,100 --> 00:24:53,100
+da minha Farwell
+
+571
+00:24:53,100 --> 00:24:55,100
+e portanto
+
+572
+00:24:55,100 --> 00:24:57,100
+por isso é quando eu vou à minha open-sense
+
+573
+00:24:57,100 --> 00:24:59,100
+ok
+
+574
+00:24:59,100 --> 00:25:01,100
+e eu olho para aqui e penso que vocês estão todos a ver
+
+575
+00:25:01,100 --> 00:25:03,100
+e vejam que eu tenho
+
+576
+00:25:03,100 --> 00:25:05,100
+uma LAN
+
+577
+00:25:05,100 --> 00:25:07,100
+e uma LAN 2
+
+578
+00:25:07,100 --> 00:25:09,100
+que corresponde
+
+579
+00:25:09,100 --> 00:25:11,100
+às duas brides
+
+580
+00:25:11,100 --> 00:25:13,100
+se eu for ao ar do ar
+
+581
+00:25:13,100 --> 00:25:15,100
+vou ver que eu tenho
+
+582
+00:25:15,100 --> 00:25:17,100
+uma que tem lá as duas brides
+
+583
+00:25:17,100 --> 00:25:19,100
+ligadas OPNS-LAN
+
+584
+00:25:19,100 --> 00:25:21,100
+e OPNS-OPT-1
+
+585
+00:25:21,100 --> 00:25:23,100
+e vejam que OPNS-LAN
+
+586
+00:25:23,100 --> 00:25:25,100
+tem um MUN
+
+587
+00:25:25,100 --> 00:25:27,100
+e OPNS-OPT-1
+
+588
+00:25:27,100 --> 00:25:29,100
+tem dois
+
+589
+00:25:29,100 --> 00:25:31,100
+e se nós formos
+
+590
+00:25:31,100 --> 00:25:33,100
+a open-sense
+
+591
+00:25:33,100 --> 00:25:35,100
+onde ver
+
+592
+00:25:35,100 --> 00:25:37,100
+que eu tenho a LAN
+
+593
+00:25:37,100 --> 00:25:39,100
+com um MUN
+
+594
+00:25:39,100 --> 00:25:41,100
+e tenho a LAN 2
+
+595
+00:25:41,100 --> 00:25:43,100
+com um 2
+
+596
+00:25:43,100 --> 00:25:45,100
+que corresponde
+
+597
+00:25:45,100 --> 00:25:47,100
+exatamente
+
+598
+00:25:47,100 --> 00:25:49,100
+aos dois números
+
+599
+00:25:49,100 --> 00:25:51,100
+quando liguei as brides
+
+600
+00:25:51,100 --> 00:25:56,390
+que ele criou aqui automaticamente
+
+601
+00:25:56,390 --> 00:25:58,390
+consegui explicar?
+
+602
+00:25:58,390 --> 00:26:00,390
+andando para frente
+
+603
+00:26:00,390 --> 00:26:02,390
+portanto
+
+604
+00:26:02,390 --> 00:26:04,390
+isto vocês instalaram o Kali
+
+605
+00:26:04,390 --> 00:26:06,390
+na semana passada
+
+606
+00:26:06,390 --> 00:26:08,390
+e eu sempre que
+
+607
+00:26:08,390 --> 00:26:10,390
+vamos
+
+608
+00:26:10,390 --> 00:26:12,390
+por acaso
+
+609
+00:26:12,390 --> 00:26:14,390
+nunca se esqueçam
+
+610
+00:26:14,390 --> 00:26:16,390
+o passouro de 1, 2, 3, 4, 5
+
+611
+00:26:16,390 --> 00:26:18,390
+nunca se esqueçam disso
+
+612
+00:26:18,390 --> 00:26:20,390
+qualquer momento
+
+613
+00:26:20,390 --> 00:26:22,390
+não acontecer como aconteceu
+
+614
+00:26:22,390 --> 00:26:24,390
+e eu acho que meti esta passouro
+
+615
+00:26:24,390 --> 00:26:26,390
+mas já não tenho certeza de tudo
+
+616
+00:26:26,390 --> 00:26:28,390
+e não consegui entrar para para
+
+617
+00:26:28,390 --> 00:26:30,390
+mais ou menos 50% da turma
+
+618
+00:26:30,390 --> 00:26:32,390
+chegou esta parte
+
+619
+00:26:32,390 --> 00:26:34,390
+que falaram o Kali
+
+620
+00:26:34,390 --> 00:26:36,390
+e estão no Kali
+
+621
+00:26:36,390 --> 00:26:38,390
+entraram na interface gráfica
+
+622
+00:26:38,390 --> 00:26:40,390
+como eu estou
+
+623
+00:26:40,390 --> 00:26:42,390
+na parte interna da minha Farwall
+
+624
+00:26:42,390 --> 00:26:44,390
+ao notar com o endereço IP
+
+625
+00:26:44,390 --> 00:26:46,390
+e lembro-se sempre que eu vos disse
+
+626
+00:26:46,390 --> 00:26:48,390
+que a minha gateway
+
+627
+00:26:48,390 --> 00:26:50,390
+eu por norma
+
+628
+00:26:50,390 --> 00:26:52,390
+pessoalmente ponho sempre a minha gateway
+
+629
+00:26:52,390 --> 00:26:54,390
+com o número 1
+
+630
+00:26:54,390 --> 00:26:56,390
+não é obrigatório for com o número 1
+
+631
+00:26:56,390 --> 00:26:58,390
+eu ponho sempre com o número 1
+
+632
+00:26:58,390 --> 00:27:00,390
+e se vocês estão em vossa casa
+
+633
+00:27:00,390 --> 00:27:02,390
+neste momento
+
+634
+00:27:02,390 --> 00:27:04,390
+e se forem ver qual é a vossa gateway
+
+635
+00:27:04,390 --> 00:27:06,390
+quase que aposto
+
+636
+00:27:06,390 --> 00:27:08,390
+99% de vocês também terão que me gateway
+
+637
+00:27:08,390 --> 00:27:10,390
+o 192.168.11
+
+638
+00:27:10,390 --> 00:27:12,390
+já agora
+
+639
+00:27:12,390 --> 00:27:14,390
+em termos de segurança
+
+640
+00:27:14,390 --> 00:27:16,390
+de ciber-segurança, isto não se faz isto
+
+641
+00:27:16,390 --> 00:27:18,390
+ou seja, não é normal
+
+642
+00:27:18,390 --> 00:27:20,390
+pôrmos o 192.168.11
+
+643
+00:27:20,390 --> 00:27:22,390
+por que?
+
+644
+00:27:22,390 --> 00:27:24,390
+por defeito 99%
+
+645
+00:27:24,390 --> 00:27:26,390
+da Farwall
+
+646
+00:27:26,390 --> 00:27:28,390
+e dos routas que nós que são instalados
+
+647
+00:27:28,390 --> 00:27:30,390
+têm este endereço
+
+648
+00:27:30,390 --> 00:27:32,390
+eu pessoalmente uso 50
+
+649
+00:27:32,390 --> 00:27:34,390
+mas não é obrigatório
+
+650
+00:27:34,390 --> 00:27:36,390
+quem usa, em vez de ser o 192.168
+
+651
+00:27:36,390 --> 00:27:38,390
+qualquer coisa
+
+652
+00:27:38,390 --> 00:27:40,390
+usa o 10, 10, 10
+
+653
+00:27:40,390 --> 00:27:42,390
+usa outro tipo de gama de endereço
+
+654
+00:27:42,390 --> 00:27:44,390
+usar o 1
+
+655
+00:27:44,390 --> 00:27:46,390
+não é boa ideia
+
+656
+00:27:46,390 --> 00:27:48,390
+porque típicamente todas a gente usa 1
+
+657
+00:27:48,390 --> 00:27:50,390
+e portanto
+
+658
+00:27:50,390 --> 00:27:52,390
+na minha opinião, a potenciência nem devia
+
+659
+00:27:52,390 --> 00:27:54,390
+estar com um portefeito
+
+660
+00:27:54,390 --> 00:27:56,390
+mas como um está praticando sempre o portefeito
+
+661
+00:27:56,390 --> 00:27:58,390
+e se vocês se lembrarem
+
+662
+00:27:58,390 --> 00:28:00,390
+era este número para ser lá
+
+663
+00:28:00,390 --> 00:28:02,390
+portanto, neste momento do que eu fiz
+
+664
+00:28:02,390 --> 00:28:04,390
+na minha
+
+665
+00:28:04,390 --> 00:28:06,390
+interface gráfica de OpenSense
+
+666
+00:28:06,390 --> 00:28:08,390
+para que
+
+667
+00:28:08,390 --> 00:28:10,390
+vocês consigam ver
+
+668
+00:28:10,390 --> 00:28:12,390
+claro que já está toda configurada
+
+669
+00:28:12,390 --> 00:28:14,390
+e nós hoje
+
+670
+00:28:14,390 --> 00:28:16,390
+vamos falar aqui
+
+671
+00:28:16,390 --> 00:28:18,390
+de
+
+672
+00:28:18,390 --> 00:28:20,390
+uma área muito específica
+
+673
+00:28:20,390 --> 00:28:22,390
+embora em termos de demonstração
+
+674
+00:28:22,390 --> 00:28:24,390
+e vou-vos pedir desculpa
+
+675
+00:28:24,390 --> 00:28:26,390
+em termos de slides
+
+676
+00:28:26,390 --> 00:28:28,390
+eu vou-vos falar de suricata
+
+677
+00:28:28,390 --> 00:28:30,390
+em termos de demonstração
+
+678
+00:28:30,390 --> 00:28:32,390
+eu vou falar do suricata
+
+679
+00:28:32,390 --> 00:28:34,390
+vou falar do ZenArma
+
+680
+00:28:34,390 --> 00:28:36,390
+e a razão porque eu vou usar outra opção
+
+681
+00:28:36,390 --> 00:28:38,390
+sem ser a opção suricata
+
+682
+00:28:38,390 --> 00:28:40,390
+porque é que eu vou
+
+683
+00:28:40,390 --> 00:28:42,390
+falar teoricamente uma solução
+
+684
+00:28:42,390 --> 00:28:44,390
+e na prática da outra solução
+
+685
+00:28:44,390 --> 00:28:46,390
+é para vocês terem
+
+686
+00:28:46,390 --> 00:28:48,390
+mais alguma informação
+
+687
+00:28:48,390 --> 00:28:50,390
+caso um dia
+
+688
+00:28:50,390 --> 00:28:52,390
+quando trabalharem nestes coisas
+
+689
+00:28:52,390 --> 00:28:54,390
+perceberem que não há
+
+690
+00:28:54,390 --> 00:28:56,390
+só a única solução
+
+691
+00:28:56,390 --> 00:28:58,390
+há mais suricata é uma das soluções
+
+692
+00:28:58,390 --> 00:29:00,390
+e portanto
+
+693
+00:29:00,390 --> 00:29:02,390
+vamos falar
+
+694
+00:29:02,390 --> 00:29:04,390
+de IPS e DS
+
+695
+00:29:04,390 --> 00:29:06,390
+e depois voltamos
+
+696
+00:29:06,390 --> 00:29:08,390
+vamos voltar novamente
+
+697
+00:29:08,390 --> 00:29:10,390
+aqui a parte
+
+698
+00:29:10,390 --> 00:29:12,390
+da OpenSense
+
+699
+00:29:12,390 --> 00:29:14,390
+a interface gráfica
+
+700
+00:29:14,390 --> 00:29:16,390
+para fazer algumas demonstrações
+
+701
+00:29:16,390 --> 00:29:18,390
+e também algumas demonstrações
+
+702
+00:29:18,390 --> 00:29:20,390
+em termos de calio e a medida que fomos avançando
+
+703
+00:29:20,390 --> 00:29:22,390
+na matéria
+
+704
+00:29:22,390 --> 00:29:24,390
+sim
+
+705
+00:29:24,390 --> 00:29:26,390
+em que aqui é uma questão da parte gráfica
+
+706
+00:29:26,390 --> 00:29:28,390
+da OpenSense
+
+707
+00:29:28,390 --> 00:29:30,390
+em que na altura 3
+
+708
+00:29:30,390 --> 00:29:32,390
+mas o Guião 3 não estava disponível
+
+709
+00:29:32,390 --> 00:29:34,390
+não estava, o que aconteceu foi pessoas
+
+710
+00:29:34,390 --> 00:29:36,390
+que conseguiam chegar ao fim do 2 e disse
+
+711
+00:29:36,390 --> 00:29:38,390
+agora vamos entrando
+
+712
+00:29:38,390 --> 00:29:40,390
+que não era suposto
+
+713
+00:29:40,390 --> 00:29:42,390
+lá está aquela questão de ser heterogêneo
+
+714
+00:29:42,390 --> 00:29:44,390
+portanto há pessoas que conseguiram muito mais
+
+715
+00:29:44,390 --> 00:29:46,390
+mais rapidamente chegar lá
+
+716
+00:29:46,390 --> 00:29:48,390
+e nessa altura individualmente disse
+
+717
+00:29:48,390 --> 00:29:50,390
+não está o Guião mas vamos começar por aqui
+
+718
+00:29:50,390 --> 00:29:52,390
+e diz o endereço
+
+719
+00:29:52,390 --> 00:29:54,390
+mas o Guião 3
+
+720
+00:29:54,390 --> 00:29:56,390
+era a próxima aula, portanto havia um Guião
+
+721
+00:29:56,390 --> 00:29:58,390
+há primeiros 12 horas
+
+722
+00:29:58,390 --> 00:30:00,390
+mas houve pessoas que andaram
+
+723
+00:30:00,390 --> 00:30:02,390
+não diria 50%
+
+724
+00:30:02,390 --> 00:30:04,390
+mas houve uma percentagem relativamente elevada
+
+725
+00:30:04,390 --> 00:30:06,390
+de uma que conseguiu chegar lá mais
+
+726
+00:30:06,390 --> 00:30:08,390
+mais rapidamente e eu
+
+727
+00:30:08,390 --> 00:30:10,390
+vamos avançando por aqui
+
+728
+00:30:10,390 --> 00:30:12,390
+só para não acabar a aula mais ceda
+
+729
+00:30:12,390 --> 00:30:14,390
+e aproveitarmos a aula de uma forma
+
+730
+00:30:14,390 --> 00:30:16,390
+completa
+
+731
+00:30:16,390 --> 00:30:18,390
+portanto
+
+732
+00:30:18,390 --> 00:30:20,390
+voltando aqui aos guiões
+
+733
+00:30:20,390 --> 00:30:22,390
+eu penso a apresentação
+
+734
+00:30:22,390 --> 00:30:24,390
+vocês estão a ver agora neste momento
+
+735
+00:30:24,390 --> 00:30:26,390
+os slides, correto?
+
+736
+00:30:26,390 --> 00:30:28,390
+correto
+
+737
+00:30:28,390 --> 00:30:30,390
+correto, ok
+
+738
+00:30:30,390 --> 00:30:32,390
+pronto
+
+739
+00:30:32,390 --> 00:30:34,390
+eu vou aqui começar
+
+740
+00:30:34,390 --> 00:30:36,390
+a falar
+
+741
+00:30:36,390 --> 00:30:38,390
+com uma opinião muito pessoal
+
+742
+00:30:38,390 --> 00:30:40,390
+que é eu não sou
+
+743
+00:30:40,390 --> 00:30:42,390
+um adepto
+
+744
+00:30:42,390 --> 00:30:44,390
+muito furós
+
+745
+00:30:46,390 --> 00:30:48,390
+destas as coisas
+
+746
+00:30:48,390 --> 00:30:50,390
+principalmente não sou um adepto
+
+747
+00:30:50,390 --> 00:30:52,390
+um pouco furós
+
+748
+00:30:52,390 --> 00:30:54,390
+quase não sou adepto
+
+749
+00:30:54,390 --> 00:30:56,390
+do Deep Pact Inspection
+
+750
+00:30:58,390 --> 00:31:00,390
+o que é que é um DPI
+
+751
+00:31:00,390 --> 00:31:02,390
+um Deep Pact Inspection
+
+752
+00:31:02,390 --> 00:31:04,390
+um Deep Pact Inspection
+
+753
+00:31:04,390 --> 00:31:06,390
+é nós vamos detetar
+
+754
+00:31:06,390 --> 00:31:08,390
+olhando para o pacote
+
+755
+00:31:08,390 --> 00:31:10,390
+de informação
+
+756
+00:31:10,390 --> 00:31:12,390
+vamos detetar
+
+757
+00:31:12,390 --> 00:31:14,390
+se dentro daquele pacote
+
+758
+00:31:14,390 --> 00:31:16,390
+informação está
+
+759
+00:31:16,390 --> 00:31:18,390
+algo que não seja
+
+760
+00:31:18,390 --> 00:31:20,390
+que possa presenciar-se
+
+761
+00:31:20,390 --> 00:31:22,390
+como sendo um ataque
+
+762
+00:31:22,390 --> 00:31:24,390
+ou seja
+
+763
+00:31:24,390 --> 00:31:26,390
+eu não vou olhar só para um pacote
+
+764
+00:31:26,390 --> 00:31:28,390
+vou olhar para uma série de pacotes
+
+765
+00:31:28,390 --> 00:31:30,390
+e vou comparar esses pacotes
+
+766
+00:31:30,390 --> 00:31:32,390
+com uma assinatura
+
+767
+00:31:32,390 --> 00:31:34,390
+e depois vou verificar
+
+768
+00:31:34,390 --> 00:31:36,390
+se essa assinatura
+
+769
+00:31:36,390 --> 00:31:38,390
+bater certo
+
+770
+00:31:38,390 --> 00:31:40,390
+com o que estou a ver nos meus pacotes
+
+771
+00:31:40,390 --> 00:31:42,390
+em termos de bites
+
+772
+00:31:42,390 --> 00:31:44,390
+eu vou dizer ok então aqui estou na presença
+
+773
+00:31:44,390 --> 00:31:46,390
+de uma tentativa
+
+774
+00:31:46,390 --> 00:31:48,390
+de ataque
+
+775
+00:31:48,390 --> 00:31:50,390
+ou uma tentativa de mau aéreo
+
+776
+00:31:50,390 --> 00:31:52,390
+ou seja o que for
+
+777
+00:31:52,390 --> 00:31:54,390
+qual é o primeiro problema
+
+778
+00:31:54,390 --> 00:31:56,390
+o primeiro problema
+
+779
+00:31:56,390 --> 00:31:58,390
+quando nós falamos disso
+
+780
+00:31:58,390 --> 00:32:00,390
+é que
+
+781
+00:32:00,390 --> 00:32:02,390
+se a ligação
+
+782
+00:32:02,390 --> 00:32:04,390
+for incripetada
+
+783
+00:32:04,390 --> 00:32:06,390
+e como é o parte das ligações
+
+784
+00:32:06,390 --> 00:32:08,390
+são incripetadas se eu não fizer nada
+
+785
+00:32:08,390 --> 00:32:10,390
+isto não será absolutamente para nada
+
+786
+00:32:10,390 --> 00:32:12,390
+se a ligação
+
+787
+00:32:12,390 --> 00:32:14,390
+é incripetada
+
+788
+00:32:14,390 --> 00:32:16,390
+eu não posso olhar para os pacotes
+
+789
+00:32:16,390 --> 00:32:18,390
+e comparar aqui uma assinatura
+
+790
+00:32:18,390 --> 00:32:20,390
+porque
+
+791
+00:32:20,390 --> 00:32:22,390
+esse conjunto de pacotes
+
+792
+00:32:22,390 --> 00:32:24,390
+o que está lá em termos de bites
+
+793
+00:32:24,390 --> 00:32:26,390
+varia de acordo
+
+794
+00:32:26,390 --> 00:32:28,390
+com o certificado
+
+795
+00:32:28,390 --> 00:32:30,390
+ou seja de acordo com o que vai variar
+
+796
+00:32:30,390 --> 00:32:32,390
+de acordo com a chave que eu usei para a incripetação
+
+797
+00:32:32,390 --> 00:32:34,390
+se a chave da incripetação
+
+798
+00:32:34,390 --> 00:32:36,390
+não é constante
+
+799
+00:32:36,390 --> 00:32:38,390
+e nós esperamos que não seja
+
+800
+00:32:38,390 --> 00:32:40,390
+quer dizer que as ligações também não vão ser
+
+801
+00:32:40,390 --> 00:32:42,390
+quer dizer que eu não consigo olhar para ali
+
+802
+00:32:42,390 --> 00:32:44,390
+nesta assinatura
+
+803
+00:32:44,390 --> 00:32:46,390
+que eu vou obter
+
+804
+00:32:46,390 --> 00:32:48,390
+claro que vocês podem dizer
+
+805
+00:32:48,390 --> 00:32:50,390
+mas não é possível eu dar a voltar a isso
+
+806
+00:32:50,390 --> 00:32:52,390
+é
+
+807
+00:32:52,390 --> 00:32:54,390
+se eu tiver acesso ao certificar
+
+808
+00:32:54,390 --> 00:32:56,390
+e se finalmente
+
+809
+00:32:56,390 --> 00:32:58,390
+se eu tenho isto a residir na minha ruta
+
+810
+00:32:58,390 --> 00:33:00,390
+eu consigo ter acesso ao certificar
+
+811
+00:33:00,390 --> 00:33:02,390
+porque não se esqueçam
+
+812
+00:33:02,390 --> 00:33:04,390
+que há ali uma troca
+
+813
+00:33:04,390 --> 00:33:06,390
+de chaves inicial
+
+814
+00:33:06,390 --> 00:33:08,390
+sempre ali na possibilidade de eu conseguir
+
+815
+00:33:08,390 --> 00:33:10,390
+porque no fundo
+
+816
+00:33:10,390 --> 00:33:12,390
+eu tenho uma ruta, portanto, para todos os efeitos
+
+817
+00:33:12,390 --> 00:33:14,390
+uma ruta consegue fazer
+
+818
+00:33:14,390 --> 00:33:16,390
+a frase não é mais correta
+
+819
+00:33:16,390 --> 00:33:18,390
+mas faz uma espécie
+
+820
+00:33:18,390 --> 00:33:20,390
+de middle nomen attack
+
+821
+00:33:20,390 --> 00:33:22,390
+porque está ali no meio
+
+822
+00:33:22,390 --> 00:33:24,390
+portanto eu consigo ver todo o tráfego
+
+823
+00:33:24,390 --> 00:33:26,390
+e, portanto, quer dizer que eu consigo ter acesso a chaves
+
+824
+00:33:26,390 --> 00:33:28,390
+e só consigo ter acesso às minhas chaves
+
+825
+00:33:28,390 --> 00:33:30,390
+e isso quer dizer
+
+826
+00:33:30,390 --> 00:33:32,390
+que eu consigo incripetar
+
+827
+00:33:32,390 --> 00:33:34,390
+o tráfego
+
+828
+00:33:34,390 --> 00:33:36,390
+para poder olhar o que está lá dentro
+
+829
+00:33:36,390 --> 00:33:38,390
+como vocês conseguem perceber
+
+830
+00:33:38,390 --> 00:33:40,390
+mesmo que tecnicamente
+
+831
+00:33:40,390 --> 00:33:42,390
+isso seja possível
+
+832
+00:33:42,390 --> 00:33:44,390
+seja possível desincripetar
+
+833
+00:33:44,390 --> 00:33:46,390
+e até desincripetar e tornar incripetar
+
+834
+00:33:46,390 --> 00:33:48,390
+desincripetar, olhar para o tráfego
+
+835
+00:33:48,390 --> 00:33:50,390
+e tornar incripetar
+
+836
+00:33:50,390 --> 00:33:52,390
+desincripetar, olhar para o tráfego
+
+837
+00:33:52,390 --> 00:33:54,390
+comparar com a assinatura e tornar incripetar
+
+838
+00:33:54,390 --> 00:33:56,390
+mesmo que eu faça isso tudo
+
+839
+00:33:56,390 --> 00:33:58,390
+este termos computacionagem pesada
+
+840
+00:33:58,390 --> 00:34:00,390
+portanto, típicamente
+
+841
+00:34:00,390 --> 00:34:02,390
+esta solução
+
+842
+00:34:02,390 --> 00:34:04,390
+de
+
+843
+00:34:04,390 --> 00:34:06,390
+de
+
+844
+00:34:06,390 --> 00:34:08,390
+deu fazer IDES
+
+845
+00:34:08,390 --> 00:34:10,390
+é uma solução que em termos
+
+846
+00:34:10,390 --> 00:34:12,390
+de depressamento
+
+847
+00:34:12,390 --> 00:34:14,390
+é extremamente pesada em primeiro lugar
+
+848
+00:34:14,390 --> 00:34:16,390
+em segundo lugar
+
+849
+00:34:16,390 --> 00:34:18,390
+estas soluções novamente estão
+
+850
+00:34:18,390 --> 00:34:20,390
+relegadas
+
+851
+00:34:20,390 --> 00:34:22,390
+para assinaturas
+
+852
+00:34:22,390 --> 00:34:24,390
+para licenciamentos
+
+853
+00:34:24,390 --> 00:34:26,390
+muito mais
+
+854
+00:34:26,390 --> 00:34:28,390
+pesados em termos de valor
+
+855
+00:34:28,390 --> 00:34:30,390
+no final do ano, ok?
+
+856
+00:34:30,390 --> 00:34:32,390
+e isso quer dizer que
+
+857
+00:34:32,390 --> 00:34:34,390
+a menos que nós estejamos
+
+858
+00:34:34,390 --> 00:34:36,390
+em uma situação
+
+859
+00:34:36,390 --> 00:34:38,390
+em que nós temos
+
+860
+00:34:38,390 --> 00:34:40,390
+necessitamos ter alta segurança
+
+861
+00:34:40,390 --> 00:34:42,390
+e há outras soluções em ser isto
+
+862
+00:34:42,390 --> 00:34:44,390
+e eu vou tentar
+
+863
+00:34:44,390 --> 00:34:46,390
+não fazer, não usar
+
+864
+00:34:46,390 --> 00:34:48,390
+nenhuma destas soluções
+
+865
+00:34:48,390 --> 00:34:50,390
+é ótimo quando nós começamos a dar uma matéria
+
+866
+00:34:50,390 --> 00:34:52,390
+e quem está a dar uma matéria diz
+
+867
+00:34:52,390 --> 00:34:54,390
+não acredito muito nisto
+
+868
+00:34:54,390 --> 00:34:56,390
+mas é verdade esta
+
+869
+00:34:56,390 --> 00:34:58,390
+portanto, normalmente nós consideramos
+
+870
+00:34:58,390 --> 00:35:00,390
+que o IDES
+
+871
+00:35:00,390 --> 00:35:02,390
+é o tal ferramenta
+
+872
+00:35:02,390 --> 00:35:04,390
+que faz a inspeção
+
+873
+00:35:04,390 --> 00:35:06,390
+o DPI é
+
+874
+00:35:06,390 --> 00:35:08,390
+a detecção de introdução com geração
+
+875
+00:35:08,390 --> 00:35:10,390
+simplesmente alertas e o IDES
+
+876
+00:35:10,390 --> 00:35:12,390
+é prevenção de conexões após
+
+877
+00:35:12,390 --> 00:35:14,390
+a detecção, ou seja, eu posso
+
+878
+00:35:14,390 --> 00:35:16,390
+ser mais levesinho
+
+879
+00:35:16,390 --> 00:35:18,390
+e dizer assim, ok? e eu vou só
+
+880
+00:35:18,390 --> 00:35:20,390
+gerar um alerta se detectar
+
+881
+00:35:20,390 --> 00:35:22,390
+que uma das assinaturas
+
+882
+00:35:22,390 --> 00:35:24,390
+estava a ter certo
+
+883
+00:35:24,390 --> 00:35:26,390
+ou posso principalmente prevenir
+
+884
+00:35:26,390 --> 00:35:28,390
+sequer a ligação e não permitir
+
+885
+00:35:28,390 --> 00:35:30,390
+a ligação
+
+886
+00:35:30,390 --> 00:35:32,390
+mais uma vez que estou de engenharia
+
+887
+00:35:32,390 --> 00:35:34,390
+isto é uma questão
+
+888
+00:35:34,390 --> 00:35:36,390
+de decisão de engenharia
+
+889
+00:35:36,390 --> 00:35:38,390
+ou seja, se eu tiver
+
+890
+00:35:38,390 --> 00:35:40,390
+uma solução
+
+891
+00:35:40,390 --> 00:35:42,390
+em que simplesmente estou a gerar
+
+892
+00:35:42,390 --> 00:35:44,390
+alertas, mas não estou a tomar
+
+893
+00:35:44,390 --> 00:35:46,390
+nenhuma atitude preemptiva
+
+894
+00:35:46,390 --> 00:35:48,390
+de não permitir as ligações
+
+895
+00:35:48,390 --> 00:35:50,390
+o que pode acontecer
+
+896
+00:35:50,390 --> 00:35:52,390
+é um bocadinho que o que acontece quando nós temos os cookies
+
+897
+00:35:52,390 --> 00:35:54,390
+que a partir de certa hora a gente já está farta
+
+898
+00:35:54,390 --> 00:35:56,390
+que eu já disse sim, ok? e a tudo
+
+899
+00:35:56,390 --> 00:35:58,390
+só para não autorar os cookies
+
+900
+00:35:58,390 --> 00:36:00,390
+e embora haja
+
+901
+00:36:00,390 --> 00:36:02,390
+uma área na ciber-segurança
+
+902
+00:36:04,390 --> 00:36:06,390
+quer dizer, há funções na ciber-segurança
+
+903
+00:36:06,390 --> 00:36:08,390
+há pessoas contratadas na ciber-segurança
+
+904
+00:36:08,390 --> 00:36:10,390
+simplesmente pode dar para esses alertas
+
+905
+00:36:10,390 --> 00:36:12,390
+também, há aqui uma questão
+
+906
+00:36:12,390 --> 00:36:14,390
+que está a mudar
+
+907
+00:36:14,390 --> 00:36:16,390
+um bocadinho
+
+908
+00:36:16,390 --> 00:36:18,390
+e está a mudar um bocadinho
+
+909
+00:36:18,390 --> 00:36:20,390
+que é a utilização
+
+910
+00:36:20,390 --> 00:36:22,390
+dentro da administração artificial
+
+911
+00:36:22,390 --> 00:36:24,390
+em que estes alertas todos
+
+912
+00:36:24,390 --> 00:36:26,390
+antigamente eram verificados para um ser humano
+
+913
+00:36:26,390 --> 00:36:28,390
+e hoje começam a ser verificados automaticamente
+
+914
+00:36:28,390 --> 00:36:30,390
+por os soluções
+
+915
+00:36:30,390 --> 00:36:32,390
+da administração artificial
+
+916
+00:36:32,390 --> 00:36:34,390
+e portanto
+
+917
+00:36:34,390 --> 00:36:36,390
+é mais combustível
+
+918
+00:36:36,390 --> 00:36:38,390
+desculpem a expressão
+
+919
+00:36:38,390 --> 00:36:40,390
+e portanto eu não tenho que olhar para
+
+920
+00:36:40,390 --> 00:36:42,390
+milhares de alertas e tomar a decisão
+
+921
+00:36:42,390 --> 00:36:44,390
+quais é que daqueles milhares de alertas
+
+922
+00:36:44,390 --> 00:36:46,390
+ou centenas de alertas
+
+923
+00:36:46,390 --> 00:36:48,390
+são alertas que eu tenho que
+
+924
+00:36:48,390 --> 00:36:50,390
+tomar alguma decisão
+
+925
+00:36:50,390 --> 00:36:52,390
+ou tenho que investigar mais profundamente
+
+926
+00:36:52,390 --> 00:36:54,390
+porque eu posso começar a ter
+
+927
+00:36:54,390 --> 00:36:58,390
+e há
+
+928
+00:36:58,390 --> 00:37:00,390
+principalmente agora com o aparecimento
+
+929
+00:37:00,390 --> 00:37:02,390
+dos mcps
+
+930
+00:37:02,390 --> 00:37:04,390
+eu posso ter
+
+931
+00:37:04,390 --> 00:37:06,390
+e ter um servidor mcp
+
+932
+00:37:06,390 --> 00:37:08,390
+e ligar um clau
+
+933
+00:37:08,390 --> 00:37:10,390
+para o clau de investigar estas coisas todas
+
+934
+00:37:10,390 --> 00:37:12,390
+seja o que eu quiser
+
+935
+00:37:12,390 --> 00:37:14,390
+e portanto
+
+936
+00:37:14,390 --> 00:37:16,390
+claro que isso tem custos
+
+937
+00:37:16,390 --> 00:37:18,390
+portanto como tudo na vida, portanto há aqui uma decisão sempre
+
+938
+00:37:18,390 --> 00:37:20,390
+de engenharia
+
+939
+00:37:20,390 --> 00:37:22,390
+a prevenção das conexões
+
+940
+00:37:22,390 --> 00:37:24,390
+é uma solução
+
+941
+00:37:24,390 --> 00:37:26,390
+muito mais radical
+
+942
+00:37:26,390 --> 00:37:28,390
+e é uma solução
+
+943
+00:37:28,390 --> 00:37:30,390
+muito mais radical porque toda
+
+944
+00:37:30,390 --> 00:37:32,390
+esta solução
+
+945
+00:37:32,390 --> 00:37:34,390
+que eu estou a falar neste momento
+
+946
+00:37:34,390 --> 00:37:36,390
+é uma solução que tem uma tendência muito grande
+
+947
+00:37:36,390 --> 00:37:38,390
+de criar falsos alertas
+
+948
+00:37:38,390 --> 00:37:40,390
+ou seja, falsas tensões
+
+949
+00:37:40,390 --> 00:37:42,390
+e isso quer dizer que eu posso ter
+
+950
+00:37:42,390 --> 00:37:44,390
+conexões perfeitamente dignas
+
+951
+00:37:44,390 --> 00:37:46,390
+e simplesmente porque
+
+952
+00:37:46,390 --> 00:37:48,390
+houve uma falsa tensão
+
+953
+00:37:48,390 --> 00:37:50,390
+essa conexão que é perfeitamente
+
+954
+00:37:50,390 --> 00:37:52,390
+ser considerada
+
+955
+00:37:52,390 --> 00:37:54,390
+uma conexão maliciosa
+
+956
+00:37:54,390 --> 00:37:56,390
+e portanto a seguir
+
+957
+00:37:56,390 --> 00:37:58,390
+eu só vou cortar
+
+958
+00:37:58,390 --> 00:38:00,390
+e ter aqui um problema
+
+959
+00:38:00,390 --> 00:38:02,390
+na parte
+
+960
+00:38:02,390 --> 00:38:04,390
+diga
+
+961
+00:38:04,390 --> 00:38:06,390
+mas então a detecção é feita
+
+962
+00:38:06,390 --> 00:38:08,390
+porque
+
+963
+00:38:08,390 --> 00:38:10,390
+uma assinatura que existe dentro
+
+964
+00:38:10,390 --> 00:38:12,390
+do pacote não corresponde
+
+965
+00:38:12,390 --> 00:38:14,390
+ao que era esperado a isso
+
+966
+00:38:14,390 --> 00:38:16,390
+não, o que acontece é que tenho
+
+967
+00:38:16,390 --> 00:38:18,390
+uma base de assinaturas
+
+968
+00:38:18,390 --> 00:38:20,390
+de pacotes, sequência de pacotes
+
+969
+00:38:20,390 --> 00:38:22,390
+ok, eu digo
+
+970
+00:38:22,390 --> 00:38:24,390
+se eu tiver esta sequência de pacotes
+
+971
+00:38:24,390 --> 00:38:26,390
+isto é este determinado tipo de ataque
+
+972
+00:38:26,390 --> 00:38:28,390
+e portanto
+
+973
+00:38:28,390 --> 00:38:30,390
+quando passam os pacotes
+
+974
+00:38:30,390 --> 00:38:32,390
+eu vou analisar os pacotes
+
+975
+00:38:32,390 --> 00:38:34,390
+e vou compará-los com essa base de assinaturas
+
+976
+00:38:34,390 --> 00:38:36,390
+e se bater certo
+
+977
+00:38:36,390 --> 00:38:38,390
+eu vou dizer ok
+
+978
+00:38:38,390 --> 00:38:40,390
+então isto é uma tentativa de ataque
+
+979
+00:38:40,390 --> 00:38:42,390
+ok, no seguimento
+
+980
+00:38:42,390 --> 00:38:44,390
+tinha outra pergunta
+
+981
+00:38:44,390 --> 00:38:46,390
+para todos os pacotes
+
+982
+00:38:46,390 --> 00:38:48,390
+só para nunca
+
+983
+00:38:48,390 --> 00:38:50,390
+no nosso caso específico dos sistemas inhibidos
+
+984
+00:38:50,390 --> 00:38:52,390
+há aqui uma questão adicional
+
+985
+00:38:52,390 --> 00:38:54,390
+normalmente isto é utilizado
+
+986
+00:38:54,390 --> 00:38:56,390
+do ponto de vista da UAN
+
+987
+00:38:56,390 --> 00:38:58,390
+ou seja, quando eu tenho serviços
+
+988
+00:38:58,390 --> 00:39:00,390
+que estão acessivas ao mundo
+
+989
+00:39:00,390 --> 00:39:02,390
+em que eu quero estar determinados
+
+990
+00:39:02,390 --> 00:39:04,390
+a tipo de ataques
+
+991
+00:39:04,390 --> 00:39:06,390
+imaginemos que eu tenho um servidor web
+
+992
+00:39:06,390 --> 00:39:08,390
+e quero tratar um determinado tipo de ataques
+
+993
+00:39:08,390 --> 00:39:10,390
+no nosso caso específico
+
+994
+00:39:10,390 --> 00:39:12,390
+dos sistemas inhibidos
+
+995
+00:39:12,390 --> 00:39:14,390
+muitas vezes os sistemas inhibidos
+
+996
+00:39:14,390 --> 00:39:16,390
+não estão dentro da firewall
+
+997
+00:39:16,390 --> 00:39:18,390
+e portanto
+
+998
+00:39:18,390 --> 00:39:20,390
+já por esse próprio propósito
+
+999
+00:39:20,390 --> 00:39:22,390
+não tem tanta necessidade
+
+1000
+00:39:22,390 --> 00:39:24,390
+de utilizar este tipo de soluções
+
+1001
+00:39:24,390 --> 00:39:26,390
+muitas vezes
+
+1002
+00:39:26,390 --> 00:39:28,390
+mas continuo de sua escolha
+
+1003
+00:39:28,390 --> 00:39:30,390
+a minha questão era mais
+
+1004
+00:39:30,390 --> 00:39:32,390
+então no caso
+
+1005
+00:39:32,390 --> 00:39:34,390
+nós
+
+1006
+00:39:34,390 --> 00:39:36,390
+exatamente
+
+1007
+00:39:36,390 --> 00:39:38,390
+exercemos mais ou menos pressão
+
+1008
+00:39:38,390 --> 00:39:40,390
+na computação
+
+1009
+00:39:40,390 --> 00:39:42,390
+com base naquilo que carregámos
+
+1010
+00:39:42,390 --> 00:39:44,390
+na base de dados
+
+1011
+00:39:44,390 --> 00:39:46,390
+ou seja, nas prevenções que isermos
+
+1012
+00:39:46,390 --> 00:39:48,390
+exatamente
+
+1013
+00:39:48,390 --> 00:39:50,390
+vamos falar um bocadinho
+
+1014
+00:39:50,390 --> 00:39:52,390
+há aqui uma questão que é
+
+1015
+00:39:52,390 --> 00:39:54,390
+já perceberam isso, eu estou a analisar pacotes
+
+1016
+00:39:54,390 --> 00:39:56,390
+isso tem uma terminada
+
+1017
+00:39:56,390 --> 00:39:58,390
+um custo computacional
+
+1018
+00:39:58,390 --> 00:40:00,390
+obviamente se eu tiver pacotes
+
+1019
+00:40:00,390 --> 00:40:02,390
+incriptados, eu tenho um custo computacional
+
+1020
+00:40:02,390 --> 00:40:04,390
+muito mais acrescido
+
+1021
+00:40:04,390 --> 00:40:06,390
+que eu tenho que desincriptar
+
+1022
+00:40:06,390 --> 00:40:08,390
+para poder ver o que está lá dentro
+
+1023
+00:40:08,390 --> 00:40:10,390
+e também tenho a ver
+
+1024
+00:40:10,390 --> 00:40:12,390
+também da minha base de dados de assinaturas
+
+1025
+00:40:12,390 --> 00:40:14,390
+só tiver uma base de dados de assinaturas
+
+1026
+00:40:14,390 --> 00:40:16,390
+muito extensa
+
+1027
+00:40:16,390 --> 00:40:18,390
+sempre tenho aquelas pacotes
+
+1028
+00:40:18,390 --> 00:40:20,390
+eu tenho que comprar com a minha base de dados todo
+
+1029
+00:40:20,390 --> 00:40:22,390
+quanto mais extensa foram as minhas bases de dados
+
+1030
+00:40:22,390 --> 00:40:24,390
+se os pacotes são muito incriptados
+
+1031
+00:40:24,390 --> 00:40:26,390
+tudo isto tem um peso computacional
+
+1032
+00:40:26,390 --> 00:40:28,390
+tipicamente
+
+1033
+00:40:28,390 --> 00:40:30,390
+para uma situação
+
+1034
+00:40:30,390 --> 00:40:32,390
+por exemplo
+
+1035
+00:40:32,390 --> 00:40:34,390
+a única situação que eu me diga assim
+
+1036
+00:40:34,390 --> 00:40:36,390
+mais a sério
+
+1037
+00:40:36,390 --> 00:40:38,390
+para situações de pequena dimensão
+
+1038
+00:40:38,390 --> 00:40:40,390
+estamos a falar
+
+1039
+00:40:40,390 --> 00:40:42,390
+de 10 termos envolvidos
+
+1040
+00:40:42,390 --> 00:40:44,390
+3 ou 4 pcs
+
+1041
+00:40:44,390 --> 00:40:46,390
+uma coisa assim relativamente pequena
+
+1042
+00:40:46,390 --> 00:40:48,390
+nós teremos logo ali a falar
+
+1043
+00:40:48,390 --> 00:40:50,390
+a brincar a 20%
+
+1044
+00:40:50,390 --> 00:40:52,390
+de custo computacional no professor
+
+1045
+00:40:52,390 --> 00:40:54,390
+só porque temos isto aqui
+
+1046
+00:40:54,390 --> 00:40:56,390
+a funcionar
+
+1047
+00:40:56,390 --> 00:40:58,390
+depois
+
+1048
+00:40:58,390 --> 00:41:00,390
+o programa mais utilizado
+
+1049
+00:41:00,390 --> 00:41:02,390
+e o programa é frio é
+
+1050
+00:41:02,390 --> 00:41:04,390
+que é o suricato
+
+1051
+00:41:04,390 --> 00:41:06,390
+o suricato é considerado
+
+1052
+00:41:06,390 --> 00:41:08,390
+o estándar
+
+1053
+00:41:08,390 --> 00:41:10,390
+neste ministro
+
+1054
+00:41:10,390 --> 00:41:12,390
+quando você instalou uma open-sense
+
+1055
+00:41:12,390 --> 00:41:14,390
+vocês viram o que ele tem a adones
+
+1056
+00:41:14,390 --> 00:41:16,390
+portanto eu posso chegar lá e simplesmente
+
+1057
+00:41:16,390 --> 00:41:18,390
+dizer eu quero usar o adone
+
+1058
+00:41:18,390 --> 00:41:20,390
+suricato
+
+1059
+00:41:20,390 --> 00:41:22,390
+claro que é evidente
+
+1060
+00:41:22,390 --> 00:41:24,390
+é como costumam estas coisas
+
+1061
+00:41:24,390 --> 00:41:26,390
+se eu utilizar o suricato
+
+1062
+00:41:26,390 --> 00:41:28,390
+eu tenho que escolher qual é a base
+
+1063
+00:41:28,390 --> 00:41:30,390
+de dados de assinaturas que vou comparar
+
+1064
+00:41:30,390 --> 00:41:32,390
+com as minhas pacotes
+
+1065
+00:41:32,390 --> 00:41:34,390
+há muitas soluções
+
+1066
+00:41:34,390 --> 00:41:36,390
+se eu optar por uma solução frio é
+
+1067
+00:41:36,390 --> 00:41:38,390
+eu vou ter mais
+
+1068
+00:41:38,390 --> 00:41:40,390
+falsos positivos
+
+1069
+00:41:40,390 --> 00:41:42,390
+é menos curada
+
+1070
+00:41:42,390 --> 00:41:44,390
+essa base de dados
+
+1071
+00:41:44,390 --> 00:41:46,390
+é menos base de dados mantidas
+
+1072
+00:41:46,390 --> 00:41:48,390
+mas que típicamente são base de dados
+
+1073
+00:41:48,390 --> 00:41:50,390
+que fornecem mais falsos positivos
+
+1074
+00:41:50,390 --> 00:41:52,390
+depois há uma segunda
+
+1075
+00:41:52,390 --> 00:41:54,390
+podemos dizer uma segunda linha
+
+1076
+00:41:54,390 --> 00:41:56,390
+de base de dados
+
+1077
+00:41:56,390 --> 00:41:58,390
+de assinaturas
+
+1078
+00:41:58,390 --> 00:42:00,390
+em que eu vou ser sincero
+
+1079
+00:42:00,390 --> 00:42:02,390
+acho isso fabuloso
+
+1080
+00:42:02,390 --> 00:42:04,390
+em que
+
+1081
+00:42:04,390 --> 00:42:06,390
+são bases de dados de assinaturas
+
+1082
+00:42:06,390 --> 00:42:08,390
+que estão a ser mantidas e que são
+
+1083
+00:42:08,390 --> 00:42:10,390
+de qualidade superior
+
+1084
+00:42:10,390 --> 00:42:12,390
+mas só podemos usar essas bases de dados
+
+1085
+00:42:12,390 --> 00:42:14,390
+se aceitarmos
+
+1086
+00:42:14,390 --> 00:42:16,390
+que
+
+1087
+00:42:16,390 --> 00:42:18,390
+as comparações
+
+1088
+00:42:18,390 --> 00:42:20,390
+que a nossa farola está a fazer
+
+1089
+00:42:20,390 --> 00:42:22,390
+podem ser enviadas
+
+1090
+00:42:22,390 --> 00:42:24,390
+para a empresa
+
+1091
+00:42:24,390 --> 00:42:26,390
+para a empresa melhorar as bases de dados
+
+1092
+00:42:26,390 --> 00:42:28,390
+não parece assim
+
+1093
+00:42:28,390 --> 00:42:30,390
+uma coisa muito simpática
+
+1094
+00:42:30,390 --> 00:42:32,390
+eu estarei a enviar para uma empresa
+
+1095
+00:42:32,390 --> 00:42:34,390
+que eu não conheço lá nenhum
+
+1096
+00:42:34,390 --> 00:42:36,390
+o que é que o meu sistema está a comparar
+
+1097
+00:42:36,390 --> 00:42:38,390
+para eles segundo eles
+
+1098
+00:42:38,390 --> 00:42:40,390
+melhorarem as bases de dados
+
+1099
+00:42:40,390 --> 00:42:42,390
+mas eu nunca me senti a vontade
+
+1100
+00:42:42,390 --> 00:42:44,390
+com isso e há uma terceira
+
+1101
+00:42:44,390 --> 00:42:46,390
+terceira nível que é obviamente
+
+1102
+00:42:46,390 --> 00:42:48,390
+eu compro licíndice
+
+1103
+00:42:48,390 --> 00:42:50,390
+base de dados de assinaturas
+
+1104
+00:42:50,390 --> 00:42:52,390
+e aí mais uma vez
+
+1105
+00:42:52,390 --> 00:42:54,390
+há bastante
+
+1106
+00:42:54,390 --> 00:42:56,390
+e é sempre às vezes
+
+1107
+00:42:56,390 --> 00:42:58,390
+um bocadinho olha
+
+1108
+00:42:58,390 --> 00:43:00,390
+as suas usas
+
+1109
+00:43:00,390 --> 00:43:02,390
+e o uso extra tem dado bom resultado
+
+1110
+00:43:02,390 --> 00:43:04,390
+mas dependem de um tipo de ataques
+
+1111
+00:43:04,390 --> 00:43:06,390
+dependem dos serviços que estão a ser
+
+1112
+00:43:06,390 --> 00:43:08,390
+utilizados para o exterior
+
+1113
+00:43:08,390 --> 00:43:10,390
+no entanto como eu vos disse
+
+1114
+00:43:10,390 --> 00:43:12,390
+típicamente este pacote
+
+1115
+00:43:12,390 --> 00:43:14,390
+este tipo de situação
+
+1116
+00:43:14,390 --> 00:43:16,390
+baseado em suricata
+
+1117
+00:43:16,390 --> 00:43:18,390
+eu vejo normalmente
+
+1118
+00:43:18,390 --> 00:43:20,390
+este sempre relegado para o ano
+
+1119
+00:43:20,390 --> 00:43:22,390
+ou seja para situações que eu tenho serviços
+
+1120
+00:43:22,390 --> 00:43:24,390
+que estão a ser disponibilizados na internet
+
+1121
+00:43:24,390 --> 00:43:26,390
+e então nestes serviços que eu estou
+
+1122
+00:43:26,390 --> 00:43:28,390
+a verificar
+
+1123
+00:43:28,390 --> 00:43:30,390
+estou a fazer
+
+1124
+00:43:30,390 --> 00:43:32,390
+uma espécie de pacotes
+
+1125
+00:43:32,390 --> 00:43:34,390
+para confirmar se as assinaturas estão
+
+1126
+00:43:34,390 --> 00:43:36,390
+ou não estão a mostrar
+
+1127
+00:43:36,390 --> 00:43:38,390
+uma coisa porque
+
+1128
+00:43:38,390 --> 00:43:40,390
+eu aí consegui ver
+
+1129
+00:43:40,390 --> 00:43:42,390
+imaginemos eu tenho um
+
+1130
+00:43:42,390 --> 00:43:44,390
+um serviço
+
+1131
+00:43:44,390 --> 00:43:46,390
+exposto na rede
+
+1132
+00:43:46,390 --> 00:43:48,390
+e consigo ter as assinaturas
+
+1133
+00:43:48,390 --> 00:43:50,390
+por exemplo se estão a fazer um ataque de SQL Injection
+
+1134
+00:43:50,390 --> 00:43:52,390
+ou uma coisa semelhante
+
+1135
+00:43:52,390 --> 00:43:54,390
+estão a fazer um tipo de ataques
+
+1136
+00:43:54,390 --> 00:43:56,390
+eu tenho visto mais isto
+
+1137
+00:43:56,390 --> 00:43:58,390
+utilização suricata
+
+1138
+00:43:58,390 --> 00:44:00,390
+em situações viradas para o ano
+
+1139
+00:44:00,390 --> 00:44:02,390
+e tenho visto
+
+1140
+00:44:02,390 --> 00:44:04,390
+outro tipo de soluções
+
+1141
+00:44:04,390 --> 00:44:06,390
+não baseadas de suricata
+
+1142
+00:44:06,390 --> 00:44:08,390
+neste caso já falamos isto
+
+1143
+00:44:08,390 --> 00:44:10,390
+as nestes de generation firewall
+
+1144
+00:44:10,390 --> 00:44:12,390
+pacotes que são relegados
+
+1145
+00:44:12,390 --> 00:44:14,390
+mais para a área de LAN
+
+1146
+00:44:14,390 --> 00:44:16,390
+e por isso é que eu devo ver isso ao bocado
+
+1147
+00:44:16,390 --> 00:44:18,390
+que eu vou vos mostrar
+
+1148
+00:44:18,390 --> 00:44:20,390
+e como tipicamente
+
+1149
+00:44:20,390 --> 00:44:22,390
+os meus sistemas envolvidos
+
+1150
+00:44:22,390 --> 00:44:24,390
+são os serviços na LAN
+
+1151
+00:44:24,390 --> 00:44:26,390
+eu estou a ter serviço dentro da minha LAN
+
+1152
+00:44:26,390 --> 00:44:28,390
+eu vou mostrar-vos
+
+1153
+00:44:28,390 --> 00:44:30,390
+mais uma solução
+
+1154
+00:44:30,390 --> 00:44:32,390
+em next generation firewall
+
+1155
+00:44:32,390 --> 00:44:34,390
+para a LAN
+
+1156
+00:44:34,390 --> 00:44:36,390
+do que o suricata
+
+1157
+00:44:36,390 --> 00:44:38,390
+para a LAN
+
+1158
+00:44:38,390 --> 00:44:40,390
+como vos disse
+
+1159
+00:44:40,390 --> 00:44:42,390
+são uma aplicação de regras
+
+1160
+00:44:42,390 --> 00:44:44,390
+uma base das regras
+
+1161
+00:44:44,390 --> 00:44:46,390
+que vão ser configuradas
+
+1162
+00:44:46,390 --> 00:44:48,390
+portanto que vos disse
+
+1163
+00:44:48,390 --> 00:44:50,390
+eu tenho um tráfego
+
+1164
+00:44:50,390 --> 00:44:52,390
+de suricata
+
+1165
+00:44:52,390 --> 00:44:54,390
+e depois eu com isto
+
+1166
+00:44:54,390 --> 00:44:56,390
+posso ter alertas
+
+1167
+00:44:56,390 --> 00:44:58,390
+posso fazer analysis
+
+1168
+00:44:58,390 --> 00:45:00,390
+de fluxos de informação
+
+1169
+00:45:00,390 --> 00:45:02,390
+de redes
+
+1170
+00:45:02,390 --> 00:45:04,390
+posso, a partir daqui
+
+1171
+00:45:04,390 --> 00:45:06,390
+com esta informação fazer muita coisa
+
+1172
+00:45:06,390 --> 00:45:08,390
+mais uma vez, aqui e às vezes
+
+1173
+00:45:08,390 --> 00:45:10,390
+há aqui um problema de chest de informação
+
+1174
+00:45:10,390 --> 00:45:12,390
+quando eu utilizo este tipo de ferramentas
+
+1175
+00:45:12,390 --> 00:45:14,390
+como já tinha falado
+
+1176
+00:45:14,390 --> 00:45:16,390
+em proliferação de ligação entre
+
+1177
+00:45:16,390 --> 00:45:18,390
+em
+
+1178
+00:45:18,390 --> 00:45:20,390
+TLS
+
+1179
+00:45:20,390 --> 00:45:22,390
+implica uma diminuição de utilidade de API
+
+1180
+00:45:22,390 --> 00:45:24,390
+porque implica
+
+1181
+00:45:24,390 --> 00:45:26,390
+um aumento procemente necessário
+
+1182
+00:45:28,390 --> 00:45:30,390
+lá está tal questão da avaliação
+
+1183
+00:45:30,390 --> 00:45:32,390
+das suas necessidades
+
+1184
+00:45:32,390 --> 00:45:34,390
+e das regras que eu vou ter a utilizar
+
+1185
+00:45:34,390 --> 00:45:36,390
+porque isto tem implicações
+
+1186
+00:45:36,390 --> 00:45:38,390
+no custo da firewall
+
+1187
+00:45:38,390 --> 00:45:40,390
+obviamente, se eu estiver em minha casa
+
+1188
+00:45:40,390 --> 00:45:42,390
+ou estiver num escritório da advogada
+
+1189
+00:45:42,390 --> 00:45:44,390
+ou estiver numa clínica médica
+
+1190
+00:45:44,390 --> 00:45:46,390
+se calhar não tem um impacto
+
+1191
+00:45:46,390 --> 00:45:48,390
+tão elevado com isto
+
+1192
+00:45:48,390 --> 00:45:50,390
+mas se calhar também uma clínica médica
+
+1193
+00:45:50,390 --> 00:45:52,390
+se quiser ter um servidor do web
+
+1194
+00:45:52,390 --> 00:45:54,390
+também não vou
+
+1195
+00:45:54,390 --> 00:45:56,390
+for o servidor do web de antaclínica
+
+1196
+00:45:56,390 --> 00:45:58,390
+vou disponibilizar estes serviços fora
+
+1197
+00:45:58,390 --> 00:46:00,390
+e, portanto, provavelmente
+
+1198
+00:46:00,390 --> 00:46:02,390
+de antaclínica eu terei os sistemas
+
+1199
+00:46:02,390 --> 00:46:04,390
+e movidos típicos da medicina
+
+1200
+00:46:04,390 --> 00:46:06,390
+mais uma vez
+
+1201
+00:46:06,390 --> 00:46:08,390
+a questão dos falsos positivos
+
+1202
+00:46:08,390 --> 00:46:10,390
+e, portanto,
+
+1203
+00:46:10,390 --> 00:46:12,390
+há aqui
+
+1204
+00:46:12,390 --> 00:46:14,390
+que implica uma escolha
+
+1205
+00:46:14,390 --> 00:46:16,390
+criteriosa da base
+
+1206
+00:46:16,390 --> 00:46:18,390
+da de regras
+
+1207
+00:46:18,390 --> 00:46:20,390
+e, claro, também implica
+
+1208
+00:46:20,390 --> 00:46:22,390
+o aparecimento de vendedores
+
+1209
+00:46:22,390 --> 00:46:24,390
+com soluções adicionais
+
+1210
+00:46:24,390 --> 00:46:26,390
+ou de API clássico
+
+1211
+00:46:26,390 --> 00:46:28,390
+que eu vou buscar uma base
+
+1212
+00:46:28,390 --> 00:46:30,390
+da de assinaturas
+
+1213
+00:46:30,390 --> 00:46:32,390
+num caso específico de dióteros
+
+1214
+00:46:32,390 --> 00:46:34,390
+ou seja, dos sistemas envolvidos
+
+1215
+00:46:34,390 --> 00:46:36,390
+e aqui já sabem que uso
+
+1216
+00:46:36,390 --> 00:46:38,390
+uma palavra ou outra
+
+1217
+00:46:38,390 --> 00:46:40,390
+de uma forma
+
+1218
+00:46:40,390 --> 00:46:42,390
+genérica
+
+1219
+00:46:42,390 --> 00:46:44,390
+e temos uma
+
+1220
+00:46:44,390 --> 00:46:46,390
+reflexão de protocolos
+
+1221
+00:46:46,390 --> 00:46:48,390
+ou seja, não tem só os protocolos
+
+1222
+00:46:48,390 --> 00:46:50,390
+TCP, tipicamente
+
+1223
+00:46:50,390 --> 00:46:52,390
+já vimos isso logo
+
+1224
+00:46:52,390 --> 00:46:54,390
+que eu vos disse, tipicamente, em OTS
+
+1225
+00:46:54,390 --> 00:46:56,390
+só tiveram protocolo
+
+1226
+00:46:56,390 --> 00:46:58,390
+e agora vamos tentar modificar os protocolos
+
+1227
+00:46:58,390 --> 00:47:00,390
+todo o que vai acontecer
+
+1228
+00:47:00,390 --> 00:47:02,390
+até mais um protocolo
+
+1229
+00:47:02,390 --> 00:47:04,390
+e se não complica
+
+1230
+00:47:04,390 --> 00:47:06,390
+e nós hoje vamos tentar mostrar
+
+1231
+00:47:06,390 --> 00:47:08,390
+para vocês perceberem que eu estou aqui a falar
+
+1232
+00:47:08,390 --> 00:47:10,390
+quando falo qual é o problema
+
+1233
+00:47:10,390 --> 00:47:12,390
+da infração dos protocolos de ligação
+
+1234
+00:47:12,390 --> 00:47:14,390
+que é aqui na trás
+
+1235
+00:47:14,390 --> 00:47:16,390
+da adicionão, aqui depois de uma demonstração
+
+1236
+00:47:16,390 --> 00:47:18,390
+mais à frente que eu vou tentar fazer
+
+1237
+00:47:18,390 --> 00:47:20,390
+portanto, uma maior percentagem
+
+1238
+00:47:20,390 --> 00:47:22,390
+de falso negativo são os positivos
+
+1239
+00:47:22,390 --> 00:47:24,390
+e um menor número de vetores da tac
+
+1240
+00:47:24,390 --> 00:47:26,390
+ou seja, eu sei que tenho
+
+1241
+00:47:26,390 --> 00:47:28,390
+uma superfície da tac superior
+
+1242
+00:47:28,390 --> 00:47:30,390
+porque passa a ter mais protocolos
+
+1243
+00:47:30,390 --> 00:47:32,390
+e passa a ter mais positivos
+
+1244
+00:47:32,390 --> 00:47:34,390
+a superfície da tac, tipicamente, será
+
+1245
+00:47:34,390 --> 00:47:36,390
+proporcional à isso, quando falamos
+
+1246
+00:47:36,390 --> 00:47:38,390
+que a superfície da tac é as possibilidades
+
+1247
+00:47:38,390 --> 00:47:40,390
+de detectar, mas na verdade
+
+1248
+00:47:40,390 --> 00:47:42,390
+é que muitas vezes
+
+1249
+00:47:42,390 --> 00:47:44,390
+o número de detecções da tac
+
+1250
+00:47:44,390 --> 00:47:46,390
+diminui porque exatamente eu tenho
+
+1251
+00:47:46,390 --> 00:47:48,390
+uma proliferação
+
+1252
+00:47:48,390 --> 00:47:50,390
+de sistemas
+
+1253
+00:47:50,390 --> 00:47:52,390
+os sistemas são muito heterogênticos
+
+1254
+00:47:52,390 --> 00:47:54,390
+muitas vezes e os protocolos
+
+1255
+00:47:54,390 --> 00:47:56,390
+têm vários protocolos de indicação
+
+1256
+00:47:56,390 --> 00:47:58,390
+e portanto, muitas vezes eu tenho mais dificuldade
+
+1257
+00:47:58,390 --> 00:48:00,390
+em detectar
+
+1258
+00:48:00,390 --> 00:48:02,390
+esses ataques
+
+1259
+00:48:04,390 --> 00:48:06,390
+posso ter DPI's sem IPS
+
+1260
+00:48:06,390 --> 00:48:08,390
+que é a minha espécie
+
+1261
+00:48:08,390 --> 00:48:10,390
+em que eu pretendo
+
+1262
+00:48:10,390 --> 00:48:12,390
+verificar ou analisar o tráfego
+
+1263
+00:48:12,390 --> 00:48:14,390
+e gerar alertas, mas sempre o que é o tráfego
+
+1264
+00:48:14,390 --> 00:48:16,390
+e aqui, os programas mais
+
+1265
+00:48:16,390 --> 00:48:18,390
+utilizados
+
+1266
+00:48:18,390 --> 00:48:20,390
+deste tipo
+
+1267
+00:48:20,390 --> 00:48:22,390
+de análise de tráfego
+
+1268
+00:48:22,390 --> 00:48:24,390
+não é só este
+
+1269
+00:48:24,390 --> 00:48:26,390
+há mais, eu pessoalmente
+
+1270
+00:48:26,390 --> 00:48:28,390
+uso em top, em ninguém
+
+1271
+00:48:28,390 --> 00:48:30,390
+e eu acho
+
+1272
+00:48:30,390 --> 00:48:32,390
+e aqui vamos, então, voltar
+
+1273
+00:48:32,390 --> 00:48:34,390
+à nossa
+
+1274
+00:48:34,390 --> 00:48:36,390
+nossa
+
+1275
+00:48:36,390 --> 00:48:38,390
+nossa Cali
+
+1276
+00:48:40,390 --> 00:48:42,390
+antes de voltar à alma de Cali,
+
+1277
+00:48:42,390 --> 00:48:44,390
+o que é que eu vos vou demonstrar?
+
+1278
+00:48:44,390 --> 00:48:46,390
+portanto, eu criei aqui
+
+1279
+00:48:46,390 --> 00:48:48,390
+uma simulação
+
+1280
+00:48:48,390 --> 00:48:50,390
+eu criei uma simulação
+
+1281
+00:48:50,390 --> 00:48:52,390
+de um sistema invadido
+
+1282
+00:48:52,390 --> 00:48:54,390
+neste caso, este
+
+1283
+00:48:54,390 --> 00:48:56,390
+mais uma vez como sempre
+
+1284
+00:48:56,390 --> 00:48:58,390
+começa por OpenSense, que está no lado
+
+1285
+00:48:58,390 --> 00:49:00,390
+do LAN da OpenSense
+
+1286
+00:49:00,390 --> 00:49:02,390
+este não está no meu tráfego
+
+1287
+00:49:02,390 --> 00:49:04,390
+eu tenho um cliente
+
+1288
+00:49:04,390 --> 00:49:06,390
+NKTT
+
+1289
+00:49:06,390 --> 00:49:08,390
+que está a ser simulado
+
+1290
+00:49:08,390 --> 00:49:10,390
+e tenho
+
+1291
+00:49:10,390 --> 00:49:12,390
+um segundo
+
+1292
+00:49:12,390 --> 00:49:14,390
+mas o segundo está a ser ligado
+
+1293
+00:49:14,390 --> 00:49:16,390
+e tenho aqui um osquito
+
+1294
+00:49:16,390 --> 00:49:18,390
+que é um broker
+
+1295
+00:49:18,390 --> 00:49:20,390
+depois vamos falar nas alfas da OpenSense
+
+1296
+00:49:20,390 --> 00:49:22,390
+portanto, que permite a comunicação
+
+1297
+00:49:22,390 --> 00:49:24,390
+em NKTT
+
+1298
+00:49:24,390 --> 00:49:26,390
+portanto, eu tenho aqui uma comunicação
+
+1299
+00:49:26,390 --> 00:49:28,390
+entre um sistema invadido
+
+1300
+00:49:28,390 --> 00:49:30,390
+que está a ser simulado
+
+1301
+00:49:30,390 --> 00:49:32,390
+em um sistema
+
+1302
+00:49:32,390 --> 00:49:34,390
+e um broker
+
+1303
+00:49:34,390 --> 00:49:36,390
+na realidade
+
+1304
+00:49:36,390 --> 00:49:38,390
+também podemos ver isso
+
+1305
+00:49:38,390 --> 00:49:40,390
+dentro da minha própria rede
+
+1306
+00:49:40,390 --> 00:49:42,390
+e eu optei por mostrar-vos a situação
+
+1307
+00:49:42,390 --> 00:49:44,390
+em que vocês vão no laboratório
+
+1308
+00:49:44,390 --> 00:49:46,390
+a realizar
+
+1309
+00:49:46,390 --> 00:49:48,390
+e não a situação que eu tenho aqui em casa
+
+1310
+00:49:48,390 --> 00:49:50,390
+porque na realidade eu também tenho
+
+1311
+00:49:50,390 --> 00:49:52,390
+comunicações entre sistemas invadidos
+
+1312
+00:49:52,390 --> 00:49:54,390
+comunicações baseadas
+
+1313
+00:49:54,390 --> 00:49:56,390
+tem muito tipo de comunicações, tenho comunicações baseadas
+
+1314
+00:49:56,390 --> 00:49:58,390
+em NKTT
+
+1315
+00:49:58,390 --> 00:50:00,390
+por termos de função mais simples
+
+1316
+00:50:00,390 --> 00:50:02,390
+e portanto, o que nós neste momento
+
+1317
+00:50:02,390 --> 00:50:04,390
+vamos ver é as comunicações
+
+1318
+00:50:04,390 --> 00:50:06,390
+NKTT
+
+1319
+00:50:06,390 --> 00:50:08,390
+usando
+
+1320
+00:50:08,390 --> 00:50:10,390
+N-Top, N-G
+
+1321
+00:50:10,390 --> 00:50:12,390
+e ver o que é que nós com este N-Top
+
+1322
+00:50:12,390 --> 00:50:14,390
+N-G
+
+1323
+00:50:14,390 --> 00:50:16,390
+conseguimos ter
+
+1324
+00:50:16,390 --> 00:50:18,390
+de visualização
+
+1325
+00:50:18,390 --> 00:50:23,850
+da rede
+
+1326
+00:50:23,850 --> 00:50:25,850
+o N-Top N-G
+
+1327
+00:50:25,850 --> 00:50:27,850
+é um adone
+
+1328
+00:50:27,850 --> 00:50:29,850
+que pode ser instalado como adone de OpenSense
+
+1329
+00:50:29,850 --> 00:50:31,850
+como pode ser instalado
+
+1330
+00:50:31,850 --> 00:50:33,850
+a parte
+
+1331
+00:50:33,850 --> 00:50:35,850
+eu também tenho instalado a parte
+
+1332
+00:50:35,850 --> 00:50:37,850
+como eu disse, eu não uso OpenSense
+
+1333
+00:50:37,850 --> 00:50:39,850
+em produção, uso neste momento o NIFEI
+
+1334
+00:50:39,850 --> 00:50:41,850
+e aí eu terei que fazer
+
+1335
+00:50:41,850 --> 00:50:43,850
+um
+
+1336
+00:50:43,850 --> 00:50:45,850
+reflector
+
+1337
+00:50:45,850 --> 00:50:47,850
+de pacotes, ou seja, todos os pacotes
+
+1338
+00:50:47,850 --> 00:50:49,850
+mas não estou instalado diretamente na FB
+
+1339
+00:50:49,850 --> 00:50:51,850
+ou não estou instalado diretamente no Ruta
+
+1340
+00:50:51,850 --> 00:50:53,850
+eu tenho que ter a visão
+
+1341
+00:50:53,850 --> 00:50:55,850
+desses pacotes e portanto
+
+1342
+00:50:55,850 --> 00:50:57,850
+tenho que redirecionar
+
+1343
+00:50:57,850 --> 00:50:59,850
+os pacotes todos para o N-Top N-G
+
+1344
+00:50:59,850 --> 00:51:01,850
+com os custos
+
+1345
+00:51:01,850 --> 00:51:03,850
+obviamente que isso tem em termos
+
+1346
+00:51:03,850 --> 00:51:05,850
+de rede
+
+1347
+00:51:05,850 --> 00:51:07,850
+de tráfico de rede, que eu vou ter que
+
+1348
+00:51:07,850 --> 00:51:09,850
+fazer um reflector
+
+1349
+00:51:09,850 --> 00:51:11,850
+de todo o tráfico de rede
+
+1350
+00:51:11,850 --> 00:51:13,850
+o N-Top N-G
+
+1351
+00:51:13,850 --> 00:51:15,850
+vamos então aqui
+
+1352
+00:51:15,850 --> 00:51:17,850
+ele instala-se
+
+1353
+00:51:17,850 --> 00:51:19,850
+na OpenSense
+
+1354
+00:51:19,850 --> 00:51:21,850
+como um adone
+
+1355
+00:51:21,850 --> 00:51:23,850
+depois de instalar na OpenSense
+
+1356
+00:51:23,850 --> 00:51:25,850
+com o adone, eu simplesmente
+
+1357
+00:51:25,850 --> 00:51:27,850
+pronto para o porto 3000
+
+1358
+00:51:27,850 --> 00:51:29,850
+portanto é o mesmo endereço
+
+1359
+00:51:29,850 --> 00:51:31,850
+da minha OpenSense, 292.168.1
+
+1360
+00:51:31,850 --> 00:51:33,850
+só que agora vai viver
+
+1361
+00:51:33,850 --> 00:51:35,850
+no porto 3000
+
+1362
+00:51:35,850 --> 00:51:37,850
+e se vocês olharem para aqui
+
+1363
+00:51:37,850 --> 00:51:39,850
+neste momento que vocês já estão a ver
+
+1364
+00:51:39,850 --> 00:51:41,850
+aqui é o N-Top
+
+1365
+00:51:41,850 --> 00:51:43,850
+N-G
+
+1366
+00:51:43,850 --> 00:51:45,850
+e portanto o que ele vai fazer
+
+1367
+00:51:45,850 --> 00:51:47,850
+basicamente ele vai observar
+
+1368
+00:51:47,850 --> 00:51:49,850
+não os pacotes
+
+1369
+00:51:49,850 --> 00:51:51,850
+mas vai tipicamente
+
+1370
+00:51:51,850 --> 00:51:53,850
+observar o tipo de protocolo
+
+1371
+00:51:53,850 --> 00:51:55,850
+se é não encriptado
+
+1372
+00:51:55,850 --> 00:51:57,850
+quais são os portos
+
+1373
+00:51:57,850 --> 00:51:59,850
+qual é que está a passar
+
+1374
+00:51:59,850 --> 00:52:01,850
+na rede
+
+1375
+00:52:01,850 --> 00:52:03,850
+neste momento
+
+1376
+00:52:03,850 --> 00:52:05,850
+e o que vocês conseguem ver
+
+1377
+00:52:05,850 --> 00:52:07,850
+neste momento é uma série
+
+1378
+00:52:07,850 --> 00:52:09,850
+de conexões
+
+1379
+00:52:09,850 --> 00:52:11,850
+todas do meu Cali
+
+1380
+00:52:11,850 --> 00:52:13,850
+e vem logo
+
+1381
+00:52:13,850 --> 00:52:15,850
+aqui um score de 100
+
+1382
+00:52:15,850 --> 00:52:17,850
+ou seja, ele tem depois
+
+1383
+00:52:17,850 --> 00:52:19,850
+uma série de regras
+
+1384
+00:52:19,850 --> 00:52:21,850
+de comportamento
+
+1385
+00:52:21,850 --> 00:52:23,850
+ou seja
+
+1386
+00:52:23,850 --> 00:52:25,850
+por exemplo, ele sabe sobre uma ligação
+
+1387
+00:52:25,850 --> 00:52:27,850
+uma regra de comportamento simples
+
+1388
+00:52:27,850 --> 00:52:29,850
+uma ligação
+
+1389
+00:52:29,850 --> 00:52:31,850
+em TCP
+
+1390
+00:52:31,850 --> 00:52:33,850
+porto 80, quer dizer que é uma ligação
+
+1391
+00:52:33,850 --> 00:52:35,850
+HTTP
+
+1392
+00:52:35,850 --> 00:52:37,850
+e quer dizer que é uma ligação não encriptada
+
+1393
+00:52:37,850 --> 00:52:39,850
+e portanto se ele detectar
+
+1394
+00:52:39,850 --> 00:52:41,850
+que estão a existir conexões
+
+1395
+00:52:41,850 --> 00:52:43,850
+no porto 80
+
+1396
+00:52:43,850 --> 00:52:45,850
+não
+
+1397
+00:52:45,850 --> 00:52:47,850
+no porto 80
+
+1398
+00:52:47,850 --> 00:52:49,850
+ele vai me dizer cuidado
+
+1399
+00:52:49,850 --> 00:52:51,850
+mas aqui a possibilidade
+
+1400
+00:52:51,850 --> 00:52:53,850
+de ter aqui
+
+1401
+00:52:53,850 --> 00:52:55,850
+uma situação de
+
+1402
+00:52:55,850 --> 00:52:57,850
+pode não ser um ataque
+
+1403
+00:52:57,850 --> 00:52:59,850
+ele não vai detectar ataques
+
+1404
+00:52:59,850 --> 00:53:01,850
+ele vai detectar comportamentos
+
+1405
+00:53:01,850 --> 00:53:03,850
+que não são corretos
+
+1406
+00:53:03,850 --> 00:53:05,850
+e vai dar um score
+
+1407
+00:53:05,850 --> 00:53:07,850
+de comportamentos
+
+1408
+00:53:07,850 --> 00:53:09,850
+neste caso vocês conseguem ver
+
+1409
+00:53:09,850 --> 00:53:11,850
+um score de comportamento 100
+
+1410
+00:53:11,850 --> 00:53:13,850
+ou seja
+
+1411
+00:53:13,850 --> 00:53:15,850
+bastante elevado não é
+
+1412
+00:53:15,850 --> 00:53:17,850
+portanto que é uma ligação do meu Cali
+
+1413
+00:53:17,850 --> 00:53:19,850
+um score de 5500
+
+1414
+00:53:19,850 --> 00:53:21,850
+24
+
+1415
+00:53:21,850 --> 00:53:23,850
+e ele diz mal que é cuidado com este tipo de ligação
+
+1416
+00:53:23,850 --> 00:53:25,850
+e convém a olhar para este tipo
+
+1417
+00:53:25,850 --> 00:53:27,850
+de ligação
+
+1418
+00:53:27,850 --> 00:53:29,850
+em qualquer
+
+1419
+00:53:29,850 --> 00:53:31,850
+altura eu supostamente
+
+1420
+00:53:31,850 --> 00:53:33,850
+não está a fazer isso
+
+1421
+00:53:33,850 --> 00:53:35,850
+mas eu devia conseguir ver
+
+1422
+00:53:35,850 --> 00:53:37,850
+as ligações mas posso pedir
+
+1423
+00:53:37,850 --> 00:53:39,850
+para ver só os
+
+1424
+00:53:39,850 --> 00:53:41,850
+alertas
+
+1425
+00:53:41,850 --> 00:53:43,850
+ele neste momento está a mostrar
+
+1426
+00:53:43,850 --> 00:53:45,850
+simplesmente os alertas e eu posso ver
+
+1427
+00:53:45,850 --> 00:53:47,850
+as ligações
+
+1428
+00:53:47,850 --> 00:53:49,850
+como o Cali está a fazer
+
+1429
+00:53:49,850 --> 00:53:51,850
+que as são as ligações
+
+1430
+00:53:51,850 --> 00:53:53,850
+do meu open-sense
+
+1431
+00:53:53,850 --> 00:53:55,850
+e posso sempre pedir a ele
+
+1432
+00:53:55,850 --> 00:53:57,850
+para obviamente fazer filtragens
+
+1433
+00:53:57,850 --> 00:53:59,850
+por tipo de protocolos
+
+1434
+00:53:59,850 --> 00:54:01,850
+ok
+
+1435
+00:54:01,850 --> 00:54:03,850
+neste momento eu só pedi os warnings
+
+1436
+00:54:03,850 --> 00:54:05,850
+mas posso pedir todo tipo
+
+1437
+00:54:05,850 --> 00:54:07,850
+de protocolos
+
+1438
+00:54:07,850 --> 00:54:09,850
+e ao me ver aqui que aparece logo aqui
+
+1439
+00:54:09,850 --> 00:54:11,850
+um pedido de ligação
+
+1440
+00:54:11,850 --> 00:54:13,850
+e aqui que eu queria chamar a atenção
+
+1441
+00:54:13,850 --> 00:54:15,850
+que esta parte é importante
+
+1442
+00:54:15,850 --> 00:54:17,850
+aqui uma ligação
+
+1443
+00:54:17,850 --> 00:54:19,850
+do meu open-sense mktt client 1
+
+1444
+00:54:21,850 --> 00:54:23,850
+que ele não
+
+1445
+00:54:23,850 --> 00:54:25,850
+classificou como sendo perigosa
+
+1446
+00:54:25,850 --> 00:54:27,850
+e não classificou como sendo perigosa
+
+1447
+00:54:27,850 --> 00:54:29,850
+porque nas regras
+
+1448
+00:54:29,850 --> 00:54:31,850
+de comportamento
+
+1449
+00:54:31,850 --> 00:54:33,850
+que ele tem neste momento carregadas
+
+1450
+00:54:33,850 --> 00:54:35,850
+essas regras de comportamento
+
+1451
+00:54:35,850 --> 00:54:37,850
+não equacionam
+
+1452
+00:54:37,850 --> 00:54:39,850
+as comunicações mktt
+
+1453
+00:54:39,850 --> 00:54:41,850
+ok
+
+1454
+00:54:41,850 --> 00:54:43,850
+ele está muito mais virado
+
+1455
+00:54:43,850 --> 00:54:45,850
+para comunicações http
+
+1456
+00:54:45,850 --> 00:54:47,850
+para comunicações estandas
+
+1457
+00:54:47,850 --> 00:54:49,850
+mas nas comunicações mktt
+
+1458
+00:54:49,850 --> 00:54:51,850
+ele não tem nenhuma regra de comportamento
+
+1459
+00:54:51,850 --> 00:54:53,850
+as regras de comportamento são políticas
+
+1460
+00:54:53,850 --> 00:54:55,850
+são aqui
+
+1461
+00:54:55,850 --> 00:54:57,850
+e se vocês
+
+1462
+00:54:57,850 --> 00:54:59,850
+e se fomos ao baby roll check
+
+1463
+00:54:59,850 --> 00:55:01,850
+e abrimos aqui no novo tab
+
+1464
+00:55:01,850 --> 00:55:05,420
+onde vê que só fizer aqui
+
+1465
+00:55:05,420 --> 00:55:07,420
+uma pesquisa por mktt
+
+1466
+00:55:07,420 --> 00:55:09,420
+não aparece nada
+
+1467
+00:55:09,420 --> 00:55:11,420
+ou seja, não há nenhuma regra
+
+1468
+00:55:11,420 --> 00:55:13,420
+embora eu saiba
+
+1469
+00:55:13,420 --> 00:55:15,420
+sei que tem um comportamento
+
+1470
+00:55:15,420 --> 00:55:17,420
+bastante complexo
+
+1471
+00:55:17,420 --> 00:55:19,420
+no mktt e por que?
+
+1472
+00:55:19,420 --> 00:55:21,420
+porque estou a fazer comunicações mktt
+
+1473
+00:55:21,420 --> 00:55:23,420
+entre um sistema imobíto
+
+1474
+00:55:23,420 --> 00:55:25,420
+e um broker
+
+1475
+00:55:25,420 --> 00:55:27,420
+comunicações não equiliputadas
+
+1476
+00:55:27,420 --> 00:55:29,420
+ok, eu fiz isso de propósito
+
+1477
+00:55:29,420 --> 00:55:31,420
+elas não estão a ser equiliputadas
+
+1478
+00:55:31,420 --> 00:55:33,420
+mas o on top nge
+
+1479
+00:55:33,420 --> 00:55:35,420
+não está
+
+1480
+00:55:35,420 --> 00:55:37,420
+conseguido apanhar
+
+1481
+00:55:37,420 --> 00:55:39,420
+esse tipo de ligações
+
+1482
+00:55:39,420 --> 00:55:41,420
+puro que nas regras de comportamento
+
+1483
+00:55:41,420 --> 00:55:43,420
+que são
+
+1484
+00:55:43,420 --> 00:55:45,420
+117 que estão neste momento carregadas
+
+1485
+00:55:45,420 --> 00:55:47,420
+não existe nenhuma
+
+1486
+00:55:47,420 --> 00:55:49,420
+regra de comportamento para as comunicações
+
+1487
+00:55:49,420 --> 00:55:51,420
+mktt
+
+1488
+00:55:51,420 --> 00:55:53,420
+e portanto que não existe nenhuma regra de comportamento
+
+1489
+00:55:53,420 --> 00:55:55,420
+e ele por isso simplesmente
+
+1490
+00:55:55,420 --> 00:55:57,420
+borrifa-se
+
+1491
+00:55:57,420 --> 00:55:59,420
+claro que é evidente
+
+1492
+00:55:59,420 --> 00:56:01,420
+que eu também posso ligar isto ao suricata
+
+1493
+00:56:01,420 --> 00:56:03,420
+e fazer aqui umas coisinhas mais interessantes
+
+1494
+00:56:03,420 --> 00:56:05,420
+mas não é isso que
+
+1495
+00:56:05,420 --> 00:56:07,420
+está neste momento
+
+1496
+00:56:07,420 --> 00:56:09,420
+claro que é evidente
+
+1497
+00:56:09,420 --> 00:56:11,420
+que eu consigo ter
+
+1498
+00:56:11,420 --> 00:56:13,420
+uma série de gráficos que são sempre interessantes
+
+1499
+00:56:13,420 --> 00:56:15,420
+em que eu consigo ver
+
+1500
+00:56:15,420 --> 00:56:17,420
+quem são
+
+1501
+00:56:17,420 --> 00:56:19,420
+os mais palavrosos
+
+1502
+00:56:19,420 --> 00:56:21,420
+em termos
+
+1503
+00:56:21,420 --> 00:56:23,420
+de comunicações
+
+1504
+00:56:23,420 --> 00:56:25,420
+eu consigo saber
+
+1505
+00:56:25,420 --> 00:56:27,420
+como consigo saber quais são as aplicações
+
+1506
+00:56:27,420 --> 00:56:29,420
+que estão a ser mais usadas
+
+1507
+00:56:29,420 --> 00:56:31,420
+qual é que é a classificação
+
+1508
+00:56:31,420 --> 00:56:33,420
+que ele está a dar ao tipo de tráfego
+
+1509
+00:56:33,420 --> 00:56:35,420
+se considera tráfego
+
+1510
+00:56:35,420 --> 00:56:37,420
+mais correto
+
+1511
+00:56:37,420 --> 00:56:39,420
+ou menos correto, tem uns alertas
+
+1512
+00:56:39,420 --> 00:56:41,420
+ou seja, eu com isto consigo ter uma visão
+
+1513
+00:56:41,420 --> 00:56:43,420
+da rede
+
+1514
+00:56:43,420 --> 00:56:45,420
+mas mais uma vez como
+
+1515
+00:56:45,420 --> 00:56:47,420
+acontecia com o suricata
+
+1516
+00:56:47,420 --> 00:56:49,420
+eu aqui
+
+1517
+00:56:49,420 --> 00:56:51,420
+também tenho uma situação
+
+1518
+00:56:51,420 --> 00:56:53,420
+em que eu tenho que adaptar
+
+1519
+00:56:53,420 --> 00:56:55,420
+este programa
+
+1520
+00:56:55,420 --> 00:56:57,420
+para o tipo de comunicações
+
+1521
+00:56:57,420 --> 00:56:59,420
+ou tipo de sistemas que eu vou ter
+
+1522
+00:56:59,420 --> 00:57:01,420
+que ela vai estar observar
+
+1523
+00:57:01,420 --> 00:57:03,420
+ou seja, não é uma panaceia
+
+1524
+00:57:03,420 --> 00:57:05,420
+eu compro
+
+1525
+00:57:05,420 --> 00:57:07,420
+eu ponho isto a funcionar e posso se descansar a dormir
+
+1526
+00:57:07,420 --> 00:57:09,420
+não é assim que isto funciona
+
+1527
+00:57:09,420 --> 00:57:11,420
+eu tenho que olhar para isto
+
+1528
+00:57:11,420 --> 00:57:13,420
+e ter noção completa
+
+1529
+00:57:13,420 --> 00:57:15,420
+do que é que estou a ver
+
+1530
+00:57:15,420 --> 00:57:17,420
+como vocês conseguem perceber
+
+1531
+00:57:17,420 --> 00:57:19,420
+eu consigo realmente ter aqui
+
+1532
+00:57:19,420 --> 00:57:21,420
+uma série de
+
+1533
+00:57:21,420 --> 00:57:23,420
+por exemplo, que é obviamente
+
+1534
+00:57:23,420 --> 00:57:25,420
+que diz-me cópia de Ciência
+
+1535
+00:57:25,420 --> 00:57:27,420
+ou seja, a própria Farwell
+
+1536
+00:57:27,420 --> 00:57:29,420
+tem mais de comunicação
+
+1537
+00:57:29,420 --> 00:57:31,420
+deixe-me ver se eu não consigo mostrar isso
+
+1538
+00:57:31,420 --> 00:57:33,420
+não, não consigo
+
+1539
+00:57:33,420 --> 00:57:35,420
+eu consigo ter aqui
+
+1540
+00:57:35,420 --> 00:57:37,420
+uma comunicação de placificação
+
+1541
+00:57:37,420 --> 00:57:39,420
+e depois olhar com isto
+
+1542
+00:57:39,420 --> 00:57:41,420
+com cuidado
+
+1543
+00:57:41,420 --> 00:57:43,420
+e ver o que é que está a acontecer
+
+1544
+00:57:43,420 --> 00:57:45,420
+e é isso basicamente
+
+1545
+00:57:45,420 --> 00:57:47,420
+que eu depois aqui
+
+1546
+00:57:47,420 --> 00:57:49,420
+falo um bocadinho
+
+1547
+00:57:49,420 --> 00:57:51,420
+portanto, o Ntopen Gear
+
+1548
+00:57:51,420 --> 00:57:53,420
+permita obter insights formagráficas
+
+1549
+00:57:53,420 --> 00:57:55,420
+ou seja, eu consigo olhar
+
+1550
+00:57:55,420 --> 00:57:57,420
+como tem gráfico, eu consigo olhar para
+
+1551
+00:57:57,420 --> 00:57:59,420
+as soluções
+
+1552
+00:57:59,420 --> 00:58:01,420
+para o tráfego e conseguir perceber
+
+1553
+00:58:01,420 --> 00:58:03,420
+ok, mais uma vez
+
+1554
+00:58:03,420 --> 00:58:05,420
+aqui temos que
+
+1555
+00:58:05,420 --> 00:58:07,420
+sempre a atenção isto, temos que adaptar
+
+1556
+00:58:07,420 --> 00:58:09,420
+principalmente as regras de comportamento
+
+1557
+00:58:09,420 --> 00:58:11,420
+o que é que eu quero apanhar
+
+1558
+00:58:11,420 --> 00:58:13,420
+como considera comportamentos
+
+1559
+00:58:13,420 --> 00:58:15,420
+que não são mais cobertos
+
+1560
+00:58:15,420 --> 00:58:17,420
+no caso, se temos imubíto
+
+1561
+00:58:17,420 --> 00:58:19,420
+faz tipo de protocolos
+
+1562
+00:58:19,420 --> 00:58:21,420
+faz tipo de sistemas
+
+1563
+00:58:21,420 --> 00:58:23,420
+isto não é uma panaceia
+
+1564
+00:58:23,420 --> 00:58:25,420
+eu tenho que muitas vezes criar regras específicas
+
+1565
+00:58:25,420 --> 00:58:27,420
+mas eu tenho uma visão
+
+1566
+00:58:27,420 --> 00:58:29,420
+muito gráfica
+
+1567
+00:58:29,420 --> 00:58:31,420
+do que é que está a acontecer
+
+1568
+00:58:31,420 --> 00:58:33,420
+portanto, eu tenho uma visão muito gráfica
+
+1569
+00:58:33,420 --> 00:58:35,420
+do que é que está a acontecer
+
+1570
+00:58:35,420 --> 00:58:37,420
+eu consigo com alguma facilidade
+
+1571
+00:58:37,420 --> 00:58:39,420
+ou seja, tenho grillão
+
+1572
+00:58:39,420 --> 00:58:41,420
+ou seja, se eu chegar por exemplo às top applications
+
+1573
+00:58:41,420 --> 00:58:43,420
+clicar lá, eu consigo ver
+
+1574
+00:58:43,420 --> 00:58:45,420
+quem é que estava a usar
+
+1575
+00:58:45,420 --> 00:58:47,420
+aquele tipo de aplicação
+
+1576
+00:58:47,420 --> 00:58:49,420
+se eu clicar nos protocolos
+
+1577
+00:58:49,420 --> 00:58:51,420
+eu consigo saber quem estava a usar um determinado tipo de protocolos
+
+1578
+00:58:51,420 --> 00:58:53,420
+obviamente eu consigo
+
+1579
+00:58:53,420 --> 00:58:55,420
+que não tenho isso instalado
+
+1580
+00:58:55,420 --> 00:58:57,420
+porque a minha máquina é fraquinha
+
+1581
+00:58:57,420 --> 00:58:59,420
+ou seja, tem muita coisa lá
+
+1582
+00:58:59,420 --> 00:59:01,420
+eu também consigo saber
+
+1583
+00:59:01,420 --> 00:59:03,420
+que países é que os meus sistemas estão a comunicar
+
+1584
+00:59:03,420 --> 00:59:05,420
+isso pode ser interessante
+
+1585
+00:59:05,420 --> 00:59:07,420
+nos sistemas de imubíto
+
+1586
+00:59:07,420 --> 00:59:09,420
+ou os sistemas de imubíto off the shelf
+
+1587
+00:59:09,420 --> 00:59:11,420
+em que eu estou a comprar
+
+1588
+00:59:11,420 --> 00:59:13,420
+e se que dá, pode ser interessante saber
+
+1589
+00:59:13,420 --> 00:59:15,420
+como é que os meus sistemas de imubíto estão a conversar
+
+1590
+00:59:17,420 --> 00:59:19,420
+mas, como eu vos disse
+
+1591
+00:59:19,420 --> 00:59:21,420
+isto não é uma panaceia
+
+1592
+00:59:21,420 --> 00:59:23,420
+eu tenho que olhar para o tráfego
+
+1593
+00:59:23,420 --> 00:59:25,420
+eu tenho que perceber o que é que eu tenho que estar lá
+
+1594
+00:59:25,420 --> 00:59:27,420
+que tipo de comunicações é que eu tenho que estar lá
+
+1595
+00:59:27,420 --> 00:59:29,420
+e isto
+
+1596
+00:59:29,420 --> 00:59:31,420
+normalmente não é feito com este programa
+
+1597
+00:59:31,420 --> 00:59:33,420
+é feito
+
+1598
+00:59:33,420 --> 00:59:35,420
+com acesso ao outro programa
+
+1599
+00:59:35,420 --> 00:59:37,420
+que é o iShark
+
+1600
+00:59:37,420 --> 00:59:43,030
+agora vamos ver se eu tenho aqui
+
+1601
+00:59:43,030 --> 00:59:45,030
+ok, tenho
+
+1602
+00:59:45,030 --> 00:59:48,570
+o que vocês estão a ver aqui
+
+1603
+00:59:48,570 --> 00:59:50,570
+neste o iShark
+
+1604
+00:59:50,570 --> 00:59:52,570
+é também uma ferramenta
+
+1605
+00:59:52,570 --> 00:59:54,570
+uma ferramenta setada
+
+1606
+00:59:54,570 --> 00:59:56,570
+no Cali
+
+1607
+00:59:56,570 --> 00:59:58,570
+e o que vocês estão a ver aqui
+
+1608
+00:59:58,570 --> 01:00:00,570
+neste momento
+
+1609
+01:00:00,570 --> 01:00:02,570
+é
+
+1610
+01:00:02,570 --> 01:00:04,570
+as comunicações
+
+1611
+01:00:04,570 --> 01:00:06,570
+mktt do meu sistema de imubíto
+
+1612
+01:00:06,570 --> 01:00:08,570
+simulado
+
+1613
+01:00:08,570 --> 01:00:10,570
+na minha rede
+
+1614
+01:00:10,570 --> 01:00:12,570
+e se vocês olharem
+
+1615
+01:00:12,570 --> 01:00:14,570
+como eu disse, mensagem
+
+1616
+01:00:14,570 --> 01:00:16,570
+acabou de cair outra mensagem
+
+1617
+01:00:16,570 --> 01:00:18,570
+se vocês olharem
+
+1618
+01:00:18,570 --> 01:00:20,570
+para a minha mensagem
+
+1619
+01:00:20,570 --> 01:00:22,570
+é completamente
+
+1620
+01:00:22,570 --> 01:00:24,570
+pext
+
+1621
+01:00:24,570 --> 01:00:26,570
+ou seja, eu consigo olhar e ver
+
+1622
+01:00:26,570 --> 01:00:28,570
+perfeitamente que estou neste momento
+
+1623
+01:00:28,570 --> 01:00:30,570
+por exemplo, aqui está em cima de todos
+
+1624
+01:00:30,570 --> 01:00:32,570
+estou a receber a qualidade do ar
+
+1625
+01:00:32,570 --> 01:00:34,570
+na freguesia de novo gílido
+
+1626
+01:00:34,570 --> 01:00:36,570
+no porto
+
+1627
+01:00:36,570 --> 01:00:38,570
+e é a quantidade de dióxido
+
+1628
+01:00:38,570 --> 01:00:40,570
+e a seguinte é a quantidade
+
+1629
+01:00:40,570 --> 01:00:42,570
+do zono de novo gílido
+
+1630
+01:00:42,570 --> 01:00:44,570
+e depois de bom fim
+
+1631
+01:00:44,570 --> 01:00:46,570
+e parâmetros, por exemplo, aqui embaixo
+
+1632
+01:00:46,570 --> 01:00:48,570
+também estou a começar a receber informação relativamente
+
+1633
+01:00:48,570 --> 01:00:50,570
+ou seja, eu olhando para isto
+
+1634
+01:00:50,570 --> 01:00:52,570
+eu digo logo
+
+1635
+01:00:52,570 --> 01:00:54,570
+ok, o que tu estás a ter aqui
+
+1636
+01:00:54,570 --> 01:00:56,570
+tu estás a ter comunicações mktt
+
+1637
+01:00:56,570 --> 01:00:58,570
+que estão
+
+1638
+01:00:58,570 --> 01:01:00,570
+em plaintext
+
+1639
+01:01:00,570 --> 01:01:02,570
+e portanto, se eu tenho que
+
+1640
+01:01:02,570 --> 01:01:04,570
+comunicações mktt em plaintext
+
+1641
+01:01:04,570 --> 01:01:06,570
+isso quer dizer que
+
+1642
+01:01:06,570 --> 01:01:08,570
+se o que eu
+
+1643
+01:01:08,570 --> 01:01:10,570
+se calhar era boa ideia no mundo
+
+1644
+01:01:10,570 --> 01:01:12,570
+em topng eu ter
+
+1645
+01:01:12,570 --> 01:01:14,570
+uma análise de comportamento
+
+1646
+01:01:14,570 --> 01:01:16,570
+para comunicações mktt
+
+1647
+01:01:16,570 --> 01:01:18,570
+em plaintext
+
+1648
+01:01:18,570 --> 01:01:20,570
+que não está neste momento
+
+1649
+01:01:20,570 --> 01:01:22,570
+na lista de regras
+
+1650
+01:01:22,570 --> 01:01:24,570
+de comportamento que ele tem ativas
+
+1651
+01:01:24,570 --> 01:01:26,570
+ou se que é questão
+
+1652
+01:01:26,570 --> 01:01:28,570
+disponibilizadas
+
+1653
+01:01:28,570 --> 01:01:30,570
+eu não vou entrar aqui um bocadinho mais
+
+1654
+01:01:30,570 --> 01:01:32,570
+em consideração com uma coisa
+
+1655
+01:01:32,570 --> 01:01:34,570
+que é porque vai fazer parte
+
+1656
+01:01:34,570 --> 01:01:36,570
+de um
+
+1657
+01:01:36,570 --> 01:01:38,570
+como é que dizer
+
+1658
+01:01:38,570 --> 01:01:40,570
+de um guião
+
+1659
+01:01:40,570 --> 01:01:42,570
+e não me esquece de estragar
+
+1660
+01:01:42,570 --> 01:01:44,570
+esse guião que é
+
+1661
+01:01:44,570 --> 01:01:46,570
+o iShark
+
+1662
+01:01:46,570 --> 01:01:48,570
+descobri qual é o password de utilizador
+
+1663
+01:01:48,570 --> 01:01:50,570
+mktt que eu estou a utilizar
+
+1664
+01:01:50,570 --> 01:01:52,570
+neste momento
+
+1665
+01:01:52,570 --> 01:01:54,570
+e portanto, isso quer dizer que eu estou a fazer
+
+1666
+01:01:54,570 --> 01:01:56,570
+isto não é considerado um pacote de inspeção
+
+1667
+01:01:56,570 --> 01:01:58,570
+não é
+
+1668
+01:01:58,570 --> 01:02:00,570
+faz parte da família anterior
+
+1669
+01:02:00,570 --> 01:02:02,570
+que eu estava a utilizar
+
+1670
+01:02:02,570 --> 01:02:04,570
+é mais
+
+1671
+01:02:04,570 --> 01:02:06,570
+um programa de
+
+1672
+01:02:06,570 --> 01:02:08,570
+análise de tráfico
+
+1673
+01:02:08,570 --> 01:02:10,570
+em que eu consigo analisar
+
+1674
+01:02:10,570 --> 01:02:12,570
+o tráfico e depois com os análises de tráfico
+
+1675
+01:02:12,570 --> 01:02:14,570
+eu consigo
+
+1676
+01:02:14,570 --> 01:02:16,570
+entrar agora mais uma mensagem
+
+1677
+01:02:16,570 --> 01:02:18,570
+eu consigo
+
+1678
+01:02:18,570 --> 01:02:20,570
+verificar que tipo de tráfico
+
+1679
+01:02:20,570 --> 01:02:22,570
+que eu tenho neste momento
+
+1680
+01:02:22,570 --> 01:02:24,570
+obviamente que o que eu confis foi
+
+1681
+01:02:24,570 --> 01:02:26,570
+fazer um filtro
+
+1682
+01:02:26,570 --> 01:02:28,570
+pelo protocolo mktt
+
+1683
+01:02:28,570 --> 01:02:40,550
+só tirar o filtro
+
+1684
+01:02:40,550 --> 01:02:42,550
+que eu sequer deve ter preparado a aula
+
+1685
+01:02:42,550 --> 01:02:44,550
+com um bocadinho menos tempo
+
+1686
+01:02:44,550 --> 01:02:46,550
+então está neste momento a retirar o filtro
+
+1687
+01:02:48,550 --> 01:02:50,550
+e quando eu retire o filtro
+
+1688
+01:02:50,550 --> 01:02:52,550
+eu estava só filtrado pelas
+
+1689
+01:02:52,550 --> 01:02:54,550
+comunicações mktt
+
+1690
+01:02:54,550 --> 01:02:56,550
+onde vê que aqui então
+
+1691
+01:02:56,550 --> 01:02:58,550
+começa a aparecer
+
+1692
+01:02:58,550 --> 01:03:00,550
+montes de comunicações
+
+1693
+01:03:00,550 --> 01:03:02,550
+nomeadamente
+
+1694
+01:03:02,550 --> 01:03:04,550
+pessoa, está sempre a fazer
+
+1695
+01:03:04,550 --> 01:03:06,550
+eu posso fazer um freeze
+
+1696
+01:03:06,550 --> 01:03:15,940
+de isto
+
+1697
+01:03:15,940 --> 01:03:17,940
+ok, eu parei agora, fiz um pause
+
+1698
+01:03:17,940 --> 01:03:19,940
+a captura
+
+1699
+01:03:19,940 --> 01:03:21,940
+portanto, está neste momento a capturar
+
+1700
+01:03:21,940 --> 01:03:23,940
+a informação
+
+1701
+01:03:23,940 --> 01:03:25,940
+e eu posso
+
+1702
+01:03:25,940 --> 01:03:27,940
+chegar aqui, ok, temos mktt
+
+1703
+01:03:27,940 --> 01:03:29,940
+na mesma, tem que ter cp
+
+1704
+01:03:29,940 --> 01:03:31,940
+mas obviamente que eu tenho aqui
+
+1705
+01:03:31,940 --> 01:03:33,940
+outro tipo de protocolos
+
+1706
+01:03:33,940 --> 01:03:35,940
+da notar, sim, André
+
+1707
+01:03:35,940 --> 01:03:37,940
+sim, estava aqui com a dúvida
+
+1708
+01:03:37,940 --> 01:03:39,940
+há um bocado quando eu fui ao trabalho no mktt
+
+1709
+01:03:39,940 --> 01:03:41,940
+ok, eu sei o que é que significam os campos
+
+1710
+01:03:41,940 --> 01:03:43,940
+mas isso tem forma de saber os valores
+
+1711
+01:03:43,940 --> 01:03:45,940
+claro
+
+1712
+01:03:45,940 --> 01:03:47,940
+eu salto
+
+1713
+01:03:47,940 --> 01:03:49,940
+se lembrou disso, eu não vou falar muito disso
+
+1714
+01:03:49,940 --> 01:03:51,940
+porque faz parte do
+
+1715
+01:03:51,940 --> 01:03:53,940
+do
+
+1716
+01:03:53,940 --> 01:03:55,940
+mktt
+
+1717
+01:03:55,940 --> 01:04:06,420
+sim
+
+1718
+01:04:06,420 --> 01:04:08,420
+veja aqui, está a ver, nesta janela
+
+1719
+01:04:08,420 --> 01:04:10,420
+aqui da esquerda
+
+1720
+01:04:10,420 --> 01:04:12,420
+e nesta janela de direita eu consigo ver
+
+1721
+01:04:12,420 --> 01:04:14,420
+o que é que está naquela
+
+1722
+01:04:14,420 --> 01:04:16,420
+transmissão, exatamente o que é que estava lá
+
+1723
+01:04:16,420 --> 01:04:18,420
+por exemplo, eu consigo saber
+
+1724
+01:04:18,420 --> 01:04:20,420
+que foi uma comunicação do 121
+
+1725
+01:04:20,420 --> 01:04:24,020
+para o 120
+
+1726
+01:04:24,020 --> 01:04:26,020
+qual foi o porto
+
+1727
+01:04:26,020 --> 01:04:28,020
+é
+
+1728
+01:04:28,020 --> 01:04:30,020
+foi utilizado pela comunicação
+
+1729
+01:04:30,020 --> 01:04:32,020
+neste caso o porto 1883
+
+1730
+01:04:32,020 --> 01:04:35,530
+e consigo saber
+
+1731
+01:04:35,530 --> 01:04:37,530
+o
+
+1732
+01:04:37,530 --> 01:04:39,530
+telemetria, ou seja, eu consigo ter
+
+1733
+01:04:39,530 --> 01:04:41,530
+acesso a toda a informação
+
+1734
+01:04:41,530 --> 01:04:43,530
+da ligação
+
+1735
+01:04:45,530 --> 01:04:47,530
+por exemplo, eu tenho ali
+
+1736
+01:04:47,530 --> 01:04:49,530
+uma linha que acredito
+
+1737
+01:04:49,530 --> 01:04:51,530
+ou seja, a quantidade de
+
+1738
+01:04:51,530 --> 01:04:53,530
+monóx, carbono, uma coisa assim
+
+1739
+01:04:53,530 --> 01:04:55,530
+só estou a dizer por exemplo, mas está aí
+
+1740
+01:04:55,530 --> 01:04:57,530
+exatamente
+
+1741
+01:04:57,530 --> 01:04:59,530
+por exemplo, como é que eu sei quanto é que era o valor
+
+1742
+01:04:59,530 --> 01:05:01,530
+não dá para saber
+
+1743
+01:05:01,530 --> 01:05:03,530
+dá, dá, dá, dá, dá, dá
+
+1744
+01:05:03,530 --> 01:05:05,530
+não sei agora de cor, mas dá
+
+1745
+01:05:05,530 --> 01:05:07,530
+normalmente o que nós fazemos
+
+1746
+01:05:07,530 --> 01:05:09,530
+e vou dizer sincero é
+
+1747
+01:05:09,530 --> 01:05:11,530
+quando detecto uma coisa nesta janela
+
+1748
+01:05:11,530 --> 01:05:13,530
+estava a ver aqui porque não é fácil
+
+1749
+01:05:13,530 --> 01:05:15,530
+às vezes, não é?
+
+1750
+01:05:15,530 --> 01:05:17,530
+porque isto está metido
+
+1751
+01:05:17,530 --> 01:05:19,530
+estava a ver na que estava isso
+
+1752
+01:05:19,530 --> 01:05:21,530
+por acaso foi pedido desculpa e não estou a conseguir ver
+
+1753
+01:05:21,530 --> 01:05:23,530
+exatamente
+
+1754
+01:05:23,530 --> 01:05:25,530
+onde é que isto está
+
+1755
+01:05:25,530 --> 01:05:27,530
+eu estou andando com a qualidade do mktt
+
+1756
+01:05:27,530 --> 01:05:29,530
+mas a partir dessa será possível
+
+1757
+01:05:29,530 --> 01:05:31,530
+e eu vou te explicar porquê
+
+1758
+01:05:31,530 --> 01:05:33,530
+porquê que eu não sei de corte também
+
+1759
+01:05:33,530 --> 01:05:35,530
+convém, não é?
+
+1760
+01:05:35,530 --> 01:05:37,530
+porque quando
+
+1761
+01:05:37,530 --> 01:05:39,530
+estou a olhar para esses
+
+1762
+01:05:39,530 --> 01:05:41,530
+protocolos, ou seja, eu detecto um protocol
+
+1763
+01:05:41,530 --> 01:05:43,530
+mktt, eu utilizo
+
+1764
+01:05:43,530 --> 01:05:45,530
+não isto, não
+
+1765
+01:05:45,530 --> 01:05:47,530
+a partir do momento que eu sei que tenho protocol
+
+1766
+01:05:47,530 --> 01:05:49,530
+eu normalmente posso utilizar isto
+
+1767
+01:05:49,530 --> 01:05:51,530
+para apanhar o utilizador, para a sorda, etc
+
+1768
+01:05:51,530 --> 01:05:53,530
+mas para ver as mensagens em si
+
+1769
+01:05:53,530 --> 01:05:55,530
+e uso um
+
+1770
+01:05:55,530 --> 01:05:57,530
+programa que o mktt explore
+
+1771
+01:05:57,530 --> 01:05:59,530
+ok
+
+1772
+01:05:59,530 --> 01:06:01,530
+mas acho que é interessante
+
+1773
+01:06:01,530 --> 01:06:03,530
+está aí a mensagem
+
+1774
+01:06:03,530 --> 01:06:05,530
+é a última linha
+
+1775
+01:06:05,530 --> 01:06:07,530
+não, mas não sei se isto é o valor
+
+1776
+01:06:07,530 --> 01:06:09,530
+por isso é que eu tenho dúvidas
+
+1777
+01:06:09,530 --> 01:06:11,530
+eu vi a mensagem
+
+1778
+01:06:11,530 --> 01:06:13,530
+mas não sei se respondo exatamente ao valor
+
+1779
+01:06:13,530 --> 01:06:15,530
+tinha que ver como é que estou a fazer
+
+1780
+01:06:15,530 --> 01:06:17,530
+ok, só por exemplo
+
+1781
+01:06:17,530 --> 01:06:19,530
+e as mensagens
+
+1782
+01:06:19,530 --> 01:06:21,530
+acreditando que seja esse valor
+
+1783
+01:06:21,530 --> 01:06:23,530
+nós não vamos saber
+
+1784
+01:06:23,530 --> 01:06:25,530
+ou seja
+
+1785
+01:06:25,530 --> 01:06:27,530
+qual é que é o fator de conversão
+
+1786
+01:06:27,530 --> 01:06:29,530
+e nada de género, não é?
+
+1787
+01:06:29,530 --> 01:06:31,530
+nós só conseguimos ver os dados em bruto
+
+1788
+01:06:31,530 --> 01:06:33,530
+neste caso só conseguimos ver os dados em bruto
+
+1789
+01:06:33,530 --> 01:06:35,530
+se eu quiser
+
+1790
+01:06:35,530 --> 01:06:37,530
+para isso eu cortava, por acaso não tenho
+
+1791
+01:06:37,530 --> 01:06:39,530
+deixe-me só confirmar aqui nesta máquina
+
+1792
+01:06:39,530 --> 01:06:41,530
+tenho mktt explore
+
+1793
+01:06:41,530 --> 01:06:43,530
+estou
+
+1794
+01:06:43,530 --> 01:06:52,700
+deixe-me só ver isso
+
+1795
+01:06:52,700 --> 01:06:54,700
+não tenho mktt explore nesta máquina
+
+1796
+01:06:54,700 --> 01:06:56,700
+e já tive aqui
+
+1797
+01:06:56,700 --> 01:06:58,700
+não coisa, mas deixei de ter
+
+1798
+01:06:58,700 --> 01:07:00,700
+perdemos muito tempo agora a instalar
+
+1799
+01:07:00,700 --> 01:07:02,700
+aqui no Cali
+
+1800
+01:07:02,700 --> 01:07:04,700
+o mktt explore, mas posso-vos mostrar
+
+1801
+01:07:04,700 --> 01:07:07,980
+como é que eu posso mostrar
+
+1802
+01:07:07,980 --> 01:07:09,980
+acho que se calhar não os consigo mostrar
+
+1803
+01:07:09,980 --> 01:07:17,100
+eu acho que não os consigo mostrar isso
+
+1804
+01:07:19,100 --> 01:07:21,100
+vai ser absoluta
+
+1805
+01:07:21,100 --> 01:07:29,140
+não, só vos consigo mostrar
+
+1806
+01:07:29,140 --> 01:07:31,140
+os valores já
+
+1807
+01:07:33,140 --> 01:07:35,140
+convertidos
+
+1808
+01:07:35,140 --> 01:07:37,140
+só vos consigo mostrar
+
+1809
+01:07:37,140 --> 01:07:39,140
+os valores convertidos
+
+1810
+01:07:39,140 --> 01:07:41,140
+não, posso
+
+1811
+01:07:41,140 --> 01:07:43,140
+depois na próxima aula
+
+1812
+01:07:43,140 --> 01:07:45,140
+depois no lavatório mostrar-vos
+
+1813
+01:07:45,140 --> 01:07:47,140
+mas neste momento não tenho
+
+1814
+01:07:47,140 --> 01:07:49,140
+para vocês poderem ver os dados
+
+1815
+01:07:49,140 --> 01:07:51,140
+completamente em bruto
+
+1816
+01:07:51,140 --> 01:07:53,140
+jogava que tinha mktt explore
+
+1817
+01:07:53,140 --> 01:07:55,140
+já, agora tenho aqui uma dada
+
+1818
+01:07:55,140 --> 01:07:57,140
+que é, isto é do white shark
+
+1819
+01:07:57,140 --> 01:07:59,140
+só permite ver estes valores
+
+1820
+01:07:59,140 --> 01:08:01,140
+porque ele está na mesma
+
+1821
+01:08:01,140 --> 01:08:03,140
+ligado na mesma rede
+
+1822
+01:08:03,140 --> 01:08:05,140
+se vocês esqueçam que isto é possível
+
+1823
+01:08:05,140 --> 01:08:07,140
+se vocês tiveram fazer um menu na mina do ataque
+
+1824
+01:08:07,140 --> 01:08:09,140
+ou seja
+
+1825
+01:08:09,140 --> 01:08:11,140
+vou mostrar aqui
+
+1826
+01:08:11,140 --> 01:08:13,140
+vamos buscar outra coisa
+
+1827
+01:08:13,140 --> 01:08:15,140
+só para vocês perceberem
+
+1828
+01:08:15,140 --> 01:08:17,140
+isto é valdo que eu vou dizer
+
+1829
+01:08:17,140 --> 01:08:19,140
+que quero para o ar shark
+
+1830
+01:08:19,140 --> 01:08:21,140
+quero para o entop NG
+
+1831
+01:08:21,140 --> 01:08:23,140
+em anos tem que acontecer isso
+
+1832
+01:08:23,140 --> 01:08:25,140
+deixe-me saber aqui
+
+1833
+01:08:25,140 --> 01:08:29,860
+isto
+
+1834
+01:08:29,860 --> 01:08:31,860
+se eu abrir
+
+1835
+01:08:31,860 --> 01:08:33,860
+será aqui
+
+1836
+01:08:33,860 --> 01:08:38,900
+eu gostava que ela abria sinceramente
+
+1837
+01:08:38,900 --> 01:08:46,890
+mas não está a abrir
+
+1838
+01:08:46,890 --> 01:08:48,890
+está aqui a expressão
+
+1839
+01:08:48,890 --> 01:08:52,200
+já abriu
+
+1840
+01:08:52,200 --> 01:08:54,200
+mas eu acho que tinha deixado-me se ligar
+
+1841
+01:08:54,200 --> 01:08:56,200
+todos os mostrar hoje
+
+1842
+01:08:56,200 --> 01:08:58,200
+mas para isto pode ter acontecido a uma vez
+
+1843
+01:08:58,200 --> 01:09:00,200
+desculpa
+
+1844
+01:09:00,200 --> 01:09:02,200
+não, está aqui a funcionar
+
+1845
+01:09:02,200 --> 01:09:04,200
+só fazer um reboot pode ter sido por isso
+
+1846
+01:09:04,200 --> 01:09:06,200
+ok, coisa
+
+1847
+01:09:06,200 --> 01:09:08,200
+eu vou mostrar o que é que acontece
+
+1848
+01:09:08,200 --> 01:09:10,200
+quando nós temos um entop NG
+
+1849
+01:09:10,200 --> 01:09:12,200
+ou um ar shark a funcionar
+
+1850
+01:09:12,200 --> 01:09:14,200
+em que eu não tenho
+
+1851
+01:09:14,200 --> 01:09:16,200
+e vou dizer quais são as condições
+
+1852
+01:09:16,200 --> 01:09:18,200
+as condições neste caso
+
+1853
+01:09:18,200 --> 01:09:20,200
+eu tenho que ter
+
+1854
+01:09:20,200 --> 01:09:22,200
+se eu tiver no suíte
+
+1855
+01:09:22,200 --> 01:09:24,200
+e tipicamente
+
+1856
+01:09:24,200 --> 01:09:26,200
+eu tenho um suíte
+
+1857
+01:09:26,200 --> 01:09:28,200
+onde temos mais equipamentos ligados
+
+1858
+01:09:28,200 --> 01:09:30,200
+o suíte o que faz
+
+1859
+01:09:30,200 --> 01:09:32,200
+é a nível 2
+
+1860
+01:09:32,200 --> 01:09:34,200
+chamada 2
+
+1861
+01:09:34,200 --> 01:09:36,200
+ele faz uma fase
+
+1862
+01:09:36,200 --> 01:09:38,200
+no fundo da filetage
+
+1863
+01:09:38,200 --> 01:09:40,200
+ele tem guarda internamente uma tabela
+
+1864
+01:09:40,200 --> 01:09:42,200
+de endereço smack
+
+1865
+01:09:42,200 --> 01:09:44,200
+em que diz
+
+1866
+01:09:44,200 --> 01:09:46,200
+em cada porta
+
+1867
+01:09:46,200 --> 01:09:48,200
+que está em cada porta de suíte
+
+1868
+01:09:48,200 --> 01:09:50,200
+e portanto
+
+1869
+01:09:50,200 --> 01:09:52,200
+quando um equipamento está ligado
+
+1870
+01:09:52,200 --> 01:09:54,200
+por exemplo na porta 1
+
+1871
+01:09:54,200 --> 01:09:56,200
+tenta comunicar com o equipamento
+
+1872
+01:09:56,200 --> 01:09:58,200
+que tem um determinado mack
+
+1873
+01:09:58,200 --> 01:10:00,200
+o que o suíte se faz é ok
+
+1874
+01:10:00,200 --> 01:10:02,200
+este mack
+
+1875
+01:10:02,200 --> 01:10:04,200
+está ligado na porta 4
+
+1876
+01:10:04,200 --> 01:10:06,200
+e portanto o tráfego
+
+1877
+01:10:06,200 --> 01:10:08,200
+vai passar da porta 1 para porta 4
+
+1878
+01:10:08,200 --> 01:10:10,200
+ou seja, se eu tiver na porta 5
+
+1879
+01:10:10,200 --> 01:10:12,200
+eu já não consigo ver nada porque
+
+1880
+01:10:12,200 --> 01:10:14,200
+eles só passam entre a 1 e a 4
+
+1881
+01:10:14,200 --> 01:10:16,200
+eu quero dizer que eu não consigo
+
+1882
+01:10:16,200 --> 01:10:18,200
+se eu tiver no suíte e tipicamente
+
+1883
+01:10:18,200 --> 01:10:20,200
+o ponto de vista físico
+
+1884
+01:10:20,200 --> 01:10:22,200
+o que eu tenho são suíte
+
+1885
+01:10:22,200 --> 01:10:24,200
+eu não vou conseguir ver este tráfego
+
+1886
+01:10:24,200 --> 01:10:26,200
+e portanto se eu não vou conseguir ver este tráfego
+
+1887
+01:10:26,200 --> 01:10:28,200
+tenho que fazer uma alteração
+
+1888
+01:10:28,200 --> 01:10:30,200
+ao 2.1
+
+1889
+01:10:30,200 --> 01:10:32,200
+ou ligo o meu sistema de probing
+
+1890
+01:10:32,200 --> 01:10:34,200
+numa porta
+
+1891
+01:10:34,200 --> 01:10:36,200
+de gestão
+
+1892
+01:10:36,200 --> 01:10:38,200
+dos suíte que tenha
+
+1893
+01:10:38,200 --> 01:10:40,200
+acesso a todo o tráfego
+
+1894
+01:10:40,200 --> 01:10:42,200
+ou coloco os suíte
+
+1895
+01:10:42,200 --> 01:10:44,200
+para trabalhar como a
+
+1896
+01:10:44,200 --> 01:10:46,200
+ou seja, em que
+
+1897
+01:10:46,200 --> 01:10:48,200
+estas tabelas que o permitem
+
+1898
+01:10:48,200 --> 01:10:50,200
+fazer de dizer ok, estou tais no 1
+
+1899
+01:10:50,200 --> 01:10:52,200
+queres comunicar com o 4
+
+1900
+01:10:52,200 --> 01:10:54,200
+vou mandar o tráfego entre o 1 e o 4
+
+1901
+01:10:54,200 --> 01:10:56,200
+e quem está no 5 não consegue ver isso
+
+1902
+01:10:56,200 --> 01:10:58,200
+eu tenho que alterar o comportamento dos suíte
+
+1903
+01:10:58,200 --> 01:11:00,200
+para que isso não aconteça
+
+1904
+01:11:00,200 --> 01:11:02,200
+isso foi golfis
+
+1905
+01:11:02,200 --> 01:11:04,200
+para quem for um bocadinho mais
+
+1906
+01:11:04,200 --> 01:11:06,200
+destas áreas e que quiser perceber um bocadinho
+
+1907
+01:11:06,200 --> 01:11:08,200
+isso é o que se faz
+
+1908
+01:11:08,200 --> 01:11:10,200
+tipicamente aqui
+
+1909
+01:11:10,200 --> 01:11:12,200
+agora não seja
+
+1910
+01:11:12,200 --> 01:11:14,200
+propriamente se calhar
+
+1911
+01:11:14,200 --> 01:11:16,200
+deixa-me ver se eu consigo abrir isto
+
+1912
+01:11:16,200 --> 01:11:18,200
+isto devia dar para fazer
+
+1913
+01:11:18,200 --> 01:11:20,200
+uma nova janela
+
+1914
+01:11:20,200 --> 01:11:22,200
+mas não está lá
+
+1915
+01:11:22,200 --> 01:11:24,200
+ok, vou-vos fazer aqui
+
+1916
+01:11:24,200 --> 01:11:30,780
+um VI
+
+1917
+01:11:30,780 --> 01:11:32,780
+estou a abrir
+
+1918
+01:11:32,780 --> 01:11:36,150
+o fecheiro de configuração
+
+1919
+01:11:36,150 --> 01:11:38,150
+de rede, quem instalou
+
+1920
+01:11:38,150 --> 01:11:40,150
+sobre o Proximox
+
+1921
+01:11:40,150 --> 01:11:42,150
+segundo as que os dois documentos
+
+1922
+01:11:42,150 --> 01:11:44,150
+teve que mexer nisto
+
+1923
+01:11:44,150 --> 01:11:46,150
+quem usou o laboratório não
+
+1924
+01:11:46,150 --> 01:11:48,150
+isto é o documento de configuração
+
+1925
+01:11:48,150 --> 01:11:50,150
+da rede, no Proximox
+
+1926
+01:11:50,150 --> 01:11:52,150
+e é o de notar
+
+1927
+01:11:52,150 --> 01:11:54,150
+vamos cá está
+
+1928
+01:11:54,150 --> 01:11:56,150
+o VMRZ
+
+1929
+01:11:56,150 --> 01:11:58,150
+portanto abrir-se
+
+1930
+01:11:58,150 --> 01:12:00,150
+o VMRZ
+
+1931
+01:12:00,150 --> 01:12:02,150
+perfeitamente normal
+
+1932
+01:12:02,150 --> 01:12:04,150
+coleguei tu aí que ela vai usar
+
+1933
+01:12:04,150 --> 01:12:06,150
+coleguei o mdlcp que ela vai usar
+
+1934
+01:12:06,150 --> 01:12:08,150
+depois tenho
+
+1935
+01:12:08,150 --> 01:12:10,150
+tal velan
+
+1936
+01:12:10,150 --> 01:12:12,150
+tal
+
+1937
+01:12:12,150 --> 01:12:14,150
+velan, portanto são as duas
+
+1938
+01:12:14,150 --> 01:12:16,150
+brides que não são usadas
+
+1939
+01:12:16,150 --> 01:12:18,150
+portanto uma é usada
+
+1940
+01:12:18,150 --> 01:12:20,150
+a velan é usada como o ano
+
+1941
+01:12:20,150 --> 01:12:22,150
+da open-sense, a VMRZ
+
+1942
+01:12:22,150 --> 01:12:24,150
+eu expliquei isso a vocês
+
+1943
+01:12:24,150 --> 01:12:26,150
+se calhar se há algum momento para ouvir uma explicação
+
+1944
+01:12:26,150 --> 01:12:28,150
+porque eu disse que eu tenho uma rede de gestão
+
+1945
+01:12:28,150 --> 01:12:30,150
+então a VMRZ está na rede de gestão
+
+1946
+01:12:30,150 --> 01:12:32,150
+e se vocês virem
+
+1947
+01:12:32,150 --> 01:12:34,150
+agora aqui na brides
+
+1948
+01:12:34,150 --> 01:12:36,150
+OpenS LAN
+
+1949
+01:12:36,150 --> 01:12:38,150
+para todos os efeitos
+
+1950
+01:12:38,150 --> 01:12:40,150
+é parecidíssima
+
+1951
+01:12:40,150 --> 01:12:42,150
+com as anteriores
+
+1952
+01:12:42,150 --> 01:12:44,150
+portanto se eu quiser até para ser mais alto
+
+1953
+01:12:44,150 --> 01:12:46,150
+o pt1 e
+
+1954
+01:12:46,150 --> 01:12:48,150
+OpenS LAN
+
+1955
+01:12:48,150 --> 01:12:50,150
+as duas brides que estão aqui nos
+
+1956
+01:12:50,150 --> 01:12:52,150
+configurações
+
+1957
+01:12:52,150 --> 01:12:54,150
+ou notar que elas são muito parecidas
+
+1958
+01:12:54,150 --> 01:12:56,150
+setuando uma tribu ou um IP outro
+
+1959
+01:12:56,150 --> 01:12:58,150
+mas há uma diferença
+
+1960
+01:12:58,150 --> 01:13:00,150
+que é isto
+
+1961
+01:13:00,150 --> 01:13:02,150
+esta entrada aqui, brides aging 0
+
+1962
+01:13:02,150 --> 01:13:04,150
+quando apanho esta configuração
+
+1963
+01:13:04,150 --> 01:13:06,150
+quando apanho esta linha aqui
+
+1964
+01:13:06,150 --> 01:13:08,150
+numa brides do Proximox
+
+1965
+01:13:08,150 --> 01:13:10,150
+a brides deixa de funcionar
+
+1966
+01:13:10,150 --> 01:13:12,150
+como um switch
+
+1967
+01:13:12,150 --> 01:13:14,150
+e passa a funcionar como um app
+
+1968
+01:13:14,150 --> 01:13:16,150
+ou seja, o tráfego na porta 1
+
+1969
+01:13:16,150 --> 01:13:18,150
+é replicado para todas as portas
+
+1970
+01:13:18,150 --> 01:13:20,150
+um app no app
+
+1971
+01:13:20,150 --> 01:13:22,150
+o tráfego na porta 1 ou na porta 0
+
+1972
+01:13:22,150 --> 01:13:24,150
+é replicado para todas as portas
+
+1973
+01:13:24,150 --> 01:13:26,150
+ou seja, não há aquele filtro
+
+1974
+01:13:26,150 --> 01:13:28,150
+para os endereços Mac
+
+1975
+01:13:28,150 --> 01:13:30,150
+que eu falei ao mercado
+
+1976
+01:13:30,150 --> 01:13:32,150
+e isso quer dizer que aqui
+
+1977
+01:13:32,150 --> 01:13:34,150
+se eu apondo isto aqui
+
+1978
+01:13:34,150 --> 01:13:36,150
+isso é condição essencial
+
+1979
+01:13:36,150 --> 01:13:38,150
+no tráfego
+
+1980
+01:13:38,150 --> 01:13:40,150
+imaginemos, eu tenho
+
+1981
+01:13:40,150 --> 01:13:42,150
+dois dispositivos ligados
+
+1982
+01:13:42,150 --> 01:13:44,150
+tenho três dispositivos ligados na minha brides
+
+1983
+01:13:44,150 --> 01:13:46,150
+o mosquito
+
+1984
+01:13:46,150 --> 01:13:48,150
+o meu cliente
+
+1985
+01:13:48,150 --> 01:13:50,150
+o broker MQTT
+
+1986
+01:13:50,150 --> 01:13:52,150
+o meu cliente MQTT
+
+1987
+01:13:52,150 --> 01:13:54,150
+e o meu Cali
+
+1988
+01:13:54,150 --> 01:13:56,150
+que está a observar o tráfego
+
+1989
+01:13:56,150 --> 01:13:58,150
+se eu não fizer isto
+
+1990
+01:13:58,150 --> 01:14:00,150
+é o equivalente a ter
+
+1991
+01:14:00,150 --> 01:14:02,150
+que estão suídos, funcionam como suídos
+
+1992
+01:14:02,150 --> 01:14:04,150
+eu não consigo ver do Cali
+
+1993
+01:14:04,150 --> 01:14:06,150
+eu não consigo começar no MQTT
+
+1994
+01:14:06,150 --> 01:14:08,150
+só consigo ver o que vem direcionado a ele
+
+1995
+01:14:08,150 --> 01:14:10,150
+primeiro ponto
+
+1996
+01:14:10,150 --> 01:14:12,150
+isto é sem isto
+
+1997
+01:14:12,150 --> 01:14:14,150
+nós não consigo fazer isto
+
+1998
+01:14:14,150 --> 01:14:16,150
+claro que
+
+1999
+01:14:16,150 --> 01:14:18,150
+em algumas situações
+
+2000
+01:14:18,150 --> 01:14:20,150
+o que se faz
+
+2001
+01:14:20,150 --> 01:14:22,150
+tem dito isso várias vezes
+
+2002
+01:14:22,150 --> 01:14:24,150
+é chamado man enemy do ataque
+
+2003
+01:14:24,150 --> 01:14:26,150
+ou seja, estou a colocar uma máquina no meio
+
+2004
+01:14:26,150 --> 01:14:28,150
+para observar o tráfego todo
+
+2005
+01:14:28,150 --> 01:14:30,150
+em algumas situações
+
+2006
+01:14:30,150 --> 01:14:32,150
+o que se faz é
+
+2007
+01:14:32,150 --> 01:14:34,150
+uma ligação do meu suídos
+
+2008
+01:14:34,150 --> 01:14:36,150
+que é um aplink
+
+2009
+01:14:36,150 --> 01:14:38,150
+ou seja, eu tenho uma série de máquinas
+
+2010
+01:14:38,150 --> 01:14:40,150
+e eu não estou tão interessado muitas vezes
+
+2011
+01:14:40,150 --> 01:14:42,150
+em ver a comunicação entre as máquinas
+
+2012
+01:14:42,150 --> 01:14:44,150
+entre si
+
+2013
+01:14:44,150 --> 01:14:46,150
+estou interessado em ver a comunicação das máquinas
+
+2014
+01:14:46,150 --> 01:14:48,150
+para
+
+2015
+01:14:48,150 --> 01:14:50,150
+uma aplink
+
+2016
+01:14:50,150 --> 01:14:52,150
+então o que eu posso fazer é por isso simplesmente meter
+
+2017
+01:14:52,150 --> 01:14:54,150
+uma máquina minha
+
+2018
+01:14:54,150 --> 01:14:56,150
+desligo o aplink
+
+2019
+01:14:56,150 --> 01:14:58,150
+e mete a minha máquina
+
+2020
+01:14:58,150 --> 01:15:00,150
+e lique da minha máquina, tenho duas portas
+
+2021
+01:15:00,150 --> 01:15:02,150
+e lique a minha máquina
+
+2022
+01:15:02,150 --> 01:15:04,150
+outra vez ao suídos
+
+2023
+01:15:04,150 --> 01:15:06,150
+ou seja, daí o nome main enemy
+
+2024
+01:15:06,150 --> 01:15:08,150
+vamos perceber, eu meti uma máquina no meio
+
+2025
+01:15:08,150 --> 01:15:10,150
+para fazer a inspeção do tráfego
+
+2026
+01:15:10,150 --> 01:15:12,150
+só fazer isto
+
+2027
+01:15:12,150 --> 01:15:14,150
+fisicamente
+
+2028
+01:15:14,150 --> 01:15:16,150
+eu consigo ter acesso ao tráfego
+
+2029
+01:15:16,150 --> 01:15:18,150
+então há duas formas basicamente
+
+2030
+01:15:18,150 --> 01:15:20,150
+uma é por um suídos a trabalhar como a
+
+2031
+01:15:20,150 --> 01:15:22,150
+foi o que eu tenho explicado até agora
+
+2032
+01:15:22,150 --> 01:15:24,150
+e uma segunda forma é fisicamente
+
+2033
+01:15:24,150 --> 01:15:26,150
+eu meti uma máquina mesmo no meio
+
+2034
+01:15:26,150 --> 01:15:28,150
+da comunicação
+
+2035
+01:15:28,150 --> 01:15:30,150
+não esquecerem
+
+2036
+01:15:30,150 --> 01:15:32,150
+que se eu tiver a trabalhar em um wi-fi
+
+2037
+01:15:32,150 --> 01:15:34,150
+e não enredeca o lado como estou a trabalhar
+
+2038
+01:15:34,150 --> 01:15:36,150
+neste momento
+
+2039
+01:15:36,150 --> 01:15:38,150
+esta questão não se coloca porque obviamente
+
+2040
+01:15:38,150 --> 01:15:40,150
+toda a comunicação é conhecida de todos os
+
+2041
+01:15:40,150 --> 01:15:42,150
+dispositivos, ela é encriptada
+
+2042
+01:15:42,150 --> 01:15:44,150
+mas toda a comunicação é
+
+2043
+01:15:44,150 --> 01:15:46,150
+e vamos agora começar logo por dizer
+
+2044
+01:15:46,150 --> 01:15:48,150
+encriptada mais ou menos
+
+2045
+01:15:48,150 --> 01:15:50,150
+dependendo
+
+2046
+01:15:50,150 --> 01:15:52,150
+do protocolo que estou a usar
+
+2047
+01:15:52,150 --> 01:15:54,150
+posso ser mais ou menos cinco
+
+2048
+01:15:54,150 --> 01:15:56,150
+eu dará a volta aqui
+
+2049
+01:15:56,150 --> 01:15:58,150
+o que acontece aqui
+
+2050
+01:15:58,150 --> 01:16:00,150
+quando nós falamos deste tipo
+
+2051
+01:16:00,150 --> 01:16:02,150
+de tefases
+
+2052
+01:16:02,150 --> 01:16:04,150
+é que
+
+2053
+01:16:04,150 --> 01:16:06,150
+eu tenho que fazer isto em primeiro lugar
+
+2054
+01:16:06,150 --> 01:16:08,150
+em segundo lugar
+
+2055
+01:16:08,150 --> 01:16:10,150
+o meu próprio Italy
+
+2056
+01:16:10,150 --> 01:16:12,150
+o que vai acontecer
+
+2057
+01:16:12,150 --> 01:16:14,150
+é que mesmo que o meu suídos
+
+2058
+01:16:14,150 --> 01:16:16,150
+seja transformado em um ar
+
+2059
+01:16:16,150 --> 01:16:18,150
+ou mesmo que eu meto uma máquina
+
+2060
+01:16:18,150 --> 01:16:20,150
+fisicamente no meio
+
+2061
+01:16:20,150 --> 01:16:22,150
+o que vai acontecer
+
+2062
+01:16:22,150 --> 01:16:24,150
+é que se o tráfego
+
+2063
+01:16:24,150 --> 01:16:26,150
+não for destinado
+
+2064
+01:16:26,150 --> 01:16:28,150
+a minha máquina, ou seja, eu meti um calio
+
+2065
+01:16:28,150 --> 01:16:30,150
+para observar o tráfego
+
+2066
+01:16:30,150 --> 01:16:32,150
+e mesmo que
+
+2067
+01:16:32,150 --> 01:16:34,150
+mesmo que eu tenha feito
+
+2068
+01:16:34,150 --> 01:16:36,150
+aquilo que eu fiz aos suídos
+
+2069
+01:16:36,150 --> 01:16:38,150
+se eu não fizer nada
+
+2070
+01:16:38,150 --> 01:16:40,150
+na minha interface de rede da minha máquina
+
+2071
+01:16:40,150 --> 01:16:42,150
+eu também não vou conseguir ver o tráfego
+
+2072
+01:16:42,150 --> 01:16:44,150
+porque
+
+2073
+01:16:44,150 --> 01:16:46,150
+porque as interfaces de rede
+
+2074
+01:16:46,150 --> 01:16:48,150
+o enorme rejeitam
+
+2075
+01:16:48,150 --> 01:16:50,150
+todo o tráfego que não é destinado
+
+2076
+01:16:50,150 --> 01:16:52,150
+para aquela máquina
+
+2077
+01:16:52,150 --> 01:16:54,150
+e portanto, eu tenho que fazer uma alteração
+
+2078
+01:16:54,150 --> 01:16:56,150
+a minha placa de rede
+
+2079
+01:16:56,150 --> 01:16:58,150
+a configuração
+
+2080
+01:16:58,150 --> 01:17:00,150
+da minha placa de rede
+
+2081
+01:17:00,150 --> 01:17:02,150
+a configuração que nós chamamos de colocar
+
+2082
+01:17:02,150 --> 01:17:04,150
+tem que colocar a placa de rede
+
+2083
+01:17:04,150 --> 01:17:06,150
+em modo promisco
+
+2084
+01:17:06,150 --> 01:17:08,150
+ou seja, eu tenho que permitir
+
+2085
+01:17:08,150 --> 01:17:10,150
+que todo o tráfego
+
+2086
+01:17:10,150 --> 01:17:12,150
+que é destinado, todo o tráfego que aparece
+
+2087
+01:17:12,150 --> 01:17:14,150
+na minha placa de rede
+
+2088
+01:17:14,150 --> 01:17:16,150
+seja ou não seja destinado
+
+2089
+01:17:16,150 --> 01:17:18,150
+ao meu dispositivo
+
+2090
+01:17:18,150 --> 01:17:20,150
+seja absorvido pelo meu dispositivo
+
+2091
+01:17:20,150 --> 01:17:22,150
+e as outras operações
+
+2092
+01:17:22,150 --> 01:17:24,150
+eu não consigo ver
+
+2093
+01:17:24,150 --> 01:17:26,150
+o tráfego em lei
+
+2094
+01:17:26,150 --> 01:17:28,150
+entre aspas
+
+2095
+01:17:28,150 --> 01:17:30,150
+obviamente, ok?
+
+2096
+01:17:30,150 --> 01:17:32,150
+Pense-se que tem que ter respondido mais ou menos
+
+2097
+01:17:32,150 --> 01:17:34,150
+à questão, não é?
+
+2098
+01:17:34,150 --> 01:17:36,150
+Sim
+
+2099
+01:17:36,150 --> 01:17:38,150
+até, pronto, eu tenho este defeito
+
+2100
+01:17:38,150 --> 01:17:40,150
+que às vezes vou um bocadinho mais longe
+
+2101
+01:17:40,150 --> 01:17:42,150
+é normal, não é?
+
+2102
+01:17:42,150 --> 01:17:44,150
+Nesses coisas nós vimos um bocadinho mais longe
+
+2103
+01:17:44,150 --> 01:17:46,150
+nas fases
+
+2104
+01:17:46,150 --> 01:17:48,150
+mas também eu gostava de chamar a atenção
+
+2105
+01:17:48,150 --> 01:17:50,150
+quando nós estamos em um wi-fi
+
+2106
+01:17:50,150 --> 01:17:52,150
+estamos em menos wi-fi
+
+2107
+01:17:52,150 --> 01:17:54,150
+e não só wi-fi
+
+2108
+01:17:54,150 --> 01:17:56,150
+como vocês pensam, como wi-fi
+
+2109
+01:17:56,150 --> 01:17:58,150
+ou seja, há muitos protocolos
+
+2110
+01:17:58,150 --> 01:18:00,150
+sistemas indivíduos
+
+2111
+01:18:00,150 --> 01:18:02,150
+que são
+
+2112
+01:18:02,150 --> 01:18:04,150
+não quebrados
+
+2113
+01:18:04,150 --> 01:18:06,150
+zikbis etc
+
+2114
+01:18:06,150 --> 01:18:08,150
+e mesmo
+
+2115
+01:18:08,150 --> 01:18:10,150
+por exemplo, vamos ao caso mais
+
+2116
+01:18:10,150 --> 01:18:12,150
+para digmato toda a minha opinião
+
+2117
+01:18:12,150 --> 01:18:14,150
+que é fm
+
+2118
+01:18:14,150 --> 01:18:16,150
+ou seja, eu estou a transmitir
+
+2119
+01:18:16,150 --> 01:18:18,150
+por fm
+
+2120
+01:18:18,150 --> 01:18:20,150
+portanto, o sistema
+
+2121
+01:18:20,150 --> 01:18:22,150
+não é nada muito complexo
+
+2122
+01:18:22,150 --> 01:18:24,150
+é simplesmente usar coisas que se usam para os anos 60
+
+2123
+01:18:24,150 --> 01:18:26,150
+ao 50, ou seja, ao que for
+
+2124
+01:18:28,150 --> 01:18:30,150
+e são ambientes partilhados
+
+2125
+01:18:30,150 --> 01:18:32,150
+ou seja, o menu Namida
+
+2126
+01:18:32,150 --> 01:18:34,150
+desde que eu quebre a incriptação
+
+2127
+01:18:34,150 --> 01:18:36,150
+eu estou completamente
+
+2128
+01:18:36,150 --> 01:18:38,150
+dentro do sistema
+
+2129
+01:18:38,150 --> 01:18:40,150
+cuidado que não é
+
+2130
+01:18:40,150 --> 01:18:42,150
+não está ao seguinte, não é?
+
+2131
+01:18:42,150 --> 01:18:44,150
+e eu estar, não basta eu estar
+
+2132
+01:18:44,150 --> 01:18:46,150
+dentro da rede
+
+2133
+01:18:46,150 --> 01:18:48,150
+não é isso que estamos a falar
+
+2134
+01:18:48,150 --> 01:18:50,150
+como se falar uma coisa
+
+2135
+01:18:50,150 --> 01:18:52,150
+geralmente diferente
+
+2136
+01:18:52,150 --> 01:18:54,150
+mas é preciso ter noção
+
+2137
+01:18:54,150 --> 01:18:56,150
+que é um ambiente partilhado
+
+2138
+01:18:56,150 --> 01:18:58,150
+o espaço lateral magnético é partilhado
+
+2139
+01:18:58,150 --> 01:19:00,150
+por definição
+
+2140
+01:19:00,150 --> 01:19:02,150
+portanto, o menu Namida
+
+2141
+01:19:02,150 --> 01:19:04,150
+está por definição, é mais simples de eu conseguir
+
+2142
+01:19:04,150 --> 01:19:06,150
+desde que eu quebre a incriptação
+
+2143
+01:19:06,150 --> 01:19:08,150
+e dependendo
+
+2144
+01:19:08,150 --> 01:19:10,150
+do que é que eu estou a usar
+
+2145
+01:19:10,150 --> 01:19:12,150
+e quase que garanto
+
+2146
+01:19:12,150 --> 01:19:14,150
+99% de vocês
+
+2147
+01:19:14,150 --> 01:19:16,150
+estão a usar
+
+2148
+01:19:16,150 --> 01:19:18,150
+WPA2
+
+2149
+01:19:18,150 --> 01:19:20,150
+pessoal, quase estes absoluta
+
+2150
+01:19:20,150 --> 01:19:22,150
+porque estão em vossa casa, vocês devem ter
+
+2151
+01:19:22,150 --> 01:19:24,150
+um ruta que o vosso
+
+2152
+01:19:24,150 --> 01:19:26,150
+USB colocou lá, seja nós
+
+2153
+01:19:26,150 --> 01:19:28,150
+a vodafone, uma diga, ou seja, quem for
+
+2154
+01:19:28,150 --> 01:19:30,150
+e por norma o que vem
+
+2155
+01:19:30,150 --> 01:19:32,150
+é
+
+2156
+01:19:32,150 --> 01:19:34,150
+o que vem instalado é
+
+2157
+01:19:34,150 --> 01:19:36,150
+a incriptação WPA2
+
+2158
+01:19:36,150 --> 01:19:38,150
+e por exemplo, há um ataque
+
+2159
+01:19:38,150 --> 01:19:40,150
+bastante conhecido ao WPA2
+
+2160
+01:19:40,150 --> 01:19:42,150
+é que se consegue cracar o WPA2
+
+2161
+01:19:42,150 --> 01:19:44,150
+portanto, todos nós devemos estar a usar o WPA3
+
+2162
+01:19:44,150 --> 01:19:46,150
+e já agora
+
+2163
+01:19:46,150 --> 01:19:48,150
+isto é mais um capítulo
+
+2164
+01:19:48,150 --> 01:19:50,150
+mas já que estamos a falar disto
+
+2165
+01:19:50,150 --> 01:19:52,150
+há uns problemas adicionais
+
+2166
+01:19:52,150 --> 01:19:54,150
+dos sistemas imbebitos
+
+2167
+01:19:54,150 --> 01:19:56,150
+é que
+
+2168
+01:19:56,150 --> 01:19:58,150
+as placas de rede
+
+2169
+01:19:58,150 --> 01:20:00,150
+que suportam WPA3
+
+2170
+01:20:00,150 --> 01:20:02,150
+têm uma tendência muito grande
+
+2171
+01:20:02,150 --> 01:20:04,150
+a não existir nos sistemas imbebitos
+
+2172
+01:20:04,150 --> 01:20:06,150
+ou seja, nos sistemas imbebitos
+
+2173
+01:20:06,150 --> 01:20:08,150
+nós em termos Wi-Fi temos tipicamente
+
+2174
+01:20:08,150 --> 01:20:10,150
+duas questões
+
+2175
+01:20:10,150 --> 01:20:12,150
+uma das questões é que
+
+2176
+01:20:12,150 --> 01:20:14,150
+só temos suporte para WPA2
+
+2177
+01:20:14,150 --> 01:20:16,150
+não temos suporte para WPA3
+
+2178
+01:20:16,150 --> 01:20:18,150
+e portanto, tem incriptações mais complexas
+
+2179
+01:20:18,150 --> 01:20:20,150
+e em segundo lugar
+
+2180
+01:20:20,150 --> 01:20:22,150
+eu
+
+2181
+01:20:22,150 --> 01:20:24,150
+só tenho acesso à rede 2.4 GHz
+
+2182
+01:20:24,150 --> 01:20:26,150
+não tenho acesso
+
+2183
+01:20:26,150 --> 01:20:28,150
+à rede 5, à rede 6
+
+2184
+01:20:28,150 --> 01:20:30,150
+e portanto
+
+2185
+01:20:30,150 --> 01:20:32,150
+mas eu desvii-me aqui um bocadinho
+
+2186
+01:20:32,150 --> 01:20:34,150
+mas é normal também desviar-me
+
+2187
+01:20:34,150 --> 01:20:36,150
+um bocadinho enquanto estou
+
+2188
+01:20:36,150 --> 01:20:38,150
+a falar
+
+2189
+01:20:38,150 --> 01:20:40,150
+destes génergos
+
+2190
+01:20:40,150 --> 01:20:42,150
+portanto, um bocadinho atrás
+
+2191
+01:20:42,150 --> 01:20:46,710
+ou meu Cali
+
+2192
+01:20:46,710 --> 01:20:48,710
+tanto o Cali
+
+2193
+01:20:48,710 --> 01:20:50,710
+já agora
+
+2194
+01:20:50,710 --> 01:20:52,710
+o Cali sendo um sistema operativo
+
+2195
+01:20:52,710 --> 01:20:54,710
+especialmente
+
+2196
+01:20:54,710 --> 01:20:56,710
+destinado
+
+2197
+01:20:56,710 --> 01:20:58,710
+a detecção de intrusões
+
+2198
+01:20:58,710 --> 01:21:00,710
+e similares já atrás
+
+2199
+01:21:00,710 --> 01:21:02,710
+as interfaces
+
+2200
+01:21:02,710 --> 01:21:04,710
+quando nós instalamos as interfaces
+
+2201
+01:21:04,710 --> 01:21:06,710
+fica logo em promisco
+
+2202
+01:21:06,710 --> 01:21:11,020
+se é instalar
+
+2203
+01:21:11,020 --> 01:21:13,020
+o SmartShark no outro tipo de sistema
+
+2204
+01:21:13,020 --> 01:21:15,020
+tem que ter esse tipo de cuidado
+
+2205
+01:21:15,020 --> 01:21:17,020
+já agora
+
+2206
+01:21:17,020 --> 01:21:19,020
+não
+
+2207
+01:21:19,020 --> 01:21:21,020
+não vou falar
+
+2208
+01:21:21,020 --> 01:21:23,020
+não vou falar diretamente disso
+
+2209
+01:21:23,020 --> 01:21:25,020
+mas nós em sistemas imbebidos
+
+2210
+01:21:25,020 --> 01:21:27,020
+tipicamente
+
+2211
+01:21:27,020 --> 01:21:29,020
+quando eu quero fazer uma análise
+
+2212
+01:21:29,020 --> 01:21:31,020
+de rede
+
+2213
+01:21:31,020 --> 01:21:33,020
+num sistema imbebido
+
+2214
+01:21:33,020 --> 01:21:35,020
+obviamente que eu não vou conseguir instalar um Cali
+
+2215
+01:21:35,020 --> 01:21:37,020
+esqueça
+
+2216
+01:21:37,020 --> 01:21:39,020
+porque aquilo tipicamente
+
+2217
+01:21:39,020 --> 01:21:41,020
+será uma situação
+
+2218
+01:21:41,020 --> 01:21:43,020
+em que
+
+2219
+01:21:43,020 --> 01:21:45,020
+o processamento que eu tenho
+
+2220
+01:21:45,020 --> 01:21:47,020
+não tem interface gráfica, não tem nada disso
+
+2221
+01:21:47,020 --> 01:21:49,020
+porque normalmente
+
+2222
+01:21:49,020 --> 01:21:51,020
+muitas vezes nós fazemos
+
+2223
+01:21:51,020 --> 01:21:53,020
+quando queremos fazer esse tipo de análises
+
+2224
+01:21:53,020 --> 01:21:55,020
+que estou aqui mostrar diretamente no SmartShark
+
+2225
+01:21:55,020 --> 01:21:57,020
+como eu não consigo instalar o SmartShark lá
+
+2226
+01:21:57,020 --> 01:21:59,020
+tipicamente
+
+2227
+01:21:59,020 --> 01:22:01,020
+que eu faço pessoalmente
+
+2228
+01:22:01,020 --> 01:22:03,020
+e com muitos dos
+
+2229
+01:22:03,020 --> 01:22:05,020
+sistemas imbebidos
+
+2230
+01:22:05,020 --> 01:22:07,020
+que no fundo tem uma variante
+
+2231
+01:22:07,020 --> 01:22:09,020
+ou tem linux
+
+2232
+01:22:09,020 --> 01:22:11,020
+ou tem uma variante da linux
+
+2233
+01:22:11,020 --> 01:22:13,020
+instalada
+
+2234
+01:22:13,020 --> 01:22:15,020
+o que eu faço é
+
+2235
+01:22:15,020 --> 01:22:17,020
+se não tiver instalado um programa
+
+2236
+01:22:17,020 --> 01:22:19,020
+chamado tcpdump
+
+2237
+01:22:19,020 --> 01:22:21,020
+esse programa tcpdump
+
+2238
+01:22:21,020 --> 01:22:23,020
+que vai fazer uma captura dos pacotes
+
+2239
+01:22:23,020 --> 01:22:25,020
+tal igual com o SmartShark
+
+2240
+01:22:25,020 --> 01:22:27,020
+que está a fazer uma captura
+
+2241
+01:22:27,020 --> 01:22:29,020
+de pacotes
+
+2242
+01:22:29,020 --> 01:22:31,020
+ele vai fazer uma captura de pacotes
+
+2243
+01:22:31,020 --> 01:22:33,020
+para me pegar nessa captura
+
+2244
+01:22:33,020 --> 01:22:35,020
+e esse fecheiro
+
+2245
+01:22:35,020 --> 01:22:37,020
+pode até ter
+
+2246
+01:22:37,020 --> 01:22:39,020
+uma entrada
+
+2247
+01:22:39,020 --> 01:22:41,020
+que é o file
+
+2248
+01:22:41,020 --> 01:22:43,020
+e eu posso abrir depois posteriormente
+
+2249
+01:22:43,020 --> 01:22:45,020
+esse fecheiro
+
+2250
+01:22:45,020 --> 01:22:47,020
+que foi criado com tcpdump
+
+2251
+01:22:47,020 --> 01:22:49,020
+posso abrir-lo no SmartShark
+
+2252
+01:22:49,020 --> 01:22:51,020
+e fazer análises offline
+
+2253
+01:22:51,020 --> 01:22:53,020
+ou seja, mais tarde fazer uma análise
+
+2254
+01:22:53,020 --> 01:22:55,020
+de que tipo de tráfego
+
+2255
+01:22:55,020 --> 01:22:57,020
+que eu estou a ter lá
+
+2256
+01:22:57,020 --> 01:22:59,020
+e conseguir ver o que está a passar
+
+2257
+01:22:59,020 --> 01:23:01,020
+muitas vezes
+
+2258
+01:23:01,020 --> 01:23:03,020
+mas esse tipo de análise
+
+2259
+01:23:03,020 --> 01:23:05,020
+vocês sabem que
+
+2260
+01:23:05,020 --> 01:23:07,020
+acho que já chegamos um bocadinho
+
+2261
+01:23:07,020 --> 01:23:09,020
+já devem ter percebido
+
+2262
+01:23:09,020 --> 01:23:11,020
+que eu tenho uma visão um bocadinho lá
+
+2263
+01:23:11,020 --> 01:23:13,020
+do que aqui é um sistema imbebido
+
+2264
+01:23:13,020 --> 01:23:15,020
+eu tenho dificuldade em dizer hoje em dia
+
+2265
+01:23:15,020 --> 01:23:17,020
+que é exatamente um sistema imbebido
+
+2266
+01:23:17,020 --> 01:23:19,020
+e portanto
+
+2267
+01:23:19,020 --> 01:23:21,020
+eu, por exemplo, nos sistemas
+
+2268
+01:23:21,020 --> 01:23:23,020
+imbebidos
+
+2269
+01:23:23,020 --> 01:23:25,020
+que são mais complexos
+
+2270
+01:23:25,020 --> 01:23:27,020
+porque são os que têm mais problemas
+
+2271
+01:23:27,020 --> 01:23:29,020
+são nos routers
+
+2272
+01:23:29,020 --> 01:23:31,020
+podemos pensar em um router
+
+2273
+01:23:31,020 --> 01:23:33,020
+que é um sistema imbebido
+
+2274
+01:23:33,020 --> 01:23:35,020
+e, por exemplo
+
+2275
+01:23:35,020 --> 01:23:37,020
+e falei-vos algum de vocês
+
+2276
+01:23:37,020 --> 01:23:39,020
+não falei todos provavelmente
+
+2277
+01:23:39,020 --> 01:23:41,020
+na altura, não tenho certeza de as absolutas
+
+2278
+01:23:41,020 --> 01:23:43,020
+os routers
+
+2279
+01:23:43,020 --> 01:23:45,020
+têm
+
+2280
+01:23:45,020 --> 01:23:47,020
+típicamente, costumam ter assim
+
+2281
+01:23:47,020 --> 01:23:49,020
+uns certos banhos
+
+2282
+01:23:49,020 --> 01:23:51,020
+portanto, e como estão a tratar
+
+2283
+01:23:51,020 --> 01:23:53,020
+de nosso tráfego, uma das coisas que se pode fazer
+
+2284
+01:23:53,020 --> 01:23:55,020
+exatamente uma análise tcpdump
+
+2285
+01:23:55,020 --> 01:23:57,020
+ou ruta
+
+2286
+01:23:57,020 --> 01:23:59,020
+e pode fazer, por exemplo
+
+2287
+01:23:59,020 --> 01:24:01,020
+se eu não tiver acesso
+
+2288
+01:24:01,020 --> 01:24:03,020
+o laptop nge ou não tiver acesso
+
+2289
+01:24:03,020 --> 01:24:05,020
+no router
+
+2290
+01:24:05,020 --> 01:24:07,020
+nem sempre temos routers com uma open-sense
+
+2291
+01:24:07,020 --> 01:24:09,020
+que me permitem fazer análises de tráfego
+
+2292
+01:24:11,020 --> 01:24:13,020
+e eu só tiveram um router mais fechado
+
+2293
+01:24:13,020 --> 01:24:15,020
+o router qualquer
+
+2294
+01:24:15,020 --> 01:24:17,020
+em muitas situações eu consigo fazer
+
+2295
+01:24:17,020 --> 01:24:19,020
+um tcpdump e conseguir olhar
+
+2296
+01:24:19,020 --> 01:24:21,020
+o que é que o router está a receber de um lado e do outro
+
+2297
+01:24:21,020 --> 01:24:23,020
+e tentar perceber o que é que está a acontecer
+
+2298
+01:24:23,020 --> 01:24:25,020
+e posso fazer prevenção
+
+2299
+01:24:25,020 --> 01:24:27,020
+de ataques, consigo detectar ataques
+
+2300
+01:24:27,020 --> 01:24:29,020
+usando simplesmente o tcpdump
+
+2301
+01:24:29,020 --> 01:24:31,020
+e depois uma análise posterior
+
+2302
+01:24:31,020 --> 01:24:33,020
+do tipo de tráfego
+
+2303
+01:24:33,020 --> 01:24:35,020
+que está a acontecer
+
+2304
+01:24:35,020 --> 01:24:37,020
+ok
+
+2305
+01:24:37,020 --> 01:24:39,020
+continuando
+
+2306
+01:24:39,020 --> 01:24:41,020
+já não tenho muito tempo
+
+2307
+01:24:41,020 --> 01:24:45,450
+voltando aqui a nossa querida open-sense
+
+2308
+01:24:47,450 --> 01:24:49,450
+lembro-se que eu vos disse que
+
+2309
+01:24:49,450 --> 01:24:51,450
+para a LAN muitas vezes
+
+2310
+01:24:51,450 --> 01:24:53,450
+são utilizados
+
+2311
+01:24:53,450 --> 01:24:55,450
+next generation of firewalls
+
+2312
+01:24:55,450 --> 01:24:57,450
+eu peço imensa desculpa
+
+2313
+01:24:57,450 --> 01:24:59,450
+mas eu não consegui
+
+2314
+01:24:59,450 --> 01:25:01,450
+arranjar aqui uma coisinha
+
+2315
+01:25:01,450 --> 01:25:03,450
+que eu começasse para aqui
+
+2316
+01:25:03,450 --> 01:25:05,450
+mostrar coisas engraçadas
+
+2317
+01:25:05,450 --> 01:25:07,450
+não é fácil
+
+2318
+01:25:07,450 --> 01:25:09,450
+às vezes
+
+2319
+01:25:09,450 --> 01:25:11,450
+por exemplo neste caso que vocês estão a ver
+
+2320
+01:25:11,450 --> 01:25:13,450
+é uma
+
+2321
+01:25:13,450 --> 01:25:15,450
+next generation of firewall
+
+2322
+01:25:15,450 --> 01:25:17,450
+que também tem assinaturas
+
+2323
+01:25:17,450 --> 01:25:19,450
+e faz um bocadinho que o suricato faz
+
+2324
+01:25:19,450 --> 01:25:21,450
+ok
+
+2325
+01:25:21,450 --> 01:25:23,450
+faz análise de tráfego
+
+2326
+01:25:23,450 --> 01:25:25,450
+a vantagem
+
+2327
+01:25:25,450 --> 01:25:27,450
+de isto
+
+2328
+01:25:27,450 --> 01:25:29,450
+pronto, um bocadinho
+
+2329
+01:25:29,450 --> 01:25:31,450
+como acontecer com o suricato
+
+2330
+01:25:31,450 --> 01:25:33,450
+há uma versão gratuita
+
+2331
+01:25:33,450 --> 01:25:35,450
+para muitas situações
+
+2332
+01:25:35,450 --> 01:25:37,450
+a versão gratuita ser perfectamente
+
+2333
+01:25:37,450 --> 01:25:39,450
+tem que ser até 50 dispositivos
+
+2334
+01:25:39,450 --> 01:25:41,450
+no máximo e sempre 50 dispositivos
+
+2335
+01:25:41,450 --> 01:25:43,450
+já se tem que pagar
+
+2336
+01:25:43,450 --> 01:25:45,450
+mas mesmo que seja
+
+2337
+01:25:45,450 --> 01:25:47,450
+acima disso e qualquer ser pago
+
+2338
+01:25:47,450 --> 01:25:49,450
+estamos a falar de 90€
+
+2339
+01:25:49,450 --> 01:25:51,450
+100€ por ano
+
+2340
+01:25:51,450 --> 01:25:53,450
+de dinheiro
+
+2341
+01:25:53,450 --> 01:25:55,450
+que está a gastar
+
+2342
+01:25:55,450 --> 01:25:57,450
+claro que é evidente como aconteceu
+
+2343
+01:25:57,450 --> 01:25:59,450
+não é top and gear
+
+2344
+01:25:59,450 --> 01:26:01,450
+não acontece um suricato
+
+2345
+01:26:01,450 --> 01:26:03,450
+mas acontece um top and gear
+
+2346
+01:26:03,450 --> 01:26:05,450
+eu consigo ter aqui algumas imagens
+
+2347
+01:26:05,450 --> 01:26:07,450
+estava a tentar ver aqui
+
+2348
+01:26:07,450 --> 01:26:09,450
+reportes acho que é aqui
+
+2349
+01:26:09,450 --> 01:26:11,450
+exatamente
+
+2350
+01:26:11,450 --> 01:26:13,450
+eu consigo ter aqui
+
+2351
+01:26:13,450 --> 01:26:15,450
+o equivalente que eu estava a mostrar
+
+2352
+01:26:15,450 --> 01:26:17,450
+muitas vezes nós
+
+2353
+01:26:17,450 --> 01:26:19,450
+isto é importante para nós
+
+2354
+01:26:19,450 --> 01:26:21,450
+para o tipo de ligações
+
+2355
+01:26:21,450 --> 01:26:23,450
+e conseguir perceber
+
+2356
+01:26:23,450 --> 01:26:25,450
+que tipo de ligações
+
+2357
+01:26:25,450 --> 01:26:27,450
+e tipo de
+
+2358
+01:26:27,450 --> 01:26:29,450
+categorias de utilização
+
+2359
+01:26:29,450 --> 01:26:31,450
+estou a ter aqui, quem são
+
+2360
+01:26:31,450 --> 01:26:33,450
+quem é que está
+
+2361
+01:26:33,450 --> 01:26:35,450
+conversar com quem
+
+2362
+01:26:35,450 --> 01:26:37,450
+eu só tenho aqui 3 IPs
+
+2363
+01:26:37,450 --> 01:26:39,450
+o IP não está o Cali
+
+2364
+01:26:39,450 --> 01:26:41,450
+o Proca de MKTT
+
+2365
+01:26:41,450 --> 01:26:43,450
+e o cliente de MKTT
+
+2366
+01:26:43,450 --> 01:26:45,450
+mas eu consigo ter uma série de informações
+
+2367
+01:26:45,450 --> 01:26:47,450
+aqui até consigo ter
+
+2368
+01:26:47,450 --> 01:26:49,450
+uma informação mais detalhada
+
+2369
+01:26:51,450 --> 01:26:53,450
+uma informação mais detalhada
+
+2370
+01:26:53,450 --> 01:26:55,450
+que eu tinha alucado
+
+2371
+01:26:55,450 --> 01:26:57,450
+vão de ver
+
+2372
+01:26:57,450 --> 01:26:59,450
+que por exemplo eu aqui
+
+2373
+01:26:59,450 --> 01:27:01,450
+já consigo ver
+
+2374
+01:27:01,450 --> 01:27:03,450
+que não era fácil de ver no
+
+2375
+01:27:03,450 --> 01:27:05,450
+no top and gear
+
+2376
+01:27:05,450 --> 01:27:07,450
+eu consigo saber que
+
+2377
+01:27:07,450 --> 01:27:09,450
+estou a fazer conexões por exemplo
+
+2378
+01:27:09,450 --> 01:27:11,450
+ou broker firewall
+
+2379
+01:27:11,450 --> 01:27:13,450
+portanto eu sei isto que aqui é
+
+2380
+01:27:13,450 --> 01:27:15,450
+onde eu estou a buscar informação
+
+2381
+01:27:15,450 --> 01:27:17,450
+da temperatura
+
+2382
+01:27:17,450 --> 01:27:19,450
+obviamente consigo saber
+
+2383
+01:27:19,450 --> 01:27:21,450
+que estou a fazer ligações ao Firefox
+
+2384
+01:27:21,450 --> 01:27:23,450
+óbvio que estou a usar o Firefox
+
+2385
+01:27:23,450 --> 01:27:25,450
+já consigo aqui perceber
+
+2386
+01:27:25,450 --> 01:27:27,450
+que eu estou a ter ligações
+
+2387
+01:27:27,450 --> 01:27:29,450
+a uma coisa
+
+2388
+01:27:29,450 --> 01:27:31,450
+que não já não é tão simpática como isto
+
+2389
+01:27:31,450 --> 01:27:33,450
+já tenho aqui um lado
+
+2390
+01:27:33,450 --> 01:27:35,450
+deixe-me ver se eu consigo fazer aqui
+
+2391
+01:27:35,450 --> 01:27:45,580
+uma coisa
+
+2392
+01:27:49,430 --> 01:27:51,430
+portanto eu a partir de momento fiz uma ligação ao Google
+
+2393
+01:27:51,430 --> 01:27:53,430
+e vamos ver se até está aqui alguma coisa
+
+2394
+01:27:53,430 --> 01:27:55,430
+não consigo
+
+2395
+01:27:55,430 --> 01:27:57,430
+não consigo
+
+2396
+01:27:57,430 --> 01:27:59,430
+não consigo ter também
+
+2397
+01:27:59,430 --> 01:28:01,430
+mas pronto
+
+2398
+01:28:01,430 --> 01:28:03,430
+ele consegue fazer coisas
+
+2399
+01:28:03,430 --> 01:28:05,430
+um bocadinho mais avançadas do que consegui
+
+2400
+01:28:05,430 --> 01:28:07,430
+no top and gear
+
+2401
+01:28:07,430 --> 01:28:09,430
+faz uma identificação de tráfico
+
+2402
+01:28:09,430 --> 01:28:11,430
+ele aqui também faz
+
+2403
+01:28:11,430 --> 01:28:13,430
+vou só a ver
+
+2404
+01:28:13,430 --> 01:28:15,430
+mesmo que eu não esteja neste momento a detectar
+
+2405
+01:28:15,430 --> 01:28:17,430
+conseguem ver que eu tenho que conseguir ver as conexões
+
+2406
+01:28:17,430 --> 01:28:19,430
+conseguir ver o que considera
+
+2407
+01:28:19,430 --> 01:28:21,430
+situações que não são
+
+2408
+01:28:21,430 --> 01:28:23,430
+muito corretas
+
+2409
+01:28:23,430 --> 01:28:25,430
+quando bloquei
+
+2410
+01:28:25,430 --> 01:28:27,430
+consigo ver caixões bloqueis
+
+2411
+01:28:27,430 --> 01:28:29,430
+consigo ver os pedidos DNS
+
+2412
+01:28:29,430 --> 01:28:31,430
+pedidos DLS
+
+2413
+01:28:31,430 --> 01:28:33,430
+consigo ter uma visão
+
+2414
+01:28:33,430 --> 01:28:35,430
+muito boa
+
+2415
+01:28:35,430 --> 01:28:37,430
+do estado
+
+2416
+01:28:37,430 --> 01:28:39,430
+da minha rede
+
+2417
+01:28:39,430 --> 01:28:42,900
+sim
+
+2418
+01:28:42,900 --> 01:28:44,900
+pronto e consigo ver
+
+2419
+01:28:44,900 --> 01:28:46,900
+todas as ligações que estou a ter neste momento
+
+2420
+01:28:46,900 --> 01:28:48,900
+claro que eu aqui estou na versão gratuita
+
+2421
+01:28:48,900 --> 01:28:50,900
+na versão gratuita
+
+2422
+01:28:50,900 --> 01:28:52,900
+eu por exemplo não faço identificação dos dispositivos
+
+2423
+01:28:52,900 --> 01:28:54,900
+na versão paga
+
+2424
+01:28:54,900 --> 01:28:56,900
+a tal de 100 euros
+
+2425
+01:28:56,900 --> 01:28:58,900
+a fase de identificação dos
+
+2426
+01:28:58,900 --> 01:29:00,900
+dos dispositivos
+
+2427
+01:29:00,900 --> 01:29:02,900
+e portanto eu em vez de ter aqui um device
+
+2428
+01:29:02,900 --> 01:29:04,900
+com uma cadra
+
+2429
+01:29:04,900 --> 01:29:06,900
+se eu conseguir ter aqui o nome
+
+2430
+01:29:06,900 --> 01:29:08,900
+do dispositivo
+
+2431
+01:29:08,900 --> 01:29:10,900
+então tinha uma visão muito melhor
+
+2432
+01:29:10,900 --> 01:29:12,900
+que tipo de conexões é o que eu estava
+
+2433
+01:29:12,900 --> 01:29:14,900
+a obter
+
+2434
+01:29:14,900 --> 01:29:16,900
+mesmo posso obviamente ver
+
+2435
+01:29:16,900 --> 01:29:18,900
+caixões ligações DLS
+
+2436
+01:29:18,900 --> 01:29:20,900
+e quais são as ligações
+
+2437
+01:29:20,900 --> 01:29:22,900
+já tem aqui umas ligações
+
+2438
+01:29:22,900 --> 01:29:24,900
+ao play google por exemplo
+
+2439
+01:29:24,900 --> 01:29:26,900
+etc
+
+2440
+01:29:26,900 --> 01:29:28,900
+e depois teoricamente isso é que eu estou a pensar
+
+2441
+01:29:28,900 --> 01:29:30,900
+porque é que eu não consigo fazer isso
+
+2442
+01:29:30,900 --> 01:29:32,900
+eu consigo ter políticas
+
+2443
+01:29:32,900 --> 01:29:37,850
+eu consigo ter políticas
+
+2444
+01:29:37,850 --> 01:29:39,850
+por exemplo de segurança
+
+2445
+01:29:39,850 --> 01:29:41,850
+e dizer olha
+
+2446
+01:29:41,850 --> 01:29:43,850
+tenta-me tratar
+
+2447
+01:29:43,850 --> 01:29:45,850
+vejam mais uma vez
+
+2448
+01:29:45,850 --> 01:29:47,850
+mesmo copagos 90 euros
+
+2449
+01:29:47,850 --> 01:29:49,850
+isto só está funcionando
+
+2450
+01:29:49,850 --> 01:29:51,850
+o tráfico não equiliputado
+
+2451
+01:29:51,850 --> 01:29:53,850
+para eu ter tráfico
+
+2452
+01:29:53,850 --> 01:29:55,850
+da análise de tráfico equiliputado
+
+2453
+01:29:55,850 --> 01:29:57,850
+eu já tenho que pagar
+
+2454
+01:29:57,850 --> 01:29:59,850
+nem sei de qual contacto custa
+
+2455
+01:29:59,850 --> 01:30:01,850
+mas acho que são militares
+
+2456
+01:30:01,850 --> 01:30:03,850
+eu já tenho que pagar a versão
+
+2457
+01:30:03,850 --> 01:30:05,850
+Enterprise
+
+2458
+01:30:05,850 --> 01:30:07,850
+já não pode ser com a versão
+
+2459
+01:30:07,850 --> 01:30:09,850
+de 100 euros
+
+2460
+01:30:09,850 --> 01:30:11,850
+mas vejam que teoricamente
+
+2461
+01:30:11,850 --> 01:30:13,850
+eu estou neste momento protegido
+
+2462
+01:30:13,850 --> 01:30:15,850
+para uma série de categoria
+
+2463
+01:30:15,850 --> 01:30:17,850
+de ataques
+
+2464
+01:30:17,850 --> 01:30:19,850
+e muitas vezes claro que
+
+2465
+01:30:19,850 --> 01:30:21,850
+é
+
+2466
+01:30:21,850 --> 01:30:23,850
+lá está
+
+2467
+01:30:23,850 --> 01:30:25,850
+quando eu tento
+
+2468
+01:30:25,850 --> 01:30:27,850
+por aqui mais
+
+2469
+01:30:27,850 --> 01:30:29,850
+mais algum tipo de ataques
+
+2470
+01:30:29,850 --> 01:30:31,850
+ai, nós fazemos isso mas tem que pagar
+
+2471
+01:30:31,850 --> 01:30:33,850
+um licenciamento
+
+2472
+01:30:33,850 --> 01:30:35,850
+ok, consigo ter
+
+2473
+01:30:35,850 --> 01:30:37,850
+controle da aplicações
+
+2474
+01:30:37,850 --> 01:30:39,850
+isto já não tem muito a ver
+
+2475
+01:30:39,850 --> 01:30:41,850
+tanto com a questão
+
+2476
+01:30:41,850 --> 01:30:43,850
+da ciber-segurança
+
+2477
+01:30:43,850 --> 01:30:45,850
+em muitas situações
+
+2478
+01:30:45,850 --> 01:30:47,850
+mais com o controle
+
+2479
+01:30:47,850 --> 01:30:49,850
+de utilização
+
+2480
+01:30:49,850 --> 01:30:51,850
+da internet
+
+2481
+01:30:51,850 --> 01:30:53,850
+portanto em que eu posso dizer
+
+2482
+01:30:53,850 --> 01:30:55,850
+o que é que eu quero cortar
+
+2483
+01:30:55,850 --> 01:30:57,850
+por exemplo, não quero que as pessoas
+
+2484
+01:30:57,850 --> 01:30:59,850
+possam utilizar ferramentas da ida
+
+2485
+01:30:59,850 --> 01:31:01,850
+não quero que as pessoas possam
+
+2486
+01:31:01,850 --> 01:31:03,850
+utilizar blogs
+
+2487
+01:31:03,850 --> 01:31:05,850
+ou etc.
+
+2488
+01:31:05,850 --> 01:31:07,850
+ou que possam jogar
+
+2489
+01:31:07,850 --> 01:31:09,850
+outra coisa que eu quero deixar
+
+2490
+01:31:09,850 --> 01:31:11,850
+ou não posso usar
+
+2491
+01:31:11,850 --> 01:31:13,850
+não quero que as pessoas possam usar
+
+2492
+01:31:13,850 --> 01:31:15,850
+whatsapp, por exemplo
+
+2493
+01:31:15,850 --> 01:31:17,850
+com a questão da minha rede
+
+2494
+01:31:17,850 --> 01:31:19,850
+portanto com este
+
+2495
+01:31:19,850 --> 01:31:21,850
+tipo de DPI
+
+2496
+01:31:21,850 --> 01:31:23,850
+eu consigo gerir
+
+2497
+01:31:23,850 --> 01:31:25,850
+esse tipo de situações de uma forma
+
+2498
+01:31:25,850 --> 01:31:27,850
+muito simples
+
+2499
+01:31:27,850 --> 01:31:29,850
+e
+
+2500
+01:31:29,850 --> 01:31:31,850
+pessoalmente
+
+2501
+01:31:31,850 --> 01:31:33,850
+isto faz parte
+
+2502
+01:31:33,850 --> 01:31:35,850
+de nós já falando totalmente
+
+2503
+01:31:35,850 --> 01:31:37,850
+para situações
+
+2504
+01:31:37,850 --> 01:31:39,850
+típicas em que eu
+
+2505
+01:31:39,850 --> 01:31:41,850
+quero por mais um
+
+2506
+01:31:41,850 --> 01:31:43,850
+set and forget
+
+2507
+01:31:43,850 --> 01:31:45,850
+e isto será mais simples
+
+2508
+01:31:45,850 --> 01:31:47,850
+porque eu consigo pôr as regras
+
+2509
+01:31:47,850 --> 01:31:49,850
+e depois consigo ter uma visão
+
+2510
+01:31:49,850 --> 01:31:51,850
+muito simples das regras
+
+2511
+01:31:51,850 --> 01:31:53,850
+e por exemplo, eu não tenho isto
+
+2512
+01:31:53,850 --> 01:31:55,850
+já mas por exemplo, uma das situações
+
+2513
+01:31:55,850 --> 01:31:57,850
+que eu tentei com
+
+2514
+01:31:57,850 --> 01:31:59,850
+esta parte nestes que as pessoas
+
+2515
+01:31:59,850 --> 01:32:01,850
+faram outra de DPI
+
+2516
+01:32:01,850 --> 01:32:03,850
+foi que, por exemplo
+
+2517
+01:32:03,850 --> 01:32:05,850
+a minha televisão Sony
+
+2518
+01:32:05,850 --> 01:32:07,850
+para todos os efeitos a mim eu sempre era bebido
+
+2519
+01:32:07,850 --> 01:32:09,850
+mesmo estando a funcionar
+
+2520
+01:32:09,850 --> 01:32:11,850
+como da MTV
+
+2521
+01:32:11,850 --> 01:32:13,850
+ou seja, mesmo tendo
+
+2522
+01:32:13,850 --> 01:32:15,850
+o Android
+
+2523
+01:32:15,850 --> 01:32:17,850
+desligado
+
+2524
+01:32:17,850 --> 01:32:19,850
+supostamente era no Gte
+
+2525
+01:32:19,850 --> 01:32:21,850
+não vai ver com o Android nem nada, não vai ver com a minha aplicação
+
+2526
+01:32:21,850 --> 01:32:23,850
+e eu
+
+2527
+01:32:23,850 --> 01:32:25,850
+não tenho sequer uma assinatura
+
+2528
+01:32:25,850 --> 01:32:27,850
+do Netflix
+
+2529
+01:32:27,850 --> 01:32:29,850
+a Netflix
+
+2530
+01:32:29,850 --> 01:32:31,850
+temava
+
+2531
+01:32:31,850 --> 01:32:33,850
+a aplicação Netflix
+
+2532
+01:32:33,850 --> 01:32:35,850
+da minha televisão, temava
+
+2533
+01:32:35,850 --> 01:32:37,850
+em comunicar com a Netflix
+
+2534
+01:32:37,850 --> 01:32:39,850
+é uma coisa completamente absurda
+
+2535
+01:32:39,850 --> 01:32:41,850
+e quer dizer que eu consigo ter
+
+2536
+01:32:41,850 --> 01:32:43,850
+vir usando uma ferramenta
+
+2537
+01:32:43,850 --> 01:32:45,850
+deste gen
+
+2538
+01:32:45,850 --> 01:32:47,850
+foi relativamente simples eu conseguir
+
+2539
+01:32:47,850 --> 01:32:49,850
+detectar a existência
+
+2540
+01:32:51,850 --> 01:32:53,850
+desse tipo de comunicação
+
+2541
+01:32:53,850 --> 01:32:55,850
+e bloquear
+
+2542
+01:32:55,850 --> 01:32:57,850
+esse tipo de comunicação
+
+2543
+01:32:57,850 --> 01:32:59,850
+ou ao contrário, por exemplo
+
+2544
+01:32:59,850 --> 01:33:01,850
+sei lá
+
+2545
+01:33:01,850 --> 01:33:03,850
+por exemplo, tem aqui uma parte
+
+2546
+01:33:03,850 --> 01:33:05,850
+que é ferramenta Hacking
+
+2547
+01:33:05,850 --> 01:33:07,850
+e eu, por exemplo, tinha posto
+
+2548
+01:33:07,850 --> 01:33:09,850
+Vocay ou Hacking
+
+2549
+01:33:09,850 --> 01:33:11,850
+o que não dava
+
+2550
+01:33:11,850 --> 01:33:13,850
+muito jeito
+
+2551
+01:33:13,850 --> 01:33:15,850
+com quem trabalha na minha área
+
+2552
+01:33:15,850 --> 01:33:17,850
+por exemplo, eu queria instalar o Cali
+
+2553
+01:33:17,850 --> 01:33:19,850
+e ele simplesmente nem me sequer me deixava
+
+2554
+01:33:19,850 --> 01:33:21,850
+entrar no site do Cali e bloquear
+
+2555
+01:33:21,850 --> 01:33:23,850
+um acesso ao site do Cali porque estava considerado
+
+2556
+01:33:23,850 --> 01:33:25,850
+e isso leva naquela questão
+
+2557
+01:33:25,850 --> 01:33:27,850
+quase o início
+
+2558
+01:33:27,850 --> 01:33:29,850
+da aula, voltamos um bocadinho
+
+2559
+01:33:29,850 --> 01:33:31,850
+na mesma questão
+
+2560
+01:33:31,850 --> 01:33:33,850
+que eu lembro se que eu vos falei
+
+2561
+01:33:33,850 --> 01:33:35,850
+sobre a lista
+
+2562
+01:33:35,850 --> 01:33:37,850
+de regras quando se usava suricata
+
+2563
+01:33:37,850 --> 01:33:39,850
+aqui não é
+
+2564
+01:33:39,850 --> 01:33:41,850
+uma lista de regras, mas aqui
+
+2565
+01:33:41,850 --> 01:33:43,850
+uma parte obscura
+
+2566
+01:33:43,850 --> 01:33:45,850
+que eu não controlo
+
+2567
+01:33:45,850 --> 01:33:47,850
+que eu quando digo assim, ok,
+
+2568
+01:33:47,850 --> 01:33:49,850
+vai cortar, por exemplo
+
+2569
+01:33:49,850 --> 01:33:51,850
+os anúncios
+
+2570
+01:33:51,850 --> 01:33:53,850
+e isto
+
+2571
+01:33:53,850 --> 01:33:55,850
+vejo lá, tem logo ali um ats
+
+2572
+01:33:55,850 --> 01:33:57,850
+se eu disser que quero cortar os anúncios
+
+2573
+01:33:57,850 --> 01:33:59,850
+eu não sei exatamente
+
+2574
+01:33:59,850 --> 01:34:01,850
+o que ele está a falar, ele fala
+
+2575
+01:34:01,850 --> 01:34:03,850
+que eu tenho as 400 níveis
+
+2576
+01:34:03,850 --> 01:34:05,850
+de corte de anúncios
+
+2577
+01:34:05,850 --> 01:34:07,850
+eu consigo ter alguma noção
+
+2578
+01:34:07,850 --> 01:34:09,850
+entrando aqui
+
+2579
+01:34:09,850 --> 01:34:11,850
+mas não tenho exatamente a noção
+
+2580
+01:34:11,850 --> 01:34:13,850
+o que é que são estes 400
+
+2581
+01:34:13,850 --> 01:34:15,850
+então
+
+2582
+01:34:15,850 --> 01:34:17,850
+esta lista de 400 sites
+
+2583
+01:34:17,850 --> 01:34:19,850
+de anúncios
+
+2584
+01:34:19,850 --> 01:34:21,850
+e portanto
+
+2585
+01:34:21,850 --> 01:34:23,850
+consigo ter alguma noção
+
+2586
+01:34:23,850 --> 01:34:25,850
+mas não consigo ter completa noção
+
+2587
+01:34:25,850 --> 01:34:27,850
+embora neste caso específico
+
+2588
+01:34:27,850 --> 01:34:29,850
+eu ainda consigo gerir
+
+2589
+01:34:29,850 --> 01:34:31,850
+ou seja, quando digo
+
+2590
+01:34:31,850 --> 01:34:33,850
+eu quero cortar anúncios, ele ao menos
+
+2591
+01:34:33,850 --> 01:34:35,850
+aqui mostra-me
+
+2592
+01:34:35,850 --> 01:34:37,850
+as 400 sites de anúncios
+
+2593
+01:34:37,850 --> 01:34:39,850
+e portanto eu consigo aqui mais ou menos
+
+2594
+01:34:39,850 --> 01:34:41,850
+ter alguma noção
+
+2595
+01:34:41,850 --> 01:34:43,850
+se formos, se formos aqui
+
+2596
+01:34:43,850 --> 01:34:49,430
+e formos
+
+2597
+01:34:49,430 --> 01:34:51,430
+a solução que eu estou a usar atualmente
+
+2598
+01:34:51,430 --> 01:34:53,430
+e eu não percebo que acabou de eu visto
+
+2599
+01:34:53,430 --> 01:34:55,430
+não era suposto
+
+2600
+01:34:55,430 --> 01:34:57,430
+mas ali aquela
+
+2601
+01:34:57,430 --> 01:34:59,430
+ferramenta é um exemplo
+
+2602
+01:34:59,430 --> 01:35:01,430
+permitiria, tem várias possibilidades
+
+2603
+01:35:01,430 --> 01:35:03,430
+por exemplo, bloquear publicidades e coisas do gênero
+
+2604
+01:35:03,430 --> 01:35:05,430
+certo?
+
+2605
+01:35:05,430 --> 01:35:07,430
+mas aquilo só dentro
+
+2606
+01:35:07,430 --> 01:35:09,430
+daquele ambiente virtual e para as máquinas
+
+2607
+01:35:09,430 --> 01:35:11,430
+ligadas naquela rede
+
+2608
+01:35:11,430 --> 01:35:13,430
+sim sim sim, não pois
+
+2609
+01:35:13,430 --> 01:35:15,430
+pois o que nós fazemos
+
+2610
+01:35:15,430 --> 01:35:17,430
+a seguir é
+
+2611
+01:35:17,430 --> 01:35:19,430
+ok, eu tenho a minha rede protegida
+
+2612
+01:35:19,430 --> 01:35:21,430
+para anúncios
+
+2613
+01:35:21,430 --> 01:35:23,430
+deixe-me só confirmar aqui que eu já consegui entrar
+
+2614
+01:35:23,430 --> 01:35:25,430
+peço desculpa
+
+2615
+01:35:25,430 --> 01:35:27,430
+já consigo
+
+2616
+01:35:27,430 --> 01:35:29,430
+eu não estou a usar aquela opção
+
+2617
+01:35:29,430 --> 01:35:31,430
+e agora estou a usar outra opção
+
+2618
+01:35:31,430 --> 01:35:33,430
+que eu estou a mostrar neste momento
+
+2619
+01:35:35,430 --> 01:35:40,470
+só um momento
+
+2620
+01:35:40,470 --> 01:35:42,470
+neste caso eu estou a usar um e-fi
+
+2621
+01:35:42,470 --> 01:35:44,470
+e a nex
+
+2622
+01:35:44,470 --> 01:35:46,470
+a minha pergunta
+
+2623
+01:35:46,470 --> 01:35:48,470
+a minha pergunta é
+
+2624
+01:35:48,470 --> 01:35:50,470
+e é no sentido de
+
+2625
+01:35:50,470 --> 01:35:52,470
+eu com aquilo não consigo
+
+2626
+01:35:52,470 --> 01:35:54,470
+gerir a rede de casa
+
+2627
+01:35:54,470 --> 01:35:56,470
+eu consigo gerir a rede que está
+
+2628
+01:35:56,470 --> 01:35:58,470
+naquele ambiente virtual
+
+2629
+01:35:58,470 --> 01:36:00,470
+não não não, se apagar
+
+2630
+01:36:00,470 --> 01:36:02,470
+em uma open-sense
+
+2631
+01:36:02,470 --> 01:36:04,470
+ou seja, pagar
+
+2632
+01:36:04,470 --> 01:36:06,470
+e quiser gastar em uns 150 euros
+
+2633
+01:36:06,470 --> 01:36:08,470
+e meter uma máquina
+
+2634
+01:36:08,470 --> 01:36:10,470
+para o instalado a open-sense da máquina
+
+2635
+01:36:10,470 --> 01:36:12,470
+e principalmente
+
+2636
+01:36:12,470 --> 01:36:14,470
+mandar a dar uma volta
+
+2637
+01:36:14,470 --> 01:36:16,470
+se eu tiver uma máquina
+
+2638
+01:36:16,470 --> 01:36:18,470
+me ligar a rede de casa
+
+2639
+01:36:18,470 --> 01:36:20,470
+e aí correr as regras
+
+2640
+01:36:20,470 --> 01:36:22,470
+vai funcionar
+
+2641
+01:36:22,470 --> 01:36:24,470
+ou seja
+
+2642
+01:36:24,470 --> 01:36:26,470
+eu tenho neste momento, imaginemos
+
+2643
+01:36:26,470 --> 01:36:28,470
+a sua cliente nós
+
+2644
+01:36:28,470 --> 01:36:30,470
+estes também são um bocado menores
+
+2645
+01:36:30,470 --> 01:36:32,470
+mas, por exemplo, eu sou cliente de nós
+
+2646
+01:36:32,470 --> 01:36:34,470
+e quem é cliente de nós
+
+2647
+01:36:34,470 --> 01:36:36,470
+tem uma das portas
+
+2648
+01:36:36,470 --> 01:36:38,470
+do router da nós
+
+2649
+01:36:38,470 --> 01:36:40,470
+pode ser colocada em bypass
+
+2650
+01:36:40,470 --> 01:36:42,470
+ou seja
+
+2651
+01:36:42,470 --> 01:36:44,470
+por isso simplesmente o router da nós
+
+2652
+01:36:44,470 --> 01:36:46,470
+não está a funcionar como router
+
+2653
+01:36:46,470 --> 01:36:48,470
+ok, tanto eu tenho um cabo
+
+2654
+01:36:48,470 --> 01:36:50,470
+tenho um cabo de televisão
+
+2655
+01:36:50,470 --> 01:36:52,470
+porque não tenho fibra
+
+2656
+01:36:52,470 --> 01:36:54,470
+tenho um cabo de televisão que entra no router da nós
+
+2657
+01:36:54,470 --> 01:36:56,470
+depois configurei o router da nós
+
+2658
+01:36:56,470 --> 01:36:58,470
+a dizer eu não quero que tudo seja de router
+
+2659
+01:36:58,470 --> 01:37:00,470
+quer que simplesmente faça um bypass
+
+2660
+01:37:00,470 --> 01:37:02,470
+e depois eu ligo
+
+2661
+01:37:02,470 --> 01:37:04,470
+quando faço bypass tem que ser na porta 3
+
+2662
+01:37:04,470 --> 01:37:06,470
+e eu ligo na porta 3
+
+2663
+01:37:06,470 --> 01:37:08,470
+no cabo de red e desse cabo de red
+
+2664
+01:37:08,470 --> 01:37:10,470
+vai a uma ruta
+
+2665
+01:37:10,470 --> 01:37:12,470
+portanto, eu estou automaticamente
+
+2666
+01:37:12,470 --> 01:37:14,470
+a fazer um bypass
+
+2667
+01:37:14,470 --> 01:37:16,470
+depois tenho que ter um bypass próprio
+
+2668
+01:37:16,470 --> 01:37:18,470
+e também, isso é o óbvio
+
+2669
+01:37:18,470 --> 01:37:20,470
+depois o que acontece
+
+2670
+01:37:20,470 --> 01:37:22,470
+o ano eu estou fora de casa
+
+2671
+01:37:22,470 --> 01:37:24,470
+quando estou em casa estou a proteger
+
+2672
+01:37:24,470 --> 01:37:26,470
+quem está fora de casa já não está protegido
+
+2673
+01:37:26,470 --> 01:37:28,470
+não está na rede de casa
+
+2674
+01:37:28,470 --> 01:37:30,470
+então o que nós fazemos nós
+
+2675
+01:37:30,470 --> 01:37:32,470
+fazemos uma ligação por VPN
+
+2676
+01:37:32,470 --> 01:37:34,470
+constante, sempre eu faço
+
+2677
+01:37:34,470 --> 01:37:36,470
+quando eu sinto de casa
+
+2678
+01:37:36,470 --> 01:37:38,470
+automaticamente
+
+2679
+01:37:38,470 --> 01:37:40,470
+o meu telemóvel
+
+2680
+01:37:40,470 --> 01:37:42,470
+os meus computadores
+
+2681
+01:37:42,470 --> 01:37:44,470
+os computadores nem estão fazendo automaticamente
+
+2682
+01:37:44,470 --> 01:37:46,470
+mas o telemóvel está a fazer isso automaticamente
+
+2683
+01:37:46,470 --> 01:37:48,470
+e o tablet também
+
+2684
+01:37:48,470 --> 01:37:50,470
+ele automaticamente liga uma VPN
+
+2685
+01:37:50,470 --> 01:37:52,470
+com teta que sou fora de casa
+
+2686
+01:37:52,470 --> 01:37:54,470
+sempre como neste caso
+
+2687
+01:37:54,470 --> 01:37:56,470
+os anúncios
+
+2688
+01:37:56,470 --> 01:37:58,470
+serem cortados
+
+2689
+01:37:58,470 --> 01:38:00,470
+de uma forma curiosa
+
+2690
+01:38:00,470 --> 01:38:02,470
+eu engraçado que
+
+2691
+01:38:02,470 --> 01:38:04,470
+aquela solução
+
+2692
+01:38:04,470 --> 01:38:06,470
+do ZenArma
+
+2693
+01:38:06,470 --> 01:38:08,470
+que eu vos mostrei anteriormente
+
+2694
+01:38:08,470 --> 01:38:10,470
+faça a solução que eu vos mostrei agora
+
+2695
+01:38:10,470 --> 01:38:12,470
+era, no caso dos anúncios
+
+2696
+01:38:12,470 --> 01:38:14,470
+especificamente dos anúncios
+
+2697
+01:38:14,470 --> 01:38:16,470
+era superior
+
+2698
+01:38:16,470 --> 01:38:18,470
+por uma razão muito simples porque
+
+2699
+01:38:18,470 --> 01:38:20,470
+ele cortava os anúncios
+
+2700
+01:38:20,470 --> 01:38:22,470
+nas apps do Android
+
+2701
+01:38:22,470 --> 01:38:24,470
+enquanto que essa solução não corta
+
+2702
+01:38:24,470 --> 01:38:26,470
+e portanto
+
+2703
+01:38:26,470 --> 01:38:28,470
+normalmente os cortes
+
+2704
+01:38:28,470 --> 01:38:30,470
+deveriam ser feitos de uma forma
+
+2705
+01:38:30,470 --> 01:38:32,470
+standard que é por DNS
+
+2706
+01:38:32,470 --> 01:38:34,470
+mas ali há mais pouca coisa
+
+2707
+01:38:34,470 --> 01:38:36,470
+também esta é a questão que eu vos tinha falado desde o início
+
+2708
+01:38:36,470 --> 01:38:38,470
+que é, há que coisas que me deixam
+
+2709
+01:38:38,470 --> 01:38:40,470
+às vezes um bocadinho incomodado porque não sei
+
+2710
+01:38:40,470 --> 01:38:42,470
+exatamente tudo que está a ser feito
+
+2711
+01:38:42,470 --> 01:38:44,470
+e eu ali, por exemplo, disse
+
+2712
+01:38:44,470 --> 01:38:46,470
+vocês viram que eu tinha
+
+2713
+01:38:46,470 --> 01:38:48,470
+eu não tinha a possibilidade
+
+2714
+01:38:48,470 --> 01:38:50,470
+de, por exemplo, quando dizia, quero cortar os anúncios
+
+2715
+01:38:50,470 --> 01:38:52,470
+saber o que eram
+
+2716
+01:38:52,470 --> 01:38:54,470
+os sites que estavam a ser cortados
+
+2717
+01:38:54,470 --> 01:38:56,470
+nesta
+
+2718
+01:38:56,470 --> 01:38:58,470
+coisa que está aqui
+
+2719
+01:38:58,470 --> 01:39:00,470
+nesta
+
+2720
+01:39:00,470 --> 01:39:02,470
+nesta
+
+2721
+01:39:02,470 --> 01:39:04,470
+nesta next generation firewall
+
+2722
+01:39:04,470 --> 01:39:06,470
+da Unify
+
+2723
+01:39:06,470 --> 01:39:08,470
+ele aqui
+
+2724
+01:39:08,470 --> 01:39:10,470
+por exemplo, eu digo e ele
+
+2725
+01:39:10,470 --> 01:39:12,470
+estou a ver mais uma vez
+
+2726
+01:39:12,470 --> 01:39:14,470
+eu posso dizer o que é que quero cortar
+
+2727
+01:39:14,470 --> 01:39:16,470
+por exemplo, sei lá
+
+2728
+01:39:16,470 --> 01:39:18,470
+os sites desligados no des
+
+2729
+01:39:18,470 --> 01:39:20,470
+etc, não é
+
+2730
+01:39:20,470 --> 01:39:22,470
+mas tenho notado
+
+2731
+01:39:22,470 --> 01:39:24,470
+por exemplo, que a deixa passar
+
+2732
+01:39:24,470 --> 01:39:26,470
+por exemplo, foi a onda
+
+2733
+01:39:26,470 --> 01:39:28,470
+foi na criptocurrency
+
+2734
+01:39:28,470 --> 01:39:30,470
+testei no outro dia
+
+2735
+01:39:30,470 --> 01:39:32,470
+e praticamente ele deixou
+
+2736
+01:39:32,470 --> 01:39:34,470
+me passar e às vezes
+
+2737
+01:39:34,470 --> 01:39:36,470
+tem coisas, por exemplo, esta é outra questão
+
+2738
+01:39:36,470 --> 01:39:38,470
+que às vezes temos que ter algum cuidado
+
+2739
+01:39:38,470 --> 01:39:40,470
+é que estas ferramentas
+
+2740
+01:39:40,470 --> 01:39:42,470
+de
+
+2741
+01:39:42,470 --> 01:39:44,470
+de inspeção
+
+2742
+01:39:44,470 --> 01:39:46,470
+de autorização, podemos dizer
+
+2743
+01:39:46,470 --> 01:39:48,470
+IPS
+
+2744
+01:39:48,470 --> 01:39:50,470
+são muitas vezes ferramentas
+
+2745
+01:39:50,470 --> 01:39:52,470
+não, são ferramentas noites americanas
+
+2746
+01:39:52,470 --> 01:39:54,470
+então, se calhar
+
+2747
+01:39:54,470 --> 01:39:56,470
+o que eu considero, sei lá
+
+2748
+01:39:56,470 --> 01:39:58,470
+se eu estou olhando para esta lista, vocês estão a olhar para a lista
+
+2749
+01:39:58,470 --> 01:40:00,470
+é que eu tenho a lista toda
+
+2750
+01:40:00,470 --> 01:40:02,470
+só por questões de verificar
+
+2751
+01:40:02,470 --> 01:40:04,470
+por exemplo, cortar sites ligados
+
+2752
+01:40:04,470 --> 01:40:06,470
+a fases de bem em um mínimo caricato
+
+2753
+01:40:06,470 --> 01:40:08,470
+não é
+
+2754
+01:40:08,470 --> 01:40:10,470
+e portanto, vocês venham aqui algumas coisas
+
+2755
+01:40:10,470 --> 01:40:12,470
+que se calhar na nossa
+
+2756
+01:40:12,470 --> 01:40:14,470
+presa de europeus, será
+
+2757
+01:40:14,470 --> 01:40:16,470
+agora eu tenho aqui
+
+2758
+01:40:16,470 --> 01:40:18,470
+portanto, ele diz aqui
+
+2759
+01:40:18,470 --> 01:40:20,470
+não permita o ver
+
+2760
+01:40:20,470 --> 01:40:22,470
+sites que tenham um fato bem
+
+2761
+01:40:22,470 --> 01:40:24,470
+lembra-se dela, faça agora
+
+2762
+01:40:26,470 --> 01:40:28,470
+mas eu gostaria
+
+2763
+01:40:28,470 --> 01:40:30,470
+mas aí dá para
+
+2764
+01:40:30,470 --> 01:40:32,470
+por exemplo
+
+2765
+01:40:32,470 --> 01:40:34,470
+personalizar
+
+2766
+01:40:34,470 --> 01:40:36,470
+este tipo de categoria
+
+2767
+01:40:36,470 --> 01:40:38,470
+é fechado
+
+2768
+01:40:38,470 --> 01:40:40,470
+é fechado, ou seja
+
+2769
+01:40:40,470 --> 01:40:42,470
+ele decidiu
+
+2770
+01:40:42,470 --> 01:40:44,470
+que, ele é que decidiu
+
+2771
+01:40:44,470 --> 01:40:46,470
+quais são os sites de
+
+2772
+01:40:46,470 --> 01:40:48,470
+fases de bem que eu não posso ver
+
+2773
+01:40:48,470 --> 01:40:50,470
+ok, mas
+
+2774
+01:40:50,470 --> 01:40:52,470
+se nós quisermos calar
+
+2775
+01:40:52,470 --> 01:40:54,470
+algum motivo
+
+2776
+01:40:54,470 --> 01:40:56,470
+fazer os nossos
+
+2777
+01:40:56,470 --> 01:40:58,470
+os nossos próprios filtros
+
+2778
+01:40:58,470 --> 01:41:00,470
+é possível
+
+2779
+01:41:00,470 --> 01:41:02,470
+neste aqui não é possível
+
+2780
+01:41:02,470 --> 01:41:04,470
+neste aqui não é possível
+
+2781
+01:41:04,470 --> 01:41:06,470
+ou seja, eu simplesmente
+
+2782
+01:41:06,470 --> 01:41:08,470
+quero ver ou não quero ver fases de bem
+
+2783
+01:41:08,470 --> 01:41:10,470
+quero ver ou não quero ver os sites
+
+2784
+01:41:10,470 --> 01:41:12,470
+sobre tabaco
+
+2785
+01:41:12,470 --> 01:41:14,470
+quero ver ou não quero ver os sites
+
+2786
+01:41:14,470 --> 01:41:16,470
+sobre biquinis
+
+2787
+01:41:16,470 --> 01:41:18,470
+eu tenho tudo ligado
+
+2788
+01:41:18,470 --> 01:41:20,470
+eu tenho isto tudo ligado
+
+2789
+01:41:20,470 --> 01:41:22,470
+mas
+
+2790
+01:41:22,470 --> 01:41:24,470
+eu não permito personalizar muito
+
+2791
+01:41:24,470 --> 01:41:26,470
+só me permite personalizar dentro
+
+2792
+01:41:26,470 --> 01:41:28,470
+destes grandes grupos
+
+2793
+01:41:28,470 --> 01:41:30,470
+podemos assim dizer, na outra solução
+
+2794
+01:41:30,470 --> 01:41:32,470
+que eu tinha-vos mostrado ao bocado
+
+2795
+01:41:32,470 --> 01:41:34,470
+na outra solução que eu tinha mostrado ao bocado
+
+2796
+01:41:34,470 --> 01:41:36,470
+que era esta
+
+2797
+01:41:36,470 --> 01:41:38,470
+aqui
+
+2798
+01:41:38,470 --> 01:41:49,370
+do next generation firewall
+
+2799
+01:41:49,370 --> 01:41:51,370
+nesta solução
+
+2800
+01:41:51,370 --> 01:41:53,370
+eu posso ter muito mais
+
+2801
+01:41:53,370 --> 01:41:55,370
+consigo ser muito mais fino
+
+2802
+01:41:55,370 --> 01:41:57,370
+portanto quando tenho atos
+
+2803
+01:41:57,370 --> 01:41:59,370
+eu já consigo saber
+
+2804
+01:41:59,370 --> 01:42:01,370
+quais são os sites que exatamente
+
+2805
+01:42:01,370 --> 01:42:03,370
+está a cortar e eu poder dizer
+
+2806
+01:42:03,370 --> 01:42:05,370
+adicionar ou não adicionar
+
+2807
+01:42:05,370 --> 01:42:07,370
+aqui dá mais liberdade
+
+2808
+01:42:07,370 --> 01:42:09,370
+aqui dá mais liberdade
+
+2809
+01:42:09,370 --> 01:42:11,370
+no entanto
+
+2810
+01:42:11,370 --> 01:42:13,370
+no entanto
+
+2811
+01:42:13,370 --> 01:42:15,370
+este tipo de bloqueios
+
+2812
+01:42:15,370 --> 01:42:17,370
+são tipicamente bloqueios
+
+2813
+01:42:17,370 --> 01:42:19,370
+baseados
+
+2814
+01:42:19,370 --> 01:42:21,370
+baseados em DNS
+
+2815
+01:42:21,370 --> 01:42:23,370
+e
+
+2816
+01:42:23,370 --> 01:42:25,370
+mesmo mais a solução
+
+2817
+01:42:25,370 --> 01:42:27,370
+que eu estou a mostrar agora
+
+2818
+01:42:27,370 --> 01:42:29,370
+não é a solução
+
+2819
+01:42:29,370 --> 01:42:31,370
+que permite ter mais liberdade
+
+2820
+01:42:31,370 --> 01:42:33,370
+a solução
+
+2821
+01:42:33,370 --> 01:42:35,370
+que permite ter mais liberdade é por exemplo
+
+2822
+01:42:35,370 --> 01:42:37,370
+P.O.
+
+2823
+01:42:37,370 --> 01:42:39,370
+que é um software
+
+2824
+01:42:39,370 --> 01:42:41,370
+uma aplicação
+
+2825
+01:42:41,370 --> 01:42:43,370
+que diga o termo
+
+2826
+01:42:45,370 --> 01:42:47,370
+de uma forma muito mais fina
+
+2827
+01:42:47,370 --> 01:42:49,370
+de detectar
+
+2828
+01:42:49,370 --> 01:42:51,370
+e determinar o que é que quer cortar
+
+2829
+01:42:51,370 --> 01:42:53,370
+e não quer cortar e o que é que eu permito
+
+2830
+01:42:53,370 --> 01:42:55,370
+passar ou deixar passar
+
+2831
+01:42:57,370 --> 01:42:59,370
+essa não tem neste momento instalada
+
+2832
+01:42:59,370 --> 01:43:01,370
+mas acho que aqui já vocês conseguem perceber
+
+2833
+01:43:01,370 --> 01:43:03,370
+os dois níveis
+
+2834
+01:43:03,370 --> 01:43:05,370
+peço desculpa os dois níveis
+
+2835
+01:43:05,370 --> 01:43:07,370
+de configuração
+
+2836
+01:43:07,370 --> 01:43:09,370
+que é possível
+
+2837
+01:43:09,370 --> 01:43:11,370
+é evidente que isto é todo
+
+2838
+01:43:11,370 --> 01:43:13,370
+qualquer coisa de engenharia
+
+2839
+01:43:13,370 --> 01:43:15,370
+isto é sempre uma questão
+
+2840
+01:43:15,370 --> 01:43:17,370
+deve haver
+
+2841
+01:43:17,370 --> 01:43:19,370
+portanto
+
+2842
+01:43:19,370 --> 01:43:21,370
+no outro tem muita mais liberdade
+
+2843
+01:43:21,370 --> 01:43:23,370
+de configurar coisas
+
+2844
+01:43:23,370 --> 01:43:25,370
+mas na prática
+
+2845
+01:43:25,370 --> 01:43:27,370
+por exemplo como o caso específico
+
+2846
+01:43:27,370 --> 01:43:29,370
+que estou sozinho em casa
+
+2847
+01:43:31,370 --> 01:43:33,370
+não estou tão preocupado com isso
+
+2848
+01:43:33,370 --> 01:43:35,370
+estou mais preocupado com
+
+2849
+01:43:35,370 --> 01:43:37,370
+outros cento de coisas como por exemplo
+
+2850
+01:43:37,370 --> 01:43:39,370
+se isto está funcionando, não está funcionando
+
+2851
+01:43:39,370 --> 01:43:41,370
+e é por isso que obviamente se calhar
+
+2852
+01:43:41,370 --> 01:43:43,370
+também nunca fui ver
+
+2853
+01:43:43,370 --> 01:43:45,370
+mas por exemplo estranho não poder ver
+
+2854
+01:43:45,370 --> 01:43:47,370
+filmes, não poder ver casas
+
+2855
+01:43:47,370 --> 01:43:49,370
+sobrefados de bem bom mesmo
+
+2856
+01:43:51,370 --> 01:43:53,370
+também só para terminar
+
+2857
+01:43:53,370 --> 01:43:55,370
+que estamos a terminar
+
+2858
+01:43:55,370 --> 01:43:57,370
+em muitas destas situações
+
+2859
+01:43:57,370 --> 01:43:59,370
+em que nós estamos até estar a tráfego
+
+2860
+01:44:01,370 --> 01:44:03,370
+também é usual
+
+2861
+01:44:03,370 --> 01:44:05,370
+nós estamos a analisar
+
+2862
+01:44:05,370 --> 01:44:07,370
+o tráfego completamente
+
+2863
+01:44:07,370 --> 01:44:09,370
+dentro de nossa faro ó
+
+2864
+01:44:09,370 --> 01:44:11,370
+e redirecionar
+
+2865
+01:44:11,370 --> 01:44:13,370
+os eventos
+
+2866
+01:44:13,370 --> 01:44:15,370
+uma coisa é eu ter
+
+2867
+01:44:15,370 --> 01:44:17,370
+atenção dos eventos, outra coisa é eu analisar os eventos
+
+2868
+01:44:17,370 --> 01:44:19,370
+eu estar a
+
+2869
+01:44:19,370 --> 01:44:21,370
+analisar os eventos
+
+2870
+01:44:21,370 --> 01:44:23,370
+não analisar diretamente na minha faro ó
+
+2871
+01:44:23,370 --> 01:44:25,370
+usando aqueles graves como os temos
+
+2872
+01:44:25,370 --> 01:44:27,370
+usando a arma, seja o que for
+
+2873
+01:44:27,370 --> 01:44:29,370
+mas ter o que nós chamamos de servidor SEM
+
+2874
+01:44:29,370 --> 01:44:31,370
+ou seja
+
+2875
+01:44:31,370 --> 01:44:33,370
+um software a parte
+
+2876
+01:44:33,370 --> 01:44:35,370
+que me permite fazer
+
+2877
+01:44:35,370 --> 01:44:37,370
+uma análise
+
+2878
+01:44:37,370 --> 01:44:39,370
+mais fina
+
+2879
+01:44:39,370 --> 01:44:41,370
+dos acontecidos e eventos de IDES
+
+2880
+01:44:41,370 --> 01:44:43,370
+e PS
+
+2881
+01:44:43,370 --> 01:44:45,370
+neste caso eu tenho o Splunk
+
+2882
+01:44:45,370 --> 01:44:47,370
+por nome eu tenho o Splunk
+
+2883
+01:44:47,370 --> 01:44:49,370
+tenho o Sentinel da Microsoft
+
+2884
+01:44:49,370 --> 01:44:51,370
+e tenho o Gerradar da IBE
+
+2885
+01:44:51,370 --> 01:44:53,370
+três que eu tenho aqui que eu posso
+
+2886
+01:44:53,370 --> 01:44:55,370
+confiar muito mais facilmente
+
+2887
+01:44:55,370 --> 01:44:57,370
+eu não uso uma versão frio é
+
+2888
+01:44:57,370 --> 01:44:59,370
+não para análise do tráfego
+
+2889
+01:44:59,370 --> 01:45:01,370
+em si
+
+2890
+01:45:01,370 --> 01:45:03,370
+eu estava aqui mostrando durante esta aula
+
+2891
+01:45:03,370 --> 01:45:05,370
+mas sim para análise de bloqueios
+
+2892
+01:45:05,370 --> 01:45:07,370
+da faro ó
+
+2893
+01:45:07,370 --> 01:45:09,370
+tanto ver se as minhas regras de faro ó
+
+2894
+01:45:09,370 --> 01:45:11,370
+estão a ser corretamente realizadas
+
+2895
+01:45:11,370 --> 01:45:13,370
+ou não
+
+2896
+01:45:13,370 --> 01:45:15,370
+e pronto chegamos aos 11 e meio
+
+2897
+01:45:15,370 --> 01:45:17,370
+basicamente
+
+2898
+01:45:17,370 --> 01:45:19,370
+e portanto vou terminar
+
+2899
+01:45:19,370 --> 01:45:21,370
+também neste que eu queria falar mas com vocês foi
+
+2900
+01:45:21,370 --> 01:45:23,370
+mesmo assim, mesmo no limite
+
+2901
+01:45:23,370 --> 01:45:25,370
+não sei se querem
+
+2902
+01:45:25,370 --> 01:45:27,370
+fazer mais alguma questão
+
+2903
+01:45:27,370 --> 01:45:29,370
+querem dizer mais alguma coisa
+
+2904
+01:45:29,370 --> 01:45:31,370
+então
+
+2905
+01:45:31,370 --> 01:45:33,370
+pronto, estão dão por termina, aperta
+
+2906
+01:45:33,370 --> 01:45:35,370
+não sei se queres fazer alguma coisa
+
+2907
+01:45:35,370 --> 01:45:37,370
+não
+
+2908
+01:45:37,370 --> 01:45:39,370
+para quem é daqui do porto
+
+2909
+01:45:39,370 --> 01:45:41,370
+embora
+
+2910
+01:45:41,370 --> 01:45:43,370
+embora isto mudou
+
+2911
+01:45:43,370 --> 01:45:45,370
+radicalmente
+
+2912
+01:45:45,370 --> 01:45:47,370
+nós estávamos a aproveitar e de tal graus
+
+2913
+01:45:47,370 --> 01:45:49,370
+para amanhã e de repente passamos para 20 graus
+
+2914
+01:45:49,370 --> 01:45:51,370
+viva o Porto
+
+2915
+01:45:51,370 --> 01:45:53,370
+viva o Porto
+
+2916
+01:45:53,370 --> 01:45:55,370
+o San João é sempre assim
+
+2917
+01:45:55,370 --> 01:45:57,370
+o San João é sempre assim
+
+2918
+01:45:57,370 --> 01:45:59,370
+se não, se não tem Orvalhada
+
+2919
+01:45:59,370 --> 01:46:01,370
+não é San João
+
+2920
+01:46:01,370 --> 01:46:03,370
+exatamente, se não tem Orvalhada não é San João
+
+2921
+01:46:03,370 --> 01:46:05,370
+bom, o San João para quem é do porto
+
+2922
+01:46:05,370 --> 01:46:07,370
+ou quem não sei do porto que tem no mesmo San João
+
+2923
+01:46:07,370 --> 01:46:09,370
+para os outros quinta-feira que estaríamos
+
+2924
+01:46:09,370 --> 01:46:11,370
+também, obrigadíssimo tanto
+
+2925
+01:46:11,370 --> 01:46:13,370
+obrigada, boa noite
+
+2926
+01:46:13,370 --> 01:46:15,370
+obrigada
+
