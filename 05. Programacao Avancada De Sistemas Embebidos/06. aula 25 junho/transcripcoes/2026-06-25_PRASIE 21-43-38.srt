@@ -1,0 +1,7280 @@
+1
+00:00:30,000 --> 00:00:40,000
+O número 17 é uma cabeça, mas pode estar enganada, mas já podemos começar.
+
+2
+00:00:40,000 --> 00:00:48,000
+Muito bem, vou desligar então a câmera que é para evitar Cristo.
+
+3
+00:00:48,000 --> 00:01:09,000
+Então, em relação a ação da freira, a maior pergunta é o seu João, deve ser teram-se.
+
+4
+00:01:09,000 --> 00:01:12,000
+Muito bem.
+
+5
+00:01:12,000 --> 00:01:19,000
+Nós na semana passada, na segunda feira, vamos falar de multeixas, como um canismo que permite garantir Jesus a Muta.
+
+6
+00:01:19,000 --> 00:01:41,000
+Seu banalí, uma ou várias operações, que tem um de servistas como um bloco atômico, ou seja, que seja imune a interferência de outras tarefas com correntes, e que os resultados final possam dependerem da ordem com que
+
+7
+00:01:41,000 --> 00:01:57,000
+com que essa interferência vai ocorrer, a minha forma é garantir que esse bloco de operações é executado livre de interferência, utilizando multeixas.
+
+8
+00:01:57,000 --> 00:02:14,000
+Um mutex é um canismo em que várias threads podem pedir acesso ao mutex, mas é garantivo que apenas uma delas, em que há bem instante, consegue adquirir mutex.
+
+9
+00:02:15,000 --> 00:02:36,000
+Portanto, é uma operação realmente atômica, pedir obter o mutex é uma operação atômica, não há duas threads que consigam obter o fred, e enquanto não temos o mutex nos bloqueanos.
+
+10
+00:02:37,000 --> 00:02:54,000
+Só que quando adquirimos o mutex, é que podemos adotar para a chamada secção crítica, aquela parte de código, que é o bloco de código para o secção de código, que deve ser vista como uma unidade atômica.
+
+11
+00:02:54,000 --> 00:03:06,000
+Quando terminar, esse com o conjunto de estessões, essa é a secção, o livro estámos um mutex para outra thread concorrente, que esteja bloqueada espera, toça também ela para o verde.
+
+12
+00:03:06,000 --> 00:03:19,000
+Hoje vamos falar de variáveis de condição, as variáveis de condição permitem nos ultrapassar uma limitação que os mutex têm.
+
+13
+00:03:19,000 --> 00:03:29,000
+Os mutex são desenhados e implementados, únicamente, para garantir exclusão mutua.
+
+14
+00:03:30,000 --> 00:03:40,000
+Isso já de si é fantástico, porque para mim nos eliminar problemas como as reis condições, certo?
+
+15
+00:03:40,000 --> 00:03:50,000
+No entanto, não conseguem resolver todos os problemas de sincronismo, por exemplo, nós podemos ter uma situação em que,
+
+16
+00:03:51,000 --> 00:04:05,000
+eu só tenho que alterar esses exclusivos para um recurso, por exemplo, a saber uma variável para poder modificar essa variável,
+
+17
+00:04:06,000 --> 00:04:21,000
+ou melhor ainda, modificar não, o ler essa variável, mas só posso, só estou interessado em ler a variável, se essa variável tiver um valor novo para ler.
+
+18
+00:04:22,000 --> 00:04:32,000
+Ou seja, a leitura dessa variável é dependente de uma condição ou um estado, ok?
+
+19
+00:04:32,000 --> 00:04:43,000
+Eu para se saber se posso consumir o valor que está nessa variável, eu vou ter, de primeira, avaliar o estado do valor que está nessa variável,
+
+20
+00:04:43,000 --> 00:04:50,000
+habitualmente, existe algo outras variáveis em que eu vou testar o valor delas, certo?
+
+21
+00:04:50,000 --> 00:05:00,000
+Muitas vezes existem variáveis, que simplesmente se inolizam uma determinada situação, chamam essas variáveis muitas vezes flags,
+
+22
+00:05:00,000 --> 00:05:12,000
+é uma grandeira que se inoliza se estamos pranto um caso ou se estamos pranto outro, por exemplo, eu quero ler um valor novo que esteja numa variável.
+
+23
+00:05:14,000 --> 00:05:22,000
+Esse buffer está pronto para ser livre, ou seja, tem um valor novo para o qual eu posso ler e também outro caso contrário,
+
+24
+00:05:22,000 --> 00:05:34,000
+eu, por exemplo, quero colocar um novo valor nesse buffer, mas eu só posso colocar um valor novo se estiver garantido que o valor que está já foi consumido para a enviamento.
+
+25
+00:05:35,000 --> 00:05:46,000
+Ora bem, eu para poder fazer isso, não basta ter um mutex, eu tenho que avaliar o estado, tem essa variável, antes de poder operá-la.
+
+26
+00:05:47,000 --> 00:05:52,000
+Só que, como é que eu posso fazer isso?
+
+27
+00:05:52,000 --> 00:06:01,000
+Temos aqui um exemplo simples, que eu já avançei de certa forma, que é um problema de um produtor e um consumidor,
+
+28
+00:06:01,000 --> 00:06:10,000
+ou seja, um produtor é algo que coloco um valor numa variável, valar num espaço temporário de armazenamento,
+
+29
+00:06:10,000 --> 00:06:24,000
+e o consumidor é outra thread que vai a esse espaço e lea o consumo, o valor que está nessa zona de armazenamento temporário.
+
+30
+00:06:25,000 --> 00:06:36,000
+O que acontece? O produtor espera que o buffer esteja conceptualmente vazio, todas as variáveis têm um valor,
+
+31
+00:06:36,000 --> 00:06:42,000
+agora aqui o que nós estamos a pensar é, esse valor representa algo que já foi consumido,
+
+32
+00:06:42,000 --> 00:06:49,000
+se representar algo que já foi consumido, podemos conceptualmente dizer que o buffer está vazio.
+
+33
+00:06:49,000 --> 00:07:00,000
+Se ainda tiver um valor que ainda está para ser utilizado, nós podemos pensar que aquele buffer, aquela variável, tem um valor apreenshe-la.
+
+34
+00:07:00,000 --> 00:07:08,000
+Por outro lado, temos consumidor que faz o contrário, tenho que esperar que o buffer tenha um valor para ser consumido,
+
+35
+00:07:08,000 --> 00:07:15,000
+e só quando tiver um valor novo, é que vai lá consumilo, e depois marcar-lo como já consumido.
+
+36
+00:07:16,000 --> 00:07:26,000
+Eu se quisesse fazer isto, simplesmente como textes, eu teria que fazer uma espécie, uma espécie não, uma espéira ativa,
+
+37
+00:07:26,000 --> 00:07:35,000
+ou seja, tinha que fazer aquela estratégia de polling, que está constantemente a verificar o estado,
+
+38
+00:07:35,000 --> 00:07:43,000
+antes de realizar a tarefa que tenho mais de realizar, mas por exemplo, olhar aqui para o produtor,
+
+39
+00:07:43,000 --> 00:07:52,000
+vocês conseguem ver aqui o meu rato certo, temos aqui a parte do produtor, eu adquiro o mutax,
+
+40
+00:07:52,000 --> 00:08:01,000
+supondo que eu consigo efetivamente adquirir um mutax, e eu agora tenho que verificar se o buffer está cheio,
+
+41
+00:08:01,000 --> 00:08:05,000
+ou seja, já se tem um aumento, ainda espera de ser consumido.
+
+42
+00:08:05,000 --> 00:08:12,000
+Enquanto o buffer estivesse cheio, ou seja, enquanto eu ver lá um dado que eu não posso sobrepor, não é?
+
+43
+00:08:12,000 --> 00:08:17,000
+O que eu tenho que fazer? É pai, eu tenho que dar a oportunidade a alguém de consumir,
+
+44
+00:08:17,000 --> 00:08:29,000
+ou seja, eu tenho que libertar o mutax para dar a oportunidade a um consumidor de adquirir um mutax e consumir o valor que está lá para ser consumido.
+
+45
+00:08:29,000 --> 00:08:36,000
+Mas o que eu faço longa seguir? Loga seguir eu vou tentar adquirir um mutax, certo?
+
+46
+00:08:36,000 --> 00:08:45,000
+Por que? Porque eu vou ter de repetir esta avaliação para verificar se o buffer está cheio ou não?
+
+47
+00:08:46,000 --> 00:08:56,000
+Só quando esta condição de forfalsa, é que eu vou sair do al e escrever no fecheiro e, por fim,
+
+48
+00:08:56,000 --> 00:08:59,000
+libertar mais uma vez o mutax.
+
+49
+00:09:03,000 --> 00:09:12,000
+Poderíamos usar aqui umas estratégias, por exemplo, entre esta linha, entre estas duas linhas,
+
+50
+00:09:12,000 --> 00:09:21,000
+eu colocaria aqui no maio um sleep para dormir durante algum tempo, um sleep ou micro sleep,
+
+51
+00:09:21,000 --> 00:09:28,000
+para garantir que não ficava ali togar o processador, sim, há uma dúvida.
+
+52
+00:09:43,000 --> 00:09:49,000
+Eu não sei se percebeu a sua questão.
+
+53
+00:09:49,000 --> 00:09:50,000
+Sim.
+
+54
+00:10:13,000 --> 00:10:24,000
+É basicamente qualquer bloco de código que seja sensível à interferência de concorrente,
+
+55
+00:10:24,000 --> 00:10:32,000
+é nós usamos hoje locos e a locos simplesmente para doindar um bloco de código,
+
+56
+00:10:32,000 --> 00:10:41,000
+para que não laja interferência de outros estrellos que possam produzir resultados
+
+57
+00:10:41,000 --> 00:10:43,000
+improvisíveis.
+
+58
+00:10:56,000 --> 00:10:59,000
+Sim, sim, sim.
+
+59
+00:10:59,000 --> 00:11:05,000
+A única coisa que nós tentamos é que seja o mais curto possível,
+
+60
+00:11:06,000 --> 00:11:14,000
+ou seja, que demora o menos tempo possível, isso não quer dizer que seja menos tempo do concessário,
+
+61
+00:11:14,000 --> 00:11:19,000
+é o mais curto possível, desde que esteja correto.
+
+62
+00:11:19,000 --> 00:11:30,000
+E outra coisa, também queremos que o tempo que demora a escutar esta secção crítica não seja indeterminado,
+
+63
+00:11:30,000 --> 00:11:36,000
+porque se for interminado, boa parte das vezes pode morar 20 micro segundos,
+
+64
+00:11:36,000 --> 00:11:42,000
+mas de repente há uma vez que aquilo vai escutar e demora dois minutos.
+
+65
+00:11:42,000 --> 00:11:48,000
+E tem ali dois minutos em que todas as outras estrellos concorrentes ficaram paradas,
+
+66
+00:11:48,000 --> 00:11:56,000
+porque aquilo está vai escutar um bloco de código que demorou muito mais tempo que alguma vez provimos, certo?
+
+67
+00:11:56,000 --> 00:12:03,000
+É a única, é a única, as únicas regras de boas práticas.
+
+68
+00:12:03,000 --> 00:12:11,000
+Agora, aquilo contador mais, mais, é o caso mais simples para se perceber
+
+69
+00:12:11,000 --> 00:12:16,000
+que mesmo um caso ultra simples como aparentemente uma linha de código,
+
+70
+00:12:16,000 --> 00:12:19,000
+que na realidade são três instruções no CPU, certo?
+
+71
+00:12:19,000 --> 00:12:27,000
+Mesmo aquela linha de código pode aparentemente estar correta e na prática dar resultados errados,
+
+72
+00:12:27,000 --> 00:12:38,000
+só por causa da interferência de threads concorrentes, a accederem e modificarem um recurso partilhado.
+
+73
+00:12:38,000 --> 00:12:46,000
+Aqui este write-of, pode imaginar que teria, por exemplo, dofra igual a um valor qualquer.
+
+74
+00:12:47,000 --> 00:12:53,000
+Pronto, só imagine que o buffer era uma variável e nós queremos colocar lá um novo valor nessa variável.
+
+75
+00:12:53,000 --> 00:13:00,000
+E o, neste caso com o crédito, neste exemplo, que é o produtor consumidor com o buffer
+
+76
+00:13:00,000 --> 00:13:14,000
+que só tem num espaço para colocar valor, e eu se quiser que o produtor não possa, sobrepor um valor que ainda não foi consumido,
+
+77
+00:13:14,000 --> 00:13:19,000
+e vou ter que fazer uma coisa destas. Enquanto houver um valor para consumir,
+
+78
+00:13:19,000 --> 00:13:25,000
+eu vou ter que dar a oportunidade da outra para escutar, fazendo o One-Lock,
+
+79
+00:13:25,000 --> 00:13:30,000
+mas depois também preciso fazer o lock para verificar se agora é minha vez ou não.
+
+80
+00:13:30,000 --> 00:13:34,000
+Só que estão desperdício. Mesmo que eu ponha aqui um sleep,
+
+81
+00:13:34,000 --> 00:13:39,000
+vamos imaginar que eu punha um sleep de 50.000 segundos.
+
+82
+00:13:40,000 --> 00:13:44,000
+50.000 segundos não é pouco tempo, não é?
+
+83
+00:13:44,000 --> 00:13:49,000
+Deixe-me encover, matar, é 20 vezes menor do que um segundo.
+
+84
+00:13:49,000 --> 00:14:01,000
+Suponho que não é 50.000 segundos e entrava agora um consumidor, e o consumidor conseguiria consumir em um micrósco.
+
+85
+00:14:01,000 --> 00:14:03,000
+1.000.000 segundos.
+
+86
+00:14:03,000 --> 00:14:11,000
+Este é ficar 49.000 segundos parado sem necessidade nenhuma, certo?
+
+87
+00:14:11,000 --> 00:14:15,000
+Por que? Porque eu tenho dado tempo para esperar 50.000 segundos.
+
+88
+00:14:15,000 --> 00:14:28,000
+Uma estratégia dessa chama-se um back-off, ou seja, e eu voluntariamente para dar a oportunidade a outros, antes de voltar a avançar.
+
+89
+00:14:29,000 --> 00:14:34,000
+Aqui não há back-off nenhum, ele está sempre insistir.
+
+90
+00:14:34,000 --> 00:14:37,000
+Ele inverte e tenta agarrar. Ele inverte e tenta agarrar.
+
+91
+00:14:37,000 --> 00:14:46,000
+Se querem que vos liga, eu já vi sistemas Linux em que esta operação seguida,
+
+92
+00:14:46,000 --> 00:14:53,000
+desta operação, ou seja, estas duas operações seguidas, resultavam em sempre a mesma frega ao ter o lock.
+
+93
+00:14:54,000 --> 00:14:58,000
+Mesmo que tivéssemos outras, que já tivessem feito o lock e estivessem a espera.
+
+94
+00:14:58,000 --> 00:15:08,000
+Por que? Porque o sistema dava prioridade àquela thread que estava a correr no processador.
+
+95
+00:15:08,000 --> 00:15:14,000
+Em vez de dar prioridade, as outras que estavam à espera de um lock há mais tempo.
+
+96
+00:15:15,000 --> 00:15:28,000
+Portanto, há coisas que podem escaparmos ao nosso controle, dependendo da forma como o sistema e o kernel do sistema operativo está programado.
+
+97
+00:15:29,000 --> 00:15:36,000
+Do outro lado, temos a recemelhante. É, eu também adquero o mutex, só que depois,
+
+98
+00:15:36,000 --> 00:15:44,000
+se a variável não estiver pronta para ser consumida, porque ainda não tem um valor novo,
+
+99
+00:15:44,000 --> 00:15:53,000
+eu vou libertar o mutex e depois vou tentar obtê-lo outra vez e verificar de novo a condição.
+
+100
+00:15:54,000 --> 00:15:59,000
+Mais uma vez, eu também poderia por aqui um sleep de alguns segundos,
+
+101
+00:15:59,000 --> 00:16:04,000
+só para dar oportunidade, eu relaxava e dar oportunidade a outros.
+
+102
+00:16:04,000 --> 00:16:11,000
+Só que lá está, mais uma vez, isso não é ótimo, porque eu posso fazer ali um tempo de espera,
+
+103
+00:16:11,000 --> 00:16:17,000
+muito grande, comparado com aquilo que depois, efetivamente, eu poderia ter disparado, certo?
+
+104
+00:16:18,000 --> 00:16:25,000
+E neste caso, o rei profondo bufferia-se lá, a minha variável igual ao valor que estava no buffer, certo?
+
+105
+00:16:25,000 --> 00:16:29,000
+E pronto, a partir daí, estava resolvido.
+
+106
+00:16:29,000 --> 00:16:38,000
+Esta situação, em que eu estou, numa esperativa constantemente, a verificar o estado,
+
+107
+00:16:38,000 --> 00:16:45,000
+faz desperdiçar ciclos de CPU. Ou seja, o CPU até poderia estar parado e apropar energia,
+
+108
+00:16:45,000 --> 00:16:49,000
+e não, eu tenho aqui uma freia que está constantemente a perguntar.
+
+109
+00:16:49,000 --> 00:16:54,000
+E então já está, então já está, então já está, então já está e poderia acreditar.
+
+110
+00:16:54,000 --> 00:16:59,000
+Não é só nós os humanos que esteja terem, os próprios CPUs, começam a crescer,
+
+111
+00:16:59,000 --> 00:17:04,000
+ligam as venduinhas e a bateria fica sem carga, ok?
+
+112
+00:17:04,000 --> 00:17:11,000
+Então, haverá solução para isto e a resposta é, sim, existe.
+
+113
+00:17:11,000 --> 00:17:20,000
+Temos as variáveis de condição. As variáveis de condição conforme já aviantei um bocadinho na segunda-feira,
+
+114
+00:17:20,000 --> 00:17:26,000
+é um localismo de synchronização que é orientado a evento.
+
+115
+00:17:26,000 --> 00:17:29,000
+E o que acontece com a variável de condição?
+
+116
+00:17:29,000 --> 00:17:40,000
+Se eu tiver o mutex e enquanto tenho um mutex, eu verifique que o estado não me permite
+
+117
+00:17:40,000 --> 00:17:45,000
+avançar para fazer o trabalho da minha secção crítica.
+
+118
+00:17:45,000 --> 00:17:50,000
+Então, eu vou libertar o mutex.
+
+119
+00:17:50,000 --> 00:17:54,000
+Mas é um libertar que é de certa forma importado, ok?
+
+120
+00:17:54,000 --> 00:18:01,000
+E a libertação deste mutex é associada a uma variável de condição.
+
+121
+00:18:01,000 --> 00:18:05,000
+E uma pessoa quando fala é variável de condição até pensa que é uma variável.
+
+122
+00:18:05,000 --> 00:18:12,000
+Mas é uma variável especial, é uma variável que na realidade parece uma variável,
+
+123
+00:18:12,000 --> 00:18:16,000
+mas é um mecanismo que fica escuta.
+
+124
+00:18:16,000 --> 00:18:23,000
+E alguém pode gritar para esta variável a dizer, olha, já pode se acordar.
+
+125
+00:18:23,000 --> 00:18:33,000
+Portanto, é uma espécie de um mecanismo que fica escuta de uma notificação de um evento.
+
+126
+00:18:33,000 --> 00:18:45,000
+E o que é que, se tem de fantástico, é que ficar parado numa variável condicional,
+
+127
+00:18:45,000 --> 00:18:49,000
+mas quando desbloquear, o mutex é de novo meu.
+
+128
+00:18:49,000 --> 00:18:53,000
+É quase como se eu entrar sem coma, como o mutex na minha mão,
+
+129
+00:18:53,000 --> 00:18:58,000
+na nossa passada semana de ter falado como o mutex era um pauvação.
+
+130
+00:18:58,000 --> 00:19:01,000
+Portanto, eu adromenço que o pau na mão.
+
+131
+00:19:01,000 --> 00:19:05,000
+Entretanto, enquanto estive adromenço o pau, seu mecanão,
+
+132
+00:19:05,000 --> 00:19:12,000
+e outras treites pegaram no pau para fazer operações no recurso partilhado.
+
+133
+00:19:12,000 --> 00:19:20,000
+A única coisa que eu sei é que, quando eu voltar a acordar, o mutex está de novo na minha mão.
+
+134
+00:19:20,000 --> 00:19:25,000
+Portanto, este ser anestesiado e acordar,
+
+135
+00:19:25,000 --> 00:19:28,000
+e eu não sei o que é que se passou enquanto estive anestesiado,
+
+136
+00:19:28,000 --> 00:19:32,000
+só sei é que, quando adromer-se, tenham o mutex na mão
+
+137
+00:19:32,000 --> 00:19:37,000
+e quando acordei o mutex continuava na minha mão.
+
+138
+00:19:37,000 --> 00:19:41,000
+Estou é um mefeito muito importante.
+
+139
+00:19:41,000 --> 00:19:46,000
+E também, isto está montando de forma que, eu abro o mal do mutex
+
+140
+00:19:46,000 --> 00:19:52,000
+e fico bloqueado na variável condicional de forma atômica.
+
+141
+00:19:52,000 --> 00:19:54,000
+Ok?
+
+142
+00:19:54,000 --> 00:19:55,000
+Pronto.
+
+143
+00:19:55,000 --> 00:20:01,000
+Agora, eu estou a dizer que a variável condição é um mecanismo que fica a escuta
+
+144
+00:20:01,000 --> 00:20:08,000
+de alguém que era um cia que gostava da coisa movou, certo?
+
+145
+00:20:08,000 --> 00:20:13,000
+É necessário também ter o mecanismo do lado lá, alguém que grito,
+
+146
+00:20:13,000 --> 00:20:16,000
+pode acordar.
+
+147
+00:20:16,000 --> 00:20:23,000
+Ok? Estanto, eu tenho uma função para esperar numa variável condição
+
+148
+00:20:23,000 --> 00:20:28,000
+e também tenho um mecanismo para simalizar quem estiver à espera
+
+149
+00:20:28,000 --> 00:20:30,000
+nessa variável condição.
+
+150
+00:20:30,000 --> 00:20:32,000
+Tá bom?
+
+151
+00:20:32,000 --> 00:20:34,000
+É a tal...
+
+152
+00:20:34,000 --> 00:20:37,000
+O exemplo que eu dei na segunda foia,
+
+153
+00:20:37,000 --> 00:20:40,000
+essa mensalinha não era aquela da fila das supermercados
+
+154
+00:20:40,000 --> 00:20:42,000
+em que uma pessoa está lá.
+
+155
+00:20:42,000 --> 00:20:47,000
+Então, quase apagar, mas a minha mãe foi alipiscar o champô
+
+156
+00:20:47,000 --> 00:20:51,000
+e quando chega a mesma altura, eu vou começar a colocar as compras no tapete.
+
+157
+00:20:51,000 --> 00:20:55,000
+A minha mãe ainda não se foca o champô, então eu diga só que está atrás de mim.
+
+158
+00:20:55,000 --> 00:20:59,000
+Olha, pode passar à frente porque falta no champô, certo?
+
+159
+00:20:59,000 --> 00:21:06,000
+O mutex era meu, mas como eu não posso avançar para a minha secção crítica,
+
+160
+00:21:06,000 --> 00:21:09,000
+que era pagar as compras, porque, por como eu estava,
+
+161
+00:21:09,000 --> 00:21:12,000
+não me permitia ainda avançar.
+
+162
+00:21:12,000 --> 00:21:19,000
+Então, eu se adotou o can, mas eu fico ali em gostado ao tapete.
+
+163
+00:21:19,000 --> 00:21:23,000
+Isso é ficar a guardar numa variável condição.
+
+164
+00:21:23,000 --> 00:21:29,000
+Sempre tanto, a minha mãe chegar, ok?
+
+165
+00:21:29,000 --> 00:21:34,000
+Eu não fico imediatamente com o can, mal a minha mãe chega a champô.
+
+166
+00:21:34,000 --> 00:21:38,000
+Eu tenho o can, está na mão de quem está a pagar, certo?
+
+167
+00:21:38,000 --> 00:21:42,000
+Eu permitia alguém que passasse a frente, e essa pessoa que passou a frente,
+
+168
+00:21:42,000 --> 00:21:48,000
+adquireu o tocan e o mutex está a fazer a secção crítica, viu?
+
+169
+00:21:48,000 --> 00:21:50,000
+Está a pagar, certo?
+
+170
+00:21:50,000 --> 00:21:55,000
+Quando ela terminar de pagar, eu vai libertar o mutex.
+
+171
+00:21:55,000 --> 00:22:00,000
+Mas se eu simplesmente libertar o mutex, eu até posso ter adonocido ali,
+
+172
+00:22:00,000 --> 00:22:06,000
+eu tenho dois carrinhos de compras para pagar, nunca mais despastava, eu até adonocido.
+
+173
+00:22:06,000 --> 00:22:12,000
+Se eu simplesmente libertar o mutex, eu até posso nem acordar, certo?
+
+174
+00:22:12,000 --> 00:22:17,000
+O que eu deve fazer para ser um bom cirradão?
+
+175
+00:22:17,000 --> 00:22:24,000
+Deve se virar para mim e dizer, olha, já está obrigado, já paguei obrigado, certo?
+
+176
+00:22:24,000 --> 00:22:27,000
+E ela se ensinalizam.
+
+177
+00:22:27,000 --> 00:22:33,000
+E ao sinalizar-me a probabilidade de eu ficar com o mutex imediatamente na minha mão,
+
+178
+00:22:33,000 --> 00:22:35,000
+é muito alta, ok?
+
+179
+00:22:35,000 --> 00:22:39,000
+E é assim que a coisa funciona?
+
+180
+00:22:39,000 --> 00:22:41,000
+Absoluto, sim.
+
+181
+00:22:41,000 --> 00:22:49,000
+Mas eu tenho aqui as duas questões que a primeira é mais só, então as variáveis de condição,
+
+182
+00:22:49,000 --> 00:22:56,000
+existem sempre associadas a mutex, não são alternativas, são só uma funcionalidade.
+
+183
+00:22:56,000 --> 00:22:57,000
+Sim, então mesmo.
+
+184
+00:22:57,000 --> 00:22:59,000
+Até vamos ver isso no código.
+
+185
+00:22:59,000 --> 00:23:03,000
+A sensação aparece chapado.
+
+186
+00:23:03,000 --> 00:23:08,000
+E a minha outra questão, era um bocado, não sei se certe nota, mas ela respondeu.
+
+187
+00:23:08,000 --> 00:23:15,000
+Isso que é a possibilidade de mesmo usando a variável de condição.
+
+188
+00:23:15,000 --> 00:23:21,000
+Depois ficarem o último da fila, caso vai jamais, entretanto mais estreitos,
+
+189
+00:23:21,000 --> 00:23:26,000
+que se posaram a escuta do tocan mutex.
+
+190
+00:23:26,000 --> 00:23:32,000
+Sim, é concorrência, é uma célula.
+
+191
+00:23:32,000 --> 00:23:33,000
+Ok.
+
+192
+00:23:33,000 --> 00:23:38,000
+Depois de muitos fatores, e podemos reter os mais afrentes,
+
+193
+00:23:38,000 --> 00:23:42,000
+mas se criar agora, como vão avançarmos para como é que isto funcionam.
+
+194
+00:23:42,000 --> 00:23:45,000
+Pelo menos vemos um mecanismo e o código.
+
+195
+00:23:45,000 --> 00:23:47,000
+E muitas vezes gosto de ver o código, explico o código,
+
+196
+00:23:47,000 --> 00:23:51,000
+opá, me quer dizer, ilustra.
+
+197
+00:23:51,000 --> 00:23:54,000
+E às vezes é mais fácil perceber quando temos o código para a nossa frente.
+
+198
+00:23:54,000 --> 00:23:56,000
+Se não percebemos, não percebemos.
+
+199
+00:23:56,000 --> 00:24:00,000
+Depois está nosso código e vocês podem me colocar as perguntas da vontade.
+
+200
+00:24:00,000 --> 00:24:01,000
+Ok.
+
+201
+00:24:01,000 --> 00:24:08,000
+Um ciclo de vida, de espera, numa variável condicional,
+
+202
+00:24:08,000 --> 00:24:11,000
+e sinalizar uma variável condicional, é isto.
+
+203
+00:24:11,000 --> 00:24:15,000
+Nós, adquirimos o text, ok.
+
+204
+00:24:15,000 --> 00:24:23,000
+E vamos verificar o estado, se nos permite avançar para o nosso trabalho crítico ou não.
+
+205
+00:24:23,000 --> 00:24:24,000
+Certo?
+
+206
+00:24:24,000 --> 00:24:30,000
+Se verificarmos que não temos hipóteses de seguir para a nossa secção crítica,
+
+207
+00:24:30,000 --> 00:24:39,000
+então, nós vamos chamar uma espera vaziada, uma espera numa variável condição.
+
+208
+00:24:39,000 --> 00:24:44,000
+E ao fazemos isso, o text é o libertado.
+
+209
+00:24:44,000 --> 00:24:48,000
+Nós entramos, nós adoramos seus, somos anteciados,
+
+210
+00:24:48,000 --> 00:24:52,000
+e o text fica disponível para quem possa realizar trabalho.
+
+211
+00:24:53,000 --> 00:24:59,000
+Quem realizar o trabalho deve modificar o estado.
+
+212
+00:24:59,000 --> 00:25:04,000
+Imagina, eu queria consumir, não havia nada para consumir, eu fiquei a espera.
+
+213
+00:25:04,000 --> 00:25:09,000
+Se eu ver uma thread que por causa, esta thread vai ter que modificar o estado,
+
+214
+00:25:09,000 --> 00:25:12,000
+dizer que já ele é qualquer coisa para consumir, certo?
+
+215
+00:25:12,000 --> 00:25:18,000
+E para além de modificar o estado, tem desplicitamente sinalizar a variável condição.
+
+216
+00:25:18,000 --> 00:25:19,000
+Ok?
+
+217
+00:25:19,000 --> 00:25:21,000
+Quer dar a história?
+
+218
+00:25:21,000 --> 00:25:23,000
+Muito obrigada, já terminai.
+
+219
+00:25:23,000 --> 00:25:25,000
+E quem está ali?
+
+220
+00:25:25,000 --> 00:25:26,000
+Espera?
+
+221
+00:25:26,000 --> 00:25:30,000
+Olha, afinal, já posso prosseguir, deixa cá ver quando é que era minha vez.
+
+222
+00:25:30,000 --> 00:25:31,000
+Certo?
+
+223
+00:25:31,000 --> 00:25:38,000
+Quando é garantido que, quando a thread que bloqueou a espera numa variável condicional
+
+224
+00:25:38,000 --> 00:25:45,000
+acorda ou divulcaia, é garantido que detém o mutex.
+
+225
+00:25:45,000 --> 00:25:46,000
+Certo?
+
+226
+00:25:46,000 --> 00:25:49,000
+Quando acorda, acorda porque já tem o mutex.
+
+227
+00:25:50,000 --> 00:25:53,000
+Quando ele acorda, mais ela mais tarde, mas vai decorar.
+
+228
+00:25:53,000 --> 00:25:57,000
+Então, qual é a vantagem?
+
+229
+00:25:57,000 --> 00:26:02,000
+A vantagem é que nós conseguimos poupar energia.
+
+230
+00:26:02,000 --> 00:26:03,000
+Por que?
+
+231
+00:26:03,000 --> 00:26:08,000
+Porque, em vez de termos esta espera ativa em que estamos constantemente a perguntar.
+
+232
+00:26:08,000 --> 00:26:09,000
+Então, já posso?
+
+233
+00:26:09,000 --> 00:26:10,000
+Então, já posso?
+
+234
+00:26:10,000 --> 00:26:11,000
+Então, já posso?
+
+235
+00:26:11,000 --> 00:26:12,000
+Então, já posso?
+
+236
+00:26:12,000 --> 00:26:15,000
+Não, nós adquirimos a thread.
+
+237
+00:26:15,000 --> 00:26:16,000
+O mutex?
+
+238
+00:26:16,000 --> 00:26:17,000
+Estou poupa?
+
+239
+00:26:17,000 --> 00:26:18,000
+É parte.
+
+240
+00:26:18,000 --> 00:26:23,000
+Não sei se vocês conseguiam ver, mas estavam aqui a lançar foguetes perto de minha casa.
+
+241
+00:26:23,000 --> 00:26:24,000
+Não ouviram?
+
+242
+00:26:24,000 --> 00:26:26,000
+Não, não, não, não.
+
+243
+00:26:26,000 --> 00:26:27,000
+Então, ok.
+
+244
+00:26:27,000 --> 00:26:31,000
+Então, é que o mecanismo de reloção do ruído, do tempo, se funciona bem.
+
+245
+00:26:31,000 --> 00:26:33,000
+Não, não vêm agora.
+
+246
+00:26:33,000 --> 00:26:35,000
+Vamos lançar um moroteio.
+
+247
+00:26:35,000 --> 00:26:37,000
+Parece que estamos lá.
+
+248
+00:26:37,000 --> 00:26:41,000
+É se ter sobrado o dia-vídeo da no IPA23.
+
+249
+00:26:41,000 --> 00:26:43,000
+Agora, o que nós temos aqui?
+
+250
+00:26:43,000 --> 00:26:45,000
+Também adquirimos o mutex.
+
+251
+00:26:45,000 --> 00:26:52,000
+Agora, também, verificamos se podemos avançar para o trabalho da secção crítica.
+
+252
+00:26:52,000 --> 00:27:02,000
+E, se não podemos avançar, então, simplesmente vamos parar ou esperar com o p-read Condition 8.
+
+253
+00:27:02,000 --> 00:27:10,000
+Nesta variável condicional, quando vai, e o libertamos o mutex m6.
+
+254
+00:27:11,000 --> 00:27:13,000
+Ok.
+
+255
+00:27:13,000 --> 00:27:17,000
+Aqui está a resposta da sua questão.
+
+256
+00:27:17,000 --> 00:27:26,000
+Eu sempre que é guarda numa variável condicional e eu tenho que libertar também o mutex.
+
+257
+00:27:26,000 --> 00:27:27,000
+Ok.
+
+258
+00:27:27,000 --> 00:27:36,000
+E esta função faz a libertação e o adormecer numa forma aparentemente atômica.
+
+259
+00:27:36,000 --> 00:27:37,000
+Ok.
+
+260
+00:27:37,000 --> 00:27:41,000
+Eu, quando diga, aparentemente atômica, já sabemos que, se olhamos para o processador,
+
+261
+00:27:41,000 --> 00:27:45,000
+vão ocorrer várias instruções.
+
+262
+00:27:45,000 --> 00:27:51,000
+Mas, do ponto de vista, prático, o que ele não faz com que estas várias instruções,
+
+263
+00:27:51,000 --> 00:27:56,000
+estas uniscutadas com o único bloco atômico.
+
+264
+00:27:57,000 --> 00:28:08,000
+Quando eu acordar com o bloco aqui, quando eu desbloquear este mutex vai ser minha outra vez.
+
+265
+00:28:08,000 --> 00:28:09,000
+Ok.
+
+266
+00:28:09,000 --> 00:28:20,000
+Então, eu vou voltar atrás e vou re-verificar o estávo, me permite avançar para a minha secção crítica.
+
+267
+00:28:21,000 --> 00:28:32,000
+Se, por acaso, não me permitir, quer dizer que se calhar outra thread de absorte e conseguiu consumir o valor antes de mim.
+
+268
+00:28:32,000 --> 00:28:37,000
+E este é o problema que também o volso-colegas há que engançado.
+
+269
+00:28:37,000 --> 00:28:44,000
+Nós podemos ter várias threades à espera na mesma variável condicional e a resposta é sim.
+
+270
+00:28:45,000 --> 00:28:54,000
+Se tivermos várias, uma ave consumir e outra, quando for a seguir, já não encontra lá nada para consumir.
+
+271
+00:28:54,000 --> 00:29:05,000
+Então, este espera pode ser necessário uma segunda vez, e quem diz uma segunda ou uma terceira, não sei, depende da situação.
+
+272
+00:29:05,000 --> 00:29:17,000
+E, por isso, é por essa possibilidade que a avaliação, da condição do preguicado, é feita num alho e num alho.
+
+273
+00:29:17,000 --> 00:29:21,000
+Por com o alho, a valia é o único vez.
+
+274
+00:29:21,000 --> 00:29:26,000
+E o alho, a valia, às vezes, que for necessárias.
+
+275
+00:29:27,000 --> 00:29:30,000
+É bastante sentido.
+
+276
+00:29:32,000 --> 00:29:38,000
+De resto, aqui está tudo igual. Finalmente, fazer o trabalho e libertar no text.
+
+277
+00:29:38,000 --> 00:29:44,000
+Reparem que aqui, nós temos o processador que está sempre, sempre, sempre, sempre para ser utilizado.
+
+278
+00:29:45,000 --> 00:29:58,000
+E aqui, a nossa thread, o liberta, para além do Excel, e o processador, até chegar à altura em que ponto eventualmente realizar o trabalho.
+
+279
+00:29:58,000 --> 00:30:02,000
+Faz sentido?
+
+280
+00:30:02,000 --> 00:30:06,000
+Ok, então agora vamos laver as funções.
+
+281
+00:30:07,000 --> 00:30:12,000
+Estou柒 de underbar liner.
+
+282
+00:30:12,000 --> 00:30:15,000
+Então, que a gente vai adotar todo o trabalho.
+
+283
+00:30:15,000 --> 00:30:18,000
+Que a gente vai adotar.
+
+284
+00:30:18,000 --> 00:30:27,000
+Então, vamos para aversal, que a gente vai adotar, porque a gente vai dizer que a gente vai adotar.
+
+285
+00:30:27,000 --> 00:30:29,000
+O que é que a gente vai adotar?
+
+286
+00:30:29,000 --> 00:30:39,500
+Aqui este READY é mesmo uma variável cujo valor na vez qual é que eu estava do recurso que eu quero usar.
+
+287
+00:30:39,500 --> 00:30:57,500
+Pode, por exemplo, ser READY igual a IAS, por acaso eu creio que num slide mais à frente, eu fiz aqui uma condição muito mais lógica porque se o valor desta variável for igual a IASY,
+
+288
+00:30:57,500 --> 00:31:01,500
+ou só o valor desta variável for igual a outro, certo?
+
+289
+00:31:01,500 --> 00:31:13,500
+Mas isto aqui é mesmo uma variável até pode ser uma condição com várias variáveis que indicam qual é que é o estado do recurso.
+
+290
+00:31:13,500 --> 00:31:19,500
+Esta variável de condição não me bicho o estado do recurso.
+
+291
+00:31:19,500 --> 00:31:29,500
+Apesar de ter um nome variável e, aparentemente, ser uma variável, porque é montado numa variável e isto é um canismo que fica a escuta.
+
+292
+00:31:29,500 --> 00:31:34,500
+Eu, sinceramente, não faço a mínima ideia do valor que está lá dentro.
+
+293
+00:31:34,500 --> 00:31:43,500
+Eu, simplesmente, é um costo mais esta variável para ficar a espera que alguém me acorde.
+
+294
+00:31:43,500 --> 00:31:50,500
+É quase como, eu não vou dizer que antes portador, porque o portador nós dizemos aqui, nós queremos acordar.
+
+295
+00:31:50,500 --> 00:31:58,500
+Mas é quase como adormecer que o telemóvel na mão, a espera que alguém nos telefone para nos levantarmos e temos que fazer qualquer coisa.
+
+296
+00:31:59,500 --> 00:32:00,500
+Certo?
+
+297
+00:32:02,500 --> 00:32:07,500
+Imagínem que vocês estão a espera de alguém, tem que buscar alguém a estação de convoy.
+
+298
+00:32:07,500 --> 00:32:13,500
+Ok? Não, a estação de convoy, não com o convoy.
+
+299
+00:32:13,500 --> 00:32:16,500
+Mas, normalmente, chega às horas ou pouco a trás.
+
+300
+00:32:16,500 --> 00:32:18,500
+Vamos arranjar outra coisa qualquer.
+
+301
+00:32:19,500 --> 00:32:30,500
+Alguém, vem de cá, pode ser mais ché, pode ser mais tarde, vem de vulaia.
+
+302
+00:32:30,500 --> 00:32:37,500
+E ao ver de vulaia, pode ser me cadinho mais ché, pode ser me cadinho mais tarde, pode apanhar mais trânsito, pode apanhar menos trânsito.
+
+303
+00:32:37,500 --> 00:32:42,500
+E nós temos que ir apanhar um desalício lá, digam-me em um sentido para ir buscar.
+
+304
+00:32:42,500 --> 00:32:44,500
+Aliás, estação de campanha.
+
+305
+00:32:44,500 --> 00:32:48,500
+Eu vou gastar o ir outra vez para haver a dor de convoy.
+
+306
+00:32:48,500 --> 00:32:50,500
+Ah, que tudo adabou isto?
+
+307
+00:32:50,500 --> 00:32:52,500
+Ok?
+
+308
+00:32:52,500 --> 00:32:54,500
+Das duas uma.
+
+309
+00:32:54,500 --> 00:32:57,500
+Eu posso ir lá para a retudo adabou a vista.
+
+310
+00:32:57,500 --> 00:33:02,500
+É encosto e fico lá a espera de ver a pessoa, certo?
+
+311
+00:33:02,500 --> 00:33:06,500
+Mas a retudo adabou a vista é um sentido para se estacionar.
+
+312
+00:33:07,500 --> 00:33:08,500
+Então o que é que nós fazemos?
+
+313
+00:33:08,500 --> 00:33:16,500
+Dizemos, apan, olha, eu estou aqui pro perto, mas quando estivesse a chegar, tu forna-me que vou ir ter contigo, certo?
+
+314
+00:33:16,500 --> 00:33:18,500
+E o que que acontece?
+
+315
+00:33:18,500 --> 00:33:25,500
+Uma pessoa estacional em um suceito nas rundezas, mas que seja fácil de estacionar e fica contigo na mão.
+
+316
+00:33:25,500 --> 00:33:34,500
+Pronto, o tu forna na mão é esta variável condicional, é apenas um canismo em que eu posso bloquear,
+
+317
+00:33:34,500 --> 00:33:39,500
+mas alguém há de nem acordar, certo?
+
+318
+00:33:39,500 --> 00:33:41,500
+A pessoa, o que eu estou a esperando?
+
+319
+00:33:41,500 --> 00:33:48,500
+Quando tu ligar, o telemóvel vai me sinalizar a dizer que o plano já posso continuar.
+
+320
+00:33:48,500 --> 00:33:52,500
+Ou já posso verificar se posso continuar, ok?
+
+321
+00:33:52,500 --> 00:33:54,500
+Eu estou a sentir.
+
+322
+00:33:54,500 --> 00:33:59,500
+Hoje estou falando, tanto a variável breve, quase como a variável condição,
+
+323
+00:33:59,500 --> 00:34:02,500
+tem que estar mais ou menos chynchronizadas, né?
+
+324
+00:34:02,500 --> 00:34:05,500
+Eu só vai acordar contigo na variável também.
+
+325
+00:34:05,500 --> 00:34:06,500
+Não, não.
+
+326
+00:34:06,500 --> 00:34:09,500
+E não só vai acordar quando for sinalizado.
+
+327
+00:34:09,500 --> 00:34:11,500
+Imagina, ok, ok.
+
+328
+00:34:11,500 --> 00:34:13,500
+E eu adoro fazer metáforas.
+
+329
+00:34:13,500 --> 00:34:18,500
+Imagina que está ali, quase atendendo a dormir seu no carro, mas perada a pessoa, certo?
+
+330
+00:34:18,500 --> 00:34:21,500
+E em distante, o tu forna toca.
+
+331
+00:34:21,500 --> 00:34:25,500
+E uma pessoa pensa, é para lá, já está a chegar, não é?
+
+332
+00:34:26,500 --> 00:34:27,500
+Ah, já está a chegar.
+
+333
+00:34:27,500 --> 00:34:29,500
+E depois, tu, entendeu?
+
+334
+00:34:29,500 --> 00:34:31,500
+Então, já estás na retunda da boa vista?
+
+335
+00:34:31,500 --> 00:34:33,500
+E a pessoa diz, é para lá, não.
+
+336
+00:34:33,500 --> 00:34:35,500
+Ouva aqui uma sivia, não tem esta reja.
+
+337
+00:34:35,500 --> 00:34:37,500
+Pai, está a trazer ou ficar essas olhas.
+
+338
+00:34:37,500 --> 00:34:39,500
+Quanto é mais maior ainda, eu chegar ai.
+
+339
+00:34:39,500 --> 00:34:40,500
+Pronto.
+
+340
+00:34:40,500 --> 00:34:45,500
+Nós até acordamos, na variável condicional, não é?
+
+341
+00:34:45,500 --> 00:34:49,500
+Só depois, vamos verificar, voltamos atrás ao lado, verificamos.
+
+342
+00:34:49,500 --> 00:34:54,500
+O estávo e, afinal do estávo, ainda não me permita avançar para o tempo.
+
+343
+00:34:54,500 --> 00:34:58,500
+Para o trabalho crítico que eu tenho de realizar a frente.
+
+344
+00:34:58,500 --> 00:35:00,500
+E isso pode acontecer.
+
+345
+00:35:00,500 --> 00:35:01,500
+Ok.
+
+346
+00:35:01,500 --> 00:35:02,500
+Ok?
+
+347
+00:35:02,500 --> 00:35:03,500
+Ok.
+
+348
+00:35:03,500 --> 00:35:04,500
+Pronto.
+
+349
+00:35:04,500 --> 00:35:06,500
+Agora, vamos lá.
+
+350
+00:35:06,500 --> 00:35:10,500
+Rapidamente, isso precisa de uma variável condicional.
+
+351
+00:35:10,500 --> 00:35:13,500
+É que, como é um clenismo, eu tenho de criar.
+
+352
+00:35:13,500 --> 00:35:15,500
+Qual é como uma mutéque?
+
+353
+00:35:15,500 --> 00:35:17,500
+Também é um clenismo e eu tenho de criar.
+
+354
+00:35:17,500 --> 00:35:18,500
+Pronto.
+
+355
+00:35:18,500 --> 00:35:20,500
+A variável condicional é igual.
+
+356
+00:35:20,500 --> 00:35:24,500
+E ver se ser p3d, mutéx, init, como no caso os mutéxes,
+
+357
+00:35:24,500 --> 00:35:29,500
+é p3d, cond, cond, condition, variable, init.
+
+358
+00:35:29,500 --> 00:35:30,500
+Pronto.
+
+359
+00:35:30,500 --> 00:35:33,500
+E aqui, o que nós precisamos de fazer?
+
+360
+00:35:33,500 --> 00:35:40,500
+Precisamos de apontar, de passar o endereço de uma variável p3d, cond, type.
+
+361
+00:35:40,500 --> 00:35:41,500
+Ok?
+
+362
+00:35:41,500 --> 00:35:42,500
+Está de nós criamos uma variável.
+
+363
+00:35:42,500 --> 00:35:46,500
+Essa variável é apenas um involucro, é um vaso.
+
+364
+00:35:46,500 --> 00:35:47,500
+Ok?
+
+365
+00:35:47,500 --> 00:35:51,500
+E nós, com esta função, passamos o endereço de esta variável,
+
+366
+00:35:51,500 --> 00:35:57,500
+que é para esta função colocar dentro desse vaso, dentro desse involucro,
+
+367
+00:35:57,500 --> 00:36:02,500
+o mecanismo configurável da variável condição.
+
+368
+00:36:02,500 --> 00:36:03,500
+Ok?
+
+369
+00:36:03,500 --> 00:36:07,500
+E depois, também temos aqui os atributos da variável condição.
+
+370
+00:36:07,500 --> 00:36:10,500
+Neste momento, vamos utilizar o nu.
+
+371
+00:36:10,500 --> 00:36:13,500
+Ou seja, não passamos o endereço de variável nu.
+
+372
+00:36:14,500 --> 00:36:19,500
+E se não passamos no endereço, o p3d, cond, type, cond, init,
+
+373
+00:36:19,500 --> 00:36:25,500
+vai assumir que é uma variável condição de série, sem qualquer atributo especial.
+
+374
+00:36:25,500 --> 00:36:27,500
+Está bom?
+
+375
+00:36:27,500 --> 00:36:31,500
+Se funcionar bem, isso criará variável condição, ele retorna zero.
+
+376
+00:36:31,500 --> 00:36:32,500
+Pronto.
+
+377
+00:36:32,500 --> 00:36:37,500
+Se não retornar zero, ou algo um problema, e não temos nenhuma variável condição moldada,
+
+378
+00:36:37,500 --> 00:36:41,500
+aqui, dentro deste vaso, dentro deste variável.
+
+379
+00:36:41,500 --> 00:36:42,500
+Ok?
+
+380
+00:36:42,500 --> 00:36:44,500
+Muito parecido com os motéis.
+
+381
+00:36:44,500 --> 00:36:48,500
+Eu tenho uma variável, apenas um vaso,
+
+382
+00:36:48,500 --> 00:36:52,500
+só que depois preciso de chamar uma função para colocar dentro desse vaso,
+
+383
+00:36:52,500 --> 00:36:55,500
+um mecanismo.
+
+384
+00:36:55,500 --> 00:36:57,500
+Tá bom?
+
+385
+00:36:57,500 --> 00:37:01,500
+Se eu quiser criar uma variável condição,
+
+386
+00:37:01,500 --> 00:37:06,500
+que vai estar desde o início até o final do meu programa,
+
+387
+00:37:07,500 --> 00:37:11,500
+portanto, uma variável estática, e eu posso utilizar esta macro,
+
+388
+00:37:11,500 --> 00:37:16,500
+p3d, cond, initializer, tal como já tínhamos para o motéis,
+
+389
+00:37:16,500 --> 00:37:20,500
+e este aqui, monta-me nesta variável cond,
+
+390
+00:37:20,500 --> 00:37:24,500
+uma variável condicional, uma variável condição,
+
+391
+00:37:24,500 --> 00:37:30,500
+que estática que vai existir do princípio até o fim do programa.
+
+392
+00:37:30,500 --> 00:37:31,500
+Ok?
+
+393
+00:37:31,500 --> 00:37:35,500
+Nesse caso, nem precisamos de destruir com uma função, vamos ver a seguir.
+
+394
+00:37:35,500 --> 00:37:36,500
+Tá bom?
+
+395
+00:37:36,500 --> 00:37:37,500
+Tal como nos motéis.
+
+396
+00:37:37,500 --> 00:37:42,500
+Também, quando faço isto, esta variável tem atributos de série,
+
+397
+00:37:42,500 --> 00:37:44,500
+não há atributos especiais.
+
+398
+00:37:44,500 --> 00:37:45,500
+Tá bom?
+
+399
+00:37:45,500 --> 00:37:51,500
+Se eu tiver uma variável condição, que não seja mais necessária,
+
+400
+00:37:51,500 --> 00:37:53,500
+eu posso destruí-la.
+
+401
+00:37:53,500 --> 00:37:56,500
+As variáveis condição, quando eu faço o início,
+
+402
+00:37:56,500 --> 00:37:58,500
+elas são criadas na RIP.
+
+403
+00:37:58,500 --> 00:37:59,500
+E pronto.
+
+404
+00:37:59,500 --> 00:38:06,500
+As treites foram pensadas para todos os tipos de aplicações,
+
+405
+00:38:06,500 --> 00:38:09,500
+não é só para as aplicações em beta.
+
+406
+00:38:09,500 --> 00:38:15,500
+Mostrando, elas são criadas na RIP e podem ser destruídas também da RIP.
+
+407
+00:38:15,500 --> 00:38:20,500
+E temos o Condição Destroy, que pega numa variável,
+
+408
+00:38:20,500 --> 00:38:25,500
+que está criada na RIP, e simplesmente o Ibreta,
+
+409
+00:38:26,500 --> 00:38:28,500
+e deixe de estir a variável.
+
+410
+00:38:28,500 --> 00:38:33,500
+Convém que não tem nenhuma thread a dormir,
+
+411
+00:38:33,500 --> 00:38:40,500
+encostada a variável para que o comportamento não seja indifenível.
+
+412
+00:38:40,500 --> 00:38:42,500
+Sempre que é comportamento indifenível,
+
+413
+00:38:42,500 --> 00:38:47,500
+estamos a dizer, está dependente da implementação do sistema.
+
+414
+00:38:47,500 --> 00:38:52,500
+O comportamento indifenível volta a lembrar,
+
+415
+00:38:52,500 --> 00:38:55,500
+não quer dizer que não se sabe o que vai acontecer.
+
+416
+00:38:55,500 --> 00:38:59,500
+Simplesmente, é, temos que olhar pro código do Kernel
+
+417
+00:38:59,500 --> 00:39:02,500
+para perceber como é que é o lida numa situação destas.
+
+418
+00:39:02,500 --> 00:39:04,500
+E pode variar nos sistemas pros outros.
+
+419
+00:39:04,500 --> 00:39:10,500
+Até mesmo no Linux, basta uma pessoa ir ao Kernel alterado e pronto.
+
+420
+00:39:10,500 --> 00:39:12,500
+Já temos outros comportamentos.
+
+421
+00:39:12,500 --> 00:39:14,500
+Ok, agora, operar.
+
+422
+00:39:14,500 --> 00:39:19,500
+Quem é forte, isso acontece mais vezes.
+
+423
+00:39:20,500 --> 00:39:25,500
+Primeiro, é aquela do lado que vai esperar, certo?
+
+424
+00:39:25,500 --> 00:39:28,500
+Então, nós temos a thread contre weight,
+
+425
+00:39:28,500 --> 00:39:31,500
+em que eu vivo, como nós já vimos,
+
+426
+00:39:31,500 --> 00:39:35,500
+eu quero aguardar, nesta variável condicional,
+
+427
+00:39:35,500 --> 00:39:37,500
+portanto, este mutex.
+
+428
+00:39:37,500 --> 00:39:43,500
+E é este mutex, que quando este condição weight desbloquear
+
+429
+00:39:43,500 --> 00:39:46,500
+e invulter de novo na minha mão.
+
+430
+00:39:47,500 --> 00:39:48,500
+Ok?
+
+431
+00:39:48,500 --> 00:39:53,500
+E ele atomicamente liberta o mutex e bloqueia a thread
+
+432
+00:39:53,500 --> 00:39:57,500
+até que a variável condição seja sinalizada.
+
+433
+00:39:57,500 --> 00:40:01,500
+Assim que te bloqueia, a thread tem automaticamente
+
+434
+00:40:01,500 --> 00:40:05,500
+a posto do mutex, é garantido o isto, ok?
+
+435
+00:40:05,500 --> 00:40:10,500
+Importante, a thread que chama esta função
+
+436
+00:40:10,500 --> 00:40:12,500
+tem que bater o mutex.
+
+437
+00:40:13,500 --> 00:40:17,500
+É batota dizer que eu quero bloquear nesta variável condicional
+
+438
+00:40:17,500 --> 00:40:20,500
+e que liberte este mutex que não é meu, ok?
+
+439
+00:40:20,500 --> 00:40:24,500
+Portanto, não podemos fazer a batota, certo?
+
+440
+00:40:24,500 --> 00:40:26,500
+Este retorno a zero se correu tudo bem,
+
+441
+00:40:26,500 --> 00:40:30,500
+mas retorno a zero só quando desbloquear a atenção, ok?
+
+442
+00:40:30,500 --> 00:40:33,500
+Não retorno a zero, mala chamamos.
+
+443
+00:40:33,500 --> 00:40:37,500
+É só quando voltarmos a acordar, é que isto vai retornarmos a zero.
+
+444
+00:40:38,500 --> 00:40:42,500
+Se retornar um número de ouro, provavelmente no esquerdo bloqueou
+
+445
+00:40:42,500 --> 00:40:45,500
+aquilo que falhou logo, quando é para falhar, falha logo
+
+446
+00:40:45,500 --> 00:40:47,500
+quase sempre para a cabeça, ok?
+
+447
+00:40:47,500 --> 00:40:49,500
+Dovidas até agora, não há?
+
+448
+00:40:49,500 --> 00:40:55,500
+Este aqui é só sintaxe, já vamos ver exemplos em código real.
+
+449
+00:40:55,500 --> 00:41:00,500
+Agora temos outro lado que é quem faz este trabalho
+
+450
+00:41:00,500 --> 00:41:06,500
+e quer eventualmente acordar quem possa estar a espera
+
+451
+00:41:06,500 --> 00:41:09,500
+naquela variável condicional.
+
+452
+00:41:09,500 --> 00:41:12,500
+E reparem que vocês podem estar a pensar.
+
+453
+00:41:12,500 --> 00:41:15,500
+Ah, e como é que ele sabe que tem de acordar alguém
+
+454
+00:41:15,500 --> 00:41:20,500
+que esteja bloqueado numa variável condição?
+
+455
+00:41:20,500 --> 00:41:23,500
+E a resposta é, no momento, não sabe,
+
+456
+00:41:23,500 --> 00:41:26,500
+mas eu, com o programa do Or,
+
+457
+00:41:26,500 --> 00:41:28,500
+eu sei que existe essa possibilidade,
+
+458
+00:41:28,500 --> 00:41:34,500
+portanto, o melhor é sinalizar sempre, ok?
+
+459
+00:41:35,500 --> 00:41:37,500
+Como é que uma pessoa sinaliza?
+
+460
+00:41:37,500 --> 00:41:41,500
+Temos, então, a função p3d condição sinal
+
+461
+00:41:41,500 --> 00:41:44,500
+e a única coisa que temos de fazer é passar o endereço
+
+462
+00:41:44,500 --> 00:41:47,500
+da variável que tem essa variável condição.
+
+463
+00:41:47,500 --> 00:41:50,500
+Ok?
+
+464
+00:41:50,500 --> 00:41:57,500
+O p3d condição sinal desbloqueia pelo menos uma thread.
+
+465
+00:41:58,500 --> 00:42:03,500
+É garantir que uma thread é desbloqueada.
+
+466
+00:42:03,500 --> 00:42:06,500
+Mas quantas é que são desbloqueadas?
+
+467
+00:42:06,500 --> 00:42:08,500
+Não faço ideia.
+
+468
+00:42:08,500 --> 00:42:12,500
+E a própria especificação também não faz ideia.
+
+469
+00:42:12,500 --> 00:42:18,500
+Ok? A única garantia é que pelo menos uma thread é desbloqueada.
+
+470
+00:42:18,500 --> 00:42:21,500
+E por que que pelo menos uma?
+
+471
+00:42:21,500 --> 00:42:25,500
+E se for em duas, há mal, é melhor duas do que nenhuma.
+
+472
+00:42:26,500 --> 00:42:28,500
+E a melhor três do que nenhuma,
+
+473
+00:42:28,500 --> 00:42:32,500
+garantidamente, três pelo menos uma,
+
+474
+00:42:32,500 --> 00:42:35,500
+está incluida, aliás, é pelo menos uma três vezes,
+
+475
+00:42:35,500 --> 00:42:38,500
+certo? Portanto, a especificação
+
+476
+00:42:38,500 --> 00:42:41,500
+querente que pelo menos uma thread acorde.
+
+477
+00:42:41,500 --> 00:42:43,500
+Mas pode ser mais.
+
+478
+00:42:43,500 --> 00:42:45,500
+Ok?
+
+479
+00:42:45,500 --> 00:42:48,500
+Pai numa coisa, se não houver threads,
+
+480
+00:42:48,500 --> 00:42:50,500
+a espera na variável condicional,
+
+481
+00:42:50,500 --> 00:42:53,500
+também não há problema nenhum.
+
+482
+00:42:53,500 --> 00:42:55,500
+O p3d condição de cegno,
+
+483
+00:42:55,500 --> 00:42:58,500
+não por luz qualquer efeito,
+
+484
+00:42:58,500 --> 00:43:02,500
+mas o sinal também não fica guardado.
+
+485
+00:43:02,500 --> 00:43:05,500
+Ninguém acorda e ninguém se lembra.
+
+486
+00:43:05,500 --> 00:43:08,500
+O sinal desaparece.
+
+487
+00:43:08,500 --> 00:43:13,500
+É quase como passar um autocar.
+
+488
+00:43:13,500 --> 00:43:16,500
+Se não estiver ninguém na paragem do autocar,
+
+489
+00:43:16,500 --> 00:43:18,500
+o autocar não para.
+
+490
+00:43:18,500 --> 00:43:20,500
+Passa, certo?
+
+491
+00:43:20,500 --> 00:43:22,500
+Se estiver alguém na paragem do autocar,
+
+492
+00:43:22,500 --> 00:43:25,500
+eu para e apanhar alguém.
+
+493
+00:43:25,500 --> 00:43:27,500
+Se não estiver ninguém,
+
+494
+00:43:27,500 --> 00:43:30,500
+ele não para e segue em frente.
+
+495
+00:43:30,500 --> 00:43:32,500
+Se eu chegar lá um minuto depois,
+
+496
+00:43:32,500 --> 00:43:34,500
+eu posso perguntar,
+
+497
+00:43:34,500 --> 00:43:36,500
+será que o autocar já passou?
+
+498
+00:43:36,500 --> 00:43:38,500
+Mas não sei, não vejo,
+
+499
+00:43:38,500 --> 00:43:40,500
+ele não está lá, certo?
+
+500
+00:43:40,500 --> 00:43:44,500
+Portanto, é que não tivesse passado nenhum autocar antes.
+
+501
+00:43:44,500 --> 00:43:46,500
+E o que acontece aqui?
+
+502
+00:43:46,500 --> 00:43:48,500
+Não sei se não fiz entender.
+
+503
+00:43:49,500 --> 00:43:54,500
+Mas o que eu quero dizer é que o sinal não fica guardado.
+
+504
+00:43:54,500 --> 00:43:57,500
+Ou é agora ou por Deus.
+
+505
+00:43:57,500 --> 00:44:00,500
+Ok?
+
+506
+00:44:00,500 --> 00:44:02,500
+Ou acorde quem está para acordar agora,
+
+507
+00:44:02,500 --> 00:44:04,500
+ou então já não acorda mais ninguém.
+
+508
+00:44:04,500 --> 00:44:07,500
+É certo?
+
+509
+00:44:07,500 --> 00:44:13,500
+Mas existe uma situação entre a condição
+
+510
+00:44:13,500 --> 00:44:17,500
+e o sinal associado a essa condição
+
+511
+00:44:17,500 --> 00:44:19,500
+e existe,
+
+512
+00:44:19,500 --> 00:44:21,500
+está em efeito,
+
+513
+00:44:21,500 --> 00:44:24,500
+mas as tredes que criaram essa condição
+
+514
+00:44:24,500 --> 00:44:27,500
+já não estão a espera de nada?
+
+515
+00:44:28,500 --> 00:44:30,500
+O que acontece é que,
+
+516
+00:44:30,500 --> 00:44:34,500
+nós lá vemos, suponha que eu sou um produtor
+
+517
+00:44:34,500 --> 00:44:38,500
+e eu vou sinalizar uma possível freda
+
+518
+00:44:38,500 --> 00:44:40,500
+que esteja a espera para consumir.
+
+519
+00:44:40,500 --> 00:44:43,500
+Se naquele momento não estiver nenhuma freda,
+
+520
+00:44:43,500 --> 00:44:45,500
+bloqueada a espera para consumir,
+
+521
+00:44:46,500 --> 00:44:49,500
+eu digo, consumam.
+
+522
+00:44:51,500 --> 00:44:52,500
+E agora,
+
+523
+00:44:52,500 --> 00:44:54,500
+consegue ouvir a minha voz,
+
+524
+00:44:54,500 --> 00:44:55,500
+a dizer, consumam.
+
+525
+00:44:55,500 --> 00:44:57,500
+Só se eu ver um no momento.
+
+526
+00:44:57,500 --> 00:44:59,500
+Hoje.
+
+527
+00:44:59,500 --> 00:45:02,500
+Se naquele momento não estiver ninguém espera para consumir,
+
+528
+00:45:02,500 --> 00:45:04,500
+não há grande problema,
+
+529
+00:45:04,500 --> 00:45:06,500
+porque eu acabo de produzir.
+
+530
+00:45:06,500 --> 00:45:09,500
+E vendo o aumento de que o minuto se vier uma freda
+
+531
+00:45:09,500 --> 00:45:10,500
+para consumir,
+
+532
+00:45:10,500 --> 00:45:13,500
+vai encontrar lá aquilo que eu deixei para consumir.
+
+533
+00:45:13,500 --> 00:45:17,500
+Então, nem vai bloquear na variável de condição.
+
+534
+00:45:19,500 --> 00:45:20,500
+Hoje então,
+
+535
+00:45:20,500 --> 00:45:22,500
+este sinal existe
+
+536
+00:45:22,500 --> 00:45:23,500
+constantemente,
+
+537
+00:45:23,500 --> 00:45:25,500
+porque nós criamos
+
+538
+00:45:25,500 --> 00:45:27,500
+o pé da edu-cundition,
+
+539
+00:45:27,500 --> 00:45:28,500
+antes.
+
+540
+00:45:28,500 --> 00:45:31,500
+E eu não...
+
+541
+00:45:31,500 --> 00:45:32,500
+Espera lá,
+
+542
+00:45:32,500 --> 00:45:34,500
+eu não percebi o existe sempre.
+
+543
+00:45:34,500 --> 00:45:36,500
+Só porque...
+
+544
+00:45:36,500 --> 00:45:37,500
+Sim, a única questão é,
+
+545
+00:45:37,500 --> 00:45:39,500
+a partir do momento em que criamos
+
+546
+00:45:39,500 --> 00:45:41,500
+uma variável de condição,
+
+547
+00:45:41,500 --> 00:45:42,500
+sim,
+
+548
+00:45:42,500 --> 00:45:45,500
+este sinal que é sempre initivo,
+
+549
+00:45:45,500 --> 00:45:46,500
+ou é só quando...
+
+550
+00:45:46,500 --> 00:45:48,500
+Não dá-se-se.
+
+551
+00:45:48,500 --> 00:45:51,500
+É só quando nós escrevemos
+
+552
+00:45:51,500 --> 00:45:52,500
+mucódico,
+
+553
+00:45:52,500 --> 00:45:53,500
+agora, enfim, um sinal.
+
+554
+00:45:53,500 --> 00:45:55,500
+E, na verdade,
+
+555
+00:45:55,500 --> 00:45:56,500
+por exemplo,
+
+556
+00:45:56,500 --> 00:45:57,500
+se for um produtor,
+
+557
+00:45:57,500 --> 00:45:59,500
+eu coloco lá o número
+
+558
+00:45:59,500 --> 00:46:00,500
+na variável
+
+559
+00:46:00,500 --> 00:46:02,500
+e, agora, digo,
+
+560
+00:46:02,500 --> 00:46:04,500
+acordem
+
+561
+00:46:04,500 --> 00:46:05,500
+e consumam
+
+562
+00:46:05,500 --> 00:46:07,500
+em liberto mutex.
+
+563
+00:46:07,500 --> 00:46:09,500
+Se eu ver alguém que está a dormir,
+
+564
+00:46:09,500 --> 00:46:12,500
+bloqueado na variável condição,
+
+565
+00:46:12,500 --> 00:46:14,500
+ele vai ouvir este sinal
+
+566
+00:46:14,500 --> 00:46:15,500
+e vai acordar.
+
+567
+00:46:15,500 --> 00:46:16,500
+Se não ver ninguém,
+
+568
+00:46:16,500 --> 00:46:19,500
+adormir na variável condição,
+
+569
+00:46:19,500 --> 00:46:20,500
+vá!
+
+570
+00:46:20,500 --> 00:46:21,500
+Passou!
+
+571
+00:46:23,500 --> 00:46:25,500
+Deixa-me cá ver uma coisa.
+
+572
+00:46:27,500 --> 00:46:28,500
+Imagine,
+
+573
+00:46:28,500 --> 00:46:30,500
+vocês estão numa sala.
+
+574
+00:46:31,500 --> 00:46:33,500
+E está a pessoa que está a dormir.
+
+575
+00:46:34,500 --> 00:46:35,500
+Ok?
+
+576
+00:46:35,500 --> 00:46:36,500
+Na sala.
+
+577
+00:46:36,500 --> 00:46:38,500
+Se eu chegar lá nessa sala,
+
+578
+00:46:38,500 --> 00:46:40,500
+acordem.
+
+579
+00:46:40,500 --> 00:46:42,500
+E for memória.
+
+580
+00:46:42,500 --> 00:46:43,500
+Quem está na sala,
+
+581
+00:46:43,500 --> 00:46:45,500
+ouveu uma gritar.
+
+582
+00:46:45,500 --> 00:46:46,500
+Certo?
+
+583
+00:46:46,500 --> 00:46:47,500
+E acordou.
+
+584
+00:46:47,500 --> 00:46:49,500
+Acredem que eu ia gritar muito alto
+
+585
+00:46:49,500 --> 00:46:50,500
+e vocês iram acordar.
+
+586
+00:46:50,500 --> 00:46:51,500
+Certo?
+
+587
+00:46:51,500 --> 00:46:53,500
+Agora, suponham que,
+
+588
+00:46:53,500 --> 00:46:54,500
+da próxima vez que eu fosse
+
+589
+00:46:54,500 --> 00:46:55,500
+lá gritar a sala,
+
+590
+00:46:55,500 --> 00:46:56,500
+na sala,
+
+591
+00:46:56,500 --> 00:46:58,500
+não tinha ninguém na sala.
+
+592
+00:46:58,500 --> 00:47:00,500
+E eu chegava na sala.
+
+593
+00:47:00,500 --> 00:47:02,500
+Pronto.
+
+594
+00:47:02,500 --> 00:47:04,500
+Tinha andado assim uma cozinha na cabeça
+
+595
+00:47:04,500 --> 00:47:05,500
+e gritar-la.
+
+596
+00:47:05,500 --> 00:47:07,500
+Acordem, apesar de não estar lá ninguém.
+
+597
+00:47:07,500 --> 00:47:09,500
+E amembora.
+
+598
+00:47:09,500 --> 00:47:11,500
+Certo?
+
+599
+00:47:11,500 --> 00:47:13,500
+Para quem é que eu gritei?
+
+600
+00:47:13,500 --> 00:47:14,500
+Para ninguém?
+
+601
+00:47:14,500 --> 00:47:16,500
+O meu greito ficou dentro da sala,
+
+602
+00:47:16,500 --> 00:47:17,500
+conjular-me?
+
+603
+00:47:17,500 --> 00:47:18,500
+Não.
+
+604
+00:47:18,500 --> 00:47:20,500
+A partir do momento de um calaí,
+
+605
+00:47:20,500 --> 00:47:21,500
+o greito desapareceu.
+
+606
+00:47:21,500 --> 00:47:23,500
+Se passado 20 segundos,
+
+607
+00:47:23,500 --> 00:47:25,500
+entrar alguém na sala,
+
+608
+00:47:27,500 --> 00:47:29,500
+vai ouvir o meu greito?
+
+609
+00:47:31,500 --> 00:47:32,500
+Também não.
+
+610
+00:47:33,500 --> 00:47:34,500
+É isso que eu vou dizer.
+
+611
+00:47:34,500 --> 00:47:36,500
+O sinal só tem efeito
+
+612
+00:47:36,500 --> 00:47:38,500
+no momento em que ele é
+
+613
+00:47:38,500 --> 00:47:40,500
+lançado.
+
+614
+00:47:40,500 --> 00:47:42,500
+Loga seguir,
+
+615
+00:47:42,500 --> 00:47:44,500
+desapareceu.
+
+616
+00:47:44,500 --> 00:47:45,500
+Ok?
+
+617
+00:47:45,500 --> 00:47:46,500
+Ok.
+
+618
+00:47:46,500 --> 00:47:48,500
+Acho que precisa isso.
+
+619
+00:47:48,500 --> 00:47:49,500
+Saber.
+
+620
+00:47:49,500 --> 00:47:51,500
+Pronto,
+
+621
+00:47:51,500 --> 00:47:53,500
+no sinal, nós temos o blogcast.
+
+622
+00:47:53,500 --> 00:47:55,500
+O blogcast, o que faz é
+
+623
+00:47:55,500 --> 00:47:56,500
+sinalizar,
+
+624
+00:47:56,500 --> 00:47:59,500
+mas sinaliza para todas as tretes
+
+625
+00:47:59,500 --> 00:48:01,500
+que possam estar
+
+626
+00:48:01,500 --> 00:48:03,500
+bloqueadas na variável condicional.
+
+627
+00:48:03,500 --> 00:48:04,500
+Ok?
+
+628
+00:48:04,500 --> 00:48:06,500
+Enquanto que o signo,
+
+629
+00:48:06,500 --> 00:48:08,500
+pelo menos acorda uma,
+
+630
+00:48:08,500 --> 00:48:11,500
+o blogcast acorda todas.
+
+631
+00:48:11,500 --> 00:48:14,500
+É garantia totalmente oposta.
+
+632
+00:48:14,500 --> 00:48:15,500
+É.
+
+633
+00:48:15,500 --> 00:48:16,500
+E o varante que todas as questões
+
+634
+00:48:16,500 --> 00:48:18,500
+de dormir vão acordar.
+
+635
+00:48:18,500 --> 00:48:20,500
+Ok?
+
+636
+00:48:20,500 --> 00:48:23,500
+E isso foi útil para situações em que,
+
+637
+00:48:23,500 --> 00:48:24,500
+por exemplo,
+
+638
+00:48:24,500 --> 00:48:25,500
+todas as questiverem,
+
+639
+00:48:25,500 --> 00:48:27,500
+todas as tretes que estiveram
+
+640
+00:48:27,500 --> 00:48:28,500
+a guardar,
+
+641
+00:48:28,500 --> 00:48:29,500
+têm um de ser lançado
+
+642
+00:48:29,500 --> 00:48:31,500
+ao mesmo tempo.
+
+643
+00:48:31,500 --> 00:48:32,500
+Que é o...
+
+644
+00:48:32,500 --> 00:48:33,500
+o...
+
+645
+00:48:33,500 --> 00:48:34,500
+o...
+
+646
+00:48:34,500 --> 00:48:36,500
+o carismo de barreira.
+
+647
+00:48:36,500 --> 00:48:38,500
+Na literatura é conhecido
+
+648
+00:48:38,500 --> 00:48:39,500
+com barreira.
+
+649
+00:48:39,500 --> 00:48:40,500
+Ouberra.
+
+650
+00:48:40,500 --> 00:48:42,500
+Que é uma situação em que,
+
+651
+00:48:42,500 --> 00:48:44,500
+esteu as corridas do ABMX.
+
+652
+00:48:44,500 --> 00:48:46,500
+Eles estão todos ali na partida.
+
+653
+00:48:46,500 --> 00:48:49,500
+E é necessário que alguém
+
+654
+00:48:49,500 --> 00:48:51,500
+baixa cancela,
+
+655
+00:48:51,500 --> 00:48:52,500
+mas baixa cancela ao mesmo tempo
+
+656
+00:48:52,500 --> 00:48:53,500
+para todos.
+
+657
+00:48:53,500 --> 00:48:54,500
+É.
+
+658
+00:48:54,500 --> 00:48:55,500
+A cancela é uma barreira.
+
+659
+00:48:55,500 --> 00:48:58,500
+Há aplicações em que acontece isso.
+
+660
+00:48:58,500 --> 00:49:00,500
+Nós temos que ter todas as tretes
+
+661
+00:49:00,500 --> 00:49:02,500
+prontas para processar
+
+662
+00:49:02,500 --> 00:49:03,500
+e quando elas
+
+663
+00:49:03,500 --> 00:49:04,500
+consigam o momento de ser
+
+664
+00:49:04,500 --> 00:49:05,500
+que lançamos todas.
+
+665
+00:49:05,500 --> 00:49:07,500
+E elas fazem o trabalho.
+
+666
+00:49:07,500 --> 00:49:08,500
+Inventalmente,
+
+667
+00:49:08,500 --> 00:49:09,500
+depois temos que esperar que todas
+
+668
+00:49:09,500 --> 00:49:11,500
+se termina em esse espaço,
+
+669
+00:49:11,500 --> 00:49:13,500
+antes de alansarmos todas
+
+670
+00:49:13,500 --> 00:49:14,500
+para o passo seguinte.
+
+671
+00:49:14,500 --> 00:49:15,500
+Ok?
+
+672
+00:49:15,500 --> 00:49:18,500
+E o broadcast é fantástico para isso
+
+673
+00:49:18,500 --> 00:49:19,500
+porque nós podemos terminar.
+
+674
+00:49:19,500 --> 00:49:21,500
+Quantas é que estão à espera
+
+675
+00:49:21,500 --> 00:49:24,500
+e quando chegarem a o valor
+
+676
+00:49:24,500 --> 00:49:26,500
+em que todas estão à espera,
+
+677
+00:49:26,500 --> 00:49:27,500
+eu posso lançar o broadcast
+
+678
+00:49:27,500 --> 00:49:28,500
+para todos e todas
+
+679
+00:49:28,500 --> 00:49:30,500
+que vão acordar e prociram.
+
+680
+00:49:30,500 --> 00:49:31,500
+Ok?
+
+681
+00:49:31,500 --> 00:49:33,500
+Mais uma vez,
+
+682
+00:49:33,500 --> 00:49:34,500
+se não houver freitos,
+
+683
+00:49:34,500 --> 00:49:35,500
+as espera,
+
+684
+00:49:35,500 --> 00:49:38,500
+o efeito broadcast é num
+
+685
+00:49:38,500 --> 00:49:40,500
+e o sinal também espera.
+
+686
+00:49:40,500 --> 00:49:44,500
+Peste Practices,
+
+687
+00:49:44,500 --> 00:49:47,500
+regras e gostos práticas,
+
+688
+00:49:47,500 --> 00:49:49,500
+é aquilo que eu já falei.
+
+689
+00:49:49,500 --> 00:49:51,500
+Avaliar a condição
+
+690
+00:49:51,500 --> 00:49:53,500
+num ciclo,
+
+691
+00:49:53,500 --> 00:49:55,500
+o algo e não um if.
+
+692
+00:49:55,500 --> 00:49:56,500
+Ok?
+
+693
+00:49:56,500 --> 00:49:59,500
+O if é muito natural,
+
+694
+00:49:59,500 --> 00:50:01,500
+o pessoal queria por um if.
+
+695
+00:50:01,500 --> 00:50:02,500
+O problema é que o if
+
+696
+00:50:02,500 --> 00:50:03,500
+só testa uma vez
+
+697
+00:50:03,500 --> 00:50:05,500
+e nós temos nestas situações
+
+698
+00:50:05,500 --> 00:50:06,500
+de garantir que possa ser
+
+699
+00:50:06,500 --> 00:50:07,500
+mais de que uma vez.
+
+700
+00:50:07,500 --> 00:50:08,500
+Por que?
+
+701
+00:50:08,500 --> 00:50:09,500
+Por que?
+
+702
+00:50:09,500 --> 00:50:12,500
+Pode acontecer
+
+703
+00:50:12,500 --> 00:50:15,500
+que uma thread
+
+704
+00:50:15,500 --> 00:50:18,500
+acorda,
+
+705
+00:50:18,500 --> 00:50:19,500
+se por isso,
+
+706
+00:50:19,500 --> 00:50:22,500
+as são um desportagens por
+
+707
+00:50:22,500 --> 00:50:24,500
+o que que isso quer dizer?
+
+708
+00:50:24,500 --> 00:50:25,500
+Ou seja,
+
+709
+00:50:25,500 --> 00:50:26,500
+eu vou achar este estranho,
+
+710
+00:50:26,500 --> 00:50:27,500
+mas uma thread que está
+
+711
+00:50:27,500 --> 00:50:28,500
+a dormir,
+
+712
+00:50:28,500 --> 00:50:29,500
+num sinal,
+
+713
+00:50:29,500 --> 00:50:31,500
+numa variável condicional,
+
+714
+00:50:31,500 --> 00:50:32,500
+pode acordar,
+
+715
+00:50:32,500 --> 00:50:34,500
+sem receber um sinal.
+
+716
+00:50:34,500 --> 00:50:36,500
+E ainda por cima,
+
+717
+00:50:36,500 --> 00:50:38,500
+a especificação,
+
+718
+00:50:38,500 --> 00:50:42,500
+desde que isso pode acontecer.
+
+719
+00:50:42,500 --> 00:50:43,500
+Ok?
+
+720
+00:50:43,500 --> 00:50:46,500
+Portanto, uma varia,
+
+721
+00:50:46,500 --> 00:50:47,500
+uma thread que está
+
+722
+00:50:47,500 --> 00:50:48,500
+já bloqueada,
+
+723
+00:50:48,500 --> 00:50:50,500
+numa variável condicional,
+
+724
+00:50:50,500 --> 00:50:52,500
+pode desbloquear,
+
+725
+00:50:52,500 --> 00:50:55,500
+sem que alguém sinaliza
+
+726
+00:50:55,500 --> 00:50:57,500
+essa variável condicional.
+
+727
+00:50:57,500 --> 00:50:58,500
+Portanto,
+
+728
+00:50:58,500 --> 00:50:59,500
+eu posso acordar,
+
+729
+00:50:59,500 --> 00:51:01,500
+o ur,
+
+730
+00:51:01,500 --> 00:51:03,500
+um acidente,
+
+731
+00:51:03,500 --> 00:51:04,500
+logo,
+
+732
+00:51:04,500 --> 00:51:05,500
+é mais seguro,
+
+733
+00:51:05,500 --> 00:51:06,500
+eu vou estar a verificar,
+
+734
+00:51:06,500 --> 00:51:07,500
+ser melhor,
+
+735
+00:51:07,500 --> 00:51:08,500
+eu ir pra caminho,
+
+736
+00:51:08,500 --> 00:51:09,500
+outra vez,
+
+737
+00:51:09,500 --> 00:51:10,500
+ou se vou ter de trabalhar.
+
+738
+00:51:10,500 --> 00:51:11,500
+Ok?
+
+739
+00:51:11,500 --> 00:51:12,500
+E também,
+
+740
+00:51:12,500 --> 00:51:13,500
+pode acontecer
+
+741
+00:51:13,500 --> 00:51:14,500
+aquele caso,
+
+742
+00:51:14,500 --> 00:51:15,500
+em que,
+
+743
+00:51:15,500 --> 00:51:16,500
+eu faço,
+
+744
+00:51:16,500 --> 00:51:18,500
+alguém via um signo
+
+745
+00:51:18,500 --> 00:51:19,500
+e acordaram
+
+746
+00:51:19,500 --> 00:51:20,500
+duas,
+
+747
+00:51:20,500 --> 00:51:21,500
+outras threads.
+
+748
+00:51:21,500 --> 00:51:23,500
+Em vez de saúde,
+
+749
+00:51:23,500 --> 00:51:24,500
+a primeira frebe,
+
+750
+00:51:24,500 --> 00:51:25,500
+faz o trabalho que querem
+
+751
+00:51:25,500 --> 00:51:26,500
+para fazer,
+
+752
+00:51:26,500 --> 00:51:27,500
+e as outras duas threads,
+
+753
+00:51:27,500 --> 00:51:29,500
+não têm o trabalho para fazer,
+
+754
+00:51:29,500 --> 00:51:30,500
+certo?
+
+755
+00:51:30,500 --> 00:51:31,500
+Portanto,
+
+756
+00:51:31,500 --> 00:51:32,500
+convém que,
+
+757
+00:51:32,500 --> 00:51:33,500
+a segunda,
+
+758
+00:51:33,500 --> 00:51:34,500
+a terceira frebe,
+
+759
+00:51:34,500 --> 00:51:35,500
+verifica
+
+760
+00:51:35,500 --> 00:51:36,500
+que essa trabalho para fazer,
+
+761
+00:51:36,500 --> 00:51:37,500
+ou seja,
+
+762
+00:51:37,500 --> 00:51:38,500
+é melhor,
+
+763
+00:51:38,500 --> 00:51:39,500
+voltar pra caminho.
+
+764
+00:51:39,500 --> 00:51:40,500
+Ok?
+
+765
+00:51:40,500 --> 00:51:41,500
+Portanto,
+
+766
+00:51:41,500 --> 00:51:42,500
+este aqui é
+
+767
+00:51:42,500 --> 00:51:43,500
+chapa set,
+
+768
+00:51:43,500 --> 00:51:45,500
+sempre que tem,
+
+769
+00:51:45,500 --> 00:51:46,500
+um p-thread,
+
+770
+00:51:46,500 --> 00:51:47,500
+Condition 8,
+
+771
+00:51:47,500 --> 00:51:48,500
+esse p-thread,
+
+772
+00:51:48,500 --> 00:51:49,500
+Condition 8,
+
+773
+00:51:49,500 --> 00:51:51,500
+está dentro de um ciclo-
+
+774
+00:51:51,500 --> 00:51:52,500
+aisle,
+
+775
+00:51:52,500 --> 00:51:53,500
+e não dentro de um ivo.
+
+776
+00:51:53,500 --> 00:51:54,500
+Tá bom?
+
+777
+00:51:54,500 --> 00:51:56,500
+Aparece em todos os livros,
+
+778
+00:51:56,500 --> 00:51:58,500
+e em todos os chat-
+
+779
+00:51:58,500 --> 00:51:59,500
+p-thread,
+
+780
+00:51:59,500 --> 00:52:01,500
+certeza.
+
+781
+00:52:01,500 --> 00:52:02,500
+Su chat-
+
+782
+00:52:02,500 --> 00:52:03,500
+p-thread,
+
+783
+00:52:03,500 --> 00:52:04,500
+não posare dentro de um aisle,
+
+784
+00:52:04,500 --> 00:52:05,500
+pá,
+
+785
+00:52:05,500 --> 00:52:06,500
+pá enganado.
+
+786
+00:52:06,500 --> 00:52:07,500
+Ok?
+
+787
+00:52:07,500 --> 00:52:09,500
+Finalmente,
+
+788
+00:52:09,500 --> 00:52:10,500
+agora,
+
+789
+00:52:10,500 --> 00:52:12,500
+é que é o nosso problema,
+
+790
+00:52:12,500 --> 00:52:14,500
+do produtor consumidor,
+
+791
+00:52:14,500 --> 00:52:16,500
+apenas com um buffer,
+
+792
+00:52:16,500 --> 00:52:18,500
+com um único reservatório,
+
+793
+00:52:18,500 --> 00:52:19,500
+revisitado.
+
+794
+00:52:19,500 --> 00:52:20,500
+Eu vou ter aqui,
+
+795
+00:52:20,500 --> 00:52:21,500
+o meu mutex,
+
+796
+00:52:21,500 --> 00:52:22,500
+mtx,
+
+797
+00:52:22,500 --> 00:52:25,500
+e vou ter duas variáveis de condição,
+
+798
+00:52:25,500 --> 00:52:26,500
+para poder
+
+799
+00:52:26,500 --> 00:52:27,500
+atensar o mecanismos para
+
+800
+00:52:27,500 --> 00:52:29,500
+adumcer e ficar à escuta.
+
+801
+00:52:29,500 --> 00:52:30,500
+Tem,
+
+802
+00:52:30,500 --> 00:52:31,500
+averiável,
+
+803
+00:52:31,500 --> 00:52:32,500
+buffer full,
+
+804
+00:52:32,500 --> 00:52:33,500
+averiável,
+
+805
+00:52:33,500 --> 00:52:34,500
+buffer empty.
+
+806
+00:52:34,500 --> 00:52:35,500
+Se calhar,
+
+807
+00:52:35,500 --> 00:52:36,500
+ai, pá,
+
+808
+00:52:36,500 --> 00:52:37,500
+pois,
+
+809
+00:52:37,500 --> 00:52:38,500
+eu garotaria pra aqui,
+
+810
+00:52:38,500 --> 00:52:40,500
+normalmente colocoaria
+
+811
+00:52:40,500 --> 00:52:41,500
+Cond,
+
+812
+00:52:41,500 --> 00:52:42,500
+buffer full,
+
+813
+00:52:42,500 --> 00:52:43,500
+e Cond,
+
+814
+00:52:43,500 --> 00:52:44,500
+buffer empty,
+
+815
+00:52:44,500 --> 00:52:45,500
+só pra viser
+
+816
+00:52:45,500 --> 00:52:46,500
+que aquilo é uma variável
+
+817
+00:52:46,500 --> 00:52:47,500
+condicionada,
+
+818
+00:52:47,500 --> 00:52:48,500
+olhava pra live,
+
+819
+00:52:48,500 --> 00:52:49,500
+logo,
+
+820
+00:52:49,500 --> 00:52:50,500
+começa por fixo,
+
+821
+00:52:50,500 --> 00:52:52,500
+que era uma variável condicional.
+
+822
+00:52:52,500 --> 00:52:53,500
+Mas estava tão muito
+
+823
+00:52:53,500 --> 00:52:54,500
+se esmado,
+
+824
+00:52:54,500 --> 00:52:55,500
+porque estava a caber
+
+825
+00:52:55,500 --> 00:52:56,500
+todo direitinho,
+
+826
+00:52:56,500 --> 00:52:57,500
+uma linha estava a caber todo direitinho,
+
+827
+00:52:57,500 --> 00:52:58,500
+e,
+
+828
+00:52:58,500 --> 00:52:59,500
+agora é que,
+
+829
+00:52:59,500 --> 00:53:00,500
+a ver, é que,
+
+830
+00:53:00,500 --> 00:53:01,500
+reparei,
+
+831
+00:53:01,500 --> 00:53:02,500
+temos estas duas variáveis
+
+832
+00:53:02,500 --> 00:53:03,500
+condicionais,
+
+833
+00:53:03,500 --> 00:53:04,500
+é,
+
+834
+00:53:04,500 --> 00:53:05,500
+uma vai ser
+
+835
+00:53:05,500 --> 00:53:06,500
+para o produtor,
+
+836
+00:53:06,500 --> 00:53:07,500
+e outra vai ser
+
+837
+00:53:07,500 --> 00:53:09,500
+para o consumidor.
+
+838
+00:53:09,500 --> 00:53:10,500
+Por que?
+
+839
+00:53:10,500 --> 00:53:11,500
+Porque,
+
+840
+00:53:11,500 --> 00:53:12,500
+eles vão aguardar
+
+841
+00:53:12,500 --> 00:53:15,500
+por efeitos diferentes.
+
+842
+00:53:15,500 --> 00:53:16,500
+O produtor,
+
+843
+00:53:16,500 --> 00:53:17,500
+primeiro,
+
+844
+00:53:17,500 --> 00:53:18,500
+adquirir o text,
+
+845
+00:53:18,500 --> 00:53:19,500
+e,
+
+846
+00:53:19,500 --> 00:53:20,500
+agora,
+
+847
+00:53:20,500 --> 00:53:22,500
+vou avaliar a minha condição.
+
+848
+00:53:22,500 --> 00:53:24,500
+Se,
+
+849
+00:53:24,500 --> 00:53:25,500
+o estado do meu golfer,
+
+850
+00:53:25,500 --> 00:53:26,500
+for,
+
+851
+00:53:26,500 --> 00:53:27,500
+buffer full,
+
+852
+00:53:27,500 --> 00:53:28,500
+ok,
+
+853
+00:53:28,500 --> 00:53:29,500
+e reparei,
+
+854
+00:53:29,500 --> 00:53:30,500
+isto aqui,
+
+855
+00:53:30,500 --> 00:53:31,500
+é mesmo uma variável,
+
+856
+00:53:31,500 --> 00:53:32,500
+tipo o ínto,
+
+857
+00:53:32,500 --> 00:53:33,500
+coisa assim.
+
+858
+00:53:33,500 --> 00:53:34,500
+Se,
+
+859
+00:53:34,500 --> 00:53:35,500
+o valor desta variável,
+
+860
+00:53:35,500 --> 00:53:36,500
+me sinalizar,
+
+861
+00:53:36,500 --> 00:53:38,500
+que o golfer está cheio,
+
+862
+00:53:38,500 --> 00:53:39,500
+é, pá,
+
+863
+00:53:39,500 --> 00:53:40,500
+tem ali qualquer coisa,
+
+864
+00:53:40,500 --> 00:53:41,500
+eu não quero
+
+865
+00:53:41,500 --> 00:53:42,500
+sobre o pôr,
+
+866
+00:53:42,500 --> 00:53:43,500
+sobre esta coisa, ok?
+
+867
+00:53:43,500 --> 00:53:44,500
+Então,
+
+868
+00:53:44,500 --> 00:53:45,500
+eu vou esperar,
+
+869
+00:53:45,500 --> 00:53:46,500
+e vou esperar,
+
+870
+00:53:46,500 --> 00:53:48,500
+na variável,
+
+871
+00:53:48,500 --> 00:53:50,500
+deveria ser,
+
+872
+00:53:50,500 --> 00:53:51,500
+quando,
+
+873
+00:53:51,500 --> 00:53:52,500
+buffer full.
+
+874
+00:53:52,500 --> 00:53:53,500
+Ok?
+
+875
+00:53:53,500 --> 00:53:54,500
+E liberto,
+
+876
+00:53:54,500 --> 00:53:55,500
+abro-mão,
+
+877
+00:53:55,500 --> 00:53:57,500
+do meu text.
+
+878
+00:53:57,500 --> 00:53:59,500
+Quando eu voltar a acordar,
+
+879
+00:53:59,500 --> 00:54:00,500
+este text,
+
+880
+00:54:00,500 --> 00:54:01,500
+é meu,
+
+881
+00:54:01,500 --> 00:54:03,500
+só que eu vou voltar a verificar,
+
+882
+00:54:03,500 --> 00:54:04,500
+se posso,
+
+883
+00:54:04,500 --> 00:54:07,500
+fazer o meu trabalho ou não.
+
+884
+00:54:07,500 --> 00:54:08,500
+E, passando o seguinte,
+
+885
+00:54:08,500 --> 00:54:09,500
+se eu tiver,
+
+886
+00:54:09,500 --> 00:54:11,500
+duas ou três treitos produtoras,
+
+887
+00:54:11,500 --> 00:54:13,500
+com um único copinho
+
+888
+00:54:13,500 --> 00:54:15,500
+para colocar o lado no valor,
+
+889
+00:54:15,500 --> 00:54:17,500
+se duas,
+
+890
+00:54:17,500 --> 00:54:19,500
+treitos produtoras acordarem,
+
+891
+00:54:19,500 --> 00:54:20,500
+a primeira,
+
+892
+00:54:20,500 --> 00:54:21,500
+pode colocar o lado no valor,
+
+893
+00:54:21,500 --> 00:54:22,500
+e a segunda,
+
+894
+00:54:22,500 --> 00:54:24,500
+já a ventar.
+
+895
+00:54:24,500 --> 00:54:25,500
+É por isso que,
+
+896
+00:54:25,500 --> 00:54:26,500
+isto teve ser sempre,
+
+897
+00:54:26,500 --> 00:54:28,500
+sempre num álbum.
+
+898
+00:54:28,500 --> 00:54:29,500
+Pato,
+
+899
+00:54:29,500 --> 00:54:30,500
+eu vou usar uma sacanada na cabeça,
+
+900
+00:54:30,500 --> 00:54:31,500
+se vocês acharem que já
+
+901
+00:54:31,500 --> 00:54:33,500
+é uma sacra de mais,
+
+902
+00:54:33,500 --> 00:54:34,500
+mas,
+
+903
+00:54:34,500 --> 00:54:36,500
+este é mesmo regra,
+
+904
+00:54:36,500 --> 00:54:37,500
+é sempre assim.
+
+905
+00:54:37,500 --> 00:54:39,500
+Quando eu vou passar daqui,
+
+906
+00:54:39,500 --> 00:54:41,500
+posso escrever no golfer,
+
+907
+00:54:41,500 --> 00:54:42,500
+ok?
+
+908
+00:54:42,500 --> 00:54:44,500
+Imaginem que era
+
+909
+00:54:44,500 --> 00:54:45,500
+o ofer velho,
+
+910
+00:54:45,500 --> 00:54:47,500
+igual a 27,
+
+911
+00:54:47,500 --> 00:54:48,500
+e agora,
+
+912
+00:54:48,500 --> 00:54:50,500
+eu venho esta variável,
+
+913
+00:54:50,500 --> 00:54:52,500
+que é que ela,
+
+914
+00:54:52,500 --> 00:54:54,500
+variável que funciona como uma flag,
+
+915
+00:54:54,500 --> 00:54:55,500
+como uma banderinha,
+
+916
+00:54:55,500 --> 00:54:57,500
+a dizer se estou no estado o also,
+
+917
+00:54:57,500 --> 00:54:58,500
+estou no estado verde,
+
+918
+00:54:58,500 --> 00:55:00,500
+e, como acabei de colocar
+
+919
+00:55:00,500 --> 00:55:01,500
+lá qualquer coisa,
+
+920
+00:55:01,500 --> 00:55:03,500
+eu vou para o ofer ful.
+
+921
+00:55:03,500 --> 00:55:04,500
+Ok?
+
+922
+00:55:04,500 --> 00:55:05,500
+Estanto,
+
+923
+00:55:05,500 --> 00:55:06,500
+o estado do meu ofer,
+
+924
+00:55:06,500 --> 00:55:07,500
+neste momento,
+
+925
+00:55:07,500 --> 00:55:10,500
+passou a ser o ofer ful.
+
+926
+00:55:11,500 --> 00:55:13,500
+E, como pode haver,
+
+927
+00:55:13,500 --> 00:55:16,500
+um consumidor que está a espera,
+
+928
+00:55:16,500 --> 00:55:19,500
+do ofer empty,
+
+929
+00:55:19,500 --> 00:55:22,500
+eu vou sinalizar,
+
+930
+00:55:22,500 --> 00:55:23,500
+precisamente,
+
+931
+00:55:23,500 --> 00:55:24,500
+a variável,
+
+932
+00:55:24,500 --> 00:55:26,500
+dofer empty.
+
+933
+00:55:26,500 --> 00:55:28,500
+Alguém que ficou ali,
+
+934
+00:55:28,500 --> 00:55:30,500
+porque tinha parado
+
+935
+00:55:30,500 --> 00:55:34,500
+por causa do ofer empty.
+
+936
+00:55:34,500 --> 00:55:35,500
+Ok?
+
+937
+00:55:35,500 --> 00:55:38,500
+E o hiberto mutex.
+
+938
+00:55:38,500 --> 00:55:40,500
+Do lado consumidor,
+
+939
+00:55:40,500 --> 00:55:42,500
+é a mesma lógica,
+
+940
+00:55:42,500 --> 00:55:43,500
+mas invertida.
+
+941
+00:55:43,500 --> 00:55:44,500
+E eu, enquanto,
+
+942
+00:55:44,500 --> 00:55:45,500
+o estado do ofer,
+
+943
+00:55:45,500 --> 00:55:47,500
+o ofer está vazio,
+
+944
+00:55:47,500 --> 00:55:49,500
+não vale a pena,
+
+945
+00:55:49,500 --> 00:55:50,500
+e o hiberto secar um valor
+
+946
+00:55:50,500 --> 00:55:51,500
+que não está lá,
+
+947
+00:55:51,500 --> 00:55:52,500
+certo?
+
+948
+00:55:52,500 --> 00:55:53,500
+Tem lá um valor,
+
+949
+00:55:53,500 --> 00:55:54,500
+só que não interessa.
+
+950
+00:55:54,500 --> 00:55:56,500
+É um valor que está expirável
+
+951
+00:55:56,500 --> 00:55:57,500
+em válido.
+
+952
+00:55:57,500 --> 00:55:58,500
+Portanto,
+
+953
+00:55:58,500 --> 00:55:59,500
+eu vou esperar,
+
+954
+00:55:59,500 --> 00:56:01,500
+neste avariável,
+
+955
+00:56:01,500 --> 00:56:03,500
+do ofer empty.
+
+956
+00:56:03,500 --> 00:56:04,500
+Pronto.
+
+957
+00:56:04,500 --> 00:56:07,500
+E abre o mal do meu mutex.
+
+958
+00:56:07,500 --> 00:56:09,500
+Sempre que eu acordo,
+
+959
+00:56:09,500 --> 00:56:11,500
+eu primeiro vou verificar
+
+960
+00:56:11,500 --> 00:56:15,500
+o estado do meu recurso.
+
+961
+00:56:15,500 --> 00:56:16,500
+E enquanto,
+
+962
+00:56:16,500 --> 00:56:17,500
+não me permitir avançar,
+
+963
+00:56:17,500 --> 00:56:19,500
+eu vou até dormir.
+
+964
+00:56:19,500 --> 00:56:21,500
+Quando avançar,
+
+965
+00:56:21,500 --> 00:56:23,500
+eu consumo o valor que está lá no ofer,
+
+966
+00:56:23,500 --> 00:56:25,500
+imaginei a minha variável,
+
+967
+00:56:25,500 --> 00:56:28,500
+igual a ofer válido,
+
+968
+00:56:28,500 --> 00:56:31,500
+e agora que eu tenho que fazer,
+
+969
+00:56:31,500 --> 00:56:33,500
+como eu tirei,
+
+970
+00:56:33,500 --> 00:56:35,500
+algo do ofer,
+
+971
+00:56:35,500 --> 00:56:37,500
+então vou forceter e te passar
+
+972
+00:56:37,500 --> 00:56:39,500
+o ofer empty.
+
+973
+00:56:39,500 --> 00:56:41,500
+E se não liso,
+
+974
+00:56:41,500 --> 00:56:42,500
+quem possa estar,
+
+975
+00:56:42,500 --> 00:56:46,500
+aspera na condição do ofer ful.
+
+976
+00:56:46,500 --> 00:56:48,500
+E por fim,
+
+977
+00:56:48,500 --> 00:56:50,500
+o hiberto mutex.
+
+978
+00:56:50,500 --> 00:56:52,500
+Portanto,
+
+979
+00:56:52,500 --> 00:56:54,500
+este vai acordar,
+
+980
+00:56:54,500 --> 00:56:57,500
+este,
+
+981
+00:56:57,500 --> 00:56:59,500
+e este,
+
+982
+00:56:59,500 --> 00:57:01,500
+vai acordar,
+
+983
+00:57:01,500 --> 00:57:03,500
+este.
+
+984
+00:57:03,500 --> 00:57:05,500
+Fa sentido.
+
+985
+00:57:19,500 --> 00:57:21,500
+Não há dúvidas?
+
+986
+00:57:21,500 --> 00:57:23,500
+Absoluto.
+
+987
+00:57:23,500 --> 00:57:25,500
+Sim, sim.
+
+988
+00:57:25,500 --> 00:57:27,500
+Tem uma questão é mais,
+
+989
+00:57:27,500 --> 00:57:29,500
+quando nós falamos,
+
+990
+00:57:29,500 --> 00:57:32,500
+quando nós emitimos o sinal,
+
+991
+00:57:32,500 --> 00:57:34,500
+isto está a esta variável,
+
+992
+00:57:34,500 --> 00:57:36,500
+de certe modo,
+
+993
+00:57:36,500 --> 00:57:39,500
+ela pode existir em vários momentos,
+
+994
+00:57:39,500 --> 00:57:41,500
+daqueles que nós fazemos,
+
+995
+00:57:41,500 --> 00:57:42,500
+certo?
+
+996
+00:57:42,500 --> 00:57:44,500
+Sim, sim.
+
+997
+00:57:44,500 --> 00:57:46,500
+Então,
+
+998
+00:57:46,500 --> 00:57:47,500
+certe modo,
+
+999
+00:57:47,500 --> 00:57:49,500
+há uma chance de estarmos a ser
+
+1000
+00:57:49,500 --> 00:57:52,500
+redundantes com algumas partes do código,
+
+1001
+00:57:52,500 --> 00:57:53,500
+ou nem por isso.
+
+1002
+00:57:53,500 --> 00:57:54,500
+Não percebeu,
+
+1003
+00:57:54,500 --> 00:57:56,500
+se nós rodamos deles com parte do código,
+
+1004
+00:57:56,500 --> 00:57:57,500
+o que quer dizer com isso?
+
+1005
+00:57:57,500 --> 00:57:59,500
+E, essencialmente,
+
+1006
+00:57:59,500 --> 00:58:02,500
+quase como em vários momentos,
+
+1007
+00:58:02,500 --> 00:58:04,500
+por ser entre treinos diferentes,
+
+1008
+00:58:04,500 --> 00:58:07,500
+usar este buffer state,
+
+1009
+00:58:07,500 --> 00:58:09,500
+estas últimas três dinhas,
+
+1010
+00:58:09,500 --> 00:58:10,500
+quase,
+
+1011
+00:58:10,500 --> 00:58:11,500
+ou no caso,
+
+1012
+00:58:11,500 --> 00:58:12,500
+a última,
+
+1013
+00:58:12,500 --> 00:58:15,500
+a última, a última.
+
+1014
+00:58:15,500 --> 00:58:17,500
+Essas duas?
+
+1015
+00:58:17,500 --> 00:58:19,500
+Sim, isso não causa problemas,
+
+1016
+00:58:19,500 --> 00:58:20,500
+a resondância.
+
+1017
+00:58:20,500 --> 00:58:21,500
+Sim.
+
+1018
+00:58:21,500 --> 00:58:23,500
+Sim.
+
+1019
+00:58:23,500 --> 00:58:24,500
+Não, não.
+
+1020
+00:58:24,500 --> 00:58:26,500
+Isto aqui é o diferente?
+
+1021
+00:58:26,500 --> 00:58:27,500
+O estado.
+
+1022
+00:58:27,500 --> 00:58:29,500
+Como é que é dizer?
+
+1023
+00:58:29,500 --> 00:58:31,500
+Por exemplo,
+
+1024
+00:58:31,500 --> 00:58:33,500
+se tiver,
+
+1025
+00:58:33,500 --> 00:58:37,500
+uma variável com um valor de temperatura,
+
+1026
+00:58:37,500 --> 00:58:38,500
+certo?
+
+1027
+00:58:38,500 --> 00:58:39,500
+Sim.
+
+1028
+00:58:39,500 --> 00:58:40,500
+Pois a que sabe,
+
+1029
+00:58:40,500 --> 00:58:43,500
+é o valor da temperatura.
+
+1030
+00:58:43,500 --> 00:58:45,500
+Sim.
+
+1031
+00:58:45,500 --> 00:58:47,500
+Isso é de perguntar,
+
+1032
+00:58:47,500 --> 00:58:48,500
+e esta temperatura,
+
+1033
+00:58:48,500 --> 00:58:51,500
+este valor já está aí há quanto tempo.
+
+1034
+00:58:53,500 --> 00:58:56,500
+Consegue dizer-me com esta variável,
+
+1035
+00:58:56,500 --> 00:58:58,500
+mas não.
+
+1036
+00:58:58,500 --> 00:59:00,500
+Exatamente.
+
+1037
+00:59:00,500 --> 00:59:02,500
+Isso quer dizer o que?
+
+1038
+00:59:02,500 --> 00:59:05,500
+Quer dizer que há variáveis,
+
+1039
+00:59:05,500 --> 00:59:08,500
+que guardam o valor.
+
+1040
+00:59:08,500 --> 00:59:10,500
+Mas o valor não é tudo.
+
+1041
+00:59:10,500 --> 00:59:14,500
+O valor só por si não representa o estado.
+
+1042
+00:59:14,500 --> 00:59:17,500
+Há situações em que eu preciso
+
+1043
+00:59:17,500 --> 00:59:19,500
+de variáveis extras,
+
+1044
+00:59:19,500 --> 00:59:21,500
+extra,
+
+1045
+00:59:21,500 --> 00:59:25,500
+que me guardam o valor auxiliar.
+
+1046
+00:59:25,500 --> 00:59:27,500
+Os estáis metadados,
+
+1047
+00:59:27,500 --> 00:59:31,500
+que permitem caracterizar melhor o valor.
+
+1048
+00:59:31,500 --> 00:59:33,500
+Por exemplo, se eu tiver
+
+1049
+00:59:33,500 --> 00:59:34,500
+temperatura,
+
+1050
+00:59:34,500 --> 00:59:36,500
+valor igual a,
+
+1051
+00:59:36,500 --> 00:59:38,500
+vamos acabar com a temperatura que está aqui,
+
+1052
+00:59:38,500 --> 00:59:39,500
+agora, 20 graus.
+
+1053
+00:59:39,500 --> 00:59:40,500
+Certo?
+
+1054
+00:59:40,500 --> 00:59:42,500
+E tem, temperatura,
+
+1055
+00:59:42,500 --> 00:59:44,500
+data hora,
+
+1056
+00:59:44,500 --> 00:59:46,500
+e dizer que é
+
+1057
+00:59:46,500 --> 00:59:49,500
+25 de julho
+
+1058
+00:59:49,500 --> 00:59:51,500
+às 21 horas.
+
+1059
+00:59:51,500 --> 00:59:53,500
+Pá, 21 horas,
+
+1060
+00:59:53,500 --> 00:59:54,500
+são 22,
+
+1061
+00:59:54,500 --> 00:59:56,500
+23, quer dizer que este valor já
+
+1062
+00:59:56,500 --> 00:59:59,500
+tem uma hora e 43 de idade.
+
+1063
+00:59:59,500 --> 01:00:00,500
+Certo?
+
+1064
+01:00:00,500 --> 01:00:02,500
+Será que
+
+1065
+01:00:02,500 --> 01:00:06,500
+é aceitável ou não é aceitável?
+
+1066
+01:00:06,500 --> 01:00:08,500
+Estatualizado ou estatualizado?
+
+1067
+01:00:08,500 --> 01:00:12,500
+Se eu quiser ter valor muito frescos,
+
+1068
+01:00:12,500 --> 01:00:16,500
+sei lá, com 10 minutos de idade no máximo,
+
+1069
+01:00:16,500 --> 01:00:18,500
+eu preciso ter esta variável a extra,
+
+1070
+01:00:18,500 --> 01:00:21,500
+que me permite caracterizar o estado
+
+1071
+01:00:21,500 --> 01:00:23,500
+do meu valor.
+
+1072
+01:00:23,500 --> 01:00:24,500
+Certo?
+
+1073
+01:00:24,500 --> 01:00:25,500
+Sim.
+
+1074
+01:00:25,500 --> 01:00:26,500
+Ok.
+
+1075
+01:00:26,500 --> 01:00:27,500
+Neste caso, com o crédito
+
+1076
+01:00:27,500 --> 01:00:29,500
+de produtor consumidor,
+
+1077
+01:00:29,500 --> 01:00:31,500
+basicamente, eu quero saber
+
+1078
+01:00:31,500 --> 01:00:34,500
+o valor que está lá naquela variável,
+
+1079
+01:00:34,500 --> 01:00:36,500
+que nem aparece aqui,
+
+1080
+01:00:36,500 --> 01:00:38,500
+mas vamos porque ela variava o buffer.
+
+1081
+01:00:38,500 --> 01:00:39,500
+Certo?
+
+1082
+01:00:39,500 --> 01:00:41,500
+O subolor que está
+
+1083
+01:00:41,500 --> 01:00:43,500
+é um valor que já foi consumido
+
+1084
+01:00:43,500 --> 01:00:47,500
+ou não foi consumido?
+
+1085
+01:00:47,500 --> 01:00:48,500
+Não, certo?
+
+1086
+01:00:48,500 --> 01:00:49,500
+Sim, sim.
+
+1087
+01:00:49,500 --> 01:00:50,500
+Ou seja,
+
+1088
+01:00:50,500 --> 01:00:54,500
+é um valor que já foi consumido,
+
+1089
+01:00:54,500 --> 01:00:59,500
+é um valor que está por consumir.
+
+1090
+01:00:59,500 --> 01:01:04,500
+Eu só posso consumir aqui o consumidor,
+
+1091
+01:01:04,500 --> 01:01:07,500
+só posso consumir quando o estado
+
+1092
+01:01:07,500 --> 01:01:10,500
+não for buffer vazio.
+
+1093
+01:01:10,500 --> 01:01:12,500
+E do mesmo, da mesma maneira,
+
+1094
+01:01:12,500 --> 01:01:15,500
+eu aqui só posso produzir
+
+1095
+01:01:15,500 --> 01:01:18,500
+se o buffer não estiver cheio.
+
+1096
+01:01:21,500 --> 01:01:22,500
+Mas é?
+
+1097
+01:01:22,500 --> 01:01:23,500
+Sim, sim.
+
+1098
+01:01:23,500 --> 01:01:25,500
+Eu vou só puxar aqui atrás.
+
+1099
+01:01:25,500 --> 01:01:27,500
+Repare que eu aqui,
+
+1100
+01:01:27,500 --> 01:01:28,500
+o ILE,
+
+1101
+01:01:28,500 --> 01:01:29,500
+é sempre,
+
+1102
+01:01:29,500 --> 01:01:30,500
+não,
+
+1103
+01:01:30,500 --> 01:01:31,500
+a condição,
+
+1104
+01:01:31,500 --> 01:01:33,500
+se verifica.
+
+1105
+01:01:33,500 --> 01:01:34,500
+Enquanto,
+
+1106
+01:01:34,500 --> 01:01:35,500
+a condição,
+
+1107
+01:01:35,500 --> 01:01:36,500
+não,
+
+1108
+01:01:36,500 --> 01:01:38,500
+se verificar.
+
+1109
+01:01:38,500 --> 01:01:39,500
+Ok?
+
+1110
+01:01:39,500 --> 01:01:40,500
+E está,
+
+1111
+01:01:40,500 --> 01:01:41,500
+às vezes, faz um caso com fusão
+
+1112
+01:01:41,500 --> 01:01:42,500
+que eu estou aqui a dizer.
+
+1113
+01:01:42,500 --> 01:01:43,500
+Ah, eu sou produtor,
+
+1114
+01:01:43,500 --> 01:01:45,500
+então, enquanto o buffer state
+
+1115
+01:01:45,500 --> 01:01:46,500
+for buffer full.
+
+1116
+01:01:46,500 --> 01:01:47,500
+Se calhar,
+
+1117
+01:01:47,500 --> 01:01:49,500
+eu até podia inverter esta lógica
+
+1118
+01:01:49,500 --> 01:01:50,500
+de fazer.
+
+1119
+01:01:50,500 --> 01:01:53,500
+O ILE note buffer state igual
+
+1120
+01:01:53,500 --> 01:01:54,500
+a buffer empty.
+
+1121
+01:01:54,500 --> 01:01:56,500
+Até é mais discritivo isso.
+
+1122
+01:01:59,500 --> 01:02:01,500
+E um bom compilador
+
+1123
+01:02:01,500 --> 01:02:03,500
+era capaz de eventualmente
+
+1124
+01:02:03,500 --> 01:02:04,500
+otimizar o código,
+
+1125
+01:02:04,500 --> 01:02:06,500
+não é que também uma negação
+
+1126
+01:02:06,500 --> 01:02:07,500
+de modo muito tempo
+
+1127
+01:02:07,500 --> 01:02:09,500
+num,
+
+1128
+01:02:09,500 --> 01:02:10,500
+num,
+
+1129
+01:02:10,500 --> 01:02:11,500
+num processador,
+
+1130
+01:02:11,500 --> 01:02:13,500
+mas calhar era mais legível,
+
+1131
+01:02:13,500 --> 01:02:14,500
+era por aqui,
+
+1132
+01:02:14,500 --> 01:02:17,500
+e if not buffer state igual igual
+
+1133
+01:02:17,500 --> 01:02:18,500
+a buffer empty,
+
+1134
+01:02:18,500 --> 01:02:19,500
+então eu vou tocar isso.
+
+1135
+01:02:19,500 --> 01:02:20,500
+Ah, já tenho
+
+1136
+01:02:20,500 --> 01:02:22,500
+duas coisas para meter,
+
+1137
+01:02:22,500 --> 01:02:23,500
+a meter aqui com,
+
+1138
+01:02:23,500 --> 01:02:24,500
+e com,
+
+1139
+01:02:24,500 --> 01:02:25,500
+a meter aqui,
+
+1140
+01:02:25,500 --> 01:02:26,500
+para ilustrar,
+
+1141
+01:02:26,500 --> 01:02:27,500
+que são variáveis
+
+1142
+01:02:27,500 --> 01:02:28,500
+com condição,
+
+1143
+01:02:28,500 --> 01:02:29,500
+e depois calhar,
+
+1144
+01:02:29,500 --> 01:02:31,500
+inverter aqui esta lógica.
+
+1145
+01:02:33,500 --> 01:02:34,500
+Está bom?
+
+1146
+01:02:35,500 --> 01:02:36,500
+Núvidas não há?
+
+1147
+01:02:39,500 --> 01:02:41,500
+Eu fiquei aqui com uma dúvida.
+
+1148
+01:02:41,500 --> 01:02:42,500
+Ok.
+
+1149
+01:02:42,500 --> 01:02:43,500
+Núvidas não há?
+
+1150
+01:02:43,500 --> 01:02:44,500
+Eu fiquei aqui com uma dúvida.
+
+1151
+01:02:44,500 --> 01:02:45,500
+Ok.
+
+1152
+01:02:45,500 --> 01:02:46,500
+Núvidas não há?
+
+1153
+01:02:47,500 --> 01:02:48,500
+Ou seja,
+
+1154
+01:02:48,500 --> 01:02:49,500
+no produço,
+
+1155
+01:02:49,500 --> 01:02:50,500
+onde tem igual,
+
+1156
+01:02:50,500 --> 01:02:52,500
+buffer state igual a buffer full.
+
+1157
+01:02:52,500 --> 01:02:53,500
+Sim.
+
+1158
+01:02:53,500 --> 01:02:54,500
+Por tanto,
+
+1159
+01:02:54,500 --> 01:02:57,500
+caso esta condição não seja verdade,
+
+1160
+01:02:57,500 --> 01:02:59,500
+nós vamos avançar na mesma,
+
+1161
+01:02:59,500 --> 01:03:01,500
+para aquela linha de código,
+
+1162
+01:03:01,500 --> 01:03:03,500
+onde diz buffer state igual
+
+1163
+01:03:03,500 --> 01:03:05,500
+a buffer full.
+
+1164
+01:03:05,500 --> 01:03:07,500
+Era na linha...
+
+1165
+01:03:07,500 --> 01:03:08,500
+Sim, aqui.
+
+1166
+01:03:08,500 --> 01:03:10,500
+Exatamente.
+
+1167
+01:03:10,500 --> 01:03:11,500
+Mas, ou seja,
+
+1168
+01:03:11,500 --> 01:03:14,500
+a próxima vez que nós adquirimos
+
+1169
+01:03:14,500 --> 01:03:16,500
+o mutais, né?
+
+1170
+01:03:16,500 --> 01:03:18,500
+Nós vamos para aquilo,
+
+1171
+01:03:18,500 --> 01:03:20,500
+e aí, sem necessariamente,
+
+1172
+01:03:20,500 --> 01:03:22,500
+vai sempre ser verdade.
+
+1173
+01:03:22,500 --> 01:03:23,500
+Sim.
+
+1174
+01:03:23,500 --> 01:03:24,500
+É o seguinte,
+
+1175
+01:03:24,500 --> 01:03:26,500
+eu percebi que estamos atribuindo o estado,
+
+1176
+01:03:26,500 --> 01:03:27,500
+ou seja, a segunda abrificação,
+
+1177
+01:03:27,500 --> 01:03:28,500
+vai sempre ser verdade.
+
+1178
+01:03:28,500 --> 01:03:29,500
+Eu percebi,
+
+1179
+01:03:29,500 --> 01:03:31,500
+deste estado,
+
+1180
+01:03:31,500 --> 01:03:32,500
+eu tenho um buffer empty,
+
+1181
+01:03:32,500 --> 01:03:34,500
+no buffer state.
+
+1182
+01:03:35,500 --> 01:03:36,500
+Agora deixe-me cá,
+
+1183
+01:03:36,500 --> 01:03:37,500
+haver uma coisa.
+
+1184
+01:03:38,500 --> 01:03:39,500
+Sim, mas isso é,
+
+1185
+01:03:39,500 --> 01:03:40,500
+por favor,
+
+1186
+01:03:40,500 --> 01:03:42,500
+que não alterava para lá, né?
+
+1187
+01:03:44,500 --> 01:03:46,500
+Eu não sei se eu consegui explicar muito bem como é de medo.
+
+1188
+01:03:48,500 --> 01:03:50,500
+Só um momento, deixe-me só escrever isto.
+
+1189
+01:03:55,500 --> 01:03:57,500
+Para ver se fica...
+
+1190
+01:04:01,500 --> 01:04:03,500
+deixe-me só...
+
+1191
+01:04:03,500 --> 01:04:04,500
+é só um bocadinho.
+
+1192
+01:04:09,500 --> 01:04:11,500
+E agora...
+
+1193
+01:04:12,500 --> 01:04:14,500
+que o fundo,
+
+1194
+01:04:14,500 --> 01:04:16,500
+o fundo vai ser branco.
+
+1195
+01:04:24,500 --> 01:04:26,500
+Não pode ser assim.
+
+1196
+01:04:26,500 --> 01:04:29,500
+Vamos ao deixar aqui um bocadinho mais.
+
+1197
+01:04:39,500 --> 01:04:40,500
+Ok.
+
+1198
+01:04:40,500 --> 01:04:42,500
+Mas,
+
+1199
+01:04:42,500 --> 01:04:44,500
+desta forma,
+
+1200
+01:04:44,500 --> 01:04:46,500
+é mais legível,
+
+1201
+01:04:46,500 --> 01:04:48,500
+é conceptualmente mais legível,
+
+1202
+01:04:48,500 --> 01:04:50,500
+faz mais sentido.
+
+1203
+01:04:50,500 --> 01:04:51,500
+Mas...
+
+1204
+01:04:51,500 --> 01:04:52,500
+Sim.
+
+1205
+01:04:52,500 --> 01:04:54,500
+No caso,
+
+1206
+01:04:54,500 --> 01:04:56,500
+o quator de direto,
+
+1207
+01:04:56,500 --> 01:04:59,500
+ou seja, isso supõe que ela seja assim para alternar entre os dois, não é?
+
+1208
+01:04:59,500 --> 01:05:00,500
+Sim, sim.
+
+1209
+01:05:00,500 --> 01:05:02,500
+Porque caso o consumer nunca,
+
+1210
+01:05:02,500 --> 01:05:04,500
+nunca adquirir somotex,
+
+1211
+01:05:04,500 --> 01:05:06,500
+o quator de direto,
+
+1212
+01:05:06,500 --> 01:05:08,500
+o prodúcer,
+
+1213
+01:05:08,500 --> 01:05:11,500
+e ao longo entrar naquilo algo,
+
+1214
+01:05:11,500 --> 01:05:14,500
+porque o próprio atribui o estado assim, né?
+
+1215
+01:05:14,500 --> 01:05:16,500
+Ah, sim, sim, sim.
+
+1216
+01:05:16,500 --> 01:05:18,500
+Exato. Ou seja,
+
+1217
+01:05:18,500 --> 01:05:20,500
+o forseio está fazendo a confusão na verdade.
+
+1218
+01:05:20,500 --> 01:05:21,500
+Ok, por acaso,
+
+1219
+01:05:21,500 --> 01:05:22,500
+pronto,
+
+1220
+01:05:22,500 --> 01:05:24,500
+deveria ter aqui um buffer state,
+
+1221
+01:05:24,500 --> 01:05:25,500
+e o buffer state,
+
+1222
+01:05:25,500 --> 01:05:26,500
+a inicialização,
+
+1223
+01:05:26,500 --> 01:05:27,500
+e o buffer state
+
+1224
+01:05:27,500 --> 01:05:29,500
+é inicializado, né?
+
+1225
+01:05:29,500 --> 01:05:32,500
+Antes de qualquer freve produzir,
+
+1226
+01:05:32,500 --> 01:05:35,500
+qual é que é o estado do buffer?
+
+1227
+01:05:35,500 --> 01:05:36,500
+É vazio.
+
+1228
+01:05:36,500 --> 01:05:37,500
+Então, do meu início,
+
+1229
+01:05:37,500 --> 01:05:39,500
+quando arrancarmos com o programa,
+
+1230
+01:05:39,500 --> 01:05:42,500
+o buffer estaria vazio.
+
+1231
+01:05:42,500 --> 01:05:43,500
+O buffer estaria vazio.
+
+1232
+01:05:43,500 --> 01:05:45,500
+Depois, depois,
+
+1233
+01:05:45,500 --> 01:05:48,500
+ela entrava no p3,
+
+1234
+01:05:48,500 --> 01:05:49,500
+condicion no 8.
+
+1235
+01:05:49,500 --> 01:05:50,500
+Sim.
+
+1236
+01:05:50,500 --> 01:05:52,500
+E escutava,
+
+1237
+01:05:52,500 --> 01:05:53,500
+ou seja,
+
+1238
+01:05:53,500 --> 01:05:55,500
+sinalizava...
+
+1239
+01:05:55,500 --> 01:05:57,500
+Ficava bloqueado.
+
+1240
+01:05:57,500 --> 01:05:59,500
+Aqui bloqueia.
+
+1241
+01:05:59,500 --> 01:06:01,500
+Ok, ele ia ficaria bloqueado.
+
+1242
+01:06:01,500 --> 01:06:02,500
+Sim.
+
+1243
+01:06:02,500 --> 01:06:03,500
+Mas ele conseguia mesmo avançar
+
+1244
+01:06:03,500 --> 01:06:04,500
+como a buffer state
+
+1245
+01:06:04,500 --> 01:06:05,500
+igual a buffer flow ano.
+
+1246
+01:06:05,500 --> 01:06:07,500
+Não.
+
+1247
+01:06:07,500 --> 01:06:08,500
+Enquanto estiver bloqueado,
+
+1248
+01:06:08,500 --> 01:06:10,500
+não avançar para o lado nenhum.
+
+1249
+01:06:10,500 --> 01:06:13,500
+Só quando, um consumidor,
+
+1250
+01:06:13,500 --> 01:06:15,500
+fizer esta linha...
+
+1251
+01:06:15,500 --> 01:06:18,500
+Ok, eu estava por supor que ele conseguia avançar
+
+1252
+01:06:18,500 --> 01:06:19,500
+para as outras...
+
+1253
+01:06:19,500 --> 01:06:21,500
+Não. Ou seja,
+
+1254
+01:06:21,500 --> 01:06:22,500
+o 8...
+
+1255
+01:06:22,500 --> 01:06:23,500
+Espara-te.
+
+1256
+01:06:23,500 --> 01:06:24,500
+É isso mesmo, né?
+
+1257
+01:06:24,500 --> 01:06:25,500
+Ele fica lá preso.
+
+1258
+01:06:25,500 --> 01:06:26,500
+É o bloqueia.
+
+1259
+01:06:26,500 --> 01:06:27,500
+Sim, sim.
+
+1260
+01:06:27,500 --> 01:06:28,500
+Eu só vai...
+
+1261
+01:06:28,500 --> 01:06:30,500
+Se eu cair nesta armabilha,
+
+1262
+01:06:30,500 --> 01:06:32,500
+eu só vai conseguir isso.
+
+1263
+01:06:32,500 --> 01:06:34,500
+Se eu cair nesta armabilha,
+
+1264
+01:06:34,500 --> 01:06:36,500
+quando alguém fizer este consigno,
+
+1265
+01:06:36,500 --> 01:06:38,500
+quando ele sinalizar,
+
+1266
+01:06:38,500 --> 01:06:39,500
+esta variável.
+
+1267
+01:06:39,500 --> 01:06:40,500
+Ok.
+
+1268
+01:06:40,500 --> 01:06:41,500
+Ou seja,
+
+1269
+01:06:41,500 --> 01:06:44,500
+nunca a forma de ele chegar ali
+
+1270
+01:06:44,500 --> 01:06:46,500
+e aquela atribuição...
+
+1271
+01:06:46,500 --> 01:06:47,500
+Não.
+
+1272
+01:06:47,500 --> 01:06:48,500
+Ou seja,
+
+1273
+01:06:48,500 --> 01:06:49,500
+no caso...
+
+1274
+01:06:49,500 --> 01:06:51,500
+Eu nem avançava que eu estava a falar,
+
+1275
+01:06:51,500 --> 01:06:52,500
+o buffer state...
+
+1276
+01:06:52,500 --> 01:06:53,500
+Nunca existe...
+
+1277
+01:06:53,500 --> 01:06:56,500
+Eu nunca consegue chegar lá com o mesmo valor
+
+1278
+01:06:56,500 --> 01:06:59,500
+daquilo que ele vai ser atribuído, né?
+
+1279
+01:06:59,500 --> 01:07:00,500
+Então, isso...
+
+1280
+01:07:00,500 --> 01:07:01,500
+Não.
+
+1281
+01:07:01,500 --> 01:07:03,500
+Eu tenho que modificar aqui isto,
+
+1282
+01:07:03,500 --> 01:07:06,500
+porque já agora também este seria aqui
+
+1283
+01:07:06,500 --> 01:07:08,500
+e ficaria
+
+1284
+01:07:08,500 --> 01:07:10,500
+com um...
+
+1285
+01:07:10,500 --> 01:07:11,500
+um...
+
+1286
+01:07:11,500 --> 01:07:12,500
+um...
+
+1287
+01:07:12,500 --> 01:07:13,500
+um...
+
+1288
+01:07:13,500 --> 01:07:14,500
+um...
+
+1289
+01:07:14,500 --> 01:07:15,500
+um...
+
+1290
+01:07:15,500 --> 01:07:16,500
+um...
+
+1291
+01:07:16,500 --> 01:07:17,500
+um...
+
+1292
+01:07:17,500 --> 01:07:18,500
+um...
+
+1293
+01:07:18,500 --> 01:07:19,500
+um...
+
+1294
+01:07:19,500 --> 01:07:20,500
+um...
+
+1295
+01:07:20,500 --> 01:07:21,500
+um...
+
+1296
+01:07:21,500 --> 01:07:22,500
+um...
+
+1297
+01:07:22,500 --> 01:07:23,500
+um...
+
+1298
+01:07:23,500 --> 01:07:24,500
+um...
+
+1299
+01:07:24,500 --> 01:07:25,500
+um...
+
+1300
+01:07:25,500 --> 01:07:26,500
+um...
+
+1301
+01:07:26,500 --> 01:07:27,500
+um...
+
+1302
+01:07:27,500 --> 01:07:28,500
+um...
+
+1303
+01:07:28,500 --> 01:07:29,500
+um...
+
+1304
+01:07:29,500 --> 01:07:30,500
+um...
+
+1305
+01:07:30,500 --> 01:07:31,500
+um...
+
+1306
+01:07:31,500 --> 01:07:32,500
+um...
+
+1307
+01:07:32,500 --> 01:07:33,500
+um...
+
+1308
+01:07:33,500 --> 01:07:34,500
+um...
+
+1309
+01:07:34,500 --> 01:07:35,500
+um...
+
+1310
+01:07:35,500 --> 01:07:36,500
+um...
+
+1311
+01:07:36,500 --> 01:07:37,500
+um...
+
+1312
+01:07:37,500 --> 01:07:38,500
+um...
+
+1313
+01:07:38,500 --> 01:07:39,500
+um...
+
+1314
+01:07:39,500 --> 01:07:40,500
+um...
+
+1315
+01:07:40,500 --> 01:07:41,500
+um...
+
+1316
+01:07:41,500 --> 01:07:42,500
+um...
+
+1317
+01:07:42,500 --> 01:07:43,500
+um...
+
+1318
+01:07:43,500 --> 01:07:44,500
+um...
+
+1319
+01:07:44,500 --> 01:07:45,500
+um...
+
+1320
+01:07:45,500 --> 01:07:46,500
+um...
+
+1321
+01:07:46,500 --> 01:07:47,500
+um...
+
+1322
+01:07:47,500 --> 01:07:48,500
+um...
+
+1323
+01:07:48,500 --> 01:07:49,500
+um...
+
+1324
+01:07:49,500 --> 01:07:50,500
+um...
+
+1325
+01:07:50,500 --> 01:07:51,500
+um...
+
+1326
+01:07:51,500 --> 01:07:52,500
+um...
+
+1327
+01:07:52,500 --> 01:07:53,500
+um...
+
+1328
+01:07:53,500 --> 01:07:54,500
+um...
+
+1329
+01:07:54,500 --> 01:07:55,500
+um...
+
+1330
+01:07:55,500 --> 01:07:56,500
+um...
+
+1331
+01:07:56,500 --> 01:07:57,500
+um...
+
+1332
+01:07:57,500 --> 01:07:58,500
+um...
+
+1333
+01:07:58,500 --> 01:07:59,500
+um...
+
+1334
+01:07:59,500 --> 01:08:09,619
+e voltar em cheio copo, certo? E enquanto o barman está na outra ponta do balcão e o meu copo
+
+1335
+01:08:09,619 --> 01:08:19,819
+não se tiver cheio, então eu vou dormir no meu copo vazio. Quando o produtor enxer meu copo,
+
+1336
+01:08:19,819 --> 01:08:28,060
+ele diz que o copo está cheio e acorda-me, eu gostava de dormir no meu copo vazio, faz sentido?
+
+1337
+01:08:29,500 --> 01:08:31,500
+É assim.
+
+1338
+01:08:31,500 --> 01:08:42,819
+É um caso mais simples porque, neste caso, só temos uma variável condicional. Quer dizer que eu tenho um produtor e
+
+1339
+01:08:42,819 --> 01:08:48,460
+o produtor sempre que tem alguma coisa para produzir, escreve por cima no buffer. Ou seja, não tem
+
+1340
+01:08:48,460 --> 01:08:54,060
+esta preocupação de não destruir o valor. Quando há uma atualização, ele coloca a valor atual,
+
+1341
+01:08:54,060 --> 01:09:04,420
+a única coisa que faz é acordar quem precisa desse valor atual. Isto é muito utilizado em
+
+1342
+01:09:04,420 --> 01:09:15,500
+este tema, mas em breve, quando nós temos uma thread que é acordada de forma explorática. Ou seja,
+
+1343
+01:09:15,500 --> 01:09:23,300
+é acordada por um evento e não é acordada pelo tempo. Temos aquelas preólicas que acordam quando
+
+1344
+01:09:23,300 --> 01:09:29,699
+chega à altura de acordar, certo? E temos aquelas sporádicas que acordam quando ocorre um evento.
+
+1345
+01:09:29,699 --> 01:09:41,260
+E que eu posso fazer para acordar? Eu tenho esta thread produtora que ocasionalmente é um sensor e
+
+1346
+01:09:41,260 --> 01:09:48,940
+coloca o valor que é no sensor num buffer partilhado. E se finaliza uma faria, uma thread que possa estar
+
+1347
+01:09:48,940 --> 01:09:58,340
+a espera que a si venta aconteça. Quando se finaliza, a thread que consome e que estava a espera, que
+
+1348
+01:09:58,340 --> 01:10:10,700
+ou vai ser um evento, acorda, faz os cálculos e siga amarengue. Tudo isto, minimizando o uso da CPU e
+
+1349
+01:10:10,859 --> 01:10:23,260
+energia. Então suponha, eu tenho um extract, uma estrutura em que eu tenho. O valor está a
+
+1350
+01:10:23,260 --> 01:10:31,420
+amostra do sensor, tenho que o valor, aquilo que foi lido e também tenho que associar uma
+
+1351
+01:10:31,420 --> 01:10:44,940
+faria, que me diz qual é o estado do valor que está aqui. Eu agora juntei o valor e
+
+1352
+01:10:44,940 --> 01:10:56,380
+ou seja, o dado e os dados que o caracterizam, os metadatos. Juntei tudo numa estrutura. E agora, pronto.
+
+1353
+01:10:56,380 --> 01:11:06,220
+Então, aqui o produtor, eu estava agora naquele olhar, eu foco, este é o produtor, mas não estou a
+
+1354
+01:11:06,220 --> 01:11:13,180
+ver aqui nada que diga que é o produtor, tenho que eu ter. Este é a thread produtora. A thread produtora,
+
+1355
+01:11:13,180 --> 01:11:26,140
+primeiro, aquilo, o Mutex para poder modificar a amostra e repara, a amostra é só o valor,
+
+1356
+01:11:26,140 --> 01:11:33,500
+não é só o valor, a amostra é o valor e o estado dos dados. Então, ele vai ter que fazer duas
+
+1357
+01:11:33,500 --> 01:11:40,300
+modificações, duas modificações, já é muito difícil de fazer atomicamente. Então, eu vou usar
+
+1358
+01:11:40,300 --> 01:11:49,180
+o Mutex para poder manipular isto de uma forma atômica. Eu obtengo o Mutex, vou ler o sensor,
+
+1359
+01:11:49,180 --> 01:11:58,300
+vou ler um determinado sensor e coloco isto no campo, o valor da minha variável temperatura.
+
+1360
+01:11:58,300 --> 01:12:07,900
+Já agora, a temperatura é um sensor sample tí, acho que é cima de cores aqui, mas a outra coisa para
+
+1361
+01:12:07,900 --> 01:12:16,300
+acessentar, portanto, tenho esta variável temperatura que é deste tipo. Então, eu coloco no campo,
+
+1362
+01:12:16,300 --> 01:12:25,739
+o valor, aquilo que foi que o sensor e coloco no jeito que está atos, estava atualizado, ok?
+
+1363
+01:12:25,739 --> 01:12:30,300
+Estante. Está aqui o novo valor, que ainda não foi consumido certeza, porque eu fui
+
+1364
+01:12:30,300 --> 01:12:37,420
+chegar ao sensor neste momento, mas ninguém deu. Eu protegido pelo Mutex, estou a colocar agora,
+
+1365
+01:12:37,420 --> 01:12:45,020
+não há hipótese de mim interlido, certo? E agora, a possibilidade de haver freites que estejam
+
+1366
+01:12:45,020 --> 01:12:55,820
+a espera do novo valor, certo? Então, o que eu faço? Eu digo para acordar, pelo menos, uma
+
+1367
+01:12:55,820 --> 01:13:03,260
+freite que esteja a espera da condição da temperatura, ok? Se eu ver alguma freite que esteja
+
+1368
+01:13:03,260 --> 01:13:13,820
+a dormir, acorda, vai ser acordada, só depois de libertar o Mutex, ok? Dovidas, não há?
+
+1369
+01:13:13,820 --> 01:13:20,380
+Esta aqui é mais simples, por que o proctor não tem trabalhada nenhuma de variáveis condicionais,
+
+1370
+01:13:20,380 --> 01:13:28,300
+ele sempre que tem de ler um sensor, ele simplesmente só precisa de garantir o Mutex, que é para
+
+1371
+01:13:28,300 --> 01:13:34,860
+poder modificar estes campos de forma atômica, sem ser interrompido por ninguém, ok?
+
+1372
+01:13:34,860 --> 01:13:44,220
+Pronto, agora, do lado do consumidor, é que eu tenho a freite que é acordada por evento,
+
+1373
+01:13:44,220 --> 01:13:52,779
+ok? Então, eu tenho aqui uma freite que adquire Mutex, sem se passar sempre por isto, não é?
+
+1374
+01:13:52,779 --> 01:14:01,500
+Adquire Mutex, e agora, vai verificar, aí esteve a ter aqui a temperatura de estados, desculpe
+
+1375
+01:14:01,500 --> 01:14:08,859
+lá, pá. Já estou a ver aqui uma quantidade de correções, portanto a manhã acredita que vai
+
+1376
+01:14:08,859 --> 01:14:15,739
+haver aqui um FPGF, mas eu depois me saldo de volta a lembrar isso, ok? Enquanto, Temperature,
+
+1377
+01:14:16,099 --> 01:14:27,460
+centers de estados, for igual a estados holgens, eu atenção, vai ver vocês lá, não averêv never
+
+1378
+01:14:27,460 --> 01:14:32,819
+um 64 casts, e também lá em estas thumbnails, também lá em sticking online, vamos meter
+
+1379
+01:14:33,039 --> 01:14:38,960
+com minuto concretamente, contestando que o snapshot balanced paraытá-lo vampire,
+
+1380
+01:14:38,960 --> 01:14:50,960
+Reparem que, neste caso, eu tenho uma thread que bloqueia e é curlada quando ocorre um evento.
+
+1381
+01:14:50,960 --> 01:14:59,960
+Quando eu ver alguém que coloque um novo valor de temperatura, ele vai sinalizar e eu gostava de dormir.
+
+1382
+01:14:59,960 --> 01:15:04,960
+Nesta variável, vou ser acordado e faço o que tenho a fazer.
+
+1383
+01:15:04,960 --> 01:15:13,960
+Processo o valor da temperatura para fazer alguma coisa, para ver se é para ligar o ar condicionado do acessimento, não faça ideia.
+
+1384
+01:15:13,960 --> 01:15:20,960
+E até posso dizer, olha, eu já usei o valor que lá está, portanto os dados passa a oule.
+
+1385
+01:15:21,960 --> 01:15:26,960
+E o hiberto mutém que, obviamente, isto fica dentro de um círculo definido.
+
+1386
+01:15:26,960 --> 01:15:29,960
+É que isto vai se repetindo, vai se repetindo.
+
+1387
+01:15:29,960 --> 01:15:38,960
+Mas este bloco aqui permite meter uma thread que é acionada quando ocorre um evento.
+
+1388
+01:15:38,960 --> 01:15:48,960
+E quem detecta o evento suponha, por exemplo, neste caso, este sensor vai mesmo,
+
+1389
+01:15:49,960 --> 01:15:52,960
+ele vai mesmo aqui buscar o valor ao sensor.
+
+1390
+01:15:52,960 --> 01:15:56,960
+Mas suponha que o sensor enviável um interrupt.
+
+1391
+01:15:56,960 --> 01:16:17,960
+Ao enviar um interrupt, a rotina que tratou a interrupção podia chamar uma função que fazia este condicional signal para acordar esta thread explorática.
+
+1392
+01:16:18,960 --> 01:16:21,960
+Ok, ouvidas no A?
+
+1393
+01:16:21,960 --> 01:16:23,960
+Eu tenho uma dango.
+
+1394
+01:16:23,960 --> 01:16:24,960
+Eu tenho uma dango.
+
+1395
+01:16:24,960 --> 01:16:27,960
+Então é a comporação do signal com o gráfica.
+
+1396
+01:16:27,960 --> 01:16:35,960
+O que faz o que pode fazer com alguma thread de incondição de noite para dormir?
+
+1397
+01:16:35,960 --> 01:16:42,960
+Não seja acompanhada que é o instrumento gráfico, ligando que todas as pessoas estão a dormir, acordem.
+
+1398
+01:16:43,960 --> 01:16:51,960
+Não signam o que podem, o que que elas deverão, poderão não acordar.
+
+1399
+01:16:51,960 --> 01:16:56,960
+Que o signal uma acorda de certeza?
+
+1400
+01:16:56,960 --> 01:16:57,960
+Sexto.
+
+1401
+01:16:59,960 --> 01:17:02,960
+Por que que pode acordar mais do que uma?
+
+1402
+01:17:03,960 --> 01:17:12,960
+E a resposta mais para o auxível nos tempos da hora é multicorpe.
+
+1403
+01:17:12,960 --> 01:17:15,960
+É, depois, melhor.
+
+1404
+01:17:15,960 --> 01:17:23,960
+A mim parece melógico porque é que mais do que uma pode acordar-se, mais do que uma que tiver a dormir com base na mesma variável condicional.
+
+1405
+01:17:23,960 --> 01:17:24,960
+Sim.
+
+1406
+01:17:24,960 --> 01:17:31,960
+Aliás, na minha cabeça, todas deveriam acordar quando o signal é efetuado.
+
+1407
+01:17:31,960 --> 01:17:34,960
+Não, porque algumas não acordam.
+
+1408
+01:17:34,960 --> 01:17:36,960
+Não, consigo não.
+
+1409
+01:17:36,960 --> 01:17:39,960
+Consegnam se tivesse uma máquina.
+
+1410
+01:17:39,960 --> 01:17:43,960
+Até vou ligar agora a minha câmera.
+
+1411
+01:17:45,960 --> 01:17:58,960
+Consegnam se tivesse um sistema com um único cor, com o único sabor, o sistema podia receber o signal.
+
+1412
+01:17:59,960 --> 01:18:05,960
+Há uma thread que envia um signal e o sistema, o que pode fazer é.
+
+1413
+01:18:05,960 --> 01:18:10,960
+Como só um processador, eu tenho a certeza que só eu é que estou a escutar.
+
+1414
+01:18:10,960 --> 01:18:21,960
+E enquanto só eu estou a escutar, eu vou selecionar uma thread que está aqui na fila despera da variável condição
+
+1415
+01:18:21,960 --> 01:18:28,960
+e vou selecionar uma para acordar quando for oportunidade.
+
+1416
+01:18:28,960 --> 01:18:31,960
+Quando for oportunidade.
+
+1417
+01:18:31,960 --> 01:18:33,960
+Ok?
+
+1418
+01:18:33,960 --> 01:18:38,960
+E eu com um único cor, eu garantia isso.
+
+1419
+01:18:38,960 --> 01:18:48,960
+Agora, suponha que tem vários cores e tem várias threads, podem estar atribuídas a vários cores.
+
+1420
+01:18:49,960 --> 01:19:00,960
+O pessoal que implementa os sistemas vai, por uma abordagem, mais como é que dizer.
+
+1421
+01:19:00,960 --> 01:19:09,960
+Mais orientada para o desempenho, que é, ok, vamos marcar várias para acordar.
+
+1422
+01:19:10,960 --> 01:19:17,960
+Como só uma vai ter um mutex, como um mutex vai passar de mão e mão a vez,
+
+1423
+01:19:18,960 --> 01:19:21,960
+se carar só a primeira, é que vai conseguir fazer trabalho.
+
+1424
+01:19:21,960 --> 01:19:27,960
+E as outras quando tiverem um mutex, vamos descobrir que no final não podem fazer trabalho nenhum.
+
+1425
+01:19:27,960 --> 01:19:35,960
+Mas qual delas é que está em melhor condição para escutar?
+
+1426
+01:19:36,960 --> 01:19:42,960
+Qual delas é que eu devo dizer para acordar?
+
+1427
+01:19:42,960 --> 01:19:49,960
+E às vezes que acontece é que a sinal é propagado para mais de que um cor.
+
+1428
+01:19:49,960 --> 01:19:52,960
+E duas ou três podem acordar.
+
+1429
+01:19:52,960 --> 01:19:57,960
+Mas o signal, a especificação é totalmente diferente.
+
+1430
+01:19:57,960 --> 01:20:01,960
+O signal é, pelo menos, uma acorda.
+
+1431
+01:20:02,960 --> 01:20:08,960
+Se for uma ótima, se for em duas, também não há problema.
+
+1432
+01:20:08,960 --> 01:20:13,960
+Se for em três, acontece, certo?
+
+1433
+01:20:13,960 --> 01:20:16,960
+A garantia é uma acorda.
+
+1434
+01:20:16,960 --> 01:20:20,960
+O bocaste, a garantia é via metralmenta ou posta.
+
+1435
+01:20:20,960 --> 01:20:24,960
+Todos as que tiverem a dormir e o garante que acordam.
+
+1436
+01:20:24,960 --> 01:20:28,960
+Porque eu eiro é essa garantia.
+
+1437
+01:20:28,960 --> 01:20:31,960
+Eu quero acordar mesmo todas.
+
+1438
+01:20:36,960 --> 01:20:39,960
+Vamos cada pensar em cenários.
+
+1439
+01:20:39,960 --> 01:20:42,960
+Eu aquela história da barreira,
+
+1440
+01:20:42,960 --> 01:20:46,960
+eu não sei se você se eu consegui ser claro, suficiente,
+
+1441
+01:20:46,960 --> 01:20:48,960
+mas é tal história.
+
+1442
+01:20:48,960 --> 01:20:51,960
+Eu posso ter que realizar um processamento,
+
+1443
+01:20:51,960 --> 01:20:55,960
+mas para passar para o próximo passo do processamento,
+
+1444
+01:20:55,960 --> 01:20:58,960
+eu tenho de garantir que todas as tredes chegaram ao fim,
+
+1445
+01:20:58,960 --> 01:21:00,960
+de fazer o primeiro passo,
+
+1446
+01:21:00,960 --> 01:21:03,960
+porque para passar o próximo passo,
+
+1447
+01:21:03,960 --> 01:21:07,960
+todas as tredes têm de ter concluído o primeiro passo.
+
+1448
+01:21:07,960 --> 01:21:10,960
+Isso quer dizer que eu, quando é para passar o próximo passo,
+
+1449
+01:21:10,960 --> 01:21:13,960
+eu quero acordar todas, certo?
+
+1450
+01:21:13,960 --> 01:21:17,960
+Proocaste, garantia que todas acordam.
+
+1451
+01:21:17,960 --> 01:21:19,960
+Isso quer dizer que não?
+
+1452
+01:21:19,960 --> 01:21:21,960
+É garantia diferente.
+
+1453
+01:21:21,960 --> 01:21:23,960
+Suponha que, por exemplo,
+
+1454
+01:21:23,960 --> 01:21:32,960
+tem um array, um buffer circular com 20 contentores para dados.
+
+1455
+01:21:32,960 --> 01:21:40,960
+Inicialmente, esse do buffer circular está totalmente vazio.
+
+1456
+01:21:40,960 --> 01:21:44,960
+E tem cinco tredes que podem ir lá buscar valores
+
+1457
+01:21:44,960 --> 01:21:46,960
+para fazer um processamento com qualquer.
+
+1458
+01:21:47,960 --> 01:21:48,960
+Ok?
+
+1459
+01:21:48,960 --> 01:21:51,960
+E tem dois ou três produtores.
+
+1460
+01:21:51,960 --> 01:21:54,960
+É distantar um produtor que vai
+
+1461
+01:21:54,960 --> 01:22:00,960
+a esse buffer circular e coloca lá um elemento
+
+1462
+01:22:00,960 --> 01:22:03,960
+num desses contentores.
+
+1463
+01:22:03,960 --> 01:22:07,960
+Se eu colocou um, qual é o interesse de fazer bocaste?
+
+1464
+01:22:07,960 --> 01:22:11,960
+Em princípio, só uma thread consumidora
+
+1465
+01:22:11,960 --> 01:22:14,960
+é que pode consumir, certo?
+
+1466
+01:22:14,960 --> 01:22:17,960
+Não vale a pena estar a tentar acordar todas
+
+1467
+01:22:17,960 --> 01:22:20,960
+quando só uma que vai realizar trabalho
+
+1468
+01:22:20,960 --> 01:22:23,960
+e todas as outras vão ficar descecionadas.
+
+1469
+01:22:23,960 --> 01:22:26,960
+Então aí, eu também poupo o sistema.
+
+1470
+01:22:26,960 --> 01:22:29,960
+Veio, opa, uma tenda a acordar.
+
+1471
+01:22:29,960 --> 01:22:32,960
+Se acordarem duas ou três, olha,
+
+1472
+01:22:32,960 --> 01:22:35,960
+o morrou e as vão ficar desconfluadas
+
+1473
+01:22:35,960 --> 01:22:39,960
+porque descobriram que afinal não tem nada para elas, não é?
+
+1474
+01:22:39,960 --> 01:22:43,960
+Mas estar a acordar todas as tredes
+
+1475
+01:22:43,960 --> 01:22:49,960
+quando eu acabei por 1, não faz muito sentido, certo?
+
+1476
+01:22:49,960 --> 01:22:51,960
+É que estar a acordar todas as tredes,
+
+1477
+01:22:51,960 --> 01:22:54,960
+se tiver muitos cores, eventualmente vai estar
+
+1478
+01:22:54,960 --> 01:23:00,960
+a colocar as tredes todas a correr nos cores
+
+1479
+01:23:00,960 --> 01:23:03,960
+e, primeiro, despodicina-se.
+
+1480
+01:23:03,960 --> 01:23:07,960
+Muitas delas vão estar a corre a código para não fazer nada.
+
+1481
+01:23:07,960 --> 01:23:08,960
+Ok?
+
+1482
+01:23:08,960 --> 01:23:12,960
+Verifique aqui o ILE e, ok, eu vou dormir outra vez.
+
+1483
+01:23:13,960 --> 01:23:16,960
+E segundo, também está a tirar CPU
+
+1484
+01:23:16,960 --> 01:23:19,960
+ou outros programas que possam correr
+
+1485
+01:23:19,960 --> 01:23:23,960
+ou outras tredes que minhas cores também possam correr.
+
+1486
+01:23:23,960 --> 01:23:24,960
+Ok?
+
+1487
+01:23:24,960 --> 01:23:28,960
+É por isso que existe o signal e o offcast.
+
+1488
+01:23:28,960 --> 01:23:32,960
+Um é quando só querem comovar o mínimo possível
+
+1489
+01:23:32,960 --> 01:23:36,960
+e outra é quando eu quero que todas acordem, certo?
+
+1490
+01:23:36,960 --> 01:23:39,960
+É por isso que estão dois níveis de garantia.
+
+1491
+01:23:40,960 --> 01:23:43,960
+O pelo menos um e o outro.
+
+1492
+01:23:43,960 --> 01:23:44,960
+Está sentido?
+
+1493
+01:23:44,960 --> 01:23:45,960
+Agora?
+
+1494
+01:23:45,960 --> 01:23:46,960
+Sim.
+
+1495
+01:23:49,960 --> 01:23:50,960
+Pronto.
+
+1496
+01:23:53,960 --> 01:23:55,960
+E ficamos por aqui.
+
+1497
+01:23:57,960 --> 01:24:01,960
+E ficamos por aqui na calma, nestes slides.
+
+1498
+01:24:02,960 --> 01:24:06,960
+Pois tem aqui outros que...
+
+1499
+01:24:08,960 --> 01:24:11,960
+Pronto, também quero partilhar as convôsco
+
+1500
+01:24:11,960 --> 01:24:13,960
+e considero por...
+
+1501
+01:24:14,960 --> 01:24:15,960
+Conselho?
+
+1502
+01:24:15,960 --> 01:24:17,960
+Vou conseguir isso senso, não é?
+
+1503
+01:24:17,960 --> 01:24:18,960
+Temos que...
+
+1504
+01:24:18,960 --> 01:24:20,960
+Temos 20 minutos?
+
+1505
+01:24:20,960 --> 01:24:22,960
+Ok, então eu vou...
+
+1506
+01:24:23,960 --> 01:24:24,960
+ser rápido.
+
+1507
+01:24:24,960 --> 01:24:26,960
+Essa parte também é relativamente rápido.
+
+1508
+01:24:26,960 --> 01:24:30,960
+Enquanto que o anterior é mais complicado
+
+1509
+01:24:30,960 --> 01:24:32,960
+na nível conceptual,
+
+1510
+01:24:32,960 --> 01:24:35,960
+este aqui é...
+
+1511
+01:24:35,960 --> 01:24:37,960
+mais fácil, pronto.
+
+1512
+01:24:37,960 --> 01:24:42,960
+Básicamente, eu tenho nada aqui a falar em frente e tal.
+
+1513
+01:24:42,960 --> 01:24:46,960
+Mas quando nós temos sistemas em breve, muitas vezes nós temos que
+
+1514
+01:24:46,960 --> 01:24:50,960
+escalhar as tredes
+
+1515
+01:24:50,960 --> 01:24:55,960
+de acordo com políticas de escalonamento
+
+1516
+01:24:55,960 --> 01:24:58,960
+e políticas de escalonamento que habitualmente
+
+1517
+01:24:58,960 --> 01:25:00,960
+assim, então, em prioridades.
+
+1518
+01:25:00,960 --> 01:25:01,960
+Ok?
+
+1519
+01:25:01,960 --> 01:25:05,960
+E depois também posso ter entre-as em...
+
+1520
+01:25:08,960 --> 01:25:12,960
+Alocar tarefas a processador específico.
+
+1521
+01:25:12,960 --> 01:25:19,960
+Isso chama-se afinidade da tarefa ao processador, aos processadores.
+
+1522
+01:25:19,960 --> 01:25:20,960
+Ok?
+
+1523
+01:25:20,960 --> 01:25:21,960
+Pronto.
+
+1524
+01:25:21,960 --> 01:25:22,960
+Então...
+
+1525
+01:25:23,960 --> 01:25:26,960
+Fredes, escalonamento e prioridades.
+
+1526
+01:25:26,960 --> 01:25:27,960
+Pronto.
+
+1527
+01:25:27,960 --> 01:25:30,960
+Fica aqui um disco-amer, mas este disco-amer
+
+1528
+01:25:30,960 --> 01:25:33,960
+até dever estar na terceira parte,
+
+1529
+01:25:33,960 --> 01:25:35,960
+aqui um aviso ilegal,
+
+1530
+01:25:35,960 --> 01:25:39,960
+que é algumas das técnicas aqui apresentadas,
+
+1531
+01:25:39,960 --> 01:25:41,960
+são específicas ao Linux.
+
+1532
+01:25:41,960 --> 01:25:44,960
+A parte final é mesmo específica do Linux.
+
+1533
+01:25:44,960 --> 01:25:49,960
+A primeira parte inicial funciona em outros temas Unix.
+
+1534
+01:25:49,960 --> 01:25:55,960
+Em Linux, como nós podemos mexer no kernel,
+
+1535
+01:25:55,960 --> 01:25:58,960
+nós conseguimos ter algumas garantias.
+
+1536
+01:25:58,960 --> 01:26:03,960
+Por exemplo, Mac OS, como é apenas manipulado pela Apple
+
+1537
+01:26:03,960 --> 01:26:07,960
+e às vezes a Apple escolhe fazer variações em relação
+
+1538
+01:26:07,960 --> 01:26:11,960
+a aquilo que são sistemas Unix normais,
+
+1539
+01:26:11,960 --> 01:26:15,960
+podemos não ter os efeitos que queríamos ter
+
+1540
+01:26:15,960 --> 01:26:17,960
+e aí não há nada a fazer.
+
+1541
+01:26:17,960 --> 01:26:23,960
+Mas também, o Mac dificilmente será uma plataforma para um sistema em breve, não é?
+
+1542
+01:26:23,960 --> 01:26:30,960
+É mais fácil ter um Linux a correr numa Raspberry Pi
+
+1543
+01:26:30,960 --> 01:26:38,960
+do que um Mac OS X a correr num contadorzinho assim também, porque nem tu.
+
+1544
+01:26:38,960 --> 01:26:39,960
+Tá bom?
+
+1545
+01:26:39,960 --> 01:26:40,960
+Pronto.
+
+1546
+01:26:40,960 --> 01:26:41,960
+Ok, então...
+
+1547
+01:26:43,960 --> 01:26:49,960
+Pronto, escalonar Fredes, definir os parâmetros de escalonamento.
+
+1548
+01:26:50,960 --> 01:26:55,960
+Se eu quiser indicar que uma Frede deve ser escalonada
+
+1549
+01:26:55,960 --> 01:26:58,960
+por este algoritmo de escalonamento
+
+1550
+01:26:58,960 --> 01:27:01,960
+e nesta algoritmo de escalonamento,
+
+1551
+01:27:01,960 --> 01:27:04,960
+tem nesta prioridade,
+
+1552
+01:27:04,960 --> 01:27:08,960
+eu utilizo o Pythread 7-Sket-Param,
+
+1553
+01:27:08,960 --> 01:27:11,960
+que é 7-Sket-Jolingo-Parameters,
+
+1554
+01:27:11,960 --> 01:27:15,960
+portanto, definir os parâmetros de escalonamento.
+
+1555
+01:27:16,960 --> 01:27:20,960
+Primeiramente, qual é o identificador da Fredes?
+
+1556
+01:27:20,960 --> 01:27:21,960
+Ok?
+
+1557
+01:27:21,960 --> 01:27:27,960
+O segundo argumento, qual é que é o algoritmo de escalonamento
+
+1558
+01:27:27,960 --> 01:27:29,960
+e esta algoritmo de escalonamento,
+
+1559
+01:27:29,960 --> 01:27:33,960
+tem de ser uma política de escalonamento presente no sistema, ok?
+
+1560
+01:27:33,960 --> 01:27:36,960
+E já vamos falar um pouquinho sobre isso
+
+1561
+01:27:36,960 --> 01:27:40,960
+e, por fim, o interesse de uma variável
+
+1562
+01:27:40,960 --> 01:27:44,960
+onde nós colocamos lá os parâmetros de escalonamento.
+
+1563
+01:27:44,960 --> 01:27:45,960
+Ok?
+
+1564
+01:27:45,960 --> 01:27:50,960
+Diga-se o nível de prioridade, tá bom?
+
+1565
+01:27:50,960 --> 01:27:56,960
+Agora, bem, aqui, o escalonamento é política de escalonamento.
+
+1566
+01:27:56,960 --> 01:27:59,960
+Normalmente, nós temos o skateboarder.
+
+1567
+01:27:59,960 --> 01:28:04,960
+O skateboarder é o escalonador,
+
+1568
+01:28:05,960 --> 01:28:11,960
+é o escalonador que escalona
+
+1569
+01:28:13,960 --> 01:28:16,960
+as tarefas habituales.
+
+1570
+01:28:17,960 --> 01:28:20,960
+Por exemplo, por exemplo, não.
+
+1571
+01:28:20,960 --> 01:28:22,960
+Vocês estão a color Windows, certo?
+
+1572
+01:28:22,960 --> 01:28:24,960
+Windows tem várias tarefas,
+
+1573
+01:28:24,960 --> 01:28:29,960
+vários programas, processos, abertos e simultâneos.
+
+1574
+01:28:29,960 --> 01:28:33,960
+O processador ou os processadores vão sendo atribuídos
+
+1575
+01:28:33,960 --> 01:28:35,960
+ao longo do tempo aos vários processos
+
+1576
+01:28:35,960 --> 01:28:37,960
+com suas necessidades, ok?
+
+1577
+01:28:37,960 --> 01:28:42,960
+De uma maneira que todas as aplicações
+
+1578
+01:28:42,960 --> 01:28:45,960
+conseguem progredir ao longo do tempo
+
+1579
+01:28:45,960 --> 01:28:49,960
+com suante também a disponibilidade que elas têm para progredir.
+
+1580
+01:28:49,960 --> 01:28:53,960
+Por exemplo, se vocês tiverem uma aplicação que está sem trabalho,
+
+1581
+01:28:53,960 --> 01:28:56,960
+imagina que vocês tenham aqui o worda-berto.
+
+1582
+01:28:56,960 --> 01:28:58,960
+Ou seja, eu tenho o worda-berto,
+
+1583
+01:28:58,960 --> 01:29:00,960
+mas como eu estou a usar o time,
+
+1584
+01:29:00,960 --> 01:29:03,960
+assim como o time estou a partilhar aqui
+
+1585
+01:29:03,960 --> 01:29:05,960
+este cheio de pdf,
+
+1586
+01:29:05,960 --> 01:29:08,960
+como o word está minimizado,
+
+1587
+01:29:08,960 --> 01:29:10,960
+está simplesmente presente no sistema,
+
+1588
+01:29:10,960 --> 01:29:12,960
+mas não está a utilizar cpu,
+
+1589
+01:29:12,960 --> 01:29:14,960
+não estou a fazer algo, certo?
+
+1590
+01:29:16,960 --> 01:29:19,960
+Aí, esse escalonamento normal,
+
+1591
+01:29:19,960 --> 01:29:21,960
+o escalo não torne normal,
+
+1592
+01:29:21,960 --> 01:29:23,960
+é o skateboarder.
+
+1593
+01:29:23,960 --> 01:29:25,960
+Por exemplo, em Linux,
+
+1594
+01:29:25,960 --> 01:29:29,960
+em Mac, não faça ideia e Windows também não.
+
+1595
+01:29:30,960 --> 01:29:32,960
+Nesta parte, eu vou ser franco.
+
+1596
+01:29:32,960 --> 01:29:34,960
+Eu tenho mais conhecimento do Linux,
+
+1597
+01:29:34,960 --> 01:29:37,960
+porque é por que o Linux é um cavalo de trabalho,
+
+1598
+01:29:37,960 --> 01:29:39,960
+uma pessoa quando querana experimentar estas coisas,
+
+1599
+01:29:39,960 --> 01:29:41,960
+experimenta com o Linux,
+
+1600
+01:29:41,960 --> 01:29:44,960
+mas seja a ver um isso em um novo anterior,
+
+1601
+01:29:44,960 --> 01:29:47,960
+de sistemas temporal, de sistemas operativos, certo?
+
+1602
+01:29:47,960 --> 01:29:50,960
+Qual é que foi o sistema com essas delisão, Linux?
+
+1603
+01:29:50,960 --> 01:29:52,960
+Por que? Porque dá para mexer.
+
+1604
+01:29:52,960 --> 01:29:54,960
+Mas, existe também o Skype,
+
+1605
+01:29:54,960 --> 01:29:56,960
+first in first out.
+
+1606
+01:29:57,960 --> 01:29:59,960
+E este aqui o first in first out,
+
+1607
+01:29:59,960 --> 01:30:02,960
+é uma política de escalonamento em que,
+
+1608
+01:30:02,960 --> 01:30:05,960
+o processo que está a mais tempo para ser escalonado
+
+1609
+01:30:05,960 --> 01:30:07,960
+é o próximo a ser escolhido.
+
+1610
+01:30:07,960 --> 01:30:08,960
+Ok?
+
+1611
+01:30:08,960 --> 01:30:09,960
+Mostrando,
+
+1612
+01:30:09,960 --> 01:30:13,960
+há medida que eles vão entrando na fila para serem escalonados,
+
+1613
+01:30:13,960 --> 01:30:15,960
+o que está a mais tempo na fila,
+
+1614
+01:30:15,960 --> 01:30:17,960
+é o primeiro a ser escalonado.
+
+1615
+01:30:17,960 --> 01:30:20,960
+E como é que nós temos prioridades?
+
+1616
+01:30:20,960 --> 01:30:22,960
+Dentro da mesma fila,
+
+1617
+01:30:22,960 --> 01:30:25,960
+o mais antigo é o mais prioritário.
+
+1618
+01:30:27,960 --> 01:30:31,960
+Só que o Skype fico tem várias filas,
+
+1619
+01:30:31,960 --> 01:30:35,960
+tem a fila de prioridade, digamos,
+
+1620
+01:30:35,960 --> 01:30:38,960
+x, a fila de prioridade, y,
+
+1621
+01:30:38,960 --> 01:30:41,960
+a fila de prioridade, z.
+
+1622
+01:30:41,960 --> 01:30:43,960
+E vamos seportar, a fila de prioridade, z,
+
+1623
+01:30:43,960 --> 01:30:45,960
+é a fila de maior prioridade.
+
+1624
+01:30:45,960 --> 01:30:48,960
+Enquanto o velho trabalhos,
+
+1625
+01:30:48,960 --> 01:30:50,960
+nesta fila de maior prioridade,
+
+1626
+01:30:50,960 --> 01:30:55,960
+o sistema operativo vai escolher sempre trabalhos
+
+1627
+01:30:55,960 --> 01:30:57,960
+que sejam nesta fila.
+
+1628
+01:30:57,960 --> 01:30:58,960
+Mais antigo,
+
+1629
+01:30:58,960 --> 01:31:00,960
+o mais antigo,
+
+1630
+01:31:00,960 --> 01:31:01,960
+para ar,
+
+1631
+01:31:01,960 --> 01:31:03,960
+vai escolher o mais antigo,
+
+1632
+01:31:03,960 --> 01:31:05,960
+o segundo mais antigo,
+
+1633
+01:31:05,960 --> 01:31:06,960
+quando terminar,
+
+1634
+01:31:06,960 --> 01:31:08,960
+vai escolher o terceiro.
+
+1635
+01:31:08,960 --> 01:31:11,960
+Só que quando esta fila de mais alta prioridade estiver vazia,
+
+1636
+01:31:11,960 --> 01:31:15,960
+é que ele vai passar para a fila de prioridade y.
+
+1637
+01:31:15,960 --> 01:31:18,960
+E só quando a fila de prioridade é y estiver vazia,
+
+1638
+01:31:18,960 --> 01:31:22,960
+é que vai passar para a fila de prioridade x.
+
+1639
+01:31:22,960 --> 01:31:24,960
+Mas mesmo quando está na fila de prioridade x,
+
+1640
+01:31:24,960 --> 01:31:26,960
+se é para ser um trabalho,
+
+1641
+01:31:26,960 --> 01:31:28,960
+na fila de prioridade z,
+
+1642
+01:31:28,960 --> 01:31:31,960
+para, e vamos fazer o trabalho que está na fila de prioridade z.
+
+1643
+01:31:31,960 --> 01:31:34,960
+É assim que funciona,
+
+1644
+01:31:34,960 --> 01:31:38,960
+os calumamentos por prioridades.
+
+1645
+01:31:38,960 --> 01:31:40,960
+Quem tem mais alta prioridade,
+
+1646
+01:31:40,960 --> 01:31:42,960
+passa sempre à frente.
+
+1647
+01:31:42,960 --> 01:31:45,960
+E se tiver uns duas tarefas,
+
+1648
+01:31:45,960 --> 01:31:47,960
+na mesma prioridade,
+
+1649
+01:31:47,960 --> 01:31:49,960
+a mais antiga,
+
+1650
+01:31:49,960 --> 01:31:51,960
+é a primeira,
+
+1651
+01:31:52,960 --> 01:31:54,960
+ou se tem o first out,
+
+1652
+01:31:54,960 --> 01:31:57,960
+dubilas, não há,
+
+1653
+01:31:57,960 --> 01:32:00,960
+mas pour aqui um exemplo,
+
+1654
+01:32:00,960 --> 01:32:06,960
+suponham que eu quero definir
+
+1655
+01:32:06,960 --> 01:32:09,960
+a minha,
+
+1656
+01:32:09,960 --> 01:32:11,960
+que quer que a minha freve,
+
+1657
+01:32:11,960 --> 01:32:14,960
+com prioridade z,
+
+1658
+01:32:14,960 --> 01:32:17,960
+desse來說,
+
+1659
+01:32:17,960 --> 01:32:27,880
+Então, eu crie uma variável para o tipo StractSketParameter.
+
+1660
+01:32:27,880 --> 01:32:34,960
+Isto aqui vai no SketPantagar, eu não puse aqui o SketPantagar, mas para poder criar
+
+1661
+01:32:34,960 --> 01:32:40,760
+uma variável destas, isto tem que ter o INCLUDO do SketPantagar, mas uma coisa que
+
+1662
+01:32:40,760 --> 01:32:42,760
+tem que sentar aqui.
+
+1663
+01:32:42,760 --> 01:32:48,880
+E agora, na esta variável, esta variável garantidamente tem este campo, e em muitos casos acho que
+
+1664
+01:32:48,880 --> 01:32:55,920
+faltem este campo, que é o Sket Priority, é a prioridade do SketParameter, eu digo que
+
+1665
+01:32:55,920 --> 01:32:58,119
+o Sket Priority é 3.
+
+1666
+01:32:58,119 --> 01:33:10,920
+E agora, chamo P3SketSketParameter, digo que é para mim própria, e eu quero ser escalonada
+
+1667
+01:33:10,920 --> 01:33:18,000
+com escalonador SketFifo, agora os escalonadores SketFifo também é chamado como um escalonador
+
+1668
+01:33:18,000 --> 01:33:19,000
+realtime.
+
+1669
+01:33:19,000 --> 01:33:28,039
+É um escalonador que tem o nível prioridade acima do escalonador habitual do sistema, tá bom?
+
+1670
+01:33:28,039 --> 01:33:35,520
+Portanto, as threads que são escalonadas em SketFifo passam à frente das outras threads
+
+1671
+01:33:35,520 --> 01:33:40,200
+todas as abituais que estejam a correr, das aplicações abituais que estejam a correr.
+
+1672
+01:33:40,200 --> 01:33:48,280
+E agora, passo endereço esta variável para mim, ou seja, estou a dizer SketFifo e Prioridade
+
+1673
+01:33:48,280 --> 01:33:49,280
+3.
+
+1674
+01:33:49,280 --> 01:33:50,280
+Ok?
+
+1675
+01:33:50,280 --> 01:33:59,080
+Pronto, o SketFifo como é um escalonador de maior prioridade em relação ao escalonador
+
+1676
+01:33:59,079 --> 01:34:05,800
+das nerefas abituais, dos processos abituais, há situações, as sistemas, normalmente
+
+1677
+01:34:05,800 --> 01:34:12,279
+nós temos que arrancar com permissões de rote de administrador, ou seja, quando vou arrancar
+
+1678
+01:34:12,279 --> 01:34:18,000
+com meu programa, que vai querer escalonar threads em SketFifo, eu tenho que correr primeiro
+
+1679
+01:34:18,000 --> 01:34:23,640
+com o sudo, espaço, e depois que o meu programa que é para ele ser corrido com permissões
+
+1680
+01:34:23,640 --> 01:34:25,519
+de administrador, tá bom?
+
+1681
+01:34:26,240 --> 01:34:33,360
+Este valor, vocês têm que ter sempre atenção às prioridades, porque o valor mínimo,
+
+1682
+01:34:33,360 --> 01:34:39,080
+o valor máximo, pode variar de sistema para sistema, então se vocês quiserem saber qual
+
+1683
+01:34:39,080 --> 01:34:45,880
+é a prioridade mínima, para um escalonador e a prioridade máxima, vocês podem utilizar
+
+1684
+01:34:45,880 --> 01:34:51,920
+o SketFifo, Priority Min e Priority Max, certo?
+
+1685
+01:34:52,399 --> 01:34:57,720
+Pois importante, para nunca esquecer, e estar aquelas coisas que a gente uma pessoa pensa,
+
+1686
+01:34:57,720 --> 01:35:04,920
+epa, maior prioridade, o maior número significa maior urgência ou menor urgência,
+
+1687
+01:35:04,920 --> 01:35:12,840
+para o SketFifo, um número maior de prioridade, representa maior urgência, portanto, maior
+
+1688
+01:35:12,840 --> 01:35:17,159
+é prioridade, maior número, maior prioridade, ok?
+
+1689
+01:35:22,480 --> 01:35:27,960
+Quais são os meios que são uma que está logo à vida?
+
+1690
+01:35:27,960 --> 01:35:33,440
+Sim, quando é prioridade, quando a pessoa tem algo que ele está afinada para lidar, para
+
+1691
+01:35:33,440 --> 01:35:38,840
+obter threads, me simplica que esse correto vai ser convertido na função de colpa que
+
+1692
+01:35:38,840 --> 01:35:46,279
+quer passar da threads, sem dar a correr na função que implementa a threads, ok?
+
+1693
+01:35:46,279 --> 01:35:53,359
+Então se contrar, passamos o idade do threads, por exemplo, se fosse a thread principal que
+
+1694
+01:35:53,359 --> 01:35:58,679
+lança todas as threads e depois quisesse atribuir as prioridades a todas as threads, então aqui
+
+1695
+01:35:58,679 --> 01:36:06,439
+ele iria colocar as threads que conhecia a partir do momento do p-fred cliente, certo?
+
+1696
+01:36:06,439 --> 01:36:11,920
+Portanto, isto está para fazer, aí é o próprio, o p-fred self, é a mim próprio, mas também
+
+1697
+01:36:11,920 --> 01:36:18,920
+dá para fazer a distância, desde que saiba o e-b das threads, eu consigo fazer esta distância,
+
+1698
+01:36:18,920 --> 01:36:25,640
+para saber qual é o maior e o menor, eu posso fazer um programa destes, aliás, não preciso
+
+1699
+01:36:25,640 --> 01:36:32,880
+fazer um programa destes, posso usar este código para terminar qual é que é a menor prioridade
+
+1700
+01:36:32,880 --> 01:36:39,880
+e a maior prioridade para uma política de escaldoramento, ou para um escaldor, certo?
+
+1701
+01:36:42,079 --> 01:36:46,600
+Neste caso, eu fiz um programa simplesmente para mostrar qual era o menor e o maior
+
+1702
+01:36:46,600 --> 01:36:52,619
+para o escaldor FIF, e depois até correi, isto numa máquina Linux e correi também aqui na
+
+1703
+01:36:52,619 --> 01:37:01,920
+máquina Mac, e por exemplo para o escaldor FIF em Linux, eu tinha as níveis de 1,99,
+
+1704
+01:37:01,920 --> 01:37:09,920
+isto aqui eu sabia, porque eu também já andei na guerra de escaldor no idade, em Linux,
+
+1705
+01:37:09,920 --> 01:37:13,920
+e sabia que era o 1,99, eu fiquei com o caso de aprender, porque nunca tinha feito isto
+
+1706
+01:37:13,920 --> 01:37:20,600
+no meu Mac, e eu, ah, fô, posso que a FIF no Mac temos muito menos níveis e ainda por cima
+
+1707
+01:37:20,600 --> 01:37:25,000
+o primeiro nível ao 15, se quer dizer que há altos níveis de abaixo, que é produtos
+
+1708
+01:37:25,000 --> 01:37:33,119
+que há o menor e menor prioridade, ok? Portanto, tenho um presente que os níveis de prioridade
+
+1709
+01:37:33,119 --> 01:37:44,039
+dependem muito do sistema, tá bom? Ok, pronto. Eu também posso criar, alterar apenas
+
+1710
+01:37:44,039 --> 01:37:52,199
+o nível de prioridade sem alterar o escaldor, suponho, por exemplo, que eu tenho uma frega
+
+1711
+01:37:52,199 --> 01:37:57,439
+que está se escaldorado, esse quer FIF, e tem que enredado o nível de prioridade com mais
+
+1712
+01:37:57,440 --> 01:38:05,440
+mais, se tivamos a pensar em Linux, só que depois, uma dada autora como estava a custar
+
+1713
+01:38:05,440 --> 01:38:11,800
+a desenvolver para o raio da frega, estava sempre para ficar para trás, e eu queria aumentar
+
+1714
+01:38:11,800 --> 01:38:17,960
+da prioridade, viu? Mantendo o escaldor FIF, neste caso, eu não preciso estar a fazer isto
+
+1715
+01:38:17,960 --> 01:38:29,600
+tudo novo com o setSketParam, setFIF e prioridade, eu posso utilizar o setSketPriority
+
+1716
+01:38:29,600 --> 01:38:37,239
+e o setSketPriority pega em uma frega e simplesmente muda o nível de prioridade sem alterar
+
+1717
+01:38:37,239 --> 01:38:43,720
+o escaldor. Ok? Portanto, era treas, agora quero passar para cinco, para estar a chamar
+
+1718
+01:38:43,720 --> 01:38:48,920
+o setSketPrior, diz a que a frega passa a elaborar ter cinco, o nível de prioridade
+
+1719
+01:38:48,920 --> 01:38:59,520
+cinco, e mantinha o mesmo escaldor. Ok? Portanto, se percebemos isso, é o que está aqui
+
+1720
+01:38:59,520 --> 01:39:06,119
+descrito, só para mais estar de recordar, ensalve-me a ver se tiverem e recordar. Este aqui, vamos
+
+1721
+01:39:06,119 --> 01:39:11,440
+passar a frente, agora frega e despreíódicas, portanto, frega e despreíódicas, são aqui
+
+1722
+01:39:11,560 --> 01:39:20,440
+que nós fazemos trabalho e depois vamos dormir até a próxima ativação da frega, certo?
+
+1723
+01:39:20,440 --> 01:39:31,560
+A próxima ativação da frega fica marcada num ponto no tempo, no instante do tempo, e estemos
+
+1724
+01:39:31,560 --> 01:39:40,880
+basicamente cogerando em que a frega vai ser acordada num cantes daquele instante. Pode acordar
+
+1725
+01:39:40,880 --> 01:39:45,359
+um bocadinho depois, porque pode haver outras tarefas mais alta prioridade que estão
+
+1726
+01:39:45,359 --> 01:39:52,400
+a consumir o processador. Então, eu não é acordado antes, mas pode ser acordado com sorte
+
+1727
+01:39:52,400 --> 01:39:58,239
+naquele momento, ou pode ser acordado algum tempo depois de pende do estado do sistema.
+
+1728
+01:39:58,239 --> 01:40:05,880
+Como nós fazemos isso? Bem, uma tarefa destas, uma frega, o que isso oculta uma tarefa
+
+1729
+01:40:05,880 --> 01:40:12,079
+prioróbica, basicamente, quando a reenca, tem uma parte inicialização em que nós
+
+1730
+01:40:12,079 --> 01:40:21,199
+diferentes qual é a configuração de escaludamento e outras tarefas de inicialização, e depois também
+
+1731
+01:40:21,199 --> 01:40:28,800
+temos que terminar qual é que é o primeiro instante de ativação, porque todos os outros
+
+1732
+01:40:28,800 --> 01:40:35,840
+chicos vão ser calculados a partir deste instante inicial. Este instante inicial, em algumas
+
+1733
+01:40:35,840 --> 01:40:43,640
+situações, é terminado pela própria frega, outras vezes é terminado pela frega inicial
+
+1734
+01:40:43,640 --> 01:40:50,159
+que depois que paga essa informação a todas as outras tarefas. Vamos poloar ou vamos
+
+1735
+01:40:50,159 --> 01:40:56,279
+polover, depende, já viven tudo, já vi muitos temas com a que vão por agordagem de que
+
+1736
+01:40:56,279 --> 01:41:02,739
+cada frega vai buscar o seu valor inicial e já vi outros temas em que a frega inicial
+
+1737
+01:41:02,739 --> 01:41:07,800
+termina qual é que é o valor inicial, por exemplo, vai ver um instante agora e diz que vai
+
+1738
+01:41:07,800 --> 01:41:13,039
+tudo arrancar daqui a dez segundos. Neste dez segundos, há um tempo de lançar todas as
+
+1739
+01:41:13,039 --> 01:41:21,399
+trevas e inicializar tudo que tem de ser inicializado. Entende? Não há uma reira única. Depois
+
+1740
+01:41:21,400 --> 01:41:27,480
+temos o ciclo infinito. No ciclo infinito, eu tenho a parte em que eu disse com o teu trabalho,
+
+1741
+01:41:27,480 --> 01:41:35,280
+depois temos a parte em que eu termina qual é que é o próximo instante da próxima, o instante
+
+1742
+01:41:35,280 --> 01:41:46,600
+da próxima ativação e, por fim, eu suspende a sua execução até aquele momento. A função
+
+1743
+01:41:46,600 --> 01:41:54,039
+coloque na nossa lipe, permite me dizer ou estabelecer um temporizador para aquele momento
+
+1744
+01:41:54,039 --> 01:42:01,880
+em tempo absoluto. É, basicamente, como vocês pederem no voce de portador e dizer, eu quero
+
+1745
+01:42:01,880 --> 01:42:10,160
+ser acordado às oito e meio. Em vez de dizer, eu quero ser acordado daqui a 20 segundos,
+
+1746
+01:42:10,159 --> 01:42:20,319
+ou seja, lá quando for. Agora, então, aqui é uma aplicação. Então, tenho aqui a variável
+
+1747
+01:42:20,319 --> 01:42:30,599
+max que me permite especificar o instante no tempo. É tipo struct, time specification. Estabariável
+
+1748
+01:42:30,600 --> 01:42:40,200
+max, permite me definir um instante no espaço, um instante no tempo. E agora, coloque
+
+1749
+01:42:40,200 --> 01:42:49,800
+get time. O que vai fazer é ler o valor do relógio, do sistema e guardá-lo nesta variável.
+
+1750
+01:42:49,800 --> 01:42:57,600
+Eu estou a passar o interesse da variável, porque esta função vai alterar esta variável.
+
+1751
+01:42:58,120 --> 01:43:07,079
+E isto aqui coloque a variável max, o instante de inicial da ativação. É tal
+
+1752
+01:43:07,079 --> 01:43:14,960
+os histórias de, e o meu sistema começa agora. E agora, todas as ativações seguintes vão
+
+1753
+01:43:14,960 --> 01:43:24,920
+ter este momento como a base para o seu calvo. E agora, temos aqui o seco de trabalho, seco
+
+1754
+01:43:25,520 --> 01:43:31,680
+infinito, ou quase infinito. Enquanto, estiver ativo, faz o trabalho que tenha
+
+1755
+01:43:31,680 --> 01:43:39,480
+fazer, sustituir isto por uma função do work, seja lá o que eu tiver de fazer, quando
+
+1756
+01:43:39,480 --> 01:43:45,840
+terminar o trabalho, o que nós temos de fazer, temos de preparar o despertador para
+
+1757
+01:43:45,840 --> 01:43:56,400
+sermos acordado no próximo momento da ativação. Então, o que eu faço? O time spec é uma
+
+1758
+01:43:56,400 --> 01:44:03,840
+estrutura que tem dois campos. Tem o tempo em segundos e tem o tempo em nossos segundos.
+
+1759
+01:44:04,840 --> 01:44:26,840
+O tempo em nosso segundos vai de 0 até 1.000 e 1.000.000.000.000 segundos dentro do segundo.
+
+1760
+01:44:27,600 --> 01:44:33,920
+Bom, então, isto tem 1.000 milhões. Você vai ver se eu troisième para confirmar1 e 3
+
+1761
+01:44:33,920 --> 01:44:47,119
+e 1.000.000 milhões, exatamente. E o que eu faço? Huh, o próximo难emento segundo é pegar
+
+1762
+01:44:47,119 --> 01:44:55,059
+nos segundos que tenham agora e sumar-lhe os segundos que quer avançar, normalmente
+
+1763
+01:44:55,059 --> 01:45:06,739
+isto é zero, ok, ou a parte das funções perióbicas, que bem tem-se na casa de 1.000
+
+1764
+01:45:06,739 --> 01:45:12,340
+segundos, portanto, quase certeza que isto faz zero zero, mas só se estiverem uma função
+
+1765
+01:45:12,340 --> 01:45:19,180
+perióbica, que tem que ser ativada cada vez segundos, aqui teriam 10 portátil, iria sumar 10
+
+1766
+01:45:19,180 --> 01:45:25,140
+segundos no tempo, ok, e agora temos aqui a parte dos nanos segundos, é a mesma história,
+
+1767
+01:45:25,140 --> 01:45:31,699
+eu pego nos nanos segundos, que tem da ultima ativação e só omelho o período em
+
+1768
+01:45:31,699 --> 01:45:40,260
+nanos segundos e já tem também os nanos segundos da próxima ativação, só que tem um problema,
+
+1769
+01:45:40,260 --> 01:45:49,699
+que tem um período de 50.000 segundos, e começam nos nanos aê, até mais fazer as contas
+
+1770
+01:45:49,699 --> 01:45:56,140
+para o nanos aê, o próximo vai ser no momento de 50.000 segundos, depois de 100.000
+
+1771
+01:45:56,140 --> 01:46:06,659
+segundos, 150, 200, 300, 950.000 segundos, e por fim, mais 50.000.000 segundos, só que
+
+1772
+01:46:06,659 --> 01:46:15,300
+é 1.000 segundos, é 1.000 segundos, ok, nessa situação, se esta sexto-cante tiver
+
+1773
+01:46:15,300 --> 01:46:23,699
+um valor igual a 1.000 milhões de nanos segundos, então tiramos 1.000 milhões de nanos
+
+1774
+01:46:23,699 --> 01:46:30,460
+segundos, que é como quem disse, estamos a tirar 1.000 segundos e incrementamos na casa
+
+1775
+01:46:30,460 --> 01:46:44,939
+dos segundos, ok, este código também é chapa 5, vocês forem ver a litratura ou se
+
+1776
+01:46:44,939 --> 01:46:51,619
+forem ver, sei lá, chate apt, mas acredito que chate apt nunca faz nisso porque isto tem
+
+1777
+01:46:51,619 --> 01:46:57,779
+todos os levos, ok, e o chate apt, por exemplo, não costuma falhar naquilo que está em todos os
+
+1778
+01:46:57,779 --> 01:47:03,619
+levos, já quase que acredito que ela até acerta, tá bom?
+
+1779
+01:47:03,619 --> 01:47:10,099
+Toto dentro, o próximo período, o próximo momento de ativação, só preciso fazer o
+
+1780
+01:47:10,099 --> 01:47:19,300
+clock na nossa web, para este tempo absoluto, que se encontra nesta variável, ok, esta parte
+
+1781
+01:47:19,300 --> 01:47:29,220
+aqui é chapa 5, é sempre igual, sempre igual, sempre igual, toda a outra coisa que falta
+
+1782
+01:47:29,220 --> 01:47:38,820
+aqui, era ter definido a minha variável período, eu tivesse que fazer isto, estava tendo
+
+1783
+01:47:38,820 --> 01:47:47,020
+ser esmato, ok, estes slides vão se for aqui uma interação de revisão porque faltam
+
+1784
+01:47:47,020 --> 01:47:54,420
+5 coisas, e a ter força aqui um exemplo, por exemplo, por exemplo, 50 mil isso conto, ok,
+
+1785
+01:47:54,420 --> 01:48:01,300
+dúvidas não há, por fim, para terminar, como é que eu engolim lux e agora que é engolim lux,
+
+1786
+01:48:01,300 --> 01:48:09,140
+por exemplo macOS, não nos permite fazer isto, porque o macOS quer ter o controle total e
+
+1787
+01:48:09,140 --> 01:48:16,500
+não nos permite a nós tirar esta parte de controle ao decidir o que é que corre em que corre,
+
+1788
+01:48:16,500 --> 01:48:27,180
+ok, mas o Linux permite nos fazer isso, portanto, a afinidade das threads aos cores, primeiro,
+
+1789
+01:48:27,180 --> 01:48:33,739
+eu tenho que saber quantos cores é que tem, em Linux vocês podem fazer o LES, CPU que faz
+
+1790
+01:48:33,739 --> 01:48:45,020
+o list dos CPUs, ok, também pode fazer n bloc de número de processos, veis quantas unidades
+
+1791
+01:48:45,020 --> 01:48:50,900
+processamente aqui existem, e atenção que este é um Pro que pode dar mais do que este LES,
+
+1792
+01:48:50,900 --> 01:48:57,260
+CPU, eu tenho ideia, eu agora não experimentei o Android Pro hoje, mas o Android Pro que
+
+1793
+01:48:57,260 --> 01:49:08,700
+vi nos quantas unidades processamente existem, mas vocês tiberem, ai, perfebe, um CPU, um
+
+1794
+01:49:08,699 --> 01:49:18,579
+CPU, porém, parece 2, ok, estou a dar o valor, e também, em Linux pode procurar aqui,
+
+1795
+01:49:18,579 --> 01:49:30,859
+no VAR-APLOC, o CPU Winfo, isto fiz aqui o que é que por soder de hectane, ok, se eu quiser
+
+1796
+01:49:30,860 --> 01:49:38,380
+o número de processadores que neste momento estão disponíveis, isto aqui funciona, esta
+
+1797
+01:49:38,380 --> 01:49:50,780
+funciona mesmo no Mac, eu posso utilizar o sysconfo, snprocessor, online, online, tropei, e estes
+
+1798
+01:49:50,780 --> 01:49:58,420
+cores que tenho, só se estiver em atrabalhar com o GNU, em Linux, também pode usar o GET-N-procs
+
+1799
+01:49:58,420 --> 01:50:10,180
+e o L, fornece-os isto, ok, agora, fique-se a afinidade, vocês podem utilizar, em Linux
+
+1800
+01:50:10,180 --> 01:50:21,380
+o P3-7-afinity-N-P, o MP, digo já, venha aqui à frente, quer dizer, não portable, ou seja,
+
+1801
+01:50:21,380 --> 01:50:30,900
+é uma extensão específica do Linux que não existe no dos termos, ok, vocês dizem, qual
+
+1802
+01:50:30,900 --> 01:50:39,100
+é que é a thread, qual é que é o também da estrutura que tem a indicação dos CPUs, a que
+
+1803
+01:50:39,100 --> 01:50:47,579
+vêm em que esta thread pode ocorrer, e depois por fim, o ainda é esta variável, tem quais
+
+1804
+01:50:47,579 --> 01:51:00,979
+os CPUs em que esta thread pode ocorrer, rapidamente, uma variável deste tipo, CPU-7-F, e
+
+1805
+01:51:00,979 --> 01:51:10,380
+eu posso colocá-la toda vez com esta máquina, eu vou saber o zero, eu limpa a máscara, e depois
+
+1806
+01:51:10,380 --> 01:51:21,859
+posso te ver que este cor é para ativar, ou seja, eu posso ocorrer neste cor, e coloco
+
+1807
+01:51:21,859 --> 01:51:30,500
+isso nesta máscara, e também posso limpar este cor da máscara, ou seja, eu limpando toda
+
+1808
+01:51:30,500 --> 01:51:37,619
+a indicar que a thread não deve ocorrer naquele cor, ok, manda-me o estudo, tem aqui
+
+1809
+01:51:37,619 --> 01:51:45,939
+a variável CPU-7, do tipo CPU-7-Type, eu limpo a variável, fica todas as eras, e agora
+
+1810
+01:51:45,939 --> 01:51:53,899
+ali por exemplo, o que é para correr no cor zero e para correr no cor um, num dos dois, portanto,
+
+1811
+01:51:53,899 --> 01:52:01,500
+eu vou dizer que a minha thread poderá correr ou no zero, ou no voe, ainda só estou a definir,
+
+1812
+01:52:01,500 --> 01:52:06,460
+agora eu vou efetivamente pedir ao sistema para tomar isso em consideração, utilizando
+
+1813
+01:52:06,460 --> 01:52:15,180
+a thread, seta fina-te, non-portable, e ou, a thread que está a chamar, quer que apliques
+
+1814
+01:52:15,180 --> 01:52:22,859
+esta regra, zero e dois, sete, todos uns outros, estão clear, e tem que dizer como é que
+
+1815
+01:52:22,859 --> 01:52:27,380
+o tamanho desta variável, porque eu tenho que dizer como é o tamanho desta variável,
+
+1816
+01:52:27,380 --> 01:52:39,579
+porque eu posso ter máquinas com 1 cor, 2 cor, 3 cor, 3, 9, 8, 4, 64, 20, 200 mil, 200 mil
+
+1817
+01:52:39,579 --> 01:52:46,300
+esperemos lá, 200, ou seja, o tamanho desta variável também pode mudar de hardware para
+
+1818
+01:52:46,300 --> 01:52:54,300
+hardware, portanto, nosso simplesmente, o tamanho desta variável depende de próprio hardware,
+
+1819
+01:52:54,300 --> 01:53:05,820
+não há, vamos ficar por aqui, só, obrigado, já passamos 6 minutos de hora, esperamos
+
+1820
+01:53:05,820 --> 01:53:13,060
+ter a dormecivo, temos que ter uma sacrava, umas 2 acabam com o slide que queria dar,
+
