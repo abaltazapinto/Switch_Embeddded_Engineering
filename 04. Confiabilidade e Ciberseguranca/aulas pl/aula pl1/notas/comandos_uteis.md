@@ -1,5 +1,8 @@
 # Checklist de comandos úteis — Guião 1 ✅
 
+
+andre
+kali2026!
 ## 1. Ver IP e interfaces
 
 ```bash
