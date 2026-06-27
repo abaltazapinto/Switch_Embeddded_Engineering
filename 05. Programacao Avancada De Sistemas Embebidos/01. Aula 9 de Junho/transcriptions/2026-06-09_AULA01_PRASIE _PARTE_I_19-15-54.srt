@@ -1,0 +1,5516 @@
+1
+00:00:00,000 --> 00:00:08,000
+Dois alunos, pelo menos que se manifestaram, não tem uma experiência prévia de programação em C.
+
+2
+00:00:08,000 --> 00:00:16,000
+Nós vamos fazer programação em C, mas como é que eu ia dizer, nós vamos utilizar a linguagem de programação C.
+
+3
+00:00:16,000 --> 00:00:21,000
+Nosso objetivo não é aprender C, mas é usar.
+
+4
+00:00:21,000 --> 00:00:27,000
+Se vocês conhecerem e já só vai sem programar, tanto melhor para vocês,
+
+5
+00:00:27,000 --> 00:00:33,000
+se não sove, se não for muito experiante, por exemplo, se tiverem aquela experiência dos modelos entre outros,
+
+6
+00:00:33,000 --> 00:00:45,000
+a programar em C, também não há grandes três. Nós vamos com calma, vamos ver como é que nós podemos utilizar a linguagem para os nossos objetivos,
+
+7
+00:00:45,000 --> 00:00:56,000
+mas mais importante do que isso, são os algoritmos, ou seja, como é que o computador vai realizar as instruções para cumprirmos um determinado objectivo.
+
+8
+00:00:57,000 --> 00:01:02,000
+Em relação à algoritmia, utilizando uma qualquer linguagem de programação,
+
+9
+00:01:02,000 --> 00:01:08,000
+toda gente aqui tem alguma experiência, certo?
+
+10
+00:01:08,000 --> 00:01:12,000
+Não tem experiência.
+
+11
+00:01:12,000 --> 00:01:21,000
+Acho que já estão tantos que não aparecem todos no único quadro,
+
+12
+00:01:21,000 --> 00:01:25,000
+maxima dizer que, mesmo assim, não conseguimos ver todos.
+
+13
+00:01:25,000 --> 00:01:28,000
+Portanto, toda gente tem alguma experiência em algoritmia.
+
+14
+00:01:28,000 --> 00:01:31,000
+O linguagem de programação, certo?
+
+15
+00:01:31,000 --> 00:01:36,000
+Alguém tem experiência em C, não precisa ser muita, mas há alguma experiência.
+
+16
+00:01:36,000 --> 00:01:39,000
+Ok, temos aqui o clave.
+
+17
+00:01:39,000 --> 00:01:45,000
+Ah, pronto, já estão lá para ser bastante, muito bem.
+
+18
+00:01:45,000 --> 00:01:49,000
+E sei lá, enjava.
+
+19
+00:01:52,000 --> 00:01:58,000
+Ok, ah, muita gente também, é uma linguagem popular.
+
+20
+00:01:58,000 --> 00:02:01,000
+Oh, oh, oh.
+
+21
+00:02:01,000 --> 00:02:06,000
+Outra linguagem também está muito na moda, Python.
+
+22
+00:02:06,000 --> 00:02:10,000
+Vamos falar, ah, é lá.
+
+23
+00:02:10,000 --> 00:02:15,000
+Uma pessoa fala em Python, realmente, a popularidade do Python está em alta,
+
+24
+00:02:15,000 --> 00:02:19,000
+pelo menos com a amostra desta turma.
+
+25
+00:02:19,000 --> 00:02:23,000
+Sim, senhora.
+
+26
+00:02:23,000 --> 00:02:26,000
+Ok, muito bem.
+
+27
+00:02:26,000 --> 00:02:30,000
+Sei lá, mais outra linguagem de programação.
+
+28
+00:02:30,000 --> 00:02:37,000
+Rust está aplica, que é uma linguagem que está a crescer neste termine.
+
+29
+00:02:37,000 --> 00:02:42,000
+Ok, também não há problema porque eu também não tenho experiência em Rust,
+
+30
+00:02:42,000 --> 00:02:48,000
+já vi programas, já escrevi alguns programinhas pequenos,
+
+31
+00:02:48,000 --> 00:02:51,000
+mas também não posso dizer que tem experiência.
+
+32
+00:02:51,000 --> 00:02:56,000
+A sorte é que nós vamos programar aqui em Rust, tá bom?
+
+33
+00:02:56,000 --> 00:02:58,000
+Pronto.
+
+34
+00:02:58,000 --> 00:03:00,000
+Também para...
+
+35
+00:03:00,000 --> 00:03:08,000
+Eu ter assim uma ideia de aquilo que vocês já viram e já trabalharam neste curso,
+
+36
+00:03:08,000 --> 00:03:12,000
+vocês já tiveram, pelo menos, uma cadeira anterior,
+
+37
+00:03:12,000 --> 00:03:17,000
+em que programavam microcontroladores, certo?
+
+38
+00:03:17,000 --> 00:03:19,000
+Sim.
+
+39
+00:03:19,000 --> 00:03:23,000
+Era o ar do Inno?
+
+40
+00:03:23,000 --> 00:03:25,000
+Fais um...
+
+41
+00:03:25,000 --> 00:03:27,000
+OutMega, 128.
+
+42
+00:03:27,000 --> 00:03:29,000
+Sim.
+
+43
+00:03:29,000 --> 00:03:31,000
+Ok, ok.
+
+44
+00:03:31,000 --> 00:03:33,000
+Programavam em Ser.
+
+45
+00:03:33,000 --> 00:03:34,000
+Sim.
+
+46
+00:03:34,000 --> 00:03:36,000
+Ok, tá bom.
+
+47
+00:03:36,000 --> 00:03:40,000
+Depois passando para coisas mais complicadas, também tiveram sistemas operativos
+
+48
+00:03:40,000 --> 00:03:43,000
+e aí também programavam em Ser.
+
+49
+00:03:44,000 --> 00:03:46,000
+Ah, nunca programaram?
+
+50
+00:03:46,000 --> 00:03:47,000
+Ok.
+
+51
+00:03:47,000 --> 00:03:53,000
+Era mais um Head Zone, viver mais de algumas coisas e não Hands-On,
+
+52
+00:03:53,000 --> 00:03:55,000
+estragar o quê?
+
+53
+00:03:55,000 --> 00:03:56,000
+Certo?
+
+54
+00:03:56,000 --> 00:03:57,000
+Exatamente.
+
+55
+00:03:57,000 --> 00:03:58,000
+Foi mais isso, sim.
+
+56
+00:03:58,000 --> 00:04:00,000
+Ok, muito bem.
+
+57
+00:04:00,000 --> 00:04:06,000
+Mas na programação do OutMega, ou seja, mais um Hands-On,
+
+58
+00:04:06,000 --> 00:04:07,000
+chegaram a programada.
+
+59
+00:04:07,000 --> 00:04:09,000
+Sim.
+
+60
+00:04:09,000 --> 00:04:12,000
+Ok.
+
+61
+00:04:12,000 --> 00:04:14,000
+Muito bem.
+
+62
+00:04:14,000 --> 00:04:17,000
+Ora, vamos.
+
+63
+00:04:17,000 --> 00:04:26,000
+Ah, coisas que normalmente os meus alunos me perguntam no logo na primeira aula.
+
+64
+00:04:26,000 --> 00:04:28,000
+Como é que é a avaliação?
+
+65
+00:04:28,000 --> 00:04:31,000
+Ora bem, ainda haver a avaliação.
+
+66
+00:04:31,000 --> 00:04:34,000
+Claro, porque vocês estão aqui para vos ensinar.
+
+67
+00:04:34,000 --> 00:04:41,000
+Vocês também estão aí para aprender e eu também estou para aprender com o vozco.
+
+68
+00:04:41,000 --> 00:04:47,000
+Isto não é daquelas palavras que costumam ficar muito bonitas na primeira aula, não.
+
+69
+00:04:47,000 --> 00:04:50,000
+A sério, eu aprendo sempre com os meus alunos.
+
+70
+00:04:50,000 --> 00:04:59,000
+Há alunos que têm experiências em campos, nos quais eu não tenho assim tanto feminino.
+
+71
+00:04:59,000 --> 00:05:06,000
+E nestas aulas, a medida que eu encontrando pessoas com outras experiências,
+
+72
+00:05:06,000 --> 00:05:08,000
+eu também fui aprendendo com elas.
+
+73
+00:05:08,000 --> 00:05:09,000
+Tá bom?
+
+74
+00:05:10,000 --> 00:05:11,000
+A avaliação.
+
+75
+00:05:11,000 --> 00:05:17,000
+No último sábado de todos nós temos ali um bloco de duas horas que rei o eu.
+
+76
+00:05:17,000 --> 00:05:18,000
+Pronto.
+
+77
+00:05:18,000 --> 00:05:24,000
+Nesse último bloco de sábado, nós teremos ali um momento de avaliação.
+
+78
+00:05:24,000 --> 00:05:31,000
+Eu neste momento, eu vou explicar, eu quero primeiro apañar vos o pulso.
+
+79
+00:05:31,000 --> 00:05:37,000
+Hoje, na próxima quinta-feira, não vou conseguir se calhar apañar vos muito o pulso,
+
+80
+00:05:37,000 --> 00:05:44,000
+porque com esta distância não dá para perceber o que é que vocês já conseguem fazer
+
+81
+00:05:44,000 --> 00:05:47,000
+ou ontem maiores dificuldades.
+
+82
+00:05:47,000 --> 00:05:57,000
+Mas a minha ideia seria nesse último sábado, vocês terem ou um trabalho para fazer,
+
+83
+00:05:57,000 --> 00:06:03,000
+e depois do momento em um model, ou então também para além desse pequeno trabalho,
+
+84
+00:06:03,000 --> 00:06:10,000
+um questionário para resolver em um papel.
+
+85
+00:06:10,000 --> 00:06:12,000
+Pronto.
+
+86
+00:06:12,000 --> 00:06:15,000
+Por que o questionário?
+
+87
+00:06:15,000 --> 00:06:23,000
+Agora, uma pessoa tem um, por exemplo, o VSCOLV e estamos a começar a escrever um programa
+
+88
+00:06:23,000 --> 00:06:26,000
+e aquilo já está a preencher quatro ou cinco linhas de código.
+
+89
+00:06:26,000 --> 00:06:30,000
+Por vezes é aquilo que nós queremos, outras vezes não é aquilo que nós queremos
+
+90
+00:06:30,000 --> 00:06:33,000
+e aquilo até acaba por irritar.
+
+91
+00:06:33,000 --> 00:06:40,000
+Eu muitas vezes até desligo o Copilot, as altas...
+
+92
+00:06:40,000 --> 00:06:45,000
+Que ele estava sempre a poluir a vista e...
+
+93
+00:06:45,000 --> 00:06:50,000
+Pronto.
+
+94
+00:06:50,000 --> 00:06:56,000
+Mas se calhar um pequeno questionário numa folha...
+
+95
+00:06:56,000 --> 00:07:03,000
+Pronto.
+
+96
+00:07:03,000 --> 00:07:10,000
+Eu creio que quero o meu foco e o voce maior interesse.
+
+97
+00:07:10,000 --> 00:07:17,000
+Talvez não sei já a nota em si, mas aprender o máximo possível, certo?
+
+98
+00:07:17,000 --> 00:07:22,000
+Portanto, eu creio que essa deve ser sempre a nossa maior preocupação.
+
+99
+00:07:23,000 --> 00:07:31,000
+É aprender o mais que podemos e depois a nota acaba por ser um efeito secundário.
+
+100
+00:07:31,000 --> 00:07:36,000
+Temos que ter uma nota, vocês têm que receber uma nota, eu tenho que fazer uma nota e pronto.
+
+101
+00:07:36,000 --> 00:07:42,000
+Tenho que ser avaliados por isso, mas o importante é até lá nós tirarmos o maior rendimento possível
+
+102
+00:07:42,000 --> 00:07:46,000
+desta nossa interação, ok?
+
+103
+00:07:46,000 --> 00:07:48,000
+Pronto.
+
+104
+00:07:48,000 --> 00:07:51,000
+Já nesse contexto, professor, só para completar.
+
+105
+00:07:51,000 --> 00:07:54,000
+Pelo menos no meu caso e por que já percebiam algumas claras.
+
+106
+00:07:54,000 --> 00:07:57,000
+Tenho mesmo sentimento e isto tem relação também em teste.
+
+107
+00:07:57,000 --> 00:07:58,000
+Pronto.
+
+108
+00:07:58,000 --> 00:08:00,000
+Eu daria que nós ultimos de gostar que nós tivemos assim.
+
+109
+00:08:00,000 --> 00:08:03,000
+Mas parecendo que eu tenho negativo, mas...
+
+110
+00:08:11,000 --> 00:08:13,000
+Eu acho que foram feitos.
+
+111
+00:08:13,000 --> 00:08:14,000
+Pronto.
+
+112
+00:08:14,000 --> 00:08:18,000
+Depois de pandir ainda mais, o professor disse que não queria chegar da nota que nós é aprender.
+
+113
+00:08:18,000 --> 00:08:22,000
+Eu, no meu caso, eu não quero saber se quer do diplogo, quero aprender.
+
+114
+00:08:22,000 --> 00:08:27,000
+E acho que faz mais sentido fazer trabalho.
+
+115
+00:08:27,000 --> 00:08:35,000
+E nem que se reduz a quantidade de matéria da arte, mas terá certeza que os trabalhos são bem empriandidos.
+
+116
+00:08:35,000 --> 00:08:36,000
+Sim.
+
+117
+00:08:36,000 --> 00:08:39,000
+Eu doco propriamente, uma nota no meu...
+
+118
+00:08:39,000 --> 00:08:41,000
+Já me clagueis realmente.
+
+119
+00:08:41,000 --> 00:08:45,000
+Querem o curso feito, mas por menos no meu caso, nem quero saber se tenho o curso feito ou não.
+
+120
+00:08:45,000 --> 00:08:48,000
+Quero mesmo ganhar conhecimento.
+
+121
+00:08:48,000 --> 00:08:49,000
+Ok.
+
+122
+00:08:49,000 --> 00:08:50,000
+Pronto.
+
+123
+00:08:50,000 --> 00:08:57,000
+Eu gosto dessa atitude e também vou dizer o seguinte.
+
+124
+00:08:57,000 --> 00:09:04,000
+E feitivamente a melhor avaliar a perurção.
+
+125
+00:09:04,000 --> 00:09:11,000
+Estava sendo objetivos que sejam inscoivas, não é?
+
+126
+00:09:11,000 --> 00:09:17,000
+Ficulados, não vale a pena continuar a avançar como se fossemos um convoy de governado,
+
+127
+00:09:17,000 --> 00:09:22,000
+mas vale insistir no primeiro, no mais básico, não é?
+
+128
+00:09:22,000 --> 00:09:28,000
+E ter uma fundação sólida a avançar o que for possível no tempo que nós temos.
+
+129
+00:09:28,000 --> 00:09:29,000
+Tá bem?
+
+130
+00:09:29,000 --> 00:09:32,000
+É a programação.
+
+131
+00:09:32,000 --> 00:09:41,000
+E às vezes, até tenho um bocado receio, porque o domínio deste módulo,
+
+132
+00:09:41,000 --> 00:09:44,000
+às vezes, é um pouco frustrante.
+
+133
+00:09:44,000 --> 00:09:54,000
+Porque às vezes os problemas não são evidentes à fonte do problema que nós temos ali, não é evidente,
+
+134
+00:09:54,000 --> 00:10:01,000
+porque nós aqui vamos falar sobretudo de programação concorrente.
+
+135
+00:10:01,000 --> 00:10:10,000
+E uma programação concorrente é quando nós temos código que está a ser executado,
+
+136
+00:10:10,000 --> 00:10:13,000
+como é que esperem nada, deixem-me cada dizer.
+
+137
+00:10:13,000 --> 00:10:22,000
+Quando nós temos sem avançar primeiro com o que é muito técnico,
+
+138
+00:10:22,000 --> 00:10:29,000
+é como se estivéssemos suponham dois programas e esses dois programas fazem parte de uma aplicação.
+
+139
+00:10:29,000 --> 00:10:31,000
+Ok?
+
+140
+00:11:29,000 --> 00:11:46,000
+E em Max, aquilo é uma ecossistema que é muito limitado.
+
+141
+00:11:46,000 --> 00:11:50,000
+Ou seja, pode haver bastante processadores, mas não há muito.
+
+142
+00:11:50,000 --> 00:11:54,000
+Pode haver bastante explacas de rede, mas não há muito.
+
+143
+00:11:54,000 --> 00:12:04,000
+Quando nós vamos para plataformas com microcontroladores, a variedade é muita.
+
+144
+00:12:04,000 --> 00:12:14,000
+E depois, se queremos escrever código para uma determinada plataforma, nós temos que preparar o nosso ambiente de trabalho de uma determinada forma.
+
+145
+00:12:14,000 --> 00:12:20,000
+Mas se quisermos programar para outra plataforma, é para.
+
+146
+00:12:20,000 --> 00:12:27,000
+O ambiente de trabalho que nós já tínhamos preparadinho já não serve, então temos que preparar outra coisa.
+
+147
+00:12:27,000 --> 00:12:31,000
+E por vezes, isso também acaba por ser um bocadinho frustrante.
+
+148
+00:12:31,000 --> 00:12:42,000
+Nós, neste curso, temos de ir com calma para minimizar o massa, minimizar ao mínimo.
+
+149
+00:13:12,000 --> 00:13:27,000
+E agora, vamos para o nosso ambiente de trabalho que nós já tínhamos preparado para uma determinada forma.
+
+150
+00:13:27,000 --> 00:13:36,000
+E agora, vamos para o nosso ambiente de trabalho que nós já tínhamos preparado para uma determinada forma.
+
+151
+00:13:36,000 --> 00:13:58,000
+O nosso ambiente de trabalho que nós já tínhamos preparado para uma determinada forma de trabalho que nós já tínhamos preparado para uma determinada forma.
+
+152
+00:17:28,000 --> 00:17:39,440
+Explicar o passo a passo, como é que se faz isso.
+
+153
+00:17:39,440 --> 00:17:45,799
+Se calhar de fazer um vídeo no YouTube para ver se se ganhava, se monetizava e ganhava
+
+154
+00:17:45,799 --> 00:17:54,559
+em um lista, mas ficamos só por um slide, mas efetivamente o VLSL para o tipo de programação
+
+155
+00:17:54,559 --> 00:18:04,279
+que nós vamos querer fazer para a sistema, o Linux, o Mac ou Windows mas deixem o Windows
+
+156
+00:18:04,279 --> 00:18:12,480
+fora neste curso, é mais do que o suficiente e o VLSL corre muito bem, corre muito bem
+
+157
+00:18:12,480 --> 00:18:20,440
+nas máquinas Windows, quem tiver o Mac também já tem uma máquina, correu Unix, portanto
+
+158
+00:18:20,440 --> 00:18:26,720
+para o tipo de programação que nós vamos fazer, que é programação para o Unix ou
+
+159
+00:18:26,720 --> 00:18:36,519
+para o Unix contra feito, que é o caso do Linux, é suficiente, mas à frente também vamos
+
+160
+00:18:36,519 --> 00:18:48,480
+experimentar um sistema operativo de tempo real, e aquele que eu escolhi foi o FreeR2, não sei se
+
+161
+00:18:48,480 --> 00:18:57,599
+foi a melhor opção, ó se não, mas era uma das disponíveis, o FreeR2, vamos lá ver,
+
+162
+00:18:57,599 --> 00:19:05,420
+existe o WinRever, já tem bastante tempo no mercado, mas sempre foi comercial, já temos que
+
+163
+00:19:05,420 --> 00:19:11,700
+pagar pelo WinRever, isto é o Rtems, mas isto é muito antigo, não sei se ainda, há muitos
+
+164
+00:19:11,700 --> 00:19:19,819
+atélites, quem não ainda corre no Rtems, mas é algo que nem sei se tem sido recentemente
+
+165
+00:19:19,819 --> 00:19:32,900
+atualizado, o FreeR2, ultimamente foi um sistema operativo de tempo real popular, ainda
+
+166
+00:19:32,900 --> 00:19:40,259
+por cima como é o Prime Source, e é gratuito, é livre, também ganha muita tração,
+
+167
+00:19:40,259 --> 00:19:51,220
+ultimamente tem apparecido e tem aumentado em popularidade o ZFIR, ok, mas pronto, eu estroestive
+
+168
+00:19:51,220 --> 00:20:01,180
+a pensar entre FreeR2 e o ZFIR, e eu optei pelo FreeR2, vamos lá ver se conseguimos minimizar
+
+169
+00:20:01,180 --> 00:20:12,380
+as frustrações, ou não, mas mais uma vez, também para escrevermos programas e compilá-los
+
+170
+00:20:12,380 --> 00:20:22,420
+e executá-los com FreeR2, podemos, há compiladores para todos os temas operativos, há compiladores
+
+171
+00:20:22,420 --> 00:20:33,460
+para Windows, para Linux e para Mac, a instalação em Windows, eu não tenho experiência, porque
+
+172
+00:20:33,460 --> 00:20:41,060
+eu não tenho máquinas, não uso Windows, e já não uso Windows, desde Windows XP, acho que deixei
+
+173
+00:20:41,059 --> 00:20:45,859
+de usar o Windows em 2001, se calhar alguns de vocês ainda nem sequer tinham nascido, mas
+
+174
+00:20:45,859 --> 00:20:58,379
+essa altura, mas em Linux, normalmente o ambiente de trabalho monta-se com bastante facilidade,
+
+175
+00:20:58,379 --> 00:21:07,220
+se forem o ponto para o APT-GATE, com APT-Institual, vocês conseguem por lá todas as ferramentas
+
+176
+00:21:07,220 --> 00:21:13,420
+que são necessárias, se tiver em um Mac, também com HomeBrew, vocês conseguem também
+
+177
+00:21:13,420 --> 00:21:20,019
+instalar todas as aplicações necessárias, e com mais um ou outros toques, que fica a funcionar
+
+178
+00:21:20,019 --> 00:21:27,620
+direitinho, eu na semana passada, andei a recriar aqui o ambiente na minha máquina Linux,
+
+179
+00:21:27,620 --> 00:21:33,620
+e pronto, é da praxe, havia umas coisas que não funcionavam, um bem a primeira, uma pessoa
+
+180
+00:21:33,620 --> 00:21:38,540
+encandada a perceber, porque aqui é uma funciona bem, e depois resolvemos o problema,
+
+181
+00:21:38,540 --> 00:21:49,340
+e mais tarde fica tudo funcional, espero, há aqui metrugente com Macs, tem Macs, põe a mão
+
+182
+00:21:49,340 --> 00:22:01,660
+no A, ok, um, dois, aí já são quatro, e deixe-me adivinhar, é tudo, destes Macs novos
+
+183
+00:22:01,660 --> 00:22:11,060
+não é com processador Apple Silicon, certo, sinto-lo com o Amium, sinto com a Amida, é pra
+
+184
+00:22:11,060 --> 00:22:19,019
+eu, o meu ainda é jurássico, ainda tem um Intel, era os últimos Intel, infelizmente, e
+
+185
+00:22:19,019 --> 00:22:27,140
+digam infelizmente, porque acho que foi o pior Mac que eu tenho, é este com o Comso, é
+
+186
+00:22:27,140 --> 00:22:36,900
+2000 e 19, cria eu, mas lá está, se vocês tenham o arme, se tem o processador Apple Silicon,
+
+187
+00:22:36,900 --> 00:22:41,540
+não é, pronto, é mais um desafio pra mim, se vocês tiverem um problema, porque os ossos
+
+188
+00:22:41,540 --> 00:22:47,259
+computadores são ligeiramente diferentes do meu, e pronto, espero que não tenho um problema
+
+189
+00:22:47,259 --> 00:23:03,859
+para mim é, para mim é soulo, é bem resto, mais questões, ok, não há mais questões, é
+
+190
+00:23:03,859 --> 00:23:13,500
+mais para aí, tem aqui uma pessoa que estava abermalho, não, mas não tem ninguém na sala de
+
+191
+00:23:14,500 --> 00:23:22,299
+ingressar, tem aqui nas pessoas uma notificação, e não percebeu por que está aqui a notificação,
+
+192
+00:23:22,299 --> 00:23:29,099
+ok, conversa também tem aqui, notificações em conversa, ok, é uma resposta das minhas
+
+193
+00:23:29,099 --> 00:23:35,819
+perguntas, pronto, eu esta dia aviante as notificações à Amida que é falando, pronto, então vamos
+
+194
+00:23:35,819 --> 00:23:38,059
+lá ver, agora se eu consigo partilhar,
+
+195
+00:23:43,500 --> 00:24:05,740
+ok, pronto, já estão a ver, um meu é cria de partilha, ok, obrigado, já estou
+
+196
+00:24:05,740 --> 00:24:18,180
+para ir, vamos lá, muito bem, então hoje vamos começar com uma introdução à programação
+
+197
+00:24:18,180 --> 00:24:26,140
+concorrente, orientada para sistemas em pervidos, agora bem, este InambedetSystems e o índice
+
+198
+00:24:26,140 --> 00:24:36,940
+mapo, porque após a curadavação tem o nome de programação, não, desculpa, este
+
+199
+00:24:36,940 --> 00:24:41,740
+moldo tem o nome de programação amassada de sistemas em pervidos, e então pack, colla e logo ali
+
+200
+00:24:41,740 --> 00:24:49,060
+o InambedetSystems, mas a programação concorrente não se resume só as sistemas em pervidos,
+
+201
+00:24:49,060 --> 00:24:55,380
+você está mantém muita programação concorrente no supercomputador, portanto a programação concorrente
+
+202
+00:24:55,460 --> 00:25:03,100
+vai ver as máquinas com maior potência possível até as máquinas mais minimalistas possíveis,
+
+203
+00:25:03,100 --> 00:25:14,820
+sempre que nós temos código que executa, como é que é dizer, quando temos várias pressões
+
+204
+00:25:14,820 --> 00:25:23,340
+de código que concorrem pelos recursos da plataforma do sistema e o concorrer pelos recursos
+
+205
+00:25:23,339 --> 00:25:33,139
+do sistema não é uma coisa má, e as concorrem dos recursos do sistema para colaburarem e conseguir
+
+206
+00:25:33,139 --> 00:25:43,740
+em chegar a um objetivo, ok, chegar a um objetivo ou então manter um objetivo, que é o caso que
+
+207
+00:25:43,740 --> 00:25:49,659
+acontece nos InambedetSystems, enquanto nos InambedetSystems, nós queremos que o nosso software
+
+208
+00:25:49,660 --> 00:25:55,220
+corre, corre, corre, corre, até não ser mais necessário, por exemplo, quando desligamos o carro
+
+209
+00:25:55,220 --> 00:26:01,180
+ou quando se desligou o avião, ou quando se desligou, sei lá, e a vizera bateu eleira dos bolsos,
+
+210
+00:26:01,180 --> 00:26:06,380
+mas as vatoiras de bolsos acho que não não teriam assim grande, ah, mas pode ser abimbe, quando
+
+211
+00:26:06,380 --> 00:26:11,340
+as almôndicas já estão acusivas, não é, em que nós desligamos a linha máquina, no caso
+
+212
+00:26:11,340 --> 00:26:16,420
+supercomputador, nós queremos mesmo mais chegar a mais depressa possível, a simulação,
+
+213
+00:26:16,420 --> 00:26:27,700
+a pervisão, por exemplo, metriológica das próximas 6 horas, ok, então, então, programação
+
+214
+00:26:27,700 --> 00:26:33,100
+sequencial, abordagem clássica, quando nós começamos a aprender a programar, nós começamos
+
+215
+00:26:33,100 --> 00:26:38,900
+sempre por aqueles programas super simples, aliás, a tradição é o primeiro programa que uma
+
+216
+00:26:38,900 --> 00:26:45,539
+pessoa faz numa linguagem de programação, é o Alamo, o deserto Hello World, basicamente,
+
+217
+00:26:45,539 --> 00:26:53,099
+é um programa que começa, diz, Hello World, e termina por ali, certo? Depois nós começamos
+
+218
+00:26:53,099 --> 00:27:00,859
+a avançar e já começamos a ir para aqueles programas mais úteis, são programas, em que nós
+
+219
+00:27:00,859 --> 00:27:09,500
+introduzimos dados e estes dados utilizados para realizar um processamento e depois o resultado
+
+220
+00:27:09,500 --> 00:27:15,259
+desse processamento, normalmente, é exportado, ou aparei-se não é gra, ou vai para um fecheiro,
+
+221
+00:27:15,259 --> 00:27:24,059
+ou então é enviado por ser lá, por uma carta registada, não faça a ideia, certo?
+
+222
+00:27:24,059 --> 00:27:30,099
+Portanto, há sempre uma entrada de dados, processamento e, no final, aqui estão os resultados,
+
+223
+00:27:30,099 --> 00:27:31,099
+ok?
+
+224
+00:27:31,100 --> 00:27:42,300
+Este tipo de programa segue um padrão típico, que é, começamos, vamos realizar trabalho
+
+225
+00:27:42,300 --> 00:27:50,060
+e, quando finalmente temos um resultado, que é o resultado, final, o nosso objetivo,
+
+226
+00:27:50,060 --> 00:27:57,780
+o programa considera-se terminado e fica por ali, certo? Neste tipo de programação, o
+
+227
+00:27:57,779 --> 00:28:06,740
+foco principal está em termos um programa funcionalmente correto, ok? Ou seja, se eu
+
+228
+00:28:06,740 --> 00:28:14,819
+inserir dois e três, e se o meu programa tiver que calcular a sua alma, eu espero que meu programa
+
+229
+00:28:14,819 --> 00:28:20,899
+de a cinco, ok? Dois mais três, pelo último vez que fiz esta operação, dava cinco, não sei
+
+230
+00:28:20,900 --> 00:28:26,940
+sempre, tanto já morreu, ou não, e já andei na escola primária há muitos anos,
+
+231
+00:28:26,940 --> 00:28:33,540
+mas acho que ainda continuo a ensinar que dois mais três é cinco, certo? Isto aqui chama-se
+
+232
+00:28:33,540 --> 00:28:45,460
+a correção funcional, certo? Se eu colocar dados, o resultado, se eu colocar um determinado
+
+233
+00:28:45,460 --> 00:28:53,620
+conjuntidade, o resultado deverá ser sempre, o que deverá ser correto, sempre, se eu
+
+234
+00:28:53,620 --> 00:29:09,700
+executar o programa 20 vezes com os mesmos dados, na dúvida, ok? Ou seja, já fala, já
+
+235
+00:29:09,700 --> 00:29:21,620
+falo muito sobre o mesmo tópico, ou seja, de meio um sinalzinho para eu acelerar, ok? Pode
+
+236
+00:29:21,620 --> 00:29:35,220
+ser, por exemplo, e eu, ah, ok, é para acelerar, certo? Pronto. Então, nem por coincidência, temos aqui
+
+237
+00:29:35,220 --> 00:29:41,299
+um programa em linguagem c, que calcula a soma de dois números, temos então ali as variáveis
+
+238
+00:29:41,299 --> 00:29:46,980
+A e B, onde nós vamos colocar dois números que serão dados para o utilizador, e a variável
+
+239
+00:29:46,980 --> 00:29:55,740
+Sam, onde nós vamos ter o resultado final, ok? Primeira fase de programa, introdução dos dados,
+
+240
+00:29:55,740 --> 00:30:02,700
+temos ali o scan F, que vai colocar um inteiro na variável A e outro inteiro na variável B,
+
+241
+00:30:02,700 --> 00:30:09,460
+se o utilizador for bem computado, vamos ter ali dois valores na variável A e na variável
+
+242
+00:30:09,460 --> 00:30:17,019
+B, ok? Pronto. Aqueles scan F, é sempre um ponto de falha, porque se o utilizador formal
+
+243
+00:30:17,019 --> 00:30:27,539
+e começar a escrever para lá, sei lá, impropérios ao computador, eu para cá se tinha um colega
+
+244
+00:30:27,539 --> 00:30:32,019
+do meu que adorava em soltar o computador, escrevi a palavra antes, quando era para testar
+
+245
+00:30:32,019 --> 00:30:39,099
+um programa. Pronto. Também já não vejam muitos anos, mas se tem de ali dois números, vamos
+
+246
+00:30:39,099 --> 00:30:46,940
+para a parte do processamento, e temos ali o A mais B, por exemplo, o A for 2 e o B for 3,
+
+247
+00:30:46,940 --> 00:30:55,220
+2 mais 3 calculamos o 5, e depois, esse resultado é atribuído a variável Sam, ok? Nós aqui
+
+248
+00:30:55,220 --> 00:31:02,220
+temos basicamente, na esta linha, duas operações, primeiro fazemos a que está do A direito,
+
+249
+00:31:02,220 --> 00:31:10,980
+que é a soma, e depois fazemos a atribuição do resultado, a variável Sam, certo? Alguma dúvida
+
+250
+00:31:10,980 --> 00:31:19,140
+em relação a isto? Este é bastante comum às linguagens de programação, certo? Pronto.
+
+251
+00:31:19,660 --> 00:31:28,020
+O fim, há algum comentário? Ok, não há nada, não há nada, não há nada, não há nada.
+
+252
+00:31:28,020 --> 00:31:40,300
+Como? Nem concordam-se, não há concordam-se. Ok, eu estou a falar isto porque quando
+
+253
+00:31:40,300 --> 00:31:48,460
+voce tipo linhas, inclusive alunos, começam a programar, esta linha às vezes não é evidente,
+
+254
+00:31:48,460 --> 00:31:55,180
+e até tenho alunos que me fazem ao contrário, põem o A mais B igual a Sam, porque também
+
+255
+00:31:55,180 --> 00:31:59,700
+tem alguma razão, primeiro faz a soma, depois faz a atribuição, portanto, eles põem tudo
+
+256
+00:31:59,700 --> 00:32:06,380
+pela ordem, pela qual elas estão a ler, mas este é assim, em quase todas as linguagens
+
+257
+00:32:06,380 --> 00:32:11,259
+de programação que eu conheço, também não é que conheça muitas, mas nas conheço é assim
+
+258
+00:32:11,259 --> 00:32:18,019
+que funciona. Por fim, temos a parte em que exportamos o resultado, temos ali um pre-interf,
+
+259
+00:32:18,019 --> 00:32:25,339
+e vamos mostrar o resultado a sua, mas é cinco. Terminou o nosso trabalho, termina também
+
+260
+00:32:25,339 --> 00:32:31,940
+o nosso programa, certo? Pronto. Este é um exemplo clássico de programação sequencial,
+
+261
+00:32:31,940 --> 00:32:41,420
+mesmo que esta programação, tivesse ives, nois estruturas condicionais, ou tivesse siglos,
+
+262
+00:32:41,420 --> 00:32:56,220
+noisle, ou no fort, esta programação é sequencial, porque se você esticar em o fio das
+
+263
+00:32:56,220 --> 00:33:02,620
+operações que são realizadas, vocês começam sempre num inicio e vão, ao fim de bastante
+
+264
+00:33:02,620 --> 00:33:13,380
+instruções, chegaram o fim, ok? No entanto, quando nós temos programas para sistemas
+
+265
+00:33:13,380 --> 00:33:22,500
+imeditos, o paradigma move ligeiramente, ok? Por que? Porque os temas operativos habitualmente
+
+266
+00:33:22,500 --> 00:33:30,100
+controlam processos físicos, ok? Por exemplo, podemos ter um sistema imbebico que está
+
+267
+00:33:30,100 --> 00:33:36,940
+a controlar um robot, vamos testar mesmo o bebido, que pode estar a controlar a injeção
+
+268
+00:33:36,940 --> 00:33:47,420
+de um automóvel vizel ou a gasolina. O carro ainda é vizel, estou a ver se com esta pós-graduação
+
+269
+00:33:47,420 --> 00:33:52,020
+consigo juntar dinheiro de suficiente para comprar um carro elétrico e ser todo mover, mas
+
+270
+00:33:52,020 --> 00:33:58,860
+olha, o meu ainda é vizel, portanto, os meus isen fazendo ação da vizel. Mas também podemos
+
+271
+00:33:58,860 --> 00:34:06,700
+perceber, imaginaem um sistema imbebido que está a controlar a climatização de um edifício,
+
+272
+00:34:06,700 --> 00:34:17,620
+ok? E o que acontece? Vocês querem que o motor do carro de link ao fim de duas ou três injeções
+
+273
+00:34:17,620 --> 00:34:22,660
+porque o calculou o momento de preciso para injetar o combustível e pronto, meu trabalho já está
+
+274
+00:34:22,699 --> 00:34:30,460
+para por ali, ou então, imaginaem, está um dia de calor, muito calor, vocês estão num prédio ali,
+
+275
+00:34:30,460 --> 00:34:37,940
+todos os freios que se ocuparam condicionados e o ar condicionados, porém, já calculei 20 vezes o que é
+
+276
+00:34:37,940 --> 00:34:45,579
+que é necessário fazer, se é preciso terminar mais o ar condicionado ou menos, antes já fiz 20 vezes,
+
+277
+00:34:45,579 --> 00:34:50,179
+meu ciclo fora, era até 20, portanto, terminem por aqui, e o pessoal começa a toda a liga
+
+278
+00:34:50,179 --> 00:34:58,019
+para ver o calor dentro do edifício, não acontece isso, aqui nós temos, nós temos sistemas
+
+279
+00:34:58,019 --> 00:35:05,859
+imbebidos, cuja sua natureza é reactiva, ou seja, tem que compreender o contexto em que estão
+
+280
+00:35:05,859 --> 00:35:17,059
+inseridos, ok? E tem que atuar no sistema em que estão inseridos para levá-lo a um estado que é
+
+281
+00:35:17,059 --> 00:35:25,179
+desejável, ok? Tanto são os sistemas que respondem estímulos do ambiente, e as funções
+
+282
+00:35:25,179 --> 00:35:31,820
+nesses sistemas imbebidos não terminam, só terminam quando se considerar que a sua missão chegou
+
+283
+00:35:31,820 --> 00:35:43,500
+ao fim, por exemplo, no caso do edifício, a climatização do edifício, se calhar, a climatização
+
+284
+00:35:43,500 --> 00:35:49,179
+do edifício, a missão só vai chegar ao fim, num dia em que tenham que fazer a manutenção,
+
+285
+00:35:49,179 --> 00:35:54,539
+ao ar condicionado, e é necessário desligar o ar condicionado para fazer lá o ibeza, verificar
+
+286
+00:35:54,539 --> 00:36:01,260
+essas peças, ainda estão em condições, ou seja, alguma que tenha que ser substituída, ou
+
+287
+00:36:01,260 --> 00:36:09,380
+também em caso da varia, não é? Imaginem que há lá um furo no condensador do ar condicionado,
+
+288
+00:36:09,380 --> 00:36:15,820
+tem que separar tudo e fazer a substituição, portanto a reparação, nesses casos, a missão
+
+289
+00:36:15,820 --> 00:36:21,300
+só o fim, mas enquanto a missão não chegou ao fim, o sistema tem de estar sempre, sempre
+
+290
+00:36:21,300 --> 00:36:27,539
+sempre para funcionar, no caso do automóvel é, desde que você é a reencamp até chegar
+
+291
+00:36:27,539 --> 00:36:33,380
+em o vosso destino e desligar em o automóvel, não é? Pá, aquele software tem de estar sempre
+
+292
+00:36:33,380 --> 00:36:41,059
+para funcionar, e sempre para reagir aos estímulos que eles chegam, certo? Por exemplo,
+
+293
+00:36:41,059 --> 00:36:47,099
+quando carrega um acelerador e são os tímulos, quando você solta uma acelerador e se é
+
+294
+00:36:47,099 --> 00:36:56,780
+outro estímulo, certo? A quantidade de ar que está a ser empurrada para os cilindos
+
+295
+00:36:56,780 --> 00:37:07,300
+também é um estímulo, ok? Pronto, uma que é a estrutura de um programa habitualmente,
+
+296
+00:37:07,300 --> 00:37:13,940
+qual é a estrutura de um programa para serem mais enviados, temos ali um ciclo infinito,
+
+297
+00:37:13,940 --> 00:37:23,740
+em que temos uma sequência que é amostrar o ambiente, portanto nós temos sensores, vamos
+
+298
+00:37:23,740 --> 00:37:31,540
+buscar valores, esses sensores, vamos mostrar quantidades ou grandezas do ambiente, com esses
+
+299
+00:37:31,540 --> 00:37:42,060
+valores nós vamos calcular a ação necessária para manter o nosso sistema no estado desejado
+
+300
+00:37:42,060 --> 00:37:50,420
+e depois atuamos em componentes do sistema para ou manter ou levar o nosso sistema para o
+
+301
+00:37:50,420 --> 00:37:59,860
+estado desejado, ok? Por exemplo, nós, quando carregamos mais no acelerador, aquilo que nós queremos
+
+302
+00:37:59,860 --> 00:38:06,700
+é colocado ainda mais de pressa, certo? Portanto, nós, a partir do momento em que pisamos mais
+
+303
+00:38:06,700 --> 00:38:13,980
+no acelerador, nós estamos a deslocar o estado desejado para mais de pressa, precise de mais
+
+304
+00:38:13,980 --> 00:38:22,260
+velocidade, para ter mais velocidade eu vou precisar que o motor seja ele elétrico, a gas óleo,
+
+305
+00:38:22,260 --> 00:38:30,900
+a gasolina ou a gas desenvolva mais potência, certo? Então, vamos pedir mais potência do motor e para
+
+306
+00:38:30,900 --> 00:38:43,059
+isso acontecer, nós vamos ter que atuar em elementos mecânicos ou iletrônicos para o motor aumentar
+
+307
+00:38:43,059 --> 00:38:51,500
+a potência que vai consumir e também produzir, porque os mudores são máquinas que transformam
+
+308
+00:38:51,500 --> 00:38:59,739
+energia, para produzir mais potência também vai consumir mais potência da fonte, ok? Então, nós temos
+
+309
+00:38:59,739 --> 00:39:11,259
+aqui um ciclo infinito de amestrar, calcular atuar, amestrar, calcular atuar, ok? Dovidas
+
+310
+00:39:14,059 --> 00:39:25,659
+não há? Já agora, outro sistema em papido que podemos considerar é, por exemplo, um leitor de
+
+311
+00:39:25,659 --> 00:39:33,860
+multimedia, ok? Antigamente, a de vió, os iPodos e coisas assim, agora, normalmente, pessoal, tem
+
+312
+00:39:33,860 --> 00:39:39,340
+destes leitores multimedia, por acaso também dão para fazer chamadas telefónicas, mas imagine,
+
+313
+00:39:39,340 --> 00:39:47,980
+vocês tenham aqui o Spotify, querem ouvir música e livam o Spotify, ok? Quando vocês estão a ouvir
+
+314
+00:39:47,980 --> 00:39:58,539
+música no Spotify, este ciclo também acontece, ou estamos no caso da computação clássica sequencial.
+
+315
+00:39:58,539 --> 00:40:16,659
+Também acontece, sim. O Sense no caso do Spotify, o Sense, o que que, o Sense, bolas, tá? Eu tenho
+
+316
+00:40:16,659 --> 00:40:22,259
+a palavra na ponta da língua, mas o Sense significa o que, no caso do Spotify?
+
+317
+00:40:23,260 --> 00:40:29,700
+Se utilizando a mão de parar ou no musico, por exemplo, ou o contrário, não dão começar a
+
+318
+00:40:29,700 --> 00:40:41,340
+mostrar? Por exemplo, sim, essas duas ações, ou essa, exato, essas duas ações envolvem duas atuações
+
+319
+00:40:41,340 --> 00:40:47,180
+diferentes. Isso não acho que tivermos simplesmente ouvir a música, também acontece este ciclo infinito,
+
+320
+00:40:48,179 --> 00:41:01,980
+sim. Exatamente. A amostragem é, neste caso, o que? Ir os caros dados, ir os caros mais dados ao
+
+321
+00:41:01,980 --> 00:41:10,819
+stream, ao fluxo de dados, estas ela vir por Wi-Fi, ou por dados móveis, certo? Mas a amostragem,
+
+322
+00:41:10,820 --> 00:41:20,700
+neste caso, é uma amostragem de um stream, um fluxo de dados que transportam uma música,
+
+323
+00:41:20,700 --> 00:41:31,820
+certo? E as 30 dados são bits que estão a chegar e eles depois têm que ser transformados em
+
+324
+00:41:31,820 --> 00:41:41,059
+pressão acústica nos auriculares que temos nos ouvidos, ok? Esta computação até é algo
+
+325
+00:41:41,059 --> 00:41:48,780
+laboriosa porque, para enviar menos bits pelo ar, tem que haver uma compressão da música,
+
+326
+00:41:48,780 --> 00:41:57,019
+portanto, diminuir radicalmente a quantidade de bits e quando nós recebemos esses poucos bits,
+
+327
+00:41:57,019 --> 00:42:06,139
+nós temos que fazer processos em vez de descompremer e voltarmos a ter bastante bits e as bastantes
+
+328
+00:42:06,139 --> 00:42:22,980
+bits depois vão certa forma, ser transformados em sinais elétricos e intenções elétricas que ocorrem
+
+329
+00:42:22,980 --> 00:42:31,460
+simétricas que nos auriculares vão fazer a vanar uma membrana com um imanizinho que está
+
+330
+00:42:31,460 --> 00:42:39,740
+lá por trás, que a vanar faz vibrar aquela membrana de plástico e é essa vibração que faz depois
+
+331
+00:42:39,740 --> 00:42:46,139
+a vanar o ar, que vai a vanar nosso tímpano e que depois também temos ali um sistema em bebido para
+
+332
+00:42:46,139 --> 00:42:55,699
+ter um sensor que tem todas as vibrações e transforma aquilo em sinais elétricos que
+
+333
+00:42:55,699 --> 00:43:02,259
+depois vão excitar nos neurônios que vão fazer uma computação e na nossa cabeça nós estamos
+
+334
+00:43:02,259 --> 00:43:11,379
+ouvindo música, ok? O nosso corpo também é um sistema em bebido, acurreram o software bastante
+
+335
+00:43:11,460 --> 00:43:20,140
+rosa, tá certo? Dovidas não há? Ora bem, eu estou agora a pensar que ainda vou nos solar de cinco, se
+
+336
+00:43:20,140 --> 00:43:30,940
+estiver a falar de maziado ou a massa caráteros, vocês já sabem, uma tosinha e eu percebo o sinal, ok?
+
+337
+00:43:30,940 --> 00:43:38,820
+Muito bem, pronto, isto aqui é um monenquinho que representa este ciclo infinito, vamos
+
+338
+00:43:38,820 --> 00:43:45,780
+trair, calcular, atuar, ok? Sempre, sempre, sempre, até desligarmos a máquina, pronto.
+
+339
+00:43:45,780 --> 00:43:58,019
+Um exemplo muito fácil e visível do nosso cotidiano, de um sistema deste tipo, temos aqui uma balança digital
+
+340
+00:43:58,019 --> 00:44:07,700
+daquelas cozinhas, ok? E quando nós ligamos à balança digital, começa a correr um programa que
+
+341
+00:44:07,700 --> 00:44:17,940
+basicamente se repete estas duas ações, vai ler um sensor para determinar qual é o peso
+
+342
+00:44:17,940 --> 00:44:28,140
+daquilo que está em cima do tabuleiro e determinando um valor, vai fazer a apresentar esse valor no
+
+343
+00:44:28,140 --> 00:44:36,940
+macrado, ok? Pronto, isto vai se repetindo e é por isto se repetir que nós se formos colocando
+
+344
+00:44:36,940 --> 00:44:46,420
+mais coisas ali em cima do tabuleiro, rapidamente o valor indicado naquela mostrador é atualizado, ok?
+
+345
+00:44:46,420 --> 00:44:53,619
+Se isto fosse feito, uma única vez, naquela parabigma sequencial clássico, nós só tínhamos
+
+346
+00:44:53,619 --> 00:44:58,579
+a primeira leitura e depois a balança desistia e nunca mais havia atualização, ok?
+
+347
+00:44:59,579 --> 00:45:14,779
+Parece bem? Até parece-se, ok? Ok, isto é c, mas representa um algoritmo, uma forma muito, como é que
+
+348
+00:45:14,779 --> 00:45:24,699
+é dizer, muito unífica, mas não há nenhuma dúvida em relação a isto, certo? Aquilo é o alum, é estranho para vocês?
+
+349
+00:45:24,700 --> 00:45:39,940
+Não, ok, pronto, já fizeram isto na programação do Arduino, do Atmega, certo? O ciclo infinito?
+
+350
+00:45:39,940 --> 00:45:50,260
+Sim, pronto, outra forma, após há duas escolas, há o while, um, e existe o for, ponto de virgo, ponto de virgo,
+
+351
+00:45:51,260 --> 00:46:01,180
+são duas maneiras de escrever um ciclo infinito, é um ciclo em que a condição nunca falha, certo? Ok, então vamos
+
+352
+00:46:01,179 --> 00:46:11,980
+começar. Ah, é que o programa que nós tínhamos ali funciona e funciona bem, atenção? Qualquer
+
+353
+00:46:11,980 --> 00:46:22,299
+variação que vocês colocam façam ali na pressão em cima do todo leiro, aquilo rapidamente faz atualizar o
+
+354
+00:46:22,300 --> 00:46:36,780
+valor de, o valor apresentado no ICRA, é que o modelo acenta no busy waiting. O busy waiting é
+
+355
+00:46:36,780 --> 00:46:47,620
+quando o nosso programa está sempre, sempre, sempre, a realizar instruções no processador, ok? Ou seja,
+
+356
+00:46:47,619 --> 00:46:58,380
+o processador nem tem tempo de respirar, está sempre, sempre, está recebendo instruções para fazer
+
+357
+00:46:58,380 --> 00:47:09,380
+algum trabalho, ok? No entanto, no caso desta balança, é para, eu preciso que ela reaja em uma
+
+358
+00:47:09,380 --> 00:47:22,260
+variação do peso em, sei lá, quinhentos e cinquenta na nosso fundo, se calhar, não. Pai, e por acaso
+
+359
+00:47:22,260 --> 00:47:30,140
+tenho uma balança desta na cozinha, e aquilo, se eu começar a colocar coisas, ela reagem menos de um
+
+360
+00:47:30,140 --> 00:47:36,539
+segundo, mas eu tenho para mim, aquela é rápida mais para eu conseguir cronometrar, mas eu tenho para
+
+361
+00:47:36,539 --> 00:47:44,300
+mim que ela deve andar ali à volta de quinhentos, mil e segundos, é cerca de meio, meio segundo, o tempo
+
+362
+00:47:44,300 --> 00:47:56,820
+é aquilo, atualiza. Eu poderia ter uma balança igualmente e ficar, se o valor que fosse apresentado no ICRA,
+
+363
+00:47:56,820 --> 00:48:04,500
+fosse atualizado a cada meio segundo, por exemplo, se eu fosse muito exigente se calhar, poderia baixar
+
+364
+00:48:04,500 --> 00:48:10,380
+desse meio segundo, para um quarto segundo, mas calhar não precisa de dos anos que não é
+
+365
+00:48:10,380 --> 00:48:20,739
+nosso segundo, e ter ali o processador sempre sempre sempre a colar, certo? Se eu incluir um atraso ou uma
+
+366
+00:48:20,739 --> 00:48:32,659
+espera no meu programa, durante este tempo de espera, o meu processador pode parar e poupar energia,
+
+367
+00:48:32,659 --> 00:48:40,739
+porque, porque um processador que está a executar instruções, é um processador que está a
+
+368
+00:48:40,739 --> 00:48:52,379
+consumir energia, iletronicamente você esteem dentro de um processador, ilhar, a milhões e
+
+369
+00:48:52,380 --> 00:49:03,700
+muitos milhões de processadores, computadores, mais potentes, transistors, ok? E iletronicamente, se
+
+370
+00:49:03,700 --> 00:49:10,940
+vocês tiverem um transistor, e o transistor passar-te o estado, aberto, para fechava, os transistors são como se fossem
+
+371
+00:49:10,940 --> 00:49:17,260
+de ruptores, só que são de ruptores, que em vez de ser anionados com o nosso TED, ligados e desligados, são
+
+372
+00:49:17,260 --> 00:49:25,900
+anionados por uma tensão ilérica, ok? Mas, essa tensão ilérica, que é aplicada no transistor,
+
+373
+00:49:25,900 --> 00:49:32,620
+permite que o transistor, ao vez passar corrente, como os interruptores da luz, quando vocês acendem a
+
+374
+00:49:32,620 --> 00:49:43,020
+lampada, ok? Ou então, permite que o transistor não permita, faz com que o transistor não deixe
+
+375
+00:49:43,019 --> 00:49:50,259
+passar corrente, e é que os interruptores quando vocês desligam a luz, ok? E não passa corrente nenhuma,
+
+376
+00:49:50,259 --> 00:50:01,259
+não chega, ilet cidade, a lampada, ela não acende, ok? Os transistors quando estão abertos ou fechados,
+
+377
+00:50:01,259 --> 00:50:07,780
+consolmen pouquíssima ilet cidade, é que mais voças de lampadas, as voças de lampadas quando
+
+378
+00:50:07,780 --> 00:50:16,540
+estão desligadas, esperem lá, as lampadas não, a lampada, quando está ligada, quando está acesa,
+
+379
+00:50:16,540 --> 00:50:22,180
+está a gastar ilet cidade, e quando está desligada, não gasta ilet cidade, não gasta energia nenhuma,
+
+380
+00:50:22,180 --> 00:50:32,019
+mas, o interruptor, vocês não se sentem calor a sair do interruptor, quer esteja a lampada acesa ou a lampada
+
+381
+00:50:32,539 --> 00:50:41,259
+certo? Se quer dizer que o interruptor, quando está ligado ou desligado, não peira a grande
+
+382
+00:50:41,259 --> 00:50:46,579
+potência por ali, se perdesse vocês em um sentido calor, ok? É uma das características de
+
+383
+00:50:46,579 --> 00:50:52,699
+ilumentes que estão a usar potência, é libertar parte dessa potência na forma de calor, como acontece
+
+384
+00:50:52,699 --> 00:51:01,460
+com as lampadas, mesmo as lampadas leves, estão a usar potência ilétrica para transformá-la em potência
+
+385
+00:51:01,460 --> 00:51:12,980
+luminosa, certo? Mas também libertam potência luminosa no do lado dos inframeiros, na forma de calor
+
+386
+00:51:12,980 --> 00:51:25,220
+ok? Os transistos que estão dentro dos processadores, se vocês tiverem obrigados a ligar e desligar para
+
+387
+00:51:25,220 --> 00:51:34,700
+executar uma instrução, e, antes, o ligado e o desligado está aquela fase em que os transistos
+
+388
+00:51:34,700 --> 00:51:43,940
+liberam energia, ok? É muito similar a isto, podem fazer esta experiência, que é uma boa analogia
+
+389
+00:51:43,940 --> 00:51:52,220
+que os transistos, se vocês tiverem assim com a mão, estão a sentir calor, e eu não estou a sentir calor,
+
+390
+00:51:52,220 --> 00:51:59,220
+se calhar vocês também não, e se eu colocar aqui a mão, ou seja, eu tenho aqui a mão e agora tenho
+
+391
+00:51:59,220 --> 00:52:06,220
+assim, estou a sentir calor, eu também não estou, ok? Isto é o transistador aberto, isto é o transistador
+
+392
+00:52:06,220 --> 00:52:14,140
+fechado, só que entre o aberto e o fechado, nós temos que levar a mão daqui para aqui, certo? E o que
+
+393
+00:52:14,139 --> 00:52:22,779
+acontece quando nós começamos a oscilária entre o aberto e o fechado? E cada vez mais rápido?
+
+394
+00:52:22,779 --> 00:52:32,059
+O que acontece com os processadores? As mãos acessem, certo? Por tanto, ter um processador que está
+
+395
+00:52:32,059 --> 00:52:41,059
+sempre, os transistos abrirem a fechar, abrirem a fechar, faz com que o processador liberte calor e
+
+396
+00:52:41,059 --> 00:52:46,059
+também consuma, tudo aquilo que ele liberte é porque ele está a consumir em algum sítio,
+
+397
+00:52:46,059 --> 00:52:56,059
+ou da fonte de alimentação, ou da bateria, ok? Se não houver necessidade de ele estar a trabalhar, os
+
+398
+00:52:56,059 --> 00:53:04,059
+transistos ficam parados e nós estamos a gastar energia, ok? Por tanto, nós podemos ter sistemas
+
+399
+00:53:04,059 --> 00:53:14,059
+e ficá-se, comprem com a tarefa, quer mostrar-me o peso de meio e meio segundo, perfeito? E boa parte do tempo,
+
+400
+00:53:14,059 --> 00:53:25,059
+ele não está a fazer nada, mas também está a preparar energia, ok? Tem aqui o mesmo programa, mas
+
+401
+00:53:26,059 --> 00:53:33,059
+só já agora, vocês conseguem ver aqui o meu rato? A volta do dia 5 antes?
+
+402
+00:53:33,059 --> 00:53:42,059
+ou não? Sim, ok, pronto, eu poderia estar aqui a passar o rato e eu estava a ver o rato e vocês não
+
+403
+00:53:42,059 --> 00:53:46,059
+estavam a ver o rato, ok, mas pronto, então estamos todos a ver o mesmo. E o que sentei é que esta linha,
+
+404
+00:53:46,059 --> 00:53:56,059
+em que estou a dizer, para adormecer durante 5 minutos, ok? E o que que acontece?
+
+405
+00:53:56,059 --> 00:54:06,059
+Avitualmente esta instrução de lei leva o processador a um estado de poupança de energia, ok? É um estado em que durante
+
+406
+00:54:06,059 --> 00:54:13,059
+5 minutos em princípio não vai acontecer nada, logo encosta e daqui a 5 minutos continuamos a fazer
+
+407
+00:54:13,059 --> 00:54:21,059
+trabalho, e isso promete nos poupar energia, ok? Se nós tivéssemos o código inicial,
+
+408
+00:54:21,059 --> 00:54:26,059
+nós estaríamos sempre, sempre, sempre, sempre, sempre para consumir potência, então a ver aqui, a linha
+
+409
+00:54:26,059 --> 00:54:35,059
+bramaia, mas se eu pulsei a trabalhar solte vez em quando, ele aqui faz a leitura de sensor e apresenta o
+
+410
+00:54:35,059 --> 00:54:45,059
+resultado no visor e dorme durante 5 minutos. Durante este tempo eu estou a poupar energia,
+
+411
+00:54:45,059 --> 00:54:54,059
+e aqui só estou a libertar aquela potência que não consigo evitar de libertar ou de consumir,
+
+412
+00:54:54,059 --> 00:55:01,059
+enquanto tenho a minha máquina ligada, a única forma de ver não gastar esta energia,
+
+413
+00:55:01,059 --> 00:55:11,059
+é ir ao interruptor e desligá-lo mesmo, certo? A reencaria a matria fora, vamos dizer assim, certo?
+
+414
+00:55:11,059 --> 00:55:19,059
+Então nós temos aqui um ciclo de trabalho, ele trabalha durante algum tempo e durante o resto do tempo
+
+415
+00:55:19,059 --> 00:55:25,059
+ele está inativo, até que volta a ter de trabalhar e depois volta a descansar.
+
+416
+00:55:26,059 --> 00:55:35,059
+Este ciclo, este tempo de natividade é bom para duas coisas, a primeira é que me permite poupar energia,
+
+417
+00:55:35,059 --> 00:55:45,059
+no caso da balança, aquilo normalmente é alimentado com duas ou três pilhas, ok? É a diferença entre ter uma
+
+418
+00:55:45,059 --> 00:55:53,059
+uma das pilhas que me douravam dois dias ou ter umas pilhas que me douram, sei lá, um ano, certo?
+
+419
+00:55:53,059 --> 00:56:06,059
+Tanto não é mal, mas também, isto aqui há uma oportunidade que é, e eu tenho este tempo para realizar esta tarefa,
+
+420
+00:56:07,059 --> 00:56:16,059
+e eu fico com este tempo todo para realizar outras tarefas que também possam ser necessárias, ok?
+
+421
+00:56:16,059 --> 00:56:32,059
+Eu só preciso é de conseguir colocar mais funções que possam ser executadas nesta plataforma como votacional durante este tempo, ok?
+
+422
+00:56:32,059 --> 00:56:44,059
+Portanto, o facto de ter uma tarefa ou uma função que não está constantemente a utilizar o processador,
+
+423
+00:56:44,059 --> 00:56:52,059
+é que eu posso poupar energia ou posso colocar mais funções na mesma máquina, ok?
+
+424
+00:56:53,059 --> 00:56:59,059
+dúvidas até agora não há, faz sentido?
+
+425
+00:57:01,059 --> 00:57:12,059
+Eu acho que faz sentido, mas isto também pode ser o que soltendo ansioso, ok? Então, partilhas recursos e concorrência,
+
+426
+00:57:13,059 --> 00:57:21,059
+se o ciclo não utilizar, ou se é aquela nossa tarefa, não utilizar 100% do tempo do processador,
+
+427
+00:57:21,059 --> 00:57:28,059
+então há ali um período em que o processador não trabalha, isto está inativo, certo?
+
+428
+00:57:29,059 --> 00:57:35,059
+Ou então, idle em português pode ser traduzido por inativo ou então por ósciose,
+
+429
+00:57:35,059 --> 00:57:46,059
+também já vi ósciose é tradução à letra, não está a fazer nada, mas muitas vezes eu preferi utilizar o termo inativo.
+
+430
+00:57:47,059 --> 00:58:00,059
+Claro, se eu quiser utilizar muito grandes problemas com a energia, por exemplo, como é que eu dizer,
+
+431
+00:58:00,059 --> 00:58:10,059
+é alimentado através de uma ficha na tomada, opa, eu posso querer maximizar a utilização da minha plataforma,
+
+432
+00:58:11,059 --> 00:58:19,059
+então eu coloco várias tarefas a correr, instale várias tarefas na minha plataforma,
+
+433
+00:58:19,059 --> 00:58:29,059
+e depois eu vou atribuindo o tempo de processador a cada uma dessas tarefas com forma forneçária, ok?
+
+434
+00:58:29,059 --> 00:58:36,059
+do ponto de vista das tarefas parece que as tarefas estão a concorrer por este tempo de processador,
+
+435
+00:58:37,059 --> 00:58:43,059
+não é uma concorrencia, como é que é dizer, selvagem, em que elas querem matar-semos aos outros,
+
+436
+00:58:43,059 --> 00:58:49,059
+mas é uma concorrencia esperemos que é civilizada, eu dizia, eu quero usar o processador,
+
+437
+00:58:49,059 --> 00:58:57,059
+e quando está disponível, eles oferecem o processador e o processador vai executar o seu código.
+
+438
+00:58:57,059 --> 00:59:03,059
+Quando os terminarem, o processador passa para outra tarefa e isso contou o código da outra tarefa.
+
+439
+00:59:04,059 --> 00:59:09,059
+Como isto é um ciclo mais chился para mais tarde, nós�amos voltarem a nossa tarefa, certo?
+
+440
+00:59:09,059 --> 00:59:16,059
+E é isso que nós temos aqui neste diagrama. Nós temos ao longo do tempo,
+
+441
+00:59:16,059 --> 00:59:22,059
+a tarefa tem um, em ecetar, a seguir na tarefa ter um e a seguir na tarefa ter dois,
+
+442
+00:59:22,059 --> 00:59:25,059
+a seguir na tarefa ter dois, quando termina, atakha a tarefa ter três,
+
+443
+00:59:25,059 --> 00:59:34,059
+E quando a tarefa ter 3 termina, voltamos a ter a tarefa 1 a repetir mais uma interação, certo?
+
+444
+00:59:34,059 --> 00:59:43,059
+Desta forma, nós conseguimos ter uma plataforma que isso escuta 3 tarefas,
+
+445
+00:59:43,059 --> 00:59:50,059
+em vez de precisar de ter 3 plataformas cada uma delas para correr uma tarefa.
+
+446
+00:59:50,059 --> 00:59:59,059
+Ou seja, temos aqui uma solução que é 3 vezes mais barata, 3 programas pelo preço de uma plataforma computacional,
+
+447
+00:59:59,059 --> 01:00:01,059
+é uma boa ideia.
+
+448
+01:00:04,059 --> 01:00:09,059
+Então as perigos vocês dizem que era uma boa ideia, mas eu rico, por vocês, é uma boa ideia.
+
+449
+01:00:09,059 --> 01:00:15,059
+Ok, um pulgar é sempre bom.
+
+450
+01:00:16,059 --> 01:00:25,059
+Estarefas são intercaladas ao longo do tempo, e como os computadores, mesmo aquelas que são baseadas em microcontroladores,
+
+451
+01:00:25,059 --> 01:00:29,059
+são muito rápidos do nosso ponto de vista.
+
+452
+01:00:29,059 --> 01:00:34,059
+Imaginem, o meu primeiro computador foi um Spectrum,
+
+453
+01:00:34,059 --> 01:00:41,059
+que tinha um processador, o Zilog, 1880, que era um processador de 8 bits,
+
+454
+01:00:41,059 --> 01:00:49,059
+e aquilo corria com um relógio de 3,6 megahertz, se não me engano.
+
+455
+01:00:49,059 --> 01:00:53,059
+3,6 megahertz quer dizer que, na melhor das hipóteses,
+
+456
+01:00:53,059 --> 01:01:02,059
+e eu tinha um processador que era capaz de realizar 3,6 milhões ou 3 milhões e 600 mil instruções,
+
+457
+01:01:02,059 --> 01:01:09,059
+num segundo, pal, meu cérebro, por mais que o queira, não tem essa velocidade.
+
+458
+01:01:09,059 --> 01:01:17,059
+Então, se eu conseguir intercalar isto, por exemplo, fazer dois ciclos textos num segundo,
+
+459
+01:01:17,059 --> 01:01:26,059
+aos meus olhos parece que estas 3 tarefas estão todas a correr ao mesmo tempo,
+
+460
+01:01:26,059 --> 01:01:32,059
+certo? Como se tivesse 3 processadores? Em vez de um,
+
+461
+01:01:32,059 --> 01:01:36,059
+é um efeito muito parecido com aquelas rodas.
+
+462
+01:01:36,059 --> 01:01:45,059
+Imaginem, vocês têm um disco e colocam aquelas rodas com pintados de azul, verde, amarelo, vermelho, as cores básicas,
+
+463
+01:01:45,059 --> 01:01:50,059
+mas as cores fundamentais. Se vocês verem a roda parada, vocês conseguem distinguir
+
+464
+01:01:50,059 --> 01:01:53,059
+muito bem todas as cores, certo?
+
+465
+01:01:53,059 --> 01:01:59,059
+Mas se vocês começarem a rovar, as cores já começam a ficar ali um pouco misturadas,
+
+466
+01:01:59,059 --> 01:02:05,059
+mas se vocês conseguirem rovar o disco muito de pressa, as cores ficam tal maneiraira,
+
+467
+01:02:05,059 --> 01:02:10,059
+misturadas que vocês vêm um disco branco, certo?
+
+468
+01:02:10,059 --> 01:02:15,059
+E é também o efeito que nós temos aqui, elas são intercaladas ao longo do tempo,
+
+469
+01:02:15,059 --> 01:02:22,059
+mas de uma forma tão rápida que para nós, apesar de podermos ter só um processador,
+
+470
+01:02:22,059 --> 01:02:28,059
+parece que nós temos vários, cada um deles é executar um desses programas,
+
+471
+01:02:28,059 --> 01:02:32,059
+ok? E depois se tiver nos multicores, a festa ainda é maior, tá bom?
+
+472
+01:02:32,059 --> 01:02:36,059
+Dovidas, não há?
+
+473
+01:02:36,059 --> 01:02:39,059
+Ok, pronto.
+
+474
+01:02:39,059 --> 01:02:46,059
+Programação concorrente, na programação concorrente, o processador é um recurso que é partilhado
+
+475
+01:02:46,059 --> 01:02:54,059
+os programas ou pelas várias entidades de código que estão presentes nesse sistema.
+
+476
+01:02:54,059 --> 01:03:00,059
+As tarefas, vamos chamar tarefas, é o termo correto para cada uma dessas entidades de código.
+
+477
+01:03:00,059 --> 01:03:10,059
+As tarefas são funções que comprem um determinado aspecto, são intercaladas para optimizar
+
+478
+01:03:10,059 --> 01:03:12,059
+ação do processador.
+
+479
+01:03:12,059 --> 01:03:22,059
+A concorrencia implica que as várias tarefas progridam ao longo do tempo, ok?
+
+480
+01:03:22,059 --> 01:03:26,059
+Mesmo que elas não escutam em simultaneamente no processador, ou seja,
+
+481
+01:03:26,059 --> 01:03:33,059
+da impressão de paralelismo, apesar de podermos não ter mesmo paralelismo.
+
+482
+01:03:33,059 --> 01:03:38,059
+Paralelismo é diferente com concorrencia, concorrente.
+
+483
+01:03:38,059 --> 01:03:43,059
+Concurrente quer dizer que eles competem por tempo de processador.
+
+484
+01:03:43,059 --> 01:03:50,059
+Paralelismo quer dizer que quando nós temos duas tarefas que estão ao mesmo tempo a serem escutadas.
+
+485
+01:03:50,059 --> 01:03:59,059
+Eu só consigo ter verdadeiro paralelismo se tiver mais de um processador, um processador para cada tarefa.
+
+486
+01:03:59,059 --> 01:04:09,059
+Ok? Ficou compreendida a distinção entre o termo correante e paralelo?
+
+487
+01:04:09,059 --> 01:04:15,059
+Concurrente? Pode dar a impressão de paralelismo, paralelo.
+
+488
+01:04:15,059 --> 01:04:23,059
+Eu tenho mesmo que ter processadores distintos a correr ao mesmo tempo tarefas distintas.
+
+489
+01:04:23,059 --> 01:04:28,059
+Ok? Consequi que ter isso ou com vários microcontroladores,
+
+490
+01:04:28,059 --> 01:04:35,059
+se eu tiver três microcontroladores, eu consigo escutar três tarefas em paralel,
+
+491
+01:04:35,059 --> 01:04:42,059
+mas também se eu tiver um processador com quatro cores, eu consigo escutar quatro tarefas em paralelo.
+
+492
+01:04:42,059 --> 01:04:46,059
+Se tiver um microcontrolador com um único processador,
+
+493
+01:04:46,059 --> 01:04:53,059
+só consigo fazer uma operação, correr uma tarefa em cada instante.
+
+494
+01:04:53,059 --> 01:04:59,059
+Não há paralelismo, mas conseguimos fazer de conta aquele paralelismo
+
+495
+01:04:59,059 --> 01:05:04,059
+quando o que começa a arrubar mais presta do que o nosso cérebro e a nossa vista.
+
+496
+01:05:04,059 --> 01:05:09,059
+Ok? Dove-las, não há? Muito bem.
+
+497
+01:05:09,059 --> 01:05:11,059
+Para, e agora estas tarefas?
+
+498
+01:05:11,059 --> 01:05:17,059
+Estarefas em sistemas em débitos, como é que elas arrancam?
+
+499
+01:05:17,059 --> 01:05:25,059
+Nós até agora vemos tarefas que arrancavam baseadas na passagem de tempo.
+
+500
+01:05:25,059 --> 01:05:32,059
+Aquela tarefa da balança, corria mais ou menos a cada quinhante,
+
+501
+01:05:32,059 --> 01:05:37,059
+500.000 segundos. Temos a tempo, taque, taque.
+
+502
+01:05:37,059 --> 01:05:39,059
+Nós vamos correr aquela função.
+
+503
+01:05:39,059 --> 01:05:45,059
+São tarefas que são estimuladas pelo tempo.
+
+504
+01:05:45,059 --> 01:05:49,059
+Também é que eles chamam tarefas bióbicas.
+
+505
+01:05:49,059 --> 01:05:56,059
+Mas também existem tarefas que são ativadas por ocorrência de um evento.
+
+506
+01:05:56,059 --> 01:06:00,059
+Por exemplo, uma tarefa quando nós cagamos numa tecla.
+
+507
+01:06:00,059 --> 01:06:03,059
+A tecla é carregada de uma forma bióbica?
+
+508
+01:06:03,059 --> 01:06:06,059
+Não, é quando calha, certo?
+
+509
+01:06:06,059 --> 01:06:12,059
+Mas quando alguém carrega naquele botão, é necessário escutar uma tarefa.
+
+510
+01:06:12,059 --> 01:06:23,059
+Por exemplo, uma tarefa que é ativada por um evento de uma forma dramática.
+
+511
+01:06:24,059 --> 01:06:32,059
+Normalmente, nós queremos que o lau sacvar fique muito considerável dentro do volante.
+
+512
+01:06:32,059 --> 01:06:35,059
+É o sítio mais aconchigado para o estar.
+
+513
+01:06:35,059 --> 01:06:39,059
+Tá lá, ta quietinho, fica aí adromês, espero que nunca te conhecer.
+
+514
+01:06:39,059 --> 01:06:50,059
+Mas no evento de haver uma colisão em que existe uma aceleração demasiado forte para ser uma aceleração normal.
+
+515
+01:06:51,059 --> 01:06:53,059
+O que acontece?
+
+516
+01:06:53,059 --> 01:07:06,059
+Há um evento que vai expulsar uma tarefa que vai atuar sobre os exclusivos que estão lá por trás do saco.
+
+517
+01:07:06,059 --> 01:07:10,059
+Os exclusivos, que é uma reação química que é parecida de uma expulsão.
+
+518
+01:07:11,059 --> 01:07:18,059
+Tenho lá uns químicos que arrepentam que esse é muito expressa e liberam um gás que expande muito rapidamente.
+
+519
+01:07:18,059 --> 01:07:24,059
+Portanto, é técnicamente uma expulsão que existe dentro de saco.
+
+520
+01:07:24,059 --> 01:07:31,059
+Portanto, temos ali uma tarefa que é acionada por um evento.
+
+521
+01:07:31,059 --> 01:07:42,059
+Desstem, as embebitos, complexos, normalmente, integram os dois tipos de tarefas ativadas pelo tempo e ativadas pelo evento,
+
+522
+01:07:42,059 --> 01:07:55,059
+em diferentes racios, e mesmo as que são ativadas pelo tempo, nem todas são ativadas com a mesma periodicidade.
+
+523
+01:07:56,059 --> 01:08:02,059
+Então, vamos agora aqui para o modelo superlope.
+
+524
+01:08:02,059 --> 01:08:17,059
+No modelo do super ciclo, o superlope, nós temos um ciclo que vai executando sequencialmente e depois, vamos em cada interação do ciclo,
+
+525
+01:08:17,060 --> 01:08:22,060
+verificar quais são as funções que têm em ser ativadas.
+
+526
+01:08:22,060 --> 01:08:28,060
+Portanto, está na hora de ativar a função A e está na hora de ativar a função B, não.
+
+527
+01:08:28,060 --> 01:08:33,060
+Está na hora de ativar a tarefa C, então tarefa C executa.
+
+528
+01:08:33,060 --> 01:08:37,060
+Mas ela é mais tarde, vamos voltar e vamos voltar a repetir todo este processo.
+
+529
+01:08:37,060 --> 01:08:46,060
+Está na hora de ativar a tarefa A, não, está na hora de ativar a tarefa B, então tarefa B entra ao serviço.
+
+530
+01:08:47,060 --> 01:08:59,060
+Um isel, aqui, suponha que nós temos aqui um dispositivo em que temos um motor servo,
+
+531
+01:08:59,060 --> 01:09:04,060
+e temos aqui um potenciometro, normalmente os servos estão volados por potenciometro,
+
+532
+01:09:04,060 --> 01:09:14,060
+e nós mexemos assim aqui no botão que tem um potenciometro e o motor deve acompanhar
+
+533
+01:09:14,060 --> 01:09:22,060
+de acordo com a regulação que nós fazemos no botão, se rodarmos para aqui o motor servo,
+
+534
+01:09:22,060 --> 01:09:27,060
+deve se deslocar para o meu lado esquerdo, se calhar para vocês ao lado direito,
+
+535
+01:09:27,060 --> 01:09:36,060
+se fizer isto assim o motor servo, deve atualizar a sua posição para acompanhar a nova regulação.
+
+536
+01:09:37,060 --> 01:09:50,060
+Para o motor ser minimamente responsivo, nós definimos que esta tarefa que lea o potenciometro,
+
+537
+01:09:50,060 --> 01:09:57,060
+a posição de potenciometro, e regula o servo para a posição correspondente à regulação,
+
+538
+01:09:57,060 --> 01:10:00,060
+temos que fazer isto a cada 10 mil e segundos.
+
+539
+01:10:01,060 --> 01:10:08,060
+Se fosse 6 mil e segundos, a ver ali muito atrás, uma pessoa começava a mexer no botão,
+
+540
+01:10:08,060 --> 01:10:13,060
+a esquerda direita, a esquerda direita, e o servo andava lá, as vezes não isso quer se mexer,
+
+541
+01:10:13,060 --> 01:10:15,060
+e andava ali meio perdido no espaço.
+
+542
+01:10:15,060 --> 01:10:22,060
+Então, 10 mil e segundos é rápido e suficiente para qualquer mudança que uma pessoa faça no botão,
+
+543
+01:10:23,060 --> 01:10:32,060
+mas também queremos mostrar um valor que corresponda a regulação do servo.
+
+544
+01:10:32,060 --> 01:10:40,060
+Imagina-me, 0, se tiver a apontar para baixo, 188, se tiver a apontar para cima, 277,
+
+545
+01:10:40,060 --> 01:10:44,060
+se tiver a apontar para o lado direito. Qualquer coisa assim, tá bom?
+
+546
+01:10:44,060 --> 01:10:49,060
+Agora, para mostrar isto no visor, não há tanto stress porque se calhar os nossos olhos,
+
+547
+01:10:49,060 --> 01:10:52,060
+nem conseguem ver diferenças em 10 mil e segundos.
+
+548
+01:10:52,060 --> 01:11:00,060
+Os nossos olhos conseguem ver a volta de 10, 15 imagens por...
+
+549
+01:11:00,060 --> 01:11:04,060
+Nem chegar às 15 imagens, é a volta de 10 imagens por segundo,
+
+550
+01:11:04,060 --> 01:11:07,060
+então, se nós conseguimos ver 10 imagens por segundo,
+
+551
+01:11:07,060 --> 01:11:10,060
+é uma imagem a cada 100 mil e segundos.
+
+552
+01:11:10,060 --> 01:11:13,060
+100 mil e segundos não tá mal, ok?
+
+553
+01:11:13,060 --> 01:11:18,060
+Vamos atualizar o visor a cada 100 mil e segundos.
+
+554
+01:11:18,060 --> 01:11:23,060
+Eu tenho aqui um super ciclo, tenho aqui o meu ciclo infinito,
+
+555
+01:11:23,060 --> 01:11:29,060
+e vou verificar qual é o meu tempo atual do sistema, ok?
+
+556
+01:11:29,060 --> 01:11:38,060
+Esta função get system time é uma função que eu inventei para ir buscar o valor do relógio
+
+557
+01:11:38,060 --> 01:11:42,060
+e vou guardá-la aqui na minha variável current time, certo?
+
+558
+01:11:42,060 --> 01:11:49,060
+E agora, para cada uma das funções, eu vou verificar se o tempo que passou,
+
+559
+01:11:49,060 --> 01:11:58,060
+desde a última ativação até agora, o trapaça o período da tarefa 1,
+
+560
+01:11:58,060 --> 01:12:02,060
+que seria os tais 10 mil e segundos, ok?
+
+561
+01:12:02,060 --> 01:12:08,060
+Se esta diferença entre a última ativação e o tempo atual,
+
+562
+01:12:08,060 --> 01:12:13,060
+o trapaça é esse período, então, eu vou correr a minha tarefa.
+
+563
+01:12:13,060 --> 01:12:19,060
+Vou correr aqui, a função servo, rame servo control, ok?
+
+564
+01:12:19,060 --> 01:12:23,060
+Eu coloquei aqui na esta minha função todas as instruções,
+
+565
+01:12:23,060 --> 01:12:28,060
+todas as operações da atualização do ser, do meu torcer, ok?
+
+566
+01:12:28,060 --> 01:12:34,060
+E quando terminar, eu vou preparar a próxima ativação.
+
+567
+01:12:34,060 --> 01:12:47,060
+Vou dizer que isto deveria ter sido ativado no momento da última ativação mais o período.
+
+568
+01:12:47,060 --> 01:12:57,060
+E agora estou à espera de perguntas em relação a esta linha.
+
+569
+01:12:57,060 --> 01:13:01,060
+Não tenho perguntas?
+
+570
+01:13:01,060 --> 01:13:10,060
+Eu vou se dizer que se calhar mais natural era dizer que ter 1 é igual a current time.
+
+571
+01:13:10,060 --> 01:13:14,060
+Certo? Como é que isto foi ativado pela última aferias?
+
+572
+01:13:14,060 --> 01:13:18,060
+Ah, foi em current time, mais ou menos.
+
+573
+01:13:18,060 --> 01:13:23,060
+Certo? Então, porque eu não estou por aqui current time?
+
+574
+01:13:23,060 --> 01:13:27,060
+Alguma ideia?
+
+575
+01:13:28,060 --> 01:13:37,060
+Melhor ainda, vocês não perceberam o efeito desta linha?
+
+576
+01:13:42,060 --> 01:13:45,060
+Estão todos agentando?
+
+577
+01:13:46,060 --> 01:13:48,060
+É fazer o secado, não é?
+
+578
+01:13:48,060 --> 01:13:57,060
+Vamos aumentar o tempo, aumentar o tempo para fazer o secado?
+
+579
+01:13:57,060 --> 01:13:59,060
+Exatamente.
+
+580
+01:13:59,060 --> 01:14:12,060
+Ou seja, reparem que nós aqui estamos a verificar se o tempo atual, menos o tempo do instante da última ativação, o trapação do período.
+
+581
+01:14:12,060 --> 01:14:18,060
+Vamos imaginar que o current time é 100.
+
+582
+01:14:18,060 --> 01:14:27,060
+E o meu teu 1, a minha tarefa 1, tinha sido ativada no instante 95.
+
+583
+01:14:27,060 --> 01:14:33,060
+100, menos 95, passaram uns 5 mil e segundos.
+
+584
+01:14:33,060 --> 01:14:36,060
+Mil e cinco mil e segundos, é maior do que vez.
+
+585
+01:14:36,060 --> 01:14:39,060
+Não, então não há tempo isto.
+
+586
+01:14:39,060 --> 01:14:46,060
+Mas, na próxima vez que passar por aqui, eu posso ter aqui 100 e 7.
+
+587
+01:14:46,060 --> 01:14:51,060
+E tenho 117 menos 95.
+
+588
+01:14:51,060 --> 01:14:55,060
+117 menos 95 dá 12.
+
+589
+01:14:55,060 --> 01:15:02,060
+Estão já passaram uns 12 mil e segundos desde a última vez que eu ativei a tarefa 1.
+
+590
+01:15:02,060 --> 01:15:05,060
+12 é maior do que vez.
+
+591
+01:15:05,060 --> 01:15:10,060
+É, então está na altura de atualizar o meu motor, certo?
+
+592
+01:15:10,060 --> 01:15:12,060
+Faz sentido?
+
+593
+01:15:12,060 --> 01:15:15,060
+Já passaram mais 10 mil e segundos.
+
+594
+01:15:15,060 --> 01:15:19,060
+Então, eu tenho mesmo que realizar a minha tarefa e realizo.
+
+595
+01:15:19,060 --> 01:15:21,060
+Agora, há uma coisa que é um caso para isto.
+
+596
+01:15:21,060 --> 01:15:24,060
+É que o tempo não para, nem volta para trás.
+
+597
+01:15:24,060 --> 01:15:30,060
+Portanto, a medida que isto vai ser discutada, o tempo vai passando, vai passando.
+
+598
+01:15:30,060 --> 01:15:32,060
+E o que é que acontecer se eu pudesse aqui?
+
+599
+01:15:32,060 --> 01:15:36,060
+T1 igual a curante time.
+
+600
+01:15:36,060 --> 01:15:41,060
+Eu passava de 95 para 112.
+
+601
+01:15:41,060 --> 01:15:42,060
+Espera, hein?
+
+602
+01:15:42,060 --> 01:15:45,060
+95 para 117.
+
+603
+01:15:45,060 --> 01:15:50,060
+E eu, em vez de dizer que a minha próxima ativação,
+
+604
+01:15:50,060 --> 01:15:57,060
+se tinha sido 95, estaria a espera do 115 e depois estaria a espera do 115.
+
+605
+01:15:58,060 --> 01:16:03,060
+Só que eu atrazem e foi no 117.
+
+606
+01:16:03,060 --> 01:16:05,060
+Ou já depois disso.
+
+607
+01:16:05,060 --> 01:16:11,060
+Se eu posei 117, já estaria a espera da próxima ativação,
+
+608
+01:16:11,060 --> 01:16:16,060
+nunca no 115, mas pelo menos no 117.
+
+609
+01:16:16,060 --> 01:16:19,060
+Faz sentido?
+
+610
+01:16:22,060 --> 01:16:24,060
+Faz sentido ou não?
+
+611
+01:16:25,060 --> 01:16:26,060
+Sim.
+
+612
+01:16:26,060 --> 01:16:35,060
+Isso quer dizer que eu começava a incluir no meu código uma veriva no tempo.
+
+613
+01:16:35,060 --> 01:16:41,060
+Eu tinha um erro da minha ativação, porque já me tinha atrasado.
+
+614
+01:16:41,060 --> 01:16:47,060
+E a minha próxima ativação ia juntar e assim eu.
+
+615
+01:16:47,060 --> 01:16:54,060
+Eu vei esta forma, posso ativar mais tarde,
+
+616
+01:16:54,060 --> 01:16:58,060
+mas a próxima ativação não vai sufrer com a ser,
+
+617
+01:16:58,060 --> 01:17:02,060
+porque eu tenho aqui 95 e vou sumar de 10.
+
+618
+01:17:02,060 --> 01:17:07,060
+Portanto, eu estou a dizer que a última ativação não foi o 75,
+
+619
+01:17:07,060 --> 01:17:09,060
+mas deveria ter sido.
+
+620
+01:17:09,060 --> 01:17:13,060
+Isso quer dizer que a próxima deverá ser o 115.
+
+621
+01:17:14,060 --> 01:17:19,060
+Se não for, pronto, pode ser o 16, 17.
+
+622
+01:17:19,060 --> 01:17:21,060
+Mas já veram o que é que era?
+
+623
+01:17:21,060 --> 01:17:27,060
+Vocês chegaram aos 16, poderem ativar a tarefa 1 e não ativar um porque.
+
+624
+01:17:27,060 --> 01:17:31,060
+Ai não, a última vez foi no 17, portanto tenho que ser no 17.
+
+625
+01:17:31,060 --> 01:17:33,060
+E perdem uma ali oportunidade.
+
+626
+01:17:33,060 --> 01:17:37,060
+Vocês começavam a ter ali uma aderiva nas ativações.
+
+627
+01:17:37,060 --> 01:17:42,060
+Desta forma, nós garantimos que os atrados não são acumulados.
+
+628
+01:17:42,060 --> 01:17:45,060
+A aderiva não acumula.
+
+629
+01:17:45,060 --> 01:17:48,060
+Ok?
+
+630
+01:17:48,060 --> 01:17:50,060
+Fais sentido.
+
+631
+01:17:50,060 --> 01:17:54,060
+Em muitos exemplos que vocês podem encontrar na neta,
+
+632
+01:17:54,060 --> 01:18:00,060
+isso calhar até mesmo nas implogências artificiais,
+
+633
+01:18:00,060 --> 01:18:03,060
+eles podem encontrar aqui o current time.
+
+634
+01:18:03,060 --> 01:18:08,060
+Portanto, vou atualizar com a última leitura do relógio.
+
+635
+01:18:08,060 --> 01:18:11,060
+Só vocês fizerem isso, devem instarciantes.
+
+636
+01:18:11,060 --> 01:18:14,060
+Estão acumular, principalmente um erro.
+
+637
+01:18:14,060 --> 01:18:16,060
+Serto, ao longo do tempo.
+
+638
+01:18:16,060 --> 01:18:19,060
+Vocês gostam de olhar para o relógio,
+
+639
+01:18:19,060 --> 01:18:22,060
+acerta um relógio agora, certo?
+
+640
+01:18:22,060 --> 01:18:27,060
+E passar três dias, eles já estavam aviantados 2 minutos.
+
+641
+01:18:27,060 --> 01:18:30,060
+Qual é a sensação?
+
+642
+01:18:30,060 --> 01:18:32,060
+É agradável?
+
+643
+01:18:32,060 --> 01:18:34,060
+Nem ligam?
+
+644
+01:18:34,060 --> 01:18:37,060
+Se tiver aviantável já numa trase, chego antes da hora.
+
+645
+01:18:37,060 --> 01:18:40,060
+É isso?
+
+646
+01:18:40,060 --> 01:18:45,060
+Eu normalmente não gosto com o relógio,
+
+647
+01:18:45,060 --> 01:18:49,060
+nem atrás, nem aviantos.
+
+648
+01:18:49,060 --> 01:18:53,060
+Então, é o que nós temos aqui.
+
+649
+01:18:53,060 --> 01:18:55,060
+É aqui, para...
+
+650
+01:18:55,060 --> 01:19:00,060
+Nós não podemos usar na mesma o current time.
+
+651
+01:19:00,060 --> 01:19:04,060
+Se a gente passar a sensação logo para a primeira,
+
+652
+01:19:04,060 --> 01:19:06,060
+a seguir ao if,
+
+653
+01:19:06,060 --> 01:19:10,060
+ou seja, a primeira coisa que ele faria seria atualizar até 1,
+
+654
+01:19:10,060 --> 01:19:13,060
+e só depois de que...
+
+655
+01:19:13,060 --> 01:19:16,060
+É igual, é igual para o que repara.
+
+656
+01:19:16,060 --> 01:19:19,060
+O current time está variável,
+
+657
+01:19:19,060 --> 01:19:23,060
+vai ter o mesmo valor em todo o ciclo.
+
+658
+01:19:23,060 --> 01:19:24,060
+Serto.
+
+659
+01:19:24,060 --> 01:19:28,060
+E o teu 1 também vai ter o mesmo valor aqui,
+
+660
+01:19:28,060 --> 01:19:30,060
+ou aqui.
+
+661
+01:19:30,060 --> 01:19:33,060
+Aqui é que já deixei de ter o valor, né?
+
+662
+01:19:33,060 --> 01:19:35,060
+É indiferente.
+
+663
+01:19:35,060 --> 01:19:37,060
+É indiferente, aliás.
+
+664
+01:19:37,060 --> 01:19:39,060
+Nós até fazemos o Get.
+
+665
+01:19:39,060 --> 01:19:41,060
+Vamos buscar o valor ao relógio,
+
+666
+01:19:41,060 --> 01:19:43,060
+e guardá-me-lo numa variável,
+
+667
+01:19:43,060 --> 01:19:47,060
+porque há medida que nós vamos avançando dentro deste ciclo,
+
+668
+01:19:47,060 --> 01:19:51,060
+o próprio valor do relógio também vai avançando.
+
+669
+01:19:51,060 --> 01:19:54,060
+Serto. É feito fora do ciclo,
+
+670
+01:19:54,060 --> 01:19:57,060
+o valor já está fixo antes dele.
+
+671
+01:19:57,060 --> 01:19:59,060
+Exatamente.
+
+672
+01:19:59,060 --> 01:20:02,060
+Nós aqui tiramos uma fotografia ao relógio,
+
+673
+01:20:02,060 --> 01:20:04,060
+e depois trabalhamos com essa fotografia.
+
+674
+01:20:04,060 --> 01:20:06,060
+Apesar de que o relógio vai também ele avançando,
+
+675
+01:20:06,060 --> 01:20:08,060
+nós, ok.
+
+676
+01:20:08,060 --> 01:20:10,060
+A nossa lógica é,
+
+677
+01:20:10,060 --> 01:20:12,060
+e este é o tempo de arranque do meu ciclo.
+
+678
+01:20:12,060 --> 01:20:14,060
+Portanto, é minha âncora,
+
+679
+01:20:14,060 --> 01:20:18,060
+dentro desta inscrição do ciclo.
+
+680
+01:20:18,060 --> 01:20:19,060
+Ok?
+
+681
+01:20:19,060 --> 01:20:20,060
+Ok.
+
+682
+01:20:20,060 --> 01:20:21,060
+Sim.
+
+683
+01:20:21,060 --> 01:20:22,060
+A sentir?
+
+684
+01:20:22,060 --> 01:20:23,060
+Sim.
+
+685
+01:20:23,060 --> 01:20:25,060
+Após são os trucos,
+
+686
+01:20:25,060 --> 01:20:28,060
+como a pessoa é aprendendo ao longo da vida,
+
+687
+01:20:28,060 --> 01:20:30,060
+parecem umas coisas pequenas,
+
+688
+01:20:30,060 --> 01:20:34,060
+mas, se nós tiramos um software que está a rodar minutos,
+
+689
+01:20:34,060 --> 01:20:36,060
+horas, dias, semanas,
+
+690
+01:20:36,060 --> 01:20:38,060
+e este tempo não só como o land.
+
+691
+01:20:38,060 --> 01:20:39,060
+Ok?
+
+692
+01:20:39,060 --> 01:20:40,060
+Muito bem.
+
+693
+01:20:40,060 --> 01:20:42,060
+Pro certo, só uma coisa.
+
+694
+01:20:42,060 --> 01:20:44,060
+Eu tenho aí uma pergunta.
+
+695
+01:20:44,060 --> 01:20:45,060
+Sim.
+
+696
+01:20:45,060 --> 01:20:49,060
+Eu sei que nós estamos aqui a aprender a parte do bullying,
+
+697
+01:20:49,060 --> 01:20:52,060
+que é a cena do loop infinito.
+
+698
+01:20:52,060 --> 01:20:53,060
+Sim.
+
+699
+01:20:53,060 --> 01:20:55,060
+Mas, em termos deste programa,
+
+700
+01:20:55,060 --> 01:20:57,060
+não seria mais ventajoso
+
+701
+01:20:57,060 --> 01:21:00,060
+de utilizar os interruptes,
+
+702
+01:21:00,060 --> 01:21:03,060
+porque...
+
+703
+01:21:03,060 --> 01:21:07,060
+Colocar um timer para...
+
+704
+01:21:07,060 --> 01:21:08,060
+Exato.
+
+705
+01:21:08,060 --> 01:21:12,060
+Para ter efeito um timer para ter efeito dois?
+
+706
+01:21:12,060 --> 01:21:13,060
+Exato.
+
+707
+01:21:13,060 --> 01:21:15,060
+Sim, que seria.
+
+708
+01:21:15,060 --> 01:21:16,060
+Ok.
+
+709
+01:21:16,060 --> 01:21:20,060
+Só que...
+
+710
+01:21:20,060 --> 01:21:23,060
+Como é que eu viser?
+
+711
+01:21:23,060 --> 01:21:27,060
+Quanto faz, assim, esse tipo de programação,
+
+712
+01:21:27,060 --> 01:21:30,060
+se calhar, a função,
+
+713
+01:21:30,060 --> 01:21:32,060
+renda, serve, control,
+
+714
+01:21:32,060 --> 01:21:33,060
+vai estar implementada,
+
+715
+01:21:33,060 --> 01:21:36,060
+dentro do...
+
+716
+01:21:36,060 --> 01:21:40,060
+dentro do handler,
+
+717
+01:21:40,060 --> 01:21:42,060
+dentro da rotina.
+
+718
+01:21:42,060 --> 01:21:44,060
+Estava a ver o R,
+
+719
+01:21:44,060 --> 01:21:46,060
+e estava a tentar lembrar-me da palavra,
+
+720
+01:21:46,060 --> 01:21:49,060
+mas estava a ver a cabeça handler dos chinais.
+
+721
+01:21:49,060 --> 01:21:52,060
+Vocês vão colocar esse código dentro da rotina
+
+722
+01:21:52,060 --> 01:21:55,060
+que trata o interrupt, certo?
+
+723
+01:21:55,060 --> 01:21:59,060
+Mas, nós podemos escrever e utilizar
+
+724
+01:21:59,060 --> 01:22:02,060
+este temporizador para outras coisas.
+
+725
+01:22:02,060 --> 01:22:06,060
+E aí, o que é que é acontecer?
+
+726
+01:22:06,060 --> 01:22:09,060
+Se este temporizador vai ser utilizado
+
+727
+01:22:09,060 --> 01:22:12,060
+para duas, três, quatro funções,
+
+728
+01:22:12,060 --> 01:22:15,060
+ou a minha rotina de tratamento
+
+729
+01:22:15,060 --> 01:22:17,060
+dentro de opção,
+
+730
+01:22:17,060 --> 01:22:19,060
+vai começar a ficar longa.
+
+731
+01:22:19,060 --> 01:22:20,060
+Serto.
+
+732
+01:22:20,060 --> 01:22:21,060
+E uma das coisas,
+
+733
+01:22:21,060 --> 01:22:23,060
+que vocês devem ter aprendido,
+
+734
+01:22:23,060 --> 01:22:25,060
+é que estas rotinas devem ter sido
+
+735
+01:22:25,060 --> 01:22:27,060
+mais minimalistas possíveis.
+
+736
+01:22:27,060 --> 01:22:28,060
+Sim, sim.
+
+737
+01:22:28,060 --> 01:22:30,060
+Serto?
+
+738
+01:22:30,060 --> 01:22:34,060
+Então, uma outra abordagem é esta.
+
+739
+01:22:34,060 --> 01:22:37,060
+É, eu vou perguntando
+
+740
+01:22:37,060 --> 01:22:38,060
+e vou ouvindo.
+
+741
+01:22:38,060 --> 01:22:39,060
+Ok?
+
+742
+01:22:39,060 --> 01:22:41,060
+Também não estou a dizer que é melhor,
+
+743
+01:22:41,060 --> 01:22:42,060
+mas é barata.
+
+744
+01:22:42,060 --> 01:22:45,060
+Ok?
+
+745
+01:22:45,060 --> 01:22:48,060
+É barata.
+
+746
+01:22:49,060 --> 01:22:51,060
+Mas também não é melhor.
+
+747
+01:22:51,060 --> 01:22:53,060
+Até por isso que tenha aqui
+
+748
+01:22:53,060 --> 01:22:54,060
+já o slide seguinte,
+
+749
+01:22:54,060 --> 01:22:55,060
+a dizer que,
+
+750
+01:22:55,060 --> 01:22:57,060
+ah, isto está até bastante simples
+
+751
+01:22:57,060 --> 01:22:59,060
+e parece razoável,
+
+752
+01:22:59,060 --> 01:23:02,060
+mas não está exento de defeitos.
+
+753
+01:23:02,060 --> 01:23:04,060
+Ok?
+
+754
+01:23:04,060 --> 01:23:07,060
+O polling, o ciclo de polling,
+
+755
+01:23:07,060 --> 01:23:10,060
+acenta no escalonamento cooperativo.
+
+756
+01:23:10,060 --> 01:23:12,060
+E o escalonamento cooperativo
+
+757
+01:23:12,060 --> 01:23:15,060
+é uma coisa muito bonita,
+
+758
+01:23:15,060 --> 01:23:17,060
+que é, eu, enquanto preciso
+
+759
+01:23:17,060 --> 01:23:18,060
+e eu uso,
+
+760
+01:23:18,060 --> 01:23:21,060
+mal deixe de precisar
+
+761
+01:23:21,060 --> 01:23:23,060
+e eu passo a quem precisa.
+
+762
+01:23:23,060 --> 01:23:27,060
+E este recurso é barata.
+
+763
+01:23:27,060 --> 01:23:30,060
+Estava mesmo aqui ao meu lado,
+
+764
+01:23:30,060 --> 01:23:33,060
+este era uma das minhas filhas.
+
+765
+01:23:33,060 --> 01:23:36,060
+E este recurso vai andando de mão e mão
+
+766
+01:23:36,060 --> 01:23:37,060
+e mais tempo,
+
+767
+01:23:37,060 --> 01:23:39,060
+mais tarde, a voltar a minha pós
+
+768
+01:23:39,060 --> 01:23:40,060
+quando eu precisar dele.
+
+769
+01:23:40,060 --> 01:23:42,060
+É uma questão de esperar.
+
+770
+01:23:42,060 --> 01:23:44,060
+Se todos forem bem comportantes,
+
+771
+01:23:44,060 --> 01:23:46,060
+e normalmente são bem comportantes,
+
+772
+01:23:46,060 --> 01:23:50,060
+o recurso é partilhado,
+
+773
+01:23:50,060 --> 01:23:51,060
+vai polando, vai polando,
+
+774
+01:23:51,060 --> 01:23:54,060
+e toda a gente tem a cesse recurso.
+
+775
+01:23:54,060 --> 01:23:56,060
+Ok?
+
+776
+01:23:56,060 --> 01:23:58,060
+É o que tem aqui,
+
+777
+01:23:58,060 --> 01:23:59,060
+nesta França,
+
+778
+01:23:59,060 --> 01:24:02,060
+cada tarefa realiza a sua computação
+
+779
+01:24:02,060 --> 01:24:05,060
+e, assim, termino,
+
+780
+01:24:05,060 --> 01:24:09,060
+entrega o processador
+
+781
+01:24:09,060 --> 01:24:11,060
+de uma forma voluntária.
+
+782
+01:24:11,060 --> 01:24:14,060
+Ou liberta.
+
+783
+01:24:14,060 --> 01:24:17,060
+No entanto,
+
+784
+01:24:17,060 --> 01:24:20,060
+fazer um sistema
+
+785
+01:24:20,060 --> 01:24:22,060
+num superlope implica
+
+786
+01:24:22,060 --> 01:24:24,060
+temos muito cuidado
+
+787
+01:24:24,060 --> 01:24:27,060
+com o tempo que demoram as nossas tarefas.
+
+788
+01:24:27,060 --> 01:24:28,060
+Por que?
+
+789
+01:24:28,060 --> 01:24:29,060
+Por que?
+
+790
+01:24:29,060 --> 01:24:31,060
+Nós podemos ter tarefas
+
+791
+01:24:31,060 --> 01:24:33,060
+que são muito rápidas de escutar
+
+792
+01:24:33,060 --> 01:24:35,060
+e podemos ter outras tarefas
+
+793
+01:24:35,060 --> 01:24:37,060
+que não são.
+
+794
+01:24:37,060 --> 01:24:39,060
+Pior ainda,
+
+795
+01:24:39,060 --> 01:24:41,060
+podemos ter tarefas
+
+796
+01:24:41,060 --> 01:24:43,060
+que voam a parte das vezes,
+
+797
+01:24:43,060 --> 01:24:45,060
+demoram pouquíssimo tempo,
+
+798
+01:24:45,060 --> 01:24:48,060
+mas, por algum azar do destino,
+
+799
+01:24:48,060 --> 01:24:51,060
+de vez em quando demoram muito.
+
+800
+01:24:51,060 --> 01:24:54,060
+Como, por exemplo,
+
+801
+01:24:54,060 --> 01:24:57,060
+uma tarefa em que eu tenha que inviar
+
+802
+01:24:57,060 --> 01:24:59,060
+um pacote
+
+803
+01:24:59,060 --> 01:25:01,060
+dados por raven.
+
+804
+01:25:01,060 --> 01:25:03,060
+Ou, pior,
+
+805
+01:25:03,060 --> 01:25:05,060
+nem vamos chegar ao raven.
+
+806
+01:25:05,060 --> 01:25:07,060
+Tenho que inviar dados
+
+807
+01:25:07,060 --> 01:25:09,060
+do bagamento
+
+808
+01:25:09,060 --> 01:25:13,060
+do placa,
+
+809
+01:25:13,060 --> 01:25:15,060
+da plataforma.
+
+810
+01:25:15,060 --> 01:25:16,060
+Por exemplo, pegar
+
+811
+01:25:16,060 --> 01:25:18,060
+num
+
+812
+01:25:18,060 --> 01:25:20,060
+e-doe-se,
+
+813
+01:25:20,060 --> 01:25:22,060
+que são, basicamente, dois fios
+
+814
+01:25:22,060 --> 01:25:24,060
+e temos lá o microcontrolador
+
+815
+01:25:24,060 --> 01:25:26,060
+ligado a esses dois fios
+
+816
+01:25:26,060 --> 01:25:28,060
+e, também, ligado a esses dois fios,
+
+817
+01:25:28,060 --> 01:25:30,060
+temos todos os outros preferidos
+
+818
+01:25:30,060 --> 01:25:35,060
+que podem comunicar com o CPU.
+
+819
+01:25:35,060 --> 01:25:37,060
+Há uma dado altura,
+
+820
+01:25:37,060 --> 01:25:39,060
+pode haver uma tarefa
+
+821
+01:25:39,060 --> 01:25:41,060
+que comunica
+
+822
+01:25:41,060 --> 01:25:43,060
+com algum paraíferico
+
+823
+01:25:43,060 --> 01:25:45,060
+através desse barramento.
+
+824
+01:25:45,060 --> 01:25:47,060
+E, boa parte das vezes,
+
+825
+01:25:47,060 --> 01:25:49,060
+manda a meia delusia de
+
+826
+01:25:49,060 --> 01:25:51,060
+bytes e aquilo,
+
+827
+01:25:51,060 --> 01:25:53,060
+que mora pouquíssimo tempo.
+
+828
+01:25:53,060 --> 01:25:56,060
+Mas, ocasiunalmente,
+
+829
+01:25:56,060 --> 01:25:58,060
+esse barramento
+
+830
+01:25:58,060 --> 01:26:00,060
+poderá demorar
+
+831
+01:26:00,060 --> 01:26:03,060
+mais tempo do que o normal.
+
+832
+01:26:03,060 --> 01:26:06,060
+E aquela tarefa
+
+833
+01:26:06,060 --> 01:26:08,060
+que, boa parte das vezes,
+
+834
+01:26:08,060 --> 01:26:09,060
+porta bem,
+
+835
+01:26:09,060 --> 01:26:10,060
+de vez em quando,
+
+836
+01:26:10,060 --> 01:26:12,060
+demora tempo possível.
+
+837
+01:26:12,060 --> 01:26:14,060
+E, ao demorar tempo possível,
+
+838
+01:26:14,060 --> 01:26:15,060
+vai
+
+839
+01:26:15,060 --> 01:26:18,060
+atrasar todas as outras tarefas
+
+840
+01:26:18,060 --> 01:26:20,060
+e, eventualmente,
+
+841
+01:26:20,060 --> 01:26:21,060
+algumas dessas tarefas
+
+842
+01:26:21,060 --> 01:26:22,060
+com o atraso
+
+843
+01:26:22,060 --> 01:26:24,060
+vão ter uma degradação
+
+844
+01:26:24,060 --> 01:26:25,060
+do serviço.
+
+845
+01:26:25,060 --> 01:26:27,060
+Até pode ocasiunar,
+
+846
+01:26:27,060 --> 01:26:29,060
+mesmo, ali uma situação perigosa,
+
+847
+01:26:29,060 --> 01:26:32,060
+dependendo do contexto,
+
+848
+01:26:32,060 --> 01:26:33,060
+certo?
+
+849
+01:26:33,060 --> 01:26:34,060
+Portanto,
+
+850
+01:26:34,060 --> 01:26:35,060
+este modelo
+
+851
+01:26:35,060 --> 01:26:36,060
+é simples,
+
+852
+01:26:36,060 --> 01:26:38,060
+super fácil implementar, certo?
+
+853
+01:26:38,060 --> 01:26:39,060
+Mas,
+
+854
+01:26:39,060 --> 01:26:41,060
+pode levar
+
+855
+01:26:41,060 --> 01:26:42,060
+a problemas
+
+856
+01:26:42,060 --> 01:26:43,060
+de arrestamento
+
+857
+01:26:43,060 --> 01:26:44,060
+e deriva
+
+858
+01:26:44,060 --> 01:26:46,060
+dos tempos da ativação.
+
+859
+01:26:46,060 --> 01:26:48,060
+Se uma tarefa
+
+860
+01:26:48,060 --> 01:26:49,060
+tomar
+
+861
+01:26:49,060 --> 01:26:52,060
+mais tempo do que o que é esperado
+
+862
+01:26:52,060 --> 01:26:55,060
+ou do que aquilo que as outras tarefas
+
+863
+01:26:55,060 --> 01:26:56,060
+aceitam, certo?
+
+864
+01:26:56,060 --> 01:26:59,060
+E bloquea as outras tarefas.
+
+865
+01:26:59,060 --> 01:27:01,060
+Faz sentido?
+
+866
+01:27:02,060 --> 01:27:03,060
+Por exemplo,
+
+867
+01:27:04,060 --> 01:27:05,060
+aqui,
+
+868
+01:27:05,060 --> 01:27:06,060
+bloquear
+
+869
+01:27:06,060 --> 01:27:07,060
+e latiência.
+
+870
+01:27:07,060 --> 01:27:08,060
+Se
+
+871
+01:27:08,060 --> 01:27:09,060
+o display task,
+
+872
+01:27:09,060 --> 01:27:10,060
+aquela tarefa
+
+873
+01:27:10,060 --> 01:27:12,060
+de mostrar o número
+
+874
+01:27:12,060 --> 01:27:13,060
+no visual,
+
+875
+01:27:13,060 --> 01:27:16,060
+se demorar 30.000 segundos,
+
+876
+01:27:17,060 --> 01:27:18,060
+ok?
+
+877
+01:27:19,060 --> 01:27:20,060
+E esta tarefa
+
+878
+01:27:20,060 --> 01:27:21,060
+que tinha de ser executada
+
+879
+01:27:21,060 --> 01:27:23,060
+a cada 10.000 segundos,
+
+880
+01:27:23,060 --> 01:27:25,060
+se esta tarefa demorar
+
+881
+01:27:25,060 --> 01:27:27,060
+30.000 segundos,
+
+882
+01:27:27,060 --> 01:27:28,060
+esta aqui
+
+883
+01:27:28,060 --> 01:27:30,060
+vai ser atrasada
+
+884
+01:27:30,060 --> 01:27:31,060
+de forma,
+
+885
+01:27:31,060 --> 01:27:33,060
+a não ser ativada
+
+886
+01:27:33,060 --> 01:27:34,060
+3 vezes
+
+887
+01:27:34,060 --> 01:27:36,060
+no período na janela
+
+888
+01:27:36,060 --> 01:27:37,060
+que tem que ter de ser atrasada
+
+889
+01:27:37,060 --> 01:27:38,060
+ou ativada.
+
+890
+01:27:38,060 --> 01:27:39,060
+Essas 3 vezes?
+
+891
+01:27:39,060 --> 01:27:40,060
+Certo?
+
+892
+01:27:40,060 --> 01:27:42,060
+Por que?
+
+893
+01:27:42,060 --> 01:27:44,060
+Por que no escalonamento
+
+894
+01:27:44,060 --> 01:27:45,060
+cooperativo,
+
+895
+01:27:45,060 --> 01:27:47,060
+quando uma tarefa
+
+896
+01:27:47,060 --> 01:27:49,060
+tem o processador,
+
+897
+01:27:49,060 --> 01:27:51,060
+tem o processador
+
+898
+01:27:51,060 --> 01:27:52,060
+e só o liberta
+
+899
+01:27:52,060 --> 01:27:54,060
+quando chegar ao fim.
+
+900
+01:27:54,060 --> 01:27:55,060
+Ok?
+
+901
+01:27:57,060 --> 01:27:59,060
+É bom
+
+902
+01:27:59,060 --> 01:28:01,060
+em sistemas muito simples,
+
+903
+01:28:01,060 --> 01:28:03,060
+mas
+
+904
+01:28:03,060 --> 01:28:04,060
+há vezes
+
+905
+01:28:04,060 --> 01:28:05,060
+em que nós temos que
+
+906
+01:28:05,060 --> 01:28:06,060
+dizer uma tarefa,
+
+907
+01:28:06,060 --> 01:28:08,060
+já chega,
+
+908
+01:28:08,060 --> 01:28:09,060
+agora o processador
+
+909
+01:28:09,060 --> 01:28:11,060
+vai para outra alguém.
+
+910
+01:28:11,060 --> 01:28:12,060
+Ok?
+
+911
+01:28:12,060 --> 01:28:14,060
+E isto não é a própria tarefa
+
+912
+01:28:14,060 --> 01:28:15,060
+que vai descobrir
+
+913
+01:28:15,060 --> 01:28:17,060
+por ela própria.
+
+914
+01:28:17,060 --> 01:28:18,060
+Normalmente,
+
+915
+01:28:18,060 --> 01:28:20,060
+temos um polícia
+
+916
+01:28:20,060 --> 01:28:21,060
+que simca a rega de fazer isso,
+
+917
+01:28:21,060 --> 01:28:22,060
+um polícia,
+
+918
+01:28:22,060 --> 01:28:23,060
+um árbitro,
+
+919
+01:28:23,060 --> 01:28:25,060
+que é aquela porcer,
+
+920
+01:28:25,060 --> 01:28:26,060
+aquilo que chamamos
+
+921
+01:28:26,060 --> 01:28:28,060
+de sistema operativo.
+
+922
+01:28:28,060 --> 01:28:29,060
+Ok?
+
+923
+01:28:29,060 --> 01:28:30,060
+Mas já vamos falar
+
+924
+01:28:30,060 --> 01:28:31,060
+mais sobre isso.
+
+925
+01:28:31,060 --> 01:28:32,060
+Pronto.
+
+926
+01:28:32,060 --> 01:28:33,060
+Aquele desvio,
+
+927
+01:28:33,060 --> 01:28:34,060
+o jitter,
+
+928
+01:28:34,060 --> 01:28:36,060
+é tal e feito,
+
+929
+01:28:36,060 --> 01:28:37,060
+em que
+
+930
+01:28:37,060 --> 01:28:39,060
+os tempos de ativação
+
+931
+01:28:39,060 --> 01:28:41,060
+vão se arrastando
+
+932
+01:28:41,060 --> 01:28:43,060
+ao longo do tempo,
+
+933
+01:28:43,060 --> 01:28:44,060
+e isso pode comprometer
+
+934
+01:28:44,060 --> 01:28:46,060
+sistemas de controle
+
+935
+01:28:46,060 --> 01:28:47,060
+preciso.
+
+936
+01:28:47,060 --> 01:28:48,060
+Ok?
+
+937
+01:28:48,060 --> 01:28:50,060
+Imaginem o serviço.
+
+938
+01:28:50,060 --> 01:28:51,060
+Se uma pessoa
+
+939
+01:28:51,060 --> 01:28:52,060
+mexe e aquilo,
+
+940
+01:28:52,060 --> 01:28:54,060
+e o tempo de ativação
+
+941
+01:28:54,060 --> 01:28:56,060
+da rotina que vai
+
+942
+01:28:57,060 --> 01:28:59,060
+atualizar a posição
+
+943
+01:28:59,060 --> 01:29:00,060
+da motor,
+
+944
+01:29:00,060 --> 01:29:01,060
+se ela atrasar,
+
+945
+01:29:01,060 --> 01:29:02,060
+nós estamos ali,
+
+946
+01:29:02,060 --> 01:29:03,060
+e o motor continua
+
+947
+01:29:03,060 --> 01:29:04,060
+no mesmo sítio,
+
+948
+01:29:04,060 --> 01:29:05,060
+e depois,
+
+949
+01:29:05,060 --> 01:29:06,060
+vai,
+
+950
+01:29:06,060 --> 01:29:07,060
+já atrasado.
+
+951
+01:29:07,060 --> 01:29:08,060
+E não soules?
+
+952
+01:29:08,060 --> 01:29:09,060
+É, pás.
+
+953
+01:29:09,060 --> 01:29:10,060
+Estou presta para nada.
+
+954
+01:29:12,060 --> 01:29:14,060
+Dovidas, não há?
+
+955
+01:29:14,060 --> 01:29:15,060
+Também.
+
+956
+01:29:15,060 --> 01:29:16,060
+Tem outro exemplo.
+
+957
+01:29:16,060 --> 01:29:17,060
+Também tem outro caso
+
+958
+01:29:17,060 --> 01:29:18,060
+que é,
+
+959
+01:29:18,060 --> 01:29:19,060
+vocês viram um calino
+
+960
+01:29:19,060 --> 01:29:21,060
+ou um de leitos?
+
+961
+01:29:21,060 --> 01:29:23,060
+O supersículo,
+
+962
+01:29:23,060 --> 01:29:24,060
+normalmente,
+
+963
+01:29:24,060 --> 01:29:25,060
+dá
+
+964
+01:29:25,060 --> 01:29:26,060
+uma carga
+
+965
+01:29:26,060 --> 01:29:27,060
+de 100%
+
+966
+01:29:27,060 --> 01:29:28,060
+ou próximo de isso
+
+967
+01:29:28,060 --> 01:29:29,060
+ao processador.
+
+968
+01:29:30,060 --> 01:29:31,060
+Estou sempre
+
+969
+01:29:31,060 --> 01:29:32,060
+para verificar.
+
+970
+01:29:32,060 --> 01:29:33,060
+Quero achar.
+
+971
+01:29:33,060 --> 01:29:34,060
+Quero achar.
+
+972
+01:29:34,060 --> 01:29:35,060
+Então, trabalhas
+
+973
+01:29:35,060 --> 01:29:36,060
+de tu.
+
+974
+01:29:36,060 --> 01:29:37,060
+Quero achar.
+
+975
+01:29:37,060 --> 01:29:38,060
+Quero achar.
+
+976
+01:29:38,060 --> 01:29:39,060
+Trabajos de tu.
+
+977
+01:29:39,060 --> 01:29:40,060
+Eu tenho uma filha
+
+978
+01:29:40,060 --> 01:29:41,060
+mais nova.
+
+979
+01:29:41,060 --> 01:29:42,060
+Às vezes, quando nós demos
+
+980
+01:29:42,060 --> 01:29:43,060
+enviagens de carro,
+
+981
+01:29:43,060 --> 01:29:44,060
+ela estava sempre a aproveitar.
+
+982
+01:29:44,060 --> 01:29:45,060
+Nós achamos.
+
+983
+01:29:46,060 --> 01:29:48,060
+É quase isso.
+
+984
+01:29:48,060 --> 01:29:50,060
+Togava uma paciência
+
+985
+01:29:50,060 --> 01:29:51,060
+e, neste caso,
+
+986
+01:29:51,060 --> 01:29:53,060
+o superloop
+
+987
+01:29:53,060 --> 01:29:54,060
+torra o processador.
+
+988
+01:29:54,060 --> 01:29:56,060
+E, depois,
+
+989
+01:29:56,060 --> 01:29:57,060
+ainda temos outra coisa
+
+990
+01:29:57,060 --> 01:29:59,060
+que tem a ver com a scalabilidade.
+
+991
+01:29:59,060 --> 01:30:01,060
+Boa parte de os temas,
+
+992
+01:30:01,060 --> 01:30:02,060
+enviabetes,
+
+993
+01:30:02,060 --> 01:30:04,060
+são sistemas muito
+
+994
+01:30:04,060 --> 01:30:05,060
+estáticos,
+
+995
+01:30:05,060 --> 01:30:06,060
+ou rígicos.
+
+996
+01:30:06,060 --> 01:30:08,060
+Nós sabemos.
+
+997
+01:30:08,060 --> 01:30:10,060
+Quero que o sistema
+
+998
+01:30:10,060 --> 01:30:11,060
+tem de fazer,
+
+999
+01:30:11,060 --> 01:30:12,060
+logo, quais são as funções,
+
+1000
+01:30:12,060 --> 01:30:13,060
+ou as tarefas,
+
+1001
+01:30:13,060 --> 01:30:14,060
+que ele vai ter de descutar.
+
+1002
+01:30:14,060 --> 01:30:16,060
+E, com que priori
+
+1003
+01:30:16,060 --> 01:30:17,060
+a circunidade,
+
+1004
+01:30:17,060 --> 01:30:18,060
+é que tem de descutar.
+
+1005
+01:30:18,060 --> 01:30:20,060
+O problema,
+
+1006
+01:30:20,060 --> 01:30:21,060
+é que,
+
+1007
+01:30:21,060 --> 01:30:23,060
+sim, também temos que fazer aquilo.
+
+1008
+01:30:23,060 --> 01:30:25,060
+E nós queremos
+
+1009
+01:30:25,060 --> 01:30:26,060
+avissionar uma nova tarefa.
+
+1010
+01:30:26,060 --> 01:30:28,060
+Vai obligar-nos a pensar,
+
+1011
+01:30:28,060 --> 01:30:30,060
+outra vez, no escalenamento.
+
+1012
+01:30:30,060 --> 01:30:32,060
+E se, ao avissionarmos
+
+1013
+01:30:32,060 --> 01:30:33,060
+aquela tarefa,
+
+1014
+01:30:33,060 --> 01:30:35,060
+se não vamos estar
+
+1015
+01:30:35,060 --> 01:30:37,060
+a introduzir,
+
+1016
+01:30:37,060 --> 01:30:38,060
+jitter,
+
+1017
+01:30:38,060 --> 01:30:40,060
+e latência nas outras tarefas.
+
+1018
+01:30:40,060 --> 01:30:41,060
+Ok?
+
+1019
+01:30:41,060 --> 01:30:42,060
+Portanto,
+
+1020
+01:30:42,060 --> 01:30:44,060
+é algo que é bom para coisas simples,
+
+1021
+01:30:44,060 --> 01:30:47,060
+mas não é bom se quisermos
+
+1022
+01:30:47,060 --> 01:30:49,060
+por para energia
+
+1023
+01:30:49,060 --> 01:30:50,060
+e, também,
+
+1024
+01:30:50,060 --> 01:30:52,060
+dificulta-nos a vida,
+
+1025
+01:30:52,060 --> 01:30:53,060
+se nós quisermos
+
+1026
+01:30:53,060 --> 01:30:55,060
+acrescentar mais qualquer coisa.
+
+1027
+01:30:55,060 --> 01:30:56,060
+Às vezes, até nem acrescentar,
+
+1028
+01:30:56,060 --> 01:30:58,060
+às vezes, é modificar uma
+
+1029
+01:30:58,060 --> 01:30:59,060
+das tarefas
+
+1030
+01:30:59,060 --> 01:31:01,060
+e, aquele tempo,
+
+1031
+01:31:01,060 --> 01:31:02,060
+a extra que
+
+1032
+01:31:02,060 --> 01:31:03,060
+avissionamos à tarefa,
+
+1033
+01:31:03,060 --> 01:31:04,060
+vai ter efeitos
+
+1034
+01:31:04,060 --> 01:31:06,060
+nas outras tarefas todas.
+
+1035
+01:31:06,060 --> 01:31:07,060
+Ok?
+
+1036
+01:31:07,060 --> 01:31:09,060
+Dovidas, não há?
+
+1037
+01:31:12,060 --> 01:31:13,060
+Só,
+
+1038
+01:31:13,060 --> 01:31:14,060
+eu estou a olhar,
+
+1039
+01:31:14,060 --> 01:31:15,060
+agora, para que pro relógio,
+
+1040
+01:31:15,060 --> 01:31:17,060
+esta sessão é até as novas horas.
+
+1041
+01:31:17,060 --> 01:31:19,060
+Mas nós não fizemos intervalo.
+
+1042
+01:31:19,060 --> 01:31:21,060
+Eu não sei como é que vocês estão
+
+1043
+01:31:21,060 --> 01:31:23,060
+habituados a fazer nos outros módulos,
+
+1044
+01:31:23,060 --> 01:31:25,060
+se costumam fazer um intervalo
+
+1045
+01:31:25,060 --> 01:31:27,060
+e terminam às novas,
+
+1046
+01:31:27,060 --> 01:31:30,060
+ou se não fazem intervalo
+
+1047
+01:31:30,060 --> 01:31:31,060
+e terminam às novas,
+
+1048
+01:31:31,060 --> 01:31:33,060
+ou se não fazem intervalo
+
+1049
+01:31:33,060 --> 01:31:35,060
+e terminam ali uns 10 minutos antes,
+
+1050
+01:31:35,060 --> 01:31:37,060
+como é que vocês estão habituados a fazer?
+
+1051
+01:31:37,060 --> 01:31:38,060
+Mas não me engano, hein?
+
+1052
+01:31:38,060 --> 01:31:40,060
+Já tivemos tudo.
+
+1053
+01:31:40,060 --> 01:31:41,060
+Já tivemos tudo?
+
+1054
+01:31:41,060 --> 01:31:42,060
+Já tivemos tudo.
+
+1055
+01:31:42,060 --> 01:31:43,060
+Já tivemos tudo.
+
+1056
+01:31:43,060 --> 01:31:45,060
+Ok, então,
+
+1057
+01:31:45,060 --> 01:31:48,060
+qual é a vossa disposição neste momento?
+
+1058
+01:31:48,060 --> 01:31:50,060
+Continuámos mais 3 minutos
+
+1059
+01:31:50,060 --> 01:31:52,060
+ou continuámos mais 3 minutos.
+
+1060
+01:31:57,060 --> 01:31:58,060
+E agora vocês ficaram a pensar?
+
+1061
+01:31:58,060 --> 01:31:59,060
+É fácil, né?
+
+1062
+01:31:59,060 --> 01:32:01,060
+Esta pergunta é uma pergunta com restaína.
+
+1063
+01:32:03,060 --> 01:32:05,060
+O que é que eu devo responder, hein?
+
+1064
+01:32:07,060 --> 01:32:08,060
+Vamos continuar?
+
+1065
+01:32:09,060 --> 01:32:11,060
+Por mim é como quiser.
+
+1066
+01:32:11,060 --> 01:32:12,060
+Ok.
+
+1067
+01:32:12,060 --> 01:32:14,060
+Já sentou e tudo? Não é?
+
+1068
+01:32:14,060 --> 01:32:16,060
+Não, não, ainda não.
+
+1069
+01:32:16,060 --> 01:32:19,060
+Claro, está como ele.
+
+1070
+01:32:19,060 --> 01:32:21,060
+Então, estamos aqui
+
+1071
+01:32:21,060 --> 01:32:22,060
+ruites, bom, não é?
+
+1072
+01:32:22,060 --> 01:32:23,060
+Exatamente.
+
+1073
+01:32:23,060 --> 01:32:26,060
+O desejo dela vai há tanto tempo, não é?
+
+1074
+01:32:26,060 --> 01:32:27,060
+Exatamente.
+
+1075
+01:32:27,060 --> 01:32:31,060
+Então vamos só aqui dar mais alguns likes, pronto.
+
+1076
+01:32:31,060 --> 01:32:33,060
+Se nós quisermos,
+
+1077
+01:32:33,060 --> 01:32:35,060
+se quisermos que a nossa vida,
+
+1078
+01:32:35,060 --> 01:32:38,060
+enquanto programadores de sistemas ambitos,
+
+1079
+01:32:38,060 --> 01:32:41,060
+seja facilitada
+
+1080
+01:32:41,060 --> 01:32:43,060
+e a tensão, porque isto não é uma vida fácil,
+
+1081
+01:32:43,060 --> 01:32:44,060
+porque isto não é uma vida fácil,
+
+1082
+01:32:44,060 --> 01:32:46,060
+porque isto é de qualquer juva, é bem vinda.
+
+1083
+01:32:46,060 --> 01:32:48,060
+Após nós precisamos estar ali
+
+1084
+01:32:48,060 --> 01:32:53,060
+algo que nos consiga dar
+
+1085
+01:32:53,060 --> 01:32:55,060
+maior flexibilidade,
+
+1086
+01:32:55,060 --> 01:32:59,060
+na forma como nós ativamos estas tarefas, ok?
+
+1087
+01:32:59,060 --> 01:33:01,060
+Até porque, muitas das vezes,
+
+1088
+01:33:01,060 --> 01:33:05,060
+estas tarefas não têm a mesma periodicidade.
+
+1089
+01:33:05,060 --> 01:33:07,060
+Nós temos tarefas que aparecem
+
+1090
+01:33:07,060 --> 01:33:09,060
+com uma frequência alta,
+
+1091
+01:33:09,060 --> 01:33:12,060
+outros que aparecem com uma frequência maior,
+
+1092
+01:33:12,060 --> 01:33:15,060
+e algumas que até vão aí aparecendo, ok?
+
+1093
+01:33:15,060 --> 01:33:19,060
+Como é que eu consigo aumentar esta flexibilidade,
+
+1094
+01:33:19,060 --> 01:33:22,060
+ou ter alguma flexibilidade
+
+1095
+01:33:22,060 --> 01:33:26,060
+em encaixar estas tarefas todas nos momentos cheiros
+
+1096
+01:33:26,060 --> 01:33:28,060
+no meu processador?
+
+1097
+01:33:28,060 --> 01:33:31,060
+Uma delas é fundamental,
+
+1098
+01:33:31,060 --> 01:33:36,060
+é eu ter a capacidade de parar uma tarefa que está a executar,
+
+1099
+01:33:36,060 --> 01:33:40,060
+para poder atribuir o processador
+
+1100
+01:33:40,060 --> 01:33:43,060
+ou o tratarefa que tenha mais pressa.
+
+1101
+01:33:44,060 --> 01:33:45,060
+tenha mais urgência
+
+1102
+01:33:45,060 --> 01:33:47,060
+ou tenha maior prioridade, ok?
+
+1103
+01:33:47,060 --> 01:33:49,060
+chama-se isto preempoção.
+
+1104
+01:33:49,060 --> 01:33:53,060
+Preempoção é a ação
+
+1105
+01:33:53,060 --> 01:33:57,060
+de suspender uma tarefa
+
+1106
+01:33:57,060 --> 01:33:59,060
+que está de toda a feliz da vida
+
+1107
+01:33:59,060 --> 01:34:01,060
+a usar o processador
+
+1108
+01:34:01,060 --> 01:34:04,060
+e sorrupiar de o processador e entregar a outra, precisa mais.
+
+1109
+01:34:04,060 --> 01:34:07,060
+Esta tarefa que está
+
+1110
+01:34:07,060 --> 01:34:09,060
+fica a suspensa,
+
+1111
+01:34:09,060 --> 01:34:11,060
+não é descartada, não vai para o lixo,
+
+1112
+01:34:11,060 --> 01:34:14,060
+ela só é colocada no congelador.
+
+1113
+01:34:14,060 --> 01:34:16,060
+E mais logo,
+
+1114
+01:34:16,060 --> 01:34:19,060
+quando eu precisar daquela tarefa, voou com o gelador
+
+1115
+01:34:19,060 --> 01:34:21,060
+metrapidamente no micro-ondas,
+
+1116
+01:34:21,060 --> 01:34:23,060
+que é para ela ficar outra vez quentinha,
+
+1117
+01:34:23,060 --> 01:34:27,060
+e ela continua a escutar do sitio onde foi para ela, ok?
+
+1118
+01:34:27,060 --> 01:34:30,060
+Esta chama-se preempoção,
+
+1119
+01:34:30,060 --> 01:34:33,060
+é fazer paus,
+
+1120
+01:34:33,060 --> 01:34:35,060
+passar para outro canal,
+
+1121
+01:34:35,060 --> 01:34:38,060
+veja-me que vem do outro programa,
+
+1122
+01:34:38,060 --> 01:34:40,060
+depois faz,
+
+1123
+01:34:40,060 --> 01:34:42,060
+outra vez, o play,
+
+1124
+01:34:42,060 --> 01:34:46,060
+onde tinha feito paus, ok?
+
+1125
+01:34:46,060 --> 01:34:49,060
+Obviamente, que para isto funcionar bem,
+
+1126
+01:34:49,060 --> 01:34:53,060
+a tarefa tem de estar bem isolada as umas das outras,
+
+1127
+01:34:53,060 --> 01:34:56,060
+o que eu quero dizer com estar bem isolada as umas das outras.
+
+1128
+01:34:56,060 --> 01:34:59,060
+Eu tenho de ter uma tarefa
+
+1129
+01:34:59,060 --> 01:35:02,060
+que garantidamente não vai ser danificada
+
+1130
+01:35:02,060 --> 01:35:05,060
+por outras tarefas quando ela estiver na executar.
+
+1131
+01:35:05,060 --> 01:35:08,060
+Ou seja, as variáveis que são próprias
+
+1132
+01:35:08,060 --> 01:35:14,060
+desta tarefa tem de estar protegidas das outras tarefas todas, ok?
+
+1133
+01:35:14,060 --> 01:35:16,060
+E também,
+
+1134
+01:35:16,060 --> 01:35:21,060
+o estado que esta tarefa tinha no momento em que foi parado
+
+1135
+01:35:21,060 --> 01:35:23,060
+tem de ser conservado
+
+1136
+01:35:23,060 --> 01:35:24,060
+para depois,
+
+1137
+01:35:24,060 --> 01:35:27,060
+quando quiser voltar a arrancar com esta tarefa,
+
+1138
+01:35:27,060 --> 01:35:30,060
+continuar com o senado se tivesse acontecido.
+
+1139
+01:35:30,060 --> 01:35:32,060
+Vocês têm esta experiência no YouTube?
+
+1140
+01:35:32,060 --> 01:35:34,060
+Vocês estão a ver um vídeo, certo?
+
+1141
+01:35:34,060 --> 01:35:36,060
+Entretanto, alguém toca a campainha
+
+1142
+01:35:36,060 --> 01:35:39,060
+e vocês que fazem, carrega-no paus, certo?
+
+1143
+01:35:39,060 --> 01:35:41,060
+Um lá atendei a porta,
+
+1144
+01:35:41,060 --> 01:35:42,060
+assim-se não era pronto,
+
+1145
+01:35:42,060 --> 01:35:43,060
+obrigado,
+
+1146
+01:35:43,060 --> 01:35:45,060
+era a mesma encomenda que eu estava a esperar.
+
+1147
+01:35:45,060 --> 01:35:47,060
+Voltam para ver o YouTube,
+
+1148
+01:35:47,060 --> 01:35:49,060
+carrega-no play,
+
+1149
+01:35:49,060 --> 01:35:50,060
+o que que acontece?
+
+1150
+01:35:50,060 --> 01:35:51,060
+O vídeo movou,
+
+1151
+01:35:53,060 --> 01:35:55,060
+continua a ver o mesmo vídeo.
+
+1152
+01:35:55,060 --> 01:35:58,060
+O vídeo ficou com quadravinhos verdes
+
+1153
+01:35:58,060 --> 01:36:00,060
+e com o sonho,
+
+1154
+01:36:00,060 --> 01:36:09,060
+o vídeo continua exatamente como se nunca tivesse a vivenparagem nenhuma.
+
+1155
+01:36:09,060 --> 01:36:11,060
+E é até amanheço,
+
+1156
+01:36:11,060 --> 01:36:13,060
+isso que nós queremos nas nossas tarefas.
+
+1157
+01:36:13,060 --> 01:36:15,060
+Quando paramos uma tarefa,
+
+1158
+01:36:15,060 --> 01:36:17,060
+o estado dela tem de ser conservado
+
+1159
+01:36:17,060 --> 01:36:19,060
+para quando nós regressarmos,
+
+1160
+01:36:19,060 --> 01:36:21,060
+para completar esta tarefa,
+
+1161
+01:36:21,060 --> 01:36:24,060
+nós continuamos com o estado,
+
+1162
+01:36:24,060 --> 01:36:27,060
+tal e qual como está antes, ok?
+
+1163
+01:36:28,060 --> 01:36:30,060
+Outra coisa,
+
+1164
+01:36:30,060 --> 01:36:33,060
+gestão automática de energia,
+
+1165
+01:36:33,060 --> 01:36:36,060
+as tarefas, por si,
+
+1166
+01:36:36,060 --> 01:36:39,060
+não sabem se o processador
+
+1167
+01:36:39,060 --> 01:36:41,060
+há de estar parado,
+
+1168
+01:36:41,060 --> 01:36:44,060
+ou tem o trabalho para fazer, ok?
+
+1169
+01:36:44,060 --> 01:36:46,060
+Portanto, não é boa ideia
+
+1170
+01:36:46,060 --> 01:36:48,060
+colocar essa lógica de...
+
+1171
+01:36:48,060 --> 01:36:50,060
+E agora é o que faz de escutar,
+
+1172
+01:36:50,060 --> 01:36:51,060
+nas tarefas.
+
+1173
+01:36:51,060 --> 01:36:54,060
+Estarefas simplesmente têm de se pensar numa coisa,
+
+1174
+01:36:54,060 --> 01:36:55,060
+ok?
+
+1175
+01:36:55,060 --> 01:36:56,060
+Eu tenho isto para fazer
+
+1176
+01:36:56,060 --> 01:36:57,060
+e quando terminei,
+
+1177
+01:36:57,060 --> 01:37:00,060
+deixe-me dormir durante algum tempo, ok?
+
+1178
+01:37:00,060 --> 01:37:03,060
+E existe um alguém que gera
+
+1179
+01:37:03,060 --> 01:37:06,060
+essas pausas e se atrabalho
+
+1180
+01:37:06,060 --> 01:37:08,060
+para entregar ao processador,
+
+1181
+01:37:08,060 --> 01:37:10,060
+ou se neste momento não há ninguém,
+
+1182
+01:37:10,060 --> 01:37:12,060
+com vontade de trabalhar,
+
+1183
+01:37:12,060 --> 01:37:13,060
+com necessidade de trabalhar
+
+1184
+01:37:13,060 --> 01:37:16,060
+e o processador também pode descansar mocado, ok?
+
+1185
+01:37:16,060 --> 01:37:17,060
+Pronto,
+
+1186
+01:37:17,060 --> 01:37:19,060
+e outra coisa que também é muito importante
+
+1187
+01:37:19,060 --> 01:37:20,060
+nas sistemas em bebê,
+
+1188
+01:37:20,060 --> 01:37:22,060
+é o escalonamento determinístico,
+
+1189
+01:37:22,060 --> 01:37:24,060
+escalonamento determinístico quer dizer
+
+1190
+01:37:24,060 --> 01:37:26,060
+que as tarefas
+
+1191
+01:37:26,060 --> 01:37:29,060
+vão entrar na altura
+
+1192
+01:37:29,060 --> 01:37:31,060
+funcionativadas,
+
+1193
+01:37:31,060 --> 01:37:33,060
+na altura apropriada
+
+1194
+01:37:33,060 --> 01:37:42,060
+para concluírem antes que seja tarde, ok?
+
+1195
+01:37:42,060 --> 01:37:44,060
+Nos sistemas em bebê,
+
+1196
+01:37:44,060 --> 01:37:49,060
+que têm requisitos de tempo estreito,
+
+1197
+01:37:50,060 --> 01:37:53,060
+também chamados requisitos de tempo real,
+
+1198
+01:37:53,060 --> 01:37:55,060
+é importante garantir
+
+1199
+01:37:55,060 --> 01:37:58,060
+que as tarefas concluem
+
+1200
+01:37:58,060 --> 01:38:00,060
+antes que seja tarde mais,
+
+1201
+01:38:00,060 --> 01:38:03,060
+normalmente, quando uma tarefa é ativada,
+
+1202
+01:38:03,060 --> 01:38:06,060
+já sabe que ela tem de concluir
+
+1203
+01:38:06,060 --> 01:38:08,060
+dentro de um prazo,
+
+1204
+01:38:08,060 --> 01:38:10,060
+se ela ultrapassar o prazo,
+
+1205
+01:38:10,060 --> 01:38:12,060
+o valor
+
+1206
+01:38:12,060 --> 01:38:17,060
+da sua computação de cai,
+
+1207
+01:38:17,060 --> 01:38:19,060
+às vezes, é,
+
+1208
+01:38:19,060 --> 01:38:21,060
+deita fora,
+
+1209
+01:38:21,060 --> 01:38:23,060
+pronto, perdeu-se,
+
+1210
+01:38:23,060 --> 01:38:26,060
+outras vezes pode ter um avião, ok?
+
+1211
+01:38:26,060 --> 01:38:28,060
+portanto,
+
+1212
+01:38:28,060 --> 01:38:30,060
+há perdas e perdas,
+
+1213
+01:38:30,060 --> 01:38:33,060
+mas, nesses temas,
+
+1214
+01:38:33,060 --> 01:38:35,060
+ela pode ser ativada
+
+1215
+01:38:35,060 --> 01:38:38,060
+e começar a executar um bocadinho mais tarde,
+
+1216
+01:38:38,060 --> 01:38:40,060
+do que o momento,
+
+1217
+01:38:40,060 --> 01:38:42,060
+do que o momento,
+
+1218
+01:38:42,060 --> 01:38:43,060
+como é que é dizer,
+
+1219
+01:38:43,060 --> 01:38:44,060
+marcado, por exemplo,
+
+1220
+01:38:44,060 --> 01:38:46,060
+estáis 95,
+
+1221
+01:38:46,060 --> 01:38:48,060
+começou a executar nos 95,
+
+1222
+01:38:48,060 --> 01:38:50,060
+começou nos 97,
+
+1223
+01:38:50,060 --> 01:38:52,060
+mas nós dizemos que ele tem de terminar
+
+1224
+01:38:52,060 --> 01:38:54,060
+antes,
+
+1225
+01:38:54,060 --> 01:38:56,060
+dos 105,
+
+1226
+01:38:56,060 --> 01:38:58,060
+se ele começou aos 97
+
+1227
+01:38:58,060 --> 01:39:00,060
+e terminaram os 99,
+
+1228
+01:39:00,060 --> 01:39:01,060
+perfeito,
+
+1229
+01:39:01,060 --> 01:39:04,060
+terminou antes de 65, ok?
+
+1230
+01:39:04,060 --> 01:39:07,060
+agora, se tinha de terminar aos 65
+
+1231
+01:39:07,060 --> 01:39:09,060
+e terminou nos 16,
+
+1232
+01:39:09,060 --> 01:39:10,060
+é, pá, aí,
+
+1233
+01:39:10,060 --> 01:39:13,060
+a nossa cara já pode ter batido no volante,
+
+1234
+01:39:13,060 --> 01:39:15,060
+temos aqui o meio a 12 eventos que saltaram fora,
+
+1235
+01:39:15,060 --> 01:39:17,060
+um caixo partido,
+
+1236
+01:39:17,060 --> 01:39:21,060
+que as órbitas também partem com muita facilidade,
+
+1237
+01:39:21,060 --> 01:39:24,060
+pá, já nos estragamos todos,
+
+1238
+01:39:24,060 --> 01:39:28,060
+só por que o airbag não abriu o momento de certo, ok?
+
+1239
+01:39:28,060 --> 01:39:30,060
+faz sentido?
+
+1240
+01:39:32,060 --> 01:39:34,060
+a solução para isto?
+
+1241
+01:39:35,060 --> 01:39:37,060
+é um sistema atractivo,
+
+1242
+01:39:37,060 --> 01:39:40,060
+o sistema atractivo é um gestoano
+
+1243
+01:39:40,060 --> 01:39:43,060
+que sabe
+
+1244
+01:39:43,060 --> 01:39:47,060
+quando é que há de atribuir recursos
+
+1245
+01:39:47,060 --> 01:39:50,060
+às tarefas que precisam dos recursos, ok?
+
+1246
+01:39:50,060 --> 01:39:53,060
+um sistema atractivo
+
+1247
+01:39:53,060 --> 01:39:55,060
+fornei-se uma
+
+1248
+01:39:55,060 --> 01:39:57,060
+camada de abstração
+
+1249
+01:39:57,060 --> 01:40:01,060
+que satisfaz estes desafios,
+
+1250
+01:40:01,060 --> 01:40:04,060
+um sistema atractivo para ser um verdadeiro sistema atractivo
+
+1251
+01:40:04,060 --> 01:40:07,060
+tem que ter o poder de
+
+1252
+01:40:07,060 --> 01:40:12,060
+parar qualquer tarefa, ok?
+
+1253
+01:40:12,060 --> 01:40:15,060
+se um sistema atractivo não tiver capacidade
+
+1254
+01:40:15,060 --> 01:40:16,060
+para parar uma tarefa,
+
+1255
+01:40:16,060 --> 01:40:18,060
+pá, aquilo não se chama atractivo,
+
+1256
+01:40:18,060 --> 01:40:19,060
+ou seja,
+
+1257
+01:40:19,060 --> 01:40:22,060
+agora é muito difícil acontecer,
+
+1258
+01:40:22,060 --> 01:40:24,060
+mas você, das vezes, não tão assim
+
+1259
+01:40:24,060 --> 01:40:26,060
+escutar um programa,
+
+1260
+01:40:26,060 --> 01:40:27,060
+o programa bloqueia
+
+1261
+01:40:27,060 --> 01:40:29,060
+e vocês querem, simplesmente,
+
+1262
+01:40:29,060 --> 01:40:31,060
+matar o programa?
+
+1263
+01:40:31,060 --> 01:40:32,060
+o que fazem?
+
+1264
+01:40:32,060 --> 01:40:35,060
+alto control de leite, certo?
+
+1265
+01:40:36,060 --> 01:40:39,060
+e aparece sugestor tarefas do Windows
+
+1266
+01:40:39,060 --> 01:40:41,060
+para quem tem muito Windows, certo?
+
+1267
+01:40:41,060 --> 01:40:45,060
+isso acontece
+
+1268
+01:40:45,060 --> 01:40:48,060
+porque o Windows
+
+1269
+01:40:48,060 --> 01:40:50,060
+é capaz de parar
+
+1270
+01:40:50,060 --> 01:40:54,060
+qualquer programa que você já correu, ok?
+
+1271
+01:40:54,060 --> 01:40:56,060
+se não conseguir isso,
+
+1272
+01:40:56,060 --> 01:40:58,060
+aquele programa que tinha bloqueado,
+
+1273
+01:40:58,060 --> 01:41:00,060
+bloqueava todo o sistema
+
+1274
+01:41:00,060 --> 01:41:02,060
+e vocês podiam carregar em alto control de leite
+
+1275
+01:41:02,060 --> 01:41:03,060
+à vontade
+
+1276
+01:41:03,060 --> 01:41:05,060
+e estava tudo parado,
+
+1277
+01:41:05,060 --> 01:41:06,060
+tinha muito ligado como toda hora da ficha
+
+1278
+01:41:06,060 --> 01:41:08,060
+e voltaram a ligar, ok?
+
+1279
+01:41:08,060 --> 01:41:10,060
+pronto
+
+1280
+01:41:11,060 --> 01:41:13,060
+isto aqui, já falamos
+
+1281
+01:41:13,060 --> 01:41:15,060
+e simplesmente há a dizer que resolva
+
+1282
+01:41:15,060 --> 01:41:17,060
+este problema, está bom?
+
+1283
+01:41:17,060 --> 01:41:18,060
+pronto
+
+1284
+01:41:18,060 --> 01:41:20,060
+ao passarmos
+
+1285
+01:41:20,060 --> 01:41:22,060
+de uma solução
+
+1286
+01:41:22,060 --> 01:41:24,060
+que corre direitamente
+
+1287
+01:41:24,060 --> 01:41:26,060
+sobre a plataforma,
+
+1288
+01:41:26,060 --> 01:41:28,060
+que é o chamado vermetal,
+
+1289
+01:41:28,060 --> 01:41:30,060
+é correr ali em cima de uma tal
+
+1290
+01:41:30,060 --> 01:41:32,060
+para uma solução
+
+1291
+01:41:32,060 --> 01:41:35,060
+em que temos as nossas tarefas
+
+1292
+01:41:35,060 --> 01:41:39,060
+a serem mediadas ou geridas
+
+1293
+01:41:39,060 --> 01:41:42,060
+por uma mega tarefa
+
+1294
+01:41:42,060 --> 01:41:45,060
+que é o sistema operativo
+
+1295
+01:41:45,060 --> 01:41:48,060
+nós ganhamos ali
+
+1296
+01:41:48,060 --> 01:41:50,060
+uma
+
+1297
+01:41:50,060 --> 01:41:52,060
+como é que é dizer
+
+1298
+01:41:52,060 --> 01:41:54,060
+uma estrutura,
+
+1299
+01:41:54,060 --> 01:41:57,060
+um ambiente de desenvolvimento
+
+1300
+01:41:57,060 --> 01:41:59,060
+em que nós basicamente
+
+1301
+01:41:59,060 --> 01:42:02,060
+só temos que nos dedicar
+
+1302
+01:42:02,060 --> 01:42:05,060
+a escrever a funcionalidade das tarefas
+
+1303
+01:42:05,060 --> 01:42:07,060
+e depois, eventualmente, também
+
+1304
+01:42:07,060 --> 01:42:09,060
+escrever quais são os requisitos
+
+1305
+01:42:09,060 --> 01:42:11,060
+não funcionais dessas tarefas,
+
+1306
+01:42:11,060 --> 01:42:13,060
+dizer que, por exemplo, esta tarefa
+
+1307
+01:42:13,060 --> 01:42:14,060
+deve ser acionada
+
+1308
+01:42:14,060 --> 01:42:16,060
+em cada 10 mil e segundos,
+
+1309
+01:42:16,060 --> 01:42:18,060
+e esta outra tarefa
+
+1310
+01:42:18,060 --> 01:42:21,060
+deve ser acionada em cada 100 mil e segundos, ok?
+
+1311
+01:42:21,060 --> 01:42:23,060
+mas não temos
+
+1312
+01:42:23,060 --> 01:42:24,060
+que nos preocuparem
+
+1313
+01:42:24,060 --> 01:42:26,060
+escrever código para
+
+1314
+01:42:26,060 --> 01:42:28,060
+efectivamente assurarmos
+
+1315
+01:42:28,060 --> 01:42:30,060
+que aquela tarefa
+
+1316
+01:42:30,060 --> 01:42:32,060
+é ativada a cada 100 mil e segundos
+
+1317
+01:42:32,060 --> 01:42:34,060
+porque o sistema operativo
+
+1318
+01:42:34,060 --> 01:42:36,060
+felizmente já tem
+
+1319
+01:42:36,060 --> 01:42:39,060
+esse código escrito por alguém
+
+1320
+01:42:39,060 --> 01:42:41,060
+que esperemos nós
+
+1321
+01:42:41,060 --> 01:42:43,060
+seis ou um grande antivíduo na matéria
+
+1322
+01:42:43,060 --> 01:42:46,060
+e escreva código muito bom
+
+1323
+01:42:46,060 --> 01:42:48,060
+melhor do que nós
+
+1324
+01:42:48,060 --> 01:42:51,060
+e já temos ali o problema de resolver, ok?
+
+1325
+01:42:51,060 --> 01:42:55,060
+dúvidas até agora, não há?
+
+1326
+01:42:55,060 --> 01:42:58,060
+obviamente que o sistema operativo
+
+1327
+01:42:58,060 --> 01:43:00,060
+e depois, ficamos para aqui
+
+1328
+01:43:00,060 --> 01:43:03,060
+o sistema operativo
+
+1329
+01:43:03,060 --> 01:43:07,060
+é dar-nos estes benefícios
+
+1330
+01:43:07,060 --> 01:43:10,060
+mas também temos que pagar
+
+1331
+01:43:10,060 --> 01:43:12,060
+quase com uma magia, uma pessoa
+
+1332
+01:43:12,060 --> 01:43:14,060
+é uma magia muito bonita, mas
+
+1333
+01:43:14,060 --> 01:43:16,060
+tem que pagar, sempre usar
+
+1334
+01:43:16,060 --> 01:43:19,060
+a magia, tem que pagar
+
+1335
+01:43:19,060 --> 01:43:22,060
+sair de carros da magia
+
+1336
+01:43:22,060 --> 01:43:25,060
+nós, o que temos?
+
+1337
+01:43:25,060 --> 01:43:27,060
+temos
+
+1338
+01:43:27,060 --> 01:43:30,060
+o nosso programa, as nossas tarefas
+
+1339
+01:43:30,060 --> 01:43:31,060
+e nós queremos
+
+1340
+01:43:31,060 --> 01:43:34,060
+é que o processador corra as nossas tarefas
+
+1341
+01:43:34,060 --> 01:43:36,060
+mas o sistema operativo
+
+1342
+01:43:36,060 --> 01:43:39,060
+que não é o nosso programa, mas não são as nossas tarefas
+
+1343
+01:43:39,060 --> 01:43:41,060
+também vai ter de correr
+
+1344
+01:43:41,060 --> 01:43:43,060
+e vai ter de usar o processador
+
+1345
+01:43:43,060 --> 01:43:46,060
+portanto há algum tempo de processador
+
+1346
+01:43:46,060 --> 01:43:48,060
+que não é utilizado para correr as nossas tarefas
+
+1347
+01:43:48,060 --> 01:43:51,060
+é utilizado para correr o sistema operativo, ok?
+
+1348
+01:43:51,060 --> 01:43:53,060
+portanto há ali um custo que nós pagamos
+
+1349
+01:43:53,060 --> 01:43:55,060
+com um tempo de processador
+
+1350
+01:43:55,060 --> 01:43:58,060
+por estarmos utilizar um sistema operativo
+
+1351
+01:43:58,060 --> 01:44:00,060
+mas para outro lado
+
+1352
+01:44:01,060 --> 01:44:03,060
+é um custo que muitas vezes
+
+1353
+01:44:06,060 --> 01:44:08,060
+é inferior ao benefício
+
+1354
+01:44:08,060 --> 01:44:11,060
+que utilizarmos o sistema operativo nos dá, ok?
+
+1355
+01:44:11,060 --> 01:44:13,060
+é quase como ir daqui a velho
+
+1356
+01:44:13,060 --> 01:44:15,060
+eu posso ir a pé
+
+1357
+01:44:15,060 --> 01:44:17,060
+mas e chegou lá
+
+1358
+01:44:17,060 --> 01:44:20,060
+daqui a velho, 70 quilômetros
+
+1359
+01:44:20,060 --> 01:44:22,060
+se se tomasse muito café
+
+1360
+01:44:22,060 --> 01:44:25,060
+se cadar ainda era capaz de chegar num dia, certo?
+
+1361
+01:44:25,060 --> 01:44:27,060
+mas fora de carro chegou lá em 40 minutos
+
+1362
+01:44:27,060 --> 01:44:29,060
+agora, obviamente que o carro tem um carro
+
+1363
+01:44:29,060 --> 01:44:31,060
+que o carro tem um custo
+
+1364
+01:44:31,060 --> 01:44:33,060
+que tem de gastar o gasoli
+
+1365
+01:44:33,060 --> 01:44:35,060
+ou iléteis cidades
+
+1366
+01:44:35,060 --> 01:44:36,060
+se vai ser um carro elétrico para
+
+1367
+01:44:36,060 --> 01:44:38,060
+nós lá ver se vai ser desta
+
+1368
+01:44:38,060 --> 01:44:39,060
+mas se vai ser um carro elétrico
+
+1369
+01:44:39,060 --> 01:44:41,060
+que tem sempre que pagar qualquer coisa, certo?
+
+1370
+01:44:41,060 --> 01:44:44,060
+portanto há benefícios
+
+1371
+01:44:44,060 --> 01:44:45,060
+e há custos
+
+1372
+01:44:45,060 --> 01:44:47,060
+no caso do uso de um sistema operativo
+
+1373
+01:44:47,060 --> 01:44:50,060
+o custo é tempo de processador
+
+1374
+01:44:50,060 --> 01:44:53,060
+que vai ser utilizado para correr código
+
+1375
+01:44:53,060 --> 01:44:56,060
+que não é a minha aplicação, ok?
+
+1376
+01:44:56,060 --> 01:44:58,060
+só encontrarmos daqui a 40 minutos
+
+1377
+01:45:00,060 --> 01:45:03,060
+eu tenho já processador aplicado
+
+1378
+01:45:03,060 --> 01:45:04,060
+vocês há?
+
+1379
+01:45:04,060 --> 01:45:06,060
+bom, vamos sentar
+
