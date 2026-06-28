@@ -1,0 +1,880 @@
+1
+00:00:00,720 --> 00:00:07,900
+Regres geral, as coisas vão se equilibrar e o oficial popular vai-se incluindo a sua missão,
+
+2
+00:00:07,900 --> 00:00:13,500
+vai-se tendo mais coisas, vai-se tendo menos coisas, mas não chega ao ponto em que fica cheio.
+
+3
+00:00:13,500 --> 00:00:20,460
+Se ficar cheio muitas vezes, nós estamos aqui com uma falta de equilíbrio entre os produtos
+
+4
+00:00:20,460 --> 00:00:27,860
+que está a produzir muito e quem não soube não está a conseguir dar conta do recado.
+
+5
+00:00:28,480 --> 00:00:33,200
+Se for ao contrário, não há de despreza. Temos produtores que são menos e temos consumidos
+
+6
+00:00:33,200 --> 00:00:42,510
+os que são muito vorados e qualquer coisa que aparece no offer circular é rapidamente consumido.
+
+7
+00:00:42,510 --> 00:00:47,150
+Agora, mecanicamente, estamos no offer circular. Primeiro.
+
+8
+00:00:47,150 --> 00:00:49,750
+Você pode ter um considerador?
+
+9
+00:00:49,750 --> 00:00:50,270
+Como?
+
+10
+00:00:50,270 --> 00:00:51,670
+Só pode ter um considerador?
+
+11
+00:00:51,670 --> 00:00:53,110
+Não, pode até para os.
+
+12
+00:00:53,110 --> 00:00:55,870
+E os é que ele sabe fazer o almoço aí do lado?
+
+13
+00:00:55,870 --> 00:00:58,230
+Não tem isso.
+
+14
+00:00:58,250 --> 00:01:06,410
+Agora sou eu e eu retire-o e atualmente as variáveis acessórias ou os ciúliars que me definem
+
+15
+00:01:06,410 --> 00:01:16,010
+no estado do ovo. É por isso que eu dependeri das variáveis de índice para a próxima produção
+
+16
+00:01:16,010 --> 00:01:24,330
+e índice para o próximo consumo e num realmente o gestão deste momento do ovo para além do ovo,
+
+17
+00:01:24,330 --> 00:01:37,830
+certo? É tal história que nós muitas vezes temos algo a guardar-nos e colar-o temos outros
+
+18
+00:01:37,830 --> 00:01:46,710
+dados que nos caracterizam o estado daquela variável, daquela estrutura de dados, ok?
+
+19
+00:01:46,710 --> 00:01:53,630
+Aliás, é por isso que a estrutura de dados tem um contentor e tem quem defina o estado.
+
+20
+00:01:53,770 --> 00:01:55,610
+Então, é uma cansada, bom para ser o lado.
+
+21
+00:01:55,610 --> 00:02:05,470
+O boleto e o arricano neste ovo.
+
+22
+00:02:05,470 --> 00:02:09,990
+Bounder circular.
+
+23
+00:02:09,990 --> 00:02:17,950
+O bounder é muito importante para sistemas em breve porque bounder, que é dizer, limitado.
+
+24
+00:02:17,950 --> 00:02:30,610
+E a uma cabeça, quando for compilar, já sei qual é que vai ser apagado no mole que um arco-claro, certo?
+
+25
+00:02:30,610 --> 00:02:33,890
+Quem é cobre é cobre, temos que sempre ler tudo contadinho, não é?
+
+26
+00:02:33,890 --> 00:02:40,150
+É o que acontece com a pérdida, o pessoal habita um assado e isto vai ocupar-nos mais, isto vai ter que ocupar-nos mais
+
+27
+00:02:40,150 --> 00:02:47,390
+um pouco mais para que a nossa memória está limitada, já que somos ubicados por anóigos de tudo.
+
+28
+00:02:47,390 --> 00:02:56,520
+Então, temos um banco para o apartamento de dados, quando nós vamos colocar os nossos dados.
+
+29
+00:02:56,520 --> 00:03:00,680
+Que não é que eu vou, o que é que eu estava? Que não é que eu vejo, não vejo.
+
+30
+00:03:00,680 --> 00:03:01,880
+Aqui é o que eu sou.
+
+31
+00:03:01,880 --> 00:03:05,740
+Ao bóforo, vocês me prestem os voos.
+
+32
+00:03:05,740 --> 00:03:11,320
+Tudo este é um sample línguas para eles.
+
+33
+00:03:11,320 --> 00:03:12,820
+Ok, vamos por eles.
+
+34
+00:03:12,820 --> 00:03:20,920
+Então é sample type e vamos por aqui o 9.
+
+35
+00:03:20,920 --> 00:03:36,770
+Basicamente, temos um array com capacidade para importar 10 amostas, certo?
+
+36
+00:03:36,830 --> 00:03:49,680
+Vou pensar naquilo, tenho uma estante bílida, que é a array das prateleiras.
+
+37
+00:03:49,680 --> 00:04:00,620
+O 2, 3, 4, 5, 6, 7, 8, 9, 10, pronto, e as prateleiras, ainda por cima, eu colo autoculantes
+
+38
+00:04:00,620 --> 00:04:04,680
+com os números, cada uma das prateleiras tem um número.
+
+39
+00:04:04,680 --> 00:04:10,240
+É o que temos com um array, um array é uma estante com prateleiras numeradas, certo?
+
+40
+00:04:10,340 --> 00:04:20,380
+Agora, a cena como o bóforo circular é que eu não pego muito tempo a pensar onde
+
+41
+00:04:20,380 --> 00:04:25,300
+é que vou colocar um novo valor, é sempre ao frente, ok?
+
+42
+00:04:25,300 --> 00:04:29,100
+Ah, mas tens espaço atrás, esquece, é sempre diferente.
+
+43
+00:04:29,100 --> 00:04:33,660
+Sempre diferente é o caminho mais fácil, certo?
+
+44
+00:04:33,660 --> 00:04:39,800
+De começo eu esgou um pinto, uma vez, nós estávamos a ver o precipício, mas tomávamos
+
+45
+00:04:39,800 --> 00:04:43,720
+a opção de um rei e tindemos um passo diferente.
+
+46
+00:04:45,720 --> 00:04:49,160
+E logo ganhamos campeonato, pode ser campeão, né, certo?
+
+47
+00:04:49,160 --> 00:04:53,160
+Com um passo diferente, passo um precipício.
+
+48
+00:04:53,160 --> 00:05:02,870
+Agora, temos aqui estruturas auxiliares que é o índice para escrever, o índice para
+
+49
+00:05:02,870 --> 00:05:08,370
+ler e o número de elementos.
+
+50
+00:05:08,370 --> 00:05:21,800
+Quando inicialmente, no início, este é o buffer, ele não é uma operação descreta,
+
+51
+00:05:21,800 --> 00:05:24,200
+na intentativa de leitura, certo?
+
+52
+00:05:24,200 --> 00:05:30,800
+Tem o buffer a sair de sustante, totalmente no vivo.
+
+53
+00:05:31,100 --> 00:05:37,340
+Se quer dizer, quando o número de elementos será, os elementos é que eu tenho aqui,
+
+54
+00:05:37,340 --> 00:05:43,300
+por exemplo, no meu buffer, não, pode ser que eu tenho dois índices, veja, realmente
+
+55
+00:05:43,300 --> 00:05:52,900
+foi zero, neste momento, elementos validos são zero, obviamente que nós temos dez
+
+56
+00:05:52,900 --> 00:05:58,500
+prateleiras, mas as dez prateleiras não nos imaginar que elas são baseias, obviamente
+
+57
+00:05:58,500 --> 00:06:05,000
+que meio a alguns prateleiros dizem, não, não, elas estão cheias de ar, não é?
+
+58
+00:06:05,000 --> 00:06:07,000
+Então, não estão vazias.
+
+59
+00:06:07,000 --> 00:06:11,000
+E se nós passarmos a memória RAM, efetivamente elas também estão cheias de bittos, porque
+
+60
+00:06:11,000 --> 00:06:17,640
+uma pessoa não consegue chegar lá contra limites, na memória RAM, e apagar aquelas
+
+61
+00:06:17,640 --> 00:06:23,200
+destruírem aquelas posições, poder fazer isso, podemos fazer, mas émos bocas memórias
+
+62
+00:06:24,200 --> 00:06:25,200
+mais caras.
+
+63
+00:06:25,200 --> 00:06:28,700
+Já há algum altura em que elas têm ficado cada vez mais baratas, agora parece que vão
+
+64
+00:06:28,700 --> 00:06:30,700
+ficar todos os super caros.
+
+65
+00:06:30,700 --> 00:06:43,700
+Neste momento, se eu quiser escrever o primeiro elemento, onde é que eu poderia escrever?
+
+66
+00:06:43,700 --> 00:06:49,700
+Vocês podem dizer, em qualquer cídeo, realmente pode ser em qualquer cídeo.
+
+67
+00:06:49,700 --> 00:06:59,700
+Vamos arranjar aqui uma regra racional, que a boa parte do universo é considera racional.
+
+68
+00:06:59,700 --> 00:07:03,700
+Zé Anon, onde é que vamos colocar o primeiro elemento?
+
+69
+00:07:03,700 --> 00:07:04,700
+A sério.
+
+70
+00:07:04,700 --> 00:07:05,700
+Pronto.
+
+71
+00:07:05,700 --> 00:07:06,700
+Tá legal?
+
+72
+00:07:06,700 --> 00:07:07,700
+Já é mesmo universal.
+
+73
+00:07:07,700 --> 00:07:09,700
+Toda a gente gosta de colocar no princípio.
+
+74
+00:07:09,700 --> 00:07:11,700
+O primeiro, vai com o primeiro elemento.
+
+75
+00:07:11,700 --> 00:07:12,700
+Pronto.
+
+76
+00:07:12,700 --> 00:07:15,050
+Tá bom.
+
+77
+00:07:15,050 --> 00:07:24,050
+Se eu quisesse ler o mais antigo elemento, que eu deveria estar no seu buffer, eu, então,
+
+78
+00:07:24,050 --> 00:07:27,050
+iria ler recorrizição.
+
+79
+00:07:27,050 --> 00:07:28,050
+Zé?
+
+80
+00:07:28,050 --> 00:07:29,050
+Exatamente.
+
+81
+00:07:29,050 --> 00:07:32,050
+Agora aqui, temos que ser consistentes.
+
+82
+00:07:32,050 --> 00:07:39,050
+Se o primeiro elemento, vou colocar naquela regra, neste buffer que está no vici, mas
+
+83
+00:07:39,050 --> 00:07:44,050
+seria a posição zero, então, quem quiser ler, também vai ler o primeiro elemento.
+
+84
+00:07:44,050 --> 00:07:49,050
+Então, ele vai ler o primeiríssimo na posição, quando colocar no primeiríssimo, que é na posição
+
+85
+00:07:49,050 --> 00:07:50,050
+zero.
+
+86
+00:07:50,050 --> 00:07:55,050
+Este aqui, não tínhamos alguma liberdade de escolha, e este aqui fica amarrado a este.
+
+87
+00:07:55,050 --> 00:07:56,050
+Zé?
+
+88
+00:07:56,050 --> 00:07:58,900
+Faz sentido.
+
+89
+00:07:58,900 --> 00:08:04,900
+Quando eu escrever o primeiro elemento, vamos imaginar que vai escrever um cinco.
+
+90
+00:08:04,900 --> 00:08:11,900
+Eu venho aqui e pergunto, posso escrever quantos elementos é que vai ser zero?
+
+91
+00:08:11,900 --> 00:08:12,900
+Zero.
+
+92
+00:08:12,900 --> 00:08:17,900
+Se estamos zero, e se tem capacidade para dez, tem espaço a fartes.
+
+93
+00:08:17,900 --> 00:08:22,900
+Então, a primeira coisa que eu tenho que fazer, se quiser escrever, é, tem espaço
+
+94
+00:08:22,900 --> 00:08:24,900
+se o zero não era neste.
+
+95
+00:08:24,900 --> 00:08:25,900
+Ok.
+
+96
+00:08:25,900 --> 00:08:26,900
+Então, posso escrever.
+
+97
+00:08:26,900 --> 00:08:29,900
+Tenha cita que eu vou escrever.
+
+98
+00:08:29,900 --> 00:08:32,900
+Aqui dá uma dizer na posição zero.
+
+99
+00:08:32,900 --> 00:08:43,060
+Então, eu vou colocar aqui o cinco, um terço de trabalho já está feito, um terço de trabalho
+
+100
+00:08:43,060 --> 00:08:44,060
+de assinante.
+
+101
+00:08:44,060 --> 00:08:48,060
+Então, o terço de trabalho está feito, um quinto, um quinto.
+
+102
+00:08:48,060 --> 00:08:50,060
+E agora, o que é que eu tenho que fazer?
+
+103
+00:08:50,060 --> 00:08:52,060
+Acabei de colocar o meu elemento.
+
+104
+00:08:52,060 --> 00:08:54,060
+Eu tenho que atualizar isto.
+
+105
+00:08:54,060 --> 00:08:57,060
+Já existe o meu elemento de vale e o meu volto.
+
+106
+00:08:57,060 --> 00:09:03,060
+E, além do mais, quem quiser escrever a seguir, não vai escrever aqui.
+
+107
+00:09:03,060 --> 00:09:05,060
+Eu vou tentar escrever aqui.
+
+108
+00:09:06,060 --> 00:09:08,060
+Vou ter que atualizar isto, para dizer.
+
+109
+00:09:08,060 --> 00:09:13,060
+Quem quer escrever a seguir, ocupa a posição um e um, porque a posição zero está neste
+
+110
+00:09:13,060 --> 00:09:14,060
+momento de serviço.
+
+111
+00:09:14,060 --> 00:09:15,060
+Sabe?
+
+112
+00:09:15,060 --> 00:09:23,000
+Quem for melhor consumir a atenção, é ele.
+
+113
+00:09:23,000 --> 00:09:26,000
+Isto é um ponto de semer, que é um ponto de semer um bocado destrutivo.
+
+114
+00:09:26,000 --> 00:09:30,000
+Então, eu vou ver, mas vou tirar a oportunidade de quem quer escrever a seguir.
+
+115
+00:09:30,000 --> 00:09:32,000
+Vou dar mais um valor aqui, ok?
+
+116
+00:09:32,000 --> 00:09:34,000
+Porque assim, é meu, mas não é.
+
+117
+00:09:35,000 --> 00:09:38,000
+Quem quiser ler a seguir, também é o outro.
+
+118
+00:09:38,000 --> 00:09:43,000
+E o que para ler, tenho primeiro, verificar se isto é ideal para uma coisa para ler.
+
+119
+00:09:43,000 --> 00:09:48,000
+Se isto for zero, não vale a pena existir, mas nada para ler no meio.
+
+120
+00:09:48,000 --> 00:09:49,000
+Durmo.
+
+121
+00:09:49,000 --> 00:09:52,000
+Não espero ter a expressão de uma coisa para ler.
+
+122
+00:09:52,000 --> 00:09:54,000
+Mas neste caso eu até tenho um mu.
+
+123
+00:09:54,000 --> 00:09:55,000
+Certo?
+
+124
+00:09:55,000 --> 00:09:57,000
+Onde é que eu vou ler?
+
+125
+00:09:57,000 --> 00:09:59,000
+Olho para aqui, e isto aqui vejo.
+
+126
+00:09:59,000 --> 00:10:02,000
+Se queres ler, o mais sentido é que está no zero.
+
+127
+00:10:03,000 --> 00:10:04,000
+Eu ok?
+
+128
+00:10:04,000 --> 00:10:12,000
+Então vou ao zero, e faço a minha variável local, igual a rei zero.
+
+129
+00:10:12,000 --> 00:10:13,000
+Certo?
+
+130
+00:10:13,000 --> 00:10:15,000
+Vou copiar o valor para ti.
+
+131
+00:10:15,000 --> 00:10:23,000
+Para impedir que eles possam ler o meu signo, que eu estimo tanto, o que é que eu faço?
+
+132
+00:10:23,000 --> 00:10:29,000
+Primeiro, tenho que documentar aquele modelo menos.
+
+133
+00:10:29,000 --> 00:10:33,000
+Havia um value, mas eu agora involinei.
+
+134
+00:10:33,000 --> 00:10:35,000
+Portanto, temos muito um value.
+
+135
+00:10:35,000 --> 00:10:39,310
+E quem quiser ler, que leia o signo.
+
+136
+00:10:39,310 --> 00:10:41,720
+Ok?
+
+137
+00:10:41,720 --> 00:10:47,720
+Note que esta regra de ocupar o espaço, é super simples.
+
+138
+00:10:47,720 --> 00:10:53,720
+E não tem que andar para aqui a pensar se há espaço livre, que agora, ou aqui.
+
+139
+00:10:53,720 --> 00:10:57,720
+Por assim, está meio bocado, porque na realidade se continua lá.
+
+140
+00:10:57,720 --> 00:11:01,720
+Mas, logicamente, é como se não estivesse.
+
+141
+00:11:01,720 --> 00:11:03,720
+Está invalidado.
+
+142
+00:11:03,720 --> 00:11:07,720
+Esta regra é super simples, porque agora, quem que vier a se ver,
+
+143
+00:11:07,720 --> 00:11:09,720
+mas está aqui rumo.
+
+144
+00:11:09,720 --> 00:11:11,720
+Ah, e agora tem um espaço livre de alguém atrás.
+
+145
+00:11:11,720 --> 00:11:13,720
+Não quero saber, é sempre o primeiro.
+
+146
+00:11:15,720 --> 00:11:22,720
+O facto de ser bem diferente facilita a estratégia de onde é que eu vou colocar,
+
+147
+00:11:22,720 --> 00:11:24,720
+onde é que eu vou ler.
+
+148
+00:11:24,720 --> 00:11:27,720
+Caso só se complica quando chegamos aqui.
+
+149
+00:11:27,720 --> 00:11:49,660
+Suponho que...
+
+150
+00:11:58,220 --> 00:12:04,220
+Ok, suponho que tínhamos neste caso, aqui um dois, ou um, aqui um dois.
+
+151
+00:12:04,220 --> 00:12:06,220
+E agora, o que é que eu vou escrever?
+
+152
+00:12:06,220 --> 00:12:07,220
+Onde é que eu vou escrever?
+
+153
+00:12:07,220 --> 00:12:08,220
+Vou escrever no 9.
+
+154
+00:12:08,220 --> 00:12:09,220
+Tem espaço?
+
+155
+00:12:09,220 --> 00:12:11,220
+Bem, primeiro eu vou fazer sempre.
+
+156
+00:12:11,220 --> 00:12:12,220
+Tem espaço?
+
+157
+00:12:12,220 --> 00:12:13,220
+Bem, ok.
+
+158
+00:12:13,220 --> 00:12:16,220
+Então, vou escrever no 3, aqui no 9.
+
+159
+00:12:16,220 --> 00:12:20,220
+3, já tenho que trazer 9 anos.
+
+160
+00:12:20,220 --> 00:12:21,220
+Confé?
+
+161
+00:12:21,220 --> 00:12:23,220
+Tinha 2 para 103.
+
+162
+00:12:23,220 --> 00:12:25,220
+1, 2, 3, certo?
+
+163
+00:12:25,220 --> 00:12:29,220
+E agora, próximo sítio para escrever,
+
+164
+00:12:29,220 --> 00:12:32,220
+é o 10 se formos sempre em frente.
+
+165
+00:12:32,220 --> 00:12:35,220
+Mas no polo, esteque-me se fosse um domite, certo?
+
+166
+00:12:35,220 --> 00:12:37,220
+Nós andamos aqui às voltas, às voltas.
+
+167
+00:12:37,220 --> 00:12:42,220
+Vamos às voltas, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456, checa-me de 9, 0126456...
+
+168
+00:12:42,220 --> 00:12:45,220
+Como é que eu faço um dôndose?
+
+169
+00:12:45,220 --> 00:12:50,220
+Se fosse uma temática, eu teria um porno,
+
+170
+00:12:50,220 --> 00:12:53,220
+uma estrutura que se curva sobre si próprio.
+
+171
+00:12:53,220 --> 00:12:55,220
+Pás,
+
+172
+00:12:55,220 --> 00:12:58,220
+resta que ele visa o inteiro.
+
+173
+00:12:58,220 --> 00:13:02,220
+E ele vem aí, naquela naquela nova.
+
+174
+00:13:02,220 --> 00:13:04,220
+Se eu pegar,
+
+175
+00:13:04,220 --> 00:13:06,220
+se a minha regra for,
+
+176
+00:13:06,220 --> 00:13:35,220
+idx, mais mais, o meu 9 passaria para o 10, está errado, mas se eu fizer o meu idx é igual a idx w mais 1, 9 mais 1 passar a 10,
+
+177
+00:13:35,220 --> 00:13:52,620
+mas eu depois aplico o resto da divisão inteira pela minha capacidade do vetor, que é 10, 10 a dividir por 10 dá que o divisor, divisorei,
+
+178
+00:13:53,620 --> 00:14:15,210
+e o resto, 10, 10, parece magia, do 9, eu passei a ter 10, 10, e eu tenho que fazer a divisão sempre, mas este mora desde na nossa conta,
+
+179
+00:14:16,210 --> 00:14:24,210
+vocês fazem coisas muito mais mudadas no vosso código, nunca inclui com o resto de uma divisão inteira, aliás o resto da divisão,
+
+180
+00:14:26,210 --> 00:14:34,210
+e o resto de divisão que é muito mais rápido para fazer a própria divisão, a divisão das outras pessoas areis geméticas é aquela que mora muito mais tempo,
+
+181
+00:14:35,210 --> 00:14:48,210
+a não ser que vocês tenham um copo, uma modalidade aritmética, multiplicações de divisões, a divisão é mais curada, sumar-se 3 super rápido,
+
+182
+00:14:49,210 --> 00:14:56,210
+multiplicar, não é tão rápido, dividir,
+
+183
+00:15:01,210 --> 00:15:07,210
+a não ser que vocês tenham um compilador acusante para a nossa divisão, e em vez de utilizar a instituição div, do processador,
+
+184
+00:15:08,210 --> 00:15:13,210
+ou escrever outros logicos, logicos, acessóricas, apesar de ser mais logo, você consegue fazer a divisão mais rápido.
+
+185
+00:15:14,210 --> 00:15:20,090
+Divisão de multiplicação de comprações de base.
+
+186
+00:15:21,090 --> 00:15:29,090
+O que está aqui a escrever funciona bem, e o que está aqui a justificar, o que é que aparece ali?
+
+187
+00:15:30,090 --> 00:15:33,090
+Aquilo que me falava era sobre esta estratégia, ok?
+
+188
+00:15:35,090 --> 00:15:37,090
+Produzir, escrever.
+
+189
+00:15:40,090 --> 00:15:44,190
+Ok, vamos lá.
+
+190
+00:15:44,190 --> 00:15:53,890
+Vamos à escolha para o aniversário que vocês estão a produzir,
+
+191
+00:15:54,890 --> 00:15:57,890
+que acabam de fazer um cobreio de escabeiros,
+
+192
+00:15:58,890 --> 00:16:00,890
+para tal, o que vamos fazer?
+
+193
+00:16:03,900 --> 00:16:06,900
+Não o copo, de escabeiro por cima, daquilo que o copo.
+
+194
+00:16:10,900 --> 00:16:11,900
+Não vai esperar.
+
+195
+00:16:16,650 --> 00:16:20,650
+Até que está no parque do variável de escondido, variável de condição,
+
+196
+00:16:21,650 --> 00:16:22,650
+vai esperar.
+
+197
+00:16:22,650 --> 00:16:33,310
+Sim, mas, se não fosse um senso, acho que iria esperar juntos o real e o passador, e iria mudar.
+
+198
+00:16:36,310 --> 00:16:42,310
+A tal história de, nós queremos dar movimentos, de forma que o voo vai ser doar, o que eu fiz cheio.
+
+199
+00:16:46,450 --> 00:16:49,450
+Não adianta, não adianta, não adianta, não adianta, não adianta.
+
+200
+00:16:50,450 --> 00:16:51,450
+Tivemos que pensar.
+
+201
+00:16:53,450 --> 00:16:56,450
+Se calhar, não tenham os consumidores suficientes,
+
+202
+00:17:01,160 --> 00:17:05,160
+para aumentar o tamanho do bóforo circular, nem sempre é boa ideia.
+
+203
+00:17:06,160 --> 00:17:07,160
+Estou procurando continuar lá.
+
+204
+00:17:08,160 --> 00:17:10,160
+Tem um bóforo com 10, ele é do teu.
+
+205
+00:17:11,160 --> 00:17:12,160
+Ah, então, o bóforo do bóforo com 20.
+
+206
+00:17:13,160 --> 00:17:15,160
+Morou boa, que também é do teu, mas vai de feio.
+
+207
+00:17:16,160 --> 00:17:20,160
+Se tivesse sempre mais produção, consistentemente, do que consumo,
+
+208
+00:17:20,160 --> 00:17:22,160
+vai sempre ir de feio ao bóforo circular,
+
+209
+00:17:23,160 --> 00:17:28,160
+para ter que existir um equilíbrio entre a produção e o consumo.
+
+210
+00:17:29,160 --> 00:17:31,160
+A velocidade é que o bóforo achilara ligeiramente,
+
+211
+00:17:32,160 --> 00:17:34,160
+mas sem que achilara toda aquela equilíbrio.
+
+212
+00:17:35,160 --> 00:17:37,160
+Se o equilíbrio for este, não irá estar.
+
+213
+00:17:41,020 --> 00:17:43,020
+É que não os amores dos dois descartos.
+
+214
+00:17:44,020 --> 00:17:48,020
+Os amores dos dois descartos tem ali um uso que é aceitado,
+
+215
+00:17:49,020 --> 00:17:52,650
+a não ser para ler achilara toda aquela equilíbrio.
+
+216
+00:17:53,650 --> 00:17:57,950
+O bóforo é um bóforo black.
+
+217
+00:17:58,950 --> 00:18:00,950
+O bóforo é um bóforo black,
+
+218
+00:18:01,950 --> 00:18:03,950
+o que é o búsito de a nova equilíbrio de fora, para agar-se.
+
+219
+00:18:04,950 --> 00:18:06,950
+E é sempre o bóforo cinto.
+
+220
+00:18:10,350 --> 00:18:11,350
+O bóforo é um bóforo cinto.
+

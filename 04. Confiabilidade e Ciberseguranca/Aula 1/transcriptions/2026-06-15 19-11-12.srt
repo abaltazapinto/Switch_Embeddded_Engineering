@@ -1,0 +1,4024 @@
+1
+00:00:00,000 --> 00:00:07,440
+É porque não existe uma versão que seja possível de destaque, ok?
+
+2
+00:00:07,440 --> 00:00:12,800
+Nós vamos usar o que vamos usar que vamos demonstrar a seguir, ok?
+
+3
+00:00:12,800 --> 00:00:20,480
+Ou seja, a nossa intenção é mostrar-vos uma ferramenta utilizável, gratuita e que vocês
+
+4
+00:00:20,480 --> 00:00:24,240
+possam usar no vosso dia a dia.
+
+5
+00:00:24,240 --> 00:00:27,880
+Isso é o nosso objetivo.
+
+6
+00:00:27,880 --> 00:00:35,120
+Portanto, nós em termos virtualização, temos muitas soluções, basicamente, ok?
+
+7
+00:00:35,120 --> 00:00:40,720
+Mas vamos produzir às três que são realmente soluções, né?
+
+8
+00:00:40,720 --> 00:00:48,520
+E é podermos ir para o Hyper-D, que é da Microsoft, podermos ir para o MOE ou podermos ir para o Xbox.
+
+9
+00:00:48,520 --> 00:00:53,000
+A solução Hyper-D é uma solução que é muito simpática para nós,
+
+10
+00:00:53,000 --> 00:00:56,440
+nós até temos acesso a isto de uma forma gratuita.
+
+11
+00:00:56,440 --> 00:01:02,880
+A solução de Microsoft não desapareceu que seria interessante fornecer uma solução,
+
+12
+00:01:02,880 --> 00:01:07,120
+ou trabalharmos numa solução que, posteriormente, se vocês tivessem uma imprecedência,
+
+13
+00:01:07,120 --> 00:01:10,040
+sem pagar os ciclores, ok?
+
+14
+00:01:10,040 --> 00:01:17,400
+Portanto, o Hyper-D, eu vou colocar algumas coisas, quem tiver acesso ao Hyper-D,
+
+15
+00:01:17,400 --> 00:01:22,800
+podermos, nós temos algumas soluções em que podermos demonstrar como é que vocês funcionam.
+
+16
+00:01:22,800 --> 00:01:31,840
+O Vmoer, até há dois anos atrás, seria a solução que eu preconizaria com uma solução ideal para demonstrar.
+
+17
+00:01:31,840 --> 00:01:40,160
+Só que o Vmoer houve uma mudança de custos e uma mudança de licenciamento,
+
+18
+00:01:40,160 --> 00:01:46,160
+que coloca muitas das empresas em Portugal fora de tudo.
+
+19
+00:01:46,160 --> 00:01:55,240
+E, portanto, mostrarmos uma solução em que o licenciamento seria proibitivo para muitas empresas portugueses.
+
+20
+00:01:55,240 --> 00:02:00,040
+Nós temos a noção que na parte das empresas portugueses são mil, que são mil e empresas.
+
+21
+00:02:00,040 --> 00:02:06,040
+Nós optamos por, que também seria, não seria tão interessante como isso.
+
+22
+00:02:06,040 --> 00:02:10,520
+Podemos usar o Vmoer, mas também temos acesso ao Vmoer.
+
+23
+00:02:10,520 --> 00:02:14,400
+Obtou-se pela solução BoxMox, e por que?
+
+24
+00:02:14,400 --> 00:02:23,120
+Porque é uma solução que permita ao mesmo tempo vocês terem máquinas virtuais e terem containers, ok?
+
+25
+00:02:23,120 --> 00:02:32,760
+Obviamente que se vocês quiserem ter uma orchestração de containers a sério, não é isso que estamos a falar, ok?
+
+26
+00:02:32,760 --> 00:02:39,080
+Muitas empresas hoje em dia usam a registração de containers, a orchestração de containers,
+
+27
+00:02:39,080 --> 00:02:44,360
+obviamente que seria fora do âmbito, desta para a produção.
+
+28
+00:02:44,360 --> 00:02:56,400
+E, portanto, nós simplesmente vamos fornecer uma solução de hypervisa, em que permitos escorrer máquinas virtuais e permitos fornecer containers,
+
+29
+00:02:56,400 --> 00:03:01,160
+permitos escorrer obviamente Docker, óbvio, não é?
+
+30
+00:03:01,160 --> 00:03:08,720
+Mas não é isso, nós estamos preocupados, nós estamos preocupados com sempre os embolidos.
+
+31
+00:03:08,800 --> 00:03:14,520
+E, portanto, nós vamos utilizar os ferramentos como ferramentas de simulação de cenotubífios,
+
+32
+00:03:14,520 --> 00:03:21,640
+e vocês podem perguntar assim, então, por que que nós não usamos mesmo hardware?
+
+33
+00:03:21,640 --> 00:03:30,640
+Porque se não estressamos nos usar hardware, mesmo que recorresse-nos a ferramentas como lobo-red ou macro-python,
+
+34
+00:03:30,640 --> 00:03:37,880
+o tempo necessário, portanto, à atorginidade dos alunos,
+
+35
+00:03:38,000 --> 00:03:45,240
+se estremem em intervado, ou seja, por outras partes, se há algum de vocês que quiser fazer alguns trabalhos,
+
+36
+00:03:45,240 --> 00:03:50,880
+ou quiser testar, ou quiser entrar às pessoas, brincar com os cenos e os embolidos,
+
+37
+00:03:50,880 --> 00:03:55,880
+seja em macro-python, seja em lobo-red, portanto, é em que nós não temos programação,
+
+38
+00:03:55,880 --> 00:04:05,760
+temos programação por objetos, por lobo-res, ou que temos programação, e se é você mais mais, digam,
+
+39
+00:04:05,760 --> 00:04:14,640
+nós conhecemos esses sistemas, nós estamos mais preocupados em que vocês consigam perceber,
+
+40
+00:04:14,640 --> 00:04:19,240
+os conceitos da propriedade consigam perceber, ou seja, não é que se vejam,
+
+41
+00:04:19,240 --> 00:04:25,720
+que estejam duas, três, cinco horas a simplesmente a conseguir escalar um programa de macro-python,
+
+42
+00:04:25,720 --> 00:04:32,040
+portanto, e fazer flash de filmões, se vocês estiverem a trabalhar nisso, ouvi-me,
+
+43
+00:04:32,800 --> 00:04:43,280
+Não tem que a nossa visão de sistemas embolidos não é uma visão em que nós temos um SP32,
+
+44
+00:04:43,280 --> 00:04:51,920
+já tenho outros, nem o que eu preciso de qualquer, a nossa visão dos senos e embolidos vai desde uma televisão android,
+
+45
+00:04:51,920 --> 00:04:56,280
+até uma câmera, tudo isso são os senos e embolidos hoje em dia,
+
+46
+00:04:56,280 --> 00:04:59,880
+e eu não estou tão preocupado com os senos e embolidos em que eu programo,
+
+47
+00:04:59,880 --> 00:05:06,200
+eu já estou mais preocupado com os senos e embolidos, que eu não sei se foi um tipo que está há dois meses na empresa,
+
+48
+00:05:06,200 --> 00:05:12,960
+que tornou o seno e embolido, e quando falamos sobre isso, é isso que eu me preocupo mais, né?
+
+49
+00:05:12,960 --> 00:05:20,000
+O que eu quis dizer, eu não estou tão preocupado com o meu SP32, está à medida de temperatura,
+
+50
+00:05:20,000 --> 00:05:25,200
+eu estou mais preocupado com a minha televisão Sony, que não faz a minha ideia o que ela está a fazer,
+
+51
+00:05:25,200 --> 00:05:27,880
+porque eu sei, mas não é parte da sua doença,
+
+52
+00:05:27,880 --> 00:05:35,440
+e estou muito mais preocupado com a câmera que está a olhar para o sobrinho,
+
+53
+00:05:35,440 --> 00:05:38,640
+que não faça a minha ideia de que filmo esta mic, o que é que está a acontecer,
+
+54
+00:05:38,640 --> 00:05:41,960
+porque é portanto, é essa a visão,
+
+55
+00:05:41,960 --> 00:05:45,520
+ainda bem que eu tenho que ir aberto aqui para que o ano de 15 anos já está a olhar para mim,
+
+56
+00:05:45,520 --> 00:05:48,400
+para lá, se nós para frente, né?
+
+57
+00:05:48,400 --> 00:05:55,280
+Então, isto é o próximo óculos que eu queria usar nos aulas de sábado,
+
+58
+00:05:55,280 --> 00:06:04,840
+obviamente, como vocês também vão admitir aqui, nós já tivemos a de seus trabalhos no Brasil, no Brasil e em Canadá,
+
+59
+00:06:04,840 --> 00:06:08,880
+nós vamos usar como,
+
+60
+00:06:08,880 --> 00:06:14,280
+nós vamos usar como, como far o óculos, não unifar as coisas que nos tem ao cático,
+
+61
+00:06:14,280 --> 00:06:18,560
+que é todo o Unite, tem uns grafos no Unite, é muito giro aquilo,
+
+62
+00:06:18,560 --> 00:06:21,920
+nós vamos usar no sábado com a OpenSense,
+
+63
+00:06:21,920 --> 00:06:28,400
+no OpenSense nós vamos trabalhar nas regras, como é que nós podemos fazer regras, se for bom,
+
+64
+00:06:28,400 --> 00:06:31,760
+como é que nós podemos protegermos o sistema em termos de perigo,
+
+65
+00:06:31,760 --> 00:06:34,440
+como é que nós podemos protegermos o sistema de DNS,
+
+66
+00:06:34,440 --> 00:06:39,440
+como é que nós podemos, no fundo, fazer uma proteção para o sistema queira-te,
+
+67
+00:06:39,520 --> 00:06:44,080
+e vejam que tudo o que vos está mostrando, sete ou ano, sete ou ano ou ano era o que está correto,
+
+68
+00:06:44,080 --> 00:06:47,280
+é tudo grátis, e isso também foi uma coisa que nos propou,
+
+69
+00:06:47,280 --> 00:06:54,000
+seja, garantir que vocês podiam sair daqui com alfos, seja grátis.
+
+70
+00:06:54,000 --> 00:06:56,720
+E vocês também podem perceber, por exemplo,
+
+71
+00:06:56,720 --> 00:07:02,520
+que isso está aqui, que está neste momento parado, é um servidor de MQTT,
+
+72
+00:07:02,520 --> 00:07:07,520
+que tem que permitir-me, é que me permite ter comunicações,
+
+73
+00:07:07,520 --> 00:07:14,400
+tipicamente, o MQTT é das comunicações mais utilizadas em termos de sistemas de embarcais,
+
+74
+00:07:14,400 --> 00:07:19,400
+eu digo, quase tudo eu diria, que é a mais utilizada em sistemas de embarcais,
+
+75
+00:07:19,400 --> 00:07:22,400
+então vamos trabalhar com o MQTT, obviamente.
+
+76
+00:07:22,400 --> 00:07:30,520
+Não vamos saber a comata, e é o que está neste momento, na moda com a razão mais prática,
+
+77
+00:07:30,520 --> 00:07:37,520
+por comata para trabalhar em IPv6, e portanto, para a heterosididade de falunos,
+
+78
+00:07:37,520 --> 00:07:42,520
+seria um bocado complexo, nós estamos todos a trabalhar,
+
+79
+00:07:42,520 --> 00:07:53,520
+estávamos a mostrar protocolos em IPv6, e portanto, vamos fingir um bocadinho só protocolos IPv4,
+
+80
+00:07:53,520 --> 00:07:59,520
+mas se você olhar aqui, veem que já as coisas estão mais ou menos montadas,
+
+81
+00:07:59,520 --> 00:08:05,520
+e portanto, em que vocês já conseguem ver que já estão alguns clientes,
+
+82
+00:08:05,520 --> 00:08:14,520
+e estão algumas servidores também montados, para vocês poderem depois mais tarde trabalhar.
+
+83
+00:08:14,520 --> 00:08:20,520
+Nós vamos trabalhar um bocadinho, e portanto, já percebemos, já percebei,
+
+84
+00:08:20,520 --> 00:08:24,520
+que vamos fazer um bocadinho, vamos fingir um bocadinho em MQTT,
+
+85
+00:08:24,520 --> 00:08:29,520
+porque é um bocadinho, um bocadinho do ponto de vista de cada um,
+
+86
+00:08:29,520 --> 00:08:35,520
+de que é que nós vamos trabalhar, o MQTT é, como diz isso, um dos protocolos de senão,
+
+87
+00:08:35,520 --> 00:08:39,520
+um protocolo mais utilizado, e portanto, também, eu achei,
+
+88
+00:08:39,520 --> 00:08:45,520
+quando entramos a preparar este trabalho, achamos que estava aqui a trabalhar,
+
+89
+00:08:45,520 --> 00:08:49,520
+sim, para me mandar um aeroboto, um aeroboto, um aeroboto, um aeroboto,
+
+90
+00:08:50,520 --> 00:08:57,520
+portanto, também já nos vunecer alguns clientes MQTT,
+
+91
+00:08:57,520 --> 00:09:00,520
+então, vamos a procurar o que seria mais interessante,
+
+92
+00:09:00,520 --> 00:09:03,520
+e vamos vunecer alguns clientes MQTT,
+
+93
+00:09:03,520 --> 00:09:08,520
+em como buscar a temperatura e qualidade da área,
+
+94
+00:09:08,520 --> 00:09:12,520
+igual a justiça do porto, tudo em Python,
+
+95
+00:09:12,520 --> 00:09:19,520
+e Python, para se vocês quiserem alguma facilidade, orgánea,
+
+96
+00:09:19,520 --> 00:09:24,520
+no MQTT, um programa com 600 linhas, portanto, um programa especial,
+
+97
+00:09:24,520 --> 00:09:30,520
+mas se vocês quiserem olhar para o programa e se tiverem mais avotados como Python,
+
+98
+00:09:30,520 --> 00:09:34,520
+será muito interessante, porque conseguem ver a massa-pássica,
+
+99
+00:09:34,520 --> 00:09:39,520
+conseguem ver as variáveis, e conseguem perceber que a informação que eu estava buscando,
+
+100
+00:09:39,520 --> 00:09:44,520
+um país que está a ser sumida para o sistema do porto,
+
+101
+00:09:44,520 --> 00:09:48,520
+e portanto, nós vamos tentar, a ideia é para vocês também,
+
+102
+00:09:48,520 --> 00:09:52,520
+trabalharmos aqui, então, nós vamos em termos de oportunidades,
+
+103
+00:09:52,520 --> 00:09:57,520
+para trabalhar em boxbox, vamos instalar maquines virtuais,
+
+104
+00:09:57,520 --> 00:10:01,520
+vamos instalar alguns contentes, maquines virtuais,
+
+105
+00:10:01,520 --> 00:10:04,520
+e esses coisinhas têm aqui um conteúdozinho,
+
+106
+00:10:04,520 --> 00:10:07,520
+os contentes, é isso que tem, sim, já um cominho,
+
+107
+00:10:07,520 --> 00:10:10,520
+vamos instalar contentes, vamos instalar maquines virtuais,
+
+108
+00:10:10,520 --> 00:10:13,520
+para que vocês tenham acesso no ferramente.
+
+109
+00:10:13,520 --> 00:10:16,520
+Não é que já assistem os mercados,
+
+110
+00:10:16,520 --> 00:10:19,520
+é um ferramente de dar pervaixas,
+
+111
+00:10:19,520 --> 00:10:21,520
+não é que vocês tenham acesso também ao ferramente,
+
+112
+00:10:21,520 --> 00:10:28,520
+que poderá ser outro a vocês, caso que não simular o sistema de imobilires.
+
+113
+00:10:28,520 --> 00:10:34,520
+Se tiverem vontade, não só que nos disserem
+
+114
+00:10:34,520 --> 00:10:38,520
+de trabalhar com os sistemas imobilires em hardware,
+
+115
+00:10:38,520 --> 00:10:42,520
+são desmonalizados, e obviamente todo o apoio necessário,
+
+116
+00:10:42,520 --> 00:10:48,520
+nós temos SPS-32, para vocês poderem trabalhar com nós,
+
+117
+00:10:48,520 --> 00:10:50,520
+indicarem um bocadinho com eles,
+
+118
+00:10:50,520 --> 00:10:56,520
+se quiserem trabalhar com os sistemas imobilires por simulação,
+
+119
+00:10:56,520 --> 00:11:01,520
+desde os AI, muito mais só, no SPS-32,
+
+120
+00:11:01,520 --> 00:11:04,520
+nós também podemos pronunciá-los,
+
+121
+00:11:04,520 --> 00:11:09,520
+achamos só a atenção que aquilo tem uma mania muito grande para não funcionar.
+
+122
+00:11:09,520 --> 00:11:12,520
+E portanto, se quiserem, será pelo alça, quanto é risco,
+
+123
+00:11:12,520 --> 00:11:16,520
+porque não é fácil para aquilo funcionar,
+
+124
+00:11:16,520 --> 00:11:19,520
+é que está sempre a dividir, mas se algum de vocês quiser,
+
+125
+00:11:19,520 --> 00:11:25,520
+tendo algumas soluções para nem qual que se pode simular os sistemas imobilires,
+
+126
+00:11:25,520 --> 00:11:31,520
+e poderem simular o que quiserem e intentem.
+
+127
+00:11:31,520 --> 00:11:35,520
+Verda, não estou a se ficar por não?
+
+128
+00:11:35,520 --> 00:11:40,150
+Vamos fazer um intervalo aqui, Oras Verda.
+
+129
+00:11:40,150 --> 00:11:44,150
+Pois, isso foi uma coisa que eu por acaso me lembrei,
+
+130
+00:11:44,150 --> 00:11:48,150
+que há um bocado que não tínhamos disputado opinião,
+
+131
+00:11:48,150 --> 00:11:51,150
+pois nós temos que ter,
+
+132
+00:11:51,150 --> 00:11:55,150
+é suposto estarmos quatro horas juntos,
+
+133
+00:11:55,150 --> 00:12:01,150
+mas também é suposto poder haver um intervalo para comerem alguma coisa.
+
+134
+00:12:01,150 --> 00:12:07,150
+Eu não sei o que é que, ou podemos fazer isto hoje,
+
+135
+00:12:07,150 --> 00:12:11,150
+porque não temos esta,
+
+136
+00:12:11,150 --> 00:12:15,150
+como somos nós que fazemos antes e depois, digamos assim,
+
+137
+00:12:15,150 --> 00:12:17,150
+as duas primeiras horas e as duas escondas horas,
+
+138
+00:12:17,150 --> 00:12:20,150
+podemos fazer de mais seguido.
+
+139
+00:12:20,150 --> 00:12:24,150
+Não sei o que é que é mais útil para vocês,
+
+140
+00:12:24,150 --> 00:12:30,150
+se ficamos como o intervalo habitual,
+
+141
+00:12:30,150 --> 00:12:34,150
+portanto que será só às nove,
+
+142
+00:12:34,150 --> 00:12:37,150
+a aula seria das sete e dez às nove,
+
+143
+00:12:37,150 --> 00:12:41,150
+e depois das nove e quarenta às vinte e três e trinta,
+
+144
+00:12:41,150 --> 00:12:45,150
+ou se fazemos um intervalo mais pequeno,
+
+145
+00:12:45,150 --> 00:12:47,150
+ou se não fazemos intervalo.
+
+146
+00:12:47,150 --> 00:12:49,150
+Vocês querem se pronunciar?
+
+147
+00:12:49,150 --> 00:12:51,150
+Não sei o que é como é que isto tem corrido,
+
+148
+00:12:51,150 --> 00:12:53,150
+que experiência que vocês tenham.
+
+149
+00:12:53,150 --> 00:12:56,150
+O que vocês preferem?
+
+150
+00:12:56,150 --> 00:13:00,150
+Nós temos de tudo um pouco,
+
+151
+00:13:00,150 --> 00:13:07,150
+mas por norma, ultimamente, é sido tudo corrido.
+
+152
+00:13:07,150 --> 00:13:11,150
+É? Acabamos mais cedo e continuamos, hein?
+
+153
+00:13:11,150 --> 00:13:16,150
+Não, temos o intervalo na mesma das nove às nove e quarenta.
+
+154
+00:13:16,150 --> 00:13:18,150
+O que acontece é que, supostamente,
+
+155
+00:13:18,150 --> 00:13:21,150
+deveria haver um intervalo no meio, não é?
+
+156
+00:13:21,150 --> 00:13:22,150
+Sim.
+
+157
+00:13:22,150 --> 00:13:23,150
+Pronto.
+
+158
+00:13:23,150 --> 00:13:25,150
+Estas horas não?
+
+159
+00:13:25,150 --> 00:13:26,150
+Não.
+
+160
+00:13:26,150 --> 00:13:30,150
+Os outros professores saíram era que deveria haver dez minutos.
+
+161
+00:13:30,150 --> 00:13:35,150
+Então vamos acumular esses dez minutos para o fim para acabar mais cedo.
+
+162
+00:13:35,150 --> 00:13:37,150
+É isso.
+
+163
+00:13:37,150 --> 00:13:39,150
+Ok, ok, ok.
+
+164
+00:13:39,150 --> 00:13:41,150
+Pronto, então se calhar às nove e meia,
+
+165
+00:13:41,150 --> 00:13:44,150
+daqui uma hora para anos,
+
+166
+00:13:44,150 --> 00:13:47,150
+então vamos ver o que é um intervalo para os outros anos.
+
+167
+00:13:47,150 --> 00:13:52,150
+Não, o jantar é das nove às nove e quarenta.
+
+168
+00:13:52,150 --> 00:13:56,150
+Então daqui a 15 minutos esperamos um bocadinho,
+
+169
+00:13:56,150 --> 00:13:58,150
+para os outros comem qualquer coisa,
+
+170
+00:13:58,150 --> 00:14:00,150
+e também dizemos que a gente nasce, não é?
+
+171
+00:14:00,150 --> 00:14:04,150
+Porque às nove e quarenta tem a ver com o tempo que eles moram,
+
+172
+00:14:04,150 --> 00:14:08,150
+e ir à baixa cantina.
+
+173
+00:14:08,150 --> 00:14:10,150
+A cantina, que não há questão da cantina
+
+174
+00:14:10,150 --> 00:14:15,150
+de ficar maiorita só para nós podermos ter uma distração bocadinha.
+
+175
+00:14:15,150 --> 00:14:17,150
+Se ninguém entrar contra, o que é que tu diz?
+
+176
+00:14:17,150 --> 00:14:21,150
+O anstecio simpático de nove a nove e meia.
+
+177
+00:14:21,150 --> 00:14:24,150
+Se não vamos estar aqui,
+
+178
+00:14:24,150 --> 00:14:26,150
+se ninguém ser nada contra,
+
+179
+00:14:26,150 --> 00:14:30,910
+quarenta às nove horas e continuamos às nove e meia.
+
+180
+00:14:30,910 --> 00:14:32,910
+Nenhum distante, então vamos continuar.
+
+181
+00:14:32,910 --> 00:14:34,910
+Ok.
+
+182
+00:14:34,910 --> 00:14:38,910
+Vamos então pensar depois desta pequena introdução,
+
+183
+00:14:38,910 --> 00:14:41,910
+que eu já mostrei de uma forma muito rápida,
+
+184
+00:14:41,910 --> 00:14:44,910
+muito sussinta algumas soluções,
+
+185
+00:14:44,910 --> 00:14:48,910
+que é em termos de, do que nós vamos falar,
+
+186
+00:14:48,910 --> 00:14:52,910
+uma solução comercial e uma solução frioére.
+
+187
+00:14:52,910 --> 00:14:54,910
+A solução frioére não falei muito,
+
+188
+00:14:54,910 --> 00:14:57,910
+porque é que nós vamos durar até mais a salas,
+
+189
+00:14:57,910 --> 00:14:59,910
+de tanta cheque.
+
+190
+00:14:59,910 --> 00:15:03,910
+Com o tempo poderemos, com mais cuidado.
+
+191
+00:15:03,910 --> 00:15:05,910
+Vamos começar a falar,
+
+192
+00:15:05,910 --> 00:15:07,910
+porque eu não sei se vocês estão a ver,
+
+193
+00:15:07,910 --> 00:15:10,910
+uma coisa chamada Fundamente Secretografia.
+
+194
+00:15:10,910 --> 00:15:12,910
+Ok.
+
+195
+00:15:12,910 --> 00:15:14,910
+E a minha pergunta,
+
+196
+00:15:14,910 --> 00:15:16,910
+logo, porque também não posso sempre falar,
+
+197
+00:15:16,910 --> 00:15:20,910
+é quem é que vocês têm alguma noção sobre criptografia?
+
+198
+00:15:23,600 --> 00:15:28,380
+Fez um silêncio.
+
+199
+00:15:28,380 --> 00:15:30,380
+David.
+
+200
+00:15:30,380 --> 00:15:32,380
+Força.
+
+201
+00:15:32,380 --> 00:15:34,380
+Não, estava só a dizer,
+
+202
+00:15:34,380 --> 00:15:36,380
+igual a noção de,
+
+203
+00:15:36,380 --> 00:15:38,380
+para como marido.
+
+204
+00:15:38,380 --> 00:15:40,380
+Ah.
+
+205
+00:15:40,380 --> 00:15:43,380
+Vou dizer que tive uma noção da parte de uma matemática,
+
+206
+00:15:43,380 --> 00:15:45,380
+só levantar a mão de...
+
+207
+00:15:45,380 --> 00:15:47,380
+Ah, ok.
+
+208
+00:15:47,380 --> 00:15:49,380
+Ele é o de física.
+
+209
+00:15:49,380 --> 00:15:51,380
+Ele é o de física, portanto...
+
+210
+00:15:51,380 --> 00:15:54,380
+Sabe, certeza absoluta, certo?
+
+211
+00:15:54,380 --> 00:15:56,380
+Ok.
+
+212
+00:15:56,380 --> 00:15:58,380
+Vamos lá ver uma coisa, criptografia.
+
+213
+00:15:58,380 --> 00:16:01,380
+E aqui, eu gosto de sempre começar um pouquinho com a história,
+
+214
+00:16:01,380 --> 00:16:04,380
+porque acho que a história é sempre importante,
+
+215
+00:16:04,380 --> 00:16:06,380
+quando nós somos engenheiros,
+
+216
+00:16:06,380 --> 00:16:08,380
+olhar e perceber o que é que está a acontecer para trás,
+
+217
+00:16:08,380 --> 00:16:10,380
+o que é que as coisas vão acontecer.
+
+218
+00:16:10,380 --> 00:16:14,380
+Então, a criptografia é uma sobera da criptologia,
+
+219
+00:16:14,380 --> 00:16:17,380
+em que a criptologia é...
+
+220
+00:16:17,380 --> 00:16:19,380
+é a área matemática,
+
+221
+00:16:19,380 --> 00:16:21,380
+é aqui,
+
+222
+00:16:21,380 --> 00:16:25,380
+que se dedica aos estudos das conversões das...
+
+223
+00:16:25,380 --> 00:16:29,380
+da transmissão das, de uma forma secreta e segura.
+
+224
+00:16:29,380 --> 00:16:31,380
+Antes de continuar para a frente,
+
+225
+00:16:31,380 --> 00:16:34,380
+eu queria fazer aqui uma alianção,
+
+226
+00:16:34,380 --> 00:16:36,380
+que é muito estranha,
+
+227
+00:16:36,380 --> 00:16:39,380
+que é básica, e não é tudo que eu vos vou dizer,
+
+228
+00:16:39,380 --> 00:16:42,380
+durante os próximos 18 passados,
+
+229
+00:16:42,380 --> 00:16:44,380
+provavelmente é que atrasamos,
+
+230
+00:16:44,380 --> 00:16:46,380
+não serem para nada.
+
+231
+00:16:46,380 --> 00:16:49,380
+Nós não sabemos.
+
+232
+00:16:49,380 --> 00:16:51,380
+Eu costumo dizer, só soubesse,
+
+233
+00:16:51,380 --> 00:16:53,380
+como é que as coisas evoluíam,
+
+234
+00:16:53,380 --> 00:16:55,380
+eu não estava dando alguma coisa,
+
+235
+00:16:55,380 --> 00:16:57,380
+porque eu tinha ficado frio,
+
+236
+00:16:57,380 --> 00:16:59,380
+que nem para o internet, quando ela apareceu,
+
+237
+00:16:59,380 --> 00:17:01,380
+e teria ficado a segunda vez rio, quando era para seu bitcoin.
+
+238
+00:17:01,380 --> 00:17:03,380
+E das duas vezes, eu não percebi
+
+239
+00:17:03,380 --> 00:17:05,380
+o que a internet ia ser,
+
+240
+00:17:05,380 --> 00:17:07,380
+não percebi o que é que o bitcoin ia ser.
+
+241
+00:17:07,380 --> 00:17:09,380
+Portanto, hoje em dia,
+
+242
+00:17:09,380 --> 00:17:11,380
+não perceba ainda o que é que ia ser,
+
+243
+00:17:11,380 --> 00:17:14,380
+e muito menos o que é que a computação coântica vai ser.
+
+244
+00:17:14,380 --> 00:17:16,380
+Então, nós vamos falar aqui e dar algumas coisas,
+
+245
+00:17:16,380 --> 00:17:18,380
+que nós entendemos,
+
+246
+00:17:18,380 --> 00:17:20,380
+que poderão ser o futuro,
+
+247
+00:17:20,380 --> 00:17:22,380
+nós no tema da noção completa,
+
+248
+00:17:22,380 --> 00:17:24,380
+se vai ser,
+
+249
+00:17:24,380 --> 00:17:26,380
+se não vai ser,
+
+250
+00:17:26,380 --> 00:17:28,380
+e quando é que vai ser.
+
+251
+00:17:28,380 --> 00:17:30,380
+Mas também achamos que nós vemos
+
+252
+00:17:30,380 --> 00:17:33,380
+nos colocar para não destas questões,
+
+253
+00:17:33,380 --> 00:17:35,380
+nem que não seja para vocês terem noção
+
+254
+00:17:35,380 --> 00:17:38,380
+de o que poderá acontecer no futuro.
+
+255
+00:17:38,380 --> 00:17:40,380
+Portanto, a criptografia, como eu disse,
+
+256
+00:17:40,380 --> 00:17:43,380
+o incremento da microindicação segura,
+
+257
+00:17:43,380 --> 00:17:46,380
+e vamos admitir que a comunicação
+
+258
+00:17:46,380 --> 00:17:49,380
+pode ser introduzida e interceptada.
+
+259
+00:17:49,380 --> 00:17:51,380
+No nosso meio, nós chamamos a isto
+
+260
+00:17:51,380 --> 00:17:53,380
+um médio da medida do ataque,
+
+261
+00:17:53,380 --> 00:17:56,380
+ou seja, um ataque do homem do meio
+
+262
+00:17:56,380 --> 00:17:58,380
+em que eu consigo interceptar
+
+263
+00:17:58,380 --> 00:18:00,380
+as comunicações,
+
+264
+00:18:00,380 --> 00:18:02,380
+isto tem sempre, é verdade,
+
+265
+00:18:02,380 --> 00:18:04,380
+muitas vezes,
+
+266
+00:18:04,380 --> 00:18:06,380
+não conseguimos interceptar as comunicações,
+
+267
+00:18:06,380 --> 00:18:08,380
+não há momento, muitas vezes,
+
+268
+00:18:08,380 --> 00:18:10,380
+eu não consigo interceptar as comunicações,
+
+269
+00:18:10,380 --> 00:18:13,380
+porque eu estou comunicado no canal sur.pontaponto.
+
+270
+00:18:13,380 --> 00:18:16,380
+Se eu não estiver a comunicar no canal sur.pontaponto,
+
+271
+00:18:16,380 --> 00:18:18,380
+por exemplo,
+
+272
+00:18:18,380 --> 00:18:20,380
+estou a comunicar,
+
+273
+00:18:20,380 --> 00:18:22,380
+se meu bebido está a comunicar,
+
+274
+00:18:22,380 --> 00:18:24,380
+ou a faia está a comunicar por tudo,
+
+275
+00:18:24,380 --> 00:18:26,380
+e eu tenho sempre que admitir
+
+276
+00:18:26,380 --> 00:18:28,380
+que eu posso ser sujeito
+
+277
+00:18:28,380 --> 00:18:30,380
+no ataque do homem do meio,
+
+278
+00:18:30,380 --> 00:18:32,380
+e portanto, em todas as situações,
+
+279
+00:18:32,380 --> 00:18:35,380
+eu deveria utilizar criptografia
+
+280
+00:18:35,380 --> 00:18:37,380
+para garantir que as comunicações
+
+281
+00:18:37,380 --> 00:18:39,380
+são seguras.
+
+282
+00:18:39,380 --> 00:18:41,380
+Não tem que alcançar,
+
+283
+00:18:41,380 --> 00:18:43,380
+como muita gente pensa,
+
+284
+00:18:43,380 --> 00:18:45,380
+e todos vocês poderiam pensar,
+
+285
+00:18:45,380 --> 00:18:47,380
+a partida isto é quase que
+
+286
+00:18:47,380 --> 00:18:49,380
+malapolisse,
+
+287
+00:18:49,380 --> 00:18:51,380
+ou seja,
+
+288
+00:18:51,380 --> 00:18:53,380
+a parte que só tenho a criptografia,
+
+289
+00:18:53,380 --> 00:18:55,380
+só tenho a possibilidade de criptografar
+
+290
+00:18:55,380 --> 00:18:57,380
+as minhas comunicações,
+
+291
+00:18:57,380 --> 00:18:59,380
+e eu vou criptografar as minhas comunicações.
+
+292
+00:18:59,380 --> 00:19:01,380
+Está bom, é verdade?
+
+293
+00:19:01,380 --> 00:19:03,380
+Precisamente na plenária dos temas de brilho,
+
+294
+00:19:03,380 --> 00:19:05,380
+isso não é verdade?
+
+295
+00:19:05,380 --> 00:19:07,380
+Em muitas situações,
+
+296
+00:19:07,380 --> 00:19:10,380
+as comunicações não são criptografadas.
+
+297
+00:19:10,380 --> 00:19:13,380
+Vou usar um exemplo muito simples.
+
+298
+00:19:13,380 --> 00:19:15,380
+Vamos supor que
+
+299
+00:19:15,380 --> 00:19:17,380
+posso ser a escénica,
+
+300
+00:19:17,380 --> 00:19:19,380
+posso a televisão anóide,
+
+301
+00:19:19,380 --> 00:19:21,380
+posso apontular
+
+302
+00:19:21,380 --> 00:19:23,380
+uma luz qualquer na sua sala,
+
+303
+00:19:23,380 --> 00:19:25,380
+quando você diga a televisão,
+
+304
+00:19:25,380 --> 00:19:27,380
+diga quando você diga a televisão,
+
+305
+00:19:27,380 --> 00:19:29,380
+a luz se diga.
+
+306
+00:19:29,380 --> 00:19:31,380
+A comunicação da sua televisão anóide
+
+307
+00:19:31,380 --> 00:19:33,380
+se você não puder,
+
+308
+00:19:33,380 --> 00:19:35,380
+é absolutamente nada.
+
+309
+00:19:35,380 --> 00:19:37,380
+Simplesmente usarem o que é perfeito.
+
+310
+00:19:37,380 --> 00:19:39,380
+Não é criptografada.
+
+311
+00:19:39,380 --> 00:19:41,380
+Vamos ao exemplo.
+
+312
+00:19:41,380 --> 00:19:43,380
+Vocês têm a vossa Chelle,
+
+313
+00:19:43,380 --> 00:19:45,380
+que está a ler neste momento
+
+314
+00:19:45,380 --> 00:19:47,380
+a vossa atenção, a vossa frequência,
+
+315
+00:19:47,380 --> 00:19:49,380
+a vossa autocorrência,
+
+316
+00:19:49,380 --> 00:19:51,380
+a vossa energia,
+
+317
+00:19:51,380 --> 00:19:53,380
+a encosquência, a energia
+
+318
+00:19:53,380 --> 00:19:55,380
+que vocês estão consumindo em vossa casa,
+
+319
+00:19:55,380 --> 00:19:57,380
+e vão admitir que ele até
+
+320
+00:19:57,380 --> 00:19:59,380
+é capaz de cortar a energia elétrica
+
+321
+00:19:59,380 --> 00:20:01,380
+em vossa casa.
+
+322
+00:20:01,380 --> 00:20:03,380
+Se vocês não fizeram absolutamente nada,
+
+323
+00:20:03,380 --> 00:20:05,380
+essa comunicação não é criptografada.
+
+324
+00:20:05,380 --> 00:20:07,380
+Então, se quer dizer que
+
+325
+00:20:07,380 --> 00:20:09,380
+nós não podemos admitir
+
+326
+00:20:09,380 --> 00:20:11,380
+a partir da partida,
+
+327
+00:20:11,380 --> 00:20:13,380
+que o facto de existir a fotografia
+
+328
+00:20:13,380 --> 00:20:15,380
+e do facto dos dispositivos
+
+329
+00:20:15,380 --> 00:20:17,380
+inublidos
+
+330
+00:20:17,380 --> 00:20:19,380
+sem capacidade de acertar a criptografia,
+
+331
+00:20:19,380 --> 00:20:21,380
+o que isso vai acontecer.
+
+332
+00:20:21,380 --> 00:20:23,380
+Então, quando trabalhamos
+
+333
+00:20:23,380 --> 00:20:25,380
+nesta área,
+
+334
+00:20:25,380 --> 00:20:27,380
+no ovisismo, no início,
+
+335
+00:20:27,380 --> 00:20:29,380
+nós somos seros
+
+336
+00:20:29,380 --> 00:20:31,380
+para que nós venhamos fechar as coisas
+
+337
+00:20:31,380 --> 00:20:33,380
+como algo em que nós...
+
+338
+00:20:33,380 --> 00:20:35,380
+Ok, nós somos
+
+339
+00:20:35,380 --> 00:20:37,380
+somos exigidos
+
+340
+00:20:37,380 --> 00:20:39,380
+e somos por perfeito,
+
+341
+00:20:39,380 --> 00:20:41,380
+somos pessoas que nos convierten.
+
+342
+00:20:41,380 --> 00:20:43,380
+Então, a comunicação
+
+343
+00:20:43,380 --> 00:20:45,380
+envolve duas partes.
+
+344
+00:20:45,380 --> 00:20:47,380
+Obviamente, na parte de equilitação,
+
+345
+00:20:47,380 --> 00:20:49,380
+uma comunicação real
+
+346
+00:20:49,380 --> 00:20:51,380
+que ninguém conseguia ler
+
+347
+00:20:51,380 --> 00:20:53,380
+e uma segunda parte em que nós podemos
+
+348
+00:20:53,380 --> 00:20:55,380
+na comunicação que não nos achamos,
+
+349
+00:20:55,380 --> 00:20:57,380
+ninguém conseguia ler
+
+350
+00:20:57,380 --> 00:20:59,380
+e criptamos.
+
+351
+00:20:59,380 --> 00:21:01,380
+Posada,
+
+352
+00:21:01,380 --> 00:21:03,380
+nos faz o artigo que nós temos
+
+353
+00:21:03,380 --> 00:21:05,380
+acesso ao algoritmo de matemática
+
+354
+00:21:05,380 --> 00:21:07,380
+que nós chamamos macifra.
+
+355
+00:21:07,380 --> 00:21:09,380
+E este algoritmo de matemática
+
+356
+00:21:09,380 --> 00:21:11,380
+o recorre, tipicamente,
+
+357
+00:21:11,380 --> 00:21:13,380
+uma chave
+
+358
+00:21:13,380 --> 00:21:15,380
+em que só os determinantes
+
+359
+00:21:15,380 --> 00:21:17,380
+que a comunicação não conhecia.
+
+360
+00:21:17,380 --> 00:21:19,380
+Não é só da união,
+
+361
+00:21:19,380 --> 00:21:21,380
+mas
+
+362
+00:21:21,380 --> 00:21:23,380
+algumas das minhas tifras
+
+363
+00:21:23,380 --> 00:21:25,380
+que a Iglesia foi utilizada
+
+364
+00:21:25,380 --> 00:21:27,380
+para a comunicação das suas legiões
+
+365
+00:21:27,380 --> 00:21:29,380
+em que nós
+
+366
+00:21:29,380 --> 00:21:31,380
+em cada avançado,
+
+367
+00:21:31,380 --> 00:21:33,380
+xiscás, não souberte.
+
+368
+00:21:33,380 --> 00:21:35,380
+E a chave era, tipicamente,
+
+369
+00:21:35,380 --> 00:21:37,380
+três casas.
+
+370
+00:21:37,380 --> 00:21:39,380
+Ou seja, em vez de comunicar um algoritmo
+
+371
+00:21:39,380 --> 00:21:41,380
+de carinho a ler,
+
+372
+00:21:41,380 --> 00:21:43,380
+e assim,
+
+373
+00:21:43,380 --> 00:21:45,380
+em muitas situações,
+
+374
+00:21:45,380 --> 00:21:47,380
+a civilização do sumano
+
+375
+00:21:47,380 --> 00:21:49,380
+fazes mais amazade
+
+376
+00:21:49,380 --> 00:21:51,380
+em termos de criptografia.
+
+377
+00:21:51,380 --> 00:21:53,380
+Desde a renaxença
+
+378
+00:21:53,380 --> 00:21:55,380
+até à moderna,
+
+379
+00:21:55,380 --> 00:21:57,380
+foi sempre utilizada em termos
+
+380
+00:21:57,380 --> 00:21:59,380
+da guerra,
+
+381
+00:21:59,380 --> 00:22:01,380
+mas, obviamente,
+
+382
+00:22:01,380 --> 00:22:03,380
+foi durante a segunda guerra mundial
+
+383
+00:22:03,380 --> 00:22:05,380
+que aconteceu um grande avanço
+
+384
+00:22:05,380 --> 00:22:07,380
+na área de criptografia.
+
+385
+00:22:07,380 --> 00:22:09,380
+E não só na área de criptografia,
+
+386
+00:22:09,380 --> 00:22:11,380
+porque a área de criptografia foi
+
+387
+00:22:11,380 --> 00:22:13,380
+muito importante,
+
+388
+00:22:13,380 --> 00:22:15,380
+durante a segunda guerra mundial,
+
+389
+00:22:15,380 --> 00:22:17,380
+e deu direito
+
+390
+00:22:17,380 --> 00:22:19,380
+ao que nós os indichamos do computador.
+
+391
+00:22:19,380 --> 00:22:21,380
+E, portanto,
+
+392
+00:22:21,380 --> 00:22:23,380
+o Iban, etc.,
+
+393
+00:22:23,380 --> 00:22:25,380
+foi o que permitiu
+
+394
+00:22:25,380 --> 00:22:27,380
+também os elementos de sistemas
+
+395
+00:22:27,380 --> 00:22:29,380
+da computação.
+
+396
+00:22:29,380 --> 00:22:31,380
+E aqui que eu gostaria de falar
+
+397
+00:22:31,380 --> 00:22:33,380
+de uma situação que tenha parte
+
+398
+00:22:33,380 --> 00:22:35,380
+que não é bem criptografia, tanto disso
+
+399
+00:22:35,380 --> 00:22:37,380
+que a criptografia, tipicamente,
+
+400
+00:22:37,380 --> 00:22:39,380
+tem que nos ter acesso a uma chave,
+
+401
+00:22:39,380 --> 00:22:41,380
+o que eu gostaria de comentar
+
+402
+00:22:41,380 --> 00:22:43,380
+só um bocadinho de uma história
+
+403
+00:22:43,380 --> 00:22:45,380
+que também é interessante,
+
+404
+00:22:45,380 --> 00:22:47,380
+que foi utilizada por os Estados Unidos
+
+405
+00:22:47,380 --> 00:22:49,380
+durante a guerra mundial também,
+
+406
+00:22:49,380 --> 00:22:51,380
+em que há uma criptografia
+
+407
+00:22:51,380 --> 00:22:53,380
+clássica,
+
+408
+00:22:53,380 --> 00:22:55,380
+em que fazia uma chave
+
+409
+00:22:55,380 --> 00:22:57,380
+nas publicações.
+
+410
+00:22:57,380 --> 00:22:59,380
+Quase podemos dizer que havia uma dupla chave,
+
+411
+00:22:59,380 --> 00:23:01,380
+porque as publicações
+
+412
+00:23:01,380 --> 00:23:03,380
+eram transmiteiras para os navajos,
+
+413
+00:23:03,380 --> 00:23:05,380
+que eram uma trilhinha.
+
+414
+00:23:05,380 --> 00:23:07,380
+E, portanto,
+
+415
+00:23:07,380 --> 00:23:09,380
+havia aqui uma dupla
+
+416
+00:23:09,380 --> 00:23:11,380
+criptação para os japonês,
+
+417
+00:23:11,380 --> 00:23:13,380
+que era, em vez de estar
+
+418
+00:23:13,380 --> 00:23:15,380
+simplesmente em criptar a mensagem,
+
+419
+00:23:15,380 --> 00:23:17,380
+também a língua em que
+
+420
+00:23:17,380 --> 00:23:19,380
+a mensagem era em criptada,
+
+421
+00:23:19,380 --> 00:23:21,380
+era uma mensagem, uma língua que era desconhecida
+
+422
+00:23:21,380 --> 00:23:23,380
+para os japonês.
+
+423
+00:23:23,380 --> 00:23:25,380
+Aqui, um pequeno salvo sobre
+
+424
+00:23:25,380 --> 00:23:27,380
+como é que nós podemos complicar
+
+425
+00:23:27,380 --> 00:23:29,380
+ainda mais esta questão da criptografia.
+
+426
+00:23:29,380 --> 00:23:31,380
+Mas
+
+427
+00:23:31,380 --> 00:23:33,380
+a situação mais famosa
+
+428
+00:23:33,380 --> 00:23:35,380
+e, penso,
+
+429
+00:23:35,380 --> 00:23:37,380
+deviam ter visto
+
+430
+00:23:37,380 --> 00:23:39,380
+o filme
+
+431
+00:23:39,380 --> 00:23:41,380
+em que aparece
+
+432
+00:23:41,380 --> 00:23:43,380
+o enigma
+
+433
+00:23:43,380 --> 00:23:45,380
+e toda a parte da construção.
+
+434
+00:23:45,380 --> 00:23:47,380
+Neste caso, do Ultra,
+
+435
+00:23:47,380 --> 00:23:49,380
+que foi a máquina
+
+436
+00:23:49,380 --> 00:23:51,380
+que contraposhe o enigma
+
+437
+00:23:51,380 --> 00:23:53,380
+e, como vocês sabem,
+
+438
+00:23:53,380 --> 00:23:55,380
+que foi produzido por
+
+439
+00:23:55,380 --> 00:23:57,380
+um envolto anônimo,
+
+440
+00:23:57,380 --> 00:23:59,380
+de uma tomate
+
+441
+00:23:59,380 --> 00:24:01,380
+que conseguiu criar
+
+442
+00:24:01,380 --> 00:24:03,380
+um computador
+
+443
+00:24:03,380 --> 00:24:05,380
+de
+
+444
+00:24:05,380 --> 00:24:07,380
+criptação
+
+445
+00:24:07,380 --> 00:24:09,380
+da informação dada pelo enigma.
+
+446
+00:24:09,380 --> 00:24:11,380
+O enigma era uma máquina humana
+
+447
+00:24:11,380 --> 00:24:13,380
+que era utilizada
+
+448
+00:24:13,380 --> 00:24:15,380
+por todo o Lisberto Lomón
+
+449
+00:24:15,380 --> 00:24:17,380
+que, na primeira fase,
+
+450
+00:24:17,380 --> 00:24:19,380
+era um de três rotos
+
+451
+00:24:19,380 --> 00:24:21,380
+que eu penso que é o que está aqui,
+
+452
+00:24:21,380 --> 00:24:23,380
+demonstrar nem mais de três rotos,
+
+453
+00:24:23,380 --> 00:24:25,380
+posteriormente passou um pouco de rotos
+
+454
+00:24:25,380 --> 00:24:27,380
+em que a chave
+
+455
+00:24:27,380 --> 00:24:29,380
+era conhecida
+
+456
+00:24:29,380 --> 00:24:31,380
+todos os dias,
+
+457
+00:24:31,380 --> 00:24:33,380
+a passada, todos os dias,
+
+458
+00:24:33,380 --> 00:24:35,380
+não pela máquina.
+
+459
+00:24:35,380 --> 00:24:37,380
+Temos que saber como era a posição dos rotos
+
+460
+00:24:37,380 --> 00:24:39,380
+que permitem a desqualificação
+
+461
+00:24:39,380 --> 00:24:41,380
+e a entudificação.
+
+462
+00:24:43,380 --> 00:24:45,380
+Foi muito interessante
+
+463
+00:24:45,380 --> 00:24:47,380
+a desqualificação
+
+464
+00:24:47,380 --> 00:24:49,380
+porque a desqualificação foi feita
+
+465
+00:24:49,380 --> 00:24:51,380
+provavelmente por os melhores computadores
+
+466
+00:24:53,380 --> 00:24:55,380
+que existiam
+
+467
+00:24:55,380 --> 00:24:57,380
+e essa desqualificação foi feita
+
+468
+00:24:57,380 --> 00:24:59,380
+porque simplesmente
+
+469
+00:24:59,380 --> 00:25:01,380
+os senhores da ASIS
+
+470
+00:25:01,380 --> 00:25:03,380
+que terminavam sempre as mensagens
+
+471
+00:25:03,380 --> 00:25:05,380
+por Elytlan,
+
+472
+00:25:05,380 --> 00:25:07,380
+portanto, eles através da
+
+473
+00:25:07,380 --> 00:25:09,380
+fase Elytlan,
+
+474
+00:25:09,380 --> 00:25:11,380
+eles não conseguiram desqualificar.
+
+475
+00:25:11,380 --> 00:25:13,380
+Portanto,
+
+476
+00:25:13,380 --> 00:25:15,380
+foi novos dias
+
+477
+00:25:15,380 --> 00:25:17,380
+o Lacking, que foi a primeira vez que foi feito
+
+478
+00:25:17,380 --> 00:25:19,380
+um Lacking,
+
+479
+00:25:19,380 --> 00:25:21,380
+através de uma máquina
+
+480
+00:25:21,380 --> 00:25:23,380
+umilhada de colossos,
+
+481
+00:25:23,380 --> 00:25:25,380
+que eu penso que o colossus era um nome americano,
+
+482
+00:25:25,380 --> 00:25:27,380
+e deu direito
+
+483
+00:25:27,380 --> 00:25:29,380
+a algo que eu entevo
+
+484
+00:25:29,380 --> 00:25:31,380
+em informática.
+
+485
+00:25:31,380 --> 00:25:33,380
+Deve ter ouvido falar sobre tudo,
+
+486
+00:25:33,380 --> 00:25:35,380
+foi a máquina de tooling,
+
+487
+00:25:35,380 --> 00:25:37,380
+que foi o matemático
+
+488
+00:25:37,380 --> 00:25:39,380
+que desenvolveu
+
+489
+00:25:39,380 --> 00:25:41,380
+todo esse processo de desincretação,
+
+490
+00:25:41,380 --> 00:25:43,380
+daí, só se quiserem,
+
+491
+00:25:43,380 --> 00:25:45,380
+quem foi tooling vale a pena ver o filme
+
+492
+00:25:45,380 --> 00:25:47,380
+no Mundo do Mundo de Filmes,
+
+493
+00:25:47,380 --> 00:25:49,380
+e, frente à máquina,
+
+494
+00:25:49,380 --> 00:25:51,380
+o tooling foi considerado
+
+495
+00:25:51,380 --> 00:25:53,380
+uma primeira computadora
+
+496
+00:25:53,380 --> 00:25:55,380
+que existia na era da
+
+497
+00:25:55,380 --> 00:25:57,380
+mais uma vez a criptografia
+
+498
+00:25:57,380 --> 00:25:59,380
+aparece, um dos matemáticos
+
+499
+00:25:59,380 --> 00:26:01,380
+e aparece
+
+500
+00:26:01,380 --> 00:26:03,380
+ligada à guerra, e, por consequência,
+
+501
+00:26:03,380 --> 00:26:05,380
+aparece ligada aos menos computadores
+
+502
+00:26:05,380 --> 00:26:07,380
+e, segundo os finais,
+
+503
+00:26:07,380 --> 00:26:09,380
+oublitos.
+
+504
+00:26:09,380 --> 00:26:11,380
+Quando falamos de criptografia,
+
+505
+00:26:11,380 --> 00:26:13,380
+vamos falar dos tipos de criptografia,
+
+506
+00:26:13,380 --> 00:26:15,380
+vamos falar aqui, no lugar
+
+507
+00:26:15,380 --> 00:26:17,380
+da criptografia mais simples,
+
+508
+00:26:17,380 --> 00:26:19,380
+chamada criptografia simétrica,
+
+509
+00:26:19,380 --> 00:26:21,380
+em que, quer o emissor,
+
+510
+00:26:21,380 --> 00:26:23,380
+quer o setor,
+
+511
+00:26:23,380 --> 00:26:25,380
+tem acesso a uma chave,
+
+512
+00:26:25,380 --> 00:26:27,380
+em que eu pego uma chave
+
+513
+00:26:27,380 --> 00:26:29,380
+e, com essa chave,
+
+514
+00:26:29,380 --> 00:26:31,380
+consigo criptar o meu texto
+
+515
+00:26:31,380 --> 00:26:33,380
+e eu ter um texto cifrado,
+
+516
+00:26:33,380 --> 00:26:35,380
+e, também, com a mesma chave,
+
+517
+00:26:35,380 --> 00:26:37,380
+consigo desincreptar
+
+518
+00:26:37,380 --> 00:26:39,380
+e eu ter um texto
+
+519
+00:26:39,380 --> 00:26:41,380
+normal, um texto original.
+
+520
+00:26:41,380 --> 00:26:43,380
+Tanto, normalmente, nós chamamos
+
+521
+00:26:43,380 --> 00:26:45,380
+desta parte de quilo ou de ciclo de quilo.
+
+522
+00:26:45,380 --> 00:26:47,380
+É um processo mais simples
+
+523
+00:26:47,380 --> 00:26:49,380
+de todos.
+
+524
+00:26:49,380 --> 00:26:51,380
+Desses vários tipos de algoritmos
+
+525
+00:26:51,380 --> 00:26:53,380
+o que é mais conhecido
+
+526
+00:26:53,380 --> 00:26:55,380
+e mais utilizado
+
+527
+00:26:55,380 --> 00:26:57,380
+é o AES.
+
+528
+00:26:57,380 --> 00:26:59,380
+Vocês já estão tropeçados
+
+529
+00:26:59,380 --> 00:27:01,380
+nisto alguns
+
+530
+00:27:01,380 --> 00:27:03,380
+e já é utilizado
+
+531
+00:27:03,380 --> 00:27:05,380
+desde 2002.
+
+532
+00:27:05,380 --> 00:27:07,380
+Faço multar
+
+533
+00:27:07,380 --> 00:27:09,380
+de todos os processos de
+
+534
+00:27:09,380 --> 00:27:11,380
+criptação e de criptação.
+
+535
+00:27:11,380 --> 00:27:13,380
+São processos que estão
+
+536
+00:27:13,380 --> 00:27:15,380
+muitas vezes sujeitos
+
+537
+00:27:15,380 --> 00:27:17,380
+a ser desistado
+
+538
+00:27:17,380 --> 00:27:19,380
+e, portanto, nem sempre
+
+539
+00:27:19,380 --> 00:27:21,380
+estão necessárias toda a gente.
+
+540
+00:27:21,380 --> 00:27:23,380
+Nunca nem comeceu agora
+
+541
+00:27:23,380 --> 00:27:25,380
+a ver uma notícia.
+
+542
+00:27:25,380 --> 00:27:27,380
+Hoje, a ontem, uma notícia
+
+543
+00:27:27,380 --> 00:27:29,380
+que, basicamente, os Estados Unidos
+
+544
+00:27:29,380 --> 00:27:31,380
+não permitem a utilização
+
+545
+00:27:31,380 --> 00:27:33,380
+dos outros modelos
+
+546
+00:27:33,380 --> 00:27:35,380
+da polva.
+
+547
+00:27:35,380 --> 00:27:37,380
+De polva.
+
+548
+00:27:37,380 --> 00:27:39,380
+São considerados
+
+549
+00:27:39,380 --> 00:27:41,380
+ameaças da segurança.
+
+550
+00:27:41,380 --> 00:27:43,380
+Aqui, também, aconteceu uma coisa.
+
+551
+00:27:43,380 --> 00:27:45,380
+Estamos a falar de agir e condená-los
+
+552
+00:27:45,380 --> 00:27:47,380
+em alem nosiais.
+
+553
+00:27:47,380 --> 00:27:49,380
+Estamos a falar de ano 90
+
+554
+00:27:49,380 --> 00:27:51,380
+com as criptações
+
+555
+00:27:51,380 --> 00:27:53,380
+e as incriptações
+
+556
+00:27:53,380 --> 00:27:55,380
+e, às vezes, não era todo simples
+
+557
+00:27:55,380 --> 00:27:57,380
+como isso, temos acesso
+
+558
+00:27:57,380 --> 00:27:59,380
+aos processos de criptação e de incriptação.
+
+559
+00:27:59,380 --> 00:28:01,380
+O AES é o mais conhecido de todos.
+
+560
+00:28:01,380 --> 00:28:03,380
+Existem, obviamente,
+
+561
+00:28:03,380 --> 00:28:05,380
+parentes.
+
+562
+00:28:05,380 --> 00:28:07,380
+Tem a ver, também, de achar privado.
+
+563
+00:28:07,380 --> 00:28:09,380
+E, portanto,
+
+564
+00:28:09,380 --> 00:28:11,380
+só vocês virem
+
+565
+00:28:11,380 --> 00:28:13,380
+só olhar-lhe dentro de todo o pessoal,
+
+566
+00:28:13,380 --> 00:28:15,380
+também já nisto. O AES é de todos.
+
+567
+00:28:15,380 --> 00:28:17,380
+As criptações que eu, obviamente, tenho a ver
+
+568
+00:28:17,380 --> 00:28:19,380
+também na chave.
+
+569
+00:28:19,380 --> 00:28:21,380
+De rapididade.
+
+570
+00:28:21,380 --> 00:28:23,380
+É só o ritmo.
+
+571
+00:28:23,380 --> 00:28:25,380
+Agora, tenho aqui uma informação
+
+572
+00:28:25,380 --> 00:28:27,380
+um pouquinho mais estagada.
+
+573
+00:28:27,380 --> 00:28:29,380
+É só o ritmo que tenho que ver
+
+574
+00:28:29,380 --> 00:28:31,380
+com a ideia dos números primos,
+
+575
+00:28:31,380 --> 00:28:33,380
+em que eu, sim,
+
+576
+00:28:33,380 --> 00:28:35,380
+eu se pegar em dois números primos
+
+577
+00:28:35,380 --> 00:28:37,380
+em nenhum tipo de cárdole dos números primos
+
+578
+00:28:37,380 --> 00:28:39,380
+eu tenho um determinado número.
+
+579
+00:28:39,380 --> 00:28:41,380
+Isso é fácil.
+
+580
+00:28:41,380 --> 00:28:43,380
+É muito fácil.
+
+581
+00:28:43,380 --> 00:28:45,380
+Os números primos
+
+582
+00:28:45,380 --> 00:28:47,380
+são muito fáceis.
+
+583
+00:28:47,380 --> 00:28:49,380
+É muito difícil
+
+584
+00:28:49,380 --> 00:28:51,380
+eu conseguir saber quais são os números primos
+
+585
+00:28:51,380 --> 00:28:53,380
+que têm direito ao cárdole do tipo de cárdole.
+
+586
+00:28:53,380 --> 00:28:55,380
+Chega antes de eu saber
+
+587
+00:28:55,380 --> 00:28:57,380
+que foi a regra de utilização.
+
+588
+00:28:57,380 --> 00:28:59,380
+É esse o princípio que está
+
+589
+00:28:59,380 --> 00:29:01,380
+por trás do AES.
+
+590
+00:29:03,380 --> 00:29:05,380
+De vista da temática,
+
+591
+00:29:05,380 --> 00:29:07,380
+qual que é a informação de uma matriz.
+
+592
+00:29:07,380 --> 00:29:09,380
+Ou seja, mistura linhas, mistura colunas.
+
+593
+00:29:09,380 --> 00:29:11,380
+Faz uma série
+
+594
+00:29:11,380 --> 00:29:13,380
+de operações matriciais.
+
+595
+00:29:13,380 --> 00:29:15,380
+Foi
+
+596
+00:29:15,380 --> 00:29:17,380
+dentro desta
+
+597
+00:29:17,380 --> 00:29:19,380
+ideia do cárdole matricial
+
+598
+00:29:19,380 --> 00:29:21,380
+que vocês sabem
+
+599
+00:29:21,380 --> 00:29:23,380
+do cárdole matricial hoje em dia.
+
+600
+00:29:23,380 --> 00:29:25,380
+Principalmente, outra vez, muito na ordem
+
+601
+00:29:25,380 --> 00:29:27,380
+com os AES.
+
+602
+00:29:27,380 --> 00:29:29,380
+Foi um recorde
+
+603
+00:29:29,380 --> 00:29:31,380
+de 15 ao 8
+
+604
+00:29:31,380 --> 00:29:33,380
+e no final foi
+
+605
+00:29:33,380 --> 00:29:35,380
+escolhido algo de terreno
+
+606
+00:29:35,380 --> 00:29:37,380
+que é o que é tipicamente utilizado.
+
+607
+00:29:37,380 --> 00:29:39,380
+Há alguns exemplos.
+
+608
+00:29:39,380 --> 00:29:41,380
+Há
+
+609
+00:29:41,380 --> 00:29:43,380
+alguns exemplos que nós usamos todos os vídeos.
+
+610
+00:29:43,380 --> 00:29:45,380
+Só que agora é a bota.
+
+611
+00:29:45,380 --> 00:29:47,380
+Se calharmos os exemplos
+
+612
+00:29:47,380 --> 00:29:49,380
+mais clássicos de equilitação
+
+613
+00:29:49,380 --> 00:29:51,380
+simétrica.
+
+614
+00:29:51,380 --> 00:29:53,380
+Outra, essa é a equilitação dos vídeos.
+
+615
+00:29:53,380 --> 00:29:55,380
+Aqui um pequeno problema
+
+616
+00:29:55,380 --> 00:29:57,380
+para quem estámos a trabalhar
+
+617
+00:29:57,380 --> 00:29:59,380
+estamos a estudar
+
+618
+00:29:59,380 --> 00:30:01,380
+de sistemas e impedidos.
+
+619
+00:30:01,380 --> 00:30:03,380
+E já agora existe um vídeo
+
+620
+00:30:03,380 --> 00:30:05,380
+muitos vídeos
+
+621
+00:30:05,380 --> 00:30:07,380
+que vocês quiserem ver.
+
+622
+00:30:07,380 --> 00:30:09,380
+É
+
+623
+00:30:09,380 --> 00:30:11,380
+que é
+
+624
+00:30:11,380 --> 00:30:13,380
+demonstrado
+
+625
+00:30:13,380 --> 00:30:15,380
+como nós conseguimos
+
+626
+00:30:15,380 --> 00:30:17,380
+desigriptar um disco bitlóper.
+
+627
+00:30:17,380 --> 00:30:19,380
+É de
+
+628
+00:30:19,380 --> 00:30:21,380
+extremamente simples.
+
+629
+00:30:21,380 --> 00:30:23,380
+Quando tenho um ponto de dor a brincar
+
+630
+00:30:23,380 --> 00:30:25,380
+a primeira coisa
+
+631
+00:30:25,380 --> 00:30:27,380
+que tem a ser feita
+
+632
+00:30:27,380 --> 00:30:29,380
+é o disco sujo,
+
+633
+00:30:29,380 --> 00:30:31,380
+desigriptado e eu tenho que mandar a chave
+
+634
+00:30:31,380 --> 00:30:33,380
+para você não conseguir desigriptar o disco.
+
+635
+00:30:33,380 --> 00:30:35,380
+Se não,
+
+636
+00:30:35,380 --> 00:30:37,380
+se está ingriptado.
+
+637
+00:30:37,380 --> 00:30:39,380
+Uma ideia extremamente simples
+
+638
+00:30:39,380 --> 00:30:41,380
+é se eu interceptar
+
+639
+00:30:41,380 --> 00:30:43,380
+o que vocês fizeram com o meio-denomido
+
+640
+00:30:43,380 --> 00:30:45,380
+ao ataque.
+
+641
+00:30:45,380 --> 00:30:47,380
+É em que eu meto um oximoscópio
+
+642
+00:30:47,380 --> 00:30:49,380
+e vejo que são os vídeos que estão a ser passados
+
+643
+00:30:49,380 --> 00:30:51,380
+para
+
+644
+00:30:51,380 --> 00:30:53,380
+o sistema de gestão do disco
+
+645
+00:30:53,380 --> 00:30:55,380
+para desigriptar o disco.
+
+646
+00:30:55,380 --> 00:30:57,380
+Eu tenho a chave de acesso do bitlóper.
+
+647
+00:30:57,380 --> 00:30:59,380
+Então, se for isso.
+
+648
+00:30:59,380 --> 00:31:01,380
+E é ouvido no tema do YouTube
+
+649
+00:31:01,380 --> 00:31:03,380
+de socialistas populares
+
+650
+00:31:03,380 --> 00:31:05,380
+que mostra como é que um pico
+
+651
+00:31:05,380 --> 00:31:07,380
+tanto um professador
+
+652
+00:31:07,380 --> 00:31:09,380
+custa 3 euros
+
+653
+00:31:09,380 --> 00:31:11,380
+eu consigo dar a volta
+
+654
+00:31:11,380 --> 00:31:13,380
+a todos os inscripitações da disco.
+
+655
+00:31:13,380 --> 00:31:15,380
+Mas consegue não.
+
+656
+00:31:15,380 --> 00:31:17,380
+Obviamente porque está mudando e hoje em dia
+
+657
+00:31:17,380 --> 00:31:19,380
+já ficam criminais inteligentes
+
+658
+00:31:19,380 --> 00:31:21,380
+até alguém escolher qual é a forma
+
+659
+00:31:21,380 --> 00:31:23,380
+de dar outra vez a volta do sujo.
+
+660
+00:31:23,380 --> 00:31:25,380
+Mas
+
+661
+00:31:25,380 --> 00:31:27,380
+há um canal
+
+662
+00:31:27,380 --> 00:31:29,380
+no YouTube
+
+663
+00:31:29,380 --> 00:31:31,380
+se vocês gostarem destas ápies
+
+664
+00:31:31,380 --> 00:31:33,380
+nós achamos Low Level.
+
+665
+00:31:33,380 --> 00:31:35,380
+Este canal Low Level
+
+666
+00:31:35,380 --> 00:31:37,380
+não trata só
+
+667
+00:31:37,380 --> 00:31:39,380
+de ser novo no vídeo, está a tudo mais.
+
+668
+00:31:39,380 --> 00:31:41,380
+Está a ter surpresa
+
+669
+00:31:41,380 --> 00:31:43,380
+e portanto
+
+670
+00:31:43,380 --> 00:31:45,380
+não nos aconsegue para que seja para a noite
+
+671
+00:31:45,380 --> 00:31:47,380
+porque se vocês olharem para o Low Level
+
+672
+00:31:47,380 --> 00:31:49,380
+veem alguns
+
+673
+00:31:49,380 --> 00:31:51,380
+dos filmes que eu tenho lá
+
+674
+00:31:51,380 --> 00:31:53,380
+vídeos que eu tenho lá
+
+675
+00:31:53,380 --> 00:31:55,380
+rapidamente os contigo com a sensação
+
+676
+00:31:55,380 --> 00:31:57,380
+que vão ser todos para cá.
+
+677
+00:31:57,380 --> 00:31:59,380
+Não é mentira mas
+
+678
+00:31:59,380 --> 00:32:01,380
+vai durar mais algum tempo.
+
+679
+00:32:01,380 --> 00:32:03,380
+E portanto
+
+680
+00:32:03,380 --> 00:32:05,380
+se vocês gostarem destas ápies
+
+681
+00:32:05,380 --> 00:32:07,380
+em que gostam de filmes e gostam de perceber
+
+682
+00:32:07,380 --> 00:32:09,380
+como isto funciona na base
+
+683
+00:32:09,380 --> 00:32:11,380
+vejam Low Level
+
+684
+00:32:11,380 --> 00:32:13,380
+é um excelente canal
+
+685
+00:32:13,380 --> 00:32:15,380
+de YouTube para vocês puderem ver.
+
+686
+00:32:15,380 --> 00:32:17,380
+Portanto
+
+687
+00:32:17,380 --> 00:32:19,380
+em umas inscripitações
+
+688
+00:32:19,380 --> 00:32:21,380
+cinétricas mais utilizados
+
+689
+00:32:21,380 --> 00:32:23,380
+BitLocker é outra das
+
+690
+00:32:23,380 --> 00:32:25,380
+inscripitações
+
+691
+00:32:25,380 --> 00:32:27,380
+obviamente
+
+692
+00:32:27,380 --> 00:32:29,380
+é mais simples, mais eficiente, mais rápido
+
+693
+00:32:29,380 --> 00:32:31,380
+e em muitas situações nós vemos
+
+694
+00:32:31,380 --> 00:32:33,380
+que as pessoas são eficientes
+
+695
+00:32:33,380 --> 00:32:35,380
+e sejam rápidas.
+
+696
+00:32:35,380 --> 00:32:37,380
+Terminando ainda a criptografia
+
+697
+00:32:37,380 --> 00:32:39,380
+cinétrica
+
+698
+00:32:39,380 --> 00:32:41,380
+nós temos o que nós chamamos da criptografia asimétrica
+
+699
+00:32:41,380 --> 00:32:43,380
+ou seja
+
+700
+00:32:43,380 --> 00:32:45,380
+em que existe uma chave pública
+
+701
+00:32:45,380 --> 00:32:47,380
+e uma chave privada
+
+702
+00:32:47,380 --> 00:32:49,380
+não se esquece da cinétrica
+
+703
+00:32:49,380 --> 00:32:51,380
+se você tem acesso a uma chave privada
+
+704
+00:32:51,380 --> 00:32:53,380
+ou seja
+
+705
+00:32:53,380 --> 00:32:55,380
+o inicio do setor
+
+706
+00:32:55,380 --> 00:32:57,380
+é só uma chave. Aqui não
+
+707
+00:32:57,380 --> 00:32:59,380
+é só uma chave pública
+
+708
+00:32:59,380 --> 00:33:01,380
+qualquer pessoa pode ter acesso a essa chave pública
+
+709
+00:33:01,380 --> 00:33:03,380
+e tem uma chave privada
+
+710
+00:33:03,380 --> 00:33:05,380
+em que só
+
+711
+00:33:05,380 --> 00:33:07,380
+o setor
+
+712
+00:33:07,380 --> 00:33:09,380
+é que é atentor da chave privada
+
+713
+00:33:09,380 --> 00:33:11,380
+um exemplo
+
+714
+00:33:11,380 --> 00:33:13,380
+vamos entender mais à frente
+
+715
+00:33:13,380 --> 00:33:15,380
+um exemplo clássico de isto
+
+716
+00:33:15,380 --> 00:33:17,380
+será o Cretão Ciudadão
+
+717
+00:33:17,380 --> 00:33:19,380
+em que para eu ter acesso
+
+718
+00:33:19,380 --> 00:33:21,380
+a minha chave privada
+
+719
+00:33:21,380 --> 00:33:23,380
+eu tenho que ter um bingo
+
+720
+00:33:23,380 --> 00:33:25,380
+enquanto que a chave pública
+
+721
+00:33:25,380 --> 00:33:27,380
+é de acesso já
+
+722
+00:33:27,380 --> 00:33:29,380
+ou seja quando eu sigo no documento
+
+723
+00:33:29,380 --> 00:33:31,380
+e eu sigo no documento quando a minha chave privada
+
+724
+00:33:31,380 --> 00:33:33,380
+e por isso é que eu tenho que pôr lá no bingo
+
+725
+00:33:33,380 --> 00:33:35,380
+mas qualquer pessoa ou qualquer um de vocês
+
+726
+00:33:35,380 --> 00:33:37,380
+se pegar um documento
+
+727
+00:33:37,380 --> 00:33:39,380
+assinar por mim
+
+728
+00:33:39,380 --> 00:33:41,380
+sabe o que é assinar por mim
+
+729
+00:33:41,380 --> 00:33:43,380
+que tenha acesso a chave pública
+
+730
+00:33:43,380 --> 00:33:45,380
+a ideia é um pedido que traz aí essa
+
+731
+00:33:45,380 --> 00:33:47,380
+não é só usada
+
+732
+00:33:47,380 --> 00:33:49,380
+é usar totalmente o processo
+
+733
+00:33:49,380 --> 00:33:51,380
+que é mais utilizado hoje em dia
+
+734
+00:33:51,380 --> 00:33:53,380
+em muitas das situações
+
+735
+00:33:53,380 --> 00:33:55,380
+não é criptografia cinétrica
+
+736
+00:33:55,380 --> 00:33:57,380
+mas sim, é criptografia assinétrica
+
+737
+00:33:57,380 --> 00:33:59,380
+que é isso
+
+738
+00:33:59,380 --> 00:34:01,380
+e a mensagem de utilizar a chave privada
+
+739
+00:34:01,380 --> 00:34:03,380
+e que amplifica a mensagem de usar a chave pública
+
+740
+00:34:03,380 --> 00:34:05,380
+que estava adreocado
+
+741
+00:34:05,380 --> 00:34:07,380
+quando nós assinamos um documento
+
+742
+00:34:07,380 --> 00:34:09,380
+através da Cretão Ciudadão
+
+743
+00:34:09,380 --> 00:34:11,380
+em que quem eu assino um documento
+
+744
+00:34:11,380 --> 00:34:13,380
+usa a minha chave privada
+
+745
+00:34:13,380 --> 00:34:15,380
+e mete o bingo para poder assinar
+
+746
+00:34:15,380 --> 00:34:17,380
+a minha chave privada
+
+747
+00:34:17,380 --> 00:34:19,380
+vocês vão ler o documento assinado
+
+748
+00:34:19,380 --> 00:34:21,380
+para poder assinar a chave pública
+
+749
+00:34:21,380 --> 00:34:23,380
+e portanto
+
+750
+00:34:23,380 --> 00:34:25,380
+não é necessário ter um bingo
+
+751
+00:34:25,380 --> 00:34:27,380
+porque eu tenho que ter um bingo
+
+752
+00:34:27,380 --> 00:34:29,380
+então é isso que eu estou a dizer
+
+753
+00:34:29,380 --> 00:34:31,380
+eu tenho uma chave
+
+754
+00:34:31,380 --> 00:34:33,380
+uma chave que faz
+
+755
+00:34:33,380 --> 00:34:35,380
+a incriptação
+
+756
+00:34:35,380 --> 00:34:37,380
+e depois há uma chave que faz as incriptação
+
+757
+00:34:37,380 --> 00:34:40,980
+desculpa por aquele
+
+758
+00:34:40,980 --> 00:34:42,980
+pronomíncio
+
+759
+00:34:42,980 --> 00:34:44,980
+os jovens ao ouvir existentes
+
+760
+00:34:44,980 --> 00:34:46,980
+o RSA
+
+761
+00:34:46,980 --> 00:34:48,980
+é o mais conhecido
+
+762
+00:34:48,980 --> 00:34:50,980
+um momento para o RSA 3
+
+763
+00:34:50,980 --> 00:34:52,980
+que é utilizado para as edição de chaves
+
+764
+00:34:52,980 --> 00:34:54,980
+só no que vocês
+
+765
+00:34:54,980 --> 00:34:56,980
+já tentou
+
+766
+00:34:56,980 --> 00:34:58,980
+criar chaves em um grupo de chaves
+
+767
+00:34:58,980 --> 00:35:00,980
+simétricas
+
+768
+00:35:00,980 --> 00:35:02,980
+típicamente
+
+769
+00:35:02,980 --> 00:35:04,980
+usam por mais
+
+770
+00:35:04,980 --> 00:35:06,980
+chamadas RSA
+
+771
+00:35:06,980 --> 00:35:08,980
+que permitem as edição de chaves
+
+772
+00:35:08,980 --> 00:35:10,980
+e também há de
+
+773
+00:35:10,980 --> 00:35:12,980
+que a chave é gelada
+
+774
+00:35:12,980 --> 00:35:14,980
+através das suas matemáticas
+
+775
+00:35:14,980 --> 00:35:16,980
+típicamente do número de primeiros
+
+776
+00:35:16,980 --> 00:35:18,980
+primeiros como para estes aleatórios
+
+777
+00:35:18,980 --> 00:35:20,980
+são real um dia que é uma chave
+
+778
+00:35:20,980 --> 00:35:22,980
+para anotar mais uma vez
+
+779
+00:35:22,980 --> 00:35:24,980
+típicamente
+
+780
+00:35:24,980 --> 00:35:26,980
+se você fizer no lindos
+
+781
+00:35:26,980 --> 00:35:28,980
+se terem lindos
+
+782
+00:35:28,980 --> 00:35:30,980
+tem que passar o rato
+
+783
+00:35:30,980 --> 00:35:32,980
+aleatórem-se
+
+784
+00:35:32,980 --> 00:35:34,980
+em cima do quadrado
+
+785
+00:35:34,980 --> 00:35:36,980
+para a criação da chave
+
+786
+00:35:36,980 --> 00:35:38,980
+se for no lindos
+
+787
+00:35:38,980 --> 00:35:40,980
+e que volante
+
+788
+00:35:40,980 --> 00:35:42,980
+então isto é muito utilizado
+
+789
+00:35:42,980 --> 00:35:44,980
+para acessores digitais
+
+790
+00:35:44,980 --> 00:35:46,980
+para inquilitação de mensagens
+
+791
+00:35:46,980 --> 00:35:48,980
+e típicamente
+
+792
+00:35:48,980 --> 00:35:50,980
+existem básicos
+
+793
+00:35:50,980 --> 00:35:52,980
+RSA é o álbum mais utilizado
+
+794
+00:35:52,980 --> 00:35:54,980
+mas isto é mais
+
+795
+00:35:54,980 --> 00:35:56,980
+álbum mais utilizado
+
+796
+00:35:56,980 --> 00:35:58,980
+RSA, RSA, RDA, RDA
+
+797
+00:35:58,980 --> 00:36:00,980
+existem básicos
+
+798
+00:36:00,980 --> 00:36:02,980
+mas típicamente
+
+799
+00:36:02,980 --> 00:36:04,980
+o álbum mais utilizado
+
+800
+00:36:04,980 --> 00:36:06,980
+é o RSA
+
+801
+00:36:06,980 --> 00:36:08,980
+estes dois álbums
+
+802
+00:36:08,980 --> 00:36:10,980
+portanto
+
+803
+00:36:10,980 --> 00:36:12,980
+estes dois álbums
+
+804
+00:36:12,980 --> 00:36:14,980
+em cima
+
+805
+00:36:14,980 --> 00:36:16,980
+não é tão interessante como nós estamos
+
+806
+00:36:16,980 --> 00:36:18,980
+no sistema de edibilito
+
+807
+00:36:18,980 --> 00:36:20,980
+tem um impacto computacional
+
+808
+00:36:20,980 --> 00:36:22,980
+não muito agenciável
+
+809
+00:36:22,980 --> 00:36:24,980
+e portanto, muitas vezes no sistema de edibilito
+
+810
+00:36:24,980 --> 00:36:26,980
+nós usamos uma variação
+
+811
+00:36:26,980 --> 00:36:28,980
+nós usamos um algoritmo de inquilitação
+
+812
+00:36:28,980 --> 00:36:30,980
+o que nós chamamos
+
+813
+00:36:30,980 --> 00:36:32,980
+arquitetografia pulo
+
+814
+00:36:32,980 --> 00:36:34,980
+curvilítica
+
+815
+00:36:34,980 --> 00:36:36,980
+a ideia é basicamente a seguinte
+
+816
+00:36:36,980 --> 00:36:38,980
+portanto
+
+817
+00:36:38,980 --> 00:36:40,980
+naquele consor do RSA
+
+818
+00:36:40,980 --> 00:36:42,980
+eu considero que é uma variante
+
+819
+00:36:44,980 --> 00:36:46,980
+e é basicamente
+
+820
+00:36:46,980 --> 00:36:48,980
+em que eu tento encontrar
+
+821
+00:36:48,980 --> 00:36:50,980
+a discussão para a discussão
+
+822
+00:36:50,980 --> 00:36:52,980
+que tem aqui, que é esse intervalo
+
+823
+00:36:52,980 --> 00:36:54,980
+aqui é a vontade de
+
+824
+00:36:54,980 --> 00:36:56,980
+ir para o modo P
+
+825
+00:36:56,980 --> 00:36:58,980
+e que a discussão é do modo
+
+826
+00:36:58,980 --> 00:37:00,980
+é o resto
+
+827
+00:37:00,980 --> 00:37:02,980
+nós
+
+828
+00:37:02,980 --> 00:37:04,980
+queremos mais necessárias
+
+829
+00:37:04,980 --> 00:37:06,980
+estar com o modo do resto
+
+830
+00:37:06,980 --> 00:37:08,980
+portanto, este algoritmo
+
+831
+00:37:08,980 --> 00:37:10,980
+é
+
+832
+00:37:10,980 --> 00:37:12,980
+permite chaves mais pequenos
+
+833
+00:37:12,980 --> 00:37:14,980
+portanto, por exemplo, é chaves mais pequenos
+
+834
+00:37:14,980 --> 00:37:16,980
+portanto, no uso
+
+835
+00:37:16,980 --> 00:37:18,980
+de pequenos de hoje, mil e quarenta e oito
+
+836
+00:37:18,980 --> 00:37:20,980
+mil e vinte e quatro itens, os chaves mais pequenos
+
+837
+00:37:20,980 --> 00:37:22,980
+é mais eficiente
+
+838
+00:37:22,980 --> 00:37:24,980
+ou seja, o ponto de vista computacional é mais eficiente
+
+839
+00:37:24,980 --> 00:37:26,980
+portanto, o ponto de vista de sistemas
+
+840
+00:37:26,980 --> 00:37:28,980
+em robírios é preferido
+
+841
+00:37:28,980 --> 00:37:30,980
+um grande problema
+
+842
+00:37:30,980 --> 00:37:32,980
+é que isto foi proposto
+
+843
+00:37:32,980 --> 00:37:34,980
+pela NECA
+
+844
+00:37:34,980 --> 00:37:36,980
+e fui descobrir que é bem bacó
+
+845
+00:37:36,980 --> 00:37:38,980
+ou seja
+
+846
+00:37:38,980 --> 00:37:40,980
+é a NECA para quem não sabe
+
+847
+00:37:40,980 --> 00:37:42,980
+é o NEC
+
+848
+00:37:42,980 --> 00:37:44,980
+das ex-decidos chaves
+
+849
+00:37:44,980 --> 00:37:46,980
+ela propôs isto ao NIST
+
+850
+00:37:46,980 --> 00:37:48,980
+que é o NEC
+
+851
+00:37:48,980 --> 00:37:50,980
+no Instituto
+
+852
+00:37:50,980 --> 00:37:52,980
+TQSUT
+
+853
+00:37:52,980 --> 00:37:54,980
+mas basicamente
+
+854
+00:37:54,980 --> 00:37:56,980
+são uma entidade
+
+855
+00:37:56,980 --> 00:37:58,980
+norte-americana que propôs
+
+856
+00:37:58,980 --> 00:38:00,980
+a outra entidade norte-americana
+
+857
+00:38:00,980 --> 00:38:02,980
+que supostamente, rumo, lamenta
+
+858
+00:38:02,980 --> 00:38:04,980
+estas questões todas que nós estamos a formar
+
+859
+00:38:04,980 --> 00:38:06,980
+da equiliptação
+
+860
+00:38:06,980 --> 00:38:08,980
+só tinha um baccador
+
+861
+00:38:08,980 --> 00:38:10,980
+e portanto
+
+862
+00:38:10,980 --> 00:38:12,980
+diga um baccador
+
+863
+00:38:12,980 --> 00:38:14,980
+e segundo ele, nas más línguas, é NECA
+
+864
+00:38:14,980 --> 00:38:16,980
+que propôs isto, um baccador
+
+865
+00:38:16,980 --> 00:38:18,980
+para poder escutar
+
+866
+00:38:18,980 --> 00:38:20,980
+as comunicações todas baseadas
+
+867
+00:38:20,980 --> 00:38:22,980
+neste tipo de criptografia
+
+868
+00:38:22,980 --> 00:38:24,980
+decorrídica
+
+869
+00:38:24,980 --> 00:38:26,980
+portanto, e se sugesse
+
+870
+00:38:26,980 --> 00:38:28,980
+com que as pessoas não gostassem muito
+
+871
+00:38:28,980 --> 00:38:30,980
+deste algoritmo
+
+872
+00:38:30,980 --> 00:38:32,980
+é para
+
+873
+00:38:32,980 --> 00:38:34,980
+que não tenham noção
+
+874
+00:38:34,980 --> 00:38:36,980
+setor anos de filmes
+
+875
+00:38:36,980 --> 00:38:38,980
+que eu tenho visto
+
+876
+00:38:38,980 --> 00:38:40,980
+sobre o que a NECA
+
+877
+00:38:40,980 --> 00:38:42,980
+é capaz de ouvir ou deixar ouvir
+
+878
+00:38:42,980 --> 00:38:44,980
+e eu costumo dizer na brincadeira
+
+879
+00:38:44,980 --> 00:38:46,980
+um dia que a NECA
+
+880
+00:38:46,980 --> 00:38:48,980
+esteja a ouvir
+
+881
+00:38:48,980 --> 00:38:50,980
+as incriptáveis minhas comunicações
+
+882
+00:38:50,980 --> 00:38:52,980
+quer dizer que eu sou suficientemente importante
+
+883
+00:38:52,980 --> 00:38:54,980
+para alguém
+
+884
+00:38:54,980 --> 00:38:56,980
+pessoalmente, não me parece que a NECA
+
+885
+00:38:56,980 --> 00:38:58,980
+se importe muito nos acaba
+
+886
+00:38:58,980 --> 00:39:00,980
+portanto
+
+887
+00:39:00,980 --> 00:39:02,980
+isto foi verdade, foi encontrado
+
+888
+00:39:02,980 --> 00:39:04,980
+no baccador
+
+889
+00:39:04,980 --> 00:39:06,980
+num algoritmo de incriptação
+
+890
+00:39:06,980 --> 00:39:08,980
+e partirei-se para não gostar
+
+891
+00:39:08,980 --> 00:39:10,980
+deste algoritmo de incriptação
+
+892
+00:39:10,980 --> 00:39:12,980
+que eu não usava no anterior
+
+893
+00:39:12,980 --> 00:39:14,980
+a verdade é que este algoritmo
+
+894
+00:39:14,980 --> 00:39:16,980
+é um algoritmo muito mais bem
+
+895
+00:39:16,980 --> 00:39:18,980
+com os algoritmos anteriores
+
+896
+00:39:18,980 --> 00:39:20,980
+e portanto, mais simpático
+
+897
+00:39:20,980 --> 00:39:22,980
+para isso que a gente está a trabalhar
+
+898
+00:39:22,980 --> 00:39:24,980
+em sistemas enrichos
+
+899
+00:39:24,980 --> 00:39:26,980
+para terminarmos
+
+900
+00:39:26,980 --> 00:39:28,980
+a nossa
+
+901
+00:39:28,980 --> 00:39:30,980
+cada intervalo
+
+902
+00:39:30,980 --> 00:39:32,980
+tem aqui
+
+903
+00:39:32,980 --> 00:39:34,980
+uma compressão
+
+904
+00:39:34,980 --> 00:39:36,980
+uma compressão interagência
+
+905
+00:39:36,980 --> 00:39:38,980
+e vitórias
+
+906
+00:39:38,980 --> 00:39:40,980
+por
+
+907
+00:39:40,980 --> 00:39:42,980
+por coleglítica
+
+908
+00:39:44,980 --> 00:39:46,980
+vejam que
+
+909
+00:39:46,980 --> 00:39:48,980
+basicamente
+
+910
+00:39:48,980 --> 00:39:50,980
+são as entasiadas
+
+911
+00:39:50,980 --> 00:39:52,980
+eu expliquei, faturação de grandes números
+
+912
+00:39:52,980 --> 00:39:54,980
+ou problemas logaritmos
+
+913
+00:39:54,980 --> 00:39:56,980
+para não se
+
+914
+00:39:56,980 --> 00:39:58,980
+fazer uma
+
+915
+00:39:58,980 --> 00:40:00,980
+equação
+
+916
+00:40:00,980 --> 00:40:02,980
+especial
+
+917
+00:40:04,980 --> 00:40:06,980
+cá está, o desempenho é preferido
+
+918
+00:40:06,980 --> 00:40:08,980
+portanto
+
+919
+00:40:08,980 --> 00:40:10,980
+para um número de chá
+
+920
+00:40:10,980 --> 00:40:12,980
+a sua lança é supostamente também a NECA
+
+921
+00:40:12,980 --> 00:40:14,980
+o desempenho é superior
+
+922
+00:40:14,980 --> 00:40:16,980
+no NECA
+
+923
+00:40:16,980 --> 00:40:18,980
+é mais rápido
+
+924
+00:40:18,980 --> 00:40:20,980
+e portanto, eu preciso menos
+
+925
+00:40:20,980 --> 00:40:22,980
+a quantidade de computação
+
+926
+00:40:22,980 --> 00:40:24,980
+para incriptar sobre o NECA
+
+927
+00:40:24,980 --> 00:40:26,980
+o NECA
+
+928
+00:40:26,980 --> 00:40:28,980
+a adopção
+
+929
+00:40:28,980 --> 00:40:30,980
+do
+
+930
+00:40:30,980 --> 00:40:32,980
+o NECA, como eu disse, foi muito valente
+
+931
+00:40:32,980 --> 00:40:34,980
+no início, por causa de muita desconfiança
+
+932
+00:40:34,980 --> 00:40:36,980
+com esta questão do NECA
+
+933
+00:40:36,980 --> 00:40:38,980
+também no
+
+934
+00:40:38,980 --> 00:40:40,980
+S, então, um linear
+
+935
+00:40:40,980 --> 00:40:42,980
+de que qualquer
+
+936
+00:40:42,980 --> 00:40:44,980
+seja coleglítica que eu adote
+
+937
+00:40:44,980 --> 00:40:46,980
+eu consigo adotar
+
+938
+00:40:46,980 --> 00:40:48,980
+imediatamente
+
+939
+00:40:48,980 --> 00:40:50,980
+para o NECA, portanto
+
+940
+00:40:50,980 --> 00:40:52,980
+no início tem uma adopção muito lenta
+
+941
+00:40:52,980 --> 00:40:54,980
+agora está a ter uma adopção
+
+942
+00:40:54,980 --> 00:40:56,980
+mais rápida
+
+943
+00:40:56,980 --> 00:40:58,980
+eu
+
+944
+00:40:58,980 --> 00:41:00,980
+é assim, portanto
+
+945
+00:41:00,980 --> 00:41:02,980
+porque é que nós dizemos assim, porque tem
+
+946
+00:41:02,980 --> 00:41:04,980
+menor peso computacional
+
+947
+00:41:04,980 --> 00:41:06,980
+mas há muito impacto
+
+948
+00:41:06,980 --> 00:41:08,980
+também nos sistemas indivíduos
+
+949
+00:41:08,980 --> 00:41:10,980
+já não tem tantos
+
+950
+00:41:10,980 --> 00:41:12,980
+pontos do peso, no sistema computacional
+
+951
+00:41:12,980 --> 00:41:14,980
+é ingrediente
+
+952
+00:41:14,980 --> 00:41:16,980
+que a partir do momento
+
+953
+00:41:16,980 --> 00:41:18,980
+em que nós nos sistemas indivíduos
+
+954
+00:41:18,980 --> 00:41:20,980
+passamos da programação
+
+955
+00:41:20,980 --> 00:41:22,980
+para uma programação basada em Python
+
+956
+00:41:22,980 --> 00:41:24,980
+e passamos da programação feita à medida
+
+957
+00:41:24,980 --> 00:41:26,980
+para uma programação feita
+
+958
+00:41:26,980 --> 00:41:28,980
+baseada em NECA
+
+959
+00:41:28,980 --> 00:41:30,980
+é verdade, os professores estão a ficar mais rápidos
+
+960
+00:41:30,980 --> 00:41:32,980
+mas também é verdade
+
+961
+00:41:32,980 --> 00:41:34,980
+que nós estamos a fazer problemas
+
+962
+00:41:34,980 --> 00:41:36,980
+com muito
+
+963
+00:41:36,980 --> 00:41:38,980
+muito menor qualidade
+
+964
+00:41:38,980 --> 00:41:40,980
+em traspos, obviamente
+
+965
+00:41:40,980 --> 00:41:42,980
+passamos de uma situação
+
+966
+00:41:42,980 --> 00:41:44,980
+em que nós nos envolvendo
+
+967
+00:41:44,980 --> 00:41:46,980
+nas 2.000 nossas experimentações
+
+968
+00:41:46,980 --> 00:41:48,980
+em uma célula
+
+969
+00:41:48,980 --> 00:41:50,980
+passamos os ciclos nos sistemas indivíduos
+
+970
+00:41:50,980 --> 00:41:52,980
+e depois tínhamos os ciclos longos
+
+971
+00:41:52,980 --> 00:41:54,980
+em ser para uma situação
+
+972
+00:41:54,980 --> 00:41:56,980
+em que nós despejamos Python de feitos por IA
+
+973
+00:41:56,980 --> 00:41:58,980
+lá dentro
+
+974
+00:41:58,980 --> 00:42:00,980
+e depois o tipo resolva
+
+975
+00:42:00,980 --> 00:42:02,980
+em disse que só não precisamos acreditar
+
+976
+00:42:02,980 --> 00:42:04,980
+para a Python, mas temos isso
+
+977
+00:42:04,980 --> 00:42:06,980
+em macropyton nos anos Python
+
+978
+00:42:06,980 --> 00:42:08,980
+portanto
+
+979
+00:42:08,980 --> 00:42:10,980
+toda esta questão de criptoação
+
+980
+00:42:10,980 --> 00:42:12,980
+tem
+
+981
+00:42:12,980 --> 00:42:14,980
+é sempre discutido
+
+982
+00:42:14,980 --> 00:42:16,980
+por menos que somente discuto sempre
+
+983
+00:42:16,980 --> 00:42:18,980
+quando me ponho uma tabela
+
+984
+00:42:18,980 --> 00:42:20,980
+e isso é melhor porque é mais leve
+
+985
+00:42:20,980 --> 00:42:22,980
+eu tenho sempre muitas dúvidas sobre o que é
+
+986
+00:42:22,980 --> 00:42:24,980
+mais leve
+
+987
+00:42:24,980 --> 00:42:26,980
+e portanto
+
+988
+00:42:26,980 --> 00:42:28,980
+mas tá aqui a tabela que é considerado hoje em dia
+
+989
+00:42:28,980 --> 00:42:30,980
+mais correta
+
+990
+00:42:30,980 --> 00:42:32,980
+em que eu digo que é para dispositivos móveis
+
+991
+00:42:32,980 --> 00:42:34,980
+piótios que possam se distribuir
+
+992
+00:42:34,980 --> 00:42:36,980
+e etc
+
+993
+00:42:36,980 --> 00:42:38,980
+é cada vez mais utilizada
+
+994
+00:42:38,980 --> 00:42:40,980
+baseados em NECA
+
+995
+00:42:42,980 --> 00:42:44,980
+tá na altura do para
+
+996
+00:42:44,980 --> 00:42:46,980
+tá
+
+997
+00:42:46,980 --> 00:42:48,980
+tá me diga me diz nada que me faz perguntas
+
+998
+00:42:48,980 --> 00:42:50,980
+não é franca
+
+999
+00:42:50,980 --> 00:42:52,980
+não é?
+
+1000
+00:42:52,980 --> 00:42:54,980
+sim
+
+1001
+00:42:54,980 --> 00:42:56,980
+sim
+
+1002
+00:42:56,980 --> 00:42:58,980
+óbvio que estão
+
+1003
+00:42:58,980 --> 00:43:00,980
+estão sempre por cá
+
+1004
+00:43:00,980 --> 00:43:02,980
+não, 9 meses estão a buscar outra vez
+
+1005
+00:43:02,980 --> 00:43:04,980
+é já ainda
+
+1006
+00:43:04,980 --> 00:43:06,980
+é já
+
