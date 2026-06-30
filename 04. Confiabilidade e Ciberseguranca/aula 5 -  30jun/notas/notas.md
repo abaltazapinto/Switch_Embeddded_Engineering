@@ -609,3 +609,9 @@ Isto significa:
 
 DNS via Tailscale está funcional ✅
 
+---
+
+Para mostrar no ISEP/Zepi, basta abrir no browser:
+
+http://100.70.175.106/admin
+
