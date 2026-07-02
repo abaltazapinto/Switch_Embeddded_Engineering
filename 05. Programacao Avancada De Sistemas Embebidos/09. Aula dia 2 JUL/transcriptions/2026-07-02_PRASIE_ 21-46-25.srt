@@ -1,0 +1,3208 @@
+1
+00:00:00,000 --> 00:00:06,140
+para depois vocês poderem escrever código e compilá-lo.
+
+2
+00:00:06,140 --> 00:00:12,580
+Por que? Porque o processo de compilação é um bocado mais complicado, aquilo que não é uma compilação cruzada.
+
+3
+00:00:12,580 --> 00:00:18,820
+Ou seja, nós estamos a utilizar o nosso computador para escrever um programa que vai correr na outra plataforma.
+
+4
+00:00:18,820 --> 00:00:27,740
+O compilador não vai ser aquilo que nós temos utilizado, não é o GCC, nem o CELANG.
+
+5
+00:00:28,020 --> 00:00:32,360
+Vai ser o GCC para uma determinada arquitetura.
+
+6
+00:00:32,360 --> 00:00:39,160
+E eu até ando a preparar as coisas para compilar para um para uma arquitetura-arme, 32 bits.
+
+7
+00:00:39,160 --> 00:00:53,880
+E depois correr no KMU, que é um emulador, que vai simular uma board que tem um arme Cortex-M3.
+
+8
+00:00:54,400 --> 00:01:05,780
+O problema, ainda hoje, andei ali uma hora à volta daquilo, é que o próprio sete e o manual do Friar Tós,
+
+9
+00:01:05,780 --> 00:01:13,160
+não é um manual, é documentação online, diz que a melhor forma é pegar nuntos diretórios,
+
+10
+00:01:13,160 --> 00:01:21,040
+nuntos projetos do demonstrador que eles têm e depois começar a cortar fora aquilo que não interessa,
+
+11
+00:01:21,040 --> 00:01:27,800
+da demonstração e ficarmos com uma base para compilar para aquela arquitetura,
+
+12
+00:01:27,800 --> 00:01:30,000
+porque já tem tudo configurado e tal.
+
+13
+00:01:30,000 --> 00:01:36,460
+E o problema maior é precisamente ter tudo configurado para o hardware que tenha aquela board.
+
+14
+00:01:36,460 --> 00:01:45,720
+Incrívelmente ou não, eu acho que já consegui preparar aquilo, o compilador, a makefile, é como está a falhar.
+
+15
+00:01:46,700 --> 00:01:50,320
+E eu andei ali às voltas, acho que ainda vou ter que meter aquilo sei lá.
+
+16
+00:01:50,320 --> 00:01:57,880
+Numa inteligência artificial para ver se já somos dois a falhar, a tentar perceber por que aquilo não funciona.
+
+17
+00:01:57,880 --> 00:02:03,540
+Em princípio deveria funcionar, mas ainda não consegui por aquilo funcionar, mas para a semana tem que ter isso a funcionar.
+
+18
+00:02:03,540 --> 00:02:06,800
+Durante o fim de semana, tenho que por isso.
+
+19
+00:02:06,800 --> 00:02:13,080
+Por ocorrer as demonstrações é fácil, por acompilar e depois correr as demonstrações é fácil.
+
+20
+00:02:13,080 --> 00:02:22,120
+Agora, se quisermos fazer um programa mais simples para experimentar e compilar, está complicado, pelo menos no meu lado.
+
+21
+00:02:22,120 --> 00:02:25,500
+Já agora, aqui pessoal que já trabalhou com Frié-Retours.
+
+22
+00:02:29,000 --> 00:02:41,240
+Vocês já estão habituados a pegar numa estrutura de direitórios pronta para receber um projeto
+
+23
+00:02:41,240 --> 00:02:47,880
+ou utiliza um sinal vs. code com algum plugin que cria isso automaticamente, coisa assim.
+
+24
+00:02:47,880 --> 00:02:49,960
+Qual é a verdade em que vocês costumam fazer?
+
+25
+00:02:49,960 --> 00:02:56,780
+Quem trabalha com Frié-Retours?
+
+26
+00:02:56,780 --> 00:03:15,140
+A única coisa que já fiz disso foi com um STM e basicamente era configurar a parte do Frié-Retours naquilo que o BMX penseu.
+
+27
+00:03:15,300 --> 00:03:20,740
+E depois usava só algumas funções da Zolk Latinha, nunca fiz nada disso.
+
+28
+00:03:22,500 --> 00:03:28,340
+Pronto, então, este fim de semana já tenho meu sufrimento marcado, é por isso a funcionar,
+
+29
+00:03:28,340 --> 00:03:35,780
+para depois fazer um zip, para ser mais fácil para vocês instalarem no vosso disc e depois saírem ao fecheiro main
+
+30
+00:03:35,780 --> 00:03:44,860
+e acrescentarem as funções das tarefas e lançarem, compilar e depois por ocorrer dentro do KMU.
+
+31
+00:03:44,940 --> 00:03:56,060
+Por ocorrer dentro do KMU também é fácil, aliás, eu vou parar, vou fazer isto sem rede, espero que não corra mal.
+
+32
+00:03:57,420 --> 00:04:10,880
+Ora, só avisem-me daqui a 5 minutos que é para não estar a perder muito tempo, mas partilhar aqui com o vosso meu acrescento é mais fácil.
+
+33
+00:04:11,840 --> 00:04:17,040
+Já estou partilhando aqui para terminar.
+
+34
+00:04:17,040 --> 00:04:43,890
+Este Frié-Retours foi o que saquei, depois tenho aqui este diretório Frié-Retours, isto eu fiz o clone do repositório Git.
+
+35
+00:04:44,610 --> 00:04:53,010
+Se vocês forem à página do Frié-Retours, tem a indicação de como podem fazer o clone do repositório que vocês têm.
+
+36
+00:04:53,010 --> 00:05:01,010
+Tem lá o link para o repositório, é só fazer Git, clone e sacar aquilo para o vosso disc.
+
+37
+00:05:01,970 --> 00:05:09,920
+O problema é que se formos ver aqui, onde é que está?
+
+38
+00:05:09,920 --> 00:05:17,680
+Tem que entrar outra vez em Frié-Retours, tem aqui o demo.
+
+39
+00:05:17,680 --> 00:05:33,740
+Se entrarmos aqui no demo, é a aplicação de mostração, só que tem a aplicação de demonstração com um projeto para cada uma destas bordes.
+
+40
+00:05:36,420 --> 00:05:40,180
+Por que eles fazem isto como tantas?
+
+41
+00:05:40,180 --> 00:05:47,380
+Porque em cada um destes diretórios, tem lá um fecheiro com a configuração do hardware.
+
+42
+00:05:47,380 --> 00:05:52,980
+Tem o que é que existe, o que é que não existe, o que é que pode ser ligado, o que é que não pode ser ligado.
+
+43
+00:05:53,300 --> 00:06:03,300
+E nós vamos fazer para esta board virtual, que é uma board que tem um Cortex MPS2,
+
+44
+00:06:03,300 --> 00:06:13,300
+e compilar para o KMU e para o MoviBugger IAR do KMU, e compilar com o GCC.
+
+45
+00:06:13,300 --> 00:06:21,300
+Vamos então aqui entrar no Cortex, por acaso eu no Cortex, eu acho que fiz uma copia disto,
+
+46
+00:06:23,600 --> 00:06:33,360
+para isso um bocadinho, deixe-me ver se me lembro do direitório, eu acho que é isto experiment,
+
+47
+00:06:33,360 --> 00:07:17,900
+eu fiz uma copia, então se a ver experiment, ali é isso, deixe-me só ver se tenho aqui o Rtons,
+
+48
+00:07:27,230 --> 00:07:34,830
+exatamente, é isto o direitório, este aqui é o binário que depois vai ser produtivo no final.
+
+49
+00:07:34,830 --> 00:07:56,500
+Aqui tem o fecheiro main, e este fecheiro main é onde está o código, está aqui o código fonte,
+
+50
+00:07:56,820 --> 00:08:11,920
+e tem aqui um diretor, um fecheiro que é isto FreeRtons.conf.h, e este fecheiro é que é muito
+
+51
+00:08:11,920 --> 00:08:21,360
+importante porque este fecheiro tem a configuração desta board, então este.h já está tudo preparado
+
+52
+00:08:21,440 --> 00:08:31,200
+para aquela board. Basicamente para cada board existe um FreeRtons.conf.h, e é por isso que é
+
+53
+00:08:31,200 --> 00:08:42,240
+importante uma pessoa manter isto, portar a descobrir todas as configurações para uma board,
+
+54
+00:08:42,240 --> 00:08:48,080
+para vermos muito tempo, portanto é melhor pegar no que já existe. Para compilar isto,
+
+55
+00:08:50,110 --> 00:08:59,070
+aqui é o build, vou compilar o gcc, e agora basta fazer, está aqui a makefile,
+
+56
+00:09:00,190 --> 00:09:07,070
+basta fazer make, é fazer make, ele não vai ter muito trabalho porque já está compilado,
+
+57
+00:09:07,070 --> 00:09:13,790
+exatamente, mas este tem que só fazer aqui um clean, mas fazer aqui o make,
+
+58
+00:09:14,110 --> 00:09:17,550
+para vocês verem, isto está aqui para que para que para que para que para que compilar todos os
+
+59
+00:09:17,550 --> 00:09:30,080
+feijos necessários para produzir aquele FreeRtons.conf.h, está aqui o output FreeRtonsDemo,
+
+60
+00:09:30,080 --> 00:09:39,280
+OK? Pronto, este aqui é o binário que depois seria flechado para a board,
+
+61
+00:09:39,840 --> 00:09:49,040
+OK? Portanto, tenho aqui o código binário, só que agora, acho que aqui seria o output,
+
+62
+00:09:49,040 --> 00:09:56,800
+e agora eu quero correr no Camu, eu vou só aqui, eu sou um bocado preguiçoso, deixe-me vir aqui
+
+63
+00:09:56,800 --> 00:10:10,380
+buscar, pronto, está aqui, eu vou buscar o Camu, neste caso é um Camu para imular no ar,
+
+64
+00:10:11,340 --> 00:10:19,580
+qual é que é a machine? É uma MPS2 AN385, e eu não inventei isto,
+
+65
+00:10:20,620 --> 00:10:29,500
+vem no ritmo deste direitório, diz lá, isto aqui compila para uma board MPS2 AN385,
+
+66
+00:10:30,140 --> 00:10:36,220
+no gráfico, isto aqui é para correr neste terminal de texto, e depois digo que o kernel,
+
+67
+00:10:36,300 --> 00:10:47,740
+ou seja, o fecheiro binário, com a imagem que estaria a correr na board, é o output RTSDemo.out,
+
+68
+00:10:47,740 --> 00:11:00,700
+OK? E o que aconteceu agora aqui? Pois, já estou no output, estou no output, não estou no output,
+
+69
+00:11:02,990 --> 00:11:15,170
+pronto, já está a correr, está a imular a board, OK? Agora para terminar isto,
+
+70
+00:11:15,170 --> 00:11:22,370
+este semestre de molema, o que é que controla x? Pronto, é daquelas cenas que é estranho de
+
+71
+00:11:22,370 --> 00:11:30,930
+mocará-se, controla, solta-se, e o x, e parou. Portanto, este programa, o Camu,
+
+72
+00:11:31,730 --> 00:11:37,410
+que é uma família de programas, é bastante utilizado porque imula vários sistemas
+
+73
+00:11:39,810 --> 00:11:50,770
+mais simples, OK? E podemos correr, imular um sistema a correr este em mais, tá bom? O processo em si
+
+74
+00:11:50,770 --> 00:12:03,550
+não é difícil, o meu problema que ainda não consegui resolver é, desculpe lá, estar-vos a chatear,
+
+75
+00:12:04,270 --> 00:12:09,230
+que eu acho que estou a chatear já neste momento, são 58, vocês teriam um tema chamável
+
+76
+00:12:10,510 --> 00:12:24,500
+antes, é que eu acho que este é o My Project, que é tal, o tal direitório que queria limpar
+
+77
+00:12:25,140 --> 00:12:50,830
+para fazer, para ter nenhuma base, está-me a falhar, isto aqui de certeza é um problema
+
+78
+00:12:51,550 --> 00:13:00,510
+de um caminho, tenha que descobrir o que está a passar aqui, andei uma hora a volta
+
+79
+00:13:00,510 --> 00:13:05,870
+deste, não tive mais tempo para dedicar e infelizmente não consegui resolver, ou melhor,
+
+80
+00:13:05,870 --> 00:13:11,470
+não tive uma hora atrás deste, a volta deste problema, andei uma hora a tentar por isto
+
+81
+00:13:11,470 --> 00:13:15,870
+funcionar, só que na parte final não consegui, tenho que resolver isto,
+
+82
+00:13:16,590 --> 00:13:23,230
+só que ainda me está resolvido, mas este fim de semana vou resolver. OK, pronto, agora que já
+
+83
+00:13:23,230 --> 00:13:35,040
+vos massacrei, mas já deu para ver que é possível executar um programa para frear tos,
+
+84
+00:13:35,040 --> 00:13:42,450
+mesmo sem ter ar do ar físico, certo? Podemos ter um ar do ar virtual, e ele corre.
+
+85
+00:13:43,170 --> 00:13:53,090
+Mas já agora isto, ou seja, a borda ela tem que estar, ou seja, a borda ela tem que estar
+
+86
+00:13:53,090 --> 00:13:59,330
+contemplada na implementação do frear tos, não é? O que eu quero perguntar é assim,
+
+87
+00:14:00,370 --> 00:14:05,410
+existem bordes que, ou seja, que não consigamos usar frear tos, ou seja, tem que ser bar metal
+
+88
+00:14:05,410 --> 00:14:12,610
+para lá, e pronto. Eu estou a dizer, porque na altura em que eu tentei usar isto,
+
+89
+00:14:13,970 --> 00:14:19,890
+eu usava isto naquela ideia da ST, em que, pronto, até lá aquele ambiente gráfico,
+
+90
+00:14:19,890 --> 00:14:24,130
+para configurações e assim, e algumas delas tinham isso do frear tos, e pronto,
+
+91
+00:14:25,010 --> 00:14:29,810
+basicamente a compilação que era feita, não é? Claro que isto depois por trás havia de existir
+
+92
+00:14:29,810 --> 00:14:36,690
+aí um Makefile, alguma coisa assim, uma geração chegar lá e carregar lá no martelinho,
+
+93
+00:14:36,690 --> 00:14:43,810
+ele fazia bilho, e ia seguir aflachar o código e estava feito. O que eu quero dizer é,
+
+94
+00:14:43,810 --> 00:14:50,690
+isso só, ou seja, essa parte gráfica só aparecia para algumas bordes, talvez eles não tivessem
+
+95
+00:14:50,690 --> 00:14:55,890
+preparado ainda aquilo na altura para todas as bordes, mas, ou seja, existem fabricantes,
+
+96
+00:14:55,890 --> 00:15:02,370
+por exemplo, posso não ter feito nada disso de frear tos, não é? Sim, sim, sim. Opa,
+
+97
+00:15:05,010 --> 00:15:12,770
+como é que eu ia dizer? Neste domínio, há muita variedade de plataformas, ok? E o problema é que
+
+98
+00:15:12,770 --> 00:15:18,610
+uma programação é tão próxima das plataformas, boa parte às vezes, para uma plataforma, se
+
+99
+00:15:18,610 --> 00:15:27,730
+ainda ninguém se dedicou a configurar os header files, e às vezes até mesmo criar código
+
+100
+00:15:27,730 --> 00:15:35,570
+de propósito para aquela bordo, alguém tende o fazer. E se nós tivemos muita urgência e interesse,
+
+101
+00:15:35,570 --> 00:15:41,250
+fazemos nós. Ou então, o que podemos fazer é ver qual é a lista de arvoer que é suportado
+
+102
+00:15:42,210 --> 00:15:50,930
+pelo frear tos, ou seja, já há configurações para aquela bordo e pronto, compramos uma dessas.
+
+103
+00:15:50,930 --> 00:16:03,490
+É um bocado diferente de estar a compilar para Linux ou estar a compilar para Windows ou Mac.
+
+104
+00:16:04,210 --> 00:16:11,170
+É a tal história que eu disse que esses tipos de sistemas operativos, os genéricos,
+
+105
+00:16:12,290 --> 00:16:19,410
+ocultam na totalidade o hardware, ok? Nós, quando compilamos, nós compilamos para o sistema
+
+106
+00:16:19,410 --> 00:16:25,730
+operativo, não compilamos para, ok, também compilamos para o hardware, porque temos de
+
+107
+00:16:25,810 --> 00:16:33,490
+compilar para o código máquina do processador que está por baixo, certo? Mas uma coisa é eu
+
+108
+00:16:33,490 --> 00:16:43,970
+compilar para um Windows que tem um x86, ah, o que é que eu vou compilar? Vou criar código
+
+109
+00:16:43,970 --> 00:16:54,370
+máquina que corre nos x86, não é? Nos AMD, as ondas Intel, mas as chamadas ao hardware são
+
+110
+00:16:54,370 --> 00:16:59,250
+chamadas que são mediadas pelo sistema operativo. Eu só preciso conhecer o sistema operativo,
+
+111
+00:16:59,250 --> 00:17:03,410
+não preciso conhecer o hardware. Quem tem de conhecer o hardware é o sistema operativo.
+
+112
+00:17:03,410 --> 00:17:07,650
+A tal história que eu disse quando nós instalamos o Windows, aquilo demora algum tempo a perguntar
+
+113
+00:17:07,650 --> 00:17:15,570
+que placa gráfica é que é? Que placa de rede é que é? Que placa de som é que é? Certo? Que
+
+114
+00:17:15,570 --> 00:17:22,930
+adaptador Bluetooth é que tu é? Portanto, ele pergunta a todos para depois, quando for
+
+115
+00:17:22,930 --> 00:17:30,210
+instalar, instala os drivers específicos para aquilo que está lá, certo? E ele faz
+
+116
+00:17:30,210 --> 00:17:35,730
+isso de forma automática e já faz isso de forma automática desde 1995, o Windows,
+
+117
+00:17:36,370 --> 00:17:42,530
+isso começou a ser com riqueiro, melhor, começou a ser muito automático no Windows 95.
+
+118
+00:17:43,490 --> 00:17:54,050
+Nesses casos, nós estamos a criar, quando eu digo que nós vamos utilizar um R2,
+
+119
+00:17:54,050 --> 00:18:02,290
+na realidade nós vamos estar a compilar o nosso programa com o sistema operativo
+
+120
+00:18:03,170 --> 00:18:11,810
+para produzir um único servinário, um executável. E esse executável vai correr
+
+121
+00:18:11,890 --> 00:18:24,430
+diretamente em cima do hardware, certo? Vocês viram aquilo que eu tinha para correr?
+
+122
+00:18:25,070 --> 00:18:32,990
+Eu não estou a partilhar nada depois, não. Mas aquilo que eu tinha para correr era um
+
+123
+00:18:33,070 --> 00:18:43,870
+único cheiro. O meu KMU estava a imular uma placa de hardware, não é? Uma board. Aquela placa
+
+124
+00:18:43,870 --> 00:18:50,830
+corria exclusivamente aquele cheiro, aquele cheiro inclui todo o código do sistema operativo,
+
+125
+00:18:51,870 --> 00:18:59,470
+do R2 e também todo o código da aplicação, as minhas tarefas, certo? Portanto, é uma
+
+126
+00:18:59,470 --> 00:19:07,230
+compilação muito diferente da compilação para Windows ou para Linux. Eu se vou criar um único
+
+127
+00:19:07,230 --> 00:19:16,190
+cheiro binário que vai correr diretamente em cima da board. Então, antes do meu processo de compilação,
+
+128
+00:19:16,190 --> 00:19:22,990
+eu tenho de conhecer bem os parâmetros, tenho de conhecer bem qual é o hardware que existe nessa
+
+129
+00:19:22,990 --> 00:19:32,030
+board para depois, quando eu compilar, eu poder utilizar esse hardware. Eu não posso compilar
+
+130
+00:19:32,030 --> 00:19:38,590
+um fechar executável que vai utilizar o componente X, se o componente X não existir nessa board.
+
+131
+00:19:40,820 --> 00:19:51,380
+É por isso que a pessoal que, felizmente, se dedica a conhecer bem o hardware que está numa board
+
+132
+00:19:51,940 --> 00:19:58,660
+e a criar a configuração específica para essa board. Nessa ideia é, como falou,
+
+133
+00:20:00,260 --> 00:20:06,900
+e aliás, isso é muito normal quando nós temos ideias para, fornecidos por um fabricante,
+
+134
+00:20:06,900 --> 00:20:12,420
+para uma família de placas desse fabricante. O que é que acontece? Nós vamos criar um novo
+
+135
+00:20:12,420 --> 00:20:18,180
+projeto e ao criarmos um novo projeto ele pergunta qual é o target, qual é que é a plataforma
+
+136
+00:20:18,740 --> 00:20:27,140
+para onde nós vamos correr este software, certo? E ao escolhermos qual é que é a plataforma,
+
+137
+00:20:28,420 --> 00:20:36,500
+basicamente, o que ele faz é, vai a um repositório de configurações e coloca logo no nosso projeto
+
+138
+00:20:37,060 --> 00:20:46,580
+a configuração para aquele hardware, certo? E ele não faz isto dinamicamente,
+
+139
+00:20:46,660 --> 00:20:55,300
+ele vai buscar mesmo um fecheiro de configuração que já vem de fábrica, ok, para o nosso projeto.
+
+140
+00:20:58,060 --> 00:21:05,580
+Se nós quisermos depois de mudar de plataforma, basicamente nós vamos ter que criar um novo
+
+141
+00:21:05,580 --> 00:21:11,180
+projeto ou, como cá de sorte, até podemos usar mesmo, mas dizemos agora é para outra plataforma
+
+142
+00:21:11,900 --> 00:21:18,220
+e a configuração do hardware dessa plataforma, toc, vai substituir anterior no nosso projeto.
+
+143
+00:21:19,020 --> 00:21:25,260
+E quando nós compilarmos, quando compilarmos o nosso programa com o sistema operativo,
+
+144
+00:21:26,780 --> 00:21:36,620
+o binário já vai refletir a funcionalidade mapeada para o hardware que efetivamente existe
+
+145
+00:21:36,620 --> 00:21:43,740
+nessa plataforma final. Não sei se me fiz entender, se tiverem dúvidas podem
+
+146
+00:21:44,700 --> 00:21:58,260
+perguntar. Ficou esclarecido? Ele ou menos, é quem me fez a pergunta?
+
+147
+00:21:58,260 --> 00:22:04,900
+Sim, sim. Ok, pronto. Também se tiverem mais dúvidas, pode me colocar ou até pode
+
+148
+00:22:04,900 --> 00:22:10,900
+colocar depois por mensagem ou por e-mail também. Muito bem, então isto nós ainda chegamos a ver
+
+149
+00:22:10,900 --> 00:22:19,620
+ontem, como é que nós podemos criar uma tarefa, ok? Criamos uma tarefa com a função xtax,
+
+150
+00:22:20,100 --> 00:22:27,940
+xtaxcreate, ok? Ao criar uma tarefa nós temos que indicar qual é que é a função
+
+151
+00:22:29,060 --> 00:22:34,820
+da tarefa, está bom? Isso tinha bastantes argumentos, chegamos a falar sobre os argumentos.
+
+152
+00:22:36,980 --> 00:22:45,540
+Agora, temos que instanciar as tarefas com xtaxcreate. O facto de nós instanciarmos
+
+153
+00:22:45,540 --> 00:22:50,500
+as tarefas, não faz com que elas covam logo. Por exemplo, xtaxcreate punha logo as tarefas
+
+154
+00:22:50,500 --> 00:22:57,540
+a correr quando vai só oportunidade. Aqui não, aqui elas só começam a ser executadas quando
+
+155
+00:22:57,540 --> 00:23:06,420
+nós arrancamos com o escalonador, ok? Que o Vtask Start Schedule. E o habitual é termos uma
+
+156
+00:23:06,420 --> 00:23:13,780
+mãe em que primeiro instanciamos as tarefas e por fim quando temos todas as tarefas criadas
+
+157
+00:23:14,180 --> 00:23:25,220
+ligamos o carrossel, ok? E o carrossel, o escalonador, começa a atribuir processador
+
+158
+00:23:25,220 --> 00:23:32,500
+às tarefas, certo? É uma função que nunca retorne. Se chegarmos aqui, é porque alguma coisa
+
+159
+00:23:32,500 --> 00:23:38,660
+que romala, está bom? Pronto, nós isto vemos, não há dúvidas, pois não. Fica...
+
+160
+00:23:38,660 --> 00:23:47,540
+É possível só que instar uma das tarefas, ou seja, o Task Start Schedule será organizado
+
+161
+00:23:47,540 --> 00:23:56,420
+nas tarefas. Vamos pegar num caso concreto. Aqui estamos a criar duas tarefas, certo?
+
+162
+00:23:56,420 --> 00:24:05,300
+Trafa um e a tarefa dois. E agora diz-me, se eu arrancar com o Task Start Scheduler e ele só vai
+
+163
+00:24:05,300 --> 00:24:11,060
+arrancar com uma, é esta a pergunta? Não, contrário. Se eu quiser só arrancar com uma, como é que
+
+164
+00:24:11,060 --> 00:24:16,500
+acontecer? Se quiser arrancar só com uma, apesar de ter criadas duas?
+
+165
+00:24:16,500 --> 00:24:21,060
+Exatamente. É fácil. Não criar a segunda,
+
+166
+00:24:21,060 --> 00:24:24,900
+criar só a primeira. Ok. E ele não recebe nenhum identificador,
+
+167
+00:24:25,860 --> 00:24:31,950
+Como assim? Então, imaginá-lo que poderia ser uma
+
+168
+00:24:33,230 --> 00:24:42,590
+jornada de maxiasmos ser definida na criação da função, Task Start Scheduler, uma hipótese
+
+169
+00:24:42,590 --> 00:24:48,830
+de se eu percebesse um argumento que fosse tipo Char, como se caso, seria uma ideia ou...
+
+170
+00:24:48,990 --> 00:24:57,390
+Ok. Mas não. Não. O escalonador, o escalonador, a função do escalonador é atribuir
+
+171
+00:24:57,390 --> 00:25:07,740
+processador, durante algum tempo, às tarefas do sistema. Se eu quero que o meu escalonador
+
+172
+00:25:07,740 --> 00:25:15,740
+só atribua processador a uma tarefa, o meu programa só deve ter uma tarefa. Não vale
+
+173
+00:25:15,740 --> 00:25:21,900
+a pena estar a escrever tarefas ou instanciar tarefas, que depois não queremos que elas
+
+174
+00:25:21,900 --> 00:25:29,280
+sejam, que elas discutem, certo? Mas vamos, por exemplo, com o meu programa tem dois
+
+175
+00:25:29,280 --> 00:25:34,480
+timers. Tem dois? Dois timers, dois tempos visadores. Ok, ok, ok.
+
+176
+00:25:34,480 --> 00:25:38,480
+E o que é que eles... Que eles... Que eles vão botar mais alto.
+
+177
+00:25:38,480 --> 00:25:45,360
+E se eu quiser que eles corram acincronamente, em duas tarefas separadas, é que eles corram
+
+178
+00:25:45,360 --> 00:25:51,520
+ao mesmo tempo, ou, por menos, com a... em usam que corram ao mesmo tempo, que eu posso
+
+179
+00:25:51,520 --> 00:25:56,160
+ter mais uma aplicação. Duas tarefas, não. Ou não faz sentido.
+
+180
+00:25:56,160 --> 00:26:05,280
+Se tiver duas tarefas, sim. Tem que lançar duas tarefas, certo? Agora aquilo que me está
+
+181
+00:26:05,280 --> 00:26:08,320
+a dizer é que essas tarefas têm períodos diferentes.
+
+182
+00:26:08,320 --> 00:26:15,600
+Exatamente. Exatamente. Então os RTOs fartam-se de encontrar isso.
+
+183
+00:26:15,600 --> 00:26:20,000
+É o panorama mais normal. Há tarefas que são mais frequentes, há tarefas que são menos
+
+184
+00:26:20,000 --> 00:26:30,120
+frequentes, certo? E o que o escalonador tem de fazer é em cada instante em que ele vai
+
+185
+00:26:30,120 --> 00:26:35,160
+decidir, em cada instante de escalonamento, que é um instante em que ele vai decidir
+
+186
+00:26:35,160 --> 00:26:40,000
+a quem é que vai atribuir o processador a seguir, certo?
+
+187
+00:26:40,000 --> 00:26:43,720
+Sim. Ele olha o próprio panorama das estretes,
+
+188
+00:26:43,720 --> 00:26:48,800
+vê quais são aquelas que estão prontas para executar, e vai escolher uma delas, normalmente
+
+189
+00:26:48,800 --> 00:26:52,070
+a que tem maior prioridade.
+
+190
+00:26:52,070 --> 00:26:53,670
+Ou tem que se lançar.
+
+191
+00:26:53,670 --> 00:27:01,110
+Imagina, tem uma tarefa que repete a cada 100 mil e segundos, e tem outra tarefa que
+
+192
+00:27:01,110 --> 00:27:07,710
+repete a cada segundo, e suponha que logo no início estão as duas prontas.
+
+193
+00:27:07,710 --> 00:27:12,150
+O pai, ele vai escolher uma das duas, certo?
+
+194
+00:27:12,150 --> 00:27:16,190
+Entretanto, vai executar depois também a outra.
+
+195
+00:27:16,190 --> 00:27:21,310
+Mas ao fim de 100 mil e segundos, só uma das tarefas é que está pronta.
+
+196
+00:27:21,310 --> 00:27:25,790
+A outra, que só vai repetir ao fim de um segundo, não é?
+
+197
+00:27:25,790 --> 00:27:28,510
+Está a dormir, está descansada da vida.
+
+198
+00:27:28,590 --> 00:27:33,670
+Sim, agora, aqui a minha questão é que vamos se depor de um caso real, eu estou tentando
+
+199
+00:27:33,670 --> 00:27:38,950
+dar-me um sensor, que tem um género de mal função de time-out, e faz-te conta que
+
+200
+00:27:38,950 --> 00:27:43,390
+entra um novo sensor na rede, tem que criar outra tarefa relacionada com o time-out
+
+201
+00:27:43,390 --> 00:27:48,590
+desse sensor, mas eu não sei quando é que essa tarefa vai ser criada, e daí a minha
+
+202
+00:27:48,590 --> 00:27:55,310
+pergunta do pastorito é mais controle, só que quando é que essas tarefas são criadas,
+
+203
+00:27:55,310 --> 00:27:59,230
+e não faz muito sentido na minha cabeça, por exemplo, na certeza que está errado.
+
+204
+00:27:59,230 --> 00:28:06,990
+Eu estava a chamar várias vezes a função Task Start Schedule, quando criou cada tarefa,
+
+205
+00:28:06,990 --> 00:28:07,990
+por exemplo.
+
+206
+00:28:07,990 --> 00:28:14,470
+Eu acho que está aqui com um problema, que é o seguinte, estes sistemas são muito estáticos
+
+207
+00:28:14,470 --> 00:28:20,430
+e fechados, ou seja, não admitem muitas variações.
+
+208
+00:28:21,430 --> 00:28:26,530
+O que eu quero dizer com isso?
+
+209
+00:28:26,530 --> 00:28:33,250
+Imagine que tem um sensor e tem uma tarefa dedicada a esse sensor, certo?
+
+210
+00:28:33,250 --> 00:28:41,450
+A uma da altura, quero ligar um segundo sensor e quero ter uma segunda tarefa dedicada a esse
+
+211
+00:28:41,450 --> 00:28:42,450
+sensor, certo?
+
+212
+00:28:42,450 --> 00:28:43,450
+Certo.
+
+213
+00:28:43,450 --> 00:28:46,050
+É isso que começar a dizer.
+
+214
+00:28:46,050 --> 00:28:47,050
+É isso mesmo.
+
+215
+00:28:47,170 --> 00:28:58,170
+Nesse caso, tenho uma hipótese, é, pega no código-fonte, escreve a tarefa que vai lidar
+
+216
+00:28:58,170 --> 00:29:09,850
+com o segundo sensor, volta a compilar, flecha para a sua gorde e arranca com os dois sensores.
+
+217
+00:29:09,850 --> 00:29:16,450
+Outra hipótese é, eu tenho, eu posso ligar vários sensores, certo?
+
+218
+00:29:17,450 --> 00:29:23,690
+Hot plug, o sistema está a correr e eu quero ligar, certo?
+
+219
+00:29:23,690 --> 00:29:28,810
+Nesse caso, não vai ter uma tarefa para cada sensor.
+
+220
+00:29:28,810 --> 00:29:32,530
+Nesse caso, vai ter uma tarefa que lida com qualquer sensor.
+
+221
+00:29:34,530 --> 00:29:35,530
+Ok.
+
+222
+00:29:35,530 --> 00:29:36,530
+Ok?
+
+223
+00:29:36,530 --> 00:29:46,410
+Vai ter de escrever uma função em que seja sensível a um sensor, e aqui no U, em que
+
+224
+00:29:46,410 --> 00:29:51,650
+é indefinido mesmo, não é um sensor numeral, é um sensor indefinido.
+
+225
+00:29:51,650 --> 00:30:01,490
+E sempre que um sensor se manifestar, essa tarefa vai processar esse sensor.
+
+226
+00:30:01,490 --> 00:30:02,490
+Ok?
+
+227
+00:30:02,490 --> 00:30:12,890
+Por exemplo, os sensores para sinalizarem, David, não baixe a mão, que vai já seguir,
+
+228
+00:30:13,890 --> 00:30:20,970
+os sensores para sinalizarem que tem algo de novo, muito provavelmente vão lançar
+
+229
+00:30:20,970 --> 00:30:25,690
+uma interrupção, certo?
+
+230
+00:30:25,690 --> 00:30:34,210
+O, a função, a retina que vai tratar o interrupt, possivelmente vai identificar qual é aquele
+
+231
+00:30:34,210 --> 00:30:39,210
+sensor, os sensores para além da interrupção, e se tivermos dois dos sensores da mesma
+
+232
+00:30:39,210 --> 00:30:44,130
+natureza, provavelmente vão lançar a mesma interrupção, mas vão identificá-la com
+
+233
+00:30:44,130 --> 00:30:45,450
+um número diferente.
+
+234
+00:30:45,450 --> 00:30:46,450
+Certo?
+
+235
+00:30:46,450 --> 00:30:53,890
+A identificação do sensor e o valor que vem do sensor, mas sobretudo, aquilo que vem
+
+236
+00:30:53,890 --> 00:31:00,530
+do sensor deve ter uma identificação do sensor, para poder distinguir uns dos outros.
+
+237
+00:31:00,530 --> 00:31:07,970
+Esses valores são heitos pela retina, e depois a retina vai chamar a função que trata
+
+238
+00:31:07,970 --> 00:31:16,070
+um sensor, seja ele qual for, certo?
+
+239
+00:31:16,070 --> 00:31:23,670
+E dessa forma, já consegue adaptar-se a hot plugs, certo?
+
+240
+00:31:23,670 --> 00:31:27,430
+É uma tarefa que liga com todos.
+
+241
+00:31:27,430 --> 00:31:34,030
+David, não, é o seguinte, eu não sei esclarecer, mas queria agora também passar ao David,
+
+242
+00:31:34,030 --> 00:31:37,790
+porque se ele era a dúvida que está ligada com esta.
+
+243
+00:31:37,790 --> 00:31:43,150
+Não era bem-duvido, ou seja, o que eu queria dizer é dentro dessa task, um que geria vários
+
+244
+00:31:43,150 --> 00:31:48,670
+sensores, eu não posso criar uma task 2, que passa a gerir aquele sensor que eu registrei
+
+245
+00:31:48,670 --> 00:31:49,670
+de novo.
+
+246
+00:31:49,670 --> 00:31:55,070
+A questão é, quando é que nós podemos chamar essa task create, se eu posso chamar isso
+
+247
+00:31:55,070 --> 00:31:59,350
+dentro de uma task, ou não?
+
+248
+00:31:59,350 --> 00:32:01,350
+Igual a pergunta.
+
+249
+00:32:01,350 --> 00:32:02,350
+Ok.
+
+250
+00:32:02,990 --> 00:32:08,750
+E a pergunta é, a resposta é, eu penso que sim.
+
+251
+00:32:08,750 --> 00:32:16,270
+Agora precisava de ler o capítulo 4, acho que é no capítulo 4, que falo sobre isso,
+
+252
+00:32:16,270 --> 00:32:18,270
+mas possivelmente sim.
+
+253
+00:32:18,270 --> 00:32:20,270
+Agora, o que é que acontece?
+
+254
+00:32:20,270 --> 00:32:29,470
+Você tem sempre um problema da task que não começar, só por ser criada, não?
+
+255
+00:32:29,470 --> 00:32:31,470
+É esse problema.
+
+256
+00:32:31,470 --> 00:32:41,270
+É, eu muitas vezes quero ter a garantia de que eu posso, eu tenho memória suficiente,
+
+257
+00:32:41,270 --> 00:32:50,710
+e depois também o fato de ter mais uma nova task vai afeitar os parâmetros de temporização
+
+258
+00:32:50,710 --> 00:32:55,780
+das outras tarefas.
+
+259
+00:32:55,780 --> 00:33:03,900
+Eu agora estou aqui a fazer uma ganda ginástica mental, porque eu estou formatado para quando
+
+260
+00:33:03,900 --> 00:33:11,260
+escreve uma aplicação, no final, eu sei qual é que é a pegada de memória dessa aplicação,
+
+261
+00:33:11,260 --> 00:33:12,260
+ok?
+
+262
+00:33:12,260 --> 00:33:18,500
+E sei quais são os tempos máximos de resposta, ou espero saber quais são os tempos máximos
+
+263
+00:33:18,500 --> 00:33:21,580
+de resposta, de cada uma das tarefas.
+
+264
+00:33:21,580 --> 00:33:28,260
+E o fato de eu avicionar mais uma tarefa vai-me afeitar os tempos de resposta das outras,
+
+265
+00:33:28,260 --> 00:33:31,980
+ou seja, mata mais garantias que eu tinha antes.
+
+266
+00:33:31,980 --> 00:33:32,980
+Certo?
+
+267
+00:33:32,980 --> 00:33:40,900
+Portanto, eu para mim, e eu quando, e reparem, eu ultimamente não tenho programado muito
+
+268
+00:33:40,900 --> 00:33:47,980
+para estes temas baseados em microcontroladores, mas quando eu fazia isso, a minha perspectiva
+
+269
+00:33:47,980 --> 00:33:50,860
+era muito estática, muito fechada.
+
+270
+00:33:50,860 --> 00:34:01,880
+É, esta é o código e a coisa não vai crescer muito, não vai crescer mais do que isto.
+
+271
+00:34:01,880 --> 00:34:06,960
+Eu não sei se respondi e não sei se posso passar a prática estão do André, ou profumentário
+
+272
+00:34:06,960 --> 00:34:07,960
+do André.
+
+273
+00:34:07,960 --> 00:34:08,960
+Então...
+
+274
+00:34:08,960 --> 00:34:16,440
+Eu estava só a dizer, não tem que ter os recursos todos e estamos à vontade, é claro.
+
+275
+00:34:16,440 --> 00:34:25,480
+Opa, é o seguinte, por exemplo, eu quando programo estretes para Linux, eu não me preocupo
+
+276
+00:34:25,480 --> 00:34:30,600
+muito, ou melhor, porque eu também quero ter estretes de base de controle, ok?
+
+277
+00:34:30,600 --> 00:34:37,160
+Mas se for necessário criar mais uma thread, em princípio, a minha máquina, se for um
+
+278
+00:34:37,160 --> 00:34:46,520
+PC com 16 GB de memória, eu nem sei por sempre que tem mais uma tarefa, mais uma thread, certo?
+
+279
+00:34:46,520 --> 00:34:55,680
+Aquilo ter 16 ou ter 23 estretes é quase igual ao litro, de uma máquina daquelas, a correr
+
+280
+00:34:55,680 --> 00:35:03,960
+em Linux, até porque se houver algum processo que esteja mais parado e eu precisar de mais
+
+281
+00:35:03,960 --> 00:35:11,360
+memória, eventualmente esse outro processo, essa outra aplicação que esteja mais inativa,
+
+282
+00:35:11,360 --> 00:35:16,460
+pode ser despejada da memória para o visco, ok?
+
+283
+00:35:16,460 --> 00:35:24,220
+A memória virtual permite-me habilidades dessas, que é não só o processo de ter uma
+
+284
+00:35:24,220 --> 00:35:28,580
+ideia que tem um mapa de memória muito bonito todo contigo e depois na realidade, na memória
+
+285
+00:35:28,580 --> 00:35:34,100
+RAM está todo espalhado pelos buracos que estavam livros, depois ainda tem esse efeito
+
+286
+00:35:34,100 --> 00:35:40,460
+que é se eu precisar de memória RAM, eu posso pegar em programas que estão relativamente
+
+287
+00:35:40,460 --> 00:35:48,060
+inativos e copiar esses blocos de memória que estão atribuídos na RAM para o visco
+
+288
+00:35:48,060 --> 00:35:50,700
+e liberta memória RAM, ok?
+
+289
+00:35:50,980 --> 00:36:00,580
+Agora nesses sistemas eu não tenho margem para esses truques, é aquela memória que tenho
+
+290
+00:36:00,580 --> 00:36:01,580
+e acabou.
+
+291
+00:36:01,580 --> 00:36:07,980
+Se eu tivesse 64 capas de memória, é com 64 capas de memória que eu tenho de brincar
+
+292
+00:36:07,980 --> 00:36:17,180
+e de jogar e lançar uma nova tarefa precisa de memória, certo?
+
+293
+00:36:17,180 --> 00:36:27,990
+Precisa de memória para stack, precisa de memória para o task control block e, ok,
+
+294
+00:36:27,990 --> 00:36:32,990
+mas podem dizer, ok, isso nem vai ocupar muito espaço porque eu até tinha comprado
+
+295
+00:36:32,990 --> 00:36:39,510
+a placa mais barata que havia e mesmo assim aquele tinha memória que era um disparate,
+
+296
+00:36:39,510 --> 00:36:42,590
+nunca chegava a usar aquela memória toda.
+
+297
+00:36:42,590 --> 00:36:47,990
+Depois vem o efeito do tempo, nesses sistemas o tempo também pode ser muito importante.
+
+298
+00:36:48,910 --> 00:36:55,710
+Que é, eu se tiver quatro tarefas, eu, por exemplo, eu sei que a tarefa de mais baixa
+
+299
+00:36:55,710 --> 00:37:01,630
+prioridade poderá, no máximo, ter um tempo de resposta que depende de ter de esperar
+
+300
+00:37:01,630 --> 00:37:07,630
+pelas outras todas e se calhar algumas delas até poder escutar duas ou três vezes nesse
+
+301
+00:37:07,630 --> 00:37:09,710
+período de espera, ok?
+
+302
+00:37:09,710 --> 00:37:13,510
+O que é que acontece se eu agora lançar mais uma tarefa?
+
+303
+00:37:13,510 --> 00:37:20,430
+Se eu lançar mais uma tarefa, eu estou a afetar todos os tempos máximos de resposta
+
+304
+00:37:20,430 --> 00:37:25,590
+porque é mais uma tarefa que está a utilizar o processador, ok?
+
+305
+00:37:25,590 --> 00:37:30,870
+E quando ela estiver a usar, ela vai estar a causar mais atrasos aos outros.
+
+306
+00:37:30,870 --> 00:37:36,350
+É por isso que quando me colocou essa pergunta, o meu cérebro teve que estar aqui a fazer
+
+307
+00:37:36,350 --> 00:37:42,430
+um bocado de, como é que eu ia dizer, reprogramação porque neste caso eu estou habituado a ter
+
+308
+00:37:42,470 --> 00:37:44,750
+coisas que são muito estáticas.
+
+309
+00:37:44,750 --> 00:37:52,070
+É isto que eu tenho no início e é com esta configuração lógica do software que eu
+
+310
+00:37:52,070 --> 00:37:58,680
+tenho no início que o meu programa vai correr sempre.
+
+311
+00:37:58,680 --> 00:38:06,080
+Portanto, lançar mais uma nova tarefa a meio do jogo, opa, até pode ser para substituir
+
+312
+00:38:06,080 --> 00:38:10,400
+Cristiano Ronaldo, mas aí tinha que ser para substituir, não era meter dois jogadores
+
+313
+00:38:10,400 --> 00:38:11,400
+em campo.
+
+314
+00:38:11,400 --> 00:38:20,260
+Um tem de sair e outro tem de entrar que é para não afetar em demasia.
+
+315
+00:38:20,260 --> 00:38:24,340
+Não sei se clarefiquei ou se tem mais alguma dúvida.
+
+316
+00:38:24,340 --> 00:38:25,660
+Estas perguntas são interessantes.
+
+317
+00:38:25,660 --> 00:38:30,020
+Estou esclarecido, não posso.
+
+318
+00:38:30,020 --> 00:38:37,420
+Ok, ok, pronto, opa, por acaso são interessantes, porque há uma diferença, pai, entre estar
+
+319
+00:38:37,420 --> 00:38:44,020
+a fazer software para embedded ou estar a fazer software para computadores de uso genérico,
+
+320
+00:38:45,660 --> 00:38:46,660
+ok?
+
+321
+00:38:46,660 --> 00:38:55,500
+É aqui normalmente nós fazemos as coisas de uma forma muito espartilhada e quase paranoica.
+
+322
+00:38:55,500 --> 00:39:00,340
+Eu quero ter controle de tudo para quando sair da fábrica e quando meu software sair
+
+323
+00:39:00,340 --> 00:39:04,620
+da fábrica, montado às cavalitas da board, não é?
+
+324
+00:39:04,620 --> 00:39:09,660
+Eu já sei como é que aquilo vai correr, ou tenho esperança de saber como é que aquilo
+
+325
+00:39:09,660 --> 00:39:10,660
+vai correr.
+
+326
+00:39:10,780 --> 00:39:11,780
+Certo?
+
+327
+00:39:11,780 --> 00:39:16,380
+E não haver assim muitas coisas que cresçam e depois ficam sem memória e a coisa falha.
+
+328
+00:39:18,380 --> 00:39:20,980
+Está bom?
+
+329
+00:39:20,980 --> 00:39:21,980
+Pronto.
+
+330
+00:39:21,980 --> 00:39:25,060
+Então, vamos só passar à frente.
+
+331
+00:39:25,060 --> 00:39:27,580
+Aqui o escalonador.
+
+332
+00:39:27,580 --> 00:39:36,300
+O escalonador do FreeRTOS em prédio de definição pode ser pre-ambitivo e pode ser colaborativo
+
+333
+00:39:36,300 --> 00:39:40,580
+com o operativo, mas em prédio de definição é pre-ambitivo, ok?
+
+334
+00:39:40,580 --> 00:39:48,500
+Portanto, é um escalonador que de tempos a tempos interrompe a execução de uma tarefa
+
+335
+00:39:48,500 --> 00:39:55,940
+que possa estar a executar e vamos executar ali um pedacinho de código, uma rotina em
+
+336
+00:39:55,940 --> 00:40:02,780
+que basicamente ele vai decidir qual é que vai ser a próxima tarefa, que vai receber
+
+337
+00:40:02,780 --> 00:40:10,230
+o processador, até pode ser a mesma que está a correr, até pode ser outra.
+
+338
+00:40:10,230 --> 00:40:16,390
+E se for outra, temos que fazer a mudança de contexto, que é guardar os registros do
+
+339
+00:40:16,390 --> 00:40:23,950
+processador, os valores que estão nos registros do processador para no thread, na task control
+
+340
+00:40:23,950 --> 00:40:30,150
+block ou na stack, da thread que vai ser interrompida, e depois ir buscar os valores
+
+341
+00:40:30,150 --> 00:40:37,950
+do processador da outra thread que vai passar a correr, carregá-los para o processador
+
+342
+00:40:37,950 --> 00:40:44,380
+e depois a reencar com essa segunda thread, ok?
+
+343
+00:40:44,380 --> 00:40:53,900
+As tarefas de mais alta prioridade conseguem sempre interromper as de baixa prioridade.
+
+344
+00:40:53,900 --> 00:41:00,500
+Se eu tiver uma a correr neste momento, uma tarefa de baixa prioridade suponho com prioridade
+
+345
+00:41:00,500 --> 00:41:11,780
+2, e agora aparecer pronta para correr uma tarefa de prioridade 4, então o escalonador
+
+346
+00:41:11,780 --> 00:41:21,920
+vai parar a prioridade 2 e vai dar o CPU a prioridade 4, ok?
+
+347
+00:41:21,920 --> 00:41:35,260
+Bem, em pré-definição, se nós tivermos numa fila várias tarefas, imagina em duas,
+
+348
+00:41:35,260 --> 00:41:44,460
+2 é sempre o caso mais simples do complicado, da mesma prioridade, por pré-definição o
+
+349
+00:41:44,460 --> 00:41:51,460
+escalonador do fria e retos vai fazer round robin, ou seja, o que é isto?
+
+350
+00:41:51,460 --> 00:42:01,900
+Ele faz a um prior a um momento de escalonamento e ele decide executar e atribuir o processador
+
+351
+00:42:01,900 --> 00:42:11,900
+a tarefa, passava algum tempo, o temporizador do escalonador volta a acordar o escalonador
+
+352
+00:42:11,900 --> 00:42:17,180
+e o escalonador olha para lá e diz, ok, tem a tarefa A e a tarefa B são ambas da prioridade
+
+353
+00:42:17,180 --> 00:42:25,860
+4, a tarefa A está a correr, a tarefa B está a ready, então agora vou fazer uma troca
+
+354
+00:42:25,860 --> 00:42:35,260
+de contexto e vai ser a ver que vai correr e a Africa ready, a seguir no momento de escalonamento
+
+355
+00:42:35,260 --> 00:42:41,540
+seguinte, se a vez estiver a correr e a estiver pronta e não houver mais nenhuma alta prioridade
+
+356
+00:42:41,540 --> 00:42:52,620
+então ele vai fazer a troca e vai por A a executar no CPU e a B passa a ready, ok?
+
+357
+00:42:52,620 --> 00:42:58,140
+Já agora temos aqui este mapa, isto aqui foi tirado do tal livro de programação de
+
+358
+00:42:58,140 --> 00:43:05,180
+fria e retos no capítulo 4 e basicamente uma tarefa quando é criada fica no estado
+
+359
+00:43:05,180 --> 00:43:15,340
+ready, ok? Quando é escalonada, quando o escalonador decide atribuir o CPU, ela passa a correr,
+
+360
+00:43:15,340 --> 00:43:23,060
+se for preamptada, ela passa a correr para pronta, ou seja, não foi por vontade dela
+
+361
+00:43:23,060 --> 00:43:33,180
+que deixou de executar, foi porque o escalonador le tirou o CPU, ok? Também pode acontecer
+
+362
+00:43:33,180 --> 00:43:40,180
+quando ela está a correr e faz um pedido de uma função bloqueante, ele vai ficar a
+
+363
+00:43:40,180 --> 00:43:46,500
+espera de um determinado evento, quando acontece esse pedido de uma função bloqueante, ela passa de
+
+364
+00:43:46,500 --> 00:43:55,780
+running para bloc e obviamente quando passa de running para bloc, o CPU fica disponível e o
+
+365
+00:43:55,780 --> 00:44:02,820
+escalonador entra em ação para ir à fila de tarefas que estão prontas, pega na mais alta
+
+366
+00:44:02,820 --> 00:44:13,140
+prioridade e toque para ir na correr, ok? Uma tarefa que esteja bloqueada, a espera de um evento
+
+367
+00:44:13,140 --> 00:44:23,860
+e, entretanto, esse evento acontece só que passa ao estado de ready, ok? E mais cedo ou mais tarde
+
+368
+00:44:23,860 --> 00:44:31,980
+vai ser escalonada e vai executar, está bom? Este aqui é o circuito mais habitual, é
+
+369
+00:44:32,020 --> 00:44:39,740
+ready, running, running, ready, ready, running, running, ready e às vezes o running chama-nos uma
+
+370
+00:44:39,740 --> 00:44:46,300
+função que vai ficar à espera de qualquer coisa, então passa a bloc e quando acontece esse evento,
+
+371
+00:44:46,300 --> 00:44:56,980
+bloc para ready e mais cedo ou mais tarde running, ok? Aqui o suspended é um estado diferente, o
+
+372
+00:44:56,980 --> 00:45:04,780
+suspended é quando nós dizemos explicitamente que esta tarefa fica de fora do escalonamento,
+
+373
+00:45:04,780 --> 00:45:15,460
+é quase como sei lá, enquanto aqui o ready é colocar o pause, não é? No vídeo, aqui o suspended
+
+374
+00:45:15,460 --> 00:45:24,860
+é quase como carregar no stop, ela fica de fora, ela não está à espera de nenhum evento, ok? Ela
+
+375
+00:45:24,860 --> 00:45:33,340
+totalmente foi desligada, podia estar em ready, podia estar em running, mas ela é suspended,
+
+376
+00:45:33,340 --> 00:45:41,660
+passa para suspended. Mais cedo ou mais tarde pode se chamar o resumo e quando se chama o resumo,
+
+377
+00:45:41,660 --> 00:45:49,700
+que é o destilo, ok? Tu estávais mesmo no congelador, congelador, ok? Totalmente bloco de gelo,
+
+378
+00:45:49,700 --> 00:46:00,580
+quando fazemos o resumo, ela passa a ready e há de correr. Este caso é diferente do ready,
+
+379
+00:46:00,580 --> 00:46:07,220
+porque o ready se dámos o processador e ele corre. O bloc não dámos o processador porque está à
+
+380
+00:46:07,220 --> 00:46:15,220
+espera do evento, mas quando esse evento está a acontecer, passa a ready. O suspended é um bloqueado,
+
+381
+00:46:15,220 --> 00:46:24,940
+mas um bloqueado, mas, como é que dizer, deliberado, ok? Nós dizemos mesmo, esta tarefa fica suspensa.
+
+382
+00:46:24,940 --> 00:46:35,700
+Não está à espera de nenhum evento, ok? Não é considerada para ser escalonada, é algo que está
+
+383
+00:46:35,700 --> 00:46:43,940
+ali no parque de estacionamento e olha mais cedo ou mais tarde, se por acaso quisermos chamá-la de
+
+384
+00:46:44,020 --> 00:46:54,420
+festa chamamos o resumo, pedimos para ela continuar e passa a ready. Duvidas, não há? Nós já vamos falar
+
+385
+00:46:54,420 --> 00:47:00,580
+nisso, há um slide aí à frente que falamos nisso, mas também não falo muito mais do que aquilo que
+
+386
+00:47:00,580 --> 00:47:11,540
+falei, ok? Importante, quando múltiplas tarefas têm a mesma prioridade e estão prontas para executar,
+
+387
+00:47:11,540 --> 00:47:23,700
+o frio a retos vai gerilas baseadas na configuração desta variável config e o time slicing, ok? O que é
+
+388
+00:47:23,700 --> 00:47:34,940
+o time slicing? O time slicing é costar o tempo às fatias, ou seja, as tarefas são organizadas ou o CPU
+
+389
+00:47:34,940 --> 00:47:45,940
+é atribuído às tarefas em fatias de tempo, ok? Portanto, fatias de tempo fixas. Podemos dizer que
+
+390
+00:47:45,940 --> 00:47:52,940
+é, por exemplo, fatias de tempo de 50 milis segundos. Portanto, quando atribuímos uma fatia de tempo ou uma
+
+391
+00:47:52,940 --> 00:47:58,740
+tarefa, garantimos essa tarefa 50 milis segundos desde que não aparece nenhuma tarefa mais importante,
+
+392
+00:47:58,860 --> 00:48:12,980
+uma prioridade maior. Agora, se nós tivemos o config use time slicing ativado, ou seja, definido em
+
+393
+00:48:12,980 --> 00:48:22,100
+nenhum, já agora, onde é que eu tenho isso? Eu tenho estas variáveis no frio a retos config.h,
+
+394
+00:48:22,100 --> 00:48:31,860
+o tal fixeiricamente importante. Pronto. Se nós tivemos preemissões ativadas e, para além das
+
+395
+00:48:31,860 --> 00:48:40,020
+preemissões, o use time slicing também estiver ativado, o escalonador vai partilhar o tempo ou vai
+
+396
+00:48:40,020 --> 00:48:49,500
+intercalar as tarefas, ou vai intercalar as tarefas no CPU de igual prioridade, ou seja, suponham que,
+
+397
+00:48:50,500 --> 00:48:59,020
+pronto, tenho aqui its task executes for the duration of one RTOS tick interrupt. O que é isto? O tick
+
+398
+00:48:59,020 --> 00:49:09,540
+interrupt? O tick interrupt é a tal interrupção que acorda o escalonador, ok? Essa interrupção é
+
+399
+00:49:09,540 --> 00:49:17,180
+lançada através de um temporizador. Nós podemos marcar para acordar o escalonador, por exemplo, a cada
+
+400
+00:49:17,180 --> 00:49:29,660
+10 segundos, certo? Se marcarmos 100 milis segundos, o tick é um tick de 100 milis segundos. Se eu
+
+401
+00:49:29,660 --> 00:49:36,780
+tiver o time slicing, eu atribuo 100 milis segundos à tarefa A, que tem prioridade 4, e ao fim de 100
+
+402
+00:49:36,780 --> 00:49:43,420
+milis segundos, eu vou escolher a tarefa B, de prioridade 4. E ao fim de outros 100 milis segundos,
+
+403
+00:49:43,460 --> 00:49:55,700
+eu vou dar o CPU à tarefa A, de prioridade 4. Qual é a vantagem disto? A vantagem disto é que ambas
+
+404
+00:49:55,700 --> 00:50:06,390
+as tarefas de igual prioridade vão progredindo ao longo do tempo, ok? Ou seja, a tarefa A não tem
+
+405
+00:50:06,390 --> 00:50:18,710
+que esperar que a tarefa A termine e o mesmo com a tarefa B. Não, com a tarefa A também não tem que
+
+406
+00:50:18,710 --> 00:50:29,110
+esperar que outra termine. Ou seja, elas vão avançando mais ou menos a par. Outra alternativa é sem o
+
+407
+00:50:29,110 --> 00:50:36,750
+time slicing. Se o time slicing estiver desligado, portanto, definida zero, o escalonador não vai
+
+408
+00:50:36,750 --> 00:50:46,150
+trocar tarefas em cada tick. Se eu tiver a tarefa A de prioridade 4 e a tarefa B de prioridade 4,
+
+409
+00:50:46,150 --> 00:50:54,980
+ok? E vamos supor que o escalonador pegou primeiro na tarefa A, o escalonador não vai
+
+410
+00:50:54,980 --> 00:51:04,060
+trocar a tarefa A até que ela diga, já não precise mais do processador, ok? Só quando a tarefa A disser
+
+411
+00:51:04,060 --> 00:51:12,060
+não precise mais do processador, é que o escalonador vai escalonar a tarefa B e vai fazer o mesmo com a
+
+412
+00:51:12,060 --> 00:51:18,100
+tarefa B. A tarefa B vai executar até o fim, obviamente, desde que não apareça uma tarefa de
+
+413
+00:51:18,100 --> 00:51:25,180
+prioridade 5 ou prioridade 6. Qualquer tarefa de prioridade mais elevada consegue intervomper
+
+414
+00:51:25,180 --> 00:51:34,220
+uma de prioridade mais baixa, ok? O que é que acontece? Eu, por acaso, da primeira vez que vi isto no
+
+415
+00:51:34,220 --> 00:51:45,860
+frio a retos, achei um bocado de estranho. Por quê? Porque na literatura de real-time scheduling,
+
+416
+00:51:45,860 --> 00:51:55,340
+normalmente, não se usa o time slicing. Por quê? Porque o time slicing implica que,
+
+417
+00:51:55,340 --> 00:52:02,380
+em cada tick, vocês tenham que fazer uma amoleça de contexto. E uma amoleça de contexto demora
+
+418
+00:52:02,380 --> 00:52:14,540
+algum tempo a ser executado, ok? Imagine, vocês têm o kernel, vocês têm o escalonador a copiar os
+
+419
+00:52:14,540 --> 00:52:23,980
+elementos, os valores que estão nos registros para a memória, para salvaguardar o estado da tarefa A,
+
+420
+00:52:24,460 --> 00:52:35,620
+depois têm que ir à memória e carregar os valores dos registros da tarefa B e só depois é que arranca
+
+421
+00:52:35,620 --> 00:52:42,460
+com a tarefa B. E passado 100 milis segundos está a fazer outra vez o mesmo. Vocês podem dizer,
+
+422
+00:52:42,460 --> 00:52:49,700
+ah, esse só demora uns microsecondos, mas se fizerem isso 6 vezes por segundo, já vai demorar algum
+
+423
+00:52:50,180 --> 00:52:55,460
+tempo. Se vocês estiverem constantemente a fazer isso, vocês vão estar a gastar muito tempo do
+
+424
+00:52:55,460 --> 00:53:06,730
+processador a executar COVID do escalonador, ok? Normalmente, na literatura, o que acontece? Na teoria
+
+425
+00:53:06,730 --> 00:53:15,970
+de escalonamento, tratamos sempre de escalonamento em que se minimiza este context switch, estas
+
+426
+00:53:15,970 --> 00:53:25,530
+mudanças de contexto, precisamente para minimizar os custos de escalonamento, ok? É o que diz aqui,
+
+427
+00:53:25,530 --> 00:53:36,930
+se nós não utilizarmos o time slicing, vamos diminuir os custos do escalonamento, de vez em vez
+
+428
+00:53:36,930 --> 00:53:44,610
+das mudanças de contexto. E além do mais, se eu diminuo estes tempos, eu tenho mais controle
+
+429
+00:53:44,610 --> 00:53:53,890
+do tempo que, efetivamente, uma tarefa demora a terminar um trabalho e, por consequência, isso
+
+430
+00:53:53,890 --> 00:54:00,130
+também se propaga aos trabalhos das outras tarefas que estão à espera. Portanto, eu consigo ter mais
+
+431
+00:54:00,130 --> 00:54:13,220
+determinismo no tempo de resposta de qualquer tarefa, ok? No entanto, vocês podem dizer, ah, mas isso é
+
+432
+00:54:13,220 --> 00:54:22,380
+um posão, porque se eu tiver uma tarefa que nunca liberte o processador, então o processador vai
+
+433
+00:54:22,380 --> 00:54:27,940
+estar sempre a correr essa tarefa. E aquilo que eu os digo é, se vocês tiverem uma tarefa que nunca
+
+434
+00:54:27,940 --> 00:54:37,440
+liberta o processador, se calhar o seu programa não está assim tão bom, ok? O que é que é o normal?
+
+435
+00:54:37,440 --> 00:54:47,200
+Nós temos uma tarefa que faz o trabalho e depois para, e quando dizemos para, ela liberta o
+
+436
+00:54:47,200 --> 00:54:53,960
+processador e fica à espera da próxima ativação. Enquanto libertou o processador, o processador fica
+
+437
+00:54:53,960 --> 00:55:05,310
+livre para executar outras tarefas. Tá sentido? Ok. Pronto, nós vamos voltar a isto mais à frente,
+
+438
+00:55:05,310 --> 00:55:13,870
+mas também passar dados para uma nova tarefa. É aquela parte que era assim um bocado mais estranha,
+
+439
+00:55:13,870 --> 00:55:24,710
+não é mais estranho, mas de todos estes parâmetros, aquele que é um pouco mais estranho é, e se eu
+
+440
+00:55:24,710 --> 00:55:34,310
+quiser passar parâmetros para cada thread, temos aqui o tal apontador genérico e isto
+
+441
+00:55:34,310 --> 00:55:41,110
+é o tal e qual que nós já vimos com as threads. É, eu passo um endereço, o andais suposte
+
+442
+00:55:41,110 --> 00:55:50,590
+encontrar uma palete com os valores que a thread precisa para começar a funcionar, ok? Só que como
+
+443
+00:55:50,590 --> 00:55:56,190
+é que os dados estão organizados nessa palete? A thread tem que saber e não há problema nenhum
+
+444
+00:55:56,190 --> 00:56:02,030
+para vocês programam, que era parte de quem lança a thread e empacota os dados que vão para a thread,
+
+445
+00:56:02,030 --> 00:56:08,550
+como depois também vocês programam o thread que vai empacotar esses dados, certo? Portanto,
+
+446
+00:56:08,550 --> 00:56:13,270
+vocês sabem como é que eles vão empacotados para dentro da thread e depois sabem como é que vão
+
+447
+00:56:13,270 --> 00:56:26,480
+desenbrulhar dentro da thread. Então, a thread recebe os dados através de um endereço genérico,
+
+448
+00:56:26,480 --> 00:56:33,160
+um apontador genérico, ok? Nesse apontador genérico nós podemos encontrar qualquer coisa, podemos
+
+449
+00:56:33,160 --> 00:56:40,640
+criar inteiros, estruturas, vetores, strings, por acaso também são vetores, são vetores chars,
+
+450
+00:56:40,640 --> 00:56:47,480
+ok? Dentro da função, tal como nós tínhamos com as threads, nós temos que saber desenpacotar
+
+451
+00:56:47,480 --> 00:56:55,720
+aquilo que encontrarmos nesse endereço, ok? Utilizando um caste apropriável. Mas, por exemplo,
+
+452
+00:56:56,160 --> 00:57:05,880
+vamos ver um caso de uso. Vamos criar duas tarefas que executam exatamente a mesma função,
+
+453
+00:57:05,880 --> 00:57:13,240
+portanto, vamos lançar duas tarefas que executam a mesma função, mas nós queremos que elas tenham
+
+454
+00:57:13,240 --> 00:57:23,450
+comportamentos diferentes, ok? Recebem, cada uma delas vai receber uma string com parâmetro e o que
+
+455
+00:57:23,450 --> 00:57:32,690
+é suposto de fazerem é mostrarem a string que receberam na sua invocação, ok? E cada uma delas
+
+456
+00:57:32,690 --> 00:57:39,210
+deve imprimir uma mensagem a cada segundo, a cada mil e mil segundos, ok? Aquilo que eu estou a esperar
+
+457
+00:57:39,210 --> 00:57:49,970
+é que, por exemplo, a tarefa A escreva, ou lá da tarefa A e a segunda tarefa escreva ou lá da tarefa B,
+
+458
+00:57:49,970 --> 00:58:04,030
+um exemplo, ok? O que eu posso fazer? Tenho aqui a minha task que retorna Voive, mas recebe
+
+459
+00:58:04,030 --> 00:58:11,270
+um apontador genérico, aqui este pv parameters, ok? Vai cair aqui nesta variável um endereço.
+
+460
+00:58:11,270 --> 00:58:19,670
+Aquilo que eu tenho de fazer é irei esse endereço e desenpacotar os dados com a estão. E neste caso,
+
+461
+00:58:19,670 --> 00:58:29,590
+eu sei que esta tarefa vai receber uma string que é para depois ser apresentada a cada segundo,
+
+462
+00:58:29,590 --> 00:58:38,030
+ok? Portanto, eu sei porque eu estou a desenvolver este programa e esta string vai receber um
+
+463
+00:58:38,030 --> 00:58:47,630
+endereço onde eu vou encontrar uma string. Pronto, então, tenho aqui a variável. Messages que é um
+
+464
+00:58:47,630 --> 00:58:54,910
+apontador para chars, portanto, é um apontador para string. E agora, o que eu vou fazer? Vou pôr
+
+465
+00:58:54,910 --> 00:59:03,790
+esta variável message ou olhar exatamente para o mesmo endereço que foi passado aqui por pv
+
+466
+00:59:03,790 --> 00:59:12,470
+parameters, ok? Suponho que este pv parameters recebe um endereço de 2 mil. Esta variável message fica
+
+467
+00:59:12,470 --> 00:59:19,870
+para guardar o endereço de 2 mil. Portanto, ambas estão a olhar para o mesmo endereço. A única
+
+468
+00:59:19,870 --> 00:59:28,470
+diferença é que esta pv parameters é uma variável que aponta para dados em bruto.
+
+469
+00:59:29,390 --> 00:59:42,990
+Rodeita, certo? A variável message é uma variável que olha para memória, mas interpreta o que está
+
+470
+00:59:42,990 --> 00:59:51,990
+naquela posição de memória como chars, ok? Portanto, enquanto que este olha e ver bytes em bruto,
+
+471
+00:59:52,750 --> 01:00:01,350
+esta olha exatamente para o mesmo endereço e ver a característica, ok? E eu aqui estou a colocá-los
+
+472
+01:00:01,350 --> 01:00:08,230
+para o mesmo lado, para o mesmo endereço, certo? Mas agora, tenho aqui o meu ciclo de serviço,
+
+473
+01:00:08,230 --> 01:00:19,670
+meu ciclo infinito e o meu trabalho é mostrar um écran, task 6 e apresentar uma string antes de
+
+474
+01:00:19,670 --> 01:00:29,590
+a linha. E que string é essa? É aquela que é apontada por esta variável message, ok? Se
+
+475
+01:00:29,590 --> 01:00:38,030
+utilizasse aqui a pv parameters, o cumpilador iria dizer, é para a, olha com pv parameters, olha para
+
+476
+01:00:38,030 --> 01:00:46,310
+dados em bruto, e aqui estás a dizer para apresentar uma string. Eu poderia fazer isto. Aqui em
+
+477
+01:00:46,310 --> 01:00:55,270
+um message, eu poderia colocar um cast de char asterisco e pôr pv parameters, ok? Mas é muito
+
+478
+01:00:55,270 --> 01:01:05,110
+mais lógico utilizar palavras que indicam o valor lógico, o valor semântico dos dados que estão
+
+479
+01:01:05,110 --> 01:01:10,630
+ali guardados. Faz muito mais sentido e está a menos de trabalho a escrever. Escrever ali
+
+480
+01:01:10,630 --> 01:01:21,110
+certo? Duvidas até agora, não há? Por fim, podemos isto a dormir 100 mil mil segundos,
+
+481
+01:01:21,110 --> 01:01:30,590
+um segundo, ok? Com o Vtasque de Lei, o Vtasque de Lei é para dormir pelo menos mil segundos, já vamos
+
+482
+01:01:30,870 --> 01:01:40,750
+falar-me agora. Esta função transforma um número em mil e segundos para ticks, os ticks,
+
+483
+01:01:41,750 --> 01:01:51,470
+o escalonador, ok? Aqui o número de ticks não tem de ter correspondência direta com mil e
+
+484
+01:01:51,470 --> 01:01:57,750
+segundos ou segundos, ok? E pode depender de configuração de uma bordo para outra configuração de outra
+
+485
+01:01:58,750 --> 01:02:06,470
+ou configuração de projeto para outra configuração de projeto. Então, esta função que faz é pega neste
+
+486
+01:02:06,470 --> 01:02:13,670
+número, assume este número começando em mil e segundos e vai converter-lo para o número de ticks.
+
+487
+01:02:13,670 --> 01:02:21,830
+Suponho, por exemplo, que um tick é 100 mil e segundos. Ele vai pegar nestes mil mil e segundos e vai
+
+488
+01:02:21,830 --> 01:02:34,190
+poderem 10 ticks, certo? Porque 100 mil mil e segundos cabem 10 intervalos de 100 mil e
+
+489
+01:02:34,190 --> 01:02:41,630
+segundos, certo? Mil, a dívida por 100 dá 10, então está 10 ticks. A cada 100 mil e segundos
+
+490
+01:02:41,630 --> 01:02:51,620
+temos um tick. Quantos ticks é que precisamos para mil, 10? Faz sentido? Aqui há alguma dúvida,
+
+491
+01:02:55,420 --> 01:03:07,300
+não há? Pronto. Então agora, vamos ver do lado da mãe, ok? Que é quem cria as tarefas e depois
+
+492
+01:03:07,300 --> 01:03:14,100
+a genca do carro-celo. O que é que nós temos do lado da mãe? Temos aqui 2 vetores static,
+
+493
+01:03:15,300 --> 01:03:24,580
+ok? 2 vetores static de charge. Message 1 e message 2. Message 1 tem
+
+494
+01:03:24,580 --> 01:03:31,060
+Hello from Task A e o outro tem Hello from Task B. Por que que eu estou a criar estes vetores
+
+495
+01:03:31,060 --> 01:03:37,060
+como static? Estou a criar estes vetores como static para torná-los totalmente independentes
+
+496
+01:03:37,060 --> 01:03:46,900
+do ciclo de vida da mãe, ok? Lembram-se nas tretes que a função mãe também podia desaparecer
+
+497
+01:03:46,900 --> 01:03:54,100
+antes das outras tretes conseguirem buscar o valor que a mãe do que tinha passado por
+
+498
+01:03:54,100 --> 01:04:00,860
+argumento. Se nós colocarmos static, temos uma variável que vai durar todo o período de
+
+499
+01:04:00,860 --> 01:04:11,300
+execução do programa. É uma variável que está no Date Assignment. Logo, no momento da compilação,
+
+500
+01:04:11,300 --> 01:04:17,220
+já sabemos como estar aquela variável e é uma variável que no arranque já existe e quando
+
+501
+01:04:17,220 --> 01:04:23,780
+colocarmos o computador ela ainda está a existir, ok? Estamos a garantir que ela não desaparece mesmo
+
+502
+01:04:23,780 --> 01:04:31,700
+que a função mãe possa desaparecer. Ela não fica na stack da mãe, ok? O static faz com que uma
+
+503
+01:04:31,700 --> 01:04:40,100
+função nunca fique numa stack. Fica sempre no Date Assignment. Ok, pronto, então estamos aqui a lançar
+
+504
+01:04:40,100 --> 01:04:51,300
+a tarefa que chamamos task A e estamos a passar-lhe este o endereço onde começa esta string,
+
+505
+01:04:51,300 --> 01:04:58,500
+ok? Message um. E para a segunda fazemos o mesmo, só que passamos do endereço onde está a message dois.
+
+506
+01:04:59,700 --> 01:05:10,940
+Certo? Avencamos o carro ao céu e o que acontece? A tarefa A vem aqui e vai receber o endereço para
+
+507
+01:05:10,940 --> 01:05:18,940
+esta mensagem. A segunda tarefa. Vem aqui e vai receber o endereço para esta mensagem. Resultado.
+
+508
+01:05:19,940 --> 01:05:27,220
+Vamos ter algo assim. A cada segundo, a primeira tarefa escreve esta mensagem, a segunda tarefa escreve
+
+509
+01:05:27,220 --> 01:05:43,380
+esta outra mensagem, ok? Dóvidas. Não há? Parece fácil? E é porque não é difícil, ok?
+
+510
+01:05:44,380 --> 01:05:54,630
+Parecendo fácil, não é nada difícil. Podemos avançar? Vamos então avançar, ok? Notas
+
+511
+01:05:54,630 --> 01:05:59,070
+importantes são exatamente as mesmas notas que nós já tínhamos com as tarefas quando passávamos
+
+512
+01:05:59,070 --> 01:06:06,670
+argumentos. A mesma função pode ser utilizada e antes múltiplas tarefas. Portanto, eu posso
+
+513
+01:06:06,670 --> 01:06:13,430
+instanciar várias tarefas usando o mesmo corpo, ok? Nós também já fazemos isso com as tarefas. Podemos
+
+514
+01:06:13,430 --> 01:06:22,470
+instanciar várias tarefas que corriam a mesma função. Tinha o mesmo corpo. Cada instância da
+
+515
+01:06:22,470 --> 01:06:27,590
+tarefa pode receber dados diferentes. Também já tínhamos visto isso com as tarefas. Eu pode instanciar
+
+516
+01:06:27,590 --> 01:06:34,230
+duas tarefas que corriam a partir da mesma função, mas eu passava uns dados a uma instância de uma
+
+517
+01:06:34,230 --> 01:06:39,750
+freia e passava outros dados ou outra instância da freia. E elas entram em comportamentos diferentes,
+
+518
+01:06:39,750 --> 01:06:46,870
+porque recebiam dados diferentes, ok? Importantíssimo, os dados passados devem
+
+519
+01:06:46,870 --> 01:06:54,950
+continuar válidos após a criação da tarefa. Por quê? Eu queria a tarefa, mas eu tenho de
+
+520
+01:06:54,950 --> 01:07:01,590
+garantir que a tarefa, quando começar a executar, seja lá isso quando for, os dados ainda se mantém
+
+521
+01:07:01,590 --> 01:07:09,510
+mais àquilo que eu passei, certo? Também falámos sobre isso nas tarefas e falámos agora.
+
+522
+01:07:09,510 --> 01:07:17,470
+Variáveis locais dentro de uma função podem desaparecer após retornar. É por isso que nós
+
+523
+01:07:17,470 --> 01:07:27,710
+não devemos utilizar dados que estão na stack de uma função que vai criar uma tarefa, ok?
+
+524
+01:07:27,990 --> 01:07:43,890
+Vamos usar estática. Static ou hip são os mais seguros. Se houver problemas com a utilização
+
+525
+01:07:43,890 --> 01:07:58,700
+da hip, estática, ok? A vantagem da hip é que nós podemos usar e depois libertar, só que isso tem
+
+526
+01:07:58,700 --> 01:08:08,240
+que ser muito controlado. Alô? Duvidas, não há? Isto aqui é exatamente igual àquilo que já
+
+527
+01:08:08,240 --> 01:08:19,500
+tínhamos lidado com as stretches. Ok, pronto. Prioridades. As prioridades, nós tínhamos visto
+
+528
+01:08:19,500 --> 01:08:28,660
+que era um número, certo? E é um número... Quanto maior for o número, maior é a urgência ou
+
+529
+01:08:28,660 --> 01:08:34,980
+a prioridade dessa tarefa. Nós, quando fazemos o task create, definimos qual é que é o número
+
+530
+01:08:34,980 --> 01:08:43,780
+da prioridade, ok? Mais à frente até podemos mudar a prioridade dessa variável com a função
+
+531
+01:08:43,780 --> 01:08:52,260
+vtask priority set, ok? Em que passamos aqui ou o identificador da thread, se eu quiser modificar a
+
+532
+01:08:52,260 --> 01:09:00,420
+prioridade da outra thread ou então passo no se for para modificar a minha própria prioridade,
+
+533
+01:09:00,420 --> 01:09:08,020
+tá bom? Mas é sempre possível modificar dinamicamente enquanto o programa está a executar a prioridade
+
+534
+01:09:08,020 --> 01:09:14,420
+de uma thread. Então, não temos que ficar para sempre agarrados a esta prioridade que está aqui no
+
+535
+01:09:14,500 --> 01:09:23,060
+thread. Se bem, muitas vezes ficamos, ok? Se for a thread monotônica, aquela prioridade é fixa.
+
+536
+01:09:23,060 --> 01:09:31,460
+Quais são os níveis de prioridade? Os níveis de prioridade, nós temos a ver. Nesta configuração,
+
+537
+01:09:31,460 --> 01:09:40,100
+config max priorities, também no free rtoxconfig.h. Vocês estão a ver que este share tem uma data
+
+538
+01:09:40,100 --> 01:09:47,780
+de missões, certo? É por isso que é bom aproveitar este share que já foi definido por
+
+539
+01:09:47,780 --> 01:09:59,510
+alguém para uma determinada plataforma, ok? O intervalo de prioridades permitidos é zero
+
+540
+01:09:59,510 --> 01:10:06,550
+até config max priorities menos um. Se nós aqui dissermos que temos dez prioridades, temos
+
+541
+01:10:06,550 --> 01:10:14,890
+a dar prioridades de zero até nove. É sentido? Como informático, estamos habituados a contar
+
+542
+01:10:14,890 --> 01:10:23,690
+a partir de zero, certo? E é o que acontece aqui. Se tivermos aqui vinte, vamos ter de zero até
+
+543
+01:10:23,690 --> 01:10:33,370
+ao dezenove, tá bom? O zero é sempre a prioridade mais baixa e podemos atribuir a mesma prioridade a
+
+544
+01:10:33,450 --> 01:10:42,250
+três tarefas, ok? E o escalonador lida bem com isso. Tá bom? Dovidas, não há? Vocês em
+
+545
+01:10:42,250 --> 01:10:49,370
+sistemas tempo real, vocês falaram no rei de monotônica, certo? Prioridades fixas.
+
+546
+01:10:49,370 --> 01:10:59,370
+Sim, sim. As prioridades são atribuídas na ordem inversa do período da tarefa, ou seja,
+
+547
+01:10:59,370 --> 01:11:06,090
+que tenham prioridades menores, têm maiores prioridades, maiores prioridades, certo? Como
+
+548
+01:11:06,090 --> 01:11:14,010
+tem que se resolver em menos tempo, obviamente, que passam à frente das outras, pronto? E é aqui que
+
+549
+01:11:14,010 --> 01:11:23,690
+nós podemos atribuir as prioridades. Em rei de monotônica, prioridades menores, prioridades
+
+550
+01:11:23,690 --> 01:11:33,290
+maiores, nível de prioridade maior, ok? Pronto. Se tivermos duas com o mesmo período, por exemplo,
+
+551
+01:11:33,290 --> 01:11:39,610
+ambas têm um período tarefa A e tarefa B, têm um período de cinquenta mil e segundos, têm o mesmo
+
+552
+01:11:39,610 --> 01:11:50,380
+nível de prioridade, mesmo período, mesma prioridade, certo? Ok. Pronto. O que é que nós,
+
+553
+01:11:50,380 --> 01:11:58,300
+no tempo, utilizando um interrupt priorico, que é o TIC, ok? O escalonador normalmente executa
+
+554
+01:11:58,300 --> 01:12:07,500
+a cada TIC. Portanto, temos o escalonador como uma rotina de serviço de uma interrupção
+
+555
+01:12:07,500 --> 01:12:15,340
+de um timer, de um temporizador. O tempo, entre dois TICs consecutivos, é chamado periodo do TIC,
+
+556
+01:12:15,580 --> 01:12:24,380
+ok? E uma tarefa de tempo, tipicamente, corresponde a um período TIC, que nós já tivemos a falar
+
+557
+01:12:24,380 --> 01:12:35,190
+previamente. A frequência do TIC é configurada no config TIC rate hertz, ou seja, quantos TICs
+
+558
+01:12:35,190 --> 01:12:44,070
+por segundo, e onde está esta configuração? Um sítio do costume friar-tos-config.h, ok?
+
+559
+01:12:45,030 --> 01:12:50,870
+É um fecheiro que tem de acompanhar sempre o vosso projeto. Tem lá as configurações todas,
+
+560
+01:12:50,870 --> 01:12:58,630
+quer do sistema, quer da plataforma, ok? Notem que isto aqui, o TIC rate, é quantas interrupções
+
+561
+01:12:58,630 --> 01:13:06,070
+eu tenho por segundo. Hertz é por segundo. Podemos ir a este fecheiro e encontrar algo
+
+562
+01:13:06,070 --> 01:13:14,950
+deste tipo, define config TIC rate 100. Neste caso, nós estamos a dizer que em cada segundo
+
+563
+01:13:15,590 --> 01:13:23,990
+há 100 TICs, neste caso concreto. Se nós num segundo temos 100 TICs, qual é que é o período
+
+564
+01:13:23,990 --> 01:13:41,350
+de cada TIC? Então, se num segundo nós temos 100 TICs, 1 dividido por 100 dá-me 0,010, ou seja,
+
+565
+01:13:41,430 --> 01:13:50,840
+10 mili-secundos, certo? Se tiverem dúvidas, façam uma conta e vão pegar na calculadora,
+
+566
+01:13:50,840 --> 01:14:06,380
+façam num segundo há 100 TICs, logo que cada TIC demora 10 mili-secundos, ok? Se vocês quiserem
+
+567
+01:14:06,380 --> 01:14:13,420
+menos TICs, porquê? Se vocês tiverem mais TICs, vocês têm um sistema que responde muito de pressa
+
+568
+01:14:13,740 --> 01:14:26,170
+de tarefas, ok? Qual é que é o problema de vocês terem muitos TICs por segundo? Sempre que
+
+569
+01:14:26,170 --> 01:14:32,250
+vocês chamam o escalonador, vocês estão a interromper a tarefa que está a fazer trabalho
+
+570
+01:14:32,250 --> 01:14:38,330
+útil. O escalonador não faz trabalho útil, o escalonador faz trabalho que nos dá jeito,
+
+571
+01:14:39,290 --> 01:14:49,780
+ok? Mas o trabalho útil é feito pelas tarefas, certo? Se vocês tiverem constantemente a chamar
+
+572
+01:14:49,780 --> 01:14:56,740
+o escalonador, vocês vão estar a usar muito tempo de processador a correr código que dá jeito,
+
+573
+01:14:56,740 --> 01:15:06,020
+mas que não é o útil, certo? Portanto, mas, por outro lado, vocês chamarem com pouca frequência
+
+574
+01:15:06,180 --> 01:15:15,860
+do escalonador, o que é que acontece? As tarefas vão mudar de uma forma mais lenta. Isso faz com que
+
+575
+01:15:15,860 --> 01:15:27,000
+o sistema seja menos responsivo. Drama, mais responsivo, mas a despreviçar mais tempo de
+
+576
+01:15:27,000 --> 01:15:33,800
+processador com o sistema operativo ou menos responsivo, mas a fazer mais trabalho útil
+
+577
+01:15:33,800 --> 01:15:42,920
+por unidade de tempo. A engenharia é uma arte do equilíbrio e temos que estudar qual é que é o
+
+578
+01:15:42,920 --> 01:15:51,800
+equilíbrio, ok? Antes de chamar o escalonador várias vezes, mas sem estar a ter um impacto negativo
+
+579
+01:15:52,120 --> 01:16:01,000
+no desempenho do sistema todo, tá bom? Sim. Sim, caramba. Como é que fazemos esse,
+
+580
+01:16:03,160 --> 01:16:13,320
+pronto, esse equilíbrio? Existe alguma convenção? Não existe, não existe. Por exemplo,
+
+581
+01:16:14,280 --> 01:16:26,200
+em sistemas gerais como Linux e o Windows, antigamente havia uma regra que era 50 mil
+
+582
+01:16:26,200 --> 01:16:36,680
+segundos. 50 mil segundos era um bom período para chamar o escalonador quando queríamos ter
+
+583
+01:16:36,760 --> 01:16:46,920
+alguns sistemas que fossem, como é que dizer, multi-utilizador e com as aplicações a rodarem
+
+584
+01:16:46,920 --> 01:16:55,240
+a cada 50 mil segundos, os utilizadores humanos, eu pensava que isso não vinha obviamente do Windows,
+
+585
+01:16:55,240 --> 01:17:00,360
+o Windows aproveitou-se de uma regra que já vinha de trás de sistemas multi-utilizador,
+
+586
+01:17:00,440 --> 01:17:06,120
+em que o Linux era um deles. A paz, aquilo que correcia 50 mil segundos,
+
+587
+01:17:06,120 --> 01:17:13,560
+fossem mudantes da aplicação a cada 50 mil segundos, as pessoas humanas nem se apercebiam muito bem,
+
+588
+01:17:13,560 --> 01:17:21,880
+ok? Porque o sistema era responsivo aos nossos dedos e aos nossos olhos na mesma,
+
+589
+01:17:21,880 --> 01:17:29,080
+nós somos muito lentes em relação ao computador, tá bom? Agora, aqui, nestes sistemas,
+
+590
+01:17:29,640 --> 01:17:38,200
+depende um bocado. Por quê? Porque nós podemos ter tarefas que precisem de entrar ao serviço
+
+591
+01:17:38,200 --> 01:17:45,080
+a cada 50 mil segundos, ok? E se eu tiver essas tarefas que têm de entrar a cada 50 mil segundos,
+
+592
+01:17:45,720 --> 01:17:50,680
+se calhar, eu não posso ter um tick que vá mesmo, mesmo, mesmo aos 50 mil segundos.
+
+593
+01:17:51,640 --> 01:17:57,880
+Se calhar, eu preciso ter um tick que um período tick seja mais curto,
+
+594
+01:17:57,880 --> 01:18:08,060
+que é para ter a resolução suficiente para encaixar todas as tarefas e conseguir
+
+595
+01:18:08,060 --> 01:18:13,500
+dar a resposta a essas tarefas que têm períodos de ativação bastante curtos.
+
+596
+01:18:13,500 --> 01:18:20,540
+Agora, se a tarefa mais frequente tiver, por exemplo, um período de 200 mil segundos,
+
+597
+01:18:21,100 --> 01:18:27,590
+se calhar, eu posso relaxar um bocado mais no período tick, ok?
+
+598
+01:18:28,630 --> 01:18:33,430
+Ok, temos que nos adaptar, então, sempre aos nossos casos, então, ok?
+
+599
+01:18:33,430 --> 01:18:42,070
+Este, os sistemas, embebitos, são sistemas um bocado, como é que eu ia dizer? Gourmet,
+
+600
+01:18:43,030 --> 01:18:54,630
+Gourmet, aquilo tem muita mão do artista. E é preciso, por vezes, perceber o conjunto de tarefas
+
+601
+01:18:54,630 --> 01:18:59,750
+que nós temos, os requisitos de tarefas que nós temos e como é que eu vou querer estar
+
+602
+01:18:59,750 --> 01:19:07,910
+em derromper sempre na perspectiva de isto que tem de responder aos requisitos temporais
+
+603
+01:19:07,910 --> 01:19:14,070
+destas tarefas diminuindo o impacto que o sistema operativo tem sempre.
+
+604
+01:19:14,070 --> 01:19:18,870
+Sempre que nós estamos a correr sistema operativo, código do sistema operativo,
+
+605
+01:19:18,870 --> 01:19:24,710
+não estamos a correr o código da aplicação. É a ideia que vocês têm que ter na cabeça.
+
+606
+01:19:24,710 --> 01:19:29,240
+O sistema operativo é sempre um custo. E você?
+
+607
+01:19:29,240 --> 01:19:37,880
+Sim, sim. Se o período destas tarefas for alterado ao longo do tempo,
+
+608
+01:19:37,880 --> 01:19:41,640
+algo me pode-se de alterar a frequência da tick?
+
+609
+01:19:41,640 --> 01:19:52,410
+Voltamos ao tal vício que eu já tenho. Isto são sistemas fechados.
+
+610
+01:19:52,410 --> 01:19:59,770
+Se alterarmos a frequência das tarefas, não é o período de ativação das tarefas,
+
+611
+01:20:01,610 --> 01:20:09,450
+eu vou ter de alterar o programa. E pior ainda, possivelmente eu vou ter de
+
+612
+01:20:09,450 --> 01:20:17,290
+validar o conjunto de tarefas para ver se o esclonamento é executável ou não.
+
+613
+01:20:17,290 --> 01:20:25,370
+Ou seja, na literatura, em americano, é, eu tenho que fazer um feasability test
+
+614
+01:20:25,450 --> 01:20:34,170
+do Task 7, ou seja, verificar se eu consigo que todas as tarefas em qualquer situação
+
+615
+01:20:34,170 --> 01:20:44,890
+consigam responder dentro da janela temporal que os é atribuído.
+
+616
+01:20:44,890 --> 01:20:48,650
+Pois é o seguinte. Há sistemas que são o ar de real-time.
+
+617
+01:20:48,650 --> 01:20:52,810
+Vocês falaram nisto no ar de real-time e no software real-time?
+
+618
+01:20:52,810 --> 01:20:56,090
+Sim. Pronto. Se for ar de real-time,
+
+619
+01:20:56,090 --> 01:21:03,290
+vocês têm mesmo que fazer esta validação da executabilidade do esclonamento, ou seja,
+
+620
+01:21:03,290 --> 01:21:10,090
+garantir que, independentemente daquilo que aconteça, de que o mundo esteja a explodir,
+
+621
+01:21:10,650 --> 01:21:17,290
+esteja a cair um porco no espaço, qualquer coisa assim, nós garantimos que as tarefas conseguem
+
+622
+01:21:17,290 --> 01:21:20,970
+sempre responder dentro da janela temporal que os é atribuída.
+
+623
+01:21:21,770 --> 01:21:29,050
+Ok? Por outro lado, há o software real-time em que é bom que elas respondam dentro do tempo,
+
+624
+01:21:30,570 --> 01:21:34,570
+mas, de vez em quando, responderem fora do tempo, prontos, são ali uns quadradinhos
+
+625
+01:21:34,570 --> 01:21:39,610
+verdes que aparecem na televisão, ou então se houve no telemóvel,
+
+626
+01:21:40,730 --> 01:21:45,210
+porque houve uma tarefa que se atrasou e não pôs o resultado ficar fora
+
+627
+01:21:45,210 --> 01:21:53,930
+dentro da janela temporal em que via, ou seja, pôs o resultado ficar fora já depois do tempo de
+
+628
+01:21:53,930 --> 01:22:03,690
+vivo. E nesses casos, se for necessário, pode-se mudar e, olha, depois aguentámos a bronca,
+
+629
+01:22:06,490 --> 01:22:13,130
+certo? Mais uma vez, estes são sistemas wormapha, uma pessoa tem de ver qual é que
+
+630
+01:22:14,090 --> 01:22:22,730
+se vai alguém morrer ou não, se é uma pessoa perder o prazo, não é? A deadline, se perdemos
+
+631
+01:22:22,730 --> 01:22:27,690
+a deadline, ou se calhar alguém morre. N outros casos, perdemos a deadline, aparece um quadrado verde
+
+632
+01:22:27,690 --> 01:22:33,450
+no ecrã, mas pronto, é grave se nós não vimos a seleção a marcar o golo, não é? Foi mesmo ali
+
+633
+01:22:33,450 --> 01:22:38,170
+no momento em que a bola estava aí a entrar na baliza e quando o quadrado verde saiu, a bola
+
+634
+01:22:38,170 --> 01:22:44,970
+já estava fora da baliza e foram chamar o VAR para saber se era a bola ou não. E eu nem consegui ver
+
+635
+01:22:44,970 --> 01:22:51,290
+se a bola tinha entrado ou não, só me pareceu um quadrado verde dentro da baliza. Mas pronto, aí
+
+636
+01:22:51,290 --> 01:23:02,200
+nesse caso não morre ninguém. Tá bom? Não sei se respondi, né, Bora? Sim, sim. Obrigado. Eu vou
+
+637
+01:23:02,200 --> 01:23:08,280
+dizer uma coisa, eu tive uma disciplina quando estava a tirar a licenciatura, que para mim era horrível,
+
+638
+01:23:10,120 --> 01:23:18,600
+era de design de software, engenharia de software. E às vezes, nas aulas práticas, nós trabalhávamos
+
+639
+01:23:18,600 --> 01:23:25,800
+muito com casos, quase um projeto. Temos este caso, agora precisamos de fazer aqui o design de software
+
+640
+01:23:25,800 --> 01:23:35,080
+para este caso. E às vezes, às vezes, sempre, há mais de uma solução possível. E uma pessoa,
+
+641
+01:23:35,080 --> 01:23:41,080
+pode ser assim, assim, assim, assim. E o professor até colocava no quadro, aquilo eram aulas que eram
+
+642
+01:23:41,080 --> 01:23:47,000
+muito interactivas, toda a gente colaborava, não é? E o professor apunha no quadro, e nós. Ah, sim,
+
+643
+01:23:47,000 --> 01:23:52,920
+senhor, parece bem, porque estávamos a construir a solução. E lá começávamos nós a passar no
+
+644
+01:23:52,920 --> 01:23:57,960
+caderno, não é? A solução final. Só que, de verdade, alguém falava outra coisa qualquer e o
+
+645
+01:23:57,960 --> 01:24:04,120
+professor dizia, pois também pode ser. E começava a pagar e a pôr essa outra solução alternativa.
+
+646
+01:24:05,080 --> 01:24:09,800
+Eu lembro que ficava nas horas de caráter, porque já tinha feito mais de metade do diagrama, e de
+
+647
+01:24:09,800 --> 01:24:15,400
+repente apagavam uma boa parte do diagrama e começavam a fazer outra coisa diferente. E eu
+
+648
+01:24:15,400 --> 01:24:20,120
+ai, xin, o que é que ficamos, pá? E às vezes, uma pessoa até perguntava, mas o que é que é melhor?
+
+649
+01:24:20,120 --> 01:24:31,000
+E o professor simplesmente encolhia os ombros. E na altura, eu era jovem, não é? Era novo, ficava
+
+650
+01:24:31,000 --> 01:24:39,080
+com isso. Mas obviamente que depois uma pessoa percebe. Temos o cenário A ou a solução A e
+
+651
+01:24:39,080 --> 01:24:47,720
+temos a solução B. Ambas têm pontos fortes e ambas têm pontos fracos. Portanto, uma é mais,
+
+652
+01:24:47,720 --> 01:24:55,240
+é melhor adaptada a determinados cenários, outra é mais adaptada a outros cenários. O que é que
+
+653
+01:24:55,240 --> 01:25:03,400
+estamos? Escolhemos sempre a solução, que é mais, que está mais bem adaptada ao cenário,
+
+654
+01:25:03,400 --> 01:25:11,480
+o que é mais frequente. Certo? Por que? Porque sempre que apareça, vez em quando, aquele cenário
+
+655
+01:25:11,480 --> 01:25:17,960
+que é menos frequente, nós vamos referir um bocadinho, mas pronto, também é só vez em quando.
+
+656
+01:25:19,480 --> 01:25:25,080
+Certo? É como, por exemplo, eu e as vacinas. Eu não gosto nada de apanhar vacinas. Felizmente,
+
+657
+01:25:25,080 --> 01:25:32,040
+posso mais dias sem picar, e muito curteza em que me piquem. Mas olha, quando me piquem, é aquele
+
+658
+01:25:32,040 --> 01:25:38,360
+cenário que não gosto, mas está feito. É só um bocadinho. Já passou, já passou. Eu quero
+
+659
+01:25:38,360 --> 01:25:42,360
+informar-se das horas onde dizemos. Pronto, isso já passou, isso já passou. Ainda está lá a agulha
+
+660
+01:25:42,360 --> 01:25:47,960
+espetada, mas é isso. Está quase, está quase. Já passou, já passou. Pronto, pronto. Não chora, menino.
+
+661
+01:25:48,840 --> 01:26:01,320
+Certo? Muito bem, vamos então continuar. Vamos expandir, então, o Not-Running-State. Ora bem, eu aqui
+
+662
+01:26:01,320 --> 01:26:10,520
+já falei boa parte previamente quando nós tínhamos aquele diagrama das dos estados. As tarefas, que
+
+663
+01:26:10,600 --> 01:26:20,040
+ocultam sempre, não é aquele active, nem esperativo, é aquelas que estão sempre, sempre, sempre,
+
+664
+01:26:20,040 --> 01:26:27,960
+sempre com CPU intensivas, são muito raras e raramente, são úteis. Normalmente, se vocês
+
+665
+01:26:27,960 --> 01:26:34,200
+tivessem uma prioridade, uma tarefa da alta prioridade, que estivessem para correr, pá, nem vale a pena
+
+666
+01:26:34,200 --> 01:26:37,960
+vocês estarem a escrever as tarefas de baixa prioridade, porque elas nunca iam ter a oportunidade de
+
+667
+01:26:37,960 --> 01:26:44,600
+fazer. A alta prioridade ia monopolizar o processador e as de baixa prioridade estavam lá só a
+
+668
+01:26:44,600 --> 01:26:53,000
+fazer feitiúo, mas valia a arranjar outra plataforma para meter as tarefas de baixa prioridade a
+
+669
+01:26:53,000 --> 01:27:00,680
+correr nessa outra plataforma. No entanto, boa parte das tarefas são tarefas que fazem o seu
+
+670
+01:27:00,680 --> 01:27:11,240
+trabalho e depois ficam à espera da próxima ativação. Ou seja, são tarefas que, ou são orientadas
+
+671
+01:27:11,240 --> 01:27:20,840
+ao tempo, são ativadas pela passagem do tempo, ou então são tarefas que são orientadas a eventos,
+
+672
+01:27:20,840 --> 01:27:30,410
+ou seja, ficam à espera que há um evento para serem ativadas. As que são ativadas pelo tempo
+
+673
+01:27:30,410 --> 01:27:38,970
+estão priorificamente baseadas na contagem de um temporizador e as tarefas orientadas ao evento
+
+674
+01:27:38,970 --> 01:27:48,970
+executam quando é detectável um evento, ou a parte das vezes um interrupt, ok? Aliás, pensando bem,
+
+675
+01:27:48,970 --> 01:27:55,530
+são ambas, estão ambas à espera do interrupt, só que estes aqui é um interrupt especial,
+
+676
+01:27:55,610 --> 01:28:02,410
+é um temporizador e aqui é um interrupt de qualquer coisa que esteja ligada à máquina, tá bom?
+
+677
+01:28:02,410 --> 01:28:13,210
+Pronto, esta parte aqui já falamos, ready, blocked e suspended, certo? Quando nós temos tarefas que
+
+678
+01:28:13,210 --> 01:28:21,050
+podem não estar a executar, eu posso ter um sistema que, num dado instante, não tenho nenhuma tarefa
+
+679
+01:28:21,130 --> 01:28:30,970
+que esteja ready, podem estar todas blocked, a espera que ou haja um evento ou que o tempo passe
+
+680
+01:28:30,970 --> 01:28:42,410
+e o temporizador acorde, certo? Nesse caso, o FreeRTOS cria uma tarefa idle, ou seja, é uma tarefa
+
+681
+01:28:42,490 --> 01:28:51,210
+que fica, a quem é atribuído o processador, ok? Para o processador não ficar sozinho.
+
+682
+01:28:52,970 --> 01:29:00,730
+Vocês podem ver essa tarefa também no Windows ou no Mac, se vocês fizerem alto control delete no caso
+
+683
+01:29:00,730 --> 01:29:10,540
+do Windows e forem ao Task Manager, o Task Manager aparece lá o idle, acho que é o idle, idle, idle task,
+
+684
+01:29:11,500 --> 01:29:18,140
+que é um processo que simplesmente não está a fazer nada, está a contar o tempo em que o
+
+685
+01:29:18,140 --> 01:29:28,140
+processador não tem nada para fazer, ok? Portanto, o FreeRTOS cria a tarefa idle automaticamente,
+
+686
+01:29:28,140 --> 01:29:33,660
+então nós podemos criar tarefas que fazem qualquer coisa e gourmet e se tivermos
+
+687
+01:29:34,060 --> 01:29:40,780
+no um determinado instante nenhuma tarefa pronta para executar, nenhuma tarefa aqui in ready,
+
+688
+01:29:40,780 --> 01:29:50,680
+que não há stress, entre em serviço a idle task, está bom? Já falamos aqui que entram no
+
+689
+01:29:50,680 --> 01:29:57,240
+estado de block quando está a espera do evento, podem ser eventos tempo a, quando está a espera
+
+690
+01:29:57,240 --> 01:30:07,080
+do evento, ok? Este slide está a faltar aqui uma frase, agora estou a olhar para aqui e eu realmente
+
+691
+01:30:07,080 --> 01:30:13,240
+deveria ter posto aqui mais uma frase, portanto, uma tarefa entre em block, quando aquela volta a
+
+692
+01:30:13,240 --> 01:30:22,520
+sair do block para ready, no caso, estar à espera de um evento temporal pode acontecer quando um delay
+
+693
+01:30:22,600 --> 01:30:34,360
+termina ou quando chegamos a uma hora que nós tínhamos marcado para acordar, ok? Por exemplo, eu
+
+694
+01:30:34,360 --> 01:30:39,400
+aqui normalmente marco, deixe-me cá ver, aí, não posso dizer a que horas é que isto está marcado
+
+695
+01:30:39,400 --> 01:30:44,600
+para acordar amanhã, porque às 9 da manhã e até tenho vergonha de acordar tão tarde,
+
+696
+01:30:44,680 --> 01:30:53,400
+ter isto marcado para acordar tão tarde, certo? O delay expires, aí, quando eu digo, olha, daqui a 15
+
+697
+01:30:53,400 --> 01:31:02,040
+minutos chamam para desligar o fogão se não o arroz queima, certo? E quando é que é daqui a 15
+
+698
+01:31:02,040 --> 01:31:11,480
+minutos? Eu deixo cá ver, são 11 e 17, portanto, é por volta das 11 e 32, ok? Também posso ficar
+
+699
+01:31:11,480 --> 01:31:17,640
+à espera de eventos que não são temporais, são eventos de sincronização. Eu posso estar à
+
+700
+01:31:17,640 --> 01:31:25,800
+espera de ler dados numa fila, por exemplo, em um buffer circular e quando houver lá qualquer coisa
+
+701
+01:31:25,800 --> 01:31:33,160
+para ler, eu sou informado e sou acordado e vou ler, certo? Ou então, quando estou à espera de um
+
+702
+01:31:33,160 --> 01:31:38,600
+semáforo e rependo semáforo, abre e eu tenho autorização para avançar, ou então quando outro
+
+703
+01:31:38,600 --> 01:31:43,400
+tipo de notificação também me chega, eu estava à espera de que essa notificação de um evento
+
+704
+01:31:43,400 --> 01:32:03,000
+qualquer chegasse, eu, ok, passa ready, mas chega mais tarde, vou executar o código, seguinte, ok? Por exemplo,
+
+705
+01:32:03,000 --> 01:32:12,760
+um exemplo em que uma tarefa espera que haja dados na queue, eu quero receber dados de uma fila,
+
+706
+01:32:13,480 --> 01:32:20,440
+mas eu não quero ficar indefinidamente à espera, eu quero aguardar no máximo 10 mil segundos,
+
+707
+01:32:21,880 --> 01:32:31,480
+das duas uma, dentro desses 10 mil segundos, ou chega dados à fila e ele recolha esses dados,
+
+708
+01:32:31,480 --> 01:32:38,280
+ou então, ao fim de 10 mil segundos, eu desbloqueio e recebo uma mensagem de erro, ok?
+
+709
+01:32:39,080 --> 01:32:45,240
+Tanto, esta função, nós não vamos ver hoje, é apenas para exemplo, mas eu posso fazer um
+
+710
+01:32:45,240 --> 01:32:54,680
+queue receive desta fila, é para aguardar aquilo que eu tirar da fila nesta variável data e quanto
+
+711
+01:32:54,680 --> 01:33:02,760
+tempo é que ele quer ficar à espera, no máximo, 10 mil segundos, 10 mil segundos, 10 mil segundos e
+
+712
+01:33:02,840 --> 01:33:10,760
+transforma este index, ok? Pronto, das duas uma, se eu ver lá qualquer coisa para ler dentro desses
+
+713
+01:33:10,760 --> 01:33:20,040
+10 mil segundos, tudo bem? Eu vou ter aqui o valor recolhido nesta variável, senão, se estes 10 mil
+
+714
+01:33:20,040 --> 01:33:27,480
+segundos expirem e eu desbloqueio na mesma, mas aqui o ex que eu recebo vai dar-me um error call,
+
+715
+01:33:27,480 --> 01:33:36,280
+em vez de me dar o zero, de zero erros, ok? Num caso ou no outro, ela tinha bloqueado e vai passar
+
+716
+01:33:36,280 --> 01:33:43,960
+do bloc de priority, tá bem? O suspender, já falei no suspender, é aquele caso em que
+
+717
+01:33:45,160 --> 01:33:54,120
+queríamos pôr uma tarefa em criogenia puridura. Vai chegar mais tarde ou até posso precisar
+
+718
+01:33:54,120 --> 01:34:02,760
+dela, mas é para esquecê-la, em que está-la ao canto. No ready state, eu tenho uma tarefa que
+
+719
+01:34:02,760 --> 01:34:09,480
+só não está a executar porque não tem CPU, não simples quanto isso. Se nós lidarmos com o CPU,
+
+720
+01:34:09,480 --> 01:34:16,840
+o CPU tem capacidade de executar as próximas instruções, certo? Não está bloqueada,
+
+721
+01:34:16,840 --> 01:34:23,320
+não está suspenso e simplesmente está à espera que o escalonador a selecione, ok? Só que os
+
+722
+01:34:23,320 --> 01:34:30,280
+escalonadores colhe sempre a tarefa de maior prioridade para correr, certo? Portanto,
+
+723
+01:34:30,280 --> 01:34:39,400
+tem que esperar pela sua vez. Pronto, estamos com a terminar. Se eu tiver tarefas que aguardam
+
+724
+01:34:39,400 --> 01:34:47,320
+a próxima ativação através do tempo, podemos pô-las à espera com o task delay,
+
+725
+01:34:48,280 --> 01:34:57,080
+a que nós temos visto nos exemplos todos. Faz trabalho e depois espera algum tempo, ok? O task
+
+726
+01:34:57,080 --> 01:35:07,560
+delay coloca a tarefa em blocked, ok? Enquanto está em blocked, como não é considerada para correr,
+
+727
+01:35:07,560 --> 01:35:14,040
+não vai consumir CPU. Isso não consome CPU, está a dar tempo às outras tarefas para executar,
+
+728
+01:35:14,760 --> 01:35:22,280
+é civilizada, se eu não preciso, se eu percebo o a quem preciso, não simples quanto isso, ok?
+
+729
+01:35:26,120 --> 01:35:36,040
+É ótima para tarefas que sejam orientadas para tempo e se calhar também por eventos.
+
+730
+01:35:37,000 --> 01:35:44,680
+Protótipo. Vtask delay e depois tem que passar aqui o número de tiques para ficar à espera.
+
+731
+01:35:44,680 --> 01:35:53,240
+Obviamente, para utilizar o Vtask delay, no freeRTOS.conf.h o incluo de Vtask delay tem de estar
+
+732
+01:35:53,240 --> 01:36:03,240
+ativado e regra geral está por pré-definição, o Vtask delay está ativado, ok? Ora bem, lembre-se
+
+733
+01:36:03,240 --> 01:36:08,120
+que aqui tem que ser o número de tiques e o número de tiques pode variar de configuração para
+
+734
+01:36:08,120 --> 01:36:16,440
+configuração. Normalmente nós gostamos de indicar em mili-secundos, o que fazemos? Aqui dentro utilizamos
+
+735
+01:36:16,440 --> 01:36:24,360
+chumpro qud millisecond to tics, está bom? Mas é um exemplo. Tenho aqui a minha task function.
+
+736
+01:36:25,320 --> 01:36:34,840
+Eu tenho agora aqui a minha variável x delay do tipo tic-tip e é constante, ou seja, nunca vai mudar,
+
+737
+01:36:34,840 --> 01:36:43,960
+ok? E eu quero meter aqui o número de tiques que correspondem a 250 mili-secundos. Agora,
+
+738
+01:36:43,960 --> 01:36:50,840
+antes do meu ciclo de serviço, faço trabalho e espero pelo menos 250 mili-secundos.
+
+739
+01:36:51,560 --> 01:37:00,120
+Ao fim de 200 mili-secundos, mais coisa, nunca menos coisa, eu volto a repetir, está bom? Eu
+
+740
+01:37:00,120 --> 01:37:07,320
+quando digo pelo menos 250 mili-secundos, ela, ao fim de 250 mili-secundos, é capaz de ser ativada.
+
+741
+01:37:07,320 --> 01:37:15,320
+Não quero dizer é que corre, pode não correr por ter outras tarefas de mais alta prioridade
+
+742
+01:37:15,320 --> 01:37:23,560
+à frente dela, ok? Portanto, isto aqui é sempre pelo menos ao fim de 250 mili-secundos,
+
+743
+01:37:23,560 --> 01:37:30,920
+ela acorde. Nunca antes, está bom? Se for antes, alguma coisa está a mal na implementação do que
+
+744
+01:37:30,920 --> 01:37:47,640
+está a correr por baixo. Mas isto aqui é um bocado como é que eu dizer? Gingão, temos aqui um bocado de
+
+745
+01:37:48,120 --> 01:38:02,360
+colegas, em americano, certo? Possivelmente, o seu colega não sabe o que é que quer dizer
+
+746
+01:38:02,360 --> 01:38:07,800
+Gingão, se calhar também alguns doces não sabem, mas é ali algo que joga. Se isto do
+
+747
+01:38:07,800 --> 01:38:14,120
+workload morar mais tempo, umas vezes e menos tempo, umas vezes, se quer dizer que a ativação
+
+748
+01:38:15,080 --> 01:38:20,440
+as ativações nunca vão ocorrer em períodos certinhos.
+
+749
+01:38:21,720 --> 01:38:27,960
+Se o do workload morar mais tempo, a próxima ativação vai ser um bocado mais tarde. Se o
+
+750
+01:38:27,960 --> 01:38:32,760
+do workload morar menos tempo, a ativação vai ser um bocado mais cheio, certo? Fica sempre
+
+751
+01:38:32,760 --> 01:38:40,600
+dependente daqui do tempo que isto mora. Então, se quisermos ter mesmo relógio suíço,
+
+752
+01:38:41,560 --> 01:38:50,920
+temos o Vtasquivileiantil. E aqui nós dizemos para esperar até um dado momento no relógio.
+
+753
+01:38:51,560 --> 01:38:59,960
+É, basicamente, o nosso despertador. Nós, quando definimos um despertador, definimos para despertar
+
+754
+01:38:59,960 --> 01:39:08,040
+a uma hora absoluta, a um tempo absoluto. E o Vtasquivileiantil dá-nos esse tempo absoluto.
+
+755
+01:39:09,000 --> 01:39:17,080
+Como é que nós podemos utilizar? O Vtasquivileiantil tem dois parâmetros dos argumentos. O primeiro é,
+
+756
+01:39:17,080 --> 01:39:25,220
+quando é que foi a última vez que ativou e qual é que é o tempo que tem de ser incrementado
+
+757
+01:39:25,220 --> 01:39:32,980
+a última ativação para determinarmos a próxima ativação? Suponham, por exemplo, que a última
+
+758
+01:39:33,060 --> 01:39:41,590
+ativação foi aos 500. O relógio marcava 500, ok? Os relógios marcam o número.
+
+759
+01:39:42,390 --> 01:39:52,470
+Tanto, o relógio marcava 500. E o meu time incremento é 50. Se a última ativação foi aos 500,
+
+760
+01:39:53,430 --> 01:40:01,940
+então a próxima vai ser aos 550. Da próxima vez, quando é que estava marcada a última ativação,
+
+761
+01:40:02,660 --> 01:40:10,660
+eram os 550. Então a próxima ativação vai ser aos 550 mais 50, 600. Desta forma,
+
+762
+01:40:11,460 --> 01:40:19,940
+eu fico imune ao tempo que demoram a fazer o meu trabalho. Eu estou sempre a marcar. É aqui,
+
+763
+01:40:19,940 --> 01:40:27,060
+é aqui, é aqui, é aqui, com um período rígido, ok? O mesmo que trabalhem no tramaneio.
+
+764
+01:40:29,620 --> 01:40:39,380
+Isso agora, isso agora é que põe o dedo na freira. Não é suposto. É o quadrado, é o quadrado
+
+765
+01:40:39,540 --> 01:40:50,340
+verde, o ecrã. Quando acontece isso, certo? Há situações em que, para, evita-se ao máximo,
+
+766
+01:40:50,340 --> 01:40:58,100
+aliás, tenta-se garantir que isso nunca vai acontecer, ok? Mas pode acontecer. E o que é que acontece?
+
+767
+01:40:59,860 --> 01:41:05,860
+Se ele marcar para um tempo no passado, ele vai passar imediatamente a ready.
+
+768
+01:41:06,820 --> 01:41:14,790
+O escalonador vai colocá-lo imediatamente em ready, certo? Só que o problema é que,
+
+769
+01:41:14,790 --> 01:41:22,710
+se isso for muito frequente, vamos começar a ter ativações que estão cada vez mais atrasadas.
+
+770
+01:41:24,550 --> 01:41:31,590
+E um sistema assim não é muito saudável. É quase como nós chegarmos ao fim do mês
+
+771
+01:41:32,390 --> 01:41:39,030
+sem dinheiro, se for uma vez, opa, acontece, é um quadrado verde no ecrã. Agora, se for assim,
+
+772
+01:41:39,030 --> 01:41:45,030
+todos os meses, nós aí estamos com um problema estrutural. E temos que fazer qualquer coisa
+
+773
+01:41:45,030 --> 01:41:51,030
+para mudar isso, porque é um problema que não se posou, ok? Pronto, como é que nós montamos
+
+774
+01:41:51,030 --> 01:41:55,670
+isto? Ei pá, temos dois minutos e eu a dizer que iremos acabar antes. Como é que é possível?
+
+775
+01:41:55,750 --> 01:42:01,350
+Ora bem, então, primeiro, temos que adquirir o relógio no início
+
+776
+01:42:03,750 --> 01:42:12,230
+da nossa execução. Tenho aqui uma variável, Last Wake Time, e vou buscar o valor do relógio.
+
+777
+01:42:12,230 --> 01:42:17,670
+Portanto, Task GetTickCount. Isto aqui pega-me no número que está no relógio,
+
+778
+01:42:18,390 --> 01:42:23,990
+ok? Quando estic, se é que já passaram, deixe-me ligar-nos a bordo. E paque, coloca-me ali naquela
+
+779
+01:42:23,990 --> 01:42:32,470
+variável, ok? Isto marca-me o instante inicial. Agora, a partir daqui, eu vou entrar no meu ciclo,
+
+780
+01:42:32,470 --> 01:42:40,230
+então, estou aberto aqui, marca o início do tempo. Agora, eu entro no meu ciclo de serviço,
+
+781
+01:42:41,350 --> 01:42:49,750
+faço o trabalho que tenho a fazer e vou dormir até o próximo momento de ativação, até o
+
+782
+01:42:49,750 --> 01:42:58,070
+próximo instante da ativação, que é calculado, baseado na última ativação e no meu período,
+
+783
+01:42:58,870 --> 01:43:05,030
+ok? Isto aqui, se às vezes eu morar 15, não interessa-se. Se morar 20, não interessa-se. Se
+
+784
+01:43:05,030 --> 01:43:11,510
+morar 30, não interessa-se. Vamos, por exemplo, dar aqui um número a 50 mil segundos. Só interessa-se
+
+785
+01:43:11,590 --> 01:43:19,670
+de morar 60, aí é que temos um problema, sério? Não é suposto acontecer, mas se acontecer,
+
+786
+01:43:22,200 --> 01:43:30,120
+é um quadrado verde-mei grande. Duvidas? Não há? Ainda consegui terminar às 11h29.
+
+787
+01:43:31,560 --> 01:43:40,280
+Pessoal, continuos para a semana, ok? Entretanto, eu vou tentar colocar isto de módulo, assim que
+
+788
+01:43:40,360 --> 01:43:47,480
+possível, para vocês também terem acesso, ok? E se tiverem dúvidas, depois também podemos
+
+789
+01:43:47,480 --> 01:43:54,040
+conversar para a próxima semana ou em ninguém. Tá bom? Entretanto, boa noite, é pai, eu pensava
+
+790
+01:43:54,040 --> 01:43:58,920
+que ia terminar às mais chele, e terminei mais chele, não esgutei o tempo e não fui mais além, não é?
+
+791
+01:43:58,920 --> 01:44:11,080
+É o tal problema estrutural de ultrapassar sempre o preoubo, é ativação, está sempre a ficar
+
+792
+01:44:11,080 --> 01:44:19,880
+para trás, pois o meu problema é estrutural. Vamo lá, só fiquem bem, boa noite e fim de semana.
+
+793
+01:45:25,130 --> 01:45:28,170
+Você tem 5, 8.
+
+794
+01:45:28,170 --> 01:45:32,250
+Tudo bem, vamos lá, vamos lá, vamos lá, vamos lá, vamos lá, vamos lá.
+
+795
+01:45:32,250 --> 01:45:34,810
+Eu sou o maior que armou. O que você tem? Sim.
+
+796
+01:45:34,810 --> 01:45:39,210
+Quantos centímetros você tem? Eu estou quase 5, 9, o que você tem? Não, eu não preciso de revengamento.
+
+797
+01:45:41,050 --> 01:45:42,010
+Eu preciso de distância.
+
+798
+01:45:44,410 --> 01:45:47,290
+Veja, o revengamento só me mantém conectado à mesma coisa que eu estou tentando
+
+799
+01:45:47,530 --> 01:45:52,890
+dar, mas a distância, isso me dá para respirar, me dá para ser de Deus.
+
+800
+01:45:54,410 --> 01:45:59,130
+Plus, uma das mais difíceis desculpas para algumas pessoas se soltar é realizing que
+
+801
+01:45:59,130 --> 01:46:02,330
+suas ações não continuam a controlar a sua emoção.
+
+802
+01:46:04,250 --> 01:46:05,690
+Há um muito alto...
+
