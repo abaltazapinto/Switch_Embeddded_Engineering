@@ -709,4 +709,617 @@ nada
 
 ---
 
+Agora escreve esta linha na shell da OPNsense:
+
+echo "nat on vtnet0 inet from 192.168.2.0/24 to any -> (vtnet0)" >> /tmp/lan2-test.pf
+Objetivo
+
+Adicionar a regra de NAT outbound para a LAN2.
+
+Isto diz:
+
+Todo o tráfego que vem da rede 192.168.2.0/24 e sai pela WAN vtnet0 deve ser traduzido para o IP da WAN da OPNsense.
+
+---
+
+Agora acrescenta a regra que permite entrada de tráfego vindo da LAN2.
+
+Na shell da OPNsense escreve:
+
+echo "pass in quick on vtnet2 inet from 192.168.2.0/24 to any keep state" >> /tmp/lan2-test.pf
+Objetivo
+
+Permitir que pacotes vindos da LAN2 entrem na firewall pela interface:
+
+OPT1/LAN2 = vtnet2
+
+Sem esta regra, o tráfego do c3 pode chegar à OPNsense mas ser bloqueado.
+
+Como pensar
+
+O caminho é:
+
+c3 192.168.2.100
+   ↓
+vtnet2 / LAN2
+   ↓
+OPNsense
+   ↓
+WAN / vtnet0
+   ↓
+Internet
+
+Esta regra autoriza a primeira parte:
+
+LAN2 → OPNsense
+
+A linha anterior do NAT autoriza a tradução quando sair pela WAN.
+
+
+---
+
+Agora acrescenta a regra que permite a saída pela WAN:
+
+echo "pass out quick on vtnet0 inet all keep state" >> /tmp/lan2-test.pf
+Objetivo
+
+Permitir que a OPNsense envie para fora, pela WAN:
+
+vtnet0 = WAN
+vtnet2 = LAN2 / OPT1
+
+Agora o fluxo fica completo:
+
+c3 192.168.2.100
+  ↓
+entra na OPNsense por vtnet2
+  ↓
+é permitido pela regra pass in
+  ↓
+faz NAT para a WAN
+  ↓
+sai pela vtnet0
+  ↓
+Internet
+Como pensar
+
+Até agora o ficheiro deve ter 4 linhas:
+
+set skip on lo0
+nat on vtnet0 inet from 192.168.2.0/24 to any -> (vtnet0)
+pass in quick on vtnet2 inet from 192.168.2.0/24 to any keep state
+pass out quick on vtnet0 inet all keep state
+
+Isto é uma configuração temporária de teste, não a final bonita do guião.
+
+---
+
+# obrigar a escrever a regra que queremos.
+
+## Ação — comando certo no FreeBSD/OPNsense
+
+O erro foi porque o `sed` mostrou a correção, mas depois o `mv` ficou sem argumentos.
+
+Na OPNsense usa este comando:
+
+```sh
+sed -i '' 's#192\.2\.0/24#192.168.2.0/24#g' /tmp/lan2-test.pf
+cat /tmp/lan2-test.pf
+```
+
+---
+
+## Objetivo
+
+Corrigir diretamente o ficheiro `/tmp/lan2-test.pf`.
+
+Na OPNsense/FreeBSD, o `sed -i` precisa deste formato:
+
+```sh
+sed -i ''
+```
+
+---
+
+## Resultado esperado
+
+O `cat` deve mostrar:
+
+```text
+set skip on lo0
+nat on vtnet0 inet from 192.168.2.0/24 to any -> (vtnet0)
+pass in quick on vtnet2 inet from 192.168.2.0/24 to any keep state
+pass out quick on vtnet0 inet all keep state
+```
+
+---
+
+## Como pensar
+
+Agora só estás a corrigir o ficheiro.
+Ainda não aplicaste as regras.
+
+Depois de veres `192.168.2.0/24` nas duas linhas, o próximo passo será:
+
+```sh
+pfctl -nf /tmp/lan2-test.pf
+```
+
+---
+
+## Pergunta de decisão
+
+Depois do `cat`, a linha `pass in` já mostra `192.168.2.0/24`?
+
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+---
+
+## Ação — próximo teste
+
+Agora testa **DNS**, porque já provaste que Internet por IP funciona:
+
+```bash
+ping -c 4 google.com
+```
+
+---
+
+## Objetivo
+
+Separar estas duas coisas:
+
+```text
+ping 8.8.8.8 funciona
+→ Internet por IP funciona ✅
+
+ping google.com funciona
+→ DNS + Internet funcionam ✅
+```
+
+O teu resultado atual prova isto:
+
+```text
+c3 → OPNsense LAN2 → NAT → WAN → 8.8.8.8 ✅
+```
+
+Isto é excelente. Significa que as regras temporárias funcionaram.
+
+---
+
+## Como pensar
+
+O `ping 8.8.8.8` não usa nomes. Vai direto a um IP.
+
+Mas `google.com` precisa primeiro de DNS:
+
+```text
+google.com
+  ↓ DNS
+142.250.x.x
+  ↓ ping
+Internet
+```
+
+Se `ping google.com` falhar com erro tipo:
+
+```text
+Temporary failure in name resolution
+```
+
+então a Internet está OK, mas o DNS do `c3` está mal.
+
+---
+
+## Interpretação para o professor
+
+> Depois de adicionar regra de acesso na `vtnet2` e NAT outbound na `vtnet0`, o cliente da LAN2 conseguiu pingar `8.8.8.8`. Isto prova que o tráfego da nova subrede `192.168.2.0/24` já consegue sair para a Internet através da OPNsense.
+
+Correção importante:
+
+> Estas regras **não ficaram gravadas “na LAN” pela GUI**. Foram aplicadas temporariamente ao `pf` através do ficheiro `/tmp/lan2-test.pf`.
+
+---
+
+## Pitfalls
+
+| Situação                      | Significado                                               |
+| ----------------------------- | --------------------------------------------------------- |
+| `ping 8.8.8.8` funciona       | NAT + rota funcionam                                      |
+| `ping google.com` falha       | DNS mal configurado                                       |
+| reboot da OPNsense            | regras temporárias desaparecem                            |
+| GUI da OPNsense não acessível | problema de acesso do browser à rede virtual, não da LAN2 |
+
+---
+
+## Pergunta de decisão
+
+O comando `ping -c 4 google.com` responde ou dá erro de DNS?
+
+
+---
+
+## Ação — registar o ponto exato
+
+**Não: o Guião 4 ainda não está todo feito.**
+Mas fizeste uma parte importante: **LAN2 consegue sair para a Internet com regra + NAT temporários** ✅
+
+O que está provado agora:
+
+```text
+c3 / ubuntu2: 192.168.2.100/24
+Gateway:     192.168.2.1
+DNS:         funcional
+Ping 8.8.8.8:     OK
+Ping google.com:  OK
+```
+
+---
+
+## Objetivo
+
+Fechar esta conclusão:
+
+> A nova rede LAN2 já consegue aceder à Internet quando existem regras de acesso e NAT outbound para `192.168.2.0/24`.
+
+---
+
+## Como pensar
+
+O teu teste `ping google.com` prova **duas coisas**:
+
+```text
+ping 8.8.8.8 funciona
+→ routing + NAT + saída para Internet funcionam
+
+ping google.com funciona
+→ DNS também funciona
+```
+
+Logo, esta parte do guião está validada:
+
+```text
+3.2 — permitir ao ubuntu2 / LAN2 aceder à Internet
+```
+
+Mas atenção: fizeste isto por regras temporárias em `/tmp/lan2-test.pf`, não pela GUI da OPNsense.
+
+---
+
+## Estado do Guião 4
+
+| Parte                                   | Estado                                       |
+| --------------------------------------- | -------------------------------------------- |
+| `3.1` Criar `vmbr4`                     | ✅                                            |
+| Adicionar `vtnet2/OPT1` à OPNsense      | ✅                                            |
+| Configurar LAN2 `192.168.2.1/24`        | ✅                                            |
+| DHCP LAN2                               | configurado, mas não provado automaticamente |
+| Cliente `c3` na LAN2                    | ✅ com IP manual                              |
+| LAN2 → Internet                         | ✅ com regras temporárias                     |
+| `3.2.1` ubuntu1 → ubuntu2 ping/wget     | ❌ ainda falta                                |
+| `3.2.2` ubuntu2 → ubuntu1 ping/wget     | ❌ ainda falta                                |
+| `3.2.3` regra só para `index.html`      | ❌ ainda falta                                |
+| `3.3` NAT para acesso da WAN ao ubuntu1 | ❌ ainda falta                                |
+| `3.4` forcing DNS para Unbound          | ❌ ainda falta                                |
+
+---
+
+## Interpretação para o professor
+
+Podes dizer:
+
+> Configurei a LAN2 na OPNsense com a rede `192.168.2.0/24`. O cliente `c3` foi configurado com IP `192.168.2.100` e gateway `192.168.2.1`. Inicialmente conseguia chegar à gateway mas não à Internet. Ao adicionar uma regra de acesso na `vtnet2` e NAT outbound na `vtnet0`, o cliente passou a conseguir pingar `8.8.8.8` e resolver `google.com`, provando que o tráfego da LAN2 consegue sair para a Internet.
+
+---
+
+## Erro comum importante
+
+Não digas ainda:
+
+```text
+Guião 4 feito
+```
+
+Diz antes:
+
+```text
+A primeira parte funcional do Guião 4 está validada: LAN2 com saída para Internet.
+```
+
+---
+
+## Próximo passo
+
+Agora entra na parte seguinte do guião:
+
+```text
+3.2.1 — testar comunicação ubuntu1 → ubuntu2
+```
+
+Para isso precisas identificar quem será o **ubuntu1** e quem será o **ubuntu2**.
+
+## Pergunta de decisão
+
+Queres usar o `c3` como **ubuntu2/LAN2** e criar/usar outro container como **ubuntu1/LAN**?
+
+---
+
+pct set 105 --hostname ubuntu2-lan2
+
+pct reboot 105
+
+---
+
+O ubuntu1 representa um cliente na LAN original, por isso está ligado à bridge associada à interface LAN da OPNsense. O ubuntu2 representa um cliente na LAN2/OPT1, ligado à nova bridge vmbr4.
+
+---
+
+
+Agora depois de criada a ubuntu1 clonando a c1
+
+e hora de testar se existe comuynicacao entre as duas redes internas, 
+
+
+ubuntu1-lan
+192.168.1.182
+   ↓
+OPNsense
+   ↓
+ubuntu2-lan2
+192.168.2.100
+
+---
+
+Interpretação para o professor
+
+O ubuntu1 recebeu IP 192.168.1.182/24 por DHCP na LAN original. Agora estou a testar se uma máquina da LAN consegue comunicar com uma máquina da LAN2. Isto valida a política de acesso entre subredes internas através da OPNsense.
+
+---
+
+Voltar a criar o ficheiro:
+
+/tmp/lan2-test.pf
+
+que vai guardar as regras temporárias para:
+
+LAN2 → Internet
+LAN → LAN2
+
+---
+
+
+![alt text](image-7.png)
+
+---
+
+Agora acrescenta a regra que permite tráfego a entrar pela LAN2 / OPT1:
+
+echo "pass in quick on vtnet2 inet from 192.168.2.0/24 to any keep state" >> /tmp/lan2-test.pf
+
+
+---
+
+Ação — próxima linha
+
+Agora acrescenta a regra que permite saída pela WAN:
+
+echo "pass out quick on vtnet0 inet all keep state" >> /tmp/lan2-test.pf
+Objetivo
+
+Completar o fluxo:
+
+ubuntu2-lan2
+192.168.2.100
+   ↓
+OPNsense LAN2 / vtnet2
+   ↓
+NAT
+   ↓
+OPNsense WAN / vtnet0
+   ↓
+Internet
+Como pensar
+
+Já tens:
+
+LAN2 entra na firewall ✅
+NAT para WAN ✅
+
+Agora falta permitir a saída pela interface WAN:
+
+vtnet0 = WAN
+
+---
+
+Agora acrescenta a regra para permitir ubuntu1-lan → ubuntu2-lan2:
+
+echo "pass in quick on vtnet1 inet from 192.168.1.0/24 to 192.168.2.0/24 keep state" >> /tmp/lan2-test.pf
+Objetivo
+
+Permitir tráfego que entra pela LAN original:
+
+vtnet1 = LAN
+192.168.1.0/24 → 192.168.2.0/24
+
+---
+
+![alt text](image-8.png)
+
+
+---
+
+Interpretação para avaliação
+
+Depois de reiniciar um container, configurações manuais feitas com ip addr add não persistem. Por isso, antes de concluir que a firewall bloqueia, tenho de confirmar se o destino ainda tem o IP esperado
+
+---
+
+
+![alt text](image-9.png)\
+
+
+---
+
+![alt text](image-10.png)
+
+----
+
+Próximo passo do 3.2.1: no container 105 / ubuntu2-lan2, instala o Apache:
+
+apt update && apt install -y apache2
+
+---
+
+O guião agora quer testar se o ubuntu1-lan consegue carregar a página web do ubuntu2-lan2 com wget.
+
+Para isso, o ubuntu2-lan2 tem de ter um servidor web ativo:
+
+ubuntu2-lan2
+192.168.2.100
+Apache2 / HTTP porta 80
+
+---
+
+respondeu 
+
+![alt text](image-11.png)
+
+---
+
+## Sim ✅
+
+Isso foi **do `ubuntu1-lan` para o `ubuntu2-lan2`**.
+
+Prova pelo prompt:
+
+```text
+root@ubuntu1-lan:~#
+```
+
+E pelo comando:
+
+```bash
+wget -O- http://192.168.2.100/
+```
+
+Como `192.168.2.100` é o IP do **ubuntu2-lan2**, este teste valida:
+
+```text
+ubuntu1-lan → ubuntu2-lan2 via HTTP ✅
+```
+
+O resultado também confirma HTTP OK:
+
+```text
+HTTP request sent, awaiting response... 200 OK
+```
+
+## Atenção
+
+A página mostra:
+
+```html
+<h1>C1 - Servidor Apache do laboratorio</h1>
+```
+
+Isso é só o **texto dentro do `index.html`**. Pode estar herdado/clonado. Não significa que foste ao C1. O IP manda: foste ao `192.168.2.100`.
+
+## Ação — próximo passo
+
+Agora faz o inverso, ponto **3.2.2**:
+
+No **ubuntu2-lan2**, testa ping para o `ubuntu1-lan`:
+
+```bash
+ping -c 4 192.168.1.182
+```
+
+## Objetivo
+
+Validar:
+
+```text
+ubuntu2-lan2 → ubuntu1-lan
+```
+
+Pergunta: esse ping responde?
+
+
+---
+
+Interpretação
+
+O sentido LAN -> LAN2 funciona.
+
+O sentido LAN2 -> LAN ainda falha porque a regra temporária atual permite principalmente:
+
+192.168.1.0/24 -> 192.168.2.0/24
+
+mas ainda não permite explicitamente:
+
+192.168.2.0/24 -> 192.168.1.0/24
+
+## Objetivo
+
+Guardar uma tabela limpa para não voltares a perder-te entre:
+
+```text
+vmbr3 = LAN original = 192.168.1.0/24
+vmbr4 = LAN2 nova    = 192.168.2.0/24
+Próximo passo
+
+Para resolver o sentido inverso, a regra que falta é LAN2 → LAN, entrando pela vtnet2.
+
+---
+
+![alt text](image-12.png)
+
+Feito ✅
+
+Agora já tens 3.2.2 parcialmente validado:
+
+ubuntu2-lan2 → ubuntu1-lan
+192.168.2.100 → 192.168.1.182
+ping OK ✅
+
+![alt text](image-13.png)
+
+
+---
+
+![alt text](image-14.png)
+
+3.2.1 ubuntu1-lan → ubuntu2-lan2
+ping 192.168.2.100 ✅
+wget http://192.168.2.100/ ✅
+
+3.2.2 ubuntu2-lan2 → ubuntu1-lan
+ping 192.168.1.182 ✅
+wget http://192.168.1.182/ ✅
+
+---
+
+A LAN original consegue comunicar com a LAN2 através da OPNsense.
+O teste wget prova acesso HTTP ao servidor Apache do ubuntu2-lan2.
+
+
+
+## Objetivo
+
+Fechar a evidência antes de começares o **3.2.3**, porque no próximo passo vais restringir regras e alguns pings podem deixar de funcionar.
+
+## Como pensar
+
+Neste momento as regras estão permissivas demais.  
+O **3.2.3** vai pedir algo mais fino:
+
+```text
+permitir página web
+bloquear o resto entre máquinas
+manter Internet
+
+---
 
