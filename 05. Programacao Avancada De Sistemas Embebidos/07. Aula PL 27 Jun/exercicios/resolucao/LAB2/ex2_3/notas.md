@@ -97,3 +97,83 @@ pthread_mutex_unlock(&buffer.lock);
 ## Pergunta de decisão
 
 Queres avançar já para **3.1 — Producer-Consumer with Condition Variables**?
+
+
+## Ação — 1 passo 🧭
+
+Sim: **a 2.3 está resolvida funcionalmente** ✅
+
+Marca no teu `notas.md`:
+
+```md
+## LAB2 — Exercise 2.3
+
+Estado: resolvido.
+
+Critério de correção observado:
+- 1 producer / 1 consumer: produced=10 consumed=10
+- 4 producers / 2 consumers: produced=40 consumed=40
+- Não houve deadlock.
+- O final_value varia/depende da sequência de offsets e da ordem das threads.
+```
+
+## Objetivo
+
+Fechar a 2.3 como exercício implementado e testado.
+
+O que provaste experimentalmente:
+
+```text
+items produzidos == items consumidos
+```
+
+Logo, o protocolo:
+
+```text
+DATA_EMPTY → producer escreve
+DATA_READY → consumer lê
+```
+
+funcionou.
+
+## Como pensar
+
+A 2.3 não pede ainda eficiência máxima. Pede:
+
+```text
+mutex-only synchronisation
+polling
+back-off com usleep()
+```
+
+Tu fizeste isso.
+
+A limitação também ficou clara:
+
+```text
+com consumer lento → programa demora mais
+com buffer de 1 posição → throughput limitado
+com polling → threads acordam várias vezes para testar estado
+```
+
+Isto prepara exatamente a próxima secção: **condition variables**.
+
+## Pitfalls & troubleshooting
+
+1. `final_value` não é critério principal.
+2. O importante é `produced == consumed`.
+3. Não misturar 2.3 com `pthread_cond_wait()`.
+4. Mais threads não significa automaticamente mais rápido, porque o buffer só tem uma posição.
+
+## Alternativas / tradeoffs
+
+| Versão                                  | Estado             |
+| --------------------------------------- | ------------------ |
+| 2.3 mutex-only polling                  | ✅ feita            |
+| 3.1 condition variables                 | próximo nível      |
+| buffer circular com condition variables | depois             |
+| semáforos                               | alternativa futura |
+
+## Pergunta de decisão
+
+Queres agora fazer só uma **conclusão escrita curta da 2.3** para relatório/notebook, sem avançar ainda para código da 3.1?
