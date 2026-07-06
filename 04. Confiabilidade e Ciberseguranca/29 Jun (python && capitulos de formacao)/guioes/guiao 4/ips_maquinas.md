@@ -67,3 +67,4 @@ bloquear o resto entre máquinas
 manter Internet
 
 ---
+
