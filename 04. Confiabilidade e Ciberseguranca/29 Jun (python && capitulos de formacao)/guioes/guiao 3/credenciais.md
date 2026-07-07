@@ -8,3 +8,16 @@
 | Debian antigo                |  `dee` |      `dee` |
 | Kali                         | 'andre' | 'kali2026!' | 
 to
+
+
+---
+
+# Guiao 5
+
+>broker MQTT
+
+    192.168.1.157
+
+>Client MQTT
+
+    192.168.1.109
