@@ -636,3 +636,597 @@ MQTT usa TCP/1883 sem TLS
 ## Próximo passo do guião
 
 Agora estás pronto para o **3.4 — MQTT com comunicações encriptadas** 🔐
+
+---
+
+# o mosquitoo precisa destes 3 ficheiros
+
+| Ficheiro     | Função                               |
+| ------------ | ------------------------------------ |
+| `ca.crt`     | certificado da autoridade que assina |
+| `server.crt` | certificado público do broker        |
+| `server.key` | chave privada do broker              |
+
+
+![alt text](image-13.png)
+
+Não copies o ca.key para /etc/mosquitto/certs/.
+
+ca.key é a chave privada da autoridade certificadora. Deve ficar protegida em /root.
+
+---
+
+## Certificados no sítio certo ✅
+
+Agora tens:
+
+```text
+/etc/mosquitto/certs/ca.crt
+/etc/mosquitto/certs/server.crt
+/etc/mosquitto/certs/server.key
+```
+
+E a `server.key` está com dono `mosquitto:mosquitto`, que era o ponto crítico.
+
+---
+
+## Ação: próximo passo — criar listener TLS na porta `8883`
+
+No **brokerMQTT**, corre:
+
+```bash
+cat > /etc/mosquitto/conf.d/tls.conf <<'EOF'
+listener 8883 0.0.0.0
+cafile /etc/mosquitto/certs/ca.crt
+certfile /etc/mosquitto/certs/server.crt
+keyfile /etc/mosquitto/certs/server.key
+allow_anonymous true
+EOF
+
+systemctl restart mosquitto
+systemctl status mosquitto --no-pager
+ss -lntp | grep mosquitto
+```
+
+---
+
+## Objetivo
+
+Passar de MQTT simples:
+
+```text
+1883 → MQTT sem encriptação
+```
+
+para MQTT com TLS:
+
+```text
+8883 → MQTT encriptado
+```
+
+---
+
+## Resultado esperado
+
+No `ss`, queremos ver algo como:
+
+```text
+0.0.0.0:1883
+0.0.0.0:8883
+```
+
+ou pelo menos:
+
+```text
+0.0.0.0:8883
+```
+
+---
+
+## Como pensar
+
+O broker agora vai ter:
+
+| Porta  | Função                   |
+| ------ | ------------------------ |
+| `1883` | MQTT normal, texto claro |
+| `8883` | MQTT com TLS/encriptação |
+
+O `server.crt` identifica o broker.
+O `server.key` permite ao broker provar que é dono desse certificado.
+O `ca.crt` permite ao cliente confiar nesse certificado.
+
+---
+
+## Pitfalls
+
+1. Se o Mosquitto não arrancar, quase sempre é erro de path ou permissões da `server.key`.
+2. `8883` é a porta habitual para MQTT com TLS.
+3. `allow_anonymous true` continua só para laboratório.
+4. O cliente vai precisar do `ca.crt` para validar o broker.
+
+---
+
+## Pergunta de decisão
+
+Depois do `ss -lntp | grep mosquitto`, aparece a porta `8883`?
+![alt text](image-14.png)
+
+---
+
+## Sim — é normal aparecerem as duas portas ✅
+
+Tens agora o Mosquitto a escutar em:
+
+```text
+0.0.0.0:1883
+0.0.0.0:8883
+```
+
+Isto é bom para o guião porque permite comparar:
+
+| Porta  | Significado                      |
+| ------ | -------------------------------- |
+| `1883` | MQTT normal, **sem encriptação** |
+| `8883` | MQTT com **TLS/encriptação**     |
+
+Ou seja, ainda tens o teste antigo ativo e agora adicionaste o teste seguro. Não é erro.
+
+---
+
+## Ação: próximo passo
+
+Agora precisamos pôr o `ca.crt` no **ClientMQTT**, porque o cliente precisa confiar no certificado do broker.
+
+Na **Shell do Proxmox `pve`**, corre:
+
+```bash
+pct pull 107 /etc/mosquitto/certs/ca.crt /root/ca.crt
+pct push 108 /root/ca.crt /root/ca.crt
+```
+
+---
+
+## Objetivo
+
+Copiar isto:
+
+```text
+brokerMQTT:/etc/mosquitto/certs/ca.crt
+```
+
+para isto:
+
+```text
+ClientMQTT:/root/ca.crt
+```
+
+O cliente **não precisa** da `server.key`.
+Só precisa do `ca.crt`.
+
+---
+
+## Como pensar
+
+O TLS funciona assim:
+
+```text
+ClientMQTT → liga ao broker na porta 8883
+BrokerMQTT → mostra o server.crt
+ClientMQTT → usa ca.crt para verificar se confia nesse certificado
+```
+
+A `server.key` fica só no broker.
+
+---
+
+## Pitfalls
+
+1. **Nunca copies `server.key` para o cliente.**
+2. **Nunca copies `ca.key` para o cliente.**
+3. O cliente precisa só de `ca.crt`.
+4. O `1883` continuar ativo não estraga o `8883`.
+
+---
+
+## Pergunta de decisão
+
+Depois de copiares, no **ClientMQTT** corre:
+
+```bash
+ls -lh /root/ca.crt
+```
+
+Aparece o ficheiro?
+![alt text](image-16.png)
+![alt text](image-15.png)
+
+>sim
+
+---
+
+## Perfeito — `ca.crt` já está no ClientMQTT ✅
+
+Agora o cliente já tem a autoridade certificadora para confiar no certificado do broker.
+
+---
+
+## Ação: próximo passo — testar MQTT com TLS
+
+No **ClientMQTT**, corre:
+
+```bash
+echo "192.168.1.157 mqtt-broker" >> /etc/hosts
+
+mosquitto_pub \
+  -h mqtt-broker \
+  -p 8883 \
+  --cafile /root/ca.crt \
+  -t "isep/teste" \
+  -m "teste mqtt tls" \
+  -d
+```
+
+---
+
+## Objetivo
+
+Testar isto:
+
+```text
+ClientMQTT → BrokerMQTT:8883
+```
+
+mas agora com **TLS/encriptação**.
+
+---
+
+## Resultado esperado
+
+Queremos ver:
+
+```text
+Client null sending CONNECT
+Client null received CONNACK (0)
+Client null sending PUBLISH
+Client null sending DISCONNECT
+```
+
+O ponto crítico é:
+
+```text
+received CONNACK (0)
+```
+
+Isso significa:
+
+> O cliente validou o certificado com `ca.crt`, ligou ao broker na porta `8883` e publicou a mensagem.
+
+---
+
+## Como pensar
+
+Usei `mqtt-broker` em vez de `192.168.1.157` porque o certificado foi criado com:
+
+```text
+CN = mqtt-broker
+```
+
+Se ligares por IP, pode falhar a validação do nome do certificado.
+
+---
+
+## Pitfalls
+
+1. `1883` = MQTT sem TLS.
+2. `8883` = MQTT com TLS.
+3. O cliente precisa do `ca.crt`.
+4. O nome usado em `-h` deve bater certo com o nome do certificado.
+
+---
+
+## Pergunta de decisão
+
+O comando devolve `received CONNACK (0)` ou dá erro de certificado/hostname?
+
+
+![alt text](image-17.png)
+
+---
+
+## Sim — deu mesmo ✅🔐
+
+O ponto crítico apareceu:
+
+```text
+Client null received CONNACK (0)
+Client null sending PUBLISH
+Client null sending DISCONNECT
+```
+
+Isto prova que o **ClientMQTT conseguiu ligar ao BrokerMQTT pela porta 8883 com TLS**.
+
+---
+
+## Interpretação
+
+Agora tens:
+
+| Porta  | Estado | Significado              |
+| ------ | -----: | ------------------------ |
+| `1883` |  ativo | MQTT sem encriptação     |
+| `8883` |  ativo | MQTT com TLS/encriptação |
+
+O teste que fizeste usou:
+
+```text
+ClientMQTT → mqtt-broker:8883 → BrokerMQTT
+```
+
+e o cliente validou o certificado usando:
+
+```text
+/root/ca.crt
+```
+
+---
+
+## Ação: próximo passo — testar subscriber + publisher com TLS
+
+No **ClientMQTT**, corre este comando único:
+
+```bash
+timeout 8s mosquitto_sub \
+  -h mqtt-broker \
+  -p 8883 \
+  --cafile /root/ca.crt \
+  -t "isep/teste" \
+  -v & sleep 1; \
+mosquitto_pub \
+  -h mqtt-broker \
+  -p 8883 \
+  --cafile /root/ca.crt \
+  -t "isep/teste" \
+  -m "mensagem com tls" \
+  -d; wait
+```
+
+---
+
+## Objetivo
+
+Provar o fluxo completo:
+
+```text
+Publisher TLS → Broker TLS 8883 → Subscriber TLS
+```
+
+---
+
+## Resultado esperado
+
+Deves ver algo como:
+
+```text
+Client null received CONNACK (0)
+Client null sending PUBLISH ...
+isep/teste mensagem com tls
+```
+
+A linha importante é:
+
+```text
+isep/teste mensagem com tls
+```
+
+Isso prova que o subscriber recebeu a mensagem através da ligação TLS.
+
+---
+
+## Frase para relatório
+
+```md
+Na configuração com TLS, o broker Mosquitto escuta na porta 8883 usando certificados. O cliente utiliza o ficheiro ca.crt para validar o certificado do broker. O teste com mosquitto_pub recebeu CONNACK (0), confirmando que a ligação MQTT com encriptação foi aceite.
+```
+
+Mostra-me se aparece `isep/teste mensagem com tls`.
+
+
+![alt text](image-18.png)
+
+----
+
+## 3.4 validado ✅🔐
+
+A linha decisiva apareceu:
+
+```text
+isep/teste mensagem com tls
+```
+
+Isto prova que o fluxo completo funcionou:
+
+```text
+ClientMQTT subscriber TLS
+        ↑
+BrokerMQTT 8883 TLS
+        ↑
+ClientMQTT publisher TLS
+```
+
+E também apareceu:
+
+```text
+Client null received CONNACK (0)
+Client null sending PUBLISH
+Client null sending DISCONNECT
+```
+
+Ou seja: o broker aceitou a ligação MQTT com TLS, recebeu a publicação e entregou-a ao subscriber.
+
+---
+
+## Interpretação para relatório
+
+```md
+Na configuração MQTT com TLS, o broker Mosquitto escuta na porta 8883 com certificados configurados. O cliente usa o ficheiro ca.crt para validar o certificado do broker. O teste com mosquitto_pub recebeu CONNACK (0), confirmando que a ligação TLS foi aceite, e o mosquitto_sub recebeu a mensagem "isep/teste mensagem com tls", confirmando a comunicação MQTT encriptada entre cliente e broker.
+```
+
+---
+
+## O que isto prova em segurança
+
+| Teste                      | Prova                                    |
+| -------------------------- | ---------------------------------------- |
+| `1883`                     | MQTT sem encriptação                     |
+| `8883`                     | MQTT com TLS                             |
+| `--cafile /root/ca.crt`    | o cliente valida o certificado do broker |
+| `CONNACK (0)`              | o broker aceitou a sessão                |
+| mensagem recebida no `sub` | publish/subscribe funcionou              |
+
+---
+
+## Ação: próximo passo
+
+Agora captura o tráfego TLS para mostrar que é na porta `8883`.
+
+No **Proxmox pve**, corre:
+
+```bash
+tcpdump -i any -nn -c 20 'host 192.168.1.109 and host 192.168.1.157 and tcp port 8883'
+```
+
+Depois, no **ClientMQTT**, repete:
+
+```bash
+mosquitto_pub \
+  -h mqtt-broker \
+  -p 8883 \
+  --cafile /root/ca.crt \
+  -t "isep/teste" \
+  -m "prova tls tcpdump" \
+  -d
+```
+
+---
+
+## Resultado esperado
+
+No `tcpdump`, deves ver:
+
+```text
+192.168.1.109.xxxxx > 192.168.1.157.8883
+192.168.1.157.8883 > 192.168.1.109.xxxxx
+```
+
+Frase-chave:
+
+> Agora a comunicação MQTT já não está na porta 1883, mas sim na porta 8883, indicando MQTT sobre TLS.
+
+---
+
+![alt text](image-19.png)
+
+# SIM wowowow
+
+----
+
+## Yes — agora ficou mesmo validado ✅🔐
+
+No `tcpdump` do Proxmox aparece tráfego entre:
+
+```text
+192.168.1.109.xxxxx > 192.168.1.157.8883
+192.168.1.157.8883 > 192.168.1.109.xxxxx
+```
+
+E no cliente apareceu:
+
+```text
+Client null received CONNACK (0)
+Client null sending PUBLISH
+Client null sending DISCONNECT
+```
+
+Isto prova:
+
+```text
+ClientMQTT → BrokerMQTT:8883
+```
+
+com **MQTT sobre TLS**.
+
+---
+
+## Frase para relatório / avaliação
+
+```md
+Na configuração encriptada, o broker Mosquitto foi configurado para escutar na porta 8883 com certificados TLS. O cliente usou o ficheiro ca.crt para validar o certificado do broker e conseguiu publicar uma mensagem com mosquitto_pub, recebendo CONNACK (0). A captura tcpdump confirmou tráfego TCP entre o cliente 192.168.1.109 e o broker 192.168.1.157 na porta 8883, demonstrando comunicação MQTT encriptada.
+```
+
+---
+
+## O que tens validado no Guião 5
+
+| Secção                       | Estado | Prova                                |
+| ---------------------------- | -----: | ------------------------------------ |
+| 3.1 Broker/client MQTT local |      ✅ | Mosquitto instalado e ativo          |
+| 3.2 MQTT local sem TLS       |      ✅ | tráfego em `1883`                    |
+| 3.3 Broker remoto            |      ✅ | `broker.hivemq.com:1883` + `CONNACK` |
+| 3.4 MQTT com TLS             |      ✅ | tráfego em `8883` + `ca.crt`         |
+
+---
+
+## Próximo passo
+
+Tira screenshot deste `tcpdump` com a porta `8883` e guarda como prova final do **3.4**. Depois podemos fechar o guião com um resumo curto para exame.
+
+
+![alt text](image-20.png)
+
+---
+
+## Para agora: para aqui e vai comer ✅
+
+O **Guião 5 está funcionalmente validado**.
+
+### O que já tens feito
+
+| Parte                      | Estado | Prova                                                |
+| -------------------------- | -----: | ---------------------------------------------------- |
+| **3.1 MQTT local**         |      ✅ | broker/client instalados                             |
+| **3.2 MQTT local sem TLS** |      ✅ | `192.168.1.109 → 192.168.1.157:1883`                 |
+| **3.3 broker remoto**      |      ✅ | `192.168.1.109 → IP externo:1883`                    |
+| **3.4 MQTT com TLS**       |      ✅ | `192.168.1.109 → 192.168.1.157:8883` + `CONNACK (0)` |
+
+---
+
+## Screenshot que deves guardar agora
+
+Guarda este ecrã atual. Ele mostra:
+
+```text
+192.168.1.109 > 192.168.1.157.8883
+192.168.1.157.8883 > 192.168.1.109
+```
+
+Isto é a prova final do **MQTT com TLS**.
+
+---
+
+## Frase final para relatório
+
+```md
+No Guião 5 foi configurada comunicação MQTT entre um cliente e um broker Mosquitto. Primeiro foi validada comunicação sem encriptação na porta 1883. Depois foi usado um broker remoto em broker.hivemq.com, também na porta 1883. Finalmente, foi configurado TLS no broker local, usando certificados, ficando o Mosquitto a escutar na porta 8883. O cliente usou o ficheiro ca.crt para validar o certificado do broker e conseguiu publicar mensagens, recebendo CONNACK (0). A captura tcpdump confirmou tráfego entre 192.168.1.109 e 192.168.1.157 na porta 8883.
+```
+
+---
+
+## Explicação oral curta
+
+> A porta `1883` mostra MQTT normal, sem encriptação.
+> A porta `8883` mostra MQTT com TLS.
+> O `CONNACK (0)` confirma que o broker aceitou a ligação MQTT.
+> O `tcpdump` confirma que o tráfego passou mesmo entre cliente e broker na porta correta.
+
+---
