@@ -70,6 +70,14 @@ void *producer(void *arg)
         while (buffer.count == BUFFER_SIZE) {
             pthread_cond_wait(&buffer.buffer_can_write, &buffer.lock);
         }
+
+        buffer.samples[buffer.write_idx] = sample;
+        buffer.write_idx = (buffer.write_idx + 1) % BUFFER_SIZE;
+        buffer.count++;
+        printf("[producer %ld] DENTRO DO LOCK : PRODUCED %s value=%d count=%d\n",
+       id, sample.sensor, sample.value, buffer.count);
+
+        pthread_cond_signal(&buffer.buffer_can_read);
         /*
          * TODO:
          * escrever sample em samples[write_idx]
@@ -82,8 +90,69 @@ void *producer(void *arg)
 
         int sleep_ms = random_between(P_SLEEP_MIN_MS, P_SLEEP_MAX_MS);
         usleep(sleep_ms * 1000);
+        printf("[producer %ld] producer_consumed %s value=%d\n", id, sample.sensor, sample.value);
     }
 
-    printf("[producer %ld] finished\n", id);
     return NULL;
+}
+
+
+
+void *consumer(void *arg)
+{
+    long id = (long)arg;
+
+    for (int i = 0; i < ITEMS_PER_PRODUCER; i++) {
+        sample_t sample;
+
+        pthread_mutex_lock(&buffer.lock);
+
+        /*
+         * TODO:
+         * while buffer vazio:
+         *     esperar em buffer_can_read
+         */ 
+        while (buffer.count == 0) {
+            pthread_cond_wait(&buffer.buffer_can_read, &buffer.lock);
+        }
+
+        sample = buffer.samples[buffer.read_idx];
+        buffer.read_idx = (buffer.read_idx + 1) % BUFFER_SIZE;
+        buffer.count--;
+        pthread_cond_signal(&buffer.buffer_can_write);
+        /*
+         * TODO:
+         * ler sample em samples[read_idx]
+         * avançar read_idx circularmente
+         * aumentar count
+         * sinalizar buffer_can_write
+         */
+
+        pthread_mutex_unlock(&buffer.lock);
+
+        int sleep_ms = random_between(P_SLEEP_MIN_MS, P_SLEEP_MAX_MS);
+        usleep(sleep_ms * 1000);
+        printf("[consumer %ld] consumer_consumed %s value=%d\n", id, sample.sensor, sample.value);
+    }
+    return NULL;
+}
+
+int main(void)
+{
+    pthread_t producer_thread;
+    pthread_t consumer_thread;
+
+    srand(time(NULL));
+
+    pthread_create(&consumer_thread, NULL, consumer, (void *)1L);
+    pthread_create(&producer_thread, NULL, producer, (void *)1L);
+
+    pthread_join(producer_thread, NULL);
+    pthread_join(consumer_thread, NULL);
+
+    pthread_mutex_destroy(&buffer.lock);
+    pthread_cond_destroy(&buffer.buffer_can_read);
+    pthread_cond_destroy(&buffer.buffer_can_write);
+
+    return 0;
 }
