@@ -1,0 +1,3064 @@
+1
+00:00:16,019 --> 00:00:22,420
+E temos aqui este material para vocês começarem a encher. Temos 10 destes e para que entrem
+
+2
+00:00:22,420 --> 00:00:30,219
+se vocês me acham à vontade nisto, pronto. Tenho aqui, as classes teóricas servem um
+
+3
+00:00:30,219 --> 00:00:36,179
+bocadinho para dar as fundações teóricas, as opções de arquitetura e também compreenderem
+
+4
+00:00:36,179 --> 00:00:39,060
+um bocadinho quais são os compromissos que temos de fazer. Eu hoje vou tentar
+
+5
+00:00:39,060 --> 00:00:43,299
+passar nisso um bocadinho mais rápido e no laboratório então faremos isto. Basicamente
+
+6
+00:00:43,299 --> 00:01:08,480
+o mais importante nível de coisa é o Raspberry Pi. Uma coisa, em qualquer momento, qualquer
+
+7
+00:01:08,480 --> 00:01:15,359
+dúvida que tenham, interrompam, por favor, não deixem passar a dúvida, perguntem logo na hora.
+
+8
+00:01:15,359 --> 00:01:22,159
+Portanto, então, como é que vamos fazer os movimentos de Inteligencia Articial que
+
+9
+00:01:22,159 --> 00:01:30,879
+normalmente correm aqui? Estamos a falar aqui, que é clave, né? Eu preparo estes slides agora
+
+10
+00:01:30,879 --> 00:01:36,159
+próximos desta apresentação. Há coisas que não estão trabalhadas, não é? Portanto,
+
+11
+00:01:36,159 --> 00:01:39,920
+eu tenho slides muito melhor preparados pelas áreas que eu já dei isto várias vezes e tal,
+
+12
+00:01:39,920 --> 00:01:44,439
+e portanto qualquer dúvida, pronto. Estamos a falar de correr modelos de Inteligencia
+
+13
+00:01:44,439 --> 00:01:50,799
+Articial. Nós podemos correr a nível do nosso computador, podemos correr em vez da device,
+
+14
+00:01:50,799 --> 00:01:56,799
+no Raspberry, uma coisa assim desse género, até no Arduino, ou a nível de cloud. O sítio
+
+15
+00:01:56,799 --> 00:02:04,079
+que temos tem muita implicação na forma como o modelo toma, na quantidade de operações que
+
+16
+00:02:04,079 --> 00:02:13,159
+ele tem, no poder computacional que ele usa e no seu poder preditivo, não é? Porque quanto mais
+
+17
+00:02:13,159 --> 00:02:17,360
+complexo é o modelo, mais potencial ele tem para ser o modelo potente. Portanto,
+
+18
+00:02:17,360 --> 00:02:23,159
+essencialmente o desafio é, para conseguirmos pôr Inteligencia Articial a correr aqui,
+
+19
+00:02:23,319 --> 00:02:27,840
+como é que nós transformamos estes modelos mais convencionais que correm a nível de cloud,
+
+20
+00:02:27,840 --> 00:02:32,360
+mas também a nível de computador, mais para correrem nestes dispositivos que são
+
+21
+00:02:32,360 --> 00:02:40,439
+os com treina de device, ou seja, dispositivos que têm recursos limitados, ok? Pronto. Antes
+
+22
+00:02:40,439 --> 00:02:46,639
+disso, a avaliação, só para tirarmos esta coisa do caminho. Nós não vamos fazer exames,
+
+23
+00:02:46,639 --> 00:02:50,879
+vamos fazer um challenge, que é um trabalho que vocês vão fazer na quarta e quinta semana,
+
+24
+00:02:51,639 --> 00:02:58,639
+em que vão desenvolver uma aplicação, em que vai ficar aberta, vamos negociá-la com vocês em
+
+25
+00:02:58,639 --> 00:03:05,080
+grupos de dois, porque só temos 10 raspberries e portanto formam grupos de dois, escolham e
+
+26
+00:03:05,080 --> 00:03:12,520
+organizem-se entre vocês e vocês vão conosco negociar um trabalho para fazer, vocês vão
+
+27
+00:03:12,520 --> 00:03:18,280
+ter larga autonomia na decisão de várias opções do trabalho, das métricas e dos modelos,
+
+28
+00:03:18,280 --> 00:03:24,800
+sempre falando conosco para termos coisas que são relevantes, interessantes. E depois é um
+
+29
+00:03:24,800 --> 00:03:30,960
+bocadinho a gestão do desenvolvimento do modelo, do seu transporte para o TensorFlow Lite,
+
+30
+00:03:30,960 --> 00:03:36,879
+neste caso que agora chama-se Lite RT, que é a plataforma onde estamos, e no fundo vocês,
+
+31
+00:03:36,879 --> 00:03:44,159
+há várias, mas há uma componente que é a elaboração do modelo e depois a transição
+
+32
+00:03:44,360 --> 00:03:52,159
+para um dispositivo desta natureza e vocês serem capazes de ter uma perspectiva de engenharia,
+
+33
+00:03:52,159 --> 00:03:57,159
+ou seja, de quais os três ovos, dos três ovos que estão a fazer isso, ou seja, vocês
+
+34
+00:03:57,159 --> 00:04:02,280
+têm um modelo que tem um determinado desempenho, que custa determinada energia, que custa,
+
+35
+00:04:02,280 --> 00:04:09,360
+que tem determinado poder de decisão e ao, no fundo, fazemos quase um pruno ao modelo,
+
+36
+00:04:09,560 --> 00:04:15,120
+a cortarmos o modelo e afiná-lo para manter a sua capacidade preditiva, mas ao mesmo tempo
+
+37
+00:04:15,120 --> 00:04:26,680
+tirar a necessidade de poder computacional, se calhar ele poder correr num CPU que é muito
+
+38
+00:04:26,680 --> 00:04:31,399
+mais, é menos potente, um dispositivo com menos memória e por aí fora, e ele sairá à frente
+
+39
+00:04:31,399 --> 00:04:38,040
+para mostrar isto, e portanto é essa o desafio, o drill é mesmo esse, é conseguiremos
+
+40
+00:04:38,040 --> 00:04:44,680
+fazer isso. Pronto, e vamos já ver isso mais com mais detalhe. Pronto, uma coisa geral, eu tenho
+
+41
+00:04:44,680 --> 00:04:49,680
+aqui muita gente desta área, mas é importante fazermos assim, o que é a inteligência artificial,
+
+42
+00:04:49,680 --> 00:04:55,839
+o que é machine learning, o que é deep learning e o que são redes neuronais, pronto, isto é
+
+43
+00:04:55,839 --> 00:05:06,879
+relativamente simples. O AI é um broad spectrum, é um conjunto de áreas, ou nós temos dispositivos
+
+44
+00:05:07,079 --> 00:05:18,079
+de software que basicamente tenta imitar a cognição humana na sua visão mais lata.
+
+45
+00:05:18,079 --> 00:05:22,560
+Depois há muitas abordagens, eu tenho uma aula de inteligência artificial sobre isso,
+
+46
+00:05:22,560 --> 00:05:27,759
+mas acho que aqui é mais ou menos o tempo para se falar, mas a inteligência artificial é isso,
+
+47
+00:05:27,759 --> 00:05:32,639
+é pôr as máquinas a aprender com as mãos, a agir com as mãos, a fazer isso, há essencialmente
+
+48
+00:05:32,639 --> 00:05:39,920
+algumas companhias. O machine learning é a capacidade de termos dispositivos ou entidades
+
+49
+00:05:39,920 --> 00:05:47,720
+que aprendem por exposição aos dados, daí aprendizagem automática, ou seja, é um algoritmo
+
+50
+00:05:47,720 --> 00:05:53,600
+em contraste de um algoritmo convencional em que nós especificamos um conjunto de regras,
+
+51
+00:05:53,600 --> 00:05:59,279
+aqui nós não especificamos regras, mas expomos esse algoritmo, um conjunto alargado,
+
+52
+00:05:59,360 --> 00:06:05,040
+que é o alargado de dados, e ao analisar esses dados de uma forma sequencial e iterativa,
+
+53
+00:06:05,040 --> 00:06:10,639
+ele vai aprender a distinguir entre classes diferentes, entre casos diferentes,
+
+54
+00:06:10,639 --> 00:06:17,079
+a agrupar esses dados, no fundo procura de padrões, que era uma das áreas que foi,
+
+55
+00:06:17,079 --> 00:06:20,759
+há muitas áreas que foram precursoras da inteligência artificial e do machine learning,
+
+56
+00:06:20,759 --> 00:06:28,199
+e uma delas era o pattern recognition, quando eu era estudante em 1990 era o pattern recognition,
+
+57
+00:06:28,279 --> 00:06:35,040
+era uma cena maior, e foi a coisa que me fez vir para esta área, na altura eu achava super
+
+58
+00:06:35,040 --> 00:06:39,439
+interessante o pattern recognition, porque já achava que nós tínhamos que ter muita
+
+59
+00:06:39,439 --> 00:06:44,600
+estatística na vida, porque a vida é tudo menos determinística, é muito mais probabilística,
+
+60
+00:06:44,600 --> 00:06:48,480
+e na engenharia nós tínhamos sempre uma perspectiva muito probabilística, sempre os
+
+61
+00:06:48,480 --> 00:06:53,920
+materiais ómicos com isto e com aquilo, ambientes muito controlados, para as coisas terem
+
+62
+00:06:53,920 --> 00:07:00,759
+uma lógica própria, isso foi incrível, e sou muito grato por isso, porque foi isso que nos
+
+63
+00:07:00,759 --> 00:07:06,040
+trouxe em termos de engenharia, e deu credibilidade à profissão da engenharia,
+
+64
+00:07:06,040 --> 00:07:09,879
+porque nós conseguíamos fazer coisas que funcionavam com todo este framework,
+
+65
+00:07:09,879 --> 00:07:16,360
+mas efetivamente agora estamos numa zona da história humana, em que vamos entrar na
+
+66
+00:07:16,360 --> 00:07:21,839
+possibilidade de sermos mais determinísticos, e há possibilidades imensas em todas as áreas,
+
+67
+00:07:21,839 --> 00:07:27,560
+como a engenharia da abeção, da saúde, etc, vamos ter aí evoluções gigantescas,
+
+68
+00:07:27,560 --> 00:07:30,800
+porque não temos que olhar para o mundo só de uma perspectiva determinística,
+
+69
+00:07:30,800 --> 00:07:35,160
+se eu controlar todas as variáveis, então eu sei que isto mais isto mais aquilo,
+
+70
+00:07:35,160 --> 00:07:39,079
+nestas condições dá isto, naquelas condições dá aquilo, agora não,
+
+71
+00:07:39,079 --> 00:07:44,120
+podemos trabalhar a um nível muito mais, com mais devido melhor em certeza, mas eu estou
+
+72
+00:07:44,120 --> 00:07:47,879
+me a perder, porque eu estava a falar de presença artificial, e depois falei do machine
+
+73
+00:07:47,879 --> 00:07:53,439
+learning, a capacidade de aprender a partir de dados, o deep learning, dentro do machine learning,
+
+74
+00:07:53,439 --> 00:07:59,399
+há uma miríade gigantesca de, há uma, até a expressão não é miríade, há uma platora de
+
+75
+00:07:59,399 --> 00:08:05,680
+modelos, imensos modelos, e entre esses modelos, alguns dos mais representativos são
+
+76
+00:08:05,680 --> 00:08:09,839
+as redes neuronais, as redes neuronais, eu acho que vocês já ouviram falar, obviamente,
+
+77
+00:08:09,839 --> 00:08:14,319
+se tiverem dúvidas digam que explica-se também em 5 ou 10 minutos o conceito da rede,
+
+78
+00:08:14,319 --> 00:08:21,560
+a rede funciona, é uma imitação por matemática, é uma abstração, em que nós criamos um neurónio
+
+79
+00:08:21,560 --> 00:08:26,639
+artificial, e há a semelhança do nosso cérebro, replicamos em redes esses neurónios,
+
+80
+00:08:26,639 --> 00:08:30,600
+e pronto, essencialmente depois criou-se um mecanismo de aprendizagem, essas redes
+
+81
+00:08:30,600 --> 00:08:35,159
+neuronais, criou-se um mecanismo de aprendizagem, que não funciona um conjunto de algoritmos
+
+82
+00:08:35,159 --> 00:08:41,679
+que nos permitiu afinar isto, e há um conjunto largo de pessoas que dão contributos muito
+
+83
+00:08:41,679 --> 00:08:47,000
+positivos, e a certa altura isto funciona, e quando funciona as pessoas começam a pensar,
+
+84
+00:08:47,000 --> 00:08:52,960
+ah, isto é fixe, faz umas coisas, há pessoas muito excitadas com isto, mas a certa altura
+
+85
+00:08:52,960 --> 00:08:58,000
+há pessoas como o Geoffrey Hinton, que é um senhor que hoje tem muito relevo nesta
+
+86
+00:08:58,000 --> 00:09:03,720
+área, ganhou um prémio Nobel, acho eu recentemente, e bem, acho que foi da física,
+
+87
+00:09:03,720 --> 00:09:09,519
+porque eles não conseguem dar nada nesta área, e o Geoffrey Hinton foi reconhecido por um
+
+88
+00:09:09,519 --> 00:09:14,360
+trabalho notável que fez, muitos outros também, mas ele foi o que se sacou mais nos últimos anos,
+
+89
+00:09:14,360 --> 00:09:21,840
+pronto, e então surgem as redes neuronais, com este poder, e tornam-se no fundo o aproximador
+
+90
+00:09:21,840 --> 00:09:28,279
+universal, ou seja, no fundo o framework pelo qual tu consegues aproximar qualquer função,
+
+91
+00:09:28,279 --> 00:09:33,960
+de qualquer maneira, basta ajustares a complexidade da rede e ela adapta-se e consegue. Há uma prova
+
+92
+00:09:33,960 --> 00:09:38,440
+científica de uma pessoa que eu, no meu dobramento, pus isso, agora me lembro quem é,
+
+93
+00:09:38,440 --> 00:09:43,320
+ah, que é o aproximador universal. Outra coisa que eu não disse aqui, mas é importante dizer-te,
+
+94
+00:09:43,320 --> 00:09:49,440
+quando estamos a falar de modelos, porque eu não sei se volto aqui, há muitos modelos,
+
+95
+00:09:49,440 --> 00:09:54,840
+as redes neuronais são ótimas, o Cláudio deve-se lembrar, as árvores de decisão são
+
+96
+00:09:54,840 --> 00:09:59,799
+incríveis, por outros motivos que eu depois falarei à frente, que têm a ver, posso
+
+97
+00:09:59,879 --> 00:10:04,279
+dizer que é a interpretabilidade, ou seja, no mar de decisão nós sabemos como o modelo decide,
+
+98
+00:10:04,279 --> 00:10:10,320
+totalmente, e percebemos quais são as variáveis, quanto é que é o par da variável, e no fundo,
+
+99
+00:10:10,320 --> 00:10:16,840
+a aprendizagem automática no mar de decisão, dá-nos a ciência através da qual ele faz o
+
+100
+00:10:16,840 --> 00:10:21,559
+algoritmo, e portanto é muito bom quando temos processos relativamente complexos e queremos
+
+101
+00:10:21,559 --> 00:10:27,519
+perceber como é que fazemos a inteligência sobre aquilo, e o treino por aprendizagem
+
+102
+00:10:27,519 --> 00:10:33,600
+automática permite-nos perceber isso, portanto é incrível os modelos nos quais nós conseguimos
+
+103
+00:10:33,600 --> 00:10:38,799
+essa restriabilidade da aprendizagem. As redes neuronais naturalmente não têm isso,
+
+104
+00:10:38,799 --> 00:10:43,000
+há frameworks que estão, e tem havido muito trabalho nessa área agora recentemente,
+
+105
+00:10:43,000 --> 00:10:48,720
+da interpretabilidade, começa por criar processos de decisão médicos, processos de
+
+106
+00:10:48,720 --> 00:10:53,799
+decisão de condução autónoma, de carros, de barcos e de aviões, e a malta ou ser
+
+107
+00:10:53,799 --> 00:10:58,200
+estressado, tem medo e diz não, mas eu quero saber como é que ele decide, então há muito
+
+108
+00:10:58,200 --> 00:11:03,559
+trabalho nessa área, eu juro que na próxima década vai haver contributos significativos nessa
+
+109
+00:11:03,559 --> 00:11:08,039
+área. Pronto, o deep learning, o que é que é? O deep learning é uma sub-àrea do machine learning,
+
+110
+00:11:08,039 --> 00:11:13,840
+totalmente lá dentro, que usa redes neuronais, é exclusiva de redes neuronais, ou que estas
+
+111
+00:11:13,840 --> 00:11:18,000
+redes neuronais em termos arquiteturais têm uma especificidade, que são redes neuronais
+
+112
+00:11:18,000 --> 00:11:23,159
+profundas, ou seja, com muitas camadas, se uma rede normal pode ter duas, três, quatro, cinco
+
+113
+00:11:23,159 --> 00:11:29,320
+camadas, uma rede profunda pode ter dez, vinte, cinquenta, cem camadas, cento e cinquenta
+
+114
+00:11:29,320 --> 00:11:33,840
+camadas, não é nada de especial, tem uma rede que é a ResNet, tem a ResNet cento e cinquenta
+
+115
+00:11:33,840 --> 00:11:38,960
+e dois e coisas assim. Naturalmente que cada arquitetura tem o seu desafio, uma rede
+
+116
+00:11:38,960 --> 00:11:44,679
+cento e cinquenta e duas camadas precisa de mecanismos para funcionar e, por exemplo,
+
+117
+00:11:45,679 --> 00:11:56,320
+eles usam uma teoria com resíduos, que é para aumentar a duração dos gradientes,
+
+118
+00:11:56,320 --> 00:12:03,240
+das derivadas, para conseguir otimizar, senão aquilo ao derivar em cadeia aquilo vai tudo para
+
+119
+00:12:03,240 --> 00:12:08,919
+zero e não consegue fazer, o ResNet é precisamente esse o contributo e foi em 2015,
+
+120
+00:12:08,919 --> 00:12:14,600
+foi uma rede super potente, entretanto vieram outras coisas, mas depois eu falo um bocadinho
+
+121
+00:12:15,159 --> 00:12:19,879
+de planos, redes profundas e redes internais, são essência de estúdio, portanto acho que com
+
+122
+00:12:19,879 --> 00:12:28,500
+isto já vos expliquei, fiz dúvidas, se houver perguntem. Depois eu já falei nisto, eu fiz aqui
+
+123
+00:12:28,500 --> 00:12:37,340
+uma imagem rapidamente aqui numa cena de ar, abordagem convencional, temos instruções de
+
+124
+00:12:37,340 --> 00:12:43,620
+computadores, que eu chamo aqui regras, instruções, a lógica toda programada e em dados
+
+125
+00:12:43,740 --> 00:12:50,379
+e imputos de utilizadores, que é um programa normal e nós programamos isto tudo num programa,
+
+126
+00:12:50,379 --> 00:12:54,899
+assim temos a dados, imputos de utilizadores, com instruções como if, then e imputos,
+
+127
+00:12:54,899 --> 00:13:00,139
+etc e corremos um programa, mas o programa é programado por uma pessoa e depois de
+
+128
+00:13:00,139 --> 00:13:05,580
+compilado ou interpretado temos um resultado. Uma simuladinha é diferente, nós temos
+
+129
+00:13:05,580 --> 00:13:12,139
+essencialmente dados, temos essencialmente respostas ou ações das pessoas que nos permitem
+
+130
+00:13:12,340 --> 00:13:18,740
+tirar algumas conclusões sobre aqueles dados, expomos tudo isto ao nosso modelo, que é um
+
+131
+00:13:18,740 --> 00:13:24,139
+programa de computador, mas não é um programa que é programado pelo utilizador, é um framework
+
+132
+00:13:24,139 --> 00:13:28,820
+que vai, que está treinado para correr aqueles dados e aprender. E pronto, e após o treino,
+
+133
+00:13:28,820 --> 00:13:34,820
+após o treino nós temos um modelo que pode aprender bem ou aprender mal,
+
+134
+00:13:34,820 --> 00:13:40,659
+mas se aprender bem, ele consegue tomar decisões sobre aqueles dados. Aquela imagem é um gato
+
+135
+00:13:40,779 --> 00:13:46,379
+ou é um cão, é um gato ou é um rato ou é um cão, aquela imagem contém um cão que não
+
+136
+00:13:46,379 --> 00:13:54,740
+contém, aquela imagem corresponde, aquele fio de vídeo corresponde a um carro andar numa
+
+137
+00:13:54,740 --> 00:14:01,820
+estrada ou estar a sair e todas estas informações são tiradas e dadas e entregues a outros
+
+138
+00:14:01,820 --> 00:14:06,820
+sistemas que podem decidir com base nelas e portanto não precisa estar a dizer, vocês
+
+139
+00:14:06,820 --> 00:14:11,460
+sabem, a importância que isto tem, esta extração de informação a partir de dados,
+
+140
+00:14:11,460 --> 00:14:18,019
+o não termos que programar tudo, nem saber qual é a lógica de decisão, porque isto torna-se
+
+141
+00:14:18,019 --> 00:14:23,659
+automática aprendizagem e daí aprendizagem automática, então é um bocadinho isto.
+
+142
+00:14:23,659 --> 00:14:30,379
+Eu acho que vocês já todos sabem isto bem. Eu acho que não pus aqui porque tenho mais
+
+143
+00:14:30,580 --> 00:14:37,019
+Ah, mas posso falar depois, o poder e o custo do deep learning. O deep learning é brutal,
+
+144
+00:14:37,019 --> 00:14:41,620
+a gente sabe o que isso é e sente que o poder que isto tem, o impacto que está a ter na nossa
+
+145
+00:14:41,620 --> 00:14:47,139
+vida pela magnitude dos modelos, pelas funcionalidades que eles nos dão, por nós
+
+146
+00:14:47,139 --> 00:14:52,820
+podermos em linguagem humana, ele interpretar linguagem humana, depois converter isto em
+
+147
+00:14:52,820 --> 00:14:57,580
+representações vetoriais que depois conseguem fazer problemas de machine learning mais
+
+148
+00:14:57,580 --> 00:15:03,220
+e interpretar aqueles resultados e voltar a pôr aquilo num formato humano e dar-nos essa
+
+149
+00:15:03,220 --> 00:15:08,779
+resposta num simples chat e nós dizemos que é muito fixe, eu gosto imenso disto, mas claro,
+
+150
+00:15:08,779 --> 00:15:14,220
+obviamente tudo isto tem muitas funcionalidades, a compressão de texto para vetores de coisas
+
+151
+00:15:14,220 --> 00:15:19,059
+que depois são devidamente interpretadas, depois essas coisas têm que ser modeladas para
+
+152
+00:15:19,059 --> 00:15:23,179
+criar um sistema de inteligência artificial mais convencional e depois isso tem que ser
+
+153
+00:15:23,179 --> 00:15:27,179
+preparado, tem que ser treinado, visto e depois tem que andar para trás e, portanto,
+
+154
+00:15:27,179 --> 00:15:32,299
+tudo isto é muito pesado. O que é que o deep learning faz? Extração automática de features,
+
+155
+00:15:32,299 --> 00:15:38,860
+as convulsões nas imagens, nas transformas, uma série de coisas que faz, tem resultados
+
+156
+00:15:38,860 --> 00:15:44,860
+incríveis em áreas tais como, mas não só, visão computacional, processamento de áudio,
+
+157
+00:15:44,860 --> 00:15:49,220
+processamento de texto, processamento de séries temporais, hoje em dia nós podemos
+
+158
+00:15:49,779 --> 00:15:57,220
+ver, é um chat da vida aos M&A, um chat CPT que nos interpreta sequências temporais profundas,
+
+159
+00:15:57,220 --> 00:16:03,779
+como dados de investimentos, sensores de máquinas e ele fala com a excelência de um sistema
+
+160
+00:16:03,779 --> 00:16:08,259
+antigo de machine learning que era treinado especificamente para isto, é um treino que
+
+161
+00:16:08,259 --> 00:16:12,740
+demora tempo e que exige a presença até de um engenheiro especializado, portanto hoje
+
+162
+00:16:12,740 --> 00:16:17,460
+temos isso acessível a qualquer pessoa que é super interessante. Qual é o problema? Os
+
+163
+00:16:17,460 --> 00:16:23,659
+sistemas evoluíram bastante, mas a certa altura a melhoria dos sistemas implica sempre uma
+
+164
+00:16:23,659 --> 00:16:30,179
+explosão do número de parâmetros e, consequentemente, o requisito de memória dos sistemas e eu tirei aqui
+
+165
+00:16:30,179 --> 00:16:39,019
+um exemplo, em 1950 um sistema de Stavart que era este, a Physias, tinha menos de 100 parâmetros
+
+166
+00:16:39,580 --> 00:16:48,659
+e o preceptorão, em 1960, já andava aqui em alguns milhares, não, vai nos mil,
+
+167
+00:16:48,659 --> 00:16:52,980
+se calhar, porque isto é uma escala logarítmica, mas este preceptorão, isto já não é bem
+
+168
+00:16:52,980 --> 00:16:59,779
+correto, visto na prática o preceptorão tem a dover parâmetros, tem que correr também para aí 2 ou 3,
+
+169
+00:16:59,779 --> 00:17:05,099
+mas depois isto já são cada vez preceptorões e depois vamos por aqui acima até que chegamos
+
+170
+00:17:05,099 --> 00:17:14,180
+em 2010 a milhão e depois notam que a curva aumenta muito mais, a derivada aumenta e, portanto,
+
+171
+00:17:14,180 --> 00:17:18,500
+estamos hoje a falar quase a caminhar para 1 trilhão de parâmetros, se calhar até já
+
+172
+00:17:18,500 --> 00:17:22,980
+ultrapassamos, eu não fui confirmar isso, pronto, e parâmetros essencialmente são cálculos
+
+173
+00:17:22,980 --> 00:17:26,740
+de computações que temos que fazer e, portanto, o modelo tem que correr aquilo tudo,
+
+174
+00:17:26,740 --> 00:17:31,420
+tem que atualizar todos os parâmetros a cada época da coisa e, portanto, isto depois
+
+175
+00:17:31,420 --> 00:17:38,619
+faz-se com os computadores mega potentes, com computadores com centenas de GPUs e CPUs,
+
+176
+00:17:38,619 --> 00:17:45,859
+com memória a um nível astronómico, uma coisa gigantesca para correr estes mega modelos,
+
+177
+00:17:45,859 --> 00:17:49,460
+pronto, que é isto que a gente está a fazer. Já agora, eu mais à frente tenho isto,
+
+178
+00:17:49,460 --> 00:17:54,380
+mas estou a sempre em necessidade de falar, uma coisa é o treino do modelo, ok, outra coisa
+
+179
+00:17:54,380 --> 00:17:58,700
+é a inferência, o treino é quando o modelo está a aprender a ler a probabilidade através
+
+180
+00:17:58,900 --> 00:18:04,299
+de todos, a inferência é o modelo treinado quando nós pegamos o modelo, metemos novos
+
+181
+00:18:04,299 --> 00:18:08,380
+dados que não foram usados no treino e ele vai dizer isto é isto, é aquilo, ou seja,
+
+182
+00:18:08,380 --> 00:18:12,180
+está a dar a resposta, o treino é quando ele está a aprender a dar a resposta, tá bem?
+
+183
+00:18:12,180 --> 00:18:19,859
+Agora, o ciclo de vida do machine learning, estão a ver aqui, bom, essencialmente começa
+
+184
+00:18:19,859 --> 00:18:26,940
+aqui na recolha de dados, o data collection, isto é preciso estar ligado a sistemas físicos,
+
+185
+00:18:26,940 --> 00:18:31,220
+ou seja, o computador, sejam eles sistemas físicos, máquinas, empresas, e nós temos
+
+186
+00:18:31,220 --> 00:18:34,500
+que guardar os dados, imaginem que vocês tenham um sensor de temperatura, uma PT-100,
+
+187
+00:18:34,500 --> 00:18:40,140
+e vocês tenham alguns, um Raspberry ou um Arduino, a comunicar com aquilo e a dizer assim,
+
+188
+00:18:40,140 --> 00:18:46,220
+olha, vou guardar sempre a temperatura disto, vou também guardar quando é ligado e desligado
+
+189
+00:18:46,220 --> 00:18:51,420
+aquele interruptor, vou guardar também os dados do transportador que chega aqui e eu digo,
+
+190
+00:18:51,420 --> 00:18:56,299
+quem diz um Arduino, desculpem, quem diz um Arduino, diz um PLC, diz um dispositivo de
+
+191
+00:18:56,380 --> 00:19:01,180
+informação, de controlo, e nós guardamos estes dados, queremos ali uma base de dados local,
+
+192
+00:19:01,180 --> 00:19:06,180
+depois esta base de dados pode bater com timestamps de outras bases de dados, que
+
+193
+00:19:06,180 --> 00:19:10,859
+acontecem a outros níveis da empresa, e nós podemos construir uma base de dados muito
+
+194
+00:19:10,859 --> 00:19:18,660
+mais completa com todo este mar de dados, e depois com este mar de dados, esta quantidade
+
+195
+00:19:18,660 --> 00:19:23,539
+gigantesca de informação, porque reparem isto rapidamente, chega a gigas de terabytes de
+
+196
+00:19:23,539 --> 00:19:30,420
+dados e dizem, a experiência normal do ser humano e do engenheiro, que não está sensibilizado
+
+197
+00:19:30,420 --> 00:19:35,619
+para isso, e vamos guardar isso, quer dizer, vamos gastar um dinheiro a manter essa informação
+
+198
+00:19:35,619 --> 00:19:39,700
+que não serve para nada, mas a questão é esta, é que a informação serve para tudo,
+
+199
+00:19:39,700 --> 00:19:44,940
+e eu acho que uma das grandes funções das empresas hoje é operarem guardando o máximo
+
+200
+00:19:44,940 --> 00:19:49,539
+de dados de todos os processos que acham que no futuro podem vir a ser altamente
+
+201
+00:19:49,539 --> 00:19:54,980
+importante, porque esses dados são um novo ouro, porque os dados são aquilo que lhe permite treinar
+
+202
+00:19:54,980 --> 00:20:03,259
+os modelos no futuro, onde é que eu acho que, neste caso tenho que dizer, onde é que eu acho
+
+203
+00:20:03,259 --> 00:20:07,900
+que os americanos foram muito perto, e está cá o nosso aluno americano, tem que ficar
+
+204
+00:20:07,900 --> 00:20:13,500
+satisfeito por isto, em oferecer-nos estes modelos de forma gratuita, nós estamos a
+
+205
+00:20:13,500 --> 00:20:17,819
+operar sobre aqueles modelos, cada vez que nós estamos a usar e utilizar, estamos a passar
+
+206
+00:20:18,019 --> 00:20:24,180
+os dados, estamos a contextualizá-los, e estes dados vão ser guardados de forma vectorizada
+
+207
+00:20:24,180 --> 00:20:28,859
+nas suas bases de dados, obviamente que, ao duro, eu nunca fui ler os termos da coisa,
+
+208
+00:20:28,859 --> 00:20:32,259
+mas obviamente que estes dados têm que ser utilizados para qualquer coisa mais,
+
+209
+00:20:32,259 --> 00:20:38,380
+e são os dados para treinar, mas o próprio utilizador está a supervisionar isto ao dar
+
+210
+00:20:38,380 --> 00:20:44,380
+indicações, ao fazer a query, e portanto há aqui uma simbiose incrível, em que tens
+
+211
+00:20:44,380 --> 00:20:48,539
+um modelo que queres de ponta, ofereces um freetier para as pessoas utilizarem,
+
+212
+00:20:48,539 --> 00:20:53,779
+que é super útil para as pessoas, e a certa altura o freetier está a gerar um
+
+213
+00:20:53,779 --> 00:20:58,980
+mar imenso de dados, que depois pode ser utilizado para melhorar o modelo, e portanto
+
+214
+00:20:58,980 --> 00:21:04,059
+é uma coisa retroalimentada de uma forma positiva, que faz crescer o modelo e oferece
+
+215
+00:21:04,059 --> 00:21:09,220
+mais a todas as pessoas, pronto, o perigo neste caso, é se os modelos forem em
+
+216
+00:21:09,819 --> 00:21:15,420
+Closed source se forem fechados, e se o código não for público, embora o código é só uma
+
+217
+00:21:15,420 --> 00:21:20,779
+parte do problema, porque o treino é outro, mas se os pedes forem públicos, que é o mais
+
+218
+00:21:20,779 --> 00:21:31,700
+importante até no ser open source, aí já é outro campeonato, mas quem é que dá mais
+
+219
+00:21:31,700 --> 00:21:35,660
+modelos em open source? Os chineses, que obviamente são os contendentes da coisa,
+
+220
+00:21:35,819 --> 00:21:41,700
+os americanos não temos praticamente nada em open source, a Google tem a Gema, e há sim
+
+221
+00:21:41,700 --> 00:21:46,900
+uns modelos que são um bocado flagships para nós termos, também para fazer frente à
+
+222
+00:21:46,900 --> 00:21:51,779
+concorrência chinesa, e sim, eu acho que no caso da América, eles até estão a libertar
+
+223
+00:21:51,779 --> 00:21:56,619
+os modelos um bocado em resposta aos modelos chineses, mas mantém-se fechado,
+
+224
+00:21:56,619 --> 00:22:01,420
+e é uma estratégica de negócio que parece bastante adequada, eu não percebo nada
+
+225
+00:22:02,019 --> 00:22:06,619
+Mas que o meu engenheiro tem sempre a minha opinião, e eu vejo sempre a perspetiva de melhorar
+
+226
+00:22:06,619 --> 00:22:11,779
+o sistema e de fazer avançar. Data collection, super importante, data is the new world,
+
+227
+00:22:11,779 --> 00:22:17,099
+nunca se esqueçam disso, os dados são o ouro atual, quem tem dados tem tudo, domina o futuro,
+
+228
+00:22:17,099 --> 00:22:21,339
+porque obviamente precisa de modelos, precisa de capacidade de processamento para eles,
+
+229
+00:22:21,339 --> 00:22:27,180
+mas com dados tem modelos que modelam a realidade e vai dominar o futuro. Data cleaning,
+
+230
+00:22:27,180 --> 00:22:35,099
+pre-processamento de dados no início, processá-los, tirá-los, lixam, outliers, resolver o problema
+
+231
+00:22:35,099 --> 00:22:40,380
+dos baúas em falta, por aí fora, ou seja, uma espécie de pré-processamento de dados.
+
+232
+00:22:40,380 --> 00:22:48,299
+Depois, o feature engineering, feature engineering significa que vocês têm os dados em bruto,
+
+233
+00:22:48,299 --> 00:22:53,460
+e vocês vão extrair informação daqueles dados, imaginem que vocês têm dados de
+
+234
+00:22:54,019 --> 00:22:58,019
+temperatura, e na realidade vocês percebem-se que para o vosso processo vocês só precisam
+
+235
+00:22:58,019 --> 00:23:02,579
+da temperatura média, da máxima e da mínima, se calhar uns percentes daquilo chegam
+
+236
+00:23:02,579 --> 00:23:07,500
+perfeitamente para modelar, e que os vão de estar a pôr toneladas de informação em dados
+
+237
+00:23:07,500 --> 00:23:11,779
+brutos, e tiram ali um conjunto de escritores daquilo, com umas janelas ou com umas coisas
+
+238
+00:23:11,779 --> 00:23:16,740
+assim, e reduzem em 95% o tamanho, e do ponto de vista de modelo aquilo não faz diferença
+
+239
+00:23:16,740 --> 00:23:22,420
+nenhuma, mas até simplifica o modelo, porque aquela forma mais compacta, instância a instância,
+
+240
+00:23:22,579 --> 00:23:29,619
+permite-vos ser muito mais eficiente. Depois, o treino do modelo. Passada esta fase inicial
+
+241
+00:23:29,619 --> 00:23:34,779
+de criar o nosso data set, de processual e de pôr num formato que seja interessante,
+
+242
+00:23:34,779 --> 00:23:40,740
+devendo do ponto de vista, do tamanho, da utilidade dos dados, etc, nós escolhemos
+
+243
+00:23:40,740 --> 00:23:45,700
+o modelo e vamos treinar um ou vários modelos e vamos treiná-lo. Aqui sim é que é quando a
+
+244
+00:23:45,700 --> 00:23:54,819
+gente está a aprender, o modelo está a aprender e o modelo é treinado até que tenha um desempenho
+
+245
+00:23:54,819 --> 00:24:02,019
+interessante. Depois, quando o modelo já está treinado, com bom desempenho, passa para a parte
+
+246
+00:24:02,019 --> 00:24:07,140
+de evaluation, e esta evaluation eu já nem sei muito bem o que é que eles querem aqui dizer,
+
+247
+00:24:07,140 --> 00:24:13,299
+mas evaluation é no fundo mais a parte de inferência, onde a gente está agora, porque
+
+248
+00:24:13,859 --> 00:24:18,180
+eu nem concordo muito com isto. Evaluation é o deployment, é onde nós estamos agora a fazer
+
+249
+00:24:18,180 --> 00:24:25,700
+o deploy do modelo e ele está a fazer a inferência. E aqui ele demete evaluation e o deploy é aqui,
+
+250
+00:24:25,700 --> 00:24:33,380
+o diploma que ele tem aqui no fundo, é pull a funcionar online, ou seja, pull a postar dados
+
+251
+00:24:33,380 --> 00:24:37,859
+a sério. Esta evaluation é quando nós estamos a testar se o modelo está muito bom e se já
+
+252
+00:24:37,859 --> 00:24:42,579
+funciona. O deploy é pull a funcionar, a classificar dados do mundo real, a funcionar
+
+253
+00:24:42,980 --> 00:24:48,180
+e esta monitorização é verso ao longo do tempo o nosso modelo que está a fazer,
+
+254
+00:24:48,180 --> 00:24:52,819
+exclusivamente inferência, que já foi treinado, se ele continua atual, se continua com dados
+
+255
+00:24:52,819 --> 00:24:58,420
+bons, com, desculpem, com bom desempenho, ou seja, normalmente o desempenho tem a ver
+
+256
+00:24:58,420 --> 00:25:04,579
+com os dados. Se os conceitos que vêm nos dados novos forem ainda dentro dos conceitos
+
+257
+00:25:04,579 --> 00:25:09,619
+nos quais o modelo foi treinado, então isto mantém-se altamente relevante. Se não forem,
+
+258
+00:25:09,779 --> 00:25:14,980
+o modelo precisa ser treinado. Pronto, depois eu vou só avançar porque eu quero ver,
+
+259
+00:25:14,980 --> 00:25:20,099
+deixem ver as horas, 22, pronto, e eu quero ver se ainda nos fala um bocadinho. Boa saudade.
+
+260
+00:25:20,099 --> 00:25:25,940
+Aqui só uma coisa que tem aqui mais, este, eu não pus este, este é mais chato,
+
+261
+00:25:25,940 --> 00:25:30,380
+mas pulo aqui para vos mostrar. É tudo a mesma coisa, data collection, cleaning
+
+262
+00:25:30,380 --> 00:25:34,339
+and preprocessing, é a mesma coisa. O exploratório e data análise, é uma coisa
+
+263
+00:25:34,339 --> 00:25:39,140
+que vocês vão ver, esta EDA é muito falada e o EDA é o que é. É no fundo uma análise
+
+264
+00:25:39,220 --> 00:25:43,299
+de dados, vemos as distribuições, quantidades, vemos, percebemos que variáveis temos,
+
+265
+00:25:43,299 --> 00:25:48,500
+conhecer os dados, e é uma coisa que em data science é muito valorizada, ou seja,
+
+266
+00:25:48,500 --> 00:25:55,460
+fazer esta análise inicial, conhecer o data set, ter assim, get a grip da coisa, é super
+
+267
+00:25:55,460 --> 00:26:00,019
+interessante. Quem é de machine learning, olha para isto e diz, nada disso, não quero nada
+
+268
+00:26:00,019 --> 00:26:06,740
+com isto, porque depois a grande, onde nós vamos aprender muito mais, é depois no treino
+
+269
+00:26:06,900 --> 00:26:12,259
+com o resultado do treino, com o modelo, tiramos muito mais conclusões, mas sim,
+
+270
+00:26:12,259 --> 00:26:15,700
+isto também é muito relevante, e no data science é muito valorizado, era para vos falar
+
+271
+00:26:15,700 --> 00:26:21,059
+disto. Depois o fitment engineering and feature selection, é isto, é escolher os escritores
+
+272
+00:26:21,059 --> 00:26:25,859
+e depois até selecionar the end features que temos, podemos selecionar algumas que
+
+273
+00:26:25,859 --> 00:26:30,019
+são mais relevantes. Depois a seleção do modelo, neste caso o que eles estão a dizer,
+
+274
+00:26:30,019 --> 00:26:34,980
+é selecionar um tipo de modelo para treinar, depois aqui ao treinar, mode evaluation and
+
+275
+00:26:35,220 --> 00:26:41,380
+final, isto é fase final, em que estamos a finalizar o treino do modelo, aqui sim,
+
+276
+00:26:41,380 --> 00:26:46,420
+de uma forma mais bem descrita, e depois o mode deployment, é quando vamos para o teste
+
+277
+00:26:46,420 --> 00:26:51,940
+puro, por o modelo só fazer inferência, e a monitorização e manutenção, que é tal coisa
+
+278
+00:26:51,940 --> 00:26:55,299
+de ver qual é o desempenho do modelo enquanto ele está a fazer inferência, se ele está a
+
+279
+00:26:55,299 --> 00:27:00,579
+funcionar bem. Manutenção, são operações de manutenção no modelo, por acaso desconheço,
+
+280
+00:27:00,660 --> 00:27:06,019
+e terminamos aqui. Quando isto dá, nós temos que redefinir a coisa, ou se não for
+
+281
+00:27:06,019 --> 00:27:10,819
+redefinir o problema, temos que recolher novamente dados e fazer todo o processo,
+
+282
+00:27:10,819 --> 00:27:14,980
+que podemos passar se calhar algumas coisas à frente e tal, não podemos passar em nada,
+
+283
+00:27:14,980 --> 00:27:21,140
+isto aqui, isto é que temos que fazer para termos o modelo atualizado, está bem? Rápido,
+
+284
+00:27:21,140 --> 00:27:26,259
+isto demora mais que o que eu queria. Pronto, a nível das deep neural networks, o treino
+
+285
+00:27:26,259 --> 00:27:32,420
+acontece aqui, ou acontece aqui nestas coisas potentes, isto é bom, porque este tipo de
+
+286
+00:27:32,420 --> 00:27:36,980
+dispositivos são altamente poderosos, consomem bastante energia, mas têm a capacidade de
+
+287
+00:27:36,980 --> 00:27:42,259
+processar modelos gigantes, super poderosos. O problema é que exigem data centers, clusters,
+
+288
+00:27:42,259 --> 00:27:48,259
+GPUs locais ou na cloud, isto não interessa, é um processo de treino de uma rede neural,
+
+289
+00:27:48,259 --> 00:27:53,539
+mas a duração de um processo de treino destes é de horas, dias ou semanas,
+
+290
+00:27:53,700 --> 00:27:58,420
+e os consumos de energia são elevados, portanto obviamente que um dispositivo de Edge,
+
+291
+00:27:58,420 --> 00:28:01,859
+um dispositivo que está lá no outro lado junto ao processo e não na cloud,
+
+292
+00:28:01,859 --> 00:28:06,980
+vai ter dificuldades a falar nisso. Uma coisa importante a dizer, vocês vão ler muita coisa
+
+293
+00:28:06,980 --> 00:28:12,259
+e nós às vezes emocionamos a descrever as coisas, agora após a graduação em sistemas
+
+294
+00:28:12,259 --> 00:28:17,059
+indebidos, e faz-se muita coisa em sistemas indebidos, mas não há Milages, é uma coisa
+
+295
+00:28:17,059 --> 00:28:21,539
+também importante-se dizer, porque vêm alguns livros, mas não vêm todos. Não há Milages,
+
+296
+00:28:21,700 --> 00:28:26,420
+um dispositivo de Edge que tem baixos recursos computacionais consegue fazer coisas muito
+
+297
+00:28:26,420 --> 00:28:32,339
+interessantes, com o trabalho bem feito pode fazer quase pequenos milagres, mas nunca um
+
+298
+00:28:32,339 --> 00:28:37,380
+modelo Edge pode competir com um modelo desta magnitude, quer seja de um de PC,
+
+299
+00:28:37,380 --> 00:28:42,740
+quer seja um de cloud, porque obviamente os recursos são completamente diferentes,
+
+300
+00:28:42,740 --> 00:28:47,779
+cuidado com isto, porque às vezes em certos panfletos, em certas coisas, dizem-se coisas
+
+301
+00:28:47,859 --> 00:28:54,500
+que podem fazer os modelos nos iluvem e quando nós estamos no início podemos cair um
+
+302
+00:28:54,500 --> 00:29:02,339
+bocado nessa ilusão, mas é impossível. Dito isto, há casos extraordinários de transposição
+
+303
+00:29:02,339 --> 00:29:07,779
+de modelos para dispositivos de baixos recursos, são afinados, são feitas alguns
+
+304
+00:29:07,779 --> 00:29:12,980
+truques, as coisas são ajustadas, às vezes até com uma pequena heurística, e as coisas
+
+305
+00:29:13,059 --> 00:29:18,180
+são resultados incríveis, ok? É importante dizer isto para vocês levarem.
+
+306
+00:29:18,180 --> 00:29:27,220
+Só uma questão, quando a professora diz que os dispositivos embebidos nem sequer conseguem
+
+307
+00:29:27,220 --> 00:29:33,859
+competir com estes, não é lógico mesmo, mas eu imaginava a aplicação de um sistema de
+
+308
+00:29:33,859 --> 00:29:38,099
+inteligência artificial no sistema embebido, um modelo já treinado, não propriamente
+
+309
+00:29:38,099 --> 00:29:55,099
+executado. Sim, a sua pergunta é se se também treina no Raspberry. Sim, porque é
+
+310
+00:29:55,099 --> 00:30:01,420
+isso que se faz, ou seja, é esse o processo que gasta mais recursos, é o treino. Há as duas
+
+311
+00:30:01,980 --> 00:30:07,099
+abordagens, há as duas abordagens, sem ver só se não está aqui ninguém que deu aquele
+
+312
+00:30:07,099 --> 00:30:12,140
+sinal, parece que estava além. Há as duas abordagens, ou seja, normalmente o modelo é
+
+313
+00:30:12,140 --> 00:30:17,900
+treinado noutro computador mais poderoso e depois é adaptado para isto, mas também há,
+
+314
+00:30:17,900 --> 00:30:24,339
+também pode ser treinado diretamente no constreino de device. O que há abordagem mais
+
+315
+00:30:24,339 --> 00:30:30,259
+legal é fazemos a adaptação. O Tracer Flow Lite é isso que faz, do que eu ouvi,
+
+316
+00:30:30,259 --> 00:30:34,660
+porque lá está, eu não estive assim tanto com essa parte, que é o posto de ar que está nisso,
+
+317
+00:30:34,660 --> 00:30:38,299
+mas já no sábado vocês vão estar com ele, podem colocar essa pergunta, mas há as duas
+
+318
+00:30:38,299 --> 00:30:42,980
+abordagens, ou seja, treina-se fora e traz-se para este dispositivo ou até pode ser treinado.
+
+319
+00:30:42,980 --> 00:30:47,859
+Agora, aqui entre nós, é a geneira treinar num dispositivo limitado, podemos treinar muito
+
+320
+00:30:47,859 --> 00:30:52,380
+mais depressa com outras solidez e depois fazemos a adaptação para aqui. Exato, eu diria que
+
+321
+00:30:54,279 --> 00:30:59,559
+Ok, obrigado. Nada, nada, isso há coisa, mas há coisa que eu vi, não gosto de ser,
+
+322
+00:30:59,559 --> 00:31:05,720
+às vezes, eu só tento só ser contundente quando já tenho alguma segurança naquilo,
+
+323
+00:31:05,720 --> 00:31:10,880
+porque eu já vi muita coisa. Há aqui há dois ou três anos tivemos um artigo,
+
+324
+00:31:10,880 --> 00:31:15,359
+tivemos um imperfecto laboratório que até apresentou um artigo, e aquilo era super
+
+325
+00:31:15,359 --> 00:31:18,759
+engraçado, aquilo era para constreinar device, o que é que os gajos faziam? Muitas
+
+326
+00:31:18,759 --> 00:31:23,640
+coisas, eles arranjaram uma coisa com FFTs e com uma série de coisas matemáticas que a gente
+
+327
+00:31:23,640 --> 00:31:29,559
+conhece em engenharia eletrotécnica, extração de FFTs, wavelets e umas coisas que eles faziam
+
+328
+00:31:29,559 --> 00:31:34,359
+de uma forma muito simples, eles faziam AutoML, então as pegavam num computador e perante
+
+329
+00:31:34,359 --> 00:31:39,440
+sinais relativamente simples, eles faziam AutoML de uma forma sequencial, AutoML é treinar
+
+330
+00:31:39,440 --> 00:31:43,960
+em combinações diferentes e modelos diferentes, combinar aquilo quase num processo de brute
+
+331
+00:31:44,519 --> 00:31:50,960
+e depois conseguir desempenhos maravilhosos e vendiam aquilo. Aquilo é uma cena, uma ideia
+
+332
+00:31:50,960 --> 00:31:55,839
+incrível, funcionava muito bem, foi para uma cena de comboios, aquilo deu uns resultados
+
+333
+00:31:55,839 --> 00:32:01,240
+maravilhosos e aquilo era só AutoML. Fiquei danado que diga há gajos que ganham dinheiro
+
+334
+00:32:01,240 --> 00:32:05,759
+com coisas que são conceitos relativamente simples, ou seja, o sucesso na vida às vezes
+
+335
+00:32:05,759 --> 00:32:09,519
+também tem uma certa maluqueira de um gajo que era assim vou fazer uma cena que ninguém está a
+
+336
+00:32:09,680 --> 00:32:14,799
+e existe AutoML para outras coisas, mas naquela área é uma maluqueira de um tipo que diz assim
+
+337
+00:32:14,799 --> 00:32:20,160
+não se quer fácil, eu tenho um PC com poder computacional, eu ponho qualquer gajo a treinar
+
+338
+00:32:20,160 --> 00:32:24,319
+isto de uma forma incrível e depois arranjo-lhe uma solução que ele não precisa saber nada
+
+339
+00:32:24,319 --> 00:32:29,920
+do treino disto e resolvi o problema porque ele passa nos sinais, eu treino e quando ele
+
+340
+00:32:29,920 --> 00:32:36,799
+fizer exportar lá para o seu Arduino ou lá para o seu Edge Device pequenino, ele vai ter
+
+341
+00:32:37,119 --> 00:32:41,920
+que fazer uma conclusão, na área dos comboios estava N gente a fazer com essas coisas e noutras
+
+342
+00:32:41,920 --> 00:32:47,720
+áreas, na aviação não, mas estava muita gente a explorar isso e até pode ser a primeira fase,
+
+343
+00:32:47,720 --> 00:32:55,559
+mas depois mais tarde, se calhar, os requisitos de segurança obriam a que seja feita uma
+
+344
+00:32:55,559 --> 00:33:00,960
+auditoria e que se perceba até que há confiabilidade naquilo, ou seja, são depois
+
+345
+00:33:00,960 --> 00:33:05,480
+de sistemas onde são transportadas pessoas e há requisitos de segurança que têm que ser
+
+346
+00:33:05,799 --> 00:33:12,319
+e nem de propósito vocês estão a trabalhar com uma malta que está associada ao mostrado
+
+347
+00:33:12,319 --> 00:33:15,960
+de sistemas computacionais críticos que é isto levado ao extremo, depois essa é o
+
+348
+00:33:15,960 --> 00:33:22,039
+pessoal Miguel Pinho e toda este pessoal Filipe Pacheco, o pessoal Lino, eles estão todos
+
+349
+00:33:22,039 --> 00:33:26,799
+ligados a isto e então os sistemas computacionais críticos é a garantia até dos tempos de
+
+350
+00:33:26,799 --> 00:33:31,920
+execução, portanto, depois eles fazem software em linguagens em que a gente consegue garantir
+
+351
+00:33:32,119 --> 00:33:36,920
+o tempo de execução, o C, C++ são bons para isso, tem os seus desafios, falarem postulístico
+
+352
+00:33:36,920 --> 00:33:41,000
+e me dizem logo que não, cá melhor, porque depois há linguagens muito próprias para
+
+353
+00:33:41,000 --> 00:33:45,640
+garantir o tempo de execução e eles adoram isso, pronto, eu vou voltar para aqui senão não acaba.
+
+354
+00:33:45,640 --> 00:33:51,839
+A inferência, desculpem lá, o treino, era aqui o treino, pronto, e a inferência é onde
+
+355
+00:33:51,839 --> 00:33:57,480
+acontece uma coisa importante, a definição de Edge versus Clow, tem a ver com uma coisa que é,
+
+356
+00:33:58,119 --> 00:34:04,680
+eu explico-vos no vosso, o Edge é junto a onde os dados são produzidos e o Clow é o central,
+
+357
+00:34:04,680 --> 00:34:10,360
+é centralizado mais, é a cena super potente que é posta na internet e os dispositivos de Edge,
+
+358
+00:34:10,360 --> 00:34:14,039
+os dispositivos que estão junto ao processo onde a coisa acontece, onde os dados são gerados
+
+359
+00:34:14,039 --> 00:34:20,400
+e onde os resultados são esperados e o Clow é ao contrário, é no centro do centro do mundo,
+
+360
+00:34:20,400 --> 00:34:28,400
+onde a gente tem tudo concentrado, uma coisa que eu aprendi, o mundo não é a preto e branco,
+
+361
+00:34:28,400 --> 00:34:33,239
+o Porto é um povo incrível, mas o Benfica também é, está agradado a toda a gente,
+
+362
+00:34:33,239 --> 00:34:40,280
+eu sou portista, mas temos que perceber que não há uma abordagem, a Clow tem vantagens
+
+363
+00:34:40,280 --> 00:34:45,760
+maravilhosas e centraliza e a centralização dá-nos imensas vantagens, de verdade,
+
+364
+00:34:45,760 --> 00:34:50,360
+temos os dados todos concentrados, poder decidir tudo e não ter as coisas distribuídas,
+
+365
+00:34:50,360 --> 00:34:58,079
+o Edge dá-nos vantagens da localidade, da privacidade, de rapidez na decisão,
+
+366
+00:34:58,079 --> 00:35:04,000
+mas por outro lado tem o problema de dependermos de modelos com restrições e temos que adaptar
+
+367
+00:35:04,000 --> 00:35:07,719
+para termos desempenho naqueles modelos, temos que desenvolver recursos que na Clow não
+
+368
+00:35:07,719 --> 00:35:12,599
+temos sequer que nos preocupar, na Clow podemos dar peita na vontade, não está preocupados
+
+369
+00:35:12,679 --> 00:35:18,840
+com gestão de memória, está tudo bem, no Edge temos que fazer, como aqui pelo menos os dois
+
+370
+00:35:18,840 --> 00:35:23,599
+alunos que me falaram que programam em CC++ gestão de memória, ser muito criteriosos com
+
+371
+00:35:23,599 --> 00:35:28,400
+isto ou usar linguagens que já façam uma gestão de memória bem feita, que nos dêem
+
+372
+00:35:28,400 --> 00:35:32,079
+garantias que depois não vamos ter segmentation faults e problemas durante a execução,
+
+373
+00:35:32,079 --> 00:35:37,599
+portanto, e eu só estou a falar de alguns problemas, só que programo em microcontroladores
+
+374
+00:35:37,599 --> 00:35:45,800
+e baixo nível ou mais baixo nível, sabem do que eu estou a falar, mas portanto, na engenharia
+
+375
+00:35:45,800 --> 00:35:51,880
+como na vida não há milagres, nós estamos sempre a fazer o balanço, ou seja, se por um lado
+
+376
+00:35:51,880 --> 00:35:55,719
+temos as vantagens da Clow, por outro lado temos as suas vantagens e no Edge é a mesma
+
+377
+00:35:55,719 --> 00:35:59,559
+coisa e portanto não se preocupem, o que eu quero dizer é que ninguém fica a rir de ninguém.
+
+378
+00:35:59,559 --> 00:36:06,880
+O que eu acho é que na Clow é mais fácil dar aquele kick inicial, mas na realidade depois
+
+379
+00:36:07,079 --> 00:36:11,760
+o movimento também às vezes torna-se altamente pesado e no Edge depois de a gente estar por
+
+380
+00:36:11,760 --> 00:36:16,679
+dentro da coisa a gente tem uma curva de aprendizagem mais chata no início, mas depois
+
+381
+00:36:16,679 --> 00:36:21,199
+também pode fazer mais coisas, tem mais possibilidades, pá, é vida. Eu acho que isto é
+
+382
+00:36:21,199 --> 00:36:27,400
+a mesma vida, ganhas no lado, perdes no outro, a tua alegria inicial pode ser também a tua
+
+383
+00:36:27,400 --> 00:36:33,320
+surpresa que passaram os anos, fique isso mesmo, ok? Deixem-me ver o que eu tinha aqui,
+
+384
+00:36:33,320 --> 00:36:42,360
+a inferência acontece no Edge neste caso, a forward pass significa que não há treino,
+
+385
+00:36:42,360 --> 00:36:46,440
+que só estamos a meter os dados e ele já está treinado, portanto ele calcula e dá respostas
+
+386
+00:36:46,440 --> 00:36:52,119
+e era determinista que fazes o constantangue, nem sempre há os focos plantes, é só para dizer que
+
+387
+00:36:52,119 --> 00:36:56,840
+isto é o nosso foco. Uma coisa que eu vos quis pôr aqui foi esta questão por um segundo
+
+388
+00:36:56,840 --> 00:37:03,559
+eu tenho incluído a forward, era para vos falarem nisto que eu falei, portanto o Cloud Computing
+
+389
+00:37:03,559 --> 00:37:22,190
+temos sistemas centralizados remotos longe das fontes de dados, não é? Essencialmente todos os
+
+390
+00:37:22,190 --> 00:37:27,869
+dados produzidos aqui são mandados para a Cloud, são lá processados e as eventuais, as
+
+391
+00:37:27,869 --> 00:37:33,110
+alterações de estado são lá feitas, a Malta de Informática conhece bem isto, guardar os
+
+392
+00:37:33,110 --> 00:37:40,110
+dados, atualizar tudo, atualizar as visualizações etc e depois tudo é mandado para este lado
+
+393
+00:37:40,110 --> 00:37:46,750
+mediante o tipo de dispositivo e essas coisas. Pronto, temos essas vantagens Big Data Analytics,
+
+394
+00:37:46,750 --> 00:37:55,909
+coordenação global, guardar dados de muita gente ou aquilo que também é dedicado por Big Data,
+
+395
+00:37:56,349 --> 00:38:03,750
+imaginem, Google Drive, Netflix, tudo isso, ser centralizado é incrível. O problema, temos maior
+
+396
+00:38:03,750 --> 00:38:10,070
+latência, temos dependência da própria ligação da internet, não temos perigosidade dos dados,
+
+397
+00:38:10,070 --> 00:38:15,150
+porque podemos ter perigosidade na transmissão dos dados, mas depois os dados lá de lá
+
+398
+00:38:15,150 --> 00:38:21,230
+obviamente são processados e nós temos que confiar na entidade que está de lado de lá de lá,
+
+399
+00:38:21,389 --> 00:38:27,510
+todos nós temos essa questão, usamos um drive qualquer, eu uso o Google Drive e o One Drive
+
+400
+00:38:27,510 --> 00:38:32,949
+da Microsoft e de alguma forma eu confio nestas empresas de que os meus dados não vão ser
+
+401
+00:38:32,949 --> 00:38:38,030
+processados de uma forma muito agressiva, mas são, por algoritmos, são todos processados,
+
+402
+00:38:38,030 --> 00:38:44,070
+senão nós não tínhamos Google Drive, nem e-mails de graça. Pronto, eu sou sempre assim
+
+403
+00:38:44,070 --> 00:38:49,750
+um bocadinho contundente nisto, porque gosto de passar aos alunos esta noção, não é evil,
+
+404
+00:38:49,949 --> 00:38:56,349
+nós usarmos as coisas, agora nós temos é que ter essa noção. Imaginem, se vocês são o
+
+405
+00:38:56,349 --> 00:39:01,429
+exército americano, se vocês são uma agência super séria de segurança ou de inteligência de
+
+406
+00:39:01,429 --> 00:39:06,429
+um país relevante do mundo, como é a América, como é a China, como é eventualmente a Rússia
+
+407
+00:39:06,429 --> 00:39:12,829
+e a Alemanha e outros países assim grandes, nós não podemos estar a confiar que olha,
+
+408
+00:39:12,829 --> 00:39:17,469
+vou fazer aqui uma cena super importante que ninguém pode saber e vou pôr isto no Google Drive,
+
+409
+00:39:18,230 --> 00:39:23,269
+ou seja, vocês têm que ter sistemas próprios, todos controlados, em que vocês coordenam todas
+
+410
+00:39:23,269 --> 00:39:28,750
+as etapas daquilo, porque senão estarão a ter um leak gigantesco mais. Os próprios algoritmos
+
+411
+00:39:28,750 --> 00:39:33,949
+em criticação, nós temos que ter total controle daquilo e temos que ter serviços de inteligência
+
+412
+00:39:33,949 --> 00:39:39,309
+que nos assegurem com o máximo de confiança que não há países estrangeiros que consigam
+
+413
+00:39:39,309 --> 00:39:43,469
+crecar aquilo, que é algo que nós não temos a certeza. Os grandes blocos eventualmente
+
+414
+00:39:43,469 --> 00:39:52,590
+conseguem crecar os designados algoritmos de encriptação estadarite e eu acredito que
+
+415
+00:39:52,590 --> 00:39:59,789
+existam blocos que os conseguem desencriptar de uma forma perfeitamente rápida e eficaz,
+
+416
+00:39:59,789 --> 00:40:04,190
+foi assim que a Segunda Guerra Mundial foi ganha, foi com a traição dos alemães
+
+417
+00:40:04,190 --> 00:40:10,550
+não saberem que tinham o seu código de encriptação completamente crecados. Eu
+
+418
+00:40:10,550 --> 00:40:15,150
+vou fazer um exemplo de coisas que aconteceram para falar nesta questão. E depois toda esta
+
+419
+00:40:15,150 --> 00:40:20,989
+gestão é um misto disto de questões de segurança, de cyber segurança, de capacidade
+
+420
+00:40:20,989 --> 00:40:25,630
+computacional, de gestão dos dispositivos que temos e a engenharia é tudo isto,
+
+421
+00:40:25,630 --> 00:40:30,030
+é o gosto dos utilizadores, é aquilo que podemos fazer e é a forma como nós vamos
+
+422
+00:40:30,030 --> 00:40:35,469
+engenhar a coisa, ou seja, construir a solução para que funcione. Reparem, até há uns anos
+
+423
+00:40:35,469 --> 00:40:41,349
+quando tínhamos os smartphones que temos hoje, era tudo mais difícil. Hoje o smartphone é uma
+
+424
+00:40:41,349 --> 00:40:45,829
+plataforma que permite que muitas coisas sejam já integradas no smartphone, ou seja,
+
+425
+00:40:45,829 --> 00:40:50,750
+há um processamento junto do utilizador final, que neste caso será o Edge, neste caso o smartphone
+
+426
+00:40:50,750 --> 00:40:56,750
+é o Edge, e há logo ali um processamento que é feito que permite que a comunicação com a
+
+427
+00:40:56,750 --> 00:41:07,869
+comunicação seja muito mais limitada, menos dados, menos requesidos. E portanto, tudo isto não é
+
+428
+00:41:07,869 --> 00:41:13,510
+propriamente só sistemas embebidos, mas é também muito a gestão da coisa. O que eu queria falar
+
+429
+00:41:13,510 --> 00:41:19,150
+mais, e acho que já me estiquei muito nisto, é o FOG. O FOG é uma coisa intermédia que são
+
+430
+00:41:19,150 --> 00:41:23,389
+dispositivos ou uma espécie de mini-clouds que normalmente são utilizados, podem ser
+
+431
+00:41:23,550 --> 00:41:28,469
+outras coisas, mas normalmente são utilizados para coisas como fazer um pré-processamento de dados
+
+432
+00:41:28,469 --> 00:41:36,230
+que reduz a necessidade do payload que é mandado para lá, e portanto, pode em alguns casos compensar
+
+433
+00:41:36,230 --> 00:41:43,429
+termos uma mini-cloud mais perto que pré-processa e reduz muito o peso de comunicação com a
+
+434
+00:41:43,429 --> 00:41:49,030
+cloud centralizada. Podemos ter, por exemplo, uma espécie de uma encriptação localizada ou até
+
+435
+00:41:49,630 --> 00:41:55,469
+uma referência, uma rede local em FOG Computing que está a alimentar os Edge Devices e não
+
+436
+00:41:55,469 --> 00:42:07,190
+precisamos de fazer sair das nossas instalações informação classificada que temos o medo que
+
+437
+00:42:07,190 --> 00:42:13,710
+seja processada, pronto. Vou por sobre isso mais vezes entrar assim numas discussões,
+
+438
+00:42:13,789 --> 00:42:20,070
+mais para vos agitar as mentes e para vocês ficarem com estas coisas. Eu não estou a dizer
+
+439
+00:42:20,070 --> 00:42:26,030
+nada super elaborado, mas é para vos ajustar, agitar a mente para vocês ficarem a pensar nisto
+
+440
+00:42:26,030 --> 00:42:32,590
+e espero que isto fique com vocês para depois no futuro se perguntarem se estão a garantir
+
+441
+00:42:32,590 --> 00:42:36,789
+a segurança dos dados quando isso é relevante, se estão a gerir bem as baterias quando isso
+
+442
+00:42:36,789 --> 00:42:42,710
+é relevante, porque por exemplo, estarmos a assegurar com encriptação de dados que
+
+443
+00:42:42,710 --> 00:42:46,909
+não vão ser nenhuma e que não vai ter nenhum problema é um peso para as baterias, para a
+
+444
+00:42:46,909 --> 00:42:51,070
+computação que às vezes não faz sentido e isso é a engenharia também gostava que vocês
+
+445
+00:42:51,070 --> 00:42:55,110
+ficassem com essa perspetiva que a engenharia é também muito compromisso e muito chegar a
+
+446
+00:42:55,110 --> 00:43:01,349
+coisas novas. Pronto, depois isto eu já disse isso tudo vou andar para aqui e não vou estar agora
+
+447
+00:43:01,349 --> 00:43:08,309
+a falar disto, a possibilidade da cloud é isto é falhar rede e vocês param. Depois a
+
+448
+00:43:08,309 --> 00:43:12,829
+pergunta, a resposta à pergunta que me fizeram a educar, o Edge AI, arranjei aqui uma imagem que
+
+449
+00:43:12,829 --> 00:43:18,510
+mostro exatamente isso, no caso da cloud o treino e a inferência é feito centralizado na cloud
+
+450
+00:43:18,510 --> 00:43:25,389
+e é tudo mandado e depois os resultados são enviados, no caso deste aqui nós temos os dados
+
+451
+00:43:25,389 --> 00:43:30,550
+mandados para lá é treinado, o modelo treinado vem para aqui e a inferência já é local,
+
+452
+00:43:30,550 --> 00:43:35,949
+que era o que estávamos a falar e depois a pergunta do aluno que perguntou, peço desculpa
+
+453
+00:43:35,949 --> 00:43:41,670
+não sei o nome, temos aqui a cloud e temos aqui o treino e a inferência aqui no Edge. Mas isto o
+
+454
+00:43:41,670 --> 00:43:48,030
+carrinho aqui está com as rodas assim para o lado porque é exigir muito dele e acima de tudo,
+
+455
+00:43:48,030 --> 00:43:52,590
+não sei se pode haver sistemas em que faz sentido isto mas nós vamos ter que ter uma
+
+456
+00:43:52,590 --> 00:43:58,710
+capacidade computacional no dispositivo que é que depois vai estar tipicamente muito
+
+457
+00:43:58,710 --> 00:44:04,909
+sub aproveitada porque 99% do tempo o dispositivo vai estar a fazer a inferência e ele tem que
+
+458
+00:44:04,989 --> 00:44:10,190
+ter uma capacidade de processamento capaz de fazer o treino e portanto era como o aluno dizia,
+
+459
+00:44:10,190 --> 00:44:17,070
+não faz muito sentido e eu concordo totalmente com isto. Agora, só para vocês terem aqui
+
+460
+00:44:17,070 --> 00:44:22,949
+uma coisa que se agarra e não é que isto existe, a nível de alguns parâmetros a latência
+
+461
+00:44:22,949 --> 00:44:28,989
+na cloud é alta, não significa que seja alta mas significa é que exige toda uma estrutura
+
+462
+00:44:28,989 --> 00:44:34,070
+de indicações de internet que garanta temos e nós temos isso aqui na Europa,
+
+463
+00:44:34,070 --> 00:44:39,789
+Estados Unidos, nestes países desenvolvidos ou relativamente desenvolvidos temos latências
+
+464
+00:44:39,789 --> 00:44:43,989
+super incríveis, também tem que dizer uma coisa, graças a estas tecnológicas que fazem
+
+465
+00:44:43,989 --> 00:44:52,789
+muita coisa que nos facilita a vida, Google e etc que instalam coisas atrás de coisas que eu
+
+466
+00:44:52,789 --> 00:44:58,309
+não sei como é que eles conseguem incorporar isso nos custos mas conseguem e muito data
+
+467
+00:44:58,510 --> 00:45:04,510
+a internet acaba a ser por ser estruturada também por estas empresas o que é bom para nós mas lá
+
+468
+00:45:04,510 --> 00:45:08,550
+está levanta a questão porque é que estas empresas suportam tanta net que é por causa
+
+469
+00:45:08,550 --> 00:45:13,590
+do demodos não é? Bem há sim grandes discussões sobre isso na área da ciudade de segurança
+
+470
+00:45:13,590 --> 00:45:18,710
+mas a latência é mais alta e no EDES é mais baixa porquê? Porque a inferência é feita cá
+
+471
+00:45:18,710 --> 00:45:25,949
+portanto os dados são locais, a inferência é local e tira-se aqui as conclusões. A privacidade
+
+472
+00:45:25,949 --> 00:45:31,710
+é baixa porque temos transmitir dados e vamos pôr os nossos dados a terceiros, aqui é alta
+
+473
+00:45:31,710 --> 00:45:37,909
+porque os dados são repetidos. Atenção, é alta mediante o nível de segurança que vocês têm no
+
+474
+00:45:37,909 --> 00:45:42,510
+coisa, vocês vão ver, esta pessoa é muito acismada, não é cismada, é ver as coisas de várias
+
+475
+00:45:42,510 --> 00:45:46,949
+perspectivas. Para vocês terem um constreio na device, casos que eu não conheço,
+
+476
+00:45:46,949 --> 00:45:50,989
+não conheço, conheço os americanos de casos de espionagem que são coitos e depois conheço
+
+477
+00:45:50,989 --> 00:45:56,070
+que são típicos os russos e os chineses que são tramados e espionam tudo. Nas duas décadas
+
+478
+00:45:56,070 --> 00:46:01,670
+que antecederam este momento, por exemplo, os russos eram falados mas os chineses era o fim
+
+479
+00:46:01,670 --> 00:46:06,429
+porque foi o que levou hoje à disputa que temos, então os chineses eram terreais,
+
+480
+00:46:06,429 --> 00:46:10,750
+os gajos copiam tudo e foram apanhados a fazer isto e fazer aquilo, eles foram apanhados,
+
+481
+00:46:10,750 --> 00:46:14,869
+eles são apanhados como qualquer bloco é apanhado, a minha teoria é toda a gente
+
+482
+00:46:14,869 --> 00:46:20,110
+espiona, toda a gente espiona, é feio, não é bonito de fazer mas toda a gente espiona
+
+483
+00:46:20,429 --> 00:46:25,989
+e é óbvio que é da natureza humana e eu não gosto de nada disso mas é da natureza humana,
+
+484
+00:46:25,989 --> 00:46:30,909
+nós estamos a desenvolver uma solução e sabemos que existe na China uma empresa que
+
+485
+00:46:30,909 --> 00:46:35,590
+tem aquilo tudo feito. Há um momento no meio daquela competição que as pessoas vão,
+
+486
+00:46:35,590 --> 00:46:40,070
+pelo menos a um dia vinho que vai acender na cabeça da pessoa e diz, e se arranjar-se
+
+487
+00:46:40,070 --> 00:46:44,789
+um bacano na China que me descesse aquilo para eu acelerar? E acho que entre os blocos
+
+488
+00:46:44,989 --> 00:46:50,949
+aconteceu na disputa entre a América e a União Soviética, aconteceu na Roma Antiga,
+
+489
+00:46:50,949 --> 00:46:54,670
+aconteceu no Império Griego, naquelas coisas todas, portanto nós devemos assumir que
+
+490
+00:46:54,670 --> 00:46:59,230
+isto vai acontecer mesmo que não aconteça. Tenho um caso de um amigo que é engenheiro,
+
+491
+00:46:59,230 --> 00:47:03,869
+tirou o curso na FIUBE e trabalhava numa empresa, na altura era solteiríssimo e ele
+
+492
+00:47:03,869 --> 00:47:09,230
+cismou que estava a ser espionado porque havia uma empresa italiana que saía com
+
+493
+00:47:09,230 --> 00:47:16,349
+pessoas relativamente próximas das deles, davam alguma latência, alguns atrasos a
+
+494
+00:47:16,349 --> 00:47:20,429
+eles e tal, nunca faziam nada à frente deles e ele aprecedeu-se de uma coisa,
+
+495
+00:47:20,429 --> 00:47:23,789
+também é um gajo, se calhar ainda mais cismado do que eu e disse, isto é impossível,
+
+496
+00:47:23,789 --> 00:47:28,590
+eles nunca nos adiantam e eles se fizessem as coisas, pelo menos algumas vezes eles
+
+497
+00:47:28,590 --> 00:47:32,909
+iam à nossa frente, eles vão sempre atrás e metem tipo um atraso aleatório e cismou
+
+498
+00:47:32,909 --> 00:47:37,349
+que eles o coisavam. O dono da empresa ria-se dele, mas o tipo como tinha tempo
+
+499
+00:47:37,389 --> 00:47:43,110
+continuou a cismar com aquilo até que passava quase um ano, ele às vezes ficava na empresa e
+
+500
+00:47:43,110 --> 00:47:48,070
+pôs umas câmaras e umas cenas e tal e descobriu, havia uma na Zona Industrial da
+
+501
+00:47:48,070 --> 00:47:52,590
+Maia havia uma carrinha, uma Ford Transit, passava lá e recolhiam o lixo e não era
+
+502
+00:47:52,590 --> 00:47:56,349
+a empresa do lixo, era aquela carrinha que duas ou três vezes por semana recolhiam o lixo.
+
+503
+00:47:56,349 --> 00:48:01,389
+Conclusão, ele implementou um sistema de eliminação física de todas as provas do
+
+504
+00:48:01,389 --> 00:48:06,989
+desenvolvimento, do fabrico, segurou todos os servidores das coisas, as coisas do ID que
+
+505
+00:48:07,190 --> 00:48:11,949
+fazia, levou-os para casa dele e criptou tudo. Conclusão, passava pouco tempo a
+
+506
+00:48:11,949 --> 00:48:15,349
+empresa italiana estava em dificuldades, passados dois anos estava em insolvencia.
+
+507
+00:48:15,349 --> 00:48:21,429
+Ou seja, o que é que eles faziam? Eles pagavam alguém que contratava uns bacanos
+
+508
+00:48:21,429 --> 00:48:27,429
+em Portugal que recolhiam o lixo daquilo. Aquilo depois de meter o polícia e os
+
+509
+00:48:27,429 --> 00:48:35,309
+após o lixo, recolhiam as empresas. Agora cada vez é com esta informação,
+
+510
+00:48:35,429 --> 00:48:38,670
+como engenheiros, acho que nós temos que ter essa perspectiva da segurança,
+
+511
+00:48:38,670 --> 00:48:42,670
+porque também é isso que nós fazemos, trazer esta este cuidado. Ora bem, o time
+
+512
+00:48:42,670 --> 00:48:47,269
+ML, gente, o time ML é o extremo, é o mínimo, é quando vamos para alguns nanos
+
+513
+00:48:47,269 --> 00:48:52,469
+e coisas assim muito pequeninos, isto é o exagero. Quantidades de memória muito
+
+514
+00:48:52,469 --> 00:48:56,909
+baixas, CPUs altamente limitadas e a transposição de modelos para coisas
+
+515
+00:48:56,909 --> 00:49:01,550
+dessas, portanto, depois há estes pronosos, os megahertz, não os gigahertz, as memórias
+
+516
+00:49:02,110 --> 00:49:05,710
+agora, este tipo de dispositivos até já estão muito mais fibrosos do que eram
+
+517
+00:49:05,710 --> 00:49:09,630
+antigamente e os consumos aniligados, essencialmente se vocês precisarem de
+
+518
+00:49:09,630 --> 00:49:13,670
+autonomias elevadas em dispositivos operados por bateria, ou alimentados
+
+519
+00:49:13,670 --> 00:49:18,789
+por bateria. Pronto, os quatro pilares do Edge, a latência, a largura de banda
+
+520
+00:49:18,789 --> 00:49:24,389
+para terem conectividade, a privacidade e a segurança, a fiabilidade e a autonomia.
+
+521
+00:49:24,510 --> 00:49:31,150
+Pronto, depois tenho aqui Isto, mas acho que vocês, isto eu posso falar. Aplicações
+
+522
+00:49:31,150 --> 00:49:36,349
+críticas que não podem esperar, não podem ter atraso na decisão e portanto
+
+523
+00:49:36,349 --> 00:49:41,789
+isto é importante, confusão autônoma, a robótica colaborativa, processos médicos,
+
+524
+00:49:41,789 --> 00:49:48,429
+biomédicos para e fora, a largura de banda, é lá está, isto está a dar aqui
+
+525
+00:49:48,429 --> 00:49:53,949
+uma perspectiva um bocado polarizada, porque a largura de banda é ter a largura de banda que
+
+526
+00:49:53,989 --> 00:50:01,750
+pode ser na perspectiva terem uma grande largura de banda na vossa conexão ou então terem uma
+
+527
+00:50:01,750 --> 00:50:08,949
+capacidade de processar localmente ou comprimir-se para cloud, em que terem atenção conforme a
+
+528
+00:50:08,949 --> 00:50:13,670
+solução. Eu queria só chegar a uma coisa, a privacidade, já falei disto e a fiabilidade.
+
+529
+00:50:13,670 --> 00:50:18,070
+Pronto, essencialmente a operação em condições difíceis, que eu optei por pôr aquilidromes,
+
+530
+00:50:18,070 --> 00:50:22,150
+que é bonito e também tem mais impacto, mas depois isto é a nível industrial, em nível
+
+531
+00:50:22,269 --> 00:50:29,389
+de que imaginem a cápsula endoscópica quebra evolutiva e passa todo o trato digestivo de
+
+532
+00:50:29,389 --> 00:50:33,510
+uma pessoa, portanto tem que aguentar aquelas condições, tem que operar, tem que ser capaz
+
+533
+00:50:33,510 --> 00:50:38,829
+de um dispositivo que tem um centímetro e pouco e portanto tem que ter iluminação, câmaras,
+
+534
+00:50:38,829 --> 00:50:45,550
+telemetria, capacidade de transmitividades com telemetria, autonomia, uma bateria,
+
+535
+00:50:45,550 --> 00:50:49,510
+tem que ter segurança para o paciente que não vai fazer leak de nada, tem que não
+
+536
+00:50:49,590 --> 00:50:55,190
+entrar ácidos que riam e ideologizar aquilo e tem que funcionar durante um período de 4, 5, 6 horas
+
+537
+00:50:55,190 --> 00:51:00,230
+enquanto recolhe imagens, portanto a questão da fiabilidade. O que é que eu vos queria falar?
+
+538
+00:51:00,230 --> 00:51:10,829
+Pronto, a engenharia das distrições, já falei disto, gerir o postamento computacional,
+
+539
+00:51:10,829 --> 00:51:16,869
+a memória, a quantidade de disco, ou seja, de flash onde conseguimos guardar as coisas e a energia.
+
+540
+00:51:17,190 --> 00:51:21,550
+Depois isto, muito ganso, isto aqui que já é mais caríssimo, nós estamos um bocadinho
+
+541
+00:51:21,550 --> 00:51:28,230
+apertados, mas eu vou aproveitar que não temos todo o tempo do mundo e vou-vos mostrar
+
+542
+00:51:28,230 --> 00:51:32,989
+aqui um outro PowerPoint para começarmos, que na próxima aula quero-vos falar aquelas
+
+543
+00:51:32,989 --> 00:51:39,510
+várias coisas. Windows, Windows, Windows, e é isto. Desculpem-se de ter ouvido-vos em sartes real.
+
+544
+00:51:39,510 --> 00:51:53,179
+Põe-vos, põe-vos isto. Deixem-me ver só se põe-vos tipo no fim de semana ou na
+
+545
+00:51:53,179 --> 00:51:57,139
+sexta-feira põe-vos para ver se põe-vos isto mais bonitinho, se não isto ficar sem
+
+546
+00:51:57,139 --> 00:52:01,260
+flueira e também queria dar assim uma, toda isto, mas eu quero também aproveitar para
+
+547
+00:52:01,260 --> 00:52:05,460
+dar-vos aqui umas coisinhas nisto. Data saem se não quero, o que é que eu vos quero falar?
+
+548
+00:52:05,460 --> 00:52:13,059
+Quero-vos falar do pipeline, deixem-me só ver para trás. Ah, o gajo, espera lá. Deixem-me só
+
+549
+00:52:13,260 --> 00:52:16,980
+uma coisa, abrir novamente isto, isto teve tanto tempo que acho que vou perder as imagens.
+
+550
+00:52:16,980 --> 00:52:22,900
+Não sei se é fácil. Eu compilo-vos, sim, eu não se preocupo bem que eu compilo-vos isto.
+
+551
+00:52:22,900 --> 00:52:29,420
+Eu hoje é que não quis estar a pôr o que estive a refletir sobre algumas coisas que eu queria.
+
+552
+00:52:29,420 --> 00:52:34,619
+A refletir é uma coisa boa, os alentos adoram isso, né? O gajo está ali nas calmas,
+
+553
+00:52:34,619 --> 00:52:38,659
+eu tenho essa costela, gosto de pensar nas coisas e tal, enquanto que penso. Estou em
+
+554
+00:52:38,820 --> 00:52:44,980
+uma coisa incrível. Isto não interessa, aqui são coisas que são muito massudas por aqui.
+
+555
+00:52:44,980 --> 00:52:54,099
+Eu tenho essa costela, não, será aquilo que eu falei da inteligência artesial, isto também
+
+556
+00:52:54,099 --> 00:53:04,820
+não, estão coisas. Posso só mostrar aqui três pessoas. E são pontos, foram pontos
+
+557
+00:53:05,059 --> 00:53:11,699
+principalmente desta área, este Jim Gray foi o que fundou, ou que criou o conceito do fordo
+
+558
+00:53:11,699 --> 00:53:16,099
+paradigma. Isto pode parecer uma coisa que não é muito relevante, mas é porque o quarto paradigma
+
+559
+00:53:16,099 --> 00:53:22,059
+da ciência é o data science, ou seja, é ciência baseada em dados, ou seja, nós agora estamos
+
+560
+00:53:22,059 --> 00:53:27,260
+numa abordagem não de simulação, mas uma abordagem baseada em dados. E então isto é o
+
+561
+00:53:27,260 --> 00:53:31,099
+fundamento que nós estamos a trabalhar, o nosso mundo está neste momento a transitar para
+
+562
+00:53:31,300 --> 00:53:35,420
+o mundo. É uma coisa quase filosófica e as pessoas às vezes não se apercebem,
+
+563
+00:53:35,420 --> 00:53:41,019
+e este senhor Jim Gray que não é nada falado, eu acho que é importante chamar as coisas pelo
+
+564
+00:53:41,019 --> 00:53:47,659
+nome, é incrível que ele tenha o Turing Award, mas é uma pessoa que tem muita importância
+
+565
+00:53:47,659 --> 00:53:52,500
+na fundação daquilo que é a nossa forma de viver atual. Depois o segundo é este
+
+566
+00:53:52,500 --> 00:53:57,739
+Geoffrey Hinton, que é chamado o avôzinho do deep learning, mas não é só isso,
+
+567
+00:53:57,940 --> 00:54:03,260
+ele trabalhou décadas e décadas, eu no meu doutoramento estudei muita coisa feita por ele
+
+568
+00:54:03,260 --> 00:54:08,539
+e pela equipa dele, e é notável o trabalho deste senhor, ele ganhou um Turing Award,
+
+569
+00:54:08,539 --> 00:54:13,860
+entretanto eu não tenho aqui, mas ele ganhou um Nobel qualquer. E esta senhora Fei Fei Li,
+
+570
+00:54:13,860 --> 00:54:19,780
+que é uma, acho que é chinesa, trabalha na Universidade de Stanford e faz uma coisa
+
+571
+00:54:19,780 --> 00:54:23,300
+incrível, que às vezes é preciso ter homens, outras vezes é preciso ter mulheres,
+
+572
+00:54:23,500 --> 00:54:28,579
+é preciso temos diversidade de pessoas e de pensamentos. Ela apercebe-se de uma coisa
+
+573
+00:54:28,579 --> 00:54:34,019
+que muita gente via e ela tem a iniciativa e é a grande contribuição dela e ganhou
+
+574
+00:54:34,019 --> 00:54:39,139
+imensos prémios por causa disso. Ela criou a Imaginet, que é uma base de dados gigantesca,
+
+575
+00:54:39,139 --> 00:54:44,900
+que foi o que foi necessário para treinar as 100 anos na altura. E depois agora tenho
+
+576
+00:54:44,900 --> 00:54:50,219
+uma coisa que é o AI for all, que eu já nem me lembro o que faz, mas se vocês tiverem
+
+577
+00:54:50,219 --> 00:54:55,739
+um like, vão ver. Aliás, eu tenho isto aqui nas minhas Pecanodes, vocês devem, eu partilhei,
+
+578
+00:54:55,739 --> 00:55:06,420
+vocês não estão a ver o PowerPoint ou estão? Não. Meu Deus, o postor foi um tó tó, então
+
+579
+00:55:06,420 --> 00:55:11,179
+este parque ia falar e vocês não estão a ver nada, desculpem, que mau aspecto. Olha,
+
+580
+00:55:11,179 --> 00:55:15,579
+pronto, peço-vos desculpa, eu aqui ia falar todo entusiasmado e vocês sem verem isto,
+
+581
+00:55:15,780 --> 00:55:22,500
+não te acontece. Nada vai ser pior do que a cena que uma vez que eu estava a começar no Tim,
+
+582
+00:55:22,500 --> 00:55:28,460
+e disse não sei quê, e vou partilhar e fechei a sessão, foi engraçadíssimo. Portanto,
+
+583
+00:55:28,460 --> 00:55:33,380
+pronto, então, este é o Jim Gray, o tal senhor, o Joffrey Hinton e a Feifei Lica,
+
+584
+00:55:33,380 --> 00:55:38,340
+a tal senhora que fez a Imaginet. Isto foi, este contributo dela é tão ou mais
+
+585
+00:55:38,340 --> 00:55:42,860
+importante, claro, que todos os outros, porque sem esta base de dados o deep learning nunca
+
+586
+00:55:42,860 --> 00:55:48,420
+foi dada à taxa que boiou, portanto ela foi a pessoa que teve a sensibilidade de dizer assim,
+
+587
+00:55:48,420 --> 00:55:54,019
+está toda a gente nos movê-los, imagina, vai-se fazer uma festa dos cachorros e toda a gente
+
+588
+00:55:54,019 --> 00:55:59,019
+faz tudo, tem as melhores salsichas, os melhores molhos e tal, e há uma pessoa que diz pão,
+
+589
+00:55:59,019 --> 00:56:03,780
+é preciso pão, e apercebe-se que é preciso assim uma cena que é essencial e que ninguém
+
+590
+00:56:03,780 --> 00:56:07,699
+estava a ver. Portanto, achei incrível isso. Pronto, depois aqui a questão que eu gerei
+
+591
+00:56:08,539 --> 00:56:15,579
+nós opostamos os dados, geramos estas barras do que temos lá, isso é super importante.
+
+592
+00:56:15,579 --> 00:56:22,340
+Depois disto não interessa, data science gente, uma coisa muito importante, matemáticas e
+
+593
+00:56:22,340 --> 00:56:27,139
+estatísticas, os pilares do data science, matemática e estatística, programação e o
+
+594
+00:56:27,139 --> 00:56:30,980
+business acumen, o que é que é isto? Matemática e estatística toda a gente sabe o que é,
+
+595
+00:56:30,980 --> 00:56:36,579
+programação e capacidade de programarmos os movimentos, o business acumen é essencialmente
+
+596
+00:56:36,659 --> 00:56:40,940
+perceber a lógica do negócio. Os alunos aqui que são de engenharia informática devem falar
+
+597
+00:56:40,940 --> 00:56:46,380
+disto extensivamente no custo deles e é percebemos a lógica do negócio. Não adianta nós
+
+598
+00:56:46,380 --> 00:56:51,780
+sermos uns programadores bons se depois não interagirmos com as equipas das empresas que
+
+599
+00:56:51,780 --> 00:56:56,099
+nos explicam, olha eu quero isto assim, é importante, mas atenção isto por menor, esta é
+
+600
+00:56:56,099 --> 00:57:00,699
+a diferença entre muito software feito na Europa e software, por exemplo, vou dar sempre
+
+601
+00:57:00,699 --> 00:57:04,860
+o exemplo de quem está à frente, os Estados Unidos, a gente olha para o Teams e às vezes
+
+602
+00:57:05,059 --> 00:57:09,780
+a gente diz, como é que eles puseram isto aqui? Porque trabalharam naquilo, falaram com quem está
+
+603
+00:57:09,780 --> 00:57:14,659
+por dentro, afinaram versões e versões e versões e mesmo o próprio Teams nós estamos
+
+604
+00:57:14,659 --> 00:57:19,860
+a dar aulas lá e com frequência eu olho para aquilo e digo, eu não estou a usar nada disto,
+
+605
+00:57:19,860 --> 00:57:24,780
+nós estamos a usar o Teams em menos de 10%, usamos as funcionalidades de base que nos
+
+606
+00:57:24,780 --> 00:57:29,380
+permitem fazer grande parte da coisa, mas o Teams é uma plataforma muito mais poderosa e
+
+607
+00:57:29,380 --> 00:57:34,619
+da mesma forma que é o Teams, estamos a falar de tudo, software incluindo software de
+
+608
+00:57:34,619 --> 00:57:38,099
+inclusão artificial e temos este feedback de quem está na área, é super importante.
+
+609
+00:57:38,099 --> 00:57:41,699
+Pronto, não vou perder mais tempo nisto, só para terminar também que nos vou aprender
+
+610
+00:57:41,699 --> 00:57:47,219
+além da hora, o processo data science e machine learning é parecido, definir o nosso
+
+611
+00:57:47,219 --> 00:57:52,699
+problema, fazer a coleção de dados, a recolha de dados, o pré-processamento, depois o
+
+612
+00:57:52,699 --> 00:57:58,420
+data que vos falei a bocado, desenvolvimento de modelo e evaluation, deployment and maintenance,
+
+613
+00:57:58,420 --> 00:58:03,500
+já falei, onde é que entra e porque é que mostro isto? Os data engineers, a malta que está
+
+614
+00:58:03,500 --> 00:58:09,940
+essencialmente a processar e a tratar dos dados, a malta das bases de dados que organiza a
+
+615
+00:58:09,940 --> 00:58:14,940
+ingestão daquelas coisas, a gestão dos dados, tudo aquilo, tanto malta das bases de dados
+
+616
+00:58:14,940 --> 00:58:19,500
+que está aqui no data engineer, isto é uma carreira em si só, ok? Esta gestão, o pré-processamento
+
+617
+00:58:19,820 --> 00:58:24,860
+depois o data analyst que é a pessoa que faz o pré-processamento e o analgo exploratório
+
+618
+00:58:24,860 --> 00:58:29,940
+dos dados, também superou uma coisa que está agora a entrar e são profissões de futuro,
+
+619
+00:58:29,940 --> 00:58:34,579
+ok? E uma machine learning engineer que é onde eu gosto de estar e onde alguns de vocês
+
+620
+00:58:34,579 --> 00:58:39,179
+também vão gostar, desenvolvimento de modelos e o deployment que é essencialmente treinar
+
+621
+00:58:39,179 --> 00:58:44,659
+e afinar modelos para serem eficientes e depois pô-los a funcionar e a serem úteis
+
+622
+00:58:44,860 --> 00:58:49,739
+e nem tudo isto. Mas reparem, nós dependemos dos datasets, nós não notamos muito que vamos
+
+623
+00:58:49,739 --> 00:58:54,940
+às plataformas buscar datasets que já foram recolhidos e curados por outras pessoas e estão
+
+624
+00:58:54,940 --> 00:59:00,619
+impecáveis, não é? O Iris e milhares de datasets que estão aí nas plataformas de data
+
+625
+00:59:00,619 --> 00:59:05,019
+e temos lá os dados e dizem, ah isto é incrível, isto é muito fácil, temos um dataset,
+
+626
+00:59:05,019 --> 00:59:11,099
+pois é, é muito fácil, mas o Robert Fischer andou a medir aquelas flores há 100 anos,
+
+627
+00:59:11,179 --> 00:59:16,460
+e é que para nós temos isto, alguém teve que ir para o CUB fazer o trabalho, então é só,
+
+628
+00:59:16,460 --> 00:59:20,980
+desculpem que eu às vezes repito-me um bocado, mas é para tentar ilustrar os conceitos.
+
+629
+00:59:21,739 --> 00:59:29,260
+Olha pessoal, a minha vontade era continuar, mas não é justo. Acho que vamos já falar para
+
+630
+00:59:29,260 --> 00:59:32,739
+fechar a aula, mas acho que fico por aqui. Na próxima aula tenho que ver o que vamos dar,
+
+631
+00:59:32,739 --> 00:59:37,900
+mas queria-vos só falar de machine learning e queria-vos mostrar coisinhas como, como é
+
+632
+00:59:38,099 --> 00:59:43,940
+que é uma rede, o que é o offline online learning, que é uma coisa fácil de explicar,
+
+633
+00:59:43,940 --> 00:59:51,019
+quais são as operações básicas de aprendizagem, o supervisionado é a classificação e a regressão,
+
+634
+00:59:51,019 --> 00:59:54,460
+só para vocês ficarem com um cheirinho de falso para lá para a semana e outras coisas,
+
+635
+00:59:54,460 --> 00:59:58,739
+como é que se treinam estes modelos, depois temos para aqui umas imagens, umas coisas bonitas,
+
+636
+00:59:58,739 --> 01:00:03,460
+aprendizagem por reforço, quero só mostrar isto, não vamos entrar por aqui, mas só para
+
+637
+01:00:03,460 --> 01:00:07,860
+vocês verem. O ciclo já está aqui de outra maneira, que já tínhamos falado há um bocado,
+
+638
+01:00:07,860 --> 01:00:13,659
+mas eu pus aqui, não te contestam. E depois vamos falar sobre classificação e regressão,
+
+639
+01:00:13,659 --> 01:00:18,340
+eventualmente só, mas queria que isto fosse falar porque tem outras coisas a dar. Os tipos
+
+640
+01:00:18,340 --> 01:00:24,139
+de classificação, o praticinamento dos dados para treino, isto que eu estou aqui a falar,
+
+641
+01:00:24,139 --> 01:00:28,900
+é estranho para algumas pessoas ou vocês mais ou menos já conhecem isto?
+
+642
+01:00:33,940 --> 01:00:40,500
+Eu já conheço alguma parte, sim. Mas já conhecem, ou de outra forma,
+
+643
+01:00:40,500 --> 01:00:44,219
+vamos tentar por quem não. Há aqui alguém que nunca ouviu falar nesta, no praticinamento
+
+644
+01:00:44,219 --> 01:00:51,019
+de dados, nestas coisas que eu falei aqui, por exemplo, classificação binária ou classificação
+
+645
+01:00:51,019 --> 01:00:54,659
+e regressão, isto são termos totalmente estranhos para alguém, não tenham vergonha,
+
+646
+01:00:54,659 --> 01:00:58,579
+a sério, é importante é… Eu nunca ouvi. Pronto, há aqui um aluno que nunca ouviu.
+
+647
+01:00:58,579 --> 01:01:02,739
+Então para a semana falamos um bocadinho nisto e depois o resto das coisas que eu tenho
+
+648
+01:01:02,900 --> 01:01:08,099
+a falar… Há para a semana? Não, na quinta-feira, não é? Desculpem. Eu estou a trabalhar em
+
+649
+01:01:08,099 --> 01:01:12,019
+semanas, não, isso era nas férias, agora é quinta-feira. Daqui a dois dias estamos a falar
+
+650
+01:01:12,019 --> 01:01:16,420
+disso, está bem? Perguntas de hoje. Vocês, desculpem que isto foi assim a desprejar um
+
+651
+01:01:16,420 --> 01:01:22,420
+bocado, mas a ideia foi partilhar com vocês o máximo que consegui hoje. Dúvidas,
+
+652
+01:01:22,420 --> 01:01:24,820
+o que é que ficou hoje que vocês não perceberam? Diga-se, não, desculpem,
+
+653
+01:01:24,820 --> 01:01:33,139
+esteve ali a falar, eu não entendi aquilo. Meu Deus, ninguém tem dúvidas? Vocês estão a
+
+654
+01:01:33,139 --> 01:01:36,579
+dizer que eu tenho um ótimo professor, eu estranho, que eu conheço-me, eu sei que também
+
+655
+01:01:36,579 --> 01:01:42,340
+falho. Pronto, vocês não têm dúvidas. Opa, estejam à vontade, perguntem, não tenham com
+
+656
+01:01:42,340 --> 01:01:46,940
+coisas, eu se não souber, digam. E vocês hoje têm uma sorte que eu não tinha no meu tempo,
+
+657
+01:01:46,940 --> 01:01:51,780
+vocês têm. Isto não é tirar-me de nada, vocês disponham, vocês têm o meu email,
+
+658
+01:01:51,780 --> 01:01:57,260
+têm o Teams, contactem-me sempre que precisarem. Epá, mas vocês hoje têm uma coisa
+
+659
+01:01:57,260 --> 01:02:03,860
+incrível, eu adorava em 1994 ter tido isto, que é um raio de uns chat-gp, de uns eminaicos,
+
+660
+01:02:03,860 --> 01:02:33,380
+responda tudo, que é maravilhoso. Caríssimos, diga-me, o LeadAI, o LeadAI, oh, o LeadAI é
+
+661
+01:02:33,380 --> 01:02:38,340
+uma cena que eu pus aqui alguns, eu explico, isto é fixe, eu por acaso nem sei se o instalei,
+
+662
+01:02:38,340 --> 01:02:41,780
+mas eu acho que tão perfeito está. Pronto, o LeadAI é uma aplicação de entusiasmo
+
+663
+01:02:41,780 --> 01:02:45,940
+ideal, que tem um free tier, que vamos ver se ele funciona, está aqui para as nossas aulas,
+
+664
+01:02:45,940 --> 01:02:50,900
+o que é que ele faz? Ele aviciona-se como se fosse uma pessoa, se vocês forem ver,
+
+665
+01:02:50,900 --> 01:02:56,340
+ele está cá hoje. Onde é que ele está? Não sei a se ele aguenta este tempo todo.
+
+666
+01:02:56,340 --> 01:03:00,099
+Pois ele já não deve estar e deixamos o email, porque ele deve ter terminado a
+
+667
+01:03:00,099 --> 01:03:04,739
+sua sessão e mandou o relatório. É isso, pronto, porque isto foi longo,
+
+668
+01:03:04,739 --> 01:03:09,219
+mas porquê? Porque se nós pagássemos, se nós fôssemos uns gabricáceos, se fossemos ali
+
+669
+01:03:09,219 --> 01:03:14,179
+para o país do lance e que a nossa universidade tivesse muito dinheiro, nós tínhamos isto a
+
+670
+01:03:14,179 --> 01:03:20,659
+funcionar. Porquê? Ele basicamente, ele guarda isto e faz um relatório de estudo textual e
+
+671
+01:03:20,659 --> 01:03:25,380
+depois, quer vocês, quer eu, aceitemos que eu posso partilhar com vocês ou não, mas partilharia
+
+672
+01:03:25,380 --> 01:03:29,940
+obviamente, tinha que configurá-lo para que era, às vezes, uma piada que se diz ou coisa que
+
+673
+01:03:29,940 --> 01:03:34,980
+fica mal, não é? Mas vocês depois podem ficar com estes relatórios aqui e ele,
+
+674
+01:03:34,980 --> 01:03:38,739
+imagina, e depois vocês, tá, quem é que aquela pessoa teve a falar na primeira aula, que eu já
+
+675
+01:03:38,739 --> 01:03:45,059
+não me lembro, e perguntam a um LLM ou pegam na transcrição, metem no vosso LLM de preferência
+
+676
+01:03:45,059 --> 01:03:48,179
+e dizem, olha, quem é que ele teve a falar? Falou disto, falou aquilo, olha, o gajo andou
+
+677
+01:03:48,179 --> 01:03:51,940
+aqui, andou lá, falou disto e, portanto, essencialmente, lá está. Novamente, é a
+
+678
+01:03:51,940 --> 01:03:56,980
+geração de dados, é o que aconteceu aqui não fica gravado, porque ficar gravado é pesado
+
+679
+01:03:56,980 --> 01:04:02,699
+e é muita coisa, mas pode-se adicionar aqui uma coisa que faz uma transcrição do que aqui
+
+680
+01:04:02,699 --> 01:04:09,980
+falamos e depois, no final, podemos ter, olha, a transcrição, fazer um resumo e points,
+
+681
+01:04:09,980 --> 01:04:14,059
+a opostora que enganou-se em alguma coisa durante a aula, olha, enganou-se aqui neste ponto,
+
+682
+01:04:14,059 --> 01:04:18,699
+pode-me dar uma boa opostora, eu aqui não percebi isto, ah, tal, olha, ah, pera lá que enganei-me,
+
+683
+01:04:18,699 --> 01:04:24,699
+portanto, o mundo de possibilidades é imenso, ah pá, e é isto, portanto, é o que eu digo,
+
+684
+01:04:24,699 --> 01:04:29,739
+a inclusão especial vai ter um impacto. Vocês aqui nesta fosgradação, tão focados numa coisa,
+
+685
+01:04:29,739 --> 01:04:35,219
+é óbvio que estes modelos grandes vão sempre causar-nos este impacto e têm que causar,
+
+686
+01:04:35,219 --> 01:04:40,179
+porque eles fazem parte da nossa vida. Agora, o foco aqui é depois na transcrição para modelos
+
+687
+01:04:40,179 --> 01:04:45,699
+pequeninos que fazem as coisas maravilhosas da vida, um sistema de bombas, um sistema de uma
+
+688
+01:04:45,699 --> 01:04:50,940
+máquina com um ti-ar e nós vamos lá pôr machine learning, um sistema de eletrónica potência,
+
+689
+01:04:50,940 --> 01:04:55,139
+como há um bocado falávamos com um aluno que é especializado nessa área, e depois nós
+
+690
+01:04:55,139 --> 01:04:59,139
+vamos pôr lá machine learning e resolver problemas que não conseguíamos, porque não
+
+691
+01:04:59,139 --> 01:05:03,940
+tínhamos algoritmos com a inteligência suficiente para gerir muito melhor uma gestão de uma
+
+692
+01:05:03,940 --> 01:05:12,739
+bateria, para fazer inferência, ah, sei lá, no, no, no coisa que a Sara falou, todos os
+
+693
+01:05:12,739 --> 01:05:17,940
+projetos dela e por aí fora, estão a ver, e portanto é isto, ou seja, nós hoje temos mais
+
+694
+01:05:17,940 --> 01:05:23,380
+inteligência, mais distribuída, temos capacidade de ater nos algoritmos e de aplicar lá.
+
+695
+01:05:23,579 --> 01:05:28,099
+Eu estou assim um bocado filosófico, não é isso que sequer daqui, mas é a primeira aula e também é
+
+696
+01:05:28,099 --> 01:05:33,340
+supostamente falarmos disso. Pronto, gente, e pronto, o idea é isso, só que uma gente não
+
+697
+01:05:33,340 --> 01:05:39,460
+paga, ele dá ali uns 30 ou 40 minutos e depois acaba, ah, mas pagando é uma cena
+
+698
+01:05:39,460 --> 01:05:43,179
+espetacular, porque depois ficamos com a transcrição, eu próprio posso fazer a
+
+699
+01:05:43,179 --> 01:05:48,420
+auditoria às minhas aulas, etc, etc, etc, mas vocês isso depois também já conhecem.
+
+700
+01:05:48,619 --> 01:06:11,260
+E agora, só para terminar, onde admiro isso, já tive a sua idade, mas vou-vos dizer, eu estou
+
+701
+01:06:11,260 --> 01:06:19,739
+cansado de experimentar, eu há dois anos, eu há, desde o Covid, eu ganhei um bocadinho de
+
+702
+01:06:19,739 --> 01:06:23,219
+hipertensão arterial, porque isto ficou tão fixe, com tanta coisa para fazer, que um gajo
+
+703
+01:06:23,219 --> 01:06:29,260
+começou a ficar super dentro disto, mas o problema é, eu quando comecei a dar a cadeira
+
+704
+01:06:29,260 --> 01:06:34,099
+de hipertensão arterial, eu andava com um desesmado, em que só para vocês terem uma
+
+705
+01:06:34,099 --> 01:06:38,019
+ideia, eu aderia, imagina, em uma das redes sociais, não sei se era o TikTok, se era o
+
+706
+01:06:38,019 --> 01:06:42,460
+Instagram, e tudo que eu fazia lá era só ter coisas de hipertensão arterial, então eu
+
+707
+01:06:42,460 --> 01:06:49,739
+tinha um OneNote da Microsoft, só para apontar, tipo como se fosse quase um bookmark
+
+708
+01:06:49,739 --> 01:06:54,619
+manager de ferramentas. Eu vou-vos dizer, ainda aguentei isto até chegar ao OpenClock,
+
+709
+01:06:54,820 --> 01:07:00,380
+o OpenClock estava a surgir, ainda ninguém falava dele, eu disse, esquece, eu nunca mais
+
+710
+01:07:00,380 --> 01:07:09,789
+na vida, deixa eu ver, eu nunca mais na vida quero, eu nunca mais, desculpa, não era
+
+711
+01:07:09,789 --> 01:07:15,269
+a minha escolha só, a perguntar se isto me amoravas, eu não quero, eu, André, admiro
+
+712
+01:07:15,269 --> 01:07:20,150
+imenso, já fiz isso imenso e gosto de acompanhar, mas agora já não leio, o que é que eu faço?
+
+713
+01:07:20,150 --> 01:07:24,750
+Agora peço aos modelos, pela solução que preciso, porque assim eu vou-vos dizer,
+
+714
+01:07:25,190 --> 01:07:30,510
+a minha cabeça estava aí abaixo, porque a taxa de emergência de coisas, de soluções e de
+
+715
+01:07:30,510 --> 01:07:34,750
+modelos é uma coisa assustadora, eu tentei acompanhar, mas não consegui, é brutal,
+
+716
+01:07:34,750 --> 01:07:39,829
+essas soluções que fala, vou-lhe dizer, eu agora, eu instalo quando preciso e vou atrás,
+
+717
+01:07:39,829 --> 01:07:44,829
+porque tentar acompanhar o mercado está brutal, vejam só, por exemplo, nas soluções para
+
+718
+01:07:44,829 --> 01:07:51,750
+o Agente IKI do OpenClock, não é? Bem, isso agora está mais estabilizado, mas houve uma
+
+719
+01:07:51,750 --> 01:07:57,829
+que era N por semana e nós também temos que preservar a nossa inteligência natural,
+
+720
+01:07:57,829 --> 01:08:02,670
+que é biológica, à custa da inteligência artificial, ou seja, que ela nos seja útil,
+
+721
+01:08:02,670 --> 01:08:07,110
+e sim, já agora ninguém perguntou, mas eu acho que a inteligência artificial é uma cena
+
+722
+01:08:07,110 --> 01:08:13,070
+incrível, é uma ferramenta brutal, mas nós temos de ter cuidado com ela, vocês têm as
+
+723
+01:08:13,070 --> 01:08:16,789
+vossas opiniões, pronto, eu como pessoa estou aqui a emitir, não é que vocês me tenham
+
+724
+01:08:17,350 --> 01:08:23,949
+Mas sim, nós temos de ter cuidado, porque os algoritmos estão a ficar bastante fortes
+
+725
+01:08:23,949 --> 01:08:28,789
+e podemos ter problemas, alguns, mas é o que é, vamos gerindo, vamos fazendo aquilo
+
+726
+01:08:28,789 --> 01:08:33,109
+que fizemos enquanto humanos, já fizemos a Geneira com energia nuclear, já fizemos
+
+727
+01:08:33,109 --> 01:08:37,390
+com biologia, já fizemos com química, já fizemos com matemática, já fizemos
+
+728
+01:08:37,390 --> 01:08:41,470
+com política, vamos fazê-la com AI, esperemos que não seja muito mal para nós enquanto
+
+729
+01:08:41,470 --> 01:08:49,029
+relativamente, enquanto espécie e enquanto individualmente, obviamente, a minha teoria
+
+730
+01:08:49,029 --> 01:08:53,069
+até há poucos anos era o machine learning e a inteligência artificial, neste sentido
+
+731
+01:08:53,069 --> 01:08:59,710
+mais estreito, salvo vivas, porque os carros conduzidos com inteligência artificial vão
+
+732
+01:08:59,710 --> 01:09:03,390
+ter acidentes e vão morrer pessoas, mas muito menos do que conduzidos por humanos
+
+733
+01:09:03,390 --> 01:09:08,109
+e portanto isso é bom, a questão é que quando morrer uma pessoa, o responsável
+
+734
+01:09:08,109 --> 01:09:12,270
+é uma falha no algoritmo e não é um gajo que pode dizer, ah foi este que falhou,
+
+735
+01:09:12,270 --> 01:09:18,510
+não podemos dizer isso porque não existe o condutor humano, eu acho que para mim
+
+736
+01:09:18,510 --> 01:09:33,710
+o toque de caixa, o teste de ouro disso é quando a aviação for autónoma, quando
+
+737
+01:09:33,710 --> 01:09:37,430
+nós começamos a andar num avião de forma autónoma, porque é uma cena que pode ser
+
+738
+01:09:37,430 --> 01:09:42,750
+humano, é um dos, pode ser humano para mim era super interessante entrar num avião
+
+739
+01:09:42,750 --> 01:09:46,989
+e saber que não há ninguém a conduzir-lo, que é só uma gente que está a conduzir
+
+740
+01:09:46,989 --> 01:09:50,789
+ou uma gente com fãs ou um telo, mas se nós chegarmos a isso, em minha vida chegarmos
+
+741
+01:09:50,789 --> 01:09:55,390
+a isso, eu acho que já atingimos uma cena incrível de confiança nesses algoritmos
+
+742
+01:09:55,390 --> 01:09:59,270
+e de confiança nisso tudo, claro, depois nós podemos ter telemetria e podemos
+
+743
+01:09:59,270 --> 01:10:02,989
+ter um piloto em terra se necessário a intervir, a questão é que eu acho
+
+744
+01:10:03,029 --> 01:10:07,470
+que não vai ser necessário e isso é uma das coisas que eu acho que irá acontecer
+
+745
+01:10:07,470 --> 01:10:12,109
+nos próximos anos e isto vai ser mais onigente, no sentido bom, mas também no
+
+746
+01:10:12,109 --> 01:10:17,869
+sentido mau, porque nós vamos entregar, imaginem-se, cirurgia robocuisada e nós
+
+747
+01:10:17,869 --> 01:10:22,310
+já seremos operados por uma máquina e nós já temos, o robôs de operação já
+
+748
+01:10:22,310 --> 01:10:25,710
+existem, já funcionam, eu já vi um a trabalhar e portanto está ali um gajo
+
+749
+01:10:25,710 --> 01:10:30,590
+deitado, adormecido, no caso que eu assisti o adormecido era controlado por
+
+750
+01:10:30,789 --> 01:10:35,909
+uma estereologista, mas imagina isto tudo feito por uma matoneza que está ali a
+
+751
+01:10:35,909 --> 01:10:41,869
+controlar-nos, está ali um ser humano a ser operado, é o que é, é o tempo que
+
+752
+01:10:41,869 --> 01:10:45,590
+estamos a viver com o bom e o mal que tem, e temos que ser gratos na minha opinião,
+
+753
+01:10:45,590 --> 01:10:49,949
+porque isto é uma cena incrível, para mim é, acho para vocês também não é?
+
+754
+01:10:49,949 --> 01:11:00,630
+Sim. Muito bem, caríssimos, não vos vou demorar, já são 9 e 7, já passamos
+
+755
+01:11:00,829 --> 01:11:09,670
+Muito obrigado pela vossa atenção, desculpem lá ser tão, tudo seguido, tudo tão seguido
+
+756
+01:11:09,670 --> 01:11:15,229
+Desculpe-me interromper. Desculpe-me interromper. São Augustais, na quinta-feira acho que
+
+757
+01:11:15,229 --> 01:11:20,270
+vamos estar aulas só para o professor e a nossa aula está marcada para as 21h40,
+
+758
+01:11:20,270 --> 01:11:24,710
+seria possível termos a aula de quinta à mesma hora que esta?
+
+759
+01:11:25,710 --> 01:11:32,909
+Por mim, deixa-me só verificar, por mim acho que, tenho só confirmado, acho que sim,
+
+760
+01:11:32,909 --> 01:11:46,079
+vocês preferem todos? Sim. De outra maneira, ninguém só põe? Não, ninguém só põe,
+
+761
+01:11:46,079 --> 01:11:51,159
+tão caríssimos, deixa-me só arrastar aqui no meu, pronto, então, desivendo, eu vou
+
+762
+01:11:51,159 --> 01:11:56,560
+só mudar este, porque o postura Thiago pode não poder, eu acho que ele vai poder,
+
+763
+01:11:56,600 --> 01:12:02,600
+pode não poder, a aula de quinta-feira está marcada para as 19h10, está bem?
+
+764
+01:12:03,920 --> 01:12:07,920
+Obrigada professor. Caríssimos, muito obrigado pela vossa atenção,
+
+765
+01:12:07,920 --> 01:12:14,439
+desejo-vos uns bons dias até quinta, tá? Até quinta. Boa noite, tudo bom? Até quinta.
+
+766
+01:12:14,439 --> 01:12:16,600
+Obrigada. Boa noite, bom dia.
+
