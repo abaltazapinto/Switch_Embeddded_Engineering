@@ -1,0 +1,1288 @@
+1
+00:00:00,000 --> 00:00:05,480
+Ou seja, é termos um sistema que aprende a partir dos dados.
+
+2
+00:00:05,480 --> 00:00:10,480
+Em vez de ser especificamente programado, ele aprende através de uma exposição contínua
+
+3
+00:00:10,480 --> 00:00:16,039
+a dados, muitas vezes iterando nesses dados, e ele aprende os conceitos que tem nos dados
+
+4
+00:00:16,039 --> 00:00:21,359
+e aprende a tomar decisões com base na aprendizagem que faz desses dados.
+
+5
+00:00:21,359 --> 00:00:25,079
+Portanto, essencialmente a ideia base que é permitir aos computadores aprender dos
+
+6
+00:00:25,079 --> 00:00:30,719
+dados, a partir de experiência, tal como os humanos fazem, e é um ramo da inteligência
+
+7
+00:00:30,719 --> 00:00:34,960
+artificial que envolve o uso de algoritmos e modelos estatísticos, que é bom de exponar
+
+8
+00:00:34,960 --> 00:00:40,359
+estudo, para permitir aos computadores aprenderem e melhorarem a sua experiência sem serem
+
+9
+00:00:40,359 --> 00:00:41,759
+explicitamente programados.
+
+10
+00:00:41,759 --> 00:00:51,520
+Isto que eu estou a dar aqui, esta parte que eu gostou a pôr aqui a Bold, é a
+
+11
+00:00:51,520 --> 00:00:53,719
+definição de aprendizagem automática.
+
+12
+00:00:53,719 --> 00:00:59,920
+Portanto, do ponto de vista conceptual, temos dados, temos um processo de treino, e a
+
+13
+00:00:59,920 --> 00:01:05,920
+partir desse processo de treino, nós temos um modelo em si que é treinado,
+
+14
+00:01:05,920 --> 00:01:11,359
+e após treinado está feito o treino, o modelo tem os seus parâmetros devidamente
+
+15
+00:01:11,359 --> 00:01:15,200
+treinados para aquilo, ou seja, o valor dos parâmetros é o treino e a aprendizagem
+
+16
+00:01:15,200 --> 00:01:19,519
+que ele faz dos dados, e depois passamos então à fase de teste, que é onde fazemos
+
+17
+00:01:19,519 --> 00:01:21,079
+aquilo que se designa pela inferência.
+
+18
+00:01:21,120 --> 00:01:23,159
+Já falei ontem, não vou perder muito tempo aqui.
+
+19
+00:01:23,159 --> 00:01:29,760
+Casos notáveis, isto não está assim super atualizado, nós temos aqui a detecção
+
+20
+00:01:29,760 --> 00:01:35,680
+de objetos em imagem, que é uma tarefa muito forte no caso das redes neuronais
+
+21
+00:01:35,680 --> 00:01:41,079
+profundas, particularmente das CNN, as redes neuronais convolucionais, isto aqui
+
+22
+00:01:41,079 --> 00:01:45,400
+é a detecção de objetos, temos aqui estas bounding boxes, e depois temos outras
+
+23
+00:01:46,359 --> 00:01:53,560
+temos outras aplicações como o NLP, que é postamento de texto, postamento natural
+
+24
+00:01:53,560 --> 00:01:57,959
+de linguagem natural, em que podemos fazer information retrieval, isto é super
+
+25
+00:01:57,959 --> 00:02:03,359
+importante para agora os LLMs atuais, análise de sentimento também é super
+
+26
+00:02:03,359 --> 00:02:06,480
+importante, temos um texto, que é o mesmo texto, com pequenas mudanças,
+
+27
+00:02:06,480 --> 00:02:13,000
+revela diferentes sentimentos, diferentes perspectivas daquela escrita, o
+
+28
+00:02:13,039 --> 00:02:18,319
+sacado, a tristeza, a alegria, a coisa ser muito sério ou não, distração de
+
+29
+00:02:18,319 --> 00:02:22,280
+informação, machine translation, que é uma série a ser incrível, que os LLMs
+
+30
+00:02:22,280 --> 00:02:26,479
+vieram trazer, vocês já repararam que ao interagirem, que os vossos LLMs
+
+31
+00:02:26,479 --> 00:02:31,439
+vocês mudam a língua em que falam, e ele responde uma e outra facilmente,
+
+32
+00:02:31,439 --> 00:02:36,719
+traduz naturalmente, e com o tamanho dos níveis atuais, é extremamente
+
+33
+00:02:36,719 --> 00:02:40,120
+simples, porque ele suporta multilinguagens nativamente, portanto nem é
+
+34
+00:02:40,120 --> 00:02:45,400
+um esforço, é uma coisa natural, nunca fiz, mas pedimos para escrever as
+
+35
+00:02:45,400 --> 00:02:48,400
+frases meias numa linguagem e meia noutras, ou como ele faz isso com uma
+
+36
+00:02:48,400 --> 00:02:53,000
+naturalidade incrível, porque ele suporta automaticamente a tradução
+
+37
+00:02:53,000 --> 00:02:58,759
+automática, e respostas a questões, há mais do que isto, estas são as
+
+38
+00:02:58,759 --> 00:03:02,759
+principais, e estavam numa imagem que eu arranjei, e eu aproveitei para não ter que
+
+39
+00:03:02,759 --> 00:03:08,319
+fazer uma, e isto, por exemplo, para o Google é incrível, porque eles fazem
+
+40
+00:03:08,319 --> 00:03:14,719
+naturalmente esta pesquisa, tinham toda uma stack para indexarem a net e terem
+
+41
+00:03:14,719 --> 00:03:18,520
+questões semânticas para perceberem as perguntas, e dessa forma darem as
+
+42
+00:03:18,520 --> 00:03:24,919
+páginas mais relevantes, e neste momento até tem aquele modo IA, que no fundo
+
+43
+00:03:24,919 --> 00:03:28,800
+já vai além e já responde diretamente à pessoa, e é aquilo que eles têm
+
+44
+00:03:28,800 --> 00:03:31,599
+de fazer, porque se não perdem relevância passa aos outros, e podem ser
+
+45
+00:03:31,599 --> 00:03:36,240
+canibalizados no seu maior negócio. Muito bem, agora uma coisa antiga,
+
+46
+00:03:36,800 --> 00:03:41,840
+ainda se usa, quando na entrada temos uma imagem ou uma descrição, e na saída
+
+47
+00:03:41,840 --> 00:03:45,800
+temos uma imagem e uma descrição, temos aqui descrição para descrição, temos
+
+48
+00:03:45,800 --> 00:03:49,120
+a importância artificial, descrição para imagem, temos os computadores
+
+49
+00:03:49,120 --> 00:03:52,960
+gráficos, ou seja, temos uma síntese, geramos uma imagem, imagem para
+
+50
+00:03:52,960 --> 00:03:58,159
+imagem, temos portamento digital de imagem, imagem para descrição, temos
+
+51
+00:03:58,159 --> 00:04:00,960
+aquilo que se digna por computer vision, que é isto, é tirar a
+
+52
+00:04:00,960 --> 00:04:04,319
+informação das imagens. Isto aqui é um conceito já um bocadinho
+
+53
+00:04:04,360 --> 00:04:09,240
+outdated, isto já não é assim uma coisa, mas acaba também por dar-vos uma
+
+54
+00:04:09,240 --> 00:04:13,599
+perspectiva mais global de algumas operações que se fazem de tocar
+
+55
+00:04:13,599 --> 00:04:20,160
+muito mais, apesar isto também no som, nos sensores da IoT, e portanto
+
+56
+00:04:20,160 --> 00:04:24,480
+isto depois é tudo aplicável a praticamente todo tipo de dados, com as
+
+57
+00:04:24,480 --> 00:04:28,959
+medidas, com os vistos ajustes que temos que fazer. Ok, então muito
+
+58
+00:04:28,959 --> 00:04:34,480
+rápido e não quero perder muito tempo aqui, porque hoje temos assim, não é
+
+59
+00:04:34,480 --> 00:04:37,319
+bastante, mas temos um conjunto de matéria que eu gostava de ajudar, e
+
+60
+00:04:37,319 --> 00:04:40,720
+quanto mais der, melhor, porque temos de venir para aula, mas eu vou tentar
+
+61
+00:04:40,720 --> 00:04:46,120
+ir além disso. Ok, dados, dados é a essência disto, eu disse-vos na aula
+
+62
+00:04:46,120 --> 00:04:51,000
+passada, dados é data is the new world, ou seja, é onde está tudo, é onde os
+
+63
+00:04:51,000 --> 00:04:55,759
+modelos aprendem, portanto sem dados não há mais nada. São cruciais
+
+64
+00:04:55,839 --> 00:05:01,519
+para o aprendizagem dos modelos, dados é qualquer informação ou entrada que
+
+65
+00:05:01,519 --> 00:05:05,560
+pode ser usada para treinar ou testar o modelo de aprendizagem máquina,
+
+66
+00:05:05,560 --> 00:05:10,920
+portanto pode ser tudo, desde imagens, sons, textos, até sinais, sinais
+
+67
+00:05:10,920 --> 00:05:15,720
+biológicos, sinais de máquinas, sinais geológicos, tudo que vocês
+
+68
+00:05:15,720 --> 00:05:19,319
+quiseram, toda a interação humana, tudo aquilo que pode ser quantificado e
+
+69
+00:05:19,319 --> 00:05:25,319
+sensorizado, são dados possíveis, e podem ser inclusivamente adquiridos de
+
+70
+00:05:25,319 --> 00:05:29,759
+formas muito diversas, dentro do dataset, que se utiliza muito, que é o Iris, que
+
+71
+00:05:29,759 --> 00:05:33,360
+foi umas medições feitas há umas décadas muito grandes, se calhar há
+
+72
+00:05:33,360 --> 00:05:36,920
+quase há 100 anos, por um senhor Robert Fisher, que mediou
+
+73
+00:05:36,920 --> 00:05:41,279
+caracteristas de pétalas e sépulas de flores, isso foi guardado e quando
+
+74
+00:05:41,279 --> 00:05:44,839
+precisaram disso alguém se disse, lembrou que havia essas medições e criaram esse
+
+75
+00:05:44,839 --> 00:05:48,839
+dataset, ainda hoje é utilizado, longe o senhor imaginar que o dataset dele ia
+
+76
+00:05:48,839 --> 00:05:54,160
+sobreviver tantas décadas depois, é um exemplo, mas há muitos.
+
+77
+00:05:54,160 --> 00:05:58,759
+Pronto, os dados são organizados em datasets, que são conjuntos de dados, e
+
+78
+00:05:58,759 --> 00:06:03,639
+podem conter muitas observações, ou seja, são data instance, um dataset é
+
+79
+00:06:03,639 --> 00:06:10,240
+composto de instâncias de dados, uma sequência de instâncias de dados é
+
+80
+00:06:10,240 --> 00:06:14,319
+um dataset, depois os datasets são os dados para treinar os modelos, que
+
+81
+00:06:14,319 --> 00:06:18,079
+aprendem a identificar os padrões e as relações que existem nos dados, e
+
+82
+00:06:18,079 --> 00:06:21,439
+depois com esses modelos fazem reproduções nos novos dados, a
+
+83
+00:06:21,519 --> 00:06:25,240
+qualidade e quantidade dos dados, esta é para mim é a das mais importantes, a
+
+84
+00:06:25,240 --> 00:06:30,160
+qualidade e quantidade dos dados para treinar o modelo, pode impactar a sua
+
+85
+00:06:30,160 --> 00:06:34,160
+performance de uma forma muito significativa, tornando os dados um
+
+86
+00:06:34,160 --> 00:06:39,720
+componente essencial de aprendizagem máquina, de machine learning, eu estou-me a
+
+87
+00:06:39,720 --> 00:06:43,240
+repetir imenso, mas é muito importante que vocês resistem bem a isto, porque é
+
+88
+00:06:43,240 --> 00:06:49,680
+exatamente isto, é exatamente isto, vocês estão a ver a minha câmera, não sei se
+
+89
+00:06:49,680 --> 00:07:00,639
+parquei a câmera ou não? Sim, sim. Ok. Importante atenção a isto, mas pronto,
+
+90
+00:07:00,639 --> 00:07:03,879
+agora uma coisa muito importante relativa a dados, que eu não vou falar
+
+91
+00:07:03,879 --> 00:07:07,160
+extensivamente, eu vou só introduzir o conceito, nesta disciplina que eu estou a
+
+92
+00:07:07,160 --> 00:07:11,120
+usar, este slides para aula 2, tem inteligência artificial, como é um semestre inteiro a falar
+
+93
+00:07:11,120 --> 00:07:14,959
+disto, depois vamos a estes detalhes e tal, mas é o de Curse of
+
+94
+00:07:14,959 --> 00:07:20,279
+Financiality, atualmente nos nossos computadores e tudo que seja
+
+95
+00:07:20,279 --> 00:07:24,600
+cloud-based, nós não temos tanto estes problemas, porque não sei se vocês
+
+96
+00:07:24,600 --> 00:07:29,519
+tenham essa sensação, mas eu acho que quase todos têm, os nossos
+
+97
+00:07:29,519 --> 00:07:32,639
+computadores são bastante potentes, digamos os nossos portáteis que têm aqueles
+
+98
+00:07:32,639 --> 00:07:36,480
+compromissos da mobilidade, os nossos computadores físicos, os nossos
+
+99
+00:07:36,480 --> 00:07:40,399
+computadores fixos, os clouds que utilizamos são super poderosos e
+
+100
+00:07:40,399 --> 00:07:43,439
+portanto nós não damos tanto conta dessas coisas, porque a computação que
+
+101
+00:07:43,439 --> 00:07:46,199
+temos disponível é mesmo bastante poderosa, faça assim há umas décadas
+
+102
+00:07:46,519 --> 00:07:51,120
+atrás, é extraordinário o que temos em termos de capacidade
+
+103
+00:07:51,120 --> 00:07:56,240
+computacional. E os dispositivos que são o alvo daquilo que fazemos aqui
+
+104
+00:07:56,240 --> 00:08:00,319
+nesta pós-graduação, partilham disto, dão algumas dificuldades em termos
+
+105
+00:08:00,319 --> 00:08:03,759
+computacionais, e portanto é importante referir disto. The Curse of
+
+106
+00:08:03,759 --> 00:08:08,199
+Financiality, o que é isso? Refere à dificuldade de modular-nos de uma
+
+107
+00:08:08,199 --> 00:08:11,920
+forma exata à aprendizagem a partir de dados de alta
+
+108
+00:08:12,360 --> 00:08:16,639
+dimensionalidade, ou seja, dados que têm muitas dimensões. Uma coisa é o
+
+109
+00:08:16,639 --> 00:08:20,160
+tamanho do data set, a quantidade de instâncias que têm, de data instance que
+
+110
+00:08:20,160 --> 00:08:24,279
+têm, outra coisa é que cada instância de dados tem muitas variáveis, e isso é
+
+111
+00:08:24,279 --> 00:08:28,439
+que é alta dimensionalidade. É normalmente desejável trabalhar com
+
+112
+00:08:28,439 --> 00:08:32,399
+data sets que têm muitas features, e features são as tais
+
+113
+00:08:32,399 --> 00:08:36,440
+características, são as variáveis com que trabalhamos, ou variável
+
+114
+00:08:36,440 --> 00:08:40,320
+exatamente. However, as the number of dimensions features na data set
+
+115
+00:08:40,399 --> 00:08:44,399
+em crises, o que é que acontece? A quantidade de dados requeridos para
+
+116
+00:08:44,399 --> 00:08:48,840
+tornar-nos a aprendizagem eficaz a partir desses dados aumenta
+
+117
+00:08:48,840 --> 00:08:52,200
+exponencialmente, ou seja, quantas mais variáveis, muito mais dados
+
+118
+00:08:52,200 --> 00:08:54,840
+vocês vão ter para aprender, e portanto a aprendizagem torna-se mais
+
+119
+00:08:54,840 --> 00:08:59,559
+pesada, torna-se muito mais complexo encontrar os padrões, porque
+
+120
+00:08:59,559 --> 00:09:03,200
+o modelo tem que analisar muito mais variáveis em cada
+
+121
+00:09:03,200 --> 00:09:06,879
+instância de dados, e portanto o cruzamento de padrões entre
+
+122
+00:09:06,879 --> 00:09:11,120
+variáveis aumenta de uma forma, eu não diria exponencial, mas é
+
+123
+00:09:11,120 --> 00:09:14,919
+exponencial no fundo, eu não diria não, mas é mesmo exponencial, e portanto por
+
+124
+00:09:14,919 --> 00:09:18,639
+isso é que isto acontece. Torna-se muito mais complexo modelar de uma
+
+125
+00:09:18,639 --> 00:09:23,919
+forma exata as relações entre as variáveis, o que pode levar a problemas
+
+126
+00:09:23,919 --> 00:09:29,039
+do overfitting ou de poor generalization on your data, que essencialmente é
+
+127
+00:09:29,039 --> 00:09:33,120
+a mesma coisa, tenho aqui Or, mas eles são a mesma coisa, o overfitting é
+
+128
+00:09:33,120 --> 00:09:37,519
+um modelo ficar tão ajustado que quando vêm dados de novos, ele não consegue
+
+129
+00:09:37,519 --> 00:09:40,799
+generalizar, já agora o underfitting é quando o modelo é mesmo
+
+130
+00:09:40,799 --> 00:09:44,799
+coarse, é assim fraco, ou seja, o modelo não consegue sequer durante o
+
+131
+00:09:44,799 --> 00:09:48,639
+treino aprender, e já agora, porque não vamos lá chegar no final da aula de
+
+132
+00:09:48,639 --> 00:09:52,480
+certeza, eu vou meter uma coisa que se fala à frente, que é quando o modelo
+
+133
+00:09:52,480 --> 00:09:56,240
+está em underfitting, ou seja, quando ele não treinou bem, logo no treino
+
+134
+00:09:56,240 --> 00:10:00,480
+nós temos medidas da qualidade do treino e da qualidade em teste na
+
+135
+00:10:00,559 --> 00:10:06,480
+referência, e uma coisa importante, vocês são um caladinho, já percebi isso, e é
+
+136
+00:10:06,480 --> 00:10:10,720
+lógico para eu dar aulas, e quando eu estou assim com o lance, interrompam se tiverem
+
+137
+00:10:10,720 --> 00:10:14,799
+dúvidas, ok? Porque há aqui questões que podem saltar, e eu estou a falar
+
+138
+00:10:14,799 --> 00:10:18,720
+isto muito rápido, eu já falo isto há alguns anos, e portanto para mim pode
+
+139
+00:10:18,720 --> 00:10:22,879
+parecer muito tranquilo, mas se alguém tiver dúvidas, perguntem, porque é
+
+140
+00:10:22,879 --> 00:10:26,320
+hoje, e assim não tem que depois estudar e ver, não é que seja
+
+141
+00:10:26,320 --> 00:10:30,879
+difícil, vocês podem depois apanhar isto muito bem através de bibliografia
+
+142
+00:10:30,879 --> 00:10:36,159
+que eu vos posso dar, ou através até de um LLM que utilizem para discutir
+
+143
+00:10:36,159 --> 00:10:39,679
+estas questões, eles aplicam bastante bem, tem que se dizer nesta área de
+
+144
+00:10:39,679 --> 00:10:42,720
+massimilando a inteligência artificial, os modelos são bastante robustos,
+
+145
+00:10:42,720 --> 00:10:46,639
+cá há muitos de arte, eles são bastante competentes, mas pronto,
+
+146
+00:10:46,639 --> 00:10:52,399
+perguntem sempre o que dizerem, tá? Ah, e o underfit é, no treino,
+
+147
+00:10:52,639 --> 00:10:56,879
+os critérios de desempenho do modelo em treino são baixos, ou seja,
+
+148
+00:10:56,879 --> 00:11:00,960
+ele não atinge grande desempenho no treino, e portanto isso é o modelo
+
+149
+00:11:00,960 --> 00:11:04,720
+underfit. Isto é a pergunta de teste, sempre que é uma coisa básica,
+
+150
+00:11:04,720 --> 00:11:08,639
+como é que se vê se o modelo está em underfit ou em overfit? Pronto,
+
+151
+00:11:08,639 --> 00:11:12,559
+o overfit é uma coisa diferente, o modelo em overfit é o modelo que no
+
+152
+00:11:12,559 --> 00:11:16,000
+treino tem um desempenho muito bom ou excepcional, portanto ele
+
+153
+00:11:16,000 --> 00:11:19,919
+treinou lindamente, ele aprendeu tudo, ele com os dados de treino,
+
+154
+00:11:20,000 --> 00:11:23,600
+porque são dados que ele ciclicamente está a ver e vê várias épocas,
+
+155
+00:11:23,600 --> 00:11:26,559
+no caso das redes neuronais ele vê aquilo várias épocas, é exposto aos
+
+156
+00:11:26,559 --> 00:11:31,200
+dados várias vezes, o que é que acontece? Ele no treino, ele no limite
+
+157
+00:11:31,200 --> 00:11:36,000
+até faz 100%, ele acerta tudo, ele sabe tudo, ele é o maior. Qual é o problema?
+
+158
+00:11:36,000 --> 00:11:38,960
+Quando nós metemos dados novos, novos dados que nunca foram vistos
+
+159
+00:11:38,960 --> 00:11:41,519
+durante o treino, são dados do mesmo problema, são dados
+
+160
+00:11:41,519 --> 00:11:45,440
+de pertencentes àquele problema, mas nunca foram usados em treino,
+
+161
+00:11:45,440 --> 00:11:50,000
+que são dados de teste, ok? E, portanto, quando vocês metem esses
+
+162
+00:11:50,000 --> 00:11:53,519
+novos dados, ele vai fazer a inferência nesses dados, o treino já terminou,
+
+163
+00:11:53,519 --> 00:11:58,720
+ele quebra e basicamente perde, tem uma quebra de desempenho significativa.
+
+164
+00:11:58,720 --> 00:12:01,519
+Isso é o modelo em overfit, ou seja, ele decorou tão bem os dados,
+
+165
+00:12:01,519 --> 00:12:04,799
+mas depois não acompanha. À frente vamos ver isso, acho que chegamos lá.
+
+166
+00:12:04,799 --> 00:12:08,480
+Qual é o fluxo de trabalho? Imagine learning, nós temos um problema,
+
+167
+00:12:08,480 --> 00:12:12,879
+como vos disse, aquela questão do business acumen, do data science,
+
+168
+00:12:12,960 --> 00:12:17,360
+é sempre importante conhecermos o nosso problema bem, e a partir desse problema
+
+169
+00:12:17,360 --> 00:12:23,679
+construímos o tal data set, e depois com o data set vamos treinar o nosso modelo.
+
+170
+00:12:23,679 --> 00:12:27,759
+Ok, ao final do treino temos um modelo devidamente treinado,
+
+171
+00:12:27,759 --> 00:12:30,639
+avaliado, e quando se considera que esse modelo está competente,
+
+172
+00:12:30,639 --> 00:12:34,399
+ele é passado para uma segunda fase, que é a fase de teste, ou inferência.
+
+173
+00:12:34,399 --> 00:12:38,399
+Nessa fase há novos dados pertencentes ao mesmo problema,
+
+174
+00:12:38,399 --> 00:12:42,480
+por acaso eu podia pôr aqui uma seta, né? Novos dados pertencentes
+
+175
+00:12:42,480 --> 00:12:47,360
+ao problema, que são agora aplicados ou fornecidos ao modelo,
+
+176
+00:12:47,360 --> 00:12:52,720
+ele faz a inferência e ele gera as designadas predictions, ou seja,
+
+177
+00:12:52,720 --> 00:12:56,720
+ele imita a sua opinião sobre os dados, e as opiniões podem ser
+
+178
+00:12:56,720 --> 00:13:01,039
+de diversos tipos, como vamos ver a seguir. Outra coisa,
+
+179
+00:13:01,039 --> 00:13:04,000
+antes de avançar nisso para a questão do tipo de problema,
+
+180
+00:13:04,000 --> 00:13:09,440
+a nível de problemas de machine learning, há algumas abordagens,
+
+181
+00:13:10,000 --> 00:13:14,720
+uma delas é o offline learning, é praticamente 90 e muitos por cento
+
+182
+00:13:14,720 --> 00:13:19,120
+de tudo que vocês vão fazer nisto. Offline significa, é o batch,
+
+183
+00:13:19,120 --> 00:13:23,919
+é em lots, e é o machine learning que, basicamente,
+
+184
+00:13:23,919 --> 00:13:28,320
+vocês compilam um data set todo, e quando têm esse data set,
+
+185
+00:13:28,320 --> 00:13:31,600
+ou seja, compilam todas aquelas instâncias de dados para ali abaixo,
+
+186
+00:13:31,600 --> 00:13:35,039
+criam um data set, e quando o data set está totalmente pronto,
+
+187
+00:13:35,440 --> 00:13:40,000
+vocês iniciam o treino do modelo, e portanto, quando o modelo é treinado,
+
+188
+00:13:40,000 --> 00:13:42,720
+ele é treinado num data set que é estático, que é aquilo,
+
+189
+00:13:42,720 --> 00:13:46,000
+e é treinado até ao final, até ver sucesso no treino,
+
+190
+00:13:46,000 --> 00:13:48,799
+e é aquele data set. Isto é treino offline, ou seja,
+
+191
+00:13:48,799 --> 00:13:52,000
+vocês pegam naquele lote e treinam um modelo com ele.
+
+192
+00:13:52,000 --> 00:13:54,399
+Depois têm umas coisas disso, é treinado uma vez,
+
+193
+00:13:54,399 --> 00:13:57,200
+depois é usado repetidamente para fazer predições,
+
+194
+00:13:57,200 --> 00:14:01,919
+é usado em aplicações onde a data é relativamente estática.
+
+195
+00:14:02,879 --> 00:14:06,879
+Isto é verdade, mas eu tenho que fazer aqui uma adição.
+
+196
+00:14:06,879 --> 00:14:11,440
+Isto não significa que o data set não tenha dezenas,
+
+197
+00:14:11,440 --> 00:14:14,879
+centenas ou até milhares de conceitos diferentes lá dentro nos dados.
+
+198
+00:14:14,879 --> 00:14:19,200
+Significa, sim, que estes dezenas ou centenas ou milhares de conceitos,
+
+199
+00:14:19,200 --> 00:14:26,799
+centenas ou milhares de data instance que possa ter esse data set,
+
+200
+00:14:26,799 --> 00:14:30,399
+estes conceitos não alteram muito ao longo do tempo, ou seja,
+
+201
+00:14:30,480 --> 00:14:33,840
+isto é dizer que o nosso data set é muito representativo
+
+202
+00:14:33,840 --> 00:14:36,960
+daquilo, o que é a realidade daquele problema,
+
+203
+00:14:36,960 --> 00:14:42,559
+e todas aquelas instâncias acabam por representar praticamente todos os casos que existem.
+
+204
+00:14:42,559 --> 00:14:45,919
+Porquê? Se vocês não tiverem coisas que não estão cobertas,
+
+205
+00:14:45,919 --> 00:14:48,480
+obviamente o modelo não pode aprender, não é?
+
+206
+00:14:48,480 --> 00:14:52,080
+Isto é um bocado como uma criança, se ela não é exposta a determinadas realidades,
+
+207
+00:14:52,080 --> 00:14:53,600
+é óbvio que ela não aprende.
+
+208
+00:14:53,600 --> 00:14:57,519
+No caso das crianças, com a leitura às vezes as pessoas conseguem perceber alguma coisa,
+
+209
+00:14:57,679 --> 00:15:02,080
+mas aquilo que a pessoa vive é aquilo que nós experimentamos de uma forma mais natural,
+
+210
+00:15:02,080 --> 00:15:06,639
+e acontece-nos a nós, por vezes, conhecer uma coisa do ponto de vista mais teórico,
+
+211
+00:15:06,639 --> 00:15:11,120
+mais que estudamos e tal, e quando passamos pela experiência de operar naquilo,
+
+212
+00:15:11,120 --> 00:15:16,399
+de estarem devidos naquela realidade, de repente parece que a nossa aprendizagem
+
+213
+00:15:17,039 --> 00:15:20,879
+acelera significativamente. Um exemplo clássico disso é a
+
+214
+00:15:20,879 --> 00:15:25,840
+aprendizagem de línguas, em que as pessoas andam anos a aprender inglês, por exemplo,
+
+215
+00:15:25,840 --> 00:15:30,399
+e de repente vão a um país onde a língua oficial é o inglês, estão imersos naquilo,
+
+216
+00:15:30,399 --> 00:15:35,360
+e agora até se usa a expressão imersão, e vocês estão imersos, e de repente vocês têm,
+
+217
+00:15:36,799 --> 00:15:40,000
+há uma aceleração gigantesca na vossa aprendizagem. Eu tive isso
+
+218
+00:15:40,000 --> 00:15:43,279
+quando fui à Inglaterra a primeira vez, cheguei à Inglaterra e toda a gente dizia,
+
+219
+00:15:43,279 --> 00:15:47,519
+eu aprendi, eu estimei-se inglês. Na realidade eu não aprendi, só afinei, não é?
+
+220
+00:15:49,120 --> 00:15:54,480
+Mais coisa, agora, em contraste à aprendizagem offline que eu estava aqui a falar,
+
+221
+00:15:54,480 --> 00:16:00,320
+temos a aprendizagem online. Esta basicamente, o online significa que nós vamos treinando o
+
+222
+00:16:00,320 --> 00:16:09,279
+modelo, perdão, à medida que os dados chegam, ao invés de compilarmos tudo o dataset,
+
+223
+00:16:09,279 --> 00:16:14,080
+agora temos já se calhar um pequeno conjunto de dataset, ou vamos treinado à medida que as
+
+224
+00:16:14,080 --> 00:16:20,879
+amostras chegam, e vamos treinando o modelo de forma incremental. Há também quem diga que
+
+225
+00:16:21,679 --> 00:16:27,440
+eu peço desculpa que eu estou super irritado a garganta, durante esta aula vou estar assomentado,
+
+226
+00:16:27,440 --> 00:16:36,610
+afetado, mas eu passei em algum sítio que algo me irritou aqui a garganta.
+
+227
+00:16:36,610 --> 00:16:42,450
+Os modelos de machine learning são atualizados, ou seja, os parâmetros são atualizados,
+
+228
+00:16:42,450 --> 00:16:47,490
+isto é, eu dizer que o treino acontece à medida que os dados estão disponíveis.
+
+229
+00:16:48,049 --> 00:16:56,129
+O treino permite aos modelos, hopefully, ou seja, expectavelmente, melhorarem a sua accuracy,
+
+230
+00:16:56,129 --> 00:17:03,169
+que é a sua exatidão, num problema específico. Pronto, aqui, nesta questão do não-concept,
+
+231
+00:17:03,169 --> 00:17:07,890
+porque não sei se é que vamos exatamente como eu me periste aqui, e acima de tudo,
+
+232
+00:17:07,890 --> 00:17:15,730
+aprender e adaptar-se a dados que mudam. Portanto, reparem, se vocês num problema
+
+233
+00:17:16,690 --> 00:17:21,009
+de offline learning, começar a ver mudanças e o vosso dataset foi adquirido antes dessas
+
+234
+00:17:21,009 --> 00:17:25,809
+mudanças, o que acontece é que vocês vão ter que juntar esses dados aos dados anteriores e
+
+235
+00:17:25,809 --> 00:17:31,890
+retreinar o modelo todo com todos os dados, os iniciais mais estes, e agora o modelo passa
+
+236
+00:17:31,890 --> 00:17:36,450
+a incluir esses conceitos. Mas o treino de todo o dataset é pesado, porque é preciso passar
+
+237
+00:17:36,450 --> 00:17:43,170
+aquelas instâncias N vezes no modelo. Nos modelos de aprendizagem online é super
+
+238
+00:17:43,250 --> 00:17:50,210
+difícil, porque à medida que novos os dados aparecem, os novos conceitos vão sendo
+
+239
+00:17:50,210 --> 00:17:54,690
+incorporados no modelo. Qual é o problema? Não está aqui dito, nem era para aqui,
+
+240
+00:17:54,690 --> 00:17:59,569
+mas posso-te dar uma dica. Há questões sobre a aprendizagem online que depois têm que ser
+
+241
+00:17:59,569 --> 00:18:05,890
+geridas por quem estuda bastante e trabalha no desenvolvimento destas coisas, que é o
+
+242
+00:18:05,890 --> 00:18:10,369
+controle de learning e o controle em forgetting. Por quê? Porque durante a aprendizagem
+
+243
+00:18:10,930 --> 00:18:14,769
+é comum os últimos conceitos começarem a sobrepôr-se, os outros começam a esquecer-se
+
+244
+00:18:14,769 --> 00:18:19,170
+exatamente como nós humanos, embora nós tenhamos isto muito mais trabalhado, porque temos milhões
+
+245
+00:18:19,170 --> 00:18:24,450
+de anos de evolução, mas o que acontece é que os últimos conceitos começam a sobrepôr-se aos
+
+246
+00:18:24,450 --> 00:18:29,970
+anteriores e os anteriores começam a desaparecer, começam a serem esquecidos, e portanto é
+
+247
+00:18:29,970 --> 00:18:34,450
+preciso ter algum controle ou tentar ter algum controle sobre o processo de aprendizagem
+
+248
+00:18:34,450 --> 00:18:39,170
+para adicionar aprendizagem sem perder aprendizagem, e isto tem que ser o mais
+
+249
+00:18:39,170 --> 00:18:44,130
+controlado possível. Pronto, este é um dos grandes motivos pelo qual a aprendizagem online
+
+250
+00:18:44,130 --> 00:18:51,250
+ainda não é muito mais utilizada, porque ela é super interessante, e para o I.S.O.S. que constreina
+
+251
+00:18:51,250 --> 00:18:57,809
+device, os dispositivos com recursos limitados, como são estes na área dos edge device e nos
+
+252
+00:18:57,809 --> 00:19:04,130
+embedded device, isto seria o ideal e há algoritmos país que eu fui verificar antes desta
+
+253
+00:19:04,690 --> 00:19:10,450
+questão. A questão é que depois temos que ver que algoritmos há, mas mais tarde vamos ver se
+
+254
+00:19:10,450 --> 00:19:14,930
+possível vamos voltar a isto, isto é super interessante. Pronto, pode ser utilizada em
+
+255
+00:19:14,930 --> 00:19:19,970
+aplicações onde não é possível guardar os dados, por exemplo, não temos a storage
+
+256
+00:19:19,970 --> 00:19:24,529
+país para os dados todos, e então optarmos por um online que assim vamos treinando e dentro
+
+257
+00:19:24,529 --> 00:19:31,329
+da memória ou da memória RAM ou Chrome que temos, ou seja, volátil ou não volátil,
+
+258
+00:19:31,329 --> 00:19:37,250
+podemos guardar os dados quando se perde energia ou não, e vamos guardando só no modelo e reparem,
+
+259
+00:19:37,250 --> 00:19:41,089
+isto é uma espécie de compactação de informação, nós em vez de guardarmos todos os dados,
+
+260
+00:19:41,089 --> 00:19:45,650
+guardamos só na parametrização do modelo, aquela aprendizagem na forma do modelo de
+
+261
+00:19:45,650 --> 00:19:50,369
+inteligência artificial, ou machine learning. Isto é bom para se ter em data sources, os
+
+262
+00:19:50,369 --> 00:19:55,329
+modelos são inicialmente treinados a uma small set of data e depois à medida que novos
+
+263
+00:19:55,329 --> 00:20:00,130
+dados ficam disponíveis, o modelo vai sendo atualizado com a nova informação. Pronto,
+
+264
+00:20:00,210 --> 00:20:06,529
+isto é bom, grandes volumes de dados, é super interessante, problemas com padrões que mudam
+
+265
+00:20:06,529 --> 00:20:12,930
+nos dados, o chamado concept drift, e para fornecer real time predictions. O que é que está aqui a ser
+
+266
+00:20:12,930 --> 00:20:19,009
+dito? As real time predictions é nós, à medida que treinamos o modelo, já vamos poder incorporar
+
+267
+00:20:19,009 --> 00:20:24,289
+esse conhecimento no modelo e já vamos poder dar predições. Portanto, pode haver problemas
+
+268
+00:20:24,529 --> 00:20:30,769
+com as restrições temporais muito elevadas e um batch learning, um offline, não é nada interessante
+
+269
+00:20:30,769 --> 00:20:36,450
+porque a latência entra a acontecer uma coisa e nós retreinarmos o modelo, é grande demais para
+
+270
+00:20:36,450 --> 00:20:43,410
+nós fazermos aquela inferência e portanto ser online é super interessante, porque mal o dado
+
+271
+00:20:43,410 --> 00:20:48,690
+é exposto ao modelo, passado pouquíssimo tempo o modelo já incorpora essa informação e já
+
+272
+00:20:48,690 --> 00:20:53,730
+pode começar a decidir com base nisso. No entanto, eles são mais complexos de ser
+
+273
+00:20:53,890 --> 00:21:00,930
+dados, isto é uma realidade, e requer a monitorização cuidadosa para garantir que o modelo continua a
+
+274
+00:21:00,930 --> 00:21:06,130
+aprender de uma forma eficaz ao longo do tempo, isto é uma realidade, foi o que eu vos disse há
+
+275
+00:21:06,130 --> 00:21:11,569
+um bocado. Agora, estes slides não são nada de especial, isto era só para introduzir nesta
+
+276
+00:21:11,569 --> 00:21:17,410
+fase. Portanto, aqui, o que é que eu tenho? Isto está um bocado chumbaroso, eu adaptei,
+
+277
+00:21:17,890 --> 00:21:24,049
+label data e os respetivos labels, é cada um data instance e depois isto seria a resposta da
+
+278
+00:21:24,049 --> 00:21:30,369
+coisa e label data é o que? Para explicar daqui isto bem mais à frente, mas para não ficar confuso,
+
+279
+00:21:30,369 --> 00:21:38,769
+label data é vocês têm um conjunto variáveis, sei lá, o peso, a temperatura, o volume, a
+
+280
+00:21:38,769 --> 00:21:44,049
+cor e uma série de coisas que estão lá guardadas para cada instance de dados e no final
+
+281
+00:21:44,049 --> 00:21:52,529
+isto é uma cereja e no final da outra diz isto é uma maçã, isto é uma piêra, isto é outra
+
+282
+00:21:52,529 --> 00:22:00,009
+piêra e etc. E o label é isto, é termos uma variável que podemos designar uma resposta e é a
+
+283
+00:22:00,009 --> 00:22:05,890
+resposta e o label é exatamente isso, é a resposta no dataset. E já agora, a label data é
+
+284
+00:22:05,890 --> 00:22:10,089
+um dataset que tem um conjunto variáveis e cadências de dados, mas nenhuma pode ser
+
+285
+00:22:10,289 --> 00:22:16,329
+uma resposta. Reparem, basta vocês elegeram uma variável a resposta e o vosso dataset já é
+
+286
+00:22:16,329 --> 00:22:22,410
+labeled, ok? Pois podem não fazer sentido, mas o label, tipicamente há um label definido,
+
+287
+00:22:22,410 --> 00:22:28,049
+mas se não houver nós podemos formular problemas dizendo agora o que eu quero é eu tenho maçãs
+
+288
+00:22:28,049 --> 00:22:33,170
+isto e aquilo e eu quero saber a cor e posso dizer que a cor é a minha saída e ele aprende
+
+289
+00:22:33,170 --> 00:22:37,569
+a discriminar num conjunto imenso de maçãs e não sei o que mais, se há cor, se não há,
+
+290
+00:22:37,769 --> 00:22:43,089
+etc. e tal. Portanto, reparem que isto depois no âmbito de engenharia, da matemática e da física,
+
+291
+00:22:43,089 --> 00:22:47,130
+nós podemos sempre ir a outras áreas, eu estou a dar aquelas que são mais próximas,
+
+292
+00:22:47,130 --> 00:22:52,130
+engenharia eletro-técnica, a minha formação de base, mas nós podemos sempre inverter e isto
+
+293
+00:22:52,130 --> 00:22:56,569
+às vezes, como isto é um bocado irrelevante nesta formação, mas é também para ajudar
+
+294
+00:22:56,569 --> 00:23:00,490
+a esta coisa, às vezes é super interessante o que se faz virando-nos do dica ao prégo,
+
+295
+00:23:00,490 --> 00:23:05,210
+invertendo os nossos problemas e por exemplo eu lembro-me do alteramento de ver coisas na
+
+296
+00:23:05,210 --> 00:23:10,089
+tecnologia, até da medicina, de inverter problemas e começar a tirar conclusões super
+
+297
+00:23:10,089 --> 00:23:14,890
+interessantes, quase no sentido contrário, mas depois aquilo ter validado no ponto de vista
+
+298
+00:23:14,890 --> 00:23:18,289
+psicológico e no ponto de vista médico, que havia assim coisas, eu vou para cá se não levo
+
+299
+00:23:18,289 --> 00:23:21,450
+nenhum exemplo, mas havia coisas super interessantes e que viram-se do plano do
+
+300
+00:23:21,450 --> 00:23:25,130
+ao contrário, depois começam a tirar conclusões que depois dito, então para lá, e agora
+
+301
+00:23:25,130 --> 00:23:29,009
+partindo daqui podemos chegar a outra coisa super interessante e na engenharia isto também
+
+302
+00:23:30,009 --> 00:23:37,009
+Pronto, e temos aqui, temos aqui basicamente a zona, os dados de treino numa máquina
+
+303
+00:23:37,009 --> 00:23:40,970
+para produzir o tal modelo, isto seria o modelo treinado e depois treinado metemos
+
+304
+00:23:40,970 --> 00:23:46,009
+os tais dados, que agora não estamos a dar foco nos labels, mas e não são,
+
+305
+00:23:46,009 --> 00:23:50,410
+porque aqui agora já não há labels, os dados de teste nunca têm labels, porquê?
+
+306
+00:23:50,410 --> 00:23:55,210
+Porque o objetivo é nós produzirmos os labels com o modelo, esta parte, percebem
+
+307
+00:23:55,210 --> 00:24:05,259
+isto? Eu não estou a ver, se calhar vocês vão fazer reações, mas já estou, pronto, não interessa.
+
+308
+00:24:05,259 --> 00:24:10,259
+O importante é, não há labels aqui, ou seja, nós até podemos ter o nosso data set,
+
+309
+00:24:10,259 --> 00:24:15,259
+porque não é um data set, é para desenvolver modelo, até podemos ter os labels e usamos
+
+310
+00:24:15,259 --> 00:24:21,259
+com frequência data sets com labels, mas o modelo não os conhece, imita a sua prediction
+
+311
+00:24:21,259 --> 00:24:26,259
+e no final, a partir da prediction que ele faz do label, nós contrastamos ou comparamos
+
+312
+00:24:26,259 --> 00:24:32,259
+essa prediction com o label oficial e normalmente é assim, que fazemos medidas de exatidão,
+
+313
+00:24:32,259 --> 00:24:35,259
+sensibilidade, especificidade e muitas outras por aí fora, está bem?
+
+314
+00:24:35,259 --> 00:24:39,259
+Mas para isso temos que correr, depois no mundo real, não temos isso, porque o que nós queremos,
+
+315
+00:24:39,259 --> 00:24:45,259
+quando por exemplo numa caixa de self-checkout, nós queremos é quando passamos uma garrafa de água
+
+316
+00:24:45,259 --> 00:24:50,259
+que ela registre, quando é uma fruta que ela registre por aí fora, e portanto,
+
+317
+00:24:50,259 --> 00:24:56,259
+depois, essencialmente, a certa altura, depois de todo este treino com dados, com label,
+
+318
+00:24:56,259 --> 00:25:02,259
+supervisionados, depois temos que ter uma enorme confiança no modelo para depois podermos passar
+
+319
+00:25:02,259 --> 00:25:08,259
+a usar o modelo em dados para os quais não queremos a resposta e o modelo assegura que é capaz de o fazer.
+
+320
+00:25:08,259 --> 00:25:12,259
+Muito bem, isto relaciona-se com uma coisa que é a supervisor de learning,
+
+321
+00:25:12,259 --> 00:25:15,259
+que se divide em dois problemas, a redução e a classificação.
+
+322
+00:25:15,259 --> 00:25:17,259
+Eu já vou falar disto, mas é muito simples.
+
