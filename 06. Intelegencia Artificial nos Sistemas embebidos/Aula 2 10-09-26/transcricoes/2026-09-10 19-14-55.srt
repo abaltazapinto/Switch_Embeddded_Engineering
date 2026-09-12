@@ -1286,3 +1286,6007 @@ que se divide em dois problemas, a redução e a classificação.
 00:25:15,259 --> 00:25:17,259
 Eu já vou falar disto, mas é muito simples.
 
+323
+00:25:17,259 --> 00:25:23,259
+Na classificação, nós queremos, a partir dos dados de entrada, separar os dados em uma
+
+324
+00:25:23,259 --> 00:25:28,259
+ou várias classes, normalmente duas ou mais classes, embora exista também classificação,
+
+325
+00:25:28,259 --> 00:25:34,259
+é da classe ou não é, isso é one class, mas normalmente a classificação é boi ou vaca,
+
+326
+00:25:34,259 --> 00:25:39,259
+desculpem o termo, mas é um bocadinho assim, é uma coisa ou não é, tem câncer ou não tem,
+
+327
+00:25:39,259 --> 00:25:44,259
+passa ou não passa, faz ou não faz, é coisa assim, mas existem vários tipos de classificação.
+
+328
+00:25:44,259 --> 00:25:50,259
+E a classificação que me vive é que são classes, é uma variável categórica que assume um, dois, três,
+
+329
+00:25:50,259 --> 00:25:52,259
+quatro, cinco valores conforme o número de classes.
+
+330
+00:25:52,259 --> 00:25:55,259
+A regressão essencialmente é uma variável contínua, ou seja,
+
+331
+00:25:55,259 --> 00:26:00,259
+são o mesmo problema com os mesmos algoritmos, a diferença muda na variável de saída.
+
+332
+00:26:00,259 --> 00:26:05,259
+Aqui é uma variável categórica, ou seja, discreta, e aqui é uma variável contínua.
+
+333
+00:26:05,259 --> 00:26:10,259
+A classificação também pode ser com variável contínuo, mas na prática o que nos interessa
+
+334
+00:26:10,259 --> 00:26:14,259
+são conjuntos discretos de valores, que nós queremos classificar numa demo class.
+
+335
+00:26:14,259 --> 00:26:17,259
+Na regressão é função pura, estimar uma função.
+
+336
+00:26:17,259 --> 00:26:24,259
+Depois, ah, isto aqui tem que passar à frente, desculpe, isto não interessa,
+
+337
+00:26:24,259 --> 00:26:27,259
+espere aí, aqui pode vir, não está bem, deixem-me só, estou a ver uma coisa,
+
+338
+00:26:27,259 --> 00:26:35,299
+depois, ai, falhou aqui isto, que é que eu faço saudades, então desculpem lá,
+
+339
+00:26:35,299 --> 00:26:42,480
+deixem-me abrir outra vez que isso parece que falhou, parece que falhou,
+
+340
+00:26:44,819 --> 00:26:49,819
+ah, eu fechei o vídeo, só um bocadinho, que eu já cheguei aqui dentro,
+
+341
+00:26:51,819 --> 00:27:01,819
+aqui, e é esta, e aqui, perdeu, não sei porquê, perdeu as imagens.
+
+342
+00:27:16,099 --> 00:27:20,099
+Pois, eu queria vos mostrar isto. Ora bem, então agora, ainda que fio ao tímis,
+
+343
+00:27:20,099 --> 00:27:22,099
+vocês não estão a ver nada, pois não.
+
+344
+00:27:24,099 --> 00:27:28,099
+É, mas eu já vou, pronto, já estão a ver, não é?
+
+345
+00:27:28,099 --> 00:27:34,500
+Ele falhou aqui esta passagem, tudo bem.
+
+346
+00:27:34,500 --> 00:27:39,500
+Então, não é assim, aparecia só a set, então aqui, o que é que temos?
+
+347
+00:27:39,500 --> 00:27:43,500
+Se calhar com o vinho aí, eu até posso deixar um bocadinho mais assim.
+
+348
+00:27:43,500 --> 00:27:47,500
+Eu não tenho speaker notes, eu nem tenho nada aqui.
+
+349
+00:27:47,500 --> 00:27:51,500
+Portanto, aqui já vos estou a mostrar um data set com labels, não é?
+
+350
+00:27:51,500 --> 00:27:54,500
+Que temos aqui as medidas das diferentes variáveis.
+
+351
+00:27:54,500 --> 00:27:57,500
+Isto é uma data instance, isto é outra data instance,
+
+352
+00:27:57,500 --> 00:28:06,970
+se calhar é melhor pôr o, pôr o coisa, para vocês, para vocês, é,
+
+353
+00:28:06,970 --> 00:28:11,970
+pôr aqui um apontador, porque fica, pode agora ficar melhor.
+
+354
+00:28:11,970 --> 00:28:16,970
+Ou seja, isto é uma data instance, isto é outra, isto é outra, isto é outra,
+
+355
+00:28:16,970 --> 00:28:18,970
+e o que é que ele vai fazer?
+
+356
+00:28:18,970 --> 00:28:22,970
+Neste caso é o iris, iris tosa, iris versa e colas, ainda outra,
+
+357
+00:28:22,970 --> 00:28:28,970
+iris virgínica, são três classes, e basicamente ele dá os valores da
+
+358
+00:28:28,970 --> 00:28:32,970
+pétala e da sépala em direções diferentes, o length e o width,
+
+359
+00:28:32,970 --> 00:28:37,970
+e basicamente ele está aqui a dar isto e vocês, através das dimensões,
+
+360
+00:28:37,970 --> 00:28:41,970
+ele vai aprender com exposição às respostas e ele aprende,
+
+361
+00:28:41,970 --> 00:28:45,970
+dão-lhe as dimensões e ele diz, ah, com estas dimensões isto é uma setosa,
+
+362
+00:28:45,970 --> 00:28:48,970
+ou então com estas dimensões isto é uma versicola, e já agora para a outra,
+
+363
+00:28:48,970 --> 00:28:52,970
+eu não pus aqui, mas também tem a virgínica, com outras é virgínica,
+
+364
+00:28:52,970 --> 00:28:56,970
+e portanto o processo de treino é particularmente isso, é pegar nestes dados
+
+365
+00:28:56,970 --> 00:29:00,970
+e treinar, e depois pegar noutros dados que não são estes de treino,
+
+366
+00:29:00,970 --> 00:29:04,970
+que são os dados de teste, e fazer a tal predição, neste caso as predições
+
+367
+00:29:04,970 --> 00:29:07,970
+são coisas como estas, setosa, que é a versicola, etc.
+
+368
+00:29:07,970 --> 00:29:12,970
+Os dados de teste são apenas as variáveis de entrada, como eu tenho aqui, estão a ver,
+
+369
+00:29:12,970 --> 00:29:15,970
+e o data certo de treino é este, ainda falta aqui uma coisa que não está,
+
+370
+00:29:15,970 --> 00:29:17,970
+e vai aparecer à frente.
+
+371
+00:29:17,970 --> 00:29:19,970
+Classificação versus regressão, é isto.
+
+372
+00:29:19,970 --> 00:29:23,970
+A classificação é uma função que é por, é no fundo,
+
+373
+00:29:23,970 --> 00:29:27,970
+preparem estes modelos, o que conseguem aproximar são funções,
+
+374
+00:29:27,970 --> 00:29:31,970
+e a função na classificação é encontrar uma função discriminante,
+
+375
+00:29:31,970 --> 00:29:36,970
+ou seja, uma função que assume uma posição na qual ela consegue
+
+376
+00:29:36,970 --> 00:29:40,970
+discriminar entre elementos de classe, é o mesmo problema,
+
+377
+00:29:40,970 --> 00:29:44,970
+só que um objetivo diferente, num, a função é discriminante,
+
+378
+00:29:44,970 --> 00:29:48,970
+ou seja, ela vai-se posicionar de maneira a separar, da melhor maneira,
+
+379
+00:29:48,970 --> 00:29:51,970
+elementos de duas classes diferentes, duas ou mais,
+
+380
+00:29:52,970 --> 00:29:57,970
+e aqui, na regressão, é a função,
+
+381
+00:29:57,970 --> 00:30:00,970
+tenta aproximar, ao máximo, a função aos dados,
+
+382
+00:30:00,970 --> 00:30:02,970
+faz um ajuste, uma curva aos dados,
+
+383
+00:30:02,970 --> 00:30:06,970
+para, a partir de dados, nós conseguimos estimar uma função que os descrevem.
+
+384
+00:30:06,970 --> 00:30:10,970
+Agora, logo por aqui vocês veem que o machine learning é super interessante,
+
+385
+00:30:10,970 --> 00:30:13,970
+porque já isso foi dito ontem, e é porquê?
+
+386
+00:30:13,970 --> 00:30:17,970
+Porque vocês conseguem extrair funções a partir de dados,
+
+387
+00:30:17,970 --> 00:30:21,970
+sem o ser humano ter de estar ali propriamente a fazer
+
+388
+00:30:21,970 --> 00:30:24,970
+o grande esforço intelectual para isso, ou seja,
+
+389
+00:30:24,970 --> 00:30:27,970
+neste caso, conseguiu-se implementar por software,
+
+390
+00:30:28,970 --> 00:30:33,970
+mecanismos que permitiram a estes modelos,
+
+391
+00:30:33,970 --> 00:30:36,970
+aprenderem a partir dos dados, e é espetacular.
+
+392
+00:30:36,970 --> 00:30:38,970
+Eu ontem acho que já devia ter dito isto, por exemplo,
+
+393
+00:30:38,970 --> 00:30:40,970
+a árvore de decisão é um exemplo incrível,
+
+394
+00:30:40,970 --> 00:30:42,970
+porque a árvore de decisão é totalmente interpretável,
+
+395
+00:30:42,970 --> 00:30:43,970
+o que é que é isto?
+
+396
+00:30:43,970 --> 00:30:46,970
+Nas árvores de decisão, quando vocês aprendem a decisão,
+
+397
+00:30:46,970 --> 00:30:48,970
+no final vocês têm árvore que explica exatamente
+
+398
+00:30:48,970 --> 00:30:50,970
+como é que ele faz toda a decisão.
+
+399
+00:30:50,970 --> 00:30:53,970
+E depois de fazerem aquilo, vocês nos vossos empregos,
+
+400
+00:30:53,970 --> 00:30:58,970
+nos vossos trabalhos do dia a dia, ou de investigação que façam,
+
+401
+00:30:58,970 --> 00:31:00,970
+vocês podem aplicar uma árvore de decisão,
+
+402
+00:31:00,970 --> 00:31:03,970
+fazem a aprendizagem, e no final, para qualquer problema,
+
+403
+00:31:03,970 --> 00:31:07,970
+na qual ela ajuste com um grande, com um elevado grau de eficiência,
+
+404
+00:31:07,970 --> 00:31:11,970
+vocês sabem como é que se faz aquela decisão
+
+405
+00:31:11,970 --> 00:31:12,970
+e como é que separam os dados.
+
+406
+00:31:12,970 --> 00:31:14,970
+E logo isso dá-nos muita informação,
+
+407
+00:31:14,970 --> 00:31:16,970
+mas a implementação de uma árvore de decisão
+
+408
+00:31:16,970 --> 00:31:18,970
+é extremamente simples, porque são ifs.
+
+409
+00:31:18,970 --> 00:31:20,970
+If o valor é tanto, então é uma coisa e outra,
+
+410
+00:31:20,970 --> 00:31:22,970
+e parto ali os data sets, e por exemplo,
+
+411
+00:31:22,970 --> 00:31:24,970
+a árvore de decisão é certamente o modelo
+
+412
+00:31:24,970 --> 00:31:26,970
+que para aqui é muito utilizado.
+
+413
+00:31:26,970 --> 00:31:28,970
+Pronto, one-label data, só pegamos aqui,
+
+414
+00:31:28,970 --> 00:31:30,970
+tenho que me despachar a descender as horas.
+
+415
+00:31:30,970 --> 00:31:33,970
+Ok, one-label data, basicamente são dados
+
+416
+00:31:33,970 --> 00:31:35,970
+para os quais não há labels, não há respostas,
+
+417
+00:31:35,970 --> 00:31:38,970
+são aplicados ao modelo, que eu aqui chamo de machine,
+
+418
+00:31:38,970 --> 00:31:41,970
+e o resultado, aqui está tudo ao monto,
+
+419
+00:31:41,970 --> 00:31:43,970
+e ele dá alguma forma a agrupar os resultados.
+
+420
+00:31:43,970 --> 00:31:46,970
+Ou seja, estes retângulos com retângulos,
+
+421
+00:31:46,970 --> 00:31:49,970
+os círculos com círculos, e estes hexágonos com hexágonos,
+
+422
+00:31:49,970 --> 00:31:50,970
+e fica tudo junto.
+
+423
+00:31:50,970 --> 00:31:53,970
+No fundo, o problema desta aprendizagem
+
+424
+00:31:53,970 --> 00:31:56,970
+não se previse nada, é muito mais agrupar,
+
+425
+00:31:56,970 --> 00:31:58,970
+porque não temos respostas,
+
+426
+00:31:58,970 --> 00:32:00,970
+ou setar padrões dentro da coisa.
+
+427
+00:32:00,970 --> 00:32:03,970
+É importante dizer-vos que a aprendizagem
+
+428
+00:32:03,970 --> 00:32:04,970
+não se previse nada,
+
+429
+00:32:04,970 --> 00:32:07,970
+tipicamente não tem mesmo o nível de eficácia
+
+430
+00:32:07,970 --> 00:32:10,970
+que tenha supervisionada, porque também não é suposto,
+
+431
+00:32:10,970 --> 00:32:14,970
+não quer dizer que não se possa ter resultados muito bons com isto,
+
+432
+00:32:14,970 --> 00:32:17,970
+mas a supervisionada é muito mais exata,
+
+433
+00:32:17,970 --> 00:32:20,970
+porque tem a supervisão de uma variável de saída, ok?
+
+434
+00:32:20,970 --> 00:32:22,970
+Unsupervised, só, isto é rápido,
+
+435
+00:32:22,970 --> 00:32:26,970
+só para vos mostrar que no fundo vocês aqui passam dados sem classes,
+
+436
+00:32:26,970 --> 00:32:29,970
+e que depois, do modelo treinado,
+
+437
+00:32:29,970 --> 00:32:31,970
+vocês passam outros dados sem classes,
+
+438
+00:32:31,970 --> 00:32:35,970
+e ele basicamente vai-vos dar predições onde é que eles encaixam,
+
+439
+00:32:35,970 --> 00:32:38,970
+onde é que eles pertencem, em que grupo pertencem.
+
+440
+00:32:38,970 --> 00:32:41,970
+Depois, dois conceitos muito importantes,
+
+441
+00:32:41,970 --> 00:32:44,970
+o semi-supervisor e o reinforcement.
+
+442
+00:32:44,970 --> 00:32:47,970
+Basicamente, qual é o problema?
+
+443
+00:32:47,970 --> 00:32:49,970
+Os dados são um novo ouro,
+
+444
+00:32:49,970 --> 00:32:52,970
+mas há uma questão é que os dados de qualidade,
+
+445
+00:32:52,970 --> 00:32:55,970
+e os dados com supervisão e devidamente tratados,
+
+446
+00:32:55,970 --> 00:32:56,970
+devidamente curados,
+
+447
+00:32:56,970 --> 00:32:59,970
+curados são processados para estarem impecáveis,
+
+448
+00:32:59,970 --> 00:33:01,970
+são extremamente caros,
+
+449
+00:33:01,970 --> 00:33:03,970
+e os dados são grande parte dos custos
+
+450
+00:33:03,970 --> 00:33:05,970
+da inclusão artificial atual,
+
+451
+00:33:05,970 --> 00:33:08,970
+e as empresas usam imensas estratégias para se ter a dados,
+
+452
+00:33:08,970 --> 00:33:10,970
+das formas mais baratas possíveis.
+
+453
+00:33:10,970 --> 00:33:12,970
+Uma delas é pagar, tipo a indianos,
+
+454
+00:33:12,970 --> 00:33:14,970
+e as chineses, agora já não tantos chineses,
+
+455
+00:33:14,970 --> 00:33:17,970
+mas muitos indianos, milhares e milhares de indianos,
+
+456
+00:33:17,970 --> 00:33:21,970
+que estão 8, 10, 12 horas por dia a fazer label data sets,
+
+457
+00:33:21,970 --> 00:33:25,970
+e portanto são pagos para 2 dólares a hora,
+
+458
+00:33:25,970 --> 00:33:27,970
+não sei o quê, estão ali a fazer label data sets,
+
+459
+00:33:27,970 --> 00:33:30,970
+vamos atrás de outros, é um emprego muito qualquer,
+
+460
+00:33:30,970 --> 00:33:32,970
+e depois também, de dados de experiência,
+
+461
+00:33:32,970 --> 00:33:35,970
+a Internet serve para fazer a agriação de muitos dados,
+
+462
+00:33:35,970 --> 00:33:39,970
+e também os dados da nossa experiência de utilização,
+
+463
+00:33:39,970 --> 00:33:42,970
+plataformas que nos são dada de forma gratuita
+
+464
+00:33:42,970 --> 00:33:45,970
+ou relativamente barata,
+
+465
+00:33:45,970 --> 00:33:48,970
+e a nossa utilização também gera esses dados,
+
+466
+00:33:48,970 --> 00:33:50,970
+o data gathering é uma cena super relevante.
+
+467
+00:33:50,970 --> 00:33:51,970
+E então o que é que acontece?
+
+468
+00:33:51,970 --> 00:33:54,970
+Muitas vezes nós não temos a capacidade ou o dinheiro
+
+469
+00:33:54,970 --> 00:33:56,970
+para processar corretamente os dados,
+
+470
+00:33:56,970 --> 00:33:59,970
+neste caso seria arranjar-lhes os labels,
+
+471
+00:33:59,970 --> 00:34:01,970
+então o que é que se faz?
+
+472
+00:34:01,970 --> 00:34:04,970
+O processo de perfil semi-supervisionado,
+
+473
+00:34:04,970 --> 00:34:07,970
+na qual temos um pequeno conjunto de dados com labels,
+
+474
+00:34:07,970 --> 00:34:09,969
+treinamos o modelo com eles,
+
+475
+00:34:09,969 --> 00:34:12,969
+e depois aplicamos estes aqui para fazer a inferência,
+
+476
+00:34:12,969 --> 00:34:14,969
+fazer os pseudo labels,
+
+477
+00:34:14,969 --> 00:34:17,969
+que no fundo é a partir do modelo inicialmente treinado com estes,
+
+478
+00:34:17,969 --> 00:34:18,969
+geramos os labels destes,
+
+479
+00:34:18,969 --> 00:34:24,969
+e depois aqui vamos criar o modelo final com isto tudo.
+
+480
+00:34:24,969 --> 00:34:26,969
+Pronto, há muitos anos, quando eu estudei isto,
+
+481
+00:34:26,969 --> 00:34:29,969
+depois nunca mais usei o semi-supervisionado,
+
+482
+00:34:29,969 --> 00:34:31,969
+um aluno uma vez que fez umas coisas mas depois trocou o trabalho
+
+483
+00:34:31,969 --> 00:34:33,969
+porque não estava a dar o que ele queria,
+
+484
+00:34:33,969 --> 00:34:35,969
+e ele mudou para outros modelos e vem,
+
+485
+00:34:35,969 --> 00:34:37,969
+isto não funcionava nada de especial.
+
+486
+00:34:37,969 --> 00:34:39,969
+Nos últimos anos tenho ouvido assim umas bocas
+
+487
+00:34:39,969 --> 00:34:42,969
+que têm havido aí alguns modelos que têm melhorado,
+
+488
+00:34:42,969 --> 00:34:44,969
+mas fica a dica e é útil para coisas,
+
+489
+00:34:44,969 --> 00:34:46,969
+mas é sempre aquela história.
+
+490
+00:34:46,969 --> 00:34:48,969
+Outra coisa que nem sempre vamos muito,
+
+491
+00:34:48,969 --> 00:34:50,969
+e julgo aqui no TensorFlow Lite,
+
+492
+00:34:50,969 --> 00:34:52,969
+não sei se é muito usado,
+
+493
+00:34:52,969 --> 00:34:56,969
+mas vamos explorar isso agora ao longo das próximas semanas,
+
+494
+00:34:56,969 --> 00:34:58,969
+o reinforcement learning,
+
+495
+00:34:58,969 --> 00:35:00,969
+agora o professor Tiago é especializado nisto,
+
+496
+00:35:00,969 --> 00:35:02,969
+o reinforcement learning ele sabe muito o assunto,
+
+497
+00:35:04,969 --> 00:35:07,969
+e então basicamente o reinforcement é o que é?
+
+498
+00:35:07,969 --> 00:35:10,969
+Vocês têm um agente que é um modelo por software
+
+499
+00:35:10,969 --> 00:35:13,969
+e tem basicamente um ambiente, um environment,
+
+500
+00:35:13,969 --> 00:35:17,969
+e esse environment essencialmente tem a capacidade de fazer duas coisas,
+
+501
+00:35:17,969 --> 00:35:19,969
+tem um estado que ele comunica ao agente
+
+502
+00:35:19,969 --> 00:35:23,969
+e emite reworks conforme o tipo de ação que lhe é passado.
+
+503
+00:35:23,969 --> 00:35:26,969
+Então vamos lá, o agente olha para um sistema qualquer,
+
+504
+00:35:26,969 --> 00:35:28,969
+o environment é qualquer coisa física,
+
+505
+00:35:28,969 --> 00:35:30,969
+pode ser quase um sistema físico,
+
+506
+00:35:30,969 --> 00:35:33,969
+um sistema social, um sistema de engenharia, qualquer coisa,
+
+507
+00:35:33,969 --> 00:35:35,969
+e o que é que acontece?
+
+508
+00:35:35,969 --> 00:35:37,969
+Ele olha, está a observar e diz,
+
+509
+00:35:37,969 --> 00:35:39,969
+opa, isto está parado,
+
+510
+00:35:39,969 --> 00:35:41,969
+e não está a acontecer nada,
+
+511
+00:35:41,969 --> 00:35:45,969
+logo eu mando aqui um pontapé na cena a ver o que acontece,
+
+512
+00:35:45,969 --> 00:35:49,969
+e se este pontapé faz uma mudança de estado
+
+513
+00:35:49,969 --> 00:35:52,969
+e o ambiente diz ok, mudamos de estado, estamos em movimento,
+
+514
+00:35:52,969 --> 00:35:55,969
+e diz, olha mas este movimento é uma grande porcaria,
+
+515
+00:35:55,969 --> 00:35:56,969
+não serve para nada,
+
+516
+00:35:56,969 --> 00:35:59,969
+e o agente diz ok, então vou dar um pontapé no outro sentido,
+
+517
+00:35:59,969 --> 00:36:01,969
+e ele manda outro pontapé,
+
+518
+00:36:01,969 --> 00:36:04,969
+e ele diz, olha isto agora continuamos em movimento,
+
+519
+00:36:04,969 --> 00:36:06,969
+mas este movimento está basicamente igual ao outro,
+
+520
+00:36:06,969 --> 00:36:08,969
+mas há aqui uma coisa,
+
+521
+00:36:08,969 --> 00:36:10,969
+mas mudou que isto agora está melhor,
+
+522
+00:36:10,969 --> 00:36:13,969
+e esta gente vai explorar as duas dimensões,
+
+523
+00:36:13,969 --> 00:36:14,969
+onde é que eu vou?
+
+524
+00:36:14,969 --> 00:36:16,969
+Para o mal, onde é que eu vou para o bem,
+
+525
+00:36:16,969 --> 00:36:18,969
+ou seja, ele anda assim num jogo,
+
+526
+00:36:18,969 --> 00:36:20,969
+uma espécie de quente e frio,
+
+527
+00:36:20,969 --> 00:36:22,969
+e diz ok, se eu for para aqui isto dá mal,
+
+528
+00:36:22,969 --> 00:36:23,969
+se eu for para ali vai mal,
+
+529
+00:36:23,969 --> 00:36:25,969
+se eu for virar ainda mais aqui faço mal,
+
+530
+00:36:25,969 --> 00:36:27,969
+mas eu agora se for para o outro lado e começar a coisar,
+
+531
+00:36:27,969 --> 00:36:29,969
+eu vou mudar o estado ao sistema,
+
+532
+00:36:29,969 --> 00:36:31,969
+e vou agora para esta zona do quente,
+
+533
+00:36:31,969 --> 00:36:33,969
+e pá, quente, quente, quente, quentinho,
+
+534
+00:36:33,969 --> 00:36:35,969
+e pá, aqui está a ferver, agora aqui começa a esfriar,
+
+535
+00:36:35,969 --> 00:36:38,969
+e ele começa a mapear o ambiente dessa maneira,
+
+536
+00:36:38,969 --> 00:36:40,969
+pronto, e o que é que acontece?
+
+537
+00:36:40,969 --> 00:36:42,969
+No final o agente em reinforcement learning
+
+538
+00:36:42,969 --> 00:36:44,969
+acaba por observar o ambiente
+
+539
+00:36:44,969 --> 00:36:46,969
+e perceber como é que ele funciona,
+
+540
+00:36:46,969 --> 00:36:49,969
+depois há aqui duas políticas grandes,
+
+541
+00:36:49,969 --> 00:36:51,969
+mas não é relevante nesta altura,
+
+542
+00:36:51,969 --> 00:36:53,969
+mas é essencialmente isto,
+
+543
+00:36:53,969 --> 00:36:55,969
+do reinforcement learning.
+
+544
+00:36:55,969 --> 00:36:57,969
+Depois, isto já falamos,
+
+545
+00:36:57,969 --> 00:36:59,969
+ah, rapidamente,
+
+546
+00:36:59,969 --> 00:37:01,969
+redução dimensional,
+
+547
+00:37:01,969 --> 00:37:03,969
+lembram-se de eu ter falado
+
+548
+00:37:03,969 --> 00:37:05,969
+do Curse of Dimensionality,
+
+549
+00:37:05,969 --> 00:37:07,969
+e aqui há bocado,
+
+550
+00:37:07,969 --> 00:37:09,969
+muitas variáveis são um problema,
+
+551
+00:37:09,969 --> 00:37:11,969
+como vos disse, não são um problema para máquinas potentes,
+
+552
+00:37:11,969 --> 00:37:13,969
+mas são para máquinas menos potentes,
+
+553
+00:37:13,969 --> 00:37:15,969
+e podem ser relevantes aqui,
+
+554
+00:37:15,969 --> 00:37:17,969
+então, o objetivo disto é ir a cada instância,
+
+555
+00:37:17,969 --> 00:37:19,969
+a cada amostra,
+
+556
+00:37:19,969 --> 00:37:22,969
+e se está a ser pesado por usar todas aquelas variáveis,
+
+557
+00:37:22,969 --> 00:37:24,969
+nós podemos tentar arranjar técnicas
+
+558
+00:37:24,969 --> 00:37:26,969
+para reduzir o número de variáveis,
+
+559
+00:37:26,969 --> 00:37:28,969
+mas obviamente queremos fazer isso,
+
+560
+00:37:28,969 --> 00:37:30,969
+mas queremos também preservar a informação,
+
+561
+00:37:30,969 --> 00:37:33,969
+ou seja, queremos deitar fora o trigo,
+
+562
+00:37:33,969 --> 00:37:35,969
+desculpem o joio, e não perder o trigo,
+
+563
+00:37:35,969 --> 00:37:37,969
+ou seja, e isto é super interessante,
+
+564
+00:37:37,969 --> 00:37:39,969
+as técnicas de redução de dimensionalidade
+
+565
+00:37:39,969 --> 00:37:41,969
+podem ser usadas para tarefas
+
+566
+00:37:41,969 --> 00:37:43,969
+como visualização,
+
+567
+00:37:43,969 --> 00:37:45,969
+por exemplo, imaginem que temos um dataset
+
+568
+00:37:45,969 --> 00:37:47,969
+com 20 e tal features,
+
+569
+00:37:47,969 --> 00:37:49,969
+queremos fazer uma visualização daquilo,
+
+570
+00:37:49,969 --> 00:37:51,969
+ou um plot tridimensional, ou o que for,
+
+571
+00:37:51,969 --> 00:37:53,969
+ou até um pequeno vídeo quadridimensional,
+
+572
+00:37:53,969 --> 00:37:55,969
+com 3 dimensões,
+
+573
+00:37:55,969 --> 00:37:57,969
+mais o tempo, algo desse género,
+
+574
+00:37:57,969 --> 00:37:59,969
+na realidade nós,
+
+575
+00:37:59,969 --> 00:38:01,969
+acima de 3, 4 dimensões,
+
+576
+00:38:01,969 --> 00:38:03,969
+já não sabemos fazer isso,
+
+577
+00:38:03,969 --> 00:38:05,969
+temos que fazer coisas paramétricas,
+
+578
+00:38:05,969 --> 00:38:07,969
+se uma variável for isto, então temos estas 2 ou 3 variáveis,
+
+579
+00:38:07,969 --> 00:38:09,969
+e por aqui fora,
+
+580
+00:38:09,969 --> 00:38:11,969
+e a redução de dimensional muitas vezes é uma coisa
+
+581
+00:38:11,969 --> 00:38:13,969
+que serve para treinar os modelos,
+
+582
+00:38:13,969 --> 00:38:15,969
+mas também serve para a visualização,
+
+583
+00:38:15,969 --> 00:38:17,969
+treinar variáveis que são redundantes,
+
+584
+00:38:17,969 --> 00:38:19,969
+ou representar os nossos dados
+
+585
+00:38:19,969 --> 00:38:21,969
+em espaços da mostra,
+
+586
+00:38:21,969 --> 00:38:23,969
+com 2 ou 3 variáveis,
+
+587
+00:38:23,969 --> 00:38:25,969
+mas que representam 90 e tal por cento de informação,
+
+588
+00:38:25,969 --> 00:38:27,969
+já vos vou falar do PCA que é exatamente isso,
+
+589
+00:38:27,969 --> 00:38:29,969
+pronto, isto é para a visualização,
+
+590
+00:38:29,969 --> 00:38:31,969
+feature extraction,
+
+591
+00:38:31,969 --> 00:38:33,969
+que é basicamente nós no fundo
+
+592
+00:38:33,969 --> 00:38:35,969
+termos 20 variáveis,
+
+593
+00:38:35,969 --> 00:38:37,969
+e dizer assim, olha,
+
+594
+00:38:37,969 --> 00:38:39,969
+eu vou destas variáveis,
+
+595
+00:38:39,969 --> 00:38:41,969
+uso uma técnica para tirar 3,
+
+596
+00:38:41,969 --> 00:38:43,969
+mas que guardam quase toda a informação,
+
+597
+00:38:43,969 --> 00:38:45,969
+e data compression,
+
+598
+00:38:45,969 --> 00:38:47,969
+porque se vocês têm 20 variáveis e conseguem representar 3,
+
+599
+00:38:47,969 --> 00:38:49,969
+vocês na realidade
+
+600
+00:38:49,969 --> 00:38:51,969
+são a fazer um zip com um bocadinho de perda,
+
+601
+00:38:51,969 --> 00:38:53,969
+até poderia ser sem perda,
+
+602
+00:38:53,969 --> 00:38:55,969
+mas normalmente é com um bocadinho de perda,
+
+603
+00:38:55,969 --> 00:38:57,969
+que sequer pouca,
+
+604
+00:38:57,969 --> 00:38:59,969
+e vocês no fundo podem inclusivamente,
+
+605
+00:38:59,969 --> 00:39:01,969
+imaginem, se o vosso dataset é muito grande
+
+606
+00:39:01,969 --> 00:39:03,969
+e ocupa muito espaço,
+
+607
+00:39:03,969 --> 00:39:05,969
+ao fazerem esta compressão de dados por redução
+
+608
+00:39:05,969 --> 00:39:07,969
+dimensional, vocês deixam de ter
+
+609
+00:39:07,969 --> 00:39:09,969
+os dados originais, mas vocês passam
+
+610
+00:39:09,969 --> 00:39:11,969
+a ter uns dados que do ponto de vista da aprendizagem
+
+611
+00:39:11,969 --> 00:39:13,969
+máquina, os representam um problema,
+
+612
+00:39:13,969 --> 00:39:15,969
+e vocês podem perfeitamente
+
+613
+00:39:15,969 --> 00:39:17,969
+ter só aqueles dados,
+
+614
+00:39:17,969 --> 00:39:19,969
+ocupar muito espaço em disco e guardar
+
+615
+00:39:19,969 --> 00:39:21,969
+aquela realidade toda de uma farola comprimida
+
+616
+00:39:21,969 --> 00:39:23,969
+e ter. Pronto.
+
+617
+00:39:23,969 --> 00:39:25,969
+Duas coisas importantes, é
+
+618
+00:39:25,969 --> 00:39:27,969
+feature selection, feature selection é o que é?
+
+619
+00:39:27,969 --> 00:39:29,969
+Não é exatamente
+
+620
+00:39:29,969 --> 00:39:31,969
+isto que eu estou a dizer, mas feature selection
+
+621
+00:39:31,969 --> 00:39:33,969
+é de N features que vocês têm, vocês
+
+622
+00:39:33,969 --> 00:39:35,969
+selecionam M que é menor
+
+623
+00:39:35,969 --> 00:39:37,969
+do que N, ou seja,
+
+624
+00:39:37,969 --> 00:39:39,969
+é olhar para aqui e dizer assim,
+
+625
+00:39:39,969 --> 00:39:41,969
+que estas features são um pouco relevantes,
+
+626
+00:39:41,969 --> 00:39:43,969
+adiciona um pouco à aprendizagem
+
+627
+00:39:43,969 --> 00:39:45,969
+do meu modelo,
+
+628
+00:39:45,969 --> 00:39:47,969
+e portanto eu vou ficar só com estas,
+
+629
+00:39:47,969 --> 00:39:49,969
+seleção de features, e depois
+
+630
+00:39:49,969 --> 00:39:51,969
+existe a reduction mesmo, que eu coloco aqui
+
+631
+00:39:51,969 --> 00:39:53,969
+o PCA, mas não é
+
+632
+00:39:53,969 --> 00:39:55,969
+só esta, a seguir deve ir aqui,
+
+633
+00:39:55,969 --> 00:39:57,969
+pronto, já disse isto
+
+634
+00:39:57,969 --> 00:39:59,969
+só rapidamente aqui,
+
+635
+00:39:59,969 --> 00:40:01,969
+é o ranking
+
+636
+00:40:01,969 --> 00:40:03,969
+da importância de cada feature,
+
+637
+00:40:03,969 --> 00:40:05,969
+no dataset, baseado
+
+638
+00:40:05,969 --> 00:40:07,969
+em diversos critérios, ou seja,
+
+639
+00:40:07,969 --> 00:40:09,969
+é só isto que interessa aqui
+
+640
+00:40:09,969 --> 00:40:11,969
+mais especificamente,
+
+641
+00:40:11,969 --> 00:40:13,969
+que é vocês vão a um conjunto de features e vão
+
+642
+00:40:13,969 --> 00:40:15,969
+mapear a importância de todas,
+
+643
+00:40:15,969 --> 00:40:17,969
+e no final dizem, olha,
+
+644
+00:40:17,969 --> 00:40:19,969
+para ter mais ou menos isto, eleito de forestas que valem pouco
+
+645
+00:40:19,969 --> 00:40:21,969
+e fico só com estas, perdemos
+
+646
+00:40:21,969 --> 00:40:23,969
+informação com isto, mas
+
+647
+00:40:23,969 --> 00:40:25,969
+ganhamos menos dimensionalidade.
+
+648
+00:40:25,969 --> 00:40:27,969
+Depois, a
+
+649
+00:40:27,969 --> 00:40:29,969
+feature selection está aqui,
+
+650
+00:40:29,969 --> 00:40:31,969
+a redução
+
+651
+00:40:31,969 --> 00:40:33,969
+dimensional, há várias
+
+652
+00:40:33,969 --> 00:40:35,969
+algoritmos, e a redução
+
+653
+00:40:35,969 --> 00:40:37,969
+dimensional, é literalmente
+
+654
+00:40:37,969 --> 00:40:39,969
+reduzir mesmo as, ou seja,
+
+655
+00:40:39,969 --> 00:40:41,969
+mantém-se a informação de todas as features,
+
+656
+00:40:41,969 --> 00:40:43,969
+mas reduzimos para outras features,
+
+657
+00:40:43,969 --> 00:40:45,969
+isto implica sempre
+
+658
+00:40:45,969 --> 00:40:47,969
+o mapeamento num novo espaço.
+
+659
+00:40:47,969 --> 00:40:49,969
+Do ponto de vista matemático, isto é uma
+
+660
+00:40:49,969 --> 00:40:51,969
+translação para outro espaço vetorial,
+
+661
+00:40:51,969 --> 00:40:53,969
+ok? Normalmente,
+
+662
+00:40:53,969 --> 00:40:55,969
+não é normalmente, esse novo espaço vetorial,
+
+663
+00:40:55,969 --> 00:40:57,969
+as variáveis não são as mesmas da entrada,
+
+664
+00:40:57,969 --> 00:40:59,969
+mas as novas variáveis
+
+665
+00:40:59,969 --> 00:41:01,969
+representam o mesmo problema.
+
+666
+00:41:01,969 --> 00:41:03,969
+Pronto, desculpem lá que estivesse um bocado massudo, mas é se
+
+667
+00:41:03,969 --> 00:41:05,969
+vocês pelo menos já têm o inútil.
+
+668
+00:41:05,969 --> 00:41:07,969
+O PCA faz
+
+669
+00:41:07,969 --> 00:41:09,969
+isto de uma maneira, o LBA faz isto de outra,
+
+670
+00:41:09,969 --> 00:41:11,969
+são os dois que se utilizam mais,
+
+671
+00:41:11,969 --> 00:41:13,969
+praticamente só sou este.
+
+672
+00:41:13,969 --> 00:41:15,969
+O PCA, não vos vou explicar, mas vou só
+
+673
+00:41:15,969 --> 00:41:17,969
+mostrar-vos como é que faz.
+
+674
+00:41:17,969 --> 00:41:19,969
+Deixe-me ver se eu tenho aqui uma coisa, este
+
+675
+00:41:19,969 --> 00:41:21,969
+português, este em inglês, ou português que aqui está não interessa.
+
+676
+00:41:21,969 --> 00:41:23,969
+Pronto, essencialmente,
+
+677
+00:41:23,969 --> 00:41:25,969
+vejam o PCA como um
+
+678
+00:41:25,969 --> 00:41:27,969
+método que mapeia aquelas
+
+679
+00:41:27,969 --> 00:41:29,969
+variáveis num espaço de
+
+680
+00:41:29,969 --> 00:41:31,969
+três variáveis, ou quatro,
+
+681
+00:41:31,969 --> 00:41:33,969
+e tem a capacidade de medir
+
+682
+00:41:33,969 --> 00:41:35,969
+qual a percentagem da informação
+
+683
+00:41:35,969 --> 00:41:37,969
+foi pedida, ou seja, ele
+
+684
+00:41:37,969 --> 00:41:39,969
+tem um critério de qualidade que diz, olha,
+
+685
+00:41:39,969 --> 00:41:41,969
+se tu representares em três das novas
+
+686
+00:41:41,969 --> 00:41:43,969
+variáveis, tu perdes, por exemplo, 20% de informação,
+
+687
+00:41:43,969 --> 00:41:45,969
+se usares quatro,
+
+688
+00:41:45,969 --> 00:41:47,969
+tu perdes só 3%,
+
+689
+00:41:47,969 --> 00:41:49,969
+se usares cinco, perdes 0,1%.
+
+690
+00:41:49,969 --> 00:41:51,969
+E depois o utilizador, ao fazer
+
+691
+00:41:51,969 --> 00:41:53,969
+o PCA para vários casos, vai escolher
+
+692
+00:41:53,969 --> 00:41:55,969
+que caso quer.
+
+693
+00:41:55,969 --> 00:41:57,969
+E do ponto de vista prático, é isto que vocês precisam de entender,
+
+694
+00:41:57,969 --> 00:41:59,969
+o PCA aplica-se com uma função,
+
+695
+00:41:59,969 --> 00:42:01,969
+depois nós vamos escolher o número
+
+696
+00:42:01,969 --> 00:42:03,969
+de variáveis conforme a perda de informação
+
+697
+00:42:03,969 --> 00:42:05,969
+que estamos disponíveis.
+
+698
+00:42:05,969 --> 00:42:07,969
+E mais, vocês podem fazer outra coisa,
+
+699
+00:42:07,969 --> 00:42:09,969
+vocês podem fazer isto e treinam o modelo
+
+700
+00:42:09,969 --> 00:42:11,969
+e veem qual é o impacto dessa
+
+701
+00:42:11,969 --> 00:42:13,969
+perda no próprio modelo.
+
+702
+00:42:13,969 --> 00:42:15,969
+E às vezes até se pode perder mais, mas
+
+703
+00:42:15,969 --> 00:42:17,969
+em termos de o modelo consegue
+
+704
+00:42:17,969 --> 00:42:19,969
+pegar bem naquilo e continua a decidir
+
+705
+00:42:19,969 --> 00:42:21,969
+bastante bem, então normalmente é este o pipeline
+
+706
+00:42:21,969 --> 00:42:23,969
+que se faz. Vamos esquecer
+
+707
+00:42:23,969 --> 00:42:25,969
+isto, que isto é para vos fazer confusão
+
+708
+00:42:25,969 --> 00:42:27,969
+nesta fase.
+
+709
+00:42:27,969 --> 00:42:29,969
+É o que eu vos digo, é agrupamento de dados
+
+710
+00:42:29,969 --> 00:42:31,969
+que falamos à bocada e aqui é muito fácil
+
+711
+00:42:31,969 --> 00:42:33,969
+que nós temos as cores e
+
+712
+00:42:33,969 --> 00:42:35,969
+se não tivéssemos as cores, tenhamos na mesma
+
+713
+00:42:35,969 --> 00:42:37,969
+as manchas, as densidades e
+
+714
+00:42:37,969 --> 00:42:39,969
+também ainda não era difícil, mas
+
+715
+00:42:39,969 --> 00:42:41,969
+o clacering às vezes pode ser desafiante porque
+
+716
+00:42:41,969 --> 00:42:43,969
+os padrões não são tão simples, aqui temos padrões
+
+717
+00:42:43,969 --> 00:42:45,969
+de dimensionais e nós podemos
+
+718
+00:42:45,969 --> 00:42:47,969
+ter padrões de 100, 200, 300 variáveis,
+
+719
+00:42:47,969 --> 00:42:49,969
+isso é um problema
+
+720
+00:42:49,969 --> 00:42:51,969
+completamente diferente.
+
+721
+00:42:51,969 --> 00:42:53,969
+Mas lá está, é um problema para nós humanos,
+
+722
+00:42:53,969 --> 00:42:55,969
+porque própria matemática é só
+
+723
+00:42:55,969 --> 00:42:57,969
+expandir a coisa para N variáveis
+
+724
+00:42:57,969 --> 00:42:59,969
+e os algoritmos felizmente
+
+725
+00:42:59,969 --> 00:43:01,969
+tipicamente aplicam-se todos para N
+
+726
+00:43:01,969 --> 00:43:03,969
+dimensões e portanto basicamente
+
+727
+00:43:03,969 --> 00:43:05,969
+a matemática continua a fazer o seu trabalho
+
+728
+00:43:05,969 --> 00:43:07,969
+e é aqui que eu costumo dizer sempre, a matemática
+
+729
+00:43:07,969 --> 00:43:09,969
+dá-nos olhos para além das dimensões que
+
+730
+00:43:09,969 --> 00:43:11,969
+o humano consegue abarcar, porque efetivamente
+
+731
+00:43:11,969 --> 00:43:13,969
+nós temos esta limitação
+
+732
+00:43:13,969 --> 00:43:15,969
+enquanto humanos e este é um
+
+733
+00:43:15,969 --> 00:43:17,969
+dos grandes tratores que faz com que nós tenhamos a
+
+734
+00:43:17,969 --> 00:43:19,969
+inteligência artificial, é temos esta matemática
+
+735
+00:43:19,969 --> 00:43:21,969
+que nos permite ver muito além das
+
+736
+00:43:21,969 --> 00:43:23,969
+dimensões que um ser humano
+
+737
+00:43:23,969 --> 00:43:25,969
+consegue, para aquelas pessoas que dizem
+
+738
+00:43:25,969 --> 00:43:27,969
+ah mas a inteligência artificial não consegue
+
+739
+00:43:27,969 --> 00:43:29,969
+e este é o ponto de charneira
+
+740
+00:43:29,969 --> 00:43:31,969
+que é mapear espaços
+
+741
+00:43:31,969 --> 00:43:33,969
+de memória e aumentar a nossa memória e conseguir
+
+742
+00:43:33,969 --> 00:43:35,969
+lidar com
+
+743
+00:43:35,969 --> 00:43:37,969
+um número de variáveis que
+
+744
+00:43:37,969 --> 00:43:39,969
+para o ser humano não são possível, não significa
+
+745
+00:43:39,969 --> 00:43:41,969
+que nós não sejamos umas máquinas incríveis de
+
+746
+00:43:41,969 --> 00:43:43,969
+postamento porque somos,
+
+747
+00:43:43,969 --> 00:43:45,969
+todos nós mais ou menos mediante a coisa
+
+748
+00:43:45,969 --> 00:43:47,969
+mas somos, mas temos esta
+
+749
+00:43:47,969 --> 00:43:49,969
+realidade, isto aqui é só
+
+750
+00:43:49,969 --> 00:43:51,969
+para vos mostrar algoritmos, não vamos
+
+751
+00:43:51,969 --> 00:43:53,969
+entrar por aqui, mas que isto por aqui
+
+752
+00:43:53,969 --> 00:43:55,969
+porque eu fiz este, apesar de ser este e estes
+
+753
+00:43:55,969 --> 00:43:57,969
+não são os que eu estou a utilizar lá, eu adaptei um bocadinho
+
+754
+00:43:57,969 --> 00:43:59,969
+isto aqui são
+
+755
+00:43:59,969 --> 00:44:01,969
+diferentes algoritmos aplicados a diferentes
+
+756
+00:44:01,969 --> 00:44:03,969
+tipos de datasets, eu faço
+
+757
+00:44:03,969 --> 00:44:05,969
+notar que estes datasets são todos
+
+758
+00:44:05,969 --> 00:44:07,969
+sintéticos, isto é um dataset, isto é
+
+759
+00:44:07,969 --> 00:44:09,969
+outro, isto é outro, isto é
+
+760
+00:44:09,969 --> 00:44:11,969
+outro, isto é outro, isto é outro
+
+761
+00:44:11,969 --> 00:44:13,969
+e isto são os algoritmos
+
+762
+00:44:13,969 --> 00:44:15,969
+portanto são datasets sintéticos, são datasets
+
+763
+00:44:15,969 --> 00:44:17,969
+que não existem no mundo real, foram criados
+
+764
+00:44:17,969 --> 00:44:19,969
+para evidenciar determinadas
+
+765
+00:44:19,969 --> 00:44:21,969
+características dos dados
+
+766
+00:44:21,969 --> 00:44:23,969
+para os quais determinados
+
+767
+00:44:23,969 --> 00:44:25,969
+algoritmos são melhores
+
+768
+00:44:25,969 --> 00:44:27,969
+e por exemplo temos um k-minus
+
+769
+00:44:27,969 --> 00:44:29,969
+em minivatos que isto é
+
+770
+00:44:29,969 --> 00:44:31,969
+e este k-minus é um clustering
+
+771
+00:44:31,969 --> 00:44:33,969
+que vai por proximidade,
+
+772
+00:44:33,969 --> 00:44:35,969
+no fundo por densidade
+
+773
+00:44:35,969 --> 00:44:37,969
+mas é radial, e ao ser radial
+
+774
+00:44:37,969 --> 00:44:39,969
+por exemplo aqui não consegue, ele consegue
+
+775
+00:44:39,969 --> 00:44:41,969
+ser radial à volta de uma cena, vai
+
+776
+00:44:41,969 --> 00:44:43,969
+até aqui e o outro vai até ali para dois
+
+777
+00:44:43,969 --> 00:44:45,969
+clusters, mas ele não consegue separar
+
+778
+00:44:45,969 --> 00:44:47,969
+por exemplo um cluster interior
+
+779
+00:44:47,969 --> 00:44:49,969
+este Affinity Propagation
+
+780
+00:44:49,969 --> 00:44:51,969
+é uma coisa que se desenvolveu que isto até
+
+781
+00:44:51,969 --> 00:44:53,969
+convés logo para três, o Minishift
+
+782
+00:44:53,969 --> 00:44:55,969
+o clustering spectral é incrível
+
+783
+00:44:55,969 --> 00:44:57,969
+aqui, porque como é muito
+
+784
+00:44:57,969 --> 00:44:59,969
+por densidade e ele vai logo
+
+785
+00:44:59,969 --> 00:45:01,969
+e vai por proximidade e define
+
+786
+00:45:01,969 --> 00:45:03,969
+os dois, o ORD
+
+787
+00:45:03,969 --> 00:45:05,969
+aglomerativo também tem aqui uma certa falha
+
+788
+00:45:05,969 --> 00:45:07,969
+o DBSCAN
+
+789
+00:45:07,969 --> 00:45:09,969
+e o HDBSCAN são máquinas
+
+790
+00:45:09,969 --> 00:45:11,969
+tem muito bons resultados
+
+791
+00:45:11,969 --> 00:45:13,969
+olha aqui, pega, pega
+
+792
+00:45:13,969 --> 00:45:15,969
+ou este, nem conheço este
+
+793
+00:45:15,969 --> 00:45:17,969
+e o GMM, que tem um algoritmo que eu gosto imenso
+
+794
+00:45:17,969 --> 00:45:19,969
+muito útil
+
+795
+00:45:19,969 --> 00:45:21,969
+embora é útil
+
+796
+00:45:21,969 --> 00:45:23,969
+porque eu utilizei muito
+
+797
+00:45:23,969 --> 00:45:25,969
+o ambito do meu trabalho, mas não é
+
+798
+00:45:25,969 --> 00:45:27,969
+assim tão utilizado atualmente, este
+
+799
+00:45:27,969 --> 00:45:29,969
+DBSCAN e HDBSCAN e o K-minus
+
+800
+00:45:29,969 --> 00:45:31,969
+são os mais utilizados assim
+
+801
+00:45:31,969 --> 00:45:33,969
+em coisas potentes, reparem aqui
+
+802
+00:45:33,969 --> 00:45:35,969
+este também pegam bem, há aqui um outro
+
+803
+00:45:35,969 --> 00:45:37,969
+também bom pegando, este aqui pega
+
+804
+00:45:37,969 --> 00:45:39,969
+aqui que é por densidade
+
+805
+00:45:39,969 --> 00:45:41,969
+este já pegam melhor, conseguem mapear
+
+806
+00:45:41,969 --> 00:45:43,969
+melhor e
+
+807
+00:45:43,969 --> 00:45:45,969
+curiosamente o HDBSCAN
+
+808
+00:45:45,969 --> 00:45:47,969
+aqui
+
+809
+00:45:47,969 --> 00:45:49,969
+sujou um bocadinho, isto aqui já não está tão bom
+
+810
+00:45:49,969 --> 00:45:51,969
+depois este são menos
+
+811
+00:45:51,969 --> 00:45:53,969
+relevantes, este são para aqui, este são daqueles
+
+812
+00:45:53,969 --> 00:45:55,969
+que claramente ficam muito bem para o GMM
+
+813
+00:45:55,969 --> 00:45:57,969
+que ele apanha isto muito bem, neste
+
+814
+00:45:57,969 --> 00:45:59,969
+nem tanto, aqui estes quase todos
+
+815
+00:45:59,969 --> 00:46:01,969
+apanham, isto é relativamente fácil
+
+816
+00:46:01,969 --> 00:46:03,969
+depois aqui a questão é se queremos
+
+817
+00:46:03,969 --> 00:46:05,969
+fazer estes dois clusters ou não queremos
+
+818
+00:46:05,969 --> 00:46:07,969
+por exemplo este faz bem
+
+819
+00:46:07,969 --> 00:46:09,969
+este faz muito bem, o GMM é ótimo
+
+820
+00:46:09,969 --> 00:46:11,969
+isto e portanto aqui faz muito bem
+
+821
+00:46:11,969 --> 00:46:13,969
+e depois aqui nem é nada, isto basicamente é
+
+822
+00:46:13,969 --> 00:46:15,969
+uma amalgama de dados
+
+823
+00:46:15,969 --> 00:46:17,969
+todos juntos e depois
+
+824
+00:46:17,969 --> 00:46:19,969
+ver se como é que cada um acaba por decidir isto
+
+825
+00:46:19,969 --> 00:46:21,969
+pessoal, vocês não tem que saber
+
+826
+00:46:21,969 --> 00:46:23,969
+isto, o machine learning é um bocadinho
+
+827
+00:46:23,969 --> 00:46:25,969
+de má culinária, a certa
+
+828
+00:46:25,969 --> 00:46:27,969
+altura vocês vão experimentando os
+
+829
+00:46:27,969 --> 00:46:29,969
+diferentes modelos em dados
+
+830
+00:46:29,969 --> 00:46:31,969
+e vocês vão ganhando uma relação
+
+831
+00:46:31,969 --> 00:46:33,969
+eu há dois dias acho que vos disse
+
+832
+00:46:33,969 --> 00:46:35,969
+eu tenho muita apreciação pela
+
+833
+00:46:35,969 --> 00:46:37,969
+redes neuronais, são modelos que me têm
+
+834
+00:46:37,969 --> 00:46:39,969
+resolvido muitos problemas e que são incríveis
+
+835
+00:46:39,969 --> 00:46:41,969
+e são, hoje em dia as redes são questionáveis
+
+836
+00:46:41,969 --> 00:46:43,969
+gosto de azar a decisão
+
+837
+00:46:43,969 --> 00:46:45,969
+gosto muito do random de forges, gosto muito dos
+
+838
+00:46:45,969 --> 00:46:47,969
+ensembles, desculpe-me de ir a azar a decisão
+
+839
+00:46:47,969 --> 00:46:49,969
+gosto muito dos ensembles que são conjuntos
+
+840
+00:46:49,969 --> 00:46:51,969
+de modelos simples
+
+841
+00:46:51,969 --> 00:46:53,969
+que são, cujas respostas são combinadas
+
+842
+00:46:53,969 --> 00:46:55,969
+são incríveis, o bagging,
+
+843
+00:46:55,969 --> 00:46:57,969
+o boosting, a mistura de
+
+844
+00:46:57,969 --> 00:46:59,969
+especialistas que agora está muito falada por causa
+
+845
+00:46:59,969 --> 00:47:01,969
+dos LLMs que estão a usar a mistura de especialistas
+
+846
+00:47:01,969 --> 00:47:03,969
+que era a abordagem que
+
+847
+00:47:03,969 --> 00:47:05,969
+obviamente tinha que ser, puxando
+
+848
+00:47:05,969 --> 00:47:07,969
+aqui uma coisa
+
+849
+00:47:07,969 --> 00:47:09,969
+essa era a minha tese no meu doutoramento
+
+850
+00:47:09,969 --> 00:47:11,969
+para isso e foi uma rede que se conquistou
+
+851
+00:47:11,969 --> 00:47:13,969
+portanto super interessante
+
+852
+00:47:13,969 --> 00:47:15,969
+não é que eu tenha nenhuma contributo nisso
+
+853
+00:47:15,969 --> 00:47:17,969
+mas era o que eu achava
+
+854
+00:47:17,969 --> 00:47:19,969
+porque liberto aos modelos
+
+855
+00:47:19,969 --> 00:47:21,969
+da quantidade de dados que tem que ser
+
+856
+00:47:21,969 --> 00:47:23,969
+e fico muito satisfeito
+
+857
+00:47:23,969 --> 00:47:25,969
+que aí tenha sido porque
+
+858
+00:47:25,969 --> 00:47:27,969
+os chineses ficaram com o crédito
+
+859
+00:47:27,969 --> 00:47:29,969
+mas os americanos já faziam muito isso
+
+860
+00:47:29,969 --> 00:47:31,969
+já tinham muita questão de usar a mistura
+
+861
+00:47:31,969 --> 00:47:33,969
+de especialistas, só não
+
+862
+00:47:33,969 --> 00:47:35,969
+alardeavam
+
+863
+00:47:35,969 --> 00:47:37,969
+o que a China fez foi
+
+864
+00:47:37,969 --> 00:47:39,969
+tornar os modelos muito mais simples
+
+865
+00:47:39,969 --> 00:47:41,969
+e não é mais simples, é mais pequenos
+
+866
+00:47:41,969 --> 00:47:43,969
+com modelos mais pequenos conseguiram melhores resultados
+
+867
+00:47:43,969 --> 00:47:45,969
+pronto, agora é assim
+
+868
+00:47:45,969 --> 00:47:47,969
+era isto, a regação
+
+869
+00:47:47,969 --> 00:47:49,969
+cá está, desculpem, a regação
+
+870
+00:47:49,969 --> 00:47:51,969
+é a situação de ajustar
+
+871
+00:47:51,969 --> 00:47:53,969
+uma curva, neste caso é uma reta
+
+872
+00:47:53,969 --> 00:47:55,969
+mas é sempre uma curva a conjuntos de pontos
+
+873
+00:47:55,969 --> 00:47:57,969
+vocês já conhecem
+
+874
+00:47:57,969 --> 00:47:59,969
+aqui estava o passar isto, já falamos
+
+875
+00:47:59,969 --> 00:48:01,969
+pronto, classificação binária
+
+876
+00:48:01,969 --> 00:48:03,969
+temos duas classes diferentes e vamos
+
+877
+00:48:03,969 --> 00:48:05,969
+arranjar o modelo que as separes
+
+878
+00:48:05,969 --> 00:48:07,969
+ou seja, uma questão
+
+879
+00:48:07,969 --> 00:48:09,969
+duas respostas
+
+880
+00:48:09,969 --> 00:48:11,969
+treinado o modelo a cada novo dado que interessa
+
+881
+00:48:11,969 --> 00:48:13,969
+dá-se um determinado dado
+
+882
+00:48:13,969 --> 00:48:15,969
+que nós não sabemos do que é
+
+883
+00:48:15,969 --> 00:48:17,969
+e o modelo no fundo vai dizer olha aqui é um luzango
+
+884
+00:48:17,969 --> 00:48:19,969
+aqui é um azul, aqui é um azul, aqui é um azul
+
+885
+00:48:19,969 --> 00:48:21,969
+e aqui é um luzango
+
+886
+00:48:21,969 --> 00:48:23,969
+e depois de ele treinar ele está a dizer o que isto é
+
+887
+00:48:23,969 --> 00:48:25,969
+deixa eu ver o que é que poderia ser
+
+888
+00:48:25,969 --> 00:48:27,969
+um sim ou não, duas respostas
+
+889
+00:48:27,969 --> 00:48:29,969
+porque é a binária
+
+890
+00:48:29,969 --> 00:48:31,969
+pronto, exemplo
+
+891
+00:48:31,969 --> 00:48:33,969
+pode ser um email, uma imagem, um paciente
+
+892
+00:48:33,969 --> 00:48:35,969
+e ele responde às questões
+
+893
+00:48:35,969 --> 00:48:37,969
+é spam ou não é spam
+
+894
+00:48:37,969 --> 00:48:39,969
+o paciente tem uma doença ou não tem
+
+895
+00:48:39,969 --> 00:48:41,969
+é um gato ou não é um gato
+
+896
+00:48:41,969 --> 00:48:43,969
+pronto, depois já dou aqui um exemplo que
+
+897
+00:48:43,969 --> 00:48:45,969
+pode-se usar probabilidades ou não
+
+898
+00:48:45,969 --> 00:48:47,969
+basicamente é de termos uma dada probabilidade
+
+899
+00:48:47,969 --> 00:48:49,969
+definirmos um threshold que eu aqui tenho
+
+900
+00:48:49,969 --> 00:48:51,969
+0,5 mas não tem que ser 0,5
+
+901
+00:48:51,969 --> 00:48:53,969
+definir um determinado threshold
+
+902
+00:48:53,969 --> 00:48:55,969
+e quando é acima do threshold é de uma classe
+
+903
+00:48:55,969 --> 00:48:57,969
+quando é baixa é de outra
+
+904
+00:48:57,969 --> 00:48:59,969
+multiclasse classification
+
+905
+00:48:59,969 --> 00:49:01,969
+multiclasse é termos múltiplas classes
+
+906
+00:49:03,969 --> 00:49:05,969
+ou seja, mas
+
+907
+00:49:05,969 --> 00:49:07,969
+aqui é multiclasse
+
+908
+00:49:07,969 --> 00:49:09,969
+escolho uma de N
+
+909
+00:49:09,969 --> 00:49:11,969
+aqui é que é a importância disto
+
+910
+00:49:11,969 --> 00:49:13,969
+é simples mas é importante saber isto
+
+911
+00:49:13,969 --> 00:49:15,969
+é uma de N, é um gato, é um cão
+
+912
+00:49:15,969 --> 00:49:17,969
+é um pássaro ou é o super-homem
+
+913
+00:49:17,969 --> 00:49:19,969
+desculpa
+
+914
+00:49:19,969 --> 00:49:21,969
+a linguagem, é inglês, espanhol
+
+915
+00:49:21,969 --> 00:49:23,969
+sei quê, ou ele está com uma doença
+
+916
+00:49:23,969 --> 00:49:25,969
+é uma gripe, é um covido, é uma alergia
+
+917
+00:49:25,969 --> 00:49:27,969
+ou é uma pessoa sem doença
+
+918
+00:49:27,969 --> 00:49:29,969
+é um de N
+
+919
+00:49:29,969 --> 00:49:31,969
+mas o N é maior que dois
+
+920
+00:49:31,969 --> 00:49:33,969
+temos três ou mais classes
+
+921
+00:49:33,969 --> 00:49:35,969
+e depois o multilabel
+
+922
+00:49:35,969 --> 00:49:37,969
+o multilabel é uma coisa super interessante
+
+923
+00:49:37,969 --> 00:49:39,969
+porque o multilabel vocês podem
+
+924
+00:49:39,969 --> 00:49:41,969
+ter
+
+925
+00:49:41,969 --> 00:49:43,969
+m de N
+
+926
+00:49:43,969 --> 00:49:45,969
+em que o M é um número que vai de
+
+927
+00:49:45,969 --> 00:49:47,969
+0 até N
+
+928
+00:49:47,969 --> 00:49:49,969
+ou seja, vocês podem ter N classes
+
+929
+00:49:49,969 --> 00:49:51,969
+de um conjunto de classes
+
+930
+00:49:51,969 --> 00:49:53,969
+e por exemplo pode ser um cão isso é castanho
+
+931
+00:49:53,969 --> 00:49:55,969
+pode ser um cavalo isso é castanho
+
+932
+00:49:55,969 --> 00:49:57,969
+ou vermelho ou o que for
+
+933
+00:49:57,969 --> 00:49:59,969
+e portanto o multilabel
+
+934
+00:49:59,969 --> 00:50:01,969
+permite que seja um gato
+
+935
+00:50:01,969 --> 00:50:03,969
+e uma
+
+936
+00:50:03,969 --> 00:50:05,969
+ave aqui
+
+937
+00:50:05,969 --> 00:50:07,969
+um pássaro
+
+938
+00:50:07,969 --> 00:50:09,969
+e este gato não está aqui em uma grande
+
+939
+00:50:09,969 --> 00:50:11,969
+posição, neste caso ele escolhe um de N
+
+940
+00:50:11,969 --> 00:50:13,969
+e no binário escolhe um de dois
+
+941
+00:50:13,969 --> 00:50:15,969
+depois as hipnoses estão
+
+942
+00:50:15,969 --> 00:50:17,969
+arredondantes
+
+943
+00:50:17,969 --> 00:50:19,969
+depois problemas na classificação
+
+944
+00:50:19,969 --> 00:50:21,969
+em balance classification
+
+945
+00:50:21,969 --> 00:50:23,969
+o que é isto? Reparem
+
+946
+00:50:23,969 --> 00:50:25,969
+para muitas coisas da nossa vida
+
+947
+00:50:25,969 --> 00:50:27,969
+o spam é um exemplo
+
+948
+00:50:27,969 --> 00:50:29,969
+as doenças graves são outro exemplo
+
+949
+00:50:29,969 --> 00:50:31,969
+o data set vai recolher dados
+
+950
+00:50:31,969 --> 00:50:33,969
+mas felizmente
+
+951
+00:50:33,969 --> 00:50:35,969
+o spam é uma parte pequena
+
+952
+00:50:35,969 --> 00:50:37,969
+do nosso email, felizmente o cancro
+
+953
+00:50:37,969 --> 00:50:39,969
+é uma parte pequena dos nossos exames
+
+954
+00:50:39,969 --> 00:50:41,969
+graças a Deus, e portanto
+
+955
+00:50:41,969 --> 00:50:43,969
+os data sets ficam altamente
+
+956
+00:50:43,969 --> 00:50:45,969
+desequilibrados
+
+957
+00:50:45,969 --> 00:50:47,969
+há uma classe que é classe normal
+
+958
+00:50:47,969 --> 00:50:49,969
+que é super representativa
+
+959
+00:50:49,969 --> 00:50:51,969
+e há uma classe que é a classe
+
+960
+00:50:51,969 --> 00:50:53,969
+e nós temos interesse em detectar
+
+961
+00:50:53,969 --> 00:50:55,969
+que é altamente
+
+962
+00:50:55,969 --> 00:50:57,969
+super representada, o que é que acontece?
+
+963
+00:50:57,969 --> 00:50:59,969
+o modelo ao ser exposto a tantos dados
+
+964
+00:50:59,969 --> 00:51:01,969
+de uma classe
+
+965
+00:51:01,969 --> 00:51:03,969
+de uma forma simples o modelo
+
+966
+00:51:03,969 --> 00:51:05,969
+tende a decidir por essa classe, ou seja
+
+967
+00:51:05,969 --> 00:51:07,969
+basta dizer assim, se o modelo
+
+968
+00:51:07,969 --> 00:51:09,969
+for inteligente, percebe, se 99
+
+969
+00:51:09,969 --> 00:51:11,969
+em 100 forem de uma classe
+
+970
+00:51:11,969 --> 00:51:13,969
+a forma mais simples que o modelo
+
+971
+00:51:13,969 --> 00:51:15,969
+tem de fazer é dizer assim
+
+972
+00:51:15,969 --> 00:51:17,969
+se eu emitir a classe normal
+
+973
+00:51:17,969 --> 00:51:19,969
+eu vou estar 99% das vezes certo
+
+974
+00:51:19,969 --> 00:51:21,969
+e portanto
+
+975
+00:51:21,969 --> 00:51:23,969
+eu até começar a acertar, eu não preciso fazer nada
+
+976
+00:51:23,969 --> 00:51:25,969
+eu só preciso dizer
+
+977
+00:51:25,969 --> 00:51:27,969
+que é sempre da classe maioritária
+
+978
+00:51:27,969 --> 00:51:29,969
+e eu acerto a aprendizagem
+
+979
+00:51:29,969 --> 00:51:31,969
+e começa daí para cima
+
+980
+00:51:31,969 --> 00:51:33,969
+se vocês tiverem 99 em 100
+
+981
+00:51:33,969 --> 00:51:35,969
+coisas de uma classe
+
+982
+00:51:35,969 --> 00:51:37,969
+e depois
+
+983
+00:51:37,969 --> 00:51:39,969
+treinarem mal o modelo
+
+984
+00:51:39,969 --> 00:51:41,969
+se o modelo for esperto vai convergir logo
+
+985
+00:51:41,969 --> 00:51:43,969
+para a classe maioritária
+
+986
+00:51:43,969 --> 00:51:45,969
+e vocês têm uma actividade assim
+
+987
+00:51:45,969 --> 00:51:47,969
+que é uma exatidão de classificação 99
+
+988
+00:51:47,969 --> 00:51:49,969
+não sabe nada porque ele basicamente está sempre a emitir
+
+989
+00:51:49,969 --> 00:51:51,969
+mesmo label, ou seja
+
+990
+00:51:51,969 --> 00:51:53,969
+nesses casos a aprendizagem começa
+
+991
+00:51:53,969 --> 00:51:55,969
+ali, quando ele começa a 99.1
+
+992
+00:51:55,969 --> 00:51:57,969
+99.2, 99.3, 99.4
+
+993
+00:51:57,969 --> 00:51:59,969
+até chegar ao máximo que ele consegue
+
+994
+00:51:59,969 --> 00:52:01,969
+pronto, é isto o conceito
+
+995
+00:52:01,969 --> 00:52:03,969
+de imbalance classification
+
+996
+00:52:03,969 --> 00:52:05,969
+classificação com data sets muito
+
+997
+00:52:05,969 --> 00:52:07,969
+com as classes
+
+998
+00:52:07,969 --> 00:52:09,969
+a representatividade das classes é muito
+
+999
+00:52:09,969 --> 00:52:11,969
+desequilibrada, outra coisa
+
+1000
+00:52:11,969 --> 00:52:13,969
+importante, já falei disto várias vezes
+
+1001
+00:52:13,969 --> 00:52:15,969
+estou a pôr aqui a imagem
+
+1002
+00:52:15,969 --> 00:52:17,969
+se vocês têm um data set
+
+1003
+00:52:17,969 --> 00:52:19,969
+para VATS, para offline
+
+1004
+00:52:19,969 --> 00:52:21,969
+vocês têm os dados todos
+
+1005
+00:52:21,969 --> 00:52:23,969
+e vocês têm que partir estes dados em
+
+1006
+00:52:23,969 --> 00:52:25,969
+treino, validação e teste
+
+1007
+00:52:25,969 --> 00:52:27,969
+o que é isto pessoal? Treino, validação e teste
+
+1008
+00:52:27,969 --> 00:52:29,969
+o treino é toda desta zona
+
+1009
+00:52:29,969 --> 00:52:31,969
+aqui, eu por acaso havia de
+
+1010
+00:52:31,969 --> 00:52:33,969
+refazer isto, o treino é toda esta zona
+
+1011
+00:52:33,969 --> 00:52:35,969
+inclui o treino e validação
+
+1012
+00:52:35,969 --> 00:52:37,969
+e o teste é isto
+
+1013
+00:52:37,969 --> 00:52:39,969
+pronto, em termos práticos isto é o seguinte
+
+1014
+00:52:39,969 --> 00:52:41,969
+os dados de teste são os dados que são utilizados
+
+1015
+00:52:41,969 --> 00:52:43,969
+no final para testar se o nosso modelo foi bom
+
+1016
+00:52:43,969 --> 00:52:45,969
+o que é que define os dados de teste?
+
+1017
+00:52:45,969 --> 00:52:47,969
+nunca foram vistos durante o processo
+
+1018
+00:52:47,969 --> 00:52:49,969
+de treino, nunca, ficam de fora
+
+1019
+00:52:49,969 --> 00:52:51,969
+agora, durante a parte de treino
+
+1020
+00:52:51,969 --> 00:52:53,969
+em que estamos a treinar o modelo, nós temos
+
+1021
+00:52:53,969 --> 00:52:55,969
+dados de treino e validação
+
+1022
+00:52:55,969 --> 00:52:57,969
+basicamente isto é um conjunto de dados
+
+1023
+00:52:57,969 --> 00:52:59,969
+que depois estão partidos em dois
+
+1024
+00:52:59,969 --> 00:53:01,969
+e basicamente isto é o que? Os dados de treino são aqueles
+
+1025
+00:53:01,969 --> 00:53:03,969
+dados que são utilizados para expor ao modelo
+
+1026
+00:53:03,969 --> 00:53:05,969
+ele vê e vê respostas
+
+1027
+00:53:05,969 --> 00:53:07,969
+e está a aprender
+
+1028
+00:53:07,969 --> 00:53:09,969
+no fim de uma época, no fim de ele passar
+
+1029
+00:53:09,969 --> 00:53:11,969
+todos os dados uma vez, normalmente na rede
+
+1030
+00:53:11,969 --> 00:53:13,969
+quando ele está a aprender época a época
+
+1031
+00:53:13,969 --> 00:53:15,969
+e época é passagem do data set toda uma vez
+
+1032
+00:53:15,969 --> 00:53:17,969
+ele para e diz assim, vou fazer a validação
+
+1033
+00:53:17,969 --> 00:53:19,969
+fiz um bloco de aprendizagem
+
+1034
+00:53:19,969 --> 00:53:21,969
+e agora vou ver como é que isto funciona
+
+1035
+00:53:21,969 --> 00:53:23,969
+e então é que ele pega nestes dados
+
+1036
+00:53:23,969 --> 00:53:25,969
+que não foram utilizados para serem expostos ao modelo
+
+1037
+00:53:25,969 --> 00:53:27,969
+no treino
+
+1038
+00:53:27,969 --> 00:53:29,969
+e ele usa estes dados para ver se o modelo
+
+1039
+00:53:29,969 --> 00:53:31,969
+está a funcionar bem, ou seja
+
+1040
+00:53:31,969 --> 00:53:33,969
+o conjunto de validação é uma espécie
+
+1041
+00:53:33,969 --> 00:53:35,969
+de um conjunto de teste durante o treino
+
+1042
+00:53:35,969 --> 00:53:37,969
+acho que isto fica claro
+
+1043
+00:53:37,969 --> 00:53:39,969
+o conjunto de validação é um conjunto
+
+1044
+00:53:39,969 --> 00:53:41,969
+de teste durante o treino e é usado
+
+1045
+00:53:41,969 --> 00:53:43,969
+iterativamente nas várias épocas de treino
+
+1046
+00:53:43,969 --> 00:53:45,969
+à medida
+
+1047
+00:53:45,969 --> 00:53:47,969
+portanto ele não aprende no conjunto de validação
+
+1048
+00:53:47,969 --> 00:53:49,969
+só usa para verificar se ele aprendeu bem
+
+1049
+00:53:49,969 --> 00:53:51,969
+quando ele termina o treino significa que o modelo
+
+1050
+00:53:51,969 --> 00:53:53,969
+já está com bom desempenho
+
+1051
+00:53:53,969 --> 00:53:55,969
+quer nos dados de treino
+
+1052
+00:53:55,969 --> 00:53:57,969
+quer nos dados de validação e ele
+
+1053
+00:53:57,969 --> 00:53:59,969
+iterou e a cada
+
+1054
+00:53:59,969 --> 00:54:01,969
+cada alteração foi melhorando
+
+1055
+00:54:01,969 --> 00:54:03,969
+melhorando e no final tem um desempenho que se considera
+
+1056
+00:54:03,969 --> 00:54:05,969
+satisfatório
+
+1057
+00:54:05,969 --> 00:54:07,969
+ou excelente e depois do modelo
+
+1058
+00:54:07,969 --> 00:54:09,969
+então são aplicados os dados de teste
+
+1059
+00:54:09,969 --> 00:54:11,969
+para ele emitir as respostas e ver se
+
+1060
+00:54:11,969 --> 00:54:13,969
+aqui é que é a tal questão
+
+1061
+00:54:13,969 --> 00:54:15,969
+no final do processo de treino
+
+1062
+00:54:15,969 --> 00:54:17,969
+se ele tiver um elevado desempenho
+
+1063
+00:54:17,969 --> 00:54:19,969
+ele está capaz de poder ser um modelo
+
+1064
+00:54:19,969 --> 00:54:21,969
+com boa capacidade
+
+1065
+00:54:21,969 --> 00:54:23,969
+se não tiver é um modelo que está em underfit
+
+1066
+00:54:23,969 --> 00:54:25,969
+ou seja treinou mal
+
+1067
+00:54:25,969 --> 00:54:27,969
+se ele tiver um grande desempenho em treino
+
+1068
+00:54:27,969 --> 00:54:29,969
+e depois perder em teste
+
+1069
+00:54:29,969 --> 00:54:31,969
+é a situação que se designa de overfit
+
+1070
+00:54:31,969 --> 00:54:33,969
+Ok?
+
+1071
+00:54:33,969 --> 00:54:35,969
+Pronto, desde este slide
+
+1072
+00:54:35,969 --> 00:54:37,969
+isto é para a outra aula
+
+1073
+00:54:37,969 --> 00:54:39,969
+os dados são extremamente caros
+
+1074
+00:54:39,969 --> 00:54:41,969
+de adquirir e processar e portanto
+
+1075
+00:54:41,969 --> 00:54:43,969
+basicamente com muita frequência
+
+1076
+00:54:43,969 --> 00:54:45,969
+nós fazemos uma coisa que é validação cruzada
+
+1077
+00:54:45,969 --> 00:54:47,969
+o que é que é validação cruzada?
+
+1078
+00:54:47,969 --> 00:54:49,969
+é nós temos estes dados todos
+
+1079
+00:54:49,969 --> 00:54:51,969
+e reparem, se eu uso estes dados para treinar
+
+1080
+00:54:51,969 --> 00:54:53,969
+e para de treinar com estes dados
+
+1081
+00:54:53,969 --> 00:54:55,969
+significa que a validação está aqui dentro
+
+1082
+00:54:55,969 --> 00:54:57,969
+significa que aqui eu vou depois partir
+
+1083
+00:54:57,969 --> 00:54:59,969
+validação mas estou a dar foco nisso
+
+1084
+00:54:59,969 --> 00:55:01,969
+e o que é que acontece?
+
+1085
+00:55:01,969 --> 00:55:03,969
+e depois temos aqui os dados de teste
+
+1086
+00:55:03,969 --> 00:55:05,969
+e a validação cruzada é vocês irem aos dados de treino
+
+1087
+00:55:05,969 --> 00:55:07,969
+em vez de fazerem isto fazem uma coisa muito melhor
+
+1088
+00:55:07,969 --> 00:55:09,969
+que é vocês vão partir isto em folds
+
+1089
+00:55:09,969 --> 00:55:11,969
+em partes mais ou menos idênticas
+
+1090
+00:55:11,969 --> 00:55:13,969
+e vamos dizer assim
+
+1091
+00:55:13,969 --> 00:55:15,969
+eu agora vou treinar com estes dados
+
+1092
+00:55:15,969 --> 00:55:17,969
+e vou validar com estes
+
+1093
+00:55:17,969 --> 00:55:19,969
+agora vou treinar com estes dados e valido com estes
+
+1094
+00:55:19,969 --> 00:55:21,969
+e por aqui fora vocês produzem N modelos
+
+1095
+00:55:21,969 --> 00:55:23,969
+que no fundo exploram
+
+1096
+00:55:23,969 --> 00:55:25,969
+diferentes partes dos dados
+
+1097
+00:55:25,969 --> 00:55:27,969
+para treinar modelos
+
+1098
+00:55:27,969 --> 00:55:29,969
+e depois no final testam com os dados de teste
+
+1099
+00:55:29,969 --> 00:55:31,969
+mas o que é que vocês conseguem?
+
+1100
+00:55:31,969 --> 00:55:33,969
+muito mais diversidade dos modelos
+
+1101
+00:55:33,969 --> 00:55:35,969
+que os mesmos dados
+
+1102
+00:55:35,969 --> 00:55:37,969
+porque vocês não podem pôr os mesmos dados
+
+1103
+00:55:37,969 --> 00:55:39,969
+que usam para validação e teste no modelo
+
+1104
+00:55:39,969 --> 00:55:41,969
+se vocês só fizerem uma partição
+
+1105
+00:55:41,969 --> 00:55:43,969
+uma partição como estaria aqui
+
+1106
+00:55:43,969 --> 00:55:45,969
+tiram aqui uns dados para validação
+
+1107
+00:55:45,969 --> 00:55:47,969
+e treinam só com isto
+
+1108
+00:55:47,969 --> 00:55:49,969
+ou seja, ele só aprendeu esta parte dos conceitos
+
+1109
+00:55:49,969 --> 00:55:51,969
+só testou com estes
+
+1110
+00:55:51,969 --> 00:55:53,969
+só validou com estes
+
+1111
+00:55:53,969 --> 00:55:55,969
+desculpem só testou com estes
+
+1112
+00:55:55,969 --> 00:55:57,969
+Desta forma vocês conseguem uma coisa muito mais complexa
+
+1113
+00:55:57,969 --> 00:55:59,969
+e desta forma
+
+1114
+00:55:59,969 --> 00:56:01,969
+conseguem muito maior robustez
+
+1115
+00:56:01,969 --> 00:56:03,969
+e muito maior confiança
+
+1116
+00:56:03,969 --> 00:56:05,969
+na qualidade
+
+1117
+00:56:05,969 --> 00:56:07,969
+no desempenho do modelo
+
+1118
+00:56:07,969 --> 00:56:09,969
+e isto porquê? Porque os dados são caros
+
+1119
+00:56:09,969 --> 00:56:11,969
+porque se assim não for vocês põem com atividades imensas de dados
+
+1120
+00:56:11,969 --> 00:56:13,969
+e a partir de aí vocês têm grande
+
+1121
+00:56:13,969 --> 00:56:15,969
+confiança de que
+
+1122
+00:56:15,969 --> 00:56:17,969
+conseguem fazer isto bem
+
+1123
+00:56:17,969 --> 00:56:19,969
+depois há outras questões que se falam às vezes
+
+1124
+00:56:19,969 --> 00:56:21,969
+que é na forma como mostramos os dados
+
+1125
+00:56:21,969 --> 00:56:23,969
+há formas de mostrar dados
+
+1126
+00:56:23,969 --> 00:56:25,969
+por exemplo para treino, validação e teste
+
+1127
+00:56:25,969 --> 00:56:27,969
+que obrigam a irmos ao longo
+
+1128
+00:56:27,969 --> 00:56:29,969
+de todos os dados que é para evitarmos
+
+1129
+00:56:29,969 --> 00:56:31,969
+os dados normalmente são adquiridos de uma forma temporal
+
+1130
+00:56:31,969 --> 00:56:33,969
+e se vocês partirem isto logo
+
+1131
+00:56:33,969 --> 00:56:35,969
+de uma vez no início vocês ficam com
+
+1132
+00:56:35,969 --> 00:56:37,969
+intervalo temporal para treino
+
+1133
+00:56:37,969 --> 00:56:39,969
+outro para validação e outro para teste
+
+1134
+00:56:39,969 --> 00:56:41,969
+e há técnicas estatísticas
+
+1135
+00:56:41,969 --> 00:56:43,969
+a mostrar mas forçando
+
+1136
+00:56:45,969 --> 00:56:47,969
+cada uma das classes
+
+1137
+00:56:47,969 --> 00:56:49,969
+de treino, validação e teste
+
+1138
+00:56:49,969 --> 00:56:51,969
+a ser ao longo de todos os dados
+
+1139
+00:56:51,969 --> 00:56:53,969
+são outras coisas e são aspectos operacionais
+
+1140
+00:56:53,969 --> 00:56:55,969
+mas pronto, o liboanalto
+
+1141
+00:56:55,969 --> 00:56:57,969
+é basicamente é o excesso total
+
+1142
+00:56:57,969 --> 00:56:59,969
+é isto para treino e deixa uma sample
+
+1143
+00:56:59,969 --> 00:57:01,969
+só para validação
+
+1144
+00:57:01,969 --> 00:57:03,969
+isto é uma coisa mais teórica só para vocês
+
+1145
+00:57:03,969 --> 00:57:05,969
+saberem que existe
+
+1146
+00:57:05,969 --> 00:57:07,969
+agora, métricas de classificação
+
+1147
+00:57:07,969 --> 00:57:09,969
+eu não vou entrar nelas agora
+
+1148
+00:57:09,969 --> 00:57:11,969
+depois quando formos para a prática
+
+1149
+00:57:11,969 --> 00:57:13,969
+mas essencialmente vocês
+
+1150
+00:57:13,969 --> 00:57:15,969
+devem conhecer só a confusion matrix
+
+1151
+00:57:15,969 --> 00:57:17,969
+ou seja
+
+1152
+00:57:17,969 --> 00:57:19,969
+estar a explicar as que não faz sentido agora
+
+1153
+00:57:19,969 --> 00:57:21,969
+deixem de ver o horário, são 8
+
+1154
+00:57:21,969 --> 00:57:23,969
+temos até às 9, isto anda bem
+
+1155
+00:57:23,969 --> 00:57:25,969
+temos a classe predicta
+
+1156
+00:57:25,969 --> 00:57:27,969
+que pode ser, imagina
+
+1157
+00:57:27,969 --> 00:57:29,969
+se for classificação binária
+
+1158
+00:57:29,969 --> 00:57:31,969
+é positivo ou negativo
+
+1159
+00:57:31,969 --> 00:57:33,969
+e a classe real da coisa
+
+1160
+00:57:33,969 --> 00:57:35,969
+pronto, se a gente emitir positivo e for positivo
+
+1161
+00:57:35,969 --> 00:57:37,969
+é um trupe positivo
+
+1162
+00:57:37,969 --> 00:57:39,969
+se emitirmos positivo e for negativo
+
+1163
+00:57:39,969 --> 00:57:41,969
+é um falso positivo
+
+1164
+00:57:41,969 --> 00:57:43,969
+e aqui em baixo falso negativo e trupe negativo
+
+1165
+00:57:43,969 --> 00:57:45,969
+ou seja, isto basicamente
+
+1166
+00:57:45,969 --> 00:57:47,969
+são os que ele acertou
+
+1167
+00:57:47,969 --> 00:57:49,969
+e aqui são os que ele falhou
+
+1168
+00:57:49,969 --> 00:57:51,969
+e depois em função disso
+
+1169
+00:57:51,969 --> 00:57:53,969
+nós podemos
+
+1170
+00:57:53,969 --> 00:57:55,969
+definir a exatidão
+
+1171
+00:57:55,969 --> 00:57:57,969
+que é accuracy, ou seja
+
+1172
+00:57:57,969 --> 00:57:59,969
+quantas amostras nós acertamos no total
+
+1173
+00:57:59,969 --> 00:58:01,969
+de propicições que fizemos
+
+1174
+00:58:01,969 --> 00:58:03,969
+os trupe positivos mais os corretos
+
+1175
+00:58:03,969 --> 00:58:05,969
+a dividir pelo total de amostras que classificamos
+
+1176
+00:58:05,969 --> 00:58:07,969
+e a exatidão, quantas acertamos
+
+1177
+00:58:07,969 --> 00:58:09,969
+reparem, é incrível
+
+1178
+00:58:09,969 --> 00:58:11,969
+é a melhor medida possível
+
+1179
+00:58:11,969 --> 00:58:13,969
+mas tem este problema
+
+1180
+00:58:13,969 --> 00:58:15,969
+se o data 7 for não balanceado
+
+1181
+00:58:15,969 --> 00:58:17,969
+e ele
+
+1182
+00:58:17,969 --> 00:58:19,969
+tiver 99
+
+1183
+00:58:19,969 --> 00:58:21,969
+de uma classe e outro dela
+
+1184
+00:58:21,969 --> 00:58:23,969
+ele se mandar tudo para aquela classe
+
+1185
+00:58:23,969 --> 00:58:25,969
+ele acerta 99 em 100
+
+1186
+00:58:25,969 --> 00:58:27,969
+e portanto vocês têm uma accuracy de 99
+
+1187
+00:58:27,969 --> 00:58:29,969
+e o modelo não sabe, peta
+
+1188
+00:58:29,969 --> 00:58:31,969
+cuidado, e para
+
+1189
+00:58:31,969 --> 00:58:33,969
+mas para a maior parte dos problemas
+
+1190
+00:58:33,969 --> 00:58:35,969
+é isto que se utiliza, a accuracy é incrível
+
+1191
+00:58:35,969 --> 00:58:37,969
+é quanto é que eu acerto no total
+
+1192
+00:58:37,969 --> 00:58:39,969
+pronto, só neste caso é que de coisa
+
+1193
+00:58:39,969 --> 00:58:41,969
+quando vocês têm isso, vocês podem ir para uma coisa
+
+1194
+00:58:41,969 --> 00:58:43,969
+este é um exemplo da accuracy
+
+1195
+00:58:43,969 --> 00:58:45,969
+quero para mostrar o cálculo disso
+
+1196
+00:58:45,969 --> 00:58:47,969
+mas não é nada
+
+1197
+00:58:47,969 --> 00:58:49,969
+especial
+
+1198
+00:58:49,969 --> 00:58:51,969
+pronto
+
+1199
+00:58:51,969 --> 00:58:53,969
+a sensibilidade é o trupe positive rate
+
+1200
+00:58:53,969 --> 00:58:55,969
+ou seja, agora vocês fazem uma coisa diferente
+
+1201
+00:58:55,969 --> 00:58:57,969
+a sensibilidade no fundo, de uma forma simples
+
+1202
+00:58:57,969 --> 00:58:59,969
+é, qual é a accuracy
+
+1203
+00:58:59,969 --> 00:59:01,969
+no caso dos positivos
+
+1204
+00:59:01,969 --> 00:59:03,969
+estão a ver? ou seja, quantas é que eu
+
+1205
+00:59:03,969 --> 00:59:05,969
+acerto dos positivos
+
+1206
+00:59:05,969 --> 00:59:07,969
+é basicamente o que isto está aqui a dizer
+
+1207
+00:59:07,969 --> 00:59:09,969
+e agora, iremos fazer
+
+1208
+00:59:09,969 --> 00:59:11,969
+aqui estas contas, posso passar
+
+1209
+00:59:11,969 --> 00:59:13,969
+quantas é que eu acerto dos negativos
+
+1210
+00:59:13,969 --> 00:59:15,969
+porque é que isto é importante
+
+1211
+00:59:15,969 --> 00:59:17,969
+se vocês estiverem em balance
+
+1212
+00:59:17,969 --> 00:59:19,969
+vocês dizem, olha, eu nos positivos
+
+1213
+00:59:19,969 --> 00:59:21,969
+estou, por exemplo, a 10%
+
+1214
+00:59:21,969 --> 00:59:23,969
+mas nos negativos estou a 94%
+
+1215
+00:59:23,969 --> 00:59:25,969
+e dizem, ah, eu tenho aqui um problema
+
+1216
+00:59:25,969 --> 00:59:27,969
+de sensibilidade, não é?
+
+1217
+00:59:27,969 --> 00:59:29,969
+porque os negativos, que é a especificidade
+
+1218
+00:59:29,969 --> 00:59:31,969
+eu estou a acertar muito bem
+
+1219
+00:59:31,969 --> 00:59:33,969
+e nos positivos eu não estou a conseguir discriminar a classe
+
+1220
+00:59:33,969 --> 00:59:35,969
+então tenho que ver o que é que se passa
+
+1221
+00:59:35,969 --> 00:59:37,969
+está bem? eu espero, diga, diga
+
+1222
+00:59:37,969 --> 00:59:39,969
+mas estes tipos de testes
+
+1223
+00:59:39,969 --> 00:59:41,969
+e métricas só são usadas
+
+1224
+00:59:41,969 --> 00:59:43,969
+em classificações binárias, é isso?
+
+1225
+00:59:43,969 --> 00:59:45,969
+não, não
+
+1226
+00:59:45,969 --> 00:59:47,969
+isto depois é tudo expansível, isso é uma grande pergunta
+
+1227
+00:59:47,969 --> 00:59:49,969
+isto depois é tudo expansível
+
+1228
+00:59:49,969 --> 00:59:51,969
+para multiclasse
+
+1229
+00:59:51,969 --> 00:59:53,969
+classifica isto, nós damos a este caso
+
+1230
+00:59:53,969 --> 00:59:55,969
+que é o mais fácil, é o que fica melhor
+
+1231
+00:59:55,969 --> 00:59:57,969
+nos, nos
+
+1232
+00:59:57,969 --> 00:59:59,969
+nos acetatos, não é? mas particularmente
+
+1233
+00:59:59,969 --> 01:00:01,969
+por exemplo, vocês podem ter
+
+1234
+01:00:01,969 --> 01:00:03,969
+por exemplo, a accuracy é sempre global, não é?
+
+1235
+01:00:03,969 --> 01:00:05,969
+eu vou andar para trás e deixar
+
+1236
+01:00:05,969 --> 01:00:07,969
+sempre malandro ir aqui atrás para mostrar
+
+1237
+01:00:07,969 --> 01:00:09,969
+e ver se é sempre global, ou seja, se vocês tiverem 10 classes
+
+1238
+01:00:09,969 --> 01:00:11,969
+vocês emitem classificações
+
+1239
+01:00:11,969 --> 01:00:13,969
+num conjunto de amostras que está aqui
+
+1240
+01:00:13,969 --> 01:00:15,969
+e no fundo quantas acertaram de cada classe
+
+1241
+01:00:15,969 --> 01:00:17,969
+não é?
+
+1242
+01:00:17,969 --> 01:00:19,969
+ou seja, quantas, desculpem, quantas estão certas e quantas estão erradas
+
+1243
+01:00:19,969 --> 01:00:21,969
+independentemente da classe
+
+1244
+01:00:21,969 --> 01:00:23,969
+a accuracy é uma medida que é global
+
+1245
+01:00:23,969 --> 01:00:25,969
+a sensibilidade e a especificidade
+
+1246
+01:00:25,969 --> 01:00:27,969
+que estão aqui, vocês podem depois
+
+1247
+01:00:27,969 --> 01:00:29,969
+definir isto por classe
+
+1248
+01:00:29,969 --> 01:00:31,969
+quanto é que é o acerto de uma classe, quanto é que acerta de outra
+
+1249
+01:00:31,969 --> 01:00:33,969
+quanto é que acerta e no fundo fica independente
+
+1250
+01:00:33,969 --> 01:00:35,969
+já agora, eu falava no início
+
+1251
+01:00:35,969 --> 01:00:37,969
+não sei se eu volto a pôr isto
+
+1252
+01:00:37,969 --> 01:00:39,969
+deixa-me acertar
+
+1253
+01:00:39,969 --> 01:00:41,969
+não, eu volto para trás
+
+1254
+01:00:41,969 --> 01:00:43,969
+na confusion matrix
+
+1255
+01:00:43,969 --> 01:00:45,969
+a confusion matrix, que se faz mesmo
+
+1256
+01:00:45,969 --> 01:00:47,969
+multi classe, eu nem posso explicar isto
+
+1257
+01:00:47,969 --> 01:00:49,969
+que é uma confusão, mas quando a gente vê a gente percebe
+
+1258
+01:00:49,969 --> 01:00:51,969
+ele mete as classes todas
+
+1259
+01:00:51,969 --> 01:00:53,969
+e expande isto com uma matriz
+
+1260
+01:00:53,969 --> 01:00:55,969
+mais complicada, a diagonal principal
+
+1261
+01:00:55,969 --> 01:00:57,969
+é onde ele acerta e tudo o resto
+
+1262
+01:00:57,969 --> 01:00:59,969
+é todas as combinações de falhas, ok?
+
+1263
+01:00:59,969 --> 01:01:01,969
+e depois vocês percebem que vocês
+
+1264
+01:01:01,969 --> 01:01:03,969
+desinteressam-vos as amostras que estão ao longo desta
+
+1265
+01:01:03,969 --> 01:01:05,969
+diagonal acho que é secundária, não é?
+
+1266
+01:01:05,969 --> 01:01:07,969
+não principal, ao longo da diagonal principal
+
+1267
+01:01:07,969 --> 01:01:09,969
+esta é que é secundária
+
+1268
+01:01:09,969 --> 01:01:11,969
+ao longo da diagonal principal, e depois
+
+1269
+01:01:11,969 --> 01:01:13,969
+tudo o que estiver fora, que é tudo o que está ao lado
+
+1270
+01:01:13,969 --> 01:01:15,969
+porque vocês estão a fazer N para N
+
+1271
+01:01:15,969 --> 01:01:17,969
+são as falsas, pois ele mostra
+
+1272
+01:01:17,969 --> 01:01:19,969
+normalmente as
+
+1273
+01:01:19,969 --> 01:01:21,969
+as percentagens
+
+1274
+01:01:21,969 --> 01:01:23,969
+e tudo, é interessante, mas eu acho que quando vocês virem
+
+1275
+01:01:23,969 --> 01:01:25,969
+é muito fácil de entender
+
+1276
+01:01:25,969 --> 01:01:27,969
+já agora, disso eu ando em volta a dizer hoje
+
+1277
+01:01:27,969 --> 01:01:29,969
+bom, quando tiverem estas coisas
+
+1278
+01:01:29,969 --> 01:01:31,969
+é muito simples, vocês fazem um
+
+1279
+01:01:31,969 --> 01:01:33,969
+print screen, mandam aqui-lhe para o vosso
+
+1280
+01:01:33,969 --> 01:01:35,969
+LLM de eleição, e dizem assim
+
+1281
+01:01:35,969 --> 01:01:37,969
+ajuda-me a interpretar esta matriz de construção
+
+1282
+01:01:37,969 --> 01:01:39,969
+ou esta medida e tal
+
+1283
+01:01:39,969 --> 01:01:41,969
+e ele faz isso, não é bom, é
+
+1284
+01:01:41,969 --> 01:01:46,340
+em forma perfeita, ok?
+
+1285
+01:01:46,340 --> 01:01:48,340
+quando estou a fazer, a resolver um problema
+
+1286
+01:01:48,340 --> 01:01:50,340
+quando às vezes estou a fazer um teste, ou o que seja
+
+1287
+01:01:50,340 --> 01:01:52,340
+antigamente tinha de fazer umas contas
+
+1288
+01:01:52,340 --> 01:01:54,340
+e ponho-me ali a fazer, e gosto de fazer
+
+1289
+01:01:54,340 --> 01:01:56,340
+atualmente faço um print screen, digo as
+
+1290
+01:01:56,340 --> 01:01:58,340
+métricas que eu quero, como é que eu quero
+
+1291
+01:01:58,340 --> 01:02:00,340
+analisar aquilo, e ele dá-me tudo e diz
+
+1292
+01:02:00,340 --> 01:02:02,340
+claro que eu já sei, mais ou menos
+
+1293
+01:02:02,340 --> 01:02:04,340
+mas gosto de ter, porque ele responde
+
+1294
+01:02:04,340 --> 01:02:06,340
+se não tiver por certo eu próprio
+
+1295
+01:02:06,340 --> 01:02:08,340
+tenho sensibilidade
+
+1296
+01:02:08,340 --> 01:02:10,340
+para dizer calma, isto aqui não está
+
+1297
+01:02:10,340 --> 01:02:12,340
+aconteceu-me há dois anos num teste, pedi uma
+
+1298
+01:02:12,340 --> 01:02:14,340
+análise, uma matriz de construção
+
+1299
+01:02:14,340 --> 01:02:16,340
+e ele trocou-se, era um chato, estava muito
+
+1300
+01:02:16,340 --> 01:02:18,340
+longo, mas vocês não querem
+
+1301
+01:02:18,340 --> 01:02:20,340
+mal nenhum pedirem, porque ele ensina-vos
+
+1302
+01:02:20,340 --> 01:02:22,340
+a mesma coisa, com o treino dos modelos
+
+1303
+01:02:22,340 --> 01:02:24,340
+quando vocês tiverem a fazer o treino dos vossos modelos
+
+1304
+01:02:24,340 --> 01:02:26,340
+façam um print dos
+
+1305
+01:02:26,340 --> 01:02:28,340
+gráficos dos veículos e metam lá
+
+1306
+01:02:28,340 --> 01:02:30,340
+e digam, olha o modelo tal, no TensorFlow, no Lite RT
+
+1307
+01:02:30,340 --> 01:02:32,340
+tem este treino, o data set
+
+1308
+01:02:32,340 --> 01:02:34,340
+e dentro disto ele vai-vos explicar tudo direitinho
+
+1309
+01:02:34,340 --> 01:02:36,340
+pode acontecer uma vez ou outra
+
+1310
+01:02:36,340 --> 01:02:38,340
+falhar, mas eu tenho bastante confiança
+
+1311
+01:02:38,340 --> 01:02:40,340
+nisso, porque tenho usado extensivamente e com todos
+
+1312
+01:02:40,340 --> 01:02:42,340
+os alunos e tem funcionado de forma
+
+1313
+01:02:42,340 --> 01:02:44,340
+incrível. Pronto, tinha que dar
+
+1314
+01:02:44,340 --> 01:02:46,340
+este conselho, que é já sempre, mas é super
+
+1315
+01:02:46,340 --> 01:02:48,340
+importante que os vai ajudar em tudo que vocês vão
+
+1316
+01:02:48,340 --> 01:02:50,340
+fazer aqui.
+
+1317
+01:02:50,340 --> 01:02:52,340
+Respondi à pergunta de quem me perguntou, certo?
+
+1318
+01:02:52,340 --> 01:02:54,340
+Sim, sim.
+
+1319
+01:02:54,340 --> 01:02:56,340
+Ok, a Rock Curve, a Rock Curve é uma
+
+1320
+01:02:56,340 --> 01:02:58,340
+coisa que parece muito complicada e na realidade
+
+1321
+01:02:58,340 --> 01:03:00,340
+é uma coisa super simples.
+
+1322
+01:03:00,340 --> 01:03:02,340
+No sentido que a Rock Curve
+
+1323
+01:03:02,340 --> 01:03:04,340
+basicamente só tem
+
+1324
+01:03:04,340 --> 01:03:06,340
+isto que interessa, e eu andei um ano ou dois
+
+1325
+01:03:06,340 --> 01:03:08,340
+a fazer coisas, mear rocos, não olhava
+
+1326
+01:03:08,340 --> 01:03:10,340
+ou dava sensibilidades,
+
+1327
+01:03:10,340 --> 01:03:12,340
+e um dia fui estudar a Rock Curve
+
+1328
+01:03:12,340 --> 01:03:14,340
+e talvez, sei lá, meia hora mais tarde,
+
+1329
+01:03:14,340 --> 01:03:16,340
+esse meu Deus, era isto.
+
+1330
+01:03:16,340 --> 01:03:18,340
+Vou tentar passar-vos disso para vos evitar essa coisa.
+
+1331
+01:03:18,340 --> 01:03:20,340
+A Rock Curve é um
+
+1332
+01:03:20,340 --> 01:03:22,340
+traçado dos falsos positive rates
+
+1333
+01:03:22,340 --> 01:03:24,340
+com uns true positive rates, tem aqui uns truques
+
+1334
+01:03:24,340 --> 01:03:26,340
+e vocês, se quiserem, podem estudar
+
+1335
+01:03:26,340 --> 01:03:28,340
+isto, mas, essencialmente,
+
+1336
+01:03:28,340 --> 01:03:30,340
+o que é que vos interessa?
+
+1337
+01:03:30,340 --> 01:03:32,340
+Se a curva for isto, significa
+
+1338
+01:03:32,340 --> 01:03:34,340
+o random guessing, significa que o vosso
+
+1339
+01:03:34,340 --> 01:03:36,340
+classificador ou vosso modelo
+
+1340
+01:03:36,340 --> 01:03:38,340
+acerta tanto, se isto fosse
+
+1341
+01:03:38,340 --> 01:03:40,340
+atirar uma moeda ao ar, ele acerta tanto
+
+1342
+01:03:40,340 --> 01:03:42,340
+quanto isso, ele não consegue
+
+1343
+01:03:42,340 --> 01:03:44,340
+se tem grande classe. Ele diz é boi, é vaca,
+
+1344
+01:03:44,340 --> 01:03:46,340
+é boi, é vaca, é boi, é vaca e nunca acerta.
+
+1345
+01:03:46,340 --> 01:03:48,340
+Ou seja, acerta tanto quanto
+
+1346
+01:03:48,340 --> 01:03:50,340
+atirar uma moeda ao ar.
+
+1347
+01:03:50,340 --> 01:03:52,340
+À medida que o vosso classificador
+
+1348
+01:03:52,340 --> 01:03:54,340
+começa a ter desempenho, atenção que as curvas
+
+1349
+01:03:54,340 --> 01:03:56,340
+não são assim sempre perfeitinhas, às vezes
+
+1350
+01:03:56,340 --> 01:03:58,340
+vem aqui, torcem-me um bocado,
+
+1351
+01:03:58,340 --> 01:04:00,340
+elas na realidade depois têm erros.
+
+1352
+01:04:00,340 --> 01:04:02,340
+Erros não é distorções aqui,
+
+1353
+01:04:02,340 --> 01:04:04,340
+mas essencialmente à medida que a curva vai
+
+1354
+01:04:04,340 --> 01:04:06,340
+aumentando, aumentando, aumentando,
+
+1355
+01:04:06,340 --> 01:04:08,340
+até chegar a uma curva que na realidade
+
+1356
+01:04:08,340 --> 01:04:10,340
+é uma reta até aqui e outra até ali,
+
+1357
+01:04:10,340 --> 01:04:12,340
+aqui é 0.5
+
+1358
+01:04:12,340 --> 01:04:14,340
+e aqui é o
+
+1359
+01:04:14,340 --> 01:04:16,340
+classificador perfeito
+
+1360
+01:04:16,340 --> 01:04:18,340
+e aqui é um classificador totalmente
+
+1361
+01:04:18,340 --> 01:04:20,340
+aleatório. Então, a ver, à medida
+
+1362
+01:04:20,340 --> 01:04:22,340
+que a curva aumenta, aumenta, aumenta,
+
+1363
+01:04:22,340 --> 01:04:24,340
+a curva rock é ótima.
+
+1364
+01:04:24,340 --> 01:04:26,340
+Pronto, para que é que a curva rock
+
+1365
+01:04:26,340 --> 01:04:28,340
+é muito fixe? Quando vocês
+
+1366
+01:04:28,340 --> 01:04:30,340
+estão a classificar 2, 3, 4
+
+1367
+01:04:30,340 --> 01:04:32,340
+classificadores, vocês traçam
+
+1368
+01:04:32,340 --> 01:04:34,340
+as curvas rock dos vários classificadores
+
+1369
+01:04:34,340 --> 01:04:36,340
+sobre o mesmo modelo
+
+1370
+01:04:36,340 --> 01:04:38,340
+e automaticamente, ao verem
+
+1371
+01:04:38,340 --> 01:04:40,340
+qual é a curva que fica mais acima,
+
+1372
+01:04:40,340 --> 01:04:42,340
+vocês percebem logo
+
+1373
+01:04:42,340 --> 01:04:44,340
+instantaneamente qual é o melhor
+
+1374
+01:04:44,340 --> 01:04:46,340
+classificador, ok? E temos
+
+1375
+01:04:46,340 --> 01:04:48,340
+logo uma ordenação,
+
+1376
+01:04:48,340 --> 01:04:50,340
+neste caso serão modelos, porque são
+
+1377
+01:04:50,340 --> 01:04:52,340
+classificadores diferentes, mas são
+
+1378
+01:04:52,340 --> 01:04:54,340
+modelos diferentes do mesmo problema
+
+1379
+01:04:54,340 --> 01:04:56,340
+e quando nós estamos a fazer isso, automaticamente
+
+1380
+01:04:56,340 --> 01:04:58,340
+por esta hierarquização pela posição
+
+1381
+01:04:58,340 --> 01:05:00,340
+nós sabemos logo, olha, este é o melhor
+
+1382
+01:05:00,340 --> 01:05:02,340
+modelo de todos, este é o segundo, este é o terceiro
+
+1383
+01:05:02,340 --> 01:05:04,340
+isto normalmente depois não é assim separado, é tudo muito colado
+
+1384
+01:05:04,340 --> 01:05:06,340
+mas por diferenças
+
+1385
+01:05:06,340 --> 01:05:08,340
+marginais, nós conseguimos
+
+1386
+01:05:08,340 --> 01:05:10,340
+perceber qual é o melhor.
+
+1387
+01:05:10,340 --> 01:05:12,340
+Pronto, isto é a curva rock.
+
+1388
+01:05:12,340 --> 01:05:14,340
+O
+
+1389
+01:05:14,340 --> 01:05:16,340
+não está aqui, o algo ser rock
+
+1390
+01:05:16,340 --> 01:05:18,340
+que eu não falo aqui, pois falo mais à frente,
+
+1391
+01:05:18,340 --> 01:05:20,340
+mas eu digo-vos, o algo ser rock
+
+1392
+01:05:20,340 --> 01:05:22,340
+é basicamente o integral disto, ou seja
+
+1393
+01:05:22,340 --> 01:05:24,340
+é a área sob a curva
+
+1394
+01:05:24,340 --> 01:05:26,340
+que será tanto maior quanto mais a curva
+
+1395
+01:05:26,340 --> 01:05:28,340
+será para cima, ou seja,
+
+1396
+01:05:28,340 --> 01:05:30,340
+quando um classificador é perfeito, o algo ser rock
+
+1397
+01:05:30,340 --> 01:05:32,340
+é 1, que é 1 vezes 1
+
+1398
+01:05:32,340 --> 01:05:34,340
+estão a ver?
+
+1399
+01:05:34,340 --> 01:05:36,340
+Esta é sempre 1, o que for o
+
+1400
+01:05:36,340 --> 01:05:38,340
+integral disto, que é qualquer coisa entre 0
+
+1401
+01:05:38,340 --> 01:05:40,340
+e 1
+
+1402
+01:05:40,340 --> 01:05:42,340
+neste caso nem é 0
+
+1403
+01:05:42,340 --> 01:05:44,340
+é 0.5 e 1, porque metade
+
+1404
+01:05:44,340 --> 01:05:46,340
+deste quadrado
+
+1405
+01:05:46,340 --> 01:05:48,340
+é 0.5 de área
+
+1406
+01:05:50,340 --> 01:05:52,340
+ou seja, estes triângulos
+
+1407
+01:05:52,340 --> 01:05:54,340
+e portanto
+
+1408
+01:05:54,340 --> 01:05:56,340
+esperem que eu perdi-me
+
+1409
+01:05:56,340 --> 01:05:58,340
+e à medida que vocês aumentam, estão a aumentar
+
+1410
+01:05:58,340 --> 01:06:00,340
+ao ser rock em 0,5 e 1
+
+1411
+01:06:00,340 --> 01:06:02,340
+já sei
+
+1412
+01:06:02,340 --> 01:06:04,340
+eu ia dizer uma coisa que
+
+1413
+01:06:04,340 --> 01:06:06,340
+veio à cabeça e eu esqueci-me
+
+1414
+01:06:06,340 --> 01:06:08,340
+pronto, essencialmente, quanto maior
+
+1415
+01:06:08,340 --> 01:06:10,340
+for o algo ser rock, melhor é o vosso classificador
+
+1416
+01:06:10,340 --> 01:06:12,340
+e portanto, vocês têm estas duas
+
+1417
+01:06:12,340 --> 01:06:14,340
+formas de irrequisar
+
+1418
+01:06:14,340 --> 01:06:16,340
+o desempenho dos vossos modelos
+
+1419
+01:06:16,340 --> 01:06:18,340
+no mesmo problema, obviamente, nós vamos comparar
+
+1420
+01:06:18,340 --> 01:06:20,340
+que as coisas são comparáveis
+
+1421
+01:06:20,340 --> 01:06:22,340
+e com a curva e o AOC
+
+1422
+01:06:22,340 --> 01:06:24,340
+é relativamente fácil de
+
+1423
+01:06:24,340 --> 01:06:26,340
+mostrar, no vosso trabalho, quer seja
+
+1424
+01:06:26,340 --> 01:06:28,340
+num trabalho que dá origem ao artigo científico
+
+1425
+01:06:28,340 --> 01:06:30,340
+a gente mostrar qual é o melhor modelo
+
+1426
+01:06:30,340 --> 01:06:32,340
+interessantíssima, se nós conseguimos
+
+1427
+01:06:32,340 --> 01:06:34,340
+aceder às rocks
+
+1428
+01:06:34,340 --> 01:06:36,340
+dos nossos competidores
+
+1429
+01:06:36,340 --> 01:06:38,340
+se eles descem os dados públicos
+
+1430
+01:06:38,340 --> 01:06:40,340
+e então nós podemos comparar-nos uns com os outros
+
+1431
+01:06:40,340 --> 01:06:42,340
+a partir desta
+
+1432
+01:06:42,340 --> 01:06:44,340
+métrica, está bem?
+
+1433
+01:06:44,340 --> 01:06:46,340
+Outra coisa, não sobram com isto, porque
+
+1434
+01:06:46,340 --> 01:06:48,340
+depois isto são tudo funções que a gente chama
+
+1435
+01:06:48,340 --> 01:06:50,340
+no Python, no
+
+1436
+01:06:50,340 --> 01:06:52,340
+Scikit, no
+
+1437
+01:06:52,340 --> 01:06:54,340
+TensorFlow Lite, no LiteRT
+
+1438
+01:06:54,340 --> 01:06:56,340
+depois há funções para fazer isto tudo
+
+1439
+01:06:56,340 --> 01:06:58,340
+normalmente, está bem?
+
+1440
+01:06:58,340 --> 01:07:00,340
+Outra coisa importante
+
+1441
+01:07:00,340 --> 01:07:02,340
+o BIAS Variance Tradeoff
+
+1442
+01:07:02,340 --> 01:07:04,340
+é uma coisa que é super importante falar
+
+1443
+01:07:04,340 --> 01:07:06,340
+na primeira aula
+
+1444
+01:07:06,340 --> 01:07:08,340
+nos modelos de aprendizagem
+
+1445
+01:07:08,340 --> 01:07:10,340
+automática, há essencialmente
+
+1446
+01:07:10,340 --> 01:07:12,340
+várias grandes erros, o BIAS e o Variance
+
+1447
+01:07:12,340 --> 01:07:14,340
+que tem a ver com o nível de treino do modelo
+
+1448
+01:07:14,340 --> 01:07:16,340
+o que é que é o BIAS?
+
+1449
+01:07:16,340 --> 01:07:18,340
+o BIAS é o erro que surge da aproximação
+
+1450
+01:07:18,340 --> 01:07:20,340
+de um problema real com o modelo simplificado
+
+1451
+01:07:20,340 --> 01:07:22,340
+ou seja, o BIAS é o erro
+
+1452
+01:07:22,340 --> 01:07:24,340
+que vem do under fitting do modelo
+
+1453
+01:07:24,340 --> 01:07:26,340
+ele não treinou bem e o gajo está cheio de BIAS
+
+1454
+01:07:26,340 --> 01:07:28,340
+BIAS é ser tosco, é não saber
+
+1455
+01:07:28,340 --> 01:07:30,340
+é um modelo que é polarizado
+
+1456
+01:07:30,340 --> 01:07:32,340
+coitadinho, não é?
+
+1457
+01:07:32,340 --> 01:07:34,340
+a variância é um erro diferente
+
+1458
+01:07:34,340 --> 01:07:36,340
+a variância é o erro do perfeitinho
+
+1459
+01:07:36,340 --> 01:07:38,340
+é o erro do modelo que treina muito
+
+1460
+01:07:38,340 --> 01:07:40,340
+tudo corre no modelo de treino
+
+1461
+01:07:40,340 --> 01:07:42,340
+e chega ao teste e não faz nada
+
+1462
+01:07:42,340 --> 01:07:44,340
+todos nós na vida já tivemos BIAS
+
+1463
+01:07:44,340 --> 01:07:46,340
+e Variance
+
+1464
+01:07:46,340 --> 01:07:48,340
+já falhamos por estendermos um bocado tosco
+
+1465
+01:07:48,340 --> 01:07:50,340
+já falhamos por querer demais e fazer tudo tão bem
+
+1466
+01:07:50,340 --> 01:07:52,340
+e até falhamos quando aquilo é para fazer
+
+1467
+01:07:52,340 --> 01:07:54,340
+e o erro de variância é quando está tudo
+
+1468
+01:07:54,340 --> 01:07:56,340
+muito perfeitinho, ele decorou tudo
+
+1469
+01:07:56,340 --> 01:07:58,340
+e cá está
+
+1470
+01:07:58,340 --> 01:08:00,340
+quando vocês estão aqui do lado esquerdo
+
+1471
+01:08:00,340 --> 01:08:02,340
+na dimensão do under fitting
+
+1472
+01:08:02,340 --> 01:08:04,340
+o que é que vocês têm?
+
+1473
+01:08:04,340 --> 01:08:06,340
+no caso da classificação e no caso em baixo da regressão
+
+1474
+01:08:06,340 --> 01:08:08,340
+no under fitting vocês têm
+
+1475
+01:08:08,340 --> 01:08:10,340
+um raio de uma curva que na realidade
+
+1476
+01:08:10,340 --> 01:08:12,340
+não separa muito bem isto, é tosco
+
+1477
+01:08:12,340 --> 01:08:14,340
+não faz a coisa bem
+
+1478
+01:08:14,340 --> 01:08:16,340
+no caso da regressão vocês têm
+
+1479
+01:08:16,340 --> 01:08:18,340
+uma coisa que
+
+1480
+01:08:18,340 --> 01:08:20,340
+traça aqui uma reta e
+
+1481
+01:08:20,340 --> 01:08:22,340
+à primeira instância até poderia parecer
+
+1482
+01:08:22,340 --> 01:08:24,340
+uma coisa boa, isto é que uma história de água está quente ou fria
+
+1483
+01:08:24,340 --> 01:08:26,340
+é sempre uma questão de compararmos
+
+1484
+01:08:26,340 --> 01:08:28,340
+olhando só para aqui a gente diz
+
+1485
+01:08:28,340 --> 01:08:30,340
+está mal, ele até traça nos dados e tal
+
+1486
+01:08:30,340 --> 01:08:32,340
+no entanto quando vocês olham por exemplo
+
+1487
+01:08:32,340 --> 01:08:34,340
+para um problema de classificação
+
+1488
+01:08:34,340 --> 01:08:36,340
+e veem aqui uma coisa que percebe
+
+1489
+01:08:36,340 --> 01:08:38,340
+que nestes dados todos há aqui uma grande concentração
+
+1490
+01:08:38,340 --> 01:08:40,340
+de azuis e que há uma tendência maior
+
+1491
+01:08:40,340 --> 01:08:42,340
+para haver aqui em baixo os amarelos
+
+1492
+01:08:42,340 --> 01:08:44,340
+ou os castanhos
+
+1493
+01:08:44,340 --> 01:08:46,340
+e traça esta curva, isto é o que se chama
+
+1494
+01:08:46,340 --> 01:08:48,340
+o right fit, outra coisa
+
+1495
+01:08:48,340 --> 01:08:50,340
+não há uma função única que é boa
+
+1496
+01:08:50,340 --> 01:08:52,340
+às vezes em uns problemas
+
+1497
+01:08:52,340 --> 01:08:54,340
+há aqui um conjunto de funções que servem
+
+1498
+01:08:54,340 --> 01:08:56,340
+o mesmo propósito, com mais ou menos
+
+1499
+01:08:56,340 --> 01:08:58,340
+os mesmos resultados e tal, o que importa é que
+
+1500
+01:08:58,340 --> 01:09:00,340
+o vosso classificador seja capaz de encontrar
+
+1501
+01:09:00,340 --> 01:09:02,340
+uma que seja mais ou menos o right fit, está bem?
+
+1502
+01:09:02,340 --> 01:09:04,340
+É importante também dizer isto, caso as pessoas julgam
+
+1503
+01:09:04,340 --> 01:09:06,340
+que se vai chegar a um limite teórico
+
+1504
+01:09:06,340 --> 01:09:08,340
+aquilo, e esse limite na prática
+
+1505
+01:09:08,340 --> 01:09:10,340
+na maior parte das vezes não existe
+
+1506
+01:09:10,340 --> 01:09:12,340
+o interesse é chegar a um bom valor
+
+1507
+01:09:12,340 --> 01:09:14,340
+e portanto este é o right fit, e isto é o over fit
+
+1508
+01:09:14,340 --> 01:09:16,340
+é ele, ok, ele treinou tanto
+
+1509
+01:09:16,340 --> 01:09:18,340
+que diz assim, este é azul, este é amarelo
+
+1510
+01:09:18,340 --> 01:09:20,340
+este é azul, agora tenho que ir buscar este azul
+
+1511
+01:09:20,340 --> 01:09:22,340
+ainda incluo este, mas agora tenho que excluir
+
+1512
+01:09:22,340 --> 01:09:24,340
+este amarelo e agora tenho que ir por estes amarelos
+
+1513
+01:09:24,340 --> 01:09:26,340
+e agora tenho que buscar estes azuis
+
+1514
+01:09:26,340 --> 01:09:28,340
+este gajo em treino teve 100%, ele não falhou nada
+
+1515
+01:09:28,340 --> 01:09:30,340
+o problema é que
+
+1516
+01:09:30,340 --> 01:09:32,340
+quando ele chega ao teste
+
+1517
+01:09:32,340 --> 01:09:34,340
+ele está tão over fit
+
+1518
+01:09:34,340 --> 01:09:36,340
+que a gente mete dados novos
+
+1519
+01:09:36,340 --> 01:09:38,340
+e ele vai ter amarelos aqui
+
+1520
+01:09:38,340 --> 01:09:40,340
+que na realidade seriam amarelos
+
+1521
+01:09:40,340 --> 01:09:42,340
+e ele vai classificar como azul
+
+1522
+01:09:42,340 --> 01:09:44,340
+e vai ter aqui
+
+1523
+01:09:44,340 --> 01:09:46,340
+azuis, bem, não vou fazer
+
+1524
+01:09:46,340 --> 01:09:48,340
+um momento António Guterres que agora não estou a ver
+
+1525
+01:09:48,340 --> 01:09:50,340
+portanto, e vai ter aqui azuis por exemplo
+
+1526
+01:09:50,340 --> 01:09:52,340
+exatamente, e vai ter aqui azuis
+
+1527
+01:09:52,340 --> 01:09:54,340
+que ele vai classificar como amarelos
+
+1528
+01:09:54,340 --> 01:09:56,340
+e na realidade eram azuis porque estão claramente
+
+1529
+01:09:56,340 --> 01:09:58,340
+na zona dos azuis, estão a ver?
+
+1530
+01:09:58,340 --> 01:10:00,340
+Na regressão, aqui é apanhar
+
+1531
+01:10:00,340 --> 01:10:02,340
+a tendência dos dados e este está
+
+1532
+01:10:02,340 --> 01:10:04,340
+incrível, este aqui
+
+1533
+01:10:04,340 --> 01:10:06,340
+olhando para este, não se vê, mas olhando para este
+
+1534
+01:10:06,340 --> 01:10:08,340
+diz não, o gajo faz um fit muito melhor
+
+1535
+01:10:08,340 --> 01:10:10,340
+ele captura a essência dos dados
+
+1536
+01:10:10,340 --> 01:10:12,340
+e o over fit é isto, ele tenta, coitadinho
+
+1537
+01:10:12,340 --> 01:10:14,340
+ele tenta apanhar tudo e na realidade
+
+1538
+01:10:14,340 --> 01:10:16,340
+depois vai emitir erros atrás
+
+1539
+01:10:16,340 --> 01:10:18,340
+deles, desculpem-me
+
+1540
+01:10:18,340 --> 01:10:20,340
+vou passar, pronto, ao longo
+
+1541
+01:10:20,340 --> 01:10:22,340
+do treino, no treino
+
+1542
+01:10:22,340 --> 01:10:24,340
+das redes sociais e de alguns outros modelos
+
+1543
+01:10:24,340 --> 01:10:26,340
+são treinos em épocas que
+
+1544
+01:10:26,340 --> 01:10:28,340
+acontecem ao longo do tempo, o que é que acontece?
+
+1545
+01:10:28,340 --> 01:10:30,340
+À medida que vocês treinam
+
+1546
+01:10:30,340 --> 01:10:32,340
+a complexidade do vosso modelo
+
+1547
+01:10:32,340 --> 01:10:34,340
+vai aumentando
+
+1548
+01:10:34,340 --> 01:10:36,340
+e treinar mais
+
+1549
+01:10:36,340 --> 01:10:38,340
+costuma ser ajeitoso, mas não
+
+1550
+01:10:38,340 --> 01:10:40,340
+significa que seja sempre bom, ou seja
+
+1551
+01:10:40,340 --> 01:10:42,340
+quando vocês
+
+1552
+01:10:42,340 --> 01:10:44,340
+começam a treinar a complexidade
+
+1553
+01:10:44,340 --> 01:10:46,340
+do modelo ele não sabe nada, ele começa
+
+1554
+01:10:46,340 --> 01:10:48,340
+a aprender e o vosso
+
+1555
+01:10:48,340 --> 01:10:50,340
+o vosso modelo tem
+
+1556
+01:10:50,340 --> 01:10:52,340
+muito erro, pronto, aqui os modelos
+
+1557
+01:10:52,340 --> 01:10:54,340
+estão de compostos em
+
+1558
+01:10:54,340 --> 01:10:56,340
+vias, o erro de vias e o erro
+
+1559
+01:10:56,340 --> 01:10:58,340
+de variância e a soma destes dois erros
+
+1560
+01:10:58,340 --> 01:11:00,340
+da o erro total do modelo
+
+1561
+01:11:00,340 --> 01:11:02,340
+e para a grande maioria dos problemas
+
+1562
+01:11:02,340 --> 01:11:04,340
+acontece isto que é, o modelo
+
+1563
+01:11:04,340 --> 01:11:06,340
+começa o treino e tem muito vias
+
+1564
+01:11:06,340 --> 01:11:08,340
+ele não sabe nada e ele tem
+
+1565
+01:11:08,340 --> 01:11:10,340
+zero variância, porque ele também não erra
+
+1566
+01:11:10,340 --> 01:11:12,340
+por ser muito completo
+
+1567
+01:11:12,340 --> 01:11:14,340
+porque ele começou o treino, à medida que vocês treinam
+
+1568
+01:11:14,340 --> 01:11:16,340
+ele vai aprendendo, ele vai andando
+
+1569
+01:11:16,340 --> 01:11:18,340
+até que chega a um ponto onde
+
+1570
+01:11:18,340 --> 01:11:20,340
+o erro chega a um determinado
+
+1571
+01:11:20,340 --> 01:11:22,340
+mínimo, depois nem sempre
+
+1572
+01:11:22,340 --> 01:11:24,340
+acontece, mas muitas vezes acontece
+
+1573
+01:11:24,340 --> 01:11:26,340
+se vocês continuarem a treinar, além disto
+
+1574
+01:11:26,340 --> 01:11:28,340
+o erro começa a aumentar, porquê?
+
+1575
+01:11:28,340 --> 01:11:30,340
+Porque ele estava em underfit completo
+
+1576
+01:11:30,340 --> 01:11:32,340
+começa a treinar até atingir o que se
+
+1577
+01:11:32,340 --> 01:11:34,340
+chama o right fit e se vocês
+
+1578
+01:11:34,340 --> 01:11:36,340
+continuarem a treinar ad eternal
+
+1579
+01:11:36,340 --> 01:11:38,340
+ele entra em overfit, ou seja
+
+1580
+01:11:38,340 --> 01:38:29,420
+ele treina demais, pronto.
+
+1581
+01:38:29,420 --> 01:38:31,420
+Por parte é uma cisma minha
+
+1582
+01:38:31,420 --> 01:38:33,420
+mas agora gosto porque
+
+1583
+01:38:33,420 --> 01:38:35,420
+é um conceito que eu acho que é essencial
+
+1584
+01:38:35,420 --> 01:38:37,420
+para nos conhecermos, partilhar o
+
+1585
+01:38:37,420 --> 01:38:39,420
+ecrã por um bocadinho
+
+1586
+01:38:39,420 --> 01:38:41,420
+é este livro aqui, The wisdom of the crowds
+
+1587
+01:38:41,420 --> 01:38:43,420
+é incrível isto
+
+1588
+01:38:43,420 --> 01:38:45,420
+e é essencialmente o princípio dos ensembles
+
+1589
+01:38:47,420 --> 01:38:49,420
+aplicado ao
+
+1590
+01:38:49,420 --> 01:38:51,420
+aplicado à sociedade
+
+1591
+01:38:51,420 --> 01:38:53,420
+é muito muito interessante
+
+1592
+01:38:53,420 --> 01:38:55,420
+agora vocês devem estar a ver já o powerpoint
+
+1593
+01:38:55,420 --> 01:38:57,420
+outra vez, correto?
+
+1594
+01:38:57,420 --> 01:38:59,420
+mas qual a ideia?
+
+1595
+01:38:59,420 --> 01:39:01,420
+qual a ideia? é que havia muito
+
+1596
+01:39:01,420 --> 01:39:03,420
+diferentes autores
+
+1597
+01:39:03,420 --> 01:39:05,420
+ah, eu
+
+1598
+01:39:05,420 --> 01:39:07,420
+partilho aqui, então vamos fazer assim
+
+1599
+01:39:07,420 --> 01:39:09,420
+eu vou aqui
+
+1600
+01:39:09,420 --> 01:39:11,420
+e eu
+
+1601
+01:39:13,420 --> 01:39:15,420
+acho que estar a pôr o coelho
+
+1602
+01:39:15,420 --> 01:39:17,420
+é um bocadinho, copy
+
+1603
+01:39:17,420 --> 01:39:19,420
+eu vou aqui ao nosso chat
+
+1604
+01:39:19,420 --> 01:39:21,420
+e partilho, opa, isto não é matéria, não é?
+
+1605
+01:39:21,420 --> 01:39:23,420
+não é óbvio, não é matéria
+
+1606
+01:39:23,420 --> 01:39:25,420
+mas foi um livro que eu gostei muito de ler
+
+1607
+01:39:25,420 --> 01:39:27,420
+e que acho que é super interessante
+
+1608
+01:39:27,420 --> 01:39:29,420
+onde é que está? ah, está aqui
+
+1609
+01:39:29,420 --> 01:39:31,420
+agora tenho que abrir aqui o chat, tenho que ter cuidado
+
+1610
+01:39:31,420 --> 01:39:33,420
+que eu não faço assim tantas sensações no pince
+
+1611
+01:39:33,420 --> 01:39:35,420
+e depois
+
+1612
+01:39:35,420 --> 01:39:37,420
+isto é um livro que é uma referência
+
+1613
+01:39:37,420 --> 01:39:39,420
+a título mais pessoal
+
+1614
+01:39:39,420 --> 01:39:41,420
+ligado
+
+1615
+01:39:41,420 --> 01:39:43,420
+nada, nada, claro que temos que ser claros na coisa
+
+1616
+01:39:43,420 --> 01:39:45,420
+pronto, e então isto é para
+
+1617
+01:39:45,420 --> 01:39:47,420
+exultar a diversidade, está bem?
+
+1618
+01:39:47,420 --> 01:39:49,420
+a diversidade, ou seja, é importante ter
+
+1619
+01:39:49,420 --> 01:39:51,420
+e depois a nível de modelos, que também já temos já testadas
+
+1620
+01:39:51,420 --> 01:40:15,569
+10, 20, 50,
+
+1621
+01:40:15,569 --> 01:40:17,569
+100, 1000 modelos
+
+1622
+01:40:17,569 --> 01:40:19,569
+e se eles forem relativamente bonzinhos a gente faz
+
+1623
+01:40:19,569 --> 01:40:21,569
+uma média, ou seja, a média acerta
+
+1624
+01:40:21,569 --> 01:40:23,569
+mais, e eu ponho os mesmos
+
+1625
+01:40:23,569 --> 01:40:25,569
+dados, ponho os mesmos dados em todos os
+
+1626
+01:40:25,569 --> 01:40:27,569
+modelos, uns acertam e uns desfalam
+
+1627
+01:40:27,569 --> 01:40:29,569
+mas nós sabemos que do ponto de vista estatístico
+
+1628
+01:40:29,569 --> 01:40:31,569
+a maioria vai acertar e se eu combinar
+
+1629
+01:40:31,569 --> 01:40:33,569
+por média, dizer, vou fazer uma média desta
+
+1630
+01:40:33,569 --> 01:40:35,569
+malva toda, pá, o que é que vocês acham
+
+1631
+01:40:35,569 --> 01:40:37,569
+de eu hoje comer de feijoada? E o pessoal diz
+
+1632
+01:40:37,569 --> 01:40:39,569
+é bom, é mau, é bom, é mau, e a gente combina
+
+1633
+01:40:39,569 --> 01:40:41,569
+aquela gente toda e a média tem
+
+1634
+01:40:41,569 --> 01:40:43,569
+sabedoria e a gente diz, olha, hoje vou comer
+
+1635
+01:40:43,569 --> 01:40:45,569
+de feijoada, hoje não vou comer de feijoada
+
+1636
+01:40:45,569 --> 01:40:47,569
+e aquela decisão é boa, pronto, isto é
+
+1637
+01:40:47,569 --> 01:40:49,569
+quando eles são relativamente próximos, têm
+
+1638
+01:40:49,569 --> 01:40:51,569
+um nível de diversidade um bocadinho baixo entre eles
+
+1639
+01:40:51,569 --> 01:40:53,569
+e ao
+
+1640
+01:40:53,569 --> 01:40:55,569
+combinar os modelos nós queremos que eles
+
+1641
+01:40:55,569 --> 01:40:57,569
+sejam, com a diversidade
+
+1642
+01:40:57,569 --> 01:40:59,569
+um bocadinho complementado, mas isso
+
+1643
+01:40:59,569 --> 01:41:01,569
+é para quem andou nestas coisas e
+
+1644
+01:41:01,569 --> 01:41:03,569
+pronto, o que é que acontece?
+
+1645
+01:41:03,569 --> 01:41:05,569
+Depois podemos ter classificadores muito
+
+1646
+01:41:05,569 --> 01:41:07,569
+mais especializados, em que um trata mais de uma zona
+
+1647
+01:41:07,569 --> 01:41:09,569
+de outra volta e o combinador, agora já é
+
+1648
+01:41:09,569 --> 01:41:11,569
+um seleitor de modelos, isto é o que
+
+1649
+01:41:11,569 --> 01:41:13,569
+acontece na mistura de especialistas, vocês
+
+1650
+01:41:13,569 --> 01:41:15,569
+ouviram falar aqui há um ano ou dois
+
+1651
+01:41:15,569 --> 01:41:17,569
+do modelo chinês, do primeiro que era o
+
+1652
+01:41:17,569 --> 01:41:19,569
+Deep Sea, que usava
+
+1653
+01:41:19,569 --> 01:41:21,569
+a mistura de especialistas, é uma cena
+
+1654
+01:41:21,569 --> 01:41:23,569
+incrível, eles treinaram pequenos modelos em problemas
+
+1655
+01:41:23,569 --> 01:41:25,569
+complementares e problemas
+
+1656
+01:41:25,569 --> 01:41:27,569
+e ao serem pequenos, modelos
+
+1657
+01:41:27,569 --> 01:41:29,569
+eram muito mais pequenos e
+
+1658
+01:41:29,569 --> 01:41:31,569
+treinaram um bruto combinador com uma
+
+1659
+01:41:31,569 --> 01:41:33,569
+capacidade de inferir de uma forma
+
+1660
+01:41:33,569 --> 01:41:35,569
+incrível qual dos modelos é mais
+
+1661
+01:41:35,569 --> 01:41:37,569
+adequado e foi isso que fez o Deep Sea
+
+1662
+01:41:37,569 --> 01:41:39,569
+ser muito mais pequeno do que os outros,
+
+1663
+01:41:39,569 --> 01:41:41,569
+e portanto foi o grande sucesso daquilo.
+
+1664
+01:41:41,569 --> 01:41:43,569
+Eu na altura fiquei muito
+
+1665
+01:41:43,569 --> 01:41:45,569
+entusiasmado, foi uma coisa que eu também
+
+1666
+01:41:45,569 --> 01:41:47,569
+era uma das minhas teses, fiquei todo
+
+1667
+01:41:47,569 --> 01:41:49,569
+contente e dizia, ia para o espetáculo e tal,
+
+1668
+01:41:49,569 --> 01:41:51,569
+eu só queria que alguém me tivesse citado,
+
+1669
+01:41:51,569 --> 01:41:53,569
+mas eu tinha que ter feito muito
+
+1670
+01:41:53,569 --> 01:41:55,569
+mais para lá chegar e bem, mas
+
+1671
+01:41:55,569 --> 01:41:57,569
+era uma das minhas teses
+
+1672
+01:41:57,569 --> 01:41:59,569
+e daí achei
+
+1673
+01:41:59,569 --> 01:42:01,569
+que foram chinês, depois mais tarde, tive algum
+
+1674
+01:42:01,569 --> 01:42:03,569
+tempo, fui ler e na realidade não, já
+
+1675
+01:42:03,569 --> 01:42:05,569
+havia equipas americanas a fazer isto
+
+1676
+01:42:05,569 --> 01:42:07,569
+e a diversidade é uma coisa já muito antiga,
+
+1677
+01:42:07,569 --> 01:42:09,569
+portanto isto foi explorado,
+
+1678
+01:42:09,569 --> 01:42:11,569
+muito bem explorado por eles do ponto de pista prática.
+
+1679
+01:42:11,569 --> 01:42:13,569
+Deixem-me ir aqui mais abaixo,
+
+1680
+01:42:13,569 --> 01:42:15,569
+a diversidade já está,
+
+1681
+01:42:15,569 --> 01:42:17,569
+esta questão dos weak learners vamos passar
+
+1682
+01:42:17,569 --> 01:42:19,569
+a frente, mas essencialmente um weak
+
+1683
+01:42:19,569 --> 01:42:21,569
+learner e um strong learner é
+
+1684
+01:42:21,569 --> 01:42:23,569
+um weak learner é um classificador que
+
+1685
+01:42:23,569 --> 01:42:25,569
+aprende a ser ligeiramente melhor que o
+
+1686
+01:42:25,569 --> 01:42:27,569
+random guessing, ou seja, se ele tiver que classificar
+
+1687
+01:42:27,569 --> 01:42:29,569
+bola vermelha, bola
+
+1688
+01:42:29,569 --> 01:42:31,569
+verde, ele basicamente
+
+1689
+01:42:31,569 --> 01:42:33,569
+basta que ele faça 55 ou 60%
+
+1690
+01:42:33,569 --> 01:42:35,569
+de acertos, e a gente
+
+1691
+01:42:35,569 --> 01:42:37,569
+combina muitos e por maioria, já
+
+1692
+01:42:37,569 --> 01:42:39,569
+conseguimos ter, por combinação
+
+1693
+01:42:39,569 --> 01:42:41,569
+por média, já conseguimos ter o weak learning
+
+1694
+01:42:41,569 --> 01:42:43,569
+a funcionar, pois há muitas vantagens,
+
+1695
+01:42:43,569 --> 01:42:45,569
+ser um weak learner é
+
+1696
+01:42:45,569 --> 01:42:47,569
+chato porque ele não é assim tão bom, temos que
+
+1697
+01:42:47,569 --> 01:42:49,569
+ter muitos no modelo, mas
+
+1698
+01:42:49,569 --> 01:42:51,569
+é muito mais performant, porque treinar
+
+1699
+01:42:51,569 --> 01:42:53,569
+estes modelos é super fácil, é leve,
+
+1700
+01:42:53,569 --> 01:42:55,569
+eles depois levam a,
+
+1701
+01:42:55,569 --> 01:42:57,569
+não fazem overfit, porque eles são pouco treinados,
+
+1702
+01:42:57,569 --> 01:42:59,569
+quando já estão bonzinhos,
+
+1703
+01:42:59,569 --> 01:43:01,569
+já não treina mais,
+
+1704
+01:43:01,569 --> 01:43:03,569
+são eficientes do ponto de vista computacional,
+
+1705
+01:43:03,569 --> 01:43:05,569
+porque com muito pouco trabalho a treinar,
+
+1706
+01:43:05,569 --> 01:43:07,569
+são flexíveis e diversos, porque
+
+1707
+01:43:07,569 --> 01:43:09,569
+tem pouco treino, lá está o erro deles cai mais
+
+1708
+01:43:09,569 --> 01:43:11,569
+para o lado do vias, e portanto
+
+1709
+01:43:11,569 --> 01:43:13,569
+eles são mais tusquidos, e portanto
+
+1710
+01:43:13,569 --> 01:43:15,569
+eles vão ter diversidade, porque eles vão dizer também muita
+
+1711
+01:43:15,569 --> 01:43:17,569
+asneira, portanto a ideia é que
+
+1712
+01:43:17,569 --> 01:43:19,569
+complementando todos, eles cancelem uns aos outros
+
+1713
+01:43:19,569 --> 01:43:21,569
+e por maioria a gente chega lá.
+
+1714
+01:43:23,569 --> 01:43:25,569
+Desvantagem ao fusing weak learners
+
+1715
+01:43:25,569 --> 01:43:28,979
+in ensemble learning.
+
+1716
+01:43:28,979 --> 01:43:30,979
+Inclusive complexidade, ah, pois a complexidade
+
+1717
+01:43:30,979 --> 01:43:32,979
+agora é na combinação,
+
+1718
+01:43:32,979 --> 01:43:34,979
+os treinos de tempo, bem, esqueçam,
+
+1719
+01:43:34,979 --> 01:43:36,979
+ia ser uma chatice para estarmos aqui,
+
+1720
+01:43:36,979 --> 01:43:38,979
+ainda me vou emaranhar aqui,
+
+1721
+01:43:38,979 --> 01:43:40,979
+que isto tem que ser com calma.
+
+1722
+01:43:40,979 --> 01:43:42,979
+Depois, não tenho aqui,
+
+1723
+01:43:42,979 --> 01:43:44,979
+o bagging, pronto, e essencialmente eu vou-vos falar
+
+1724
+01:43:44,979 --> 01:43:46,979
+de três coisas, o bagging, o Vosso,
+
+1725
+01:43:46,979 --> 01:43:48,979
+tínhamos duas especialistas, o bagging,
+
+1726
+01:43:48,979 --> 01:43:50,979
+eu queria ter uma imagem, não tenho,
+
+1727
+01:43:50,979 --> 01:43:52,979
+o bagging, o que é,
+
+1728
+01:43:52,979 --> 01:43:54,979
+gente, o bagging é essencialmente,
+
+1729
+01:43:54,979 --> 01:43:56,979
+é isto, pronto, o bagging é nós
+
+1730
+01:43:56,979 --> 01:43:58,979
+pegarmos num dataset,
+
+1731
+01:43:58,979 --> 01:44:00,979
+pegamos nos dados de treino, e fazemos
+
+1732
+01:44:00,979 --> 01:44:02,979
+uma amostragem com reposição, ou seja,
+
+1733
+01:44:02,979 --> 01:44:04,979
+vamos ao nosso dataset original, tiramos
+
+1734
+01:44:04,979 --> 01:44:06,979
+um conjunto de amostras, e fazemos como se fosse
+
+1735
+01:44:06,979 --> 01:44:08,979
+um saquinho com amostras,
+
+1736
+01:44:08,979 --> 01:44:10,979
+e dizemos, este é o conjunto
+
+1737
+01:44:10,979 --> 01:44:12,979
+e voltamos a pôr as amostras todas aqui,
+
+1738
+01:44:12,979 --> 01:44:14,979
+e voltamos a mostrar do mesmo
+
+1739
+01:44:14,979 --> 01:44:16,979
+conjunto, ou seja, cada vez que nós começamos
+
+1740
+01:44:16,979 --> 01:44:18,979
+a amostragem, nós temos o conjunto todo
+
+1741
+01:44:18,979 --> 01:44:20,979
+intacto, estão a ver?
+
+1742
+01:44:20,979 --> 01:44:22,979
+E portanto, tiramos, e amostramos daqui
+
+1743
+01:44:22,979 --> 01:44:24,979
+e amostramos dali, a cada amostragem
+
+1744
+01:44:24,979 --> 01:44:26,979
+nós vamos, como é aleatório, nós vamos
+
+1745
+01:44:26,979 --> 01:44:28,979
+sempre tirar amostras ligeiramente diferentes,
+
+1746
+01:44:28,979 --> 01:44:30,979
+e portanto, nós até podemos
+
+1747
+01:44:30,979 --> 01:44:32,979
+tirar, reparem, um conjunto de dados,
+
+1748
+01:44:32,979 --> 01:44:34,979
+que é o total de dados de treino,
+
+1749
+01:44:34,979 --> 01:44:36,979
+mas como ele ao mostrar,
+
+1750
+01:44:36,979 --> 01:44:38,979
+pode mostrar duas vezes o mesmo dado,
+
+1751
+01:44:38,979 --> 01:44:40,979
+diga, diga, alguém...
+
+1752
+01:44:44,979 --> 01:44:46,979
+Isto é a parte da nossa sessão.
+
+1753
+01:44:46,979 --> 01:44:48,979
+Como isto é a parte,
+
+1754
+01:44:48,979 --> 01:44:50,979
+deixem-me só ver as horas que eu posso
+
+1755
+01:44:50,979 --> 01:44:52,979
+estar a demorar,
+
+1756
+01:44:52,979 --> 01:44:54,979
+temos que acabar, deixem-me só terminar,
+
+1757
+01:44:54,979 --> 01:44:56,979
+e se alguém precisar sair, pode sair.
+
+1758
+01:44:56,979 --> 01:44:58,979
+E eles vão ter os subconjuntos todos diferentes,
+
+1759
+01:44:58,979 --> 01:45:00,979
+e depois treino estes modelos nos diferentes conjuntos.
+
+1760
+01:45:00,979 --> 01:45:02,979
+Ora, estes modelos ficam diversos,
+
+1761
+01:45:02,979 --> 01:45:04,979
+e depois fazemos uma média, uma combinação
+
+1762
+01:45:04,979 --> 01:45:06,979
+por média, com a veragem disto, ok?
+
+1763
+01:45:06,979 --> 01:45:08,979
+Nos dados de teste, lá está,
+
+1764
+01:45:08,979 --> 01:45:10,979
+o modelo está treinado, e depois é só meter as entradas,
+
+1765
+01:45:10,979 --> 01:45:12,979
+e ele dá as saídas.
+
+1766
+01:45:12,979 --> 01:45:14,979
+Isto é o bagging. O boosting,
+
+1767
+01:45:14,979 --> 01:45:16,979
+não vos vou explicar, porque eu não tenho aqui sequer suporte para isto,
+
+1768
+01:45:16,979 --> 01:45:18,979
+o mistura de especialistas é este.
+
+1769
+01:45:18,979 --> 01:45:20,979
+Aqui a função é diferente,
+
+1770
+01:45:20,979 --> 01:45:22,979
+aqui nós temos os dados,
+
+1771
+01:45:22,979 --> 01:45:24,979
+treinamos os especialistas em subproblemas
+
+1772
+01:45:24,979 --> 01:45:26,979
+do problema geral,
+
+1773
+01:45:26,979 --> 01:45:28,979
+e depois a gating network,
+
+1774
+01:45:28,979 --> 01:45:30,979
+o que faz é, quando a gente
+
+1775
+01:45:30,979 --> 01:45:32,979
+lhe mete aqui os dados a todos,
+
+1776
+01:45:32,979 --> 01:45:34,979
+e mete também na gating network, a gating também
+
+1777
+01:45:34,979 --> 01:45:36,979
+é treinada, também tem um processo de treino,
+
+1778
+01:45:36,979 --> 01:45:38,979
+e aprende a dizer assim, olha, neste caso
+
+1779
+01:45:38,979 --> 01:45:40,979
+quem vai trabalhar é o 1,
+
+1780
+01:45:40,979 --> 01:45:42,979
+ou neste caso quem trabalha é o 2,
+
+1781
+01:45:42,979 --> 01:45:44,979
+ou quem trabalha é o 3.
+
+1782
+01:45:44,979 --> 01:45:46,979
+Neste caso, por exemplo, se fosse o 1, ele dava um peso
+
+1783
+01:45:46,979 --> 01:45:48,979
+de um a este e zero a estes,
+
+1784
+01:45:48,979 --> 01:45:50,979
+todos imitem a sua opinião,
+
+1785
+01:45:50,979 --> 01:45:52,979
+mas esta é que conta, e reparem,
+
+1786
+01:45:52,979 --> 01:45:54,979
+entre uma coisa e a combinação,
+
+1787
+01:45:54,979 --> 01:45:56,979
+que é 0, 3, 0, 3, 0, 3 para cada um,
+
+1788
+01:45:56,979 --> 01:45:58,979
+que não é o caso da mistura de especialistas,
+
+1789
+01:45:58,979 --> 01:46:00,979
+não é, isto seria mais um bagging,
+
+1790
+01:46:00,979 --> 01:46:02,979
+mas na mistura de especialistas ele tende a pôr pesos mais
+
+1791
+01:46:02,979 --> 01:46:04,979
+para cada um, mas não significa que
+
+1792
+01:46:04,979 --> 01:46:06,979
+tenha que ser um só, por exemplo, eu fazia muito mais
+
+1793
+01:46:06,979 --> 01:46:08,979
+um especialista em si, mas podemos
+
+1794
+01:46:08,979 --> 01:46:10,979
+combinar todos mas dando mais peso a um,
+
+1795
+01:46:10,979 --> 01:46:12,979
+por exemplo, 0, 7 para este, 0, 2 para este
+
+1796
+01:46:12,979 --> 01:46:14,979
+e 0, 1 para este, está bem, gente?
+
+1797
+01:46:14,979 --> 01:46:16,979
+Muito obrigado pela
+
+1798
+01:46:16,979 --> 01:46:18,979
+vossa atenção, haveria mais coisas a falar,
+
+1799
+01:46:18,979 --> 01:46:20,979
+mas acho que fica aqui uma boa introdução,
+
+1800
+01:46:20,979 --> 01:46:22,979
+e para a semana estamos cá.
+
+1801
+01:46:22,979 --> 01:46:24,979
+Só uma
+
+1802
+01:46:24,979 --> 01:46:26,979
+questão,
+
+1803
+01:46:26,979 --> 01:46:28,979
+para sábado temos a necessário
+
+1804
+01:46:28,979 --> 01:46:30,979
+instalar alguma coisa no computador?
+
+1805
+01:46:30,979 --> 01:46:32,979
+É que o posto Tiago,
+
+1806
+01:46:32,979 --> 01:46:34,979
+eu acho que não,
+
+1807
+01:46:34,979 --> 01:46:36,979
+porque vocês no sábado o que vão fazer
+
+1808
+01:46:36,979 --> 01:46:38,979
+é instalar os Raspberry Pi's.
+
+1809
+01:46:38,979 --> 01:46:40,979
+Ok.
+
+1810
+01:46:40,979 --> 01:46:42,979
+E portanto, juro que não há nada
+
+1811
+01:46:42,979 --> 01:46:44,979
+para agora, eu tenho que andar
+
+1812
+01:46:44,979 --> 01:46:46,979
+mais em cima disso, porque não vou dar aula
+
+1813
+01:46:46,979 --> 01:46:48,979
+no sábado por acaso, não vi, mas não me parece.
+
+1814
+01:46:48,979 --> 01:46:50,979
+Mas vamos fazendo-nos assim,
+
+1815
+01:46:50,979 --> 01:46:52,979
+eu vou falar com o posto Tiago,
+
+1816
+01:46:52,979 --> 01:46:54,979
+ainda hoje vou ver se se contactam,
+
+1817
+01:46:54,979 --> 01:46:56,979
+e se houver alguma coisa eu mando-vos uma mensagem pelo Tinos
+
+1818
+01:46:56,979 --> 01:46:58,979
+avisar, ou eu ou ele, está bem?
+
+1819
+01:46:58,979 --> 01:47:00,979
+Ok, obrigado.
+
+1820
+01:47:00,979 --> 01:47:02,979
+Muito obrigado pela vossa paciência, caríssimos,
+
+1821
+01:47:02,979 --> 01:47:06,289
+até breve.
+
+1822
+01:47:06,289 --> 01:47:08,289
+Obrigado. Boa noite.
+
+1823
+01:47:08,289 --> 01:47:10,289
+Obrigada, boa noite.
+
