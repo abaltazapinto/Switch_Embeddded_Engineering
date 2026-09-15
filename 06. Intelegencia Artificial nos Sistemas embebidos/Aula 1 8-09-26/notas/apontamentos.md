@@ -70,3 +70,17 @@ vamos falar nas proximas aulas:
 ![alt text](image-20.png)
 
 quero aprende rtudo e o maximop sobre o assunto no maximo antes de quinta !!!
+
+CSV loader error "wrong number of values"
+→ verificar primeiro delimitadores e número de campos por linha
+→ não converter para ARFF antes de corrigir a estrutura
+
+
+
+---
+
+CSV malformed:
+vírgula no fim da linha
+→ cria coluna vazia adicional
+→ parser pode dar "wrong number of values"
+

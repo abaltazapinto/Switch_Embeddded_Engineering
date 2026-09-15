@@ -1,0 +1,9440 @@
+1
+00:07:20,430 --> 00:07:24,630
+E por isso é que nesta primeira edição, ou nestas aulas iniciais que estão de despejar
+
+2
+00:07:24,630 --> 00:07:30,430
+a muita matéria, se for rápido, mais vocês coloquem dúvidas, só alguma coisa ficou,
+
+3
+00:07:30,430 --> 00:07:33,630
+porque esta aula é uma aula mais livre que temos, ok?
+
+4
+00:07:33,630 --> 00:07:38,470
+Porque eu venho, venho tu, mas da matéria anterior, só ver alguma coisa queiram perguntar,
+
+5
+00:07:38,470 --> 00:07:39,470
+estejam à vontade.
+
+6
+00:07:39,470 --> 00:07:44,990
+Vocês são assim mais caladinhos e sossegados, isso é bom para dar aula, mas na aula
+
+7
+00:07:44,990 --> 00:07:50,230
+2 estejam inteiramente à vontade para interagir, não tenham medo de se haver conflito
+
+8
+00:07:50,230 --> 00:07:54,030
+de falarem os dois ao mesmo tempo, isso resolve-se.
+
+9
+00:07:54,030 --> 00:07:56,830
+Mas aproveitarmos esta aula, pronto.
+
+10
+00:07:56,830 --> 00:08:01,870
+Não habendo assim dúvidas, eu trouxe dois guiões, que são da caveira que eu dou na
+
+11
+00:08:01,870 --> 00:08:07,750
+leque, trouxe esses dois guiões para fazer-me, estava a pensar fazer o primeiro eu, mais
+
+12
+00:08:07,750 --> 00:08:13,310
+ou menos na Ralo, falar um bocado e vocês interagirem comigo, o André Pousa Manoara
+
+13
+00:08:13,310 --> 00:08:18,710
+já vou atendê-lo, se calhar para não ser tão lento e não se toma suco para
+
+14
+00:08:18,710 --> 00:08:23,270
+vocês calharam o que eu fazia o primeiro e depois vocês faziam o segundo, e a minha
+
+15
+00:08:23,270 --> 00:08:29,710
+proposta era, talvez vocês instalarem esta ferramenta ao ECA, pronto, quem me conhece,
+
+16
+00:08:29,710 --> 00:08:34,830
+o Clódiu foi já foi meu aluno, eu sou sismado com ECA, não sou sismado, eu gosto
+
+17
+00:08:34,830 --> 00:08:44,030
+muito da ferramenta, porque há coisas mais bonitas, ao RapidMiner, ao Orange,
+
+18
+00:08:44,030 --> 00:08:54,430
+há um outro, que é o Mamaralinho, como é que aquilo se chama, é o, em lá que eu até
+
+19
+00:08:54,430 --> 00:09:01,950
+vos posso pôr aqui e partilhamos isto aqui um bocadinho, só não queria partilhar o
+
+20
+00:09:01,950 --> 00:09:08,910
+meu ecrã, porque isto está a uma confusão, rapaz, mas é o que é, né, a vida,
+
+21
+00:09:08,910 --> 00:09:13,910
+é o meu desktop, meu estado atualmente, então vou partilhar o ecrã todo e
+
+22
+00:09:13,990 --> 00:09:18,790
+vou fazendo com vocês para vos ir demonstrando, demonstrando vocês vocês
+
+23
+00:09:18,790 --> 00:09:21,830
+estarem a ver, porque senão isto é horrível estar aqui de uma coisa desta e não
+
+24
+00:09:21,830 --> 00:09:27,590
+estar a ver nada, pronto, eu peço só desculpa, que eu tenho um ecrã ultra wide e
+
+25
+00:09:27,590 --> 00:09:33,950
+se calhar em alguns ecrãs não fica tão bom de se ver, mas adaria esta moda e
+
+26
+00:09:33,950 --> 00:09:41,590
+isto é muito fixe, portanto, eu estava a fazer, por exemplo, OECA, Alternatives,
+
+27
+00:09:41,590 --> 00:09:47,910
+fazemos aqui, é o NIME, pronto, o que eu queria saber era o NIME,
+
+28
+00:09:47,910 --> 00:09:52,390
+há aqui uma série deles, também para vos passar, pronto, pessoal, é assim, estes
+
+29
+00:09:52,390 --> 00:09:57,270
+softwares que eu gostei a falar e acho que é um co-resultado interessante,
+
+30
+00:09:57,270 --> 00:10:02,550
+esta aula, acho que se torna uma aula bastante valiosa, por isto, porque
+
+31
+00:10:02,550 --> 00:10:05,870
+é assim, vocês estão numa pós-graduação de sistemas computacionais
+
+32
+00:10:05,870 --> 00:10:09,230
+imbebibidos, mas para vocês fazerem
+
+33
+00:10:09,230 --> 00:10:13,150
+inteligência artificial em sistemas computacionais imbebibidos, vocês têm
+
+34
+00:10:13,150 --> 00:10:17,910
+que ter a noção e os conceitos daquilo que é inteligência artificial e
+
+35
+00:10:17,910 --> 00:10:22,230
+aprendizagem automática, e estas plataformas são, na minha opinião,
+
+36
+00:10:22,230 --> 00:10:28,030
+as melhores, nós na lec, na licenciatura engenharia eletrotécnica
+
+37
+00:10:28,110 --> 00:10:32,110
+vamos muito mais para o Python, e os nossos alunos lá, assim como talvez
+
+38
+00:10:32,110 --> 00:10:36,310
+também muito informática, têm muito o apelo de programar, pronto,
+
+39
+00:10:36,310 --> 00:10:40,310
+que é uma coisa que eles é próxima e eles gostam e os de informática
+
+40
+00:10:40,310 --> 00:10:43,230
+muito mais, mas os de eletrotécnica também e o Python é uma coisa que
+
+41
+00:10:43,230 --> 00:10:46,750
+eles atraem, e portanto nós fugimos muito mais para isso, e agora com
+
+42
+00:10:46,750 --> 00:10:49,750
+as de ePneurol Network, então é uma loucura, que falo de nós também
+
+43
+00:10:49,750 --> 00:10:53,750
+dessas coisas e quer fazer, mas grande parte do machine learning e grande
+
+44
+00:10:53,750 --> 00:10:57,190
+parte das pessoas, se quiserem fazer machine learning, é com estas
+
+45
+00:10:57,190 --> 00:11:01,110
+plataformas, são obviamente uma espécie de word versus latech,
+
+46
+00:11:01,110 --> 00:11:05,030
+ou seja, vocês têm uma interface gráfica, um das coisas foram
+
+47
+00:11:05,030 --> 00:11:09,110
+implementadas para serem mais baseadas num fluxo gráfico do
+
+48
+00:11:09,110 --> 00:11:13,670
+trabalho, não é assim, um fluxo gráfico, tem tipicamente uma
+
+49
+00:11:13,670 --> 00:11:17,230
+curva da aprendizagem que é mais curta e dão para fazer muita
+
+50
+00:11:17,230 --> 00:11:20,870
+coisa, pronto, no meio disso, todos são incríveis, este
+
+51
+00:11:20,870 --> 00:11:24,670
+rapid miner que aqui está, e vou tentar abrir assim vários,
+
+52
+00:11:25,630 --> 00:11:29,830
+todos que aqui estão, já agora o R também é importante,
+
+53
+00:11:31,110 --> 00:11:33,310
+e o ECA, depois por fim ponha aqui o ECA.
+
+54
+00:11:37,700 --> 00:11:42,220
+Mostrando-vos, este rapid miner, isto é uma máquina, isto é uma
+
+55
+00:11:42,220 --> 00:11:44,820
+máquina, só para que estão a ver a quantidade de empresas
+
+56
+00:11:44,820 --> 00:11:49,020
+que o usam, e isto é uma coisa mais de origem alemãe,
+
+57
+00:11:49,020 --> 00:11:53,180
+associada à Alemanha, e muito patrocinada aqui na Europa,
+
+58
+00:11:53,180 --> 00:11:55,340
+portanto é bom, isto é nosso, e nós temos que
+
+59
+00:11:56,340 --> 00:12:00,340
+eu por acaso ainda não fui muito bom na ECA, porque sou utilizador do
+
+60
+00:12:00,340 --> 00:12:04,340
+do ECA há uns anos, e gosto, hoje agora o ECA é australiano,
+
+61
+00:12:04,340 --> 00:12:09,740
+mas muito, como é que se diz, muito sem religião,
+
+62
+00:12:09,740 --> 00:12:14,420
+eles são muito neutros, e deixam andar, e este é o europeu,
+
+63
+00:12:14,420 --> 00:12:17,020
+pronto, e o na ECA é esta coisa aqui, mas é super
+
+64
+00:12:17,020 --> 00:12:20,500
+completo, tem muita coisa e tal, acho muito interessante,
+
+65
+00:12:20,500 --> 00:12:24,020
+gostava até de fazer uma pós-graduação, ou um curso
+
+66
+00:12:24,020 --> 00:12:27,620
+de curto ou média-duração com este software, porque acho que
+
+67
+00:12:27,620 --> 00:12:30,820
+é um curso que é muito útil para muitas pessoas, e depois
+
+68
+00:12:30,820 --> 00:12:33,620
+tem a vantagem, como o Nain é uma plataforma gratuita,
+
+69
+00:12:33,620 --> 00:12:37,100
+free and open source, mas depois eles têm toda uma clave
+
+70
+00:12:37,100 --> 00:12:39,300
+que se pode se inscrever e que se paga um valor que é
+
+71
+00:12:39,300 --> 00:12:42,300
+relativamente aceitável, e se nós precisamos decorrer
+
+72
+00:12:42,300 --> 00:12:44,660
+grandes quantidades de idade, eles suportam e ganham
+
+73
+00:12:44,660 --> 00:12:47,820
+dinheiro com esse modelo de freemium, acho que é
+
+74
+00:12:47,820 --> 00:12:51,060
+muito interessante para as empresas, e neste caso
+
+75
+00:12:51,060 --> 00:12:53,780
+para os profissionais que são vocês, nas empresas, a
+
+76
+00:12:53,780 --> 00:12:57,980
+fazerem escalar em, pronto, este é bom, só que tem aqui um
+
+77
+00:12:57,980 --> 00:13:02,340
+conjunto de grandes coisas a aprender, depois o Orange
+
+78
+00:13:02,340 --> 00:13:05,860
+é uma espécie de uma cópia, do Rapid Minor,
+
+79
+00:13:05,860 --> 00:13:08,740
+acho que é de origem francesa, tem crescido muito,
+
+80
+00:13:08,740 --> 00:13:12,300
+o Orange tem uma proposta muito própria, mas tem
+
+81
+00:13:12,300 --> 00:13:14,340
+aumentado bastante, tem extensões para Python
+
+82
+00:13:14,340 --> 00:13:16,820
+atualmente, que é uma coisa que dá o que poder,
+
+83
+00:13:16,860 --> 00:13:21,780
+e acima de tudo, é mais intuitivo do que o Nain,
+
+84
+00:13:21,780 --> 00:13:23,980
+embora também tenha todos aqueles componentes que eles
+
+85
+00:13:23,980 --> 00:13:26,900
+precisam e tal, e tenho uma questão que eu vos
+
+86
+00:13:26,900 --> 00:13:32,260
+queria dizer, que é bonito, ou seja, os gráficos
+
+87
+00:13:32,260 --> 00:13:37,500
+do Nain têm este aspecto, conseguem ver?
+
+88
+00:13:37,500 --> 00:13:40,820
+Sim. Pronto, tem este aspecto incrível,
+
+89
+00:13:40,820 --> 00:13:43,940
+tem um aspecto super moderno, é espetacular,
+
+90
+00:13:43,940 --> 00:13:45,700
+é espetacular, e é da outra coisa que me dava
+
+91
+00:13:45,740 --> 00:13:48,780
+bem para se fazer um curso, Nain, Rapid Minor,
+
+92
+00:13:48,780 --> 00:13:51,420
+é uma questão que devia ser eu também refletir um
+
+93
+00:13:51,420 --> 00:13:54,500
+bocadinho, se calhar, estar um bocado, o mercado,
+
+94
+00:13:54,500 --> 00:13:56,820
+mas estão a ver que isto aqui, isto tem aqui
+
+95
+00:13:56,820 --> 00:14:00,900
+muita, muita coisa para se fazer, pronto.
+
+96
+00:14:00,900 --> 00:14:03,780
+Antigamente, este aqui, o Rapid Minor era o
+
+97
+00:14:03,780 --> 00:14:06,500
+estado arte, era um atelado da área, era a
+
+98
+00:14:06,500 --> 00:14:10,460
+máquina, era, tinha tudo, os modelos, era o pago,
+
+99
+00:14:10,460 --> 00:14:13,500
+mas era também o bom que tínhamos tudo, pronto.
+
+100
+00:14:13,540 --> 00:14:16,460
+É um só fede referência, eu nunca o
+
+101
+00:14:16,460 --> 00:14:21,900
+considerei em nenhum trabalho que fiz, porque é pago,
+
+102
+00:14:21,900 --> 00:14:24,260
+e portanto temos logo este problema a partida,
+
+103
+00:14:24,260 --> 00:14:27,020
+que ou eu consigo arranjar um aldravíce qualquer
+
+104
+00:14:27,020 --> 00:14:29,540
+e ainda fazer aldravíce, a colocar os
+
+105
+00:14:29,540 --> 00:14:31,940
+emaldravíces e a colocar a instituição
+
+106
+00:14:31,940 --> 00:14:34,340
+ao trabalho emaldravíces, e portanto nunca
+
+107
+00:14:34,340 --> 00:14:35,900
+foi um coisa, na universidade de mim,
+
+108
+00:14:35,900 --> 00:14:39,220
+onde eu já, também já trabalhei,
+
+109
+00:14:39,220 --> 00:14:41,780
+a pá usavam o Rapid Minor, que tinham licença,
+
+110
+00:14:41,780 --> 00:14:44,020
+mas pronto, são outros valores.
+
+111
+00:14:44,020 --> 00:14:48,740
+Depois, ao R, o R é um software, é uma
+
+112
+00:14:48,740 --> 00:14:51,340
+espécie de linguagem mais orientada à
+
+113
+00:14:51,340 --> 00:14:53,420
+estatística, mas altamente poderosa,
+
+114
+00:14:53,420 --> 00:14:56,180
+isto é uma cena muito poderosa, e o R
+
+115
+00:14:56,180 --> 00:14:59,500
+tem um R-Studio, que é uma coisa própria
+
+116
+00:14:59,500 --> 00:15:04,740
+deles, nem sei se é deles, mas é o R-Studio,
+
+117
+00:15:04,740 --> 00:15:10,540
+que é R-Studio, também para os passados,
+
+118
+00:15:10,540 --> 00:15:14,380
+que não é assim, isto é R. O R-Studio é uma
+
+119
+00:15:14,380 --> 00:15:19,500
+coisa muito engraçada, basicamente o R
+
+120
+00:15:19,500 --> 00:15:22,060
+é uma linguagem determinal, é uma
+
+121
+00:15:22,060 --> 00:15:23,940
+linguagem importante, quase, é uma
+
+122
+00:15:23,940 --> 00:15:25,420
+linguagem que começou-se de programação,
+
+123
+00:15:25,420 --> 00:15:28,100
+e o R-Studio é uma cena incrível,
+
+124
+00:15:28,100 --> 00:15:32,420
+porque vocês devem ser este, transformem
+
+125
+00:15:32,420 --> 00:15:34,740
+isto, mete o R por dentro, e passamos a
+
+126
+00:15:34,740 --> 00:15:38,940
+ter este interface, que é maravilhoso,
+
+127
+00:15:39,060 --> 00:15:41,260
+é mesmo tipo um atleta, estão a ver?
+
+128
+00:15:41,260 --> 00:15:43,300
+E, portanto, fica super interessante,
+
+129
+00:15:43,300 --> 00:15:46,140
+temos uma consola, temos aqui as variáveis,
+
+130
+00:15:46,140 --> 00:15:48,420
+a inspeção de variáveis, temos aqui toda a
+
+131
+00:15:48,420 --> 00:15:51,460
+inspeção de coisas, e temos aqui a zona de
+
+132
+00:15:51,460 --> 00:15:54,820
+cóbia, temos, olha, tem agora um assistente,
+
+133
+00:15:54,820 --> 00:15:57,660
+nem sabia, a malta da estatística agora
+
+134
+00:15:57,660 --> 00:15:59,780
+é isto, o R e o R-Studio são muito
+
+135
+00:15:59,780 --> 00:16:02,300
+conhecidos. Pronto, e finalmente, temos
+
+136
+00:16:02,300 --> 00:16:04,340
+aqui o eca, o eca o que é que é?
+
+137
+00:16:04,340 --> 00:16:08,220
+É feinho, não convence ninguém, mas
+
+138
+00:16:08,220 --> 00:16:10,740
+tenho uma coisa que eu vou mostrar é que
+
+139
+00:16:10,740 --> 00:16:13,060
+vencida aquela curva inicial da
+
+140
+00:16:13,060 --> 00:16:15,180
+aprendizagem, que é estranho de entrar,
+
+141
+00:16:15,180 --> 00:16:17,540
+ok? Todos os outros parecem muito mais
+
+142
+00:16:17,540 --> 00:16:19,900
+fáceis de utilizar, mas o que vocês
+
+143
+00:16:19,900 --> 00:16:22,180
+vão perceber é que o eca é
+
+144
+00:16:22,180 --> 00:16:24,140
+esquisito à partida, mas depois vocês
+
+145
+00:16:24,140 --> 00:16:25,460
+perceberem meia dúzia de coisas,
+
+146
+00:16:25,460 --> 00:16:27,700
+vocês já trabalham naquilo, e depois com
+
+147
+00:16:27,700 --> 00:16:29,140
+algumas dúvidas vocês fazem muita
+
+148
+00:16:29,140 --> 00:16:31,620
+coisa. Pronto, o eca, na altura que
+
+149
+00:16:31,620 --> 00:16:32,860
+eu comecei a trabalhar com isto, que já
+
+150
+00:16:32,860 --> 00:16:35,220
+foi pai há mais de 15 anos, o eca
+
+151
+00:16:35,220 --> 00:16:37,300
+tinha outra vantagem, era dos
+
+152
+00:16:37,300 --> 00:16:38,940
+frameworks que tinha mais modelos
+
+153
+00:16:38,940 --> 00:16:41,260
+disponíveis. Atualmente isso já não é
+
+154
+00:16:41,260 --> 00:16:42,740
+verdade, até porque eles convergiram
+
+155
+00:16:42,740 --> 00:16:45,020
+muito para a Python, todos o eca
+
+156
+00:16:45,020 --> 00:16:47,700
+inclusiva, também suporta a Python
+
+157
+00:16:47,700 --> 00:16:49,900
+embora ele seja quase 100% vaziado em
+
+158
+00:16:49,900 --> 00:16:52,740
+Java, e portanto ao convergirem para
+
+159
+00:16:52,740 --> 00:16:54,780
+Python, eles já conseguem integrar todos os
+
+160
+00:16:54,780 --> 00:16:57,140
+frameworks de Python, e portanto hoje a
+
+161
+00:16:57,140 --> 00:16:58,460
+nível de modelos estão todos
+
+162
+00:16:58,460 --> 00:17:00,460
+bastante bem. O que é que eu vou
+
+163
+00:17:00,460 --> 00:17:03,500
+dizer a sugerir? Se quiserem, eu mando
+
+164
+00:17:03,620 --> 00:17:08,300
+aqui o download nisto, o link de download,
+
+165
+00:17:08,300 --> 00:17:11,980
+e vocês querem descarregar, eu imagino
+
+166
+00:17:11,980 --> 00:17:14,540
+que sejam quase todos Windows, né? E
+
+167
+00:17:14,540 --> 00:17:16,700
+portanto eu vou copiar este link e
+
+168
+00:17:16,700 --> 00:17:21,980
+vou buscar aqui no chat da nossa
+
+169
+00:17:21,980 --> 00:17:32,050
+sessão. Como vos disse, como vos
+
+170
+00:17:32,050 --> 00:17:35,290
+disse, este o eca é uma coisa mais
+
+171
+00:17:35,290 --> 00:17:37,850
+convencional, mas que os permite ter
+
+172
+00:17:37,850 --> 00:17:41,290
+um Playground para experimentar
+
+173
+00:17:41,290 --> 00:17:42,610
+machine learning de uma forma
+
+174
+00:17:42,610 --> 00:17:44,610
+intuitiva. Então vamos lá, eu vou
+
+175
+00:17:44,610 --> 00:17:47,130
+expor outra coisa, eu adaptei
+
+176
+00:17:47,130 --> 00:17:52,490
+dois guiões, adaptei dois guiões da
+
+177
+00:17:52,490 --> 00:17:54,130
+disciplina que eu tenho de Inteligência
+
+178
+00:17:54,130 --> 00:17:56,850
+Artecial, que é o que faz sentido para
+
+179
+00:17:56,850 --> 00:18:00,010
+este tipo de abordagem. Deixem-me por
+
+180
+00:18:00,010 --> 00:18:08,100
+aqui, ah mas ele ainda não foi.
+
+181
+00:18:08,100 --> 00:18:11,820
+O eca foi agora, e agora vão estes dois
+
+182
+00:18:11,820 --> 00:18:24,410
+guiões, como é que ele diz? Ah, eu não
+
+183
+00:18:24,410 --> 00:18:26,210
+estou a perceber isto, é que se terem
+
+184
+00:18:26,210 --> 00:18:33,370
+os séries de nota lá, uma amareia,
+
+185
+00:18:33,370 --> 00:18:37,130
+pronto, então eu vou ter que fazer uma
+
+186
+00:18:37,130 --> 00:18:39,610
+coisa diferente, então eu vou ter que ir
+
+187
+00:18:39,610 --> 00:18:40,970
+aqui a um diretório que eu tenho de
+
+188
+00:18:40,970 --> 00:18:44,730
+partilhas. Não gosto de para o modo
+
+189
+00:18:44,730 --> 00:18:49,490
+de ser, não acho. Posso pôr? Olhe, boa ideia,
+
+190
+00:18:50,290 --> 00:18:54,400
+boa ideia, eu até me esqueço que nós
+
+191
+00:18:54,400 --> 00:18:58,770
+temos um ovo, não sabem? Quem é que está
+
+192
+00:18:58,770 --> 00:19:08,600
+aqui para entrar? Aperceu-me aqui a
+
+193
+00:19:08,600 --> 00:19:16,400
+alguém? Nós aceitamos. Aceitaram?
+
+194
+00:19:16,400 --> 00:19:19,120
+Achei que era eu que estava a entrar.
+
+195
+00:19:19,120 --> 00:19:21,160
+Perfeito, não é que desapareceu uma
+
+196
+00:19:21,160 --> 00:19:22,680
+pessoa e eu diga assim, espera lá para
+
+197
+00:19:22,680 --> 00:19:26,200
+deixar a pessoa, deixemos só procurar
+
+198
+00:19:26,200 --> 00:19:29,360
+onde é que está aqui a nossa, e
+
+199
+00:19:29,360 --> 00:19:30,960
+agora, sabe qual é que eu nunca fui
+
+200
+00:19:30,960 --> 00:19:32,400
+aqui a nossa coisa, será esta?
+
+201
+00:19:32,400 --> 00:19:38,100
+Não, pois está aqui as minhas outras
+
+202
+00:19:38,100 --> 00:20:12,190
+coisas tudo, está aqui. Será aqui?
+
+203
+00:20:12,190 --> 00:20:18,220
+O que vocês venham? Como é que se
+
+204
+00:20:18,220 --> 00:20:25,010
+é uma disciplina? Eu deixo ali um
+
+205
+00:20:25,010 --> 00:20:28,050
+lento para a disciplina.
+
+206
+00:20:28,050 --> 00:20:29,890
+Agradeço imenso que eu não estou a
+
+207
+00:20:29,890 --> 00:20:34,610
+encontrar, ora bem. Coisa sem sentido,
+
+208
+00:20:34,610 --> 00:20:36,690
+não podemos partilhar ficheiros
+
+209
+00:20:36,690 --> 00:20:41,890
+aqui. Obrigado, ela agora vai me
+
+210
+00:20:41,890 --> 00:20:45,810
+deixar andar. Pronto, está aqui pois
+
+211
+00:20:45,810 --> 00:20:52,450
+por que ela não aparece? Está aqui a
+
+212
+00:20:52,450 --> 00:20:59,650
+pele do goio, e agora vamos pôr
+
+213
+00:20:59,650 --> 00:21:05,140
+cipês, não é? Ora bem, se for para
+
+214
+00:21:05,140 --> 00:21:06,420
+ser assim, vocês estão também
+
+215
+00:21:06,420 --> 00:21:08,780
+bom assistido. Eu aqui evitar isto,
+
+216
+00:21:08,780 --> 00:21:13,780
+mas é o que é. Móvil visão, aqui
+
+217
+00:21:13,860 --> 00:21:20,580
+isto são aulas, IP, isto para ser
+
+218
+00:21:20,580 --> 00:21:41,460
+bem, havia de ir para cima, mover,
+
+219
+00:21:41,460 --> 00:21:51,300
+de geral, já está. Aula 1, ah, eu
+
+220
+00:21:51,300 --> 00:21:55,440
+depois vou pôr, e isto é aula 3,
+
+221
+00:21:55,440 --> 00:22:00,000
+é um ficheiro, o que eu quero
+
+222
+00:22:00,000 --> 00:22:09,220
+fazer? Aqui seria uma subsecção,
+
+223
+00:22:09,220 --> 00:22:10,820
+fica assim, aula 3 e agora
+
+224
+00:22:10,820 --> 00:22:16,800
+adicionava ficheiros, e agora vou
+
+225
+00:22:16,800 --> 00:22:21,250
+buscar-los aqui, se eu me tinha
+
+226
+00:22:21,250 --> 00:22:23,730
+lembrado, já gostei de pôr, estou
+
+227
+00:22:23,730 --> 00:22:50,700
+pronto. É que eu não aceitei isto,
+
+228
+00:22:50,700 --> 00:23:05,540
+não? Sim, muito bem. Ora brifiquem
+
+229
+00:23:05,540 --> 00:23:12,460
+se conseguem, mas deixa eu
+
+230
+00:23:12,540 --> 00:23:43,840
+apanhar um, não, não é bom. O
+
+231
+00:23:43,840 --> 00:23:52,820
+acto fora data science, entrou
+
+232
+00:23:52,820 --> 00:24:15,630
+tu, des, data science, e agora,
+
+233
+00:24:15,630 --> 00:24:34,770
+pois agora isto não está bem, e
+
+234
+00:24:34,770 --> 00:24:37,010
+agora vou adicionar este ficheiro
+
+235
+00:24:37,010 --> 00:24:48,740
+entre o tu classificacion, e o
+
+236
+00:24:56,620 --> 00:25:01,180
+outro. Pronto, e ali,
+
+237
+00:25:01,180 --> 00:25:02,940
+vou só fazer uma coisa que eu
+
+238
+00:25:02,940 --> 00:25:04,540
+não gosto, uma coisa que isto
+
+239
+00:25:04,540 --> 00:25:07,660
+está. Se isto é data science, eu
+
+240
+00:25:07,660 --> 00:25:13,470
+vou quitar, e vou tirar este
+
+241
+00:25:13,470 --> 00:25:21,100
+apagar. Pronto, já está.
+
+242
+00:25:21,100 --> 00:25:23,660
+Caríssimos, brifiquem por favor
+
+243
+00:25:23,660 --> 00:25:25,020
+se conseguem, mas já deve estar
+
+244
+00:25:25,020 --> 00:25:27,820
+tudo bem. Pronto, vocês acedem
+
+245
+00:25:27,820 --> 00:25:30,060
+a isto, mandem-vos o link do
+
+246
+00:25:31,020 --> 00:25:33,100
+eca. Pronto, e eu sugiria que
+
+247
+00:25:33,100 --> 00:25:34,620
+descarregassem o eca, podem
+
+248
+00:25:34,620 --> 00:25:37,260
+instalá-lo. Não é obrigatório
+
+249
+00:25:37,260 --> 00:25:38,300
+seguirem, já se quiserem
+
+250
+00:25:38,300 --> 00:25:40,060
+fazem só a seguir, eu vou abrir
+
+251
+00:25:40,060 --> 00:25:42,380
+o meu eca, e vou vos mostrar o
+
+252
+00:25:42,380 --> 00:25:47,020
+primeiro, o primeiro guião. Eu vou
+
+253
+00:25:47,020 --> 00:25:49,740
+abrir-los lado a lado, estou
+
+254
+00:25:49,740 --> 00:25:51,340
+para, isto é o eca, é este
+
+255
+00:25:51,340 --> 00:25:53,420
+programinha aqui, este é a
+
+256
+00:25:53,420 --> 00:25:55,180
+janela principal, já agora,
+
+257
+00:25:55,180 --> 00:25:59,630
+esta é a janela principal, e
+
+258
+00:25:59,630 --> 00:26:00,990
+depois ela abre quatro
+
+259
+00:26:00,990 --> 00:26:02,750
+aplicações, ou cinco
+
+260
+00:26:02,750 --> 00:26:03,950
+aplicações, que é este
+
+261
+00:26:03,950 --> 00:26:05,790
+Explorer, que é o que nós
+
+262
+00:26:05,790 --> 00:26:07,870
+vamos trabalhar hoje, este
+
+263
+00:26:07,870 --> 00:26:10,270
+Explorer é basicamente a
+
+264
+00:26:10,270 --> 00:26:11,790
+forma de nós a partir de um
+
+265
+00:26:11,790 --> 00:26:14,030
+data sete, explorarmos um
+
+266
+00:26:14,030 --> 00:26:16,510
+conjunto, façam entrar a
+
+267
+00:26:16,510 --> 00:26:19,310
+pessoa, explorarmos um conjunto
+
+268
+00:26:19,310 --> 00:26:21,150
+algoritmos de forma
+
+269
+00:26:21,150 --> 00:26:22,830
+individual sobre este data
+
+270
+00:26:22,830 --> 00:26:24,830
+sete, depois ele tem um
+
+271
+00:26:24,830 --> 00:26:26,830
+outro módulo, que é o
+
+272
+00:26:26,830 --> 00:26:30,670
+Experimenter, é diferente, é
+
+273
+00:26:30,670 --> 00:26:32,430
+num data sete nós podemos
+
+274
+00:26:32,430 --> 00:26:34,030
+criar toda uma experiência, ou
+
+275
+00:26:34,030 --> 00:26:35,710
+seja, as condições de
+
+276
+00:26:35,710 --> 00:26:38,670
+training test de um determinado
+
+277
+00:26:38,670 --> 00:26:40,830
+data sete, e depois aplicamos
+
+278
+00:26:40,830 --> 00:26:42,430
+vários modelos a este data
+
+279
+00:26:42,430 --> 00:26:44,670
+sete, e ele corre os todos, e
+
+280
+00:26:44,670 --> 00:26:46,110
+compara os resultados de forma
+
+281
+00:26:46,110 --> 00:26:48,270
+automática. É uma coisa
+
+282
+00:26:48,270 --> 00:26:49,710
+interessante, é computacionalmente
+
+283
+00:26:49,710 --> 00:26:51,150
+mais pesado, mas é
+
+284
+00:26:51,150 --> 00:26:52,270
+interessante quando nós queremos
+
+285
+00:26:52,270 --> 00:26:54,910
+fazer isto tudo uma vez, e ter
+
+286
+00:26:54,990 --> 00:26:58,750
+logo uma comparação entre
+
+287
+00:26:58,750 --> 00:27:01,230
+quais os algoritmos são mais
+
+288
+00:27:01,230 --> 00:27:02,510
+eficientes para um determinado
+
+289
+00:27:02,510 --> 00:27:04,590
+problema. Atenção que nada disto
+
+290
+00:27:04,590 --> 00:27:05,790
+é automático, isto aqui nós
+
+291
+00:27:05,790 --> 00:27:07,310
+selecionamos algoritmos à mão,
+
+292
+00:27:07,310 --> 00:27:08,670
+e depois ele só os corre
+
+293
+00:27:08,670 --> 00:27:09,790
+sequencialmente tuandos e
+
+294
+00:27:09,790 --> 00:27:11,790
+comparos. O que estamos a
+
+295
+00:27:11,790 --> 00:27:13,310
+fazer com o Experimenter,
+
+296
+00:27:13,310 --> 00:27:14,670
+também podemos fazer sempre o
+
+297
+00:27:14,670 --> 00:27:16,830
+Explorer, ou seja, no Explorer
+
+298
+00:27:16,830 --> 00:27:18,270
+podemos fazer individualmente,
+
+299
+00:27:18,270 --> 00:27:19,710
+pois os resultados vão aparecer
+
+300
+00:27:19,710 --> 00:27:21,390
+aqui, e quando aparecerem
+
+301
+00:27:21,390 --> 00:27:22,990
+nesta zona ao resultado, nós
+
+302
+00:27:23,070 --> 00:27:24,910
+resistamos, e depois comparamos.
+
+303
+00:27:24,910 --> 00:27:26,030
+Normalmente o que se trabalha
+
+304
+00:27:26,030 --> 00:27:27,630
+mais é no Explorer, mas
+
+305
+00:27:27,630 --> 00:27:28,990
+a causa em que o Experimenter
+
+306
+00:27:28,990 --> 00:27:32,910
+é bom. Pois aqui o Nolas Flow,
+
+307
+00:27:32,910 --> 00:27:34,510
+que é uma coisa mais gráfica,
+
+308
+00:27:34,510 --> 00:27:35,950
+por acaso não tenho aqui nada,
+
+309
+00:27:35,950 --> 00:27:37,390
+mas posso tentar abrir um pouco
+
+310
+00:27:37,390 --> 00:27:40,750
+de mostrar, para vos
+
+311
+00:27:40,750 --> 00:27:44,270
+mostrar, e este Nolas Flow
+
+312
+00:27:44,270 --> 00:27:46,030
+é muito mais gráfico, ou seja,
+
+313
+00:27:46,030 --> 00:27:47,230
+se eu abrir aqui talvez um
+
+314
+00:27:48,590 --> 00:27:51,470
+alguma experiência, Open,
+
+315
+00:27:51,630 --> 00:27:53,230
+se eu tenho aqui alguma coisa,
+
+316
+00:27:55,710 --> 00:27:56,990
+tinha que ter procurado.
+
+317
+00:27:56,990 --> 00:28:00,350
+Pronto, se tiver aqui um Flow,
+
+318
+00:28:00,350 --> 00:28:02,350
+é basicamente uma coisa gráfica
+
+319
+00:28:02,350 --> 00:28:04,270
+em que nós termos cada coisa,
+
+320
+00:28:04,270 --> 00:28:06,750
+e este é, e ele faz isto
+
+321
+00:28:06,750 --> 00:28:08,190
+de uma forma mais gráfica.
+
+322
+00:28:08,190 --> 00:28:09,230
+Há-se um grande vantagem
+
+323
+00:28:09,230 --> 00:28:10,990
+nesta verdade,
+
+324
+00:28:10,990 --> 00:28:12,830
+mas é algo que tem.
+
+325
+00:28:12,830 --> 00:28:14,030
+Depois tem que o Work Vendres,
+
+326
+00:28:14,030 --> 00:28:14,910
+que já nem me lembro o que é que
+
+327
+00:28:14,910 --> 00:28:15,470
+isto faz,
+
+328
+00:28:16,830 --> 00:28:17,870
+mas eu tenho ali no Vião
+
+329
+00:28:17,870 --> 00:28:18,590
+que eu apontei já
+
+330
+00:28:18,590 --> 00:28:19,870
+por causa destes desquecimentos.
+
+331
+00:28:19,870 --> 00:28:21,230
+Tem que o Work Vendres,
+
+332
+00:28:21,310 --> 00:28:22,910
+e depois tem que o Mandeline.
+
+333
+00:28:22,910 --> 00:28:24,750
+Pronto, coisas importantes.
+
+334
+00:28:24,750 --> 00:28:26,030
+Deixe-me abrir, então,
+
+335
+00:28:26,030 --> 00:28:29,710
+o primeiro PDF,
+
+336
+00:28:31,230 --> 00:28:33,070
+que é este, fora Data Science.
+
+337
+00:28:33,870 --> 00:28:35,070
+Pronto, eu posto aqui os nomes,
+
+338
+00:28:35,070 --> 00:28:35,950
+movei isto para não estar
+
+339
+00:28:35,950 --> 00:28:36,990
+com a outra vez com as coisas
+
+340
+00:28:36,990 --> 00:28:38,430
+que o nome da outra disciplina.
+
+341
+00:28:38,430 --> 00:28:39,790
+O Vião é exatamente o mesmo,
+
+342
+00:28:39,790 --> 00:28:40,910
+não há aldreinada.
+
+343
+00:28:41,790 --> 00:28:43,150
+Portanto, está a falar aqui
+
+344
+00:28:43,150 --> 00:28:45,070
+da Data Science, já falamos disto tudo.
+
+345
+00:28:47,070 --> 00:28:48,590
+O que é que podemos fazer
+
+346
+00:28:49,630 --> 00:28:51,070
+aqui em instalação do ECS,
+
+347
+00:28:51,070 --> 00:28:52,190
+se precisarem, ficam aí.
+
+348
+00:28:53,070 --> 00:28:53,710
+Só uma coisa,
+
+349
+00:28:53,710 --> 00:28:54,910
+esta versão do ECS pode-se
+
+350
+00:28:54,910 --> 00:28:55,870
+a nos estar a utilizar,
+
+351
+00:28:55,870 --> 00:28:56,910
+ele tem que atualizar
+
+352
+00:28:59,140 --> 00:29:00,660
+este aqui é para macOS,
+
+353
+00:29:00,660 --> 00:29:01,700
+mas para o Windows pode-me
+
+354
+00:29:01,700 --> 00:29:03,060
+nos estar a ultimamos,
+
+355
+00:29:03,060 --> 00:29:03,780
+é só verá-lo.
+
+356
+00:29:04,580 --> 00:29:05,780
+Depois, estamos aqui
+
+357
+00:29:05,780 --> 00:29:07,700
+no UI Shuser,
+
+358
+00:29:07,700 --> 00:29:08,340
+que é este,
+
+359
+00:29:10,260 --> 00:29:11,940
+e vamos entrar no outro.
+
+360
+00:29:11,940 --> 00:29:13,460
+Deixem-me ver onde é que eu fui daqui.
+
+361
+00:29:15,550 --> 00:29:16,910
+Por exemplo, é o Explorer,
+
+362
+00:29:16,910 --> 00:29:17,870
+o Experimenter,
+
+363
+00:29:18,430 --> 00:29:19,790
+o Nova Slow,
+
+364
+00:29:19,790 --> 00:29:20,670
+o Work Vendres,
+
+365
+00:29:20,670 --> 00:29:22,510
+e o Simple CLI.
+
+366
+00:29:22,510 --> 00:29:23,710
+Isto é um Command Line.
+
+367
+00:29:25,790 --> 00:29:27,870
+Este é uma combinação
+
+368
+00:29:27,870 --> 00:29:30,030
+do Explorer EX Experimenter,
+
+369
+00:29:30,670 --> 00:29:31,470
+mas lá está,
+
+370
+00:29:31,470 --> 00:29:33,230
+nós só partimos para estes aqui,
+
+371
+00:29:33,230 --> 00:29:34,750
+particularmente para estes três,
+
+372
+00:29:35,310 --> 00:29:36,590
+depois de dominarmos este,
+
+373
+00:29:36,590 --> 00:29:38,270
+para nesta fase este,
+
+374
+00:29:38,270 --> 00:29:40,110
+e quando muito vamos vir,
+
+375
+00:29:40,110 --> 00:29:41,310
+este é o normal que se faz.
+
+376
+00:29:42,430 --> 00:29:44,030
+Depois, uma coisa importante,
+
+377
+00:29:44,750 --> 00:29:45,630
+no Tools Menu,
+
+378
+00:29:46,270 --> 00:29:46,990
+Tools Menu,
+
+379
+00:29:46,990 --> 00:29:48,510
+temos aqui várias coisas,
+
+380
+00:29:48,510 --> 00:29:50,750
+uma em inspeção dos cheiros AR,
+
+381
+00:29:50,750 --> 00:29:51,230
+FF,
+
+382
+00:29:52,670 --> 00:29:53,470
+uma coisa,
+
+383
+00:29:53,470 --> 00:29:55,790
+se não perceberem alguma coisa, interrompam,
+
+384
+00:29:55,790 --> 00:29:57,230
+se não deixem passar.
+
+385
+00:29:57,230 --> 00:29:59,230
+Este AR, FF Viewer,
+
+386
+00:29:59,230 --> 00:30:01,230
+AR, FF é o nome
+
+387
+00:30:01,230 --> 00:30:03,790
+do formato dos cheiros nativos do ECAP,
+
+388
+00:30:03,790 --> 00:30:04,190
+ok?
+
+389
+00:30:04,830 --> 00:30:06,430
+Eu já neste,
+
+390
+00:30:06,430 --> 00:30:08,270
+eu podia editar aqui um qualquer cheiro,
+
+391
+00:30:08,270 --> 00:30:09,710
+mas eu já pus no guião,
+
+392
+00:30:09,710 --> 00:30:11,150
+exatamente para ser mais fácil.
+
+393
+00:30:11,870 --> 00:30:13,470
+Depois, temos um SQL Viewer,
+
+394
+00:30:13,470 --> 00:30:14,830
+para editarmos base dados,
+
+395
+00:30:15,470 --> 00:30:16,990
+temos aqui um BaseNet Editor,
+
+396
+00:30:16,990 --> 00:30:18,830
+que é para as redes beisianas,
+
+397
+00:30:19,390 --> 00:30:21,310
+termos os pedos delas,
+
+398
+00:30:21,310 --> 00:30:23,070
+mas este é uma coisa pouco roubante,
+
+399
+00:30:23,070 --> 00:30:24,270
+e este também não é,
+
+400
+00:30:24,270 --> 00:30:25,470
+este é muito importante,
+
+401
+00:30:25,470 --> 00:30:27,310
+podemos ver aqui o AR, FF,
+
+402
+00:30:27,310 --> 00:30:28,030
+e já agora,
+
+403
+00:30:28,030 --> 00:30:29,310
+qualquer cheiro AR, FF,
+
+404
+00:30:29,310 --> 00:30:30,830
+eu vou acabar por vos mostrar,
+
+405
+00:30:31,870 --> 00:30:32,750
+e vou aqui
+
+406
+00:30:35,310 --> 00:30:36,750
+ao meu disco,
+
+407
+00:30:36,750 --> 00:30:39,230
+e vou aqui aos programinhas,
+
+408
+00:30:39,230 --> 00:30:40,670
+e vou aqui ao ECAP,
+
+409
+00:30:41,550 --> 00:30:42,750
+que está aqui,
+
+410
+00:30:42,750 --> 00:30:43,870
+deve ser para este,
+
+411
+00:30:43,870 --> 00:30:44,750
+vou aqui a dados,
+
+412
+00:30:45,550 --> 00:30:46,830
+e vou aqui ao AIRIS,
+
+413
+00:30:46,830 --> 00:30:48,110
+que é o que a gente está a trabalhar,
+
+414
+00:30:48,110 --> 00:30:48,750
+que aí está,
+
+415
+00:30:48,750 --> 00:30:49,150
+acerto,
+
+416
+00:30:49,150 --> 00:30:50,510
+ao ver o formato AR, FF,
+
+417
+00:30:50,510 --> 00:30:51,470
+conseguem ver,
+
+418
+00:30:52,510 --> 00:30:53,230
+se eu fizer,
+
+419
+00:30:53,230 --> 00:30:55,950
+editar com o jeitinho,
+
+420
+00:30:55,950 --> 00:30:57,230
+com o nó depado mais, mais,
+
+421
+00:30:57,870 --> 00:30:59,150
+cá está o fecheiro,
+
+422
+00:30:59,150 --> 00:30:59,790
+portanto,
+
+423
+00:30:59,790 --> 00:31:00,750
+aquele editor,
+
+424
+00:31:00,750 --> 00:31:02,270
+não é nada mais, nada menos,
+
+425
+00:31:02,270 --> 00:31:03,630
+como a coisa que vai abrir,
+
+426
+00:31:04,270 --> 00:31:04,910
+isto assim,
+
+427
+00:31:04,910 --> 00:31:05,550
+e vemos aqui,
+
+428
+00:31:05,550 --> 00:31:08,430
+a estrutura do fecheiro AR, FF,
+
+429
+00:31:09,470 --> 00:31:09,950
+pronto,
+
+430
+00:31:09,950 --> 00:31:11,230
+uma coisa importante,
+
+431
+00:31:11,230 --> 00:31:12,430
+eu vou assim na sequência,
+
+432
+00:31:12,430 --> 00:31:13,310
+eu vou aproveitando
+
+433
+00:31:13,310 --> 00:31:15,070
+as oportunidades que surgem,
+
+434
+00:31:15,070 --> 00:31:16,270
+com as coisas que vou abrindo,
+
+435
+00:31:17,550 --> 00:31:18,990
+um fecheiro AR, FF,
+
+436
+00:31:20,750 --> 00:31:22,190
+que é essencialmente uma forma,
+
+437
+00:31:22,190 --> 00:31:23,550
+representação,
+
+438
+00:31:23,550 --> 00:31:24,190
+desculpe,
+
+439
+00:31:24,190 --> 00:31:26,110
+é uma forma de representação,
+
+440
+00:31:26,110 --> 00:31:27,230
+de dados tabulares,
+
+441
+00:31:27,230 --> 00:31:28,510
+e por que que são dados tabulares?
+
+442
+00:31:28,510 --> 00:31:29,550
+Reparem,
+
+443
+00:31:29,550 --> 00:31:30,750
+nós temos aqui essencialmente
+
+444
+00:31:30,750 --> 00:31:31,790
+uma zona de cabeçalho,
+
+445
+00:31:31,790 --> 00:31:32,510
+onde temos estes,
+
+446
+00:31:32,510 --> 00:31:34,190
+todos estes comentários,
+
+447
+00:31:34,190 --> 00:31:36,270
+e isto é texto só para nos orientar,
+
+448
+00:31:36,270 --> 00:31:37,470
+nós humanos,
+
+449
+00:31:37,470 --> 00:31:38,430
+para nos orientar,
+
+450
+00:31:38,430 --> 00:31:39,630
+em que estrutura isto,
+
+451
+00:31:39,630 --> 00:31:40,590
+descreva as variáveis,
+
+452
+00:31:40,590 --> 00:31:41,790
+e por aqui fora,
+
+453
+00:31:41,790 --> 00:31:42,430
+e depois,
+
+454
+00:31:43,550 --> 00:31:45,070
+quando terminam os comentários
+
+455
+00:31:45,070 --> 00:31:46,270
+nesta linha,
+
+456
+00:31:46,270 --> 00:31:47,710
+nós passamos por uma zona,
+
+457
+00:31:47,710 --> 00:31:48,990
+onde estamos literalmente
+
+458
+00:31:48,990 --> 00:31:50,430
+a descrever o VACET,
+
+459
+00:31:50,510 --> 00:31:51,870
+at relation,
+
+460
+00:31:51,870 --> 00:31:52,590
+e o nome,
+
+461
+00:31:52,590 --> 00:31:54,350
+isto é o nome do nosso data set,
+
+462
+00:31:54,350 --> 00:31:55,070
+ok?
+
+463
+00:31:55,070 --> 00:31:55,790
+E depois,
+
+464
+00:31:55,790 --> 00:31:56,670
+sequencialmente,
+
+465
+00:31:56,670 --> 00:31:58,510
+nós pulamos os nossos atributos,
+
+466
+00:31:58,510 --> 00:32:00,030
+at attribute,
+
+467
+00:32:00,030 --> 00:32:01,230
+o nome do atributo,
+
+468
+00:32:01,950 --> 00:32:03,550
+e o tipo dos dados,
+
+469
+00:32:03,550 --> 00:32:04,430
+toda a gente aqui,
+
+470
+00:32:05,310 --> 00:32:06,270
+que já programou,
+
+471
+00:32:07,150 --> 00:32:08,350
+sabe o que isto é,
+
+472
+00:32:08,350 --> 00:32:09,870
+se alguém não tem tanta experiência
+
+473
+00:32:09,870 --> 00:32:10,590
+de programação,
+
+474
+00:32:10,590 --> 00:32:11,390
+tenhamos uma aluna,
+
+475
+00:32:11,390 --> 00:32:12,270
+que era jornalista,
+
+476
+00:32:12,270 --> 00:32:13,230
+embora ela
+
+477
+00:32:13,230 --> 00:32:14,270
+estava dentro das coisas,
+
+478
+00:32:14,270 --> 00:32:16,030
+devido a cerraria e tal,
+
+479
+00:32:16,030 --> 00:32:17,150
+pronto, isto é um inteiro,
+
+480
+00:32:17,150 --> 00:32:18,270
+um float,
+
+481
+00:32:18,270 --> 00:32:19,630
+um real, o que foi,
+
+482
+00:32:19,790 --> 00:32:21,390
+e declaramos aqui o tipo de variável,
+
+483
+00:32:21,390 --> 00:32:22,990
+se é categórica, se é numérica,
+
+484
+00:32:22,990 --> 00:32:24,350
+se é numérica de que tipo é,
+
+485
+00:32:24,350 --> 00:32:24,830
+e tal.
+
+486
+00:32:25,390 --> 00:32:26,350
+Qualquer dúvida,
+
+487
+00:32:26,350 --> 00:32:27,950
+eu diria que podem ir à ajuda
+
+488
+00:32:27,950 --> 00:32:29,230
+do OEC River,
+
+489
+00:32:29,230 --> 00:32:30,270
+mas não precisam,
+
+490
+00:32:30,270 --> 00:32:31,150
+porque hoje em dia,
+
+491
+00:32:31,150 --> 00:32:32,350
+pedem ao OEC LLM,
+
+492
+00:32:32,350 --> 00:32:33,470
+olha, que tipo de variáveis
+
+493
+00:32:33,470 --> 00:32:34,990
+é que eu posso ter no AERIS,
+
+494
+00:32:34,990 --> 00:32:37,070
+dentro do formato IRFF,
+
+495
+00:32:37,070 --> 00:32:38,430
+e eles explicam tudo direitinho,
+
+496
+00:32:38,430 --> 00:32:39,870
+então as coisas podem
+
+497
+00:32:39,870 --> 00:32:40,670
+recorrer a isso,
+
+498
+00:32:40,670 --> 00:32:42,030
+que eles indexam estas coisas.
+
+499
+00:32:42,590 --> 00:32:43,630
+Pronto, e então temos aqui,
+
+500
+00:32:43,630 --> 00:32:45,070
+essencialmente, quatro variáveis,
+
+501
+00:32:45,070 --> 00:32:45,870
+o SEPA LENTE,
+
+502
+00:32:46,590 --> 00:32:48,430
+o SEPA UID,
+
+503
+00:32:48,430 --> 00:32:49,310
+o PETA LENTE,
+
+504
+00:32:49,310 --> 00:32:50,030
+e o PETA UID.
+
+505
+00:32:50,030 --> 00:32:51,150
+Já agora, para vos mostrar,
+
+506
+00:32:51,790 --> 00:32:53,230
+este data ser AERIS,
+
+507
+00:32:53,790 --> 00:32:54,990
+foi o que eu escolhi para aqui,
+
+508
+00:32:54,990 --> 00:32:56,350
+e é o que eu uso muitas vezes,
+
+509
+00:32:57,070 --> 00:32:58,990
+AERIS data sete.
+
+510
+00:33:00,590 --> 00:33:01,630
+Se eu vos mostrar aqui,
+
+511
+00:33:02,510 --> 00:33:03,950
+o que é importante verem aqui?
+
+512
+00:33:04,510 --> 00:33:06,270
+O AERIS é esta florzinha,
+
+513
+00:33:07,790 --> 00:33:08,590
+ok?
+
+514
+00:33:08,590 --> 00:33:09,550
+O AERIS é,
+
+515
+00:33:09,550 --> 00:33:11,150
+pronto, vai para aqui para esta coisa,
+
+516
+00:33:11,150 --> 00:33:12,830
+mas eu queria vos mostrar isto melhor.
+
+517
+00:33:13,950 --> 00:33:15,470
+O AERIS é esta flor,
+
+518
+00:33:15,470 --> 00:33:16,670
+que eu nem sei como é que se chama
+
+519
+00:33:17,470 --> 00:33:18,590
+em português,
+
+520
+00:33:18,590 --> 00:33:19,710
+e ela essencialmente,
+
+521
+00:33:19,710 --> 00:33:20,590
+tem a pétala,
+
+522
+00:33:21,070 --> 00:33:22,270
+esta coisinha assim,
+
+523
+00:33:22,270 --> 00:33:23,150
+e tem a sêpala,
+
+524
+00:33:23,150 --> 00:33:23,870
+que é esta,
+
+525
+00:33:23,870 --> 00:33:24,270
+isto é,
+
+526
+00:33:24,270 --> 00:33:25,390
+anatomia da planta.
+
+527
+00:33:25,950 --> 00:33:26,750
+E basicamente,
+
+528
+00:33:26,750 --> 00:33:27,310
+ao senhor,
+
+529
+00:33:27,310 --> 00:33:28,350
+que é o Robert Fisher,
+
+530
+00:33:28,350 --> 00:33:30,190
+que em 1920,
+
+531
+00:33:30,750 --> 00:33:31,790
+ao 30 por aí,
+
+532
+00:33:31,790 --> 00:33:32,830
+mas há muitos anos,
+
+533
+00:33:33,310 --> 00:33:34,190
+fez esta data sete,
+
+534
+00:33:34,190 --> 00:33:35,630
+fez 50 medições
+
+535
+00:33:35,630 --> 00:33:36,910
+de cada um recatarias
+
+536
+00:33:36,910 --> 00:33:38,190
+de subspecies desta flor,
+
+537
+00:33:38,750 --> 00:33:39,950
+e ele fez o comprimento
+
+538
+00:33:39,950 --> 00:33:40,670
+e a largura,
+
+539
+00:33:41,150 --> 00:33:43,150
+e depois usaram este data sete,
+
+540
+00:33:43,150 --> 00:33:44,430
+para fazerem investigação
+
+541
+00:33:44,430 --> 00:33:45,710
+na altura no passado.
+
+542
+00:33:45,710 --> 00:33:46,830
+E este data sete ficou,
+
+543
+00:33:46,830 --> 00:33:47,870
+e quando a mal perder,
+
+544
+00:33:48,590 --> 00:33:50,670
+o Data Science Machine Learning precisou,
+
+545
+00:33:50,670 --> 00:33:52,590
+o BioCardia, este data sete registado,
+
+546
+00:33:52,590 --> 00:33:53,710
+e começou a trabalhar com ele.
+
+547
+00:33:54,110 --> 00:33:55,230
+Pronto, então essencialmente
+
+548
+00:33:55,230 --> 00:33:56,510
+o data sete, o que é que tem?
+
+549
+00:33:56,750 --> 00:33:58,030
+Tem 150 amostas,
+
+550
+00:33:58,030 --> 00:33:58,910
+se vocês repararem,
+
+551
+00:33:58,910 --> 00:34:00,190
+vocês vão por aqui abaixo.
+
+552
+00:34:00,510 --> 00:34:01,550
+Tem 50
+
+553
+00:34:01,550 --> 00:34:04,030
+da subspecie irisciptosa,
+
+554
+00:34:04,430 --> 00:34:06,190
+depois tem mais 50
+
+555
+00:34:06,190 --> 00:34:08,270
+da subspecie irisversicolar,
+
+556
+00:34:08,830 --> 00:34:10,670
+e depois tem mais 50
+
+557
+00:34:10,670 --> 00:34:11,870
+da subspecie
+
+558
+00:34:12,510 --> 00:34:13,710
+irisvitigínica.
+
+559
+00:34:14,030 --> 00:34:14,510
+Ok?
+
+560
+00:34:15,230 --> 00:34:16,350
+E portanto, basicamente,
+
+561
+00:34:16,350 --> 00:34:17,230
+e os dados são tabulais,
+
+562
+00:34:17,230 --> 00:34:17,790
+porquê?
+
+563
+00:34:18,030 --> 00:34:21,150
+Porquê ele recolhe, para cada flor,
+
+564
+00:34:22,350 --> 00:34:23,790
+o comprimento da sépala
+
+565
+00:34:23,790 --> 00:34:25,150
+e a largura da sépala,
+
+566
+00:34:25,389 --> 00:34:26,190
+da sépala,
+
+567
+00:34:26,190 --> 00:34:28,030
+o comprimento da pétala
+
+568
+00:34:28,030 --> 00:34:29,310
+e a largura da pétala,
+
+569
+00:34:29,630 --> 00:34:30,350
+da pétala.
+
+570
+00:34:30,350 --> 00:34:32,750
+E com estas quatro dimensões,
+
+571
+00:34:32,909 --> 00:34:34,909
+no final associem-lhe uma classe,
+
+572
+00:34:35,070 --> 00:34:36,270
+e uma classe,
+
+573
+00:34:36,590 --> 00:34:37,150
+e é
+
+574
+00:34:37,630 --> 00:34:39,550
+o tipo de subspecie que é,
+
+575
+00:34:39,550 --> 00:34:41,550
+cestosa, cevercicólogo,
+
+576
+00:34:41,710 --> 00:34:42,830
+cevergínica.
+
+577
+00:34:43,150 --> 00:34:44,510
+Pergunta para vocês,
+
+578
+00:34:44,830 --> 00:34:45,870
+este data sete
+
+579
+00:34:45,870 --> 00:34:46,830
+é um data sete,
+
+580
+00:34:46,830 --> 00:34:49,949
+de aprendizagem supervisionado
+
+581
+00:34:49,949 --> 00:34:51,389
+ou não supervisionado?
+
+582
+00:35:03,730 --> 00:35:05,090
+Não, é supervisionado.
+
+583
+00:35:05,650 --> 00:35:07,170
+É supervisionado, não é?
+
+584
+00:35:08,290 --> 00:35:09,810
+É que está organizado, certo?
+
+585
+00:35:09,810 --> 00:35:11,570
+Está rotulado, também, não é?
+
+586
+00:35:11,730 --> 00:35:13,250
+Está rotulado, exatamente,
+
+587
+00:35:13,250 --> 00:35:14,690
+porque tem as labels, é isso.
+
+588
+00:35:14,930 --> 00:35:16,290
+Como temos as labels,
+
+589
+00:35:16,530 --> 00:35:18,930
+ele também nos permite fazer
+
+590
+00:35:18,930 --> 00:35:20,450
+aprendizagem não supervisionada,
+
+591
+00:35:20,450 --> 00:35:22,130
+se nós ignorarmos esta variável.
+
+592
+00:35:22,450 --> 00:35:24,130
+Mas dado que temos as labels,
+
+593
+00:35:24,130 --> 00:35:24,930
+nós temos
+
+594
+00:35:25,170 --> 00:35:26,930
+variável para fazer a supervisão
+
+595
+00:35:26,930 --> 00:35:27,810
+da aprendizagem,
+
+596
+00:35:27,810 --> 00:35:28,290
+para dizer,
+
+597
+00:35:28,290 --> 00:35:29,650
+olha, se estás a ver este conjunto
+
+598
+00:35:29,650 --> 00:35:30,610
+de variáveis todas,
+
+599
+00:35:30,610 --> 00:35:31,730
+isto é uma setosa.
+
+600
+00:35:32,210 --> 00:35:33,890
+E esta, esta também é uma setosa.
+
+601
+00:35:33,890 --> 00:35:36,050
+E esta aqui, esta já é uma versicola.
+
+602
+00:35:36,290 --> 00:35:37,970
+Portanto, o label, no fundo,
+
+603
+00:35:37,970 --> 00:35:38,850
+é a informação.
+
+604
+00:35:38,850 --> 00:35:39,890
+É resposta, não é?
+
+605
+00:35:40,290 --> 00:35:41,810
+E ao ser resposta,
+
+606
+00:35:41,810 --> 00:35:42,850
+durante a aprendizagem,
+
+607
+00:35:42,850 --> 00:35:44,050
+é muito mais fácil.
+
+608
+00:35:44,210 --> 00:35:45,410
+Nós, enquanto seres humanos,
+
+609
+00:35:45,410 --> 00:35:46,610
+também sentimos isso, não é?
+
+610
+00:35:46,930 --> 00:35:48,610
+Nós podemos estar, olhar para uns
+
+611
+00:35:48,610 --> 00:35:50,130
+números de uma forma abstracta,
+
+612
+00:35:50,130 --> 00:35:51,730
+e podemos tentar requer um padrão.
+
+613
+00:35:52,130 --> 00:35:53,650
+Se nos dissemos, olha, isto,
+
+614
+00:35:53,650 --> 00:35:54,690
+está a ver esta medida,
+
+615
+00:35:54,690 --> 00:35:55,250
+isto é boi.
+
+616
+00:35:55,810 --> 00:35:57,330
+E esta medida toda, isto é vaca,
+
+617
+00:35:57,330 --> 00:35:58,930
+e uma pessoa percebe mais rapidamente.
+
+618
+00:35:59,330 --> 00:36:00,850
+Porque é mais fácil distinguir
+
+619
+00:36:00,850 --> 00:36:01,570
+e percebe,
+
+620
+00:36:01,570 --> 00:36:03,570
+do ponto de vista da taxonomia,
+
+621
+00:36:03,570 --> 00:36:05,250
+nós sabemos que há duas classes.
+
+622
+00:36:05,490 --> 00:36:06,930
+É logo, é muito mais fácil.
+
+623
+00:36:06,930 --> 00:36:08,370
+Sabemos quantas classes há,
+
+624
+00:36:08,610 --> 00:36:10,850
+e associamos todas as amostras a uma classe.
+
+625
+00:36:11,250 --> 00:36:12,370
+Pronto, mas agora,
+
+626
+00:36:12,370 --> 00:36:13,890
+voltando a dizer uma coisa que eu disse
+
+627
+00:36:13,890 --> 00:36:14,930
+numa das aulas anteriores,
+
+628
+00:36:16,290 --> 00:36:18,530
+um problema é que este tipo de coisas
+
+629
+00:36:18,530 --> 00:36:19,490
+são difíceis.
+
+630
+00:36:20,050 --> 00:36:22,290
+Se por um lado, é preciso medir as variáveis,
+
+631
+00:36:22,290 --> 00:36:23,650
+e isto já é um trabalho,
+
+632
+00:36:23,650 --> 00:36:24,690
+num sistema, por exemplo,
+
+633
+00:36:24,690 --> 00:36:26,130
+elétero e eletrônico,
+
+634
+00:36:26,450 --> 00:36:29,570
+ou informático, é preciso que haja processamento,
+
+635
+00:36:29,970 --> 00:36:31,250
+e censurização,
+
+636
+00:36:31,250 --> 00:36:32,450
+e que se messemos variáveis,
+
+637
+00:36:32,450 --> 00:36:33,890
+e que se guardem em bases dados,
+
+638
+00:36:34,130 --> 00:36:36,530
+e portanto, já há um trabalho em recolher as variáveis.
+
+639
+00:36:37,090 --> 00:36:39,090
+Mas, termos a label,
+
+640
+00:36:39,090 --> 00:36:40,530
+é um trabalho adicional,
+
+641
+00:36:40,530 --> 00:36:43,490
+que é associado a determinada ocorrência.
+
+642
+00:36:43,730 --> 00:36:45,890
+Nós dizemos para este conjunto de medidas
+
+643
+00:36:45,890 --> 00:36:48,370
+que nós tiramos de um sistema físico,
+
+644
+00:36:48,370 --> 00:36:50,130
+químico, real, social,
+
+645
+00:36:50,130 --> 00:36:52,050
+o que é que seja um sistema qualquer
+
+646
+00:36:52,050 --> 00:36:53,010
+que nós registramos,
+
+647
+00:36:53,330 --> 00:36:55,170
+a do ponto de vista de quantificamos
+
+648
+00:36:55,170 --> 00:36:56,370
+numéricamente,
+
+649
+00:36:57,170 --> 00:36:58,370
+a resposta é esta.
+
+650
+00:36:58,770 --> 00:37:01,730
+E aqui, é duas ordens de magnitude,
+
+651
+00:37:01,730 --> 00:37:03,250
+a dificuldade que há até dados,
+
+652
+00:37:03,250 --> 00:37:04,610
+que é primeiro a recolhê-los,
+
+653
+00:37:04,610 --> 00:37:05,890
+na forma de medidas,
+
+654
+00:37:05,890 --> 00:37:07,650
+e depois, numa segunda instância,
+
+655
+00:37:07,650 --> 00:37:09,090
+de ter os dados com os labels,
+
+656
+00:37:09,090 --> 00:37:10,530
+e os labels são caros.
+
+657
+00:37:10,770 --> 00:37:11,970
+Por que? Porque o label,
+
+658
+00:37:11,970 --> 00:37:14,130
+ou temos forma de ter essa resposta,
+
+659
+00:37:14,130 --> 00:37:15,090
+ou se não temos,
+
+660
+00:37:15,090 --> 00:37:16,610
+temos de ter um agente qualquer,
+
+661
+00:37:16,610 --> 00:37:18,130
+pode ser uma coisa, uma máquina,
+
+662
+00:37:18,130 --> 00:37:19,330
+ou pode ser uma pessoa,
+
+663
+00:37:19,570 --> 00:37:21,170
+a dar essas classificações,
+
+664
+00:37:21,170 --> 00:37:22,050
+e é incrível.
+
+665
+00:37:22,290 --> 00:37:23,730
+Eu recentemente apercebi-me,
+
+666
+00:37:23,730 --> 00:37:25,010
+deixe-me só dar um detalhe no ar.
+
+667
+00:37:28,700 --> 00:37:30,460
+Eu recentemente apercebi-me
+
+668
+00:37:31,100 --> 00:37:33,100
+de uma coisa que nós não vemos em Portugal,
+
+669
+00:37:33,900 --> 00:37:35,740
+e é, os grandes países do mundo
+
+670
+00:37:35,740 --> 00:37:37,340
+que estão a fazer a inteligência artificial,
+
+671
+00:37:37,740 --> 00:37:38,860
+são vários,
+
+672
+00:37:38,860 --> 00:37:40,700
+mas essencialmente são dois grandes locos,
+
+673
+00:37:40,700 --> 00:37:42,060
+que são as empresas americanas
+
+674
+00:37:42,060 --> 00:37:43,820
+que estão a liderar este processo, tudo,
+
+675
+00:37:44,860 --> 00:37:47,660
+e são os chinês que estão a ir atrás
+
+676
+00:37:47,660 --> 00:37:49,420
+e com grandes resultados,
+
+677
+00:37:49,660 --> 00:37:52,060
+e a fazer, neste momento, por todo o mundo,
+
+678
+00:37:52,060 --> 00:37:54,620
+estas pessoas, estas empresas,
+
+679
+00:37:55,260 --> 00:37:56,700
+estão a pagar as pessoas,
+
+680
+00:37:57,260 --> 00:37:59,580
+para fazer antarefas diferentes,
+
+681
+00:38:00,380 --> 00:38:03,180
+acompanhando com maquinetas ambivariáveis,
+
+682
+00:38:03,180 --> 00:38:04,780
+com câmaras a gravar,
+
+683
+00:38:05,340 --> 00:38:07,740
+e as geradades para que é para treinar os modelos,
+
+684
+00:38:08,300 --> 00:38:09,820
+mais, no caso da China,
+
+685
+00:38:09,820 --> 00:38:12,060
+eles têm um interesse extraordinário nisso,
+
+686
+00:38:12,060 --> 00:38:13,100
+por causa da robótica,
+
+687
+00:38:13,100 --> 00:38:13,900
+os americanos também,
+
+688
+00:38:13,900 --> 00:38:15,740
+mas os chinês acho que estão fortíssimos,
+
+689
+00:38:15,740 --> 00:38:16,540
+necessárias,
+
+690
+00:38:16,540 --> 00:38:17,660
+e então estão a gravar tudo.
+
+691
+00:38:17,660 --> 00:38:19,180
+Então temos uma alta de todo o mundo,
+
+692
+00:38:19,500 --> 00:38:21,260
+a fazer tarefas cotidianas,
+
+693
+00:38:21,260 --> 00:38:22,940
+incluindo tarefas domésticas,
+
+694
+00:38:23,660 --> 00:38:25,580
+com várias câmaras na pessoa,
+
+695
+00:38:25,580 --> 00:38:27,020
+e está tudo a ser gravado,
+
+696
+00:38:27,020 --> 00:38:27,740
+como é que tu fazes,
+
+697
+00:38:27,740 --> 00:38:29,340
+como é que uma pessoa normal lá a valosa,
+
+698
+00:38:29,340 --> 00:38:31,260
+como é que uma pessoa normal cozinha,
+
+699
+00:38:31,260 --> 00:38:32,380
+etc., coisa e tal.
+
+700
+00:38:32,380 --> 00:38:33,580
+Estes dados são para quê?
+
+701
+00:38:33,580 --> 00:38:35,580
+Para treinar os fotofotos robôs
+
+702
+00:38:35,580 --> 00:38:36,780
+domésticos e industriais.
+
+703
+00:38:37,740 --> 00:38:38,620
+É isto.
+
+704
+00:38:38,620 --> 00:38:40,220
+Se vocês ouvirem falar,
+
+705
+00:38:40,220 --> 00:38:41,980
+por exemplo, de protocolos atuais,
+
+706
+00:38:41,980 --> 00:38:44,060
+a Antrópico tem um protocolo que é o MCP,
+
+707
+00:38:44,700 --> 00:38:47,260
+e o MCP tem um protocolo que foi
+
+708
+00:38:47,260 --> 00:38:49,180
+dos primeiros, com grande sucesso,
+
+709
+00:38:49,180 --> 00:38:51,340
+que permite interligar sistemas
+
+710
+00:38:51,340 --> 00:38:52,380
+de inteligência artificial,
+
+711
+00:38:52,380 --> 00:38:53,580
+particularmente LLMs,
+
+712
+00:38:54,460 --> 00:38:55,900
+a sistemas físicos.
+
+713
+00:38:55,900 --> 00:38:56,780
+E portanto,
+
+714
+00:38:56,780 --> 00:38:58,700
+nós fazemos depois ali uma articulação
+
+715
+00:38:58,700 --> 00:39:00,940
+em software entre cliente e servidor,
+
+716
+00:39:01,740 --> 00:39:03,020
+e com isto a funcionar,
+
+717
+00:39:03,020 --> 00:39:04,780
+nós pedimos o LLM
+
+718
+00:39:04,780 --> 00:39:06,940
+em linguagem natural coisas,
+
+719
+00:39:06,940 --> 00:39:08,620
+e ele vai desmultiplicar aquilo
+
+720
+00:39:08,620 --> 00:39:10,300
+em instruções de código,
+
+721
+00:39:11,180 --> 00:39:13,260
+e construir coisas em sistemas físicos.
+
+722
+00:39:14,220 --> 00:39:16,300
+Isto é uma coisa que já está a funcionar,
+
+723
+00:39:16,300 --> 00:39:18,060
+está na inteligência artificial aplicada,
+
+724
+00:39:18,060 --> 00:39:19,660
+já fizemos isto lá,
+
+725
+00:39:19,660 --> 00:39:20,700
+e tive um aluno,
+
+726
+00:39:21,420 --> 00:39:23,180
+este ano foi só um que fez MCP.
+
+727
+00:39:23,260 --> 00:39:24,140
+Tavia mais que isero,
+
+728
+00:39:24,140 --> 00:39:25,180
+mas depois só um é que seguiu.
+
+729
+00:39:25,820 --> 00:39:27,420
+E com o MCP, o que é que ele fez?
+
+730
+00:39:27,420 --> 00:39:29,260
+O aluno trabalhava numa empresa,
+
+731
+00:39:29,260 --> 00:39:30,860
+uma das tarefas que ele fazia
+
+732
+00:39:30,860 --> 00:39:32,460
+era desenhos em auto-cabe,
+
+733
+00:39:32,460 --> 00:39:34,060
+e era uma tarefa que ele não gostava.
+
+734
+00:39:34,060 --> 00:39:36,140
+Ele usou, no caso dele, o Cloud,
+
+735
+00:39:36,780 --> 00:39:37,900
+como Cloud Assistant,
+
+736
+00:39:37,900 --> 00:39:39,980
+e desenhou toda uma solução de cliente
+
+737
+00:39:39,980 --> 00:39:42,300
+e servidor MCP para aquilo,
+
+738
+00:39:42,300 --> 00:39:44,700
+e colocou o Cloud
+
+739
+00:39:45,980 --> 00:39:48,300
+com prontes especificadas por ele,
+
+740
+00:39:48,300 --> 00:39:51,020
+e tudo, e desenvolvendo a solução de MCP,
+
+741
+00:39:51,020 --> 00:39:52,380
+e colocou-se o Cloud
+
+742
+00:39:52,380 --> 00:39:54,540
+a fazer as coisas que ele fazia na empresa,
+
+743
+00:39:54,540 --> 00:39:57,580
+com base em exemplos que ele tinha de empresa,
+
+744
+00:39:58,220 --> 00:39:59,740
+e basicamente ele, em meia hora,
+
+745
+00:39:59,740 --> 00:40:01,340
+fazia o trabalho da semana toda.
+
+746
+00:40:01,340 --> 00:40:03,260
+Tanto, já estava resolvido.
+
+747
+00:40:03,260 --> 00:40:04,860
+Pronto, montando atrás,
+
+748
+00:40:04,860 --> 00:40:05,980
+isto era para vos falar
+
+749
+00:40:05,980 --> 00:40:08,140
+da requeza e da importância de dados.
+
+750
+00:40:08,860 --> 00:40:10,860
+E, portanto, os dados estão aqui recolhidos
+
+751
+00:40:10,860 --> 00:40:11,820
+nesta forma.
+
+752
+00:40:11,820 --> 00:40:13,660
+O primeiro é o CEPALENG,
+
+753
+00:40:13,660 --> 00:40:15,900
+depois vírula o CEPALUID,
+
+754
+00:40:15,900 --> 00:40:17,420
+vírula o PETALENG,
+
+755
+00:40:17,420 --> 00:40:19,100
+vírula o PETALUID.
+
+756
+00:40:19,180 --> 00:40:21,820
+E, finalmente, a classe
+
+757
+00:40:21,820 --> 00:40:23,100
+preparem em cada linha,
+
+758
+00:40:23,100 --> 00:40:24,140
+temos uma instância,
+
+759
+00:40:24,140 --> 00:40:25,580
+cada linha foi a medição
+
+760
+00:40:25,580 --> 00:40:26,620
+de uma data instance,
+
+761
+00:40:26,620 --> 00:40:28,860
+ou seja, de uma flora que foi medida,
+
+762
+00:40:28,860 --> 00:40:30,700
+com a respectiva resposta.
+
+763
+00:40:30,700 --> 00:40:32,140
+E, vendo agora em colunas,
+
+764
+00:40:32,140 --> 00:40:34,220
+e cada coluna é um dos atributos
+
+765
+00:40:34,220 --> 00:40:35,420
+e eleibam.
+
+766
+00:40:35,420 --> 00:40:36,540
+Por isso é que estes dados
+
+767
+00:40:36,540 --> 00:40:38,060
+são chamados dados tabulados,
+
+768
+00:40:38,060 --> 00:40:39,420
+não é porque eles são representados
+
+769
+00:40:39,420 --> 00:40:40,540
+numa tabela,
+
+770
+00:40:40,540 --> 00:40:42,380
+e eram os dados com que eu trabalhei
+
+771
+00:40:42,380 --> 00:40:44,780
+nesta área durante anos e anos.
+
+772
+00:40:44,780 --> 00:40:47,420
+Intertante é que começaram a surgir
+
+773
+00:40:47,420 --> 00:40:49,180
+outros dados de outra natureza,
+
+774
+00:40:49,180 --> 00:40:50,620
+imagens, sons,
+
+775
+00:40:50,620 --> 00:40:52,540
+dados mais complexos,
+
+776
+00:40:52,540 --> 00:40:54,460
+que, quando eu comecei nisto,
+
+777
+00:40:54,460 --> 00:40:56,460
+não era razoável fazer,
+
+778
+00:40:56,460 --> 00:40:57,740
+se fazia-se postamento de imagens,
+
+779
+00:40:57,740 --> 00:41:00,700
+tração de informação de imagens, etc.
+
+780
+00:41:00,700 --> 00:41:01,500
+Mas foram, por exemplo,
+
+781
+00:41:01,500 --> 00:41:05,020
+100 anos que trouxeram as imagens
+
+782
+00:41:05,020 --> 00:41:06,620
+com uma coisa natural KDM,
+
+783
+00:41:06,620 --> 00:41:08,140
+que postavam-nos muito bem,
+
+784
+00:41:08,140 --> 00:41:09,740
+também as músicas, etc.
+
+785
+00:41:09,740 --> 00:41:11,900
+Tudo isso foi sendo prepostado.
+
+786
+00:41:11,900 --> 00:41:13,740
+E temos hoje uma coisa que não é
+
+787
+00:41:13,740 --> 00:41:15,500
+o foco desta pós-graduação,
+
+788
+00:41:15,580 --> 00:41:17,580
+mas temos a multimodalidade,
+
+789
+00:41:17,580 --> 00:41:20,300
+que é os sistemas de inteligência artificial
+
+790
+00:41:20,300 --> 00:41:23,420
+lidam com múltiplas mobilidades de dados,
+
+791
+00:41:23,420 --> 00:41:25,180
+ou seja, lidam com texto,
+
+792
+00:41:25,180 --> 00:41:26,940
+lidam com dados de sensores
+
+793
+00:41:26,940 --> 00:41:29,020
+diretamente da internet das coisas,
+
+794
+00:41:29,020 --> 00:41:31,100
+se for o caso, pode ser de outras realidades,
+
+795
+00:41:31,100 --> 00:41:32,540
+mas fica sempre bem falar
+
+796
+00:41:32,540 --> 00:41:34,140
+na internet das coisas,
+
+797
+00:41:34,140 --> 00:41:35,340
+lidam com sons,
+
+798
+00:41:35,340 --> 00:41:36,540
+lidam com textos,
+
+799
+00:41:36,540 --> 00:41:38,380
+lidam com imagens estáticas,
+
+800
+00:41:38,380 --> 00:41:40,140
+ou com vídeos, imagens dinâmicas,
+
+801
+00:41:40,140 --> 00:41:41,580
+em sequência, né?
+
+802
+00:41:41,580 --> 00:41:42,300
+E tudo isto.
+
+803
+00:41:42,300 --> 00:41:43,100
+E, portanto,
+
+804
+00:41:43,180 --> 00:41:45,340
+o estamos no domínio da multimodalidade,
+
+805
+00:41:45,340 --> 00:41:46,460
+tá bem?
+
+806
+00:41:46,460 --> 00:41:47,820
+Doutra maneira,
+
+807
+00:41:47,820 --> 00:41:50,060
+os sistemas ficam cada vez mais pivabotos,
+
+808
+00:41:50,060 --> 00:41:50,860
+por que, obviamente,
+
+809
+00:41:50,860 --> 00:41:52,300
+estes dados todos são,
+
+810
+00:41:52,300 --> 00:41:54,860
+e a realidade que não quer calar
+
+811
+00:41:54,860 --> 00:41:56,060
+e que nós estamos a ver
+
+812
+00:41:56,060 --> 00:41:57,420
+e vamos ver nos próximos anos
+
+813
+00:41:57,420 --> 00:42:00,700
+é a corrida gigantesca a data-centres,
+
+814
+00:42:00,700 --> 00:42:04,300
+porque o modelo Cloud está a impor-se bem,
+
+815
+00:42:04,300 --> 00:42:05,980
+e, portanto, as pessoas,
+
+816
+00:42:05,980 --> 00:42:07,820
+expectávelmente, vão recorrer
+
+817
+00:42:07,820 --> 00:42:11,500
+a estas subscrições
+
+818
+00:42:12,460 --> 00:42:13,740
+em Cloud Computing,
+
+819
+00:42:13,740 --> 00:42:14,620
+e, portanto,
+
+820
+00:42:14,620 --> 00:42:16,220
+quem corre os modelos de protoragem,
+
+821
+00:42:16,220 --> 00:42:17,900
+a quantidade de computação
+
+822
+00:42:17,900 --> 00:42:19,260
+aumentou exponencialmente
+
+823
+00:42:19,260 --> 00:42:21,180
+e vai aumentar muito mais
+
+824
+00:42:21,180 --> 00:42:22,380
+e nos próximos anos.
+
+825
+00:42:22,380 --> 00:42:24,140
+Este tipo de modelos vão gastar
+
+826
+00:42:24,140 --> 00:42:24,940
+uma parte,
+
+827
+00:42:24,940 --> 00:42:26,540
+uma fatia muito significativa
+
+828
+00:42:26,540 --> 00:42:27,980
+da iletidade mundial.
+
+829
+00:42:27,980 --> 00:42:29,580
+Ou seja, aquilo que nós vamos poupar
+
+830
+00:42:29,580 --> 00:42:30,220
+em muita coisa,
+
+831
+00:42:30,220 --> 00:42:32,940
+vamos ter que investir em infraestrutura,
+
+832
+00:42:32,940 --> 00:42:34,460
+que é a guerra que está a fazer a China
+
+833
+00:42:34,460 --> 00:42:35,260
+que nós não vemos
+
+834
+00:42:35,260 --> 00:42:36,380
+e os Estados Unidos que se vê,
+
+835
+00:42:36,380 --> 00:42:37,500
+que falam muito
+
+836
+00:42:37,500 --> 00:42:39,740
+da discussão gigantesca
+
+837
+00:42:39,740 --> 00:42:40,780
+que está a ver
+
+838
+00:42:41,260 --> 00:42:42,860
+os custos de eletricidade a aumentar,
+
+839
+00:42:42,860 --> 00:42:44,780
+os americanos podes com aquilo,
+
+840
+00:42:44,780 --> 00:42:46,220
+e as empresas de lobbying
+
+841
+00:42:46,220 --> 00:42:47,500
+a fazerem até
+
+842
+00:42:49,500 --> 00:42:51,820
+a terem iniciativas super fortes
+
+843
+00:42:51,820 --> 00:42:53,580
+do ponto de vista político
+
+844
+00:42:53,580 --> 00:42:55,180
+para convencer o governo
+
+845
+00:42:55,180 --> 00:42:56,300
+a não
+
+846
+00:42:56,300 --> 00:42:59,500
+dar procedência às queixas da população
+
+847
+00:42:59,500 --> 00:43:01,100
+para poderem continuar a expandir,
+
+848
+00:43:01,100 --> 00:43:02,380
+só para nos dar uma informação
+
+849
+00:43:02,380 --> 00:43:03,340
+que eu li,
+
+850
+00:43:03,340 --> 00:43:04,780
+assim, alguns no jornal,
+
+851
+00:43:04,780 --> 00:43:07,260
+a Microsoft comprou uma central nuclear
+
+852
+00:43:07,260 --> 00:43:08,220
+só para
+
+853
+00:43:08,220 --> 00:43:09,740
+a reativa uma central antiga,
+
+854
+00:43:09,740 --> 00:43:11,100
+comprou o Estado americano
+
+855
+00:43:11,100 --> 00:43:13,500
+e vai arrativar para a propriedade da Centro de Alé.
+
+856
+00:43:13,500 --> 00:43:15,260
+Portanto, a ordem de magnitude
+
+857
+00:43:15,260 --> 00:43:16,540
+dos consumos energéticos
+
+858
+00:43:16,540 --> 00:43:17,660
+são gigantescos.
+
+859
+00:43:17,660 --> 00:43:19,420
+Pronto, mas já me estiquei muito aqui
+
+860
+00:43:19,420 --> 00:43:20,380
+e era também só para falar
+
+861
+00:43:20,380 --> 00:43:22,220
+já que a aula é mais livre.
+
+862
+00:43:22,220 --> 00:43:23,100
+Datos tabulados,
+
+863
+00:43:23,100 --> 00:43:24,060
+que é super importante
+
+864
+00:43:24,060 --> 00:43:25,740
+para vocês conhecerem.
+
+865
+00:43:25,740 --> 00:43:27,020
+E é isto, o aéreo está aqui,
+
+866
+00:43:27,020 --> 00:43:28,060
+não vou insistir mais,
+
+867
+00:43:28,060 --> 00:43:29,180
+isto não é a minha tarefa,
+
+868
+00:43:29,180 --> 00:43:30,700
+esqueçam-lhe isto-me
+
+869
+00:43:30,700 --> 00:43:32,860
+e agora queria voltar aqui
+
+870
+00:43:32,860 --> 00:43:33,740
+ao vial.
+
+871
+00:43:33,740 --> 00:43:35,340
+Pronto, temos aqui isto,
+
+872
+00:43:35,340 --> 00:43:36,620
+este é o ECA
+
+873
+00:43:36,620 --> 00:43:37,820
+antes de irmos propriamente
+
+874
+00:43:37,820 --> 00:43:38,380
+ao Explorer,
+
+875
+00:43:38,380 --> 00:43:39,100
+que é o que interessa,
+
+876
+00:43:39,100 --> 00:43:40,860
+gostava de mostrar o Pacas Manager,
+
+877
+00:43:40,860 --> 00:43:43,100
+que é uma coisa que as pessoas esquecem de ver
+
+878
+00:43:43,100 --> 00:43:44,220
+e é super importante.
+
+879
+00:43:44,220 --> 00:43:45,980
+Se formos aqui ao Pacas Manager,
+
+880
+00:43:45,980 --> 00:43:48,220
+eu já tenho muita coisa instalada,
+
+881
+00:43:48,220 --> 00:43:49,500
+ele vai abrir.
+
+882
+00:43:49,500 --> 00:43:52,300
+Imaginem que vocês querem, por exemplo,
+
+883
+00:43:52,300 --> 00:43:53,180
+de
+
+884
+00:43:53,180 --> 00:43:55,710
+C
+
+885
+00:43:55,710 --> 00:43:57,150
+Gm
+
+886
+00:43:57,150 --> 00:43:58,270
+3.
+
+887
+00:43:58,270 --> 00:44:00,910
+Vocês querem procurar por determinada coisa
+
+888
+00:44:00,910 --> 00:44:02,030
+e vocês querem que fazem?
+
+889
+00:44:02,030 --> 00:44:04,670
+Procuram aqui por um nome genérico da coisa
+
+890
+00:44:04,670 --> 00:44:06,430
+e somos apresentados
+
+891
+00:44:06,430 --> 00:44:07,550
+aspectualmente
+
+892
+00:44:07,550 --> 00:44:09,150
+um ou vários modelos,
+
+893
+00:44:09,150 --> 00:44:11,710
+ou modelos caso assim existam,
+
+894
+00:44:11,710 --> 00:44:13,710
+vários modelos que querem e reparem só
+
+895
+00:44:13,710 --> 00:44:15,870
+a quantidade de modelos que eu tenho aqui,
+
+896
+00:44:15,870 --> 00:44:17,470
+que eu nem tenho instalados,
+
+897
+00:44:17,470 --> 00:44:19,310
+de C gen 3,
+
+898
+00:44:19,310 --> 00:44:21,230
+diferentes, todas elas,
+
+899
+00:44:21,230 --> 00:44:23,470
+Rotation de Forrest,
+
+900
+00:44:23,470 --> 00:44:25,870
+do Prefuse 3, na Air Base,
+
+901
+00:44:25,870 --> 00:44:27,630
+Multilink Instance Learning,
+
+902
+00:44:27,630 --> 00:44:28,510
+Funcional 3,
+
+903
+00:44:28,510 --> 00:44:29,630
+Befuse 3
+
+904
+00:44:29,630 --> 00:44:31,470
+e vis-nos aqui logo automaticamente
+
+905
+00:44:31,470 --> 00:44:32,670
+para a categoria S,
+
+906
+00:44:32,670 --> 00:44:33,950
+é só para prestamento,
+
+907
+00:44:33,950 --> 00:44:34,590
+classificação,
+
+908
+00:44:34,590 --> 00:44:37,230
+classificação e reversão ou não
+
+909
+00:44:37,310 --> 00:44:40,270
+e damos a versão do repositor e por aqui fora.
+
+910
+00:44:40,270 --> 00:44:42,750
+Pronto, quando vocês querem instalar, é só chegar aqui,
+
+911
+00:44:42,750 --> 00:44:45,790
+botão do lado, não é nada, é selecionar,
+
+912
+00:44:45,790 --> 00:44:48,030
+ir aqui, clicar em instalar, instalar.
+
+913
+00:44:48,030 --> 00:44:49,070
+Ok?
+
+914
+00:44:49,070 --> 00:44:51,470
+Por exemplo,
+
+915
+00:44:51,470 --> 00:44:52,350
+com o
+
+916
+00:44:52,350 --> 00:44:55,950
+o Sionol, não vai ter nada a visto,
+
+917
+00:44:55,950 --> 00:44:59,070
+não vai ter nada, porque eu estava a masticar forte,
+
+918
+00:44:59,070 --> 00:45:09,180
+mas podemos fazer aqui Neural,
+
+919
+00:45:09,180 --> 00:45:12,540
+Neural Network, que parecem que e várias,
+
+920
+00:45:12,540 --> 00:45:13,740
+não é?
+
+921
+00:45:13,820 --> 00:45:16,140
+Outra coisa interessante, recentemente,
+
+922
+00:45:16,140 --> 00:45:18,860
+o eca já incluiu aqui um Diplan e Forgei,
+
+923
+00:45:18,860 --> 00:45:20,140
+Forjava,
+
+924
+00:45:20,140 --> 00:45:22,620
+e já tem aqui uma biblioteca que permite
+
+925
+00:45:22,620 --> 00:45:25,180
+integrar um conjunto de modelos,
+
+926
+00:45:25,180 --> 00:45:26,620
+aqui isto,
+
+927
+00:45:26,620 --> 00:45:27,740
+é o eca andar para a frente,
+
+928
+00:45:27,740 --> 00:45:28,860
+ainda falta aqui muita coisa,
+
+929
+00:45:28,860 --> 00:45:30,540
+mas o eca já deu um salto
+
+930
+00:45:30,540 --> 00:45:31,740
+para compensar isto.
+
+931
+00:45:31,740 --> 00:45:32,460
+E por que é que deu?
+
+932
+00:45:32,460 --> 00:45:33,900
+Porque o Orange também deu,
+
+933
+00:45:33,900 --> 00:45:36,220
+e o RapidMainer já tem,
+
+934
+00:45:36,220 --> 00:45:38,380
+e o Keydime,
+
+935
+00:45:38,380 --> 00:45:40,700
+também já tem umas coisas interessantes nessa área.
+
+936
+00:45:40,700 --> 00:45:42,220
+Pronto, isto era só para administrar,
+
+937
+00:45:42,220 --> 00:45:43,980
+então eu te dou para as meninas,
+
+938
+00:45:43,980 --> 00:45:45,100
+vamos para o Explorer.
+
+939
+00:45:45,100 --> 00:45:47,180
+Deixemos só, antes de começar aqui,
+
+940
+00:45:47,180 --> 00:45:49,660
+mostrarmos, pronto, o RFFL,
+
+941
+00:45:49,660 --> 00:45:51,180
+é uma coisa mais bonitinha
+
+942
+00:45:51,180 --> 00:45:53,500
+para vermos aqui o que eu mostrei,
+
+943
+00:45:53,500 --> 00:45:54,860
+finalmente o Explorer,
+
+944
+00:45:54,860 --> 00:45:56,940
+e eu acho que vão passar
+
+945
+00:45:56,940 --> 00:45:58,620
+particularmente aqui,
+
+946
+00:45:58,620 --> 00:46:01,660
+aos fichets, vou abrir,
+
+947
+00:46:01,660 --> 00:46:03,260
+Open File,
+
+948
+00:46:03,260 --> 00:46:04,460
+não vou me acelerar,
+
+949
+00:46:04,460 --> 00:46:11,220
+tenho aqui coisas.
+
+950
+00:46:13,220 --> 00:46:14,980
+Vou aqui diretamente aos,
+
+951
+00:46:14,980 --> 00:46:16,340
+não é aqui,
+
+952
+00:46:16,340 --> 00:46:19,780
+quero aqui aos seus pontos,
+
+953
+00:46:19,780 --> 00:46:22,900
+e quero vir aqui aos Program,
+
+954
+00:46:22,900 --> 00:46:24,500
+ao eca,
+
+955
+00:46:24,500 --> 00:46:28,080
+não é eles,
+
+956
+00:46:28,080 --> 00:46:35,940
+que ele ainda não se deita,
+
+957
+00:46:35,940 --> 00:46:38,260
+e agora vamos aqui ao Iris.
+
+958
+00:46:38,260 --> 00:46:39,540
+Ele se tem um 2D,
+
+959
+00:46:39,540 --> 00:46:41,620
+que se para só ir a duas das classes,
+
+960
+00:46:41,620 --> 00:46:42,820
+mas nós queremos trabalhar
+
+961
+00:46:42,820 --> 00:46:44,500
+aqui com o 3D.
+
+962
+00:46:44,500 --> 00:46:45,940
+Pronto, e temos isto.
+
+963
+00:46:45,940 --> 00:46:48,500
+Importante, eu esqueci-me de vos mostrar,
+
+964
+00:46:48,500 --> 00:46:50,020
+na vortura, uma coisa,
+
+965
+00:46:50,020 --> 00:46:52,420
+que são os formatos que ele importa,
+
+966
+00:46:52,980 --> 00:46:54,020
+Open File,
+
+967
+00:46:54,020 --> 00:46:55,620
+está aqui, os formatos que ele importa,
+
+968
+00:46:55,620 --> 00:46:56,740
+são este, olha,
+
+969
+00:46:56,740 --> 00:46:58,260
+antigamente eram estes que estavam aqui,
+
+970
+00:46:58,260 --> 00:46:59,700
+deste lado, estão a ver,
+
+971
+00:46:59,700 --> 00:47:00,820
+e agora já tem muito mais,
+
+972
+00:47:00,820 --> 00:47:02,980
+tem um RFFL nativo,
+
+973
+00:47:02,980 --> 00:47:06,020
+tem o C45 para data file,
+
+974
+00:47:06,020 --> 00:47:08,980
+CSV, que é uma coisa do Excel que a gente tem,
+
+975
+00:47:08,980 --> 00:47:10,340
+JSON, também há muito tempo,
+
+976
+00:47:10,340 --> 00:47:11,940
+está sete agora em JSON,
+
+977
+00:47:11,940 --> 00:47:13,620
+.ms,
+
+978
+00:47:13,620 --> 00:47:15,060
+e depois de uma série aqui
+
+979
+00:47:15,060 --> 00:47:17,300
+de outras instâncias de dados,
+
+980
+00:47:17,300 --> 00:47:19,380
+não precisamos disso, já está aberto.
+
+981
+00:47:19,380 --> 00:47:21,060
+Pronto, a nível dos dados,
+
+982
+00:47:21,060 --> 00:47:22,260
+o que é que eu vos posso mostrar?
+
+983
+00:47:22,260 --> 00:47:25,140
+Abrimos, podemos abrir aqui de um RL,
+
+984
+00:47:25,140 --> 00:47:26,180
+de uma base de dados,
+
+985
+00:47:26,180 --> 00:47:28,900
+Generator 7, nunca usei nada disto,
+
+986
+00:47:28,900 --> 00:47:30,580
+abrimos-se, tenho usado-se,
+
+987
+00:47:30,580 --> 00:47:32,180
+empenhar RFFL.
+
+988
+00:47:32,180 --> 00:47:33,220
+Mas o que é que temos aqui?
+
+989
+00:47:33,220 --> 00:47:35,460
+Temos aqui uma série de descrições
+
+990
+00:47:35,460 --> 00:47:37,540
+do data set que abrimos,
+
+991
+00:47:37,540 --> 00:47:39,140
+temos aqui representações,
+
+992
+00:47:39,140 --> 00:47:42,740
+estatísticas e gráficas do data sete,
+
+993
+00:47:42,740 --> 00:47:45,380
+e depois temos aqui uma série de outras tabes,
+
+994
+00:47:45,380 --> 00:47:47,780
+o pré-processo, o classify,
+
+995
+00:47:47,780 --> 00:47:49,620
+queremos dar a seguir o cluster,
+
+996
+00:47:49,620 --> 00:47:51,620
+podemos, ou seja, classificação,
+
+997
+00:47:51,700 --> 00:47:54,100
+gerar clusters a partir nos data sets,
+
+998
+00:47:54,100 --> 00:47:55,460
+associação,
+
+999
+00:47:55,460 --> 00:47:58,020
+selecionar atributos e visualizar.
+
+1000
+00:47:58,020 --> 00:47:59,540
+Esta é uma parte importante.
+
+1001
+00:47:59,540 --> 00:48:01,220
+Uma coisa interessante,
+
+1002
+00:48:01,220 --> 00:48:03,540
+o que acontece sempre no visualizar,
+
+1003
+00:48:03,540 --> 00:48:06,340
+é que ele está em um modo em que se vê muito mal,
+
+1004
+00:48:06,340 --> 00:48:08,020
+então nós temos que selecionar aqui
+
+1005
+00:48:08,020 --> 00:48:09,220
+qualquer coisa,
+
+1006
+00:48:09,220 --> 00:48:12,580
+fazer o update para o que queremos,
+
+1007
+00:48:12,580 --> 00:48:14,820
+e depois isto já se fica bem melhor,
+
+1008
+00:48:14,820 --> 00:48:17,700
+selecionar-se uma visualização que seja interessante,
+
+1009
+00:48:17,700 --> 00:48:20,180
+e o gitar é quantidade de ruído,
+
+1010
+00:48:20,260 --> 00:48:23,380
+se puderem muito gitar, isto fica por esta espécie,
+
+1011
+00:48:23,380 --> 00:48:26,660
+se não impresem, eu quero o mínimo do gitar,
+
+1012
+00:48:26,660 --> 00:48:30,260
+que é para as coisas aparecerem como elas estão na realidade.
+
+1013
+00:48:30,260 --> 00:48:34,580
+Ainda assim, já temos aqui 3 classes,
+
+1014
+00:48:34,580 --> 00:48:37,620
+que são bolinhas de 3 cores diferentes,
+
+1015
+00:48:37,620 --> 00:48:40,980
+e já vamos depois ver isto de uma forma melhor.
+
+1016
+00:48:40,980 --> 00:48:43,220
+Ah, aqui ele ainda não tem estas coisas
+
+1017
+00:48:43,220 --> 00:48:44,580
+de fazer zoom por rato,
+
+1018
+00:48:44,580 --> 00:48:49,860
+tanto se vocês quiserem fazer-se o melhor,
+
+1019
+00:48:49,940 --> 00:48:52,020
+tem que ir aqui, por exemplo, a presente precedente,
+
+1020
+00:48:52,020 --> 00:48:55,010
+acho que é assim,
+
+1021
+00:48:55,010 --> 00:48:57,650
+não é nada, isto é o 100,
+
+1022
+00:48:57,650 --> 00:49:01,250
+não é nada, aqui é aqui update,
+
+1023
+00:49:01,250 --> 00:49:04,610
+e depois faz um bocadinho update,
+
+1024
+00:49:04,610 --> 00:49:06,050
+e fazemos aqui,
+
+1025
+00:49:06,050 --> 00:49:07,330
+mas isto é para me mostrar,
+
+1026
+00:49:07,330 --> 00:49:09,170
+montando aqui ao prestesamente,
+
+1027
+00:49:09,170 --> 00:49:10,130
+cá estão,
+
+1028
+00:49:10,130 --> 00:49:11,970
+se vocês repararem, temos então,
+
+1029
+00:49:11,970 --> 00:49:13,730
+todos os atributos que eu vos mostrei,
+
+1030
+00:49:13,730 --> 00:49:15,810
+as respectivas classes,
+
+1031
+00:49:15,810 --> 00:49:17,730
+se nós selecionarmos isto tudo,
+
+1032
+00:49:17,730 --> 00:49:19,250
+o que é que ele está a mostrar?
+
+1033
+00:49:19,330 --> 00:49:21,490
+Estamos a mostrar que o valor mínimo
+
+1034
+00:49:21,490 --> 00:49:24,130
+de um determinado atributo,
+
+1035
+00:49:24,130 --> 00:49:27,330
+se ele selecionar aqui este atributo,
+
+1036
+00:49:27,330 --> 00:49:31,330
+este atributo faz sepa length,
+
+1037
+00:49:31,330 --> 00:49:33,010
+ele mete aqui o nome,
+
+1038
+00:49:33,010 --> 00:49:34,450
+se eu clicar no sepa live,
+
+1039
+00:49:34,450 --> 00:49:36,050
+ele mete aqui o nome,
+
+1040
+00:49:36,050 --> 00:49:37,730
+e diz assim para esta variável,
+
+1041
+00:49:37,730 --> 00:49:40,690
+que agora estamos só a editar a variável sepa live,
+
+1042
+00:49:40,690 --> 00:49:42,290
+o valor mínimo é 2,
+
+1043
+00:49:42,290 --> 00:49:44,130
+o máximo é 4.4,
+
+1044
+00:49:44,130 --> 00:49:46,050
+a média é 3.054,
+
+1045
+00:49:46,050 --> 00:49:48,610
+e o desvio padrão é 0.434,
+
+1046
+00:49:48,610 --> 00:49:50,450
+cá estão os valores todos representados
+
+1047
+00:49:50,450 --> 00:49:51,650
+na forma de um histograma,
+
+1048
+00:49:51,650 --> 00:49:52,770
+quanto é que ele dá,
+
+1049
+00:49:52,770 --> 00:49:53,650
+mas atenção,
+
+1050
+00:49:53,650 --> 00:49:55,970
+ele com as cores estava a mostrar as classes,
+
+1051
+00:49:55,970 --> 00:49:58,050
+vocês têm 12 testes,
+
+1052
+00:49:58,050 --> 00:49:59,650
+há 24 testes,
+
+1053
+00:49:59,650 --> 00:50:01,090
+51 é de 7,
+
+1054
+00:50:01,090 --> 00:50:03,490
+e depois tenho aqui as diferentes classes,
+
+1055
+00:50:03,490 --> 00:50:04,690
+com azul,
+
+1056
+00:50:04,690 --> 00:50:06,450
+a vermelha e a azul escura,
+
+1057
+00:50:06,450 --> 00:50:08,930
+onde é que ele nos dá as classes?
+
+1058
+00:50:08,930 --> 00:50:10,210
+Tenho que ir ver,
+
+1059
+00:50:10,210 --> 00:50:11,970
+tenho que ir ver,
+
+1060
+00:50:11,970 --> 00:50:14,210
+e ah, ele pode separar,
+
+1061
+00:50:14,210 --> 00:50:16,770
+podemos por assim,
+
+1062
+00:50:16,770 --> 00:50:18,290
+por classe,
+
+1063
+00:50:18,370 --> 00:50:19,570
+ou não classe,
+
+1064
+00:50:19,570 --> 00:50:21,330
+é classe,
+
+1065
+00:50:21,330 --> 00:50:23,250
+pelas classes, é a nossa atua,
+
+1066
+00:50:23,250 --> 00:50:25,170
+e temos aqui a distribuição,
+
+1067
+00:50:25,170 --> 00:50:27,250
+para todas as variáveis também,
+
+1068
+00:50:27,250 --> 00:50:27,730
+então,
+
+1069
+00:50:27,730 --> 00:50:28,930
+mas isto não interessa muito,
+
+1070
+00:50:28,930 --> 00:50:30,690
+se formos aqui, é fácil,
+
+1071
+00:50:30,690 --> 00:50:34,290
+se fizemos o label como representada,
+
+1072
+00:50:34,290 --> 00:50:37,730
+e ele vai ter 50 instâncias diferentes,
+
+1073
+00:50:37,730 --> 00:50:39,810
+com valores que são sempre os mesmos,
+
+1074
+00:50:39,810 --> 00:50:40,450
+e cá está,
+
+1075
+00:50:40,450 --> 00:50:41,890
+o histograma tem 51,
+
+1076
+00:50:41,890 --> 00:50:42,450
+52,
+
+1077
+00:50:42,450 --> 00:50:43,730
+52,
+
+1078
+00:50:43,730 --> 00:50:44,930
+é a distribuição dele,
+
+1079
+00:50:44,930 --> 00:50:45,330
+pronto,
+
+1080
+00:50:45,330 --> 00:50:46,690
+isto são os valores da seguida,
+
+1081
+00:50:46,690 --> 00:50:49,060
+e diz,
+
+1082
+00:50:49,140 --> 00:50:50,580
+filacionando tudo,
+
+1083
+00:50:50,580 --> 00:50:52,180
+e se formos ao visualize,
+
+1084
+00:50:52,180 --> 00:50:54,900
+podemos ver coisas mais interessantes,
+
+1085
+00:50:54,900 --> 00:50:59,330
+alguma dúvida até agora?
+
+1086
+00:50:59,330 --> 00:51:01,090
+Podemos ver coisas mais interessantes,
+
+1087
+00:51:01,090 --> 00:51:01,810
+como por exemplo,
+
+1088
+00:51:01,810 --> 00:51:03,570
+aqui a variável é a classe,
+
+1089
+00:51:03,570 --> 00:51:04,930
+e aqui é o cepa-link,
+
+1090
+00:51:04,930 --> 00:51:05,730
+cepa-link,
+
+1091
+00:51:05,730 --> 00:51:06,370
+peta-link,
+
+1092
+00:51:06,370 --> 00:51:07,970
+peta-link e novamente a classe,
+
+1093
+00:51:07,970 --> 00:51:09,410
+uma coisa,
+
+1094
+00:51:09,410 --> 00:51:11,090
+tudo que seja ao longo da variável,
+
+1095
+00:51:11,090 --> 00:51:13,490
+desta diagonal,
+
+1096
+00:51:13,490 --> 00:51:14,610
+vai ser sempre assim,
+
+1097
+00:51:14,610 --> 00:51:16,130
+com este aspecto linear,
+
+1098
+00:51:16,130 --> 00:51:16,850
+porque é,
+
+1099
+00:51:16,850 --> 00:51:18,530
+vocês estão a representar a classe,
+
+1100
+00:51:18,530 --> 00:51:20,050
+com a própria classe,
+
+1101
+00:51:20,050 --> 00:51:21,010
+ou seja, a classe,
+
+1102
+00:51:21,010 --> 00:51:21,730
+é esta,
+
+1103
+00:51:21,730 --> 00:51:22,690
+esta,
+
+1104
+00:51:22,690 --> 00:51:23,250
+esteis,
+
+1105
+00:51:23,250 --> 00:51:24,050
+e a classe é aquela,
+
+1106
+00:51:24,050 --> 00:51:25,330
+e é claro que vão dar uma lineagem,
+
+1107
+00:51:25,330 --> 00:51:26,370
+quando uma vale uma coisa,
+
+1108
+00:51:26,370 --> 00:51:27,890
+ou outra vale a mesma,
+
+1109
+00:51:27,890 --> 00:51:28,290
+portanto,
+
+1110
+00:51:28,290 --> 00:51:29,730
+há uma coisa a linear,
+
+1111
+00:51:29,730 --> 00:51:31,810
+mas fora desta diagonal,
+
+1112
+00:51:31,810 --> 00:51:33,650
+é que a coisa começa a ficar interessante,
+
+1113
+00:51:33,650 --> 00:51:34,770
+por que?
+
+1114
+00:51:34,770 --> 00:51:36,130
+Porque se vocês mostrarem,
+
+1115
+00:51:36,130 --> 00:51:36,530
+por exemplo,
+
+1116
+00:51:36,530 --> 00:51:38,770
+a classe versus o cepa-link,
+
+1117
+00:51:38,770 --> 00:51:40,690
+vocês veem aqui que o cepa-link,
+
+1118
+00:51:40,690 --> 00:51:41,890
+tem todos estes valores,
+
+1119
+00:51:43,410 --> 00:51:45,410
+e depois na uma classe,
+
+1120
+00:51:45,410 --> 00:51:46,370
+e depois na outra classe,
+
+1121
+00:51:46,370 --> 00:51:47,250
+tem estes valores,
+
+1122
+00:51:47,250 --> 00:51:47,890
+e na outra classe,
+
+1123
+00:51:47,890 --> 00:51:49,170
+tem estes valores,
+
+1124
+00:51:49,170 --> 00:51:49,810
+e portanto,
+
+1125
+00:51:50,130 --> 00:51:51,810
+vocês logo aqui percebem,
+
+1126
+00:51:52,450 --> 00:51:53,170
+que por exemplo,
+
+1127
+00:51:53,170 --> 00:51:53,970
+esta,
+
+1128
+00:51:53,970 --> 00:51:55,410
+esta variável,
+
+1129
+00:51:55,410 --> 00:51:57,250
+o comprimento da cepa-link,
+
+1130
+00:51:57,250 --> 00:51:58,770
+não é uma variável muito interessante,
+
+1131
+00:51:58,770 --> 00:52:00,130
+para separar as três classes,
+
+1132
+00:52:00,130 --> 00:52:00,770
+por que?
+
+1133
+00:52:00,770 --> 00:52:02,530
+Porque os valores que eles obtêm,
+
+1134
+00:52:02,530 --> 00:52:04,210
+são muito sobrepostos,
+
+1135
+00:52:05,170 --> 00:52:06,210
+já o cepa-link,
+
+1136
+00:52:06,210 --> 00:52:07,730
+também há a mesma coisa,
+
+1137
+00:52:07,730 --> 00:52:09,410
+esta fica um bocado mais festilada,
+
+1138
+00:52:09,410 --> 00:52:11,010
+mas ainda assim tem toda esta zona,
+
+1139
+00:52:11,010 --> 00:52:12,610
+em paralelo com estas,
+
+1140
+00:52:12,610 --> 00:52:13,730
+não é melhor,
+
+1141
+00:52:13,730 --> 00:52:15,010
+mas depois altas variáveis,
+
+1142
+00:52:15,010 --> 00:52:15,890
+como estas aqui,
+
+1143
+00:52:16,610 --> 00:52:18,130
+o petal-link,
+
+1144
+00:52:18,130 --> 00:52:19,090
+e petal-link,
+
+1145
+00:52:19,090 --> 00:52:20,130
+que são melhores,
+
+1146
+00:52:20,130 --> 00:52:22,450
+porque este já está totalmente separado,
+
+1147
+00:52:22,450 --> 00:52:24,210
+aqui se posemos aqui uma reta,
+
+1148
+00:52:24,850 --> 00:52:26,210
+todos os azuis cursos,
+
+1149
+00:52:26,210 --> 00:52:27,410
+ficam logo separados,
+
+1150
+00:52:27,410 --> 00:52:29,250
+e estes aqui não são tão separados,
+
+1151
+00:52:29,890 --> 00:52:31,650
+mas se nós posemos aqui uma reta,
+
+1152
+00:52:32,290 --> 00:52:33,090
+neste valor,
+
+1153
+00:52:33,090 --> 00:52:34,450
+já separamos toda esta parte,
+
+1154
+00:52:34,450 --> 00:52:35,890
+e toda aquela parte,
+
+1155
+00:52:35,890 --> 00:52:37,490
+e só temos enganos aqui,
+
+1156
+00:52:37,490 --> 00:52:38,690
+relativamente a estes.
+
+1157
+00:52:39,330 --> 00:52:40,370
+E se vocês virem agora,
+
+1158
+00:52:40,370 --> 00:52:43,090
+a representação das duas variáveis conjugadas,
+
+1159
+00:52:43,090 --> 00:52:44,130
+petal-link,
+
+1160
+00:52:44,130 --> 00:52:45,010
+cepa-link,
+
+1161
+00:52:45,650 --> 00:52:46,610
+preparem,
+
+1162
+00:52:46,610 --> 00:52:47,250
+que aqui,
+
+1163
+00:52:47,250 --> 00:52:49,570
+se já não for linear a fronteira de separação,
+
+1164
+00:52:49,570 --> 00:52:50,770
+nós já conseguimos,
+
+1165
+00:52:50,770 --> 00:52:52,450
+conseguimos terminar aqui uma curva,
+
+1166
+00:52:52,450 --> 00:52:53,490
+até pode ser uma reta,
+
+1167
+00:52:54,130 --> 00:52:54,770
+separa isto,
+
+1168
+00:52:54,770 --> 00:52:56,530
+mas se conseguirmos uma certa curva,
+
+1169
+00:52:56,530 --> 00:52:57,730
+aqui assim, por aqui,
+
+1170
+00:52:58,370 --> 00:52:59,970
+ela já vai conseguir a separação,
+
+1171
+00:53:00,690 --> 00:53:01,650
+já neste caso,
+
+1172
+00:53:01,650 --> 00:53:02,850
+é um bocadinho mais difícil,
+
+1173
+00:53:02,850 --> 00:53:05,330
+quando fazemos o petal-link com cepa-link,
+
+1174
+00:53:05,890 --> 00:53:07,650
+nós separamos muito bem a classe azul,
+
+1175
+00:53:07,650 --> 00:53:09,010
+que é tal que se separa muito bem,
+
+1176
+00:53:09,010 --> 00:53:10,050
+como vocês veem aqui,
+
+1177
+00:53:10,690 --> 00:53:12,450
+mas depois estas duas,
+
+1178
+00:53:12,450 --> 00:53:14,610
+que é Virginia e versicola,
+
+1179
+00:53:14,690 --> 00:53:17,650
+já têm aqui um certo grau de sobreposição,
+
+1180
+00:53:17,650 --> 00:53:18,450
+ou overlapping,
+
+1181
+00:53:18,850 --> 00:53:21,730
+e portanto, a gente consegue separar até um certo ponto,
+
+1182
+00:53:21,730 --> 00:53:23,090
+porque depois deste ponto,
+
+1183
+00:53:23,090 --> 00:53:24,930
+onde eles começam a misturar-se,
+
+1184
+00:53:24,930 --> 00:53:27,250
+significa que os valores, neste caso,
+
+1185
+00:53:27,810 --> 00:53:31,250
+do petal-link e do petal-link,
+
+1186
+00:53:32,050 --> 00:53:33,410
+já são muito próximos,
+
+1187
+00:53:33,410 --> 00:53:34,210
+entre amostras,
+
+1188
+00:53:35,090 --> 00:53:37,570
+e depois, com valores muito próximos,
+
+1189
+00:53:37,570 --> 00:53:39,090
+ou até praticamente iguais,
+
+1190
+00:53:39,650 --> 00:53:41,330
+um é de uma classe ou até da outra,
+
+1191
+00:53:41,330 --> 00:53:42,370
+estas são classes,
+
+1192
+00:53:42,370 --> 00:53:44,370
+que não são linearmente separáveis,
+
+1193
+00:53:44,370 --> 00:53:45,890
+ou seja, não são classes,
+
+1194
+00:53:45,890 --> 00:53:47,090
+que não têm uma margem,
+
+1195
+00:53:47,090 --> 00:53:48,930
+entre elas, de separação de segurança,
+
+1196
+00:53:49,410 --> 00:53:52,130
+para vocês passarem lá uma reta,
+
+1197
+00:53:52,130 --> 00:53:54,290
+e dizerem tudo que está à esquerda desta reta,
+
+1198
+00:53:54,290 --> 00:53:54,930
+é de uma classe,
+
+1199
+00:53:54,930 --> 00:53:56,290
+tudo que está à direita,
+
+1200
+00:53:56,290 --> 00:53:58,290
+desta reta é da outra classe,
+
+1201
+00:53:58,290 --> 00:54:00,930
+isso são classes linearmente separáveis.
+
+1202
+00:54:00,930 --> 00:54:03,090
+Há classes que não são linearmente separáveis,
+
+1203
+00:54:03,090 --> 00:54:04,290
+como por exemplo, esta aqui,
+
+1204
+00:54:05,410 --> 00:54:07,330
+esta classe não é linearmente separável,
+
+1205
+00:54:07,330 --> 00:54:08,610
+mas ainda assim é separável,
+
+1206
+00:54:08,610 --> 00:54:09,730
+que se vocês passarem aqui,
+
+1207
+00:54:09,730 --> 00:54:11,250
+uma curva assim deste gênero,
+
+1208
+00:54:12,050 --> 00:54:13,090
+só esta,
+
+1209
+00:54:13,170 --> 00:54:15,090
+só esta aqui e novamente,
+
+1210
+00:54:15,090 --> 00:54:16,610
+como eu disse na última aula,
+
+1211
+00:54:16,610 --> 00:54:17,970
+cuidado com o overfitting,
+
+1212
+00:54:17,970 --> 00:54:20,050
+vocês agora podiam traçar aqui uma reta,
+
+1213
+00:54:20,050 --> 00:54:21,410
+que chegava aqui e aqui,
+
+1214
+00:54:21,410 --> 00:54:22,130
+buscar por ali,
+
+1215
+00:54:22,770 --> 00:54:25,010
+e depois vinha a fazer esta volta toda,
+
+1216
+00:54:25,010 --> 00:54:26,690
+mas isto é claramente overfitting,
+
+1217
+00:54:26,690 --> 00:54:29,090
+quando ele se ajusta demasiado aos dados,
+
+1218
+00:54:29,090 --> 00:54:30,850
+e depois, por exemplo, novos dados,
+
+1219
+00:54:30,850 --> 00:54:32,450
+pode acontecer que ele não consiga,
+
+1220
+00:54:32,450 --> 00:54:34,850
+portanto, e esta não é linearmente separável,
+
+1221
+00:54:34,850 --> 00:54:36,210
+mas por exemplo, esta é,
+
+1222
+00:54:36,210 --> 00:54:37,410
+esta é, esta é,
+
+1223
+00:54:37,410 --> 00:54:39,170
+toda esta azul é linearmente separável,
+
+1224
+00:54:39,170 --> 00:54:40,130
+as outras duas é que não.
+
+1225
+00:54:40,850 --> 00:54:42,450
+E portanto, nós aqui temos logo
+
+1226
+00:54:42,450 --> 00:54:45,730
+uma visão geral de como é que isto funciona,
+
+1227
+00:54:45,730 --> 00:54:47,090
+qual é a dispersão dos dados
+
+1228
+00:54:47,090 --> 00:54:50,770
+em função das duas variáveis incluídas,
+
+1229
+00:54:50,770 --> 00:54:52,130
+qual é o problema?
+
+1230
+00:54:52,130 --> 00:54:53,410
+Nós conseguimos fazer isto
+
+1231
+00:54:54,450 --> 00:54:55,650
+para primeiro a ordem,
+
+1232
+00:54:55,650 --> 00:54:57,090
+para a segunda ordem representando
+
+1233
+00:54:57,090 --> 00:54:59,170
+uma variável em função da outra,
+
+1234
+00:54:59,170 --> 00:55:00,290
+e para terceira a ordem,
+
+1235
+00:55:00,290 --> 00:55:02,210
+daí para a frente já não fazemos nada.
+
+1236
+00:55:02,210 --> 00:55:02,770
+Quando muito,
+
+1237
+00:55:02,770 --> 00:55:04,050
+nós temos uma quarta variável,
+
+1238
+00:55:04,050 --> 00:55:05,250
+que será o tempo,
+
+1239
+00:55:05,250 --> 00:55:06,690
+e à medida que o tempo passa,
+
+1240
+00:55:06,690 --> 00:55:08,130
+vamos visualizando a evolução
+
+1241
+00:55:08,130 --> 00:55:09,490
+das outras três variáveis,
+
+1242
+00:55:10,050 --> 00:55:11,650
+mas é tudo que conseguimos fazer.
+
+1243
+00:55:11,650 --> 00:55:13,490
+Já o machine learning consegue
+
+1244
+00:55:13,490 --> 00:55:15,250
+estender todos estes códigos,
+
+1245
+00:55:15,250 --> 00:55:16,850
+todos estes cálculos matemáticos
+
+1246
+00:55:16,850 --> 00:55:17,970
+para qualquer dimensão
+
+1247
+00:55:17,970 --> 00:55:20,050
+e a sua representação e etc.,
+
+1248
+00:55:20,050 --> 00:55:21,250
+que nós não percebemos nada,
+
+1249
+00:55:21,250 --> 00:55:22,690
+ou mais que três dimensões,
+
+1250
+00:55:22,690 --> 00:55:24,370
+e o tempo, quarta dimensão,
+
+1251
+00:55:24,370 --> 00:55:25,410
+já não apanho nada
+
+1252
+00:55:25,410 --> 00:55:26,450
+do que aquilo significa.
+
+1253
+00:55:27,410 --> 00:55:31,250
+E dentro das frameworks,
+
+1254
+00:55:31,250 --> 00:55:32,130
+matemáticamente,
+
+1255
+00:55:32,130 --> 00:55:33,330
+a gente consegue implementar
+
+1256
+00:55:33,330 --> 00:55:34,610
+métodos matemáticos
+
+1257
+00:55:34,610 --> 00:55:35,490
+que processam isto.
+
+1258
+00:55:35,490 --> 00:55:36,290
+O que é ótimo,
+
+1259
+00:55:36,290 --> 00:55:37,490
+pois hoje temos problemas
+
+1260
+00:55:37,490 --> 00:55:39,650
+com 400, 500 mil variáveis,
+
+1261
+00:55:40,210 --> 00:55:41,410
+e ele otimiza aquilo
+
+1262
+00:55:41,410 --> 00:55:42,690
+que se transforma em um problema pequeno,
+
+1263
+00:55:42,690 --> 00:55:44,610
+com obviamente muito cálculo por trás,
+
+1264
+00:55:45,330 --> 00:55:45,970
+e é incrível,
+
+1265
+00:55:45,970 --> 00:55:47,490
+porque nós conseguimos
+
+1266
+00:55:47,490 --> 00:55:48,610
+otimizar um sistema
+
+1267
+00:55:48,610 --> 00:55:49,250
+que de outra maneira,
+
+1268
+00:55:49,250 --> 00:55:50,210
+não conseguimos nada.
+
+1269
+00:55:50,850 --> 00:55:51,570
+Pronto.
+
+1270
+00:55:51,570 --> 00:55:51,890
+E aí,
+
+1271
+00:55:51,890 --> 00:55:52,850
+acho que não vou estar
+
+1272
+00:55:52,850 --> 00:55:54,210
+insistir muito mais nisto.
+
+1273
+00:55:55,330 --> 00:55:56,210
+Bom, aqui, por exemplo,
+
+1274
+00:55:56,210 --> 00:55:57,010
+o Cephalang,
+
+1275
+00:55:57,650 --> 00:55:58,450
+o Cephaloida,
+
+1276
+00:55:58,450 --> 00:55:59,490
+a que nós vamos overlapar
+
+1277
+00:55:59,490 --> 00:56:00,290
+com os gigantescos,
+
+1278
+00:56:00,290 --> 00:56:01,170
+este novamente,
+
+1279
+00:56:01,170 --> 00:56:02,370
+linearmente separável,
+
+1280
+00:56:02,930 --> 00:56:03,730
+e estes dois,
+
+1281
+00:56:03,730 --> 00:56:06,450
+os azuis claros
+
+1282
+00:56:06,930 --> 00:56:07,570
+e os vermelhos,
+
+1283
+00:56:07,570 --> 00:56:09,410
+com uma superposição gigantesca,
+
+1284
+00:56:09,410 --> 00:56:10,610
+como é que vocês separam isto?
+
+1285
+00:56:10,610 --> 00:56:12,130
+Por que aqui esta época é que as não é?
+
+1286
+00:56:12,690 --> 00:56:14,370
+Tudo que seja fora disto assim,
+
+1287
+00:56:15,650 --> 00:56:16,290
+é azul,
+
+1288
+00:56:16,290 --> 00:56:16,770
+bebé.
+
+1289
+00:56:17,410 --> 00:56:19,570
+Tudo que seja dentro desta coisa aqui,
+
+1290
+00:56:19,570 --> 00:56:20,370
+ninguém sabe,
+
+1291
+00:56:20,370 --> 00:56:21,570
+porque é vermelho ou azul.
+
+1292
+00:56:22,210 --> 00:56:23,090
+Aqui tudo bem,
+
+1293
+00:56:23,090 --> 00:56:26,210
+podes assumir que é azul claro,
+
+1294
+00:56:26,210 --> 00:56:27,890
+aqui podes assumir que é vermelho,
+
+1295
+00:56:27,890 --> 00:56:29,330
+aqui não podes assumir muito,
+
+1296
+00:56:29,330 --> 00:56:31,010
+mas aqui nesta zona é muito complicado
+
+1297
+00:56:31,010 --> 00:56:32,050
+que eles ficam surpostos,
+
+1298
+00:56:32,050 --> 00:56:32,530
+tá bem?
+
+1299
+00:56:33,810 --> 00:56:34,850
+Pronto, deixe-me ver aqui
+
+1300
+00:56:34,850 --> 00:56:36,210
+que é que eu puse mais aqui,
+
+1301
+00:56:36,210 --> 00:56:36,850
+lá, lá, lá.
+
+1302
+00:56:37,410 --> 00:56:39,650
+Aqui estava-vos a mostrar,
+
+1303
+00:56:39,650 --> 00:56:40,850
+aquilo que mostrei ao cabo,
+
+1304
+00:56:40,850 --> 00:56:42,450
+um mostrado de um vecheiro,
+
+1305
+00:56:43,410 --> 00:56:44,610
+IRFF,
+
+1306
+00:56:44,610 --> 00:56:46,530
+e essa IRFF
+
+1307
+00:56:46,530 --> 00:56:47,570
+está aqui representado
+
+1308
+00:56:47,570 --> 00:56:48,450
+para não haver problema.
+
+1309
+00:56:50,130 --> 00:56:51,650
+Aqui é explicado,
+
+1310
+00:56:52,610 --> 00:56:54,290
+há alguns termos do IRF,
+
+1311
+00:56:54,290 --> 00:56:55,650
+não é muito roubante,
+
+1312
+00:56:55,650 --> 00:56:59,330
+tem aqui a mostra das figuras,
+
+1313
+00:57:00,450 --> 00:57:02,290
+lá está a questão entre pétala
+
+1314
+00:57:02,290 --> 00:57:03,170
+e sepala,
+
+1315
+00:57:03,170 --> 00:57:04,610
+a sepala até maior,
+
+1316
+00:57:04,610 --> 00:57:06,130
+e ninguém iria, né?
+
+1317
+00:57:06,930 --> 00:57:09,650
+Pronto, essencialmente através
+
+1318
+00:57:09,650 --> 00:57:11,730
+destas medidas e com os labels,
+
+1319
+00:57:11,730 --> 00:57:13,250
+nós vamos criar,
+
+1320
+00:57:15,170 --> 00:57:16,130
+criamos um data sete,
+
+1321
+00:57:16,130 --> 00:57:17,250
+com esse data sete vamos treinar
+
+1322
+00:57:17,250 --> 00:57:18,370
+movimentos,
+
+1323
+00:57:18,370 --> 00:57:20,450
+em que a partir do treino,
+
+1324
+00:57:20,450 --> 00:57:22,210
+quando está o modelo treinado,
+
+1325
+00:57:22,210 --> 00:57:23,730
+ele consegue fazer inferência
+
+1326
+00:57:23,730 --> 00:57:25,170
+com um dado grau de confiança,
+
+1327
+00:57:25,890 --> 00:57:28,290
+em como determinado conjunto de
+
+1328
+00:57:28,290 --> 00:57:29,330
+medidas de uma instância
+
+1329
+00:57:29,330 --> 00:57:30,290
+que foi medida agora
+
+1330
+00:57:30,290 --> 00:57:32,050
+e que nós não temos um ser humano
+
+1331
+00:57:32,050 --> 00:57:32,770
+para nos dizer
+
+1332
+00:57:32,770 --> 00:57:34,210
+esta era a subspecie tal,
+
+1333
+00:57:35,010 --> 00:57:36,930
+este sistema matematicamente
+
+1334
+00:57:36,930 --> 00:57:38,290
+vai ser capaz de a partir
+
+1335
+00:57:38,290 --> 00:57:39,170
+dessas medidas de dizer
+
+1336
+00:57:39,170 --> 00:57:40,530
+olha, esta é uma virgínica
+
+1337
+00:57:40,530 --> 00:57:41,730
+ou esta é uma versicola
+
+1338
+00:57:41,730 --> 00:57:44,210
+ou esta é a outra subspecie,
+
+1339
+00:57:44,210 --> 00:57:44,610
+está bem?
+
+1340
+00:57:45,570 --> 00:57:47,010
+Então, agora vamos para aqui,
+
+1341
+00:57:47,010 --> 00:57:48,450
+abrimos o AIRIS,
+
+1342
+00:57:48,450 --> 00:57:50,050
+fazemos isto que eu estive aqui a falar,
+
+1343
+00:57:50,690 --> 00:57:51,730
+pronto, eu aqui ponho mais
+
+1344
+00:57:51,730 --> 00:57:53,010
+umas coisas que é
+
+1345
+00:57:53,010 --> 00:57:54,530
+a descrição daquilo que ali está,
+
+1346
+00:57:58,290 --> 00:58:00,130
+aqui mostra as variáveis,
+
+1347
+00:58:01,010 --> 00:58:02,690
+como eu gostar a mostrar,
+
+1348
+00:58:02,690 --> 00:58:03,650
+a avocar,
+
+1349
+00:58:05,410 --> 00:58:05,970
+vamos ver,
+
+1350
+00:58:05,970 --> 00:58:07,490
+mostra estas variáveis assim,
+
+1351
+00:58:07,490 --> 00:58:08,530
+qual é a distribuição
+
+1352
+00:58:09,250 --> 00:58:10,610
+para as três classes
+
+1353
+00:58:10,610 --> 00:58:12,050
+de cada uma das suficientes,
+
+1354
+00:58:12,050 --> 00:58:13,570
+das variáveis que lá tem,
+
+1355
+00:58:16,270 --> 00:58:18,670
+aqui está a tal tava,
+
+1356
+00:58:19,390 --> 00:58:21,390
+onde vamos ver a visualização,
+
+1357
+00:58:22,590 --> 00:58:23,310
+desculpem,
+
+1358
+00:58:23,310 --> 00:58:24,830
+onde vamos ver as visualizações
+
+1359
+00:58:24,830 --> 00:58:26,510
+conforme estive a ver com vocês,
+
+1360
+00:58:28,110 --> 00:58:28,910
+aumentei,
+
+1361
+00:58:28,910 --> 00:58:30,350
+fiz aquela configuração,
+
+1362
+00:58:30,350 --> 00:58:31,870
+ah, e aqui é um exemplo
+
+1363
+00:58:31,870 --> 00:58:32,510
+de uma coisa,
+
+1364
+00:58:33,230 --> 00:58:34,990
+aqui é um exemplo de nós estarmos a
+
+1365
+00:58:34,990 --> 00:58:35,870
+trabalhar a cores,
+
+1366
+00:58:36,430 --> 00:58:37,870
+e passamos para para ti branco,
+
+1367
+00:58:37,870 --> 00:58:38,670
+qual é a diferença?
+
+1368
+00:58:38,670 --> 00:58:40,190
+A cores nós temos informação
+
+1369
+00:58:40,190 --> 00:58:40,830
+das classes,
+
+1370
+00:58:42,510 --> 00:58:44,510
+se nós tirarmos a variável,
+
+1371
+00:58:45,310 --> 00:58:46,910
+nós tiramos esta variável,
+
+1372
+00:58:50,340 --> 00:58:51,460
+isto equivale,
+
+1373
+00:58:53,780 --> 00:58:55,540
+nós tiramos esta variável daqui,
+
+1374
+00:58:56,180 --> 00:58:57,460
+esta variável em todos,
+
+1375
+00:58:57,460 --> 00:58:58,980
+o soto, o versicólico,
+
+1376
+00:58:58,980 --> 00:59:00,660
+o virginica, etc.,
+
+1377
+00:59:00,660 --> 00:59:02,180
+se esta variável for removida,
+
+1378
+00:59:03,140 --> 00:59:04,820
+esta é o equivalente a dizer
+
+1379
+00:59:04,820 --> 00:59:06,100
+que esta figura que aqui
+
+1380
+00:59:06,100 --> 00:59:08,100
+temos nestas cores vibrantes,
+
+1381
+00:59:08,100 --> 00:59:09,460
+nestas cores vibrantes,
+
+1382
+00:59:10,180 --> 00:59:12,180
+passará nestas cores vibrantes,
+
+1383
+00:59:12,180 --> 00:59:13,060
+passará a ser isto,
+
+1384
+00:59:13,620 --> 00:59:15,140
+se vocês remover a informação
+
+1385
+00:59:15,140 --> 00:59:15,620
+de classe,
+
+1386
+00:59:15,620 --> 00:59:16,420
+o que vocês têm,
+
+1387
+00:59:16,420 --> 00:59:18,180
+são um conjunto de pontos dispersos,
+
+1388
+00:59:18,980 --> 00:59:19,860
+mas que não pertencem
+
+1389
+00:59:19,860 --> 00:59:21,060
+a classe diferente.
+
+1390
+00:59:21,060 --> 00:59:21,540
+Agora,
+
+1391
+00:59:21,540 --> 00:59:22,900
+o que nós podemos fazer,
+
+1392
+00:59:22,900 --> 00:59:23,700
+é clustering,
+
+1393
+00:59:23,700 --> 00:59:24,500
+e é dizer assim,
+
+1394
+00:59:24,500 --> 00:59:25,700
+olha, dentro destes dados,
+
+1395
+00:59:25,700 --> 00:59:27,460
+eu vou aplicar um algoritmo de clustering
+
+1396
+00:59:27,460 --> 00:59:28,740
+para dois clusters aqui,
+
+1397
+00:59:29,300 --> 00:59:30,740
+nesta sepa-luide
+
+1398
+00:59:30,740 --> 00:59:31,860
+e sepa-lang,
+
+1399
+00:59:32,500 --> 00:59:33,220
+eu conclugo,
+
+1400
+00:59:33,220 --> 00:59:34,020
+na realidade,
+
+1401
+00:59:34,020 --> 00:59:35,220
+eu tenho essencialmente
+
+1402
+00:59:35,220 --> 00:59:37,220
+dois grandes conjuntos de dados,
+
+1403
+00:59:38,660 --> 00:59:39,780
+mas na prática,
+
+1404
+00:59:39,780 --> 00:59:41,620
+não tem nada dos conjuntos de dados,
+
+1405
+00:59:41,620 --> 00:59:42,820
+porque se vocês forem para i,
+
+1406
+00:59:42,820 --> 00:59:43,700
+e estarem a ser um convivá-la,
+
+1407
+00:59:43,700 --> 00:59:44,660
+que eu não estou a fazer mal,
+
+1408
+00:59:45,300 --> 00:59:46,020
+é o terceiro,
+
+1409
+00:59:46,020 --> 00:59:46,660
+sepa-lang,
+
+1410
+00:59:46,660 --> 00:59:47,700
+sepa-lang,
+
+1411
+00:59:47,700 --> 00:59:53,420
+sepa-lang,
+
+1412
+00:59:53,420 --> 00:59:58,190
+sepa-lang,
+
+1413
+00:59:58,190 --> 00:59:59,390
+sepa-lang,
+
+1414
+00:59:59,390 --> 01:00:00,510
+sepa-lang,
+
+1415
+01:00:00,510 --> 01:00:04,260
+sepa-lang,
+
+1416
+01:00:04,260 --> 01:00:05,460
+é este aqui.
+
+1417
+01:00:05,460 --> 01:00:06,340
+Pronto, essencialmente,
+
+1418
+01:00:06,340 --> 01:00:07,060
+o que estamos a ver,
+
+1419
+01:00:07,060 --> 01:00:10,500
+são dois grandes clusters,
+
+1420
+01:00:10,500 --> 01:00:11,780
+porque não conseguimos perceber
+
+1421
+01:00:11,780 --> 01:00:13,940
+esta resposta,
+
+1422
+01:00:13,940 --> 01:00:14,740
+e é isto que temos,
+
+1423
+01:00:17,040 --> 01:00:17,680
+para ver,
+
+1424
+01:00:17,680 --> 01:00:19,360
+damos aqui este grande cluster,
+
+1425
+01:00:19,360 --> 01:00:20,800
+que na realidade é composto
+
+1426
+01:00:21,440 --> 01:00:23,040
+por dois outros clusters
+
+1427
+01:00:23,040 --> 01:00:26,910
+que estão aqui,
+
+1428
+01:00:30,830 --> 01:00:31,390
+que estão aqui,
+
+1429
+01:00:32,110 --> 01:00:32,510
+ok?
+
+1430
+01:00:33,310 --> 01:00:34,110
+Depois,
+
+1431
+01:00:34,110 --> 01:00:34,670
+depois,
+
+1432
+01:00:34,670 --> 01:00:35,230
+depois,
+
+1433
+01:00:35,230 --> 01:00:35,870
+depois,
+
+1434
+01:00:38,030 --> 01:00:38,270
+ah,
+
+1435
+01:00:39,070 --> 01:00:39,390
+agora,
+
+1436
+01:00:39,390 --> 01:00:40,270
+coisas que eu vos falei
+
+1437
+01:00:40,270 --> 01:00:40,990
+na aula passada,
+
+1438
+01:00:40,990 --> 01:00:42,590
+e que gostavam dos referidos,
+
+1439
+01:00:42,590 --> 01:00:43,550
+também com atenção,
+
+1440
+01:00:45,870 --> 01:00:47,150
+select attributes,
+
+1441
+01:00:48,110 --> 01:00:52,780
+ver o que é que eu vivi aqui,
+
+1442
+01:00:59,540 --> 01:01:00,420
+esta coisa,
+
+1443
+01:01:00,420 --> 01:01:01,460
+se pode se apagar tudo,
+
+1444
+01:01:02,100 --> 01:01:23,360
+o que é que eu queria fazer?
+
+1445
+01:01:25,360 --> 01:01:26,080
+Pronto,
+
+1446
+01:01:27,360 --> 01:01:30,500
+aqui tem,
+
+1447
+01:01:31,220 --> 01:01:31,700
+portanto,
+
+1448
+01:01:31,700 --> 01:01:33,140
+agora aqui vamos fazer uma coisa,
+
+1449
+01:01:33,140 --> 01:01:34,420
+vamos selecionar atributos,
+
+1450
+01:01:34,420 --> 01:01:34,820
+lembra,
+
+1451
+01:01:34,820 --> 01:01:36,020
+se quando eu falei das tarefas
+
+1452
+01:01:36,020 --> 01:01:37,780
+de redução dimensional,
+
+1453
+01:01:37,780 --> 01:01:39,460
+o feature selection é isto,
+
+1454
+01:01:39,460 --> 01:01:40,820
+nós chegarmos aqui,
+
+1455
+01:01:40,820 --> 01:01:42,260
+e fizemos tarde,
+
+1456
+01:01:42,260 --> 01:01:43,620
+já está selecionada,
+
+1457
+01:01:44,580 --> 01:01:45,700
+o que é que ele diz?
+
+1458
+01:01:45,700 --> 01:01:46,820
+Nós temos então,
+
+1459
+01:01:46,820 --> 01:01:48,100
+150 amostras,
+
+1460
+01:01:48,100 --> 01:01:49,220
+com 5 atributos,
+
+1461
+01:01:49,780 --> 01:01:50,420
+e agora,
+
+1462
+01:01:50,420 --> 01:01:50,900
+ele diz,
+
+1463
+01:01:50,900 --> 01:01:51,220
+olha,
+
+1464
+01:01:51,220 --> 01:01:52,340
+se eu olhar para isto,
+
+1465
+01:01:52,340 --> 01:01:53,620
+o method lbfirst,
+
+1466
+01:01:54,420 --> 01:01:55,860
+e depois mais o dono outro,
+
+1467
+01:01:55,860 --> 01:01:57,220
+que é o subset eval,
+
+1468
+01:01:58,020 --> 01:01:58,900
+e ele vai aqui,
+
+1469
+01:01:58,900 --> 01:01:59,780
+no atributos,
+
+1470
+01:01:59,780 --> 01:02:00,500
+PowerData,
+
+1471
+01:02:00,500 --> 01:02:01,540
+5.0.2,
+
+1472
+01:02:01,540 --> 01:02:02,340
+Sousa 12,
+
+1473
+01:02:03,060 --> 01:02:03,460
+Merit,
+
+1474
+01:02:03,460 --> 01:02:04,100
+FortVest,
+
+1475
+01:02:04,100 --> 01:02:05,060
+SubsetFound,
+
+1476
+01:02:05,060 --> 01:02:06,260
+0887,
+
+1477
+01:02:06,260 --> 01:02:07,620
+isto é a avaliação global,
+
+1478
+01:02:07,620 --> 01:02:08,900
+qual o desempenho nisto,
+
+1479
+01:02:08,900 --> 01:02:11,380
+faça o desempenho do data set original,
+
+1480
+01:02:11,940 --> 01:02:13,380
+o data set original,
+
+1481
+01:02:13,380 --> 01:02:14,980
+tinha 5 variáveis,
+
+1482
+01:02:14,980 --> 01:02:16,340
+este tem 3 variáveis,
+
+1483
+01:02:16,900 --> 01:02:19,140
+mas se vocês usarem estas 3 variáveis,
+
+1484
+01:02:19,140 --> 01:02:21,780
+ele ainda assim consegue 88.7%
+
+1485
+01:02:22,500 --> 01:02:24,420
+do interesse na informação,
+
+1486
+01:02:24,420 --> 01:02:25,060
+e portanto,
+
+1487
+01:02:25,060 --> 01:02:25,860
+e os agora,
+
+1488
+01:02:25,860 --> 01:02:27,300
+os atributos foram escolhidos,
+
+1489
+01:02:28,100 --> 01:02:29,140
+foram,
+
+1490
+01:02:29,140 --> 01:02:29,860
+qual,
+
+1491
+01:02:29,860 --> 01:02:30,900
+foram qual,
+
+1492
+01:02:35,020 --> 01:02:35,980
+por acaso não,
+
+1493
+01:02:35,980 --> 01:02:36,940
+ah, está aqui, está aqui,
+
+1494
+01:02:37,500 --> 01:02:38,220
+Petalink,
+
+1495
+01:02:38,220 --> 01:02:39,100
+e Petalif,
+
+1496
+01:02:39,100 --> 01:02:39,820
+ou seja,
+
+1497
+01:02:39,820 --> 01:02:41,260
+ele faz um rank,
+
+1498
+01:02:41,260 --> 01:02:42,460
+das variáveis,
+
+1499
+01:02:42,460 --> 01:02:43,580
+por importância,
+
+1500
+01:02:44,060 --> 01:02:44,380
+ok,
+
+1501
+01:02:45,180 --> 01:02:45,900
+e depois,
+
+1502
+01:02:45,900 --> 01:02:48,300
+seleciona as n variáveis,
+
+1503
+01:02:48,300 --> 01:02:49,340
+que dão o melhor,
+
+1504
+01:02:50,300 --> 01:02:51,580
+o melhor contributo
+
+1505
+01:02:51,580 --> 01:02:52,620
+para o algoritmo.
+
+1506
+01:02:53,260 --> 01:02:54,220
+Pronto, este era um,
+
+1507
+01:02:54,860 --> 01:02:55,660
+e há um outro,
+
+1508
+01:03:19,330 --> 01:03:20,610
+mostrar para ser o rancor,
+
+1509
+01:03:20,610 --> 01:03:22,850
+deixem-me saber onde é que está o rancor que eu tenho aí,
+
+1510
+01:03:26,850 --> 01:03:27,730
+ok, está tudo,
+
+1511
+01:03:27,730 --> 01:03:28,290
+mas agora,
+
+1512
+01:03:28,290 --> 01:03:29,730
+vamos mostrar uma coisa,
+
+1513
+01:03:30,370 --> 01:03:31,170
+ele fez isto,
+
+1514
+01:03:31,170 --> 01:03:31,810
+ah,
+
+1515
+01:03:31,810 --> 01:03:33,170
+a cada vez que corremos,
+
+1516
+01:03:33,170 --> 01:03:34,690
+se eu correr uma segunda vez,
+
+1517
+01:03:34,690 --> 01:03:36,290
+deixem-me só fazer aqui uma coisa,
+
+1518
+01:03:36,930 --> 01:03:38,450
+se eu correr através do algoritmo,
+
+1519
+01:03:38,450 --> 01:03:40,050
+a cada vez ele mete aqui,
+
+1520
+01:03:40,050 --> 01:03:40,930
+ah,
+
+1521
+01:03:40,930 --> 01:03:41,650
+a run,
+
+1522
+01:03:41,650 --> 01:03:42,290
+ok,
+
+1523
+01:03:42,290 --> 01:03:42,930
+e portanto,
+
+1524
+01:03:42,930 --> 01:03:44,690
+quando vocês estiverem mais afriante,
+
+1525
+01:03:44,690 --> 01:03:46,210
+com 20, 30, 50,
+
+1526
+01:03:46,210 --> 01:03:47,650
+as inovações feitas,
+
+1527
+01:03:47,650 --> 01:03:49,090
+se precisarem de andar para trás,
+
+1528
+01:03:49,090 --> 01:03:50,130
+é só selecionar,
+
+1529
+01:03:50,130 --> 01:03:51,810
+e tudo aquilo que vai ser mostrado,
+
+1530
+01:03:51,810 --> 01:03:52,770
+é relativo a essa,
+
+1531
+01:03:53,650 --> 01:03:54,850
+que era esta saída,
+
+1532
+01:03:54,850 --> 01:03:56,770
+que era as variáveis intermedias,
+
+1533
+01:03:57,570 --> 01:03:58,850
+é tudo relativo a essa,
+
+1534
+01:03:58,850 --> 01:03:59,570
+essa corrida,
+
+1535
+01:03:59,570 --> 01:03:59,890
+está bem,
+
+1536
+01:04:01,010 --> 01:04:01,650
+e portanto,
+
+1537
+01:04:01,650 --> 01:04:02,450
+basicamente,
+
+1538
+01:04:02,450 --> 01:04:03,170
+é isto,
+
+1539
+01:04:06,770 --> 01:04:07,730
+infogaine,
+
+1540
+01:04:07,730 --> 01:04:08,290
+e vol.
+
+1541
+01:04:33,730 --> 01:04:34,450
+É isto,
+
+1542
+01:04:34,450 --> 01:04:35,090
+é isto,
+
+1543
+01:04:35,090 --> 01:04:37,250
+o selecione da sua information gain,
+
+1544
+01:04:37,250 --> 01:04:37,730
+gain,
+
+1545
+01:04:37,730 --> 01:04:38,770
+e ele faz o rancar,
+
+1546
+01:04:38,770 --> 01:04:40,610
+o rancar é muito interessante,
+
+1547
+01:04:40,610 --> 01:04:42,290
+vocês correm isto,
+
+1548
+01:04:42,290 --> 01:04:42,770
+e ele diz,
+
+1549
+01:04:42,770 --> 01:04:44,450
+desde a data set toda,
+
+1550
+01:04:44,450 --> 01:04:46,050
+que analisei todas as fitxas,
+
+1551
+01:04:46,050 --> 01:04:46,770
+e diga-se sim,
+
+1552
+01:04:46,770 --> 01:04:47,890
+a primeira,
+
+1553
+01:04:47,890 --> 01:04:51,090
+com 1.418, 4.188,
+
+1554
+01:04:51,090 --> 01:04:52,450
+é o pétal length,
+
+1555
+01:04:52,450 --> 01:04:53,330
+o segundo,
+
+1556
+01:04:53,330 --> 01:04:54,690
+é 1.378,
+
+1557
+01:04:54,690 --> 01:04:56,050
+é o pétal width,
+
+1558
+01:04:56,050 --> 01:04:56,850
+o terceiro,
+
+1559
+01:04:56,850 --> 01:04:57,890
+é o sepa length,
+
+1560
+01:04:57,890 --> 01:04:58,770
+e o quarto,
+
+1561
+01:04:58,770 --> 01:04:59,410
+é o sepa length,
+
+1562
+01:04:59,410 --> 01:04:59,730
+ou seja,
+
+1563
+01:04:59,730 --> 01:05:00,850
+em termos de importância,
+
+1564
+01:05:00,850 --> 01:05:01,730
+as duas primeiras,
+
+1565
+01:05:01,730 --> 01:05:03,330
+são as mais importantes todas,
+
+1566
+01:05:03,410 --> 01:05:03,890
+também.
+
+1567
+01:05:04,690 --> 01:05:06,850
+Embora a terceira faça a outra,
+
+1568
+01:05:06,850 --> 01:05:07,730
+é muito menos,
+
+1569
+01:05:07,730 --> 01:05:08,450
+mas a quarta,
+
+1570
+01:05:08,450 --> 01:05:09,730
+tem de é menos faça a terceira,
+
+1571
+01:05:09,730 --> 01:05:10,690
+e portanto,
+
+1572
+01:05:10,690 --> 01:05:11,650
+o sepa width,
+
+1573
+01:05:11,650 --> 01:05:12,530
+é aquela variável,
+
+1574
+01:05:12,530 --> 01:05:14,050
+o que interessa mesmo um pouquinho,
+
+1575
+01:05:14,050 --> 01:05:15,170
+o sepa length.
+
+1576
+01:05:15,170 --> 01:05:16,210
+Se nós formos aqui,
+
+1577
+01:05:16,210 --> 01:05:17,570
+e olharmos para o sepa length,
+
+1578
+01:05:18,850 --> 01:05:20,770
+é através dos sepa lengths aqui,
+
+1579
+01:05:23,260 --> 01:05:24,300
+e sepa length,
+
+1580
+01:05:24,300 --> 01:05:25,020
+onde é que está?
+
+1581
+01:05:26,620 --> 01:05:27,500
+E sepa length,
+
+1582
+01:05:27,500 --> 01:05:29,020
+e ele tem aqui,
+
+1583
+01:05:29,020 --> 01:05:30,940
+pouquíssima capacidade discriminativa,
+
+1584
+01:05:30,940 --> 01:05:31,420
+reparem,
+
+1585
+01:05:32,060 --> 01:05:33,420
+que a azul clara,
+
+1586
+01:05:33,420 --> 01:05:34,460
+a azul clara,
+
+1587
+01:05:34,460 --> 01:05:35,980
+é esta coisa que está aqui,
+
+1588
+01:05:39,090 --> 01:05:40,850
+é esta coisa que está aqui,
+
+1589
+01:05:45,280 --> 01:05:46,000
+onde é que está?
+
+1590
+01:05:46,000 --> 01:05:46,720
+Estou a fazer uma,
+
+1591
+01:05:49,300 --> 01:05:50,340
+esta separação,
+
+1592
+01:05:50,340 --> 01:05:51,780
+e eu ia a outra coisa ali,
+
+1593
+01:05:51,780 --> 01:05:52,180
+onde vi,
+
+1594
+01:05:52,180 --> 01:05:52,740
+não interessa,
+
+1595
+01:05:52,740 --> 01:05:53,300
+porque senão,
+
+1596
+01:05:53,300 --> 01:05:54,500
+agora não está mais saindo aqui.
+
+1597
+01:05:55,380 --> 01:05:56,260
+Ok, portanto,
+
+1598
+01:05:56,260 --> 01:05:56,980
+estou aqui,
+
+1599
+01:05:56,980 --> 01:05:58,420
+agora vou buscar isto,
+
+1600
+01:06:00,100 --> 01:06:01,460
+onde agora tenho aqui uns exercícios
+
+1601
+01:06:01,460 --> 01:06:02,180
+para fazer,
+
+1602
+01:06:02,180 --> 01:06:03,620
+que vocês depois podem fazer,
+
+1603
+01:06:04,500 --> 01:06:05,140
+que é o,
+
+1604
+01:06:05,140 --> 01:06:06,980
+o eder data sete,
+
+1605
+01:06:06,980 --> 01:06:07,860
+e meter isto,
+
+1606
+01:06:07,860 --> 01:06:09,540
+e explorar um bocado,
+
+1607
+01:06:09,540 --> 01:06:10,180
+visualizar,
+
+1608
+01:06:10,180 --> 01:06:10,900
+ver os,
+
+1609
+01:06:10,980 --> 01:06:12,420
+as distribuições de dados,
+
+1610
+01:06:12,420 --> 01:06:13,140
+fazer o,
+
+1611
+01:06:14,020 --> 01:06:15,540
+o data,
+
+1612
+01:06:15,540 --> 01:06:16,980
+o ambiente ação aos dados,
+
+1613
+01:06:16,980 --> 01:06:17,620
+que a postura,
+
+1614
+01:06:19,460 --> 01:06:20,260
+não é postura,
+
+1615
+01:06:20,260 --> 01:06:20,660
+é,
+
+1616
+01:06:20,660 --> 01:06:21,460
+isso é a outra,
+
+1617
+01:06:21,460 --> 01:06:22,500
+da outra pós-gradação,
+
+1618
+01:06:23,060 --> 01:06:24,580
+que estive a falar que postura Tiago
+
+1619
+01:06:24,580 --> 01:06:25,220
+pode vos fazer,
+
+1620
+01:06:25,220 --> 01:06:25,620
+ok?
+
+1621
+01:06:26,820 --> 01:06:27,940
+E agora, eu acho que ia passar
+
+1622
+01:06:27,940 --> 01:06:28,740
+esta coisa à frente,
+
+1623
+01:06:28,740 --> 01:06:29,860
+já são 8 e 20,
+
+1624
+01:06:30,660 --> 01:06:32,260
+depois se quiserem podem fazer isto,
+
+1625
+01:06:32,260 --> 01:06:33,460
+tenho aqui dois data sets,
+
+1626
+01:06:35,060 --> 01:06:36,420
+o eder data sete,
+
+1627
+01:06:36,420 --> 01:06:37,140
+e tem o,
+
+1628
+01:06:37,140 --> 01:06:37,860
+o,
+
+1629
+01:06:37,860 --> 01:06:38,340
+o,
+
+1630
+01:06:38,340 --> 01:06:39,060
+o,
+
+1631
+01:06:39,060 --> 01:06:40,740
+simple gender classification,
+
+1632
+01:06:41,380 --> 01:06:41,700
+pronto,
+
+1633
+01:06:41,700 --> 01:06:43,700
+mas nada que estes problemas são,
+
+1634
+01:06:43,700 --> 01:06:45,380
+o eder data sete,
+
+1635
+01:06:45,380 --> 01:06:46,900
+eu peço os,
+
+1636
+01:06:46,900 --> 01:06:48,500
+para fazer a inspeção de dados,
+
+1637
+01:06:48,500 --> 01:06:50,180
+que é uma coisa que nós fizemos aqui,
+
+1638
+01:06:50,980 --> 01:06:52,580
+são estas coisas que eu pedi,
+
+1639
+01:06:52,580 --> 01:06:53,780
+tem os scattergrapes,
+
+1640
+01:06:53,780 --> 01:06:55,060
+que são estes gráficos aqui,
+
+1641
+01:06:55,060 --> 01:06:56,420
+são scattergrapes,
+
+1642
+01:06:56,420 --> 01:06:58,180
+seja uma variável contra a outra,
+
+1643
+01:06:58,740 --> 01:07:00,180
+e temos aqui o pré-postamento,
+
+1644
+01:07:00,180 --> 01:07:02,420
+onde também podemos associar-nos,
+
+1645
+01:07:04,500 --> 01:07:05,460
+não podemos,
+
+1646
+01:07:05,460 --> 01:07:06,180
+é,
+
+1647
+01:07:06,180 --> 01:07:07,620
+exatamente ali,
+
+1648
+01:07:07,620 --> 01:07:09,460
+tanto aqui podemos ver eles histogramas,
+
+1649
+01:07:10,020 --> 01:07:11,780
+e os scattergrapes são aqui,
+
+1650
+01:07:11,780 --> 01:07:13,060
+e depois a segunda parte,
+
+1651
+01:07:13,060 --> 01:07:14,180
+que já é muito mais,
+
+1652
+01:07:14,180 --> 01:07:16,500
+pedir-nos um,
+
+1653
+01:07:16,500 --> 01:07:17,780
+um,
+
+1654
+01:07:17,780 --> 01:07:18,820
+que faça uma coisa,
+
+1655
+01:07:18,820 --> 01:07:19,700
+que é do que é um seguinte,
+
+1656
+01:07:19,700 --> 01:07:20,740
+que é uma classificação,
+
+1657
+01:07:21,540 --> 01:07:22,340
+CSB,
+
+1658
+01:07:22,340 --> 01:07:22,980
+não sei o que,
+
+1659
+01:07:22,980 --> 01:07:23,780
+por acaso ainda não,
+
+1660
+01:07:23,780 --> 01:07:24,500
+nem faço isso,
+
+1661
+01:07:25,220 --> 01:07:26,260
+meto um data sete,
+
+1662
+01:07:26,260 --> 01:07:27,380
+e peço-vos aqui uma,
+
+1663
+01:07:27,380 --> 01:07:28,020
+uma conversão,
+
+1664
+01:07:28,020 --> 01:07:29,380
+para vocês evitarem muito bem,
+
+1665
+01:07:29,380 --> 01:07:30,020
+e fazerem,
+
+1666
+01:07:32,020 --> 01:07:33,220
+e depois abrindo é que por hora,
+
+1667
+01:07:33,220 --> 01:07:34,260
+estudar o data sete,
+
+1668
+01:07:34,260 --> 01:07:35,780
+as suas vídeos e tal,
+
+1669
+01:07:35,780 --> 01:07:38,100
+fazer a análise exploratória inicial,
+
+1670
+01:07:38,100 --> 01:07:38,740
+uma coisa,
+
+1671
+01:07:38,740 --> 01:07:40,500
+eu ponho os links devido dos data sets,
+
+1672
+01:07:40,500 --> 01:07:41,380
+para vocês terem,
+
+1673
+01:07:42,260 --> 01:07:44,340
+e uma coisa que eu me esqueci de falar,
+
+1674
+01:07:44,340 --> 01:07:46,180
+e é importante para vocês terem,
+
+1675
+01:07:47,380 --> 01:07:47,860
+que é,
+
+1676
+01:07:48,580 --> 01:07:49,620
+que está lá em cima,
+
+1677
+01:07:52,030 --> 01:07:53,230
+que está lá em cima,
+
+1678
+01:07:56,940 --> 01:07:58,540
+pronto, aqui um link para um data sete,
+
+1679
+01:07:58,540 --> 01:07:59,420
+mas outra coisa aqui,
+
+1680
+01:07:59,420 --> 01:08:00,380
+que vocês podem mostrar,
+
+1681
+01:08:01,500 --> 01:08:02,220
+pronto, que é aqui?
+
+1682
+01:08:03,660 --> 01:08:06,300
+Com frequência nos sites da vida,
+
+1683
+01:08:06,300 --> 01:08:07,180
+os cargos,
+
+1684
+01:08:07,740 --> 01:08:08,620
+os data science,
+
+1685
+01:08:08,620 --> 01:08:09,180
+qualquer coisa,
+
+1686
+01:08:09,180 --> 01:08:11,180
+nós temos data sets informados,
+
+1687
+01:08:11,180 --> 01:08:11,980
+muito informados,
+
+1688
+01:08:11,980 --> 01:08:13,740
+mas um deles muito comum é o CSV,
+
+1689
+01:08:14,380 --> 01:08:15,420
+e para vocês prefiram,
+
+1690
+01:08:15,420 --> 01:08:17,260
+precisam de converter para IRFF,
+
+1691
+01:08:17,260 --> 01:08:18,779
+já vos ouvi de que nem sempre é fácil,
+
+1692
+01:08:19,340 --> 01:08:20,140
+esta conversão,
+
+1693
+01:08:20,140 --> 01:08:21,500
+às vezes é um bocado trabalhosa,
+
+1694
+01:08:21,500 --> 01:08:22,460
+para não dizer que dá,
+
+1695
+01:08:22,460 --> 01:08:23,660
+às vezes muito trabalho,
+
+1696
+01:08:24,220 --> 01:08:25,020
+não podia ser,
+
+1697
+01:08:25,020 --> 01:08:26,540
+mas um carateiro escondido,
+
+1698
+01:08:26,540 --> 01:08:27,420
+uma coisa que fosse,
+
+1699
+01:08:27,979 --> 01:08:29,740
+há uma série de conversores,
+
+1700
+01:08:29,740 --> 01:08:30,939
+como estou a CSV,
+
+1701
+01:08:30,939 --> 01:08:31,979
+do IRFF,
+
+1702
+01:08:32,540 --> 01:08:33,819
+se eu pesquisar no Google,
+
+1703
+01:08:33,819 --> 01:08:34,700
+vocês vão ver,
+
+1704
+01:08:34,700 --> 01:08:35,500
+imediatamente,
+
+1705
+01:08:35,979 --> 01:08:43,390
+se eu pesquisar no Google,
+
+1706
+01:08:43,390 --> 01:08:44,750
+vocês vão ver que aparecem,
+
+1707
+01:08:44,750 --> 01:08:45,550
+vários aqui,
+
+1708
+01:08:51,120 --> 01:08:52,319
+este é o que estou a usar,
+
+1709
+01:08:52,720 --> 01:08:53,920
+depois aqui outro,
+
+1710
+01:08:55,520 --> 01:08:57,760
+e aqui é uma aplicação,
+
+1711
+01:08:57,760 --> 01:08:58,960
+que vocês podem sacar,
+
+1712
+01:09:00,000 --> 01:09:00,880
+e aqui há,
+
+1713
+01:09:02,160 --> 01:09:03,840
+o Wiki da Weka,
+
+1714
+01:09:03,840 --> 01:09:05,279
+onde eles estão a mostrar,
+
+1715
+01:09:06,319 --> 01:09:07,359
+e alguns exemplos,
+
+1716
+01:09:07,359 --> 01:09:08,640
+se vocês forem para o dia baixo,
+
+1717
+01:09:09,200 --> 01:09:09,840
+alguns há,
+
+1718
+01:09:10,800 --> 01:09:12,000
+há descrições,
+
+1719
+01:09:12,000 --> 01:09:12,960
+não é aqui nesta página,
+
+1720
+01:09:12,960 --> 01:09:13,680
+mas há descrições,
+
+1721
+01:09:13,680 --> 01:09:14,640
+telhadas do fecheiro,
+
+1722
+01:09:14,640 --> 01:09:15,600
+e vocês podem estudar,
+
+1723
+01:09:16,160 --> 01:09:17,200
+e fazer a mão tente,
+
+1724
+01:09:17,200 --> 01:09:18,240
+e na medida possível,
+
+1725
+01:09:18,240 --> 01:09:19,279
+fazer com um combustor,
+
+1726
+01:09:19,279 --> 01:09:19,760
+como este,
+
+1727
+01:09:19,760 --> 01:09:20,640
+é muito mais fácil,
+
+1728
+01:09:21,279 --> 01:09:22,640
+vocês só têm que buscar,
+
+1729
+01:09:22,640 --> 01:09:24,080
+o ferice,
+
+1730
+01:09:24,080 --> 01:09:24,800
+se metê-lo aqui,
+
+1731
+01:09:25,520 --> 01:09:26,160
+e depois,
+
+1732
+01:09:26,160 --> 01:09:27,600
+dizer qual é o apito delimicador,
+
+1733
+01:09:27,600 --> 01:09:28,640
+que não se calda uma vírgula,
+
+1734
+01:09:28,640 --> 01:09:29,840
+e submetê-lo,
+
+1735
+01:09:29,840 --> 01:09:30,960
+e ele automaticamente,
+
+1736
+01:09:30,960 --> 01:09:32,560
+pusfará a conversão,
+
+1737
+01:09:32,560 --> 01:09:34,160
+a menos que dê erros,
+
+1738
+01:09:34,160 --> 01:09:35,040
+e ele,
+
+1739
+01:09:35,040 --> 01:09:35,520
+para,
+
+1740
+01:09:35,520 --> 01:09:36,479
+e não faz,
+
+1741
+01:09:36,479 --> 01:09:37,040
+e portanto,
+
+1742
+01:09:37,040 --> 01:09:37,920
+vocês vão ter que,
+
+1743
+01:09:37,920 --> 01:09:39,840
+ir ao fecheiro original,
+
+1744
+01:09:39,840 --> 01:09:40,960
+e ver o que é que fizeram,
+
+1745
+01:09:41,359 --> 01:09:41,840
+cerrado,
+
+1746
+01:09:41,840 --> 01:09:42,640
+qual é o caráter,
+
+1747
+01:09:43,040 --> 01:09:44,080
+para lá está,
+
+1748
+01:09:44,080 --> 01:09:44,960
+que está a dar o erro,
+
+1749
+01:09:44,960 --> 01:09:46,080
+e tem que eu remover,
+
+1750
+01:09:46,080 --> 01:09:47,840
+ou acertar os caratés,
+
+1751
+01:09:47,840 --> 01:09:49,279
+de maneira a representar,
+
+1752
+01:09:49,279 --> 01:09:50,240
+o,
+
+1753
+01:09:50,319 --> 01:09:51,120
+o padrão,
+
+1754
+01:09:51,120 --> 01:09:52,399
+que é suposto lá estar,
+
+1755
+01:09:52,399 --> 01:09:53,359
+e dessa forma,
+
+1756
+01:09:53,359 --> 01:09:54,960
+ele passar aqui no combustor,
+
+1757
+01:09:55,520 --> 01:09:56,160
+está bem?
+
+1758
+01:09:56,160 --> 01:09:56,880
+Eu acho que agora,
+
+1759
+01:09:56,880 --> 01:09:57,040
+então,
+
+1760
+01:09:57,040 --> 01:09:57,600
+passava este,
+
+1761
+01:09:57,600 --> 01:09:58,320
+este,
+
+1762
+01:09:58,320 --> 01:09:59,440
+este que ia um a frente,
+
+1763
+01:09:59,440 --> 01:10:00,240
+vocês têm aí,
+
+1764
+01:10:00,240 --> 01:10:00,960
+em qualquer momento,
+
+1765
+01:10:01,520 --> 01:10:02,640
+e passava para o segundo,
+
+1766
+01:10:02,640 --> 01:10:03,680
+e que eu já falei muito,
+
+1767
+01:10:03,680 --> 01:10:04,560
+e acho que é interessante,
+
+1768
+01:10:04,560 --> 01:10:05,040
+vocês,
+
+1769
+01:10:05,840 --> 01:10:06,400
+eh,
+
+1770
+01:10:06,400 --> 01:10:07,520
+fazerem coisas,
+
+1771
+01:10:10,850 --> 01:10:12,530
+passavam-se para o classification,
+
+1772
+01:10:12,530 --> 01:10:13,170
+e no ECA,
+
+1773
+01:10:13,170 --> 01:10:14,610
+é exatamente a mesma coisa,
+
+1774
+01:10:14,610 --> 01:10:15,650
+eu acho que até que trabalho,
+
+1775
+01:10:15,650 --> 01:10:16,530
+com o aeros na mesma,
+
+1776
+01:10:17,090 --> 01:10:18,050
+a única coisa que eu acho,
+
+1777
+01:10:18,050 --> 01:10:18,850
+que eu quero falar,
+
+1778
+01:10:18,850 --> 01:10:20,050
+é o que é a classificação,
+
+1779
+01:10:20,050 --> 01:10:21,250
+já vem de uma semana passada,
+
+1780
+01:10:21,890 --> 01:10:23,090
+é termos dados de treino,
+
+1781
+01:10:23,090 --> 01:10:23,730
+com levels,
+
+1782
+01:10:23,730 --> 01:10:24,850
+metermos tudo isto,
+
+1783
+01:10:25,410 --> 01:10:26,850
+um algoritmo machine learning,
+
+1784
+01:10:26,850 --> 01:10:28,610
+e gerarmos um modelo predictivo,
+
+1785
+01:10:29,330 --> 01:10:30,130
+e depois,
+
+1786
+01:10:30,130 --> 01:10:31,490
+depois de treinado,
+
+1787
+01:10:31,490 --> 01:10:33,170
+vocês metem novos dados,
+
+1788
+01:10:33,170 --> 01:10:34,530
+dados destes que não,
+
+1789
+01:10:34,530 --> 01:10:35,730
+tem os levels associados,
+
+1790
+01:10:36,210 --> 01:10:37,490
+ou se os tiverem,
+
+1791
+01:10:37,490 --> 01:10:38,850
+não são utilizados,
+
+1792
+01:10:38,850 --> 01:10:39,730
+nesta fase,
+
+1793
+01:10:39,730 --> 01:10:40,210
+por,
+
+1794
+01:10:40,210 --> 01:10:42,130
+a partir dos dados tabulares,
+
+1795
+01:10:42,130 --> 01:10:43,330
+das entradas,
+
+1796
+01:10:43,330 --> 01:10:44,210
+são geradas,
+
+1797
+01:10:44,930 --> 01:10:45,890
+eh,
+
+1798
+01:10:45,890 --> 01:10:46,770
+as saídas,
+
+1799
+01:10:46,770 --> 01:10:47,730
+ou as probabilidades,
+
+1800
+01:10:47,730 --> 01:10:49,250
+ou as levels de saída,
+
+1801
+01:10:49,810 --> 01:10:51,010
+e depois estas levels,
+
+1802
+01:10:51,010 --> 01:10:51,730
+são comparadas,
+
+1803
+01:10:51,730 --> 01:10:53,010
+com as verdadeiras levels,
+
+1804
+01:10:53,010 --> 01:10:53,490
+disto,
+
+1805
+01:10:53,490 --> 01:10:54,210
+para,
+
+1806
+01:10:54,210 --> 01:10:55,010
+tirarmos,
+
+1807
+01:10:55,010 --> 01:10:56,770
+a real capacidade e inferência,
+
+1808
+01:10:56,770 --> 01:10:57,730
+do modelo treinado,
+
+1809
+01:10:57,730 --> 01:10:58,290
+ok?
+
+1810
+01:10:58,290 --> 01:10:59,810
+Podemos isto nas aulas anteriores,
+
+1811
+01:10:59,810 --> 01:11:01,090
+só para vocês verem,
+
+1812
+01:11:01,090 --> 01:11:02,690
+fala aqui, de vários algoritmos,
+
+1813
+01:11:02,690 --> 01:11:03,250
+que falamos,
+
+1814
+01:11:03,250 --> 01:11:04,050
+o SVM,
+
+1815
+01:11:04,850 --> 01:11:05,970
+com os vectors de suporte,
+
+1816
+01:11:05,970 --> 01:11:06,930
+que eu vos falei de outra vez,
+
+1817
+01:11:07,490 --> 01:11:08,370
+é a matemática,
+
+1818
+01:11:08,370 --> 01:11:09,570
+não dei, nem costumo dar,
+
+1819
+01:11:09,570 --> 01:11:11,170
+porque a matemática é uma complexidade,
+
+1820
+01:11:11,170 --> 01:11:12,050
+que é desnecessária,
+
+1821
+01:11:12,050 --> 01:11:13,650
+nós hoje implementamos em software,
+
+1822
+01:11:14,690 --> 01:11:16,290
+aqui, uma famosa rede neuronal,
+
+1823
+01:11:16,290 --> 01:11:17,010
+em que se põe aqui,
+
+1824
+01:11:17,010 --> 01:11:18,370
+de uma forma mais simplificada,
+
+1825
+01:11:19,090 --> 01:11:20,370
+os módulos somadores,
+
+1826
+01:11:20,370 --> 01:11:21,250
+os módulos,
+
+1827
+01:11:21,250 --> 01:11:22,690
+com as funções de ativação,
+
+1828
+01:11:23,250 --> 01:11:24,290
+para cada camada,
+
+1829
+01:11:24,290 --> 01:11:25,330
+entrada de,
+
+1830
+01:11:25,330 --> 01:11:26,530
+camada de entrada,
+
+1831
+01:11:26,530 --> 01:11:27,490
+em camada de saída,
+
+1832
+01:11:27,970 --> 01:11:29,090
+camada interna,
+
+1833
+01:11:29,650 --> 01:11:30,210
+ou idem,
+
+1834
+01:11:31,330 --> 01:11:31,970
+uma decisão,
+
+1835
+01:11:31,970 --> 01:11:33,250
+que eu não põe os coisas,
+
+1836
+01:11:33,250 --> 01:11:34,770
+mas vocês viram na semana passada,
+
+1837
+01:11:34,770 --> 01:11:35,810
+que é uma coisa decisão,
+
+1838
+01:11:36,450 --> 01:11:37,010
+o bugging,
+
+1839
+01:11:37,010 --> 01:11:38,530
+que é um bugger de classifier,
+
+1840
+01:11:38,530 --> 01:11:39,410
+que são vários,
+
+1841
+01:11:39,410 --> 01:11:41,170
+modelos relativamente próximos,
+
+1842
+01:11:41,170 --> 01:11:42,530
+mas com ligeiras diferenças,
+
+1843
+01:11:42,530 --> 01:11:43,010
+entre eles,
+
+1844
+01:11:43,730 --> 01:11:44,770
+se nos passa uma entrada,
+
+1845
+01:11:44,770 --> 01:11:46,130
+eles todos tomam uma decisão,
+
+1846
+01:11:46,130 --> 01:11:47,410
+e por maioria,
+
+1847
+01:11:47,410 --> 01:11:48,930
+com a maioria costuma afretar,
+
+1848
+01:11:49,410 --> 01:11:50,450
+a maioria dos modelos,
+
+1849
+01:11:50,450 --> 01:11:51,410
+que são muito próximos,
+
+1850
+01:11:51,410 --> 01:11:52,610
+mas com diferenças entre si,
+
+1851
+01:11:52,610 --> 01:11:53,570
+acabam por acertar,
+
+1852
+01:11:53,970 --> 01:11:55,010
+e se nós integrámos,
+
+1853
+01:11:55,010 --> 01:11:55,650
+por uma média,
+
+1854
+01:11:55,650 --> 01:11:56,450
+todas aquelas,
+
+1855
+01:11:56,930 --> 01:11:58,370
+todas aquelas predições,
+
+1856
+01:11:58,370 --> 01:11:59,570
+nós vamos encontrar
+
+1857
+01:11:59,570 --> 01:12:00,930
+uma resposta correta.
+
+1858
+01:12:01,890 --> 01:12:03,330
+Depois, o random forest,
+
+1859
+01:12:03,330 --> 01:12:05,650
+que é um bug de decisão 3,
+
+1860
+01:12:06,210 --> 01:12:06,770
+ou seja,
+
+1861
+01:12:06,770 --> 01:12:07,890
+faça uma decisão 3,
+
+1862
+01:12:07,890 --> 01:12:08,370
+faça outra,
+
+1863
+01:12:08,370 --> 01:12:08,930
+outra, outra,
+
+1864
+01:12:08,930 --> 01:12:09,330
+e no fim,
+
+1865
+01:12:09,330 --> 01:12:10,530
+faça um bug de aqui,
+
+1866
+01:12:10,530 --> 01:12:11,810
+agrega-se aquelas respostas,
+
+1867
+01:12:11,810 --> 01:12:12,450
+todas,
+
+1868
+01:12:12,450 --> 01:12:13,570
+com as ligeiras diferentes,
+
+1869
+01:12:13,570 --> 01:12:14,690
+as de umas e de outras,
+
+1870
+01:12:15,090 --> 01:12:16,850
+e conseguimos ter um classificador,
+
+1871
+01:12:16,850 --> 01:12:17,730
+altamente robusto,
+
+1872
+01:12:17,730 --> 01:12:18,850
+como é o random forest,
+
+1873
+01:12:18,850 --> 01:12:19,810
+que fica a dica,
+
+1874
+01:12:19,810 --> 01:12:21,090
+que é uma coisa que interessa.
+
+1875
+01:12:21,090 --> 01:12:22,290
+Relativamente ao EQ,
+
+1876
+01:12:22,290 --> 01:12:23,090
+e isto,
+
+1877
+01:12:23,090 --> 01:12:23,810
+conversa,
+
+1878
+01:12:23,810 --> 01:12:24,210
+conversa,
+
+1879
+01:12:24,210 --> 01:12:24,770
+conversa,
+
+1880
+01:12:26,830 --> 01:12:27,790
+até que, finalmente,
+
+1881
+01:12:27,790 --> 01:12:30,030
+vocês vão para o aires,
+
+1882
+01:12:30,030 --> 01:12:31,470
+acho que este nenu é o aires,
+
+1883
+01:12:32,430 --> 01:12:32,910
+é, é.
+
+1884
+01:12:34,110 --> 01:12:34,590
+Pronto,
+
+1885
+01:12:34,590 --> 01:12:35,950
+a rock-curve,
+
+1886
+01:12:35,950 --> 01:12:36,670
+que está a ela,
+
+1887
+01:12:36,670 --> 01:12:37,630
+para vocês verem,
+
+1888
+01:12:38,030 --> 01:12:39,070
+esta rock-curve
+
+1889
+01:12:39,070 --> 01:12:40,510
+foi tirada da internet,
+
+1890
+01:12:40,510 --> 01:12:41,550
+ou fui ao que eu mandei,
+
+1891
+01:12:41,550 --> 01:12:42,590
+desenhar em Python,
+
+1892
+01:12:43,150 --> 01:12:44,590
+relativa um problema de AMI,
+
+1893
+01:12:45,710 --> 01:12:46,830
+mas esta rock-curve
+
+1894
+01:12:46,830 --> 01:12:48,670
+é ilustrativa da realidade,
+
+1895
+01:12:48,670 --> 01:12:49,950
+quando vocês acertam
+
+1896
+01:12:49,950 --> 01:12:51,150
+a metade da representação
+
+1897
+01:12:51,150 --> 01:12:52,430
+do false positive rate
+
+1898
+01:12:52,430 --> 01:12:53,550
+contra o positive rate,
+
+1899
+01:12:53,550 --> 01:12:54,590
+e temos que ser
+
+1900
+01:12:54,590 --> 01:12:55,870
+exatos a fazer isto.
+
+1901
+01:12:57,150 --> 01:12:58,430
+Se ficarmos em cima
+
+1902
+01:12:58,430 --> 01:12:59,630
+deste traçejado,
+
+1903
+01:12:59,630 --> 01:13:01,070
+desta diagonal,
+
+1904
+01:13:01,710 --> 01:13:02,750
+é o random guessing,
+
+1905
+01:13:02,750 --> 01:13:03,230
+ou seja,
+
+1906
+01:13:03,230 --> 01:13:04,190
+é a mesma coisa que a virar
+
+1907
+01:13:04,190 --> 01:13:05,070
+uma número a areia,
+
+1908
+01:13:05,070 --> 01:13:06,350
+ou diz que é uma coisa ou outra,
+
+1909
+01:13:06,830 --> 01:13:07,710
+aleatoriamente,
+
+1910
+01:13:07,710 --> 01:13:09,230
+e à medida que o classificador,
+
+1911
+01:13:09,230 --> 01:13:10,430
+que a curva do classificador,
+
+1912
+01:13:10,430 --> 01:13:11,630
+se aproxima,
+
+1913
+01:13:11,630 --> 01:13:12,910
+até chegar a uma vertical,
+
+1914
+01:13:12,910 --> 01:13:14,030
+aqui que vai de zero a um,
+
+1915
+01:13:14,030 --> 01:13:15,390
+e outra que vai de um a zero,
+
+1916
+01:13:15,950 --> 01:13:16,510
+ali,
+
+1917
+01:13:16,510 --> 01:13:18,590
+aí é uma rock-curva,
+
+1918
+01:13:18,590 --> 01:13:19,630
+perfeita,
+
+1919
+01:13:19,630 --> 01:13:20,990
+e que vai ter uma área
+
+1920
+01:13:20,990 --> 01:13:22,030
+sob a curva de um,
+
+1921
+01:13:22,030 --> 01:13:23,630
+porque isto é um por um,
+
+1922
+01:13:23,630 --> 01:13:24,990
+a integração de um,
+
+1923
+01:13:25,710 --> 01:13:26,750
+a dividir por um,
+
+1924
+01:13:27,710 --> 01:13:28,750
+da um,
+
+1925
+01:13:28,750 --> 01:13:30,670
+e depois a dividir por este,
+
+1926
+01:13:30,670 --> 01:13:31,230
+pronto,
+
+1927
+01:13:31,230 --> 01:13:31,790
+mas dá,
+
+1928
+01:13:31,790 --> 01:13:32,910
+dá, aliás,
+
+1929
+01:13:32,910 --> 01:13:33,870
+a cobanharia da um,
+
+1930
+01:13:33,870 --> 01:13:34,670
+nem a dividir,
+
+1931
+01:13:35,230 --> 01:13:36,430
+isto conta tudo.
+
+1932
+01:13:36,430 --> 01:13:36,990
+Já agora,
+
+1933
+01:13:36,990 --> 01:13:37,950
+um classificador,
+
+1934
+01:13:37,950 --> 01:13:38,510
+que está aqui,
+
+1935
+01:13:38,510 --> 01:13:39,310
+e um classificador
+
+1936
+01:13:39,310 --> 01:13:40,190
+de que veste exatamente
+
+1937
+01:13:40,190 --> 01:13:41,390
+o oposto aqui,
+
+1938
+01:13:41,390 --> 01:13:42,110
+ou este,
+
+1939
+01:13:42,110 --> 01:13:42,910
+viater este,
+
+1940
+01:13:43,470 --> 01:13:44,590
+ele tem exatamente
+
+1941
+01:13:44,590 --> 01:13:45,310
+a mesma,
+
+1942
+01:13:45,310 --> 01:13:46,270
+o mesmo índice,
+
+1943
+01:13:46,270 --> 01:13:46,830
+na,
+
+1944
+01:13:46,830 --> 01:13:47,870
+na,
+
+1945
+01:13:47,870 --> 01:13:49,470
+a mesma capacidade predictiva,
+
+1946
+01:13:49,950 --> 01:13:50,750
+a diferença é que,
+
+1947
+01:13:50,750 --> 01:13:51,310
+neste caso,
+
+1948
+01:13:51,310 --> 01:13:53,070
+ele acerta majoritariamente,
+
+1949
+01:13:53,070 --> 01:13:54,190
+e nesta acerta ainda mais
+
+1950
+01:13:54,190 --> 01:13:55,390
+majoritariamente,
+
+1951
+01:13:55,390 --> 01:13:56,190
+e neste caso,
+
+1952
+01:13:56,190 --> 01:13:57,470
+ele falha ao contrário,
+
+1953
+01:13:57,470 --> 01:13:58,590
+quando é boi,
+
+1954
+01:13:58,590 --> 01:13:59,470
+ele diz que é vaca,
+
+1955
+01:13:59,470 --> 01:14:00,990
+quando é vaca diz que é boi.
+
+1956
+01:14:00,990 --> 01:14:01,470
+Portanto,
+
+1957
+01:14:01,470 --> 01:14:02,830
+quando se vos aparecesse,
+
+1958
+01:14:02,830 --> 01:14:03,870
+há um dia que não vai aparecer,
+
+1959
+01:14:03,870 --> 01:14:04,990
+mas há um dia que vos aparecesse
+
+1960
+01:14:04,990 --> 01:14:05,950
+uma rock-curva virada
+
+1961
+01:14:05,950 --> 01:14:06,910
+para este lado,
+
+1962
+01:14:06,910 --> 01:14:07,390
+ou seja,
+
+1963
+01:14:07,390 --> 01:14:08,750
+já sabem que o vosso
+
+1964
+01:14:08,750 --> 01:14:10,190
+classificador está conseguido
+
+1965
+01:14:10,190 --> 01:14:11,950
+discriminar as classes,
+
+1966
+01:14:11,950 --> 01:14:13,230
+só que está com problema,
+
+1967
+01:14:13,230 --> 01:14:15,230
+ele tem trocadas as labels,
+
+1968
+01:14:15,230 --> 01:14:15,870
+e está a dizer,
+
+1969
+01:14:15,870 --> 01:14:16,190
+olha,
+
+1970
+01:14:16,190 --> 01:14:17,790
+o gato é gata,
+
+1971
+01:14:17,790 --> 01:14:18,750
+e a gata é gato,
+
+1972
+01:14:18,750 --> 01:14:19,630
+e não faz sentido,
+
+1973
+01:14:19,630 --> 01:14:21,390
+ele tem que dizer a coisa certa,
+
+1974
+01:14:21,390 --> 01:14:21,870
+e portanto,
+
+1975
+01:14:21,870 --> 01:14:22,430
+muitas vezes,
+
+1976
+01:14:22,430 --> 01:14:23,070
+isto faz-se,
+
+1977
+01:14:23,070 --> 01:14:24,030
+quando era com gato
+
+1978
+01:14:24,030 --> 01:14:24,990
+e com coisas assim,
+
+1979
+01:14:24,990 --> 01:14:26,270
+isto acontecia,
+
+1980
+01:14:26,270 --> 01:14:27,230
+e depois ias a ver,
+
+1981
+01:14:27,230 --> 01:14:28,030
+que tinha sido um engano
+
+1982
+01:14:28,030 --> 01:14:28,750
+a programar,
+
+1983
+01:14:28,750 --> 01:14:29,230
+ou isto.
+
+1984
+01:14:30,110 --> 01:14:30,990
+Mais coisas,
+
+1985
+01:14:30,990 --> 01:14:31,710
+agora temos aqui
+
+1986
+01:14:31,710 --> 01:14:32,750
+uns exercícios,
+
+1987
+01:14:34,030 --> 01:14:34,910
+que eu ia parar
+
+1988
+01:14:34,910 --> 01:14:35,790
+10 minutinhos,
+
+1989
+01:14:35,790 --> 01:14:36,590
+ia-vos pedir-se
+
+1990
+01:14:36,590 --> 01:14:37,790
+se vocês pegavam nisto,
+
+1991
+01:14:38,430 --> 01:14:39,390
+e,
+
+1992
+01:14:39,390 --> 01:14:40,270
+daqui a 10 minutos,
+
+1993
+01:14:40,270 --> 01:14:40,830
+eu voltava.
+
+1994
+01:14:41,550 --> 01:14:42,030
+Pode ser?
+
+1995
+01:14:48,940 --> 01:14:49,820
+Ok.
+
+1996
+01:14:49,820 --> 01:14:50,940
+Da outra maneira,
+
+1997
+01:14:50,940 --> 01:14:51,900
+já instalaram o eca,
+
+1998
+01:14:51,900 --> 01:14:52,300
+todos?
+
+1999
+01:14:59,550 --> 01:14:59,870
+Sim.
+
+2000
+01:15:00,510 --> 01:15:01,950
+Instala em o eca,
+
+2001
+01:15:01,950 --> 01:15:02,750
+27,
+
+2002
+01:15:02,750 --> 01:15:03,550
+eu acho,
+
+2003
+01:15:03,550 --> 01:15:04,910
+35% aqui,
+
+2004
+01:15:04,910 --> 01:15:06,030
+vou só ali,
+
+2005
+01:15:06,030 --> 01:15:06,990
+ver um bocadinho de água,
+
+2006
+01:15:06,990 --> 01:15:07,950
+que estou cheio de cedo,
+
+2007
+01:15:09,230 --> 01:15:10,270
+mesmo cheio de cedo,
+
+2008
+01:15:10,270 --> 01:15:11,790
+e já volto,
+
+2009
+01:15:11,790 --> 01:15:12,110
+está bem?
+
+2010
+01:15:13,550 --> 01:15:14,430
+Já, com licença.
+
+2011
+01:20:20,940 --> 01:20:21,420
+Para viva.
+
+2012
+01:20:22,860 --> 01:20:23,740
+Se vocês querem dar uma coisa,
+
+2013
+01:20:23,740 --> 01:20:24,300
+estou aqui,
+
+2014
+01:28:18,990 --> 01:28:19,710
+queríssimos,
+
+2015
+01:28:19,710 --> 01:28:20,670
+ninguém precisa de nada,
+
+2016
+01:28:25,970 --> 01:28:26,690
+é bom sinal.
+
+2017
+01:28:34,180 --> 01:28:35,380
+São só mais 5 minutos,
+
+2018
+01:28:36,020 --> 01:28:36,580
+e depois,
+
+2019
+01:28:36,580 --> 01:28:37,780
+pedir-vos alguns de vocês
+
+2020
+01:28:37,780 --> 01:28:38,900
+para mostrar ver um bocadinho,
+
+2021
+01:28:39,860 --> 01:28:40,660
+o que fizeram,
+
+2022
+01:28:40,660 --> 01:28:41,300
+só para,
+
+2023
+01:28:41,300 --> 01:28:42,580
+e tentámos ter um bocadinho,
+
+2024
+01:28:42,580 --> 01:28:43,460
+uma discussão final.
+
+2025
+01:33:49,600 --> 01:33:50,160
+Então,
+
+2026
+01:33:50,160 --> 01:33:51,360
+que tal a experiência?
+
+2027
+01:33:52,080 --> 01:34:01,580
+Principalmente,
+
+2028
+01:34:01,580 --> 01:34:04,540
+tive a mais dificuldade
+
+2029
+01:34:05,660 --> 01:34:06,540
+em conseguir,
+
+2030
+01:34:07,820 --> 01:34:08,780
+interpretar,
+
+2031
+01:34:08,780 --> 01:34:10,220
+aquilo que estou a visualizar,
+
+2032
+01:34:11,820 --> 01:34:12,140
+quando,
+
+2033
+01:34:13,660 --> 01:34:15,020
+quando se fazem as curvas.
+
+2034
+01:34:16,700 --> 01:34:17,980
+Se quiser partilhar o eca,
+
+2035
+01:34:17,980 --> 01:34:18,540
+é que vem a Zoé,
+
+2036
+01:34:19,340 --> 01:34:19,740
+para nós,
+
+2037
+01:34:21,740 --> 01:34:22,300
+eventualmente,
+
+2038
+01:34:22,300 --> 01:34:23,340
+discutirmos um bocadinho,
+
+2039
+01:34:23,340 --> 01:34:24,140
+isso é que está à vontade.
+
+2040
+01:34:33,260 --> 01:34:34,300
+Depois, não sei,
+
+2041
+01:34:34,300 --> 01:34:35,180
+se calhar assim.
+
+2042
+01:34:37,180 --> 01:34:38,140
+Partilho-se só, Janela,
+
+2043
+01:34:38,140 --> 01:34:39,260
+para não expor tudo,
+
+2044
+01:34:39,260 --> 01:34:39,980
+né?
+
+2045
+01:34:39,980 --> 01:34:41,340
+Eu estava a ir à procura,
+
+2046
+01:34:42,300 --> 01:34:43,180
+não sei se está.
+
+2047
+01:34:44,460 --> 01:34:45,580
+Não ainda não está.
+
+2048
+01:34:45,580 --> 01:34:46,140
+É no,
+
+2049
+01:34:46,140 --> 01:34:46,780
+é o xer,
+
+2050
+01:34:48,140 --> 01:34:48,780
+e depois,
+
+2051
+01:34:48,780 --> 01:34:49,900
+tem que ir à,
+
+2052
+01:34:49,900 --> 01:34:50,380
+o window.
+
+2053
+01:34:53,600 --> 01:34:53,840
+Quer dizer,
+
+2054
+01:34:53,840 --> 01:34:54,480
+não obrigatório,
+
+2055
+01:34:54,480 --> 01:34:55,200
+eu só estou a,
+
+2056
+01:34:55,200 --> 01:34:56,240
+eu estou a esperar.
+
+2057
+01:34:56,960 --> 01:34:58,000
+Ah,
+
+2058
+01:34:58,000 --> 01:34:58,960
+ok.
+
+2059
+01:34:58,960 --> 01:34:59,680
+Acho que está.
+
+2060
+01:35:00,960 --> 01:35:01,440
+Já está,
+
+2061
+01:35:01,440 --> 01:35:02,000
+não está.
+
+2062
+01:35:03,360 --> 01:35:03,840
+Isso,
+
+2063
+01:35:03,840 --> 01:35:04,240
+por que?
+
+2064
+01:35:06,080 --> 01:35:06,560
+Pronto,
+
+2065
+01:35:06,560 --> 01:35:07,360
+a minha questão,
+
+2066
+01:35:08,240 --> 01:35:08,800
+se calhar,
+
+2067
+01:35:08,800 --> 01:35:10,640
+não é,
+
+2068
+01:35:11,520 --> 01:35:13,120
+o porquê do código de cores,
+
+2069
+01:35:13,120 --> 01:35:14,560
+mesmo na própria linha.
+
+2070
+01:35:15,360 --> 01:35:15,920
+Por exemplo,
+
+2071
+01:35:17,840 --> 01:35:19,120
+isso representa alguma coisa
+
+2072
+01:35:19,120 --> 01:35:19,840
+em específico.
+
+2073
+01:35:20,880 --> 01:35:21,200
+É,
+
+2074
+01:35:21,200 --> 01:35:22,080
+é no fundo,
+
+2075
+01:35:22,080 --> 01:35:22,960
+acho que é uma medida
+
+2076
+01:35:22,960 --> 01:35:23,600
+da cura assim,
+
+2077
+01:35:23,600 --> 01:35:25,040
+o que é que ele está a conseguir fazer?
+
+2078
+01:35:25,840 --> 01:35:26,800
+Que ele vai aqui,
+
+2079
+01:35:26,800 --> 01:35:27,680
+06,
+
+2080
+01:35:27,680 --> 01:35:28,320
+06,
+
+2081
+01:35:28,320 --> 01:35:28,800
+07.
+
+2082
+01:35:30,000 --> 01:35:30,320
+Mas,
+
+2083
+01:35:30,320 --> 01:35:30,480
+olha,
+
+2084
+01:35:30,480 --> 01:35:32,080
+mas agora vou-vos dar um exemplo,
+
+2085
+01:35:32,080 --> 01:35:32,560
+por exemplo,
+
+2086
+01:35:32,560 --> 01:35:33,200
+eu nunca,
+
+2087
+01:35:33,200 --> 01:35:34,880
+nunca fizeste a roca aqui.
+
+2088
+01:35:36,320 --> 01:35:37,360
+O que é que eu vou fazer?
+
+2089
+01:35:37,360 --> 01:35:38,720
+Eu fiz um print,
+
+2090
+01:35:38,720 --> 01:35:39,520
+da sua imagem,
+
+2091
+01:35:40,320 --> 01:35:40,640
+ok?
+
+2092
+01:35:41,520 --> 01:35:43,200
+Isso é uma coisa super importante,
+
+2093
+01:35:43,200 --> 01:35:44,240
+também de explicar,
+
+2094
+01:35:44,960 --> 01:35:47,040
+porque a pós-graduação,
+
+2095
+01:35:47,040 --> 01:35:49,040
+também serve para estas coisas.
+
+2096
+01:35:50,240 --> 01:35:51,200
+Eu fiz um print,
+
+2097
+01:35:51,200 --> 01:35:52,880
+e vou aqui um chat no geminai,
+
+2098
+01:35:52,880 --> 01:35:53,920
+que é o que eu estou a utilizar,
+
+2099
+01:35:55,120 --> 01:35:57,040
+e isso fica assim,
+
+2100
+01:35:57,040 --> 01:35:57,840
+explica-me,
+
+2101
+01:35:59,360 --> 01:35:59,680
+o,
+
+2102
+01:35:59,680 --> 01:36:00,560
+claro que eu podia ler,
+
+2103
+01:36:00,560 --> 01:36:00,880
+não é?
+
+2104
+01:36:02,640 --> 01:36:02,960
+Vou,
+
+2105
+01:36:04,800 --> 01:36:05,440
+vou,
+
+2106
+01:36:05,440 --> 01:36:06,240
+ver,
+
+2107
+01:36:06,240 --> 01:36:07,520
+vou de cores,
+
+2108
+01:36:08,800 --> 01:36:09,680
+no gráfico,
+
+2109
+01:36:12,670 --> 01:36:13,150
+pronto.
+
+2110
+01:36:16,780 --> 01:36:17,340
+Nunca era,
+
+2111
+01:36:18,060 --> 01:36:19,340
+eu estou a usar ativamente,
+
+2112
+01:36:19,340 --> 01:36:20,300
+em tuzença artificial,
+
+2113
+01:36:21,020 --> 01:36:22,140
+uma selera,
+
+2114
+01:36:22,140 --> 01:36:23,100
+e também não quero,
+
+2115
+01:36:23,100 --> 01:36:23,500
+adoro,
+
+2116
+01:36:24,140 --> 01:36:24,940
+deixar estes,
+
+2117
+01:36:24,940 --> 01:36:25,660
+estes primeiros,
+
+2118
+01:36:25,660 --> 01:36:26,860
+segundo os alunos,
+
+2119
+01:36:26,860 --> 01:36:27,660
+irem sem isto,
+
+2120
+01:36:28,620 --> 01:36:30,220
+comado no fecheiro tal,
+
+2121
+01:36:30,220 --> 01:36:32,220
+represento o valor do 3-solve,
+
+2122
+01:36:32,220 --> 01:36:33,420
+utilizado pelo modelo,
+
+2123
+01:36:33,980 --> 01:36:35,500
+para tomar as suas decisões.
+
+2124
+01:36:36,940 --> 01:36:38,940
+Poso verificar no menos o suspenso,
+
+2125
+01:36:38,940 --> 01:36:39,660
+quanto está,
+
+2126
+01:36:39,660 --> 01:36:40,940
+o color 3-solve,
+
+2127
+01:36:42,060 --> 01:36:42,380
+sei lá,
+
+2128
+01:36:42,380 --> 01:36:43,100
+no menos o suspenso,
+
+2129
+01:36:43,100 --> 01:36:44,860
+quanto do superior esquerdo,
+
+2130
+01:36:48,510 --> 01:36:49,070
+ok?
+
+2131
+01:36:49,070 --> 01:36:50,350
+O color 3-solve,
+
+2132
+01:36:53,020 --> 01:36:53,580
+muito bem.
+
+2133
+01:36:56,540 --> 01:36:57,580
+Professor, eu acho que
+
+2134
+01:36:57,580 --> 01:36:58,860
+as cores, neste caso,
+
+2135
+01:36:58,860 --> 01:36:59,980
+muito significados,
+
+2136
+01:36:59,980 --> 01:37:01,900
+simplesmente na tribulinação,
+
+2137
+01:37:01,900 --> 01:37:02,940
+na escala de cores,
+
+2138
+01:37:03,580 --> 01:37:04,380
+os resultados.
+
+2139
+01:37:07,360 --> 01:37:10,560
+Eu já vou ir na prática,
+
+2140
+01:37:10,560 --> 01:37:12,400
+cada ponte da curva do gráfico,
+
+2141
+01:37:12,400 --> 01:37:13,360
+fui uma cor específica,
+
+2142
+01:37:13,360 --> 01:37:13,840
+que indica,
+
+2143
+01:37:18,240 --> 01:37:18,480
+pois,
+
+2144
+01:37:19,360 --> 01:37:19,840
+porque é assim,
+
+2145
+01:37:21,120 --> 01:37:22,400
+quando ele está a fazer o plot
+
+2146
+01:37:22,400 --> 01:37:24,560
+da rock,
+
+2147
+01:37:25,920 --> 01:37:27,120
+cada pontinho verde,
+
+2148
+01:37:27,120 --> 01:37:28,720
+é correspondente a um 3-solve,
+
+2149
+01:37:29,360 --> 01:37:30,000
+ou seja,
+
+2150
+01:37:31,040 --> 01:37:33,360
+o 3-solve 0.067,
+
+2151
+01:37:33,360 --> 01:37:34,560
+há de corresponder
+
+2152
+01:37:35,360 --> 01:37:37,200
+ao canto superior direito,
+
+2153
+01:37:38,160 --> 01:37:39,360
+e depois ele vai andando,
+
+2154
+01:37:39,360 --> 01:37:41,440
+por aí vai-se nos tons de azul,
+
+2155
+01:37:41,440 --> 01:37:43,360
+por no gráfico que não se vê muito bem,
+
+2156
+01:37:43,360 --> 01:37:45,120
+mas aqui na escala desse,
+
+2157
+01:37:45,120 --> 01:37:47,040
+ele vai rebuzindo os tons de azul
+
+2158
+01:37:47,040 --> 01:37:48,000
+até ao 0.05,
+
+2159
+01:37:48,000 --> 01:37:48,640
+onde ele está,
+
+2160
+01:37:48,640 --> 01:37:50,080
+uma espécie de um castanho,
+
+2161
+01:37:50,080 --> 01:37:50,720
+em um verde,
+
+2162
+01:37:51,360 --> 01:37:51,840
+que é ali,
+
+2163
+01:37:51,840 --> 01:37:52,560
+mais ou menos,
+
+2164
+01:37:52,560 --> 01:37:54,640
+no canto superior esquerdo,
+
+2165
+01:37:55,200 --> 01:37:56,960
+onde ele está a fazer a transição
+
+2166
+01:37:56,960 --> 01:37:58,080
+entre o azul e o amarelo,
+
+2167
+01:37:58,720 --> 01:38:01,200
+e depois chega ao 0.099,
+
+2168
+01:38:01,200 --> 01:38:02,240
+que é quando está a cair mais.
+
+2169
+01:38:03,200 --> 01:38:03,680
+Pronto,
+
+2170
+01:38:03,680 --> 01:38:05,680
+e essencialmente nós vamos escolher
+
+2171
+01:38:05,680 --> 01:38:07,360
+os 3-solves que nos interessam mais,
+
+2172
+01:38:08,080 --> 01:38:08,800
+da decisão,
+
+2173
+01:38:08,800 --> 01:38:10,960
+que são sempre aqui no canto superior esquerdo.
+
+2174
+01:38:16,290 --> 01:38:18,770
+Mas a rock é uma medida mais global,
+
+2175
+01:38:19,330 --> 01:38:20,850
+no sentido em que nos dá para todos
+
+2176
+01:38:20,850 --> 01:38:21,730
+estes 3-solves.
+
+2177
+01:38:21,730 --> 01:38:23,650
+Se nós fizermos com o outro,
+
+2178
+01:38:23,650 --> 01:38:25,490
+nós escolhemos isso automaticamente,
+
+2179
+01:38:25,490 --> 01:38:26,850
+e o modelo de anos
+
+2180
+01:38:27,410 --> 01:38:28,210
+a cura-se,
+
+2181
+01:38:28,210 --> 01:38:28,930
+a sensibilidade,
+
+2182
+01:38:28,930 --> 01:38:29,730
+a especificidade,
+
+2183
+01:38:29,730 --> 01:38:30,530
+para o caso,
+
+2184
+01:38:30,530 --> 01:38:31,650
+em que estamos a analisar.
+
+2185
+01:38:32,130 --> 01:38:33,650
+Isso é que eu vos disse na aula passada,
+
+2186
+01:38:33,650 --> 01:38:36,450
+que a curva rock
+
+2187
+01:38:37,090 --> 01:38:38,050
+e a medida,
+
+2188
+01:38:38,050 --> 01:38:40,130
+a área sobre a curva,
+
+2189
+01:38:40,130 --> 01:38:41,570
+ou ao ser rock,
+
+2190
+01:38:41,570 --> 01:38:43,650
+são medidas mais globais
+
+2191
+01:38:43,650 --> 01:38:45,730
+que caracterizam o classificador em si.
+
+2192
+01:38:49,380 --> 01:38:50,180
+Acho que é.
+
+2193
+01:38:50,180 --> 01:38:50,900
+Ok.
+
+2194
+01:38:51,220 --> 01:38:52,180
+Então no caso,
+
+2195
+01:38:52,180 --> 01:38:52,980
+lá está,
+
+2196
+01:38:55,060 --> 01:38:57,220
+o esquema de cores não é propriamente
+
+2197
+01:38:58,100 --> 01:38:59,220
+indicativo
+
+2198
+01:38:59,220 --> 01:39:00,820
+de nada na curva.
+
+2199
+01:39:02,260 --> 01:39:03,060
+É mais...
+
+2200
+01:39:03,940 --> 01:39:05,380
+O esquema das cores,
+
+2201
+01:39:05,380 --> 01:39:06,420
+ou seja,
+
+2202
+01:39:06,420 --> 01:39:08,420
+ele tem uma capacidade de discriminar,
+
+2203
+01:39:08,420 --> 01:39:09,700
+e mediante o 3-solve,
+
+2204
+01:39:10,340 --> 01:39:12,020
+que se escolhe o valor do 3-solve,
+
+2205
+01:39:12,020 --> 01:39:14,900
+que se escolhe para a classificação,
+
+2206
+01:39:15,540 --> 01:39:16,420
+e ele determina
+
+2207
+01:39:16,420 --> 01:39:17,300
+quanto é que ele acerta
+
+2208
+01:39:17,300 --> 01:39:18,180
+e quanto é que ele falha.
+
+2209
+01:39:18,180 --> 01:39:18,660
+E tira,
+
+2210
+01:39:18,660 --> 01:39:20,420
+eu representei-se num gráfico,
+
+2211
+01:39:20,420 --> 01:39:21,220
+ou seja,
+
+2212
+01:39:21,220 --> 01:39:23,060
+para aquela capacidade produtiva,
+
+2213
+01:39:23,060 --> 01:39:23,540
+ele diz,
+
+2214
+01:39:25,220 --> 01:39:26,420
+as várias hipóteses que o tem,
+
+2215
+01:39:26,420 --> 01:39:26,980
+são estas.
+
+2216
+01:39:27,700 --> 01:39:28,180
+Repare-se,
+
+2217
+01:39:28,180 --> 01:39:29,860
+nós agora adicionamos um outro modelo,
+
+2218
+01:39:29,860 --> 01:39:31,140
+adicioná-nos outro modelo.
+
+2219
+01:39:31,700 --> 01:39:32,500
+Este modelo,
+
+2220
+01:39:32,500 --> 01:39:33,620
+imaginemos que era inferior.
+
+2221
+01:39:34,260 --> 01:39:36,500
+Ele já ia ficar mais para dentro do gráfico,
+
+2222
+01:39:36,500 --> 01:39:37,220
+abaixo deste.
+
+2223
+01:39:37,940 --> 01:39:38,820
+E nós logo,
+
+2224
+01:39:38,900 --> 01:39:40,180
+eu, quando expliquei,
+
+2225
+01:39:40,180 --> 01:39:42,340
+eu mostrei-vos um gráfico que tinha várias curvas.
+
+2226
+01:39:42,340 --> 01:39:44,100
+Quanto mais próximo do centro,
+
+2227
+01:39:44,100 --> 01:39:45,380
+pior é o modelo.
+
+2228
+01:39:45,380 --> 01:39:46,500
+Quanto mais incostável,
+
+2229
+01:39:46,500 --> 01:39:48,100
+canto superior esquerdo,
+
+2230
+01:39:48,100 --> 01:39:49,300
+melhor é o modelo.
+
+2231
+01:39:49,300 --> 01:39:50,340
+Tanto, este modelo,
+
+2232
+01:39:50,340 --> 01:39:51,060
+olha-se para aqui,
+
+2233
+01:39:51,060 --> 01:39:52,740
+e vê-se logo que é um ótimo modelo.
+
+2234
+01:39:54,180 --> 01:39:55,380
+Reparem o,
+
+2235
+01:39:56,740 --> 01:39:57,620
+no canto superior esquerdo,
+
+2236
+01:39:57,620 --> 01:39:58,420
+dizem, plot,
+
+2237
+01:39:58,420 --> 01:39:59,620
+área and rock,
+
+2238
+01:39:59,620 --> 01:40:00,660
+que é o alça rock,
+
+2239
+01:40:01,860 --> 01:40:03,060
+já é de 99,
+
+2240
+01:40:03,060 --> 01:40:04,100
+qualquer coisa.
+
+2241
+01:40:04,100 --> 01:40:04,820
+Quanto este,
+
+2242
+01:40:04,820 --> 01:40:05,860
+acho que é 99, né?
+
+2243
+01:40:05,860 --> 01:40:06,420
+Sim.
+
+2244
+01:40:06,420 --> 01:40:08,180
+É extremamente alto,
+
+2245
+01:40:08,180 --> 01:40:09,060
+e nós vemos,
+
+2246
+01:40:09,060 --> 01:40:09,940
+mas basicamente,
+
+2247
+01:40:09,940 --> 01:40:11,700
+a área sobre a curva é quase tudo.
+
+2248
+01:40:11,700 --> 01:40:12,500
+Ele está a perder.
+
+2249
+01:40:12,500 --> 01:40:13,540
+Ou seja,
+
+2250
+01:40:13,540 --> 01:40:15,380
+independentemente do qual seja o 3-sol,
+
+2251
+01:40:15,380 --> 01:40:18,020
+do modelo tem uma grande capacidade discriminativa.
+
+2252
+01:40:18,020 --> 01:40:18,900
+Um modelo melhor,
+
+2253
+01:40:18,900 --> 01:40:20,100
+bastava que as curvas
+
+2254
+01:40:20,100 --> 01:40:22,260
+evolassem estas retas
+
+2255
+01:40:22,260 --> 01:40:23,780
+que o modelo apresenta,
+
+2256
+01:40:23,780 --> 01:40:24,580
+e em algum sítio,
+
+2257
+01:40:24,580 --> 01:40:25,860
+ele andasse mais um bocadinho,
+
+2258
+01:40:25,860 --> 01:40:28,020
+e ele já era melhor globalmente.
+
+2259
+01:40:28,020 --> 01:40:29,140
+Pronto, isto antigamente
+
+2260
+01:40:29,140 --> 01:40:30,580
+era muito utilizado,
+
+2261
+01:40:30,580 --> 01:40:32,580
+porque nós queríamos demonstrar,
+
+2262
+01:40:32,580 --> 01:40:34,180
+pois eram os conjuntos de features
+
+2263
+01:40:34,180 --> 01:40:36,020
+e modelos que eram melhores
+
+2264
+01:40:36,020 --> 01:40:38,020
+para determinados problemas.
+
+2265
+01:40:38,020 --> 01:40:40,660
+Isto era 2012,
+
+2266
+01:40:40,660 --> 01:40:42,420
+ABS-8, por aí,
+
+2267
+01:40:42,420 --> 01:40:43,940
+era o grande desafio.
+
+2268
+01:40:43,940 --> 01:40:44,740
+E então,
+
+2269
+01:40:44,740 --> 01:40:46,580
+a alça permitimos isso,
+
+2270
+01:40:46,580 --> 01:40:48,900
+demonstrar que o modelo era superior
+
+2271
+01:40:48,900 --> 01:40:50,820
+para n variáveis.
+
+2272
+01:40:50,820 --> 01:40:52,340
+E isto estava a parte de percentíficos,
+
+2273
+01:40:52,340 --> 01:40:54,740
+a tensão na altura e continuadade,
+
+2274
+01:40:54,740 --> 01:40:57,540
+mas atualmente o paradigma mudou bastante.
+
+2275
+01:40:58,740 --> 01:41:00,740
+E a coisa que me está mais impressionado
+
+2276
+01:41:00,740 --> 01:41:02,340
+é a capacidade de raciocínio,
+
+2277
+01:41:02,340 --> 01:41:04,340
+que é um raciocínio falsificado,
+
+2278
+01:41:04,340 --> 01:41:05,780
+que os LLMs têm
+
+2279
+01:41:05,780 --> 01:41:06,660
+azul reasoning,
+
+2280
+01:41:06,660 --> 01:41:07,860
+é uma cena incrível,
+
+2281
+01:41:07,860 --> 01:41:10,100
+e que dá resultado absolutamente
+
+2282
+01:41:10,100 --> 01:41:12,580
+brotais.
+
+2283
+01:41:12,580 --> 01:41:14,580
+Vou vos contar aqui uma coisa.
+
+2284
+01:41:14,580 --> 01:41:15,460
+Eu estive,
+
+2285
+01:41:15,460 --> 01:41:17,460
+a semana passada e há 15 dias,
+
+2286
+01:41:17,460 --> 01:41:19,860
+um júri de seriação
+
+2287
+01:41:19,860 --> 01:41:21,860
+de alunos para um curso
+
+2288
+01:41:21,860 --> 01:41:23,860
+do Politécnico do Porto.
+
+2289
+01:41:23,860 --> 01:41:25,860
+Eram muitos candidatos,
+
+2290
+01:41:25,860 --> 01:41:27,860
+senti tal candidatos e fiz aquilo à mão.
+
+2291
+01:41:27,860 --> 01:41:29,860
+E depois,
+
+2292
+01:41:29,860 --> 01:41:31,860
+pus o Geminai a fase de seriação.
+
+2293
+01:41:31,860 --> 01:41:33,860
+Criei um chato próprio,
+
+2294
+01:41:33,860 --> 01:41:35,860
+customizei todo,
+
+2295
+01:41:35,860 --> 01:41:37,860
+com esses racos dados,
+
+2296
+01:41:37,860 --> 01:41:39,860
+que é, essencialmente, a nexar os cheiros,
+
+2297
+01:41:39,860 --> 01:41:41,860
+e a certa altura comecei a
+
+2298
+01:41:41,860 --> 01:41:43,860
+estruturar em um conjunto de coeris
+
+2299
+01:41:43,860 --> 01:41:45,860
+e em um conjunto de instruções aqui.
+
+2300
+01:41:45,860 --> 01:41:47,860
+É impressionante o que aquilo faz.
+
+2301
+01:41:47,860 --> 01:41:49,860
+Tenho uma exatidão brutal.
+
+2302
+01:41:49,860 --> 01:41:51,860
+É preciso ter cuidado,
+
+2303
+01:41:51,860 --> 01:41:53,860
+mas está super, e é o reasoning,
+
+2304
+01:41:53,860 --> 01:41:55,860
+o nível de complexidade
+
+2305
+01:41:55,860 --> 01:41:57,860
+para os assassinos que eu lhes via,
+
+2306
+01:41:57,860 --> 01:41:59,860
+na análise de documentação,
+
+2307
+01:41:59,860 --> 01:42:01,860
+na análise crítica,
+
+2308
+01:42:01,860 --> 01:42:03,860
+daquilo na produção,
+
+2309
+01:42:03,860 --> 01:42:05,860
+testes patas, coisas assim,
+
+2310
+01:42:05,860 --> 01:42:07,860
+é impressionante.
+
+2311
+01:42:07,860 --> 01:42:09,860
+Eu fiz uma parte
+
+2312
+01:42:09,860 --> 01:42:11,860
+dos senti tal candidatos,
+
+2313
+01:42:11,860 --> 01:42:13,860
+deve ter feito para aí uns 30,
+
+2314
+01:42:13,860 --> 01:42:15,860
+30 a 35,
+
+2315
+01:42:15,860 --> 01:42:17,860
+por lá.
+
+2316
+01:42:17,860 --> 01:42:19,860
+Eu vou vos dizer, os últimos 3 ou 4,
+
+2317
+01:42:19,860 --> 01:42:21,860
+eu já se olhei posse
+
+2318
+01:42:21,860 --> 01:42:23,860
+e que não devia ter feito,
+
+2319
+01:42:23,860 --> 01:42:25,860
+os últimos 3 ou 4 que eram candidatos
+
+2320
+01:42:25,860 --> 01:42:27,860
+que estavam rejeitados à partida.
+
+2321
+01:42:27,860 --> 01:42:29,860
+Estavam rejeitados
+
+2322
+01:42:29,860 --> 01:42:31,860
+sem nenhuma margem, porque faltava documentação.
+
+2323
+01:42:31,860 --> 01:42:33,860
+Eu já deixei o texto estar até aí,
+
+2324
+01:42:33,860 --> 01:42:35,860
+como é que estava,
+
+2325
+01:42:35,860 --> 01:42:37,860
+porque eles obviamente estavam rejeitados.
+
+2326
+01:42:37,860 --> 01:42:39,860
+O único erro que eu podia cometer
+
+2327
+01:42:39,860 --> 01:42:41,860
+era se o modelo se enganasse,
+
+2328
+01:42:41,860 --> 01:42:43,860
+eu mandava um texto que não era 100%
+
+2329
+01:42:43,860 --> 01:42:45,860
+do que eu estava ao caso dele,
+
+2330
+01:42:45,860 --> 01:42:47,860
+mas aquilo era tão certinho
+
+2331
+01:42:47,860 --> 01:42:49,860
+que os últimos 2 ou 3,
+
+2332
+01:42:49,860 --> 01:42:51,860
+eu disse, oh, vai o texto estar.
+
+2333
+01:42:51,860 --> 01:42:56,290
+É importante.
+
+2334
+01:42:56,290 --> 01:42:58,290
+Está super interessante isto.
+
+2335
+01:42:58,290 --> 01:43:00,290
+Mais coisas, já falamos, já vimos aqui a Curva Rock,
+
+2336
+01:43:00,290 --> 01:43:02,290
+a outra perspectiva que alguém tinha gostado
+
+2337
+01:43:02,290 --> 01:43:05,570
+de partilhar ou não.
+
+2338
+01:43:05,570 --> 01:43:07,570
+O Verde também nos vou satiar, olhem.
+
+2339
+01:43:07,570 --> 01:43:09,570
+Esta aula 2 foi muito isto,
+
+2340
+01:43:09,570 --> 01:43:11,570
+foi aproveitar uma hora
+
+2341
+01:43:11,570 --> 01:43:13,570
+que eu acelaria na semana passada
+
+2342
+01:43:13,570 --> 01:43:15,570
+e tinha a hora disponível.
+
+2343
+01:43:15,570 --> 01:43:17,570
+O ECA não era nada que estava previsto nós falarmos,
+
+2344
+01:43:17,570 --> 01:43:19,570
+mas eu queria, obviamente,
+
+2345
+01:43:19,570 --> 01:43:21,570
+não nos ia dispensar a aula
+
+2346
+01:43:21,570 --> 01:43:23,570
+e íamos aproveitar a aula, né?
+
+2347
+01:43:23,570 --> 01:43:25,570
+E portanto, optei por isto.
+
+2348
+01:43:25,570 --> 01:43:27,570
+Espero que tenham gostado.
+
+2349
+01:43:27,570 --> 01:43:29,570
+O ECA é uma ferramenta
+
+2350
+01:43:29,570 --> 01:43:31,570
+super interessante.
+
+2351
+01:43:31,570 --> 01:43:33,570
+As pessoas que também são boas,
+
+2352
+01:43:33,570 --> 01:43:35,570
+se quiserem explorar,
+
+2353
+01:43:35,570 --> 01:43:37,570
+se tiverem alguma dúvida no futuro,
+
+2354
+01:43:37,570 --> 01:43:39,570
+podem mandar um e-mail
+
+2355
+01:43:39,570 --> 01:43:41,570
+e eu dou-vos mais informação,
+
+2356
+01:43:41,570 --> 01:43:43,570
+embora vocês encontram muito,
+
+2357
+01:43:43,570 --> 01:43:45,570
+mas há alguma informação
+
+2358
+01:43:45,570 --> 01:43:47,570
+que precisem ou alguma pequena dúvida
+
+2359
+01:43:47,570 --> 01:43:49,570
+que tenham, se eu souber responder
+
+2360
+01:43:49,570 --> 01:43:51,570
+dos ajudos.
+
