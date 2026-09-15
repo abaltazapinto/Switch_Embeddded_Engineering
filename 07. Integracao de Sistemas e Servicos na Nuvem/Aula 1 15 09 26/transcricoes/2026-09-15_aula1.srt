@@ -1,0 +1,6948 @@
+1
+00:00:00,000 --> 00:00:09,040
+ou a capacidade necessária, porque o equipamento era vosso, logo, vocês tinham que ter logo
+
+2
+00:00:09,040 --> 00:00:19,200
+toda a capacidade necessária para o, desculpem lá, está uma que faltar a palavra, mas para
+
+3
+00:00:19,200 --> 00:00:27,600
+a solicitação que previam, certo? Por exemplo, se vocês tivessem a espera de ter 500 pedidos
+
+4
+00:00:27,600 --> 00:00:35,040
+por minuto, vocês iam ter de projetar o equipamento para suportar, pelo menos, esses 500 pedidos
+
+5
+00:00:35,040 --> 00:00:42,560
+por minuto. Obviamente que tinham que projetar para mais, porque não iam comprar para 500
+
+6
+00:00:42,560 --> 00:00:48,960
+pedidos por minuto e daqui a quatro dias ou duas semanas já estavam em 1500 pedidos por
+
+7
+00:00:48,960 --> 00:00:57,320
+segundo, por minuto, certo? Portanto, tinha sempre que sobredimensionar quando estávamos
+
+8
+00:00:57,320 --> 00:01:08,960
+a projetar a compra, ok? E depois, ainda possível, havia aqui um custo operacional muito elevado.
+
+9
+00:01:08,960 --> 00:01:16,720
+Por exemplo, se vocês necessitassem de evoluir, não é uma coisa que vocês conseguissem
+
+10
+00:01:16,720 --> 00:01:24,080
+fazer de um momento para o outro, ou seja, demoravam sempre tempo a projetar a próxima compra, a comprar
+
+11
+00:01:24,080 --> 00:01:35,480
+e até a obter financiamento. Era uma responsabilidade muito grande que caía em cima da empresa,
+
+12
+00:01:35,480 --> 00:01:40,800
+ter o controle total. Por um lado, era bom porque tinham o controle total, por outro lado,
+
+13
+00:01:40,800 --> 00:01:47,120
+era mau porque tinham todos esses custos associados, quer logo a cabeça para a compra,
+
+14
+00:01:47,120 --> 00:02:01,520
+quer para depois manter e evoluir, ok? O que é que aconteceu? O que aconteceu é que apareceram
+
+15
+00:02:01,520 --> 00:02:10,240
+empresas que alugavam equipamentos. Não é que isso fosse uma novidade, porque já nos anos
+
+16
+00:02:10,240 --> 00:02:20,000
+1960 se alugava tempo de mainframe, ok? Quem tinha mainframes e quando os mainframes custavam
+
+17
+00:02:20,000 --> 00:02:27,560
+bastante dinheiro, se calhar o equivalente agora a milhões de euros, quem tinha o mainframe
+
+18
+00:02:27,560 --> 00:02:35,760
+alugava tempo de mainframe. Portanto, essa história da alugar não é novidade, mas era possível
+
+19
+00:02:35,760 --> 00:02:43,680
+uma empresa, por exemplo, se quisesse ter presença na net, em vez de estar a comprar um servidor web,
+
+20
+00:02:43,680 --> 00:02:53,440
+um servidor para ser um servidor web, poderia dirigir-se a uma empresa e alugar uma máquina
+
+21
+00:02:53,440 --> 00:03:00,160
+para ter presença na net, ok? Também podia alugar outra máquina para ter, por exemplo,
+
+22
+00:03:00,160 --> 00:03:10,800
+o serviço de base de dados. Não precisava de ter em casa. As empresas, normalmente, essas empresas
+
+23
+00:03:10,800 --> 00:03:19,320
+que foram seiam, tinham bastante capacidade de computação, portanto, tinham bastantes
+
+24
+00:03:19,320 --> 00:03:35,220
+máquinas num centro de dados e aquilo que eles faziam era um computador, por exemplo,
+
+25
+00:03:35,220 --> 00:03:42,820
+um computador dos vários que tinham um servidor, era dividido em várias máquinas virtuales e
+
+26
+00:03:42,820 --> 00:03:51,980
+eu, se quisesse, por exemplo, alugar uma máquina Windows, aquilo que eu recebia era na realidade
+
+27
+00:03:51,980 --> 00:04:01,660
+uma máquina virtual a correr o Windows, ok? Essa máquina virtual era uma em várias
+
+28
+00:04:01,660 --> 00:04:14,130
+máquinas que estava a correr sobre um computador, um único computador físico, faz sentido? Isso ainda
+
+29
+00:04:14,130 --> 00:04:22,610
+existe. Vocês ainda podem alugar máquinas e, basicamente, quando vocês iam alugar uma máquina,
+
+30
+00:04:22,610 --> 00:04:31,050
+vocês diziam qual era a capacidade de processamento que criam, qual era a quantidade de memória que criam,
+
+31
+00:04:31,050 --> 00:04:38,770
+qual era a quantidade de armazenamento que criam e aquilo para vocês, muitas vezes, podiam escolher,
+
+32
+00:04:38,770 --> 00:04:45,570
+outras vezes podiam escolher um conjunto de configurações já predeterminadas e pronto,
+
+33
+00:04:45,570 --> 00:04:53,090
+depois pagavam o preço ou uma renda mensal ou uma renda semestral ou anual e pronto,
+
+34
+00:04:53,090 --> 00:04:58,130
+tinham aquela máquina, era como se tivesse um computador, mas na realidade era uma máquina virtual,
+
+35
+00:04:58,130 --> 00:05:06,610
+ok? Estas empresas ganhavam dinheiro a alugar várias máquinas virtuais a vários clientes,
+
+36
+00:05:06,610 --> 00:05:17,730
+ok? Então, já neste modelo de negócio havia a utilização de máquinas virtuais sobre máquinas
+
+37
+00:05:17,730 --> 00:05:25,930
+físicas, tá bom? As máquinas virtuais tinham uma vantagem, elas corriam, podemos ter, por
+
+38
+00:05:25,930 --> 00:05:32,090
+exemplo, um computador com 10 máquinas virtuais, mas cada uma delas estava isolada de todas as outras,
+
+39
+00:05:32,090 --> 00:05:37,650
+portanto, não havia interferência entre as máquinas virtuais. Uma máquina virtual desconhecia
+
+40
+00:05:37,650 --> 00:05:48,920
+que havia 9 outras máquinas a paraatilhar os mesmos recursos, certo? Por fim, isto foi evoluindo para
+
+41
+00:05:48,920 --> 00:06:02,000
+o modelo de cloud, ok? O modelo de cloud é algo parecido com o alugar de um servidor, uma máquina
+
+42
+00:06:02,000 --> 00:06:14,400
+virtual, só que tomou estereotes. Por quê? Porque, primeiro, nós podemos também contratar uma capacidade
+
+43
+00:06:14,400 --> 00:06:25,520
+de processamento, uma capacidade de armazenamento e uma capacidade de rede, ok? Mas, se nós precisarmos
+
+44
+00:06:25,520 --> 00:06:34,200
+de aumentar essa capacidade, pontualmente, a infraestrutura está montada para permitir esse
+
+45
+00:06:34,200 --> 00:06:44,760
+celular de capacidade. Até, podemos também precisar, imaginem, de, durante algum tempo, servir
+
+46
+00:06:44,760 --> 00:06:51,360
+também clientes que estão em outra zona geográfica, em outra região geográfica. E, em vez de estarmos
+
+47
+00:06:51,360 --> 00:07:04,160
+a transferir dados entre grandes distâncias, mais vale replicar a nossa máquina num centro
+
+48
+00:07:04,200 --> 00:07:10,080
+de dados que está mais próximo daqueles clientes. Imaginem que, por exemplo, os luxamburgueses
+
+49
+00:07:10,080 --> 00:07:15,680
+descobriram o meu negócio de sapatos. E ali, por a altura de Natal, eles estão feitos de oitos a
+
+50
+00:07:15,680 --> 00:07:25,680
+comprarmos sapatos, ok? Pá, em vez de eu estarem a ligarem-se à minha imagem que está assediada
+
+51
+00:07:25,680 --> 00:07:32,200
+a aluguros em Portugal, eu posso replicar a minha loja temporariamente num centro de
+
+52
+00:07:32,200 --> 00:07:38,160
+dados, estar no luxamburo e, com isso, o tráfego não precisa de correr tão grandes distâncias,
+
+53
+00:07:38,160 --> 00:07:51,690
+certo? Ou seja, também permite migrar ou escalar geográficamente. Também, a Cloud oferece
+
+54
+00:07:51,690 --> 00:08:01,930
+serviços que facilitam, para além destes escalar e migrar automáticos, também tem serviços
+
+55
+00:08:01,930 --> 00:08:15,930
+que também tem facilitar a gestão dos nossos recursos, sem termos que ter alguém que é
+
+56
+00:08:15,930 --> 00:08:31,850
+especialista em administração. Por exemplo, se vocês forem a Alazur ou a Abolas, a AWS,
+
+57
+00:08:31,850 --> 00:08:38,850
+até me dava a falhar o próprio nome da Amazon, eu queria dizer da Amazon, o que é que acontece?
+
+58
+00:08:38,850 --> 00:08:45,850
+E eles têm a infraestrutura montada com bastantes aplicações, o que é que eu estou a partilhar,
+
+59
+00:08:45,850 --> 00:08:53,850
+não estou a partilhar nada, com aplicações que facilitam a gestão pela parte dos clientes,
+
+60
+00:08:53,850 --> 00:09:00,850
+ok? Obviamente que não vai ser alguém que nunca mexeu num computador que vai fazer
+
+61
+00:09:00,850 --> 00:09:08,850
+administração da Cloud, mas facilita em muito a gestão daqueles recursos que nós estamos
+
+62
+00:09:08,850 --> 00:09:16,850
+a alugar ao fornecedor, está bem? Outra coisa também, quem os fornecedores de Cloud
+
+63
+00:09:16,850 --> 00:09:24,850
+têm os seus dados, os seus centros de dados, com ligações de rede muito rápidas
+
+64
+00:09:25,850 --> 00:09:41,540
+e também elas conseguem fazer ali uma gestão muito dinâmica dos recursos que são utilizados
+
+65
+00:09:41,540 --> 00:09:46,540
+pelos seus vários clientes. Basicamente, se todos os clientes de repente precisarem
+
+66
+00:09:46,540 --> 00:09:53,540
+de mais capacidade, aí não há milagres, mas o que pode acontecer é que há clientes
+
+67
+00:09:53,540 --> 00:09:58,540
+que pontualmente precisam de mais recursos e depois deixam de precisar de tantos esses recursos,
+
+68
+00:09:58,540 --> 00:10:06,540
+entretanto outro cliente pode precisar de mais recursos e há ali uma gestão muito dinâmica
+
+69
+00:10:06,540 --> 00:10:15,540
+de toda a capacidade instalada entre os vários clientes, ok? E a Cloud é caracterizada
+
+70
+00:10:15,540 --> 00:10:25,540
+por também fazer essa gestão de forma automática, ok? A Cloud foi uma plataforma,
+
+71
+00:10:25,540 --> 00:10:33,540
+uma plataforma que tem um conjunto de serviços que foram sendo construídos de forma a permitir
+
+72
+00:10:33,540 --> 00:10:38,540
+um comportamento muito dinâmico e de forma automática, sem ter que ter lá alguém que às
+
+73
+00:10:38,540 --> 00:10:47,540
+duas da manhã receba uma mensagem e vai lá para o computador ligar-se ao servidor e dizer
+
+74
+00:10:47,540 --> 00:10:56,540
+que, afinal, tem que dar mais capacidade a uma máquina virtual do que a outra, ok?
+
+75
+00:10:56,540 --> 00:11:02,540
+Seu ver dúvidas podem colocá-las. Já sabem, não há novidade nenhuma, vocês sempre foram
+
+76
+00:11:02,540 --> 00:11:11,540
+bons a colocar dúvidas, certo? Pronto. O modelo de serviço da Cloud temos o infrastructure
+
+77
+00:11:11,540 --> 00:11:20,540
+as a service em que a infraestrutura é disponibilizada aos clientes já como um
+
+78
+00:11:20,540 --> 00:11:33,540
+serviço. Portanto, eu posso pedir capacidades informáticas e essa infraestrutura é alugada
+
+79
+00:11:33,540 --> 00:11:40,540
+como um serviço. Eu não tenho que estar a comprar equipamentos, eu não tenho que estar a pensar
+
+80
+00:11:40,540 --> 00:11:49,540
+em equipamentos com capacidades e com características que tenho de adquirir, ok?
+
+81
+00:11:49,540 --> 00:11:59,540
+Também tem platform as a service em que existe aqui uma gestão dos ambientes de
+
+82
+00:11:59,540 --> 00:12:07,540
+execução para quem vai desenvolver aplicações, ok? Portanto, não é só o parque informático,
+
+83
+00:12:07,540 --> 00:12:15,540
+existe também serviços que já são disponíveis para quem vai desenvolver
+
+84
+00:12:15,540 --> 00:12:23,540
+software para um cliente poder já utilizar esses serviços, ok? Portanto, eles também já fornecem
+
+85
+00:12:23,540 --> 00:12:40,940
+muita coisa. Já agora, já aqui alguém usou, o programou para o AWS ou o Azure, sim, é
+
+86
+00:12:40,940 --> 00:12:48,940
+verdade que eu estou a dizer, não é? Ou seja, eles já têm muita coisa feita que pode ser
+
+87
+00:12:48,940 --> 00:12:58,670
+fácilmente, que pode ser utilizada na construção das nossas aplicações. E por fim,
+
+88
+00:12:58,670 --> 00:13:04,670
+também tem software as a service em que existe software que já está disponibilizado
+
+89
+00:13:04,670 --> 00:13:21,380
+e nós também podemos pagar para o usar, ok? Tipo de deployment, não é instalação,
+
+90
+00:13:21,380 --> 00:13:31,380
+é mais implantação. Opa, aquela que nós conhecemos melhor porque é aquela que
+
+91
+00:13:31,380 --> 00:13:39,380
+existe, há mais marketing, não é? É a clave pública. A clave pública não é
+
+92
+00:13:39,380 --> 00:13:46,380
+pronunciada pelo Estado, também poderia ser, mas é uma clave que pertence a uma entidade,
+
+93
+00:13:46,380 --> 00:13:57,380
+a Amazon, Google, Microsoft, são os mais conhecidos, ok? E nós podemos usar esses
+
+94
+00:13:57,380 --> 00:14:06,380
+recursos, obviamente, comprar ou alugar esses recursos. Na realidade, nós somos
+
+95
+00:14:06,380 --> 00:14:14,380
+locatários, nós não temos propriedade de nada, ok? Simplesmente pagamos para usar,
+
+96
+00:14:14,380 --> 00:14:23,380
+colocamos lá o nosso software, ok? Podemos contratar políticas de utilização dos
+
+97
+00:14:23,380 --> 00:14:30,380
+recursos e pagamos de acordo com essa política que é contratada, mas nós não somos donos de
+
+98
+00:14:30,380 --> 00:14:39,380
+nenhuma instalação, nós simplesmente alugamos para usar. Do outro lado, temos a clave privada.
+
+99
+00:14:39,380 --> 00:14:54,340
+A clave privada é aquela em que eu sou o dono do centro de dados, ok? Portanto,
+
+100
+00:14:55,340 --> 00:15:01,340
+o mesmo que os meus servidores da antigamente, mas para além dos meus servidores da
+
+101
+00:15:01,340 --> 00:15:07,340
+antigamente, eu já tenho lá toda a maquinaria, quando eu digo maquinaria, queria dizer os
+
+102
+00:15:07,340 --> 00:15:15,340
+serviços montados para, por exemplo, poder fazer a gestão de carga, se é necessário
+
+103
+00:15:15,340 --> 00:15:22,340
+aumentar o número de instâncias de um determinado serviço, por exemplo, porque
+
+104
+00:15:22,340 --> 00:15:27,340
+chegamos à conclusão que tínhamos três imagens deste serviço, mas estas três imagens
+
+105
+00:15:27,340 --> 00:15:33,340
+neste momento não são suficientes, porque há pedidos que já estão a demorar 20 segundos
+
+106
+00:15:33,340 --> 00:15:38,340
+a serem atendidos, então é necessário replicar esse serviço em mais computadores
+
+107
+00:15:38,340 --> 00:15:49,340
+para conseguir dar resposta aos pedidos que neste momento estão a cair, ok?
+
+108
+00:15:49,340 --> 00:15:59,540
+E depois também existe o modelo híbrido, em que, em parte, eu tenho a minha clave privada
+
+109
+00:15:59,540 --> 00:16:07,540
+e, na outra parte, eu contrato a clave pública, ok?
+
+110
+00:16:07,540 --> 00:16:19,660
+Ah, deixe-me cá ver só o próximo slide, ok? Ah, pontos fortes e pontos fracos
+
+111
+00:16:19,660 --> 00:16:26,660
+de uma destas abordagens. Aí, brinda, tenta conciliar os pontos fortes
+
+112
+00:16:26,660 --> 00:16:35,660
+mitigando os pontos fracos na clave pública. Temos uma vantagem que é óbvia, que é
+
+113
+00:16:35,660 --> 00:16:40,660
+eu não tenho de comprar nada à cabeça, não tenho de estar a comprar um parque informático
+
+114
+00:16:40,660 --> 00:16:46,660
+e comunicações à cabeça, portanto, populou esse investimento inicial
+
+115
+00:16:46,660 --> 00:16:56,660
+e depois também, eu não tenho de ter alguém que esteja permanentemente de...
+
+116
+00:16:56,660 --> 00:17:08,890
+Não dá para faltar a palavra, não é de plantão, mas de prevenção, prevenção.
+
+117
+00:17:08,890 --> 00:17:15,890
+Ou seja, se houver uma máquina que avaria, o problema não é meu
+
+118
+00:17:15,890 --> 00:17:19,890
+e eu nem sequer sei que houver esse problema, ok?
+
+119
+00:17:19,890 --> 00:17:26,890
+Os gajos da Amazon ou da Google, eles que se encarreguem de tirar essa máquina de
+
+120
+00:17:26,890 --> 00:17:29,890
+serviço e substituí-la por outro, ok?
+
+121
+00:17:29,890 --> 00:17:33,890
+E ainda por cima, a Cloud está montada para fazer isto automaticamente.
+
+122
+00:17:33,890 --> 00:17:38,890
+Só houver uma máquina que avaria, rapidamente replica-se o que estava
+
+123
+00:17:38,890 --> 00:17:43,890
+ocorrendo nessa máquina, noutra que esteja disponível e ela entrar ao serviço.
+
+124
+00:17:43,890 --> 00:17:48,890
+Portanto, o próprio serviço de Cloud também é feito para evitar muitas dessas operações
+
+125
+00:17:48,890 --> 00:17:50,890
+que antigamente eram manuais.
+
+126
+00:17:50,890 --> 00:17:59,890
+Por outro lado, nós não somos donos de nada a agora o problema da soberania, não é?
+
+127
+00:17:59,890 --> 00:18:06,890
+Porque do outro lado do Oceano temos agora um presidente que não é muito certo, não é?
+
+128
+00:18:06,890 --> 00:18:14,890
+E se nós tivermos a alugar ou a contratar, por exemplo, a Amazon, a Amazon é uma empresa americana,
+
+129
+00:18:14,890 --> 00:18:23,890
+como é que nós garantimos que aquilo que colocarmos em servidores da Amazon
+
+130
+00:18:23,890 --> 00:18:29,890
+não vão para a América e não vai haver espionagem, certo?
+
+131
+00:18:29,890 --> 00:18:34,890
+Portanto, aqui obviamente pelos contratos eles dizem que não, isso não acontece.
+
+132
+00:18:34,890 --> 00:18:42,890
+Mas será, não será, os espiões nunca dizem que estão a espiar, certo?
+
+133
+00:18:42,890 --> 00:18:45,890
+Portanto, há aqui um problema de soberania.
+
+134
+00:18:45,890 --> 00:18:54,890
+Esse problema de soberania, obviamente que é anulado ou reduzível se tiver uma Cloud privada.
+
+135
+00:18:54,890 --> 00:19:01,890
+Uma Cloud privada, os equipamentos são meus, obviamente que se são meus eu tenho que os pagar,
+
+136
+00:19:01,890 --> 00:19:03,890
+tenho que haver um investimento à cabeça, não é?
+
+137
+00:19:03,890 --> 00:19:10,890
+Mas os equipamentos são meus, logo aquilo que está nesses equipamentos, eu sei onde está
+
+138
+00:19:10,890 --> 00:19:16,890
+e eventualmente eu posso conhecer as medidas de proteção desses dados.
+
+139
+00:19:16,890 --> 00:19:23,890
+Uma abordagem híbrida, permite-me colocar aquilo que é sensível nos meus equipamentos
+
+140
+00:19:23,890 --> 00:19:29,890
+e aquilo que não é sensível nos equipamentos da Cloud pública, ok?
+
+141
+00:19:29,890 --> 00:19:37,890
+Por exemplo, se for uma presença, uma presença na net, em que eventualmente nós podemos
+
+142
+00:19:37,890 --> 00:19:46,890
+receber dados que vêm de fora, mas que não são nossos, logo nós não temos preocupações
+
+143
+00:19:46,890 --> 00:19:51,890
+sensíveis com esses dados, opai, eu posso colocar isso na Cloud pública.
+
+144
+00:19:51,890 --> 00:19:56,890
+E é menos uma preocupação que eu tenho, mas dados que sejam sensíveis,
+
+145
+00:19:56,890 --> 00:20:01,890
+esses não vão parar à pública, ficam na Cloud privada, ok?
+
+146
+00:20:01,890 --> 00:20:07,840
+Dovidas, até agora, não é? Muito bem.
+
+147
+00:20:07,840 --> 00:20:17,840
+Vantagens da Cloud e aquilo que eles têm tentado vender desde que a Cloud surgiu
+
+148
+00:20:17,840 --> 00:20:23,840
+como uma solução para, ai, bolas, todos os problemas.
+
+149
+00:20:23,840 --> 00:20:30,820
+Primeiro, elimina aquele investimento à cabeça, certo?
+
+150
+00:20:30,820 --> 00:20:35,820
+É daquelas coisas que é espectacular. É quase como comprar uma casa.
+
+151
+00:20:35,820 --> 00:20:40,820
+Eu, se não comprar uma casa, se alugar, não tenho que dar uma entrada para comprar.
+
+152
+00:20:40,820 --> 00:20:45,820
+Não preciso ter aquele dinheiro para comprar, certo?
+
+153
+00:20:45,820 --> 00:20:49,820
+Basicamente, é isso que eles prometem.
+
+154
+00:20:49,820 --> 00:20:56,820
+Depois, também, se nós fomos para as Cloud públicas, nós temos uma eletricidade
+
+155
+00:20:56,820 --> 00:21:00,820
+e uma escala global que quer dizer isto de eletricidade.
+
+156
+00:21:00,820 --> 00:21:08,820
+Eletricidade quer dizer que eu posso aumentar ou diminuir os recursos que necessito
+
+157
+00:21:08,820 --> 00:21:12,820
+e até posso fazer isto de forma automática,
+
+158
+00:21:12,820 --> 00:21:15,820
+de acordo com uma política contratada, ok?
+
+159
+00:21:15,820 --> 00:21:20,820
+E depois, ainda por cima, se nós tivermos a trabalhar como um fundidor global,
+
+160
+00:21:20,820 --> 00:21:29,820
+eu posso, também, replicar o meu código em diversas partes geográficas do mundo, ok?
+
+161
+00:21:29,820 --> 00:21:33,820
+Por exemplo, eu posso querer replicar para um centro de dados,
+
+162
+00:21:33,820 --> 00:21:38,820
+ali para os lados de Paris e outro ali para os lados, sei lá, do Dubai.
+
+163
+00:21:38,820 --> 00:21:41,820
+Há muitos influenciais no Dubai, não é?
+
+164
+00:21:41,820 --> 00:21:46,820
+Tudo ali a escapar os impostos para expor alguma coisa no Dubai.
+
+165
+00:21:46,820 --> 00:21:51,820
+Certo? Desculpa lá, pá.
+
+166
+00:21:51,820 --> 00:21:59,820
+Eu, o Covid-19 já foi embora, mas a tosse aqui, as coscas negras ainda continuam.
+
+167
+00:21:59,820 --> 00:22:13,190
+Por fim, as operações e custos estão, também, passados para o forno de estorno.
+
+168
+00:22:13,190 --> 00:22:15,190
+Se houver uma varia, não é comigo.
+
+169
+00:22:15,190 --> 00:22:24,570
+Se houver a necessidade de aumentar a capacidade, isso também não é comigo.
+
+170
+00:22:24,570 --> 00:22:28,570
+Os fundidores que tratem disso tudo, certo?
+
+171
+00:22:28,570 --> 00:22:30,570
+Muito bem.
+
+172
+00:22:30,570 --> 00:22:32,570
+Estou a demorar tempo demais.
+
+173
+00:22:32,570 --> 00:22:34,570
+E vocês, nem sequer me estão a fazer perguntas.
+
+174
+00:22:34,570 --> 00:22:36,570
+Está aí alguém?
+
+175
+00:22:36,570 --> 00:22:38,570
+Não estou a fazer perguntas?
+
+176
+00:22:38,570 --> 00:22:40,570
+Ah, ok, ok.
+
+177
+00:22:40,570 --> 00:22:42,570
+Muito bem.
+
+178
+00:22:43,570 --> 00:22:48,570
+Pessoal, também é o seguinte, se isto for tópicos,
+
+179
+00:22:48,570 --> 00:22:52,570
+eu acho que ainda não foram cobertos noutros módulos,
+
+180
+00:22:52,570 --> 00:22:56,570
+mas forem tópicos que não valem a pena estar a demorar tanto tempo,
+
+181
+00:22:56,570 --> 00:23:02,100
+também podem me dizer para eu aligirar, tá bom?
+
+182
+00:23:02,100 --> 00:23:12,100
+Pa, quais são as limitações de uma clave que se podem assistir atualmente?
+
+183
+00:23:12,100 --> 00:23:17,100
+O maior problema na clave tem a ver com a latência, ok?
+
+184
+00:23:17,100 --> 00:23:20,100
+Mas isto não é um problema exclusivo da clave,
+
+185
+00:23:20,100 --> 00:23:26,100
+é um problema que vem da utilização de redes,
+
+186
+00:23:26,100 --> 00:23:28,100
+sobretudo da internet.
+
+187
+00:23:28,100 --> 00:23:35,100
+Sempre que nós temos que passar dados em longas distâncias por vários equipamentos,
+
+188
+00:23:35,100 --> 00:23:41,100
+nós perdemos qualquer determinismo e previsibilidade em relação a tempos.
+
+189
+00:23:41,100 --> 00:23:48,100
+O tempo de fazer-lo transportar este pacote daqui para outro sítio, certo?
+
+190
+00:23:48,100 --> 00:23:54,100
+Por quê? Porque a internet e as tecnologias que se portam a internet
+
+191
+00:23:54,100 --> 00:23:57,100
+não são determinísticas,
+
+192
+00:23:57,100 --> 00:24:01,100
+pelo menos em boas, em muitas capacidades,
+
+193
+00:24:01,100 --> 00:24:05,100
+em muitas categorias de serviço.
+
+194
+00:24:05,100 --> 00:24:07,100
+Não são determinísticas.
+
+195
+00:24:07,100 --> 00:24:12,100
+Isso quer dizer que se eu tiver aplicações que tenham janelas de tempo muito restritas,
+
+196
+00:24:12,100 --> 00:24:16,100
+tanto requisitos temporais muito restritos,
+
+197
+00:24:16,100 --> 00:24:25,100
+eu não posso confiar em soluções que estejam totalmente localizadas na clave, certo?
+
+198
+00:24:25,100 --> 00:24:31,100
+Apesar da clave, por exemplo, ter grande capacidade de processamento
+
+199
+00:24:31,100 --> 00:24:35,100
+para reconhecer objetos, imaginem,
+
+200
+00:24:35,100 --> 00:24:39,770
+o meu carro e estou a imaginar o Tesla,
+
+201
+00:24:39,770 --> 00:24:44,770
+porque o Tesla é daquelas coisas que gostam de mostrar o reconhecimento dos objetos
+
+202
+00:24:44,770 --> 00:24:46,770
+que vão à frente do carro, não é?
+
+203
+00:24:46,770 --> 00:24:52,770
+Eu não posso fazer esse reconhecimento dos objetos que estão à frente do carro.
+
+204
+00:24:52,770 --> 00:24:55,770
+Na clave, por quê?
+
+205
+00:24:55,770 --> 00:24:59,770
+Porque eventualmente eu enviava uma imagem para a clave
+
+206
+00:24:59,770 --> 00:25:04,770
+e quando a clave me disse se cuidar porque vais atropolar um pião,
+
+207
+00:25:04,770 --> 00:25:11,940
+o pião já estava esticado no chão, certo?
+
+208
+00:25:11,940 --> 00:25:14,940
+Certo? Faz sentido este exemplo?
+
+209
+00:25:14,940 --> 00:25:15,940
+Claro, sim, sim.
+
+210
+00:25:15,940 --> 00:25:20,940
+É que nós não podemos mesmo confiar nos tempos de resposta,
+
+211
+00:25:20,940 --> 00:25:23,940
+sempre que temos a internet no meio, ok?
+
+212
+00:25:23,940 --> 00:25:28,940
+Apesar de termos capacidade de processamento fantástico na clave,
+
+213
+00:25:28,940 --> 00:25:33,940
+muitas das vezes esse processamento, o resultado, já pode vir tarde.
+
+214
+00:25:33,940 --> 00:25:43,940
+Não temos aquele determinismo ou aquela previsibilidade com a clave.
+
+215
+00:25:43,940 --> 00:25:51,940
+Depois também acontece atualmente algo que há perto 20 anos atrás
+
+216
+00:25:51,940 --> 00:25:58,940
+quando apareceu a clave e parecia que a ser o milar, que a salvar todo o universo.
+
+217
+00:25:58,940 --> 00:26:05,940
+Acontece agora que é nós agora temos milhões e milhões e milhões de dispositivos
+
+218
+00:26:05,940 --> 00:26:10,940
+que estão a gerar dados e mais dados e mais dados e mais dados, ok?
+
+219
+00:26:10,940 --> 00:26:16,940
+A quantidade de dados que são gerados atualmente é muito superior
+
+220
+00:26:16,940 --> 00:26:20,940
+à quantidade de dados que era gerado automaticamente por dispositivos,
+
+221
+00:26:20,940 --> 00:26:22,940
+que têm sensores, não é?
+
+222
+00:26:22,940 --> 00:26:24,940
+Há 20 anos atrás,
+
+223
+00:26:24,940 --> 00:26:30,940
+se todos estes dispositivos estiverem a enviar todos os dados que elegeram
+
+224
+00:26:30,940 --> 00:26:37,940
+para a clave através da internet, vai parar tudo, ok?
+
+225
+00:26:37,940 --> 00:26:44,940
+Portanto, a clave e a rede que a suporta, que suporta as comunicações
+
+226
+00:26:44,940 --> 00:26:50,940
+não têm capacidade para a totalidade de dados que são gerados.
+
+227
+00:26:50,940 --> 00:26:53,940
+Portanto, tem que existir aqui alguma filtragem
+
+228
+00:26:53,940 --> 00:26:57,940
+que só vou mandar para a clave aqueles dados que realmente interessa
+
+229
+00:26:57,940 --> 00:27:00,940
+enviar para a clave, ok?
+
+230
+00:27:00,940 --> 00:27:08,940
+Tudo aquilo que não for necessário, se calhar, eu devo evitar de os enviar, ok?
+
+231
+00:27:08,940 --> 00:27:15,260
+Faz sentido?
+
+232
+00:27:15,260 --> 00:27:17,260
+Imaginem, por exemplo, o tal Tesla.
+
+233
+00:27:17,260 --> 00:27:22,260
+Se o Tesla estivesse a mandar o stream de vídeo para a clave
+
+234
+00:27:22,260 --> 00:27:25,260
+para uma dado altura o Elon Musk a arrancar os cabelos,
+
+235
+00:27:25,260 --> 00:27:28,260
+aquilo já foi um plano de capilar que ele fez, não é?
+
+236
+00:27:28,260 --> 00:27:32,260
+Mas ele ia começar a arrancar os cabelos porque ele queria vender mais Teslas, não é?
+
+237
+00:27:32,260 --> 00:27:38,260
+Só que vender mais Teslas implica mais fluxos de vídeo que ele ia ter que suportar
+
+238
+00:27:38,260 --> 00:27:45,260
+e fazer aquela detecção de piões e bicicletas e de caminhões que estão à frente
+
+239
+00:27:45,260 --> 00:27:49,260
+para depois enviar respostas para os carros.
+
+240
+00:27:49,260 --> 00:27:51,260
+E o pessoal ia começar a bater.
+
+241
+00:27:51,260 --> 00:27:54,260
+Porque, opa, não havia capacidade.
+
+242
+00:27:54,260 --> 00:27:56,260
+Certo?
+
+243
+00:27:56,260 --> 00:28:01,260
+Outra coisa também, aplicações que sejam puramente baseadas na clave
+
+244
+00:28:01,260 --> 00:28:08,980
+estão totalmente, dependendo da conectividade, ok?
+
+245
+00:28:08,980 --> 00:28:12,980
+Suponham, por exemplo, que vocês tenham uma aplicação no vosso telemóvel.
+
+246
+00:28:12,980 --> 00:28:22,130
+E essa aplicação do vosso telemóvel utiliza a clave.
+
+247
+00:28:22,130 --> 00:28:26,130
+Vamos ver um exemplo.
+
+248
+00:28:26,130 --> 00:28:31,130
+Existem aquelas aplicações para fazer registros de treinos e de corridas
+
+249
+00:28:31,130 --> 00:28:37,130
+ou de passeios, como por exemplo o Strava ou o Connect da Garmin.
+
+250
+00:28:37,130 --> 00:28:42,130
+Sei lá, também existe outra que é o Commut, acho eu.
+
+251
+00:28:42,130 --> 00:28:46,130
+E essas aplicações no telemóvel, vocês, por exemplo, imaginem,
+
+252
+00:28:46,130 --> 00:28:51,130
+vão dar um passeio e querem registar o passeio para, no final,
+
+253
+00:28:51,130 --> 00:28:54,130
+ver quantos quilômetros aqui andaram,
+
+254
+00:28:54,130 --> 00:28:57,130
+qual é que foi a velocidade máxima que vocês deram,
+
+255
+00:28:57,130 --> 00:29:02,130
+qual é que foi a altitude máxima que estiveram e tal.
+
+256
+00:29:02,130 --> 00:29:07,950
+Vocês carregam no botão para começar a gravar
+
+257
+00:29:07,950 --> 00:29:10,950
+e querem gravar o passeio,
+
+258
+00:29:10,950 --> 00:29:15,950
+quer que tenham ligação à internet ou não tenham ligação à internet?
+
+259
+00:29:15,950 --> 00:29:17,950
+Certo?
+
+260
+00:29:17,950 --> 00:29:22,950
+Quero de que, no final, quando vocês passarem a terminar o passeio,
+
+261
+00:29:22,950 --> 00:29:28,950
+vocês querem que os dados do passeio, da caminhada,
+
+262
+00:29:28,950 --> 00:29:33,950
+sejam transferidos para a clave, lá para os serviços do Strava
+
+263
+00:29:33,950 --> 00:29:37,950
+ou do Commut ou da Garmin, certo?
+
+264
+00:29:37,950 --> 00:29:43,950
+Mas não querem que a falta de ligação à rede
+
+265
+00:29:43,950 --> 00:29:48,950
+impeça a vossa aplicação de funcionar, certo?
+
+266
+00:29:48,950 --> 00:29:53,950
+Portanto, é uma aplicação que, sim, senhor, se tiverem ligados,
+
+267
+00:29:53,950 --> 00:29:58,950
+funciona online e liga-se à clave, mas, se não tiverem ligação,
+
+268
+00:29:58,950 --> 00:30:03,950
+ela é perfeitamente capaz de funcionar offline, certo?
+
+269
+00:30:03,950 --> 00:30:07,950
+Aplicações que sejam totalmente dependentes da clave
+
+270
+00:30:07,950 --> 00:30:09,950
+não acontece isso.
+
+271
+00:30:09,950 --> 00:30:12,950
+Vamos pensar, por exemplo, na Netflix.
+
+272
+00:30:12,950 --> 00:30:15,950
+Também pode ter aplicação na Netflix.
+
+273
+00:30:15,950 --> 00:30:18,950
+Eu já sei que na Netflix vocês podem descarregar
+
+274
+00:30:18,950 --> 00:30:23,950
+episódios ou filmes para o vosso dispositivo móvel, certo?
+
+275
+00:30:23,950 --> 00:30:27,950
+Mas, se vocês forem como eu, que têm um telemóvel ultrapassado
+
+276
+00:30:27,950 --> 00:30:32,950
+e que está sempre cheio de traia, está sempre a chorar,
+
+277
+00:30:32,950 --> 00:30:36,950
+a dizer que não tem mais espaço para nada, certo?
+
+278
+00:30:36,950 --> 00:30:40,950
+É pá, vocês não vão descarregar o último episódio daquela série
+
+279
+00:30:40,950 --> 00:30:43,950
+que estão a ver, porque senão ficam sem espaço para mais nada,
+
+280
+00:30:43,950 --> 00:30:46,950
+muito telemóvel, se calhar nem tem espaço para esse episódio, certo?
+
+281
+00:30:46,950 --> 00:30:52,950
+Vamos pensar na Netflix se fosse puramente online.
+
+282
+00:30:52,950 --> 00:30:57,950
+Se fosse puramente online, vocês metiam-se num autocarro
+
+283
+00:30:57,950 --> 00:30:59,950
+e estavam a ver o vídeo.
+
+284
+00:30:59,950 --> 00:31:03,950
+Bastava passar por um sítio em que perdessem a conectividade,
+
+285
+00:31:03,950 --> 00:31:08,950
+choque, já deixavam de ter acesso ao vídeo, certo?
+
+286
+00:31:08,950 --> 00:31:14,950
+Imaginem que vocês metiam-se num avião e o avião não tinha Wi-Fi.
+
+287
+00:31:14,950 --> 00:31:20,950
+Agora, há os que têm Wi-Fi e vocês pagam para o ter.
+
+288
+00:31:20,950 --> 00:31:26,950
+Portanto, vocês não querem ter Wi-Fi, esqueçam Netflix, certo?
+
+289
+00:31:26,950 --> 00:31:33,260
+Já demorei tempo a mais com este connectivo e TV-Pendacy, certo?
+
+290
+00:31:33,260 --> 00:31:34,260
+Ok.
+
+291
+00:31:34,260 --> 00:31:36,260
+Pronto.
+
+292
+00:31:36,260 --> 00:31:43,260
+Mais aqui um quadro comparativo entre os centros de dados privados,
+
+293
+00:31:43,260 --> 00:31:48,260
+aqueles que antigamente existiam, ou então uma cloud centralizada.
+
+294
+00:31:48,260 --> 00:31:55,260
+E aqui pelo meio, aquela solução intermédia que era eu alugar máquinas virtuais
+
+295
+00:31:55,260 --> 00:31:57,260
+ou um fornecedor de máquinas virtuais.
+
+296
+00:31:57,260 --> 00:32:00,260
+Pá, há coisas boas.
+
+297
+00:32:00,260 --> 00:32:04,260
+Por exemplo, aqui não há investimento inicial.
+
+298
+00:32:04,260 --> 00:32:11,260
+Aqui temos que fazer logo um investimento inicial.
+
+299
+00:32:11,260 --> 00:32:17,260
+Se também estivermos a pensar na evolução,
+
+300
+00:32:17,260 --> 00:32:21,260
+no meio de centros privados, a coisa que decorra devagar,
+
+301
+00:32:21,260 --> 00:32:24,260
+mas forna cloud, a coisa é em segundos.
+
+302
+00:32:24,260 --> 00:32:27,260
+Desde que ela tem uma capacidade instalada, o que eles querem é vender.
+
+303
+00:32:27,260 --> 00:32:30,260
+Portanto, eu preciso mais, pega-te.
+
+304
+00:32:30,260 --> 00:32:32,260
+E agora, o que você quer é pagar, claro, certo?
+
+305
+00:32:32,260 --> 00:32:39,260
+Mas pronto, tenho aqui uma comparação de algumas métricas.
+
+306
+00:32:39,260 --> 00:32:45,260
+Ora, bem, então, como é que apareceu o Edge Computing?
+
+307
+00:32:45,260 --> 00:32:52,260
+O Edge Computing apareceu derrido, sobretudo, a dois fatores.
+
+308
+00:32:52,260 --> 00:32:58,260
+Primeiro, eu precisava de...
+
+309
+00:32:58,260 --> 00:33:01,260
+Não é precisava de resolver.
+
+310
+00:33:01,260 --> 00:33:04,260
+Eu não queria ter o problema da Latécia.
+
+311
+00:33:04,260 --> 00:33:08,260
+Por quê? Porque em muitas situações de controle,
+
+312
+00:33:08,260 --> 00:33:14,260
+a minha resposta não pode vir num tempo muito variável.
+
+313
+00:33:14,260 --> 00:33:17,260
+Eu tenho que ter a minha resposta ao controle
+
+314
+00:33:17,260 --> 00:33:22,260
+dentro de um intervalo de tempo bem definido.
+
+315
+00:33:22,260 --> 00:33:25,260
+Porque senão aquilo que eu quero controlar
+
+316
+00:33:25,260 --> 00:33:27,260
+pode se tornar incontrolável, certo?
+
+317
+00:33:27,260 --> 00:33:30,260
+Portanto, ter ali processamento próximo
+
+318
+00:33:30,260 --> 00:33:35,260
+de forma a diminuir a Latécia
+
+319
+00:33:35,260 --> 00:33:39,260
+e a imprevisibilidade daquele gitar era essencial.
+
+320
+00:33:39,260 --> 00:33:46,260
+Logo, eu preciso de manter computação junto à realidade.
+
+321
+00:33:46,260 --> 00:33:52,260
+Outro fator, depois também se vai a tornar cada vez mais proponurante,
+
+322
+00:33:52,260 --> 00:33:55,260
+tem a ver com a quantidade de informação que é processada,
+
+323
+00:33:55,260 --> 00:33:57,260
+que é gerada
+
+324
+00:33:57,260 --> 00:34:03,260
+e que não pode ser diretamente injetada na rede, ok?
+
+325
+00:34:03,260 --> 00:34:08,260
+Isso implica que tem de existir ali um trabalho de filtragem
+
+326
+00:34:08,260 --> 00:34:12,260
+ou até de agrigação, um pré-processamento
+
+327
+00:34:12,260 --> 00:34:16,260
+para decidir ou para preparar também
+
+328
+00:34:16,260 --> 00:34:22,260
+o que é que vai ser transportado para a clave.
+
+329
+00:34:22,260 --> 00:34:25,260
+Portanto, tem que haver ali uma seleção daquilo que interesse
+
+330
+00:34:25,260 --> 00:34:28,260
+e aquilo que não interessa, ok?
+
+331
+00:34:28,260 --> 00:34:31,260
+Vamos, por exemplo, imaginar o Tesla.
+
+332
+00:34:31,260 --> 00:34:38,260
+O Tesla interessa ter o reconhecimento dos obstáculos
+
+333
+00:34:38,260 --> 00:34:43,260
+vistos pelas câmaras com uma Latécia baixa.
+
+334
+00:34:43,260 --> 00:34:45,260
+Então, o que é que eu faço?
+
+335
+00:34:45,260 --> 00:34:51,260
+Coloco capacidade de processamento no Tesla, no carro, certo?
+
+336
+00:34:51,260 --> 00:34:53,260
+Muito próximo do carro.
+
+337
+00:34:53,260 --> 00:34:56,260
+Estou a imaginar, no outro lado, só o povo, certo?
+
+338
+00:34:56,260 --> 00:35:05,800
+E suponham que também vocês querem informar
+
+339
+00:35:05,800 --> 00:35:08,800
+ou a Tesla, a Tesla gosta de ser informada,
+
+340
+00:35:08,800 --> 00:35:12,800
+quer ser informada sobre determinados eventos
+
+341
+00:35:12,800 --> 00:35:15,800
+que ocorram no vosso carro.
+
+342
+00:35:15,800 --> 00:35:17,800
+As duas, uma.
+
+343
+00:35:17,800 --> 00:35:20,800
+Ou o carro estava sempre a enviar um fluxo de dados,
+
+344
+00:35:20,800 --> 00:35:22,800
+enviava tudo aquilo que interessava,
+
+345
+00:35:22,800 --> 00:35:24,800
+mas também tudo aquilo que não interessava.
+
+346
+00:35:24,800 --> 00:35:28,800
+Ou então, eu tenho processamento no carro
+
+347
+00:35:28,800 --> 00:35:32,800
+que me faz a seleção este evento não interessa,
+
+348
+00:35:32,800 --> 00:35:34,800
+este evento não interessa,
+
+349
+00:35:34,800 --> 00:35:36,800
+olha, este evento interessa e envia,
+
+350
+00:35:36,800 --> 00:35:39,800
+ou então este não interessa,
+
+351
+00:35:39,800 --> 00:35:41,800
+este não interessa, ou então este interessa,
+
+352
+00:35:41,800 --> 00:35:44,800
+mas vou juntar com este, este e este
+
+353
+00:35:44,800 --> 00:35:51,420
+e vou enviar um resumo, por exemplo, ok?
+
+354
+00:35:51,420 --> 00:35:54,420
+Estas são as razões que fizeram
+
+355
+00:35:54,420 --> 00:35:58,420
+reavivar a capacidade,
+
+356
+00:35:58,420 --> 00:36:01,420
+uma maior capacidade de processamento
+
+357
+00:36:01,420 --> 00:36:03,420
+junto à realidade
+
+358
+00:36:03,420 --> 00:36:07,420
+e não centralizada nos centros de dados, ok?
+
+359
+00:36:07,420 --> 00:36:13,200
+Entretanto, os gais da SISC,
+
+360
+00:36:13,200 --> 00:36:17,200
+que também ali por volta de...
+
+361
+00:36:17,200 --> 00:36:20,200
+Há uns 10, 15 anos atrás,
+
+362
+00:36:20,200 --> 00:36:23,200
+creio eu, estamos em 2016,
+
+363
+00:36:23,200 --> 00:36:25,200
+se calhar há uns 15 anos atrás,
+
+364
+00:36:25,200 --> 00:36:29,200
+também vieram com o conceito de fogo.
+
+365
+00:36:29,200 --> 00:36:30,200
+E o que é que é o fogo?
+
+366
+00:36:30,200 --> 00:36:34,200
+Pronto, a clave está lá em cima, no céu, certo?
+
+367
+00:36:34,200 --> 00:36:38,200
+E o pessoal da SISC,
+
+368
+00:36:38,200 --> 00:36:43,200
+que fabrica equipamentos de rede,
+
+369
+00:36:43,200 --> 00:36:46,200
+que são computadores especializados
+
+370
+00:36:46,200 --> 00:36:49,200
+em lidar com o tráfego de dados, certo?
+
+371
+00:36:49,200 --> 00:36:51,200
+Mas são computadores em si
+
+372
+00:36:51,200 --> 00:36:53,200
+e eles pensaram que podiam também colocar
+
+373
+00:36:53,200 --> 00:36:57,200
+capacidade de processamento
+
+374
+00:36:57,200 --> 00:37:01,200
+mais próximo da realidade,
+
+375
+00:37:01,200 --> 00:37:04,200
+sobretudo nos seus equipamentos que eles também vendiam.
+
+376
+00:37:04,200 --> 00:37:07,200
+E eles chamaram a isso uma nuvem mais baixa,
+
+377
+00:37:07,200 --> 00:37:10,200
+que é o fogo, um nevoeio, ok?
+
+378
+00:37:10,200 --> 00:37:15,200
+No panorama atual de Claude e Edge,
+
+379
+00:37:15,200 --> 00:37:19,200
+o fogo é uma camada
+
+380
+00:37:19,200 --> 00:37:26,200
+que fica entre Edge e a Claude, ok?
+
+381
+00:37:26,200 --> 00:37:29,830
+Em que zona?
+
+382
+00:37:29,830 --> 00:37:33,830
+Isso agora, é que depende um bocado
+
+383
+00:37:33,830 --> 00:37:39,830
+de quem diz o que é fogo, o fogo, ok?
+
+384
+00:37:39,830 --> 00:37:43,830
+Por exemplo, para quem fabrica equipamentos de rede,
+
+385
+00:37:43,830 --> 00:37:47,830
+a fogo começa nos equipamentos
+
+386
+00:37:47,830 --> 00:37:52,830
+que estão ligados ao backbone da internet.
+
+387
+00:37:52,830 --> 00:37:56,830
+Portanto, basta terem um access point
+
+388
+00:37:56,830 --> 00:38:01,830
+ou um router, já estamos no fogo, ok?
+
+389
+00:38:01,830 --> 00:38:05,830
+Parem lá, não, já estamos na Edge.
+
+390
+00:38:05,830 --> 00:38:10,830
+Para, os fabricantes associados
+
+391
+00:38:10,830 --> 00:38:13,830
+a equipamentos que se chamam Edge,
+
+392
+00:38:13,830 --> 00:38:17,830
+a Edge fica um bocadinho, a Edge vai se calhar até aí.
+
+393
+00:38:17,830 --> 00:38:21,830
+Então, está ali uma, como é que eu ia dizer,
+
+394
+00:38:21,830 --> 00:38:24,830
+uma nabolina e onde é que para a fogo.
+
+395
+00:38:24,830 --> 00:38:27,830
+Mas, basicamente, o conceito que vocês têm de ter
+
+396
+00:38:27,830 --> 00:38:29,830
+é que existe a Claude,
+
+397
+00:38:29,830 --> 00:38:33,830
+com grande capacidade de processamento,
+
+398
+00:38:33,830 --> 00:38:37,830
+eu até tenho aqui o boneco.
+
+399
+00:38:37,830 --> 00:38:40,830
+Vocês têm aqui a Claude,
+
+400
+00:38:40,830 --> 00:38:44,830
+alguns num sítio qualquer lá em cima no céu
+
+401
+00:38:44,830 --> 00:38:48,830
+com centros de dados
+
+402
+00:38:48,830 --> 00:38:52,830
+com capacidades de processamento
+
+403
+00:38:52,830 --> 00:38:56,830
+e de armazenamento doidas, certo?
+
+404
+00:38:56,830 --> 00:39:00,830
+Junto à terra, onde as coisas acontecem,
+
+405
+00:39:00,830 --> 00:39:03,830
+no mundo físico, nós temos a Edge.
+
+406
+00:39:03,830 --> 00:39:07,830
+Edge quer dizer fronteira, limiar, ok?
+
+407
+00:39:07,830 --> 00:39:11,830
+Fronteira com o mundo físico, com o mundo real.
+
+408
+00:39:11,830 --> 00:39:14,830
+Já agora a palavra Edge, quer dizer,
+
+409
+00:39:14,830 --> 00:39:18,830
+estamos ali na fronteira com o mundo real.
+
+410
+00:39:18,830 --> 00:39:21,830
+Do um lado da fronteira temos
+
+411
+00:39:21,830 --> 00:39:23,830
+sistemas computacionais,
+
+412
+00:39:23,830 --> 00:39:26,830
+do outro lado de valinha temos
+
+413
+00:39:26,830 --> 00:39:30,830
+a realidade, o mundo físico, ok?
+
+414
+00:39:30,830 --> 00:39:33,830
+O Edge quer dizer isso, o limiar
+
+415
+00:39:33,830 --> 00:39:36,830
+entre o mundo digital e o mundo físico.
+
+416
+00:39:36,830 --> 00:39:39,830
+E depois temos aqui esta camada
+
+417
+00:39:39,830 --> 00:39:42,830
+intermédia, que é o fogo.
+
+418
+00:39:42,830 --> 00:39:45,830
+A camada intermédia, da forma como eu estou
+
+419
+00:39:45,830 --> 00:39:48,830
+habitual a ver, é onde temos
+
+420
+00:39:48,830 --> 00:39:51,830
+todos aqueles equipamentos que estão fixos.
+
+421
+00:39:51,830 --> 00:39:54,830
+Mesmo fixos, em armários.
+
+422
+00:39:54,830 --> 00:39:57,830
+Por exemplo, se tivermos a pensar em Smart City,
+
+423
+00:39:57,830 --> 00:40:00,830
+numa Smart City, vocês imaginem
+
+424
+00:40:00,830 --> 00:40:03,830
+nas estações de metro,
+
+425
+00:40:03,830 --> 00:40:05,830
+aqui no metro do Porto,
+
+426
+00:40:05,830 --> 00:40:07,830
+vocês já viram armários,
+
+427
+00:40:07,830 --> 00:40:10,830
+que tem lá computadores, como por exemplo,
+
+428
+00:40:10,830 --> 00:40:14,830
+computadores que estão a adquirir o vídeo,
+
+429
+00:40:14,830 --> 00:40:16,830
+videovigilância,
+
+430
+00:40:16,830 --> 00:40:20,830
+tem computadores que também tratam da sinalização da linha,
+
+431
+00:40:20,830 --> 00:40:24,830
+computadores que com a sinalização da linha
+
+432
+00:40:24,830 --> 00:40:26,830
+também tratam da sinalética,
+
+433
+00:40:26,830 --> 00:40:29,830
+quer dizer, quanto tempo é que demora o próximo
+
+434
+00:40:29,830 --> 00:40:32,830
+convóio a chegar e muitas outras funções.
+
+435
+00:40:32,830 --> 00:40:35,830
+E esses equipamentos que estão guardados em armários
+
+436
+00:40:35,830 --> 00:40:38,830
+para mim, é fogo.
+
+437
+00:40:38,830 --> 00:40:41,830
+Ok? São aqueles equipamentos mais
+
+438
+00:40:41,830 --> 00:40:44,830
+pedaditos e fixos.
+
+439
+00:40:44,830 --> 00:40:47,830
+Eles têm
+
+440
+00:40:47,830 --> 00:40:50,830
+uma característica muito mais móvel,
+
+441
+00:40:50,830 --> 00:40:53,830
+como por exemplo,
+
+442
+00:40:53,830 --> 00:40:56,830
+aparecem aqui os wearables,
+
+443
+00:40:56,830 --> 00:40:59,830
+os smartphones, certo?
+
+444
+00:40:59,830 --> 00:41:02,830
+E também os próprios carros,
+
+445
+00:41:02,830 --> 00:41:05,830
+mas também estão próximos
+
+446
+00:41:05,830 --> 00:41:08,830
+da realidade, certo?
+
+447
+00:41:08,830 --> 00:41:11,830
+Por exemplo,
+
+448
+00:41:11,830 --> 00:41:15,830
+atuadores como equipamentos urbanos,
+
+449
+00:41:15,830 --> 00:41:18,830
+robôs,
+
+450
+00:41:18,830 --> 00:41:21,830
+algo assim,
+
+451
+00:41:21,830 --> 00:41:27,940
+dúvidas não há?
+
+452
+00:41:27,940 --> 00:41:30,940
+Eu ainda estou assim um bocado afeitado do Covid-19,
+
+453
+00:41:30,940 --> 00:41:33,940
+porque uma das coisas que o Covid-19 também me fez
+
+454
+00:41:33,940 --> 00:41:36,940
+foi me dormir mal uma série de vezes.
+
+455
+00:41:36,940 --> 00:41:39,940
+Eu dormia mais mal, até houve um dia que foi muito engraçado
+
+456
+00:41:39,940 --> 00:41:42,940
+que eu fui para a cama e pensei,
+
+457
+00:41:42,940 --> 00:41:45,940
+é pá, e hoje já me susto a sentir melhor,
+
+458
+00:41:45,940 --> 00:41:48,940
+hoje vou dormir mesmo bem. E fui para a cama,
+
+459
+00:41:48,940 --> 00:41:51,940
+adormeci, passava 3 horas,
+
+460
+00:41:51,940 --> 00:41:54,940
+acordei com aquela sensação de
+
+461
+00:41:54,940 --> 00:41:57,940
+bolas, vou ficar com insônia.
+
+462
+00:41:57,940 --> 00:42:00,940
+E fiquei horas sem conseguir dormir,
+
+463
+00:42:00,940 --> 00:42:03,940
+porque não faço ideia, estava mesmo filado
+
+464
+00:42:03,940 --> 00:42:06,940
+que ia dormir. E o resultado é que
+
+465
+00:42:06,940 --> 00:42:09,940
+eu é esta hora para falar, já há palavras
+
+466
+00:42:09,940 --> 00:42:12,940
+que me custam a resgatar.
+
+467
+00:42:12,940 --> 00:42:15,940
+Se houver alguma coisa em que não seja
+
+468
+00:42:15,940 --> 00:42:18,940
+propriamente claro, vocês avisem-me, tá bem?
+
+469
+00:42:18,940 --> 00:42:21,940
+E podem colocar as perguntas todas que quiserem.
+
+470
+00:42:21,940 --> 00:42:24,940
+Agora, o contínuo,
+
+471
+00:42:24,940 --> 00:42:29,630
+claro, é isso.
+
+472
+00:42:29,630 --> 00:42:32,630
+Se estivermos a pensar nas responsabilidades,
+
+473
+00:42:32,630 --> 00:42:35,630
+nós, netes, temos os equipamentos que fazem a captura
+
+474
+00:42:35,630 --> 00:42:38,630
+ou a monitorização
+
+475
+00:42:38,630 --> 00:42:41,630
+do mundo físico, não é?
+
+476
+00:42:41,630 --> 00:42:44,630
+Depois também têm funcionalidades
+
+477
+00:42:44,630 --> 00:42:47,630
+como converter sinais
+
+478
+00:42:47,630 --> 00:42:50,630
+ou fazer filtragem, também
+
+479
+00:42:50,630 --> 00:42:53,630
+reagir em tempo real, ou seja,
+
+480
+00:42:53,630 --> 00:42:56,630
+as operações de controle estão todas colocadas
+
+481
+00:42:56,630 --> 00:42:59,630
+aqui na netes, precisamente
+
+482
+00:42:59,630 --> 00:43:02,630
+para dar a resposta em tempos
+
+483
+00:43:02,630 --> 00:43:05,630
+controlados. Na folha, nós temos, por exemplo,
+
+484
+00:43:05,630 --> 00:43:08,630
+agregação de dados
+
+485
+00:43:08,630 --> 00:43:11,630
+e filtragem de dados. Eu, por exemplo,
+
+486
+00:43:11,630 --> 00:43:14,630
+posso ter um computador num armário
+
+487
+00:43:14,630 --> 00:43:17,630
+que está a receber dados de 20
+
+488
+00:43:17,630 --> 00:43:20,630
+termômetros, imagina,
+
+489
+00:43:20,630 --> 00:43:23,630
+que estão todos ali na região de
+
+490
+00:43:23,630 --> 00:43:26,630
+pensar-nos em parâmetros, ok?
+
+491
+00:43:26,630 --> 00:43:29,630
+E o que é que acontece? Eu preciso ter
+
+492
+00:43:29,630 --> 00:43:32,630
+as 20 medidas,
+
+493
+00:43:32,630 --> 00:43:35,630
+não, se calhar, eu posso
+
+494
+00:43:35,630 --> 00:43:38,630
+receber as medidas dos 20 aparelhos
+
+495
+00:43:38,630 --> 00:43:41,630
+e termino a média.
+
+496
+00:43:41,630 --> 00:43:44,630
+E a única coisa que tenho de enviar para cima
+
+497
+00:43:44,630 --> 00:43:47,630
+é o valor médio. Só nisto,
+
+498
+00:43:47,630 --> 00:43:50,630
+existe uma compressão de 20 para 1, ok?
+
+499
+00:43:50,630 --> 00:43:53,630
+E este é um exemplo muito
+
+500
+00:43:53,630 --> 00:43:56,630
+prático, mas é algo
+
+501
+00:43:56,630 --> 00:43:59,630
+que me permite aliviar o tráfego
+
+502
+00:43:59,630 --> 00:44:02,630
+que depois vai circular no backbone
+
+503
+00:44:02,630 --> 00:44:05,630
+da internet, ok? O mesmo, por exemplo,
+
+504
+00:44:05,630 --> 00:44:07,630
+como, imagina,
+
+505
+00:44:07,630 --> 00:44:10,630
+reconhecimento de
+
+506
+00:44:10,630 --> 00:44:13,630
+imagem.
+
+507
+00:44:13,630 --> 00:44:16,630
+Tenho uma câmera que está apontada
+
+508
+00:44:16,630 --> 00:44:19,630
+para uma estrada.
+
+509
+00:44:19,630 --> 00:44:22,630
+E aquilo que interessa saber é qual é que é a velocidade
+
+510
+00:44:22,630 --> 00:44:25,630
+média dos carros
+
+511
+00:44:25,630 --> 00:44:28,630
+que estão a circular naquela estrada.
+
+512
+00:44:28,630 --> 00:44:31,630
+Nós podemos ter uma aplicação que está a fazer o reconhecimento
+
+513
+00:44:31,630 --> 00:44:34,630
+dos carros
+
+514
+00:44:34,630 --> 00:44:37,630
+e a velocidade que eles estão a circular, ok?
+
+515
+00:44:37,630 --> 00:44:40,630
+O processamento de vídeo é feito na folha,
+
+516
+00:44:40,630 --> 00:44:43,630
+um computador num armário ali perto
+
+517
+00:44:43,630 --> 00:44:46,630
+faz esse reconhecimento de vídeo, esse processamento
+
+518
+00:44:46,630 --> 00:44:49,630
+determina qual é que é a velocidade
+
+519
+00:44:49,630 --> 00:44:52,630
+e a cada 2 minutos
+
+520
+00:44:52,630 --> 00:44:55,630
+envia a velocidade média, um único número
+
+521
+00:44:55,630 --> 00:44:58,630
+para um centro de dados
+
+522
+00:44:58,630 --> 00:45:01,630
+que está no outro sítio qualquer e não precisa estar a mandar o extremo de vídeo.
+
+523
+00:45:01,630 --> 00:45:04,630
+Só presta a enviar aquela informação
+
+524
+00:45:04,630 --> 00:45:07,630
+que é perfeitamente necessária, certo?
+
+525
+00:45:07,630 --> 00:45:10,630
+Portanto, podemos colocar algum
+
+526
+00:45:10,630 --> 00:45:13,630
+processamento mais pesado
+
+527
+00:45:13,630 --> 00:45:16,630
+nestes computadores que têm eventualmente
+
+528
+00:45:16,630 --> 00:45:19,630
+maior capacidade do que
+
+529
+00:45:19,630 --> 00:45:22,630
+estes que andam aqui junto a
+
+530
+00:45:22,630 --> 00:45:25,630
+ao mundo físico.
+
+531
+00:45:25,630 --> 00:45:28,630
+Do lado da V, do lado da cloud, pronto,
+
+532
+00:45:28,630 --> 00:45:31,630
+temos aquelas grandes capacidades para
+
+533
+00:45:31,630 --> 00:45:34,630
+processar grandes quantidades de dados.
+
+534
+00:45:34,630 --> 00:45:37,630
+Neste postado estejam lá, agora é preciso fazer
+
+535
+00:45:37,630 --> 00:45:40,630
+uma análise estatística
+
+536
+00:45:40,630 --> 00:45:43,630
+utilizando
+
+537
+00:45:43,630 --> 00:45:46,630
+um algoritmo qualquer.
+
+538
+00:45:46,630 --> 00:45:49,630
+Temos ali computadores que fazem isso
+
+539
+00:45:49,630 --> 00:45:56,700
+na boa, certo?
+
+540
+00:45:56,700 --> 00:45:59,700
+Não há dúvidas? Ok.
+
+541
+00:45:59,700 --> 00:46:02,700
+Pronto, este aqui foi um bonequinho
+
+542
+00:46:02,700 --> 00:46:05,700
+que, aliás, não fui o que fiz
+
+543
+00:46:05,700 --> 00:46:08,700
+e eu podia ao Germany para me fazer este boneco
+
+544
+00:46:08,700 --> 00:46:11,700
+que estava em a escala, mas dá para perceber que
+
+545
+00:46:11,700 --> 00:46:14,700
+as latências vão aumentando
+
+546
+00:46:14,700 --> 00:46:17,700
+com o suante
+
+547
+00:46:17,700 --> 00:46:20,700
+nós nos afastamos da edge em direção
+
+548
+00:46:20,700 --> 00:46:23,700
+à cloud, ok? Mas basicamente
+
+549
+00:46:23,700 --> 00:46:26,700
+é natural.
+
+550
+00:46:26,700 --> 00:46:29,700
+Se nós temos mais internet entre
+
+551
+00:46:29,700 --> 00:46:32,700
+dois pontos, obviamente que
+
+552
+00:46:32,700 --> 00:46:35,700
+o tempo que poderá demorar também aumenta,
+
+553
+00:46:35,700 --> 00:46:44,710
+certo?
+
+554
+00:46:44,710 --> 00:46:49,120
+Pronto, aqui em relação à soberania dos dados,
+
+555
+00:46:49,120 --> 00:46:52,120
+se nós tivermos
+
+556
+00:46:52,120 --> 00:46:55,120
+a nossa cloud privada, este por acaso,
+
+557
+00:46:55,120 --> 00:46:58,120
+eu acho que
+
+558
+00:46:58,120 --> 00:47:01,120
+agora que estou a rever
+
+559
+00:47:01,120 --> 00:47:04,120
+o fluxo todo, eu acho que isto já deveria ter
+
+560
+00:47:04,120 --> 00:47:07,120
+estado há anos, não era assim que eu tinha pensado,
+
+561
+00:47:07,120 --> 00:47:10,120
+mas
+
+562
+00:47:10,120 --> 00:47:13,120
+ah ok, já sei o que que eu quero dizer, desculpe.
+
+563
+00:47:13,120 --> 00:47:16,120
+Aqui tem a ver com os dados
+
+564
+00:47:16,120 --> 00:47:19,120
+que a edge pode colocar na rede
+
+565
+00:47:19,120 --> 00:47:22,120
+ou não.
+
+566
+00:47:22,120 --> 00:47:25,120
+Se eu tiver processamento na edge,
+
+567
+00:47:25,120 --> 00:47:30,010
+obviamente são dados que não vão
+
+568
+00:47:30,010 --> 00:47:33,010
+andar a navegar pelo internet, ok?
+
+569
+00:47:33,010 --> 00:47:36,010
+Portanto,
+
+570
+00:47:36,010 --> 00:47:39,010
+se eles não estiverem na rede
+
+571
+00:47:39,010 --> 00:47:43,010
+ninguém os vai ver,
+
+572
+00:47:43,010 --> 00:47:46,010
+e também se eu não os guardar
+
+573
+00:47:46,010 --> 00:47:50,380
+na cloud, se alguém atacar a cloud
+
+574
+00:47:50,380 --> 00:47:53,380
+também não são dados que não vão ver, porque não estão lá.
+
+575
+00:47:53,380 --> 00:47:56,380
+O que não está
+
+576
+00:47:56,380 --> 00:47:59,380
+não se vê, certo?
+
+577
+00:47:59,380 --> 00:48:02,380
+Depois também podem acontecer
+
+578
+00:48:02,380 --> 00:48:05,380
+restrições
+
+579
+00:48:05,380 --> 00:48:08,380
+do GDPR, por exemplo
+
+580
+00:48:08,380 --> 00:48:11,380
+há dados que mesmo
+
+581
+00:48:11,380 --> 00:48:14,380
+anunimizados
+
+582
+00:48:14,380 --> 00:48:17,380
+podem
+
+583
+00:48:17,380 --> 00:48:20,380
+podem ir contra o regulamento
+
+584
+00:48:20,380 --> 00:48:23,380
+geral de proteção de dados
+
+585
+00:48:23,380 --> 00:48:26,380
+se eles forem armazenados em algum sítio.
+
+586
+00:48:26,380 --> 00:48:29,380
+Então, se nós os processarmos no local
+
+587
+00:48:29,380 --> 00:48:32,380
+na edge, não existe nenhum problema
+
+588
+00:48:32,380 --> 00:48:37,140
+poderemos
+
+589
+00:48:37,140 --> 00:48:40,140
+iluminar
+
+590
+00:48:40,140 --> 00:48:43,140
+desculpe papá
+
+591
+00:48:43,140 --> 00:48:48,990
+poderemos iluminar
+
+592
+00:48:48,990 --> 00:48:51,990
+problemas com a aplicação
+
+593
+00:48:51,990 --> 00:48:54,990
+do GPRB, porque
+
+594
+00:48:54,990 --> 00:48:57,990
+por exemplo, podemos não ter a necessidade
+
+595
+00:48:57,990 --> 00:49:00,990
+de estar a guardar ou de estar a transportar
+
+596
+00:49:00,990 --> 00:49:05,850
+dados ressovencíveis, ok?
+
+597
+00:49:05,850 --> 00:49:11,920
+Aqui a minimização
+
+598
+00:49:11,920 --> 00:49:14,920
+de riscos tem a ver com, por exemplo
+
+599
+00:49:14,920 --> 00:49:17,920
+a telematria
+
+600
+00:49:17,920 --> 00:49:20,920
+que é agregada, ou seja, não está
+
+601
+00:49:20,920 --> 00:49:23,920
+os dados não têm
+
+602
+00:49:23,920 --> 00:49:30,860
+o que é que eu quero dizer aqui?
+
+603
+00:49:30,860 --> 00:49:33,860
+Quero dizer que os dados
+
+604
+00:49:33,860 --> 00:49:36,860
+podem ser dissociados
+
+605
+00:49:36,860 --> 00:49:39,860
+da fonte
+
+606
+00:49:39,860 --> 00:49:42,860
+ou podem ser anunimizados
+
+607
+00:49:42,860 --> 00:49:48,000
+antes de serem injetados na internet
+
+608
+00:49:48,000 --> 00:49:51,000
+e isto permite diminuir os riscos
+
+609
+00:49:51,000 --> 00:49:54,000
+por exemplo, este dado onde é que veio
+
+610
+00:49:54,000 --> 00:49:57,000
+é daquilo dispositivo, então eu vou
+
+611
+00:49:57,000 --> 00:50:00,000
+ver onde está o dispositivo
+
+612
+00:50:00,000 --> 00:50:03,000
+ou que tipo de dispositivo é que é.
+
+613
+00:50:03,000 --> 00:50:06,000
+Se eu simplesmente disser, a temperatura em parâmetros é 22 graus
+
+614
+00:50:06,000 --> 00:50:09,000
+de que trimômetro é que veio a essa indicação
+
+615
+00:50:09,000 --> 00:50:12,000
+parâmetros
+
+616
+00:50:12,000 --> 00:50:15,000
+não, mas qual é que é o trimômetro parâmetros?
+
+617
+00:50:15,000 --> 00:50:18,000
+Pega ali em 20 leituras
+
+618
+00:50:18,000 --> 00:50:21,000
+e POC
+
+619
+00:50:21,000 --> 00:50:24,000
+cria uma única
+
+620
+00:50:24,000 --> 00:50:27,000
+uma única
+
+621
+00:50:27,000 --> 00:50:30,000
+um único valor que fica dissociado
+
+622
+00:50:30,000 --> 00:50:35,300
+das fontes, certo?
+
+623
+00:50:35,300 --> 00:50:40,740
+Ok. AIDS também permite
+
+624
+00:50:40,740 --> 00:50:43,740
+operar totalmente ligado
+
+625
+00:50:43,740 --> 00:50:46,740
+da rede, o que é ótimo
+
+626
+00:50:46,740 --> 00:50:49,740
+certo?
+
+627
+00:50:49,740 --> 00:50:52,740
+Portanto, eu tenho aplicações
+
+628
+00:50:52,740 --> 00:50:55,740
+que podem beneficiar
+
+629
+00:50:55,740 --> 00:50:58,740
+do acesso a rede
+
+630
+00:50:58,740 --> 00:51:01,740
+e a clave, mas não houver
+
+631
+00:51:01,740 --> 00:51:04,740
+acesso a rede, também não há problema
+
+632
+00:51:04,740 --> 00:51:07,740
+ela continua a funcionar e eventualmente até pode registrar
+
+633
+00:51:07,740 --> 00:51:10,740
+aquilo que necessita registrar
+
+634
+00:51:10,740 --> 00:51:13,740
+e quando houver uma ligação
+
+635
+00:51:13,740 --> 00:51:16,740
+faz então a sincronização com a clave
+
+636
+00:51:16,740 --> 00:51:19,740
+por exemplo, aquilo que acontece com
+
+637
+00:51:19,740 --> 00:51:22,740
+com tal aplicação para registrar a caminhada
+
+638
+00:51:22,740 --> 00:51:25,740
+posso andar no meio da montanha, não tenho
+
+639
+00:51:25,740 --> 00:51:28,740
+dados móveis mas
+
+640
+00:51:28,740 --> 00:51:31,740
+aquilo continua a registrar a minha caminhada
+
+641
+00:51:31,740 --> 00:51:34,740
+quando eu depois descer da montanha
+
+642
+00:51:34,740 --> 00:51:37,740
+e chegar à vila, ligo-me
+
+643
+00:51:37,740 --> 00:51:40,740
+na antena e aquilo de repente tenho dados móveis
+
+644
+00:51:40,740 --> 00:51:43,740
+e os dados da caminhada são passados para
+
+645
+00:51:43,740 --> 00:51:48,560
+o serviço que está na clave
+
+646
+00:51:48,560 --> 00:51:51,560
+dúvidas, não há?
+
+647
+00:51:51,560 --> 00:51:54,560
+Esta aqui por acaso consegui cobrir os três
+
+648
+00:51:54,560 --> 00:51:57,560
+com um único exemplo
+
+649
+00:51:57,560 --> 00:52:00,560
+Ok, pronto, isto aqui também não tem novidades
+
+650
+00:52:00,560 --> 00:52:03,560
+é uma comparação entre
+
+651
+00:52:03,560 --> 00:52:06,560
+os dispositivos que estão nestas
+
+652
+00:52:06,560 --> 00:52:09,560
+três regiões, nestes eu tenho
+
+653
+00:52:09,560 --> 00:52:12,560
+um consumo de energia baixo
+
+654
+00:52:12,560 --> 00:52:15,560
+na fogo eu tenho máquinas já mais elaboradas
+
+655
+00:52:15,560 --> 00:52:18,560
+portanto já existe um consumo de eletricidade
+
+656
+00:52:18,560 --> 00:52:21,560
+moderado mas fomos para os centros de dados
+
+657
+00:52:21,560 --> 00:52:24,560
+o consumo de energia é uma loucura
+
+658
+00:52:24,560 --> 00:52:27,560
+em relação ao espaço
+
+659
+00:52:27,560 --> 00:52:30,560
+a restrições de espaço, os edges devices
+
+660
+00:52:30,560 --> 00:52:33,560
+normalmente tem restrições grandes
+
+661
+00:52:33,560 --> 00:52:36,560
+tem de caber neste espaço
+
+662
+00:52:36,560 --> 00:52:39,560
+ok, então vamos arranjar aqui
+
+663
+00:52:39,560 --> 00:52:42,560
+uma máquina que fique a caber
+
+664
+00:52:42,560 --> 00:52:45,560
+dentro deste espaço disponível
+
+665
+00:52:45,560 --> 00:52:48,560
+no caso da clave, nós nem nos preocupamos com isso
+
+666
+00:52:48,560 --> 00:52:51,560
+o fornecedor é que precisa
+
+667
+00:52:51,560 --> 00:52:54,560
+arranjar espaço e tal e montar a infraestrutura
+
+668
+00:52:54,560 --> 00:52:57,560
+mas nem nos importamos com isso
+
+669
+00:52:57,560 --> 00:53:00,560
+em relação a capacidade de computação nos edges devices
+
+670
+00:53:00,560 --> 00:53:03,560
+não é limitada e no caso da clave
+
+671
+00:53:03,560 --> 00:53:06,560
+é virtualmente
+
+672
+00:53:06,560 --> 00:53:09,560
+ilimitada ok
+
+673
+00:53:09,560 --> 00:53:12,560
+mas vemos que do lado do edge
+
+674
+00:53:12,560 --> 00:53:15,560
+há restrições
+
+675
+00:53:15,560 --> 00:53:18,560
+devido a
+
+676
+00:53:18,560 --> 00:53:21,560
+as características movestas que é consumo
+
+677
+00:53:21,560 --> 00:53:24,560
+capacidade de computação no lado da clave
+
+678
+00:53:24,560 --> 00:53:27,560
+a coisa é
+
+679
+00:53:27,560 --> 00:53:30,560
+é exuberante
+
+680
+00:53:30,560 --> 00:53:33,560
+querem consumos, querem capacidades
+
+681
+00:53:33,560 --> 00:53:36,560
+querem infraestrutura que é necessária para suportar aquilo
+
+682
+00:53:36,560 --> 00:53:39,560
+ok
+
+683
+00:53:39,560 --> 00:53:42,560
+aplicações
+
+684
+00:53:42,560 --> 00:53:45,560
+paradigmáticas
+
+685
+00:53:45,560 --> 00:53:48,560
+que utilizam este que aplicam
+
+686
+00:53:48,560 --> 00:53:51,560
+este contínuo da clave
+
+687
+00:53:51,560 --> 00:53:54,560
+até a edge
+
+688
+00:53:54,560 --> 00:53:57,560
+temos os veículos autónomos
+
+689
+00:53:57,560 --> 00:54:00,560
+é daquelas coisas que tem havido muita investigação
+
+690
+00:54:00,560 --> 00:54:03,560
+porque os veículos são autónomos
+
+691
+00:54:03,560 --> 00:54:06,560
+tem bastante sistema já para controlar
+
+692
+00:54:06,560 --> 00:54:09,560
+o próprio veículo
+
+693
+00:54:09,560 --> 00:54:12,560
+e aquilo que o rodeia
+
+694
+00:54:12,560 --> 00:54:15,560
+no imediato mas também há muita investigação
+
+695
+00:54:15,560 --> 00:54:18,560
+para colocar os veículos a cooperar
+
+696
+00:54:18,560 --> 00:54:21,560
+uns com os outros por exemplo
+
+697
+00:54:21,560 --> 00:54:24,560
+no caso de haver um abrandamento
+
+698
+00:54:24,560 --> 00:54:27,560
+porque há muito tráfico mais à frente
+
+699
+00:54:27,560 --> 00:54:30,560
+enviar essa notificação
+
+700
+00:54:30,560 --> 00:54:33,560
+para uma infraestrutura que vai disseminar essa informação
+
+701
+00:54:33,560 --> 00:54:36,560
+e os próprios automóveis recebem informação
+
+702
+00:54:36,560 --> 00:54:39,560
+de que um quilômetro à frente
+
+703
+00:54:39,560 --> 00:54:42,560
+o trânsito está muito lento logo
+
+704
+00:54:42,560 --> 00:54:45,560
+ele deve começar a regular a velocidade desde já
+
+705
+00:54:45,560 --> 00:54:48,560
+para evitar acidentes quando chegar lá não ser surpreendido
+
+706
+00:54:48,560 --> 00:54:51,560
+no caso de haver um acidente a ver logo uma notificação
+
+707
+00:54:51,560 --> 00:54:54,560
+e o próprio cá eventualmente
+
+708
+00:54:54,560 --> 00:54:57,560
+de forma automática a fazer a regulação
+
+709
+00:54:57,560 --> 00:55:00,560
+porque já sabemos que a gente é o pessoal a conduzir
+
+710
+00:55:00,560 --> 00:55:03,560
+é maluco o pessoal está a dizer Cuidado dá-lhe um acidente
+
+711
+00:55:03,560 --> 00:55:06,560
+e eles continuam a erer esse anticorrente
+
+712
+00:55:06,560 --> 00:55:09,560
+ainda hoje é 4.0 portanto
+
+713
+00:55:09,560 --> 00:55:12,560
+integrar os processos de fabrico
+
+714
+00:55:12,560 --> 00:55:15,560
+em sistemas inteligentes
+
+715
+00:55:15,560 --> 00:55:18,560
+e também smart screens
+
+716
+00:55:18,560 --> 00:55:21,560
+a distribuição
+
+717
+00:55:21,560 --> 00:55:24,560
+elétrica de energia elétrica agora
+
+718
+00:55:24,560 --> 00:55:27,560
+é muito complexa porque existem muitos
+
+719
+00:55:27,560 --> 00:55:30,560
+produtores não é que antigamente que havia
+
+720
+00:55:30,560 --> 00:55:33,560
+poucos produtores e a coisa era muito
+
+721
+00:55:33,560 --> 00:55:36,560
+fácil de regular muito fácil
+
+722
+00:55:36,560 --> 00:55:39,560
+era mais fácil do que agora não era muito nunca
+
+723
+00:55:39,560 --> 00:55:42,560
+foi muito fácil mas era mais fácil do que agora
+
+724
+00:55:42,560 --> 00:55:45,560
+e então
+
+725
+00:55:45,560 --> 00:55:48,560
+a gestão da redistribuição
+
+726
+00:55:48,560 --> 00:55:51,560
+elétrica neste momento tem que ser
+
+727
+00:55:51,560 --> 00:55:54,560
+fortemente dinâmica
+
+728
+00:55:54,560 --> 00:55:57,560
+e bastante reativa
+
+729
+00:55:57,560 --> 00:56:00,560
+ok pronto dúvidas até agora não há
+
+730
+00:56:00,560 --> 00:56:03,560
+já vemos que existem
+
+731
+00:56:03,560 --> 00:56:07,970
+dois como é que dizer
+
+732
+00:56:07,970 --> 00:56:10,970
+dois modelos que ao nome dos tempos
+
+733
+00:56:10,970 --> 00:56:13,970
+foram se fundindo que é o modelo
+
+734
+00:56:13,970 --> 00:56:16,970
+da computação de alta capacidade
+
+735
+00:56:16,970 --> 00:56:19,970
+que existem os servidores e a computação
+
+736
+00:56:19,970 --> 00:56:22,970
+de uma capacidade
+
+737
+00:56:22,970 --> 00:56:25,970
+muito modesta mas muito aplicada
+
+738
+00:56:25,970 --> 00:56:28,970
+no controlo de processos físicos ok
+
+739
+00:56:28,970 --> 00:56:31,970
+e tem existido uma interligação
+
+740
+00:56:31,970 --> 00:56:34,970
+cada vez maior e antes
+
+741
+00:56:34,970 --> 00:56:37,970
+esses dois domínios
+
+742
+00:56:37,970 --> 00:56:40,970
+e as aplicações distribuem
+
+743
+00:56:40,970 --> 00:56:43,970
+atualmente entre a edge
+
+744
+00:56:43,970 --> 00:56:46,970
+e a clave ok pronto
+
+745
+00:56:46,970 --> 00:56:49,970
+agora a clave a clave como é que
+
+746
+00:56:49,970 --> 00:56:52,970
+surgiu a clave
+
+747
+00:56:52,970 --> 00:56:55,970
+a clave surgiu a partir
+
+748
+00:56:55,970 --> 00:56:58,970
+da
+
+749
+00:56:58,970 --> 00:57:04,110
+sim ok surgiu
+
+750
+00:57:04,110 --> 00:57:07,110
+sobretudo acente nas tecnologias de virtualização
+
+751
+00:57:07,110 --> 00:57:10,110
+e depois houve um grande esforço para
+
+752
+00:57:10,110 --> 00:57:13,110
+automatizar
+
+753
+00:57:13,110 --> 00:57:16,110
+o comportamento
+
+754
+00:57:16,110 --> 00:57:19,110
+ou a reconfiguração
+
+755
+00:57:19,110 --> 00:57:22,110
+dos equipamentos
+
+756
+00:57:22,110 --> 00:57:25,110
+e dos serviços que correm nesses equipamentos ok
+
+757
+00:57:25,110 --> 00:57:28,110
+então vamos falar sobre virtualização e contenturização
+
+758
+00:57:28,110 --> 00:57:31,110
+ok conceito virtualização
+
+759
+00:57:31,110 --> 00:57:35,840
+refé-se sobretudo à extração
+
+760
+00:57:35,840 --> 00:57:38,840
+de recursos
+
+761
+00:57:38,840 --> 00:57:41,840
+eu posso ter um computador físico
+
+762
+00:57:41,840 --> 00:57:44,840
+uma máquina física ok
+
+763
+00:57:44,840 --> 00:57:47,840
+mas se eu utilizar essa máquina
+
+764
+00:57:47,840 --> 00:57:50,840
+como uma unidade
+
+765
+00:57:50,840 --> 00:57:53,840
+dificilmente eu vou conseguir dividir
+
+766
+00:57:53,840 --> 00:57:56,840
+seus recursos para
+
+767
+00:57:56,840 --> 00:57:59,840
+diferentes aplicações
+
+768
+00:57:59,840 --> 00:58:02,840
+ou diferentes clientes ok
+
+769
+00:58:02,840 --> 00:58:05,840
+se eu tiver uma máquina física
+
+770
+00:58:05,840 --> 00:58:08,840
+que suporte
+
+771
+00:58:08,840 --> 00:58:11,840
+duas, três, quatro máquinas virtuais
+
+772
+00:58:11,840 --> 00:58:14,840
+em que cada máquina virtual
+
+773
+00:58:14,840 --> 00:58:17,840
+desconhece a existência das outras
+
+774
+00:58:17,840 --> 00:58:20,840
+eu posso criar uma máquina virtual
+
+775
+00:58:20,840 --> 00:58:23,840
+com uma determinada dimensão para suportar um serviço
+
+776
+00:58:23,840 --> 00:58:26,840
+e posso ter outra máquina virtual
+
+777
+00:58:26,840 --> 00:58:29,840
+com outra dimensão
+
+778
+00:58:29,840 --> 00:58:32,840
+para suportar um serviço independente
+
+779
+00:58:32,840 --> 00:58:35,840
+ou de serviço
+
+780
+00:58:35,840 --> 00:58:38,840
+e este isolamento até pode
+
+781
+00:58:38,840 --> 00:58:41,840
+permitir que seu serviço da máquina virtual
+
+782
+00:58:41,840 --> 00:58:44,840
+a deitar abaixo
+
+783
+00:58:44,840 --> 00:58:47,840
+a máquina a
+
+784
+00:58:47,840 --> 00:58:50,840
+a máquina b encontra-se isolado a desse problema
+
+785
+00:58:50,840 --> 00:58:56,300
+ok portanto
+
+786
+00:58:56,300 --> 00:58:59,300
+desligar o hardware físico
+
+787
+00:58:59,300 --> 00:59:04,510
+só das
+
+788
+00:59:04,510 --> 00:59:07,510
+as extrações
+
+789
+00:59:07,510 --> 00:59:10,510
+lógicas, máquinas lógicas
+
+790
+00:59:10,510 --> 00:59:13,510
+foi uma das
+
+791
+00:59:13,510 --> 00:59:16,510
+principais
+
+792
+00:59:16,510 --> 00:59:19,510
+preocupações ou objetivos
+
+793
+00:59:19,510 --> 00:59:21,510
+ok
+
+794
+00:59:21,510 --> 00:59:23,510
+e como é que nós fazemos isso?
+
+795
+00:59:23,510 --> 00:59:26,510
+eu até posso ter uma máquina só com um processador
+
+796
+00:59:26,510 --> 00:59:29,510
+antigamente aconteceu isso, eu tinha um computador
+
+797
+00:59:29,510 --> 00:59:32,510
+com um processador
+
+798
+00:59:32,510 --> 00:59:35,510
+quando falem antigamente, estou a imaginar para ir nos anos 80
+
+799
+00:59:35,510 --> 00:59:38,510
+o que acontece? Eu posso pegar
+
+800
+00:59:38,510 --> 00:59:41,510
+nesse único processador e dividir o tempo desse processador
+
+801
+00:59:41,510 --> 00:59:44,510
+se eu dividir o tempo desse processador
+
+802
+00:59:44,510 --> 00:59:47,510
+em duas metades
+
+803
+00:59:47,510 --> 00:59:50,510
+eu logicamente
+
+804
+00:59:50,510 --> 00:59:53,510
+parece que tenho dois processadores
+
+805
+00:59:53,510 --> 00:59:56,510
+com metade da capacidade do processador físico
+
+806
+00:59:56,510 --> 00:59:59,510
+é como se tivesse dois computadores
+
+807
+00:59:59,510 --> 01:00:02,510
+com metade da capacidade
+
+808
+01:00:02,510 --> 01:00:05,510
+daquele computador físico
+
+809
+01:00:05,510 --> 01:00:08,510
+faz sentido?
+
+810
+01:00:08,510 --> 01:00:12,860
+e também eu posso aproveitar
+
+811
+01:00:12,860 --> 01:00:15,860
+toda a memória para fazer uma partição da memória
+
+812
+01:00:15,860 --> 01:00:18,860
+por diferentes máquinas virtuais
+
+813
+01:00:18,860 --> 01:00:21,860
+e eu até posso dizer quanta memória
+
+814
+01:00:21,860 --> 01:00:24,860
+é que cada uma das máquinas virtuais tem
+
+815
+01:00:24,860 --> 01:00:27,860
+e posso atribuir quantidades diferentes de memória
+
+816
+01:00:27,860 --> 01:00:30,860
+a diferentes máquinas com suas ambicidades
+
+817
+01:00:30,860 --> 01:00:33,860
+também
+
+818
+01:00:33,860 --> 01:00:36,860
+posso fazer isso com os recursos de rede
+
+819
+01:00:36,860 --> 01:00:39,860
+eu posso ter uma máquina virtual
+
+820
+01:00:39,860 --> 01:00:42,860
+que precisa de usar mais
+
+821
+01:00:42,860 --> 01:00:45,860
+placa de rede
+
+822
+01:00:45,860 --> 01:00:48,860
+e outra máquina virtual que não tem tanta necessidade
+
+823
+01:00:48,860 --> 01:00:51,860
+de comunicações, logo eu vou lhe dar
+
+824
+01:00:51,860 --> 01:00:54,860
+uma capacidade de rede
+
+825
+01:00:54,860 --> 01:00:57,860
+obviamente que é boa parte destas partições
+
+826
+01:00:57,860 --> 01:01:00,860
+são feitas em tempo
+
+827
+01:01:00,860 --> 01:01:03,860
+no tempo total imaginem num segundo
+
+828
+01:01:03,860 --> 01:01:06,860
+eu vou dar tantos milissecondes esta máquina
+
+829
+01:01:06,860 --> 01:01:09,860
+tantos milissecondes outra máquina e tantos milissecondes outra máquina
+
+830
+01:01:09,860 --> 01:01:16,790
+o facto
+
+831
+01:01:16,790 --> 01:01:19,790
+um programa
+
+832
+01:01:19,790 --> 01:01:22,790
+quando não está a ser executado pelo processador
+
+833
+01:01:22,790 --> 01:01:25,790
+não sabe que não está a ser executado pelo processador
+
+834
+01:01:25,790 --> 01:01:30,420
+então ok portanto
+
+835
+01:01:30,420 --> 01:01:33,420
+um programa
+
+836
+01:01:33,420 --> 01:01:36,420
+que não está a correr no processador não faz ideia
+
+837
+01:01:36,420 --> 01:01:39,420
+que não está a correr no processador porque não faz ideia nenhuma
+
+838
+01:01:39,420 --> 01:01:42,420
+não está a correr no processador é que me se tivesse congelado
+
+839
+01:01:42,420 --> 01:01:48,210
+ok
+
+840
+01:01:48,210 --> 01:01:51,210
+não sei se fechantei porque eu disse para ilustrar
+
+841
+01:01:51,210 --> 01:01:54,210
+o como é que nós podemos dividir
+
+842
+01:01:54,210 --> 01:01:57,210
+algo físico em entidades lógicas
+
+843
+01:01:57,210 --> 01:02:00,210
+através da divisão por tempo
+
+844
+01:02:00,210 --> 01:02:06,730
+ok então
+
+845
+01:02:06,730 --> 01:02:09,730
+isto aqui eu pedi a Gemini
+
+846
+01:02:09,730 --> 01:02:12,730
+para me fazer um boneco
+
+847
+01:02:12,730 --> 01:02:15,730
+em que me mostrasse uma máquina física
+
+848
+01:02:15,730 --> 01:02:18,730
+e depois alí uma fatia
+
+849
+01:02:18,730 --> 01:02:21,730
+de algo que faz a virtualização
+
+850
+01:02:21,730 --> 01:02:24,730
+e em cima dessa máquina física
+
+851
+01:02:24,730 --> 01:02:27,730
+eu tenho várias máquinas virtuais
+
+852
+01:02:27,730 --> 01:02:30,730
+cada uma delas a correr
+
+853
+01:02:30,730 --> 01:02:33,730
+um sistema operativo e um conjunto de aplicações
+
+854
+01:02:33,730 --> 01:02:36,730
+obviamente que cada uma destas máquinas virtuais
+
+855
+01:02:36,730 --> 01:02:39,730
+como elas estão a partilhar os recursos
+
+856
+01:02:39,730 --> 01:02:42,730
+desta máquina física cada uma delas
+
+857
+01:02:42,730 --> 01:02:45,730
+é uma fração ou representa
+
+858
+01:02:45,730 --> 01:02:48,730
+uma fração desta máquina física
+
+859
+01:02:48,730 --> 01:02:53,070
+faz sentido cada máquina destas virtual
+
+860
+01:02:53,070 --> 01:02:56,070
+é como se fosse um computador mais fraco
+
+861
+01:02:56,070 --> 01:02:59,070
+do que esta máquina física
+
+862
+01:02:59,070 --> 01:03:06,300
+esta imagem conseguia atrecer a tentativa
+
+863
+01:03:06,300 --> 01:03:09,300
+tive que andar sempre a dizer não, não goste isto assim
+
+864
+01:03:09,300 --> 01:03:12,300
+faz assim, não, não goste isto assim faz assim
+
+865
+01:03:12,300 --> 01:03:15,300
+e mesmo assim eu não sei se isto ficou perfeito
+
+866
+01:03:15,300 --> 01:03:18,300
+isto aqui dá um bocado mal amanhado
+
+867
+01:03:18,300 --> 01:03:21,300
+mas ao fim de ter as tentativas eu disse ok
+
+868
+01:03:21,300 --> 01:03:24,300
+já está, dá para passar bem a ideia
+
+869
+01:03:24,300 --> 01:03:27,300
+a ser profissionista
+
+870
+01:03:27,300 --> 01:03:29,300
+ok, então agora
+
+871
+01:03:29,300 --> 01:03:32,300
+esta fatia de virtualização como é que ela é conseguida?
+
+872
+01:03:32,300 --> 01:03:34,300
+tá
+
+873
+01:03:34,300 --> 01:03:37,300
+é conseguida através de
+
+874
+01:03:37,300 --> 01:03:39,300
+um hipervisor
+
+875
+01:03:39,300 --> 01:03:42,300
+um hipervisor é software
+
+876
+01:03:42,300 --> 01:03:45,300
+que permite dividir os recursos
+
+877
+01:03:45,300 --> 01:03:47,300
+da máquina
+
+878
+01:03:47,300 --> 01:03:50,300
+ocultando
+
+879
+01:03:50,300 --> 01:03:53,300
+o assento direto à máquina
+
+880
+01:03:53,300 --> 01:03:56,300
+às máquinas virtuais
+
+881
+01:03:56,300 --> 01:03:59,300
+mas estabelece um ambiente em que as máquinas virtuais
+
+882
+01:03:59,300 --> 01:04:02,300
+conseguem executar ok
+
+883
+01:04:02,300 --> 01:04:06,930
+chama-se a isso um hipervisor
+
+884
+01:04:06,930 --> 01:04:09,930
+hipervisores a
+
+885
+01:04:09,930 --> 01:04:15,490
+desculpa
+
+886
+01:04:15,490 --> 01:04:18,490
+a de dois tipos, tipo 1 e tipo 2
+
+887
+01:04:18,490 --> 01:04:24,430
+os hipervisores de tipo 1
+
+888
+01:04:24,430 --> 01:04:27,430
+também vulgarmente conhecidos por bare metal
+
+889
+01:04:27,430 --> 01:04:30,430
+porque correm em cima
+
+890
+01:04:30,430 --> 01:04:33,430
+do hardware
+
+891
+01:04:33,430 --> 01:04:36,430
+é um hipervisor
+
+892
+01:04:36,430 --> 01:04:39,430
+que
+
+893
+01:04:39,430 --> 01:04:41,430
+corre diretamente o software
+
+894
+01:04:41,430 --> 01:04:44,430
+que faz a gestão das máquinas virtuais
+
+895
+01:04:44,430 --> 01:04:47,430
+diretamente em cima da plataforma
+
+896
+01:04:47,430 --> 01:04:49,430
+sem necessidade
+
+897
+01:04:49,430 --> 01:04:52,430
+de ter um sistema operativo completo para fazer isso
+
+898
+01:04:52,430 --> 01:04:55,430
+ok, o próximo ox
+
+899
+01:04:55,430 --> 01:04:58,430
+é o caso de um hipervisor tipo 1
+
+900
+01:04:58,430 --> 01:05:01,430
+vocês instalam o próximo ox
+
+901
+01:05:01,430 --> 01:05:04,430
+não tenham um sistema operativo
+
+902
+01:05:04,430 --> 01:05:07,430
+como nós estamos habituados a ter
+
+903
+01:05:07,430 --> 01:05:10,430
+no mac ou no windows
+
+904
+01:05:10,430 --> 01:05:13,430
+é que ele tem um software
+
+905
+01:05:13,430 --> 01:05:16,430
+que estabelece tudo aquilo que é necessário
+
+906
+01:05:16,430 --> 01:05:19,430
+para gerir as máquinas virtuais
+
+907
+01:05:19,430 --> 01:05:22,430
+e permitir que as máquinas virtuais
+
+908
+01:05:22,430 --> 01:05:25,430
+partidem os recursos da máquina
+
+909
+01:05:25,430 --> 01:05:28,430
+ok, mas
+
+910
+01:05:28,430 --> 01:05:31,430
+no caso o próximo ox
+
+911
+01:05:31,430 --> 01:05:34,430
+e agora ai vocês são os especialistas
+
+912
+01:05:34,430 --> 01:05:37,430
+a configuração e a operação do próximo ox
+
+913
+01:05:37,430 --> 01:05:40,430
+não é feita na própria máquina
+
+914
+01:05:40,430 --> 01:05:43,430
+é sempre feita através de uma interface remota
+
+915
+01:05:43,430 --> 01:05:46,430
+ou por shell
+
+916
+01:05:46,430 --> 01:05:49,430
+ou por uma interface web
+
+917
+01:05:49,430 --> 01:05:52,430
+tem uma interface web para algumas das funcionalidades
+
+918
+01:05:52,430 --> 01:05:57,030
+pode me confirmar se sim ou se não
+
+919
+01:05:57,030 --> 01:06:00,030
+sim, não tem
+
+920
+01:06:00,030 --> 01:06:02,030
+ou seja, o próximo ox
+
+921
+01:06:02,030 --> 01:06:05,030
+apesar de ter ali um kernel linux
+
+922
+01:06:05,030 --> 01:06:08,030
+não tem aquilo que nós estamos habituados
+
+923
+01:06:08,030 --> 01:06:11,030
+a ver no linux que utilizamos para trabalhar
+
+924
+01:06:11,030 --> 01:06:13,030
+no nosso desktop
+
+925
+01:06:13,030 --> 01:06:16,030
+não tem ecrã nem sequer tem suporte para teclado
+
+926
+01:06:16,030 --> 01:06:19,030
+possivelmente a única coisa que tenham é
+
+927
+01:06:19,030 --> 01:06:22,030
+um ponto de entrada para a configuração
+
+928
+01:06:22,030 --> 01:06:25,030
+e gestão
+
+929
+01:06:25,030 --> 01:06:28,030
+mas, fora isso, tira toda aquela carga
+
+930
+01:06:28,030 --> 01:06:31,030
+que é necessária, o meu foco é
+
+931
+01:06:31,030 --> 01:06:34,030
+gerir máquinas virtuais
+
+932
+01:06:34,030 --> 01:06:37,030
+pôs a partilhar e a estar doer
+
+933
+01:06:37,030 --> 01:06:40,030
+com o menor custo possível
+
+934
+01:06:45,700 --> 01:06:48,700
+exemplos, temos o próximo ox
+
+935
+01:06:48,700 --> 01:06:50,700
+mas também temos o vmoer
+
+936
+01:06:50,700 --> 01:06:52,700
+o sxi
+
+937
+01:06:52,700 --> 01:06:54,700
+também temos o hyperv
+
+938
+01:06:54,700 --> 01:06:56,700
+da microsoft
+
+939
+01:06:56,700 --> 01:06:58,700
+são hypervisores
+
+940
+01:06:58,700 --> 01:07:00,700
+bastante conhecidos
+
+941
+01:07:00,700 --> 01:07:02,700
+o próximo ox
+
+942
+01:07:02,700 --> 01:07:04,700
+é aquele que é gratuito
+
+943
+01:07:04,700 --> 01:07:06,700
+ou o livro
+
+944
+01:07:06,700 --> 01:07:08,700
+o vmoer
+
+945
+01:07:08,700 --> 01:07:10,700
+o sxi, vocês têm que pagá-lo
+
+946
+01:07:10,700 --> 01:07:12,700
+pagar para outra
+
+947
+01:07:12,700 --> 01:07:14,700
+mas obviamente quando pagam também
+
+948
+01:07:14,700 --> 01:07:16,700
+uma série de coisas que podem acompanhar
+
+949
+01:07:16,700 --> 01:07:18,700
+para algumas empresas
+
+950
+01:07:18,700 --> 01:07:20,700
+para bastante empresas
+
+951
+01:07:20,700 --> 01:07:22,700
+é um custo que eles pagam
+
+952
+01:07:22,700 --> 01:07:24,700
+com alegria
+
+953
+01:07:24,700 --> 01:07:26,700
+o hyperv da microsoft
+
+954
+01:07:26,700 --> 01:07:28,700
+não sei como é que está
+
+955
+01:07:28,700 --> 01:07:30,700
+como é que é o licenciamento
+
+956
+01:07:30,700 --> 01:07:32,700
+mas também acredito que se pague
+
+957
+01:07:32,700 --> 01:07:34,700
+para o tema
+
+958
+01:07:34,700 --> 01:07:36,700
+ok
+
+959
+01:07:36,700 --> 01:07:41,000
+como é que
+
+960
+01:07:41,000 --> 01:07:43,000
+ele faz
+
+961
+01:07:43,000 --> 01:07:45,000
+a gestão
+
+962
+01:07:45,000 --> 01:07:47,000
+das máquinas virtuais
+
+963
+01:07:47,000 --> 01:07:49,000
+do uso dos recursos físicos
+
+964
+01:07:49,000 --> 01:07:51,000
+pelas máquinas virtuais
+
+965
+01:07:51,000 --> 01:07:53,000
+normalmente existe
+
+966
+01:07:53,000 --> 01:07:55,000
+um kernel que é instalado
+
+967
+01:07:55,000 --> 01:07:57,000
+e o gestor de máquinas virtuais
+
+968
+01:07:57,000 --> 01:07:59,000
+está integrado nesse kernel
+
+969
+01:07:59,000 --> 01:08:01,000
+no caso do próximo ox
+
+970
+01:08:01,000 --> 01:08:03,000
+vocês têm o kvm
+
+971
+01:08:03,000 --> 01:08:05,000
+lá
+
+972
+01:08:05,000 --> 01:08:07,000
+inserido como um móvel do kernel
+
+973
+01:08:07,000 --> 01:08:09,000
+ok
+
+974
+01:08:09,000 --> 01:08:11,000
+portanto
+
+975
+01:08:11,000 --> 01:08:13,000
+o ambiente
+
+976
+01:08:13,000 --> 01:08:15,000
+de virtualização
+
+977
+01:08:15,000 --> 01:08:17,000
+no caso dos hypervisor tipo 1
+
+978
+01:08:17,000 --> 01:08:19,000
+está integrado no kernel
+
+979
+01:08:19,000 --> 01:08:21,000
+ok
+
+980
+01:08:21,000 --> 01:08:23,000
+tem lá
+
+981
+01:08:23,000 --> 01:08:25,000
+todas as rutinas necessárias
+
+982
+01:08:25,000 --> 01:08:27,000
+para descalmar cpu
+
+983
+01:08:27,000 --> 01:08:29,000
+pelas máquinas virtuais
+
+984
+01:08:29,000 --> 01:08:31,000
+atribuir morem também as máquinas virtuais
+
+985
+01:08:31,000 --> 01:08:33,000
+fazer a partilha
+
+986
+01:08:33,000 --> 01:08:35,000
+dos dispositivos
+
+987
+01:08:35,000 --> 01:08:37,000
+de entrada e saída
+
+988
+01:08:37,000 --> 01:08:39,000
+entre as máquinas virtuais
+
+989
+01:08:39,000 --> 01:08:41,000
+ok
+
+990
+01:08:41,000 --> 01:08:43,000
+essas operações de baixo nível
+
+991
+01:08:43,000 --> 01:08:45,000
+normalmente devemos associados a um kernel
+
+992
+01:08:45,000 --> 01:08:47,000
+estão lá
+
+993
+01:08:47,000 --> 01:08:49,000
+mas
+
+994
+01:08:49,000 --> 01:08:51,000
+para além disso
+
+995
+01:08:51,000 --> 01:08:53,000
+pouco há, ou seja, um kernel que é muito especializado
+
+996
+01:08:53,000 --> 01:08:55,000
+em gerir
+
+997
+01:08:55,000 --> 01:08:57,000
+recursos físicos
+
+998
+01:08:57,000 --> 01:08:59,000
+entre máquinas virtuais
+
+999
+01:08:59,000 --> 01:09:02,760
+ok
+
+1000
+01:09:02,760 --> 01:09:04,760
+pronto
+
+1001
+01:09:04,760 --> 01:09:06,760
+para isso de correr melhor
+
+1002
+01:09:06,760 --> 01:09:08,760
+até há arquiteturas
+
+1003
+01:09:08,760 --> 01:09:10,760
+que têm extensões
+
+1004
+01:09:10,760 --> 01:09:12,760
+que permitem
+
+1005
+01:09:12,760 --> 01:09:14,760
+tem instruções
+
+1006
+01:09:14,760 --> 01:09:16,760
+apropriadas para os hypervisores
+
+1007
+01:09:16,760 --> 01:09:18,760
+para facilitar as operações de gestão
+
+1008
+01:09:18,760 --> 01:09:20,760
+entre as máquinas virtuais
+
+1009
+01:09:20,760 --> 01:09:22,760
+quais são elas
+
+1010
+01:09:22,760 --> 01:09:24,760
+eu sei que elas existem
+
+1011
+01:09:24,760 --> 01:09:26,760
+existem estas extensões
+
+1012
+01:09:26,760 --> 01:09:28,760
+o VTX nos processadores de Intel
+
+1013
+01:09:28,760 --> 01:09:30,760
+existe esta extensão MVV
+
+1014
+01:09:30,760 --> 01:09:32,760
+de virtualize
+
+1015
+01:09:32,760 --> 01:09:34,760
+nos processadores da MV
+
+1016
+01:09:34,760 --> 01:09:36,760
+quais são essas instruções
+
+1017
+01:09:36,760 --> 01:09:38,760
+não sei
+
+1018
+01:09:38,760 --> 01:09:40,760
+ultrapasse
+
+1019
+01:09:40,760 --> 01:09:42,760
+é um ramo
+
+1020
+01:09:42,760 --> 01:09:44,760
+para ser francô convozco
+
+1021
+01:09:44,760 --> 01:09:46,760
+é um ramo em que eu
+
+1022
+01:09:46,760 --> 01:09:48,760
+não trabalhei
+
+1023
+01:09:48,760 --> 01:09:50,760
+para a pessoal da administração
+
+1024
+01:09:50,760 --> 01:09:52,760
+é o pão nosso cada dia
+
+1025
+01:09:52,760 --> 01:09:54,760
+possivelmente
+
+1026
+01:09:54,760 --> 01:09:56,760
+eu como não sou administrador de sistemas
+
+1027
+01:09:56,760 --> 01:09:58,760
+é daquelas coisas que conheço
+
+1028
+01:09:58,760 --> 01:10:00,760
+sei que elas existem
+
+1029
+01:10:00,760 --> 01:10:02,760
+e pronto, fico feliz
+
+1030
+01:10:02,760 --> 01:10:04,760
+tá bom
+
+1031
+01:10:04,760 --> 01:10:06,760
+continuando
+
+1032
+01:10:06,760 --> 01:10:08,760
+exato, tenho aqui
+
+1033
+01:10:08,760 --> 01:10:10,760
+um boneco
+
+1034
+01:10:10,760 --> 01:10:12,760
+este aqui
+
+1035
+01:10:12,760 --> 01:10:14,760
+só por curiosidade
+
+1036
+01:10:14,760 --> 01:10:18,390
+eu podia a Gemini
+
+1037
+01:10:18,390 --> 01:10:20,390
+porque eu quando procurava na Google
+
+1038
+01:10:20,390 --> 01:10:22,390
+qualquer coisa e depois ia a imagens
+
+1039
+01:10:22,390 --> 01:10:24,390
+estava com dificuldade de encontrar
+
+1040
+01:10:24,390 --> 01:10:26,390
+aquilo que eu queria
+
+1041
+01:10:26,390 --> 01:10:28,390
+então eu vou pedir a Gemini
+
+1042
+01:10:28,390 --> 01:10:30,390
+para fazer um boneco
+
+1043
+01:10:30,390 --> 01:10:32,390
+eu fazia, não é bem isto que eu quero
+
+1044
+01:10:32,390 --> 01:10:34,390
+e depois tinha que andar sempre lá
+
+1045
+01:10:34,390 --> 01:10:36,390
+a dizer agora eu modifiquei isto
+
+1046
+01:10:36,390 --> 01:10:38,390
+agora eu modifiquei aquilo
+
+1047
+01:10:38,390 --> 01:10:40,390
+que eu queria
+
+1048
+01:10:40,390 --> 01:10:42,390
+mas acho que isto representa mais ou menos bem
+
+1049
+01:10:42,390 --> 01:10:44,390
+temos aqui em baixo
+
+1050
+01:10:44,390 --> 01:10:46,390
+o hardware físico, a máquina física
+
+1051
+01:10:46,390 --> 01:10:48,390
+e agora temos aqui
+
+1052
+01:10:48,390 --> 01:10:50,390
+o kernel
+
+1053
+01:10:50,390 --> 01:10:52,390
+do hipervisor
+
+1054
+01:10:52,390 --> 01:10:54,390
+portanto nós não temos aqui
+
+1055
+01:10:54,390 --> 01:10:56,390
+um sistema operativo
+
+1056
+01:10:56,390 --> 01:10:58,390
+no conceito que nós estamos habituados
+
+1057
+01:10:58,390 --> 01:11:00,390
+um sistema operativo de uso genérico
+
+1058
+01:11:00,390 --> 01:11:02,390
+este é um sistema operativo
+
+1059
+01:11:02,390 --> 01:11:04,390
+específico
+
+1060
+01:11:04,390 --> 01:11:06,390
+para gerir máquinas virtuais
+
+1061
+01:11:06,390 --> 01:11:08,390
+faz a gestão do tempo de CPU
+
+1062
+01:11:08,390 --> 01:11:10,390
+a alocação de memória
+
+1063
+01:11:10,390 --> 01:11:12,390
+e a
+
+1064
+01:11:12,390 --> 01:11:14,390
+a utilização
+
+1065
+01:11:14,390 --> 01:11:16,390
+dos outros recursos
+
+1066
+01:11:16,390 --> 01:11:18,390
+entre as várias máquinas virtuais
+
+1067
+01:11:18,390 --> 01:11:20,390
+ok
+
+1068
+01:11:20,390 --> 01:11:22,390
+as máquinas virtuais estão aqui, cada uma delas
+
+1069
+01:11:22,390 --> 01:11:24,390
+está isolada, pensa que tenho um computador
+
+1070
+01:11:24,390 --> 01:11:26,390
+só para eles
+
+1071
+01:11:26,390 --> 01:11:28,390
+mas
+
+1072
+01:11:28,390 --> 01:11:30,390
+toda
+
+1073
+01:11:30,390 --> 01:11:32,390
+a competição
+
+1074
+01:11:32,390 --> 01:11:34,390
+toda a concorrência
+
+1075
+01:11:34,390 --> 01:11:36,390
+é lidada por este kernel
+
+1076
+01:11:36,390 --> 01:11:38,390
+do hipervisor
+
+1077
+01:11:38,390 --> 01:11:40,390
+proxmox por exemplo
+
+1078
+01:11:40,390 --> 01:11:43,740
+certo?
+
+1079
+01:11:43,740 --> 01:11:45,740
+os tipo 2, você já utilizaram
+
+1080
+01:11:45,740 --> 01:11:47,740
+o virtualbox
+
+1081
+01:11:47,740 --> 01:11:51,020
+da oracle
+
+1082
+01:11:51,020 --> 01:11:53,020
+sim
+
+1083
+01:11:53,020 --> 01:11:55,020
+ok, pronto
+
+1084
+01:11:55,020 --> 01:11:57,020
+o virtualbox
+
+1085
+01:11:57,020 --> 01:11:59,020
+é um hipervisor de tipo 2
+
+1086
+01:11:59,020 --> 01:12:01,020
+ou seja, permite ter
+
+1087
+01:12:01,020 --> 01:12:03,020
+suporta
+
+1088
+01:12:03,020 --> 01:12:05,020
+e gerir máquinas virtuais
+
+1089
+01:12:05,020 --> 01:12:07,020
+só que
+
+1090
+01:12:07,020 --> 01:12:09,020
+o software
+
+1091
+01:12:09,020 --> 01:12:11,020
+que faz a gestão das máquinas virtuais
+
+1092
+01:12:11,020 --> 01:12:13,020
+em vez de estar integrado
+
+1093
+01:12:13,020 --> 01:12:15,020
+no kernel do sistema operativo
+
+1094
+01:12:15,020 --> 01:12:17,020
+não é apenas uma aplicação
+
+1095
+01:12:17,020 --> 01:12:19,020
+que corre em cima
+
+1096
+01:12:19,020 --> 01:12:21,020
+do sistema operativo
+
+1097
+01:12:21,020 --> 01:12:23,020
+ok
+
+1098
+01:12:23,020 --> 01:12:25,020
+portanto, é um
+
+1099
+01:12:25,020 --> 01:12:27,020
+programa
+
+1100
+01:12:27,020 --> 01:12:29,020
+fora do sistema operativo
+
+1101
+01:12:29,020 --> 01:12:31,020
+que permite
+
+1102
+01:12:31,020 --> 01:12:33,020
+criar bolhas
+
+1103
+01:12:33,020 --> 01:12:35,020
+em que corre lá dentro
+
+1104
+01:12:35,020 --> 01:12:37,020
+cóbico, que tem um outro sistema operativo
+
+1105
+01:12:37,020 --> 01:12:39,020
+e outras aplicações
+
+1106
+01:12:39,020 --> 01:12:41,020
+obviamente
+
+1107
+01:12:41,020 --> 01:12:43,020
+que este distanciamento
+
+1108
+01:12:43,020 --> 01:12:45,020
+da minha máquina virtual
+
+1109
+01:12:45,020 --> 01:12:47,020
+pelo hipervisor de tipo 2
+
+1110
+01:12:47,020 --> 01:12:49,020
+pelo sistema operativo
+
+1111
+01:12:49,020 --> 01:12:51,020
+anfitrião da máquina
+
+1112
+01:12:51,020 --> 01:12:53,020
+e finalmente o hardware
+
+1113
+01:12:53,020 --> 01:12:55,020
+faz com que essas máquinas virtuais
+
+1114
+01:12:55,020 --> 01:12:57,020
+se apresentem
+
+1115
+01:12:57,020 --> 01:12:59,020
+bastante lentas
+
+1116
+01:12:59,020 --> 01:13:01,020
+em relação
+
+1117
+01:13:01,020 --> 01:13:03,020
+a um hipervisor de tipo 1
+
+1118
+01:13:03,020 --> 01:13:05,020
+as máquinas virtuais aqui
+
+1119
+01:13:05,020 --> 01:13:07,020
+vão ser
+
+1120
+01:13:07,020 --> 01:13:09,020
+muito mais pesadas
+
+1121
+01:13:09,020 --> 01:13:11,020
+no entanto, é espectacular quando nós queremos
+
+1122
+01:13:11,020 --> 01:13:13,020
+fazer as experiências com
+
+1123
+01:13:13,020 --> 01:13:15,020
+se eu tivesse aqui
+
+1124
+01:13:15,020 --> 01:13:17,020
+duas máquinas Linux
+
+1125
+01:13:17,020 --> 01:13:19,020
+para correr esta aplicação
+
+1126
+01:13:19,020 --> 01:13:21,020
+pagamos no virtualbox
+
+1127
+01:13:21,020 --> 01:13:23,020
+por que? porque continuamos a ter
+
+1128
+01:13:23,020 --> 01:13:25,020
+todo o nosso ambiente de trabalho
+
+1129
+01:13:25,020 --> 01:13:27,020
+enquanto que no proxmox
+
+1130
+01:13:27,020 --> 01:13:29,020
+nós temos ali uma máquina
+
+1131
+01:13:29,020 --> 01:13:31,020
+que vai ser um servidor poliduro
+
+1132
+01:13:31,020 --> 01:13:33,020
+nós corremos o virtualbox
+
+1133
+01:13:33,020 --> 01:13:35,020
+que temos no nosso sistema desktop
+
+1134
+01:13:35,020 --> 01:13:37,020
+e podemos experimentar
+
+1135
+01:13:37,020 --> 01:13:39,020
+com outras máquinas a correr
+
+1136
+01:13:39,020 --> 01:13:41,020
+dentro do nosso desktop mas continuamos a ter
+
+1137
+01:13:41,020 --> 01:13:43,020
+toda a nossa comunidade
+
+1138
+01:13:43,020 --> 01:13:45,020
+do desktop, certo?
+
+1139
+01:13:45,020 --> 01:13:47,020
+portanto, estes tipo 2
+
+1140
+01:13:47,020 --> 01:13:49,020
+são muito utilizados para
+
+1141
+01:13:49,020 --> 01:13:51,020
+fazer experiências
+
+1142
+01:13:51,020 --> 01:13:53,020
+testar software
+
+1143
+01:13:53,020 --> 01:13:55,020
+mas não são utilizados
+
+1144
+01:13:55,020 --> 01:13:58,870
+em servidores
+
+1145
+01:13:58,870 --> 01:14:00,870
+quer dizer que a clave
+
+1146
+01:14:00,870 --> 01:14:02,870
+utiliza máquinas
+
+1147
+01:14:02,870 --> 01:14:04,870
+com hipervisor de tipo 1
+
+1148
+01:14:04,870 --> 01:14:09,590
+faz sentido?
+
+1149
+01:14:09,590 --> 01:14:13,220
+como? como?
+
+1150
+01:14:13,220 --> 01:14:17,180
+há uma dúvida?
+
+1151
+01:14:17,180 --> 01:14:19,180
+pronto, então
+
+1152
+01:14:19,180 --> 01:14:21,180
+recapitulando
+
+1153
+01:14:21,180 --> 01:14:23,180
+as máquinas
+
+1154
+01:14:23,180 --> 01:14:25,180
+que estão na clave
+
+1155
+01:14:25,180 --> 01:14:27,180
+utilizam todas elas
+
+1156
+01:14:27,180 --> 01:14:29,180
+hipervisor de tipo 1
+
+1157
+01:14:29,180 --> 01:14:31,180
+os hipervisor de tipo 2 são bons
+
+1158
+01:14:31,180 --> 01:14:33,180
+é para programadores que querem fazer
+
+1159
+01:14:33,180 --> 01:14:35,180
+experiências, alguns testes
+
+1160
+01:14:39,180 --> 01:14:41,180
+temos aqui um exemplo
+
+1161
+01:14:41,180 --> 01:14:43,180
+em que temos a plataforma
+
+1162
+01:14:43,180 --> 01:14:45,180
+física, a máquina
+
+1163
+01:14:45,180 --> 01:14:47,180
+temos aqui o sistema operativo
+
+1164
+01:14:47,180 --> 01:14:49,180
+o windows ou macOS
+
+1165
+01:14:49,180 --> 01:14:51,180
+macOS
+
+1166
+01:14:51,180 --> 01:14:53,180
+e depois temos uma aplicação
+
+1167
+01:14:53,180 --> 01:14:55,180
+a correr em cima
+
+1168
+01:14:55,180 --> 01:14:57,180
+a concorrer com todas as outras aplicações
+
+1169
+01:14:57,180 --> 01:14:59,180
+que é o gestor
+
+1170
+01:14:59,180 --> 01:15:01,180
+de
+
+1171
+01:15:01,180 --> 01:15:03,180
+máquinas virtuais
+
+1172
+01:15:03,180 --> 01:15:05,180
+e depois em cima deste gestor
+
+1173
+01:15:05,180 --> 01:15:07,180
+de máquinas virtuais, temos as máquinas virtuais
+
+1174
+01:15:07,180 --> 01:15:09,180
+que utilizam o ambiente
+
+1175
+01:15:09,180 --> 01:15:11,180
+que é criado para esta aplicação
+
+1176
+01:15:11,180 --> 01:15:13,180
+basicamente
+
+1177
+01:15:13,180 --> 01:15:15,180
+temos máquinas virtuais a correr
+
+1178
+01:15:15,180 --> 01:15:17,180
+dentro de uma aplicação
+
+1179
+01:15:17,180 --> 01:15:19,180
+que está a correr dentro da minha máquina
+
+1180
+01:15:19,180 --> 01:15:21,180
+certo?
+
+1181
+01:15:21,180 --> 01:15:29,610
+dúvidas não há?
+
+1182
+01:15:29,610 --> 01:15:34,940
+muito bem
+
+1183
+01:15:34,940 --> 01:15:36,940
+quais são os custos
+
+1184
+01:15:36,940 --> 01:15:38,940
+que nós temos associados
+
+1185
+01:15:38,940 --> 01:15:40,940
+a virtualização
+
+1186
+01:15:40,940 --> 01:15:42,940
+a virtualização tem coisas boas
+
+1187
+01:15:42,940 --> 01:15:44,940
+como por exemplo, eu tenho uma plataforma
+
+1188
+01:15:44,940 --> 01:15:46,940
+e depois eu posso organizar
+
+1189
+01:15:46,940 --> 01:15:48,940
+esta minha plataforma física
+
+1190
+01:15:48,940 --> 01:15:50,940
+em plataformas
+
+1191
+01:15:50,940 --> 01:15:52,940
+lógicas
+
+1192
+01:15:52,940 --> 01:15:54,940
+ou virtuais
+
+1193
+01:15:54,940 --> 01:15:56,940
+e dessa forma
+
+1194
+01:15:56,940 --> 01:15:58,940
+eu posso utilizar
+
+1195
+01:15:58,940 --> 01:16:00,940
+de uma forma mais racional
+
+1196
+01:16:00,940 --> 01:16:02,940
+organizada
+
+1197
+01:16:02,940 --> 01:16:04,940
+os meus recursos
+
+1198
+01:16:04,940 --> 01:16:06,940
+certo? no entanto
+
+1199
+01:16:06,940 --> 01:16:08,940
+isso não vem livre de problemas
+
+1200
+01:16:08,940 --> 01:16:10,940
+por exemplo
+
+1201
+01:16:10,940 --> 01:16:12,940
+se eu tiver duas máquinas virtuais
+
+1202
+01:16:12,940 --> 01:16:14,940
+linux
+
+1203
+01:16:14,940 --> 01:16:16,940
+na mesma máquina física
+
+1204
+01:16:16,940 --> 01:16:18,940
+eu vou ter duas
+
+1205
+01:16:18,940 --> 01:16:20,940
+vezes a instalação
+
+1206
+01:16:20,940 --> 01:16:22,940
+do linux
+
+1207
+01:16:22,940 --> 01:16:24,940
+um linux a correr na máquina A
+
+1208
+01:16:24,940 --> 01:16:26,940
+e outro linux a correr na máquina B
+
+1209
+01:16:26,940 --> 01:16:28,940
+não existe partilha
+
+1210
+01:16:28,940 --> 01:16:30,940
+de instalação
+
+1211
+01:16:30,940 --> 01:16:32,940
+do linux por exemplo
+
+1212
+01:16:32,940 --> 01:16:34,940
+porque cada máquina
+
+1213
+01:16:34,940 --> 01:16:36,940
+está totalmente isolada
+
+1214
+01:16:36,940 --> 01:16:38,940
+cada máquina virtual
+
+1215
+01:16:38,940 --> 01:16:40,940
+está totalmente isolada da outra máquina virtual
+
+1216
+01:16:40,940 --> 01:16:42,940
+cada máquina virtual
+
+1217
+01:16:42,940 --> 01:16:44,940
+tem a sua visão do disco
+
+1218
+01:16:44,940 --> 01:16:46,940
+ok?
+
+1219
+01:16:46,940 --> 01:16:48,940
+logo
+
+1220
+01:16:48,940 --> 01:16:50,940
+não há partilhas
+
+1221
+01:16:50,940 --> 01:16:52,940
+de disco entre máquinas virtuais
+
+1222
+01:16:52,940 --> 01:16:54,940
+isso quer dizer que
+
+1223
+01:16:54,940 --> 01:16:56,940
+se eu quero ter
+
+1224
+01:16:56,940 --> 01:16:58,940
+duas máquinas virtuais a correr linux
+
+1225
+01:16:58,940 --> 01:17:00,940
+eu vou ter dois linux a correr
+
+1226
+01:17:00,940 --> 01:17:02,940
+naquela máquina física
+
+1227
+01:17:02,940 --> 01:17:04,940
+ok? isso obviamente implica
+
+1228
+01:17:04,940 --> 01:17:06,940
+usar mais memória
+
+1229
+01:17:06,940 --> 01:17:08,940
+também
+
+1230
+01:17:08,940 --> 01:17:10,940
+eu vou ter duas vezes aquela pegada
+
+1231
+01:17:10,940 --> 01:17:12,940
+do linux
+
+1232
+01:17:12,940 --> 01:17:14,940
+e se eu tiver a pensar em seis máquinas virtuais
+
+1233
+01:17:14,940 --> 01:17:16,940
+vou ter seis vezes
+
+1234
+01:17:16,940 --> 01:17:18,940
+essa pegada
+
+1235
+01:17:18,940 --> 01:17:20,940
+outra coisa
+
+1236
+01:17:20,940 --> 01:17:22,940
+também quando nós atribuímos
+
+1237
+01:17:22,940 --> 01:17:24,940
+memória
+
+1238
+01:17:24,940 --> 01:17:26,940
+a uma máquina virtual
+
+1239
+01:17:26,940 --> 01:17:28,940
+essa atribuição é
+
+1240
+01:17:28,940 --> 01:17:30,940
+estática
+
+1241
+01:17:30,940 --> 01:17:32,940
+ou seja, nós damos por exemplo
+
+1242
+01:17:32,940 --> 01:17:34,940
+dois gigas de RAM
+
+1243
+01:17:34,940 --> 01:17:36,940
+à máquina virtual A
+
+1244
+01:17:36,940 --> 01:17:38,940
+e dez gigas de RAM
+
+1245
+01:17:38,940 --> 01:17:40,940
+à máquina virtual B
+
+1246
+01:17:40,940 --> 01:17:42,940
+se a máquina A precisar de mais memória
+
+1247
+01:17:46,940 --> 01:17:48,940
+pode ser difícil
+
+1248
+01:17:48,940 --> 01:17:50,940
+atribuir-lhe mais memória
+
+1249
+01:17:50,940 --> 01:17:52,940
+sem termos que reconfigurar
+
+1250
+01:17:52,940 --> 01:17:54,940
+desligar e voltar a arrancar
+
+1251
+01:17:54,940 --> 01:17:56,940
+ok?
+
+1252
+01:17:56,940 --> 01:17:58,940
+os supervisores
+
+1253
+01:17:58,940 --> 01:18:00,940
+agora não sei
+
+1254
+01:18:00,940 --> 01:18:02,940
+vocês já experimentaram
+
+1255
+01:18:02,940 --> 01:18:04,940
+o Proxmox
+
+1256
+01:18:04,940 --> 01:18:06,940
+se calhar até me vão dizer
+
+1257
+01:18:06,940 --> 01:18:08,940
+mas os supervisores
+
+1258
+01:18:08,940 --> 01:18:10,940
+tinham
+
+1259
+01:18:10,940 --> 01:18:12,940
+eram normalmente
+
+1260
+01:18:12,940 --> 01:18:14,940
+um bocado rígido
+
+1261
+01:18:14,940 --> 01:18:16,940
+em relação à configuração
+
+1262
+01:18:16,940 --> 01:18:18,940
+nós definíamos uma configuração
+
+1263
+01:18:18,940 --> 01:18:20,940
+e depois está a funcionar
+
+1264
+01:18:20,940 --> 01:18:22,940
+no mês
+
+1265
+01:18:22,940 --> 01:18:24,940
+e também o que diz aqui
+
+1266
+01:18:24,940 --> 01:18:26,940
+é que a memória
+
+1267
+01:18:26,940 --> 01:18:28,940
+é atribuída a uma máquina virtual
+
+1268
+01:18:28,940 --> 01:18:30,940
+é atribuída a essa máquina virtual
+
+1269
+01:18:30,940 --> 01:18:32,940
+e não fica disponível
+
+1270
+01:18:32,940 --> 01:18:34,940
+para
+
+1271
+01:18:34,940 --> 01:18:36,940
+o sistema
+
+1272
+01:18:36,940 --> 01:18:38,940
+o supervisor que está a utilizar
+
+1273
+01:18:38,940 --> 01:18:40,940
+está a gerir essa máquina
+
+1274
+01:18:48,700 --> 01:18:50,700
+então
+
+1275
+01:18:50,700 --> 01:18:52,700
+o que aconteceu?
+
+1276
+01:18:52,700 --> 01:18:54,700
+Houve
+
+1277
+01:18:54,700 --> 01:18:56,700
+um conjunto
+
+1278
+01:18:56,700 --> 01:18:58,700
+de características
+
+1279
+01:18:58,700 --> 01:19:00,700
+que foram sendo adicionadas
+
+1280
+01:19:00,700 --> 01:19:04,170
+ao Linux
+
+1281
+01:19:04,170 --> 01:19:06,170
+que
+
+1282
+01:19:06,170 --> 01:19:08,170
+trouxeram a possibilidade
+
+1283
+01:19:08,170 --> 01:19:10,170
+de executar
+
+1284
+01:19:10,170 --> 01:19:12,170
+uma aplicação
+
+1285
+01:19:12,170 --> 01:19:14,170
+dentro de uma bolha
+
+1286
+01:19:14,170 --> 01:19:16,170
+visualamento
+
+1287
+01:19:16,170 --> 01:19:18,170
+um processo quando está a correr
+
+1288
+01:19:18,170 --> 01:19:20,170
+já está numa bolha
+
+1289
+01:19:20,170 --> 01:19:22,170
+visualamento
+
+1290
+01:19:22,170 --> 01:19:24,170
+mas os processos
+
+1291
+01:19:24,170 --> 01:19:26,170
+só estão isolados uns dos outros
+
+1292
+01:19:28,170 --> 01:19:30,170
+e eu quando falo aqui numa bolha visualamento
+
+1293
+01:19:30,170 --> 01:19:32,170
+que é aquilo que sai chamar
+
+1294
+01:19:32,170 --> 01:19:34,170
+de contentor
+
+1295
+01:19:34,170 --> 01:19:36,170
+não é uma bolha visualamento
+
+1296
+01:19:36,170 --> 01:19:38,170
+de um único processo
+
+1297
+01:19:38,170 --> 01:19:40,170
+é
+
+1298
+01:19:40,170 --> 01:19:42,170
+tudo aquilo que eu quiser colocar
+
+1299
+01:19:42,170 --> 01:19:44,170
+dentro dessa bolha visualamento
+
+1300
+01:19:44,170 --> 01:19:46,170
+pode ser mais do que um processo
+
+1301
+01:19:46,170 --> 01:19:48,170
+pode ser
+
+1302
+01:19:48,170 --> 01:19:50,170
+uma parte
+
+1303
+01:19:50,170 --> 01:19:52,170
+ou uma visão do sistema de fecheios
+
+1304
+01:19:52,170 --> 01:19:54,170
+do disco
+
+1305
+01:19:54,170 --> 01:19:56,170
+pode ser também
+
+1306
+01:19:56,170 --> 01:19:58,170
+uma configuração
+
+1307
+01:19:58,170 --> 01:20:00,170
+da rede
+
+1308
+01:20:00,170 --> 01:20:02,170
+é quase como se tivesse
+
+1309
+01:20:02,170 --> 01:20:04,170
+uma bolha
+
+1310
+01:20:04,170 --> 01:20:06,170
+que está isolada
+
+1311
+01:20:06,170 --> 01:20:08,170
+do resto do software
+
+1312
+01:20:08,170 --> 01:20:10,170
+que está naquele computador
+
+1313
+01:20:10,170 --> 01:20:12,170
+é exceto
+
+1314
+01:20:12,170 --> 01:20:14,170
+numa coisa que é partilhada
+
+1315
+01:20:14,170 --> 01:20:16,170
+que é o kernel do sistema operativo
+
+1316
+01:20:20,170 --> 01:20:22,170
+ou seja
+
+1317
+01:20:22,170 --> 01:20:24,170
+todas as bolhas
+
+1318
+01:20:24,170 --> 01:20:26,170
+correm como se fossem só
+
+1319
+01:20:26,170 --> 01:20:28,170
+o que está dentro da bolha
+
+1320
+01:20:28,170 --> 01:20:30,170
+o kernel do sistema operativo
+
+1321
+01:20:30,170 --> 01:20:32,170
+e o computador que está por baixo
+
+1322
+01:20:36,170 --> 01:20:38,170
+há
+
+1323
+01:20:38,170 --> 01:20:40,170
+há bastante tempo atrás havia uma piada
+
+1324
+01:20:40,170 --> 01:20:42,170
+que era como é que os contentores nasceram
+
+1325
+01:20:42,170 --> 01:20:44,170
+e então
+
+1326
+01:20:44,170 --> 01:20:46,170
+era o gestor
+
+1327
+01:20:46,170 --> 01:20:48,170
+de uma empresa de software
+
+1328
+01:20:48,170 --> 01:20:50,170
+que estava a receber uma chamada de um cliente
+
+1329
+01:20:50,170 --> 01:20:52,170
+ia ter
+
+1330
+01:20:52,170 --> 01:20:54,170
+com o programador
+
+1331
+01:20:54,170 --> 01:20:56,170
+e dizia
+
+1332
+01:20:56,170 --> 01:20:58,170
+o cliente diz que a aplicação
+
+1333
+01:20:58,170 --> 01:21:00,170
+que nós acabamos de
+
+1334
+01:21:00,170 --> 01:21:02,170
+a nova versão da aplicação
+
+1335
+01:21:02,170 --> 01:21:04,170
+que implementamos no servidor dele
+
+1336
+01:21:04,170 --> 01:21:06,170
+não está a funcionar
+
+1337
+01:21:06,170 --> 01:21:08,170
+e o programador diz
+
+1338
+01:21:08,170 --> 01:21:10,170
+mas estava a funcionar no meu computador
+
+1339
+01:21:10,170 --> 01:21:12,170
+e o gestor diz
+
+1340
+01:21:12,170 --> 01:21:15,450
+embala o computador dele e manda para o cliente
+
+1341
+01:21:15,450 --> 01:21:17,450
+se está a funcionar ali
+
+1342
+01:21:17,450 --> 01:21:19,450
+manda ao computador
+
+1343
+01:21:19,450 --> 01:21:21,450
+e o cliente
+
+1344
+01:21:21,450 --> 01:21:23,450
+e foi assim que nasceram os contentores
+
+1345
+01:21:23,450 --> 01:21:25,450
+porque
+
+1346
+01:21:25,450 --> 01:21:27,450
+nesta bolha
+
+1347
+01:21:27,450 --> 01:21:29,450
+é que se chama contentor
+
+1348
+01:21:29,450 --> 01:21:31,450
+nós colocamos
+
+1349
+01:21:31,450 --> 01:21:33,450
+o programa
+
+1350
+01:21:33,450 --> 01:21:35,450
+que queremos executar
+
+1351
+01:21:35,450 --> 01:21:37,450
+podemos também
+
+1352
+01:21:37,450 --> 01:21:39,450
+colocar dentro dessa bolha
+
+1353
+01:21:39,450 --> 01:21:41,450
+todas as dependências
+
+1354
+01:21:41,450 --> 01:21:43,450
+bibliotecas
+
+1355
+01:21:43,450 --> 01:21:45,450
+que esse programa precisa
+
+1356
+01:21:45,450 --> 01:21:47,450
+para executar
+
+1357
+01:21:47,450 --> 01:21:49,450
+e se essa bolha
+
+1358
+01:21:49,450 --> 01:21:51,450
+estiver a correr
+
+1359
+01:21:51,450 --> 01:21:53,450
+num computador
+
+1360
+01:21:53,450 --> 01:21:55,450
+nós pegamos nessa bolha
+
+1361
+01:21:55,450 --> 01:21:57,450
+podemos transportá-la
+
+1362
+01:21:57,450 --> 01:21:59,450
+para outro computador
+
+1363
+01:21:59,450 --> 01:22:01,450
+que tenha o mesmo sistema operativo
+
+1364
+01:22:01,450 --> 01:22:03,450
+e aquilo vai funcionar
+
+1365
+01:22:03,450 --> 01:22:05,450
+porque nós
+
+1366
+01:22:05,450 --> 01:22:07,450
+replicamos uma imagem
+
+1367
+01:22:07,450 --> 01:22:09,450
+de tudo aquilo que é necessário
+
+1368
+01:22:09,450 --> 01:22:11,450
+para este programa correr
+
+1369
+01:22:11,450 --> 01:22:13,450
+e este programa a única coisa que precisa
+
+1370
+01:22:13,450 --> 01:22:15,450
+para além do que está dentro da bolha
+
+1371
+01:22:15,450 --> 01:22:17,450
+é do sistema operativo
+
+1372
+01:22:17,450 --> 01:22:19,450
+e do computador que está por baixo
+
+1373
+01:22:19,450 --> 01:22:21,450
+ok
+
+1374
+01:22:21,450 --> 01:22:23,450
+o que apareceu entretanto
+
+1375
+01:22:23,450 --> 01:22:25,450
+o change-route
+
+1376
+01:22:25,450 --> 01:22:27,450
+o change-route que me permite dizer
+
+1377
+01:22:27,450 --> 01:22:29,450
+qual é que é o direitório
+
+1378
+01:22:29,450 --> 01:22:31,450
+o raiz
+
+1379
+01:22:31,450 --> 01:22:33,450
+onde este programa vai executar
+
+1380
+01:22:33,450 --> 01:22:35,450
+é quase como dizer que
+
+1381
+01:22:35,450 --> 01:22:37,450
+a route do sistema fecheiros
+
+1382
+01:22:37,450 --> 01:22:39,450
+para este processo
+
+1383
+01:22:39,450 --> 01:22:41,450
+é neste direitório
+
+1384
+01:22:41,450 --> 01:22:43,450
+e acima deste direitório
+
+1385
+01:22:43,450 --> 01:22:45,450
+este processo não consegue ver nada
+
+1386
+01:22:45,450 --> 01:22:47,450
+ok
+
+1387
+01:22:47,450 --> 01:22:49,450
+o change-route permite-nos
+
+1388
+01:22:49,450 --> 01:22:51,450
+ocultar tudo que estiver
+
+1389
+01:22:51,450 --> 01:22:53,450
+para acima de um determinado direitório
+
+1390
+01:22:53,450 --> 01:22:55,450
+isto permite-me fazer
+
+1391
+01:22:55,450 --> 01:22:57,450
+correr um programa
+
+1392
+01:22:57,450 --> 01:22:59,450
+que conhece
+
+1393
+01:22:59,450 --> 01:23:01,450
+de um direitório
+
+1394
+01:23:01,450 --> 01:23:03,450
+para baixo
+
+1395
+01:23:03,450 --> 01:23:05,450
+mas desconhece o resto do disco
+
+1396
+01:23:05,450 --> 01:23:07,450
+e isso protege de todos os outros programas
+
+1397
+01:23:07,450 --> 01:23:09,450
+ok
+
+1398
+01:23:11,450 --> 01:23:13,450
+também existe
+
+1399
+01:23:13,450 --> 01:23:15,450
+isolamento de processos
+
+1400
+01:23:15,450 --> 01:23:17,450
+mas isto aqui é algo que já vem
+
+1401
+01:23:17,450 --> 01:23:19,450
+desde os anos 60
+
+1402
+01:23:19,450 --> 01:23:21,450
+se tivermos a pensar
+
+1403
+01:23:21,450 --> 01:23:23,450
+em sistemas operativos
+
+1404
+01:23:23,450 --> 01:23:25,450
+em Unix anos 70
+
+1405
+01:23:25,450 --> 01:23:27,450
+e aparecer uns contentores
+
+1406
+01:23:27,450 --> 01:23:29,450
+Linux
+
+1407
+01:23:29,450 --> 01:23:31,450
+que combinam várias primitivas
+
+1408
+01:23:31,450 --> 01:23:33,450
+do kernel
+
+1409
+01:23:33,450 --> 01:23:35,450
+para criar o primeiro eclosistema
+
+1410
+01:23:35,450 --> 01:23:37,450
+de execução
+
+1411
+01:23:37,450 --> 01:23:39,450
+de contentores
+
+1412
+01:23:39,450 --> 01:23:41,450
+o que aqui é
+
+1413
+01:23:41,450 --> 01:23:43,450
+é correr uma aplicação dentro
+
+1414
+01:23:43,450 --> 01:23:45,450
+que eu por acaso gosto mais do nome boia
+
+1415
+01:23:45,450 --> 01:23:47,450
+porque contentores
+
+1416
+01:23:47,450 --> 01:23:49,450
+mas calhar num contentor
+
+1417
+01:23:49,450 --> 01:23:51,450
+é um nome mais
+
+1418
+01:23:51,450 --> 01:23:53,450
+marketingeiro
+
+1419
+01:23:53,450 --> 01:23:55,450
+do que
+
+1420
+01:23:55,450 --> 01:23:59,270
+boia
+
+1421
+01:23:59,270 --> 01:24:01,270
+uma coisa
+
+1422
+01:24:01,270 --> 01:24:03,270
+que é fantástica
+
+1423
+01:24:03,270 --> 01:24:05,270
+é estas boias partilham o kernel
+
+1424
+01:24:05,270 --> 01:24:07,270
+ou seja
+
+1425
+01:24:07,270 --> 01:24:09,270
+eu posso ter várias aplicações
+
+1426
+01:24:09,270 --> 01:24:11,270
+totalmente
+
+1427
+01:24:11,270 --> 01:24:13,270
+a correr dentro
+
+1428
+01:24:13,270 --> 01:24:15,270
+de um isolamento
+
+1429
+01:24:15,270 --> 01:24:17,270
+mas eu não preciso de isolá-las
+
+1430
+01:24:17,270 --> 01:24:19,270
+em máquinas virtuais distintas
+
+1431
+01:24:19,270 --> 01:24:21,270
+eu tenho uma única máquina
+
+1432
+01:24:21,270 --> 01:24:23,270
+com um sistema
+
+1433
+01:24:23,270 --> 01:24:25,270
+que faz
+
+1434
+01:24:25,270 --> 01:24:27,270
+com um ecossistema de contentores
+
+1435
+01:24:27,270 --> 01:24:29,270
+e as boias
+
+1436
+01:24:29,270 --> 01:24:31,270
+nascem e são geridas por esse sistema
+
+1437
+01:24:31,270 --> 01:24:33,270
+em que podemos arrancar
+
+1438
+01:24:33,270 --> 01:24:35,270
+pausar ou parar uma aplicação
+
+1439
+01:24:35,270 --> 01:24:37,270
+e sempre que elas precisam
+
+1440
+01:24:37,270 --> 01:24:39,270
+de utilizar o kernel
+
+1441
+01:24:39,270 --> 01:24:41,270
+elas utilizam o mesmo kernel
+
+1442
+01:24:41,270 --> 01:24:43,270
+portanto
+
+1443
+01:24:43,270 --> 01:24:45,270
+aquela pegada
+
+1444
+01:24:45,270 --> 01:24:47,270
+que era multiplicada
+
+1445
+01:24:47,270 --> 01:24:49,270
+pelas várias máquinas virtuais
+
+1446
+01:24:49,270 --> 01:24:51,270
+se eu tivesse 6 máquinas virtuais
+
+1447
+01:24:51,270 --> 01:24:53,270
+eu precisava ter 6
+
+1448
+01:24:53,270 --> 01:24:55,270
+espaço para 6 kernels
+
+1449
+01:24:55,270 --> 01:24:57,270
+neste caso eu tenho um único kernel
+
+1450
+01:24:57,270 --> 01:24:59,270
+e esse kernel é partilhado
+
+1451
+01:24:59,270 --> 01:25:01,270
+pelos diversos contentores
+
+1452
+01:25:07,500 --> 01:25:09,500
+dúvidas, não há?
+
+1453
+01:25:09,500 --> 01:25:11,500
+e outra coisa fantástica
+
+1454
+01:25:11,500 --> 01:25:13,500
+eu posso
+
+1455
+01:25:13,500 --> 01:25:15,500
+arrancar com um contentor
+
+1456
+01:25:15,500 --> 01:25:17,500
+em qualquer altura
+
+1457
+01:25:17,500 --> 01:25:19,500
+posso parar esse contentor
+
+1458
+01:25:19,500 --> 01:25:21,500
+posso voltar
+
+1459
+01:25:21,500 --> 01:25:23,500
+a arrancar com esse contentor
+
+1460
+01:25:23,500 --> 01:25:25,500
+e não tenho que desligar a máquina virtual
+
+1461
+01:25:25,500 --> 01:25:27,500
+e voltar a ligar a máquina virtual
+
+1462
+01:25:30,810 --> 01:25:32,810
+e se alguma coisa correr mal
+
+1463
+01:25:32,810 --> 01:25:34,810
+dentro de um contentor
+
+1464
+01:25:34,810 --> 01:25:36,810
+isso não vai afetar
+
+1465
+01:25:36,810 --> 01:25:38,810
+nenhum dos outros contentores
+
+1466
+01:25:38,810 --> 01:25:40,810
+nem de nada
+
+1467
+01:25:40,810 --> 01:25:42,810
+que fique de fora do sistema
+
+1468
+01:25:42,810 --> 01:25:44,810
+dos outros contentores
+
+1469
+01:25:44,810 --> 01:25:46,810
+portanto, aquela bolha
+
+1470
+01:25:46,810 --> 01:25:48,810
+o contentor é mesmo algo muito resistente
+
+1471
+01:25:48,810 --> 01:25:53,340
+um isolamento muito resistente
+
+1472
+01:25:53,340 --> 01:25:55,340
+ok?
+
+1473
+01:25:55,340 --> 01:25:57,340
+os name spaces
+
+1474
+01:25:57,340 --> 01:25:59,340
+foram uma das coisas
+
+1475
+01:25:59,340 --> 01:26:01,340
+no linux que permitiram avançar
+
+1476
+01:26:01,340 --> 01:26:03,340
+para os contentores
+
+1477
+01:26:03,340 --> 01:26:05,340
+eu tenho o name space de processos
+
+1478
+01:26:05,340 --> 01:26:07,340
+em que
+
+1479
+01:26:07,340 --> 01:26:09,340
+aloca
+
+1480
+01:26:09,340 --> 01:26:11,340
+a um determinado processo
+
+1481
+01:26:11,340 --> 01:26:13,340
+uma árvore de processos
+
+1482
+01:26:13,340 --> 01:26:15,340
+é o primeiro processo
+
+1483
+01:26:15,340 --> 01:26:17,340
+ok?
+
+1484
+01:26:17,340 --> 01:26:23,180
+ou seja
+
+1485
+01:26:23,180 --> 01:26:25,180
+estava a ver se
+
+1486
+01:26:25,180 --> 01:26:27,180
+arranjava uma metáfora que fosse fácil
+
+1487
+01:26:27,180 --> 01:26:29,180
+mas
+
+1488
+01:26:29,180 --> 01:26:31,180
+se vocês já trabalharam em linux
+
+1489
+01:26:31,180 --> 01:26:33,180
+sabem que
+
+1490
+01:26:33,180 --> 01:26:35,180
+qualquer sistema onyx
+
+1491
+01:26:35,180 --> 01:26:37,180
+arranca
+
+1492
+01:26:37,180 --> 01:26:39,180
+primeiro carrega o kernel
+
+1493
+01:26:39,180 --> 01:26:41,180
+depois quando o kernel está carregado
+
+1494
+01:26:41,180 --> 01:26:43,180
+ele vai criar o primeiro processo
+
+1495
+01:26:43,180 --> 01:26:45,180
+e a partir desse primeiro processo
+
+1496
+01:26:45,180 --> 01:26:47,180
+são gerados todos os processos
+
+1497
+01:26:47,180 --> 01:26:49,180
+vindos
+
+1498
+01:26:49,180 --> 01:26:51,180
+cursos
+
+1499
+01:26:51,180 --> 01:26:53,180
+certo?
+
+1500
+01:26:53,180 --> 01:26:55,180
+com o
+
+1501
+01:26:55,180 --> 01:26:57,180
+name space de processo
+
+1502
+01:26:57,180 --> 01:26:59,180
+nós conseguimos replicar
+
+1503
+01:26:59,180 --> 01:27:01,180
+esse comportamento
+
+1504
+01:27:01,180 --> 01:27:03,180
+dentro de uma bolha
+
+1505
+01:27:03,180 --> 01:27:05,180
+há o primeiro processo
+
+1506
+01:27:07,180 --> 01:27:09,180
+e esse primeiro processo
+
+1507
+01:27:09,180 --> 01:27:11,180
+não tem nenhuma relação
+
+1508
+01:27:11,180 --> 01:27:13,180
+de hierarquia, de pai para filho
+
+1509
+01:27:13,180 --> 01:27:15,180
+com outros processos que já estejam a correr
+
+1510
+01:27:15,180 --> 01:27:17,180
+na máquina
+
+1511
+01:27:17,180 --> 01:27:19,180
+portanto é um processo
+
+1512
+01:27:19,180 --> 01:27:21,180
+que nasce isolado
+
+1513
+01:27:21,180 --> 01:27:23,180
+de todos os outros processos
+
+1514
+01:27:23,180 --> 01:27:25,180
+que já possam estar na
+
+1515
+01:27:25,180 --> 01:27:27,180
+máquina
+
+1516
+01:27:27,180 --> 01:27:29,180
+é quase como se fosse uma máquina
+
+1517
+01:27:29,180 --> 01:27:31,180
+virtual dentro daquela bolha
+
+1518
+01:27:31,180 --> 01:27:33,180
+dentro de uma máquina
+
+1519
+01:27:33,180 --> 01:27:35,180
+que não é virtual
+
+1520
+01:27:35,180 --> 01:27:37,180
+ok?
+
+1521
+01:27:37,180 --> 01:27:39,180
+também temos name space de rede
+
+1522
+01:27:39,180 --> 01:27:41,180
+em que nós podemos
+
+1523
+01:27:41,180 --> 01:27:43,180
+decorar
+
+1524
+01:27:43,180 --> 01:27:47,610
+definir configurações
+
+1525
+01:27:47,610 --> 01:27:49,610
+particulares
+
+1526
+01:27:49,610 --> 01:27:51,610
+para
+
+1527
+01:27:51,610 --> 01:27:53,610
+cada
+
+1528
+01:27:53,610 --> 01:27:55,610
+contentor
+
+1529
+01:27:55,610 --> 01:27:57,610
+isto vai resvalar para contentor
+
+1530
+01:27:57,610 --> 01:27:59,610
+mas nós podemos dizer
+
+1531
+01:27:59,610 --> 01:28:01,610
+que este name space
+
+1532
+01:28:01,610 --> 01:28:03,610
+tem esta configuração de rede
+
+1533
+01:28:03,610 --> 01:28:05,610
+firewall etc
+
+1534
+01:28:05,610 --> 01:28:07,610
+e temos aqui outros name space
+
+1535
+01:28:07,610 --> 01:28:09,610
+que tem outra configuração de rede
+
+1536
+01:28:09,610 --> 01:28:11,610
+agora eu posso atribuir este name space
+
+1537
+01:28:11,610 --> 01:28:13,610
+para um contentor
+
+1538
+01:28:13,610 --> 01:28:15,610
+e aquela configuração fica atribuída
+
+1539
+01:28:15,610 --> 01:28:17,610
+a um contentor
+
+1540
+01:28:17,610 --> 01:28:19,610
+o mesmo também com name space mount
+
+1541
+01:28:19,610 --> 01:28:21,610
+ou seja, eu posso
+
+1542
+01:28:21,610 --> 01:28:23,610
+definir o que é que
+
+1543
+01:28:23,610 --> 01:28:25,610
+este name space
+
+1544
+01:28:25,610 --> 01:28:27,610
+o que é que vê
+
+1545
+01:28:27,610 --> 01:28:29,610
+no meu sistema de fecheios
+
+1546
+01:28:29,610 --> 01:28:31,610
+e todo o resto
+
+1547
+01:28:31,610 --> 01:28:33,610
+do sistema de fecheios fica oculto
+
+1548
+01:28:33,610 --> 01:28:35,610
+portanto
+
+1549
+01:28:35,610 --> 01:28:37,610
+o meu contentor só consegue ver
+
+1550
+01:28:37,610 --> 01:28:39,610
+uma parte do meu disco
+
+1551
+01:28:39,610 --> 01:28:41,610
+que dá para o disco
+
+1552
+01:28:41,610 --> 01:28:43,610
+algo que não acontece com um processo que está a correr normalmente
+
+1553
+01:28:43,610 --> 01:28:45,610
+isto é daquelas coisas que vocês
+
+1554
+01:28:45,610 --> 01:28:47,610
+já devem de sentir
+
+1555
+01:28:47,610 --> 01:28:49,610
+quando vocês arrancam com uma aplicação
+
+1556
+01:28:49,610 --> 01:28:51,610
+a aplicação consegue conhecer
+
+1557
+01:28:51,610 --> 01:28:53,610
+o disco todo
+
+1558
+01:28:53,610 --> 01:28:55,610
+nós com mount name space podemos dizer
+
+1559
+01:28:55,610 --> 01:28:57,610
+este contentor
+
+1560
+01:28:57,610 --> 01:28:59,610
+só vê esta parte do disco
+
+1561
+01:28:59,610 --> 01:29:01,610
+todo o resto do disco fica oculto
+
+1562
+01:29:01,610 --> 01:29:03,610
+ele desconhece totalmente
+
+1563
+01:29:03,610 --> 01:29:05,610
+por fim
+
+1564
+01:29:05,610 --> 01:29:07,610
+e pensando em space
+
+1565
+01:29:07,610 --> 01:29:09,610
+também podemos
+
+1566
+01:29:09,610 --> 01:29:11,610
+restringir
+
+1567
+01:29:11,610 --> 01:29:13,610
+quais são os serviços
+
+1568
+01:29:13,610 --> 01:29:15,610
+de comunicação
+
+1569
+01:29:15,610 --> 01:29:17,610
+de interprocessos
+
+1570
+01:29:17,610 --> 01:29:19,610
+comunicação e
+
+1571
+01:29:19,610 --> 01:29:21,610
+sincronização de interprocessos
+
+1572
+01:29:21,610 --> 01:29:23,610
+dentro do mesmo name space
+
+1573
+01:29:23,610 --> 01:29:25,610
+temos aqui o next time sharing
+
+1574
+01:29:25,610 --> 01:29:27,610
+system name space
+
+1575
+01:29:27,610 --> 01:29:29,610
+que permite atribuir
+
+1576
+01:29:29,610 --> 01:29:31,610
+nomes de máquina diferentes
+
+1577
+01:29:31,610 --> 01:29:33,610
+a contentores diferentes
+
+1578
+01:29:33,610 --> 01:29:35,610
+isto é ótimo por exemplo
+
+1579
+01:29:35,610 --> 01:29:37,610
+um contentor que está a correr um serviço
+
+1580
+01:29:37,610 --> 01:29:39,610
+um servidor web
+
+1581
+01:29:39,610 --> 01:29:41,610
+e outro é o contentor que está a correr um serviço
+
+1582
+01:29:41,610 --> 01:29:43,610
+de base dados
+
+1583
+01:29:43,610 --> 01:29:45,610
+e eu quero que eles estejam conhecidos
+
+1584
+01:29:45,610 --> 01:29:47,610
+por nomes de redes diferentes
+
+1585
+01:29:47,610 --> 01:29:49,610
+o TIS name space
+
+1586
+01:29:49,610 --> 01:29:51,610
+permite-me atribuir
+
+1587
+01:29:51,610 --> 01:29:53,610
+nomes diferentes
+
+1588
+01:29:53,610 --> 01:29:55,610
+nomes de redes diferentes
+
+1589
+01:29:57,610 --> 01:29:59,610
+contentores diferentes
+
+1590
+01:29:59,610 --> 01:30:01,610
+e pronto e também que o user name space
+
+1591
+01:30:01,610 --> 01:30:03,610
+que é definir quais são os utilizadores
+
+1592
+01:30:03,610 --> 01:30:05,610
+que existem
+
+1593
+01:30:05,610 --> 01:30:07,610
+e quais são os privilégios que tem dentro de um contentor
+
+1594
+01:30:07,610 --> 01:30:09,610
+ok
+
+1595
+01:30:09,610 --> 01:30:11,610
+também temos o control groups
+
+1596
+01:30:11,610 --> 01:30:13,610
+que permite-me
+
+1597
+01:30:13,610 --> 01:30:15,610
+muito importante
+
+1598
+01:30:15,610 --> 01:30:17,610
+contabilizar
+
+1599
+01:30:17,610 --> 01:30:19,610
+a utilização de recursos
+
+1600
+01:30:19,610 --> 01:30:21,610
+que cada contentor tem
+
+1601
+01:30:21,610 --> 01:30:23,610
+e posso definir limites
+
+1602
+01:30:23,610 --> 01:30:25,610
+chegando a um determinado limite
+
+1603
+01:30:25,610 --> 01:30:27,610
+automaticamente
+
+1604
+01:30:27,610 --> 01:30:29,610
+ele vai perder acesso a esse recurso
+
+1605
+01:30:29,610 --> 01:30:31,610
+temporariamente
+
+1606
+01:30:31,610 --> 01:30:33,610
+podemos também
+
+1607
+01:30:33,610 --> 01:30:35,610
+definir políticas
+
+1608
+01:30:35,610 --> 01:30:37,610
+para
+
+1609
+01:30:37,610 --> 01:30:39,610
+quando um contentor está a utilizar
+
+1610
+01:30:39,610 --> 01:30:41,610
+demasiados recursos
+
+1611
+01:30:41,610 --> 01:30:43,610
+diminuir-lhe
+
+1612
+01:30:43,610 --> 01:30:45,610
+a capacidade de utilizar esses recursos
+
+1613
+01:30:45,610 --> 01:30:47,610
+fazer-lo abrandar
+
+1614
+01:30:47,610 --> 01:30:49,610
+o mesmo também com a memória
+
+1615
+01:30:49,610 --> 01:30:51,610
+eu posso dizer que este contentor
+
+1616
+01:30:51,610 --> 01:30:53,610
+pode utilizar no máximo esta memória
+
+1617
+01:30:53,610 --> 01:30:55,610
+e também
+
+1618
+01:30:55,610 --> 01:30:57,610
+o mesmo para
+
+1619
+01:30:57,610 --> 01:30:59,610
+todos os outros preféricos
+
+1620
+01:30:59,610 --> 01:31:01,610
+definir cotas
+
+1621
+01:31:01,610 --> 01:31:03,610
+de utilização
+
+1622
+01:31:03,610 --> 01:31:05,610
+por tempo ou por espaço
+
+1623
+01:31:05,610 --> 01:31:07,610
+de preféricos
+
+1624
+01:31:07,610 --> 01:31:09,610
+certo
+
+1625
+01:31:09,610 --> 01:31:11,610
+pronto
+
+1626
+01:31:11,610 --> 01:31:13,610
+eu vou saltar aquele
+
+1627
+01:31:13,610 --> 01:31:15,610
+slide 32 para o 40
+
+1628
+01:31:15,610 --> 01:31:17,610
+e aqui tem o aspecto
+
+1629
+01:31:17,610 --> 01:31:19,610
+de uma máquina
+
+1630
+01:31:19,610 --> 01:31:21,610
+que corre contentores
+
+1631
+01:31:21,610 --> 01:31:23,610
+tem o meu hardware físico
+
+1632
+01:31:23,610 --> 01:31:25,610
+tem o meu sistema operativo
+
+1633
+01:31:25,610 --> 01:31:27,610
+tem aqui
+
+1634
+01:31:27,610 --> 01:31:29,610
+um sistema
+
+1635
+01:31:29,610 --> 01:31:31,610
+de contentores
+
+1636
+01:31:31,610 --> 01:31:33,610
+e aqui em cima
+
+1637
+01:31:33,610 --> 01:31:35,610
+eu tenho os meus contentores a correr
+
+1638
+01:31:35,610 --> 01:31:37,610
+com a minha aplicação
+
+1639
+01:31:37,610 --> 01:31:39,610
+com tudo aquilo que é necessário
+
+1640
+01:31:39,610 --> 01:31:41,610
+para a minha aplicação correr
+
+1641
+01:31:41,610 --> 01:31:43,610
+e sempre que eles precisarem de fazer
+
+1642
+01:31:43,610 --> 01:31:45,610
+uma chamada ao sistema
+
+1643
+01:31:45,610 --> 01:31:47,610
+eles fazem a chamada ao kernel
+
+1644
+01:31:47,610 --> 01:31:49,610
+que é partilhado
+
+1645
+01:31:49,610 --> 01:31:51,610
+não existe aqui replicação de kernel
+
+1646
+01:31:51,610 --> 01:31:53,610
+por máquinas virtuais
+
+1647
+01:31:53,610 --> 01:31:55,610
+eu tenho máquinas virtuais
+
+1648
+01:31:55,610 --> 01:31:57,610
+leves
+
+1649
+01:31:57,610 --> 01:31:59,610
+lightweight virtual machines
+
+1650
+01:31:59,610 --> 01:32:01,610
+por que?
+
+1651
+01:32:01,610 --> 01:32:03,610
+porque
+
+1652
+01:32:03,610 --> 01:32:05,610
+há aqui uma bolha de isolamento
+
+1653
+01:32:05,610 --> 01:32:07,610
+que mais máquinas virtuais tenham
+
+1654
+01:32:07,610 --> 01:32:09,610
+mas a plataforma
+
+1655
+01:32:09,610 --> 01:32:11,610
+que está aqui por baixo
+
+1656
+01:32:11,610 --> 01:32:13,610
+é partilhada entre eles
+
+1657
+01:32:13,610 --> 01:32:15,610
+e isto faz com que os contentores
+
+1658
+01:32:15,610 --> 01:32:17,610
+corram
+
+1659
+01:32:17,610 --> 01:32:19,610
+de uma forma mais expedita
+
+1660
+01:32:19,610 --> 01:32:21,610
+do que as aplicações
+
+1661
+01:32:21,610 --> 01:32:23,610
+em máquinas virtuais
+
+1662
+01:32:23,610 --> 01:32:25,610
+ok?
+
+1663
+01:32:25,610 --> 01:32:27,610
+por fim
+
+1664
+01:32:27,610 --> 01:32:29,610
+vamos ficar por aqui
+
+1665
+01:32:29,610 --> 01:32:31,610
+porque já está na hora
+
+1666
+01:32:31,610 --> 01:32:33,610
+mas depois eu vou fazer aqui
+
+1667
+01:32:33,610 --> 01:32:35,610
+um paralelo
+
+1668
+01:32:35,610 --> 01:32:37,610
+ao proxmox
+
+1669
+01:32:39,610 --> 01:32:41,610
+e basicamente
+
+1670
+01:32:41,610 --> 01:32:43,610
+o proxmox
+
+1671
+01:32:43,610 --> 01:32:45,610
+utiliza duas tecnologias
+
+1672
+01:32:47,610 --> 01:32:49,610
+que permitem
+
+1673
+01:32:49,610 --> 01:32:51,610
+ter o melhor dos dois mundos
+
+1674
+01:32:51,610 --> 01:32:53,610
+o proxmox
+
+1675
+01:32:53,610 --> 01:32:55,610
+permite-me ter máquinas virtuais
+
+1676
+01:32:55,610 --> 01:32:57,610
+puras e duras
+
+1677
+01:32:57,610 --> 01:32:59,610
+em que tem lá dentro
+
+1678
+01:32:59,610 --> 01:33:01,610
+um sistema
+
+1679
+01:33:01,610 --> 01:33:03,610
+um sistema operativo convidado
+
+1680
+01:33:03,610 --> 01:33:05,610
+e é correr as minhas aplicações
+
+1681
+01:33:05,610 --> 01:33:07,610
+em cima desse sistema
+
+1682
+01:33:07,610 --> 01:33:09,610
+eu tenho kvm
+
+1683
+01:33:09,610 --> 01:33:11,610
+para fazer essa gestão
+
+1684
+01:33:11,610 --> 01:33:13,610
+o módulo kvm
+
+1685
+01:33:13,610 --> 01:33:15,610
+faz a gestão
+
+1686
+01:33:15,610 --> 01:33:17,610
+módulo do kernel
+
+1687
+01:33:17,610 --> 01:33:19,610
+quando disse módulo
+
+1688
+01:33:19,610 --> 01:33:21,610
+que me faz a gestão das máquinas virtuais
+
+1689
+01:33:21,610 --> 01:33:23,610
+ok?
+
+1690
+01:33:23,610 --> 01:33:25,610
+tenho o kemu
+
+1691
+01:33:25,610 --> 01:33:27,610
+está associado ao kemu
+
+1692
+01:33:27,610 --> 01:33:29,610
+para fazer a abstração
+
+1693
+01:33:29,610 --> 01:33:31,610
+dos
+
+1694
+01:33:31,610 --> 01:33:33,610
+dos
+
+1695
+01:33:33,610 --> 01:33:35,610
+dos preféricos
+
+1696
+01:33:35,610 --> 01:33:37,610
+físicos ok?
+
+1697
+01:33:37,610 --> 01:33:39,610
+para poder fazer a gestão da partilha
+
+1698
+01:33:39,610 --> 01:33:41,610
+dos
+
+1699
+01:33:41,610 --> 01:33:43,610
+dos preféricos físicos
+
+1700
+01:33:43,610 --> 01:33:45,610
+pelas máquinas virtuais
+
+1701
+01:33:45,610 --> 01:33:47,610
+mas também
+
+1702
+01:33:47,610 --> 01:33:49,610
+tenho o LXC
+
+1703
+01:33:49,610 --> 01:33:51,610
+que me permite correr
+
+1704
+01:33:51,610 --> 01:33:53,610
+com tentores
+
+1705
+01:33:53,610 --> 01:33:55,610
+diretamente em cima
+
+1706
+01:33:55,610 --> 01:33:57,610
+do kernel proxmox
+
+1707
+01:33:57,610 --> 01:33:59,610
+ok?
+
+1708
+01:33:59,610 --> 01:34:01,610
+portanto proxmox
+
+1709
+01:34:01,610 --> 01:34:03,610
+tem um kernel linux
+
+1710
+01:34:03,610 --> 01:34:05,610
+não é o kernel completo
+
+1711
+01:34:05,610 --> 01:34:07,610
+porque tem muitas coisas que não são suportadas
+
+1712
+01:34:07,610 --> 01:34:09,610
+desktop
+
+1713
+01:34:09,610 --> 01:34:11,610
+mas tem
+
+1714
+01:34:11,610 --> 01:34:13,610
+a parte do kernel necessária
+
+1715
+01:34:13,610 --> 01:34:15,610
+para correr aplicações
+
+1716
+01:34:15,610 --> 01:34:17,610
+no kernel linux
+
+1717
+01:34:17,610 --> 01:34:19,610
+portanto
+
+1718
+01:34:19,610 --> 01:34:21,610
+nós com proxmox
+
+1719
+01:34:21,610 --> 01:34:23,610
+conseguimos ter duas coisas em simultane
+
+1720
+01:34:23,610 --> 01:34:25,610
+máquinas virtuais
+
+1721
+01:34:25,610 --> 01:34:27,610
+por as iduras
+
+1722
+01:34:27,610 --> 01:34:29,610
+e com tentores a partilhar o kernel proxmox
+
+1723
+01:34:29,610 --> 01:34:31,610
+certo?
+
+1724
+01:34:31,610 --> 01:34:33,610
+com tentores com aplicações linux
+
+1725
+01:34:33,610 --> 01:34:35,610
+que correm de uma forma muito mais ligeira
+
+1726
+01:34:35,610 --> 01:34:37,610
+de que as aplicações
+
+1727
+01:34:37,610 --> 01:34:39,610
+imaginem que tem uma máquina virtual a correr um kernel linux
+
+1728
+01:34:39,610 --> 01:34:41,610
+acreditem que
+
+1729
+01:34:41,610 --> 01:34:43,610
+no contentor
+
+1730
+01:34:43,610 --> 01:34:45,610
+essa aplicação
+
+1731
+01:34:45,610 --> 01:34:47,610
+vai ser mais expedita
+
+1732
+01:34:47,610 --> 01:34:49,610
+do que dentro da máquina virtual
+
+1733
+01:34:49,610 --> 01:34:51,610
+ok?
+
+1734
+01:34:51,610 --> 01:34:53,610
+e ficamos por aqui
+
+1735
+01:34:53,610 --> 01:34:58,330
+dúvidas não há pessoal
+
+1736
+01:34:58,330 --> 01:35:00,330
+vá
+
+1737
+01:35:00,330 --> 01:35:02,330
+agradeça a vossa paciência
+
