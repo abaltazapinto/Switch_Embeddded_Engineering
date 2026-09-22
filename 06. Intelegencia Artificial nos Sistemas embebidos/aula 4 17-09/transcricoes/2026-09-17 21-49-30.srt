@@ -1,0 +1,8120 @@
+1
+00:00:00,210 --> 00:00:08,810
+As vezes que nós vamos tentar prever, temos t-shirts, temos calças, temos vestidos, etc, etc, etc.
+
+2
+00:00:08,810 --> 00:00:19,450
+E depois, é um dataset simples e que me permite explicar-vos várias coisas a partir dele, ok?
+
+3
+00:00:19,450 --> 00:00:23,850
+E vamos usar este exemplo várias vezes durante esta aula.
+
+4
+00:00:24,850 --> 00:00:29,850
+Portanto, o que acontece aqui de uma forma mesmo muito simples?
+
+5
+00:00:29,850 --> 00:00:39,850
+O imagem 28x28, que aqui não está a escala, ok, 28x28, tem no total 784 pixels.
+
+6
+00:00:39,850 --> 00:00:47,850
+Cada um desses pixels tem um valor de 0,255 de intensidade, como eu me falei na aula prática.
+
+7
+00:00:47,850 --> 00:00:51,850
+É isto que nós damos aqui como input, ok?
+
+8
+00:00:51,850 --> 00:00:56,850
+É isto que nós passamos a uma rede neuronal, tomam estes valores de todos estes pixels.
+
+9
+00:00:56,850 --> 00:01:39,940
+E nós fazemos isto aproximando os pesos da rede neuronal que está lá dentro.
+
+10
+00:01:39,940 --> 00:01:46,940
+Passando um bocadinho à frente e disse que ando aqui mais um bocadinho as palavras que vamos precisar, ok?
+
+11
+00:01:46,940 --> 00:01:49,940
+O que é que nós temos? O que é que são samples?
+
+12
+00:01:49,940 --> 00:01:56,940
+Vocês muitas vezes se trabalharem com em já, ou agora que vão ouvindo falar, em samples, samples, samples.
+
+13
+00:01:56,940 --> 00:02:06,940
+Samples é uma parte, ou uma das coisas que vocês veem neste caso, com este dataset, é uma imagem.
+
+14
+00:02:06,940 --> 00:02:15,940
+Uma feature é algo que vem dessa sample.
+
+15
+00:02:15,940 --> 00:02:20,940
+Que nesta imagem podemos dizer que é a intensidade de um pixel, ok?
+
+16
+00:02:20,940 --> 00:02:24,940
+Mas na verdade, noutros contextos, pode ser a leitura de um sensor,
+
+17
+00:02:24,940 --> 00:02:31,940
+pode ser qualquer coisa que entre numa rede neuronal, que entre neste nosso modelo de learning, é uma feature.
+
+18
+00:02:31,940 --> 00:02:38,940
+Depois nós temos o label, eu atrás chamei de target, mas há muita gente que também te chama de label,
+
+19
+00:02:38,940 --> 00:02:48,940
+e na verdade a resposta correta para um dado, para uma dado imagem, para um dado sample, ok?
+
+20
+00:02:48,940 --> 00:02:53,940
+Portanto, vamos ter que é uma bota, ok?
+
+21
+00:02:53,940 --> 00:03:04,940
+E depois a classe, é na verdade, as classes é todas as possíveis categorias em qual o modelo pode perder.
+
+22
+00:03:07,800 --> 00:03:10,800
+Pronto, e na verdade, isto é um bocadinho que eu também já falei com vocês,
+
+23
+00:03:10,800 --> 00:03:14,800
+que no último dataset, que eu gostava de relembrar aqui.
+
+24
+00:03:14,800 --> 00:03:18,800
+E então, o que é que o modelo recebe?
+
+25
+00:03:18,800 --> 00:03:27,800
+Ele não recebe uma imagem por si, neste caso, como é que nós representamos uma imagem para um computador?
+
+26
+00:03:27,800 --> 00:03:32,800
+Nós representamos a imagem para um computador através de um vetor, ok?
+
+27
+00:03:32,800 --> 00:03:38,800
+Um vetor, eu estou a explicar isto de uma forma mais simples possível,
+
+28
+00:03:38,800 --> 00:03:43,800
+para uma rede neuronal, vamos denominar de tensor, ok?
+
+29
+00:03:43,800 --> 00:03:51,800
+Um tensor of numbers, a tensor of numbers é um vetor de números que traduz, neste caso, uma imagem,
+
+30
+00:03:51,800 --> 00:03:56,800
+mas imaginem, podia traduzir qualquer outra coisa, poderia traduzir dados de um sensor,
+
+31
+00:03:56,800 --> 00:04:01,800
+qualquer outra coisa que estaria a entrar, e que vocês estariam a dar comodados para uma rede neuronal,
+
+32
+00:04:01,800 --> 00:04:05,800
+estariam a entrar aqui como este tal tensor, ok?
+
+33
+00:04:05,800 --> 00:04:13,800
+Como já falamos ali atrás, para, e este nosso caso, 28 por 28, temos 784 valores,
+
+34
+00:04:13,800 --> 00:04:18,800
+desculpem, passei o slide à frente, ou seja, vamos ter aqui 784 entradas,
+
+35
+00:04:18,800 --> 00:04:24,800
+em que cada uma delas vai ter a intensidade daquele pixel.
+
+36
+00:04:24,800 --> 00:04:29,800
+Aqui, se vocês virem, já tem uma transformação,
+
+37
+00:04:29,800 --> 00:04:32,800
+eu disse que era de 0 a 255, certo?
+
+38
+00:04:32,800 --> 00:04:34,800
+Para, na verdade, para uma rede neuronal,
+
+39
+00:04:34,800 --> 00:04:39,800
+é mais fácil ela aprender quando os valores estão normalizados do que com valores absolutos,
+
+40
+00:04:39,800 --> 00:04:45,800
+ou seja, neste caso, o que se fez foi traduzir todos aqueles valores entre 0 a 255,
+
+41
+00:04:45,800 --> 00:04:54,800
+normalizou-se para algo de 0, vamos dizer, uma percentagem de 0 a 255, ok?
+
+42
+00:04:55,800 --> 00:05:02,800
+No data set, também, que temos vindo a falar, temos, na verdade,
+
+43
+00:05:02,800 --> 00:05:09,800
+temos 54 mil imagens que são feitas para o treino,
+
+44
+00:05:09,800 --> 00:05:17,800
+6 mil imagens que são feitas para fazer pequenos ajustes à rede,
+
+45
+00:05:17,800 --> 00:05:21,800
+fazer um tune destas decisões, já com ela bastante treinada anteriormente,
+
+46
+00:05:21,800 --> 00:05:25,800
+e depois temos estas 10 mil imagens, que foi aquelas que descarregámos um outro dia,
+
+47
+00:05:25,800 --> 00:05:33,800
+que servem apenas para testar e nunca foram vistas antes pelo modelo, ok?
+
+48
+00:05:33,800 --> 00:05:40,050
+Depois, porque é que estas últimas imagens, estas últimas 10 mil,
+
+49
+00:05:40,050 --> 00:05:46,050
+têm que passar, nós avaliamos com imagens que nunca antes foram vistas pelo modelo?
+
+50
+00:05:46,050 --> 00:05:51,050
+Na verdade, nós avaliamos com imagens que nunca foram vistas pelo modelo,
+
+51
+00:05:51,050 --> 00:05:56,050
+porque permite-nos saber que o modelo não está a aprender demasiado
+
+52
+00:05:56,050 --> 00:05:59,050
+aqueles dados que nós nos estamos a dizer.
+
+53
+00:05:59,050 --> 00:06:05,050
+Ora, por exemplo, vocês estão a aprender um problema de matemática,
+
+54
+00:06:05,050 --> 00:06:10,050
+vocês aprendem num problema e quando vão para um teste, vão fazer um problema diferente.
+
+55
+00:06:10,050 --> 00:06:15,050
+Se fizessem o mesmo problema, não teríamos a certeza que vocês teriam aprendido
+
+56
+00:06:15,050 --> 00:06:21,050
+alguma coisa ou se apenas estariam a lembrar de alguma coisa que já tenham visto antes, ok?
+
+57
+00:06:21,050 --> 00:06:28,050
+Portanto, estas 10 mil últimas imagens, neste caso,
+
+58
+00:06:28,050 --> 00:06:33,050
+permitem-nos ver testar alguma coisa que ainda não foi vista,
+
+59
+00:06:33,050 --> 00:06:39,050
+e então estamos a testar de uma forma meio que independente até agora.
+
+60
+00:06:39,050 --> 00:06:45,050
+Depois, aqui está explicado o que eu falei ali atrás,
+
+61
+00:06:45,050 --> 00:06:49,050
+os powerpoints têm bastante informação, eu estou a passar-los,
+
+62
+00:06:49,050 --> 00:06:52,050
+não vale a pena estarmos aqui com toda a informação que aqui tem,
+
+63
+00:06:52,050 --> 00:06:55,050
+o que eu quero é passar alguma mensagem, ok?
+
+64
+00:06:55,050 --> 00:06:58,050
+Mas depois, se vocês quiserem dessecar isto, se estão à vontade,
+
+65
+00:06:58,050 --> 00:07:04,050
+têm que os powerpoints todos para vocês também conseguirem ler e perceber, ok?
+
+66
+00:07:04,050 --> 00:07:07,050
+Aqui, isto tem um bocadinho daquilo que eu estava a falar antes,
+
+67
+00:07:07,050 --> 00:07:12,050
+que é, nós numa imagem, os pixels vão de 0 a 255 no valor,
+
+68
+00:07:12,050 --> 00:07:15,050
+mas na verdade nós fazemos uma normalização.
+
+69
+00:07:15,050 --> 00:07:19,050
+E então, o modelo vai receber isto na casa do 0 a 1,
+
+70
+00:07:19,050 --> 00:07:21,050
+que foi aquilo que eu os falei anteriormente,
+
+71
+00:07:21,050 --> 00:07:26,050
+e que é a forma normal de fazer estas coisas nos modelos.
+
+72
+00:07:26,050 --> 00:07:28,050
+Ou seja, nós tentamos que tudo que passamos para o modelo
+
+73
+00:07:28,050 --> 00:07:33,050
+esteja normalizado de alguma forma entre estes valores de 0 e 1.
+
+74
+00:07:33,050 --> 00:07:36,050
+Tentamos pegar em tudo o que seja e normalizar entre 0 e 1.
+
+75
+00:07:36,050 --> 00:07:42,050
+Depois, no fim, nós estamos com um problema de classificação.
+
+76
+00:07:42,050 --> 00:07:46,050
+Ora, neste problema de classificação nós, mais uma vez,
+
+77
+00:07:46,050 --> 00:07:51,050
+entra os dados da imagem, o modelo trabalha aquela imagem
+
+78
+00:07:51,050 --> 00:07:54,050
+e produz um score por cada classe.
+
+79
+00:07:54,050 --> 00:07:56,050
+Ora, o que é que ele produz?
+
+80
+00:07:56,050 --> 00:08:02,050
+Produz uma percentagem de confiança, podemos dizer assim,
+
+81
+00:08:02,050 --> 00:08:08,050
+na quanta confiança ele tem, que aquela imagem que vocês lhe passaram,
+
+82
+00:08:08,050 --> 00:08:14,050
+fosse de um dado, de uma dár da classe.
+
+83
+00:08:14,050 --> 00:08:19,050
+E ele, na verdade, nunca vai produzir a palavra,
+
+84
+00:08:19,050 --> 00:08:21,050
+ou digamos, a classe direta.
+
+85
+00:08:21,050 --> 00:08:24,050
+Ele tem uma saída correspondente ao número de classe,
+
+86
+00:08:24,050 --> 00:08:27,050
+ou seja, neste caso vai ter 10 saídas,
+
+87
+00:08:27,050 --> 00:08:29,050
+aqui só está representado metade,
+
+88
+00:08:29,050 --> 00:08:32,050
+então vai ter 10 saídas e, com essas 10 saídas,
+
+89
+00:08:32,050 --> 00:08:38,050
+vai mostrar qual é a classe que ele acha que é mais correspondente
+
+90
+00:08:38,050 --> 00:08:40,050
+à imagem que vocês enviaram.
+
+91
+00:08:40,050 --> 00:08:44,050
+Depois, nós temos vindo a falar de alta sete de imagem.
+
+92
+00:08:44,050 --> 00:08:47,050
+Em termos de imagem, não difere muito disto.
+
+93
+00:08:47,050 --> 00:08:50,050
+A única diferença é se nós tivermos cores.
+
+94
+00:08:50,050 --> 00:08:56,050
+Quando temos cores, vocês devem imaginar que passamos a ter
+
+95
+00:08:56,050 --> 00:08:59,050
+mais um valor de 0 a 255 para o vermelho,
+
+96
+00:08:59,050 --> 00:09:05,050
+um valor de 0 a 255 para o azul e um valor de 0 a 255 para o verde.
+
+97
+00:09:05,050 --> 00:09:10,050
+Ou seja, em RGB nós temos não só a intensidade de um pixel,
+
+98
+00:09:10,050 --> 00:09:14,050
+que é o que já tínhamos aqui, mas como mais três valores
+
+99
+00:09:14,050 --> 00:09:20,050
+por cada pixel que lá temos, que nos dão a cor transformada
+
+100
+00:09:20,050 --> 00:09:23,050
+para um computador do que é que é aquele pixel.
+
+101
+00:09:23,050 --> 00:09:27,050
+Portanto, uma imagem de 28 por 28, em cor,
+
+102
+00:09:27,050 --> 00:09:31,050
+seria bastante maior do que estas que nós estamos a analisar.
+
+103
+00:09:31,050 --> 00:09:34,050
+E depois, à medida que aumentamos os pixels,
+
+104
+00:09:34,050 --> 00:09:36,050
+vamos aumentar isto financialmente.
+
+105
+00:09:36,050 --> 00:09:40,050
+Se formos para uma imagem de 720p ou 1080p,
+
+106
+00:09:40,050 --> 00:09:42,050
+ou seja, HD, vamos dizer assim,
+
+107
+00:09:42,050 --> 00:09:47,050
+vamos ter aqui uma muito maior...
+
+108
+00:09:48,050 --> 00:09:54,050
+muito maior peso computacional e de memória e a própria
+
+109
+00:09:54,050 --> 00:09:56,050
+e já tem que ser maior.
+
+110
+00:09:56,050 --> 00:09:59,050
+Por exemplo, se você estiver a trabalhar com alguma coisa
+
+111
+00:09:59,050 --> 00:10:03,050
+relacionada com movimentos, por exemplo, uma pulseira
+
+112
+00:10:03,050 --> 00:10:06,050
+em que lá em bebido tem um algoritmo que detecta
+
+113
+00:10:06,050 --> 00:10:08,050
+se a pessoa está a fazer passos ou não,
+
+114
+00:10:08,050 --> 00:10:11,050
+estes vão ser os vossos dados de entrada.
+
+115
+00:10:11,050 --> 00:10:14,050
+Se estiverem a trabalhar com o áudio,
+
+116
+00:10:15,050 --> 00:10:19,050
+as ondas de sessão vão ser os vossos dados de entrada.
+
+117
+00:10:19,050 --> 00:10:21,050
+Se estiverem a trabalhar com dados de máquinas,
+
+118
+00:10:21,050 --> 00:10:25,050
+vamos ter a temperatura, a vibração, a carga, etc.
+
+119
+00:10:25,050 --> 00:10:31,050
+vão ser os vossos dados de entrada para o modelo.
+
+120
+00:10:31,050 --> 00:10:35,050
+Claro que diferentes tipos de dados afetam a arquitetura do modelo,
+
+121
+00:10:35,050 --> 00:10:43,050
+mas nós aqui não temos tempo para tratar disto tudo,
+
+122
+00:10:43,050 --> 00:10:47,050
+mas quero que saibam que o que estamos a fazer para as imagens
+
+123
+00:10:47,050 --> 00:10:50,050
+é semelhante com o que se faz com outros,
+
+124
+00:10:50,050 --> 00:10:54,050
+mas pode não ser de tudo igual.
+
+125
+00:10:54,050 --> 00:11:05,050
+Por exemplo, um exemplo simples de ondas de aceleração
+
+126
+00:11:05,050 --> 00:11:09,050
+em vários eixos para um acelerómetro.
+
+127
+00:11:09,050 --> 00:11:13,050
+Nós, na verdade, aqui em vez de termos uma imagem,
+
+128
+00:11:13,050 --> 00:11:15,050
+que é uma coisa fixa, nós aqui temos uma coisa
+
+129
+00:11:15,050 --> 00:11:17,050
+que temos que analisar ao longo do tempo,
+
+130
+00:11:17,050 --> 00:11:22,050
+logo temos uma time series, uma janela de valores de acelerómetros
+
+131
+00:11:22,050 --> 00:11:25,050
+coletionados ao longo do tempo.
+
+132
+00:11:25,050 --> 00:11:29,050
+O que nós queremos saber é que a pessoa estava a andar,
+
+133
+00:11:29,050 --> 00:11:32,050
+estava sentada, o que vossos relógios inteligentes fazem.
+
+134
+00:11:32,050 --> 00:11:38,050
+Eles tratam esta informação e vêm o que pode acontecer.
+
+135
+00:11:38,050 --> 00:11:41,050
+Qual é a diferença para nós?
+
+136
+00:11:41,050 --> 00:11:44,050
+A diferença para nós é que aqui do segundo zero
+
+137
+00:11:44,050 --> 00:11:47,050
+até o segundo doito, por exemplo, ou mais tempo,
+
+138
+00:11:47,050 --> 00:11:51,050
+a ordem importa, a orientação do sensor importa.
+
+139
+00:11:51,050 --> 00:11:54,050
+No nosso caso, numa imagem, não importa.
+
+140
+00:11:54,050 --> 00:11:58,050
+No entanto, isto vai ser apenas a forma como nós damos os dados à rede.
+
+141
+00:11:58,050 --> 00:12:02,050
+A rede em si vai ser muito semelhante.
+
+142
+00:12:02,050 --> 00:12:06,050
+Do ponto de vista lá está, dos sistemas imbebidos.
+
+143
+00:12:06,050 --> 00:12:10,050
+Normalmente, isto são telemóveis, ou relógios, ou coisas assim,
+
+144
+00:12:10,050 --> 00:12:14,050
+que precisam de processar estes dados localmente
+
+145
+00:12:14,050 --> 00:12:18,050
+e com baixa latência, para nos dizer o que está a acontecer.
+
+146
+00:12:18,050 --> 00:12:25,050
+Depois, a inspecionar uma onda de som
+
+147
+00:12:25,050 --> 00:12:28,050
+e tentar ver se descobrem uma certa palavra,
+
+148
+00:12:28,050 --> 00:12:35,050
+por exemplo, quando vocês fazem aquele Google, o Alexa, o que seja,
+
+149
+00:12:36,050 --> 00:12:39,050
+se estiver a ser processado naquele device,
+
+150
+00:12:39,050 --> 00:12:41,050
+estará a fazer uma coisa semelhante com esta.
+
+151
+00:12:41,050 --> 00:12:43,050
+Ou seja, o que é que ele vai receber?
+
+152
+00:12:43,050 --> 00:12:47,050
+Vai receber uma onda de som ao longo do tempo.
+
+153
+00:12:49,050 --> 00:12:53,050
+E é partir dessa onda de som que normalmente é transformada
+
+154
+00:12:53,050 --> 00:12:56,050
+no spectrogram, ou seja, numa coisa destas,
+
+155
+00:12:56,050 --> 00:13:00,050
+que traduz uma onda de som ao longo do tempo
+
+156
+00:13:00,050 --> 00:13:05,050
+numa codificação de intensidade por frequência.
+
+157
+00:13:05,050 --> 00:13:08,050
+Basicamente, vocês veem aqui diferentes cores
+
+158
+00:13:08,050 --> 00:13:11,050
+e significa que tem mais intensidade ou menos intensidade
+
+159
+00:13:11,050 --> 00:13:13,050
+por cada uma das frequências
+
+160
+00:13:13,050 --> 00:13:16,050
+e quase que transformem isto numa análise de uma imagem.
+
+161
+00:13:16,050 --> 00:13:19,050
+Então, o que nós queremos aprender neste caso,
+
+162
+00:13:19,050 --> 00:13:23,050
+o que a rede queria aprender era se foi dito alguma destas palavras,
+
+163
+00:13:23,050 --> 00:13:25,050
+por exemplo.
+
+164
+00:13:25,050 --> 00:13:31,050
+Isto seria o vosso sistema em bebido que trabalharia com isto.
+
+165
+00:13:31,050 --> 00:13:34,050
+Ok, teriam outros problemas, claro, microfones, background noise,
+
+166
+00:13:34,050 --> 00:13:38,050
+pessoas a falar com diferentes accents.
+
+167
+00:13:38,050 --> 00:13:41,050
+Portanto, poderia ser mais difícil
+
+168
+00:13:41,050 --> 00:13:44,050
+e há algumas dificuldades que teriam que avançar.
+
+169
+00:13:44,050 --> 00:13:47,050
+Por fim, manutenção perditiva.
+
+170
+00:13:47,050 --> 00:13:49,050
+Manutenção perditiva.
+
+171
+00:13:49,050 --> 00:13:52,050
+Mais uma vez recebem dados de sensores,
+
+172
+00:13:52,050 --> 00:13:55,050
+portura, vibração, etc.
+
+173
+00:13:55,050 --> 00:14:00,050
+E vão tentar perceber se aquela máquina está a ficar degradada ou não.
+
+174
+00:14:00,050 --> 00:14:03,050
+E este é mais uma das coisas que vocês podem fazer
+
+175
+00:14:03,050 --> 00:14:06,360
+de ponto de vista de um sistema em bebido.
+
+176
+00:14:06,360 --> 00:14:08,360
+Agora, acabando aqui com os exemplos
+
+177
+00:14:08,360 --> 00:14:14,360
+e passando ao tema de hoje, que é deep learning.
+
+178
+00:14:14,360 --> 00:14:16,360
+Deep learning, na verdade,
+
+179
+00:14:16,360 --> 00:14:18,360
+vocês têm artificial intelligence,
+
+180
+00:14:18,360 --> 00:14:22,360
+que é uma coisa muito grande e que engloba mesmo muita coisa.
+
+181
+00:14:23,360 --> 00:14:25,360
+Depois tem machine learning,
+
+182
+00:14:25,360 --> 00:14:28,360
+que é um subseto do que existe em artificial intelligence,
+
+183
+00:14:28,360 --> 00:14:30,360
+e tem deep learning, que é, na verdade,
+
+184
+00:14:30,360 --> 00:14:32,360
+outro subseto dentro de machine learning.
+
+185
+00:14:32,360 --> 00:14:35,360
+Qual é, sim, a grande diferença?
+
+186
+00:14:35,360 --> 00:14:38,360
+A inteligência social,
+
+187
+00:14:38,360 --> 00:14:42,360
+esses temas fazem tarefas de uma forma inteligente.
+
+188
+00:14:42,360 --> 00:14:44,360
+Esta definição é um bocadinho aberta.
+
+189
+00:14:44,360 --> 00:14:47,360
+Portanto, acaba aqui muita coisa,
+
+190
+00:14:47,360 --> 00:14:49,360
+mesmo coisas que, se calhar,
+
+191
+00:14:49,360 --> 00:14:51,360
+que nós não consideramos inteligentes,
+
+192
+00:14:51,360 --> 00:14:53,360
+apenas uma regra,
+
+193
+00:14:53,360 --> 00:14:55,360
+uma coisa codificada por vocês,
+
+194
+00:14:55,360 --> 00:14:57,360
+um e-fels codificado por vocês,
+
+195
+00:14:59,360 --> 00:15:01,360
+pode caber aqui.
+
+196
+00:15:01,360 --> 00:15:03,360
+Depois vocês têm machine learning.
+
+197
+00:15:03,360 --> 00:15:05,360
+Machine learning, e sim,
+
+198
+00:15:05,360 --> 00:15:07,360
+são ao ritmo dos matemáticos.
+
+199
+00:15:07,360 --> 00:15:09,360
+É apenas matemática, é apenas
+
+200
+00:15:10,360 --> 00:15:12,360
+estatística, vá,
+
+201
+00:15:12,360 --> 00:15:14,360
+que transforma um data set,
+
+202
+00:15:14,360 --> 00:15:16,360
+um quantidade de dados,
+
+203
+00:15:16,360 --> 00:15:18,360
+e permite
+
+204
+00:15:18,360 --> 00:15:20,360
+descobrir poderes naqueles dados.
+
+205
+00:15:20,360 --> 00:15:22,360
+Mas é, muitas das vezes,
+
+206
+00:15:25,360 --> 00:15:27,360
+um processo
+
+207
+00:15:27,360 --> 00:15:29,360
+mais automático do que programar à mão,
+
+208
+00:15:29,360 --> 00:15:31,360
+mas ao mesmo tempo, são coisas,
+
+209
+00:15:31,360 --> 00:15:33,360
+bastante, são árvores de decisão,
+
+210
+00:15:33,360 --> 00:15:35,360
+coisas bastante mais básicas
+
+211
+00:15:35,360 --> 00:15:37,360
+do que as retes neuronais.
+
+212
+00:15:37,360 --> 00:15:39,360
+As retes neuronais, e o deep learning,
+
+213
+00:15:39,360 --> 00:15:41,360
+o que acontece muitas das vezes, é,
+
+214
+00:15:41,360 --> 00:15:43,360
+vocês têm uma rede, como eu vou mostrar a seguir,
+
+215
+00:15:43,360 --> 00:15:45,360
+e apenas lhes dão os dados ao início,
+
+216
+00:15:45,360 --> 00:15:47,360
+e ela é obrigada a aprender
+
+217
+00:15:47,360 --> 00:15:49,360
+a dar alguma coisa no fim.
+
+218
+00:15:49,360 --> 00:15:53,090
+E por que nós falamos aqui de
+
+219
+00:15:53,090 --> 00:15:55,090
+deep learning?
+
+220
+00:15:55,090 --> 00:15:57,090
+Deep learning não é nada mais,
+
+221
+00:15:57,090 --> 00:15:59,090
+nada menos, do que várias
+
+222
+00:15:59,090 --> 00:16:01,090
+camadas lineares de neurônios.
+
+223
+00:16:01,090 --> 00:16:03,090
+Ok?
+
+224
+00:16:03,090 --> 00:16:05,090
+Eu penso que o veríssimo já vos falou
+
+225
+00:16:05,090 --> 00:16:07,090
+alguma coisa
+
+226
+00:16:07,090 --> 00:16:09,090
+de...
+
+227
+00:16:09,090 --> 00:16:11,090
+de...
+
+228
+00:16:11,090 --> 00:16:13,090
+redes não de, digamos assim,
+
+229
+00:16:13,090 --> 00:16:15,090
+mas eu vou fazer aqui uma introdução novamente.
+
+230
+00:16:16,090 --> 00:16:18,090
+Deep learning,
+
+231
+00:16:18,090 --> 00:16:20,090
+o que temos aqui,
+
+232
+00:16:20,090 --> 00:16:22,090
+é, uma camada linear,
+
+233
+00:16:22,090 --> 00:16:24,090
+não consegue aprender
+
+234
+00:16:24,090 --> 00:16:26,090
+vários conceitos, já vamos ver a seguir porquê.
+
+235
+00:16:26,090 --> 00:16:28,090
+E então, as camadas
+
+236
+00:16:28,090 --> 00:16:30,090
+interiores permitem-nos aprender conceitos mais
+
+237
+00:16:30,090 --> 00:16:32,090
+abstractos, conceitos maiores.
+
+238
+00:16:34,090 --> 00:16:36,090
+Mais camadas, também, implica
+
+239
+00:16:36,090 --> 00:16:38,090
+mais memória, mais dados, e mais
+
+240
+00:16:38,090 --> 00:16:40,090
+capacidade computacional.
+
+241
+00:16:40,090 --> 00:16:42,090
+Mas, deep, nem sempre quer dizer
+
+242
+00:16:42,090 --> 00:16:44,090
+que é demasiado grande para eles.
+
+243
+00:16:44,090 --> 00:16:46,090
+Ok?
+
+244
+00:16:46,090 --> 00:16:48,090
+Nós contamos normalmente assim, sempre que virem
+
+245
+00:16:48,090 --> 00:16:50,090
+uma estrutura de uma rede neuronal, vão ver
+
+246
+00:16:50,090 --> 00:16:52,090
+a camada de entrada,
+
+247
+00:16:52,090 --> 00:16:54,090
+uma camada escondida,
+
+248
+00:16:54,090 --> 00:16:56,090
+duas camadas escondidas e a camada de seguida.
+
+249
+00:16:56,090 --> 00:16:58,090
+Ok?
+
+250
+00:16:58,090 --> 00:17:00,090
+Pronto.
+
+251
+00:17:00,090 --> 00:17:03,530
+Passando aqui
+
+252
+00:17:03,530 --> 00:17:05,530
+à frente, para um bocadinho
+
+253
+00:17:05,530 --> 00:17:07,530
+dos neurônios,
+
+254
+00:17:07,530 --> 00:17:09,530
+que estão aqui dentro, e como é que funciona esta lógica.
+
+255
+00:17:09,530 --> 00:17:13,060
+As primeiras redes neuronais
+
+256
+00:17:13,060 --> 00:17:15,060
+vêm aqui de 1943.
+
+257
+00:17:15,060 --> 00:17:17,060
+Eu não vos quero estar a falar da história,
+
+258
+00:17:17,060 --> 00:17:19,060
+só vos quero trazer aqui alguns conceitos.
+
+259
+00:17:19,060 --> 00:17:21,060
+Que era, basicamente,
+
+260
+00:17:21,060 --> 00:17:23,060
+uma função matemática
+
+261
+00:17:23,060 --> 00:17:25,060
+que se inspirava na parte
+
+262
+00:17:25,060 --> 00:17:27,060
+biológica da coisa,
+
+263
+00:17:27,060 --> 00:17:29,060
+em que se tivéssemos o input
+
+264
+00:17:29,060 --> 00:17:31,060
+1, 2 e 3, vários inputs,
+
+265
+00:17:31,060 --> 00:17:33,060
+imaginem o número 1, o número 3, o número 2.
+
+266
+00:17:33,060 --> 00:17:35,060
+Aqui fazíamos um somatório
+
+267
+00:17:35,060 --> 00:17:37,060
+desses números
+
+268
+00:17:37,060 --> 00:17:39,060
+e alguma coisa
+
+269
+00:17:39,060 --> 00:17:41,060
+acontecia, ou não acontecia
+
+270
+00:17:41,060 --> 00:17:43,060
+com base. Se o somatório fosse maior que 10,
+
+271
+00:17:43,060 --> 00:17:45,060
+então faz qualquer coisa.
+
+272
+00:17:45,060 --> 00:17:47,060
+Se o somatório não for, então não faz.
+
+273
+00:17:47,060 --> 00:17:49,060
+Estes são os primórdios
+
+274
+00:17:49,060 --> 00:17:51,060
+numa rede neuronal, e vocês vão dizer,
+
+275
+00:17:51,060 --> 00:17:53,060
+isto é uma rede neuronal, não é só um somatório.
+
+276
+00:17:53,060 --> 00:17:55,060
+Na verdade, é uma regra simples
+
+277
+00:17:55,060 --> 00:17:57,060
+com um somatório atrás.
+
+278
+00:17:57,060 --> 00:17:59,060
+Ok?
+
+279
+00:17:59,060 --> 00:18:01,060
+Depois, começamos a ter aqui
+
+280
+00:18:01,060 --> 00:18:03,060
+o perceptron. O perceptron
+
+281
+00:18:03,060 --> 00:18:05,060
+era uma coisinha
+
+282
+00:18:05,060 --> 00:18:07,060
+ligeiramente mais evoluída.
+
+283
+00:18:07,060 --> 00:18:09,060
+Em vez das pessoas terem que chegar aqui
+
+284
+00:18:09,060 --> 00:18:11,060
+e fazer a função matemática
+
+285
+00:18:11,060 --> 00:18:13,060
+com a mão de dizer maior que 10 ou menor que 10,
+
+286
+00:18:15,060 --> 00:18:17,060
+ele próprio fazia
+
+287
+00:18:19,060 --> 00:18:21,060
+o atualizar
+
+288
+00:18:21,060 --> 00:18:23,060
+deste peso de forma
+
+289
+00:18:23,060 --> 00:18:25,060
+que a provisão ficasse menos má.
+
+290
+00:18:25,060 --> 00:18:27,060
+Ou seja, imaginem aquele exemplo
+
+291
+00:18:27,060 --> 00:18:29,060
+ali atrás.
+
+292
+00:18:29,060 --> 00:18:31,060
+Vamos voltar aqui atrás.
+
+293
+00:18:31,060 --> 00:18:33,060
+Aqui seria algum humano que diria assim,
+
+294
+00:18:33,060 --> 00:18:35,060
+maior que 10 faz
+
+295
+00:18:35,060 --> 00:18:37,060
+qualquer coisa, menor que 10 não faz nada.
+
+296
+00:18:37,060 --> 00:18:39,060
+Fora, se calhar
+
+297
+00:18:39,060 --> 00:18:41,060
+o valor melhor
+
+298
+00:18:41,060 --> 00:18:43,060
+para representar a situação do mundo real
+
+299
+00:18:43,060 --> 00:18:45,060
+que nós queríamos, deveria ser 7.
+
+300
+00:18:45,060 --> 00:18:47,060
+Mas foi um humano que chegou aqui para os 10.
+
+301
+00:18:47,060 --> 00:18:49,060
+Ora, nesta versão do perceptron
+
+302
+00:18:49,060 --> 00:18:51,060
+já existe a capacidade
+
+303
+00:18:51,060 --> 00:18:53,060
+de ele automaticamente alterar
+
+304
+00:18:53,060 --> 00:18:55,060
+este valor e perceber
+
+305
+00:18:55,060 --> 00:18:57,060
+que com 10 está a falhar, então vamos alterar
+
+306
+00:18:57,060 --> 00:18:59,060
+este valor para o outro valor
+
+307
+00:18:59,060 --> 00:19:01,060
+e vamos ver se com este novo valor
+
+308
+00:19:01,060 --> 00:19:03,060
+vamos ter
+
+309
+00:19:03,060 --> 00:19:05,060
+um melhor acerto nas coisas.
+
+310
+00:19:05,060 --> 00:19:07,060
+Ok?
+
+311
+00:19:07,060 --> 00:19:09,060
+Portanto, depois
+
+312
+00:19:09,060 --> 00:19:11,060
+começou-se
+
+313
+00:19:11,060 --> 00:19:13,060
+a expandir
+
+314
+00:19:13,060 --> 00:19:15,060
+e a chegar a cada vez mais longe,
+
+315
+00:19:15,060 --> 00:19:17,060
+começou-se a ver algumas das limitações.
+
+316
+00:19:17,060 --> 00:19:19,060
+Se vocês repararam ali atrás, era apenas
+
+317
+00:19:19,060 --> 00:19:21,060
+uma camada simples.
+
+318
+00:19:21,060 --> 00:19:23,060
+Em 1980
+
+319
+00:19:23,060 --> 00:19:25,060
+começou-se a treinar
+
+320
+00:19:25,060 --> 00:19:27,060
+com várias camadas,
+
+321
+00:19:27,060 --> 00:19:29,060
+várias camadas
+
+322
+00:19:29,060 --> 00:19:31,060
+mas era muito difícil
+
+323
+00:19:31,060 --> 00:19:33,060
+porque não tínhamos poder
+
+324
+00:19:33,060 --> 00:19:35,060
+computacional para tal.
+
+325
+00:19:35,060 --> 00:19:37,060
+A partir dos anos 2000, começamos a ter
+
+326
+00:19:37,060 --> 00:19:39,060
+mais poder computacional
+
+327
+00:19:39,060 --> 00:19:41,060
+e a conseguir ir um bocadinho mais deep
+
+328
+00:19:41,060 --> 00:19:43,060
+este deep learning, ou seja, ter mais camadas
+
+329
+00:19:43,060 --> 00:19:45,060
+e o grande breakthrough
+
+330
+00:19:45,060 --> 00:19:47,060
+da AI nos últimos anos
+
+331
+00:19:47,060 --> 00:19:49,060
+começou em 2012
+
+332
+00:19:49,060 --> 00:19:51,060
+em que as pessoas
+
+333
+00:19:51,060 --> 00:19:53,060
+começaram a usar
+
+334
+00:19:53,060 --> 00:19:55,060
+GPUs
+
+335
+00:19:55,060 --> 00:19:57,060
+ou seja, placas gráficas
+
+336
+00:19:57,060 --> 00:19:59,060
+para dar poder computacional
+
+337
+00:19:59,060 --> 00:20:01,060
+para treinar redes cada vez mais fundas.
+
+338
+00:20:01,060 --> 00:20:03,060
+Quanto mais fundo
+
+339
+00:20:03,060 --> 00:20:05,060
+esta regra não é sempre real
+
+340
+00:20:05,060 --> 00:20:07,060
+mas no início, quanto mais fundo uma rede
+
+341
+00:20:07,060 --> 00:20:09,060
+mais informação
+
+342
+00:20:09,060 --> 00:20:11,060
+conseguimos
+
+343
+00:20:11,060 --> 00:20:13,060
+reter nela.
+
+344
+00:20:13,060 --> 00:20:15,060
+Portanto, o que havia
+
+345
+00:20:15,060 --> 00:20:17,060
+a teoria, não havia computadores
+
+346
+00:20:17,060 --> 00:20:19,060
+bons o suficiente
+
+347
+00:20:19,060 --> 00:20:21,060
+para que isto se tornasse realidade.
+
+348
+00:20:21,060 --> 00:20:23,060
+A partir do momento
+
+349
+00:20:23,060 --> 00:20:25,060
+tem que se começar a usar gráficas
+
+350
+00:20:25,060 --> 00:20:27,060
+para fazer isto e seria toda uma outra aula
+
+351
+00:20:27,060 --> 00:20:29,060
+de por que as gráficas são adequadas
+
+352
+00:20:29,060 --> 00:20:31,060
+para correr a inteligência artificial, que eu vou passar
+
+353
+00:20:31,060 --> 00:20:33,060
+em frente, mas alguém descobriu isso
+
+354
+00:20:33,060 --> 00:20:35,060
+e permitiu que hoje em dia
+
+355
+00:20:35,060 --> 00:20:37,060
+conseguíssemos chegar
+
+356
+00:20:37,060 --> 00:20:39,060
+a estes níveis
+
+357
+00:20:39,060 --> 00:20:41,060
+de
+
+358
+00:20:41,060 --> 00:20:43,060
+AI que vamos
+
+359
+00:20:43,060 --> 00:20:45,060
+experienciando nesses últimos tempos.
+
+360
+00:20:45,060 --> 00:20:47,060
+Depois, de 2014
+
+361
+00:20:47,060 --> 00:20:49,060
+de 2016, houve aqui
+
+362
+00:20:49,060 --> 00:20:51,060
+umas evoluções
+
+363
+00:20:51,060 --> 00:20:53,060
+da forma como se treinava as redes
+
+364
+00:20:53,060 --> 00:20:55,060
+ligeiramente mais fáceis
+
+365
+00:20:55,060 --> 00:20:57,060
+ligeiramente mais rápidas
+
+366
+00:20:57,060 --> 00:20:59,060
+de treinar e a partir de 2017
+
+367
+00:20:59,060 --> 00:21:01,060
+começou a usar uma
+
+368
+00:21:01,060 --> 00:21:03,060
+coisa que são os transformers
+
+369
+00:21:03,060 --> 00:21:05,060
+mais uma vez eu não tenho tempo para cobrir isto tudo
+
+370
+00:21:05,060 --> 00:21:07,060
+nestas aulas que aqui vamos ter
+
+371
+00:21:07,060 --> 00:21:09,060
+mas os transformers
+
+372
+00:21:09,060 --> 00:21:11,060
+e coisas que vocês
+
+373
+00:21:11,060 --> 00:21:13,060
+devem estar a ouvir
+
+374
+00:21:13,060 --> 00:21:15,060
+sempre que ouviram falar de LLMs
+
+375
+00:21:15,060 --> 00:21:17,060
+e etc. vão ouvir nestas duas palavras
+
+376
+00:21:17,060 --> 00:21:19,060
+transformers e attention based
+
+377
+00:21:19,060 --> 00:21:21,060
+são duas novas formas
+
+378
+00:21:21,060 --> 00:21:23,060
+de organizar
+
+379
+00:21:23,060 --> 00:21:25,060
+as redes neuronais
+
+380
+00:21:25,060 --> 00:21:27,060
+que permitem que elas fiquem bastante
+
+381
+00:21:27,060 --> 00:21:29,060
+mais inteligentes
+
+382
+00:21:29,060 --> 00:21:31,060
+e que permitem chegar ao ponto
+
+383
+00:21:31,060 --> 00:21:33,060
+que nós estamos hoje em dia
+
+384
+00:21:33,060 --> 00:21:35,060
+mais uma vez com o custo
+
+385
+00:21:35,060 --> 00:21:37,060
+de usarmos cada vez mais
+
+386
+00:21:37,060 --> 00:21:39,060
+placas gráficas, mais aceleradores
+
+387
+00:21:39,060 --> 00:21:41,060
+melhor software
+
+388
+00:21:41,060 --> 00:21:43,060
+para fazer isto tudo melhor. Ou seja, a teoria
+
+389
+00:21:43,060 --> 00:21:45,060
+em si não é nova
+
+390
+00:21:45,060 --> 00:21:47,060
+o que nós temos conseguido nos últimos anos
+
+391
+00:21:47,060 --> 00:21:49,060
+é ter máquinas que acompanhem
+
+392
+00:21:49,060 --> 00:21:51,060
+esta teoria.
+
+393
+00:21:51,060 --> 00:21:53,060
+Portanto, aqui
+
+394
+00:21:53,060 --> 00:21:55,060
+vamos tentar fazer
+
+395
+00:21:55,060 --> 00:21:57,060
+um exercício simples
+
+396
+00:21:57,060 --> 00:21:59,060
+sobre isto
+
+397
+00:21:59,060 --> 00:22:01,060
+na verdade
+
+398
+00:22:01,060 --> 00:22:03,060
+vamos pensar aqui um bocadinho
+
+399
+00:22:03,060 --> 00:22:05,060
+como é que poderia ser
+
+400
+00:22:05,060 --> 00:22:07,060
+aqui uma rede neuronal
+
+401
+00:22:07,060 --> 00:22:09,060
+ok
+
+402
+00:22:09,060 --> 00:22:11,060
+vocês teriam 3 valores
+
+403
+00:22:11,060 --> 00:22:13,060
+imaginem estes 3 valores
+
+404
+00:22:13,060 --> 00:22:15,060
+como sendo
+
+405
+00:22:15,060 --> 00:22:17,060
+os valores que vem da nossa imagem
+
+406
+00:22:17,060 --> 00:22:19,060
+que nós temos estado com aquela data seta a trabalhar
+
+407
+00:22:19,060 --> 00:22:21,060
+só temos 3
+
+408
+00:22:21,060 --> 00:22:23,060
+para ser mais fácil de explicar
+
+409
+00:22:23,060 --> 00:22:25,060
+se vocês se lembram antigamente
+
+410
+00:22:25,060 --> 00:22:27,060
+nós sumávamos estes 3 valores
+
+411
+00:22:27,060 --> 00:22:29,060
+e via-mos que era maior
+
+412
+00:22:29,060 --> 00:22:31,060
+que uma data
+
+413
+00:22:31,060 --> 00:22:33,060
+com um dado valor que nós tínhamos à frente
+
+414
+00:22:33,060 --> 00:22:35,060
+lembram-se que eu disse maior que 10
+
+415
+00:22:35,060 --> 00:22:37,060
+Neste momento
+
+416
+00:22:37,060 --> 00:22:39,060
+uma rede neuronal não é bem assim
+
+417
+00:22:39,060 --> 00:22:41,060
+o que é que tem a mais
+
+418
+00:22:41,060 --> 00:22:43,060
+temos os valores na mesma entrada
+
+419
+00:22:43,060 --> 00:22:45,060
+mas temos aqui pesos
+
+420
+00:22:45,060 --> 00:22:47,060
+ou seja, na ligação entre
+
+421
+00:22:47,060 --> 00:22:49,060
+x1 até aqui
+
+422
+00:22:49,060 --> 00:22:51,060
+entre x2 até aqui
+
+423
+00:22:51,060 --> 00:22:53,060
+nós temos pesos associados
+
+424
+00:22:53,060 --> 00:22:55,060
+a cada uma das ligações
+
+425
+00:22:55,060 --> 00:22:57,060
+o que é que isto quer dizer
+
+426
+00:22:57,060 --> 00:22:59,060
+quer dizer que se nós aqui tivermos o valor 10
+
+427
+00:22:59,060 --> 00:23:01,060
+e tivermos aqui um peso
+
+428
+00:23:01,060 --> 00:23:03,060
+de 0,5
+
+429
+00:23:03,060 --> 00:23:05,060
+aqui vai chegar o valor 5
+
+430
+00:23:05,060 --> 00:23:07,060
+ok
+
+431
+00:23:07,060 --> 00:23:09,060
+se aqui tivermos o valor
+
+432
+00:23:09,060 --> 00:23:11,060
+20
+
+433
+00:23:11,060 --> 00:23:13,060
+ou 100, ou o que quiserem
+
+434
+00:23:13,060 --> 00:23:15,060
+e aqui tiverem um valor
+
+435
+00:23:15,060 --> 00:23:17,060
+de 0,20 para o valor 100
+
+436
+00:23:17,060 --> 00:23:19,060
+vocês aqui vão chegar com o valor 20
+
+437
+00:23:19,060 --> 00:23:21,060
+é apenas um multiplicador
+
+438
+00:23:21,060 --> 00:23:23,060
+para aquele número de entrada
+
+439
+00:23:23,060 --> 00:23:25,060
+ok
+
+440
+00:23:25,060 --> 00:23:27,060
+se não me estiverem a seguir
+
+441
+00:23:27,060 --> 00:23:29,060
+por favor interrompam-me
+
+442
+00:23:29,060 --> 00:23:31,060
+que se não estou aqui a falar
+
+443
+00:23:31,060 --> 00:23:33,060
+e se vocês não estiverem aqui a seguir alguma coisa
+
+444
+00:23:33,060 --> 00:23:35,060
+interrompam-me à vontade
+
+445
+00:23:35,060 --> 00:23:37,060
+temos um valor
+
+446
+00:23:37,060 --> 00:23:39,060
+valores de entrada, pesos
+
+447
+00:23:39,060 --> 00:23:41,060
+e os valores chegam todos aqui e fazem o sumatório
+
+448
+00:23:41,060 --> 00:23:43,060
+e é a partir deste sumatório
+
+449
+00:23:43,060 --> 00:23:45,060
+que nós hoje em dia
+
+450
+00:23:45,060 --> 00:23:47,060
+também temos aqui
+
+451
+00:23:47,060 --> 00:23:49,060
+um parâmetro extra
+
+452
+00:23:49,060 --> 00:23:51,060
+um B
+
+453
+00:23:51,060 --> 00:23:53,060
+o que é este B
+
+454
+00:23:53,060 --> 00:23:55,060
+é o que nos permite dar um valor aqui
+
+455
+00:23:55,060 --> 00:23:57,060
+à coisa, ou seja
+
+456
+00:23:57,060 --> 00:23:59,060
+imaginem que
+
+457
+00:23:59,060 --> 00:24:01,060
+vocês só querem ativar
+
+458
+00:24:01,060 --> 00:24:03,060
+em certos casos que nós já vamos ver à frente
+
+459
+00:24:03,060 --> 00:24:05,060
+vocês às vezes precisam deste B
+
+460
+00:24:05,060 --> 00:24:07,060
+para por a função
+
+461
+00:24:07,060 --> 00:24:09,060
+ativar apenas
+
+462
+00:24:09,060 --> 00:24:11,060
+em certos casos e outros que não
+
+463
+00:24:11,060 --> 00:24:13,060
+e é este B que hoje em dia
+
+464
+00:24:13,060 --> 00:24:15,060
+o B
+
+465
+00:24:15,060 --> 00:24:17,060
+são os pesos que aqui estão
+
+466
+00:24:17,060 --> 00:24:19,060
+que hoje em dia são aprendidos pelas redes normais
+
+467
+00:24:19,060 --> 00:24:21,060
+ou seja, no início
+
+468
+00:24:21,060 --> 00:24:23,060
+estes pesos são inicializados de uma forma
+
+469
+00:24:23,060 --> 00:24:25,060
+random
+
+470
+00:24:25,060 --> 00:24:27,060
+ok
+
+471
+00:24:27,060 --> 00:24:29,060
+vamos dizer que eram 0,5, 0,5, 0,5
+
+472
+00:24:29,060 --> 00:24:31,060
+e era o que era feito hoje em dia
+
+473
+00:24:31,060 --> 00:24:33,060
+começavam por estes pesos
+
+474
+00:24:33,060 --> 00:24:35,060
+ele podia testando
+
+475
+00:24:35,060 --> 00:24:37,060
+e se ele fosse dando o resultado certo
+
+476
+00:24:37,060 --> 00:24:39,060
+ele não mexia nos pesos
+
+477
+00:24:39,060 --> 00:24:41,060
+se não fosse dando o resultado certo
+
+478
+00:24:41,060 --> 00:24:43,060
+o que ele faz é chegar atrás e mudar estes pesos
+
+479
+00:24:43,060 --> 00:24:45,060
+e dar este valor aqui
+
+480
+00:24:45,060 --> 00:24:47,060
+agora vocês estão a ver aqui
+
+481
+00:24:47,060 --> 00:24:49,060
+um neurônio
+
+482
+00:24:49,060 --> 00:24:51,060
+imagina em uma rede neuronal
+
+483
+00:24:51,060 --> 00:24:53,060
+destas de LLM
+
+484
+00:24:53,060 --> 00:24:55,060
+XHPT e coisas do género
+
+485
+00:24:55,060 --> 00:24:57,060
+que estamos a falar
+
+486
+00:24:57,060 --> 00:24:59,060
+de ter
+
+487
+00:24:59,060 --> 00:25:01,060
+coisas como 220 bilhões
+
+488
+00:25:01,060 --> 00:25:03,060
+destas unidades aqui
+
+489
+00:25:03,060 --> 00:25:05,060
+ok, portanto
+
+490
+00:25:05,060 --> 00:25:07,060
+estamos a falar de uma escala enormíssima
+
+491
+00:25:07,060 --> 00:25:09,060
+de
+
+492
+00:25:09,060 --> 00:25:11,060
+o que é isto aqui
+
+493
+00:25:11,060 --> 00:25:13,060
+eu não entendi
+
+494
+00:25:13,060 --> 00:25:15,060
+o peso do B
+
+495
+00:25:15,060 --> 00:25:17,060
+não
+
+496
+00:25:17,060 --> 00:25:19,060
+ficou claro para mim
+
+497
+00:25:19,060 --> 00:25:21,060
+o peso do B
+
+498
+00:25:21,060 --> 00:25:23,060
+é algo dinâmico é isso
+
+499
+00:25:23,060 --> 00:25:25,060
+é algo dinâmico, eu acho para ficar claro
+
+500
+00:25:25,060 --> 00:25:27,060
+daqueles slides
+
+501
+00:25:27,060 --> 00:25:29,060
+se não ficar
+
+502
+00:25:29,060 --> 00:25:31,060
+eu volto a puxar para trás
+
+503
+00:25:31,060 --> 00:25:33,060
+ok
+
+504
+00:25:33,060 --> 00:25:35,060
+pronto, só eu vou ficar a preferir esta vista
+
+505
+00:25:35,060 --> 00:25:37,060
+que assim consigo ver o que vocês estão aqui a dizer
+
+506
+00:25:37,060 --> 00:25:39,060
+aqui temos uma
+
+507
+00:25:39,060 --> 00:25:41,060
+outra dúvida, desculpe lá
+
+508
+00:25:41,060 --> 00:25:43,060
+sim, sim
+
+509
+00:25:43,060 --> 00:25:45,060
+estou a ouvir muito de mal
+
+510
+00:25:45,060 --> 00:25:47,060
+no slide anterior
+
+511
+00:25:47,060 --> 00:25:49,060
+ok, este é calculado assim
+
+512
+00:25:49,060 --> 00:25:51,060
+e depois tem a função
+
+513
+00:25:51,060 --> 00:25:53,060
+isso é a seguir, não é?
+
+514
+00:25:53,060 --> 00:25:55,060
+essa ativação
+
+515
+00:25:55,060 --> 00:25:57,060
+isso vai ser explicado assim
+
+516
+00:25:57,060 --> 00:25:59,060
+exatamente
+
+517
+00:25:59,060 --> 00:26:01,060
+estou a esperar
+
+518
+00:26:01,060 --> 00:26:03,060
+certo, eu estou a tentar desconstruir um bocadinho isto
+
+519
+00:26:03,060 --> 00:26:05,060
+ok, eu espero que depois
+
+520
+00:26:05,060 --> 00:26:07,060
+que estamos ao fim deste capítulo, fique um bocadinho mais fácil
+
+521
+00:26:07,060 --> 00:26:09,060
+e depois até que estamos voltados aqui atrás
+
+522
+00:26:09,060 --> 00:26:11,060
+e tentar ver se vocês perceberam
+
+523
+00:26:11,060 --> 00:26:13,060
+e se eu tivesse presencialmente convosco era mais fácil
+
+524
+00:26:13,060 --> 00:26:15,060
+eu tinha um quadro e íamos fazer um exemplo
+
+525
+00:26:15,060 --> 00:26:17,060
+aqui é um bocadinho menos fácil
+
+526
+00:26:17,060 --> 00:26:19,060
+portanto, o que eu queria
+
+527
+00:26:19,060 --> 00:26:21,060
+que vocês tirassem de ali de trás
+
+528
+00:26:21,060 --> 00:26:23,060
+desta imagem que estávamos aqui a falar eram três coisas
+
+529
+00:26:23,060 --> 00:26:25,060
+os pesos
+
+530
+00:26:25,060 --> 00:26:27,060
+os W
+
+531
+00:26:27,060 --> 00:26:29,060
+que era o que estava aqui
+
+532
+00:26:29,060 --> 00:26:31,060
+que é
+
+533
+00:26:31,060 --> 00:26:33,060
+na verdade uma tradução de
+
+534
+00:26:33,060 --> 00:26:35,060
+quanto é que este input
+
+535
+00:26:35,060 --> 00:26:37,060
+quanto é que esta entrada importa
+
+536
+00:26:37,060 --> 00:26:39,060
+se nós que começamos a dar um valor
+
+537
+00:26:39,060 --> 00:26:41,060
+positivo, quer dizer que estamos
+
+538
+00:26:41,060 --> 00:26:43,060
+a suportar aquele valor
+
+539
+00:26:43,060 --> 00:26:45,060
+mas imaginem que nós estávamos a dar um valor
+
+540
+00:26:45,060 --> 00:26:47,060
+de menos 0,5
+
+541
+00:26:47,060 --> 00:26:49,060
+nós na verdade estamos a
+
+542
+00:26:49,060 --> 00:26:51,060
+quase que a dizer este valor importa nos pouco
+
+543
+00:26:51,060 --> 00:26:53,060
+ou muito pouco
+
+544
+00:26:53,060 --> 00:26:55,060
+quer dizer, na verdade o zero
+
+545
+00:26:55,060 --> 00:26:57,060
+é o que não importa menos
+
+546
+00:26:57,060 --> 00:26:59,060
+quando damos um valor negativo
+
+547
+00:26:59,060 --> 00:27:01,060
+quer dizer que estamos a afetar negativamente
+
+548
+00:27:01,060 --> 00:27:03,060
+o resto dos valores
+
+549
+00:27:03,060 --> 00:27:05,060
+estamos a transformar uma soma
+
+550
+00:27:05,060 --> 00:27:07,060
+e temos lá um valor negativo
+
+551
+00:27:07,060 --> 00:27:09,060
+que vai fazer uma subtração
+
+552
+00:27:09,060 --> 00:27:11,060
+já vai ficar mais fácil a seguir
+
+553
+00:27:11,060 --> 00:27:13,060
+temos o bias
+
+554
+00:27:13,060 --> 00:27:15,060
+que na verdade é apenas um offset
+
+555
+00:27:15,060 --> 00:27:17,060
+da soma
+
+556
+00:27:17,060 --> 00:27:19,060
+penso que também vai ficar mais fácil a seguir
+
+557
+00:27:19,060 --> 00:27:21,060
+e temos a função da ativação
+
+558
+00:27:21,060 --> 00:27:23,060
+até agora nós
+
+559
+00:27:23,060 --> 00:27:25,060
+temos vindo a fazer
+
+560
+00:27:25,060 --> 00:27:27,060
+uma função da ativação que se chama relu
+
+561
+00:27:27,060 --> 00:27:29,060
+o relu o que é
+
+562
+00:27:29,060 --> 00:27:31,060
+que é
+
+563
+00:27:31,060 --> 00:27:33,060
+uma regra simples
+
+564
+00:27:33,060 --> 00:27:35,060
+relu implica que, por exemplo
+
+565
+00:27:35,060 --> 00:27:37,060
+valor maior que 10
+
+566
+00:27:37,060 --> 00:27:39,060
+então sim, valor menor que 10 então não
+
+567
+00:27:39,060 --> 00:27:41,060
+ou então
+
+568
+00:27:41,060 --> 00:27:43,060
+manter os valores positivos
+
+569
+00:27:43,060 --> 00:27:45,060
+positivos e todos os que são negativos
+
+570
+00:27:45,060 --> 00:27:47,060
+mudar para zero
+
+571
+00:27:47,060 --> 00:27:49,060
+ok?
+
+572
+00:27:49,060 --> 00:27:51,060
+isto é a nossa função da ativação, existem várias
+
+573
+00:27:51,060 --> 00:27:53,060
+de uma forma
+
+574
+00:27:53,060 --> 00:27:55,060
+mais simples possível vamos usar para usar
+
+575
+00:27:55,060 --> 00:27:57,060
+a relu
+
+576
+00:27:57,060 --> 00:27:59,060
+para desconstruir algumas coisas
+
+577
+00:27:59,060 --> 00:28:01,060
+portanto
+
+578
+00:28:01,060 --> 00:28:03,060
+um exemplo
+
+579
+00:28:03,060 --> 00:28:05,060
+nós temos um input 0,8 e 0,3
+
+580
+00:28:05,060 --> 00:28:07,060
+ok?
+
+581
+00:28:07,060 --> 00:28:09,060
+depois
+
+582
+00:28:09,060 --> 00:28:11,060
+vamos dizer que temos aqui
+
+583
+00:28:11,060 --> 00:28:13,060
+o peso 1 seria 1,2
+
+584
+00:28:13,060 --> 00:28:15,060
+o peso 2 seria 0,5
+
+585
+00:28:15,060 --> 00:28:17,060
+e o bias 0,1
+
+586
+00:28:17,060 --> 00:28:19,060
+ok?
+
+587
+00:28:19,060 --> 00:28:21,060
+na verdade o que aqui estaríamos a fazer
+
+588
+00:28:21,060 --> 00:28:23,060
+era apenas o somatório
+
+589
+00:28:23,060 --> 00:28:25,060
+desta conta toda que aqui está
+
+590
+00:28:25,060 --> 00:28:27,060
+que é multiplicações de peso por valores
+
+591
+00:28:27,060 --> 00:28:29,060
+adicionar aqui
+
+592
+00:28:29,060 --> 00:28:31,060
+o bias
+
+593
+00:28:31,060 --> 00:28:33,060
+e dá-nos um valor
+
+594
+00:28:33,060 --> 00:28:35,060
+e este valor
+
+595
+00:28:35,060 --> 00:28:37,060
+com o relu
+
+596
+00:28:37,060 --> 00:28:39,060
+que o relu que faz é, na verdade
+
+597
+00:28:39,060 --> 00:28:41,060
+nós definimos que era isto que ela fazia
+
+598
+00:28:41,060 --> 00:28:43,060
+que é todos os valores positivos ficam positivos
+
+599
+00:28:43,060 --> 00:28:45,060
+todos os valores negativos
+
+600
+00:28:45,060 --> 00:28:47,060
+transformam-se em zero
+
+601
+00:28:47,060 --> 00:28:49,060
+e vocês dizem assim, isto serve para que
+
+602
+00:28:49,060 --> 00:28:51,060
+neste momento perceba completamente a questão
+
+603
+00:28:51,060 --> 00:28:53,060
+vamos tentar explicar aqui um bocadinho
+
+604
+00:28:53,060 --> 00:28:55,060
+portanto
+
+605
+00:28:55,060 --> 00:28:57,060
+como é que isto funciona
+
+606
+00:28:57,060 --> 00:28:59,060
+de uma forma
+
+607
+00:28:59,060 --> 00:29:01,060
+mais impossível
+
+608
+00:29:01,060 --> 00:29:03,060
+da forma que eu vos consigo explicar
+
+609
+00:29:05,060 --> 00:29:07,060
+nós aqui
+
+610
+00:29:07,060 --> 00:29:09,060
+se tentarmos pensar
+
+611
+00:29:09,060 --> 00:29:11,060
+de uma forma gráfica
+
+612
+00:29:11,060 --> 00:29:13,060
+nós estamos a tentar
+
+613
+00:29:13,060 --> 00:29:15,060
+criar uma divisão
+
+614
+00:29:15,060 --> 00:29:17,060
+entre classes
+
+615
+00:29:17,060 --> 00:29:19,060
+ou seja
+
+616
+00:29:19,060 --> 00:29:21,060
+imaginem aqui
+
+617
+00:29:21,060 --> 00:29:23,060
+para este caso
+
+618
+00:29:23,060 --> 00:29:25,060
+um and
+
+619
+00:29:25,060 --> 00:29:27,060
+a função lógica and boleana
+
+620
+00:29:27,060 --> 00:29:29,060
+eu não sei se vocês todos estão a parte disso
+
+621
+00:29:29,060 --> 00:29:31,060
+mas
+
+622
+00:29:31,060 --> 00:29:33,060
+falso com falso
+
+623
+00:29:33,060 --> 00:29:35,060
+é falso
+
+624
+00:29:35,060 --> 00:29:37,060
+falso com verdadeiro
+
+625
+00:29:37,060 --> 00:29:39,060
+é falso
+
+626
+00:29:39,060 --> 00:29:41,060
+verdadeiro com falso
+
+627
+00:29:41,060 --> 00:29:43,060
+e verdadeiro com verdadeiro
+
+628
+00:29:43,060 --> 00:29:45,060
+é verdadeiro
+
+629
+00:29:45,060 --> 00:29:47,060
+aqui está representado por zeros e uns
+
+630
+00:29:47,060 --> 00:29:49,060
+mas
+
+631
+00:29:49,060 --> 00:29:51,060
+é and boleano
+
+632
+00:29:51,060 --> 00:29:53,060
+e ora, o and boleano
+
+633
+00:29:53,060 --> 00:29:55,060
+se eu representarmos
+
+634
+00:29:55,060 --> 00:29:57,060
+num gráfico como aqui está
+
+635
+00:29:57,060 --> 00:29:59,060
+nós temos estes pontos que são de uma classe
+
+636
+00:29:59,060 --> 00:30:01,060
+que é falso
+
+637
+00:30:01,060 --> 00:30:03,060
+e temos este ponto que é de uma classe
+
+638
+00:30:03,060 --> 00:30:05,060
+que é verdadeiro
+
+639
+00:30:05,060 --> 00:30:07,060
+ou seja, os nossos valores de entrada vão ser
+
+640
+00:30:07,060 --> 00:30:09,060
+zero, zero, um
+
+641
+00:30:09,060 --> 00:30:11,060
+um zero e um um
+
+642
+00:30:11,060 --> 00:30:13,060
+e nós estamos a tentar encontrar
+
+643
+00:30:13,060 --> 00:30:15,060
+a função matemática
+
+644
+00:30:15,060 --> 00:30:17,060
+que nos divide
+
+645
+00:30:17,060 --> 00:30:19,060
+os pontos que são falsos
+
+646
+00:30:19,060 --> 00:30:21,060
+dos pontos que são verdadeiros
+
+647
+00:30:23,060 --> 00:30:25,060
+mais à frente
+
+648
+00:30:25,060 --> 00:30:27,060
+também chegamos lá
+
+649
+00:30:27,060 --> 00:30:29,060
+isto aqui
+
+650
+00:30:29,060 --> 00:30:31,060
+para já não é preciso
+
+651
+00:30:31,060 --> 00:30:33,060
+vamos só ver aqui
+
+652
+00:30:33,060 --> 00:30:35,060
+o relu
+
+653
+00:30:35,060 --> 00:30:37,060
+é a função que vamos utilizar para já
+
+654
+00:30:37,060 --> 00:30:39,060
+se é menor que zero
+
+655
+00:30:39,060 --> 00:30:41,060
+então zero
+
+656
+00:30:41,060 --> 00:30:43,060
+se é maior que zero
+
+657
+00:30:43,060 --> 00:30:45,060
+então é o valor
+
+658
+00:30:45,060 --> 00:30:47,060
+portanto, vamos voltar aqui
+
+659
+00:30:47,060 --> 00:30:49,060
+ao exemplo do and boleano
+
+660
+00:30:51,060 --> 00:30:53,060
+ora nós sabemos que
+
+661
+00:30:53,060 --> 00:30:55,060
+isso pode ser feito de várias maneiras
+
+662
+00:30:55,060 --> 00:30:57,060
+mas nós sabemos que zero com zero
+
+663
+00:30:57,060 --> 00:30:59,060
+tem que dar zero
+
+664
+00:30:59,060 --> 00:31:01,060
+um com zero
+
+665
+00:31:01,060 --> 00:31:03,060
+tem que dar zero
+
+666
+00:31:03,060 --> 00:31:05,060
+zero com um
+
+667
+00:31:05,060 --> 00:31:07,060
+tem que dar zero e um com um
+
+668
+00:31:07,060 --> 00:31:09,060
+tem que dar um
+
+669
+00:31:09,060 --> 00:31:11,060
+e vocês voltando aqui um bocadinho atrás
+
+670
+00:31:11,060 --> 00:31:13,060
+pensando aqui e retirando aqui
+
+671
+00:31:13,060 --> 00:31:15,060
+esta parte aqui
+
+672
+00:31:15,060 --> 00:31:17,060
+ok
+
+673
+00:31:17,060 --> 00:31:19,060
+vamos pegar aqui nesta
+
+674
+00:31:19,060 --> 00:31:21,060
+parte aqui nesta
+
+675
+00:31:21,060 --> 00:31:23,060
+nesta função
+
+676
+00:31:23,060 --> 00:31:25,060
+nesta imagem e colocá-la aqui embaixo
+
+677
+00:31:25,060 --> 00:31:27,060
+para tentar ajudar um bocadinho
+
+678
+00:31:27,060 --> 00:31:29,060
+ora o nosso x1
+
+679
+00:31:29,060 --> 00:31:31,060
+vai ser neste caso
+
+680
+00:31:31,060 --> 00:31:33,060
+zero
+
+681
+00:31:33,060 --> 00:31:35,060
+ok
+
+682
+00:31:35,060 --> 00:31:37,060
+o nosso x2
+
+683
+00:31:37,060 --> 00:31:39,060
+vai ser neste caso zero
+
+684
+00:31:39,060 --> 00:31:41,060
+estamos a fazer para este ponto aqui
+
+685
+00:31:41,060 --> 00:31:43,060
+ora, não liguem aqueles valores que aqui estão
+
+686
+00:31:43,060 --> 00:31:45,060
+vamos primeiro
+
+687
+00:31:45,060 --> 00:31:47,060
+lançar aqui um valor
+
+688
+00:31:47,060 --> 00:31:49,060
+a sorte
+
+689
+00:31:49,060 --> 00:31:51,060
+para este w1 e w2
+
+690
+00:31:51,060 --> 00:31:53,060
+ok, vocês lançavam um valor
+
+691
+00:31:53,060 --> 00:31:55,060
+qualquer
+
+692
+00:31:55,060 --> 00:31:58,440
+a sorte
+
+693
+00:31:58,440 --> 00:32:00,440
+este w1 e w2 ia multiplicar o vosso valor
+
+694
+00:32:00,440 --> 00:32:02,440
+de entrada por qualquer coisa
+
+695
+00:32:02,440 --> 00:32:04,440
+neste caso
+
+696
+00:32:04,440 --> 00:32:06,440
+esta função and não é muito necessário
+
+697
+00:32:06,440 --> 00:32:08,440
+ou seja nós não precisamos
+
+698
+00:32:08,440 --> 00:32:10,440
+destes valores para exemplificar
+
+699
+00:32:10,440 --> 00:32:12,440
+que ela funciona
+
+700
+00:32:12,440 --> 00:32:14,440
+mas vamos dizer que aqui era 1 em cada
+
+701
+00:32:14,440 --> 00:32:16,440
+ok, portanto
+
+702
+00:32:16,440 --> 00:32:18,440
+1 vezes 0 dá 0
+
+703
+00:32:18,440 --> 00:32:20,440
+0 vezes 1 dá 0
+
+704
+00:32:20,440 --> 00:32:22,440
+0 vezes 1 dá 0
+
+705
+00:32:22,440 --> 00:32:24,440
+vocês aqui chegavam com 0 mais 0
+
+706
+00:32:24,440 --> 00:32:26,440
+certo
+
+707
+00:32:26,440 --> 00:32:28,440
+ora, nós aqui vimos que a nossa
+
+708
+00:32:28,440 --> 00:32:30,440
+função da ativação
+
+709
+00:32:30,440 --> 00:32:32,440
+por acaso até tem aqui um problema
+
+710
+00:32:32,440 --> 00:32:34,440
+que nós aqui
+
+711
+00:32:34,440 --> 00:32:36,440
+dizíamos, por exemplo falta aqui o igual
+
+712
+00:32:36,440 --> 00:32:38,440
+falta para o boundary do 0
+
+713
+00:32:38,440 --> 00:32:40,440
+ou seja, se fosse menor ou igual a 0
+
+714
+00:32:40,440 --> 00:32:42,440
+então era 0
+
+715
+00:32:42,440 --> 00:32:44,440
+se fosse maior que o 0 era o valor
+
+716
+00:32:44,440 --> 00:32:46,440
+ora, neste caso
+
+717
+00:32:46,440 --> 00:32:48,440
+nós queremos que
+
+718
+00:32:48,440 --> 00:32:50,440
+0 mais 0 seja 0
+
+719
+00:32:50,440 --> 00:32:52,440
+nós podíamos não fazer
+
+720
+00:32:52,440 --> 00:32:54,440
+nada que
+
+721
+00:32:54,440 --> 00:32:56,440
+ia estar correto, a nossa rede neuronal
+
+722
+00:32:56,440 --> 00:32:58,440
+estava correta, certo? estão acompanhadas
+
+723
+00:32:58,440 --> 00:33:00,440
+até aqui
+
+724
+00:33:00,440 --> 00:33:02,440
+pronto
+
+725
+00:33:02,440 --> 00:33:04,440
+vamos passar para o caso a seguir
+
+726
+00:33:04,440 --> 00:33:06,440
+1 e 0
+
+727
+00:33:06,440 --> 00:33:08,440
+1 vezes 1 dá 1
+
+728
+00:33:08,440 --> 00:33:10,440
+chegava aqui 1
+
+729
+00:33:10,440 --> 00:33:12,440
+1 vezes 0, desculpem
+
+730
+00:33:12,440 --> 00:33:14,440
+0 vezes 1 dá 0
+
+731
+00:33:14,440 --> 00:33:16,440
+ok, então 1 mais 0
+
+732
+00:33:16,440 --> 00:33:18,440
+daria 1
+
+733
+00:33:18,440 --> 00:33:20,440
+ora, a segunda nossa função da ativação
+
+734
+00:33:20,440 --> 00:33:22,440
+que é esta aqui está
+
+735
+00:33:22,440 --> 00:33:24,440
+1 é maior que 0
+
+736
+00:33:24,440 --> 00:33:26,440
+portanto, o auto podia ser 1
+
+737
+00:33:26,440 --> 00:33:28,440
+ora, nós sabemos
+
+738
+00:33:28,440 --> 00:33:30,440
+que tem que ser 0
+
+739
+00:33:30,440 --> 00:33:32,440
+portanto, temos que fazer aqui qualquer coisa
+
+740
+00:33:32,440 --> 00:33:34,440
+o que é que nós podemos fazer
+
+741
+00:33:34,440 --> 00:33:36,440
+aqui tem o resultado
+
+742
+00:33:36,440 --> 00:33:38,440
+ok?
+
+743
+00:33:38,440 --> 00:33:40,440
+na verdade aqui, o que é que podemos fazer? podemos
+
+744
+00:33:40,440 --> 00:33:42,440
+retirar um valor
+
+745
+00:33:42,440 --> 00:33:44,440
+qualquer maior que 1
+
+746
+00:33:44,440 --> 00:33:46,440
+porque nós sabemos que aqui está a dar 1
+
+747
+00:33:46,440 --> 00:33:48,440
+neste momento
+
+748
+00:33:48,440 --> 00:33:50,440
+mas nós queríamos que
+
+749
+00:33:50,440 --> 00:33:52,440
+fosse
+
+750
+00:33:52,440 --> 00:33:54,440
+0
+
+751
+00:33:54,440 --> 00:33:56,440
+portanto, o que é que nós vamos fazer?
+
+752
+00:33:56,440 --> 00:33:58,440
+temos que pôr aqui, lá está
+
+753
+00:33:58,440 --> 00:34:00,440
+o bias aqui ajuda bastante
+
+754
+00:34:00,440 --> 00:34:02,440
+porque vocês podem chegar aqui ao bias
+
+755
+00:34:02,440 --> 00:34:04,440
+e dizer que o vosso bias
+
+756
+00:34:04,440 --> 00:34:06,440
+é menos 1.5
+
+757
+00:34:06,440 --> 00:34:08,440
+e na verdade o que vocês estão a fazer
+
+758
+00:34:08,440 --> 00:34:10,440
+é arrastar esta linha
+
+759
+00:34:10,440 --> 00:34:12,440
+em termos matemáticos
+
+760
+00:34:12,440 --> 00:34:14,440
+estão a arrastá-la para aqui
+
+761
+00:34:14,440 --> 00:34:16,440
+ok?
+
+762
+00:34:18,440 --> 00:34:20,440
+então, vamos dizer que é 1,5
+
+763
+00:34:20,440 --> 00:34:22,440
+logo, o vosso valor de 1
+
+764
+00:34:22,440 --> 00:34:24,440
+menos 1.5
+
+765
+00:34:24,440 --> 00:34:26,440
+aí já seria menor que 0, portanto
+
+766
+00:34:26,440 --> 00:34:28,440
+o resultado seria 0
+
+767
+00:34:28,440 --> 00:34:30,440
+ok? mas agora nós temos que
+
+768
+00:34:30,440 --> 00:34:32,440
+no ar a comprovar se isto funciona
+
+769
+00:34:32,440 --> 00:34:34,440
+ao contrário, vai ser exatamente igual a funciona
+
+770
+00:34:34,440 --> 00:34:36,440
+mas nós queremos saber
+
+771
+00:34:36,440 --> 00:34:38,440
+se 1 com 1 vai funcionar
+
+772
+00:34:38,440 --> 00:34:40,440
+agora, 1 vezes 1
+
+773
+00:34:40,440 --> 00:34:42,440
+dá 1, 1 vezes 1 dá 1
+
+774
+00:34:42,440 --> 00:34:44,440
+ok?
+
+775
+00:34:44,440 --> 00:34:46,440
+aqui chega 1 mais 1 dá 2
+
+776
+00:34:46,440 --> 00:34:48,440
+nós fazemos o sumatório
+
+777
+00:34:48,440 --> 00:34:50,440
+2 menos 1,5
+
+778
+00:34:50,440 --> 00:34:52,440
+foi o valor que devemos obter
+
+779
+00:34:52,440 --> 00:34:54,440
+dá maior que 0
+
+780
+00:34:54,440 --> 00:34:56,440
+portanto, ok? confirma-se
+
+781
+00:34:56,440 --> 00:34:58,440
+este valor é positivo e era positivo que nós queríamos
+
+782
+00:34:58,440 --> 00:35:00,440
+eu tirei aqui um valor de 1,5
+
+783
+00:35:00,440 --> 00:35:02,440
+ok?
+
+784
+00:35:02,440 --> 00:35:04,440
+vocês podiam
+
+785
+00:35:04,440 --> 00:35:06,440
+uma rede neuronal não sabe atirar um valor
+
+786
+00:35:06,440 --> 00:35:08,440
+tão exato
+
+787
+00:35:08,440 --> 00:35:10,440
+então vai experimentando
+
+788
+00:35:10,440 --> 00:35:12,440
+mudar estes 3 valores aqui
+
+789
+00:35:12,440 --> 00:35:14,440
+até que as condições
+
+790
+00:35:14,440 --> 00:35:16,440
+sejam verificadas
+
+791
+00:35:16,440 --> 00:35:18,440
+por isso é que nós temos um training set
+
+792
+00:35:18,440 --> 00:35:20,440
+sejam conjunto de dados de treino
+
+793
+00:35:20,440 --> 00:35:22,440
+e que vamos dizer à rede
+
+794
+00:35:22,440 --> 00:35:24,440
+quando entram estes dados
+
+795
+00:35:24,440 --> 00:35:26,440
+nós queremos que eles sejam assim
+
+796
+00:35:26,440 --> 00:35:28,440
+para completar estes pesos que aqui estão dentro
+
+797
+00:35:28,440 --> 00:35:30,440
+de forma a ajustar-se
+
+798
+00:35:30,440 --> 00:35:32,440
+o melhor possível
+
+799
+00:35:32,440 --> 00:35:34,440
+para dar aquele resultado
+
+800
+00:35:34,440 --> 00:35:36,440
+não sei se quem me fez as perguntas um bocado
+
+801
+00:35:36,440 --> 00:35:38,440
+se ficou mais claro agora
+
+802
+00:35:38,440 --> 00:35:40,440
+ou seja, o B ali é
+
+803
+00:35:40,440 --> 00:35:42,440
+para termos
+
+804
+00:35:42,440 --> 00:35:44,440
+exatamente
+
+805
+00:35:44,440 --> 00:35:46,440
+o B neste caso o que faz
+
+806
+00:35:46,440 --> 00:35:48,440
+lembra-se daquelas funções matemáticas que eram
+
+807
+00:35:48,440 --> 00:35:50,440
+AX mais B
+
+808
+00:35:50,440 --> 00:35:52,440
+que definiu uma reta
+
+809
+00:35:52,440 --> 00:35:54,440
+nós aqui na verdade
+
+810
+00:35:54,440 --> 00:35:56,440
+estamos a fazer com que esta reta matemática
+
+811
+00:35:56,440 --> 00:35:58,440
+ela aqui não está bem representada
+
+812
+00:35:58,440 --> 00:36:00,440
+mas ela aqui
+
+813
+00:36:00,440 --> 00:36:02,440
+estaria a começar em 1,5
+
+814
+00:36:02,440 --> 00:36:04,440
+ou seja, nós deslocámo-la
+
+815
+00:36:04,440 --> 00:36:06,440
+para 1,5
+
+816
+00:36:06,440 --> 00:36:08,440
+e estamos a definir este boundary aqui
+
+817
+00:36:08,440 --> 00:36:10,440
+ok?
+
+818
+00:36:10,440 --> 00:36:12,440
+este é um ano de símbolos
+
+819
+00:36:12,440 --> 00:36:14,440
+é uma coisa simples e eu já vou mostrar exemplos mais complexos
+
+820
+00:36:14,440 --> 00:36:16,440
+vocês têm o quanto é exemplo
+
+821
+00:36:16,440 --> 00:36:18,440
+de um or
+
+822
+00:36:18,440 --> 00:36:20,440
+um or
+
+823
+00:36:20,440 --> 00:36:22,440
+é
+
+824
+00:36:22,440 --> 00:36:24,440
+o inverso, pronto, mas o que é que aconteceu?
+
+825
+00:36:24,440 --> 00:36:26,440
+nós, se fôssemos usar
+
+826
+00:36:26,440 --> 00:36:28,440
+a rede anterior
+
+827
+00:36:28,440 --> 00:36:30,440
+ela ia dar valores errados, porque aqui
+
+828
+00:36:30,440 --> 00:36:32,440
+ia nos dar 0 e aqui também ia dar 0
+
+829
+00:36:32,440 --> 00:36:34,440
+agora na verdade nós aqui temos que
+
+830
+00:36:34,440 --> 00:36:36,440
+encontrar um valor diferente
+
+831
+00:36:36,440 --> 00:36:38,440
+para o B para ela nos dar um or
+
+832
+00:36:38,440 --> 00:36:40,440
+para que o or seja bem feito
+
+833
+00:36:40,440 --> 00:36:42,440
+um or para quem não sabe, desculpem
+
+834
+00:36:42,440 --> 00:36:44,440
+podia ter começado por aí
+
+835
+00:36:44,440 --> 00:36:46,440
+falso, representado por 0
+
+836
+00:36:46,440 --> 00:36:48,440
+com falso
+
+837
+00:36:48,440 --> 00:36:50,440
+dá falso
+
+838
+00:36:50,440 --> 00:36:52,440
+com verdadeiro
+
+839
+00:36:52,440 --> 00:36:54,440
+dá verdadeiro
+
+840
+00:36:54,440 --> 00:36:56,440
+aqui era verdadeiro com falso
+
+841
+00:36:56,440 --> 00:36:58,440
+aqui é que é falso com verdadeiro
+
+842
+00:36:58,440 --> 00:37:00,440
+dá verdadeiro e verdadeiro com verdadeiro
+
+843
+00:37:00,440 --> 00:37:02,440
+tá verdadeiro
+
+844
+00:37:02,440 --> 00:37:04,440
+portanto, nós aqui vamos encontrar
+
+845
+00:37:04,440 --> 00:37:06,440
+a rede vai encontrar sozinha
+
+846
+00:37:06,440 --> 00:37:08,440
+o conjunto daqueles valores, daqueles pesos
+
+847
+00:37:08,440 --> 00:37:10,440
+e do bias que dividem melhor
+
+848
+00:37:10,440 --> 00:37:12,440
+o training 7
+
+849
+00:37:12,440 --> 00:37:14,440
+uma classe
+
+850
+00:37:14,440 --> 00:37:16,440
+da outra, nós aqui estamos a falar
+
+851
+00:37:16,440 --> 00:37:18,440
+apenas de duas classes
+
+852
+00:37:18,440 --> 00:37:20,440
+a classe de verdadeiro e a classe do falso
+
+853
+00:37:20,440 --> 00:37:24,200
+queria chegar aqui a outros pontos
+
+854
+00:37:24,200 --> 00:37:26,200
+o que é que acontece, por exemplo
+
+855
+00:37:26,200 --> 00:37:28,200
+em funções matemáticas
+
+856
+00:37:28,200 --> 00:37:30,200
+quando estamos a falar de um short
+
+857
+00:37:30,200 --> 00:37:32,200
+um short boliano
+
+858
+00:37:32,200 --> 00:37:34,200
+o que é que é
+
+859
+00:37:34,200 --> 00:37:36,200
+quando temos dois iguais, ou seja
+
+860
+00:37:36,200 --> 00:37:38,200
+falso e falso
+
+861
+00:37:38,200 --> 00:37:40,200
+ou verdadeiro e verdadeiro
+
+862
+00:37:40,200 --> 00:37:42,200
+é falso
+
+863
+00:37:42,200 --> 00:37:44,200
+quando temos dois diferentes, ou seja
+
+864
+00:37:44,200 --> 00:37:46,200
+falso e verdadeiro, ou verdadeiro e falso
+
+865
+00:37:46,200 --> 00:37:48,200
+é verdade
+
+866
+00:37:48,200 --> 00:37:50,200
+é muito muito exclusivo
+
+867
+00:37:50,200 --> 00:37:52,200
+mas na verdade
+
+868
+00:37:52,200 --> 00:37:54,200
+nós conseguimos apenas representar
+
+869
+00:37:54,200 --> 00:37:56,200
+com o neurônio, o end
+
+870
+00:37:56,200 --> 00:37:58,200
+ou o or, quando nós passamos para um short
+
+871
+00:37:58,200 --> 00:38:00,200
+se vocês imaginarem aqui
+
+872
+00:38:00,200 --> 00:38:02,200
+eu não sei se consigo desenhar aqui
+
+873
+00:38:02,200 --> 00:38:04,200
+qualquer coisa, se vocês imaginarem
+
+874
+00:38:04,200 --> 00:38:06,200
+qualquer linha que vocês façam aqui
+
+875
+00:38:06,200 --> 00:38:08,200
+nenhuma delas
+
+876
+00:38:08,200 --> 00:38:10,200
+consegue dividir este 7
+
+877
+00:38:10,200 --> 00:38:12,200
+perfeitamente
+
+878
+00:38:12,200 --> 00:38:14,200
+certo, vamos sempre ter
+
+879
+00:38:14,200 --> 00:38:16,200
+uma coisa
+
+880
+00:38:16,200 --> 00:38:18,200
+ou seja, nunca vamos conseguir dividir
+
+881
+00:38:18,200 --> 00:38:20,200
+os verdes dos vermelhos
+
+882
+00:38:20,200 --> 00:38:22,200
+qualquer linha que desenhamos aqui
+
+883
+00:38:22,200 --> 00:38:24,200
+logo, a única forma
+
+884
+00:38:24,200 --> 00:38:26,200
+de fazer aqui isto
+
+885
+00:38:26,200 --> 00:38:28,200
+é dividir isto
+
+886
+00:38:28,200 --> 00:38:30,200
+assim
+
+887
+00:38:32,200 --> 00:38:34,200
+logo, já não estamos a falar
+
+888
+00:38:34,200 --> 00:38:36,200
+de uma função linear
+
+889
+00:38:36,200 --> 00:38:38,200
+já estamos a falar de muito outros tipos de função
+
+890
+00:38:38,200 --> 00:38:40,200
+e o que é que isto implica para uma rede neuronal
+
+891
+00:38:40,200 --> 00:38:42,200
+implica
+
+892
+00:38:42,200 --> 00:38:44,200
+que, deixe-me ver se eu tenho aqui
+
+893
+00:38:44,200 --> 00:38:46,200
+um slide sobre isso
+
+894
+00:38:48,200 --> 00:38:50,200
+está aqui
+
+895
+00:38:50,200 --> 00:38:52,200
+depois já voltamos ali atrás
+
+896
+00:38:52,200 --> 00:38:54,200
+mas acho que a explicação fica mais fácil assim
+
+897
+00:38:54,200 --> 00:38:56,200
+nós, numa rede neuronal
+
+898
+00:38:56,200 --> 00:38:58,200
+numa rede neuronal
+
+899
+00:38:58,200 --> 00:39:00,200
+para explicar um short
+
+900
+00:39:00,200 --> 00:39:02,200
+deixamos de ter
+
+901
+00:39:02,200 --> 00:39:04,200
+uma camada única e passamos a ter
+
+902
+00:39:04,200 --> 00:39:06,200
+uma pequena deep learning
+
+903
+00:39:06,200 --> 00:39:08,200
+porque já temos uma camada
+
+904
+00:39:08,200 --> 00:39:10,200
+interior
+
+905
+00:39:10,200 --> 00:39:12,200
+e o que é que esta camada interior faz
+
+906
+00:39:12,200 --> 00:39:14,200
+mais, no ponto de vista lógico
+
+907
+00:39:14,200 --> 00:39:16,200
+vamos ter um OR
+
+908
+00:39:16,200 --> 00:39:18,200
+aqui, que vai ser
+
+909
+00:39:18,200 --> 00:39:20,200
+estes dois valores vão entrar aqui
+
+910
+00:39:20,200 --> 00:39:22,200
+e vão dar um OR
+
+911
+00:39:22,200 --> 00:39:24,200
+e depois estes dois valores
+
+912
+00:39:24,200 --> 00:39:26,200
+vão entrar aqui e isto vai fazer
+
+913
+00:39:26,200 --> 00:39:28,200
+um inverso do AND
+
+914
+00:39:28,200 --> 00:39:30,200
+que é o NOT AND
+
+915
+00:39:30,200 --> 00:39:32,200
+e depois
+
+916
+00:39:32,200 --> 00:39:34,200
+quando combinarmos estes dois, vamos ter aqui mais
+
+917
+00:39:34,200 --> 00:39:36,200
+pesos nestas linhas
+
+918
+00:39:36,200 --> 00:39:38,200
+e mais uma função de somatório
+
+919
+00:39:38,200 --> 00:39:40,200
+e mais uma função da ativação
+
+920
+00:39:40,200 --> 00:39:42,200
+é muito correto
+
+921
+00:39:42,200 --> 00:39:44,200
+o que é que eu quero que vocês estivem
+
+922
+00:39:44,200 --> 00:39:46,200
+daqui
+
+923
+00:39:46,200 --> 00:39:48,200
+quanto mais complexas as coisas ficam
+
+924
+00:39:48,200 --> 00:39:50,200
+aqui está a explicação e equações
+
+925
+00:39:50,200 --> 00:39:52,200
+de todos estes valores
+
+926
+00:39:52,200 --> 00:39:54,200
+que eu tenho vindo a falar
+
+927
+00:39:54,200 --> 00:39:56,200
+e que comprovam que um short
+
+928
+00:39:56,200 --> 00:39:58,200
+precisa de várias camadas
+
+929
+00:39:58,200 --> 00:40:00,200
+o que é o caso aqui
+
+930
+00:40:00,200 --> 00:40:02,200
+é exatamente a mesma coisa
+
+931
+00:40:02,200 --> 00:40:04,200
+ele verifica os casos todos
+
+932
+00:40:04,200 --> 00:40:06,200
+e depois vocês podem olhar para isso com mais cuidado
+
+933
+00:40:06,200 --> 00:40:08,200
+mas o que eu queria que vocês percebessem
+
+934
+00:40:08,200 --> 00:40:10,200
+é, temos valores de entrada
+
+935
+00:40:10,200 --> 00:40:12,200
+esses valores de entrada vão sofrer aqui
+
+936
+00:40:12,200 --> 00:40:14,200
+com um peso
+
+937
+00:40:14,200 --> 00:40:16,200
+e este peso
+
+938
+00:40:16,200 --> 00:40:18,200
+vai ser o que transforma
+
+939
+00:40:18,200 --> 00:40:20,200
+no neurônio e depois
+
+940
+00:40:20,200 --> 00:40:22,200
+o valor que começa aqui é como se fosse
+
+941
+00:40:22,200 --> 00:40:24,200
+o valor de entrada outra vez
+
+942
+00:40:24,200 --> 00:40:26,200
+e vai sofrer outro neurônio para a frente
+
+943
+00:40:26,200 --> 00:40:28,200
+e aqui já temos várias camadas
+
+944
+00:40:30,200 --> 00:40:32,200
+eu queria vos mostrar um recurso que eu puse
+
+945
+00:40:32,200 --> 00:40:34,200
+aqui no Moodle
+
+946
+00:40:34,200 --> 00:40:36,200
+que é
+
+947
+00:40:36,200 --> 00:40:38,200
+eu vou só procurar aqui
+
+948
+00:40:38,200 --> 00:40:41,700
+eu estou a vos mostrar um bocadinho sobre isto
+
+949
+00:40:41,700 --> 00:40:43,700
+que se chama TensorFlow Playgrounds
+
+950
+00:40:43,700 --> 00:40:45,700
+ok
+
+951
+00:40:45,700 --> 00:40:47,700
+NeuroNetwork Playgrounds
+
+952
+00:40:47,700 --> 00:40:49,700
+Playground.tensorflow.org
+
+953
+00:40:49,700 --> 00:40:51,700
+está no Moodle
+
+954
+00:40:51,700 --> 00:40:53,700
+vocês podem ver isto
+
+955
+00:40:53,700 --> 00:40:55,700
+o que é que eles fazem aqui
+
+956
+00:40:55,700 --> 00:40:57,700
+de uma forma muito visual e muito engraçada
+
+957
+00:40:57,700 --> 00:40:59,700
+nós vamos dizer
+
+958
+00:40:59,700 --> 00:41:01,700
+vamos começar por estes dados
+
+959
+00:41:01,700 --> 00:41:03,700
+aqui
+
+960
+00:41:03,700 --> 00:41:05,700
+vamos fazer aqui
+
+961
+00:41:05,700 --> 00:41:07,700
+isto que está no momento
+
+962
+00:41:07,700 --> 00:41:09,700
+inicial
+
+963
+00:41:09,700 --> 00:41:11,700
+temos aqui um quantidade de dados azuis
+
+964
+00:41:11,700 --> 00:41:13,700
+e temos aqui uma quantidade de dados
+
+965
+00:41:13,700 --> 00:41:15,700
+de aranjas, ou seja, temos duas classes
+
+966
+00:41:15,700 --> 00:41:17,700
+e nós queremos prever
+
+967
+00:41:17,700 --> 00:41:19,700
+queremos arranjar um modelo
+
+968
+00:41:19,700 --> 00:41:21,700
+que aprenda
+
+969
+00:41:21,700 --> 00:41:23,700
+a dividir estes duas classes
+
+970
+00:41:23,700 --> 00:41:25,700
+ok, nós vamos começar
+
+971
+00:41:25,700 --> 00:41:27,700
+sem hidden layers aqui
+
+972
+00:41:27,700 --> 00:41:29,700
+apenas com
+
+973
+00:41:29,700 --> 00:41:31,700
+os neurónios diretos
+
+974
+00:41:31,700 --> 00:41:33,700
+a fazer a classificação
+
+975
+00:41:33,700 --> 00:41:35,700
+ok
+
+976
+00:41:35,700 --> 00:41:37,700
+vamos colocar aqui a relu
+
+977
+00:41:37,700 --> 00:41:39,700
+que era que tínhamos vindo a usar
+
+978
+00:41:39,700 --> 00:41:41,700
+e aqui no interesse
+
+979
+00:41:41,700 --> 00:41:43,700
+para já não vamos falar de nada disto
+
+980
+00:41:43,700 --> 00:41:45,700
+e é um problema de classificação exatamente o que temos aqui
+
+981
+00:41:45,700 --> 00:41:47,700
+isto aqui também no interesse para já
+
+982
+00:41:47,700 --> 00:41:49,700
+não quero complicar
+
+983
+00:41:49,700 --> 00:41:51,700
+portanto, nós queremos que o Moodle aprenda
+
+984
+00:41:51,700 --> 00:41:53,700
+a fazer a melhor divisão daqui
+
+985
+00:41:53,700 --> 00:41:55,700
+neste momento
+
+986
+00:41:55,700 --> 00:41:57,700
+ele está a losse, é o que nos diz
+
+987
+00:41:57,700 --> 00:41:59,700
+o quão bom ou mal ele está
+
+988
+00:41:59,700 --> 00:42:01,700
+e ele neste momento está
+
+989
+00:42:01,700 --> 00:42:03,700
+a aprender, vocês podem carregar neste botão aqui
+
+990
+00:42:03,700 --> 00:42:05,700
+e para aprender
+
+991
+00:42:05,700 --> 00:42:07,700
+vocês viram que isto foi rapidíssimo
+
+992
+00:42:07,700 --> 00:42:09,700
+ele aqui continua a correr
+
+993
+00:42:09,700 --> 00:42:11,700
+eu vou parar, não interessa
+
+994
+00:42:11,700 --> 00:42:13,700
+porque isto é, na verdade, como o end
+
+995
+00:42:13,700 --> 00:42:15,700
+que nós estávamos a fazer
+
+996
+00:42:15,700 --> 00:42:17,700
+tudo o que tem é de um grupo estado
+
+997
+00:42:17,700 --> 00:42:19,700
+um lado tudo o que é do grupo estado do outro
+
+998
+00:42:19,700 --> 00:42:21,700
+ele conseguiu encontrar uma função matemática
+
+999
+00:42:21,700 --> 00:42:23,700
+simples
+
+1000
+00:42:23,700 --> 00:42:25,700
+que dividiu isto também
+
+1001
+00:42:25,700 --> 00:42:27,700
+ok
+
+1002
+00:42:27,700 --> 00:42:29,700
+pronto
+
+1003
+00:42:29,700 --> 00:42:31,700
+depois vamos dizer
+
+1004
+00:42:31,700 --> 00:42:33,700
+que vamos pôr uma coisa mais complexa
+
+1005
+00:42:33,700 --> 00:42:35,700
+como estes dados que aqui estão
+
+1006
+00:42:35,700 --> 00:42:37,700
+vocês veem que aqui
+
+1007
+00:42:37,700 --> 00:42:39,700
+tem meio que está em diferentes
+
+1008
+00:42:39,700 --> 00:42:41,700
+setores e pode ser um bocadinho
+
+1009
+00:42:41,700 --> 00:42:43,700
+mais difícil de aprender
+
+1010
+00:42:43,700 --> 00:42:45,700
+vamos pôr lá aprender
+
+1011
+00:42:45,700 --> 00:42:47,700
+ele aqui
+
+1012
+00:42:47,700 --> 00:42:49,700
+se vocês virem
+
+1013
+00:42:49,700 --> 00:42:51,700
+não consegue fazer mais nada
+
+1014
+00:42:51,700 --> 00:42:53,700
+e continua com uma losse bastante grande
+
+1015
+00:42:53,700 --> 00:42:55,700
+falhem 50% dos casos
+
+1016
+00:42:55,700 --> 00:42:57,700
+é o que basicamente a losse quer dizer
+
+1017
+00:42:57,700 --> 00:42:59,700
+que ele já conseguiu fazer nada
+
+1018
+00:42:59,700 --> 00:43:01,700
+nós vamos adicionar uma camada
+
+1019
+00:43:01,700 --> 00:43:03,700
+aqui arriba
+
+1020
+00:43:03,700 --> 00:43:05,700
+e vamos pôr a correr
+
+1021
+00:43:05,700 --> 00:43:07,700
+vocês vão ver que ele com mais uma camada
+
+1022
+00:43:07,700 --> 00:43:09,700
+já consegue dividir isto em dois setores
+
+1023
+00:43:09,700 --> 00:43:11,700
+já conseguiu
+
+1024
+00:43:11,700 --> 00:43:13,700
+de baixar aqui o losse bastante
+
+1025
+00:43:13,700 --> 00:43:15,700
+bastante
+
+1026
+00:43:15,700 --> 00:43:17,700
+vocês aqui depois podem
+
+1027
+00:43:17,700 --> 00:43:19,700
+visualmente ver o que é que ele está
+
+1028
+00:43:19,700 --> 00:43:21,700
+tenta fazer, veem que aqui
+
+1029
+00:43:21,700 --> 00:43:23,700
+este é o output de 1 euro
+
+1030
+00:43:23,700 --> 00:43:25,700
+para ver o maior
+
+1031
+00:43:25,700 --> 00:43:27,700
+vocês podem ver aqui à direita
+
+1032
+00:43:27,700 --> 00:43:29,700
+que esta zona azul é o que este neurônio
+
+1033
+00:43:29,700 --> 00:43:31,700
+está a aprender entre aspas
+
+1034
+00:43:31,700 --> 00:43:33,700
+e esta zona azul é o que este neurônio está a aprender
+
+1035
+00:43:33,700 --> 00:43:35,700
+e depois estes dois juntos
+
+1036
+00:43:35,700 --> 00:43:37,700
+fazem esta combinação aqui
+
+1037
+00:43:39,700 --> 00:43:41,700
+e se vocês virem aqui as entradas
+
+1038
+00:43:41,700 --> 00:43:43,700
+é x1
+
+1039
+00:43:43,700 --> 00:43:45,700
+ou seja, o eixo do x é o que está a entrar
+
+1040
+00:43:45,700 --> 00:43:47,700
+neste neurônio
+
+1041
+00:43:47,700 --> 00:43:49,700
+e o eixo do x2
+
+1042
+00:43:49,700 --> 00:43:51,700
+que é o y neste caso
+
+1043
+00:43:51,700 --> 00:43:53,700
+que nós estamos habituados a ver
+
+1044
+00:43:53,700 --> 00:43:55,700
+a altura é o que está a entrar
+
+1045
+00:43:55,700 --> 00:43:57,700
+ok?
+
+1046
+00:43:57,700 --> 00:43:59,700
+nós vamos adicionar mais uma camada
+
+1047
+00:43:59,700 --> 00:44:01,700
+desculpem aqui eu não adicionei mais o neurônio
+
+1048
+00:44:01,700 --> 00:44:03,700
+mas vocês podem adicionar aqui mais uma camada
+
+1049
+00:44:03,700 --> 00:44:05,700
+e agora vamos pôr
+
+1050
+00:44:05,700 --> 00:44:07,700
+aqui reset de outra vez
+
+1051
+00:44:07,700 --> 00:44:09,700
+vamos pôr a treinar outra vez
+
+1052
+00:44:09,700 --> 00:44:11,700
+vocês veem que ele aqui está a melhorar bastante
+
+1053
+00:44:11,700 --> 00:44:13,700
+porque ele aqui com mais camadas
+
+1054
+00:44:13,700 --> 00:44:15,700
+consegue representar uma coisa bastante mais complexa
+
+1055
+00:44:15,700 --> 00:44:17,700
+e conseguiu dividir aqui
+
+1056
+00:44:17,700 --> 00:44:19,700
+nos passos as coisas
+
+1057
+00:44:19,700 --> 00:44:21,700
+mas se virem claramente ainda falta dividir
+
+1058
+00:44:21,700 --> 00:44:23,700
+de outro lado
+
+1059
+00:44:23,700 --> 00:44:25,700
+e vocês podem experimentar que podem pôr aqui mais neurônios
+
+1060
+00:44:25,700 --> 00:44:27,700
+o que é que vai acontecer com mais neurônios
+
+1061
+00:44:27,700 --> 00:44:29,700
+ele vai conseguir representar melhor isto
+
+1062
+00:44:29,700 --> 00:44:31,700
+mais uma camada
+
+1063
+00:44:31,700 --> 00:44:33,700
+vocês veem, ok, muito mais rapidamente
+
+1064
+00:44:33,700 --> 00:44:35,700
+agora já é pró neste problema
+
+1065
+00:44:35,700 --> 00:44:37,700
+ok?
+
+1066
+00:44:37,700 --> 00:44:39,700
+basicamente está a conseguir aproximar estes dados
+
+1067
+00:44:39,700 --> 00:44:41,700
+e perceber claramente
+
+1068
+00:44:41,700 --> 00:44:43,700
+onde é que está cada uma das camadas
+
+1069
+00:44:43,700 --> 00:44:45,700
+e agora vocês vão para um problema mais complexo
+
+1070
+00:44:45,700 --> 00:44:47,700
+com este que está dentro um do outro
+
+1071
+00:44:47,700 --> 00:44:49,700
+é muito parecido com o xor que tivemos a ver um bocado
+
+1072
+00:44:49,700 --> 00:44:51,700
+mais complexo
+
+1073
+00:44:51,700 --> 00:44:53,700
+aqui viram
+
+1074
+00:44:53,700 --> 00:44:55,700
+eu pôs a treinar com estas camadas todas
+
+1075
+00:44:55,700 --> 00:44:57,700
+e ele conseguiu rapidamente perceber
+
+1076
+00:44:57,700 --> 00:44:59,700
+o que é que era uma coisa
+
+1077
+00:44:59,700 --> 00:45:01,700
+o que é que é outra e se vocês virem aqui
+
+1078
+00:45:01,700 --> 00:45:03,700
+este neurônio não está aqui a fazer nada porque ele não aprendeu nada
+
+1079
+00:45:03,700 --> 00:45:05,700
+está tudo branco
+
+1080
+00:45:05,700 --> 00:45:07,700
+na verdade podem tirar daqui o neurônio
+
+1081
+00:45:07,700 --> 00:45:09,700
+e em princípio
+
+1082
+00:45:09,700 --> 00:45:11,700
+ele vai conseguir
+
+1083
+00:45:11,700 --> 00:45:13,700
+estabilizar-se perto
+
+1084
+00:45:13,700 --> 00:45:15,700
+do valor anterior
+
+1085
+00:45:15,700 --> 00:45:17,700
+e vai conseguir identificar
+
+1086
+00:45:17,700 --> 00:45:19,700
+o conjunto de dados
+
+1087
+00:45:19,700 --> 00:45:21,700
+ok?
+
+1088
+00:45:21,700 --> 00:45:23,700
+eu estou a fazer isto muito por alto
+
+1089
+00:45:23,700 --> 00:45:25,700
+mais uma vez não estou a dar um curso dia
+
+1090
+00:45:25,700 --> 00:45:27,700
+a 100%
+
+1091
+00:45:27,700 --> 00:45:29,700
+mas gostava muito que vocês ficassem com esta ideia
+
+1092
+00:45:29,700 --> 00:45:31,700
+que
+
+1093
+00:45:31,700 --> 00:45:33,700
+as entradas
+
+1094
+00:45:33,700 --> 00:45:35,700
+as camadas interiores
+
+1095
+00:45:35,700 --> 00:45:37,700
+e o output
+
+1096
+00:45:37,700 --> 00:45:39,700
+o output neste caso aqui
+
+1097
+00:45:39,700 --> 00:45:41,700
+é muito importante
+
+1098
+00:45:41,700 --> 00:45:43,700
+para a forma como a rede é construída
+
+1099
+00:45:43,700 --> 00:45:45,700
+depois
+
+1100
+00:45:45,700 --> 00:45:47,700
+vocês podem brincar aqui com diferentes coisas
+
+1101
+00:45:47,700 --> 00:45:49,700
+porem mais nois nos dados
+
+1102
+00:45:49,700 --> 00:45:51,700
+vocês podem ver que tem ali
+
+1103
+00:45:51,700 --> 00:45:53,700
+pontos de laranja que são colocados ali
+
+1104
+00:45:53,700 --> 00:45:55,700
+juntos dos azuis
+
+1105
+00:45:55,700 --> 00:45:57,700
+que é o que acontece no mundo real
+
+1106
+00:45:57,700 --> 00:45:59,700
+nós nunca temos uma separação clara
+
+1107
+00:45:59,700 --> 00:46:01,700
+entre os dois mundos
+
+1108
+00:46:01,700 --> 00:46:03,700
+existe sempre este nois
+
+1109
+00:46:03,700 --> 00:46:05,700
+e então o que acontece aqui
+
+1110
+00:46:05,700 --> 00:46:07,700
+vocês põem a treinar
+
+1111
+00:46:07,700 --> 00:46:09,700
+e ele
+
+1112
+00:46:09,700 --> 00:46:11,700
+não vai ter ali uma
+
+1113
+00:46:11,700 --> 00:46:13,700
+está a falhar em
+
+1114
+00:46:13,700 --> 00:46:15,700
+9% das vezes está a falhar
+
+1115
+00:46:15,700 --> 00:46:17,700
+ok?
+
+1116
+00:46:17,700 --> 00:46:19,700
+mas se vocês
+
+1117
+00:46:19,700 --> 00:46:21,700
+que sentarem aqui fizerem uma rede neuronal enorme
+
+1118
+00:46:21,700 --> 00:46:23,700
+com mais camadas
+
+1119
+00:46:23,700 --> 00:46:25,700
+e mais neurónios
+
+1120
+00:46:27,700 --> 00:46:29,700
+já agora
+
+1121
+00:46:29,700 --> 00:46:31,700
+uma lei que se usa
+
+1122
+00:46:31,700 --> 00:46:33,700
+não é obrigatória
+
+1123
+00:46:33,700 --> 00:46:35,700
+mas é que normalmente isto é afunilado
+
+1124
+00:46:35,700 --> 00:46:37,700
+ou seja como é sagrado no início
+
+1125
+00:46:37,700 --> 00:46:39,700
+e afunila para o fim
+
+1126
+00:46:39,700 --> 00:46:41,700
+não existe uma explicação lógica para isto
+
+1127
+00:46:41,700 --> 00:46:43,700
+é normalmente o que se faz
+
+1128
+00:46:43,700 --> 00:46:45,700
+se vocês tentarem correr aqui
+
+1129
+00:46:45,700 --> 00:46:47,700
+por acaso neste caso
+
+1130
+00:46:47,700 --> 00:46:49,700
+não estamos a conseguir melhores resultados
+
+1131
+00:46:49,700 --> 00:46:51,700
+neste caso conseguimos ligeiramente
+
+1132
+00:46:51,700 --> 00:46:53,700
+melhor, conseguimos reduzir ali
+
+1133
+00:46:53,700 --> 00:46:55,700
+estamos quase a chegar ao 0.8
+
+1134
+00:46:55,700 --> 00:46:57,700
+e ele claramente deixou ali
+
+1135
+00:46:57,700 --> 00:46:59,700
+uns de fora
+
+1136
+00:46:59,700 --> 00:47:01,700
+mas os dados em si
+
+1137
+00:47:01,700 --> 00:47:03,700
+não nos permitem
+
+1138
+00:47:03,700 --> 00:47:05,700
+ter um melhor valor do que este aqui
+
+1139
+00:47:05,700 --> 00:47:07,700
+ok?
+
+1140
+00:47:07,700 --> 00:47:09,700
+depois podem chegar a coisas engraçadas como estas
+
+1141
+00:47:09,700 --> 00:47:11,700
+para treinar
+
+1142
+00:47:11,700 --> 00:47:13,700
+e ele vai se ver complicado
+
+1143
+00:47:13,700 --> 00:47:15,700
+mas em princípio a chegar lá
+
+1144
+00:47:15,700 --> 00:47:17,700
+de começar a identificar
+
+1145
+00:47:17,700 --> 00:47:19,700
+que zonas é que são que zonas
+
+1146
+00:47:19,700 --> 00:47:21,700
+e ele na verdade
+
+1147
+00:47:21,700 --> 00:47:23,700
+vocês conseguem ver aqui
+
+1148
+00:47:23,700 --> 00:47:25,700
+eu não tenho o rato que diz ali o peso
+
+1149
+00:47:25,700 --> 00:47:27,700
+0.34
+
+1150
+00:47:27,700 --> 00:47:29,700
+1 0.43 etc etc etc
+
+1151
+00:47:29,700 --> 00:47:31,700
+são estes pesos que ele está a aprender
+
+1152
+00:47:31,700 --> 00:47:33,700
+em tempo real
+
+1153
+00:47:33,700 --> 00:47:35,700
+eles são estes pesos que ele está a mudar
+
+1154
+00:47:35,700 --> 00:47:37,700
+e vocês podem
+
+1155
+00:47:37,700 --> 00:47:39,700
+deixem eles chegar aqui ao fim
+
+1156
+00:47:39,700 --> 00:47:41,700
+de uma aprendizagem relativamente boa
+
+1157
+00:47:41,700 --> 00:47:43,700
+ele está quase a chegar lá, parece-me
+
+1158
+00:47:43,700 --> 00:47:45,700
+aqui a loss continua a descer
+
+1159
+00:47:45,700 --> 00:47:47,700
+está a volta dos 10%
+
+1160
+00:47:47,700 --> 00:47:49,700
+agora estabilizou bastante
+
+1161
+00:47:49,700 --> 00:47:51,700
+estabilizou o que é dizer que nós não vamos conseguir
+
+1162
+00:47:51,700 --> 00:47:53,700
+uma coisa muito melhor do que isto
+
+1163
+00:47:53,700 --> 00:47:55,700
+vamos parar ele
+
+1164
+00:47:55,700 --> 00:47:57,700
+e vamos chegar aqui e dizer
+
+1165
+00:47:57,700 --> 00:47:59,700
+que este valor
+
+1166
+00:47:59,700 --> 00:48:01,700
+de este peso
+
+1167
+00:48:01,700 --> 00:48:03,700
+não é 1.2 mas é
+
+1168
+00:48:03,700 --> 00:48:05,700
+0.1
+
+1169
+00:48:05,700 --> 00:48:07,700
+se vocês virem, aqui provavelmente a Dani fez nada
+
+1170
+00:48:07,700 --> 00:48:09,700
+porque este peso
+
+1171
+00:48:09,700 --> 00:48:11,700
+no meio disto de tudo não faz grande confusão
+
+1172
+00:48:11,700 --> 00:48:13,700
+mas
+
+1173
+00:48:13,700 --> 00:48:15,700
+uma rede neuronal se vocês forem ver
+
+1174
+00:48:15,700 --> 00:48:17,700
+tem imensas ligações e imensos pesos
+
+1175
+00:48:17,700 --> 00:48:19,700
+e é este conjunto de ligações e pesos
+
+1176
+00:48:19,700 --> 00:48:21,700
+que ele aprende
+
+1177
+00:48:21,700 --> 00:48:23,700
+a pesar
+
+1178
+00:48:23,700 --> 00:48:25,700
+que transformam
+
+1179
+00:48:25,700 --> 00:48:27,700
+isto numa rede neuronal
+
+1180
+00:48:27,700 --> 00:48:29,700
+o que eu quero que vocês estiverem daqui hoje
+
+1181
+00:48:29,700 --> 00:48:31,700
+conceito simples que é
+
+1182
+00:48:31,700 --> 00:48:33,700
+nós temos um problema
+
+1183
+00:48:33,700 --> 00:48:35,700
+de imagens
+
+1184
+00:48:35,700 --> 00:48:37,700
+de roupa
+
+1185
+00:48:37,700 --> 00:48:39,700
+neste caso aqui é aproximar a função
+
+1186
+00:48:39,700 --> 00:48:41,700
+que melhor dividir estes dois
+
+1187
+00:48:41,700 --> 00:48:43,700
+estes dois
+
+1188
+00:48:43,700 --> 00:48:45,700
+tipos de classes
+
+1189
+00:48:45,700 --> 00:48:47,700
+e o que é que ele faz
+
+1190
+00:48:47,700 --> 00:48:49,700
+voltando ali ao nosso powerpoint
+
+1191
+00:48:49,700 --> 00:48:51,700
+todas as redes neuronais
+
+1192
+00:48:51,700 --> 00:48:53,700
+o que vão fazer
+
+1193
+00:48:53,700 --> 00:48:55,700
+é dar-los os inputs
+
+1194
+00:48:55,700 --> 00:48:57,700
+e sabendo o auto-put que nós queremos
+
+1195
+00:48:57,700 --> 00:48:59,700
+ele vai mexer com os pesos
+
+1196
+00:48:59,700 --> 00:49:01,700
+e com o bias
+
+1197
+00:49:01,700 --> 00:49:03,700
+de forma ajustar
+
+1198
+00:49:03,700 --> 00:49:05,700
+o que a rede sabe
+
+1199
+00:49:05,700 --> 00:49:07,700
+o mais próximo possível
+
+1200
+00:49:07,700 --> 00:49:09,700
+do que ela devia saber
+
+1201
+00:49:13,700 --> 00:49:15,700
+e é muito isto
+
+1202
+00:49:15,700 --> 00:49:17,700
+que é deep learning
+
+1203
+00:49:17,700 --> 00:49:19,700
+e inteligência oficial no geral
+
+1204
+00:49:19,700 --> 00:49:21,700
+sem estar aqui com as chatices
+
+1205
+00:49:21,700 --> 00:49:23,700
+do costume de ver isto
+
+1206
+00:49:23,700 --> 00:49:25,700
+muito, muito, muito ao promenor
+
+1207
+00:49:27,700 --> 00:49:29,700
+digam-me se as questões que tinham um bocado
+
+1208
+00:49:29,700 --> 00:49:31,700
+estão esclarecidas na sua maioria
+
+1209
+00:49:31,700 --> 00:49:33,700
+se tem mais alguma questão
+
+1210
+00:49:33,700 --> 00:49:35,700
+por favor
+
+1211
+00:49:35,700 --> 00:49:37,700
+eu tenho uma questão
+
+1212
+00:49:37,700 --> 00:49:39,700
+diz-me, diz-me
+
+1213
+00:49:39,700 --> 00:49:41,700
+aí a função da ativação
+
+1214
+00:49:41,700 --> 00:49:43,700
+quer dizer que ela vai sempre tentar fazer retas
+
+1215
+00:49:43,700 --> 00:49:45,700
+ou seja, cada neurônio está tentando
+
+1216
+00:49:45,700 --> 00:49:47,700
+dividir o espaço em dois
+
+1217
+00:49:47,700 --> 00:49:49,700
+sim
+
+1218
+00:49:49,700 --> 00:49:51,700
+neste caso que nós temos
+
+1219
+00:49:51,700 --> 00:49:53,700
+com esta função, é isso que eu estou a dizer
+
+1220
+00:49:53,700 --> 00:49:55,700
+exatamente, exatamente
+
+1221
+00:49:55,700 --> 00:49:57,700
+ou seja
+
+1222
+00:49:57,700 --> 00:49:59,700
+o exemplo que lá tínhamos, está aqui
+
+1223
+00:49:59,700 --> 00:50:01,700
+nós aqui posamos
+
+1224
+00:50:01,700 --> 00:50:03,700
+relu, quero que tínhamos um bocado, certo?
+
+1225
+00:50:03,700 --> 00:50:05,700
+existem outras, existe a sigmoide alinear
+
+1226
+00:50:05,700 --> 00:50:07,700
+e a tangente
+
+1227
+00:50:07,700 --> 00:50:09,700
+eu já vou mostrar a seguida
+
+1228
+00:50:11,700 --> 00:50:13,700
+muda muito
+
+1229
+00:50:13,700 --> 00:50:15,700
+quando eu digo muito
+
+1230
+00:50:15,700 --> 00:50:17,700
+a capacidade de treinar um algoritmo
+
+1231
+00:50:17,700 --> 00:50:19,700
+quando vocês alteram isto
+
+1232
+00:50:19,700 --> 00:50:21,700
+se vocês vamos tentar a mesma rede
+
+1233
+00:50:21,700 --> 00:50:23,700
+a mesma, tudo como estava um bocado
+
+1234
+00:50:23,700 --> 00:50:25,700
+e vamos tentar treinar quanto está negado
+
+1235
+00:50:25,700 --> 00:50:27,700
+porque eu já vos explico o que é
+
+1236
+00:50:29,700 --> 00:50:31,700
+ela
+
+1237
+00:50:31,700 --> 00:50:33,700
+tem gente hiperbólica, não?
+
+1238
+00:50:33,700 --> 00:50:35,700
+sim, exatamente
+
+1239
+00:50:35,700 --> 00:50:37,700
+eu já vos vou mostrar umas imagens
+
+1240
+00:50:37,700 --> 00:50:39,700
+do que é que isto significa
+
+1241
+00:50:39,700 --> 00:50:41,700
+esta, por exemplo, está a demorar
+
+1242
+00:50:41,700 --> 00:50:43,700
+muito mais tempo a treinar e a chegar aqui a algum lado, vezes
+
+1243
+00:50:43,700 --> 00:50:45,700
+está difícil para ela chegar aqui a algum lado
+
+1244
+00:50:45,700 --> 00:50:47,700
+por que?
+
+1245
+00:50:47,700 --> 00:50:49,700
+porque nós aqui
+
+1246
+00:50:49,700 --> 00:50:51,700
+também temos que adaptar um bocadinho
+
+1247
+00:50:51,700 --> 00:50:53,700
+a função da ativação aos dados que temos
+
+1248
+00:50:53,700 --> 00:50:55,700
+nós aqui temos duas classes
+
+1249
+00:50:55,700 --> 00:50:57,700
+logo, na verdade
+
+1250
+00:50:57,700 --> 00:50:59,700
+o que nós queremos que os
+
+1251
+00:50:59,700 --> 00:51:01,700
+que os neurônios façam
+
+1252
+00:51:01,700 --> 00:51:03,700
+é dividir os passos em dois
+
+1253
+00:51:03,700 --> 00:51:05,700
+em que vão dividindo em dois em vários bocadinhos
+
+1254
+00:51:05,700 --> 00:51:07,700
+porque nós queremos dividir isto em duas classes
+
+1255
+00:51:07,700 --> 00:51:09,700
+se calhar se fosse com dados
+
+1256
+00:51:09,700 --> 00:51:11,700
+mais classes
+
+1257
+00:51:11,700 --> 00:51:13,700
+esta funcionaria é melhor
+
+1258
+00:51:13,700 --> 00:51:15,700
+uma que costuma funcionar muito bem, a sigmoide
+
+1259
+00:51:15,700 --> 00:51:17,700
+e eu agora estou a dizer isto
+
+1260
+00:51:17,700 --> 00:51:19,700
+e provavelmente há aqui
+
+1261
+00:51:19,700 --> 00:51:21,700
+para me deixar ficar mal
+
+1262
+00:51:21,700 --> 00:51:23,700
+vou me deixar completamente mal, não está a fazer nada
+
+1263
+00:51:25,700 --> 00:51:27,700
+mas costuma funcionar bem
+
+1264
+00:51:29,700 --> 00:51:31,700
+por exemplo, nas imagens
+
+1265
+00:51:31,700 --> 00:51:33,700
+é uma coisa que funciona muito bem
+
+1266
+00:51:33,700 --> 00:51:35,700
+eu já explico porque
+
+1267
+00:51:35,700 --> 00:51:37,700
+não sei se fica o claro para ti
+
+1268
+00:51:37,700 --> 00:51:39,700
+isto e se calhar
+
+1269
+00:51:39,700 --> 00:51:41,700
+mas claro
+
+1270
+00:51:41,700 --> 00:51:43,700
+a outra dúvida era
+
+1271
+00:51:43,700 --> 00:51:45,700
+quando há duas camadas
+
+1272
+00:51:45,700 --> 00:51:47,700
+se é normalizado no fim da camada
+
+1273
+00:51:47,700 --> 00:51:49,700
+ou seja, se é normalizado a entrada
+
+1274
+00:51:49,700 --> 00:51:51,700
+para se receba o peso
+
+1275
+00:51:51,700 --> 00:51:53,700
+mas depois de passar no neurônio
+
+1276
+00:51:53,700 --> 00:51:55,700
+imagino que isso seja
+
+1277
+00:51:55,700 --> 00:51:57,700
+maior do que um
+
+1278
+00:51:57,700 --> 00:51:59,700
+e para entrar nos a seguir
+
+1279
+00:51:59,700 --> 00:52:01,700
+é sim
+
+1280
+00:52:01,700 --> 00:52:03,700
+de normalizar isso ou não
+
+1281
+00:52:03,700 --> 00:52:05,700
+vocês não têm que fazer nada
+
+1282
+00:52:05,700 --> 00:52:07,700
+quando estão a programar uma coisa destas
+
+1283
+00:52:07,700 --> 00:52:09,700
+isso eu percebi, isto é a mais felicidade
+
+1284
+00:52:09,700 --> 00:52:11,700
+na verdade
+
+1285
+00:52:11,700 --> 00:52:13,700
+a forma correta de o fazer
+
+1286
+00:52:13,700 --> 00:52:15,700
+é estes pesos andarem sempre entre
+
+1287
+00:52:15,700 --> 00:52:17,700
+menos um e um
+
+1288
+00:52:17,700 --> 00:52:19,700
+nunca vai fazer com qualquer valor
+
+1289
+00:52:19,700 --> 00:52:21,700
+que entre aqui entre zero e um
+
+1290
+00:52:21,700 --> 00:52:23,700
+nunca vai escalar para maior que um
+
+1291
+00:52:23,700 --> 00:52:25,700
+ou seja, andamos sempre dentro
+
+1292
+00:52:25,700 --> 00:52:27,700
+destes valores
+
+1293
+00:52:27,700 --> 00:52:29,700
+por acaso o neurônio
+
+1294
+00:52:29,700 --> 00:52:31,700
+se tiver vários inputs
+
+1295
+00:52:31,700 --> 00:52:33,700
+sim
+
+1296
+00:52:33,700 --> 00:52:35,700
+ao passar
+
+1297
+00:52:35,700 --> 00:52:37,700
+não tem problema
+
+1298
+00:52:37,700 --> 00:52:39,700
+porque
+
+1299
+00:52:39,700 --> 00:52:41,700
+neste caso deixando de ver aqui a função relu
+
+1300
+00:52:41,700 --> 00:52:43,700
+deixando-me buscar aqui o PowerPoint
+
+1301
+00:52:43,700 --> 00:52:45,700
+a função relu
+
+1302
+00:52:45,700 --> 00:52:47,700
+aqui um exemplo da função relu
+
+1303
+00:52:47,700 --> 00:52:49,700
+ela aqui
+
+1304
+00:52:49,700 --> 00:52:51,700
+está a fazer o autocupto de z
+
+1305
+00:52:51,700 --> 00:52:53,700
+e
+
+1306
+00:52:53,700 --> 00:52:55,700
+realmente tu tens razão, se o z fosse 30
+
+1307
+00:52:55,700 --> 00:52:57,700
+ela ia dar 30
+
+1308
+00:52:57,700 --> 00:52:59,700
+a maior parte das vezes o que se faz
+
+1309
+00:52:59,700 --> 00:53:01,700
+é um cap
+
+1310
+00:53:01,700 --> 00:53:03,700
+ou seja, é z até
+
+1311
+00:53:03,700 --> 00:53:05,700
+1
+
+1312
+00:53:05,700 --> 00:53:07,700
+não nos interessa saber
+
+1313
+00:53:07,700 --> 00:53:09,700
+se é muito maior
+
+1314
+00:53:09,700 --> 00:53:11,700
+e passando aqui um bocadinho as coisas
+
+1315
+00:53:11,700 --> 00:53:13,700
+de AI
+
+1316
+00:53:13,700 --> 00:53:15,700
+não tem que saber de todo
+
+1317
+00:53:15,700 --> 00:53:17,700
+se nós tivermos a fazer isto
+
+1318
+00:53:17,700 --> 00:53:19,700
+e houver muita da nossa
+
+1319
+00:53:19,700 --> 00:53:21,700
+informação que é codificada
+
+1320
+00:53:21,700 --> 00:53:23,700
+e que está nestes valores
+
+1321
+00:53:23,700 --> 00:53:25,700
+maiores, imagina, que é muito importante
+
+1322
+00:53:25,700 --> 00:53:27,700
+para nós saber que a diferença entre um 32
+
+1323
+00:53:27,700 --> 00:53:29,700
+e um 60 e tal
+
+1324
+00:53:29,700 --> 00:53:31,700
+como tu estava a dizer, porque os valores cresceram
+
+1325
+00:53:31,700 --> 00:53:33,700
+nós estamos
+
+1326
+00:53:33,700 --> 00:53:35,700
+perante um problema de um explode
+
+1327
+00:53:35,700 --> 00:53:37,700
+ingredients
+
+1328
+00:53:37,700 --> 00:53:39,700
+que é quando
+
+1329
+00:53:39,700 --> 00:53:41,700
+os nossos gradientes lá dentro estão a ficar
+
+1330
+00:53:41,700 --> 00:53:43,700
+diferentes, que depois
+
+1331
+00:53:43,700 --> 00:53:45,700
+quando nós os reduzimos a um
+
+1332
+00:53:45,700 --> 00:53:47,700
+estamos a perder
+
+1333
+00:53:47,700 --> 00:53:49,700
+tudo o que nós aprendemos
+
+1334
+00:53:49,700 --> 00:53:51,700
+o que fez sentido
+
+1335
+00:53:51,700 --> 00:53:53,700
+tem sempre
+
+1336
+00:53:53,700 --> 00:53:55,700
+pronto
+
+1337
+00:53:55,700 --> 00:53:57,700
+não sei se tem mais alguma questão
+
+1338
+00:53:57,700 --> 00:53:59,700
+agora eu posso continuar aqui mais um bocadinho
+
+1339
+00:53:59,700 --> 00:54:01,700
+se tiverem mais alguma questão
+
+1340
+00:54:01,700 --> 00:54:03,700
+tens uma vontade para me interromper
+
+1341
+00:54:03,700 --> 00:54:05,700
+pronto
+
+1342
+00:54:05,700 --> 00:54:07,700
+voltando aqui
+
+1343
+00:54:07,700 --> 00:54:12,100
+e
+
+1344
+00:54:12,100 --> 00:54:14,100
+podemos começar aqui
+
+1345
+00:54:14,100 --> 00:54:16,100
+porque é que então nesta função de ativação
+
+1346
+00:54:16,100 --> 00:54:18,100
+importa
+
+1347
+00:54:18,100 --> 00:54:20,100
+nós na verdade
+
+1348
+00:54:20,100 --> 00:54:22,100
+quando estamos a trabalhar com o ReLU
+
+1349
+00:54:22,100 --> 00:54:24,100
+estamos a trabalhar com coisas lineares
+
+1350
+00:54:24,100 --> 00:54:26,100
+ou seja, estamos a desenhar lá uma linha no espaço
+
+1351
+00:54:26,100 --> 00:54:28,100
+quando começamos
+
+1352
+00:54:28,100 --> 00:54:30,100
+a transformar isto
+
+1353
+00:54:30,100 --> 00:54:32,100
+aqui neste caso
+
+1354
+00:54:32,100 --> 00:54:34,100
+é não linear, porque nós temos a ReLU no meio
+
+1355
+00:54:34,100 --> 00:54:36,100
+ou seja, já é um peso multiplicado por ReLU
+
+1356
+00:54:36,100 --> 00:54:38,100
+ou seja, que era o que nós
+
+1357
+00:54:38,100 --> 00:54:40,100
+estávamos a fazer ali um bocado
+
+1358
+00:54:40,100 --> 00:54:42,100
+porque
+
+1359
+00:54:42,100 --> 00:54:44,100
+se deixemos só por aqui outra vez
+
+1360
+00:54:44,100 --> 00:54:46,100
+se vocês pensarem que
+
+1361
+00:54:46,100 --> 00:54:48,100
+cada um destes neurônios tem uma ativação ReLU
+
+1362
+00:54:48,100 --> 00:54:50,100
+e ele depois vai ter a ativação ReLU
+
+1363
+00:54:50,100 --> 00:54:52,100
+multiplicada pelo peso a seguir
+
+1364
+00:54:52,100 --> 00:54:54,100
+então já é não linear nestes aspectos
+
+1365
+00:54:54,100 --> 00:54:56,100
+mas não é melhor
+
+1366
+00:54:56,100 --> 00:54:58,100
+mas na verdade
+
+1367
+00:54:58,100 --> 00:55:00,100
+é sim
+
+1368
+00:55:00,100 --> 00:55:02,100
+o que vocês mais vão ver
+
+1369
+00:55:02,100 --> 00:55:04,100
+é ReLU do que eu sei
+
+1370
+00:55:04,100 --> 00:55:06,100
+do que eu tenho utilizado
+
+1371
+00:55:06,100 --> 00:55:08,100
+e do que eu vou vendo
+
+1372
+00:55:08,100 --> 00:55:10,100
+é que eu tenho utilizado todas as camadas interiores
+
+1373
+00:55:10,100 --> 00:55:12,100
+de uma rede neuronal
+
+1374
+00:55:12,100 --> 00:55:14,100
+normalmente usam ReLU
+
+1375
+00:55:14,100 --> 00:55:16,100
+em todos os neurônios
+
+1376
+00:55:16,100 --> 00:55:18,100
+não há assim
+
+1377
+00:55:18,100 --> 00:55:20,100
+uma grande diferença para aí
+
+1378
+00:55:20,100 --> 00:55:22,100
+depois nós temos outras
+
+1379
+00:55:22,100 --> 00:55:24,100
+outras que são sigmoide, tanaga
+
+1380
+00:55:24,100 --> 00:55:26,100
+e softmax por exemplo
+
+1381
+00:55:26,100 --> 00:55:28,100
+por acaso acho que é diferente do que tinha lá
+
+1382
+00:55:28,100 --> 00:55:30,100
+existem mais
+
+1383
+00:55:30,100 --> 00:55:32,100
+no nosso caso
+
+1384
+00:55:32,100 --> 00:55:34,100
+do dataset
+
+1385
+00:55:34,100 --> 00:55:36,100
+de
+
+1386
+00:55:36,100 --> 00:55:38,100
+da roupa
+
+1387
+00:55:38,100 --> 00:55:40,100
+o que nós vamos fazer no sábado
+
+1388
+00:55:40,100 --> 00:55:42,100
+vai ter
+
+1389
+00:55:42,100 --> 00:55:44,100
+todas as camadas interiores vão ser ReLU
+
+1390
+00:55:44,100 --> 00:55:46,100
+a camada de saída
+
+1391
+00:55:46,100 --> 00:55:48,100
+vai ser uma softmax
+
+1392
+00:55:48,100 --> 00:55:50,100
+é basicamente
+
+1393
+00:55:50,100 --> 00:55:52,100
+fazer um output de probabilidades
+
+1394
+00:55:52,100 --> 00:55:54,100
+para as 10 classes
+
+1395
+00:55:54,100 --> 00:55:56,100
+ok
+
+1396
+00:55:56,100 --> 00:55:58,100
+eu vou mostrar aqui
+
+1397
+00:55:58,100 --> 00:56:00,100
+uma representação gráfica do que é que se sigmoide
+
+1398
+00:56:00,100 --> 00:56:02,100
+que é tanaga
+
+1399
+00:56:02,100 --> 00:56:04,100
+ambas saturam os extremos
+
+1400
+00:56:04,100 --> 00:56:06,100
+o que pode ser
+
+1401
+00:56:06,100 --> 00:56:08,100
+os gradientes muito pequenos
+
+1402
+00:56:08,100 --> 00:56:10,100
+que é um bocadinho parecido com aquilo que eu estava a dizer
+
+1403
+00:56:10,100 --> 00:56:12,100
+um bocado
+
+1404
+00:56:12,100 --> 00:56:14,100
+de que se fizermos um cap na ReLU
+
+1405
+00:56:14,100 --> 00:56:16,100
+de um certo valor
+
+1406
+00:56:16,100 --> 00:56:18,100
+estamos a fazer com que todos os gradientes
+
+1407
+00:56:18,100 --> 00:56:20,100
+maiores, todos os valores maiores
+
+1408
+00:56:20,100 --> 00:56:22,100
+sejam comprimidos aqui nestes valores
+
+1409
+00:56:22,100 --> 00:56:24,100
+ok
+
+1410
+00:56:24,100 --> 00:56:26,100
+pronto, são diferentes funções de ativação
+
+1411
+00:56:26,100 --> 00:56:28,100
+nós
+
+1412
+00:56:28,100 --> 00:56:30,100
+eu vou aqui para estar explicado porque como é extremamente
+
+1413
+00:56:30,100 --> 00:56:32,100
+melhor que a outra
+
+1414
+00:56:32,100 --> 00:56:34,100
+eu estaria aqui a dar uma aula sobre
+
+1415
+00:56:34,100 --> 00:56:36,100
+AI
+
+1416
+00:56:36,100 --> 00:56:38,100
+que são semanas
+
+1417
+00:56:38,100 --> 00:56:40,100
+e isto não vale a pena estar aqui assateado
+
+1418
+00:56:40,100 --> 00:56:42,100
+o que estava a referir no slide anterior
+
+1419
+00:56:42,100 --> 00:56:44,100
+significa que temos duas funções
+
+1420
+00:56:44,100 --> 00:56:46,100
+na mesma rede
+
+1421
+00:56:46,100 --> 00:56:48,100
+vocês podem ter as funções que quiserem
+
+1422
+00:56:48,100 --> 00:56:50,100
+dentro da mesma rede
+
+1423
+00:56:50,100 --> 00:56:52,100
+ou seja, naquele exemplo que eu estava aqui a dar
+
+1424
+00:56:52,100 --> 00:56:54,100
+aqui dentro
+
+1425
+00:56:54,100 --> 00:56:56,100
+nesta UI
+
+1426
+00:56:56,100 --> 00:56:58,100
+apenas consigo selecionar ReLU
+
+1427
+00:56:58,100 --> 00:57:00,100
+para todos e ficar aplicado a todos
+
+1428
+00:57:00,100 --> 00:57:02,100
+mas, numa rede normal
+
+1429
+00:57:02,100 --> 00:57:04,100
+que vocês sejam vocês a criar
+
+1430
+00:57:04,100 --> 00:57:06,100
+vocês podem pôr ReLU nestes
+
+1431
+00:57:06,100 --> 00:57:08,100
+Softmax nestes
+
+1432
+00:57:08,100 --> 00:57:10,100
+Sigmoid nestes
+
+1433
+00:57:10,100 --> 00:57:12,100
+podem pôr o que quiserem
+
+1434
+00:57:12,100 --> 00:57:14,100
+normalmente isso não se faz
+
+1435
+00:57:14,100 --> 00:57:16,100
+ok
+
+1436
+00:57:16,100 --> 00:57:18,100
+normalmente escolhe-se a ReLU
+
+1437
+00:57:18,100 --> 00:57:20,100
+para tudo o que é interno
+
+1438
+00:57:20,100 --> 00:57:22,100
+e depois, a saída
+
+1439
+00:57:22,100 --> 00:57:24,100
+escolhe-se o Sigmoid ou o Tanaga
+
+1440
+00:57:24,100 --> 00:57:26,100
+ou o Softmax
+
+1441
+00:57:26,100 --> 00:57:28,100
+sendo a Softmax a mais usada
+
+1442
+00:57:28,100 --> 00:57:30,100
+a saída e era apenas
+
+1443
+00:57:30,100 --> 00:57:32,100
+isto que eu queria capturar aqui
+
+1444
+00:57:32,100 --> 00:57:34,100
+que é
+
+1445
+00:57:34,100 --> 00:57:36,100
+a saída, como a vossa colega disse
+
+1446
+00:57:36,100 --> 00:57:38,100
+os somatórios podem dar coisas enormes
+
+1447
+00:57:38,100 --> 00:57:40,100
+neste caso 2.7 para um polúvar
+
+1448
+00:57:40,100 --> 00:57:42,100
+1.3 para um casaco
+
+1449
+00:57:42,100 --> 00:57:44,100
+0.8 para uma tchut
+
+1450
+00:57:44,100 --> 00:57:46,100
+o que a Softmax vai fazer
+
+1451
+00:57:46,100 --> 00:57:48,100
+vai pegar nestes valores
+
+1452
+00:57:48,100 --> 00:57:50,100
+e quase que os transformar
+
+1453
+00:57:50,100 --> 00:57:52,100
+em probabilidades
+
+1454
+00:57:52,100 --> 00:57:54,100
+porque todos os somados têm que dar um com a Softmax
+
+1455
+00:57:54,100 --> 00:57:56,100
+basicamente faz uma normalização
+
+1456
+00:57:56,100 --> 00:59:41,660
+acham que podemos dizer
+
+1457
+00:59:41,660 --> 00:59:43,660
+que elas são uma camada
+
+1458
+00:59:43,660 --> 00:59:45,660
+para detectar mangas
+
+1459
+00:59:45,660 --> 00:59:47,660
+outra camada para detectar se é
+
+1460
+00:59:49,660 --> 00:59:51,660
+sapatos ou não
+
+1461
+00:59:51,660 --> 00:59:53,660
+outra se tem vertical edges
+
+1462
+00:59:53,660 --> 00:59:55,660
+vocês acham que cada camada faz uma coisa
+
+1463
+00:59:55,660 --> 00:59:57,660
+ou
+
+1464
+00:59:57,660 --> 00:59:59,660
+que aquilo só funciona em conjunto
+
+1465
+00:59:59,660 --> 01:00:01,660
+não sei se alguém quer falar um bocadinho comigo
+
+1466
+01:00:01,660 --> 01:00:03,660
+ou quer pensar um bocadinho sobre esta questão
+
+1467
+01:00:03,660 --> 01:00:07,320
+depois do que estivermos a ver até aqui
+
+1468
+01:00:07,320 --> 01:00:09,320
+ninguém se arrisca
+
+1469
+01:00:09,320 --> 01:00:11,320
+porque
+
+1470
+01:00:11,320 --> 01:00:13,320
+isso seria verdade
+
+1471
+01:00:13,320 --> 01:00:15,320
+e se calhar vou dizer que um palavrão
+
+1472
+01:00:15,320 --> 01:00:17,320
+mas
+
+1473
+01:00:17,320 --> 01:00:19,320
+se isso fosse uma rede normal do conflacionamento
+
+1474
+01:00:19,320 --> 01:00:21,320
+aí sim
+
+1475
+01:00:21,320 --> 01:00:23,320
+estamos máscars
+
+1476
+01:00:23,320 --> 01:00:25,320
+neste caso
+
+1477
+01:00:25,320 --> 01:00:27,320
+não sei se sempre é verdade
+
+1478
+01:00:27,320 --> 01:00:29,320
+ok, percebo
+
+1479
+01:00:29,320 --> 01:00:31,320
+percebo
+
+1480
+01:00:31,320 --> 01:00:33,320
+poderíamos dizer isso
+
+1481
+01:00:33,320 --> 01:00:35,320
+se cada uma dessas máscaras que tu falas
+
+1482
+01:00:35,320 --> 01:00:37,320
+provavelmente será mais avançado para as teus colegas
+
+1483
+01:00:37,320 --> 01:00:39,320
+poderíamos dizer isso
+
+1484
+01:00:39,320 --> 01:00:41,320
+se uma dessas máscaras avançadas
+
+1485
+01:00:41,320 --> 01:00:43,320
+fosse dedicada a descobrir
+
+1486
+01:00:43,320 --> 01:00:45,320
+exatamente
+
+1487
+01:00:45,320 --> 01:00:47,320
+mas
+
+1488
+01:00:47,320 --> 01:00:49,320
+numa rede normal
+
+1489
+01:00:49,320 --> 01:00:51,320
+dita, não convolucional
+
+1490
+01:00:51,320 --> 01:00:53,320
+sem essas arquiteturas
+
+1491
+01:00:53,320 --> 01:00:55,320
+novas
+
+1492
+01:00:55,320 --> 01:00:57,320
+uma rede normal como aquela que eu estava ali a mostrar um bocado
+
+1493
+01:00:57,320 --> 01:00:59,320
+achas que funciona assim?
+
+1494
+01:00:59,320 --> 01:01:01,320
+pois acho que não
+
+1495
+01:01:01,320 --> 01:01:03,320
+ok
+
+1496
+01:01:03,320 --> 01:01:05,320
+exatamente, não funciona assim
+
+1497
+01:01:05,320 --> 01:01:07,320
+este aqui está um bocadinho
+
+1498
+01:01:07,320 --> 01:01:09,320
+para tentar vocês
+
+1499
+01:01:09,320 --> 01:01:11,320
+vão ver muitos algoritmos como arvos
+
+1500
+01:01:11,320 --> 01:01:13,320
+decisão
+
+1501
+01:01:13,320 --> 01:01:15,320
+coisas que em que cada camada
+
+1502
+01:01:15,320 --> 01:01:17,320
+não são redes normais, mas em que cada camada
+
+1503
+01:01:17,320 --> 01:01:19,320
+claramente vos diz e se para
+
+1504
+01:01:19,320 --> 01:01:21,320
+ok, esta tem
+
+1505
+01:01:21,320 --> 01:01:23,320
+manguez, aquela não tem
+
+1506
+01:01:23,320 --> 01:01:25,320
+e é por aqui que estamos a fazer a separação
+
+1507
+01:01:25,320 --> 01:01:27,320
+nas redes normais
+
+1508
+01:01:27,320 --> 01:01:29,320
+aquilo é uma
+
+1509
+01:01:29,320 --> 01:01:31,320
+como se costuma dizer na
+
+1510
+01:01:31,320 --> 01:01:33,320
+digíria de inteligência aficial
+
+1511
+01:01:33,320 --> 01:01:35,320
+é uma black box, ou seja, uma caixa negra
+
+1512
+01:01:35,320 --> 01:01:37,320
+aqueles pesos todos
+
+1513
+01:01:37,320 --> 01:01:39,320
+significam qualquer coisa
+
+1514
+01:01:39,320 --> 01:01:41,320
+e ela no fim até faz uma boa provisão
+
+1515
+01:01:41,320 --> 01:01:43,320
+mas vocês não sabem
+
+1516
+01:01:43,320 --> 01:01:45,320
+que parte da rede
+
+1517
+01:01:45,320 --> 01:01:47,320
+é que está a fazer o quê
+
+1518
+01:01:47,320 --> 01:01:49,320
+e eu queria que ficassem um bocadinho
+
+1519
+01:01:49,320 --> 01:01:51,320
+com essa ideia aqui
+
+1520
+01:01:51,320 --> 01:01:53,320
+em mente
+
+1521
+01:01:53,320 --> 01:01:55,320
+deixem-me só ver o que eu tenho aqui
+
+1522
+01:01:55,320 --> 01:01:57,320
+para a frente, só para ver se
+
+1523
+01:01:57,320 --> 01:01:59,320
+hoje vale a pena falar sobre isso
+
+1524
+01:01:59,320 --> 01:02:01,320
+eu penso que não
+
+1525
+01:02:01,320 --> 01:02:03,320
+esta parte não interessa muito
+
+1526
+01:02:03,320 --> 01:02:05,320
+eu só queria
+
+1527
+01:02:05,320 --> 01:02:07,320
+puxar aqui
+
+1528
+01:02:07,320 --> 01:02:09,320
+pois isto podemos ver para a frente
+
+1529
+01:02:09,320 --> 01:02:14,040
+também
+
+1530
+01:02:14,040 --> 01:02:16,040
+para já não importa muito
+
+1531
+01:02:16,040 --> 01:02:18,040
+depois vemos na próxima aula
+
+1532
+01:02:18,040 --> 01:02:20,040
+isto também vemos na próxima aula
+
+1533
+01:02:20,040 --> 01:02:22,040
+e aqui
+
+1534
+01:02:22,040 --> 01:02:24,040
+da perspectiva de
+
+1535
+01:02:24,040 --> 01:02:26,040
+edge computing, ou de sistemas imbebitos
+
+1536
+01:02:26,040 --> 01:02:28,040
+vou falar um bocadinho com vocês
+
+1537
+01:02:28,040 --> 01:02:30,040
+sobre isto
+
+1538
+01:02:30,040 --> 01:02:32,040
+vamos tentar aqui
+
+1539
+01:02:32,040 --> 01:02:34,040
+puxar aqui um bocadinho a ideia
+
+1540
+01:02:34,040 --> 01:02:36,040
+nós quando estamos a falar de sistemas imbebitos
+
+1541
+01:02:36,040 --> 01:02:38,040
+e na prova de qualquer sistema
+
+1542
+01:02:38,040 --> 01:02:40,040
+o sistema imbebitos só tem
+
+1543
+01:02:40,040 --> 01:02:42,040
+uma limitação maior
+
+1544
+01:02:42,040 --> 01:02:44,040
+em termos de computação
+
+1545
+01:02:44,040 --> 01:02:46,040
+nós estamos a lado de um triângulo
+
+1546
+01:02:46,040 --> 01:02:48,040
+de
+
+1547
+01:02:48,040 --> 01:02:50,040
+como bons nós vamos ser
+
+1548
+01:02:50,040 --> 01:02:52,040
+a prever qualquer coisa
+
+1549
+01:02:52,040 --> 01:02:54,040
+quanto a energia ou memória vamos gastar
+
+1550
+01:02:54,040 --> 01:02:56,040
+e quanto a latência
+
+1551
+01:02:56,040 --> 01:02:58,040
+ou o poder de computação vamos gastar
+
+1552
+01:02:58,040 --> 01:03:00,040
+nós vamos ter sempre este triângulo
+
+1553
+01:03:00,040 --> 01:03:02,040
+de opções
+
+1554
+01:03:02,040 --> 01:03:04,040
+vocês se gastam
+
+1555
+01:03:04,040 --> 01:03:06,040
+mais capacidade de computação e memória
+
+1556
+01:03:06,040 --> 01:03:08,040
+vocês têm
+
+1557
+01:03:08,040 --> 01:03:10,040
+uma descerteza
+
+1558
+01:03:10,040 --> 01:03:12,040
+ou em 90% dos casos
+
+1559
+01:03:12,040 --> 01:03:14,040
+tem uma melhor qualidade de previsão
+
+1560
+01:03:14,040 --> 01:03:16,040
+no entanto, vocês num sistema
+
+1561
+01:03:16,040 --> 01:03:18,040
+de edge, num sistema imbebido
+
+1562
+01:03:18,040 --> 01:03:20,040
+vocês não têm isto
+
+1563
+01:03:20,040 --> 01:03:22,040
+ou têm menos disto
+
+1564
+01:03:22,040 --> 01:03:24,040
+portanto, vocês sacrificam
+
+1565
+01:03:24,040 --> 01:03:26,040
+a memória
+
+1566
+01:03:26,040 --> 01:03:28,040
+têm um bocadinho mais de memória
+
+1567
+01:03:28,040 --> 01:03:30,040
+com menos compute mas têm um bocadinho
+
+1568
+01:03:30,040 --> 01:03:32,040
+mais de predictive quality
+
+1569
+01:03:32,040 --> 01:03:34,040
+vocês têm aqui sempre estes três termos
+
+1570
+01:03:34,040 --> 01:03:36,040
+é muito difícil ter os três
+
+1571
+01:03:36,040 --> 01:03:38,040
+no máximo, muito mais
+
+1572
+01:03:38,040 --> 01:03:40,040
+num sistema imbebido em que
+
+1573
+01:03:40,040 --> 01:03:42,040
+estas duas coisas vão ser menores
+
+1574
+01:03:42,040 --> 01:03:44,040
+ok
+
+1575
+01:03:44,040 --> 01:03:46,040
+portanto
+
+1576
+01:03:46,040 --> 01:03:48,040
+há sempre aqui um trade-off
+
+1577
+01:03:48,040 --> 01:03:50,040
+e é isso que depois nós na PL3
+
+1578
+01:03:50,040 --> 01:03:52,040
+ou seja, deste sábado que vem ao 8
+
+1579
+01:03:52,040 --> 01:03:54,040
+no outro sábado, vamos tentar explorar um bocadinho
+
+1580
+01:03:54,040 --> 01:03:56,040
+às vezes nós não queremos
+
+1581
+01:03:56,040 --> 01:03:58,040
+90% de certezas
+
+1582
+01:03:58,040 --> 01:04:00,040
+ou 95% de certezas
+
+1583
+01:04:00,040 --> 01:04:02,040
+cada 90% de certezas
+
+1584
+01:04:02,040 --> 01:04:04,040
+são suficientes
+
+1585
+01:04:04,040 --> 01:04:06,040
+porque ter um aparelho
+
+1586
+01:04:06,040 --> 01:04:08,040
+que nos desce
+
+1587
+01:04:08,040 --> 01:04:10,040
+95% de certezas
+
+1588
+01:04:10,040 --> 01:04:12,040
+e acostar ao utilizador final 100 euros
+
+1589
+01:04:12,040 --> 01:04:14,040
+mas de que alhar
+
+1590
+01:04:14,040 --> 01:04:16,040
+ter um aparelho que lhe dá 90% de certezas
+
+1591
+01:04:16,040 --> 01:04:18,040
+podemos oferecer-lhe um por 20 euros
+
+1592
+01:04:18,040 --> 01:04:20,040
+ok
+
+1593
+01:04:20,040 --> 01:04:22,040
+e é muito este trade-off
+
+1594
+01:04:22,040 --> 01:04:24,040
+que existe quando vocês aplicam
+
+1595
+01:04:24,040 --> 01:04:26,040
+e há um sistema
+
+1596
+01:04:26,040 --> 01:04:28,040
+naturalmente
+
+1597
+01:04:28,040 --> 01:04:30,040
+limitado em termos de
+
+1598
+01:04:30,040 --> 01:04:32,040
+computação ou de energia
+
+1599
+01:04:32,040 --> 01:04:34,040
+eu também falei disto na PL anterior
+
+1600
+01:04:34,040 --> 01:04:36,040
+que é vocês até podem ter muita computação
+
+1601
+01:04:36,040 --> 01:04:38,040
+mas imaginem que aquilo está alimentado
+
+1602
+01:04:38,040 --> 01:04:40,040
+por uma bateria ou por um panel suar
+
+1603
+01:04:40,040 --> 01:04:42,040
+vocês não podem estar ali horas
+
+1604
+01:04:42,040 --> 01:04:44,040
+a fazer uma computação
+
+1605
+01:04:44,040 --> 01:04:46,040
+vocês têm um limite
+
+1606
+01:04:46,040 --> 01:04:48,040
+pronto
+
+1607
+01:04:48,040 --> 01:04:50,040
+os parâmetros
+
+1608
+01:04:50,040 --> 01:04:52,040
+que temos lá dentro da rede são parâmetros
+
+1609
+01:04:52,040 --> 01:04:54,040
+aqueles pesositos
+
+1610
+01:04:54,040 --> 01:04:56,040
+cada um deles
+
+1611
+01:04:56,040 --> 01:04:58,040
+está a ocupar uma variável float de 32
+
+1612
+01:04:58,040 --> 01:05:00,040
+ou seja
+
+1613
+01:05:00,040 --> 01:05:02,040
+um tipo de dados
+
+1614
+01:05:02,040 --> 01:05:04,040
+float de 32
+
+1615
+01:05:04,040 --> 01:05:06,040
+cada um deles
+
+1616
+01:05:06,040 --> 01:05:08,040
+gasta 4 bytes
+
+1617
+01:05:08,040 --> 01:05:10,040
+e vocês vão dizer assim
+
+1618
+01:05:10,040 --> 01:05:12,040
+uma rede pequenita
+
+1619
+01:05:12,040 --> 01:05:14,040
+vamos dizer que temos uma rede com 7.850 parâmetros
+
+1620
+01:05:14,040 --> 01:05:16,040
+quer dizer que temos 7.800
+
+1621
+01:05:16,040 --> 01:05:18,040
+pesos lá pelo meio
+
+1622
+01:05:18,040 --> 01:05:20,040
+não é
+
+1623
+01:05:20,040 --> 01:05:22,040
+31 capas
+
+1624
+01:05:22,040 --> 01:05:24,040
+menos que vocês estejam usando o sistema bebido
+
+1625
+01:05:24,040 --> 01:05:26,040
+mesmo limitado
+
+1626
+01:05:26,040 --> 01:05:28,040
+não é uma coisa muito má
+
+1627
+01:05:28,040 --> 01:05:30,040
+na PL2, que vamos fazer no sábado
+
+1628
+01:05:30,040 --> 01:05:32,040
+nós vamos fazer um modelo
+
+1629
+01:05:32,040 --> 01:05:34,040
+com 50.000 parâmetros
+
+1630
+01:05:34,040 --> 01:05:36,040
+que nos vai gastar
+
+1631
+01:05:36,040 --> 01:05:38,040
+203 capas
+
+1632
+01:05:38,040 --> 01:05:40,040
+só para guardar estes parâmetros
+
+1633
+01:05:40,040 --> 01:05:42,040
+também não é
+
+1634
+01:05:42,040 --> 01:05:44,040
+uma coisa assim
+
+1635
+01:05:44,040 --> 01:05:46,040
+horrível
+
+1636
+01:05:46,040 --> 01:05:48,040
+é que
+
+1637
+01:05:48,040 --> 01:05:50,040
+um modelo tem
+
+1638
+01:05:50,040 --> 01:05:52,040
+todos os metadados relacionados com o modelo
+
+1639
+01:05:52,040 --> 01:05:54,040
+todo o sistema de suporte
+
+1640
+01:05:54,040 --> 01:05:56,040
+que pega nos dados
+
+1641
+01:05:56,040 --> 01:05:58,040
+os transforma e deixa ali no modelo
+
+1642
+01:05:58,040 --> 01:06:00,040
+e depois pega neles depois de ter sido feito
+
+1643
+01:06:00,040 --> 01:06:02,040
+uma previsão e faz qualquer coisa com eles
+
+1644
+01:06:02,040 --> 01:06:04,040
+portanto isso não é isolado
+
+1645
+01:06:04,040 --> 01:06:06,040
+muitas vezes fala-se disto e isolado
+
+1646
+01:06:08,040 --> 01:06:10,040
+mas isso não é isolado
+
+1647
+01:06:10,040 --> 01:06:12,040
+eu só queria também
+
+1648
+01:06:12,040 --> 01:06:14,040
+ok
+
+1649
+01:06:14,040 --> 01:06:16,040
+quantas
+
+1650
+01:06:16,040 --> 01:06:18,040
+mais ativasções
+
+1651
+01:06:18,040 --> 01:06:20,040
+vocês tiverem ali
+
+1652
+01:06:20,040 --> 01:06:22,040
+intermedias
+
+1653
+01:06:22,040 --> 01:06:24,040
+vão usar mais memória
+
+1654
+01:06:24,040 --> 01:06:26,040
+ele tem que computar a camada toda
+
+1655
+01:06:26,040 --> 01:06:28,040
+antes de passar para a camada a seguir
+
+1656
+01:06:28,040 --> 01:06:30,040
+portanto
+
+1657
+01:06:30,040 --> 01:06:32,040
+para além da memória que vocês estão a gastar
+
+1658
+01:06:32,040 --> 01:06:34,040
+de guardar os parâmetros
+
+1659
+01:06:34,040 --> 01:06:36,040
+ou seja estes pesos da rede
+
+1660
+01:06:36,040 --> 01:06:38,040
+vocês também estão a gastar memória
+
+1661
+01:06:38,040 --> 01:06:40,040
+RAM
+
+1662
+01:06:40,040 --> 01:06:42,040
+normalmente
+
+1663
+01:06:42,040 --> 01:06:44,040
+está a guardar
+
+1664
+01:06:44,040 --> 01:06:46,040
+os passos intermedios de passar na rede
+
+1665
+01:06:48,040 --> 01:06:50,040
+nós passamos desta camada para esta
+
+1666
+01:06:50,040 --> 01:06:52,040
+computamos os valores todos
+
+1667
+01:06:52,040 --> 01:06:54,040
+e esses valores têm de ficar guardados
+
+1668
+01:06:54,040 --> 01:06:56,040
+antes de passarmos a seguinte
+
+1669
+01:06:56,040 --> 01:06:58,040
+e antes de passarmos a outra seguinte
+
+1670
+01:06:58,040 --> 01:07:00,040
+depende muito
+
+1671
+01:07:00,040 --> 01:07:02,040
+como é que está implementado
+
+1672
+01:07:02,040 --> 01:07:04,040
+e depende se
+
+1673
+01:07:04,040 --> 01:07:07,800
+se aquilo está implementado
+
+1674
+01:07:07,800 --> 01:07:09,800
+para descartar quando já não precisa
+
+1675
+01:07:09,800 --> 01:07:11,800
+das coisas que lá estão
+
+1676
+01:07:11,800 --> 01:07:13,800
+que não fica no buffer
+
+1677
+01:07:13,800 --> 01:07:15,800
+e aquilo vai aumentando um bocadinho
+
+1678
+01:07:15,800 --> 01:07:17,800
+e muitas vezes
+
+1679
+01:07:17,800 --> 01:07:19,800
+o modelo cabe bem num disco
+
+1680
+01:07:19,800 --> 01:07:21,800
+mas dependendo da RAM do seu sistema imbebido
+
+1681
+01:07:21,800 --> 01:07:23,800
+pode nunca ver
+
+1682
+01:07:23,800 --> 01:07:25,800
+simplesmente por causa deste bocado
+
+1683
+01:07:25,800 --> 01:07:27,800
+do que ele tem que manter em memória
+
+1684
+01:07:27,800 --> 01:07:29,800
+para continuar a funcionar
+
+1685
+01:07:29,800 --> 01:07:31,800
+depois
+
+1686
+01:07:33,800 --> 01:07:35,800
+em termos de processamento
+
+1687
+01:07:35,800 --> 01:07:37,800
+nós até aqui temos estado a falar de memória
+
+1688
+01:07:37,800 --> 01:07:39,800
+temos processamentos
+
+1689
+01:07:39,800 --> 01:07:41,800
+estamos a falar que
+
+1690
+01:07:41,800 --> 01:07:43,800
+se temos uma camada
+
+1691
+01:07:43,800 --> 01:07:45,800
+vamos imaginar de entrada de 784 neurônios
+
+1692
+01:07:47,800 --> 01:07:49,800
+que é o 28 por 28 das nossas imagens
+
+1693
+01:07:49,800 --> 01:07:51,800
+dá 728 neurônios
+
+1694
+01:07:51,800 --> 01:07:53,800
+à entrada
+
+1695
+01:07:53,800 --> 01:07:55,800
+e se essa camada se liga com uma camada
+
+1696
+01:07:55,800 --> 01:07:57,800
+de 64 neurônios a seguir
+
+1697
+01:07:57,800 --> 01:07:59,800
+nós temos 50 mil cálculos
+
+1698
+01:07:59,800 --> 01:08:01,800
+50 mil multiplicações
+
+1699
+01:08:01,800 --> 01:08:03,800
+para fazer
+
+1700
+01:08:03,800 --> 01:08:05,800
+vocês dizem realmente são muitas quantas
+
+1701
+01:08:05,800 --> 01:08:07,800
+normalmente os computadores lidam bem com isto
+
+1702
+01:08:07,800 --> 01:08:09,800
+mas eu só queria que vocês imaginassem
+
+1703
+01:08:09,800 --> 01:08:11,800
+imaginassem a quantidade de
+
+1704
+01:08:11,800 --> 01:08:13,800
+quantas que vai lá para dentro
+
+1705
+01:08:13,800 --> 01:08:15,800
+daquelas redes neuronais
+
+1706
+01:08:15,800 --> 01:08:17,800
+em milésimos de segundo
+
+1707
+01:08:17,800 --> 01:08:19,800
+claro que
+
+1708
+01:08:19,800 --> 01:08:21,800
+se vocês tiverem o vosso processador
+
+1709
+01:08:21,800 --> 01:08:23,800
+do vosso sistema imbebido
+
+1710
+01:08:23,800 --> 01:08:25,800
+a tratar de 500 outras coisas
+
+1711
+01:08:25,800 --> 01:08:27,800
+e é fazer isto
+
+1712
+01:08:27,800 --> 01:08:29,800
+fazer estas quantas todas
+
+1713
+01:08:29,800 --> 01:08:31,800
+para um processador pequeno
+
+1714
+01:08:31,800 --> 01:08:33,800
+pode ser
+
+1715
+01:08:33,800 --> 01:08:35,800
+e dependendo do processador
+
+1716
+01:08:35,800 --> 01:08:37,800
+o Raspberry Pi vai aguentar
+
+1717
+01:08:37,800 --> 01:08:39,800
+mas no outro tipo de
+
+1718
+01:08:39,800 --> 01:08:41,800
+sistemas imbebidos
+
+1719
+01:08:41,800 --> 01:08:43,800
+pode ser demasiado
+
+1720
+01:08:43,800 --> 01:08:45,800
+e pode ser
+
+1721
+01:08:45,800 --> 01:08:47,800
+pode não ser adequado
+
+1722
+01:08:47,800 --> 01:08:49,800
+para aquele tipo de processador
+
+1723
+01:08:49,800 --> 01:08:51,800
+às vezes podemos otimizar
+
+1724
+01:08:51,800 --> 01:08:53,800
+um bocadinho isto mas na verdade
+
+1725
+01:08:53,800 --> 01:08:55,800
+este é o valor que eu queria que vocês
+
+1726
+01:08:55,800 --> 01:08:57,800
+pensassem neles
+
+1727
+01:08:57,800 --> 01:08:59,800
+e isto, atenção, numa camada
+
+1728
+01:08:59,800 --> 01:09:01,800
+porque a camada a seguir, neste caso, se reduzimos 64 para 10
+
+1729
+01:09:01,800 --> 01:09:03,800
+se não tivermos mais camadas intermédias
+
+1730
+01:09:03,800 --> 01:09:05,800
+e esta camada já foi a nossa final
+
+1731
+01:09:05,800 --> 01:09:07,800
+temos mais 640 multiplicações
+
+1732
+01:09:07,800 --> 01:09:11,140
+depois
+
+1733
+01:09:11,140 --> 01:09:13,140
+nós aqui preparando um bocadinho
+
+1734
+01:09:13,140 --> 01:09:15,140
+do trabalho do passem-sábado
+
+1735
+01:09:15,140 --> 01:09:17,140
+nós vamos comparar
+
+1736
+01:09:17,140 --> 01:09:19,140
+uma baseline com
+
+1737
+01:09:19,140 --> 01:09:21,140
+uma coisa um bocadinho mais funda
+
+1738
+01:09:21,140 --> 01:09:23,140
+ou seja, vamos comprar
+
+1739
+01:09:23,140 --> 01:09:25,140
+uma rede neuronal básica
+
+1740
+01:09:25,140 --> 01:09:27,140
+com apenas 7.850 parâmetros
+
+1741
+01:09:27,140 --> 01:09:29,140
+e uma rede
+
+1742
+01:09:29,140 --> 01:09:31,140
+um bocadinho mais profunda com mais parâmetros
+
+1743
+01:09:31,140 --> 01:09:33,140
+e o que nós vamos comparar é
+
+1744
+01:09:33,140 --> 01:09:35,140
+ok, esta custa mais
+
+1745
+01:09:35,140 --> 01:09:37,140
+em termos computacionais
+
+1746
+01:09:37,140 --> 01:09:39,140
+mas dá-nos um melhor resultado
+
+1747
+01:09:39,140 --> 01:09:41,140
+e é bocadinho isso que eu vou querer
+
+1748
+01:09:41,140 --> 01:09:43,140
+que vocês se apercebam
+
+1749
+01:09:43,140 --> 01:09:45,140
+na aula que vamos fazer
+
+1750
+01:09:45,140 --> 01:09:47,140
+que é que diferenças é que temos aqui
+
+1751
+01:09:47,140 --> 01:09:49,140
+e quanto é que isto não vai
+
+1752
+01:09:49,140 --> 01:09:51,140
+pesar na minha placa
+
+1753
+01:09:51,140 --> 01:09:53,140
+este aqui é bocadinho
+
+1754
+01:09:53,140 --> 01:09:55,140
+o que eu estava aqui a falar
+
+1755
+01:09:55,140 --> 01:09:57,140
+cada arquitetura
+
+1756
+01:09:57,140 --> 01:09:59,140
+também é um custo hardware
+
+1757
+01:09:59,140 --> 01:10:01,140
+se vocês têm mais camadas
+
+1758
+01:10:01,140 --> 01:10:03,140
+tem mais parâmetros, tem mais
+
+1759
+01:10:03,140 --> 01:10:05,140
+coisas guardadas
+
+1760
+01:10:05,140 --> 01:10:07,140
+se têm um input maior
+
+1761
+01:10:07,140 --> 01:10:09,140
+ou seja, se as imagens fossem RGB
+
+1762
+01:10:09,140 --> 01:10:11,140
+e não fossem só preto e branco
+
+1763
+01:10:11,140 --> 01:10:13,140
+e eu tenho que ter camadas maiores
+
+1764
+01:10:13,140 --> 01:10:15,140
+para lidar com aquilo
+
+1765
+01:10:15,140 --> 01:10:17,140
+e eu tenho que ter mais quantas
+
+1766
+01:10:17,140 --> 01:10:19,140
+portanto, ia ser uma rede maior
+
+1767
+01:10:19,140 --> 01:10:21,140
+e vocês veem onde eu quero chegar
+
+1768
+01:10:21,140 --> 01:10:23,140
+aqui é apenas um somário
+
+1769
+01:10:23,140 --> 01:10:25,140
+disto que eu tenho estado a dizer
+
+1770
+01:10:25,140 --> 01:10:27,140
+portanto
+
+1771
+01:10:27,140 --> 01:10:29,140
+a melhor dica que eu vos dou
+
+1772
+01:10:29,140 --> 01:10:31,140
+é falar de IA
+
+1773
+01:10:31,140 --> 01:10:33,140
+para esta aula não ser toda de IA
+
+1774
+01:10:33,140 --> 01:10:35,140
+pois o que estava ali para cima
+
+1775
+01:10:35,140 --> 01:10:37,140
+que eu não falei em outras alvas
+
+1776
+01:10:37,140 --> 01:10:39,140
+ou seja, pensem sempre
+
+1777
+01:10:39,140 --> 01:10:41,140
+comecem pelo problema de uma forma simples
+
+1778
+01:10:41,140 --> 01:10:43,140
+se calhar a IA até não é a melhor
+
+1779
+01:10:43,140 --> 01:10:45,140
+forma de resolver o problema
+
+1780
+01:10:45,140 --> 01:10:47,140
+e se for resolvendo de outra forma
+
+1781
+01:10:47,140 --> 01:10:49,140
+comecem simples
+
+1782
+01:10:49,140 --> 01:10:51,140
+usem uma baseline de um modelo simples
+
+1783
+01:10:51,140 --> 01:10:53,140
+e vejam, este estava a dar
+
+1784
+01:10:53,140 --> 01:10:55,140
+80% de accuracy
+
+1785
+01:10:55,140 --> 01:10:57,140
+que é o que nós vamos ver na aula PL
+
+1786
+01:10:57,140 --> 01:10:59,140
+esta accuracy chega
+
+1787
+01:10:59,140 --> 01:11:01,140
+a minha placa está maximizada
+
+1788
+01:11:01,140 --> 01:11:03,140
+se consigo correr mais
+
+1789
+01:11:03,140 --> 01:11:05,140
+vamos adicionar camadas ao modelo
+
+1790
+01:11:05,140 --> 01:11:07,140
+e vamos ver se ele continua a correr
+
+1791
+01:11:07,140 --> 01:11:09,140
+se continuar a correr
+
+1792
+01:11:09,140 --> 01:11:11,140
+depois é uma decisão técnica
+
+1793
+01:11:11,140 --> 01:11:13,140
+e de engenheiro perceber se continuamos
+
+1794
+01:11:13,140 --> 01:11:15,140
+adicionar camadas ou não
+
+1795
+01:11:15,140 --> 01:11:17,140
+e se aquela accuracy já nos chega
+
+1796
+01:11:17,140 --> 01:11:19,140
+ou se não chega
+
+1797
+01:11:19,140 --> 01:11:21,140
+esta é a decisão que vocês engenheiros
+
+1798
+01:11:21,140 --> 01:11:23,140
+vão ter que tratar
+
+1799
+01:11:23,140 --> 01:11:25,140
+aqui apenas alguns exemplos
+
+1800
+01:11:25,140 --> 01:11:27,140
+que falámos um bocadinho lá em cima
+
+1801
+01:11:27,140 --> 01:11:29,140
+nós aqui, por exemplo, numa pulseira
+
+1802
+01:11:29,140 --> 01:11:31,140
+que vocês treiam no pulso
+
+1803
+01:11:31,140 --> 01:11:33,140
+já falámos lá em cima do que estaríamos a analisar
+
+1804
+01:11:33,140 --> 01:11:35,140
+porque no pulso
+
+1805
+01:11:35,140 --> 01:11:37,140
+porque teriam
+
+1806
+01:11:37,140 --> 01:11:39,140
+baixa latência
+
+1807
+01:11:39,140 --> 01:11:41,140
+tem privacidade
+
+1808
+01:11:41,140 --> 01:11:43,140
+e não precisam estar numa rede para funcionar
+
+1809
+01:11:43,140 --> 01:11:45,140
+mas na verdade tenho o constreino da bateria
+
+1810
+01:11:45,140 --> 01:11:47,140
+e da RAM que tenho nesta bolsa pulseira
+
+1811
+01:11:47,140 --> 01:11:49,140
+ou seja, este sistema em bebido
+
+1812
+01:11:49,140 --> 01:11:51,140
+este wearable
+
+1813
+01:11:51,140 --> 01:11:53,140
+temos que criar para ele
+
+1814
+01:11:53,140 --> 01:11:55,140
+uma coisa pequenina
+
+1815
+01:11:55,140 --> 01:11:57,140
+podemos criar uma cnm muito pequenina
+
+1816
+01:11:57,140 --> 01:11:59,140
+não vou estar aqui a especificar o que é hoje
+
+1817
+01:11:59,140 --> 01:12:01,140
+na mala altura se tivermos tempo
+
+1818
+01:12:01,140 --> 01:12:03,140
+que eu falo um bocadinho sobre isso
+
+1819
+01:12:03,140 --> 01:12:05,140
+portanto vamos fazer uma rede muito pequenina
+
+1820
+01:12:05,140 --> 01:12:07,140
+aqui
+
+1821
+01:12:07,140 --> 01:12:09,140
+na questão do áudio
+
+1822
+01:12:09,140 --> 01:12:11,140
+nós temos aqui o nosso assistente
+
+1823
+01:12:11,140 --> 01:12:13,140
+ele responde nos logo
+
+1824
+01:12:13,140 --> 01:12:15,140
+e não manda esta informação para lá
+
+1825
+01:12:15,140 --> 01:12:17,140
+nenhum para fazer a computação
+
+1826
+01:12:17,140 --> 01:12:19,140
+no entanto temos ali
+
+1827
+01:12:19,140 --> 01:12:21,140
+um modelo que está a sempre a correr
+
+1828
+01:12:21,140 --> 01:12:23,140
+porque ele tem que ouvir tudo o que vocês estão a dizer
+
+1829
+01:12:23,140 --> 01:12:25,140
+ora
+
+1830
+01:12:25,140 --> 01:12:27,140
+isto em termos de energia
+
+1831
+01:12:27,140 --> 01:12:29,140
+se for uma coisa que é alimentada por bateria
+
+1832
+01:12:29,140 --> 01:12:31,140
+é um problema
+
+1833
+01:12:31,140 --> 01:12:33,140
+portanto poderemos ter que fazer decisões
+
+1834
+01:12:33,140 --> 01:12:35,140
+de que modelo é que vamos usar aqui dentro
+
+1835
+01:12:35,140 --> 01:12:37,140
+conforme esta
+
+1836
+01:12:37,140 --> 01:12:39,140
+a nossa aplicação
+
+1837
+01:12:39,140 --> 01:12:41,140
+aqui mais exemplos
+
+1838
+01:12:41,140 --> 01:12:43,140
+numa máquina
+
+1839
+01:12:43,140 --> 01:12:45,140
+que temos decisões perto do equipamento
+
+1840
+01:12:45,140 --> 01:12:47,140
+temos restrições
+
+1841
+01:12:47,140 --> 01:12:49,140
+de
+
+1842
+01:12:49,140 --> 01:12:51,140
+robusteiros
+
+1843
+01:12:51,140 --> 01:12:53,140
+ou seja nós estamos numa mochão de fábrica
+
+1844
+01:12:53,140 --> 01:12:55,140
+queremos que aquilo seja robusto
+
+1845
+01:12:55,140 --> 01:12:57,140
+temos um sistema mb de robusto
+
+1846
+01:12:57,140 --> 01:12:59,140
+que se calhar não pode enviar muito calor
+
+1847
+01:12:59,140 --> 01:13:01,140
+para o exterior porque tem uma caixa muito apertadinha
+
+1848
+01:13:01,140 --> 01:13:03,140
+e que não deixa
+
+1849
+01:13:03,140 --> 01:13:05,140
+o processador que lá está dentro
+
+1850
+01:13:05,140 --> 01:13:07,140
+fazer computações muito rápido porque não tem forma de dissipar o calor
+
+1851
+01:13:07,140 --> 01:13:09,140
+ok
+
+1852
+01:13:09,140 --> 01:13:11,140
+vamos assumir isso e vamos dizer
+
+1853
+01:13:11,140 --> 01:13:13,140
+conseguimos fazer qualquer coisa
+
+1854
+01:13:13,140 --> 01:13:15,140
+vamos ter
+
+1855
+01:13:15,140 --> 01:13:17,140
+menos acúrice
+
+1856
+01:13:17,140 --> 01:13:19,140
+melhorar as condições onde está
+
+1857
+01:13:19,140 --> 01:13:21,140
+por fim
+
+1858
+01:13:21,140 --> 01:13:23,140
+uma estação de visão
+
+1859
+01:13:23,140 --> 01:13:25,140
+uma câmara
+
+1860
+01:13:25,140 --> 01:13:27,140
+um bocadinho o que vocês teriam a fazer
+
+1861
+01:13:27,140 --> 01:13:29,140
+no data 7
+
+1862
+01:13:29,140 --> 01:13:31,140
+entrar depois que nós temos trabalhado
+
+1863
+01:13:31,140 --> 01:13:33,140
+nós também queríamos aquilo
+
+1864
+01:13:33,140 --> 01:13:35,140
+fosse rápido
+
+1865
+01:13:35,140 --> 01:13:37,140
+fosse local
+
+1866
+01:13:37,140 --> 01:13:39,140
+na verdade temos que depois trabalhar com as imagens
+
+1867
+01:13:39,140 --> 01:13:41,140
+porque as imagens reais, não é essas que estamos a trabalhar
+
+1868
+01:13:41,140 --> 01:13:43,140
+têm diferentes condições de luz
+
+1869
+01:13:43,140 --> 01:13:45,140
+às vezes o sol pode estar a bater diferente
+
+1870
+01:13:45,140 --> 01:13:47,140
+às vezes a escala não está certa
+
+1871
+01:13:47,140 --> 01:13:49,140
+às vezes estão distorcidas e etc
+
+1872
+01:13:49,140 --> 01:13:51,140
+então podemos ter que aumentar as redes
+
+1873
+01:13:51,140 --> 01:13:53,140
+para lidar com essas coisas todas
+
+1874
+01:13:55,140 --> 01:13:57,140
+por fim
+
+1875
+01:13:57,140 --> 01:13:59,140
+um bocadinho do que falamos aqui hoje
+
+1876
+01:13:59,140 --> 01:14:01,140
+que é
+
+1877
+01:14:01,140 --> 01:14:03,140
+input o que é que entra na nossa rede
+
+1878
+01:14:03,140 --> 01:14:05,140
+output o que é que sai da nossa rede
+
+1879
+01:14:05,140 --> 01:14:07,140
+input
+
+1880
+01:14:07,140 --> 01:14:09,140
+é os dados
+
+1881
+01:14:09,140 --> 01:14:11,140
+output é as decisões
+
+1882
+01:14:11,140 --> 01:14:13,140
+a qualidade
+
+1883
+01:14:13,140 --> 01:14:15,140
+na vida através da loce
+
+1884
+01:14:15,140 --> 01:14:17,140
+que é uma coisa que vamos falar melhor nas próximas aulas teóricas
+
+1885
+01:14:17,140 --> 01:14:19,140
+mas que eu já os fui falando
+
+1886
+01:14:19,140 --> 01:14:21,140
+um bocadinho hoje
+
+1887
+01:14:21,140 --> 01:14:23,140
+medo com bom ou mau
+
+1888
+01:14:23,140 --> 01:14:25,140
+estamos a acertar no que queríamos
+
+1889
+01:14:25,140 --> 01:14:27,140
+a latência o quão rápido
+
+1890
+01:14:27,140 --> 01:14:29,140
+isso está a acontecer
+
+1891
+01:14:29,140 --> 01:14:31,140
+memória é
+
+1892
+01:14:31,140 --> 01:14:33,140
+quanto de memória isso não está a gastar
+
+1893
+01:14:33,140 --> 01:14:35,140
+eu acho que vos dei aqui um exemplos
+
+1894
+01:14:35,140 --> 01:14:37,140
+engraçados
+
+1895
+01:14:37,140 --> 01:14:39,140
+de quanto a memória podemos estar a falar
+
+1896
+01:14:39,140 --> 01:14:41,140
+disto gastar
+
+1897
+01:14:41,140 --> 01:14:43,140
+até antes de continuarmos
+
+1898
+01:14:43,140 --> 01:14:45,140
+podemos pegar aqui
+
+1899
+01:14:45,140 --> 01:14:47,140
+uma coisa muito simples
+
+1900
+01:14:47,140 --> 01:14:49,140
+e pegar aqui neste valor
+
+1901
+01:14:49,140 --> 01:14:51,140
+de um flow de 32 ocupados 4 bytes
+
+1902
+01:14:51,140 --> 01:14:53,140
+se tivermos uma rede com 50.000 parâmetros
+
+1903
+01:14:53,140 --> 01:14:55,140
+estamos a ocupar
+
+1904
+01:14:55,140 --> 01:14:57,140
+203 capas
+
+1905
+01:14:57,140 --> 01:14:59,140
+uma rede
+
+1906
+01:14:59,140 --> 01:15:01,140
+neuronal como achados e preteu
+
+1907
+01:15:01,140 --> 01:15:03,140
+coisas assim do género
+
+1908
+01:15:03,140 --> 01:15:05,140
+estamos a falar a volta dos 200 bilhões parâmetros
+
+1909
+01:15:05,140 --> 01:15:07,140
+sinceramente agora
+
+1910
+01:15:07,140 --> 01:15:09,140
+sem quanto é que aquilo vai
+
+1911
+01:15:09,140 --> 01:15:11,140
+porque aquilo cresce muito rápido
+
+1912
+01:15:11,140 --> 01:15:13,140
+imagine quantos bytes de dados
+
+1913
+01:15:13,140 --> 01:15:15,140
+não estamos a falar só
+
+1914
+01:15:15,140 --> 01:15:17,140
+para guardar os pesos
+
+1915
+01:15:17,140 --> 01:15:19,140
+que estão dentro da rede
+
+1916
+01:15:19,140 --> 01:15:21,140
+estamos a falar
+
+1917
+01:15:21,140 --> 01:15:23,140
+de gigas e gigas e gigas
+
+1918
+01:15:23,140 --> 01:15:25,140
+talvez teras só para guardar os pesos
+
+1919
+01:15:25,140 --> 01:15:27,140
+que estão dentro dessas redes normais
+
+1920
+01:15:27,140 --> 01:15:29,140
+depois
+
+1921
+01:15:29,140 --> 01:15:31,140
+por fim, energia
+
+1922
+01:15:31,140 --> 01:15:33,140
+mais uma vez conforme o vosso restrição de energia
+
+1923
+01:15:33,140 --> 01:15:35,140
+no sistema de bebida que estamos a falar
+
+1924
+01:15:35,140 --> 01:15:37,140
+podemos estar a falar aqui
+
+1925
+01:15:37,140 --> 01:15:39,140
+de diferentes
+
+1926
+01:15:39,140 --> 01:15:41,140
+partes
+
+1927
+01:15:41,140 --> 01:15:43,140
+pronto, depois
+
+1928
+01:15:43,140 --> 01:15:45,140
+eu vou falar-vos um bocadinho
+
+1929
+01:15:45,140 --> 01:15:47,140
+agora, não nesta aula
+
+1930
+01:15:47,140 --> 01:15:49,140
+em algumas aulas da frente
+
+1931
+01:15:49,140 --> 01:15:51,140
+vou falar-vos um bocadinho do que são cnn
+
+1932
+01:15:51,140 --> 01:15:53,140
+lstn
+
+1933
+01:15:53,140 --> 01:15:55,140
+e transformas
+
+1934
+01:15:55,140 --> 01:15:57,140
+para vocês também não saírem daqui
+
+1935
+01:15:57,140 --> 01:15:59,140
+sem saberem o que são estas
+
+1936
+01:15:59,140 --> 01:16:01,140
+estas coisas
+
+1937
+01:16:01,140 --> 01:16:03,140
+já vi aqui um colega ou outro
+
+1938
+01:16:03,140 --> 01:16:05,140
+já sabe o que é que poderão ser estas coisas
+
+1939
+01:16:05,140 --> 01:16:07,140
+cnnlstn, se calhar vocês já trabalharam com isto
+
+1940
+01:16:07,140 --> 01:16:09,140
+por vezes
+
+1941
+01:16:09,140 --> 01:16:11,140
+portanto
+
+1942
+01:16:11,140 --> 01:16:13,140
+pronto, depois
+
+1943
+01:16:13,140 --> 01:16:15,140
+é numa próxima aula, falo-vos um bocadinho sobre isto
+
+1944
+01:16:15,140 --> 01:16:17,140
+e o que eu queria que tirassem daqui hoje é
+
+1945
+01:16:21,140 --> 01:16:23,140
+ok
+
+1946
+01:16:23,140 --> 01:16:25,140
+vocês
+
+1947
+01:16:25,140 --> 01:16:27,140
+têm um short
+
+1948
+01:16:27,140 --> 01:16:29,140
+já perceberam que um short
+
+1949
+01:16:29,140 --> 01:16:31,140
+não pode ser tratado apenas no neurônio
+
+1950
+01:16:31,140 --> 01:16:33,140
+e então começamos a ter redes mais
+
+1951
+01:16:33,140 --> 01:16:35,140
+profundas para tratar casos
+
+1952
+01:16:35,140 --> 01:16:37,140
+cada vez mais profundos
+
+1953
+01:16:37,140 --> 01:16:39,140
+esta aqui falamos um bocadinho
+
+1954
+01:16:39,140 --> 01:16:41,140
+hoje, como é que nós esperamos
+
+1955
+01:16:41,140 --> 01:16:43,140
+os dados de treino, validação e testes
+
+1956
+01:16:43,140 --> 01:16:45,140
+falamos sobre o nosso data sete
+
+1957
+01:16:45,140 --> 01:16:47,140
+mas numa aula a futura falaremos melhor
+
+1958
+01:16:47,140 --> 01:16:49,140
+e as outras
+
+1959
+01:16:49,140 --> 01:16:51,140
+esta aqui também falaremos melhor
+
+1960
+01:16:51,140 --> 01:16:53,140
+numa outra aula
+
+1961
+01:16:53,140 --> 01:16:55,140
+mas acho que abordamos um bocadinho esta aqui
+
+1962
+01:16:55,140 --> 01:16:57,140
+como é que um modelo mais pequeno
+
+1963
+01:16:57,140 --> 01:16:59,140
+pode ser melhor
+
+1964
+01:16:59,140 --> 01:17:01,140
+para um sistema imbebido do que um modelo maior
+
+1965
+01:17:01,140 --> 01:17:03,140
+portanto
+
+1966
+01:17:03,140 --> 01:17:05,140
+o modelo
+
+1967
+01:17:05,140 --> 01:17:07,140
+não é bom só porque é profundo
+
+1968
+01:17:07,140 --> 01:17:09,140
+não é só por utilizarem deep learning
+
+1969
+01:17:09,140 --> 01:17:11,140
+que vai ser bom
+
+1970
+01:17:11,140 --> 01:17:13,140
+e vai ser bom se resolver o vosso problema
+
+1971
+01:17:13,140 --> 01:17:15,140
+e mesmo que não seja deep learning
+
+1972
+01:17:15,140 --> 01:17:17,140
+se resolver o problema maravilhoso
+
+1973
+01:17:17,140 --> 01:17:19,140
+não precisa mais nada
+
+1974
+01:17:19,140 --> 01:17:21,140
+tem aqui um bocadinho de bibliografia
+
+1975
+01:17:21,140 --> 01:17:23,140
+se quiserem
+
+1976
+01:17:23,140 --> 01:17:25,140
+tem que coisas interessantes que nós
+
+1977
+01:17:25,140 --> 01:17:27,140
+vamos recobrir aqui um bocadinho
+
+1978
+01:17:27,140 --> 01:17:29,140
+pronto, por hoje era isto
+
+1979
+01:17:29,140 --> 01:17:31,140
+não sei se tem alguma questão aproveitar aqui uns minutos
+
+1980
+01:17:31,140 --> 01:17:33,140
+se tiverem aqui alguma questão
+
+1981
+01:17:33,140 --> 01:17:35,140
+se não, não vou mostrar mais hoje
+
+1982
+01:17:35,140 --> 01:17:37,140
+e numa próxima aula
+
+1983
+01:17:37,140 --> 01:17:39,140
+vemos aqui os temas que não falamos hoje
+
+1984
+01:17:39,140 --> 01:17:41,140
+alguém tem alguma questão?
+
+1985
+01:17:41,140 --> 01:17:43,140
+alguma coisa?
+
+1986
+01:17:43,140 --> 01:17:45,140
+alguma curiosidade?
+
+1987
+01:17:45,140 --> 01:17:47,140
+não?
+
+1988
+01:17:47,140 --> 01:17:49,140
+esperamos
+
+1989
+01:17:49,140 --> 01:17:51,140
+por favor
+
+1990
+01:17:51,140 --> 01:17:53,140
+qualquer coisa tem alguma questão que surgiu agora
+
+1991
+01:17:53,140 --> 01:17:55,140
+quando nós estamos
+
+1992
+01:17:55,140 --> 01:17:57,140
+a criar uma rede neuronal
+
+1993
+01:17:57,140 --> 01:17:59,140
+como é que nós conseguimos
+
+1994
+01:17:59,140 --> 01:18:01,140
+saber
+
+1995
+01:18:01,140 --> 01:18:03,140
+quantas subcamadas é que vai ser preciso
+
+1996
+01:18:03,140 --> 01:18:05,140
+ou seja, as das camadas condidas
+
+1997
+01:18:05,140 --> 01:18:07,140
+quantos neurônios é que vamos precisar
+
+1998
+01:18:07,140 --> 01:18:09,140
+se é tentativa e erro
+
+1999
+01:18:09,140 --> 01:18:11,140
+é
+
+2000
+01:18:11,140 --> 01:18:13,140
+neste momento
+
+2001
+01:18:13,140 --> 01:18:15,140
+a melhor coisa que tenho pra te dizer
+
+2002
+01:18:15,140 --> 01:18:17,140
+é a intuição
+
+2003
+01:18:17,140 --> 01:18:19,140
+e tentativa e erro
+
+2004
+01:18:19,140 --> 01:18:21,140
+não há literalmente mais nada
+
+2005
+01:18:21,140 --> 01:18:23,140
+neste momento
+
+2006
+01:18:23,140 --> 01:18:25,140
+que te diga
+
+2007
+01:18:25,140 --> 01:18:27,140
+para este problema deve escrever a mão
+
+2008
+01:18:27,140 --> 01:18:29,140
+chamar uma rede assim o assado
+
+2009
+01:18:29,140 --> 01:18:31,140
+o que acontece novamente
+
+2010
+01:18:31,140 --> 01:18:33,140
+hoje em dia
+
+2011
+01:18:33,140 --> 01:18:35,140
+é que como a malta que está a fazer redes neuronais
+
+2012
+01:18:35,140 --> 01:18:37,140
+não pensa
+
+2013
+01:18:37,140 --> 01:18:39,140
+na capacidade computacional
+
+2014
+01:18:39,140 --> 01:18:41,140
+que aquilo necessita
+
+2015
+01:18:41,140 --> 01:18:43,140
+na verdade o que faz
+
+2016
+01:18:43,140 --> 01:18:45,140
+é criar uma
+
+2017
+01:18:45,140 --> 01:18:47,140
+by default maior do que precisava
+
+2018
+01:18:47,140 --> 01:18:49,140
+depois de que ela até funciona
+
+2019
+01:18:49,140 --> 01:18:51,140
+e então, depois nunca reduzem aquilo
+
+2020
+01:18:51,140 --> 01:18:53,140
+alguém que trabalha com sistemas imbebidos
+
+2021
+01:18:53,140 --> 01:18:55,140
+não pode fazer isso
+
+2022
+01:18:55,140 --> 01:18:57,140
+porque
+
+2023
+01:18:57,140 --> 01:18:59,140
+não dá
+
+2024
+01:18:59,140 --> 01:19:01,140
+se um dia forem mesmo trabalhar com isso
+
+2025
+01:19:01,140 --> 01:19:03,140
+vão perceber que
+
+2026
+01:19:03,140 --> 01:19:05,140
+vocês vão ter que trabalhar na rede
+
+2027
+01:19:05,140 --> 01:19:07,140
+em si e reduz-la
+
+2028
+01:19:07,140 --> 01:19:09,140
+para ela conseguir correr num sistema imbebido
+
+2029
+01:19:09,140 --> 01:19:11,140
+da melhor forma
+
+2030
+01:19:11,140 --> 01:19:13,140
+mas
+
