@@ -43,7 +43,7 @@ No modelo TCP IP, que possui apenas 4 camadas, o IP corresponde a Camada de Inte
 
 - TCP pertence a que camada ? 
 
-O tcp pertemce tambem a camada rede no modelo osi acho
+	O tcp pertemce tambem a camada rede no modelo osi acho
 
 --- 
 
@@ -71,12 +71,12 @@ O tcp pertemce tambem a camada rede no modelo osi acho
 
 - Que cabecalho identifica se vem IP ou ARP?
 
-O cabecalho que identifica se o payload do quadro Ethernet e um pacote IP ou ARP e o campo EtherType, localizado no proprio cabecalho do quadro Ethernet.
+	O cabecalho que identifica se o payload do quadro Ethernet e um pacote IP ou ARP e o campo EtherType, localizado no proprio cabecalho do quadro Ethernet.
 
-. EtherType = 0x0800: Indica que o payload e um pacote IP (IPV4)
-. EtherType = 0x0806: Indica que o payload e um pacote ARP. 
+	. EtherType = 0x0800: Indica que o payload e um pacote IP (IPV4)
+	. EtherType = 0x0806: Indica que o payload e um pacote ARP. 
 
-Este e um campo e essencial para que o dispositivo receptor saiba como interpretar e processar os dados que seguem no quadro. 
+	Este e um campo e essencial para que o dispositivo receptor saiba como interpretar e processar os dados que seguem no quadro. 
 
 ---
 
@@ -96,6 +96,85 @@ Este e um campo e essencial para que o dispositivo receptor saiba como interpret
 
 - Quantos enderecos tem uma rede /24 ? 
 
-256
+	255
 
 
+---
+
+# Conceito 
+
+- Mascara  / CIDR 
+
+# O que tens de saber
+
+- /n indica bits de rede; hosts = 32 - n
+
+# Erro tipico
+
+- Confundir enderecos totais com hosts validos
+
+- Usar broadcast como host valido
+
+# Mini-pergunta
+
+- Quantos host validos ha num /26 ? 
+
+	penso que 32 - 26 = 6 | logo ha (2^6)  - 1 = 63.
+
+---
+
+# Conceito
+
+- Broadcast IPv4
+
+# O que tens de saber 
+
+- Ultimo endereco da sub-rede
+
+# Erro tipico
+
+- Usar broadcast como host valido
+
+# Mini - pergunta
+
+- Numa rede /30, quantos hosts validos existem ?
+
+	Penso que 32-30 = 2^2 -1 = 3
+
+---
+
+# Conceito
+
+- ARP
+
+# O que tens de saber
+
+- Resolve IPv4 -> MAC dentro da LAN
+
+# Erro tipico
+
+- Pensar que ARP atravessa routers
+
+# Mini pergunta
+
+- ARP funciona entre redes diferentes ? 
+
+---
+
+# Conceito 
+
+- ICMP
+
+# O que tens de saber
+
+- Diagnostico / controlo; usado por ping
+
+# Erro tipico
+
+- Confundir ICMP com TCP/UDP
+
+# Mini pergunta
+
+- O ping usa TCP, UDP ou ICMP ? 
+
+	Penso que usa ICMP 

@@ -1,0 +1,210 @@
+# primeiro
+
+	SEPARA ISTO POR CAMADAS: ICMP pertencem a logica do IP;
+	TCP/UDP pertencem a camada de transporte
+
+# Objectivo
+
+Perceber que:
+
+| Conceito |                Camada | Serve para                                 |
+| -------- | --------------------: | ------------------------------------------ |
+| **IP**   |                  Rede | Levar pacotes entre máquinas/redes         |
+| **ICMP** | Rede / controlo do IP | Enviar mensagens de erro/diagnóstico       |
+| **Ping** |            Ferramenta | Testar conectividade usando ICMP           |
+| **TCP**  |            Transporte | Comunicação fiável entre aplicações        |
+| **UDP**  |            Transporte | Comunicação simples, rápida, sem garantias |
+
+
+Nos slides da cadeira, o cabecalho IP te um campo Protocol, que identifica o protocolo encapsulado:
+ICMP = 1, TCP = 6, UDP = 17. 
+
+# Como pensar
+
+	1. IP - o carteiro
+	O ip leva datagramas de uma maquina para outra
+
+Exemplo:
+
+	Origem: 192.168.1.10
+	Destino: 8.8.8.8
+
+
+Mas IP sozinho e "best effort":
+
+	Nao garante entrega
+	Nao garante ordem
+	Nao garante ausencia de duplicados
+	Nao faz retransmissao
+
+Isto tambem aparece nos teus Slides: IP usa comutacao de datagrams, sem acknowledge, sem circuito virtual, e sem garantias de entrega. 
+
+---
+
+# 2. ICMP - mensagens de controlo do IP
+
+ICMP nao e usado para transportar dados de uma aplicacao como HTTP ou SSH
+
+Serve para mensagens como:
+
+	Destino inacessivel
+	Tempo excedido
+	Echo request
+	Echo reply
+
+Ou seja, ICMP ajuda a rede a dizer:
+
+	"Consegui chegar?"
+	"Falhou onde?"
+	"O pacote morreu por TTL?"
+
+---
+
+# 3. Ping - ferramenta que usa ICMP
+
+Ping nao e um protocolo principal. 
+E uma ferramenta. 
+
+Quando fazes:
+
+	ping 8.8.8.8
+
+A tua maquina envia:
+
+	ICMP Echo Request
+
+Se o destino responder, recebes:
+	
+	ICMP Echo Reply
+Logo: 
+
+	ping usa ICMP
+	ICMP vai dentro de IP
+
+Visualmente:
+	
+	Ethernet frame
+		IP packet
+				ICMP Echo Request / Echo Reply
+
+---
+
+4. TCP - transporte fiavel
+
+	TCP e usado quando a aplicacao precisa de fiabilidade
+
+Exemplos:
+
+	SSH
+	HTTP/HTTPS
+	FTP
+	EMAIL
+
+TCP fornece:
+
+	Ligacao
+	Numeros de sequencia
+	ACKs
+	Retransmissao
+	Controlo de fluxo
+	Controlo de congestionamento
+	Entrega ordenada
+
+Exemplo de SSH
+
+	Ethernet
+		IP
+			TCP porta 22
+					SSH
+
+Pensa assim:
+
+	TCP transforma a rede instavel numa "conversa organizada".
+
+---
+
+# 5 UDP - Transporte simples e rapido
+
+UDP envia datagramas sem criar ligacao
+
+Exemplos:
+
+	DNS
+	DHCP
+	VoIP
+	Streaming
+	Jogos online
+	MQTT-SN em alguns contextos
+
+UDP fornece basicamente:
+
+	Porta origem
+	Porta destino
+	Cheksum
+	Payload
+
+Nao fornece
+	
+	ACK automatico
+	Retransmissao
+	Ordem
+	Controlo de fluxo
+	Ligacao
+
+Pensa Assim:
+
+	UDP e "enviei, agora a aplicacao que se desenrasque se precisar de garantias".
+
+# Comparacao direta:
+
+| Pergunta                       | ICMP/Ping       | TCP      | UDP         |
+| ------------------------------ | --------------- | -------- | ----------- |
+| Serve para aplicações normais? | Não diretamente | Sim      | Sim         |
+| Usa portas?                    | Não             | Sim      | Sim         |
+| Tem ligação?                   | Não             | Sim      | Não         |
+| Tem ACK/retransmissão?         | Não como TCP    | Sim      | Não         |
+| É usado pelo ping?             | Sim             | Não      | Não         |
+| É usado por SSH?               | Não             | Sim      | Não         |
+| É usado por DNS?               | Raramente       | Às vezes | Normalmente |
+
+---
+
+# Exemplo pratico
+
+Quando fazes:
+
+	ping google.com
+
+acontece:
+
+	Aplicação ping
+	↓
+	ICMP Echo Request
+	↓
+	IP
+	↓
+	Ethernet/Wi-Fi
+
+quando fazes:
+
+	ssh user@raspberrypi.local
+
+acontece
+
+	SSH
+	↓
+	TCP porta 22
+	↓
+	IP
+	↓
+	Ethernet/Wi-Fi
+Quando fazes uma query DNS:
+
+	DNS
+	↓
+	UDP porta 53
+	↓
+	IP
+	↓
+	Ethernet/Wi-Fi
+
