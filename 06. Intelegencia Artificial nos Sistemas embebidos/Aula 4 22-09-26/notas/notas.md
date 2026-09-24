@@ -174,3 +174,5 @@ confusion matrix, das 42, gostei de aprender a confusion matrix..
 ![alt text](image-39.png)
 
 ![alt text](image-40.png)
+
+LOSS E POR CLASSE, 
