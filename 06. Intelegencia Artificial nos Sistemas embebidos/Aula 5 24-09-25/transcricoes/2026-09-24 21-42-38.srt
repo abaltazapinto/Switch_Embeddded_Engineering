@@ -1,0 +1,5416 @@
+1
+00:00:59,250 --> 00:01:59,739
+Boa noite. Peço só que me confirmem se me estão a ouvir, por favor.
+
+2
+00:01:59,739 --> 00:02:01,739
+Sim, sim.
+
+3
+00:02:01,739 --> 00:02:05,739
+Pronto. Boa noite a todos, mais uma vez.
+
+4
+00:02:05,739 --> 00:02:11,090
+Vamos começar aqui a aula 2. Eu vou partilhar aqui o ecrã convosco.
+
+5
+00:02:11,090 --> 00:02:20,139
+Agora, aqui, aqui. Diga-me se conseguem ver uma coisa,
+
+6
+00:02:20,139 --> 00:02:23,139
+um símbolo azul muito grande que diz LitRT.
+
+7
+00:02:23,139 --> 00:02:24,139
+Sim.
+
+8
+00:02:24,139 --> 00:02:26,139
+Ok. Pronto.
+
+9
+00:02:26,139 --> 00:02:28,139
+Tudo bem.
+
+10
+00:02:28,139 --> 00:02:32,139
+Continuando aqui na linha do que temos vindo a falar,
+
+11
+00:02:32,139 --> 00:02:36,139
+hoje é o dia de falar um bocadinho de coisas...
+
+12
+00:02:36,139 --> 00:02:39,139
+Bem, eu não vou dizer que são práticas porque nós não vamos olhar para código,
+
+13
+00:02:39,139 --> 00:02:44,139
+mas vamos passar da teoria do que são retos neuronais, deep learnings e coisas do género
+
+14
+00:02:44,139 --> 00:02:50,139
+para as bibliotecas ou frameworks que nos possibilitam isto.
+
+15
+00:02:50,139 --> 00:02:53,139
+O objetivo da aula é o LitRT.
+
+16
+00:02:53,139 --> 00:03:01,139
+O LitRT é, digamos, a framework mais usada em sistemas imbebidos,
+
+17
+00:03:01,139 --> 00:03:07,139
+mas para chegarmos lá eu preciso-nos falar um bocadinho de teoria, matrizes,
+
+18
+00:03:07,139 --> 00:03:12,139
+o que é o TensorFlow e o PyTorch, que são, digamos, as ferramentas mais usadas,
+
+19
+00:03:12,139 --> 00:03:15,139
+e depois, sim, vamos chegar ao LitRT.
+
+20
+00:03:15,139 --> 00:03:18,139
+Portanto, hoje vamos perceber como é que se relacionam estes três nomes.
+
+21
+00:03:18,139 --> 00:03:23,139
+Vocês, se trabalharem com redes, vão sempre ouvir falar TensorFlow, PyTorch e LitRT,
+
+22
+00:03:23,139 --> 00:03:26,139
+se trabalharem com os sistemas imbebidos.
+
+23
+00:03:26,139 --> 00:03:30,139
+Nós agora estudamos como é que uma rede aprende, mas agora queremos perceber
+
+24
+00:03:30,139 --> 00:03:33,139
+quais ferramentas é que usamos.
+
+25
+00:03:33,139 --> 00:03:37,139
+E depois, quando usarmos no sábado, daqui a dois dias,
+
+26
+00:03:37,139 --> 00:03:41,139
+o colab para fazer o treino de redes neuronais,
+
+27
+00:03:41,139 --> 00:03:45,139
+nós vamos usar estas ferramentas e depois vamos converter para LitRT
+
+28
+00:03:45,139 --> 00:03:49,139
+para depois colocarmos na nossa placa a funcionar.
+
+29
+00:03:49,139 --> 00:03:51,139
+Relembrando aqui umas coisas.
+
+30
+00:03:51,139 --> 00:03:54,139
+Aquele modelo que a semana passada nós utilizámos,
+
+31
+00:03:54,139 --> 00:03:58,139
+sobre o qual vocês fizeram download para a vossa própria placa,
+
+32
+00:03:58,139 --> 00:04:03,139
+já era um modelo que vinha em LitRT, ou seja, alguém o tinha treinado
+
+33
+00:04:03,139 --> 00:04:07,139
+e ele estava empacotado neste formato LitRT
+
+34
+00:04:07,139 --> 00:04:11,139
+e depois vocês simplesmente o usaram do vosso lado.
+
+35
+00:04:11,139 --> 00:04:14,139
+Ok? Pronto.
+
+36
+00:04:14,139 --> 00:04:18,139
+Então, hoje vamos falar do TensorFlow e do PyTorch.
+
+37
+00:04:20,139 --> 00:04:23,139
+São, digamos, três papéis.
+
+38
+00:04:23,139 --> 00:04:27,139
+Primeiro, as frameworks, como é que construímos o modelo,
+
+39
+00:04:27,139 --> 00:04:30,139
+como é que o treinamos, sempre feito fora da placa,
+
+40
+00:04:30,139 --> 00:04:32,139
+foi aquilo que eu vos disse na primeira aula,
+
+41
+00:04:32,139 --> 00:04:35,139
+não vale a pena treinarem modelos na placa, esqueçam isso,
+
+42
+00:04:35,139 --> 00:04:39,139
+isto é sempre feito fora da placa e usam a framework de treino,
+
+43
+00:04:39,139 --> 00:04:41,139
+ou seja, TensorFlow ou PyTorch.
+
+44
+00:04:41,139 --> 00:04:46,139
+Depois, tem o formato do modelo no fim,
+
+45
+00:04:46,139 --> 00:04:52,139
+quando o exportam e o põem na placa vão usar LitRT
+
+46
+00:04:52,139 --> 00:05:00,139
+e depois o runtime, é o software que executa o LitRT.
+
+47
+00:05:00,139 --> 00:05:04,139
+Nenhum software se chama runtime, mas no sentido de
+
+48
+00:05:04,139 --> 00:05:07,139
+depois como é que vocês pegam no LitRT e o põem a fazer a inferência.
+
+49
+00:05:07,139 --> 00:05:10,139
+Foi um bocadinho que já fizemos na PL anterior.
+
+50
+00:05:11,139 --> 00:05:13,139
+Portanto, TensorFlow.
+
+51
+00:05:13,139 --> 00:05:18,139
+O TensorFlow foi disponibilizado pela Google em código aberto em 2015.
+
+52
+00:05:20,139 --> 00:05:26,139
+Não passa de uma ferramenta que codifica toda aquela matemática
+
+53
+00:05:26,139 --> 00:05:30,139
+que fomos vendo na aula passada, aquelas matrizes, aqueles pesos,
+
+54
+00:05:30,139 --> 00:05:32,139
+aqueles biases, etc, etc.
+
+55
+00:05:32,139 --> 00:05:34,139
+Está ali por trás.
+
+56
+00:05:34,139 --> 00:05:37,139
+Portanto, é uma framework de cálculo numérico
+
+57
+00:05:37,139 --> 00:05:41,139
+que nos permite chegar a deep learning e aprendizagem.
+
+58
+00:05:42,139 --> 00:05:45,139
+Fornece-se vários métodos que já estão implementados
+
+59
+00:05:45,139 --> 00:05:47,139
+para trabalhar os dados,
+
+60
+00:05:47,139 --> 00:05:51,139
+para cálcular os gradient descent que nós falávamos na aula passada
+
+61
+00:05:51,139 --> 00:05:55,139
+e ferramentas para construir, treinar e exportar os modelos.
+
+62
+00:05:56,139 --> 00:05:59,139
+Quando dizemos, ou quando ouvirem alguém a dizer
+
+63
+00:05:59,139 --> 00:06:01,139
+eu estou a usar TensorFlow,
+
+64
+00:06:02,139 --> 00:06:05,139
+nós não estamos a dizer que tipo de rede é que estamos a usar, nada.
+
+65
+00:06:05,139 --> 00:06:08,139
+Simplesmente estamos a usar uma biblioteca
+
+66
+00:06:08,139 --> 00:06:12,139
+que nos tem ferramentas para nós para nos facilitar o nosso trabalho.
+
+67
+00:06:14,139 --> 00:06:17,139
+Na PL2 é o TensorFlow que vamos usar,
+
+68
+00:06:17,139 --> 00:06:21,139
+ou seja, a PL que vamos fazer no sábado é o TensorFlow que usamos
+
+69
+00:06:21,139 --> 00:06:26,139
+para construir as nossas camadas e o nosso treino.
+
+70
+00:06:27,139 --> 00:06:30,139
+Antes de falarmos de qualquer coisa, vocês repararam aqui no nome
+
+71
+00:06:30,139 --> 00:06:35,139
+TensorFlow, o flow dos tensors.
+
+72
+00:06:35,139 --> 00:06:36,139
+E o que é um tensor?
+
+73
+00:06:36,139 --> 00:06:41,139
+E esta é a parte importante, porque o tensor é a estrutura de dados central
+
+74
+00:06:41,139 --> 00:06:45,139
+quer nesta framework do TensorFlow, quer no PyTorch.
+
+75
+00:06:46,139 --> 00:06:48,139
+O tensor é a base disto tudo.
+
+76
+00:06:49,139 --> 00:06:51,139
+Portanto, para esta aula podemos pensar num tensor
+
+77
+00:06:51,139 --> 00:06:54,139
+como um conjunto de valores organizados
+
+78
+00:06:54,139 --> 00:06:57,139
+em vários eixos, em várias dimensões.
+
+79
+00:06:57,139 --> 00:07:02,139
+Vocês podem ter a dimensão zero,
+
+80
+00:07:02,139 --> 00:07:05,139
+que é quando ela é um escalar, é apenas um número.
+
+81
+00:07:05,139 --> 00:07:08,139
+Podem ter a dimensão 1,
+
+82
+00:07:08,139 --> 00:07:11,139
+já vamos perceber como é que isto se representa,
+
+83
+00:07:11,139 --> 00:07:13,139
+depois já explico melhor,
+
+84
+00:07:13,139 --> 00:07:17,139
+mas tem um vector, que é a dimensão em que ela é só de uma dimensão,
+
+85
+00:07:17,139 --> 00:07:21,139
+quando é duas dimensões é uma matriz,
+
+86
+00:07:21,139 --> 00:07:27,139
+quando, digamos, tem profundidade é um tensor de higher rank,
+
+87
+00:07:27,139 --> 00:07:29,139
+ou seja, de maior dimensão.
+
+88
+00:07:31,139 --> 00:07:36,139
+Isto é a base, quando estas palavras usam-se muito na gíria
+
+89
+00:07:36,139 --> 00:07:40,139
+de Inteligência Artificial e Deep Learning, etc.
+
+90
+00:07:40,139 --> 00:07:44,139
+Scalar, Vector, Matriz e Higher Rank.
+
+91
+00:07:44,139 --> 00:07:45,139
+Quatro palavras.
+
+92
+00:07:45,139 --> 00:07:48,139
+Deixe-me só passar aqui o slide.
+
+93
+00:07:50,139 --> 00:07:54,139
+Então, vamos aqui começar a olhar para cada uma delas.
+
+94
+00:07:55,139 --> 00:07:58,139
+À esquerda temos apenas o valor 4, certo?
+
+95
+00:07:58,139 --> 00:08:01,139
+O valor 4 é um escalar,
+
+96
+00:08:01,139 --> 00:08:05,139
+ou seja, a sua forma para uma rede neuronal é isto.
+
+97
+00:08:06,139 --> 00:08:08,139
+O que é uma forma?
+
+98
+00:08:08,139 --> 00:08:12,139
+Não tem eixos, ou seja, não é apenas um valor,
+
+99
+00:08:12,139 --> 00:08:15,139
+e então é do rank zero.
+
+100
+00:08:15,139 --> 00:08:18,139
+Só tem um valor e o valor existe por si,
+
+101
+00:08:18,139 --> 00:08:23,139
+mas não nos diz nada lá dentro.
+
+102
+00:08:23,139 --> 00:08:25,139
+Ou seja, vocês até podem ver aqui,
+
+103
+00:08:25,139 --> 00:08:27,139
+isto depois vai ficar claro, mais à frente,
+
+104
+00:08:27,139 --> 00:08:29,139
+representa-se desta forma.
+
+105
+00:08:29,139 --> 00:08:32,139
+Um 4 sem vírgula, sem nada, ok?
+
+106
+00:08:32,139 --> 00:08:37,139
+Um 4, digamos, podem representar assim e com o valor fora,
+
+107
+00:08:37,139 --> 00:08:40,139
+ou podem representar assim e com o valor fora,
+
+108
+00:08:40,139 --> 00:08:44,139
+ou podem representar assim, é apenas o número 4.
+
+109
+00:08:44,139 --> 00:08:46,139
+Podia ser qualquer outro número,
+
+110
+00:08:46,139 --> 00:08:49,139
+mas é apenas um escalar, é apenas um número.
+
+111
+00:08:49,139 --> 00:08:55,740
+Depois, deixe-me só passar aqui, ok.
+
+112
+00:08:55,740 --> 00:08:57,740
+Não é ok, temos que ver isto aqui.
+
+113
+00:08:57,740 --> 00:09:00,740
+Já à direita temos um vetor,
+
+114
+00:09:00,740 --> 00:09:04,740
+ou seja, o vetor, a forma é 4 vírgula.
+
+115
+00:09:04,740 --> 00:09:05,740
+E o que é que é 4 vírgula?
+
+116
+00:09:05,740 --> 00:09:07,740
+Por que é que é 4 vírgula?
+
+117
+00:09:07,740 --> 00:09:12,740
+Nós temos um, dois, três, quatro números,
+
+118
+00:09:12,740 --> 00:09:17,740
+ou seja, em linha, nós temos uma linha,
+
+119
+00:09:17,740 --> 00:09:19,740
+mas quando é apenas uma linha, quando é um vetor,
+
+120
+00:09:19,740 --> 00:09:21,740
+nós não pomos aqui o número,
+
+121
+00:09:21,740 --> 00:09:24,740
+e temos uma, duas, três, quatro colunas,
+
+122
+00:09:24,740 --> 00:09:27,740
+ou seja, quatro colunas vírgula qualquer coisa.
+
+123
+00:09:27,740 --> 00:09:30,740
+É assim que se representa o vetor.
+
+124
+00:09:30,740 --> 00:09:35,740
+E sempre que vocês pedirem a shape da vossa camada neuronal,
+
+125
+00:09:35,740 --> 00:09:39,740
+da vossa camada de entrada, da camada de saída, etc, etc, etc,
+
+126
+00:09:39,740 --> 00:09:41,740
+vai-vos aparecer uma coisa destas.
+
+127
+00:09:41,740 --> 00:09:44,740
+Aliás, eu já vos fui introduzindo um bocadinho este tema,
+
+128
+00:09:44,740 --> 00:09:49,740
+porque ao longo do tempo que fomos fazendo a PL1,
+
+129
+00:09:49,740 --> 00:09:52,740
+eu até já vos falei de algumas shapes, já vamos recordar isso.
+
+130
+00:09:52,740 --> 00:09:54,740
+Ok?
+
+131
+00:09:54,740 --> 00:09:56,740
+Pronto.
+
+132
+00:09:56,740 --> 00:09:58,740
+Só para se lembrarem, a vírgula faz diferença.
+
+133
+00:09:58,740 --> 00:10:00,740
+4 vírgula representa o vetor,
+
+134
+00:10:00,740 --> 00:10:02,740
+e 4 entre parênteses representam o escalar.
+
+135
+00:10:02,740 --> 00:10:03,740
+Ok?
+
+136
+00:10:03,740 --> 00:10:09,340
+Depois, passando aqui outra vez, vetor.
+
+137
+00:10:09,340 --> 00:10:15,340
+Vejam que aqui é um vetor, é uma lista de vários números.
+
+138
+00:10:15,340 --> 00:10:20,340
+Mais uma vez, é um vetor de 3 vírgula, e é assim que se representa.
+
+139
+00:10:20,340 --> 00:10:26,340
+É de um eixo, e é considerado rank 1.
+
+140
+00:10:26,340 --> 00:10:27,340
+Ok?
+
+141
+00:10:27,340 --> 00:10:31,340
+Reparem que estes três exemplos que nós vamos falar aqui,
+
+142
+00:10:31,340 --> 00:10:33,340
+têm todos três valores,
+
+143
+00:10:33,340 --> 00:10:36,340
+e que interessam-nos a forma como estão organizados.
+
+144
+00:10:36,340 --> 00:10:39,340
+E vocês dizem assim.
+
+145
+00:10:39,340 --> 00:10:43,340
+Ok, isto é um vetor, porque é uma lista.
+
+146
+00:10:43,340 --> 00:10:47,340
+Quando nós passamos a uma coluna,
+
+147
+00:10:47,340 --> 00:10:50,340
+tem na mesma três valores, representa-se assim, ou seja,
+
+148
+00:10:50,340 --> 00:10:52,340
+3 por 1.
+
+149
+00:10:52,340 --> 00:10:57,340
+Nós temos 3 linhas por uma coluna.
+
+150
+00:10:57,340 --> 00:10:59,340
+Correto?
+
+151
+00:10:59,340 --> 00:11:02,340
+E vocês dizem assim, este é de rank 2.
+
+152
+00:11:02,340 --> 00:11:03,340
+Tudo bem?
+
+153
+00:11:03,340 --> 00:11:06,340
+Porque tem aqui dois números, vamos dizer assim.
+
+154
+00:11:06,340 --> 00:11:11,340
+E este aqui não é igual a este primeiro vetor aqui.
+
+155
+00:11:11,340 --> 00:11:15,340
+A questão é, é igual,
+
+156
+00:11:15,340 --> 00:11:18,340
+ou pelo menos se vocês estiverem a olhar apenas para aqui,
+
+157
+00:11:18,340 --> 00:11:19,340
+é parecido.
+
+158
+00:11:19,340 --> 00:11:21,340
+Só que aqui interessa-nos a ordem.
+
+159
+00:11:21,340 --> 00:11:23,340
+Nós aqui sabemos que é um vetor numérico.
+
+160
+00:11:23,340 --> 00:11:25,340
+Está guardado dentro de uma variável de numpy,
+
+161
+00:11:25,340 --> 00:11:26,340
+é um vetor, ok?
+
+162
+00:11:26,340 --> 00:11:27,340
+É um array.
+
+163
+00:11:27,340 --> 00:11:31,340
+E não é o formato de dados, não está no formato correto.
+
+164
+00:11:31,340 --> 00:11:33,340
+Está num formato tensor.
+
+165
+00:11:33,340 --> 00:11:36,340
+Um formato tensor, se tiver este formato,
+
+166
+00:11:36,340 --> 00:11:38,340
+tem que ter esta representação, ok?
+
+167
+00:11:38,340 --> 00:11:40,340
+Portanto, lembrem-se sempre.
+
+168
+00:11:40,340 --> 00:11:43,340
+Filas, ok?
+
+169
+00:11:43,340 --> 00:11:45,340
+Roles.
+
+170
+00:11:45,340 --> 00:11:48,850
+Número a seguir, colunas.
+
+171
+00:11:48,850 --> 00:11:50,850
+Pronto.
+
+172
+00:11:50,850 --> 00:11:53,850
+Ter a mesma quantidade de valores, todos eles têm três,
+
+173
+00:11:53,850 --> 00:11:57,850
+não significa que tenham a mesma forma.
+
+174
+00:11:57,850 --> 00:12:00,850
+Uma operação pode aceitar organizações diferentes,
+
+175
+00:12:00,850 --> 00:12:01,850
+portanto, é muito importante.
+
+176
+00:12:01,850 --> 00:12:03,850
+E por isso é que existe esta organização,
+
+177
+00:12:03,850 --> 00:12:08,850
+porque a organização dos números importa, ok?
+
+178
+00:12:08,850 --> 00:12:14,019
+Passando à frente.
+
+179
+00:12:14,019 --> 00:12:17,169
+Desculpem.
+
+180
+00:12:17,169 --> 00:12:19,169
+Ok.
+
+181
+00:12:19,169 --> 00:12:21,169
+Agora vamos olhar para esta com calma.
+
+182
+00:12:21,169 --> 00:12:27,169
+O primeiro número indica que temos duas linhas, certo?
+
+183
+00:12:27,169 --> 00:12:32,169
+E o segundo indica que temos três colunas.
+
+184
+00:12:32,169 --> 00:12:35,169
+Nas bibliotecas, contamos os eixos a partir do zero,
+
+185
+00:12:35,169 --> 00:12:38,169
+ou seja, o eixo zero corresponde aqui às linhas,
+
+186
+00:12:38,169 --> 00:12:42,169
+e o eixo um às colunas é o que eu vos disse há um bocado,
+
+187
+00:12:42,169 --> 00:12:47,169
+ou seja, eixo zero, o primeiro valor é as linhas,
+
+188
+00:12:47,169 --> 00:12:49,169
+e aqui é as colunas.
+
+189
+00:12:49,169 --> 00:12:53,169
+Este aqui já tem seis valores, ok?
+
+190
+00:12:53,169 --> 00:12:55,169
+Continua a ser de rank 2,
+
+191
+00:12:55,169 --> 00:12:59,169
+porque nós só temos duas dimensões, ok?
+
+192
+00:12:59,169 --> 00:13:01,169
+Mas já tem seis valores aqui dentro.
+
+193
+00:13:01,169 --> 00:13:05,169
+Lá está. Temos duas linhas, três colunas.
+
+194
+00:13:05,169 --> 00:13:09,169
+E temos aqui três conceitos diferentes, lembrem-se sempre destes conceitos.
+
+195
+00:13:09,169 --> 00:13:11,169
+Shape é o que nos dá a forma,
+
+196
+00:13:11,169 --> 00:13:15,169
+o rank é o número de eixos, ou seja, duas dimensões, vamos dizer assim,
+
+197
+00:13:15,169 --> 00:13:19,169
+e o size é o número de valores que lá tem dentro, ok?
+
+198
+00:13:19,169 --> 00:13:21,169
+Porto.
+
+199
+00:13:21,169 --> 00:13:23,169
+Passando aqui à frente.
+
+200
+00:13:23,169 --> 00:13:28,169
+Imagens, nas imagens que temos visto.
+
+201
+00:13:29,169 --> 00:13:34,169
+As imagens que temos visto eram 28 por 28, certo?
+
+202
+00:13:34,169 --> 00:13:38,169
+Portanto, nós podemos representá-las como 28 por 28.
+
+203
+00:13:38,169 --> 00:13:42,169
+Elas são duas dimensões, ok?
+
+204
+00:13:42,169 --> 00:13:48,169
+E representamos a altura e o comprimento da imagem, os dois lados,
+
+205
+00:13:48,169 --> 00:13:52,169
+e que cada um destes valores tem lá um valor dentro, ok?
+
+206
+00:13:52,169 --> 00:13:57,169
+Depois, nós podemos também tornar explícito um eixo de canais,
+
+207
+00:13:57,169 --> 00:14:00,169
+ou seja, como só existe um canal,
+
+208
+00:14:00,169 --> 00:14:03,169
+ou seja, cada pixel só tem um número associado,
+
+209
+00:14:03,169 --> 00:14:06,169
+nós podemos representar como três dimensões.
+
+210
+00:14:06,169 --> 00:14:10,169
+Imaginem vocês, é parecido, basicamente é dizemos que temos uma coisa
+
+211
+00:14:10,169 --> 00:14:15,169
+num espaço tridimensional que é apenas com duas dimensões.
+
+212
+00:14:15,169 --> 00:14:19,169
+É uma imagem de 28 por 28, em que cada pixel só tem um valor.
+
+213
+00:14:19,169 --> 00:14:23,169
+Quando estamos a falar de 128 imagens,
+
+214
+00:14:23,169 --> 00:14:25,169
+que já falámos na aula passada,
+
+215
+00:14:25,169 --> 00:14:28,169
+o que é que era um batch, ok?
+
+216
+00:14:28,169 --> 00:14:31,169
+Nós dizemos, representa-se desta forma,
+
+217
+00:14:31,169 --> 00:14:37,169
+são 128 imagens de 28 por 28, em que cada uma tem apenas um valor, ok?
+
+218
+00:14:37,169 --> 00:14:42,169
+Por exemplo, se estivéssemos a falar de uma imagem de três canais,
+
+219
+00:14:42,169 --> 00:14:46,169
+ou se três canais seriam vermelho, verde e azul,
+
+220
+00:14:46,169 --> 00:14:49,169
+ou seja, a intensidade de cada uma das cores,
+
+221
+00:14:49,169 --> 00:14:54,169
+estaríamos a colocar aqui 128, 128, 28, 3, ok?
+
+222
+00:14:54,169 --> 00:15:00,169
+E aqui é que são os canais e diz-nos que para cada pixel temos x valores.
+
+223
+00:15:00,169 --> 00:15:07,169
+Se pensarem um bocadinho, é como termos aqui 28 por 28,
+
+224
+00:15:07,169 --> 00:15:10,169
+em que cada pixel, pensem tridimensionalmente,
+
+225
+00:15:10,169 --> 00:15:14,169
+cada pixel tem mais que um valor, ok?
+
+226
+00:15:14,169 --> 00:15:18,169
+Pronto, depois deixem-me só falar deste aqui.
+
+227
+00:15:18,169 --> 00:15:22,169
+Uma imagem de 128 por 28 por um channel,
+
+228
+00:15:22,169 --> 00:15:27,169
+por um channel, tem 100.352 valores,
+
+229
+00:15:27,169 --> 00:15:32,169
+ou seja, porque temos 128 imagens,
+
+230
+00:15:32,169 --> 00:15:35,169
+cada uma tem 28 por 28 e cada uma tem um valor.
+
+231
+00:15:35,169 --> 00:15:39,169
+Isto a conta faz simplesmente é apenas fazer a conta,
+
+232
+00:15:39,169 --> 00:15:42,169
+e aqui já dizemos que tem rank 4,
+
+233
+00:15:42,169 --> 00:15:46,169
+porque já são 4 dimensões da imagem.
+
+234
+00:15:46,169 --> 00:15:49,169
+Passando aqui à frente um bocadinho,
+
+235
+00:15:49,169 --> 00:15:54,169
+vamos acompanhar os dados que nós vamos usar na PL2, ok?
+
+236
+00:15:54,169 --> 00:15:57,169
+Portanto, as imagens que nós vamos dar ao modelo,
+
+237
+00:15:57,169 --> 00:16:02,169
+que nós treinamos, são 128 imagens de 28 por 28,
+
+238
+00:16:02,169 --> 00:16:06,169
+mesmo exercício que já vimos ali atrás.
+
+239
+00:16:06,169 --> 00:16:09,169
+Depois, nós temos uma camada de flatten,
+
+240
+00:16:09,169 --> 00:16:12,169
+flatten foi aquilo que eu vos falei na aula passada,
+
+241
+00:16:12,169 --> 00:16:14,169
+ou seja, passamos estes 28 por 28,
+
+242
+00:16:14,169 --> 00:16:17,169
+podíamos ter ali o 1 a explicar que era um canal,
+
+243
+00:16:17,169 --> 00:16:20,169
+nós temos 784 valores lá dentro.
+
+244
+00:16:20,169 --> 00:16:24,169
+Portanto, passamos a ter, imaginem vocês,
+
+245
+00:16:24,169 --> 00:16:27,169
+um vetor, aliás uma matriz,
+
+246
+00:16:27,169 --> 00:16:31,169
+representada na nossa memória,
+
+247
+00:16:31,169 --> 00:16:35,169
+que tem 128 imagens, cada uma com 784 valores.
+
+248
+00:16:35,169 --> 00:16:40,669
+Ora, depois vamos pôr uma camada dense,
+
+249
+00:16:40,669 --> 00:16:44,669
+ou seja, uma camada lá dentro da rede,
+
+250
+00:16:44,669 --> 00:16:47,669
+que tem a ativação relu, que vai ter
+
+251
+00:16:48,669 --> 00:16:52,669
+este formato. E o que é que significa este formato?
+
+252
+00:16:52,669 --> 00:16:57,669
+Basicamente, produz 64 valores por imagem,
+
+253
+00:16:57,669 --> 00:17:00,669
+vai receber na mesma, está preparado para receber a 128,
+
+254
+00:17:00,669 --> 00:17:03,669
+mas na verdade produz 64 valores por imagem.
+
+255
+00:17:03,669 --> 00:17:08,670
+E depois, afinal, está para as 128 imagens,
+
+256
+00:17:08,670 --> 00:17:11,670
+mas produz 10 valores, ok?
+
+257
+00:17:11,670 --> 00:17:15,670
+Ali o 128, se vocês quiserem, se for mais fácil para vocês,
+
+258
+00:17:15,670 --> 00:17:18,670
+podem tirá-lo fora. Se tirarem este 128 fora,
+
+259
+00:17:18,670 --> 00:17:21,670
+que nos diz quantas imagens são, ou quantos dados são,
+
+260
+00:17:21,670 --> 00:17:24,670
+não pensem só em imagens, porque mais tarde pode ser quantidade de dados,
+
+261
+00:17:24,670 --> 00:17:27,670
+ou outra coisa qualquer, nós recebemos 28 por 28 as imagens,
+
+262
+00:17:27,670 --> 00:17:30,670
+transformamos num flatten, que é a que nos dá
+
+263
+00:17:30,670 --> 00:17:33,670
+um array único, vamos dizer assim,
+
+264
+00:17:33,670 --> 00:17:38,670
+um desses, um row matrix de...
+
+265
+00:17:39,670 --> 00:17:43,670
+Desculpem, um vetor único, era isso que eu queria dizer,
+
+266
+00:17:43,670 --> 00:17:46,670
+um vetor único de 784 valores,
+
+267
+00:17:46,670 --> 00:17:49,670
+e depois vamos ter uma camada com 64 neurónios
+
+268
+00:17:49,670 --> 00:17:51,670
+e uma camada com 10 neurónios.
+
+269
+00:17:51,670 --> 00:17:53,670
+Mas é assim que, dentro do software,
+
+270
+00:17:53,670 --> 00:17:58,140
+vamos solicitar como é que isto funciona.
+
+271
+00:17:58,140 --> 00:18:02,140
+Depois, uma camada densa,
+
+272
+00:18:02,140 --> 00:18:04,140
+esta camada densa que eu falei aqui atrás,
+
+273
+00:18:04,140 --> 00:18:07,140
+por exemplo, uma camada dentro de uma rede neuronal,
+
+274
+00:18:10,140 --> 00:18:13,140
+guarda os seus pesos numa matriz,
+
+275
+00:18:13,140 --> 00:18:16,140
+portanto, ela própria também pode ser representada
+
+276
+00:18:16,140 --> 00:18:19,140
+num formato de uma matriz, de um tensor.
+
+277
+00:18:19,140 --> 00:18:22,140
+Ou seja, por que é que aparecem estas matrizes na rede neuronal?
+
+278
+00:18:22,140 --> 00:18:26,140
+Neste exemplo temos três entradas,
+
+279
+00:18:29,140 --> 00:18:32,140
+e estas três entradas temos dois neurónios.
+
+280
+00:18:34,140 --> 00:18:37,140
+Cada neurónio recebe as três entradas, por isso,
+
+281
+00:18:37,140 --> 00:18:40,140
+cada neurónio precisa de três pesos.
+
+282
+00:18:41,140 --> 00:18:44,140
+Um peso para cada ligação de entrada.
+
+283
+00:18:45,140 --> 00:18:47,140
+E se vocês virem, na matriz W,
+
+284
+00:18:47,140 --> 00:18:50,140
+colocamos os pesos do primeiro neurónio na primeira linha,
+
+285
+00:18:50,140 --> 00:18:52,140
+ou seja, o primeiro neurónio,
+
+286
+00:18:52,140 --> 00:18:54,140
+imaginem que está aqui como uma linha,
+
+287
+00:18:54,140 --> 00:18:57,140
+tem o peso 1, peso 2 e peso 3.
+
+288
+00:18:57,140 --> 00:19:01,140
+O segundo neurónio tem o peso 1, peso 2 e peso 3.
+
+289
+00:19:02,140 --> 00:19:03,140
+Porque lá está.
+
+290
+00:19:03,140 --> 00:19:07,140
+Imaginem aqui que temos três entradas e dois neurónios.
+
+291
+00:19:08,140 --> 00:19:11,140
+Para cada uma das entradas vamos ter que ter um peso,
+
+292
+00:19:11,140 --> 00:19:14,140
+cada um dos neurónios vai ter que ter um peso para essa entrada.
+
+293
+00:19:14,140 --> 00:19:19,140
+Depois, na segunda linha estão os pesos do segundo neurónio,
+
+294
+00:19:19,140 --> 00:19:22,140
+e temos duas linhas e três colunas,
+
+295
+00:19:22,140 --> 00:19:27,099
+logo o formato é 2 por 3.
+
+296
+00:19:27,099 --> 00:19:29,099
+Depois temos o vetor X.
+
+297
+00:19:29,099 --> 00:19:33,099
+O vetor X contém os três valores da entrada, vocês imaginem,
+
+298
+00:19:33,099 --> 00:19:37,099
+que a vossa entrada, que estava a entrar na rede neuronal,
+
+299
+00:19:37,099 --> 00:19:39,099
+tinha os valores 1, 2 e 3.
+
+300
+00:19:39,099 --> 00:19:46,099
+E estes valores 1, 2 e 3 iam passar, digamos, pela rede que tinha lá dois neurónios.
+
+301
+00:19:47,099 --> 00:19:50,099
+Tenho que tentar imaginar aquela representação gráfica,
+
+302
+00:19:50,099 --> 00:19:52,099
+eu não sei se consigo desenhar aqui, acho que não.
+
+303
+00:19:52,099 --> 00:19:59,410
+Deixem-me ver se eu consigo aqui arranjar algo que me permita desenhar.
+
+304
+00:20:00,410 --> 00:20:08,410
+Aqui, vocês têm que imaginar aqui que nós temos três entradas,
+
+305
+00:20:08,410 --> 00:20:10,410
+não vou representar assim,
+
+306
+00:20:10,410 --> 00:20:14,410
+vamos representar aqui, temos dois neurónios lá dentro,
+
+307
+00:20:14,410 --> 00:20:18,410
+e temos aqui uma, duas, três entradas.
+
+308
+00:20:18,410 --> 00:20:25,410
+Este X é o que está aqui, é 3 da altura por 1.
+
+309
+00:20:26,410 --> 00:20:29,410
+E estes pesos, o que é que representa é que cada um destes neurónios,
+
+310
+00:20:29,410 --> 00:20:32,410
+o neurónio 1, que imaginem que é a primeira linha,
+
+311
+00:20:32,410 --> 00:20:37,410
+tem o peso 1, o peso 2 e o peso 3.
+
+312
+00:20:37,410 --> 00:20:40,410
+O neurónio 2, que é a segunda linha,
+
+313
+00:20:40,410 --> 00:20:44,410
+tem o peso 1, o peso 2 e o peso 3.
+
+314
+00:20:44,410 --> 00:20:46,410
+E isto é uma rede neuronal.
+
+315
+00:20:46,410 --> 00:20:50,410
+Portanto, vocês estão a ver aqui que através de duas matrizes,
+
+316
+00:20:50,410 --> 00:20:52,410
+nós estamos a representar uma rede neuronal.
+
+317
+00:20:52,410 --> 00:20:54,410
+Continuando aqui o nosso exemplo,
+
+318
+00:20:55,410 --> 00:20:57,410
+diz-me, diz-me.
+
+319
+00:20:57,410 --> 00:20:59,410
+Fiquei um bocado confuso.
+
+320
+00:20:59,410 --> 00:21:03,410
+Quando representamos a camada dos neurónios, a rede neuronal,
+
+321
+00:21:03,410 --> 00:21:12,410
+não seria de esperar que tivesse três valores no shape
+
+322
+00:21:12,410 --> 00:21:17,410
+para indicar que é linha, coluna e quantos canais tem?
+
+323
+00:21:17,410 --> 00:21:19,410
+Ou os pesos não são um canal?
+
+324
+00:21:19,410 --> 00:21:22,410
+Os pesos não são um canal.
+
+325
+00:21:22,410 --> 00:21:24,410
+Eu percebo outra questão, ok?
+
+326
+00:21:26,410 --> 00:21:29,410
+O tensor em si, nós um bocado estávamos a falar de tensors
+
+327
+00:21:29,410 --> 00:21:31,410
+e se calhar isso não ficou bem explícito.
+
+328
+00:21:31,410 --> 00:21:33,410
+Isto são tensors, ok?
+
+329
+00:21:33,410 --> 00:21:36,410
+Isto que aqui está à frente são representações matriciais,
+
+330
+00:21:36,410 --> 00:21:38,410
+que usam um bocadinho daquela ideia do tensor,
+
+331
+00:21:38,410 --> 00:21:41,410
+mas os canais aqui não entram.
+
+332
+00:21:43,410 --> 00:21:47,410
+Desculpa que perdi aqui o meu desenho.
+
+333
+00:21:47,410 --> 00:21:49,410
+Nós aqui representamos, aliás,
+
+334
+00:21:49,410 --> 00:21:51,410
+uma rede neuronal representa-se desta forma,
+
+335
+00:21:51,410 --> 00:21:54,410
+podia-se representar pelos tais channels,
+
+336
+00:21:54,410 --> 00:21:56,410
+mas não se faz isto, porquê?
+
+337
+00:21:56,410 --> 00:21:59,410
+Porque esta representação, como se representa aqui
+
+338
+00:21:59,410 --> 00:22:02,410
+uma matriz vezes outra matriz,
+
+339
+00:22:02,410 --> 00:22:06,410
+nós estamos a fazer uma multiplicação de matrizes.
+
+340
+00:22:06,410 --> 00:22:09,410
+E eu não queria estar a entrar muito em detalhes sobre isso,
+
+341
+00:22:09,410 --> 00:22:14,410
+mas é uma das contas mais eficientes que nós podemos fazer.
+
+342
+00:22:14,410 --> 00:22:16,410
+Não sei qual é o vosso background,
+
+343
+00:22:16,410 --> 00:22:18,410
+não sei se tiveram álgebra,
+
+344
+00:22:18,410 --> 00:22:20,410
+não sei se fizeram a multiplicação de matrizes,
+
+345
+00:22:20,410 --> 00:22:24,410
+mas a multiplicação de matrizes é uma conta bastante simples
+
+346
+00:22:24,410 --> 00:22:26,410
+em termos computacionais
+
+347
+00:22:26,410 --> 00:22:29,410
+e as gráficas fazem-o muito bem.
+
+348
+00:22:29,410 --> 00:22:32,410
+Basicamente são estas contas que as gráficas têm que fazer
+
+349
+00:22:32,410 --> 00:22:34,410
+quando estão a renderizar um jogo,
+
+350
+00:22:34,410 --> 00:22:37,410
+para vocês verem o ambiente do jogo e etc.
+
+351
+00:22:37,410 --> 00:22:40,410
+Portanto, esta representação ajudou imenso,
+
+352
+00:22:40,410 --> 00:22:42,410
+porque nós vamos fazer uma conta matemática
+
+353
+00:22:42,410 --> 00:22:44,410
+de uma matriz vezes a outra
+
+354
+00:22:44,410 --> 00:22:49,410
+e para acabar, no fim, fazemos apenas a adição dos pesos.
+
+355
+00:22:49,410 --> 00:22:51,410
+Basicamente aqui, depois tem um peso associado,
+
+356
+00:22:51,410 --> 00:22:53,410
+um B1 e um B2.
+
+357
+00:22:53,410 --> 00:22:57,410
+Ou seja, transformamos todas estas contas
+
+358
+00:22:57,410 --> 00:22:59,410
+que nós vimos na aula anterior
+
+359
+00:22:59,410 --> 00:23:01,410
+numa multiplicação e adição de matrizes.
+
+360
+00:23:01,410 --> 00:23:03,410
+E por isso é que se faz desta maneira.
+
+361
+00:23:03,410 --> 00:23:07,410
+Isto são os inner workings do TensorFlow
+
+362
+00:23:07,410 --> 00:23:09,410
+e das camadas do TensorFlow.
+
+363
+00:23:09,410 --> 00:23:11,410
+Não sei se ficou esclarecido,
+
+364
+00:23:11,410 --> 00:23:13,410
+mas se tiveres mais alguma dúvida,
+
+365
+00:23:13,410 --> 00:23:15,410
+podemos esclarecer daqui um pouco.
+
+366
+00:23:15,410 --> 00:23:19,410
+Isto é mais interpretado pela matemática em si,
+
+367
+00:23:19,410 --> 00:23:22,410
+não é tanto daquilo que está a representar.
+
+368
+00:23:22,410 --> 00:23:24,410
+Sim.
+
+369
+00:23:24,410 --> 00:23:28,410
+Isto representa e na memória fica guardado assim, ok?
+
+370
+00:23:28,410 --> 00:23:32,410
+É desta forma que fica depois guardado
+
+371
+00:23:32,410 --> 00:23:36,410
+e que depois se trata na multiplicação deles.
+
+372
+00:23:37,410 --> 00:23:41,410
+Só uma questão.
+
+373
+00:23:41,410 --> 00:23:44,410
+No caso, isto é representado desta maneira
+
+374
+00:23:44,410 --> 00:23:47,410
+porque é sempre visto como um todo, não é?
+
+375
+00:23:47,410 --> 00:23:49,410
+Nunca vemos...
+
+376
+00:23:49,410 --> 00:23:51,410
+Não é usado de forma isolada,
+
+377
+00:23:51,410 --> 00:23:54,410
+por isso é que se usa as matrizes desta maneira.
+
+378
+00:23:54,410 --> 00:23:56,410
+Como assim, de forma isolada?
+
+379
+00:23:58,410 --> 00:24:00,410
+Por exemplo, o W.
+
+380
+00:24:00,410 --> 00:24:02,410
+Nunca vai ser usado por si só,
+
+381
+00:24:02,410 --> 00:24:04,410
+nem sempre em associação às entradas.
+
+382
+00:24:04,410 --> 00:24:06,410
+Por isso é que é representado assim.
+
+383
+00:24:06,410 --> 00:24:08,410
+Exatamente.
+
+384
+00:24:08,410 --> 00:24:12,410
+Nós sabemos sempre que vai ser este vezes este
+
+385
+00:24:12,410 --> 00:24:14,410
+e este vezes este,
+
+386
+00:24:14,410 --> 00:24:16,410
+este vezes este, este vezes este,
+
+387
+00:24:16,410 --> 00:24:19,410
+este vezes este e este vezes este, ok?
+
+388
+00:24:19,410 --> 00:24:21,410
+E assim nós temos uma associação também,
+
+389
+00:24:21,410 --> 00:24:23,410
+é como tu estás a dizer.
+
+390
+00:24:23,410 --> 00:24:25,410
+Ok, muito obrigado.
+
+391
+00:24:25,410 --> 00:24:27,410
+Se ficares com mais alguma dúvida,
+
+392
+00:24:27,410 --> 00:24:29,410
+depois podemos esclarecer daqui um bocadinho.
+
+393
+00:24:29,410 --> 00:24:31,410
+Agora, estou a entrar no tema,
+
+394
+00:24:31,410 --> 00:24:33,410
+resolva-se se não ficar...
+
+395
+00:24:33,410 --> 00:24:35,410
+depois vemos, ok?
+
+396
+00:24:35,410 --> 00:24:37,410
+Mas, basicamente,
+
+397
+00:24:37,410 --> 00:24:40,410
+permite-nos, com esta anotação de matrizes
+
+398
+00:24:40,410 --> 00:24:43,410
+e de soma de matrizes e de multiplicação,
+
+399
+00:24:43,410 --> 00:24:46,410
+permite-nos codificar esta conta que aqui está em baixo.
+
+400
+00:24:46,410 --> 00:24:49,410
+Ou seja, nós calculamos o Z1 como
+
+401
+00:24:49,410 --> 00:24:52,410
+isto é a tradução da conta que ali está atrás, ok?
+
+402
+00:24:52,410 --> 00:24:54,410
+É aquela conta que eu estava aqui a fazer à mão,
+
+403
+00:24:54,410 --> 00:24:56,410
+1 vezes 1, 1 vezes 1,
+
+404
+00:24:56,410 --> 00:24:58,410
+mais 0 vezes 2,
+
+405
+00:24:59,410 --> 00:25:01,410
+0 vezes 2,
+
+406
+00:25:01,410 --> 00:25:03,410
+ok, ui,
+
+407
+00:25:03,410 --> 00:25:05,410
+depois,
+
+408
+00:25:05,410 --> 00:25:08,410
+desculpem, fui eu que fiz as negras,
+
+409
+00:25:08,410 --> 00:25:10,410
+1 vezes 1,
+
+410
+00:25:10,410 --> 00:25:12,410
+0 vezes 2,
+
+411
+00:25:12,410 --> 00:25:14,410
+menos 1 vezes 3,
+
+412
+00:25:14,410 --> 00:25:18,880
+que se pegar-nos na minha representação dá um bocado,
+
+413
+00:25:18,880 --> 00:25:21,880
+que eu, entretanto, apaguei sem querer,
+
+414
+00:25:21,880 --> 00:25:24,880
+nós tínhamos 3 neurónios de entrada
+
+415
+00:25:24,880 --> 00:25:26,880
+e 2 lá dentro,
+
+416
+00:25:26,880 --> 00:25:28,880
+basicamente a fazer,
+
+417
+00:25:28,880 --> 00:25:31,880
+aqui entrou o valor 1,
+
+418
+00:25:31,880 --> 00:25:33,880
+aqui o valor 2,
+
+419
+00:25:33,880 --> 00:25:35,880
+e aqui o valor 3,
+
+420
+00:25:35,880 --> 00:25:38,880
+e aqui multiplicámos 1 por 1,
+
+421
+00:25:38,880 --> 00:25:43,799
+2 por 0,
+
+422
+00:25:43,799 --> 00:25:45,799
+desculpem o meu desenho,
+
+423
+00:25:45,799 --> 00:25:50,799
+e 3 por menos 1,
+
+424
+00:25:50,799 --> 00:25:52,799
+ok?
+
+425
+00:25:52,799 --> 00:25:54,799
+E depois, no fim, vamos acrescentar o base,
+
+426
+00:25:54,799 --> 00:25:58,210
+que é de 1.
+
+427
+00:25:58,210 --> 00:26:02,349
+É a conta que aqui está,
+
+428
+00:26:02,349 --> 00:26:05,349
+e ficamos a saber que aquele neurónio tem menos 1,
+
+429
+00:26:05,349 --> 00:26:07,349
+falamos para o seguinte neurónio,
+
+430
+00:26:07,349 --> 00:26:09,349
+dá-lhe 5,
+
+431
+00:26:09,349 --> 00:26:11,349
+e fazemos aqui o relu,
+
+432
+00:26:11,349 --> 00:26:13,349
+se vocês se lembram do relu,
+
+433
+00:26:13,349 --> 00:26:16,349
+transforma-nos negativos em 0 e positivos deixam-os ficar,
+
+434
+00:26:16,349 --> 00:26:20,349
+e pronto, basicamente chegámos ao fim, ok?
+
+435
+00:26:21,349 --> 00:26:26,349
+Chegámos ao fim daquela conta de multiplicação de matrizes,
+
+436
+00:26:26,349 --> 00:26:29,349
+e é por isso que dizemos que a,
+
+437
+00:26:29,349 --> 00:26:33,349
+desculpem, a rede neuronal mistura,
+
+438
+00:26:33,349 --> 00:26:35,349
+combina multiplicações de matrizes,
+
+439
+00:26:35,349 --> 00:26:37,349
+vaias e infunções da ativação,
+
+440
+00:26:37,349 --> 00:26:40,349
+ou seja, tudo lá dentro fica mais fácil,
+
+441
+00:26:40,349 --> 00:26:43,349
+e é assim que funciona o interior destes,
+
+442
+00:26:43,349 --> 00:26:45,349
+todas estas ferramentas que a atenção falou,
+
+443
+00:26:45,349 --> 00:26:48,349
+é assim que funciona.
+
+444
+00:26:48,349 --> 00:26:52,349
+Depois, quando nós passamos de um exemplo único,
+
+445
+00:26:52,349 --> 00:26:54,349
+para uma batch, uma batch de imagens,
+
+446
+00:26:54,349 --> 00:26:58,349
+vamos usar o mesmo exemplo, 128 imagens,
+
+447
+00:26:59,349 --> 00:27:04,349
+nós usamos uma representação ligeiramente diferente, ok?
+
+448
+00:27:05,349 --> 00:27:08,349
+Então, cada linha de X representa uma imagem,
+
+449
+00:27:08,349 --> 00:27:12,880
+e é aquela representação que eu estava a falar um bocado,
+
+450
+00:27:12,880 --> 00:27:14,880
+se vocês quiserem muito,
+
+451
+00:27:14,880 --> 00:27:16,880
+podem tirar daqui o 128 da frente,
+
+452
+00:27:16,880 --> 00:27:19,880
+e vocês ficam com 784,
+
+453
+00:27:19,880 --> 00:27:22,880
+com o peso 64,
+
+454
+00:27:26,259 --> 00:27:29,259
+e aqui, são os 64 pesos,
+
+455
+00:27:29,259 --> 00:27:32,259
+ok, são 64 resultados que nós temos,
+
+456
+00:27:32,259 --> 00:27:34,259
+multiplicados por 128 imagens,
+
+457
+00:27:34,259 --> 00:27:37,259
+isto para o nosso dataset de 28 por 28.
+
+458
+00:27:37,259 --> 00:27:39,259
+Se vos fizer confusão,
+
+459
+00:27:39,259 --> 00:27:41,259
+que a mim próprio me faz, ok?
+
+460
+00:27:41,259 --> 00:27:44,259
+Vocês pensam, no primeiro valor,
+
+461
+00:27:44,259 --> 00:27:46,259
+quando estamos a falar de inputs,
+
+462
+00:27:46,259 --> 00:27:49,259
+no primeiro valor, e quando estamos a falar de outputs,
+
+463
+00:27:49,259 --> 00:27:52,259
+no primeiro valor, é a quantidade de imagens,
+
+464
+00:27:52,259 --> 00:27:55,259
+portanto, é a quantidade de vezes que nós vamos ter aquilo,
+
+465
+00:27:55,259 --> 00:27:58,259
+porque depois, lá dentro, temos 784 valores,
+
+466
+00:27:58,259 --> 00:28:01,259
+que têm 64 pesos, digamos,
+
+467
+00:28:01,259 --> 00:28:05,259
+estão atribuídos a 64 neurónios à frente,
+
+468
+00:28:06,259 --> 00:28:08,259
+vamos ter 64 biases,
+
+469
+00:28:08,259 --> 00:28:10,259
+e portanto, no fim,
+
+470
+00:28:10,259 --> 00:28:13,259
+vamos ter 64 resultados desses neurónios,
+
+471
+00:28:13,259 --> 00:28:16,259
+na camada a seguir, na camada de output,
+
+472
+00:28:16,259 --> 00:28:18,259
+a mesma coisa.
+
+473
+00:28:18,259 --> 00:28:22,259
+É mais fácil chegar aqui e perceber isto assim,
+
+474
+00:28:22,259 --> 00:28:26,259
+do que este 128 engana muitas vezes,
+
+475
+00:28:26,259 --> 00:28:28,259
+porque ele entra numa representação matricial,
+
+476
+00:28:28,259 --> 00:28:31,259
+mas ele entra basicamente como um multiplicador, ok?
+
+477
+00:28:31,259 --> 00:28:35,259
+Pensem só, são X imagens, são X dados, é uma batas,
+
+478
+00:28:35,259 --> 00:28:38,259
+então tudo o que acontece numa rede neuronal,
+
+479
+00:28:38,259 --> 00:28:40,259
+acontece X vezes.
+
+480
+00:28:40,259 --> 00:28:43,259
+É mais fácil do que estarem a pensar,
+
+481
+00:28:43,259 --> 00:28:46,259
+de outra forma, mais complexa.
+
+482
+00:28:46,259 --> 00:28:49,859
+Depois, passando desta parte
+
+483
+00:28:49,859 --> 00:28:51,859
+um bocadinho mais matemática à frente,
+
+484
+00:28:53,859 --> 00:28:56,859
+como é que nós podemos pensar num cálculo todo?
+
+485
+00:28:56,859 --> 00:28:58,859
+Já vimos os valores e as operações,
+
+486
+00:28:58,859 --> 00:29:00,859
+agora podemos representar a relação entre as operações
+
+487
+00:29:00,859 --> 00:29:02,859
+na forma de um grafo.
+
+488
+00:29:02,859 --> 00:29:05,859
+Os nodes identificam os cálculos, ok?
+
+489
+00:29:07,859 --> 00:29:09,859
+Como multiplicação de matrizes, somas ou ativações,
+
+490
+00:29:09,859 --> 00:29:11,859
+as ligações mostram os tensores
+
+491
+00:29:11,859 --> 00:29:13,859
+que passam entre esses cálculos.
+
+492
+00:29:13,859 --> 00:29:16,859
+E aqui eu acho que vou conseguir responder à tua pergunta
+
+493
+00:29:16,859 --> 00:29:19,859
+melhor do que respondi antes, ok?
+
+494
+00:29:19,859 --> 00:29:22,859
+Portanto, imagina assim,
+
+495
+00:29:23,859 --> 00:29:25,859
+uma operação só pode avançar
+
+496
+00:29:25,859 --> 00:29:27,859
+quando tem os dados dos valores que precisa.
+
+497
+00:29:27,859 --> 00:29:29,859
+E na figura, conseguimos reconhecer
+
+498
+00:29:29,859 --> 00:29:32,859
+operações como matemultiplicação adicionar,
+
+499
+00:29:32,859 --> 00:29:35,859
+matemultiplicação adicionar.
+
+500
+00:29:35,859 --> 00:29:38,859
+E isto é o que está dentro da rede neuronal.
+
+501
+00:29:38,859 --> 00:29:41,859
+Explica-nos aqui atrás,
+
+502
+00:29:41,859 --> 00:29:44,859
+o que ele representa como tensores
+
+503
+00:29:44,859 --> 00:29:47,859
+são as transições,
+
+504
+00:29:47,859 --> 00:29:49,859
+ou seja,
+
+505
+00:29:49,859 --> 00:29:51,859
+e ele vai representar como tensores
+
+506
+00:29:51,859 --> 00:29:54,859
+o input e o output.
+
+507
+00:29:54,859 --> 00:29:56,859
+Tudo que são pesos e bias está representado
+
+508
+00:29:56,859 --> 00:29:58,859
+de uma forma matricial,
+
+509
+00:29:58,859 --> 00:30:00,859
+mas não é um tensor, ok?
+
+510
+00:30:00,859 --> 00:30:07,380
+É depois multiplicado pelos tensores.
+
+511
+00:30:07,380 --> 00:30:10,380
+E é esta estrutura que fica por trás
+
+512
+00:30:10,380 --> 00:30:16,880
+da rede, da ferramenta que se usa,
+
+513
+00:30:16,880 --> 00:30:19,880
+e é esta estrutura que nos permite depois,
+
+514
+00:30:19,880 --> 00:30:21,880
+que permite à estrutura, nós quase não fazemos nada,
+
+515
+00:30:21,880 --> 00:30:24,880
+permite à estrutura codificar tudo isto lá por trás.
+
+516
+00:30:24,880 --> 00:30:29,130
+Depois, podemos executar operações
+
+517
+00:30:29,130 --> 00:30:32,130
+à medida que o programa se chega a elas
+
+518
+00:30:32,130 --> 00:30:35,130
+e chamamos a isso eager execution,
+
+519
+00:30:35,130 --> 00:30:39,130
+ou seja, à medida que os dados vão avançando nas camadas,
+
+520
+00:30:39,130 --> 00:30:42,130
+nós vamos fazendo os cálculos
+
+521
+00:30:42,130 --> 00:30:44,130
+à medida que eles vão lá chegando.
+
+522
+00:30:44,130 --> 00:30:47,130
+E vamos observando os valores intermédios.
+
+523
+00:30:47,130 --> 00:30:50,130
+Também podemos calcular o resultado
+
+524
+00:30:50,130 --> 00:30:52,130
+num grafo, ou seja,
+
+525
+00:30:52,130 --> 00:30:54,130
+permitir ao sistema analisar as dependências
+
+526
+00:30:54,130 --> 00:30:56,130
+e aplicar as transformações
+
+527
+00:30:56,130 --> 00:30:58,130
+antes da execução.
+
+528
+00:30:58,130 --> 00:31:00,130
+Ou seja, quando ele lá dentro
+
+529
+00:31:00,130 --> 00:31:02,130
+já tem aquilo tudo codificado,
+
+530
+00:31:02,130 --> 00:31:04,130
+há uma forma de reduzir
+
+531
+00:31:04,130 --> 00:31:07,130
+e basicamente por aquilo num grafo,
+
+532
+00:31:09,130 --> 00:31:11,130
+e em vez de estar a comportar camada a camada,
+
+533
+00:31:11,130 --> 00:31:13,130
+já digamos que está
+
+534
+00:31:15,130 --> 00:31:17,130
+já está
+
+535
+00:31:18,130 --> 00:31:20,130
+já está
+
+536
+00:31:20,130 --> 00:31:22,130
+capaz de depois
+
+537
+00:31:23,130 --> 00:31:26,130
+transformar aquela execução numa coisa mais rápida.
+
+538
+00:31:28,130 --> 00:31:30,130
+Um grafo, nenhum deles,
+
+539
+00:31:30,130 --> 00:31:32,130
+quer dizer que estamos a treinar a rede outra vez,
+
+540
+00:31:32,130 --> 00:31:34,130
+quer dizer apenas na forma como estamos a fazer
+
+541
+00:31:34,130 --> 00:31:36,130
+e o TensorFlow representa,
+
+542
+00:31:36,130 --> 00:31:38,130
+dá para fazer de duas formas.
+
+543
+00:31:38,130 --> 00:31:41,130
+O Keras, vocês já devem ter ouvido,
+
+544
+00:31:41,130 --> 00:31:43,130
+o Keras é uma coisa que nos permite,
+
+545
+00:31:43,130 --> 00:31:46,130
+mais uma vez é uma interface,
+
+546
+00:31:46,130 --> 00:31:48,130
+que nos permite trabalhar
+
+547
+00:31:48,130 --> 00:31:50,130
+em alto nível no desenvolvimento de modelos.
+
+548
+00:31:50,130 --> 00:31:53,130
+Lá de trás ele depois usa
+
+549
+00:31:54,130 --> 00:31:58,130
+as coisas do TensorFlow e do resto,
+
+550
+00:31:58,130 --> 00:32:00,130
+mas, por exemplo,
+
+551
+00:32:00,130 --> 00:32:02,130
+quando vocês escrevem dense
+
+552
+00:32:02,130 --> 00:32:05,130
+ou flatten, aqueles valores que nós vimos lá em cima,
+
+553
+00:32:05,130 --> 00:32:08,130
+nós estamos a usar a interface do Keras.
+
+554
+00:32:08,130 --> 00:32:10,130
+Ele, em vez de estarmos a escrever o código todo,
+
+555
+00:32:10,130 --> 00:32:13,130
+do que é uma camada densa,
+
+556
+00:32:13,130 --> 00:32:16,130
+ele permite-nos escrever apenas dense,
+
+557
+00:32:16,130 --> 00:32:18,130
+os números daquela camada,
+
+558
+00:32:18,130 --> 00:32:20,130
+ou seja, 64 neurónios,
+
+559
+00:32:20,130 --> 00:32:22,130
+e ele próprio trata disso por baixo.
+
+560
+00:32:22,130 --> 00:32:24,130
+Ele tem um back-end por trás
+
+561
+00:32:24,130 --> 00:32:26,130
+que trata desses cálculos todos.
+
+562
+00:32:26,130 --> 00:32:28,130
+E esse back-end é o TensorFlow.
+
+563
+00:32:29,130 --> 00:32:32,130
+Pensem nisto como uma interface,
+
+564
+00:32:32,130 --> 00:32:34,130
+não é gráfica, mas é uma interface
+
+565
+00:32:34,130 --> 00:32:36,130
+que nos permite comunicar com o TensorFlow
+
+566
+00:32:36,130 --> 00:32:38,130
+da forma mais fácil possível.
+
+567
+00:32:38,130 --> 00:32:40,130
+E eles são muito associados,
+
+568
+00:32:40,130 --> 00:32:42,130
+não significam, é a mesma coisa.
+
+569
+00:32:43,130 --> 00:32:45,130
+O Keras, mais recente,
+
+570
+00:32:45,130 --> 00:32:48,130
+o mais antigo funcionava apenas com TensorFlow.
+
+571
+00:32:48,130 --> 00:32:50,130
+O mais recente já suporta PyTorch
+
+572
+00:32:50,130 --> 00:32:52,130
+e outros tipos de linguagens
+
+573
+00:32:52,130 --> 00:32:54,130
+que servem para desenvolver redes.
+
+574
+00:32:54,130 --> 00:32:57,130
+Digamos, o PyTorch e o TensorFlow são back-ends,
+
+575
+00:32:57,130 --> 00:32:59,130
+é a forma como aquelas computações
+
+576
+00:32:59,130 --> 00:33:01,130
+são todas feitas.
+
+577
+00:33:01,130 --> 00:33:04,130
+Já o Keras é a forma como nós escrevemos
+
+578
+00:33:04,130 --> 00:33:06,130
+de uma forma simples, ok?
+
+579
+00:33:06,130 --> 00:33:08,130
+Nós depois na pele vamos falar um bocadinho sobre isto,
+
+580
+00:33:08,130 --> 00:33:10,130
+como é que se escreve o código para isto,
+
+581
+00:33:11,130 --> 00:33:14,130
+mas é esta representação do Keras
+
+582
+00:33:14,130 --> 00:33:16,130
+que nos permite fazer aquilo
+
+583
+00:33:16,130 --> 00:33:18,130
+de uma forma bastante mais simples.
+
+584
+00:33:19,130 --> 00:33:21,130
+Eu estava ali a falar do PyTorch, ok?
+
+585
+00:33:21,130 --> 00:33:25,130
+O PyTorch, nós não o vamos usar nas aulas,
+
+586
+00:33:25,130 --> 00:33:28,130
+mas é o que eu uso maioritariamente no dia a dia.
+
+587
+00:33:28,130 --> 00:33:31,130
+É um motor como o TensorFlow,
+
+588
+00:33:33,130 --> 00:33:37,130
+realiza computação de tensors, ok?
+
+589
+00:33:38,130 --> 00:33:41,130
+E na verdade é diferente,
+
+590
+00:33:41,130 --> 00:33:44,130
+porque quando vocês estão a criar o TensorFlow,
+
+591
+00:33:44,130 --> 00:33:47,130
+como vocês interagem com ele a partir do Keras,
+
+592
+00:33:47,130 --> 00:33:51,130
+tem uma interface que só nos permite fazer coisas
+
+593
+00:33:52,130 --> 00:33:57,130
+mais fáceis, mas não conseguem definir muitas das coisas
+
+594
+00:33:57,130 --> 00:33:59,130
+mais específicas.
+
+595
+00:33:59,130 --> 00:34:02,130
+Já o PyTorch permite-nos definir essas coisas mais específicas.
+
+596
+00:34:03,130 --> 00:34:05,130
+Portanto, é uma escolha de programador,
+
+597
+00:34:05,130 --> 00:34:08,130
+é uma escolha quase do que é que vocês começaram a trabalhar,
+
+598
+00:34:08,130 --> 00:34:10,130
+o que é que não gostam, o que é que gostam.
+
+599
+00:34:11,130 --> 00:34:13,130
+A única coisa que temos que falar aqui
+
+600
+00:34:13,130 --> 00:34:15,130
+é que para sistemas embebidos
+
+601
+00:34:15,130 --> 00:34:17,130
+nós vamos usar o LitRT.
+
+602
+00:34:17,130 --> 00:34:21,130
+LitRT, antigamente conhecido como TensorFlow Lit,
+
+603
+00:34:21,130 --> 00:34:25,130
+como vocês percebem, é o motor do TensorFlow, ok?
+
+604
+00:34:25,130 --> 00:34:28,130
+É Google, é motor TensorFlow,
+
+605
+00:34:28,130 --> 00:34:33,130
+e portanto, esse motor TensorFlow
+
+606
+00:34:33,130 --> 00:34:36,130
+vai ser, por isso é que vamos usar TensorFlow,
+
+607
+00:34:36,130 --> 00:34:40,130
+porque é mais fácil converter algo treinado no motor TensorFlow
+
+608
+00:34:40,130 --> 00:34:47,130
+em LitRT do que algo treinado em PyTorch no LitRT.
+
+609
+00:34:47,130 --> 00:34:49,130
+Não é que não se faça, faz-se na mesma,
+
+610
+00:34:49,130 --> 00:34:53,130
+mas pronto, para o efeito desta aula, desta cadeira,
+
+611
+00:34:53,130 --> 00:34:56,130
+vamos usar o TensorFlow como a nossa ferramenta base.
+
+612
+00:34:57,130 --> 00:34:59,130
+Só para acabar aqui de falar com o PyTorch,
+
+613
+00:34:59,130 --> 00:35:01,130
+que eu saí aqui um bocadinho para o lado.
+
+614
+00:35:01,130 --> 00:35:03,130
+Como é que trabalha com os tensors,
+
+615
+00:35:03,130 --> 00:35:07,130
+definir os modelos, definir as camadas, etc.
+
+616
+00:35:07,130 --> 00:35:09,130
+Mas uma característica importante dele
+
+617
+00:35:09,130 --> 00:35:13,130
+é a ligação mais próxima entre a forma como escrevemos o programa
+
+618
+00:35:13,130 --> 00:35:15,130
+e as operações que são executadas.
+
+619
+00:35:15,130 --> 00:35:18,130
+Lá está, o Keras torna o TensorFlow uma coisa mais fácil,
+
+620
+00:35:18,130 --> 00:35:20,130
+uma interface mais fácil,
+
+621
+00:35:20,130 --> 00:35:23,130
+mas o PyTorch dá para especificar melhor as coisas.
+
+622
+00:35:23,130 --> 00:35:28,130
+E tornou-se, por isso, muito utilizado em experimentação.
+
+623
+00:35:28,130 --> 00:35:31,130
+E porque tem umas ferramentas para utilizar outros tipos de modelos
+
+624
+00:35:31,130 --> 00:35:34,130
+e outras aplicações que para aqui não vamos precisar.
+
+625
+00:35:34,130 --> 00:35:38,130
+Portanto, uma camada densa aqui continua a significar o mesmo,
+
+626
+00:35:38,130 --> 00:35:43,130
+mas é o motor diferente.
+
+627
+00:35:46,130 --> 00:35:48,130
+Durante o treino,
+
+628
+00:35:48,130 --> 00:35:51,130
+precisamos saber como é que os parâmetros influenciam a loz.
+
+629
+00:35:52,130 --> 00:35:58,130
+O PyTorch, por exemplo, guarda este resultado
+
+630
+00:35:58,130 --> 00:36:01,130
+ou guarda como é que os resultados foram computados.
+
+631
+00:36:01,130 --> 00:36:04,130
+E tem ali uma coisa que é o autogrado,
+
+632
+00:36:04,130 --> 00:36:08,130
+que verifica e acompanha as operações realizadas no forward pass
+
+633
+00:36:08,130 --> 00:36:10,130
+e registra as dependências entre os valores.
+
+634
+00:36:10,130 --> 00:36:12,130
+Ou seja, quando pedimos os gradientes,
+
+635
+00:36:12,130 --> 00:36:16,130
+ele utiliza essa informação para ir para trás no cálculo
+
+636
+00:36:16,130 --> 00:36:21,130
+para depois atualizar a rede.
+
+637
+00:36:21,130 --> 00:36:26,130
+Ou seja, ele permite ver ou ter uma visão diferente
+
+638
+00:36:26,130 --> 00:36:30,130
+sobre como é que cada parâmetro afetou o nosso resultado.
+
+639
+00:36:30,130 --> 00:36:35,130
+E depois permite-nos trabalhar com isso para a rede aprender de forma diferente.
+
+640
+00:36:39,130 --> 00:36:42,130
+Nesta parte é um bocadinho diferente,
+
+641
+00:36:43,130 --> 00:36:47,130
+mas é a grande diferença que para vocês não vos vai interessar muito,
+
+642
+00:36:47,130 --> 00:36:50,130
+mas é a grande diferença que vamos ter.
+
+643
+00:36:50,130 --> 00:36:55,130
+Hoje em dia, ambos trabalhamos com tensors,
+
+644
+00:36:55,130 --> 00:36:57,130
+permitem construir modelos,
+
+645
+00:36:57,130 --> 00:36:59,130
+calcular os gradientes automaticamente,
+
+646
+00:36:59,130 --> 00:37:02,130
+ambos têm imensas ferramentas como além do treino,
+
+647
+00:37:02,130 --> 00:37:04,130
+tratamento de dados, etc.
+
+648
+00:37:04,130 --> 00:37:06,130
+Há diferenças na forma como interagem com eles,
+
+649
+00:37:06,130 --> 00:37:10,130
+nas APIs e na forma como falam com eles,
+
+650
+00:37:10,130 --> 00:37:12,130
+no ecossistema deles,
+
+651
+00:37:12,130 --> 00:37:14,130
+antigamente já houve uma altura em que o TensorFlow
+
+652
+00:37:14,130 --> 00:37:17,130
+tinha muito mais ajuda nos fóruns online, etc.
+
+653
+00:37:17,130 --> 00:37:20,130
+Mas depois houve uma altura que passou a ser o PyTorch,
+
+654
+00:37:20,130 --> 00:37:24,130
+hoje em dia, como AI, não vejo um problema de usar um ou outro.
+
+655
+00:37:24,130 --> 00:37:28,130
+Mas foi uma questão antigamente,
+
+656
+00:37:28,130 --> 00:37:30,130
+usava muita gente TensorFlow,
+
+657
+00:37:30,130 --> 00:37:32,130
+depois passou muita gente a usar PyTorch,
+
+658
+00:37:32,130 --> 00:37:35,130
+e a documentação foi passando de um para o outro
+
+659
+00:37:35,130 --> 00:37:39,130
+e havia mais pessoas a falar de um ou de outro, do ecossistema.
+
+660
+00:37:40,130 --> 00:37:43,130
+Nenhum deles é melhor,
+
+661
+00:37:46,130 --> 00:37:48,130
+é simplesmente um mundo diferente,
+
+662
+00:37:48,130 --> 00:37:50,130
+um ecossistema diferente.
+
+663
+00:37:50,130 --> 00:37:54,130
+Portanto, para nós, aqui nesta aula, sinceramente,
+
+664
+00:37:54,130 --> 00:37:57,130
+não vamos estudar as diferenças deles,
+
+665
+00:37:57,130 --> 00:38:01,130
+porque são em um nível tão profundo que para nós não nos interessa.
+
+666
+00:38:01,130 --> 00:38:04,130
+O que nos interessa é perceber que eles trabalham com os tensors
+
+667
+00:38:04,130 --> 00:38:06,130
+e que fazem os cálculos deles.
+
+668
+00:38:07,130 --> 00:38:13,210
+Depois, nós, quando treinamos um modelo,
+
+669
+00:38:13,210 --> 00:38:16,210
+depois do treino, temos uma função.
+
+670
+00:38:17,210 --> 00:38:19,210
+E o que é essa função?
+
+671
+00:38:19,210 --> 00:38:21,210
+Quando nós treinamos, treinamos uma rede,
+
+672
+00:38:21,210 --> 00:38:26,210
+implica imensas contas daquelas matrizes, etc.
+
+673
+00:38:26,210 --> 00:38:29,210
+E manter os gradientes, como falámos na aula passada,
+
+674
+00:38:29,210 --> 00:38:32,210
+manter uma série de memória ativa para fazer as contas,
+
+675
+00:38:32,210 --> 00:38:34,210
+para fazer o treino, etc.
+
+676
+00:38:34,210 --> 00:38:37,210
+Mas no fim, aqueles pesos finais
+
+677
+00:38:37,210 --> 00:38:40,210
+e os parâmetros e os biases, não é?
+
+678
+00:38:42,210 --> 00:38:45,210
+E ficam como?
+
+679
+00:38:45,210 --> 00:38:47,210
+Ficam num fecheiro.
+
+680
+00:38:47,210 --> 00:38:51,210
+Ficam num fecheiro que depois é passível de ser executado.
+
+681
+00:38:51,210 --> 00:38:55,210
+Ou seja, vocês normalmente podem, por exemplo,
+
+682
+00:38:55,210 --> 00:38:59,210
+existe um formato que é o ONNX,
+
+683
+00:38:59,210 --> 00:39:02,210
+que é Open Neural Network Exchange,
+
+684
+00:39:02,210 --> 00:39:06,210
+digamos que é o formato para o qual podemos exportar uma rede neuronal
+
+685
+00:39:06,210 --> 00:39:09,210
+que é capaz de ser lido em qualquer lado.
+
+686
+00:39:09,210 --> 00:39:12,210
+Porque depois do treino não nos interessa se é TensorFlow,
+
+687
+00:39:12,210 --> 00:39:14,210
+se é PyTorch, se é outra coisa qualquer.
+
+688
+00:39:14,210 --> 00:39:16,210
+Nós exportamos para aquele formato
+
+689
+00:39:16,210 --> 00:39:18,210
+e aquele formato é lido em qualquer lado
+
+690
+00:39:18,210 --> 00:39:20,210
+e pode ser executado em qualquer lado.
+
+691
+00:39:20,210 --> 00:39:24,210
+Ora, o liter-T não é nada mais nada menos
+
+692
+00:39:24,210 --> 00:39:29,210
+do que uma coisa específica,
+
+693
+00:39:29,210 --> 00:39:33,210
+muito mais específica que este Open Neural Network Exchange
+
+694
+00:39:33,210 --> 00:39:35,210
+que eu falei, o ONNX,
+
+695
+00:39:35,210 --> 00:39:40,210
+porque foi feito para correr em sistemas embebidos,
+
+696
+00:39:40,210 --> 00:39:44,210
+sistemas pequenos, mas não passa de um sistema de educação.
+
+697
+00:39:44,210 --> 00:39:47,210
+Ou seja, o que é que eu quero dizer com isto?
+
+698
+00:39:48,210 --> 00:39:52,210
+Treinar TensorFlow PyTorch, sai de lá qualquer coisa.
+
+699
+00:39:52,210 --> 00:39:54,210
+E esta qualquer coisa pode ser um modelo
+
+700
+00:39:54,210 --> 00:39:56,210
+para utilizarem no vosso embebido,
+
+701
+00:39:56,210 --> 00:40:04,210
+pode ser um modelo para utilizarem no Open Neural Network Exchange,
+
+702
+00:40:04,210 --> 00:40:07,210
+ou pode ser um modelo exportado em liter-T
+
+703
+00:40:07,210 --> 00:40:09,210
+que vai executar no ambiente liter-T.
+
+704
+00:40:10,210 --> 00:40:16,210
+E então, liter-T como a ferramenta principal de hoje,
+
+705
+00:40:16,210 --> 00:40:21,210
+é Google, começou como TensorFlow Leaps,
+
+706
+00:40:21,210 --> 00:40:23,210
+ou seja, se vocês pensarem no nome,
+
+707
+00:40:23,210 --> 00:40:25,210
+era o TensorFlow Pequenino,
+
+708
+00:40:25,210 --> 00:40:27,210
+TensorFlow Lab ou não sei como é que vocês o querem chamar,
+
+709
+00:40:27,210 --> 00:40:29,210
+e agora há uma coisa de pouco tempo
+
+710
+00:40:29,210 --> 00:40:31,210
+que mudou de nome para liter-T.
+
+711
+00:40:32,210 --> 00:40:34,210
+É a tecnologia da Google para executar modelos
+
+712
+00:40:34,210 --> 00:40:37,210
+no próprio dispositivo de uma forma rápida.
+
+713
+00:40:38,210 --> 00:40:40,210
+E o nome refere-se a um conjunto de ferramentas
+
+714
+00:40:40,210 --> 00:40:44,210
+que inclui a conversão, a representação dos modelos
+
+715
+00:40:44,210 --> 00:40:46,210
+e o runtime que os executa.
+
+716
+00:40:46,210 --> 00:40:51,210
+Ou seja, basicamente, imaginem, vocês fazem um PowerPoint
+
+717
+00:40:51,210 --> 00:40:55,210
+e aquilo fica em formato PP-PTX, não é?
+
+718
+00:40:55,210 --> 00:40:57,210
+Ou seja, fica em formato PowerPoint.
+
+719
+00:40:57,210 --> 00:40:59,210
+Quando vocês exportam para PDF,
+
+720
+00:40:59,210 --> 00:41:02,210
+vocês depois têm aquele mesmo conteúdo
+
+721
+00:41:02,210 --> 00:41:04,210
+exportado para PDF.
+
+722
+00:41:04,210 --> 00:41:07,210
+E o formato é diferente, não conseguem editá-lo mais,
+
+723
+00:41:07,210 --> 00:41:11,210
+mas conseguem vê-lo e colocar os comentários e não sei quê.
+
+724
+00:41:11,210 --> 00:41:14,210
+E depois têm, por exemplo, o Adobe Acrobat Reader
+
+725
+00:41:14,210 --> 00:41:17,210
+e têm os browsers hoje em dia que veem aquele PDF.
+
+726
+00:41:17,210 --> 00:41:22,210
+Ora, o liter-T é, digamos, a conversão para PDF,
+
+727
+00:41:22,210 --> 00:41:25,210
+vamos dizer assim, e depois a forma de ver o PDF.
+
+728
+00:41:26,210 --> 00:41:29,210
+Dentro do sistema de carreira dos aeronais,
+
+729
+00:41:29,210 --> 00:41:33,210
+é isso que ele faz aqui, ok?
+
+730
+00:41:34,210 --> 00:41:38,210
+Nós, na próxima aula e o que fizemos já na anterior,
+
+731
+00:41:38,210 --> 00:41:43,210
+foi usar este motor dentro do nosso Raspberry.
+
+732
+00:41:43,210 --> 00:41:48,210
+Ou seja, havia lá um passo em que instalámos o liter-T.
+
+733
+00:41:48,210 --> 00:41:52,210
+O que tínhamos de fazer foi instalar esta biblioteca
+
+734
+00:41:52,210 --> 00:41:57,210
+que nos permite correr e ler modelos que estão em liter-T.
+
+735
+00:41:57,210 --> 00:41:59,210
+Digamos que é um motor que está ali por trás
+
+736
+00:41:59,210 --> 00:42:02,210
+que nos permite abstrair muitas das coisas
+
+737
+00:42:02,210 --> 00:42:06,210
+e que trabalha com este formato de dados, ok?
+
+738
+00:42:08,210 --> 00:42:12,210
+E porquê que se usa liter-T numa placa
+
+739
+00:42:12,210 --> 00:42:15,210
+e não se usa o TensorFlow direto?
+
+740
+00:42:15,210 --> 00:42:18,210
+Ou digamos, não é o TensorFlow, digamos o NNX, por exemplo,
+
+741
+00:42:18,210 --> 00:42:22,210
+que seria o formato exportado diretamente do TensorFlow.
+
+742
+00:42:22,210 --> 00:42:27,210
+Ora, nós usamos o liter-T porque, por exemplo,
+
+743
+00:42:27,210 --> 00:42:30,210
+a principal vantagem dele é que podemos executar
+
+744
+00:42:30,210 --> 00:42:33,210
+um modelo preparado com menos software.
+
+745
+00:42:33,210 --> 00:42:37,210
+Imaginem, o TensorFlow tem, e mesmo o NNX,
+
+746
+00:42:37,210 --> 00:42:40,210
+tem uma série de software agregado à volta
+
+747
+00:42:40,210 --> 00:42:43,210
+que o tornam muito mais fácil de correr.
+
+748
+00:42:43,210 --> 00:42:46,210
+No caso do TensorFlow, muito mais fácil de treinar.
+
+749
+00:42:46,210 --> 00:42:49,210
+Ele trata de gradient descent, etc, etc, etc,
+
+750
+00:42:49,210 --> 00:42:52,210
+mas para isso precisa de uma série de bibliotecas.
+
+751
+00:42:52,210 --> 00:42:57,210
+Bibliotecas essas que pesam no sistema.
+
+752
+00:42:57,210 --> 00:43:03,210
+Ora, o liter-T é, digamos, o emagrecimento do TensorFlow
+
+753
+00:43:03,210 --> 00:43:06,210
+para ter as bibliotecas necessárias apenas,
+
+754
+00:43:06,210 --> 00:43:09,210
+só e apenas, para correr modelos.
+
+755
+00:43:09,210 --> 00:43:12,210
+Se vocês pensarem, mais uma vez, no exemplo do PowerPoint,
+
+756
+00:43:12,210 --> 00:43:15,210
+o PowerPoint é grande porque vos permite
+
+757
+00:43:15,210 --> 00:43:18,210
+editar, arrastar, criar novos slides,
+
+758
+00:43:18,210 --> 00:43:21,210
+escrever texto, pôr imagens, etc, etc.
+
+759
+00:43:21,210 --> 00:43:24,210
+O PDF mostra-vos a mesma coisa, mas é quase como
+
+760
+00:43:24,210 --> 00:43:27,210
+uma imagem estática daquilo.
+
+761
+00:43:27,210 --> 00:43:30,210
+Portanto, não precisa de todas as outras ferramentas
+
+762
+00:43:30,210 --> 00:43:33,210
+que permite editar, arrastar imagens, etc.
+
+763
+00:43:33,210 --> 00:43:36,210
+Ok? O TensorFlow é muito abrangente, lá está,
+
+764
+00:43:36,210 --> 00:43:39,210
+e permite construir modelos, calcular os gradientes,
+
+765
+00:43:39,210 --> 00:43:42,210
+treinar, experimentar, fazer inferência, tudo, etc, etc.
+
+766
+00:43:42,210 --> 00:43:46,210
+Já o liter-T, o nome é Lit Runtime,
+
+767
+00:43:46,210 --> 00:43:51,210
+Lit RT, portanto, basicamente é apenas para Runtime.
+
+768
+00:43:51,210 --> 00:43:54,210
+É um modelo compatível mais pequeno,
+
+769
+00:43:54,210 --> 00:43:57,210
+uma biblioteca compatível mais pequena,
+
+770
+00:43:57,210 --> 00:44:00,210
+onde conseguimos fazer as previsões sem precisar
+
+771
+00:44:00,210 --> 00:44:03,210
+da instalação completa do outro todo.
+
+772
+00:44:03,210 --> 00:44:09,579
+Depois, o liter-T dispõe de operações
+
+773
+00:44:09,579 --> 00:44:15,579
+orientadas a dispositivos e mecanismos mais pequenos.
+
+774
+00:44:15,579 --> 00:44:20,579
+Ou seja, o TensorFlow sabe que vai ter muita memória
+
+775
+00:44:20,579 --> 00:44:23,579
+e, então, usa a toda.
+
+776
+00:44:23,579 --> 00:44:26,579
+Ou seja, não gera memória, não gera...
+
+777
+00:44:26,579 --> 00:44:31,579
+Ok, gera, mas não gera de uma forma tão cuidada
+
+778
+00:44:31,579 --> 00:44:35,579
+a memória do disco, não gera de uma forma tão cuidada
+
+779
+00:44:35,579 --> 00:44:39,579
+como é que aqueles tensors vão estar guardados lá nos sítios.
+
+780
+00:44:39,579 --> 00:44:46,579
+Portanto, é a forma diferente como eles lidam com isto, ok?
+
+781
+00:44:46,579 --> 00:44:52,579
+E isto ajuda a reduzir os recursos utilizados,
+
+782
+00:44:52,579 --> 00:44:55,579
+quer em memória, quer depois mesmo na RAM, não é?
+
+783
+00:44:55,579 --> 00:45:00,579
+Vocês gastam menos, e depois, mesmo no CPU,
+
+784
+00:45:00,579 --> 00:45:02,579
+que tem que tomar conta destas coisas todas,
+
+785
+00:45:02,579 --> 00:45:06,579
+gastam menos, gastam menos e precisam de menos.
+
+786
+00:45:06,579 --> 00:45:09,579
+Não podemos garantir, nunca vos dou uma garantia
+
+787
+00:45:09,579 --> 00:45:12,579
+de que qualquer modelo vai ser mais rápido
+
+788
+00:45:12,579 --> 00:45:15,579
+apenas por estarem ali de RT.
+
+789
+00:45:15,579 --> 00:45:19,579
+Mas, em princípio vai, ok?
+
+790
+00:45:19,579 --> 00:45:23,579
+Porque aquilo reduz-lhe bastante componentes maiores
+
+791
+00:45:23,579 --> 00:45:24,579
+que ali tem à volta.
+
+792
+00:45:24,579 --> 00:45:30,920
+Depois, portanto, uma das coisas que ele faz,
+
+793
+00:45:30,920 --> 00:45:35,920
+ele reutiliza memória entre camadas.
+
+794
+00:45:35,920 --> 00:45:39,920
+Uma memória, uma rede, precisa de memória para os pesos
+
+795
+00:45:39,920 --> 00:45:41,920
+e para os resultados intermédios.
+
+796
+00:45:41,920 --> 00:45:43,920
+Se vocês forem pensando, ela entra,
+
+797
+00:45:43,920 --> 00:45:44,920
+tem que calcular aqueles pesos,
+
+798
+00:45:44,920 --> 00:45:46,920
+depois que tenha ali resultados intermédios,
+
+799
+00:45:46,920 --> 00:45:49,920
+depois vai calcular mais pesos, etc, etc, etc.
+
+800
+00:45:49,920 --> 00:45:53,920
+Portanto, nós temos, neste exemplo,
+
+801
+00:45:53,920 --> 00:45:56,920
+temos três resultados consecutivos.
+
+802
+00:45:56,920 --> 00:46:06,710
+Ocupa 4K, B6K e C4K, ok?
+
+803
+00:46:06,710 --> 00:46:13,710
+Portanto, as ativações são resultados intermédios
+
+804
+00:46:13,710 --> 00:46:21,710
+e nós reutilizamos esses resultados.
+
+805
+00:46:21,710 --> 00:46:23,710
+Como eu estava a dizer?
+
+806
+00:46:23,710 --> 00:46:28,710
+A temos 4K, B temos 6K, C temos 4K, ok?
+
+807
+00:46:28,710 --> 00:46:32,710
+Portanto, enquanto calculamos o B, imaginem vocês,
+
+808
+00:46:32,710 --> 00:46:35,710
+B lê A e escreve B.
+
+809
+00:46:35,710 --> 00:46:38,710
+A camada B lê o A e escreve B.
+
+810
+00:46:38,710 --> 00:46:39,710
+Portanto, enquanto calculamos o B,
+
+811
+00:46:39,710 --> 00:46:40,710
+temos que conservar o A,
+
+812
+00:46:40,710 --> 00:46:42,710
+porque a operação está a ler esse resultado
+
+813
+00:46:42,710 --> 00:46:47,710
+e temos um espaço de 4K para A e outro 6 para B.
+
+814
+00:46:47,710 --> 00:46:49,710
+Quando o B termina,
+
+815
+00:46:49,710 --> 00:46:52,710
+não temos nenhuma operação posterior que precisa do A.
+
+816
+00:46:52,710 --> 00:46:55,710
+Imaginem três camadas, A, B e C, certo?
+
+817
+00:46:55,710 --> 00:47:00,710
+Portanto, neste momento o espaço da A
+
+818
+00:47:00,710 --> 00:47:02,710
+pode ser reutilizado para guardar C,
+
+819
+00:47:02,710 --> 00:47:05,710
+enquanto produzimos C, B continua disponível no seu espaço.
+
+820
+00:47:05,710 --> 00:47:09,710
+Se reservássemos um espaço para estes três,
+
+821
+00:47:09,710 --> 00:47:12,710
+estávamos a reservar 14K.
+
+822
+00:47:12,710 --> 00:47:16,710
+Como nós, a meio de uma camada que já não precisamos,
+
+823
+00:47:16,710 --> 00:47:19,710
+mandamos aquele valor, digamos, para o list para já,
+
+824
+00:47:19,710 --> 00:47:22,710
+nós utilizamos só 10K.
+
+825
+00:47:22,710 --> 00:47:25,710
+E vocês pensam, isto não é nada de 10K ou 14K,
+
+826
+00:47:25,710 --> 00:47:28,710
+mas se pensarem numa rede muito, muito, muito grande,
+
+827
+00:47:28,710 --> 00:47:30,710
+isto depois faz diferença.
+
+828
+00:47:30,710 --> 00:47:34,710
+Ou seja, pegando aqui no nosso desenho.
+
+829
+00:47:34,710 --> 00:47:36,710
+Como é que eu faço aqui um novo?
+
+830
+00:47:36,710 --> 00:47:42,250
+Ok, imaginem aqui, camada A,
+
+831
+00:47:42,250 --> 00:47:46,250
+camada B abstraída, camada C.
+
+832
+00:47:46,250 --> 00:47:50,250
+Ora, o A são 4K,
+
+833
+00:47:50,250 --> 00:47:54,250
+aqui o B são 6K e o C são 4K.
+
+834
+00:47:54,250 --> 00:47:56,250
+Jogo eu, não é? 4K, exatamente.
+
+835
+00:47:56,250 --> 00:48:00,250
+Portanto, nós quando estamos a fazer esta ligação aqui,
+
+836
+00:48:00,250 --> 00:48:04,250
+nós precisamos dos valores daqui para calcular isto aqui,
+
+837
+00:48:04,250 --> 00:48:06,250
+que é o que nós dizemos aqui.
+
+838
+00:48:06,250 --> 00:48:08,250
+B reads A and writes B.
+
+839
+00:48:08,250 --> 00:48:14,250
+Portanto, nós aqui precisamos de o A ainda necessário,
+
+840
+00:48:14,250 --> 00:48:20,250
+portanto, nós mantemos os 4 mais 6, desculpem,
+
+841
+00:48:20,250 --> 00:48:22,250
+4 mais 6.
+
+842
+00:48:22,250 --> 00:48:25,250
+Temos 10, certo?
+
+843
+00:48:25,250 --> 00:48:29,250
+Ora, quando esta coisa foi completa,
+
+844
+00:48:29,250 --> 00:48:32,250
+nós vamos deixar precisar desta parte daqui.
+
+845
+00:48:32,250 --> 00:48:36,250
+Logo, vamos passar para esta conta aqui.
+
+846
+00:48:36,250 --> 00:48:39,250
+E se fizéssemos isto da forma do TensorFlow,
+
+847
+00:48:39,250 --> 00:48:41,250
+que não otimiza a memória desta forma,
+
+848
+00:48:41,250 --> 00:48:43,250
+nós ficaríamos assim,
+
+849
+00:48:43,250 --> 00:48:45,250
+nós nunca eliminaríamos esta aqui.
+
+850
+00:48:45,250 --> 00:48:50,250
+Ora, se nós vamos eliminar, digamos, o liter-T ilumina,
+
+851
+00:48:50,250 --> 00:48:54,250
+nós eliminamos esta parte aqui da memória para já.
+
+852
+00:48:54,250 --> 00:48:56,250
+Portanto, em RAM,
+
+853
+00:48:56,250 --> 00:48:58,250
+estes valores vão ter que estar guardados em um outro sítio qualquer,
+
+854
+00:48:58,250 --> 00:49:02,250
+mas em RAM, nós passamos a ter apenas 6 mais 4,
+
+855
+00:49:02,250 --> 00:49:07,250
+os tais 10, em vez dos tais 14, para isto tudo.
+
+856
+00:49:07,250 --> 00:49:10,250
+Portanto, mais uma vez, que vocês dizem,
+
+857
+00:49:10,250 --> 00:49:12,250
+é um exemplo, ok?
+
+858
+00:49:12,250 --> 00:49:14,250
+É um exemplo muito pequenino,
+
+859
+00:49:14,250 --> 00:49:16,250
+e os números são didáticos.
+
+860
+00:49:16,250 --> 00:49:19,250
+É só para vocês terem uma noção.
+
+861
+00:49:19,250 --> 00:49:23,250
+Tem a que pensar quando isto cresce exponencialmente
+
+862
+00:49:23,250 --> 00:49:29,250
+para bilhões de neurónios e de pesos e etc.
+
+863
+00:49:29,250 --> 00:49:30,250
+Ok?
+
+864
+00:49:30,250 --> 00:49:32,250
+Nós pouparmos um bocadinho em cada um,
+
+865
+00:49:32,250 --> 00:49:35,250
+estamos a poupar a nossa RAM imenso.
+
+866
+00:49:35,250 --> 00:49:37,250
+Ok?
+
+867
+00:49:37,250 --> 00:49:40,250
+Portanto, agora,
+
+868
+00:49:40,250 --> 00:49:43,250
+vamos pensar, isto é o que nós vamos fazer na PL2,
+
+869
+00:49:43,250 --> 00:49:47,250
+e é aqui que vamos falar um bocadinho sobre isto.
+
+870
+00:49:47,250 --> 00:49:50,250
+Portanto, na PL2, o que vamos fazer?
+
+871
+00:49:50,250 --> 00:49:54,250
+No sábado, nós vamos treinar no Google Collab,
+
+872
+00:49:54,250 --> 00:49:57,250
+usando TensorFlow ou Keras,
+
+873
+00:49:57,250 --> 00:50:03,250
+e depois vamos converter lá no Collab para um fecheiro TF Lite,
+
+874
+00:50:03,250 --> 00:50:07,250
+e vamos usar no nosso Raspberry esse cheiro TF Lite
+
+875
+00:50:07,250 --> 00:50:13,250
+para correr o nosso modelo dentro da nossa placa.
+
+876
+00:50:13,250 --> 00:50:14,250
+Ok?
+
+877
+00:50:14,250 --> 00:50:16,250
+É exatamente o que fizemos na aula 1,
+
+878
+00:50:16,250 --> 00:50:20,250
+só que este modelo já nos era dado,
+
+879
+00:50:20,250 --> 00:50:24,250
+nós agora vamos treinar aqui com a parte de cima.
+
+880
+00:50:24,250 --> 00:50:26,250
+Ok?
+
+881
+00:50:26,250 --> 00:50:29,530
+Estou a tentar falar disto,
+
+882
+00:50:29,530 --> 00:50:32,530
+para depois a aula sábado ser um bocadinho mais simples.
+
+883
+00:50:32,530 --> 00:50:36,530
+O Python, em si, é o que está por trás disto tudo.
+
+884
+00:50:36,530 --> 00:50:42,530
+Depois, pensem, treino TensorFlow e Keras,
+
+885
+00:50:42,530 --> 00:50:44,530
+execução LIT RT.
+
+886
+00:50:44,530 --> 00:50:47,530
+Pensem sempre naquilo que eu vos disse do PowerPoint e PDF,
+
+887
+00:50:47,530 --> 00:50:50,530
+eu acho que para quem está um bocadinho mais fora das RAMs,
+
+888
+00:50:50,530 --> 00:50:53,530
+é a forma mais fácil de pensar.
+
+889
+00:50:55,530 --> 00:50:56,530
+Pronto.
+
+890
+00:50:56,530 --> 00:51:00,530
+Depois, só para dizer aqui uma coisa,
+
+891
+00:51:00,530 --> 00:51:04,530
+vamos começar com estes valores todos em float32,
+
+892
+00:51:04,530 --> 00:51:07,530
+e não vamos fazer contização de nada.
+
+893
+00:51:07,530 --> 00:51:11,530
+Depois, na placa, vamos medir a qualidade,
+
+894
+00:51:11,530 --> 00:51:15,530
+a latência e a RAM que estamos a usar na placa.
+
+895
+00:51:15,530 --> 00:51:19,809
+Ora, se vocês forem vendo,
+
+896
+00:51:19,809 --> 00:51:23,809
+isto também para vos deixar este aviso,
+
+897
+00:51:23,809 --> 00:51:28,809
+muita coisa que vocês vão vendo, mesmo muita coisa,
+
+898
+00:51:28,809 --> 00:51:31,809
+vai ainda ter o nome de TensorFlow LIT,
+
+899
+00:51:31,809 --> 00:51:36,809
+porque foi usado desde 2017 até 2024.
+
+900
+00:51:36,809 --> 00:51:38,809
+Em 2024, lançou-se o LIT RT,
+
+901
+00:51:38,809 --> 00:51:40,809
+mas não se começou a utilizar logo,
+
+902
+00:51:40,809 --> 00:51:44,809
+por que mais mal preferia toda o TensorFlow LIT.
+
+903
+00:51:45,809 --> 00:51:48,809
+Portanto, e hoje em dia,
+
+904
+00:51:48,809 --> 00:51:51,809
+começam a sair outras ferramentas,
+
+905
+00:51:51,809 --> 00:51:55,809
+a Meta lançou uma,
+
+906
+00:51:55,809 --> 00:51:59,809
+há outras empresas a lançar formatos para correr,
+
+907
+00:51:59,809 --> 00:52:04,809
+imaginem, no vosso telemóvel, no vosso relógio etc,
+
+908
+00:52:04,809 --> 00:52:08,809
+as empresas às vezes têm formatos próprios que usam,
+
+909
+00:52:08,809 --> 00:52:11,809
+porque são os formatos que querem usar nos próprios devices.
+
+910
+00:52:11,809 --> 00:52:13,809
+O mais open source,
+
+911
+00:52:13,809 --> 00:52:16,809
+e o mais fácil de trabalhar neste momento é o LIT RT,
+
+912
+00:52:16,809 --> 00:52:18,809
+porque é o que está aberto para toda a gente,
+
+913
+00:52:18,809 --> 00:52:23,809
+e é o mais fácil de trabalhar neste momento.
+
+914
+00:52:24,809 --> 00:52:28,809
+Depois, que eu também já fui pegando um bocadinho nesta ideia,
+
+915
+00:52:28,809 --> 00:52:31,809
+antigamente, quando era TensorFlow LIT,
+
+916
+00:52:31,809 --> 00:52:36,809
+era difícil que algo que fosse treinado em PyTorch
+
+917
+00:52:36,809 --> 00:52:40,809
+ou em JAX fosse colocado como LIT RT,
+
+918
+00:52:40,809 --> 00:52:43,809
+era possível, mas não era tão fácil como hoje em dia.
+
+919
+00:52:43,809 --> 00:52:47,809
+Hoje em dia, vocês podem treinar a vossa rede
+
+920
+00:52:47,809 --> 00:52:49,809
+em qualquer um destes,
+
+921
+00:52:49,809 --> 00:52:52,809
+destes ou outros, mas estes são os principais.
+
+922
+00:52:52,809 --> 00:52:54,809
+Estes dois, a esquerda mais principais ainda,
+
+923
+00:52:54,809 --> 00:52:56,809
+neste momento um bocadinho.
+
+924
+00:52:56,809 --> 00:52:59,809
+Mas vocês podem treinar em qualquer um deles,
+
+925
+00:52:59,809 --> 00:53:04,809
+e depois eles próprios já têm uma conversão,
+
+926
+00:53:04,809 --> 00:53:08,809
+o TensorFlow, porque é o original e também é da Google,
+
+927
+00:53:08,809 --> 00:53:12,809
+mas os outros já têm uma rota, uma conversão,
+
+928
+00:53:12,809 --> 00:53:17,809
+feita para transformar o que foi treinado num LIT RT.
+
+929
+00:53:18,809 --> 00:53:20,809
+Portanto, não é obrigatório criar em TensorFlow
+
+930
+00:53:20,809 --> 00:53:23,809
+a ideia que diferentes ferramentas de desenvolvimento hoje em dia,
+
+931
+00:53:23,809 --> 00:53:26,809
+todas funcionem e todas possam ser usadas,
+
+932
+00:53:26,809 --> 00:53:29,809
+e depois, no fim, exporta-se para o LIT RT
+
+933
+00:53:29,809 --> 00:53:34,809
+e vocês ficam com o .tflit, que é o formato, mais uma vez.
+
+934
+00:53:34,809 --> 00:53:37,809
+Vocês podem usar qualquer editor de Word,
+
+935
+00:53:37,809 --> 00:53:40,809
+ou digamos, não é Word, mas vocês podem usar PowerPoint,
+
+936
+00:53:40,809 --> 00:53:43,809
+ou podem usar o Open,
+
+937
+00:53:43,809 --> 00:53:45,809
+ferramentas abertas, podem utilizar a da Google,
+
+938
+00:53:45,809 --> 00:53:48,809
+e exportar para PDF, aqui é mais ou menos a mesma coisa.
+
+939
+00:53:48,809 --> 00:53:52,809
+Ou seja, podem exportar para LIT RT
+
+940
+00:53:52,809 --> 00:53:55,809
+de qualquer ferramenta que tenham usado antes.
+
+941
+00:53:57,809 --> 00:54:02,809
+Depois, o LIT RT, o tal fecheiro .tflit,
+
+942
+00:54:02,809 --> 00:54:04,809
+descreve a computação que é feita.
+
+943
+00:54:04,809 --> 00:54:09,809
+Lá dentro, nós não vamos estar a analisar lá dentro o que é que aquilo tem,
+
+944
+00:54:09,809 --> 00:54:14,809
+mas basicamente o que lá vai
+
+945
+00:54:14,809 --> 00:54:19,809
+são os pesos e os biases que aquela rede neuronal aprendeu.
+
+946
+00:54:19,809 --> 00:54:23,809
+Imaginem, uma rede neuronal é tão esperta quanto os pesos que estão ajustados.
+
+947
+00:54:23,809 --> 00:54:26,809
+Portanto, o que vai naquele fecheiro são os pesos que nós aprendemos.
+
+948
+00:54:26,809 --> 00:54:31,809
+E depois, do outro lado, algo vai saber ler esses fecheiros
+
+949
+00:54:31,809 --> 00:54:34,809
+e vai pôr a fazer uma inferência.
+
+950
+00:54:36,809 --> 00:54:39,809
+É essa combinação de valores que lá está dentro
+
+951
+00:54:39,809 --> 00:54:45,809
+que vai permitir depois ao software LIT RT que está instalado no Raspberry Pi
+
+952
+00:54:45,809 --> 00:54:50,809
+saber interpretar aquele fecheiro e fazer as previsões.
+
+953
+00:54:52,809 --> 00:54:55,809
+No início, o fecheiro por si só não faz previsões.
+
+954
+00:54:55,809 --> 00:54:58,809
+Tem que ter o leitor que depois faz previsões.
+
+955
+00:54:58,809 --> 00:55:00,809
+Mais uma vez, lembrei-se de PDF,
+
+956
+00:55:00,809 --> 00:55:05,809
+o PDF em si é codificação daquele documento num fecheiro
+
+957
+00:55:05,809 --> 00:55:08,809
+que está ali para trás com imensas coisas.
+
+958
+00:55:08,809 --> 00:55:12,809
+O other reader, o browser, o que seja que vocês usam,
+
+959
+00:55:12,809 --> 00:55:16,809
+lê depois aquele fecheiro e transformam para vocês o verem.
+
+960
+00:55:16,809 --> 00:55:18,809
+É mais ou menos a mesma coisa.
+
+961
+00:55:24,599 --> 00:55:27,599
+O grafo, se vocês usarem o Model Explorer,
+
+962
+00:55:27,599 --> 00:55:33,739
+que é uma estrutura que vocês podem ver, digamos,
+
+963
+00:55:33,739 --> 00:55:35,739
+o que é que está lá dentro e o que não está,
+
+964
+00:55:35,739 --> 00:55:41,739
+ele mantém aqui o grafo, mantém-se visível lá dentro.
+
+965
+00:55:41,739 --> 00:55:48,739
+Ou seja, o fecheiro em si do LIT RT mantém aquele grafo que falámos lá atrás
+
+966
+00:55:48,739 --> 00:55:52,739
+em que diz, tem este input, tem aquele output, está em float 32,
+
+967
+00:55:52,739 --> 00:55:56,739
+tem aquele tensor que vai fazer uma adição, que é um AD,
+
+968
+00:55:56,739 --> 00:55:59,739
+que vai fazer uma multiplicação etc.
+
+969
+00:55:59,739 --> 00:56:03,739
+Vai entrar com a shape, não sei quantos,
+
+970
+00:56:03,739 --> 00:56:06,739
+e vai sair com a shape de outra forma qualquer.
+
+971
+00:56:06,739 --> 00:56:09,739
+Portanto, não preciso que vocês saibam isto.
+
+972
+00:56:09,739 --> 00:56:15,739
+Só preciso que lá dentro tem informação que está guardada desta forma.
+
+973
+00:56:21,739 --> 00:56:25,739
+Como eu estava a dizer, isto também é apenas relembrar,
+
+974
+00:56:25,739 --> 00:56:29,739
+porque a conversão transforma a representação do modelo.
+
+975
+00:56:29,739 --> 00:56:32,739
+No início partimos da forma como o framework descreve o cálculo,
+
+976
+00:56:32,739 --> 00:56:36,739
+ou seja, o TensorFlow, e transformamos para LIT RT.
+
+977
+00:56:36,739 --> 00:56:42,739
+Antigamente isto era necessário porque quando vocês tinham que fazer conversões
+
+978
+00:56:42,739 --> 00:56:46,739
+de outras ferramentas, tipo PyTorch ou assim, para LIT RT,
+
+979
+00:56:46,739 --> 00:56:48,739
+vocês precisavam de perceber esses inner workings
+
+980
+00:56:48,739 --> 00:56:52,739
+e perceber como é que vocês representavam o que estava do lado,
+
+981
+00:56:52,739 --> 00:56:54,739
+como está no outro etc.
+
+982
+00:56:54,739 --> 00:56:58,739
+Mas, na verdade, não precisam hoje em dia,
+
+983
+00:56:58,739 --> 00:57:05,739
+porque isto já está feito por as ferramentas direito.
+
+984
+00:57:06,739 --> 00:57:14,250
+Depois, falar-vos um bocadinho do LIT RT lá dentro.
+
+985
+00:57:14,250 --> 00:57:23,329
+O grafo que está é a forma como vem do TensorFlow.
+
+986
+00:57:23,329 --> 00:57:30,329
+Quando isto depois é colocado dentro do TensorFlow, do LIT RT na placa,
+
+987
+00:57:30,329 --> 00:57:33,329
+ele ainda faz aqui umas otimizações itas.
+
+988
+00:57:33,329 --> 00:57:36,329
+Ele faz uma difusão que é, por exemplo,
+
+989
+00:57:36,329 --> 00:57:41,329
+em vez de estar a fazer um processo que é fazer a camada densa,
+
+990
+00:57:41,329 --> 00:57:44,329
+vamos dizer que é a camada fully connected numa rede de terminal,
+
+991
+00:57:44,329 --> 00:57:47,329
+e só depois aplicar um relu, ele faz aqui uma fusão
+
+992
+00:57:47,329 --> 00:57:51,329
+e faz as duas coisas ao mesmo tempo.
+
+993
+00:57:51,329 --> 00:57:55,329
+Isto tem umas otimizações de memória, tem umas otimizações nos cálculos que faz,
+
+994
+00:57:55,329 --> 00:58:01,329
+reduz o trabalho de coordenação e alguns resultados entre médias que existem
+
+995
+00:58:01,329 --> 00:58:04,329
+e, portanto, melhora ali qualquer coisinha
+
+996
+00:58:04,329 --> 00:58:07,329
+e o número de operações também melhora,
+
+997
+00:58:07,329 --> 00:58:14,329
+de forma a que vocês possam executar isto num fecheiro, numa parte, num lado, desculpem,
+
+998
+00:58:14,329 --> 00:58:18,329
+num computador mais pequeno, num sistema empevido.
+
+999
+00:58:19,329 --> 00:58:28,800
+Depois nós temos o LIT RT também tem, digamos, o seu próprio vocabulário.
+
+1000
+00:58:31,800 --> 00:58:37,800
+Quando é exportado para LIT RT tem que usar este vocabulário,
+
+1001
+00:58:37,800 --> 00:58:41,800
+tem que ser expresso através das operações ou extensões exportadas
+
+1002
+00:58:41,800 --> 00:58:44,800
+e por isso é que depois ao converter dava alguns problemas antigamente,
+
+1003
+00:58:44,800 --> 00:58:48,800
+mas hoje em dia este vocabulário já foi estendido quando se passou para LIT RT,
+
+1004
+00:58:48,800 --> 00:58:52,800
+deixou de ser apenas Google e foi, digamos, mais open source
+
+1005
+00:58:52,800 --> 00:58:56,800
+e, portanto, as outras frameworks já conseguem transformar neste formato.
+
+1006
+00:58:58,800 --> 00:59:04,800
+Mas se, imaginem, se vocês tiverem a construir uma coisa muito complicada no PyTorch,
+
+1007
+00:59:04,800 --> 00:59:08,800
+às vezes pode não haver uma conversão direta do que vocês treinaram
+
+1008
+00:59:08,800 --> 00:59:10,800
+para o que é possível representar aqui,
+
+1009
+00:59:10,800 --> 00:59:15,800
+ou seja, imaginem, não há vocabulário do lado do LIT RT
+
+1010
+00:59:15,800 --> 00:59:20,800
+que se represente a uma coisa qualquer que vocês fizeram do outro lado.
+
+1011
+00:59:20,800 --> 00:59:24,800
+Quando é assim, temos que transformar o modelo de cima
+
+1012
+00:59:24,800 --> 00:59:28,800
+e treiná-lo outra vez para ele depois ter se portado embaixo.
+
+1013
+00:59:30,800 --> 00:59:38,800
+Depois, aqui os flatbuffers, que é um formato binário usado nos fecheiros TF-LIT,
+
+1014
+00:59:38,800 --> 00:59:43,800
+é uma das coisas próprias dele, ok?
+
+1015
+00:59:43,800 --> 00:59:47,800
+É um esquema que define como é que a informação está organizada
+
+1016
+00:59:47,800 --> 00:59:49,800
+e como é que deve ser interpretada lá dentro.
+
+1017
+00:59:49,800 --> 00:59:52,800
+Mais uma vez, não preciso que vocês saibam isto a fundo,
+
+1018
+00:59:52,800 --> 00:59:54,800
+estou aqui a falar de alguns conceitos,
+
+1019
+00:59:54,800 --> 00:59:58,800
+só se depois vocês forem trabalhar mesmo com conversões que hoje em dia já ninguém faz,
+
+1020
+00:59:58,800 --> 01:00:00,800
+é que precisam disto, antigamente precisava-se.
+
+1021
+01:00:02,800 --> 01:00:04,800
+Mas imaginem, isto é um esquema, é a forma,
+
+1022
+01:00:04,800 --> 01:00:07,800
+mais uma vez não é um vocabulário, mas é a forma como isto está organizado.
+
+1023
+01:00:08,800 --> 01:00:13,800
+Portanto, uma das vantagens é permitir aceder a campos guardados que ele tem lá
+
+1024
+01:00:13,800 --> 01:00:16,800
+sem reconstruir primeiro toda a estrutura,
+
+1025
+01:00:16,800 --> 01:00:20,800
+ou seja, tentando explicar isto de outra forma,
+
+1026
+01:00:20,800 --> 01:00:23,800
+ele consegue aceder a partes da memória,
+
+1027
+01:00:23,800 --> 01:00:27,800
+a partes do que está guardado, sem ter que aceder a tudo.
+
+1028
+01:00:27,800 --> 01:00:30,800
+Isto torna, mais uma vez, é uma pequena otimizaçãozita
+
+1029
+01:00:30,800 --> 01:00:34,800
+que o torna melhor a correr em sistemas pequeninos.
+
+1030
+01:00:35,800 --> 01:00:39,800
+Não significa que ele não precise da rama,
+
+1031
+01:00:39,800 --> 01:00:44,800
+mas podemos dividir as coisas lá dentro em bocadinhos muito pequeninos
+
+1032
+01:00:44,800 --> 01:00:47,800
+que ele vai conseguir aceder só ao que precisa.
+
+1033
+01:00:47,800 --> 01:00:50,800
+Ou seja, vocês têm uma rama, imaginem vocês,
+
+1034
+01:00:50,800 --> 01:00:54,800
+para ser mais fácil, de 10, não vamos dizer o valor,
+
+1035
+01:00:54,800 --> 01:00:57,800
+não vamos dizer a unidade, são 10, ok?
+
+1036
+01:00:57,800 --> 01:01:00,800
+E o modelo normal precisaria de 12.
+
+1037
+01:01:00,800 --> 01:01:03,800
+Ora, vocês, numa coisa normal,
+
+1038
+01:01:03,800 --> 01:01:06,800
+teriam que carregar o modelo todo para a rama.
+
+1039
+01:01:06,800 --> 01:01:09,800
+Ora, os 12 não cabiam dentro dos 10.
+
+1040
+01:01:09,800 --> 01:01:12,800
+O TF Lite permite que vocês tenham umas partes carregadas
+
+1041
+01:01:12,800 --> 01:01:15,800
+e ele vai aceder só às partes que vai precisar.
+
+1042
+01:01:15,800 --> 01:01:18,800
+Portanto, vocês conseguem dividir aqueles 12,
+
+1043
+01:01:18,800 --> 01:01:22,800
+por exemplo, 10 mais 2, ou 8 mais 2 mais 2, vamos dizer assim.
+
+1044
+01:01:22,800 --> 01:01:26,800
+Então, está otimizado para trabalhar com rames pequenas
+
+1045
+01:01:27,800 --> 01:01:30,800
+e executar isto de forma melhor
+
+1046
+01:01:30,800 --> 01:01:34,800
+e organizar a informação que ele precisa de estar guardado de forma melhor.
+
+1047
+01:01:36,800 --> 01:01:43,800
+Pronto, o runtime, o que faz é pegar naquilo que ali está dentro,
+
+1048
+01:01:43,800 --> 01:01:46,800
+naquele fecheiro que nós vimos,
+
+1049
+01:01:46,800 --> 01:01:49,800
+colocar todas estas noções de vocabulário,
+
+1050
+01:01:49,800 --> 01:01:52,800
+colocar aqueles flatbuffers e preparar.
+
+1051
+01:01:52,800 --> 01:01:54,800
+Não se vocês não se devem lembrar,
+
+1052
+01:01:54,800 --> 01:01:56,800
+se vocês consultarem o PL1A,
+
+1053
+01:01:56,800 --> 01:02:00,800
+há um passo muito pequenino em que nós fazemos o carregar do modelo.
+
+1054
+01:02:00,800 --> 01:02:05,800
+Então, basicamente nós pegamos no TF Lite e carregamos para o runtime
+
+1055
+01:02:05,800 --> 01:02:09,800
+e o que vamos estar a fazer é pôr o motor do Lite RT
+
+1056
+01:02:09,800 --> 01:02:13,800
+a pegar naquele fecheiro e a fazer estas otimizações
+
+1057
+01:02:13,800 --> 01:02:17,800
+e a colocá-lo na nossa placa, disponível para correr.
+
+1058
+01:02:18,800 --> 01:02:21,800
+Ele transforma isto em execução.
+
+1059
+01:02:22,800 --> 01:02:24,800
+Concretamente, o fecheiro não é nada,
+
+1060
+01:02:24,800 --> 01:02:26,800
+ele pega naquilo, lê, prepara as operações,
+
+1061
+01:02:26,800 --> 01:02:30,800
+verifica as necessidades de espaço, verifica o espaço necessário
+
+1062
+01:02:30,800 --> 01:02:34,800
+e quando recebe uma entrada, aí sim, porque já está carregado,
+
+1063
+01:02:34,800 --> 01:02:37,800
+executa os cálculos respeitando as dependências
+
+1064
+01:02:37,800 --> 01:02:41,800
+e as debilidades, vamos dizer assim, da vossa placa.
+
+1065
+01:02:41,800 --> 01:02:45,800
+Ou seja, é este mecanismo de runtime
+
+1066
+01:02:45,800 --> 01:02:48,800
+que depois lhe permite transformar tudo isto que fomos falando
+
+1067
+01:02:48,800 --> 01:02:51,800
+e todas estas pequenas otimizações
+
+1068
+01:02:51,800 --> 01:02:56,800
+nos valores de entrada e de saída e nos cálculos que ele precisa fazer.
+
+1069
+01:02:59,139 --> 01:03:06,139
+Aqui falando um bocadinho de termos do que é que ele faz lá dentro,
+
+1070
+01:03:06,139 --> 01:03:11,139
+nós temos, por exemplo, o operador, que é a tarefa matemática,
+
+1071
+01:03:11,139 --> 01:03:14,139
+que é quando ele tem que fazer a cálculo toda.
+
+1072
+01:03:15,139 --> 01:03:22,139
+Depois temos o kernel, que é o código que faz estas operações numéricas
+
+1073
+01:03:22,139 --> 01:03:27,139
+e temos o back-end em si, que é o passe que ele usa para fazer isto.
+
+1074
+01:03:27,139 --> 01:03:30,139
+Ou seja, ele identifica o percurso de execução
+
+1075
+01:03:30,139 --> 01:03:35,139
+para uma CPU ou para um acelerador de GPU, se vocês tiverem na vossa placa.
+
+1076
+01:03:37,139 --> 01:03:42,139
+Ou seja, se pensarem aqui, o mesmo operador,
+
+1077
+01:03:42,139 --> 01:03:45,139
+ou seja, os mesmos cálculos matemáticos,
+
+1078
+01:03:45,139 --> 01:03:49,139
+podem ter associados diferentes kernels
+
+1079
+01:03:49,139 --> 01:03:52,139
+e podem ter associados diferentes dispositivos.
+
+1080
+01:03:53,139 --> 01:03:56,139
+Ou seja, não temos que instalar três coisas separadas
+
+1081
+01:03:56,139 --> 01:03:59,139
+para aparecerem três nomes, aquilo vem tudo lá dentro.
+
+1082
+01:03:59,139 --> 01:04:02,139
+Estamos a distinguir o que é que ele faz lá dentro.
+
+1083
+01:04:02,139 --> 01:04:04,139
+Vocês podem ter...
+
+1084
+01:04:05,139 --> 01:04:08,139
+Porquê? Não há uma grande razão.
+
+1085
+01:04:08,139 --> 01:04:11,139
+Mas, por exemplo, querem ter umas contas no CPU e no GPU ao mesmo tempo,
+
+1086
+01:04:11,139 --> 01:04:13,139
+vocês podem fazer.
+
+1087
+01:04:13,139 --> 01:04:15,139
+O operador é o mesmo, tem dois back-ends,
+
+1088
+01:04:15,139 --> 01:04:17,139
+um a pôr no CPU e outro no GPU lá dentro.
+
+1089
+01:04:17,139 --> 01:04:22,139
+E ele vai fazer essa otimização com o que tiver.
+
+1090
+01:04:26,139 --> 01:04:31,139
+Depois, na documentação, se vocês forem ver,
+
+1091
+01:04:31,139 --> 01:04:35,139
+antigamente, quando era TensorFlow Lite, ele era interpretado.
+
+1092
+01:04:36,139 --> 01:04:42,139
+Ou seja, é a interpretação que nós vamos usar no PL2,
+
+1093
+01:04:42,139 --> 01:04:45,139
+que é a forma mais fácil de explicar.
+
+1094
+01:04:45,139 --> 01:04:51,139
+Ele prepara os tensors, pede a execução e lê as saídas.
+
+1095
+01:04:51,139 --> 01:04:56,139
+Existe uma versão do Lite RT2 do 2 para a frente,
+
+1096
+01:04:56,139 --> 01:05:01,139
+que organiza a preparação do dispositivo à aceleração,
+
+1097
+01:05:01,139 --> 01:05:05,139
+a gestão dos buffers, etc., de uma forma compilada.
+
+1098
+01:05:05,139 --> 01:05:10,139
+Ou seja, faz isso através de uma API diferente
+
+1099
+01:05:10,139 --> 01:05:14,139
+e gera ali as coisas de forma diferente interiormente.
+
+1100
+01:05:16,139 --> 01:05:21,139
+Portanto, são duas formas diferentes.
+
+1101
+01:05:21,139 --> 01:05:26,139
+Nós vamos usar a mais básica, mas também a mais simples,
+
+1102
+01:05:26,139 --> 01:05:30,139
+mas é aquela que nos permite usar o que é mais comum.
+
+1103
+01:05:30,139 --> 01:05:33,139
+Vocês vão ver muitas coisas em TensorFlow Lite
+
+1104
+01:05:33,139 --> 01:05:38,139
+e esta coisa nova do compiled model não existe no novo.
+
+1105
+01:05:40,139 --> 01:05:46,139
+Mas em ambas as instâncias, o resultado acaba por ser
+
+1106
+01:05:46,139 --> 01:05:50,139
+sempre o modelo, já com a arquitetura e os pesos
+
+1107
+01:05:50,139 --> 01:05:52,139
+e tudo da mesma, certo?
+
+1108
+01:05:52,139 --> 01:05:54,139
+Exatamente, é exatamente igual.
+
+1109
+01:05:54,139 --> 01:05:58,139
+A nova tem estas coisas que diz aqui.
+
+1110
+01:05:58,139 --> 01:06:02,139
+Target Preparation, Hardware Acceleration and Buffer Handling.
+
+1111
+01:06:02,139 --> 01:06:07,139
+Ou seja, tudo isso que fomos falando já existe no TensorFlow Lite,
+
+1112
+01:06:07,139 --> 01:06:10,139
+já existia anteriormente no interpretador.
+
+1113
+01:06:10,139 --> 01:06:13,139
+Mas eles fizeram algumas melhorias, ok?
+
+1114
+01:06:13,139 --> 01:06:17,139
+Melhorias, coisas mínimas, mas que prepara...
+
+1115
+01:06:17,139 --> 01:06:21,139
+Por exemplo, antes de ir para uma placa,
+
+1116
+01:06:21,139 --> 01:06:25,139
+ele prepara aquele caminho, digamos assim,
+
+1117
+01:06:25,139 --> 01:06:27,139
+para ir para aquela placa.
+
+1118
+01:06:27,139 --> 01:06:30,139
+Quando precisa Hardware Accelerated,
+
+1119
+01:06:30,139 --> 01:06:32,139
+se tiverem uma GPU que possa fazer isso,
+
+1120
+01:06:32,139 --> 01:06:35,139
+ele vai usar, vai tratar ali dos buffers um bocadinho diferente,
+
+1121
+01:06:35,139 --> 01:06:38,139
+ou seja, eles próprios, se vocês virem,
+
+1122
+01:06:38,139 --> 01:06:40,139
+só começaram na versão 2.
+
+1123
+01:06:40,139 --> 01:06:43,139
+Ou seja, eles na versão 1 começaram a fazer muito igual
+
+1124
+01:06:43,139 --> 01:06:45,139
+ao que tinham anteriormente.
+
+1125
+01:06:45,139 --> 01:06:49,139
+Para evoluir, eles estão a fazer algumas otimizações, ok?
+
+1126
+01:06:52,139 --> 01:06:54,139
+Portanto, se vocês...
+
+1127
+01:06:54,139 --> 01:06:58,139
+Não sei se ficou respondido, desculpa.
+
+1128
+01:06:58,139 --> 01:07:00,139
+Acho que sim, sim.
+
+1129
+01:07:00,139 --> 01:07:01,139
+Obrigado.
+
+1130
+01:07:01,139 --> 01:07:03,139
+Pronto.
+
+1131
+01:07:05,139 --> 01:07:07,139
+Littert.
+
+1132
+01:07:07,139 --> 01:07:09,139
+Também é muito...
+
+1133
+01:07:09,139 --> 01:07:12,139
+Esta imagem até foi a imagem que eles usaram
+
+1134
+01:07:12,139 --> 01:07:14,139
+quando anunciaram o Littert, ok?
+
+1135
+01:07:14,139 --> 01:07:18,139
+E o Littert foi a forma deles de trazer muito do IA
+
+1136
+01:07:18,139 --> 01:07:21,139
+também para dispositivos móveis, ok?
+
+1137
+01:07:21,139 --> 01:07:24,139
+Ele entra numa aplicação qualquer que vocês façam,
+
+1138
+01:07:24,139 --> 01:07:26,139
+como uma biblioteca.
+
+1139
+01:07:26,139 --> 01:07:31,139
+Ou seja, é mais uma biblioteca
+
+1140
+01:07:31,139 --> 01:07:34,139
+que vocês põem numa aplicação que vocês fazem.
+
+1141
+01:07:34,139 --> 01:07:37,139
+E era um bocadinho o que eles queriam,
+
+1142
+01:07:37,139 --> 01:07:39,139
+era ter isso mesmo, era, ou seja,
+
+1143
+01:07:39,139 --> 01:07:43,139
+era ter uma biblioteca que tratasse da execução do modelo.
+
+1144
+01:07:43,139 --> 01:07:45,139
+E uma coisa tão simples
+
+1145
+01:07:45,139 --> 01:07:49,139
+que as pessoas que quisessem começar a ter IA
+
+1146
+01:07:49,139 --> 01:07:53,139
+em sistemas imbebidos, mas em telemóveis e etc, etc,
+
+1147
+01:07:53,139 --> 01:07:55,139
+precisassem apenas de usar aquela interface
+
+1148
+01:07:55,139 --> 01:07:57,139
+para correr as coisas.
+
+1149
+01:07:57,139 --> 01:08:00,139
+E, pronto, tem sido bastante utilizada,
+
+1150
+01:08:00,139 --> 01:08:03,139
+eles acho que conseguiram um bocadito o que queriam,
+
+1151
+01:08:03,139 --> 01:08:07,139
+porque anteriormente o TensorFlow Lite dava muito trabalho,
+
+1152
+01:08:07,139 --> 01:08:09,139
+era muito chato de usar,
+
+1153
+01:08:09,139 --> 01:08:11,139
+a interface era muito difícil,
+
+1154
+01:08:11,139 --> 01:08:13,139
+ou mais difícil,
+
+1155
+01:08:13,139 --> 01:08:17,140
+e isto veio tornar as coisas bastante mais simples,
+
+1156
+01:08:17,140 --> 01:08:19,140
+mais fáceis para quem desenvolve código,
+
+1157
+01:08:19,140 --> 01:08:22,140
+mais fácil para todo o ecossistema
+
+1158
+01:08:22,140 --> 01:08:24,140
+de pôr as coisas a correr
+
+1159
+01:08:24,140 --> 01:08:26,140
+dentro de dispositivos pequeninos.
+
+1160
+01:08:26,140 --> 01:08:28,140
+Agora, é tão simples como o que nós estamos a fazer,
+
+1161
+01:08:28,140 --> 01:08:30,140
+que é, treinam em qualquer linguagem,
+
+1162
+01:08:30,140 --> 01:08:32,140
+exportam para aquele modelo, para aquele formato,
+
+1163
+01:08:32,140 --> 01:08:34,140
+e do outro lado, do lado do imbebido,
+
+1164
+01:08:34,140 --> 01:08:36,140
+do lado do dispositivo móvel,
+
+1165
+01:08:36,140 --> 01:08:38,140
+se tiverem lá a biblioteca que sabe ler aquele formato,
+
+1166
+01:08:38,140 --> 01:08:40,140
+aquilo vai correr.
+
+1167
+01:08:40,140 --> 01:08:42,140
+Que é maravilhoso, mais uma vez,
+
+1168
+01:08:42,140 --> 01:08:44,140
+comparem o PDF,
+
+1169
+01:08:44,140 --> 01:08:46,140
+vocês agora exportam,
+
+1170
+01:08:46,140 --> 01:08:48,140
+e desde que do outro lado tem alguma coisa que lê PDF,
+
+1171
+01:08:48,140 --> 01:08:50,140
+maravilhoso.
+
+1172
+01:08:50,140 --> 01:08:52,140
+Aquilo corre do outro lado.
+
+1173
+01:08:52,140 --> 01:08:54,140
+Vocês não sei se são do tempo,
+
+1174
+01:08:54,140 --> 01:08:56,140
+eu já não sou, portanto,
+
+1175
+01:08:56,140 --> 01:08:58,140
+quer dizer, ainda apanhei um bocadito isso,
+
+1176
+01:08:58,140 --> 01:09:00,140
+mas às vezes vocês estavam num computador,
+
+1177
+01:09:00,140 --> 01:09:02,140
+recebiam um fiche de PDF e não tinham nada
+
+1178
+01:09:02,140 --> 01:09:04,140
+que conseguissem abrir aquela extensão PDF,
+
+1179
+01:09:04,140 --> 01:09:06,140
+e tinham que ter o Ada Acrobat Reader,
+
+1180
+01:09:06,140 --> 01:09:08,140
+e tinham que pagar por ele,
+
+1181
+01:09:08,140 --> 01:09:10,140
+para ler aquele PDF e etc.
+
+1182
+01:09:10,140 --> 01:09:12,140
+Portanto,
+
+1183
+01:09:12,140 --> 01:09:14,140
+há coisas que parecem tão resolvidas,
+
+1184
+01:09:14,140 --> 01:09:16,140
+mas que às vezes não estão,
+
+1185
+01:09:16,140 --> 01:09:18,140
+e aqui na verdade foi a forma de eles resolverem
+
+1186
+01:09:18,140 --> 01:09:20,140
+esta coisa e tornar isto tudo
+
+1187
+01:09:20,140 --> 01:09:22,140
+muito fácil,
+
+1188
+01:09:22,140 --> 01:09:24,140
+muito mais fácil do que
+
+1189
+01:09:24,140 --> 01:09:26,140
+era antigamente.
+
+1190
+01:09:28,140 --> 01:09:30,140
+Portanto,
+
+1191
+01:09:30,140 --> 01:09:32,140
+nós aqui
+
+1192
+01:09:32,140 --> 01:09:34,140
+temos a conversão,
+
+1193
+01:09:34,140 --> 01:09:36,140
+a quantização é uma coisa que vamos falar
+
+1194
+01:09:36,140 --> 01:09:38,140
+depois, e que eu já falei numa destas aulas,
+
+1195
+01:09:38,140 --> 01:09:40,140
+mas
+
+1196
+01:09:40,140 --> 01:09:42,140
+não nos interessa para já,
+
+1197
+01:09:42,140 --> 01:09:44,140
+é uma coisa que vamos falar na próxima aula
+
+1198
+01:09:44,140 --> 01:09:46,140
+terça-feira,
+
+1199
+01:09:46,140 --> 01:09:48,140
+mas só queria que vocês percebessem,
+
+1200
+01:09:48,140 --> 01:09:50,140
+a conversão é converter para
+
+1201
+01:09:50,140 --> 01:09:52,140
+litro RT, a quantização é,
+
+1202
+01:09:52,140 --> 01:09:54,140
+por exemplo, nós estamos a guardar
+
+1203
+01:09:54,140 --> 01:09:56,140
+os números todos como float
+
+1204
+01:09:56,140 --> 01:09:58,140
+32, os pesos
+
+1205
+01:09:58,140 --> 01:10:00,140
+e as ativações.
+
+1206
+01:10:00,140 --> 01:10:02,140
+A quantização permite-nos mudar
+
+1207
+01:10:02,140 --> 01:10:04,140
+a representação numérica
+
+1208
+01:10:04,140 --> 01:10:06,140
+desses valores, e ao invés de estarmos a representar em float 32,
+
+1209
+01:10:06,140 --> 01:10:08,140
+que ocupa
+
+1210
+01:10:08,140 --> 01:10:10,140
+imenso espaço, nós podemos
+
+1211
+01:10:10,140 --> 01:10:12,140
+começar a representar como
+
+1212
+01:10:12,140 --> 01:10:15,390
+um inteiro,
+
+1213
+01:10:15,390 --> 01:10:17,390
+e esse inteiro vai reduzir espaço.
+
+1214
+01:10:17,390 --> 01:10:19,390
+Penso que alguém me fez essa pergunta
+
+1215
+01:10:19,390 --> 01:10:21,390
+numa das aulas práticas,
+
+1216
+01:10:21,390 --> 01:10:23,390
+exatamente, ou seja,
+
+1217
+01:10:23,390 --> 01:10:25,390
+muitas das vezes vocês
+
+1218
+01:10:25,390 --> 01:10:27,390
+podem só converter e correr assim,
+
+1219
+01:10:27,390 --> 01:10:29,390
+até vai dar, mas se vocês quiserem entrar
+
+1220
+01:10:29,390 --> 01:10:31,390
+a limar os pormenores,
+
+1221
+01:10:31,390 --> 01:10:33,390
+vocês têm que aplicar a quantização,
+
+1222
+01:10:33,390 --> 01:10:35,390
+a quantização é, verem que formatos é que aquilo está guardado,
+
+1223
+01:10:35,390 --> 01:10:37,390
+se vocês puderem guardar num formato
+
+1224
+01:10:37,390 --> 01:10:39,390
+que ocupa
+
+1225
+01:10:39,390 --> 01:10:41,390
+um bocadinho menos de espaço,
+
+1226
+01:10:41,390 --> 01:10:43,390
+melhor,
+
+1227
+01:10:43,390 --> 01:10:45,390
+basicamente. Nós vamos ver isso,
+
+1228
+01:10:45,390 --> 01:10:47,390
+isto é basicamente a próxima aula
+
+1229
+01:10:47,390 --> 01:10:49,390
+que nós vamos dar,
+
+1230
+01:10:49,390 --> 01:10:51,390
+que vai ser na próxima terça-feira, vai ser sobre quantização,
+
+1231
+01:10:51,390 --> 01:10:53,390
+portanto,
+
+1232
+01:10:53,390 --> 01:10:55,390
+depois,
+
+1233
+01:10:55,390 --> 01:10:57,390
+acho que isto vai ficar um bocadinho mais claro.
+
+1234
+01:10:59,390 --> 01:11:01,390
+Depois, só para falar aqui um bocadinho
+
+1235
+01:11:01,390 --> 01:11:03,390
+de
+
+1236
+01:11:03,390 --> 01:11:05,390
+further reading,
+
+1237
+01:11:05,390 --> 01:11:07,390
+também
+
+1238
+01:11:07,390 --> 01:11:09,390
+de further reading é pensar que
+
+1239
+01:11:09,390 --> 01:11:11,390
+temos diferentes
+
+1240
+01:11:11,390 --> 01:11:13,390
+famílias
+
+1241
+01:11:13,390 --> 01:11:15,390
+com diferentes
+
+1242
+01:11:15,390 --> 01:11:17,390
+scopes, o LITRT
+
+1243
+01:11:17,390 --> 01:11:19,390
+que estamos a estudar executa modelos em
+
+1244
+01:11:19,390 --> 01:11:21,390
+plataformas suportadas,
+
+1245
+01:11:21,390 --> 01:11:23,390
+são plataformas que têm um sistema
+
+1246
+01:11:23,390 --> 01:11:25,390
+operativo, ou seja, o Raspberry Pi tem um sistema
+
+1247
+01:11:25,390 --> 01:11:27,390
+operativo, o LITRT entra lá
+
+1248
+01:11:27,390 --> 01:11:29,390
+dentro como uma biblioteca que corre
+
+1249
+01:11:29,390 --> 01:11:31,390
+sobre aquele sistema operativo.
+
+1250
+01:11:33,390 --> 01:11:35,390
+Depois, vocês
+
+1251
+01:11:35,390 --> 01:11:37,390
+podem corre-lo em microcontroladores
+
+1252
+01:11:37,390 --> 01:11:39,390
+que não têm sistema operativo
+
+1253
+01:11:41,390 --> 01:11:45,060
+em que precisam fazer muito mais
+
+1254
+01:11:45,060 --> 01:11:47,060
+conversões, ok? Não é conversões,
+
+1255
+01:11:47,060 --> 01:11:49,060
+é, digamos,
+
+1256
+01:11:51,060 --> 01:11:53,060
+fazer uma ligação do que é que é o hardware
+
+1257
+01:11:53,060 --> 01:11:55,060
+a isto. E o
+
+1258
+01:11:55,060 --> 01:11:57,060
+LITRT tem que saber comunicar
+
+1259
+01:11:57,060 --> 01:11:59,060
+com a forma que o vosso hardware comunica
+
+1260
+01:11:59,060 --> 01:12:01,060
+para não ter ali o sistema operativo pelo meio,
+
+1261
+01:12:01,060 --> 01:12:03,060
+ok?
+
+1262
+01:12:03,060 --> 01:12:05,060
+É possível usar,
+
+1263
+01:12:05,060 --> 01:12:07,060
+mas
+
+1264
+01:12:07,060 --> 01:12:09,060
+vocês têm que ter
+
+1265
+01:12:09,060 --> 01:12:11,060
+em atenção o firmware do
+
+1266
+01:12:11,060 --> 01:12:13,060
+microcontrolador, e não é nisto que
+
+1267
+01:12:13,060 --> 01:12:15,060
+nós vamos focar-nos nestas aulas.
+
+1268
+01:12:15,060 --> 01:12:17,060
+E depois existe-se mais
+
+1269
+01:12:17,060 --> 01:12:19,060
+recentemente um LITRT-LM
+
+1270
+01:12:19,060 --> 01:12:21,060
+que é mais
+
+1271
+01:12:21,060 --> 01:12:23,060
+vocacionado para language models,
+
+1272
+01:12:23,060 --> 01:12:25,060
+chat GPTs, não é bem chat GPTs, mas
+
+1273
+01:12:25,060 --> 01:12:27,060
+LLMs, vamos dizer assim,
+
+1274
+01:12:27,060 --> 01:12:29,060
+coisas do género, que
+
+1275
+01:12:29,060 --> 01:12:31,060
+fazem umas otimizações para
+
+1276
+01:12:31,060 --> 01:12:33,060
+essa família de coisas, ok?
+
+1277
+01:12:33,060 --> 01:12:35,060
+Nós vamos focar no maior,
+
+1278
+01:12:35,060 --> 01:12:37,060
+no LITRT como um
+
+1279
+01:12:37,060 --> 01:12:39,060
+geral, mas existem estas
+
+1280
+01:12:39,060 --> 01:12:41,060
+famílias dentro
+
+1281
+01:12:41,060 --> 01:12:43,060
+destas coisas. Portanto,
+
+1282
+01:12:43,060 --> 01:12:45,060
+o que é que nós
+
+1283
+01:12:45,060 --> 01:12:47,060
+vimos e
+
+1284
+01:12:47,060 --> 01:12:49,060
+depois de falar aqui muito, o que é que eu quero
+
+1285
+01:12:49,060 --> 01:12:51,060
+que fique na vossa cabeça?
+
+1286
+01:12:51,060 --> 01:12:53,060
+Tipo, se tivessem que tirar uma
+
+1287
+01:12:53,060 --> 01:12:55,060
+coisa desta aula, o que é que eu queria que tirassem?
+
+1288
+01:12:55,060 --> 01:12:57,060
+TensorFlow e PyTorch
+
+1289
+01:12:57,060 --> 01:12:59,060
+para treinar.
+
+1290
+01:12:59,060 --> 01:13:01,060
+Depois existe uma conversão
+
+1291
+01:13:01,060 --> 01:13:03,060
+e depois
+
+1292
+01:13:03,060 --> 01:13:05,060
+tem o LITRT na vossa placa a correr.
+
+1293
+01:13:05,060 --> 01:13:07,060
+Ok?
+
+1294
+01:13:07,060 --> 01:13:09,060
+Este é o conceito maior que eu quero
+
+1295
+01:13:09,060 --> 01:13:11,060
+que vocês tirem daqui, porque vejo muita gente
+
+1296
+01:13:11,060 --> 01:13:13,060
+a querer treinar modelos
+
+1297
+01:13:13,060 --> 01:13:15,060
+dentro das placas,
+
+1298
+01:13:15,060 --> 01:13:17,060
+vejo muita gente
+
+1299
+01:13:17,060 --> 01:13:19,060
+a querer depois, em vez
+
+1300
+01:13:19,060 --> 01:13:21,060
+de utilizarem o LITRT, utilizarem o
+
+1301
+01:13:21,060 --> 01:13:23,060
+TensorFlow dentro das placas,
+
+1302
+01:13:23,060 --> 01:13:25,060
+não façam isso.
+
+1303
+01:13:25,060 --> 01:13:27,060
+Este, digamos, é o método
+
+1304
+01:13:27,060 --> 01:13:29,060
+que é usado na indústria, é o método
+
+1305
+01:13:29,060 --> 01:13:31,060
+mais fácil, é treinam
+
+1306
+01:13:31,060 --> 01:13:33,060
+com uma coisa que está bem estabelecida,
+
+1307
+01:13:33,060 --> 01:13:35,060
+o PyTorch ou outra, se vocês quiserem,
+
+1308
+01:13:35,060 --> 01:13:37,060
+convertem
+
+1309
+01:13:37,060 --> 01:13:39,060
+e depois correm com o LITRT.
+
+1310
+01:13:39,060 --> 01:13:41,060
+Para sistemas
+
+1311
+01:13:41,060 --> 01:13:43,060
+imbedidos, neste momento,
+
+1312
+01:13:43,060 --> 01:13:45,060
+não há melhor.
+
+1313
+01:13:45,060 --> 01:13:47,060
+Ok?
+
+1314
+01:13:47,060 --> 01:13:49,060
+Depois,
+
+1315
+01:13:49,060 --> 01:13:51,060
+tem aqui algum further reading,
+
+1316
+01:13:51,060 --> 01:13:53,060
+se quiserem ver
+
+1317
+01:13:53,060 --> 01:13:55,060
+um bocadinho do anúncio
+
+1318
+01:13:55,060 --> 01:13:57,060
+quando se transformou em LITRT,
+
+1319
+01:13:57,060 --> 01:13:59,060
+quando foi, quando não foi.
+
+1320
+01:13:59,060 --> 01:14:01,060
+Portanto,
+
+1321
+01:14:01,060 --> 01:14:03,060
+cheguei ao fim desta aula,
+
+1322
+01:14:03,060 --> 01:14:05,060
+não sei se têm alguma dúvida.
+
+1323
+01:14:05,060 --> 01:14:07,060
+Se tiverem alguma dúvida,
+
+1324
+01:14:07,060 --> 01:14:09,060
+por favor, digam-me.
+
+1325
+01:14:09,060 --> 01:14:11,060
+Senão, em vez de vos estar
+
+1326
+01:14:13,060 --> 01:14:15,060
+a massacrar, digamos assim,
+
+1327
+01:14:15,060 --> 01:14:17,060
+com a quantização, falamos da quantização
+
+1328
+01:14:17,060 --> 01:14:19,060
+na próxima aula,
+
+1329
+01:14:19,060 --> 01:14:21,060
+porque não é muito necessária para o que vamos fazer
+
+1330
+01:14:21,060 --> 01:14:23,060
+no sábado e
+
+1331
+01:14:23,060 --> 01:14:25,060
+acho que
+
+1332
+01:14:25,060 --> 01:14:27,060
+fica melhor assim do que vocês
+
+1333
+01:14:27,060 --> 01:14:29,060
+estarem aqui sem massacrar, já tiveram aulas
+
+1334
+01:14:29,060 --> 01:14:31,060
+até a partir
+
+1335
+01:14:31,060 --> 01:14:33,060
+de cedo, portanto,
+
+1336
+01:14:33,060 --> 01:14:35,060
+se tiverem alguma dúvida, digam-me.
+
+1337
+01:14:35,060 --> 01:14:37,060
+Senão, peço-vos que tenham
+
+1338
+01:14:37,060 --> 01:14:39,060
+se tiverem algum tempinho,
+
+1339
+01:14:39,060 --> 01:14:41,060
+vão lendo
+
+1340
+01:14:41,060 --> 01:14:43,060
+a PL2, que é o que nós vamos fazer
+
+1341
+01:14:43,060 --> 01:14:45,060
+na próxima aula.
+
+1342
+01:14:45,060 --> 01:14:47,060
+Senão, ninguém tem dúvidas?
+
+1343
+01:14:47,060 --> 01:14:49,060
+Nada?
+
+1344
+01:14:51,060 --> 01:14:53,060
+Pronto.
+
+1345
+01:14:53,060 --> 01:14:55,060
+Espero que levem nesta aula
+
+1346
+01:14:55,060 --> 01:14:57,060
+isto que eu disse aqui,
+
+1347
+01:14:57,060 --> 01:14:59,060
+Transrflow, Conversão e LitRT.
+
+1348
+01:14:59,060 --> 01:15:01,060
+E se não tiverem mais dúvidas, ficamos por aqui por hoje.
+
+1349
+01:15:01,060 --> 01:15:05,100
+Ok?
+
+1350
+01:15:05,100 --> 01:15:07,100
+Ok.
+
+1351
+01:15:07,100 --> 01:15:09,100
+Pronto.
+
+1352
+01:15:09,100 --> 01:15:11,100
+Vemo-nos no sábado
+
+1353
+01:15:11,100 --> 01:15:13,100
+para treinar um modelo.
+
+1354
+01:15:13,100 --> 01:15:15,100
+Até amanhã. Obrigado.
+
