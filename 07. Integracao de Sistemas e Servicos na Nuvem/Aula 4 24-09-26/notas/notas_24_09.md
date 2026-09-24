@@ -100,3 +100,5 @@ porto 8080 da muinha aplicacao tambem adiciona a rede ....
 ![alt text](image-11.png)
 
 ha sepre problemas de manter algo secreto quando ponho la algo de configuracao !! 
+
+![alt text](image-12.png)
