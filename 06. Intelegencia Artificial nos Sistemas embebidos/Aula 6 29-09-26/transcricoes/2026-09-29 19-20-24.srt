@@ -1,0 +1,1372 @@
+1
+00:01:33,230 --> 00:01:38,230
+A rede da network fica a mesma, os números mudam.
+
+2
+00:01:38,230 --> 00:01:43,230
+Portanto, falando aqui dos três formatos que vocês podem usar.
+
+3
+00:01:43,230 --> 00:01:50,230
+Podemos falar de Float32, que é o formato usado durante o treino, é o de referência.
+
+4
+00:01:50,230 --> 00:01:55,230
+Toda a gente usa Float32, se não fizerem nada estão a usar Float32.
+
+5
+00:01:55,230 --> 00:01:59,230
+Float32 quer dizer que temos 32 bits para guardar um número.
+
+6
+00:01:59,230 --> 00:02:04,230
+Isto quer dizer que podemos ter um número com muitas casas decimais e com muita precisão.
+
+7
+00:02:04,230 --> 00:02:14,229
+Depois temos o Float16, que continua a ser com alguma precisão, mas metade daquela que conseguimos com o Float32.
+
+8
+00:02:14,229 --> 00:02:24,229
+É mais compacta a precisão, mas ao mesmo tempo são menos 16 bits por cada número que vocês guardam.
+
+9
+00:02:24,229 --> 00:02:33,229
+Imaginem, cada parâmetro dentro da rede, cada peso, são menos 16 bits que vocês gastam em cada uma dessas coisas.
+
+10
+00:02:33,229 --> 00:02:39,229
+Depois temos o inteiro 8, que são inteiros, como o número indica.
+
+11
+00:02:39,229 --> 00:02:47,229
+Portanto, não tem vírgulas e reduzimos isto tudo a 8 bits de representação.
+
+12
+00:02:47,229 --> 00:02:51,229
+Não precisam decorar os detalhes internos destes formatos.
+
+13
+00:02:51,229 --> 00:02:55,229
+A ideia importante é que formatos diferentes ocupam espaços diferentes.
+
+14
+00:02:55,229 --> 00:02:59,229
+E conseguem representar os valores com um nível de detalhe diferente.
+
+15
+00:02:59,229 --> 00:03:03,229
+Quanto mais memória tivermos, mais detalhe temos com o número.
+
+16
+00:03:08,229 --> 00:03:10,229
+O que isto quer dizer?
+
+17
+00:03:10,229 --> 00:03:13,229
+Olhem por exemplo para estas duas esferas.
+
+18
+00:03:13,229 --> 00:03:21,229
+Na esquerda temos muitas tonalidades e as transições são suaves.
+
+19
+00:03:21,229 --> 00:03:23,229
+Vocês não veem as transições da cor.
+
+20
+00:03:23,229 --> 00:03:27,229
+Na direita temos menos tonalidades e vemos melhor a separação entre elas.
+
+21
+00:03:27,229 --> 00:03:32,229
+Apesar disso, continuamos a olhar para isto e continua a ser uma esfera.
+
+22
+00:03:32,229 --> 00:03:35,229
+Toda a gente diz que é uma esfera aqui.
+
+23
+00:03:35,229 --> 00:03:39,229
+Isto é uma analogia para aquilo que procuramos fazer na rede.
+
+24
+00:03:39,229 --> 00:03:45,229
+Nós reduzimos-lhe algum detalhe, mas tentamos preservar a informação necessária para a tarefa.
+
+25
+00:03:45,229 --> 00:03:47,229
+Só que há um limite.
+
+26
+00:03:47,229 --> 00:03:51,229
+Imaginem que vocês tiravam e deixavam apenas uma cor.
+
+27
+00:03:51,229 --> 00:03:54,229
+Esta nossa esfera passava a ser um ciclo.
+
+28
+00:03:54,229 --> 00:03:57,229
+Nós não conseguimos perceber a profundidade dela ou não.
+
+29
+00:03:57,229 --> 00:03:59,229
+Isto era o limite.
+
+30
+00:03:59,229 --> 00:04:04,740
+Perdemos algumas coisas, temos que escolher o que perdemos.
+
+31
+00:04:04,740 --> 00:04:06,740
+Se não perdemos muito accuracy.
+
+32
+00:04:06,740 --> 00:04:12,419
+Mais uma vez é um trade-off sobre o qual temos que lidar.
+
+33
+00:04:12,419 --> 00:04:15,419
+E por que ela é útil?
+
+34
+00:04:15,419 --> 00:04:23,420
+A coisa mais óbvia e o por qual ela se faz é que torna o modelo mais compacto.
+
+35
+00:04:23,420 --> 00:04:28,420
+Nós conseguimos guardar o mesmo modelo, não também em memória mais pequena.
+
+36
+00:04:28,420 --> 00:04:32,420
+Outra coisa que nos permite é executar uma inferência ligeiramente mais depressa.
+
+37
+00:04:32,420 --> 00:04:36,420
+Porque o gajo dele está a fazer contas com números muito grandes, com muitas vírgulas,
+
+38
+00:04:36,420 --> 00:04:39,420
+que faz com que a conta seja ligeiramente mais demorada.
+
+39
+00:04:39,420 --> 00:04:42,420
+E como nós temos tantas contas lá a acontecer dentro de uma rede,
+
+40
+00:04:42,420 --> 00:04:47,420
+quando usamos números mais pequenos, vamos dizer assim, com ocupamentos de tamanho,
+
+41
+00:04:47,420 --> 00:04:50,420
+vai ser mais fácil fazer as contas.
+
+42
+00:04:50,420 --> 00:04:54,420
+E se for mais fácil fazer as contas, mais rapidamente vocês fazem a inferência.
+
+43
+00:04:54,420 --> 00:05:00,420
+Portanto, são estes dois os benefícios que vocês podem conseguir ter.
+
+44
+00:05:00,420 --> 00:05:06,420
+Ou seja, o hardware, em termos de hardware e software, vão ter menos peso e mais rapidez.
+
+45
+00:05:06,420 --> 00:05:08,420
+Mas não são automáticos.
+
+46
+00:05:08,420 --> 00:05:14,420
+Um fecheiro menor não garante por si que a execução é mais rápida.
+
+47
+00:05:14,420 --> 00:05:19,420
+Depende do modelo, dependem de outras coisas e só depois de setar em que funciona.
+
+48
+00:05:19,420 --> 00:05:23,420
+Mais uma vez, 97% das vezes é mais rápido.
+
+49
+00:05:27,420 --> 00:05:29,420
+Portanto, porque é que se faz quantização?
+
+50
+00:05:29,420 --> 00:05:36,420
+Reduzir espaço, mantendo a performance, mas para tentar meter num dispositivo imbebido
+
+51
+00:05:36,420 --> 00:05:41,420
+que tem limitações de espaço, memória, computação, etc.
+
+52
+00:05:41,420 --> 00:05:49,420
+Portanto, vamos imaginar que a rede recebe uma imagem de uma bota.
+
+53
+00:05:49,420 --> 00:05:53,420
+Ela recebeu uma imagem de uma ankle boot.
+
+54
+00:05:53,420 --> 00:05:57,420
+A versão original identifica uma bota.
+
+55
+00:05:58,420 --> 00:06:04,899
+A versão original identifica uma bota.
+
+56
+00:06:04,899 --> 00:06:08,899
+E a versão quantizada identifica uma bota.
+
+57
+00:06:08,899 --> 00:06:12,899
+Vocês vão dizer assim, temos a mesma accuracy, é bom.
+
+58
+00:06:12,899 --> 00:06:19,899
+Neste exemplo, quantizarmos o modelo, ou seja, reduzirmos a precisão dos pesos que lá teve dentro,
+
+59
+00:06:19,899 --> 00:06:22,899
+não tem qualquer efeito.
+
+60
+00:06:22,899 --> 00:06:28,899
+Mas agora imaginem vocês que uma imagem difícil de distinguir entre uma t-shirt e uma shirt.
+
+61
+00:06:30,899 --> 00:06:35,899
+Nós dávamos para lá uma t-shirt, o modelo original estávamos a dizer que era uma t-shirt,
+
+62
+00:06:35,899 --> 00:06:39,899
+mas o quantizado já nos dizia que era uma t-shirt, uma shirt normal.
+
+63
+00:06:39,899 --> 00:06:45,899
+Portanto, esta pequena mudança que vocês fazem na representação dos pesos lá dentro
+
+64
+00:06:45,899 --> 00:06:49,899
+pode ter efeitos grandes na accuracy.
+
+65
+00:06:50,899 --> 00:06:57,899
+Mas normalmente, em casos edge cases, ou seja, casos muito pequenos,
+
+66
+00:06:57,899 --> 00:07:00,899
+que vos podem trazer aqui alguma confusão.
+
+67
+00:07:00,899 --> 00:07:05,899
+Portanto, como eu disse depois, este modelo que nós temos vindo a trabalhar,
+
+68
+00:07:05,899 --> 00:07:09,899
+uma das coisas que se durava para melhorá-lo era falar com o cliente,
+
+69
+00:07:09,899 --> 00:07:13,899
+entrar a fazer e dizer assim, ok, nós dentro deste sistema embebido, com esta limitação,
+
+70
+00:07:13,899 --> 00:07:17,899
+não conseguimos identificar a diferença entre t-shirts e shirts.
+
+71
+00:07:17,899 --> 00:07:20,899
+Portanto, aqui também não haveria problema em quantizar o modelo,
+
+72
+00:07:20,899 --> 00:07:23,899
+porque conseguimos reduzir o tamanho dele, torná-lo mais rápido,
+
+73
+00:07:23,899 --> 00:07:26,899
+e mais uma vez esta diferença não nos interessava muito.
+
+74
+00:07:29,899 --> 00:07:33,899
+Portanto, aquilo que nós falámos ali ao mercado,
+
+75
+00:07:33,899 --> 00:07:38,899
+nós tem sempre a ver com a precisão numérica.
+
+76
+00:07:38,899 --> 00:07:41,899
+A precisão numérica do que é que está representado lá dentro.
+
+77
+00:07:41,899 --> 00:07:44,899
+Temos duas ideias diferentes, ok?
+
+78
+00:07:44,899 --> 00:07:48,899
+A precisão numérica é o detalhe com que representamos os valores dentro do modelo,
+
+79
+00:07:48,899 --> 00:07:53,899
+mais uma vez, se flow 32, flow 6 ou inteiro 8,
+
+80
+00:07:53,899 --> 00:08:00,899
+e a accuracy é a frequência com que se aceita nas classes, ok?
+
+81
+00:08:00,899 --> 00:08:04,899
+Não confundam isto, porque às vezes, deve ser por ser nos portugueses,
+
+82
+00:08:04,899 --> 00:08:07,899
+nós confundimos muitas vezes o precision com a accuracy,
+
+83
+00:08:07,899 --> 00:08:10,899
+não tem nada a ver, uma coisa com a outra, nadinha, ok?
+
+84
+00:08:10,899 --> 00:08:15,899
+A precisão é a representação dos valores dentro da rede,
+
+85
+00:08:15,899 --> 00:08:22,899
+e a accuracy é depois da rede tomar uma previsão se está certa ou não, ok?
+
+86
+00:08:25,899 --> 00:08:31,899
+E nunca tomem, por certo, que ter uma menor precisão numérica
+
+87
+00:08:31,899 --> 00:08:34,899
+vai afetar de certeza as vossas previsões.
+
+88
+00:08:34,899 --> 00:08:37,899
+Testem primeiro, pode até não afetar.
+
+89
+00:08:40,370 --> 00:08:47,370
+Aquilo que tínhamos falado lá em cima, quantização, depois ou durante o treino,
+
+90
+00:08:47,370 --> 00:08:52,370
+como eu falei lá em cima, e o mais normal de se fazer é depois, ok?
+
+91
+00:08:52,370 --> 00:08:57,370
+Mas existem duas abordagens, na pós-treino, foi a que eu falei antes,
+
+92
+00:08:57,370 --> 00:09:03,370
+nós pegamos um modelo que já aprendeu e produzimos uma versão com os pesos lá dentro,
+
+93
+00:09:03,370 --> 00:09:06,370
+adaptados a outro formato, vamos dizer assim,
+
+94
+00:09:06,370 --> 00:09:11,370
+vocês tinham um peso lá dentro que era, vamos supor aqui,
+
+95
+00:09:11,370 --> 00:09:19,370
+vamos supor que o peso lá dentro era 0,98 e tínhamos estas casas decimares todas, ok?
+
+96
+00:09:19,370 --> 00:09:25,370
+E isto era em float 32, se vocês forem pôr aquilo em float 16 depois do treino,
+
+97
+00:09:25,370 --> 00:09:34,370
+vamos dizer que ele vai fazer qualquer coisa como 0,98, 61,6, 0,5,
+
+98
+00:09:34,370 --> 00:09:38,370
+perdemos aqueles outros dígitos, ok?
+
+99
+00:09:38,370 --> 00:09:43,370
+E se formos converter isto para um inteiro 8,
+
+100
+00:09:43,370 --> 00:09:46,370
+o inteiro não quer dizer que ele tenha que ser inteiro,
+
+101
+00:09:46,370 --> 00:09:48,370
+porque aqui depois ele divide 0 a 1,
+
+102
+00:09:48,370 --> 00:09:51,370
+vamos dizer que ele para converter este inteiro,
+
+103
+00:09:51,370 --> 00:09:57,370
+vamos dizer que ficava com 0,98 que responde ao inteiro 98, por exemplo.
+
+104
+00:09:58,370 --> 00:10:08,860
+Portanto, nós temos vindo a perder a precisão e isto sim é o que nós fazemos em float 32
+
+105
+00:10:08,860 --> 00:10:13,860
+e reduzimos-lhe a previsão, reduzimos-lhe a memória e tentando manter o que ele já aprendeu.
+
+106
+00:10:13,860 --> 00:10:17,860
+Na outra abordagem possível é fazer isto durante o treino,
+
+107
+00:10:17,860 --> 00:10:25,860
+ou seja, durante o treino vocês já dizem ok, os pesos aqui dentro são float 16,
+
+108
+00:10:25,860 --> 00:10:29,860
+portanto vamos treinar já com isto e vamos ver que resultados é que temos,
+
+109
+00:10:29,860 --> 00:10:33,860
+vamos treinar já mais porque já sabemos que só temos float 16, ok?
+
+110
+00:10:35,860 --> 00:10:39,860
+Esta segunda abordagem exige muito mais trabalho até o final do treino,
+
+111
+00:10:42,860 --> 00:10:48,860
+portanto, não é tão usada, mas pode ser, é uma das hipóteses de o fazerem.
+
+112
+00:10:52,100 --> 00:10:57,100
+No Litter-T o conversor e o runtime têm funções diferentes.
+
+113
+00:10:57,100 --> 00:11:09,100
+Vocês, se trabalharem com Litter-T, no conversor vocês trocam um modelo de TensorFlow para Litter-T
+
+114
+00:11:09,100 --> 00:11:13,100
+e podem aqui aplicar quantização, ok?
+
+115
+00:11:14,100 --> 00:11:22,100
+Quando já temos o fecheiro Litter-T, nós já não podemos fazer quantização sobre isso, ok?
+
+116
+00:11:22,100 --> 00:11:28,100
+É no conversor que nós aplicamos a quantização às redes.
+
+117
+00:11:28,100 --> 00:11:38,990
+Pronto, depois isto de tudo pode ter que levar a uma calibração.
+
+118
+00:11:39,990 --> 00:11:47,990
+Para vocês não é muito importante, sinceramente, porque isto é tudo feito pelo conversor, ok?
+
+119
+00:11:47,990 --> 00:11:55,990
+Mas na quantização de um inteiro, basicamente ele pode ter que ajustar os pesos já conhecidos,
+
+120
+00:11:55,990 --> 00:12:02,990
+que estão guardados no modelo, e então a calibração passa exemplos pela rede, ok?
+
+121
+00:12:03,990 --> 00:12:08,990
+Imaginem assim, nos pesos que ele tem, ele consegue fazer quantização para inteiros normalmente,
+
+122
+00:12:08,990 --> 00:12:10,990
+porque ele sabe que aqueles valores vão estar entre...
+
+123
+00:12:11,990 --> 00:12:13,990
+Ok? Foi aquilo que eu vos falei ao mercado.
+
+124
+00:12:13,990 --> 00:12:23,370
+Ou seja, se tivesse aquele valor de 0.98 qualquer coisa, o valor, a conversão disto para um inteiro,
+
+125
+00:12:23,370 --> 00:12:30,370
+poderia ser 0.98, porque ele saberia que em inteiros, isto iria do 1 ao 100.
+
+126
+00:12:30,370 --> 00:12:38,370
+Ora, os valores, lembrem-se aqui atrás que falámos disto, os pesos não mudam, mas as ativações mudam.
+
+127
+00:12:38,370 --> 00:12:42,370
+Ora, se nós quisermos trabalhar na quantização das ativações,
+
+128
+00:12:42,370 --> 00:12:46,370
+nós precisamos, de quando estamos a converter para um inteiro,
+
+129
+00:12:46,370 --> 00:12:52,370
+perceber qual é o range que aquilo vai tomar, para depois transformarmos isto num inteiro.
+
+130
+00:12:52,370 --> 00:12:55,370
+Então, o que é que o conversor faz ou lhe pede que faça?
+
+131
+00:12:55,370 --> 00:13:00,370
+Basicamente, ele passa exemplos de imagens pela rede,
+
+132
+00:13:01,370 --> 00:13:07,370
+e como as imagens vão passando por lá, ele vai vendo o range de imagens que tem, ou vocês lhe dizem,
+
+133
+00:13:07,370 --> 00:13:11,370
+e ele vai conseguir fazer a quantização depois disso.
+
+134
+00:13:11,370 --> 00:13:20,370
+É apenas uma fórmula matemática que não valia a pena estarmos aqui a falar, mas pensem nisto como
+
+135
+00:13:20,370 --> 00:13:26,370
+ele, na parte das ativações, ele não sabe o quão grande aquilo é.
+
+136
+00:13:26,370 --> 00:13:34,929
+Portanto, ele tem que estimar o quão grande aquilo é, antes de escolher a régua por qual vai medir aquilo.
+
+137
+00:13:34,929 --> 00:13:38,929
+Depois, aqui, em exemplos, ok?
+
+138
+00:13:38,929 --> 00:13:46,460
+Se nós, durante a calibração, se o nosso modelo vai receber diferentes tipos de roupa
+
+139
+00:13:46,460 --> 00:13:48,460
+durante aquela calibração que eu estava a falar,
+
+140
+00:13:48,460 --> 00:13:55,460
+faz sentido mostrarmos os exemplos mais variados possíveis, que é para ele estimar melhor
+
+141
+00:13:55,460 --> 00:13:58,460
+o quão largo vai ser aquilo.
+
+142
+00:13:58,460 --> 00:14:03,460
+Porque imaginem assim, deixem-me encontrar aqui um paint.
+
+143
+00:14:04,460 --> 00:14:11,460
+Imaginem o seguinte, vocês passam, vamos primeiro começar por este exemplo de botas, apenas,
+
+144
+00:14:11,460 --> 00:14:18,460
+e as ativações lá dentro, vamos imaginar isto numa escala, num gráfico, ok?
+
+145
+00:14:20,460 --> 00:14:25,460
+O que é que nós queremos? Nós, depois de transformar isto num inteiro, queremos, por exemplo,
+
+146
+00:14:25,460 --> 00:14:32,460
+passar todos os inteiros possíveis para uma escala de 0 a 100, ok?
+
+147
+00:14:32,460 --> 00:14:41,460
+Mas, quando passamos por botas e assim, as ativações que acontecem podem acontecer aqui,
+
+148
+00:14:41,460 --> 00:14:46,460
+podem acontecer aqui, podem acontecer aqui, podem acontecer aqui, aqui, aqui, aqui, aqui, ok?
+
+149
+00:14:46,460 --> 00:14:53,460
+São valores muito grandes. O que ele vai fazer depois de ver isto, vai dizer que este valor aqui,
+
+150
+00:14:53,460 --> 00:14:58,460
+vamos dizer que este é o mais alto de todos, este passou a ser o 100 dele.
+
+151
+00:14:58,460 --> 00:15:05,460
+Portanto, este é o 99, e fez, digamos que comprimiu aquele range de valores de ativações
+
+152
+00:15:05,460 --> 00:15:09,460
+para uma representação inteira possível.
+
+153
+00:15:09,460 --> 00:15:15,460
+Se vocês só lhe passam botas em que a variabilidade não é assim tão grande, vamos dizer assim,
+
+154
+00:15:15,460 --> 00:15:21,460
+quando vocês passaram as botas para este espaço de calibração, só passaram
+
+155
+00:15:21,460 --> 00:15:26,779
+e só deu estes valores que aqui estão, ok?
+
+156
+00:15:26,779 --> 00:15:30,779
+E ele vai fazer a quantização como se fosse este espaço aqui.
+
+157
+00:15:30,779 --> 00:15:37,779
+Ora, se depois passamos outras coisas e faz com que tenhamos as ativações aqui em cima,
+
+158
+00:15:37,779 --> 00:15:43,779
+esse valor vai ser o 100, mas qualquer valor daqui para cima também vai ser 100.
+
+159
+00:15:43,779 --> 00:15:52,779
+Portanto, vocês, o nosso modelo ficou pior porque ele deixou de conseguir distinguir ranges de valores, ok?
+
+160
+00:15:52,779 --> 00:16:00,779
+Como eu disse, isto é um passo um bocadinho... é feito, digamos, automático,
+
+161
+00:16:00,779 --> 00:16:04,779
+mas vocês podem escolher os dados e ao escolher os dados podem melhorar.
+
+162
+00:16:04,779 --> 00:16:07,779
+Isto é o que tento representar um bocadinho, o que eu estava a dizer,
+
+163
+00:16:07,779 --> 00:16:11,779
+que é se vocês fizerem uma má calibração, ele não vai ter noção do espectro total,
+
+164
+00:16:11,779 --> 00:16:15,779
+portanto vai fazer um range ali muito estrito.
+
+165
+00:16:15,779 --> 00:16:20,779
+E este range estrito não vai ter em conta a distribuição dos dados que vocês realmente têm.
+
+166
+00:16:23,779 --> 00:16:35,179
+Pronto. Por fim, não é por fim, é nesta parte da calibração vocês, mais uma vez, separem as etapas, ok?
+
+167
+00:16:35,179 --> 00:16:38,179
+No treino a rede aprendeu e ajustou os pesos.
+
+168
+00:16:38,179 --> 00:16:44,179
+Na calibração é que vocês podem fazer isto que eu estava aqui a falar, ok?
+
+169
+00:16:44,179 --> 00:16:48,179
+E é que observamos os valores produzidos pela rede e aplicamos as quantizações.
+
+170
+00:16:48,179 --> 00:16:53,179
+Os pesos ficam fixos e as ativações é que têm aquele passo de calibração.
+
+171
+00:16:53,179 --> 00:16:56,179
+E depois nós testamos e vemos se isto funcionou.
+
+172
+00:16:59,620 --> 00:17:06,380
+Portanto, desta aula, a aula em si é pequena, ok?
+
+173
+00:17:06,380 --> 00:17:08,380
+Tem aqui mais uns slides, já vamos falar sobre eles.
+
+174
+00:17:08,380 --> 00:17:11,380
+A aula é pequena, mas eu só queria que vocês levassem isto aqui.
+
+175
+00:17:11,380 --> 00:17:19,380
+Se vocês tiverem uma rede muito grande, vocês podem mudar a representação dos números dentro da rede,
+
+176
+00:17:19,380 --> 00:17:28,380
+que vai levar a que o tamanho e a ocupação de memória daqueles números, daqueles pesos,
+
+177
+00:17:28,380 --> 00:17:33,380
+seja menor, mas pode ter implicações na vossa accuracy, ok?
+
+178
+00:17:33,380 --> 00:17:40,380
+E é só medindo que vocês conseguem perceber se teve demasiada implicação ou não, ok?
+
+179
+00:17:40,380 --> 00:17:48,380
+Pronto, deixemos só passar aqui para a frente.
+
+180
+00:17:48,380 --> 00:17:56,789
+Aqui fala-se um bocadinho mais da discussão de descobrir os dados de calibração, ok?
+
+181
+00:17:56,789 --> 00:18:04,789
+Se vocês realmente trabalharem com isto, os dados de calibração para aquela parte da fase de ativação podem ser importantes,
+
+182
+00:18:04,789 --> 00:18:07,789
+portanto, não se esqueçam disso.
+
+183
+00:18:07,789 --> 00:18:11,789
+Passando daqui para a frente.
+
+184
+00:18:11,789 --> 00:18:22,200
+Eu aqui deixei isto de forma, porque, mais uma vez, eu não tinha a certeza que se todos vocês já tinham representado,
+
+185
+00:18:22,200 --> 00:18:25,200
+se já tinham dado, que era fluto 16 ou não.
+
+186
+00:18:25,200 --> 00:18:33,200
+Aqui no PowerPoint está um bocadinho mais explicado o que é que são o fluto 16 e o que é que não são, ok?
+
+187
+00:18:33,200 --> 00:18:45,200
+E, portanto, vocês depois podem ver isto de uma forma mais concreta e podem perguntar-me a mim o que é que é e o que não é.
+
+188
+00:18:45,200 --> 00:18:58,180
+O que eu queria falar e deixar aqui especificado era que o tamanho do modelo e a memória que usa.
+
+189
+00:18:59,180 --> 00:19:11,289
+Lembrem-se sempre, vai ser o tamanho do modelo em número de camadas e em profundidade das camadas e no número de neurónios,
+
+190
+00:19:11,289 --> 00:19:16,289
+e aí a única coisa que vocês podem fazer é tirar ou pôr camadas,
+
+191
+00:19:16,289 --> 00:19:20,289
+e já vimos que tirar ou pôr camadas às vezes não é tão crítico assim para a rede,
+
+192
+00:19:20,289 --> 00:19:28,289
+ou então podem mudar esta coisa dos pesos, que eu estava aqui a falar, a precisão dos pesos que estão dentro da rede, ok?
+
+193
+00:19:29,289 --> 00:19:39,289
+O tamanho do modelo vai-se refletir no vosso file, no .tf file,
+
+194
+00:19:39,289 --> 00:19:46,289
+o tamanho que se vocês aplicarem com a utilização vai-se refletir no tamanho do .tf file, porque vai ser mais pequeno, ok?
+
+195
+00:19:47,289 --> 00:19:59,289
+Mas não quer dizer que o .tf file seja tudo o que vai gastar da vossa memória a quando da utilização do modelo, ok?
+
+196
+00:19:59,289 --> 00:20:02,289
+Por quê? Porque depois vocês precisam de uma série de outras coisas.
+
+197
+00:20:02,289 --> 00:20:12,289
+Portanto, se tiverem uma placa que tem um limite de X, vocês não podem ter o modelo a contar com esse X.
+
+198
+00:20:12,289 --> 00:20:15,289
+O modelo tem que ser ainda mais pequeno que é para caber tudo o resto.
+
+199
+00:20:15,289 --> 00:20:22,289
+Eu sei que tenho... Eu acho que já fui falando bastante disto ao longo das aulas, acho que me adiantei bastante quando estávamos a falar nas PLs,
+
+200
+00:20:22,289 --> 00:20:31,289
+mas não custa voltar a relembrar isto. É uma das principais coisas que eu queria que vocês saíssem daqui.
+
+201
+00:20:31,289 --> 00:20:44,289
+Mais uma vez, relembrando, a velocidade não depende só do modelo, depende do aparelho que vocês a têm... ok?
+
+202
+00:20:45,289 --> 00:20:55,289
+Portanto, tudo isto que eu estou aqui a falar pode ser verdade, e maioritariamente às vezes é, mas no vosso caso de uso, com a vossa placa,
+
+203
+00:20:55,289 --> 00:21:03,289
+ela até pode lidar muito bem, até pode lidar melhor com um flow de 32, porque o chip está feito para isso, ok?
+
+204
+00:21:03,289 --> 00:21:15,289
+E vocês estarem a converter para inteiro 8, pode levar a que aquele modelo específico tenha mais dificuldades em correr aquele modelo.
+
+205
+00:21:15,289 --> 00:21:28,660
+Quando digo dificuldades, demoro mais a correr aquele modelo. Portanto, não é regra sempre, mas é algo que vocês podem estar atentos aqui.
+
+206
+00:21:28,660 --> 00:21:42,660
+Prontos. O que é que nós... o que queria que vocês ficassem na cabeça, e depois na PL3, que será dada pelo veríssimo, queria que vocês vissem, que é...
+
+207
+00:21:42,660 --> 00:21:51,660
+Nós fazemos quantização, ele continua a classificar as coisas bem, sim ou não? Se sim, bom, vamos deixar a quantização.
+
+208
+00:21:51,660 --> 00:22:01,660
+O tamanho do modelo diminuiu, se diminuiu, porreiro. Se continuamos a ter, se a resposta for sim, e também o modelo diminuiu, porreiro.
+
+209
+00:22:01,660 --> 00:22:15,660
+Está... melhoramos o nosso modelo sem perder accuracy. Mas vocês, convém sempre medir quanto é que está a gastar na memória à medida que estão a usar o modelo, ok?
+
+210
+00:22:16,660 --> 00:22:27,660
+Estas perguntas ficaram aqui mais como... se vocês não souberem nada da teoria, ok? Sejam críticos e façam estas perguntas.
+
+211
+00:22:27,660 --> 00:22:39,660
+E vão vendo, ok, tem este modelo, funciona, não funciona. Vamos tentar reduzir. Saibam pelo menos que dá para reduzir, ok?
+
+212
+00:22:39,660 --> 00:22:50,660
+Saiam daqui pelo menos da pós-graduação, a saber que os modelos, podem haver modelos mais pequenos, que conseguem o mesmo efeito que vocês querem, que têm um modelo maior.
+
+213
+00:22:50,660 --> 00:23:05,660
+E pode haver trabalho sobre ele, que os permita isso. Muitas das vezes, o que vocês veem na literatura e mesmo vídeos do YouTube, se forem aprender sobre IA, nos vídeos do YouTube e etc.
+
+214
+00:23:05,660 --> 00:23:17,660
+Vocês não vão viver a falar sobre estas coisas de reduzir o tamanho e etc. Normalmente é tirar o máximo de computação possível para se resolver os problemas, ok?
+
+215
+00:23:17,660 --> 00:23:27,660
+E eu, como vos disse, eu não vos vou chatear aqui mais com isto. O PL3 depois será o engenheiro veríssimo a tratar, ok?
+
+216
+00:23:27,660 --> 00:23:33,660
+Eu vou falar com ele, vou dizer-lhe em que ponto é que nós estamos.
+
+217
+00:23:33,660 --> 00:23:45,660
+E agora, antes de vos deixar ir, queria só que me dissessem. Conseguiram perceber mais ou menos como é que funciona isto do deep learning?
+
+218
+00:23:45,660 --> 00:23:52,660
+Saem daqui a perceber como é que uma rede funciona mais ou menos por dentro, os pesos?
+
+219
+00:23:53,660 --> 00:24:01,660
+Eu não sei se têm alguma dúvida. Podemos usar aqui 20, 30 minutos, se quiserem, para discutir aqui alguma coisa que vocês queiram e tenham a falar.
+
+220
+00:24:01,660 --> 00:24:11,660
+Se não, deixo-vos por aqui na parte teórica e pronto. Se tiverem alguma dúvida, falem comigo.
+
+221
+00:24:11,660 --> 00:24:17,660
+Eu sinto que nas aulas PLs foram produtivas entre nós, porque conseguimos discutir bastantes coisas.
+
+222
+00:24:17,660 --> 00:24:23,660
+Até fizemos mais do que eu às vezes estava a espera, que até passámos por cima de algumas das coisas que eu estava aqui a falar às vezes.
+
+223
+00:24:23,660 --> 00:24:29,660
+Pronto, não sei. Digam, tenham alguma dúvida, não têm?
+
+224
+00:24:29,660 --> 00:24:41,660
+Por acaso eu tenho uma questão. Na parte da calibração, o professor tinha dito que é suposto fazer isto depois dos testes.
+
+225
+00:24:41,660 --> 00:24:44,660
+E antes de inferência?
+
+226
+00:24:45,660 --> 00:24:48,660
+É, depois de treinar?
+
+227
+00:24:48,660 --> 00:24:51,660
+Sim, depois do treino.
+
+228
+00:24:51,660 --> 00:24:54,660
+Sendo que o teste tem a inferência, ok?
+
+229
+00:24:54,660 --> 00:25:03,660
+Ok. Mas, ou seja, esta calibração acaba por ser um bocado também ao olho, não é?
+
+230
+00:25:03,660 --> 00:25:20,660
+Porque nós podemos fazer uma calibração, em traspas, ou podemos estar a fazer uma calibração também forçada, em traspas, só a correr bem para a inferência, por exemplo.
+
+231
+00:25:20,660 --> 00:25:24,660
+É verdade, é totalmente verdade o que tu estás a dizer.
+
+232
+00:25:24,660 --> 00:25:37,660
+E nota outra coisa, esta calibração só é precisa quando nós passamos de floats, de algo que tem casos decimais, para representações inteiras.
+
+233
+00:25:37,660 --> 00:25:49,660
+É muito raro, quando eu digo muito raro, é mesmo muito raro termos que chegar à representação por inteiros, ok?
+
+234
+00:25:49,660 --> 00:26:07,660
+Acho que vocês nunca deverão precisar disso, porque hoje em dia nós temos a facilidade de que os aparelhos pequenos que temos são bons o suficiente, e uma rede com float 32 para float 16, é isso sim.
+
+235
+00:26:07,660 --> 00:26:24,660
+Até vos digo mais, se calhar até o fazia sempre, porque o float 16 reduz espaço e raramente, do que eu tenho visto e experienciado, raramente provoca grandes problemas de accuracy, ok?
+
+236
+00:26:24,660 --> 00:26:35,660
+Passar para inteiro é mesmo raro, e este passo de calibração só é preciso para passar para inteiros.
+
+237
+00:26:35,660 --> 00:26:49,660
+Ora, como tu dizes, podemos estar a introduzir erros ao fazer este passo de calibração, porque a rede até pode ter aprendido tudo muito bem, mas como nós introduzimos um erro na fase de calibração dela a saber, tinha aquele range de peso, não é?
+
+238
+00:26:49,660 --> 00:26:53,660
+De ativações, desculpa, porque isto implica as ativações.
+
+239
+00:26:53,660 --> 00:27:07,660
+Naquele range de ativações, nós por acaso fizemos com que aqui alguns, se eu tenho aqui um desenho, aqui nós até, na quantização que nós fizemos, incluímos isto tudo, ok?
+
+240
+00:27:07,660 --> 00:27:17,660
+Mas nós esquecemos de mostrar uma ou duas imagens, não é esquecermos, não é, não conseguimos mostrar uma ou duas imagens referentes a este bocadinho aqui da distribuição.
+
+241
+00:27:17,660 --> 00:27:22,660
+Ora, a rede com este bocadinho vai deixar de funcionar.
+
+242
+00:27:22,660 --> 00:27:30,660
+É um passo muito, mais uma vez, muito experimental, ok? Não sei se ficou esclarecido a dúvida.
+
+243
+00:27:30,660 --> 00:27:34,660
+Sim, sim, e já agora tinha outra questão.
+
+244
+00:27:34,660 --> 00:27:42,660
+Pronto, esta parte da quantização pode ser feita também, ou seja, quando nós estamos a fazer o treino, não é?
+
+245
+00:27:42,660 --> 00:27:46,660
+Ou melhor, antes de fazermos o treino.
+
+246
+00:27:46,660 --> 00:27:49,660
+Durante ou depois?
+
+247
+00:27:49,660 --> 00:27:52,660
+Sim, sim, durante ou depois. Ok, ok.
+
+248
+00:27:52,660 --> 00:27:56,660
+Mas, porquê que não se costuma fazer durante?
+
+249
+00:27:56,660 --> 00:28:05,660
+Estou a assumir que à partida, se nós estivéssemos a fazer durante o treino, iríamos conseguir ter melhores resultados depois do que fazer depois do treino.
+
+250
+00:28:05,660 --> 00:28:08,660
+Ou estou a pensar mal.
+
+251
+00:28:08,660 --> 00:28:11,660
+Assumimos bem. Qual é normalmente o grande problema?
+
+252
+00:28:11,660 --> 00:28:16,660
+É que as bibliotecas que se usam, estão preparadas para fazer isto tudo com Float32.
+
+253
+00:28:16,660 --> 00:28:29,660
+Então fazes qualquer coisa com outro tipo, inclui na tua programação e na experimentação que tens, inclui overhead.
+
+254
+00:28:32,660 --> 00:28:41,660
+E normalmente, do que eu vejo na área com as pessoas que trabalhei e que usaram coisas destas, normalmente as pessoas não gostam disso.
+
+255
+00:28:41,660 --> 00:28:44,660
+As pessoas gostam de treinar, têm ali o modelo.
+
+256
+00:28:44,660 --> 00:28:46,660
+E para além disso, porquê?
+
+257
+00:28:46,660 --> 00:28:51,660
+Porque muita gente usa modelos a treinados, que não foram eles próprios a treinar e que vão à net.
+
+258
+00:28:51,660 --> 00:28:54,660
+Já agora dou-vos a referência.
+
+259
+00:28:54,660 --> 00:29:04,099
+Se forem aqui, esta é a ranking face.
+
+260
+00:29:04,099 --> 00:29:09,099
+Vocês têm N modelos treinados, ok?
+
+261
+00:29:09,099 --> 00:29:11,099
+O que é que a comunidade põe aqui?
+
+262
+00:29:11,099 --> 00:29:20,099
+Vocês vêm aqui em modelos e têm aqui parâmetros e o que é que temos falado?
+
+263
+00:29:20,099 --> 00:29:23,099
+Ok, o que é que eu quero?
+
+264
+00:29:23,099 --> 00:29:25,099
+Quero uma imagem para texto.
+
+265
+00:29:25,099 --> 00:29:28,099
+Ou imagem para imagem. Vamos dizer imagem para texto.
+
+266
+00:29:28,099 --> 00:29:33,099
+Quero que o modelo seja pequenino, tenha aqui a volta de 9.8 bilhões de parâmetros.
+
+267
+00:29:33,099 --> 00:29:35,099
+Que biblioteca é que eu quero que use?
+
+268
+00:29:35,099 --> 00:29:38,099
+Olha, quero que use TensorFlow.
+
+269
+00:29:38,099 --> 00:29:40,099
+Pronto, eu não vou escolher aqui mais nada.
+
+270
+00:29:40,099 --> 00:29:42,099
+Vocês pegam e veem assim.
+
+271
+00:29:42,099 --> 00:29:44,099
+Ok, tem aqui este modelo.
+
+272
+00:29:44,099 --> 00:29:47,099
+Desculpem, da Salesforce.
+
+273
+00:29:47,099 --> 00:29:50,099
+Leap Image Captioning Arts.
+
+274
+00:29:50,099 --> 00:29:53,099
+E vocês veem aqui e veem como é que ele funciona e tal.
+
+275
+00:29:53,099 --> 00:29:54,099
+Estudam um bocadito e tal.
+
+276
+00:29:54,099 --> 00:29:56,099
+E vejam se tem vocês a treinar.
+
+277
+00:29:56,099 --> 00:30:01,099
+E então, depois basicamente vocês podem passá-lo diretamente para o Google Colab.
+
+278
+00:30:01,099 --> 00:30:03,099
+Ok, aqui.
+
+279
+00:30:03,099 --> 00:30:05,099
+E usá-lo.
+
+280
+00:30:05,099 --> 00:30:07,099
+Claro, ou então.
+
+281
+00:30:07,099 --> 00:30:09,099
+Existe aqui uma forma.
+
+282
+00:30:09,099 --> 00:30:11,099
+Deixem-nos só ver.
+
+283
+00:30:11,099 --> 00:30:13,099
+Vocês podem fazer o copy dele para o Google Colab.
+
+284
+00:30:13,099 --> 00:30:15,099
+Este aqui não deve deixar outra coisa.
+
+285
+00:30:15,099 --> 00:30:18,099
+Mas a partir do Google Colab vocês conseguem.
+
+286
+00:30:18,099 --> 00:30:20,099
+Vocês, se o tiverem lá, conseguem fazer download dele.
+
+287
+00:30:20,099 --> 00:30:22,099
+Já treinado.
+
+288
+00:30:22,099 --> 00:30:27,099
+Portanto, muitas as pessoas usam coisas já treinadas.
+
+289
+00:30:27,099 --> 00:30:30,099
+Tem sido uma coisa que tem crescido bastante.
+
+290
+00:30:30,099 --> 00:30:34,099
+Chegar a um problema e tentar utilizar uma rede já treinada
+
+291
+00:30:34,099 --> 00:30:37,099
+para resolver aquele problema e ver se estamos a treinar nós de novo.
+
+292
+00:30:37,099 --> 00:30:45,099
+Portanto, aí, esta parte da quantização é feita depois do treino.
+
+293
+00:30:45,099 --> 00:30:47,099
+E é normalmente...
+
+294
+00:30:47,099 --> 00:30:49,099
+Lá está, podes fazer durante o treino.
+
+295
+00:30:49,099 --> 00:30:51,099
+Mas normalmente faz-se depois.
+
+296
+00:30:51,099 --> 00:30:55,099
+Ok? Não sei se com mais uma vez respondido.
+
+297
+00:30:55,099 --> 00:30:57,099
+Sim, sim.
+
+298
+00:30:57,099 --> 00:30:59,099
+Mas pronto.
+
+299
+00:30:59,099 --> 00:31:02,099
+Vocês, já agora, depois se vierem aqui.
+
+300
+00:31:03,099 --> 00:31:05,099
+Vocês têm aqui modelos de tudo isto.
+
+301
+00:31:05,099 --> 00:31:07,099
+Reinforcement Learning.
+
+302
+00:31:07,099 --> 00:31:08,099
+Audio.
+
+303
+00:31:08,099 --> 00:31:10,099
+Natural Language Processing.
+
+304
+00:31:10,099 --> 00:31:11,099
+Computer Vision.
+
+305
+00:31:11,099 --> 00:31:12,099
+Multimodais.
+
+306
+00:31:12,099 --> 00:31:14,099
+E vocês têm também data sets.
+
+307
+00:31:14,099 --> 00:31:16,099
+É uma coisa gira para explorar.
+
+308
+00:31:16,099 --> 00:31:18,099
+Porque os modelos já estão treinados.
+
+309
+00:31:18,099 --> 00:31:20,099
+E vocês conseguem pegar nisto.
+
+310
+00:31:20,099 --> 00:31:24,099
+E aplicar a qualquer coisa que vocês queiram.
+
+311
+00:31:24,099 --> 00:31:27,099
+É engraçado para andar aqui a experimentar.
+
+312
+00:31:27,099 --> 00:31:29,099
+Ok? Portanto.
+
+313
+00:31:29,099 --> 00:31:33,099
+Vocês já têm aqui algumas luzes.
+
+314
+00:31:33,099 --> 00:31:37,099
+Para depois poder olhar para isto.
+
+315
+00:31:37,099 --> 00:31:41,099
+Claro, com a ajuda do chat e dos clouds e coisas do género.
+
+316
+00:31:41,099 --> 00:31:44,099
+Para vocês pelo menos conseguem olhar para aqui.
+
+317
+00:31:44,099 --> 00:31:47,099
+E perceber, ok, que é que são parâmetros?
+
+318
+00:31:47,099 --> 00:31:51,099
+São modelos maiores ou mais pequenos que eu quero selecionar aqui.
+
+319
+00:31:51,099 --> 00:31:55,099
+As linguagens, as bibliotecas que eu quero usar.
+
+320
+00:31:55,099 --> 00:31:58,099
+Pronto, e vocês aqui já conseguem ter algumas noções.
+
+321
+00:31:58,099 --> 00:32:02,099
+E com esta noção da quantização.
+
+322
+00:32:02,099 --> 00:32:06,099
+Também depois conseguem ter uma noção de que com o modelo treinado vocês conseguem reduzir-o.
+
+323
+00:32:06,099 --> 00:32:12,099
+Porque o modelo treinado vocês já não vão mexer na profundidade e na largura dele.
+
+324
+00:32:12,099 --> 00:32:15,099
+Ok? Vocês só podem mexer após isso.
+
+325
+00:32:15,099 --> 00:32:18,099
+Portanto, é isso.
+
+326
+00:32:18,099 --> 00:32:20,099
+Não sei se mais alguém tem alguma questão.
+
+327
+00:32:20,099 --> 00:32:25,099
+Alguma discussão que eu queria trazer aqui ao grupo.
+
+328
+00:32:25,099 --> 00:32:28,819
+Não?
+
+329
+00:32:28,819 --> 00:32:31,460
+Não?
+
+330
+00:32:31,460 --> 00:32:32,460
+Pronto.
+
+331
+00:32:34,460 --> 00:32:38,460
+Se tudo correr bem, voltámos-nos a ver no último sábado.
+
+332
+00:32:38,460 --> 00:32:41,460
+Até lá, se tiverem alguma dúvida desta parte do Deep Learning.
+
+333
+00:32:41,460 --> 00:32:46,460
+Estejam à vontade para me enviar um e-mail ou para falarmos um bocadinho.
+
+334
+00:32:46,460 --> 00:32:49,460
+Não tem problema de fazermos uma reunião.
+
+335
+00:32:49,460 --> 00:32:52,460
+Se vocês quiserem liguem-me, estejam à vontade.
+
+336
+00:32:54,460 --> 00:32:57,460
+E pronto, deixo-vos por aqui.
+
+337
+00:32:57,460 --> 00:33:01,460
+E desejo-vos boa sorte e depois voltamos a falar então no último sábado.
+
+338
+00:33:02,460 --> 00:33:03,460
+Ok?
+
+339
+00:33:03,460 --> 00:33:06,460
+Ok. Obrigado.
+
+340
+00:33:06,460 --> 00:33:08,460
+Pronto. Boa jantar a todos.
+
+341
+00:33:08,460 --> 00:33:10,460
+Boa jantar.
+
+342
+00:33:10,460 --> 00:33:11,460
+Obrigado.
+
+343
+00:33:11,460 --> 00:33:12,460
+Obrigado.
+
