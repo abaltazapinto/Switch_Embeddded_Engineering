@@ -1,0 +1,4276 @@
+1
+00:00:01,139 --> 00:00:31,250
+Eu na semana passada disse que ia colocar os slides depois de fazer aquela troca que
+
+2
+00:00:31,250 --> 00:00:39,170
+tinha colocado aquela primeira secção nos slides de quinta-feira, que era a conclusão
+
+3
+00:00:39,170 --> 00:00:41,170
+dos slides de terça.
+
+4
+00:00:41,170 --> 00:00:44,530
+Eu depois fiz isso, só que me esqueci de colocar no módulo.
+
+5
+00:00:44,530 --> 00:00:55,070
+Entretanto já pus no módulo e também já coloquei no módulo, há pouco, os slides
+
+6
+00:00:55,070 --> 00:01:00,880
+de hoje, estes que estou agora a partilhar convosco, para não me esquecer.
+
+7
+00:01:00,880 --> 00:01:05,359
+E os slides de hoje, espero que os consiga levar até ao fim.
+
+8
+00:01:05,359 --> 00:01:12,359
+Eu fiz um bocado mais curtos, que era precisamente para não ficar nada por falar, manter-me
+
+9
+00:01:12,359 --> 00:01:18,120
+dentro das duas horas, portanto é o meu desafio hoje.
+
+10
+00:01:18,120 --> 00:01:24,680
+Ora bem, hoje então vamos falar sobre a orquestração de contentores.
+
+11
+00:01:24,680 --> 00:01:25,680
+Porquê?
+
+12
+00:01:25,680 --> 00:01:28,680
+O porquê da orquestração de contentores?
+
+13
+00:01:28,680 --> 00:01:29,680
+Opa!
+
+14
+00:01:29,680 --> 00:01:35,680
+Deixa-me só ver se é possível puxar aqui algumas janelas, que estou com excesso
+
+15
+00:01:35,680 --> 00:01:36,680
+de janelas.
+
+16
+00:01:37,000 --> 00:01:45,000
+Já está a mínima vista, já só tenho as janelas que preciso.
+
+17
+00:01:45,000 --> 00:01:51,400
+Então, nós, na semana passada, vimos o que é um contentor, como é que se
+
+18
+00:01:51,400 --> 00:01:59,719
+acaba com um contentor, e percebemos que o computador é aquela bolha onde executa
+
+19
+00:01:59,719 --> 00:02:05,079
+um programa, nós colocamos dentro dessa bolha todas as dependências que esse
+
+20
+00:02:05,079 --> 00:02:13,800
+programa necessita, que pode não estar no sistema operativo que suporta esse
+
+21
+00:02:13,800 --> 00:02:16,280
+programa de execução, ok?
+
+22
+00:02:16,280 --> 00:02:21,719
+Quanto menos dependências precisar, em princípio, menor será o contentor,
+
+23
+00:02:21,719 --> 00:02:27,000
+e depois podemos lançar o contentor e pará-lo manualmente.
+
+24
+00:02:27,000 --> 00:02:32,840
+Isso funciona muito bem quando nós temos apenas um contentor a correr no nosso
+
+25
+00:02:32,840 --> 00:02:35,479
+computador, certo?
+
+26
+00:02:35,479 --> 00:02:44,120
+Mas a coisa muda de figura quando temos vários computadores, vários nós, que
+
+27
+00:02:44,120 --> 00:02:55,240
+estão a cooperar e que podem correr esses contentores por uma série de motivos.
+
+28
+00:02:55,240 --> 00:03:00,759
+Pode ser, por exemplo, para balanceamento de carga, ou seja, ter vários contentores
+
+29
+00:03:00,840 --> 00:03:06,439
+a correr em vários equipamentos, vários nós, e, consoante, eles vão sendo
+
+30
+00:03:06,439 --> 00:03:09,960
+solicitados, os pedidos vão sendo distribuídos pelos vários contentores
+
+31
+00:03:09,960 --> 00:03:11,960
+que estão a correr essa aplicação.
+
+32
+00:03:11,960 --> 00:03:17,560
+Não está ninguém...
+
+33
+00:03:17,560 --> 00:03:22,020
+Ok.
+
+34
+00:03:22,020 --> 00:03:24,020
+Gabriel está com problemas a entrar.
+
+35
+00:03:24,020 --> 00:03:26,020
+Ah não, ok.
+
+36
+00:03:26,020 --> 00:03:28,020
+São dois Gabriels.
+
+37
+00:03:28,020 --> 00:03:30,020
+É por isso que eu já tinha visto dois.
+
+38
+00:03:30,020 --> 00:03:32,020
+Certo.
+
+39
+00:03:32,020 --> 00:03:34,020
+Ok.
+
+40
+00:03:34,819 --> 00:03:38,819
+Só que, o que é que acontece?
+
+41
+00:03:38,819 --> 00:03:44,819
+Se nós tivermos vários computadores que podem estar a correr a mesma aplicação
+
+42
+00:03:44,819 --> 00:03:50,819
+em contentores, fazer a gestão manual disso, pá, é...
+
+43
+00:03:50,819 --> 00:03:52,819
+Não se aplica, certo?
+
+44
+00:03:52,819 --> 00:03:59,620
+Primeiro, não vamos ter ninguém ou equipe a 24 horas por dia a tentar ver
+
+45
+00:03:59,620 --> 00:04:03,620
+quando é que um determinado contentor, uma determinada aplicação
+
+46
+00:04:03,620 --> 00:04:07,620
+está a sofrer maior solicitação para ligar ou desligar.
+
+47
+00:04:07,620 --> 00:04:15,620
+O melhor é colocar software a fazer isso automaticamente, certo?
+
+48
+00:04:15,620 --> 00:04:19,620
+Porquê? Porque o software não se cansa. Às vezes até parece que se cansa.
+
+49
+00:04:19,620 --> 00:04:21,620
+Mas o software não se cansa.
+
+50
+00:04:21,620 --> 00:04:27,620
+E trabalha 24 horas por dia sem stress nenhum, certo?
+
+51
+00:04:27,620 --> 00:04:31,620
+Chama-se isso orquestração, ok?
+
+52
+00:04:31,620 --> 00:04:41,620
+Orquestração, basicamente, é uma técnica, porque não posso dizer que é apenas uma política,
+
+53
+00:04:41,620 --> 00:04:50,620
+é uma técnica de monitorizar o estado de procura dos meus contentores
+
+54
+00:04:50,620 --> 00:04:54,620
+e também o estado de atividade dos contentores
+
+55
+00:04:54,620 --> 00:05:00,620
+e reagir no caso de ser necessário.
+
+56
+00:05:00,620 --> 00:05:02,620
+Já vamos ver isso mais à frente.
+
+57
+00:05:02,620 --> 00:05:07,620
+Já ia começar a abrir o jogo dos próximos slides, mas vamos passo a passo, ok?
+
+58
+00:05:07,620 --> 00:05:16,620
+Enquanto que termos apenas um nó, pá, é bom para controlar manualmente,
+
+59
+00:05:16,620 --> 00:05:20,620
+mas é péssimo porque temos ali um ponto único de falha,
+
+60
+00:05:20,620 --> 00:05:26,620
+se aquele nó falhar ou porque o contentor morreu
+
+61
+00:05:26,620 --> 00:05:30,620
+ou porque o próprio computador, o nó, também faleceu, não é?
+
+62
+00:05:30,620 --> 00:05:35,620
+Se perdermos esse nó, perdemos a nossa aplicação.
+
+63
+00:05:35,620 --> 00:05:39,620
+Ela deixa de responder, perdemos o serviço, ok?
+
+64
+00:05:39,620 --> 00:05:42,620
+Então o que podemos fazer? Podemos ter vários nós
+
+65
+00:05:42,620 --> 00:05:45,620
+com várias réplicas desse contentor
+
+66
+00:05:45,620 --> 00:05:49,620
+e, no caso de precisarmos de mais réplicas desse contentor,
+
+67
+00:05:49,620 --> 00:05:57,620
+nós podemos eventualmente lançar novas réplicas adicionais desse contentor
+
+68
+00:05:57,620 --> 00:06:02,620
+noutras máquinas ou até nas mesmas máquinas, desde que elas tenham capacidade.
+
+69
+00:06:05,620 --> 00:06:08,620
+E também no caso de haver alguma falha,
+
+70
+00:06:08,620 --> 00:06:13,620
+nós podemos substituir o nó que falhou por outras máquinas que estejam a correr,
+
+71
+00:06:13,620 --> 00:06:17,620
+ou seja, colocar a aplicação a correr noutra máquina, certo?
+
+72
+00:06:17,620 --> 00:06:23,319
+Quando nós olhamos para os requisitos de produção, nós queremos sempre,
+
+73
+00:06:23,319 --> 00:06:28,319
+e isso é daquelas coisas que eu adoro ver nos relatórios dos alunos de licenciatura,
+
+74
+00:06:28,319 --> 00:06:32,319
+eles quando estão num projeto, daqueles projetos de estagem,
+
+75
+00:06:32,319 --> 00:06:37,319
+colocam-se a pular nos requisitos não funcionais, com fiabilidade,
+
+76
+00:06:37,319 --> 00:06:44,319
+os sistemas têm que estar disponível 98% do tempo.
+
+77
+00:06:44,319 --> 00:06:47,319
+Obviamente que eles dizem isso é apenas uma intenção,
+
+78
+00:06:47,319 --> 00:06:52,319
+porque eles depois normalmente, quando estão a construir uma aplicação algo assim,
+
+79
+00:06:52,319 --> 00:06:56,319
+eles depois não têm o poder de ter equipamentos e definir políticas
+
+80
+00:06:56,319 --> 00:07:01,319
+para manter ou para assegurar esse requisito.
+
+81
+00:07:01,319 --> 00:07:07,319
+Mas, em produção, obviamente, requer-se alta disponibilidade.
+
+82
+00:07:07,319 --> 00:07:12,319
+Portanto, se há alguma coisa a falhar, é bom que seja reposta,
+
+83
+00:07:12,319 --> 00:07:19,319
+ou através de equipamentos redundantes, software redundante,
+
+84
+00:07:19,319 --> 00:07:26,319
+qualquer coisa tem que substituir rapidamente aquilo que deixou de estar disponível.
+
+85
+00:07:26,319 --> 00:07:39,319
+Também, quer-se expansionamento ou escalamento horizontal,
+
+86
+00:07:39,319 --> 00:07:48,319
+ou seja, se houver maior procura, lançar mais contentores para responder melhor a essa procura,
+
+87
+00:07:48,319 --> 00:07:52,319
+e o self-healing, que é se alguma coisa a falhar,
+
+88
+00:07:52,319 --> 00:07:59,319
+automaticamente recuperar dessa falha sem ser necessário acordar alguém ou telefonar alguém
+
+89
+00:07:59,319 --> 00:08:03,319
+para esse alguém ter que ir ao computador e salvar o universo.
+
+90
+00:08:03,319 --> 00:08:12,319
+Isto pode ser conseguido através de um cluster.
+
+91
+00:08:12,319 --> 00:08:20,319
+O que é um cluster? Um cluster é um conjunto de máquinas, sejam elas físicas ou virtuais,
+
+92
+00:08:20,319 --> 00:08:25,319
+antigamente eram físicas, agora podemos ter virtuais, e físicas e virtuais também,
+
+93
+00:08:25,319 --> 00:08:31,319
+podemos ter uma solução híbrida, mas o que interessa é que nós temos máquinas,
+
+94
+00:08:31,319 --> 00:08:37,320
+ou seja, temos recursos computacionais, e essas máquinas,
+
+95
+00:08:37,320 --> 00:08:44,320
+do ponto de vista de quem as está a utilizar, é um único sistema,
+
+96
+00:08:44,320 --> 00:08:54,320
+ou seja, enquanto que nos sistemas distribuídos não existe um conceito de um único sistema,
+
+97
+00:08:55,320 --> 00:09:02,320
+aqui as coisas, num cluster, as máquinas estão muito mais, como é que dizer,
+
+98
+00:09:02,320 --> 00:09:11,320
+ocupadas, ok? Até pode imaginar um cluster como algo numa perspectiva geográfica,
+
+99
+00:09:11,320 --> 00:09:18,320
+num cluster as máquinas estão todas no mesmo espaço, basicamente, ok?
+
+100
+00:09:19,320 --> 00:09:24,320
+No entanto, temos uma abstração de infraestrutura, nós podemos ter
+
+101
+00:09:24,320 --> 00:09:31,320
+vários recursos computacionais, ok? E quando eu quero lançar uma aplicação,
+
+102
+00:09:31,320 --> 00:09:37,320
+eu lanço a aplicação para o cluster, não lanço a aplicação para máquinas específicas.
+
+103
+00:09:37,320 --> 00:09:49,080
+Obrigado, portanto deixa de entrar o vosso colega.
+
+104
+00:09:50,080 --> 00:09:58,519
+Isto é uma, como é que dizer, uma funcionalidade espetacular, por quê?
+
+105
+00:09:58,519 --> 00:10:04,519
+Porque nós podemos dizer, entregar ao cluster uma aplicação e definimos
+
+106
+00:10:04,519 --> 00:10:10,519
+limites ou requisitos para essa aplicação funcionar, ok?
+
+107
+00:10:10,519 --> 00:10:14,519
+No caso, e não temos que dizer que vai ter de correr,
+
+108
+00:10:14,519 --> 00:10:19,519
+nesta máquina e naquela outra máquina, não, nós simplesmente dizemos,
+
+109
+00:10:19,519 --> 00:10:26,519
+tem de correr, por exemplo, duas instâncias e a infraestrutura vai
+
+110
+00:10:26,519 --> 00:10:32,519
+selecionar quais são as, onde é que essas instâncias vão correr,
+
+111
+00:10:32,519 --> 00:10:37,519
+em que computadores é que essas instâncias vão correr, ok?
+
+112
+00:10:37,519 --> 00:10:42,519
+Quem faz isso é aquilo que chamamos de orquestrador, ok?
+
+113
+00:10:42,519 --> 00:10:57,519
+O orquestrador é aquele software, aquela aplicação que trata da colocação,
+
+114
+00:10:57,519 --> 00:11:05,519
+eu não queria dizer implantação, mas é quem escolhe onde é que
+
+115
+00:11:05,519 --> 00:11:09,519
+um contentor vai correr, ok?
+
+116
+00:11:09,519 --> 00:11:18,519
+Também trata do isolamento e dos limites, os limites de c-groups, ok?
+
+117
+00:11:18,519 --> 00:11:24,519
+Quais são os limites de memória, quais são os limites de CPU que aquele
+
+118
+00:11:24,519 --> 00:11:30,519
+contentor pode ter e também acaba por monitorizar e gerir a distribuição
+
+119
+00:11:30,519 --> 00:11:35,519
+do trabalho, da carga de trabalho, muito bem.
+
+120
+00:11:35,519 --> 00:11:38,519
+Qual é a anatomia de um cluster?
+
+121
+00:11:38,519 --> 00:11:42,519
+Nós hoje vamos estar muito virados para o Docker Swarm,
+
+122
+00:11:42,519 --> 00:11:45,519
+ou para o orquestrador Docker Swarm.
+
+123
+00:11:45,519 --> 00:11:51,519
+Nós num cluster temos habitualmente nós que funcionam como mestres,
+
+124
+00:11:51,519 --> 00:11:57,519
+os masters, ou seja, são nós computacionais que estão a correr
+
+125
+00:11:57,519 --> 00:12:02,519
+com o software que basicamente fazem a gestão dos recursos.
+
+126
+00:12:02,519 --> 00:12:10,519
+Quando eu digo em gerir os recursos é muito parecido com os sistemas operativos.
+
+127
+00:12:10,519 --> 00:12:15,519
+Nós temos um conjunto de recursos que vão ser consumidos pelas aplicações
+
+128
+00:12:15,519 --> 00:12:20,519
+e os masternodes atuam na gestão desses recursos.
+
+129
+00:12:20,519 --> 00:12:25,519
+Onde é que as aplicações vão estar a correr
+
+130
+00:12:25,519 --> 00:12:30,519
+para consumir que recursos e em que quantidades, ok?
+
+131
+00:12:30,519 --> 00:12:36,519
+Diz aí que funciona como o cérebro do cluster, ok?
+
+132
+00:12:36,519 --> 00:12:41,519
+Estes nós, habitualmente, ficam dedicados a estas tarefas de gestão, ok?
+
+133
+00:12:41,519 --> 00:12:46,519
+Os nós master, habitualmente, só correm software de gestão
+
+134
+00:12:46,519 --> 00:12:50,519
+para decidir que programas é que correm onde.
+
+135
+00:12:50,519 --> 00:12:57,519
+E onde é que os programas que suportam a carga de trabalho efetiva correm?
+
+136
+00:12:57,519 --> 00:13:02,519
+Correm nos nós trabalhadores, nos worker nodes, ok?
+
+137
+00:13:02,519 --> 00:13:08,519
+Os worker nodes são máquinas que estão disponíveis para aceitar carga de trabalho.
+
+138
+00:13:08,519 --> 00:13:12,519
+Ou seja, são máquinas, recursos computacionais,
+
+139
+00:13:12,519 --> 00:13:18,519
+onde nós podemos colocar aplicações, podemos colocar as aplicações a correr
+
+140
+00:13:18,519 --> 00:13:26,519
+e depois essas máquinas vão atender as solicitações de quem necessitar dessas aplicações, ok?
+
+141
+00:13:26,519 --> 00:13:39,519
+Habitualmente, os worker nodes têm que informar os master nodes acerca da sua saúde.
+
+142
+00:13:39,519 --> 00:13:44,519
+Isso implica dizer o que é que eu estou a correr,
+
+143
+00:13:44,519 --> 00:13:48,519
+qual é a carga que eu estou a sofrer, ok?
+
+144
+00:13:48,519 --> 00:13:53,519
+Ou seja, quanto dos meus recursos é que estão a ser utilizados.
+
+145
+00:13:53,519 --> 00:14:01,519
+E também, periodicamente, deve-me informar os masters que eu estou vivo.
+
+146
+00:14:01,519 --> 00:14:04,519
+Portanto, podes continuar a contar comigo, ok?
+
+147
+00:14:04,519 --> 00:14:06,519
+Isto é importante, porquê?
+
+148
+00:14:07,519 --> 00:14:18,519
+A forma de um master perceber se um worker, se um node de trabalho está disponível ou não
+
+149
+00:14:18,519 --> 00:14:24,519
+é das duas uma, ou receber notificações periódicas do worker node,
+
+150
+00:14:24,519 --> 00:14:27,519
+a dizer, eu estou vivo, ou então é ao contrário,
+
+151
+00:14:27,519 --> 00:14:33,519
+ele ter que andar a perguntar a cada worker se ele está a responder ou não.
+
+152
+00:14:33,519 --> 00:14:38,519
+Qualquer uma das abordagens é funcional, ok?
+
+153
+00:14:38,519 --> 00:14:45,519
+Mas, ter worker nodes que tomam a iniciativa de dizer, eu estou vivo,
+
+154
+00:14:45,519 --> 00:14:52,519
+acaba por ser mais flexível, porquê?
+
+155
+00:14:52,519 --> 00:14:54,519
+Porque, deixe-me só ver aqui o esqueleto de água,
+
+156
+00:14:54,519 --> 00:15:03,149
+porque isso implica que o master não tenha que suportar a descoberta.
+
+157
+00:15:03,149 --> 00:15:08,149
+Basicamente, quem entra dá sinal de vida e a partir daí continua a dar sinal de vida.
+
+158
+00:15:08,149 --> 00:15:11,149
+E o master sabe que há ali qualquer coisa.
+
+159
+00:15:11,149 --> 00:15:14,149
+Há ali um worker node a funcionar.
+
+160
+00:15:14,149 --> 00:15:19,000
+Até agora há dúvidas.
+
+161
+00:15:19,000 --> 00:15:21,000
+Se tiverem dúvidas, já sabem, podem...
+
+162
+00:15:21,000 --> 00:15:25,000
+Eu agora a ver se tenho o alto e falante com o volume...
+
+163
+00:15:25,000 --> 00:15:27,000
+Ah, tenho, tenho volume.
+
+164
+00:15:27,000 --> 00:15:31,000
+Eu às vezes tiro praticamente sempre, tenho o som cortado
+
+165
+00:15:31,000 --> 00:15:34,000
+e agora estava a ver se tinha aumentado o volume ou não.
+
+166
+00:15:34,000 --> 00:15:37,000
+Mas já os tinha ouvido a cumprimentar.
+
+167
+00:15:37,000 --> 00:15:41,940
+Agora é que tinha esquecido.
+
+168
+00:15:41,940 --> 00:15:47,940
+Vamos agora falar de um conceito que é o estado desejável, ok?
+
+169
+00:15:47,940 --> 00:16:03,580
+O estado desejável é uma declaração de como nós queremos que uma aplicação no mínimo...
+
+170
+00:16:03,580 --> 00:16:11,509
+Qual é o estado?
+
+171
+00:16:11,509 --> 00:16:13,509
+Não queria voltar a dizer desejável.
+
+172
+00:16:13,509 --> 00:16:19,509
+Mas qual é que é o estado valor mínimo que uma aplicação tem de ter?
+
+173
+00:16:19,509 --> 00:16:27,049
+Nós temos aqui gestão declarativa e imperativa.
+
+174
+00:16:27,049 --> 00:16:31,049
+Na imperativa, eu tomo o controle de tudo.
+
+175
+00:16:31,049 --> 00:16:35,049
+Só que é algo que é muito manual.
+
+176
+00:16:35,049 --> 00:16:43,620
+Por exemplo, dizer corre o contentor X, na máquina Y, agora.
+
+177
+00:16:43,620 --> 00:16:44,620
+O que é que acontece?
+
+178
+00:16:44,620 --> 00:16:48,620
+Eu tomo a iniciativa.
+
+179
+00:16:48,620 --> 00:16:55,019
+A coisa é pouco automatizada, ok?
+
+180
+00:16:55,019 --> 00:17:07,019
+No entanto, se eu declarar a política ou os mínimos que eu considero para uma determinada aplicação,
+
+181
+00:17:07,019 --> 00:17:10,019
+eu estou a abrir mão da gestão.
+
+182
+00:17:10,019 --> 00:17:13,019
+E a gestão pode passar a ser automática.
+
+183
+00:17:13,019 --> 00:17:24,720
+Aqui neste caso, estou a dizer, garante que 5 réplicas da aplicação X estão a executar em qualquer altura.
+
+184
+00:17:24,720 --> 00:17:27,720
+Onde é que essas 5 réplicas estão a correr?
+
+185
+00:17:27,720 --> 00:17:28,720
+No cluster.
+
+186
+00:17:28,720 --> 00:17:30,720
+Em que máquinas?
+
+187
+00:17:30,720 --> 00:17:32,720
+Não faço ideia.
+
+188
+00:17:32,720 --> 00:17:34,720
+Isso é grave?
+
+189
+00:17:34,720 --> 00:17:35,720
+Não.
+
+190
+00:17:35,720 --> 00:17:36,720
+Eu não quero saber.
+
+191
+00:17:36,720 --> 00:17:41,720
+A única coisa que eu quero é que haja 5 réplicas que em qualquer instante estejam a correr.
+
+192
+00:17:41,720 --> 00:17:50,720
+Se vocês me garantirem isso, eu não quero saber em que nós físicos, ou em que nós específicos, não é físicos, específicos,
+
+193
+00:17:50,720 --> 00:17:51,720
+esses contentos estão a correr.
+
+194
+00:17:51,720 --> 00:17:53,720
+Por mim, tudo bem.
+
+195
+00:17:53,720 --> 00:17:56,720
+Se não for no nó A, pode ser no nó X ou no nó Z.
+
+196
+00:17:56,720 --> 00:17:58,720
+Por mim é igual ao litro.
+
+197
+00:17:58,720 --> 00:18:00,720
+Eu quero o trabalho feito, certo?
+
+198
+00:18:00,720 --> 00:18:08,279
+Quando eu vou pela abordagem declarativa,
+
+199
+00:18:08,279 --> 00:18:14,279
+eu estou a dizer qual é que é o meu estado que eu desejo.
+
+200
+00:18:14,279 --> 00:18:18,279
+Ou seja, aquele estado que é uma espécie de objetivo.
+
+201
+00:18:18,279 --> 00:18:30,420
+O estado desejado, o desire state, é como se fosse uma declaração de um objetivo.
+
+202
+00:18:30,420 --> 00:18:42,420
+Aqui diz que é uma blueprint, portanto é um plano que é disponibilizado ao orquestrador
+
+203
+00:18:42,420 --> 00:18:52,420
+como se fosse uma configuração de implantação.
+
+204
+00:18:52,420 --> 00:18:54,420
+O que é que eu quero dizer com isto?
+
+205
+00:18:55,420 --> 00:19:02,420
+Quando nós dizemos ali que eu quero cinco réplicas da aplicação X, sempre,
+
+206
+00:19:02,420 --> 00:19:06,420
+eu estou a estabelecer uma configuração para a aplicação.
+
+207
+00:19:06,420 --> 00:19:11,420
+Estou a dizer que a aplicação tem de ter a correr cinco réplicas.
+
+208
+00:19:11,420 --> 00:19:21,420
+No entanto, eu deixo a distribuição das réplicas pelos recursos, pelos nós,
+
+209
+00:19:21,420 --> 00:19:24,420
+para o orquestrador.
+
+210
+00:19:24,420 --> 00:19:27,420
+Isto funciona na parte da declaração.
+
+211
+00:19:27,420 --> 00:19:30,420
+Eu digo quais são os meus mínimos, o que é que eu quero,
+
+212
+00:19:30,420 --> 00:19:36,420
+e agora o orquestrador tem de trabalhar para cumprir com esse meu plano,
+
+213
+00:19:36,420 --> 00:19:38,420
+com esse meu desire state.
+
+214
+00:19:38,420 --> 00:19:45,420
+No entanto, a realidade muitas vezes não é aquilo que nós sonhamos
+
+215
+00:19:45,420 --> 00:19:49,420
+e existe o estado atual ou o estado corrente.
+
+216
+00:19:49,420 --> 00:20:00,420
+O estado real ou corrente, em cada instante, é mensurável através de, por exemplo,
+
+217
+00:20:00,420 --> 00:20:06,420
+quantas instâncias dos contentores nós temos a correr.
+
+218
+00:20:07,420 --> 00:20:15,420
+O que nós queremos é que o estado corrente de uma aplicação
+
+219
+00:20:15,420 --> 00:20:19,420
+seja igual ao estado desejável.
+
+220
+00:20:19,420 --> 00:20:28,420
+Se não for igual, aquilo que nós queremos é que o orquestrador tome a iniciativa
+
+221
+00:20:28,420 --> 00:20:35,420
+de lançar ações para aproximar o estado corrente ao estado desejável.
+
+222
+00:20:36,420 --> 00:20:44,420
+Esse é o objetivo do orquestrador, é conseguir ao longo do tempo
+
+223
+00:20:44,420 --> 00:20:50,420
+manter o estado atual alinhado com a minha declaração do estado objetivo.
+
+224
+00:20:52,420 --> 00:20:54,420
+Duvidas, não há?
+
+225
+00:20:54,420 --> 00:20:57,420
+É simples e é lógico, certo?
+
+226
+00:20:57,420 --> 00:20:59,420
+Ou não?
+
+227
+00:20:59,420 --> 00:21:02,420
+Ok, pronto.
+
+228
+00:21:03,420 --> 00:21:13,420
+Então, para conseguir manter ao longo do tempo esse alinhamento entre o que eu tenho
+
+229
+00:21:13,420 --> 00:21:17,420
+e o que eu declarei que queria, ok?
+
+230
+00:21:17,420 --> 00:21:23,420
+Existe aqui um loop de observar ou monitorizar.
+
+231
+00:21:26,930 --> 00:21:31,930
+Desculpem lá, eu agora estava a ir mais para o lado do embedded.
+
+232
+00:21:31,930 --> 00:21:38,930
+Monitorizar, ou seja, ir verificando qual é o estado das aplicações
+
+233
+00:21:38,930 --> 00:21:44,930
+e também o estado do hardware, dos recursos computacionais
+
+234
+00:21:44,930 --> 00:21:48,930
+onde essas aplicações estão a correr, ok?
+
+235
+00:21:48,930 --> 00:21:56,930
+Por exemplo, posso verificar que tenho N contentores desta aplicação ativos.
+
+236
+00:21:56,930 --> 00:22:02,930
+Ou posso verificar que um contentor deixou de funcionar naquele nó.
+
+237
+00:22:02,930 --> 00:22:09,930
+E isso está a afastar-me o meu estado atual, faz com que ele se afaste do estado que eu tinha declarado.
+
+238
+00:22:09,930 --> 00:22:12,930
+E isso obriga-me a reagir, ok?
+
+239
+00:22:12,930 --> 00:22:21,930
+Da monitorização que eu faço, depois tem a parte ou a tarefa de observar.
+
+240
+00:22:21,930 --> 00:22:27,930
+Observar, observar é, e o no embedded para mim é compute,
+
+241
+00:22:27,930 --> 00:22:36,930
+é avaliar daquilo que eu observei, avaliar quais são as diferenças
+
+242
+00:22:36,930 --> 00:22:40,930
+e determinar o que é que deve ser feito a seguir.
+
+243
+00:22:40,930 --> 00:22:43,930
+E aquilo que deve ser feito a seguir é action,
+
+244
+00:22:43,930 --> 00:22:51,930
+é agir de forma a voltar a levar o estado atual para o estado que eu declarei,
+
+245
+00:22:51,930 --> 00:22:54,930
+que recria os meus mínimos, ok?
+
+246
+00:22:54,930 --> 00:23:02,259
+E isto é feito ciclicamente, ok?
+
+247
+00:23:02,259 --> 00:23:09,259
+O nosso orchestrador está sem parar a verificar quais são,
+
+248
+00:23:10,259 --> 00:23:18,259
+a determinar uma quantidade de métricas sobre as aplicações e os recursos computacionais
+
+249
+00:23:18,259 --> 00:23:26,259
+e verificar se está tudo de acordo com as declarações que foram feitas, certo?
+
+250
+00:23:26,259 --> 00:23:32,259
+Eu acho que já repeti isso vezes demais.
+
+251
+00:23:32,259 --> 00:23:38,259
+Por exemplo, suponham que nós tínhamos declarado que havia aplicação,
+
+252
+00:23:38,259 --> 00:23:41,259
+esta aplicação app, ok?
+
+253
+00:23:41,259 --> 00:23:46,259
+Tinha de ter quatro contentores a correr em qualquer instante, ok?
+
+254
+00:23:46,259 --> 00:23:52,259
+Portanto o objetivo é manter, não é ter, é manter quatro contentores,
+
+255
+00:23:52,259 --> 00:23:57,259
+quatro instâncias da aplicação a correr em qualquer instante.
+
+256
+00:23:57,259 --> 00:24:04,259
+E suponham que neste nó A eu tinha duas instâncias
+
+257
+00:24:04,259 --> 00:24:09,259
+e neste nó B eu tinha outras duas instâncias, ok?
+
+258
+00:24:09,259 --> 00:24:14,259
+No entanto, o nó B deixou de responder
+
+259
+00:24:14,259 --> 00:24:18,259
+e o master, mais cedo ou mais tarde, vai descobrir isso.
+
+260
+00:24:18,259 --> 00:24:24,259
+Porquê? Porque era suposto ele receber notificações deste nó B a dizer
+
+261
+00:24:24,259 --> 00:24:27,259
+eu estou vivo, eu estou de saúde
+
+262
+00:24:27,259 --> 00:24:31,259
+e também enviar algumas métricas mais, como por exemplo
+
+263
+00:24:31,259 --> 00:24:35,259
+qual é que é a percentagem de utilização de CPU,
+
+264
+00:24:35,259 --> 00:24:38,259
+qual é que é a percentagem de utilização de memória,
+
+265
+00:24:38,259 --> 00:24:43,259
+qual é a temperatura do sistema, portanto é uma quantidade de métricas
+
+266
+00:24:43,259 --> 00:24:47,259
+que são enviadas para o master, para ele poder escolher
+
+267
+00:24:47,259 --> 00:24:49,259
+e fazer a gestão.
+
+268
+00:24:49,259 --> 00:24:52,259
+Este nó B deixou de responder
+
+269
+00:24:52,259 --> 00:24:59,259
+e aqui o master vai detectar que afinal só temos duas.
+
+270
+00:24:59,259 --> 00:25:08,769
+Quando ele observa, ele observa que estas duas não são estas quatro, ok?
+
+271
+00:25:08,769 --> 00:25:11,769
+Então o que é que ele faz? Tem de reagir.
+
+272
+00:25:11,769 --> 00:25:14,769
+Estão dois contentores, duas instâncias em falta,
+
+273
+00:25:14,769 --> 00:25:21,769
+é necessário lançar dois contentores em nós que estejam operacionais.
+
+274
+00:25:22,769 --> 00:25:28,769
+Este master chega à conclusão de que este, se não responde, não deve estar de bom de saúde.
+
+275
+00:25:28,769 --> 00:25:32,769
+Portanto nem vale a pena tentar lançar aqui, através das aplicações.
+
+276
+00:25:32,769 --> 00:25:35,769
+O que é que os parece que ele pode fazer?
+
+277
+00:25:35,769 --> 00:25:38,769
+Que soluções é que ele pode ter neste cenário?
+
+278
+00:25:38,769 --> 00:25:47,180
+Olha lá, é um voluntário, ninguém diz o que é que se pode fazer.
+
+279
+00:25:47,180 --> 00:25:49,180
+Não é difícil.
+
+280
+00:25:49,180 --> 00:25:56,819
+Vocês fariam isto à mão?
+
+281
+00:25:57,819 --> 00:26:00,819
+Provavelmente arrancar o turno.
+
+282
+00:26:00,819 --> 00:26:05,819
+Exatamente, nós temos ali.
+
+283
+00:26:05,819 --> 00:26:09,819
+Neste boneco só temos quatro nós.
+
+284
+00:26:09,819 --> 00:26:15,819
+Numa situação normal, se for em cloud, ainda poderemos ter vários nós.
+
+285
+00:26:15,819 --> 00:26:19,819
+Mas aqui para representar no slide, temos só quatro nós.
+
+286
+00:26:19,819 --> 00:26:21,819
+O que é que pode acontecer?
+
+287
+00:26:21,819 --> 00:26:27,819
+Os dois que deixámos de ter aqui, podemos colocar em nós que estejam disponíveis.
+
+288
+00:26:27,819 --> 00:26:31,819
+Aqui eu até pulo o slide, ele quer dizer que tem muita capacidade,
+
+289
+00:26:31,819 --> 00:26:35,819
+ele está ali a dormir, portanto podemos atirar-lhe com o trabalho na bola.
+
+290
+00:26:35,819 --> 00:26:40,819
+Nem sempre acontece isso, mas pretende-se que os nós
+
+291
+00:26:40,819 --> 00:26:45,819
+tenham sempre alguma capacidade para acomodar carga extra que possa aparecer.
+
+292
+00:26:45,819 --> 00:26:49,819
+Há sempre um sobredimensionamento, ou deve haver.
+
+293
+00:26:49,819 --> 00:26:55,819
+Então, neste caso, eu fiz aqui um filme em que
+
+294
+00:26:55,819 --> 00:26:58,819
+um dos contentores é lançado para o nosso ser
+
+295
+00:26:58,819 --> 00:27:01,819
+e outro dos contentores é lançado no 9a.
+
+296
+00:27:01,819 --> 00:27:04,819
+Pronto. O que é que acontece?
+
+297
+00:27:04,819 --> 00:27:09,819
+Ele toma esta ação, esta ação normalmente é calculada
+
+298
+00:27:09,819 --> 00:27:12,819
+observando, por exemplo, qual é que é a carga dos nós
+
+299
+00:27:12,819 --> 00:27:16,819
+e quem é que pode aceitar este contentor.
+
+300
+00:27:16,819 --> 00:27:23,819
+E correr não é aceitar, aceitar é ter capacidade para
+
+301
+00:27:23,819 --> 00:27:30,819
+aumentar a capacidade de uso do sistema
+
+302
+00:27:30,819 --> 00:27:34,819
+com arrancando este computador, este contentor.
+
+303
+00:27:34,819 --> 00:27:38,819
+Não sei se tem sentido, mas basicamente é calcular.
+
+304
+00:27:38,819 --> 00:27:41,819
+Isto já quase parece a história da caroxinha.
+
+305
+00:27:41,819 --> 00:27:45,819
+Quem é que pode correr este contentor que é tão bonitinho e não sei quê?
+
+306
+00:27:45,819 --> 00:27:49,819
+Não é? E não descer, pode ser tu.
+
+307
+00:27:49,819 --> 00:27:53,819
+Olha, pega lá um contentor e não vê, pega lá também um contentor.
+
+308
+00:27:53,819 --> 00:27:57,539
+Certo? O que é que acontece?
+
+309
+00:27:57,539 --> 00:28:06,539
+No final da ação nós voltamos a aproximar, neste caso até fica coincidente,
+
+310
+00:28:06,539 --> 00:28:09,539
+o estado atual com o estado desejado.
+
+311
+00:28:09,539 --> 00:28:12,539
+Nós tínhamos declarado, ok?
+
+312
+00:28:12,539 --> 00:28:14,539
+Pronto, já temos quatro.
+
+313
+00:28:14,539 --> 00:28:17,539
+Temos quatro, era preciso ter quatro, temos quatro.
+
+314
+00:28:17,539 --> 00:28:23,019
+Certo? Dúvidas, não há?
+
+315
+00:28:23,019 --> 00:28:30,660
+Parece fácil, parecendo fácil não é difícil.
+
+316
+00:28:30,660 --> 00:28:37,319
+Ok, hoje vamos falar do Dockers Form.
+
+317
+00:28:37,319 --> 00:28:41,319
+Orquestradores, há mais do que um.
+
+318
+00:28:41,319 --> 00:28:46,319
+Vão ser de certeza que já ouviram falar no Kubernetes
+
+319
+00:28:46,319 --> 00:28:52,660
+que possivelmente é o orquestrador mais utilizado,
+
+320
+00:28:52,660 --> 00:28:56,660
+só que o Kubernetes tem uma curva de aprendizagem um bocado elevada.
+
+321
+00:28:56,660 --> 00:28:59,660
+No início é muito agreste.
+
+322
+00:28:59,660 --> 00:29:11,660
+O Dockers Form não tem essa curva de aprendizagem tão agreste.
+
+323
+00:29:11,660 --> 00:29:16,660
+Só que é menos...
+
+324
+00:29:16,660 --> 00:29:24,319
+O Kubernetes é mais poderoso do que o Dockers Form.
+
+325
+00:29:24,319 --> 00:29:28,319
+O Dockers Form é muito parecido com o piloto automático.
+
+326
+00:29:28,319 --> 00:29:34,319
+E o Kubernetes é o paraíso da personalização.
+
+327
+00:29:34,319 --> 00:29:41,319
+Com o Kubernetes podemos definir muito mais políticas do que com o Dockers Form.
+
+328
+00:29:41,319 --> 00:29:47,319
+Mas para cargas, pronto, como é que ia dizer?
+
+329
+00:29:47,319 --> 00:29:55,319
+Para um uso menos exigente, o Dockers Form é por aí.
+
+330
+00:29:55,319 --> 00:29:58,319
+Então, o que é que é o Dockers Form?
+
+331
+00:29:58,319 --> 00:30:08,980
+É o motor de orquestração que vem acompanhado com o Docker.
+
+332
+00:30:08,980 --> 00:30:17,980
+Se não me engano, instalando o Docker, já vem o Dockers Form incluído no pacote.
+
+333
+00:30:17,980 --> 00:30:19,980
+Vantagens. A sua simplicidade.
+
+334
+00:30:19,980 --> 00:30:28,980
+Nós podemos utilizar o Dockers Form através da interface Docker.
+
+335
+00:30:28,980 --> 00:30:30,980
+É só colocar Docker. Qual é o comando?
+
+336
+00:30:30,980 --> 00:30:32,980
+Swarm. Evident Swarm.
+
+337
+00:30:32,980 --> 00:30:36,980
+Qual é que é o comando que queremos fazer dentro do Dockers Form?
+
+338
+00:30:36,980 --> 00:30:40,980
+Quem já está habituado a trabalhar com Docker, com contentores,
+
+339
+00:30:40,980 --> 00:30:43,980
+o Dockers Form é super fácil de aprender,
+
+340
+00:30:43,980 --> 00:30:47,980
+é só expandir os comandos que nós usamos do Dockers.
+
+341
+00:30:47,980 --> 00:30:54,609
+E também, uma das coisas que eles dizem que é espetacular,
+
+342
+00:30:54,609 --> 00:31:03,609
+ou uma das características boas, é que já há o MTLS por feito.
+
+343
+00:31:03,609 --> 00:31:12,609
+Ou seja, permite a autenticação e a encriptação entre nós e Masters
+
+344
+00:31:12,609 --> 00:31:17,609
+out of the box.
+
+345
+00:31:17,609 --> 00:31:21,609
+Logo, uma pessoa desembrulha a caixa e já tem aquilo disponível.
+
+346
+00:31:21,609 --> 00:31:27,609
+No entanto, eu não coloquei aqui, mas uma das disadvantages em relação ao Kubernetes
+
+347
+00:31:27,609 --> 00:31:34,609
+é que não permite tanta personalização, tanta parametrização como o Kubernetes.
+
+348
+00:31:34,609 --> 00:31:39,609
+Muito bem. Então, como é que eu arranco com o Docker Swarm?
+
+349
+00:31:39,609 --> 00:31:43,609
+O Docker Swarm inicialmente, nós podemos arrancar com o Docker,
+
+350
+00:31:43,609 --> 00:31:48,609
+mas o Docker Swarm não arranca, certo?
+
+351
+00:31:48,609 --> 00:31:54,609
+Se nós quisermos utilizar orquestração, temos que lançar o Swarm, o Docker Swarm.
+
+352
+00:31:54,609 --> 00:31:58,609
+E por isso, nós temos o comando Docker Swarm Init.
+
+353
+00:31:58,609 --> 00:32:05,609
+Isto aqui está a dizer para arrancar com um Master ou um Manager.
+
+354
+00:32:05,609 --> 00:32:13,609
+O Docker Swarm é sempre arrancado num Master.
+
+355
+00:32:13,609 --> 00:32:22,240
+Por quê? Porque estamos a dizer para arrancar com o orquestrador.
+
+356
+00:32:22,240 --> 00:32:27,240
+E onde é que é o orquestrador? Control-plane nos Masters.
+
+357
+00:32:30,259 --> 00:32:40,259
+Neste exemplo, estamos a dizer para publicitar o endereço da máquina local,
+
+358
+00:32:40,259 --> 00:32:49,259
+192.168.1.10, suponhamos que é o endereço da máquina,
+
+359
+00:32:49,259 --> 00:32:58,259
+e estamos a dizer que esta máquina está a correr um Master do Docker Swarm.
+
+360
+00:32:58,259 --> 00:33:05,950
+Ok? Estou-vidas. Não há? Ok.
+
+361
+00:33:05,950 --> 00:33:12,950
+Nós, quando arrancamos com o Docker Swarm, eu fui investigar o que é que acontecia.
+
+362
+00:33:12,950 --> 00:33:24,059
+E o que acontece mais relevante é que arranca com o...
+
+363
+00:33:24,059 --> 00:33:30,059
+Eles dizem Storm, mas isto aqui acaba por ser mais como um motor de consenso.
+
+364
+00:33:31,059 --> 00:33:35,059
+Aqui eu utilizo um algoritmo de consenso Raft.
+
+365
+00:33:35,059 --> 00:33:45,539
+Isto, porque já vamos ver mais à frente, estabelece a segurança MTLS
+
+366
+00:33:45,539 --> 00:33:53,539
+e vai expor também o IP da máquina para que outros nós se possam ligar,
+
+367
+00:33:53,539 --> 00:34:00,539
+ou seja, ele fica aberto para quem quiser entrar neste enxame, neste Swarm,
+
+368
+00:34:00,539 --> 00:34:02,539
+poder entrar. Ok?
+
+369
+00:34:02,539 --> 00:34:09,260
+Agora, a identificação.
+
+370
+00:34:09,260 --> 00:34:15,260
+Se alguém quiser entrar neste Swarm, pode entrar com dois papéis.
+
+371
+00:34:15,260 --> 00:34:21,260
+Pode entrar no papel de trabalhador, esperemos que sejam muitos, certo?
+
+372
+00:34:21,260 --> 00:34:26,260
+Mas também pode entrar no papel de Master, ou de Manager.
+
+373
+00:34:26,260 --> 00:34:31,260
+Tal como nos Workers, também convém ter redundância nos Managers,
+
+374
+00:34:31,260 --> 00:34:45,739
+porque se um Master falhar e só tivermos um, o nosso cluster deixa de ser gerido.
+
+375
+00:34:45,739 --> 00:34:49,739
+Portanto, convém também termos várias máquinas a assegurar a gestão.
+
+376
+00:34:49,739 --> 00:34:55,739
+Só que convém que as várias máquinas tomem todas elas as mesmas decisões.
+
+377
+00:34:55,739 --> 00:34:57,739
+E chama-se isso um consenso.
+
+378
+00:34:57,739 --> 00:35:04,739
+Eles chegarem a um consenso sobre o que é que deve ser feito e, tac, ninguém discorda.
+
+379
+00:35:04,739 --> 00:35:08,739
+E é feito. Ok? Ok.
+
+380
+00:35:08,739 --> 00:35:19,739
+Para o Mono entrar neste enxame, como Worker ou como Manager, ele precisa ter uma chave, um Token.
+
+381
+00:35:20,739 --> 00:35:28,739
+E quando nós arrancamos com um Swarm, são gerados dois Tokens.
+
+382
+00:35:28,739 --> 00:35:34,739
+Um Token para Trabalhador e um Token para Manager. Ok?
+
+383
+00:35:34,739 --> 00:35:38,739
+Como é que eu posso aceder aos Tokens?
+
+384
+00:35:38,739 --> 00:35:41,739
+Porque esses Tokens são necessários quando alguém quer entrar.
+
+385
+00:35:41,739 --> 00:35:46,739
+Eu posso lançar o comando Docker Swarm, Join Token Worker.
+
+386
+00:35:46,739 --> 00:35:52,739
+Isto aqui vai me dar qual é que é o Token para quem quiser entrar como Novo Trabalhador.
+
+387
+00:35:52,739 --> 00:35:56,739
+Ou então Join Token Manager.
+
+388
+00:35:56,739 --> 00:36:06,739
+Isto aqui vai me dar o Token para quem se quiser inscrever ou entrar no nosso Swarm, no nosso enxame, como Manager. Ok?
+
+389
+00:36:06,739 --> 00:36:15,739
+Este comando tem de ser feito na máquina que tem o Master. Ok?
+
+390
+00:36:15,739 --> 00:36:26,739
+Quem fez este Token Swarm Init, na máquina onde fizemos este Token Swarm Init, nós podemos fazer este Token Swarm Join Token Worker e Manager.
+
+391
+00:36:26,739 --> 00:36:31,739
+Este aqui é garantido porque nós queremos mesmo lançar Managers. Ok?
+
+392
+00:36:31,739 --> 00:36:36,739
+E mesmo que o Novo... Desculpem lá, o Worker.
+
+393
+00:36:36,739 --> 00:36:39,739
+Estava a olhar para aquilo. Estava a ver...
+
+394
+00:36:39,739 --> 00:36:47,739
+Esqueçam, vamos explicar o que ele estava a ver. Estava a ver o Worker aqui em baixo.
+
+395
+00:36:47,739 --> 00:36:52,739
+Se o Novo entrar como Worker, ele depois pode ser mais tarde promovido a Manager.
+
+396
+00:36:52,739 --> 00:36:57,739
+É por isso que ele estava a dizer que é esta garantidamente que nós vamos fazer.
+
+397
+00:36:57,739 --> 00:37:05,309
+Ok. O que é que vamos fazer?
+
+398
+00:37:05,309 --> 00:37:26,059
+O Token Swarm Init, quando criamos, devemos obter os Tokens para depois podermos usá-los nas máquinas que querem entrar no nosso enxame.
+
+399
+00:37:26,059 --> 00:37:33,059
+Os Tokens do Docker Swarm normalmente têm esta forma.
+
+400
+00:37:33,059 --> 00:37:37,059
+Swarm Token...
+
+401
+00:37:37,059 --> 00:37:42,059
+Aqui temos uma hache alfanumérica e termina Worker para os trabalhadores.
+
+402
+00:37:42,059 --> 00:37:47,059
+Ou Swarm Token e depois...
+
+403
+00:37:47,059 --> 00:37:50,059
+Manager para os Managers. Ok?
+
+404
+00:37:50,059 --> 00:37:58,880
+Senão, se o Novo não precisar de ser Master, não adicione como Master. Ok?
+
+405
+00:37:58,880 --> 00:38:07,880
+Nos conselhos que dão dizem para adicionar todos os Novos como Worker.
+
+406
+00:38:07,880 --> 00:38:16,880
+E depois promover os que têm de ser Managers quando...
+
+407
+00:38:16,880 --> 00:38:19,880
+A frase tem de ter um princípio e meio fim.
+
+408
+00:38:19,880 --> 00:38:32,880
+Só depois, se for necessário, que terem um Master, promovem um Novo Worker para Master, um Novo Trabalhador para Gestor. Ok?
+
+409
+00:38:32,880 --> 00:38:39,579
+Também aconselham a fazer uma rotação do Token frequente.
+
+410
+00:38:39,579 --> 00:38:47,590
+Ou seja, periodicamente atualizar os Tokens.
+
+411
+00:38:47,590 --> 00:38:51,590
+É como as Passwords. Periodicamente devemos ir mudando as Passwords.
+
+412
+00:38:51,590 --> 00:38:58,590
+Porque alguém pode descobrir e começarem a usar a Password.
+
+413
+00:38:58,590 --> 00:39:13,099
+E desta forma nós evitamos que uma Password antiga, ou neste caso um Token antigo, possa ser explorada.
+
+414
+00:39:13,099 --> 00:39:15,099
+Como é que nós fazemos isso?
+
+415
+00:39:15,099 --> 00:39:18,099
+Docker Swarm Join Token Rotate Worker.
+
+416
+00:39:18,099 --> 00:39:34,309
+E ao fazer isto, mudo o Token e, se não me engano, o novo Token é propagado para todas as máquinas que estão ligadas ao Swarm. Ok?
+
+417
+00:39:34,309 --> 00:39:39,309
+Agora, como é que eu junto máquinas ao meu Cluster?
+
+418
+00:39:39,309 --> 00:39:51,309
+Pronto. A partir do momento em que alguém criou o Cluster, o nosso enxame, nós vamos passar a usar o Docker Swarm Join. Ok?
+
+419
+00:39:51,309 --> 00:40:01,309
+Docker Swarm é sempre agora o prefixo habitual. Vamos utilizar no Docker Swarm o comando Join. Ok?
+
+420
+00:40:01,309 --> 00:40:10,309
+Quando fazemos isso, um nó vai apresentar-se ao Master e vai dizer, eu quero me ligar.
+
+421
+00:40:10,309 --> 00:40:30,309
+E ele faz este pedido através da porta 2377 do IP que foi publicitado por quem fez o Docker Swarm Init. Ok?
+
+422
+00:40:30,309 --> 00:40:33,719
+Vamos lá ver.
+
+423
+00:40:33,719 --> 00:40:37,719
+Vamos adicionar um nó.
+
+424
+00:40:37,719 --> 00:40:40,719
+Portanto, nós temos o nosso nó.
+
+425
+00:40:40,719 --> 00:40:43,719
+E queremos lançá-lo como...
+
+426
+00:40:43,719 --> 00:40:48,960
+Espera aí. Eu aqui...
+
+427
+00:40:48,960 --> 00:41:02,739
+Ok, eu aqui vou ter que corrigir este slide.
+
+428
+00:41:02,739 --> 00:41:18,739
+Porque eu ia fazer dois slides, um como Worker e outro que se adicionava imediatamente como Master, como Manager.
+
+429
+00:41:18,739 --> 00:41:31,380
+Só que o Worker era suposto ser o primeiro. E agora estou a pensar, se juntei tudo, não sou.
+
+430
+00:41:31,380 --> 00:41:33,380
+Vamos ver...
+
+431
+00:41:35,380 --> 00:41:39,380
+Deixem-me só rever. É que eu agora estou a pensar...
+
+432
+00:41:39,380 --> 00:41:43,380
+Eu tinha pensado fazer dois. Não sei se depois é se juntei os dois, não sou.
+
+433
+00:41:43,380 --> 00:41:46,380
+Portanto, Docker Swarm Join.
+
+434
+00:41:46,380 --> 00:41:49,380
+Aqui é o Token. Ou seja, leva...
+
+435
+00:41:49,380 --> 00:41:58,380
+Traço, traço, Token. E depois o Token que é criado e depois conseguimos obter no Master.
+
+436
+00:42:01,380 --> 00:42:05,380
+Eu acabei por juntar os dois slides, não sou.
+
+437
+00:42:05,380 --> 00:42:12,380
+Se for um Token de Worker, isto aqui vai juntar o nó como um Worker.
+
+438
+00:42:12,380 --> 00:42:19,380
+Se for um Token de Manager, ele adiciona imediatamente como Manager.
+
+439
+00:42:19,380 --> 00:42:36,380
+E por fim, temos que dizer qual é o endereço IP do Nó Manager que está a aceitar, a gerir o Cluster e o Porto 2377.
+
+440
+00:42:36,380 --> 00:42:43,190
+Dúvidas até agora, não há?
+
+441
+00:42:43,190 --> 00:42:50,190
+O que acontece? Quando o Nó faz este pedido para se juntar ao enxame, ao Cluster,
+
+442
+00:42:50,190 --> 00:42:53,190
+o Manager, o gestor, verifica o Token.
+
+443
+00:42:53,190 --> 00:42:56,190
+Olha para aí este Token que recebeu.
+
+444
+00:42:56,190 --> 00:43:04,190
+Se estiver conforme, envia um certificado TLS e toque.
+
+445
+00:43:04,190 --> 00:43:09,190
+Estabelece uma ligação segura com esse Nó.
+
+446
+00:43:09,190 --> 00:43:11,190
+Certo?
+
+447
+00:43:11,190 --> 00:43:14,190
+Esta parte de criptografia é aquela que...
+
+448
+00:43:14,190 --> 00:43:22,190
+Eu sei o que acontece, mas não vale a pena eu andar na parte da álgebra
+
+449
+00:43:22,190 --> 00:43:32,340
+para perceber como é que as chaves são trocadas e depois eles fazem a cifragem.
+
+450
+00:43:32,340 --> 00:43:36,340
+Mas o TLS é um método de comunicação segura,
+
+451
+00:43:36,340 --> 00:43:47,260
+através de chave em que permite autenticação e permite comunicação cifrada.
+
+452
+00:43:47,260 --> 00:43:49,260
+Ok?
+
+453
+00:43:50,260 --> 00:43:56,639
+Dúvidas, não há?
+
+454
+00:43:56,639 --> 00:44:01,639
+Portanto, já temos aqui o primeiro passo, criar o Cluster.
+
+455
+00:44:01,639 --> 00:44:05,639
+O segundo passo, adicionar nós ao Cluster.
+
+456
+00:44:05,639 --> 00:44:09,639
+No caso do Docker Swarm, nós podemos adicionar trabalhadores
+
+457
+00:44:09,639 --> 00:44:12,639
+e podemos adicionar gestores.
+
+458
+00:44:12,639 --> 00:44:15,639
+A diferença entre um e outro,
+
+459
+00:44:15,639 --> 00:44:20,639
+ou a diferença no papel de um ou de outro,
+
+460
+00:44:20,639 --> 00:44:23,639
+é dada pelo token.
+
+461
+00:44:23,639 --> 00:44:27,639
+Se é um token de trabalhador ou se é um token gestor.
+
+462
+00:44:27,639 --> 00:44:32,639
+Quando o gestor recebe este pedido, olha para o token e identifica.
+
+463
+00:44:32,639 --> 00:44:37,639
+Ok, este vai ser um novo trabalhador ou este vai ser um novo gestor.
+
+464
+00:44:37,639 --> 00:44:40,460
+Está bom?
+
+465
+00:44:40,460 --> 00:44:41,460
+Pronto.
+
+466
+00:44:41,460 --> 00:44:46,840
+O que é que nós temos dentro de um Nó gestor?
+
+467
+00:44:46,840 --> 00:44:50,840
+Temos um servidor de API,
+
+468
+00:44:50,840 --> 00:44:57,840
+ou seja, temos ali um API que recebe pabitos externos,
+
+469
+00:44:57,840 --> 00:45:00,840
+pabitos para realizar ações.
+
+470
+00:45:00,840 --> 00:45:08,789
+Temos também o tal motor de consciência.
+
+471
+00:45:08,789 --> 00:45:10,789
+Temos o escalonador.
+
+472
+00:45:10,789 --> 00:45:14,789
+O escalonador é aquele que diz
+
+473
+00:45:16,789 --> 00:45:21,789
+quando é que tem de lançar um contentor numa máquina,
+
+474
+00:45:21,789 --> 00:45:26,789
+ou eventualmente desligar um contentor numa máquina.
+
+475
+00:45:26,789 --> 00:45:29,789
+Temos o alocador,
+
+476
+00:45:29,789 --> 00:45:37,789
+que atribui endereços e IPs e recursos de rede a tarefas.
+
+477
+00:45:37,789 --> 00:45:41,789
+E também temos o dispatcher. O dispatcher é o despachante.
+
+478
+00:45:41,789 --> 00:45:44,789
+É quem coordena os trabalhadores
+
+479
+00:45:44,789 --> 00:45:48,789
+e monitoriza o estado de execução das tarefas.
+
+480
+00:45:48,789 --> 00:45:57,789
+Ou seja, é aquele que sabe o estado atual ou pouco ou recente.
+
+481
+00:45:57,789 --> 00:46:02,789
+Atual, às vezes, pode ser um atual com mais de dois, cinco segundos atrás.
+
+482
+00:46:02,789 --> 00:46:05,789
+Portanto, o estado mais recente das tarefas.
+
+483
+00:46:05,789 --> 00:46:07,789
+Está bom?
+
+484
+00:46:07,789 --> 00:46:08,789
+Pronto.
+
+485
+00:46:08,789 --> 00:46:21,070
+Como é que nós mantemos a consistência?
+
+486
+00:46:22,070 --> 00:46:26,070
+Os nós de gestão têm que chegar a um consenso.
+
+487
+00:46:26,070 --> 00:46:29,070
+Por exemplo, não podemos ter um caso
+
+488
+00:46:29,070 --> 00:46:35,070
+em que é necessário lançar um novo contentor num nó.
+
+489
+00:46:35,070 --> 00:46:40,070
+E temos três gestores
+
+490
+00:46:40,070 --> 00:46:47,070
+e cada um dos três gestores está a lançar um contentor num nó diferente.
+
+491
+00:46:47,070 --> 00:46:52,070
+Não, eles têm que chegar a um consenso.
+
+492
+00:46:52,070 --> 00:46:59,070
+Além do mais, também pode acontecer que
+
+493
+00:46:59,070 --> 00:47:02,070
+eles não cheguem todos à mesma decisão.
+
+494
+00:47:02,070 --> 00:47:06,070
+E aí, vai ter de ganhar a maioria.
+
+495
+00:47:06,070 --> 00:47:08,070
+Também pode acontecer o seguinte.
+
+496
+00:47:08,070 --> 00:47:15,070
+Os próprios gestores também podem falhar, desaparecem.
+
+497
+00:47:15,070 --> 00:47:19,070
+E é necessário manter o sistema e saber
+
+498
+00:47:19,070 --> 00:47:23,070
+quantos estão cá para decidir.
+
+499
+00:47:23,070 --> 00:47:26,070
+Vamos falar no quorum.
+
+500
+00:47:26,070 --> 00:47:30,070
+O quorum é o número mínimo de maioria
+
+501
+00:47:30,070 --> 00:47:36,070
+que os gestores ativos que é necessário.
+
+502
+00:47:36,070 --> 00:47:38,070
+Espere lá.
+
+503
+00:47:38,070 --> 00:47:44,070
+Qual é o número mínimo de gestores que estejam ativos
+
+504
+00:47:44,070 --> 00:47:48,070
+para tomar uma decisão?
+
+505
+00:47:48,070 --> 00:47:54,070
+Suponho que nós temos N gestores.
+
+506
+00:47:54,070 --> 00:48:03,960
+O quorum é esse número de gestores a dividir por dois, mais um.
+
+507
+00:48:03,960 --> 00:48:08,960
+Este aqui é o floor, é arredondar para baixo
+
+508
+00:48:08,960 --> 00:48:10,960
+ou truncar, se quiserem.
+
+509
+00:48:11,960 --> 00:48:14,960
+Isto tem que ser um número inteiro.
+
+510
+00:48:14,960 --> 00:48:16,960
+E o que acontece?
+
+511
+00:48:16,960 --> 00:48:20,960
+Se eu tiver, por exemplo, 4, 4 a dividir por 2 dá 2.
+
+512
+00:48:20,960 --> 00:48:23,960
+Portanto, é 2 mais 1.
+
+513
+00:48:23,960 --> 00:48:26,960
+Eu preciso ter um consenso de 3.
+
+514
+00:48:26,960 --> 00:48:33,960
+Mas, se eu tiver N igual a 5, 5 a dividir por 2 é 2,5.
+
+515
+00:48:33,960 --> 00:48:37,960
+Este símbolo diz arredonda para baixo
+
+516
+00:48:37,960 --> 00:48:42,960
+ou de forma mais precisa trunca.
+
+517
+00:48:42,960 --> 00:48:48,960
+É sempre corta a parte fracionária e deita fora.
+
+518
+00:48:48,960 --> 00:48:50,960
+2,5 é 2.
+
+519
+00:48:50,960 --> 00:48:52,960
+2 mais 1, 3.
+
+520
+00:48:52,960 --> 00:48:56,960
+Se eu tiver 5 servidores, 5 gestores ativos,
+
+521
+00:48:56,960 --> 00:49:00,960
+então eu tenho que ter 3 a concordar com a mesma decisão.
+
+522
+00:49:00,960 --> 00:49:03,960
+Para essa decisão avançar.
+
+523
+00:49:03,960 --> 00:49:10,960
+Reparem que ter entre 4 ou 5 o quórum mínimo é igual.
+
+524
+00:49:12,960 --> 00:49:18,960
+Se o número de gestores ativos descer abaixo do quórum,
+
+525
+00:49:18,960 --> 00:49:26,369
+o cluster para de aceitar alterações de configuração.
+
+526
+00:49:26,369 --> 00:49:31,369
+Ele basicamente entra numa espécie de modo de segurança.
+
+527
+00:49:31,369 --> 00:49:35,659
+Dúvidas.
+
+528
+00:49:35,659 --> 00:49:37,659
+Não há?
+
+529
+00:49:37,659 --> 00:49:47,659
+Já agora, este N deve ser sempre um número ímparque.
+
+530
+00:49:49,659 --> 00:49:52,659
+Capacidade de tolerância a falhas.
+
+531
+00:49:52,659 --> 00:49:55,659
+Se eu tiver N gestores,
+
+532
+00:49:55,659 --> 00:50:02,659
+então o número máximo de falhas de nós
+
+533
+00:50:02,659 --> 00:50:06,659
+é N menos 1 a dividir por 2.
+
+534
+00:50:06,659 --> 00:50:11,659
+Por exemplo, vou voltar a pegar no caso do 4 e do 5.
+
+535
+00:50:11,659 --> 00:50:15,659
+Se eu tiver 4 managers, 4 menos 1 é 3.
+
+536
+00:50:15,659 --> 00:50:17,659
+3 a dividir por 2 é 1,5.
+
+537
+00:50:17,659 --> 00:50:18,659
+1.
+
+538
+00:50:18,659 --> 00:50:21,659
+E ele aceita no máximo uma falha.
+
+539
+00:50:21,659 --> 00:50:25,659
+Se eu tiver 5, 5 menos 1 é 4.
+
+540
+00:50:25,659 --> 00:50:27,659
+4 a dividir por 2 é 2.
+
+541
+00:50:27,659 --> 00:50:32,659
+E ele aceita no mínimo 2 gestores a falhar.
+
+542
+00:50:32,659 --> 00:50:37,659
+E reparem que nestes 3 casos concretos,
+
+543
+00:50:37,659 --> 00:50:44,659
+se eu tiver 3 gestores, o meu quórum é 2 e tolera uma falha.
+
+544
+00:50:44,659 --> 00:50:52,659
+Se eu tiver 4 gestores, o meu quórum é 3 e continua a admitir uma única falha.
+
+545
+00:50:53,659 --> 00:50:57,659
+Se eu tiver 5 gestores, o meu quórum é 3,
+
+546
+00:50:57,659 --> 00:51:04,659
+ou seja, o número de nós que tem que chegar a um consenso para tomar uma decisão é o mesmo para 4,
+
+547
+00:51:04,659 --> 00:51:09,659
+mas neste caso, de 5, ele tolera duas falhas.
+
+548
+00:51:09,659 --> 00:51:14,659
+Ou seja, é mais resistente, mais resiliente a falhas.
+
+549
+00:51:14,659 --> 00:51:17,659
+Ter 5 do que ter 4.
+
+550
+00:51:17,659 --> 00:51:24,659
+E por acaso agora podia estar a pensar, podia também ter posto aqui um 6
+
+551
+00:51:24,659 --> 00:51:31,659
+e verificar que no caso de 6, o quórum passaria a 4
+
+552
+00:51:31,659 --> 00:51:34,659
+e o número de falhas continuaria a 2.
+
+553
+00:51:34,659 --> 00:51:37,659
+Ou seja, vamos lá ver aqui 4.
+
+554
+00:51:37,659 --> 00:51:41,659
+6 a dividir por 2 é 3, 3 mais 1 é 4.
+
+555
+00:51:41,659 --> 00:51:44,659
+Portanto, eu preciso de 4 a concordar para tomar uma decisão.
+
+556
+00:51:45,659 --> 00:51:51,659
+E preciso de 6 menos 1 é 5, 5 a dividir por 2 é 2 e meio, 2 falhas.
+
+557
+00:51:51,659 --> 00:51:58,659
+Ou seja, eu preciso de um quórum maior, mas mesmo assim eu só resisto a 2 falhas.
+
+558
+00:51:58,659 --> 00:52:05,659
+Isso quer dizer que, matematicamente, ter um número em par
+
+559
+00:52:05,659 --> 00:52:09,659
+é uma solução mais resiliente.
+
+560
+00:52:09,659 --> 00:52:14,659
+Porque eu não preciso de ter um quórum tão elevado
+
+561
+00:52:14,659 --> 00:52:19,659
+para o mesmo número de falhas admissíveis.
+
+562
+00:52:19,659 --> 00:52:25,570
+Consegui convencer-vos?
+
+563
+00:52:25,570 --> 00:52:30,880
+E agora estou a pensar que realmente podia ter posto ali um 6, mas olhem.
+
+564
+00:52:30,880 --> 00:52:37,880
+Adicionei, dei-vos o 6, assim, over the air, ok?
+
+565
+00:52:37,880 --> 00:52:43,880
+Deve de ser sempre utilizado um número em par de gestores.
+
+566
+00:52:43,880 --> 00:52:46,880
+Porque temos este ganho.
+
+567
+00:52:46,880 --> 00:52:53,880
+Menor consenso para o mesmo número de nós em falhas admissíveis.
+
+568
+00:52:53,880 --> 00:52:55,880
+Está bom?
+
+569
+00:52:55,880 --> 00:52:56,880
+Ok.
+
+570
+00:52:56,880 --> 00:53:02,429
+Agora, aqui.
+
+571
+00:53:02,429 --> 00:53:09,429
+A hierarquia da extração do cluster, do enxame.
+
+572
+00:53:13,380 --> 00:53:17,380
+Voltamos à mesma história, que se tivermos apenas um ambiente
+
+573
+00:53:17,380 --> 00:53:22,380
+com uma única máquina, é super fácil não estarmos a controlar
+
+574
+00:53:22,380 --> 00:53:25,380
+os contentores individualmente.
+
+575
+00:53:25,380 --> 00:53:29,380
+No entanto, se tivermos um cluster com vários nós,
+
+576
+00:53:29,380 --> 00:53:35,380
+gerir os contentores manualmente ia ser o fim do mundo, certo?
+
+577
+00:53:35,380 --> 00:53:37,380
+Então, o que temos de fazer?
+
+578
+00:53:37,380 --> 00:53:42,380
+Primeiro, desacopilar a intenção da estrutura.
+
+579
+00:53:42,380 --> 00:53:46,380
+Os operadores dizem qual é que é o estado desejado
+
+580
+00:53:46,380 --> 00:53:52,380
+conforme já vimos, e não onde ou como é que os contentores têm de executar.
+
+581
+00:53:54,380 --> 00:53:58,380
+Pronto, aqui estou apenas a ser um pouco mais específico daquilo que falámos no início.
+
+582
+00:53:58,380 --> 00:54:02,380
+Nós declaramos quais são os meus mínimos, mas eu não declaro nada
+
+583
+00:54:02,380 --> 00:54:08,380
+em relação à implantação dos contentores nos meus recursos.
+
+584
+00:54:08,380 --> 00:54:11,380
+Deixo isso ao gestor, ok?
+
+585
+00:54:11,380 --> 00:54:13,380
+É o trabalho dele.
+
+586
+00:54:13,380 --> 00:54:23,380
+No entanto, nós precisamos de ter unidades atômicas de trabalho.
+
+587
+00:54:25,380 --> 00:54:40,739
+Ou seja, o contentor é a minha unidade básica para a minha orchestração.
+
+588
+00:54:40,739 --> 00:54:48,150
+Eu posso trabalhar com contentores, número inteiro.
+
+589
+00:54:48,150 --> 00:54:52,150
+Não posso trabalhar com meio contentor ou com 3 quartos de contentores.
+
+590
+00:54:52,150 --> 00:54:58,150
+O meu contentor é a minha unidade básica, indivisível,
+
+591
+00:54:58,150 --> 00:55:03,150
+da operação ou do trabalho do orchestrador.
+
+592
+00:55:03,150 --> 00:55:06,150
+O que é que o orchestrador pode fazer?
+
+593
+00:55:06,150 --> 00:55:11,150
+Pode pegar num contentor, colocá-lo a correr numa máquina
+
+594
+00:55:11,150 --> 00:55:14,150
+ou pode desligá-lo dessa máquina.
+
+595
+00:55:14,150 --> 00:55:17,150
+É a unidade mínima.
+
+596
+00:55:17,150 --> 00:55:26,250
+Eu estava aqui a ver se arranjava uma metáfora, mas é um bocado...
+
+597
+00:55:26,250 --> 00:55:35,250
+Não estou a ver nenhuma metáfora, mas penso que o conceito é muito...
+
+598
+00:55:35,250 --> 00:55:38,250
+Como é que é dizer? Pragmático.
+
+599
+00:55:38,250 --> 00:55:44,250
+A unidade mínima de trabalho do orchestrador é a forma mais fácil que eu tenho de dizer isto.
+
+600
+00:55:44,250 --> 00:55:46,250
+É o contentor.
+
+601
+00:55:50,460 --> 00:56:01,460
+Como é que isto é transformado num modelo de operação no Dockerswarm?
+
+602
+00:56:01,460 --> 00:56:07,460
+É através de duas entidades, os serviços e as tarefas.
+
+603
+00:56:07,460 --> 00:56:12,460
+Um serviço é uma declaração.
+
+604
+00:56:12,460 --> 00:56:17,460
+Eu digo que eu tenho esta aplicação
+
+605
+00:56:17,460 --> 00:56:25,699
+e esta aplicação deve cumprir com estes requisitos para eu ficar satisfeito.
+
+606
+00:56:25,699 --> 00:56:33,699
+Eu lanço um serviço e digo quais são os requisitos associados a este serviço.
+
+607
+00:56:34,699 --> 00:56:36,699
+Ok.
+
+608
+00:56:36,699 --> 00:56:39,699
+O que é que eu escrevi aqui?
+
+609
+00:56:39,699 --> 00:56:44,699
+High level blueprint of the desired application state.
+
+610
+00:56:44,699 --> 00:56:49,699
+Nota-se aqui onde é que a inclusão artificial fez a revisão.
+
+611
+00:56:49,699 --> 00:56:52,699
+Ele gostou muito de pôr o blueprint.
+
+612
+00:56:52,699 --> 00:56:56,699
+Eu tinha pôs declaração e ele pôs blueprint.
+
+613
+00:56:56,699 --> 00:56:59,699
+High level configuration.
+
+614
+00:56:59,699 --> 00:57:01,699
+Estou agora a lembrar-me.
+
+615
+00:57:01,699 --> 00:57:04,699
+É a segunda vez que está a aparecer aqui a palavra blueprint
+
+616
+00:57:04,699 --> 00:57:08,699
+e garantidamente não seria a palavra que eu utilizaria naturalmente.
+
+617
+00:57:08,699 --> 00:57:10,699
+Eu coloquei configuration.
+
+618
+00:57:10,699 --> 00:57:14,699
+E ele por duas vezes trucou-me por blueprint.
+
+619
+00:57:14,699 --> 00:57:16,699
+Ok.
+
+620
+00:57:16,699 --> 00:57:21,699
+Com o meu serviço e qual é o meu estado desejado,
+
+621
+00:57:21,699 --> 00:57:26,699
+eu declaro este estado
+
+622
+00:57:26,699 --> 00:57:36,500
+e permite-me definir parâmetros como, por exemplo, as etiquetas da imagem,
+
+623
+00:57:36,500 --> 00:57:42,500
+quais são os portos que ele precisa ter abertos para receber pedidos,
+
+624
+00:57:42,500 --> 00:57:47,500
+quais são as ligações de rede, quais são as variáveis de ambiente.
+
+625
+00:57:47,500 --> 00:57:52,500
+Basicamente é a configuração de um contentor
+
+626
+00:57:52,500 --> 00:58:00,449
+mais os requisitos desse contentor no cluster.
+
+627
+00:58:00,449 --> 00:58:02,449
+Por outro lado, nós temos as tarefas.
+
+628
+00:58:02,449 --> 00:58:04,449
+O que são as tarefas?
+
+629
+00:58:04,449 --> 00:58:09,449
+As tarefas são as instâncias desse serviço
+
+630
+00:58:09,449 --> 00:58:15,449
+que num determinado instante constituem um estado
+
+631
+00:58:15,449 --> 00:58:19,449
+e espera-se que esse estado, ou seja, esse conjunto de instâncias,
+
+632
+00:58:19,449 --> 00:58:25,449
+forme um estado que seja o mais próximo possível,
+
+633
+00:58:25,449 --> 00:58:28,449
+até se pretendem mesmo que seja igual,
+
+634
+00:58:28,449 --> 00:58:36,289
+ao estado desejado que foi declarado no serviço.
+
+635
+00:58:36,289 --> 00:58:38,289
+Estou agora aqui a ler.
+
+636
+00:58:43,289 --> 00:58:45,289
+Esta frase está melhor.
+
+637
+00:58:45,289 --> 00:58:55,289
+Portanto, uma tarefa representa um contentor colocado num nó,
+
+638
+00:58:55,289 --> 00:58:58,289
+é um contentor alocado a um nó.
+
+639
+00:59:02,369 --> 00:59:08,369
+Portanto, as tarefas nunca são restarted,
+
+640
+00:59:08,369 --> 00:59:14,369
+não são recomeçadas, nem são reparadas no próprio local.
+
+641
+00:59:14,369 --> 00:59:16,369
+Se houver uma falha de uma tarefa,
+
+642
+00:59:16,369 --> 00:59:20,369
+o que acontece é que o gestor mata essa tarefa
+
+643
+00:59:20,369 --> 00:59:23,369
+e vai instanciar uma nova tarefa,
+
+644
+00:59:23,369 --> 00:59:27,369
+sendo o mesmo nó ou outro nó qualquer,
+
+645
+00:59:27,369 --> 00:59:33,369
+dependendo das condições.
+
+646
+00:59:33,369 --> 00:59:35,369
+Uma coisa é certa,
+
+647
+00:59:35,369 --> 00:59:42,369
+se uma tarefa, se um contentor a executar falece,
+
+648
+00:59:43,369 --> 00:59:45,369
+ele simplesmente é descartado
+
+649
+00:59:45,369 --> 00:59:48,369
+e é lançado um novo contentor.
+
+650
+00:59:49,369 --> 00:59:54,739
+Isto acaba por ser um bocado descartado,
+
+651
+00:59:54,739 --> 00:59:58,739
+como agora muitas coisas que vêm da China é para usar
+
+652
+00:59:58,739 --> 01:00:01,739
+e quando a varia nem vale a pena mandar reparar,
+
+653
+01:00:01,739 --> 01:00:04,739
+deita-se fora e compra-se um novo.
+
+654
+01:00:04,739 --> 01:00:06,739
+Foi boa a metáfora.
+
+655
+01:00:11,400 --> 01:00:14,400
+Existe uma relação de um para N.
+
+656
+01:00:14,400 --> 01:00:18,400
+Nós temos uma declaração do serviço
+
+657
+01:00:19,400 --> 01:00:26,710
+e depois esse serviço é instanciado em N tarefas.
+
+658
+01:00:29,860 --> 01:00:31,860
+Espero que essas N tarefas
+
+659
+01:00:31,860 --> 01:00:34,860
+sejam aquelas que estão no estado desejado.
+
+660
+01:00:38,860 --> 01:00:40,860
+Duvidas no A?
+
+661
+01:00:40,860 --> 01:00:44,860
+Parem aí, vou minimizar isto.
+
+662
+01:00:47,860 --> 01:00:50,860
+Estava-me a esquecer que gosto de ter aquela...
+
+663
+01:00:54,030 --> 01:00:56,030
+Eu tinha a janela do Thames por trás
+
+664
+01:00:56,030 --> 01:00:58,030
+e quando tenho a janela do Thames por trás
+
+665
+01:00:58,030 --> 01:01:01,030
+eu não vejo os thumbs e coisas assim.
+
+666
+01:01:01,030 --> 01:01:04,030
+Portanto eu minimizo a janela do Thames
+
+667
+01:01:04,030 --> 01:01:08,030
+e fico com uma espécie de régua vertical aqui do lado
+
+668
+01:01:08,030 --> 01:01:14,030
+e aí consigo ver quando vocês mandam-me nesta régua,
+
+669
+01:01:14,030 --> 01:01:17,030
+consigo ver quando metem os pulgares no ar.
+
+670
+01:01:20,590 --> 01:01:23,590
+Então vamos lá, como é que eu lanço um serviço?
+
+671
+01:01:25,590 --> 01:01:29,590
+Eu lanço um serviço com Docker Service Create.
+
+672
+01:01:29,590 --> 01:01:34,059
+Docker Service Create é o comando
+
+673
+01:01:34,059 --> 01:01:40,059
+que vai introduzir no Swarm, no Cluster, um novo serviço.
+
+674
+01:01:43,050 --> 01:01:47,050
+O último parâmetro que eu coloco aqui
+
+675
+01:01:47,050 --> 01:01:53,489
+é qual é que é a imagem do conteúdo torno
+
+676
+01:01:53,489 --> 01:01:55,489
+que está associado a este serviço.
+
+677
+01:01:56,489 --> 01:02:00,489
+Só que eu tenho vários parâmetros
+
+678
+01:02:00,489 --> 01:02:03,489
+que posso utilizar para configurar
+
+679
+01:02:03,489 --> 01:02:06,489
+o estado desejado deste serviço.
+
+680
+01:02:06,489 --> 01:02:09,489
+Neste exemplo ilustrativo,
+
+681
+01:02:09,489 --> 01:02:16,489
+estou a dizer que o nome deste serviço é Web API.
+
+682
+01:02:17,489 --> 01:02:21,489
+Apesar de buscar a imagem nginx alpine,
+
+683
+01:02:21,489 --> 01:02:24,489
+eu quero que este serviço seja conhecido
+
+684
+01:02:24,489 --> 01:02:27,489
+ou visto com o nome Web API.
+
+685
+01:02:28,489 --> 01:02:31,489
+Número de réplicas, três.
+
+686
+01:02:31,489 --> 01:02:33,489
+Ou seja, tenho que ter três réplicas
+
+687
+01:02:33,489 --> 01:02:36,489
+em cada instante no meu estado desejado.
+
+688
+01:02:36,489 --> 01:02:41,489
+Quero que publique o porto 8080.
+
+689
+01:02:41,489 --> 01:02:59,739
+Aqui eu creio que isto há semelhança
+
+690
+01:02:59,739 --> 01:03:02,739
+de quando lançamos um contenteor.
+
+691
+01:03:02,739 --> 01:03:06,739
+Estamos a dizer que o porto 8080 do host
+
+692
+01:03:06,739 --> 01:03:12,739
+deve ser direcionado para o porto 80 do contenteor.
+
+693
+01:03:12,739 --> 01:03:16,739
+Portanto, estamos a fazer aqui o map...
+
+694
+01:03:16,739 --> 01:03:21,739
+Port mapping? Port mapping, não é?
+
+695
+01:03:22,739 --> 01:03:24,739
+Lance, estou a confundir a gramática.
+
+696
+01:03:24,739 --> 01:03:30,739
+Port mapping. Port mapping não pode ser.
+
+697
+01:03:30,739 --> 01:03:32,739
+Port mapping.
+
+698
+01:03:32,739 --> 01:03:36,179
+O que é que acontece?
+
+699
+01:03:36,179 --> 01:03:38,179
+Quando eu executo isto,
+
+700
+01:03:38,179 --> 01:03:40,179
+eu estou a pedir ao SWORM
+
+701
+01:03:40,179 --> 01:03:43,179
+para adicionar um novo serviço
+
+702
+01:03:43,179 --> 01:03:47,179
+com este nome e com esta imagem.
+
+703
+01:03:47,179 --> 01:03:50,179
+Mas eu quero ter três réplicas.
+
+704
+01:03:50,179 --> 01:03:52,179
+Os gestores o que vão fazer?
+
+705
+01:03:52,179 --> 01:03:55,179
+Vão trabalhar para instanciar
+
+706
+01:03:55,179 --> 01:03:59,179
+três contenteores deste serviço.
+
+707
+01:03:59,179 --> 01:04:04,179
+Vão aos nós que fazem parte do cluster.
+
+708
+01:04:04,179 --> 01:04:08,179
+Vão analisar a carga a que eles estão submetidos.
+
+709
+01:04:08,179 --> 01:04:13,179
+Vão selecionar no máximo três nós
+
+710
+01:04:13,179 --> 01:04:17,179
+e colocar os contenteores nesses nós
+
+711
+01:04:17,179 --> 01:04:19,179
+e lançá-los.
+
+712
+01:04:19,179 --> 01:04:24,179
+Para, no final, o meu estado atual
+
+713
+01:04:24,179 --> 01:04:28,179
+coincidir com o estado que eu declarei aqui.
+
+714
+01:04:28,179 --> 01:04:29,179
+Certo?
+
+715
+01:04:29,179 --> 01:04:35,710
+É criado o serviço Web API.
+
+716
+01:04:35,710 --> 01:04:39,710
+Portanto, os gestores de cluster
+
+717
+01:04:39,710 --> 01:04:42,710
+conhecem o serviço Web API
+
+718
+01:04:42,710 --> 01:04:45,710
+e as instâncias que são colocadas
+
+719
+01:04:45,710 --> 01:04:48,710
+são despachadas ou atribuídas
+
+720
+01:04:48,710 --> 01:04:54,710
+a alguns nós, vão ter os nomes Web API.1, .2 e .3.
+
+721
+01:04:54,710 --> 01:04:58,710
+Portanto, esta é a instância 1, esta é a instância 2
+
+722
+01:04:58,710 --> 01:05:02,710
+e esta é a instância 3 do serviço Web API.
+
+723
+01:05:02,710 --> 01:05:05,340
+Ok?
+
+724
+01:05:05,340 --> 01:05:11,250
+Dúvidas?
+
+725
+01:05:11,250 --> 01:05:17,250
+Se eu quiser ver como é que estão espalhadas
+
+726
+01:05:17,250 --> 01:05:19,250
+as instâncias de um serviço,
+
+727
+01:05:19,250 --> 01:05:21,250
+eu posso utilizar o comando
+
+728
+01:05:21,250 --> 01:05:25,250
+Docker Service Process Status, PS.
+
+729
+01:05:25,250 --> 01:05:26,250
+Ok?
+
+730
+01:05:26,250 --> 01:05:29,250
+E o Docker Service Process Status
+
+731
+01:05:29,250 --> 01:05:33,250
+eu coloco aqui qual é que é o contenteor que quero ver, Web API
+
+732
+01:05:33,250 --> 01:05:40,250
+e ele vai mostrar onde é que as instâncias estão a correr.
+
+733
+01:05:40,250 --> 01:05:44,250
+Tem estas três instâncias a correr esta imagem
+
+734
+01:05:44,250 --> 01:05:47,250
+e uma está no nó 1, outra está no nó 2
+
+735
+01:05:47,250 --> 01:05:49,250
+e outra está no nó 3
+
+736
+01:05:49,250 --> 01:05:51,250
+e estão, neste caso, as três a correr.
+
+737
+01:05:51,250 --> 01:05:55,010
+Fantástico!
+
+738
+01:05:55,010 --> 01:05:57,010
+Dúvidas?
+
+739
+01:05:57,010 --> 01:05:59,769
+Não há?
+
+740
+01:05:59,769 --> 01:06:01,769
+Se tudo correu bem,
+
+741
+01:06:01,769 --> 01:06:04,769
+eram três imagens, eram três instâncias.
+
+742
+01:06:04,769 --> 01:06:06,769
+Toc, toc, toc, tenho três instâncias
+
+743
+01:06:06,769 --> 01:06:08,769
+e ainda por cima, tenho nós à farta,
+
+744
+01:06:08,769 --> 01:06:15,219
+tenho as três instâncias cada uma a correr no nó.
+
+745
+01:06:15,219 --> 01:06:20,570
+Como é que as tarefas são distribuídas?
+
+746
+01:06:20,570 --> 01:06:22,570
+Deixa-me buscar um bocadinho de água.
+
+747
+01:06:22,570 --> 01:06:32,300
+Como é que as tarefas são distribuídas?
+
+748
+01:06:32,300 --> 01:06:34,300
+Opa!
+
+749
+01:06:34,300 --> 01:06:40,300
+Os gestores têm que observar as condições de nós
+
+750
+01:06:40,300 --> 01:06:49,300
+e utilizam políticas ou estratégias de distribuir a nova carga
+
+751
+01:06:49,300 --> 01:06:52,300
+pelos recursos que têm disponíveis.
+
+752
+01:06:52,300 --> 01:06:54,300
+O que é que eles têm de fazer?
+
+753
+01:06:54,300 --> 01:06:57,300
+Têm de analisar os...
+
+754
+01:06:57,300 --> 01:07:02,599
+Ai...
+
+755
+01:07:02,599 --> 01:07:14,329
+têm que observar as restrições de recursos.
+
+756
+01:07:14,329 --> 01:07:21,329
+Por exemplo, suponham que um serviço diz que precisa
+
+757
+01:07:21,329 --> 01:07:26,329
+de 400 Mb de memória.
+
+758
+01:07:26,329 --> 01:07:33,329
+Ele vai ver nos trabalhadores que têm disponíveis
+
+759
+01:07:33,329 --> 01:07:38,329
+quais são aqueles que têm mais de 400 Mb de memória disponível.
+
+760
+01:07:38,329 --> 01:07:41,329
+Aqueles que não têm 400 Mb de memória disponível
+
+761
+01:07:41,329 --> 01:07:44,329
+nem vale a pena estar a considerá-los,
+
+762
+01:07:44,329 --> 01:07:49,329
+são imediatamente desconsiderados.
+
+763
+01:07:49,329 --> 01:07:57,329
+Quando um contentor publica que eu preciso destes recursos,
+
+764
+01:07:57,329 --> 01:07:59,329
+o manager vai ver quais são os nós
+
+765
+01:07:59,329 --> 01:08:04,329
+que têm recursos suficientes para suportar esse contentor.
+
+766
+01:08:04,329 --> 01:08:10,690
+Também podemos ter políticas
+
+767
+01:08:10,690 --> 01:08:16,689
+em que fazemos diferenciação de algumas máquinas com outras.
+
+768
+01:08:16,689 --> 01:08:20,689
+Dando-nos, por exemplo, etiquetas.
+
+769
+01:08:20,689 --> 01:08:23,689
+Suponham, por exemplo, que nós podemos ter máquinas no Porto
+
+770
+01:08:23,689 --> 01:08:25,689
+e podemos ter máquinas em Lisboa.
+
+771
+01:08:25,689 --> 01:08:29,689
+Nós podemos dar etiquetas aos nós que estão em Lisboa,
+
+772
+01:08:29,689 --> 01:08:33,689
+a dizer, Lisboa e outros, e os que estão no Porto,
+
+773
+01:08:33,689 --> 01:08:36,689
+por exemplo, darem umas etiquetas a dizer Porto.
+
+774
+01:08:36,689 --> 01:08:40,689
+E nós podemos ter um contentor a dizer que só podem correr no Porto.
+
+775
+01:08:40,689 --> 01:08:45,689
+Nem vale a pena estar a pensar nos nós que estão em Lisboa, certo?
+
+776
+01:08:45,689 --> 01:08:50,689
+É Lisboa? Não interesa.
+
+777
+01:08:50,689 --> 01:09:00,409
+Também utilizam estratégias para, como é que dizer,
+
+778
+01:09:00,409 --> 01:09:08,409
+colocar a carga nos nós que têm capacidade para suportar essa carga.
+
+779
+01:09:08,409 --> 01:09:14,670
+Como é que ele faz isto?
+
+780
+01:09:14,670 --> 01:09:17,670
+Há um conjunto de políticas que são observadas
+
+781
+01:09:17,670 --> 01:09:23,670
+e eles escolhem, neste momento, este contentor vai correr naquele nó.
+
+782
+01:09:23,670 --> 01:09:28,670
+Porque sempre considerando que este nó é aquele que,
+
+783
+01:09:28,670 --> 01:09:34,670
+ou é um daqueles que têm capacidade e têm características,
+
+784
+01:09:34,670 --> 01:09:39,670
+têm qualidades para suportar neste momento este contentor.
+
+785
+01:09:39,670 --> 01:09:53,119
+Por exemplo, temos aqui um caso em que estamos a colocar uma etiqueta
+
+786
+01:09:53,119 --> 01:09:56,119
+no nó worker1.
+
+787
+01:09:56,119 --> 01:09:59,119
+Basicamente estamos a usar o DockerNodeUpdate,
+
+788
+01:09:59,119 --> 01:10:05,119
+estamos a atualizar as propriedades de um nó.
+
+789
+01:10:05,119 --> 01:10:10,119
+Qual é o nó? É este, o worker01.
+
+790
+01:10:10,119 --> 01:10:14,119
+Estamos aqui a dizer para adicionar uma etiqueta
+
+791
+01:10:14,119 --> 01:10:19,119
+e a etiqueta é um par chave valor.
+
+792
+01:10:19,119 --> 01:10:23,119
+Queremos adicionar a etiqueta cujo nome é zona
+
+793
+01:10:23,119 --> 01:10:28,119
+e o valor é produção no norte.
+
+794
+01:10:28,119 --> 01:10:34,119
+É o ambiente de produção ao conjunto de máquinas que eu tenho na região norte.
+
+795
+01:10:34,119 --> 01:10:35,119
+Está bom?
+
+796
+01:10:35,119 --> 01:10:39,119
+Agora, eu estou aqui a criar um serviço.
+
+797
+01:10:39,119 --> 01:10:44,119
+O serviço DB Service.
+
+798
+01:10:44,119 --> 01:10:47,119
+Vai correr a imagem Rebiz Alpine.
+
+799
+01:10:47,119 --> 01:10:55,119
+Estou aqui a dizer que precisa de ter pelo menos 512 MB de memória.
+
+800
+01:10:55,119 --> 01:11:01,119
+É necessário que o sistema tenha pelo menos 512 MB de memória
+
+801
+01:11:01,119 --> 01:11:04,119
+para poder suportar este contentor.
+
+802
+01:11:04,119 --> 01:11:07,119
+Estou aqui a colocar uma restrição.
+
+803
+01:11:07,119 --> 01:11:10,500
+Qual é a restrição?
+
+804
+01:11:10,500 --> 01:11:15,609
+Se eu for ao nó, há as etiquetas
+
+805
+01:11:15,609 --> 01:11:21,609
+e nas etiquetas, se for a etiqueta identificada com a chave zone,
+
+806
+01:11:21,609 --> 01:11:23,609
+está aqui,
+
+807
+01:11:23,609 --> 01:11:31,609
+tem de ter nesta etiqueta o valor productionNorth.
+
+808
+01:11:31,609 --> 01:11:37,609
+Desta forma, já estão a ver que eu posso parametrizar várias coisas.
+
+809
+01:11:37,609 --> 01:11:47,609
+Recursos físicos, memória, CPU, mas também outras características
+
+810
+01:11:47,609 --> 01:11:55,609
+definidas pelo administrador.
+
+811
+01:11:55,609 --> 01:12:02,609
+Esta geográfica é aquela que se calhar é mais fácil de visualizar
+
+812
+01:12:02,609 --> 01:12:07,609
+e de raciocinar sobre ela.
+
+813
+01:12:07,609 --> 01:12:09,609
+Eu posso ter máquinas,
+
+814
+01:12:09,609 --> 01:12:16,850
+eu posso colocar serviços que estejam mais próximos de algo.
+
+815
+01:12:29,899 --> 01:12:31,899
+Fica para o fim.
+
+816
+01:12:31,899 --> 01:12:37,899
+Até agora estou a falar de termos vários nós
+
+817
+01:12:37,899 --> 01:12:40,899
+e distribuímos os contentores pelos nós.
+
+818
+01:12:40,899 --> 01:12:46,899
+Eventualmente vocês estão a ver isto muito aplicado na clave.
+
+819
+01:12:46,899 --> 01:12:52,899
+Eu tenho vários computadores num centro de dados,
+
+820
+01:12:52,899 --> 01:12:56,899
+até posso ter vários centros de dados distribuídos geográficamente.
+
+821
+01:12:56,899 --> 01:13:02,899
+Eu aqui estou a dizer que este contentor tem de entrar nestes nós
+
+822
+01:13:02,899 --> 01:13:06,899
+e até posso fazer uma distinção geográfica dos nós.
+
+823
+01:13:06,899 --> 01:13:16,899
+Mas aquilo que tem acontecido é que há nós na Edge
+
+824
+01:13:16,899 --> 01:13:21,899
+que já têm maior capacidade de computação
+
+825
+01:13:21,899 --> 01:13:25,899
+e correm motores Docker.
+
+826
+01:13:25,899 --> 01:13:31,899
+Portanto, nós podemos colocar contentores Docker
+
+827
+01:13:31,899 --> 01:13:34,899
+a correr em muitos equipamentos da Edge.
+
+828
+01:13:37,899 --> 01:13:49,899
+E podemos colocar contentores a correr noutros nós
+
+829
+01:13:49,899 --> 01:13:56,899
+se for necessário migrar a carga para outros nodes.
+
+830
+01:13:56,899 --> 01:13:58,899
+Há aplicações em que, por exemplo,
+
+831
+01:13:58,899 --> 01:14:02,899
+eu posso ter vários nós computacionais na Edge
+
+832
+01:14:02,899 --> 01:14:05,899
+e, no caso de um falhar,
+
+833
+01:14:05,899 --> 01:14:08,899
+o trabalho que ele está a fazer
+
+834
+01:14:08,899 --> 01:14:11,899
+ser distribuído por outros nós da Edge
+
+835
+01:14:11,899 --> 01:14:17,430
+que estejam ali nas proximidades.
+
+836
+01:14:17,430 --> 01:14:20,430
+E, desta forma, continuar a assegurar o serviço
+
+837
+01:14:20,430 --> 01:14:23,430
+a usar de uma das máquinas que estão lá na Edge,
+
+838
+01:14:23,430 --> 01:14:25,430
+teria morriu.
+
+839
+01:14:25,430 --> 01:14:36,430
+Isto que é algo que a sua agência estava muito aplicada à cloud
+
+840
+01:14:36,430 --> 01:14:43,500
+também pode ser agora aplicada na Edge.
+
+841
+01:14:43,500 --> 01:14:45,500
+Se calhar orquestração.
+
+842
+01:14:45,500 --> 01:14:48,500
+Uma pessoa coloca na fogo.
+
+843
+01:14:48,500 --> 01:14:52,500
+Onde tem os computadores que estão mais paradinhos
+
+844
+01:14:52,500 --> 01:14:56,500
+e têm mais capacidade cálculo
+
+845
+01:14:56,500 --> 01:14:59,500
+para estar a correr estes algoritmos
+
+846
+01:14:59,500 --> 01:15:05,500
+de estratégias de escalonamento, onde é que entra quem.
+
+847
+01:15:05,500 --> 01:15:09,500
+Mas já é uma realidade.
+
+848
+01:15:09,500 --> 01:15:13,500
+Nós podemos fazer orquestração de contentores
+
+849
+01:15:13,500 --> 01:15:16,500
+em maquinazinhas que estão na Edge.
+
+850
+01:15:17,500 --> 01:15:22,500
+Obviamente que vocês não vão pôr a correr numa placa SP32.
+
+851
+01:15:22,500 --> 01:15:25,500
+Isto aí dá correção executivo.
+
+852
+01:15:25,500 --> 01:15:30,500
+Não tem lá nenhum motor docker.
+
+853
+01:15:30,500 --> 01:15:34,500
+Mas se vocês tiverem máquinas populares,
+
+854
+01:15:34,500 --> 01:15:40,500
+se tiverem um Raspberry Pi, vocês podem colocar lá o docker.
+
+855
+01:15:40,500 --> 01:15:44,500
+Se vocês tiverem máquinas Raspberry Pi na Edge,
+
+856
+01:15:44,500 --> 01:15:48,500
+vocês podem fazer orquestração de contentores em Raspberry Pi.
+
+857
+01:15:50,500 --> 01:15:56,500
+Quando digo Raspberry Pi pode ser outro hardware qualquer.
+
+858
+01:15:56,500 --> 01:16:02,729
+O que foi, chocolate?
+
+859
+01:16:02,729 --> 01:16:05,729
+Tenho aqui o meu gato velhote
+
+860
+01:16:05,729 --> 01:16:08,729
+que chegou aqui e não sabe o que quer fazer.
+
+861
+01:16:08,729 --> 01:16:11,729
+Queres vir para o meu colo ou o que queres fazer?
+
+862
+01:16:11,729 --> 01:16:13,729
+Não sabes?
+
+863
+01:16:13,729 --> 01:16:15,729
+Faz-me só uma coisa.
+
+864
+01:16:15,729 --> 01:16:17,729
+Não andes em cima do teclado.
+
+865
+01:16:17,729 --> 01:16:19,729
+Ele também tem este hábito,
+
+866
+01:16:19,729 --> 01:16:21,729
+é começar a andar em cima do teclado
+
+867
+01:16:21,729 --> 01:16:23,729
+e fazer as mesmas.
+
+868
+01:16:23,729 --> 01:16:25,729
+Não andes em cima do teclado.
+
+869
+01:16:29,729 --> 01:16:35,220
+Estamos quase a terminar.
+
+870
+01:16:35,220 --> 01:16:39,220
+Regras fundamentais desta reconciliação de estado.
+
+871
+01:16:39,220 --> 01:16:45,300
+A regra da autocura continua.
+
+872
+01:16:46,300 --> 01:16:52,300
+O docker swarm opera sobre um modelo declarativo
+
+873
+01:16:52,300 --> 01:16:58,300
+em que o orquestrador está continuamente
+
+874
+01:16:58,300 --> 01:17:03,300
+a comparar a declaração do estado desejado
+
+875
+01:17:03,300 --> 01:17:09,300
+com o estado atual.
+
+876
+01:17:09,300 --> 01:17:13,300
+Aquilo que está guardado lá no raft
+
+877
+01:17:13,300 --> 01:17:17,300
+com aquilo que é reportado pelos trabalhadores.
+
+878
+01:17:17,300 --> 01:17:23,300
+Como é que nós sabemos se um nó está a funcionar?
+
+879
+01:17:25,300 --> 01:17:29,300
+Como é que nós sabemos se um nó está a funcionar?
+
+880
+01:17:29,300 --> 01:17:34,300
+E dentro desse nó como é que sabemos se os contentores estão a funcionar?
+
+881
+01:17:34,300 --> 01:17:36,300
+Primeiro, nó.
+
+882
+01:17:36,300 --> 01:17:39,300
+O nó tem que enviar art bits,
+
+883
+01:17:39,300 --> 01:17:42,300
+ou seja, provas de vida periódicas
+
+884
+01:17:42,300 --> 01:17:48,300
+para os gestores através do porto 2377,
+
+885
+01:17:48,300 --> 01:17:51,300
+aquele porto que está designado para gestão.
+
+886
+01:17:51,300 --> 01:17:56,300
+Se um nó não enviar essa prova de vida
+
+887
+01:17:56,300 --> 01:17:58,300
+mais cedo ou mais tarde,
+
+888
+01:17:58,300 --> 01:18:02,300
+ou seja, no final de um período time-out,
+
+889
+01:18:02,300 --> 01:18:05,300
+no final de um prazo de time-out,
+
+890
+01:18:05,300 --> 01:18:08,300
+os gestores vão considerar aquele nó como perdido.
+
+891
+01:18:09,300 --> 01:18:11,300
+E quando um nó está perdido,
+
+892
+01:18:11,300 --> 01:18:14,300
+toda a carga que estava alocada
+
+893
+01:18:14,300 --> 01:18:16,300
+também é considerada como perdida.
+
+894
+01:18:16,300 --> 01:18:19,300
+Todos os contentores que lá estavam alojados
+
+895
+01:18:19,300 --> 01:18:21,300
+são considerados como perdidos.
+
+896
+01:18:21,300 --> 01:18:26,300
+Pode acontecer que um nó não esteja perdido,
+
+897
+01:18:26,300 --> 01:18:29,300
+estava a enviar os art bits,
+
+898
+01:18:29,300 --> 01:18:33,300
+mas também está a enviar informação sobre os contentores.
+
+899
+01:18:33,300 --> 01:18:37,300
+E aí envia informação sobre os status contentores.
+
+900
+01:18:37,300 --> 01:18:39,300
+Se eles estão responsivos
+
+901
+01:18:39,300 --> 01:18:42,300
+ou se algum contentor não está responsivo.
+
+902
+01:18:42,300 --> 01:18:44,300
+Ai, que choca.
+
+903
+01:18:44,300 --> 01:18:46,300
+Assustaste-me agora.
+
+904
+01:18:48,300 --> 01:18:52,300
+Certo?
+
+905
+01:18:52,300 --> 01:18:55,739
+Dúvidas até agora, não há?
+
+906
+01:18:55,739 --> 01:19:05,920
+Se as tarefas estiverem num nó que foi perdido,
+
+907
+01:19:05,920 --> 01:19:08,920
+elas são marcadas como perdidas também.
+
+908
+01:19:08,920 --> 01:19:09,920
+Dead or unknown.
+
+909
+01:19:09,920 --> 01:19:12,920
+Um unknown é como um dead.
+
+910
+01:19:13,920 --> 01:19:16,920
+Não deve estar saudável,
+
+911
+01:19:16,920 --> 01:19:18,920
+portanto não podemos contar com ele.
+
+912
+01:19:18,920 --> 01:19:19,920
+Ok?
+
+913
+01:19:19,920 --> 01:19:22,920
+Por princípio, as tarefas nunca são migradas.
+
+914
+01:19:22,920 --> 01:19:25,920
+Uma tarefa que está perdida,
+
+915
+01:19:25,920 --> 01:19:28,920
+descarta-se e lança-se uma nó.
+
+916
+01:19:28,920 --> 01:19:29,920
+Ok?
+
+917
+01:19:29,920 --> 01:19:39,100
+Quando é que é lançada uma ação de reconciliação
+
+918
+01:19:39,100 --> 01:19:42,100
+entre o estado atual e o estado desejado?
+
+919
+01:19:43,100 --> 01:19:46,100
+Sempre que o número de réplicas for menor
+
+920
+01:19:46,100 --> 01:19:50,100
+do que o número de réplicas desejadas.
+
+921
+01:19:50,100 --> 01:19:53,100
+O número de réplicas atual que estão ativas
+
+922
+01:19:53,100 --> 01:19:56,100
+e que nós sabemos que estão saudáveis
+
+923
+01:19:56,100 --> 01:19:59,100
+for menor do que o que declarámos como
+
+924
+01:19:59,100 --> 01:20:02,100
+o número de réplicas que devemos ter.
+
+925
+01:20:02,100 --> 01:20:03,100
+Ok?
+
+926
+01:20:03,100 --> 01:20:05,100
+Isto é para recapitular.
+
+927
+01:20:05,100 --> 01:20:07,100
+Como é que eu posso ver?
+
+928
+01:20:08,100 --> 01:20:14,500
+Se eu fizer Docker, Node, LIS,
+
+929
+01:20:14,500 --> 01:20:18,500
+eu consigo ver quais são os nós
+
+930
+01:20:18,500 --> 01:20:26,220
+e o estado declarado para esses nós.
+
+931
+01:20:26,220 --> 01:20:27,220
+Ok?
+
+932
+01:20:28,220 --> 01:20:31,220
+Neste caso concreto, temos o node 1
+
+933
+01:20:31,220 --> 01:20:38,470
+que está a correr o manager,
+
+934
+01:20:38,470 --> 01:20:41,470
+então está no papel de manager,
+
+935
+01:20:41,470 --> 01:20:43,470
+e depois temos o node 2, 3 e 4,
+
+936
+01:20:43,470 --> 01:20:45,470
+que são o worker 1, 2 e 3.
+
+937
+01:20:45,470 --> 01:20:46,470
+Por acaso isto aqui,
+
+938
+01:20:46,470 --> 01:20:48,470
+eu quando fiz este slide,
+
+939
+01:20:48,470 --> 01:20:51,470
+já tinha posto ali o node 1
+
+940
+01:20:51,470 --> 01:20:54,470
+e fazia sentido que o node 1 fosse o manager,
+
+941
+01:20:54,470 --> 01:20:58,470
+o problema é que depois temos o node 2, 3 e 4
+
+942
+01:20:58,470 --> 01:21:02,470
+e aquilo não encaixa com o worker 1, worker 2 e worker 3,
+
+943
+01:21:02,470 --> 01:21:03,470
+mas não tem que encaixar,
+
+944
+01:21:03,470 --> 01:21:06,470
+ficava mais bonito porque é mais fácil de ver.
+
+945
+01:21:06,470 --> 01:21:11,229
+Agora, neste cenário,
+
+946
+01:21:11,229 --> 01:21:13,229
+vamos considerar que tínhamos um serviço
+
+947
+01:21:13,229 --> 01:21:15,229
+que precisava de ter 6 réplicas,
+
+948
+01:21:15,229 --> 01:21:17,229
+6 instâncias do computador,
+
+949
+01:21:17,229 --> 01:21:19,229
+e num determinado instante,
+
+950
+01:21:19,229 --> 01:21:24,229
+estas 6 instâncias estavam a correr em 3 nós.
+
+951
+01:21:24,229 --> 01:21:25,229
+Ok?
+
+952
+01:21:25,229 --> 01:21:31,229
+No entanto, o trabalhador 2, este aqui, node 3,
+
+953
+01:21:31,229 --> 01:21:34,229
+desaparece do universo.
+
+954
+01:21:34,229 --> 01:21:35,229
+Ok?
+
+955
+01:21:36,229 --> 01:21:37,229
+O que acontece?
+
+956
+01:21:37,229 --> 01:21:39,229
+Mais cedo ou mais tarde,
+
+957
+01:21:39,229 --> 01:21:44,229
+os gestores vão perceber que o node 3, worker 2,
+
+958
+01:21:44,229 --> 01:21:50,229
+não está a enviar as provas de vida, certo?
+
+959
+01:21:50,229 --> 01:21:53,229
+E vão considerá-lo como perdido.
+
+960
+01:21:53,229 --> 01:21:55,229
+É o que aparece aqui.
+
+961
+01:21:55,229 --> 01:21:57,229
+Quando estou a fazer o list dos nós,
+
+962
+01:21:57,229 --> 01:21:59,229
+quando estou a listar os nós,
+
+963
+01:21:59,229 --> 01:22:04,229
+este node 3 deixa de estar ready,
+
+964
+01:22:04,229 --> 01:22:06,229
+e passa a down.
+
+965
+01:22:06,229 --> 01:22:07,229
+Ok?
+
+966
+01:22:07,229 --> 01:22:09,229
+Isto, o que acontece?
+
+967
+01:22:09,229 --> 01:22:16,229
+Faz com que 2 dessas 3 réplicas desapareçam.
+
+968
+01:22:16,229 --> 01:22:18,229
+Passamos a ter apenas 4.
+
+969
+01:22:18,229 --> 01:22:20,229
+O que acontece?
+
+970
+01:22:20,229 --> 01:22:24,229
+O manager, o gestor, reparem.
+
+971
+01:22:24,229 --> 01:22:26,229
+Ele foi abaixo,
+
+972
+01:22:26,229 --> 01:22:29,229
+de 6 passámos para 4,
+
+973
+01:22:29,229 --> 01:22:35,229
+então é necessário lançar 2 novos contentores, certo?
+
+974
+01:22:35,229 --> 01:22:37,229
+Neste cenário aqui,
+
+975
+01:22:37,229 --> 01:22:40,229
+não temos muita margem de manobra.
+
+976
+01:22:40,229 --> 01:22:43,229
+Temos apenas o worker 1 e o worker 3,
+
+977
+01:22:43,229 --> 01:22:47,229
+e ele vai lançar essas 2 tarefas,
+
+978
+01:22:47,229 --> 01:22:50,229
+nestes 2 que estão aqui disponíveis nesta imagem.
+
+979
+01:22:50,229 --> 01:22:53,229
+Se tivéssemos mais, era mais fácil.
+
+980
+01:22:53,229 --> 01:22:57,229
+Às vezes, ter muitas opções de escolha
+
+981
+01:22:57,229 --> 01:23:00,229
+é mais difícil de escolher,
+
+982
+01:23:00,229 --> 01:23:02,229
+mas muitas das vezes não.
+
+983
+01:23:02,229 --> 01:23:04,229
+Ter mais é melhor.
+
+984
+01:23:04,229 --> 01:23:08,090
+Uma pessoa pega em qualquer coisa e pronto.
+
+985
+01:23:08,090 --> 01:23:09,090
+Certo?
+
+986
+01:23:09,090 --> 01:23:11,090
+Dúvidas?
+
+987
+01:23:11,090 --> 01:23:14,090
+Por fim, qual é o workflow?
+
+988
+01:23:14,090 --> 01:23:16,090
+Recapitulando,
+
+989
+01:23:16,090 --> 01:23:23,090
+primeiro, é necessário criar o serviço
+
+990
+01:23:23,090 --> 01:23:28,090
+e declarar qual é o estado desejável do serviço
+
+991
+01:23:28,090 --> 01:23:30,090
+e quais são os requisitos do serviço.
+
+992
+01:23:30,090 --> 01:23:35,430
+Basicamente, o estado também é uma declaração de requisitos.
+
+993
+01:23:35,430 --> 01:23:40,380
+Criar o serviço.
+
+994
+01:23:40,380 --> 01:23:42,380
+Pronto.
+
+995
+01:23:42,380 --> 01:23:49,380
+Essa declaração é guardada no Half-Score Store,
+
+996
+01:23:49,380 --> 01:23:53,380
+e depois temos o orquestrador e o escalonador
+
+997
+01:23:53,380 --> 01:23:56,380
+a lançar as instâncias
+
+998
+01:23:56,380 --> 01:24:02,380
+para que o estado atual se aproxime,
+
+999
+01:24:02,380 --> 01:24:06,380
+até chegar a ser igual ao estado que tínhamos declarado.
+
+1000
+01:24:06,380 --> 01:24:07,380
+Certo?
+
+1001
+01:24:07,380 --> 01:24:13,020
+Por fim, o dispatcher, o despachante,
+
+1002
+01:24:13,020 --> 01:24:18,020
+envia as tarefas para os nós de trabalho
+
+1003
+01:24:18,020 --> 01:24:25,319
+e cada nó de trabalho vai buscar a imagem,
+
+1004
+01:24:25,319 --> 01:24:27,319
+se não tiver ainda a imagem,
+
+1005
+01:24:27,319 --> 01:24:29,319
+e arranca o contentor.
+
+1006
+01:24:29,319 --> 01:24:33,300
+E está feito.
+
+1007
+01:24:33,300 --> 01:24:34,300
+Dúvidas?
+
+1008
+01:24:34,300 --> 01:24:39,600
+Não há?
+
+1009
+01:24:39,600 --> 01:24:41,600
+Tudo automático.
+
+1010
+01:24:41,600 --> 01:24:44,600
+Reparem, não precisamos estar a telefonar a ninguém
+
+1011
+01:24:44,600 --> 01:24:46,600
+para levantar com contentores
+
+1012
+01:24:46,600 --> 01:24:53,600
+ou para recuperar de uma falha de uma máquina que desapareceu.
+
+1013
+01:24:53,600 --> 01:24:54,600
+Nada disso.
+
+1014
+01:24:54,600 --> 01:24:58,600
+Nós declaramos como deve ser,
+
+1015
+01:24:59,600 --> 01:25:04,600
+quais são os mínimos, quais são os requisitos deste contentor,
+
+1016
+01:25:04,600 --> 01:25:07,600
+e depois o orquestrador faz tudo automaticamente
+
+1017
+01:25:07,600 --> 01:25:10,600
+para não corrermos o risco de perdermos o orquestrador
+
+1018
+01:25:10,600 --> 01:25:14,600
+como em termos mais do que um master.
+
+1019
+01:25:14,600 --> 01:25:18,600
+Se eu tenho mais do que um master, posso ter problemas na decisão.
+
+1020
+01:25:18,600 --> 01:25:19,600
+O que faço?
+
+1021
+01:25:19,600 --> 01:25:22,600
+Tem de existir um algoritmo de consenso
+
+1022
+01:25:22,600 --> 01:25:24,600
+e a maioria,
+
+1023
+01:25:24,600 --> 01:25:29,600
+que é definida de acordo com aquelas expressões que tínhamos antes,
+
+1024
+01:25:29,600 --> 01:25:32,600
+a maioria decide o consenso.
+
+1025
+01:25:32,600 --> 01:25:34,600
+A minoria desiste.
+
+1026
+01:25:34,600 --> 01:25:39,600
+Se houver minoria, podem todos chegar à mesma decisão.
+
+1027
+01:25:39,600 --> 01:25:44,600
+Quando é necessário lançar um contentor num nó,
+
+1028
+01:25:44,600 --> 01:25:49,600
+o manager envia a ordem ao nó
+
+1029
+01:25:49,600 --> 01:25:53,600
+a dizer que tem de correr este contentor
+
+1030
+01:25:53,600 --> 01:25:58,600
+e o nó automaticamente, o motor do dócraco está no nó,
+
+1031
+01:25:58,600 --> 01:26:01,600
+vai verificar se tem a imagem,
+
+1032
+01:26:01,600 --> 01:26:04,600
+se não tiver a imagem, vai buscar a imagem,
+
+1033
+01:26:04,600 --> 01:26:09,600
+mas quando a imagem do contentor estiver disponível,
+
+1034
+01:26:09,600 --> 01:26:11,600
+ele arranca com esse contentor.
+
+1035
+01:26:11,600 --> 01:26:12,600
+Certo?
+
+1036
+01:26:12,600 --> 01:26:18,949
+Já parece fácil.
+
+1037
+01:26:18,949 --> 01:26:19,949
+Dúvidas, não há?
+
+1038
+01:26:24,090 --> 01:26:27,090
+Por hoje, era isto.
+
+1039
+01:26:27,090 --> 01:26:29,090
+Consegui ficar vinte minutos.
+
+1040
+01:26:29,090 --> 01:26:32,090
+Antes da hora, já dá para compensar.
+
+1041
+01:26:32,090 --> 01:26:38,090
+Há duas semanas atrás, quando ultrapassei vinte minutos da hora.
+
+1042
+01:26:38,090 --> 01:26:40,850
+Sim, sim.
+
+1043
+01:26:40,850 --> 01:26:52,130
+Sim, sim, sim.
+
+1044
+01:26:52,130 --> 01:26:55,130
+Agora, mas tem razão.
+
+1045
+01:26:55,130 --> 01:27:01,130
+Eu tínhamos dito que o professor José Carlos tinha sugerido 50 a 50, não é?
+
+1046
+01:27:01,130 --> 01:27:04,130
+E o certo é que eu não voltei a falar com ele
+
+1047
+01:27:04,130 --> 01:27:07,130
+para discutir se fica mesmo 50 a 50
+
+1048
+01:27:07,130 --> 01:27:12,130
+ou se coloca um pouquinho mais de peso na parte laboratorial.
+
+1049
+01:27:12,130 --> 01:27:15,130
+Eu estava mais inclinado em colocar um pouquinho mais de peso na parte laboratorial,
+
+1050
+01:27:15,130 --> 01:27:17,130
+mas o professor José Carlos disse,
+
+1051
+01:27:17,130 --> 01:27:20,130
+ah, não, não, é 50 a 50.
+
+1052
+01:27:22,130 --> 01:27:26,130
+Os argumentos que ele me deu também foram assim.
+
+1053
+01:27:26,130 --> 01:27:27,130
+Sim, também tens razão.
+
+1054
+01:27:27,130 --> 01:27:30,130
+Portanto, 50 a 50 também não é mal pensado.
+
+1055
+01:27:30,130 --> 01:27:36,130
+Só que eu ainda não quis fixar isso na ficha da unidade curricular.
+
+1056
+01:27:36,130 --> 01:27:40,130
+Mas, sim, há componentes dos trabalhos que vocês vão fazer,
+
+1057
+01:27:40,130 --> 01:27:42,130
+vão fazendo na parte do laboratório,
+
+1058
+01:27:42,130 --> 01:27:47,130
+e depois também, na última semana, terão uma atividade,
+
+1059
+01:27:47,130 --> 01:27:51,130
+uma escolha múltipla, como já tivemos no modo anterior,
+
+1060
+01:27:51,130 --> 01:27:55,130
+de programação embedded.
+
+1061
+01:27:56,130 --> 01:27:59,130
+Portanto, um teste de escolha múltipla,
+
+1062
+01:28:02,130 --> 01:28:08,130
+respondem e pronto, está feita a parte de teste.
+
+1063
+01:28:13,140 --> 01:28:18,479
+Sinceramente, eu ainda, também não tive muito tempo
+
+1064
+01:28:18,479 --> 01:28:21,479
+para voltar a pegar na ficha da unidade curricular,
+
+1065
+01:28:21,479 --> 01:28:24,479
+mas eu tinha pensado numa distribuição diferente.
+
+1066
+01:28:24,479 --> 01:28:26,479
+Falei com o professor José Carlos,
+
+1067
+01:28:26,479 --> 01:28:30,479
+que estávamos a discutir, e ele também conheceu os 50 a 50.
+
+1068
+01:28:30,479 --> 01:28:32,479
+Só que ele ainda...
+
+1069
+01:28:33,479 --> 01:28:36,479
+Lá está, é necessário fazer...
+
