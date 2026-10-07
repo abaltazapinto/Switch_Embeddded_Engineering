@@ -1,0 +1,6136 @@
+1
+00:07:19,920 --> 00:07:22,920
+Boa noite, caros alunos. Tudo bem?
+
+2
+00:07:23,920 --> 00:07:24,920
+Boa noite.
+
+3
+00:07:24,920 --> 00:07:25,920
+Conseguem ouvir-me?
+
+4
+00:07:27,920 --> 00:07:28,920
+Sim.
+
+5
+00:07:28,920 --> 00:07:29,920
+Muito bem.
+
+6
+00:07:30,920 --> 00:07:41,920
+Caríssimos, vamos aqui para uma sessão que eu não estimo que não seja muito longa, porque essencialmente já temos a matéria mais ou menos de dada concluída.
+
+7
+00:07:42,920 --> 00:07:52,920
+E para a próxima aula, já andei aqui a dar voltas, o que acabaremos de dar? Uma coisa sada a arranjar e também podemos fazer alguma preparação para o teste, o que também desejar.
+
+8
+00:07:53,920 --> 00:07:57,920
+Deixem-me fechar aqui a transcrição, que não estou a ver o que eu proposo.
+
+9
+00:07:58,920 --> 00:08:04,920
+Só uma questão, uma colega que pelos bichos falou que conseguiu no fim da aula, o teste é no sábado?
+
+10
+00:08:05,920 --> 00:08:06,920
+O teste é no sábado, sim.
+
+11
+00:08:07,920 --> 00:08:13,920
+Eu tinha ficado com a ideia que tinha falado que seria só um trabalho, que ninguém tinha falado no teste.
+
+12
+00:08:14,920 --> 00:08:15,920
+Isso.
+
+13
+00:08:15,920 --> 00:08:16,920
+É o seguinte.
+
+14
+00:08:18,920 --> 00:08:19,920
+Qual é a nossa opinião?
+
+15
+00:08:20,920 --> 00:08:29,650
+Fazer um... nós inicialmente pensamos num trabalho e depois até demoramos aqui uma semana ou duas a comunicarmos isto.
+
+16
+00:08:30,650 --> 00:08:36,650
+Mas optamos por alterar para um teste, porque acho que é muito mais favorável a vocês.
+
+17
+00:08:36,650 --> 00:08:47,650
+Vocês têm os acetados das aulas e é muito mais simples fazer um teste na minha opinião.
+
+18
+00:08:48,650 --> 00:08:53,650
+O trabalho vai ser um overload para todos, para nós e para vocês.
+
+19
+00:08:55,650 --> 00:08:58,650
+E, pronto, esta é a nossa opinião.
+
+20
+00:08:59,650 --> 00:09:01,650
+Mas vocês sentem-se desconfortáveis com o teste, façam o trabalho?
+
+21
+00:09:01,650 --> 00:09:12,720
+Era só porque não tinham falado, tipo, não estava a contar com nenhum teste, não sabe, era só essa questão, como não tinham partilhado, nada.
+
+22
+00:09:13,720 --> 00:09:18,720
+Eu não sei se não posso, deixem-me ter uma folha de papel, que isto...
+
+23
+00:09:20,720 --> 00:09:26,720
+Antes de começar a falar de vários assuntos que não estavam planeados, é melhor apontar para não os querer esquecer.
+
+24
+00:09:26,720 --> 00:09:30,720
+Então, deixem-me só por aqui uma nota, fazer um dump de memória.
+
+25
+00:09:31,720 --> 00:09:33,720
+Uma coisinha que falaram agora.
+
+26
+00:09:52,860 --> 00:10:14,190
+Ok, muito bem. Alguém me pediu aqui alguma coisa, eu acho que está toda a gente cá.
+
+27
+00:10:16,190 --> 00:10:20,190
+Pronto, relativamente à questão que estábamos a falar do teste.
+
+28
+00:10:21,190 --> 00:10:23,190
+Ou de gravador, senão um teste.
+
+29
+00:10:23,190 --> 00:10:30,680
+Sejam à vontade, caríssimos. Sinceramente, eu acho que é a melhor solução.
+
+30
+00:10:31,680 --> 00:10:40,020
+O trabalho ia ser um overload gigante, nós estivemos a fazer alguma estimativa sobre o que vimos nas aulas.
+
+31
+00:10:41,020 --> 00:10:44,020
+Mas se fosse um trabalho, o que gênero de trabalho é que seria?
+
+32
+00:10:45,020 --> 00:10:47,020
+Eu por acaso fiquei nessa dúvida, estava só aqui...
+
+33
+00:10:48,020 --> 00:10:51,020
+Estava só a pensar que estamos aqui a falar entre um trabalho e um teste.
+
+34
+00:10:51,020 --> 00:10:55,020
+Eu estava só na dúvida, ou seja, que tipo de trabalho é que seria, não é?
+
+35
+00:10:56,020 --> 00:10:58,020
+Tendo em conta que era a sábada, estava só a pensar.
+
+36
+00:10:59,020 --> 00:11:05,020
+Pronto, seria um trabalho mais baseado em conferência, não no próprio treino e no problema dos modelos com a conversão.
+
+37
+00:11:06,020 --> 00:11:16,020
+Embalberia vocês saberem algumas partes daqueles processos de conversão dos modelos, da própria inferência, da monitorização dos modelos.
+
+38
+00:11:17,020 --> 00:11:20,020
+Assim, entram outras coisas principais que fizemos nos trabalhos.
+
+39
+00:11:22,020 --> 00:11:27,070
+Pronto, isso seria muito mais focado nesta questão.
+
+40
+00:11:28,070 --> 00:11:36,070
+Relativamente ao teste, nós podemos questionar este tipo de coisas de uma forma que sequer é relativamente leve, não é?
+
+41
+00:11:37,070 --> 00:11:39,070
+É muito detalhado a na aula de sábado visto.
+
+42
+00:11:40,070 --> 00:11:44,070
+Ou seja, quais são as ideias gerais disto?
+
+43
+00:11:44,070 --> 00:11:47,070
+Ou seja, o que é machine learning?
+
+44
+00:11:48,070 --> 00:11:51,070
+Quais são as principais abordagens ao machine learning?
+
+45
+00:11:52,070 --> 00:11:54,070
+Aquela é a coisa que falamos nas primeiras duas aulas.
+
+46
+00:11:55,070 --> 00:11:59,070
+Depois, todos aqueles promenóis de implementação como, sei lá, a treino de validação e teste.
+
+47
+00:12:00,070 --> 00:12:08,070
+O K-Fold, as particularidades dos embedded devices, o que é que eles têm de especial recursos limitados?
+
+48
+00:12:08,070 --> 00:12:10,070
+Como é que nós fazemos isso?
+
+49
+00:12:11,070 --> 00:12:15,070
+Como é que monitoramos isso para ver se está ou não a ser um problema?
+
+50
+00:12:16,070 --> 00:12:18,070
+O overload no recursos limitados do dispositivo?
+
+51
+00:12:19,070 --> 00:12:21,070
+Coisa que fizemos no sábado passado.
+
+52
+00:12:22,070 --> 00:12:24,070
+Mas, então, vão ser questões de resposta aberta?
+
+53
+00:12:25,070 --> 00:12:26,070
+É isso?
+
+54
+00:12:27,070 --> 00:12:28,070
+Ainda não pensamos nisso.
+
+55
+00:12:29,070 --> 00:12:30,070
+Uma expectável, não.
+
+56
+00:12:31,070 --> 00:12:32,070
+Seria o ideal.
+
+57
+00:12:34,990 --> 00:12:36,990
+Normalmente, nós ainda vamos pegar no teste.
+
+58
+00:12:36,990 --> 00:12:43,990
+Mas, é assim, eu normalmente prefiro um teste que tem, majoritariamente, perguntas de verdade e falso.
+
+59
+00:12:44,990 --> 00:12:46,990
+E que depois tem...
+
+60
+00:12:47,990 --> 00:12:51,990
+Pode eventualmente ter alguma outra pergunta de resposta por ostente.
+
+61
+00:12:52,990 --> 00:12:53,990
+Mas, esta é a minha opinião.
+
+62
+00:12:54,990 --> 00:12:55,990
+Pessoal Tiago, nós ainda não fizemos o teste.
+
+63
+00:12:56,990 --> 00:12:59,990
+Estávamos hoje precisamente a combinar como seria para fazer.
+
+64
+00:13:04,540 --> 00:13:05,540
+Ok.
+
+65
+00:13:06,540 --> 00:13:08,540
+Mas, alguém tem alguma pergunta sobre o teste?
+
+66
+00:13:10,540 --> 00:13:12,540
+Eu acho que seria importante, professor.
+
+67
+00:13:13,540 --> 00:13:17,540
+E, na verdade, se fosse um trabalho, o que tipo de trabalho é que seria?
+
+68
+00:13:18,540 --> 00:13:22,540
+Eu ouvi com os cortes, não sei se a pessoa chegou a falar sobre isso.
+
+69
+00:13:23,540 --> 00:13:25,540
+Desculpem, não percebi o final da sua frase.
+
+70
+00:13:26,540 --> 00:13:32,540
+Eu ouvi com um bocadinho de cortes, por isso não consegui perceber se a pessoa explicava o tipo de trabalho, se fosse um trabalho seria.
+
+71
+00:13:33,540 --> 00:13:38,540
+Isto porque, sendo em conta casalas práticas, nós, basicamente, tínhamos a correcódica que nos foi fornecido.
+
+72
+00:13:38,540 --> 00:13:44,540
+Eu, pessoalmente, não estou a ver que trabalho é que possa ser exigido no sábado,
+
+73
+00:13:45,540 --> 00:13:48,540
+tendo em conta que nós não desenvolvemos código até agora.
+
+74
+00:13:49,540 --> 00:13:50,540
+E você acha que seria esquecido?
+
+75
+00:13:51,540 --> 00:13:52,540
+Desenvolvemos código no sábado.
+
+76
+00:13:53,540 --> 00:13:54,540
+Mas, obviamente, não.
+
+77
+00:13:55,540 --> 00:13:56,540
+Eu disse isso há bocado.
+
+78
+00:13:57,540 --> 00:14:00,540
+Daniel, não seria expectável desenvolvermos código.
+
+79
+00:14:01,540 --> 00:14:03,540
+Seria adetuado.
+
+80
+00:14:04,540 --> 00:14:05,540
+Ou seja, seria expectável.
+
+81
+00:14:05,540 --> 00:14:13,540
+Era você, por exemplo, pegar em um código e fazerem a conversão daquele código, o modelo TensorFlow Lite, que foi o que fizemos.
+
+82
+00:14:14,540 --> 00:14:22,540
+E corrermos a inferência no computador e monitorizarmos, portanto, estou exatamente a repetir o que disse ao Carlos,
+
+83
+00:14:23,540 --> 00:14:28,540
+e monitorizarmos, portanto, a execução do modelo
+
+84
+00:14:29,540 --> 00:14:36,540
+numa perspectiva de verificar, até que, portanto, aquele modelo, com um nível de profundidade e peso computacional que tem,
+
+85
+00:14:37,540 --> 00:14:40,540
+constitui um peso para a plataforma com os seus recursos limitados.
+
+86
+00:14:41,540 --> 00:14:42,540
+Essencialmente era por aí.
+
+87
+00:14:43,540 --> 00:14:44,540
+Pronto.
+
+88
+00:14:45,540 --> 00:14:49,540
+Uma coisa que foi falada em mais de uma aula é, ultimamente, modelos para tensa-followlite.
+
+89
+00:14:50,540 --> 00:14:53,540
+Não é obrigatoriamente, ou seja, deve ser pensado, os próprios modelos devem ser pensados,
+
+90
+00:14:53,540 --> 00:14:59,540
+para serem mais facilmente portáveis para esta plataforma, ou para estas plataformas.
+
+91
+00:15:00,540 --> 00:15:06,540
+Mas o modelo, depois, sofre a quantização, sofre, no caso de alguns, podem sofrer o pruning.
+
+92
+00:15:07,540 --> 00:15:15,540
+Há uma sequência de coisas de que falamos, que são feitas de uma forma mais ou menos standardizada, para fazer essa conversão.
+
+93
+00:15:16,540 --> 00:15:17,540
+E isso também falamos disso.
+
+94
+00:15:18,540 --> 00:15:20,540
+Portanto, seria outra coisa que poderíamos incluir aqui.
+
+95
+00:15:21,540 --> 00:15:22,540
+Está bem.
+
+96
+00:15:23,540 --> 00:15:24,540
+Pronto.
+
+97
+00:15:25,540 --> 00:15:30,540
+O teste será, assim, muito paralelo a isto, mas, sem estarmos a pôr cada grupo individualmente a executar um trabalho,
+
+98
+00:15:31,540 --> 00:15:40,540
+durante uma aula, que nós temos que observar atentamente e tomar imensos apontamente sobre isso.
+
+99
+00:15:41,540 --> 00:15:46,540
+E um dos grandes motivos para mudarmos para teste é, podemos paralelizar todos os alunos.
+
+100
+00:15:47,540 --> 00:15:51,540
+Ou seja, para ser uma avaliação com alguma seriedade que se quer, não é?
+
+101
+00:15:51,540 --> 00:15:53,540
+Podemos paralelizar os alunos.
+
+102
+00:15:54,540 --> 00:15:58,540
+Obviamente, eu vi-se no sábado e não é uma coisa que vou esconder.
+
+103
+00:15:59,540 --> 00:16:08,540
+Não, obviamente, fazer um teste difícil, porque esta pós-graduação de corre no iato temporal, muito curto, cinco semanas.
+
+104
+00:16:09,540 --> 00:16:13,540
+E, sinceramente, eu acho que nós demos muita matéria.
+
+105
+00:16:13,540 --> 00:16:20,540
+E, portanto, é óbvio que teremos esse cuidado ao elaborar o teste.
+
+106
+00:16:21,540 --> 00:16:22,540
+Acho que é muito isso.
+
+107
+00:16:22,540 --> 00:16:29,540
+Além de que vocês podem repetir, por exemplo, isto, tenho uns emails que eu tenho visto de ser trocados de outros colegas.
+
+108
+00:16:30,540 --> 00:16:35,540
+Se alguém reprovar, vocês têm possibilidade de repetir isto.
+
+109
+00:16:35,540 --> 00:16:37,540
+Mas eu tenho mais que...
+
+110
+00:16:38,540 --> 00:16:42,540
+Não posso garantir que as pessoas vão passar, mas me parece que há necessidade de...
+
+111
+00:16:43,540 --> 00:16:46,540
+Uma coisa que eu não questionei, é se nós temos que fazer o teste já no sábado.
+
+112
+00:16:47,540 --> 00:16:50,540
+Por acaso, eu posso questionar ao nosso coordenador na pós-graduação.
+
+113
+00:16:51,540 --> 00:16:57,540
+Se terá que ser no sábado, ou se podemos fazer o teste, dar-nos assim uns dias, mais uma semana, para estudarem, por exemplo.
+
+114
+00:16:57,540 --> 00:17:05,540
+Eu e o Tiago, portanto, normalmente, somos assim, um bocado mais diligentes e tentamos cumprir tudo e não enganar muito.
+
+115
+00:17:06,540 --> 00:17:09,540
+Mas, se vocês sentirem essa necessidade, posso falar com o nosso coordenador.
+
+116
+00:17:10,540 --> 00:17:15,540
+E se ele achar, eventualmente, terem uma semana para estudar ou para se prepararem?
+
+117
+00:17:16,540 --> 00:17:20,540
+Não sei se falo por mim, porque nós na semana seguinte vamos ver o outro teste.
+
+118
+00:17:21,540 --> 00:17:24,540
+Portanto, acho que não entraria nenhuma vantagem.
+
+119
+00:17:24,540 --> 00:17:27,540
+Vamos ver o outro teste.
+
+120
+00:17:28,540 --> 00:17:31,540
+Na semana seguinte, temos do outro módulo.
+
+121
+00:17:32,540 --> 00:17:34,540
+Ah...
+
+122
+00:17:35,540 --> 00:17:38,540
+Mas o módulo, que já foi dado antes, é isso.
+
+123
+00:17:39,540 --> 00:17:41,540
+Não, que está a ser simultâneo com este.
+
+124
+00:17:42,540 --> 00:17:46,540
+Ah, ok. Qual é o outro disciplino? Mas agora, eu vi isso no início.
+
+125
+00:17:48,540 --> 00:17:52,540
+Eu não percebi, desculpa.
+
+126
+00:17:52,540 --> 00:17:54,540
+O gramação não é novo.
+
+127
+00:17:55,540 --> 00:17:59,540
+O gramação não é novo, hein? Mas, agora, por curiosidade, quem é postado a dar isso?
+
+128
+00:18:00,540 --> 00:18:10,040
+António Barros e o outro, não me lembro do nome.
+
+129
+00:18:11,040 --> 00:18:15,040
+António Barros, pronto. Eu dou-me bem com António, mas, em todo caso, independentemente de estar bem ou não com o professor,
+
+130
+00:18:16,040 --> 00:18:18,040
+não combina nada por os dois testes da mesma semana.
+
+131
+00:18:19,040 --> 00:18:22,670
+Pronto, queríssimos.
+
+132
+00:18:23,670 --> 00:18:27,670
+Sinceramente, mantenham a calma que isto não está aqui para...
+
+133
+00:18:27,670 --> 00:18:30,670
+Não é o nosso objetivo estar-vos a complicar a vida.
+
+134
+00:18:31,670 --> 00:18:33,670
+Ou seja, nós queremos essencialmente perceber,
+
+135
+00:18:34,670 --> 00:18:36,670
+se vocês entenderam, os conceitos base disto,
+
+136
+00:18:37,670 --> 00:18:41,670
+e se estão capazes de demonstrar que entenderam, é só isto.
+
+137
+00:18:42,670 --> 00:18:45,670
+Não vos vou, por exemplo, para a apresentação 2.
+
+138
+00:18:46,670 --> 00:18:47,670
+Tenho aqui uma série de coisas,
+
+139
+00:18:48,670 --> 00:18:50,670
+de prove-nos que vou referir.
+
+140
+00:18:51,670 --> 00:18:53,670
+Não tenho, provavelmente, um objetivo em estar-vos
+
+141
+00:18:53,670 --> 00:18:57,670
+a apertar aqui 2 ou 3 métodos, que eu refiro a certa altura.
+
+142
+00:18:58,670 --> 00:19:00,670
+Não acho, aliás, quando estava a olhar para isto,
+
+143
+00:19:01,670 --> 00:19:04,670
+ainda pensei em explicar-vos os métodos, e sinceramente,
+
+144
+00:19:05,670 --> 00:19:06,670
+não acho necessário,
+
+145
+00:19:07,670 --> 00:19:12,670
+porque, por favor, hoje, e já no passado com o livro, tínhamos isto tudo explicadinho,
+
+146
+00:19:13,670 --> 00:19:18,670
+e qual é a relevância de gostar-vos a explicar agora o método com o nome dos cientistas russos
+
+147
+00:19:19,670 --> 00:19:22,670
+e outro que, basicamente, servem para detectar o conceito de drift
+
+148
+00:19:24,670 --> 00:19:28,670
+na parte de execução, no final do life cycle do modelo,
+
+149
+00:19:29,670 --> 00:19:31,670
+quando estamos a monitorizar a sua execução,
+
+150
+00:19:32,670 --> 00:19:33,670
+e agora estar a explicar este método.
+
+151
+00:19:34,670 --> 00:19:36,670
+Acho que é muito importante vocês saberem que existe,
+
+152
+00:19:37,670 --> 00:19:40,670
+terem um exemplo de um método que é dos mais relevantes que se utilizam,
+
+153
+00:19:41,670 --> 00:19:44,670
+e só vêm precisar, simplesmente, baile-a,
+
+154
+00:19:45,670 --> 00:19:47,670
+e vai perceber, por exemplo, um método que eu não tenho aqui,
+
+155
+00:19:48,670 --> 00:19:49,670
+mas posso ver aqui, no instante,
+
+156
+00:19:49,670 --> 00:19:51,670
+este call-moder of-spir-nov,
+
+157
+00:19:52,670 --> 00:19:55,670
+é um teste de estatística que permite, basicamente, nós vermos-se
+
+158
+00:19:56,670 --> 00:19:58,670
+uma amostra pertença a uma população,
+
+159
+00:19:59,670 --> 00:20:01,670
+ou se tuas amostras provém da mesma população.
+
+160
+00:20:02,670 --> 00:20:08,670
+Essencialmente, diferem com os seus métodos que fazem isto para conceder efs,
+
+161
+00:20:09,670 --> 00:20:11,670
+ou seja, com as comulativas da estatística,
+
+162
+00:20:12,670 --> 00:20:15,670
+que não são as ver ou semelhanças, não é, são já probabilidades,
+
+163
+00:20:15,670 --> 00:20:19,670
+e este, em particular, permite detectar o concep de disto.
+
+164
+00:20:20,670 --> 00:20:21,670
+Agora, depois, lá, o método em si...
+
+165
+00:20:22,670 --> 00:20:24,670
+Podia vos falar disto, mas, sinceramente, não acho que...
+
+166
+00:20:25,670 --> 00:20:27,670
+Ah, e não estou a partilhar o ecrã, desculpem.
+
+167
+00:20:28,670 --> 00:20:31,670
+Deixem-me por aqui isto, ou partilhar...
+
+168
+00:20:32,670 --> 00:20:34,670
+Agora, sim, estão a ver, desculpem.
+
+169
+00:20:35,670 --> 00:20:38,670
+E, portanto, agora, sim, estão a ver isto.
+
+170
+00:20:40,670 --> 00:20:42,670
+E, portanto, é o método, não é?
+
+171
+00:20:42,670 --> 00:20:45,670
+Acho que devagar explicar isto, nunca devia pedir isto.
+
+172
+00:20:46,670 --> 00:20:48,670
+Mesmo que explicar-se na aula 2, não devia pedir nada disto no teste.
+
+173
+00:20:50,670 --> 00:20:52,670
+E, essencialmente, é isto.
+
+174
+00:20:55,180 --> 00:20:57,180
+Depois, eu já dei umas imagens mais bonitinhas
+
+175
+00:20:58,180 --> 00:21:02,180
+para vos tentar agradar e distrair um bocado durante a apresentação
+
+176
+00:21:03,180 --> 00:21:05,520
+sem se torna-se muito chato.
+
+177
+00:21:06,520 --> 00:21:08,520
+Queríssimos. Pronto, acho que do teste é isto.
+
+178
+00:21:09,520 --> 00:21:10,520
+Vejam tranquilos.
+
+179
+00:21:11,520 --> 00:21:13,520
+Se souber alguma situação, nós vamos, obviamente,
+
+180
+00:21:13,520 --> 00:21:15,520
+estar aqui para vos ver.
+
+181
+00:21:16,520 --> 00:21:17,520
+Vamos fazer isto.
+
+182
+00:21:18,520 --> 00:21:19,520
+Vocês estão a ver a apresentação?
+
+183
+00:21:20,520 --> 00:21:22,800
+Sim.
+
+184
+00:21:23,800 --> 00:21:24,800
+Sem explicar-nos?
+
+185
+00:21:29,030 --> 00:21:30,030
+Sim.
+
+186
+00:21:31,030 --> 00:21:32,030
+Estão a ver com as explicar-nos ou sem? Desculpem.
+
+187
+00:21:33,030 --> 00:21:34,030
+Sem.
+
+188
+00:21:35,030 --> 00:21:36,030
+Pronto, ele faz isto automaticamente.
+
+189
+00:21:37,030 --> 00:21:38,030
+Eu só estou a confirmar, porque já, uma vez,
+
+190
+00:21:39,030 --> 00:21:40,030
+não sei como me aconteceu com os meus monitores
+
+191
+00:21:41,030 --> 00:21:43,030
+e que projetei uma cena toda, que não tinha mal nenhum,
+
+192
+00:21:44,030 --> 00:21:46,030
+mas é necessário-vos estarem a levar para as explicar-nos
+
+193
+00:21:46,030 --> 00:21:48,030
+sobre o orientador ou o professor.
+
+194
+00:21:49,030 --> 00:21:51,030
+Ora, bem, então, vamos lá pegar nisto.
+
+195
+00:21:52,030 --> 00:21:54,030
+Isto é que me disse que eu acho que isto hoje não vai demorar muito.
+
+196
+00:21:55,030 --> 00:21:58,030
+Portanto, ciclo-vida de dispositivos MEL.
+
+197
+00:21:59,030 --> 00:22:02,030
+Como vocês estão a ver, nós vamos voltar àquilo que já falamos.
+
+198
+00:22:03,030 --> 00:22:06,030
+Ou seja, há um ciclo-vida que já vos mostrei em aulas anterior,
+
+199
+00:22:07,030 --> 00:22:10,030
+e hoje, essencialmente, a aula serve para estressar,
+
+200
+00:22:11,030 --> 00:22:14,030
+ou seja, estressar é insistir no aspecto da monitorização dos modelos.
+
+201
+00:22:14,030 --> 00:22:19,030
+É super-importante, é super-importante, porque é um aspecto
+
+202
+00:22:20,030 --> 00:22:22,030
+que é frequentemente esquecível.
+
+203
+00:22:23,030 --> 00:22:27,030
+Eu posso-vos dizer que já tive vários alunos a fazer projetos na licenciatura com isto,
+
+204
+00:22:28,030 --> 00:22:29,030
+e nunca é contemplável.
+
+205
+00:22:30,030 --> 00:22:32,030
+Ninguém se lembra, eu próprio acabo por me cansar,
+
+206
+00:22:33,030 --> 00:22:35,030
+e, portanto, é importante salientar-vos isto,
+
+207
+00:22:36,030 --> 00:22:39,030
+e eu próprio me recordar disto para, no próximo projeto, insistir
+
+208
+00:22:40,030 --> 00:22:42,030
+que tenhamos algumas estratégias para isto.
+
+209
+00:22:42,030 --> 00:22:44,030
+Pronto, então, o que vamos falar depois?
+
+210
+00:22:45,030 --> 00:22:46,030
+O ciclo-vida de os coretopics.
+
+211
+00:22:47,030 --> 00:22:50,030
+O deployment não termina após a primeira inferência,
+
+212
+00:22:51,030 --> 00:22:54,030
+ou seja, nós tivemos este processo de treino,
+
+213
+00:22:55,030 --> 00:22:58,030
+validação, teste, e, depois, quando íamos para o mundo real,
+
+214
+00:22:59,030 --> 00:23:01,030
+na aula passada, falámos um... na aula passada, sem ser sábado,
+
+215
+00:23:02,030 --> 00:23:04,030
+falámos um bocadinho esta diferença do mundo real, às vezes,
+
+216
+00:23:05,030 --> 00:23:09,030
+para o teste com base nº 7, e, quando vamos para a inferência no mundo real,
+
+217
+00:23:09,030 --> 00:23:12,030
+virmos que essa disto, e temos que ter atenção,
+
+218
+00:23:13,030 --> 00:23:17,030
+que é preciso continuar a verificar a qualidade da inferência que o modelo faz,
+
+219
+00:23:18,030 --> 00:23:21,030
+para percebermos que está, inclusive, a falarmos do Brits,
+
+220
+00:23:22,030 --> 00:23:23,030
+o concept de Brits nos dados, né?
+
+221
+00:23:24,030 --> 00:23:25,030
+Isso foi referido.
+
+222
+00:23:26,030 --> 00:23:27,030
+Então, tem aqui uns tópicos como,
+
+223
+00:23:28,030 --> 00:23:30,030
+sobre isto, no local statistical monitoring.
+
+224
+00:23:31,030 --> 00:23:32,030
+O que é que está a falar isto?
+
+225
+00:23:34,030 --> 00:23:36,030
+Nós estamos em ads devices,
+
+226
+00:23:36,030 --> 00:23:40,030
+em constreina de ads devices, ou seja, ação de dispositivos de ads,
+
+227
+00:23:41,030 --> 00:23:43,030
+que estão na ponta da coisa, estão muito longe da cláudica,
+
+228
+00:23:44,030 --> 00:23:45,030
+ao contrário do compositor António Vargas,
+
+229
+00:23:46,030 --> 00:23:48,030
+está a falar ainda por cima, limitados.
+
+230
+00:23:49,030 --> 00:23:50,030
+E, portanto, temos de ter cuidado,
+
+231
+00:23:51,030 --> 00:23:54,030
+em... e não temos ligações à internet,
+
+232
+00:23:55,030 --> 00:23:57,030
+que nos permitam estar constantemente
+
+233
+00:23:58,030 --> 00:24:00,030
+a comunicar com a internet por um lado,
+
+234
+00:24:01,030 --> 00:24:03,030
+e, por outro lado, se exagerámos nas comunicações,
+
+235
+00:24:03,030 --> 00:24:05,030
+podemos também estar a da cava da bateria.
+
+236
+00:24:06,030 --> 00:24:07,030
+Então, há, sim, um conjunto de coisas,
+
+237
+00:24:08,030 --> 00:24:09,030
+umas mais ou das menos, depois do tempero,
+
+238
+00:24:10,030 --> 00:24:12,030
+é um bocadinho mediante a circunstância,
+
+239
+00:24:13,030 --> 00:24:14,030
+mas isto são restrições que eles têm,
+
+240
+00:24:15,030 --> 00:24:16,030
+e temos que terem atenção a estas questões todas.
+
+241
+00:24:17,030 --> 00:24:20,030
+Mas, ainda assim, temos que monitorizar a qualidade do nosso modelo.
+
+242
+00:24:21,030 --> 00:24:24,030
+Pronto, como eu falei, há variações de dados,
+
+243
+00:24:25,030 --> 00:24:26,030
+deixando-me só ler aqui uma coisa,
+
+244
+00:24:27,030 --> 00:24:29,030
+é exatamente a mesma coisa,
+
+245
+00:24:30,030 --> 00:24:32,030
+e introduz aqui as coisas que não estou a prever nada.
+
+246
+00:24:33,030 --> 00:24:35,030
+Então, aqui temos variações nos dados,
+
+247
+00:24:36,030 --> 00:24:38,030
+as data variations, data drift e data set shift.
+
+248
+00:24:39,030 --> 00:24:43,030
+Pronto, isto essencialmente é a variação nas entradas,
+
+249
+00:24:44,030 --> 00:24:46,030
+que falamos na aula passada até com mais detalhe,
+
+250
+00:24:47,030 --> 00:24:49,030
+e o conceito drift, quando temos a variação nas saídas,
+
+251
+00:24:50,030 --> 00:24:52,030
+as entradas não variam, mas as saídas variam,
+
+252
+00:24:53,030 --> 00:24:56,030
+ou seja, a função de transferência do sistema altera-se mesmo.
+
+253
+00:24:57,030 --> 00:24:59,030
+E, portanto, aí nós temos um problema grave.
+
+254
+00:25:00,030 --> 00:25:01,030
+Uma coisa é variar os x,
+
+255
+00:25:01,030 --> 00:25:03,030
+e, portanto, as saídas vão passar a ser diferentes,
+
+256
+00:25:04,030 --> 00:25:06,030
+e eles já não conhecem, mas, porque foi a entrada que mudou,
+
+257
+00:25:07,030 --> 00:25:10,030
+outra coisa é, após menos x, passamos a ter um x em média diferente.
+
+258
+00:25:11,030 --> 00:25:13,030
+E, portanto, podem ser monitorizados de maneira diferente.
+
+259
+00:25:14,030 --> 00:25:16,030
+Depois, é preciso, também, outra coisa que é importante,
+
+260
+00:25:17,030 --> 00:25:21,030
+já falei, é medir a degradação de performance e a teção de anomalias,
+
+261
+00:25:22,030 --> 00:25:24,030
+algo que também temos que terem atenção,
+
+262
+00:25:25,030 --> 00:25:29,030
+só para poder-nos estar a ver se o nosso sistema continua a performar de forma correta,
+
+263
+00:25:29,030 --> 00:25:30,030
+ou a tensão.
+
+264
+00:25:31,030 --> 00:25:33,030
+Não quer dizer que seja o modelo que está mal,
+
+265
+00:25:34,030 --> 00:25:35,030
+pode produzir uma realidade na máquina,
+
+266
+00:25:36,030 --> 00:25:40,030
+que é uma realidade diferente e que não constitui propriamente,
+
+267
+00:25:41,030 --> 00:25:43,030
+quer dizer, a partida constitui uma situação anomal,
+
+268
+00:25:44,030 --> 00:25:45,030
+porque é algo que nunca foi visto,
+
+269
+00:25:46,030 --> 00:25:47,030
+mas é importante fazer isto.
+
+270
+00:25:48,030 --> 00:25:52,030
+Isto é fácil falar aqui, mas é difícil implementar
+
+271
+00:25:53,030 --> 00:25:55,030
+e gasta recursos que não são,
+
+272
+00:25:55,030 --> 00:25:59,030
+recursos que há a partida, nós queremos dedicar a isto, ok?
+
+273
+00:26:00,030 --> 00:26:02,030
+Portanto, esta aula é uma aula sobre bonitinho,
+
+274
+00:26:03,030 --> 00:26:08,340
+com certeza, é uma aula, um discurso bonito,
+
+275
+00:26:09,340 --> 00:26:12,340
+mas fazer isto é pesado e computacionalmente pesado,
+
+276
+00:26:13,340 --> 00:26:16,340
+ou seja, não é, não é o computacionalmente pesado,
+
+277
+00:26:17,340 --> 00:26:19,340
+é, tem que se fazer e dá muito trabalho de fazer isto,
+
+278
+00:26:20,340 --> 00:26:22,340
+mas é super interessante, porque depois de vocês terem
+
+279
+00:26:22,340 --> 00:26:26,340
+um modelo com qualidade, com uma capacidade de predicção boa,
+
+280
+00:26:27,340 --> 00:26:29,340
+adicionar-lhe estas camadas de segurança,
+
+281
+00:26:30,340 --> 00:26:33,340
+de monitorização do peso computacional,
+
+282
+00:26:34,340 --> 00:26:36,340
+eventualmente a existência de erros,
+
+283
+00:26:37,340 --> 00:26:39,340
+a atração de driftes nos dados,
+
+284
+00:26:40,340 --> 00:26:41,340
+ou driftes de conceitos, etc.
+
+285
+00:26:42,340 --> 00:26:45,340
+Isto basicamente garante que o vosso modelo
+
+286
+00:26:46,340 --> 00:26:48,340
+começa a ficar muito robusto e vai operar durante anos,
+
+287
+00:26:48,340 --> 00:26:50,340
+e anos e anos, áreas de décadas,
+
+288
+00:26:51,340 --> 00:26:52,340
+de uma forma ultra robusta.
+
+289
+00:26:53,340 --> 00:26:54,340
+Eu diria qual é a coisa como,
+
+290
+00:26:55,340 --> 00:26:58,340
+dentro de aqui um exemplo que tenha a ver com isto,
+
+291
+00:26:59,340 --> 00:27:01,340
+aquilo de seus pedadores pequeninos, que hoje temos,
+
+292
+00:27:02,340 --> 00:27:03,340
+começaram há dez anos atrás,
+
+293
+00:27:04,340 --> 00:27:06,340
+ou mais, como coisas relativamente simples.
+
+294
+00:27:07,340 --> 00:27:09,340
+Por acaso, aqui em minha casa nós tivemos um inicial,
+
+295
+00:27:10,340 --> 00:27:11,340
+que já não era daqueles primeiros,
+
+296
+00:27:12,340 --> 00:27:13,340
+mas era uma coisa na altura super inteligente,
+
+297
+00:27:14,340 --> 00:27:16,340
+e eu sabia que aquilo não era super inteligente.
+
+298
+00:27:16,340 --> 00:27:17,340
+O controle era muito básico,
+
+299
+00:27:18,340 --> 00:27:21,340
+mas por acaso, a heurística que estava no primeiro,
+
+300
+00:27:22,340 --> 00:27:26,340
+perdão, permitia que ela até fizesse uma varradura da casa
+
+301
+00:27:27,340 --> 00:27:28,340
+relativamente inteligente.
+
+302
+00:27:29,340 --> 00:27:30,340
+Bom, e só fim de muitos anos a variou,
+
+303
+00:27:31,340 --> 00:27:33,340
+e numa dia possibilidade de nada,
+
+304
+00:27:34,340 --> 00:27:36,340
+e, portanto, comparamos agora um recente.
+
+305
+00:27:37,340 --> 00:27:38,340
+Bem, uma coisa brutal.
+
+306
+00:27:39,340 --> 00:27:40,340
+E por quê?
+
+307
+00:27:41,340 --> 00:27:42,340
+Porque ele faz todo um conjunto de observações,
+
+308
+00:27:43,340 --> 00:27:44,340
+o que faz primeiro,
+
+309
+00:27:44,340 --> 00:27:46,340
+tem logo sensores novos, que localizam e tal,
+
+310
+00:27:47,340 --> 00:27:49,340
+e depois ele próprio monitoriza todo o seu processo.
+
+311
+00:27:50,340 --> 00:27:54,340
+Portanto, este é um exemplo de um dispositivo,
+
+312
+00:27:55,340 --> 00:27:57,340
+que é Edge, tenho o controle local,
+
+313
+00:27:58,340 --> 00:27:59,340
+não é que ele faz liência na internet,
+
+314
+00:28:00,340 --> 00:28:01,340
+mas não é controlado via internet,
+
+315
+00:28:02,340 --> 00:28:05,340
+e ele tem que ter uma grande qualidade nos sensores,
+
+316
+00:28:06,340 --> 00:28:07,340
+no postamento dos dados,
+
+317
+00:28:08,340 --> 00:28:09,340
+e tem que estar constantemente a ver
+
+318
+00:28:10,340 --> 00:28:11,340
+até que pode estar a manter a inferência.
+
+319
+00:28:11,340 --> 00:28:13,340
+Por exemplo, o que eu tenho aqui em casa,
+
+320
+00:28:14,340 --> 00:28:16,340
+eu noto que ele dá conta que está a fazê-los,
+
+321
+00:28:17,340 --> 00:28:20,340
+e depois começa, e tem um algoritmo paralelo,
+
+322
+00:28:21,340 --> 00:28:22,340
+que sobrepõe para o tentar levar para a base.
+
+323
+00:28:23,340 --> 00:28:24,340
+Acho que é mais ou menos assim como tudo.
+
+324
+00:28:25,340 --> 00:28:26,340
+Portanto, performance,
+
+325
+00:28:27,340 --> 00:28:29,340
+and anomaly detection, já falei sobre isto.
+
+326
+00:28:30,340 --> 00:28:32,340
+Uma cena muito interessante que vamos falar hoje,
+
+327
+00:28:33,340 --> 00:28:35,340
+é só referir duas, duas ferramentas
+
+328
+00:28:36,340 --> 00:28:38,340
+que é muito difícil vocês querem conhecer.
+
+329
+00:28:38,340 --> 00:28:43,340
+O DVC é para dados,
+
+330
+00:28:44,340 --> 00:28:46,340
+é para fazer a versão de data sets,
+
+331
+00:28:47,340 --> 00:28:49,340
+super interessante, embora, pronto,
+
+332
+00:28:50,340 --> 00:28:51,340
+aqui neste tipo de data sets,
+
+333
+00:28:52,340 --> 00:28:54,340
+nós não vamos ter data sets de gigas e de pera bytes,
+
+334
+00:28:55,340 --> 00:28:56,340
+e, portanto, pode ser questionável,
+
+335
+00:28:57,340 --> 00:29:01,340
+mas o versionamento de data sets é muito interessante,
+
+336
+00:29:02,340 --> 00:29:03,340
+especialmente quando os data sets são incrementais
+
+337
+00:29:04,340 --> 00:29:05,340
+e continuam a aumentar,
+
+338
+00:29:05,340 --> 00:29:07,340
+e temos uma espécie de um Git para dados,
+
+339
+00:29:08,340 --> 00:29:09,340
+é interessante,
+
+340
+00:29:10,340 --> 00:29:11,340
+e depois o MLflow,
+
+341
+00:29:12,340 --> 00:29:15,340
+que é uma ferramenta que eu conheço há pouco tempo,
+
+342
+00:29:16,340 --> 00:29:17,340
+mas é essencialmente para todo o resto,
+
+343
+00:29:18,340 --> 00:29:19,340
+ou seja, o Git é para Coby,
+
+344
+00:29:20,340 --> 00:29:21,340
+o DVC é para dados,
+
+345
+00:29:22,340 --> 00:29:23,340
+e o MLflow é para todo o resto,
+
+346
+00:29:24,340 --> 00:29:26,340
+é para hiperparâmetros,
+
+347
+00:29:27,340 --> 00:29:29,340
+questões de treino, executáveis,
+
+348
+00:29:30,340 --> 00:29:31,340
+tudo que sai do modelo,
+
+349
+00:29:32,340 --> 00:29:33,340
+os parâmetros, hiperparâmetros,
+
+350
+00:29:33,340 --> 00:29:34,340
+e o guarda tudo,
+
+351
+00:29:35,340 --> 00:29:36,340
+e faz o versionamento, ou seja,
+
+352
+00:29:37,340 --> 00:29:38,340
+nós podemos ter código,
+
+353
+00:29:39,340 --> 00:29:41,340
+dados e código de dados,
+
+354
+00:29:42,340 --> 00:29:45,340
+e depois todo o resto da parafernalha de machine learning AI,
+
+355
+00:29:46,340 --> 00:29:48,340
+versionada de maneira a não termos,
+
+356
+00:29:49,340 --> 00:29:50,340
+assim, depois surpresas.
+
+357
+00:29:51,340 --> 00:29:52,340
+Pronto, o MLflow ainda faz mais umas coisas,
+
+358
+00:29:53,340 --> 00:29:54,340
+que é no deployment,
+
+359
+00:29:55,340 --> 00:29:56,340
+que é também engraçado,
+
+360
+00:29:57,340 --> 00:29:58,340
+consegue quase, não é containerizar,
+
+361
+00:29:59,340 --> 00:30:00,340
+mas juntar as coisas todas,
+
+362
+00:30:01,340 --> 00:30:02,340
+e é super interessante.
+
+363
+00:30:03,340 --> 00:30:05,340
+Eu estou a referir,
+
+364
+00:30:06,340 --> 00:30:07,340
+porque me parece que está a ficar uma tendência,
+
+365
+00:30:08,340 --> 00:30:10,340
+e agora, por exemplo, não no Edge Computing,
+
+366
+00:30:11,340 --> 00:30:13,340
+mas no Zela LEMs,
+
+367
+00:30:14,340 --> 00:30:15,340
+está a ficar com força,
+
+368
+00:30:16,340 --> 00:30:18,340
+mas isto também é utilizado em Edge Computing
+
+369
+00:30:19,340 --> 00:30:20,340
+e também nestas coisas.
+
+370
+00:30:21,340 --> 00:30:22,340
+Pronto, depois,
+
+371
+00:30:23,340 --> 00:30:25,340
+manutenção preventiva e adaptativa,
+
+372
+00:30:26,340 --> 00:30:30,340
+segurança Edge e rosteja adversária,
+
+373
+00:30:30,340 --> 00:30:32,340
+operação contínua e tolerância a falhas,
+
+374
+00:30:33,340 --> 00:30:34,340
+vamos ver o que é visto depois de nos trás.
+
+375
+00:30:36,340 --> 00:30:37,340
+Acho que aqui está tudo,
+
+376
+00:30:38,340 --> 00:30:39,340
+aqui seria, eventualmente,
+
+377
+00:30:40,340 --> 00:30:41,340
+ao vos falar do processo que já falamos,
+
+378
+00:30:42,340 --> 00:30:43,340
+em gestão de dados,
+
+379
+00:30:44,340 --> 00:30:45,340
+onde estamos a recolher dados
+
+380
+00:30:46,340 --> 00:30:47,340
+e a pré-postalos,
+
+381
+00:30:48,340 --> 00:30:49,340
+não, a pré-postalos é a seguinte,
+
+382
+00:30:50,340 --> 00:30:51,340
+estamos a meter numa base de dados,
+
+383
+00:30:52,340 --> 00:30:53,340
+a guardar os nossos dados
+
+384
+00:30:54,340 --> 00:30:55,340
+e a coletar os dados localmente,
+
+385
+00:30:56,340 --> 00:30:57,340
+depois entramos no data process,
+
+386
+00:30:58,340 --> 00:30:59,340
+onde vamos limpar, estruturar,
+
+387
+00:31:00,340 --> 00:31:02,340
+vamos fazer feature engineering,
+
+388
+00:31:03,340 --> 00:31:05,340
+embora o feature engineering, em particular,
+
+389
+00:31:06,340 --> 00:31:08,340
+pois relacione também um bocado com o seguinte,
+
+390
+00:31:09,340 --> 00:31:10,340
+é mais iterativo,
+
+391
+00:31:11,340 --> 00:31:12,340
+porque nós traímos features
+
+392
+00:31:13,340 --> 00:31:15,340
+e depois testamos no model training
+
+393
+00:31:16,340 --> 00:31:18,340
+e podemos ir atrás
+
+394
+00:31:19,340 --> 00:31:21,340
+para refazer as features
+
+395
+00:31:22,340 --> 00:31:24,340
+ou adaptar ou refazer novas features
+
+396
+00:31:25,340 --> 00:31:26,340
+e temos aqui uma operação,
+
+397
+00:31:27,340 --> 00:31:28,340
+até encontrarmos um conjunto de features interessantes
+
+398
+00:31:28,340 --> 00:31:30,340
+para o modelo que estamos a utilizar,
+
+399
+00:31:31,340 --> 00:31:32,340
+portanto, e neste processo,
+
+400
+00:31:33,340 --> 00:31:34,340
+acabamos por treinar e desenvolver o nosso modelo,
+
+401
+00:31:35,340 --> 00:31:37,340
+quando o modelo está completamente pronto,
+
+402
+00:31:38,340 --> 00:31:39,340
+nós temos um modelo pronto para deployment
+
+403
+00:31:40,340 --> 00:31:41,340
+e também aqui um conjunto de operações
+
+404
+00:31:42,340 --> 00:31:43,340
+que hoje são mais detalhadas,
+
+405
+00:31:44,340 --> 00:31:46,340
+que é o package and deployment,
+
+406
+00:31:47,340 --> 00:31:48,340
+pode ser, por exemplo, no AI,
+
+407
+00:31:49,340 --> 00:31:50,340
+muito a containerização dos modelos
+
+408
+00:31:51,340 --> 00:31:52,340
+em Docker ou outros tipos de container,
+
+409
+00:31:53,340 --> 00:31:54,340
+porque é interessante,
+
+410
+00:31:55,340 --> 00:31:57,340
+porque é uma forma de criarmos uma grande abstração
+
+411
+00:31:58,340 --> 00:31:59,340
+para tudo,
+
+412
+00:32:00,340 --> 00:32:01,340
+ou seja, podemos dentro do Docker meter dados,
+
+413
+00:32:02,340 --> 00:32:03,340
+meter todas as dependências,
+
+414
+00:32:04,340 --> 00:32:06,340
+meter a nossa aplicação num formato
+
+415
+00:32:07,340 --> 00:32:08,340
+que já está pronto a executar
+
+416
+00:32:09,340 --> 00:32:10,340
+e fazemos o chip em um container
+
+417
+00:32:11,340 --> 00:32:13,340
+e depois a pessoa que vai correr o modelo
+
+418
+00:32:14,340 --> 00:32:15,340
+ou as pessoas que às vezes podem ser várias,
+
+419
+00:32:16,340 --> 00:32:18,340
+só fazem o importar e o montar o container
+
+420
+00:32:19,340 --> 00:32:20,340
+e tem a aplicação toda para onde está funcionar.
+
+421
+00:32:21,340 --> 00:32:22,340
+Isto é super interessante,
+
+422
+00:32:23,340 --> 00:32:25,340
+portanto, isto é uma particularidade.
+
+423
+00:32:25,340 --> 00:32:28,340
+E depois a inferência no Edge,
+
+424
+00:32:29,340 --> 00:32:30,340
+quando ele der deploy,
+
+425
+00:32:31,340 --> 00:32:32,340
+começamos a fazer inferências,
+
+426
+00:32:33,340 --> 00:32:34,340
+já falamos disto,
+
+427
+00:32:35,340 --> 00:32:36,340
+e então a monitorização,
+
+428
+00:32:37,340 --> 00:32:38,340
+que é, basicamente, fazer isto que eu estou a dizer,
+
+429
+00:32:39,340 --> 00:32:40,340
+ver como é que o modelo está a comportar,
+
+430
+00:32:41,340 --> 00:32:43,340
+tentar perceber se temos aqui alguma situação
+
+431
+00:32:44,340 --> 00:32:45,340
+que carece da tensão
+
+432
+00:32:46,340 --> 00:32:48,340
+e caso isso aconteça, nós temos que gerar uma ação.
+
+433
+00:32:49,340 --> 00:32:51,340
+Normalmente, o que se fazia era uma ação manual,
+
+434
+00:32:52,340 --> 00:32:53,340
+isto era uma espécie dashboard
+
+435
+00:32:53,340 --> 00:32:55,340
+que fazia um aviso
+
+436
+00:32:56,340 --> 00:32:57,340
+e entrava em um maninho de loop,
+
+437
+00:32:58,340 --> 00:33:01,340
+entrava alguém que tomava uma atitude,
+
+438
+00:33:02,340 --> 00:33:04,340
+como acionava o modo manual mais simples
+
+439
+00:33:05,340 --> 00:33:07,340
+ou então deixava aquilo funcionar,
+
+440
+00:33:08,340 --> 00:33:09,340
+mas passava a classificação para o manual de outras coisas
+
+441
+00:33:10,340 --> 00:33:11,340
+e tentava ver o que se passava,
+
+442
+00:33:12,340 --> 00:33:13,340
+mas ultimamente, tenha aparecido
+
+443
+00:33:14,340 --> 00:33:15,340
+e na preparação desta aula já havia
+
+444
+00:33:16,340 --> 00:33:17,340
+coisas já automatizadas,
+
+445
+00:33:18,340 --> 00:33:19,340
+ou seja, eles avisam
+
+446
+00:33:20,340 --> 00:33:21,340
+e tenham ações sobre isto.
+
+447
+00:33:21,340 --> 00:33:23,340
+Então, o feedback loop e o trigger update
+
+448
+00:33:24,340 --> 00:33:25,340
+é precisamente coisas dessas,
+
+449
+00:33:26,340 --> 00:33:27,340
+a retrainar a rede,
+
+450
+00:33:28,340 --> 00:33:29,340
+fazer ações mais complexas.
+
+451
+00:33:30,340 --> 00:33:31,340
+E, portanto, por isso é que agora isto aparece
+
+452
+00:33:32,340 --> 00:33:33,340
+aqui já muito fechado,
+
+453
+00:33:34,340 --> 00:33:35,340
+porque, efetivamente, isto já pode ser tudo automatizado.
+
+454
+00:33:36,340 --> 00:33:38,340
+Ele dispara aqui o retreno
+
+455
+00:33:39,340 --> 00:33:40,340
+e, se necessário, recolhe mais dados,
+
+456
+00:33:41,340 --> 00:33:42,340
+data processing, por aí fora e continua.
+
+457
+00:33:43,340 --> 00:33:45,710
+Pronto, deixe-me ver.
+
+458
+00:33:46,710 --> 00:33:47,710
+Acho que é isto.
+
+459
+00:33:48,710 --> 00:33:49,710
+Está tudo pronto.
+
+460
+00:33:49,710 --> 00:33:53,470
+Pronto, depois, é esta questão
+
+461
+00:33:54,470 --> 00:33:55,470
+que, no fundo, já está aqui dito,
+
+462
+00:33:56,470 --> 00:33:57,470
+que é deployment-exercice-vigin,
+
+463
+00:33:58,470 --> 00:34:00,470
+ou seja, foi, como eu disse,
+
+464
+00:34:01,470 --> 00:34:03,470
+a gente treina, otimiza,
+
+465
+00:34:04,470 --> 00:34:05,470
+faz implantação do modelo
+
+466
+00:34:06,470 --> 00:34:08,470
+e, depois, isto parece que estava tudo.
+
+467
+00:34:09,470 --> 00:34:11,470
+Agora, vamos fechar o ciclo,
+
+468
+00:34:13,470 --> 00:34:14,470
+ou seja,
+
+469
+00:34:15,470 --> 00:34:16,470
+deixe-me ver aqui.
+
+470
+00:34:17,470 --> 00:34:18,470
+Isto, basicamente, é a mesma coisa,
+
+471
+00:34:19,470 --> 00:34:20,470
+o processo linear que fazemos,
+
+472
+00:34:21,470 --> 00:34:23,470
+e, agora, temos aqui um processo fechado.
+
+473
+00:34:24,470 --> 00:34:25,470
+A tensão que algumas das imagens e os jadeias
+
+474
+00:34:26,470 --> 00:34:27,470
+não estiveram sem a ver,
+
+475
+00:34:28,470 --> 00:34:29,470
+se encontraram em alguma coisa,
+
+476
+00:34:30,470 --> 00:34:31,470
+digamos, corrisse,
+
+477
+00:34:32,470 --> 00:34:33,470
+nesta data, na lei,
+
+478
+00:34:34,470 --> 00:34:35,470
+isto é, basicamente, a mesma coisa.
+
+479
+00:34:36,470 --> 00:34:37,470
+Então, coisa muito importante,
+
+480
+00:34:38,470 --> 00:34:39,470
+o loudfailers, versus silentfailers,
+
+481
+00:34:40,470 --> 00:34:41,470
+isto é superimportante.
+
+482
+00:34:42,470 --> 00:34:43,470
+Esta questão aqui,
+
+483
+00:34:44,470 --> 00:34:45,470
+vamos usar a falei dela,
+
+484
+00:34:46,470 --> 00:34:47,470
+os loudfailers são coisas
+
+485
+00:34:48,470 --> 00:34:49,470
+que, obviamente,
+
+486
+00:34:49,470 --> 00:34:52,470
+o modelo da bronca,
+
+487
+00:34:53,470 --> 00:34:54,470
+não é começar a disparar coisas
+
+488
+00:34:55,470 --> 00:34:56,470
+que não deve, isto é uma coisa
+
+489
+00:34:57,470 --> 00:34:58,470
+que é autopolitativa,
+
+490
+00:34:59,470 --> 00:35:00,470
+portanto, as forças vão notar,
+
+491
+00:35:01,470 --> 00:35:02,470
+mas mais perigoso do que isso,
+
+492
+00:35:03,470 --> 00:35:04,470
+são silentfailers,
+
+493
+00:35:05,470 --> 00:35:06,470
+ou seja, são pequenas derivas
+
+494
+00:35:07,470 --> 00:35:08,470
+que acontecem, como, por exemplo,
+
+495
+00:35:09,470 --> 00:35:10,470
+um sensor que descalibra,
+
+496
+00:35:11,470 --> 00:35:12,470
+e ela vai continuar
+
+497
+00:35:13,470 --> 00:35:14,470
+a inferir com a elevada confiança,
+
+498
+00:35:15,470 --> 00:35:16,470
+mas as entradas estão degradadas.
+
+499
+00:35:17,470 --> 00:35:18,470
+E, pronto, já falamos
+
+500
+00:35:19,470 --> 00:35:20,470
+de um sensor significativo
+
+501
+00:35:21,470 --> 00:35:22,470
+de ser detectado,
+
+502
+00:35:23,470 --> 00:35:24,470
+para evitar.
+
+503
+00:35:25,470 --> 00:35:26,470
+Numa das aulas anteriores,
+
+504
+00:35:27,470 --> 00:35:28,470
+até vos falei,
+
+505
+00:35:29,470 --> 00:35:30,470
+porque, na escâmara,
+
+506
+00:35:31,470 --> 00:35:32,470
+são as lentes com sujidade.
+
+507
+00:35:33,470 --> 00:35:34,470
+Num sensor magnético,
+
+508
+00:35:35,470 --> 00:35:36,470
+é presença, por exemplo,
+
+509
+00:35:37,470 --> 00:35:38,470
+algum motor que está ali a criar,
+
+510
+00:35:39,470 --> 00:35:40,470
+a criar a interferência,
+
+511
+00:35:41,470 --> 00:35:42,470
+pode ser o desgaste natural
+
+512
+00:35:43,470 --> 00:35:44,470
+de um sensor e que altera
+
+513
+00:35:45,470 --> 00:35:46,470
+gradativamente,
+
+514
+00:35:47,470 --> 00:35:48,470
+mas de forma significativa
+
+515
+00:35:49,470 --> 00:35:50,470
+do tempo.
+
+516
+00:35:51,470 --> 00:35:52,470
+Existem até cormas,
+
+517
+00:35:53,470 --> 00:35:54,470
+de nós, com o tempo,
+
+518
+00:35:55,470 --> 00:35:56,470
+começarmos a compensar sensores
+
+519
+00:35:57,470 --> 00:35:58,470
+e gerar.
+
+520
+00:35:59,470 --> 00:36:00,470
+Uma das formas é,
+
+521
+00:36:01,470 --> 00:36:02,470
+uma das formas é,
+
+522
+00:36:03,470 --> 00:36:04,470
+deixa eu ter um aluno,
+
+523
+00:36:05,470 --> 00:36:06,470
+uma das formas,
+
+524
+00:36:09,470 --> 00:36:10,470
+é retrainar os modelos
+
+525
+00:36:11,470 --> 00:36:12,470
+e nem machinular,
+
+526
+00:36:13,470 --> 00:36:14,470
+nem uma forma fácil de fazer isso,
+
+527
+00:36:15,470 --> 00:36:16,470
+ou trajetir algoritmos
+
+528
+00:36:17,470 --> 00:36:18,470
+que fazem essa compensação.
+
+529
+00:36:19,470 --> 00:36:20,470
+De greia da real,
+
+530
+00:36:22,720 --> 00:36:23,720
+um estilo inferior,
+
+531
+00:36:24,720 --> 00:36:25,720
+aparente confidência.
+
+532
+00:36:26,720 --> 00:36:27,720
+Deixei-vos de que um artigo,
+
+533
+00:36:28,720 --> 00:36:29,720
+para vocês, se quiserem,
+
+534
+00:36:30,720 --> 00:36:31,720
+para isso.
+
+535
+00:36:32,720 --> 00:36:33,720
+Só para prosseguir uma coisa,
+
+536
+00:36:34,720 --> 00:36:35,720
+quando o professor estava aí a falar,
+
+537
+00:36:36,720 --> 00:36:37,720
+ou seja, de começarmos a receber
+
+538
+00:36:38,720 --> 00:36:39,720
+dados diferentes dos sensores,
+
+539
+00:36:40,720 --> 00:36:41,720
+isso é que era o data drift,
+
+540
+00:36:42,720 --> 00:36:43,720
+é isso?
+
+541
+00:36:44,720 --> 00:36:45,720
+O que é que comece a dar?
+
+542
+00:36:46,720 --> 00:36:47,720
+Pronto.
+
+543
+00:36:47,720 --> 00:36:48,720
+Isso faz-me aqui.
+
+544
+00:36:49,720 --> 00:36:50,720
+Quer dizer, abra sempre,
+
+545
+00:36:51,720 --> 00:36:52,720
+mas faz feedback.
+
+546
+00:36:53,720 --> 00:36:54,720
+Os dados diferentes
+
+547
+00:36:55,720 --> 00:36:56,720
+de um sensor,
+
+548
+00:36:57,720 --> 00:36:58,720
+é essencialmente uma deriva
+
+549
+00:36:59,720 --> 00:37:00,720
+do X.
+
+550
+00:37:01,720 --> 00:37:02,720
+Tenho aqui, aparente,
+
+551
+00:37:03,720 --> 00:37:04,720
+coisa a mostrar isto.
+
+552
+00:37:05,720 --> 00:37:06,720
+É uma deriva do X, ou seja,
+
+553
+00:37:07,720 --> 00:37:08,720
+nós tínhamos uma realidade,
+
+554
+00:37:09,720 --> 00:37:10,720
+a mesma temperatura, por exemplo,
+
+555
+00:37:11,720 --> 00:37:12,720
+dá origem a um valor diferente,
+
+556
+00:37:13,720 --> 00:37:14,720
+uma leitura diferente do sensor,
+
+557
+00:37:15,720 --> 00:37:16,720
+e temos aqui uma deriva.
+
+558
+00:37:17,720 --> 00:37:18,720
+Se isto foi calibrado,
+
+559
+00:37:19,720 --> 00:37:20,720
+se o AI foi calibrado,
+
+560
+00:37:21,720 --> 00:37:22,720
+de uma certa forma,
+
+561
+00:37:23,720 --> 00:37:24,720
+quando encontrar esse valor,
+
+562
+00:37:25,720 --> 00:37:26,720
+ele vai estudar aqui uma determinada
+
+563
+00:37:27,720 --> 00:37:28,720
+temperatura, neste caso,
+
+564
+00:37:29,720 --> 00:37:30,720
+estamos a falar no exemplo
+
+565
+00:37:31,720 --> 00:37:32,720
+de um sensor de temperatura.
+
+566
+00:37:33,720 --> 00:37:34,720
+E, portanto,
+
+567
+00:37:35,720 --> 00:37:36,720
+temos agora aqui esta deriva do X
+
+568
+00:37:37,720 --> 00:37:38,720
+e a inferência que ele vai estar a fazer
+
+569
+00:37:39,720 --> 00:37:40,720
+está toda errada, porque ele foi
+
+570
+00:37:41,720 --> 00:37:42,720
+treinado por outra coisa.
+
+571
+00:37:43,720 --> 00:37:44,720
+Uma coisa diferente era,
+
+572
+00:37:45,720 --> 00:37:46,720
+de repente, o sensor mudar
+
+573
+00:37:48,720 --> 00:37:50,720
+e, para a mesma temperatura,
+
+574
+00:37:51,720 --> 00:37:53,720
+ele começar a dar valores diferentes.
+
+575
+00:37:54,720 --> 00:37:55,720
+Não sei se me expliquei bem.
+
+576
+00:37:58,290 --> 00:38:00,290
+O que eu estava a tentar perceber
+
+577
+00:38:01,290 --> 00:38:02,290
+é que, ali no other slide,
+
+578
+00:38:03,290 --> 00:38:04,290
+o pessoal tinha o data drift
+
+579
+00:38:05,290 --> 00:38:06,290
+e o data set shift,
+
+580
+00:38:07,290 --> 00:38:08,290
+pensou.
+
+581
+00:38:09,290 --> 00:38:10,290
+Isso eu estava a tentar perceber
+
+582
+00:38:13,240 --> 00:38:14,240
+a diferença entre os dois, na verdade.
+
+583
+00:38:15,240 --> 00:38:16,240
+Fiquei com essa dúvida.
+
+584
+00:38:17,240 --> 00:38:18,240
+Ok, ok.
+
+585
+00:38:19,240 --> 00:38:20,240
+Eu tenho aqui.
+
+586
+00:38:22,550 --> 00:38:24,550
+O data drift é quando nós temos
+
+587
+00:38:25,550 --> 00:38:26,550
+variação nos X.
+
+588
+00:38:28,550 --> 00:38:29,550
+O outro é quando nós temos,
+
+589
+00:38:30,550 --> 00:38:32,550
+pós mesmo X, um Y diferente.
+
+590
+00:38:35,950 --> 00:38:36,950
+Ou seja...
+
+591
+00:38:37,950 --> 00:38:38,950
+Sim, mas, por exemplo, o data drift,
+
+592
+00:38:39,950 --> 00:38:40,950
+o que eu percebi,
+
+593
+00:38:41,950 --> 00:38:42,950
+se nós começarmos a receber dados
+
+594
+00:38:43,950 --> 00:38:44,950
+errados, por assim dizer,
+
+595
+00:38:45,950 --> 00:38:46,950
+estamos a tentar monitorizar
+
+596
+00:38:47,950 --> 00:38:48,950
+para ver algo
+
+597
+00:38:49,950 --> 00:38:50,950
+e temos umas determinadas entradas.
+
+598
+00:38:51,950 --> 00:38:52,950
+Se essas entradas começarem a variar,
+
+599
+00:38:52,950 --> 00:38:53,950
+estamos a ser errados, certo?
+
+600
+00:38:54,950 --> 00:38:55,950
+E esse é o data drift.
+
+601
+00:38:56,950 --> 00:38:57,950
+Temos que ter menos duas variáveis.
+
+602
+00:38:58,950 --> 00:38:59,950
+Uma X e uma Y.
+
+603
+00:39:01,950 --> 00:39:02,950
+Ok.
+
+604
+00:39:03,950 --> 00:39:04,950
+Temos que estar a monitorizar as datas.
+
+605
+00:39:05,950 --> 00:39:06,950
+Se a alterar só o X
+
+606
+00:39:07,950 --> 00:39:08,950
+e os Y se mantiverem,
+
+607
+00:39:09,950 --> 00:39:10,950
+temos data drift.
+
+608
+00:39:12,950 --> 00:39:14,950
+Se as gamas do X se mantiverem
+
+609
+00:39:15,950 --> 00:39:16,950
+e os correspondentes Y variáveis,
+
+610
+00:39:17,950 --> 00:39:19,950
+temos um concept drift.
+
+611
+00:39:20,950 --> 00:39:21,950
+Isso é que é a deriva do conceito.
+
+612
+00:39:22,950 --> 00:39:23,950
+Quando está a fazer confusão,
+
+613
+00:39:24,950 --> 00:39:25,950
+não estou a perceber,
+
+614
+00:39:26,950 --> 00:39:27,950
+ou seja, aqui no exemplo na minha cabeça,
+
+615
+00:39:30,550 --> 00:39:31,550
+o que é que pode ser o X e o Y?
+
+616
+00:39:32,550 --> 00:39:33,550
+Ok.
+
+617
+00:39:34,550 --> 00:39:35,550
+O pessoal consegue dar um exemplo,
+
+618
+00:39:36,550 --> 00:39:37,550
+ou seja, mais plático, não é?
+
+619
+00:39:38,550 --> 00:39:39,550
+Era a termos...
+
+620
+00:39:40,550 --> 00:39:41,550
+O sensor, por acaso, não resultou muito bem.
+
+621
+00:39:42,550 --> 00:39:43,550
+É termos, literalmente, um processo
+
+622
+00:39:44,550 --> 00:39:45,550
+em que, por exemplo, o X pode ser uma temperatura
+
+623
+00:39:46,550 --> 00:39:47,550
+e o Y pode ser um efeito qualquer da temperatura
+
+624
+00:39:48,550 --> 00:39:49,550
+numa máquina.
+
+625
+00:39:50,550 --> 00:39:51,550
+Eu, por acaso, usava o sensor da temperatura
+
+626
+00:39:52,550 --> 00:39:53,550
+e não estava a resultar bem.
+
+627
+00:39:54,550 --> 00:39:55,550
+É ser uma variável qualquer de entrada,
+
+628
+00:39:56,550 --> 00:39:57,550
+uma temperatura, uma pressão, o que for?
+
+629
+00:39:58,550 --> 00:39:59,550
+Pensando numa máquina.
+
+630
+00:40:00,550 --> 00:40:01,550
+E o Y é uma consequência qualquer disso.
+
+631
+00:40:02,550 --> 00:40:04,550
+Sei lá, vamos imaginar um tanque metálico.
+
+632
+00:40:05,550 --> 00:40:08,550
+Vamos imaginar o X ser uma variável
+
+633
+00:40:09,550 --> 00:40:10,550
+a pressão dentro desse tanque.
+
+634
+00:40:11,550 --> 00:40:12,550
+E vamos ser o Y,
+
+635
+00:40:13,550 --> 00:40:15,550
+temos um extensómetro na pareda daquilo,
+
+636
+00:40:16,550 --> 00:40:18,550
+até dar uma microbeflexão que aquilo faz.
+
+637
+00:40:20,550 --> 00:40:21,550
+Se nós tivemos uma alteração
+
+638
+00:40:22,550 --> 00:40:23,550
+nas gamas do X,
+
+639
+00:40:24,550 --> 00:40:25,550
+apenas,
+
+640
+00:40:26,550 --> 00:40:27,550
+o que nós temos é um data drift.
+
+641
+00:40:28,550 --> 00:40:29,550
+Ou seja, nós estávamos a ter
+
+642
+00:40:30,550 --> 00:40:33,550
+o modelo foi treinado dentro ali de uma gama de valores muito
+
+643
+00:40:34,550 --> 00:40:35,550
+estável, e era aquilo.
+
+644
+00:40:36,550 --> 00:40:37,550
+E de repente, começamos a ter
+
+645
+00:40:38,550 --> 00:40:39,550
+pressões completamente fora das gamas
+
+646
+00:40:40,550 --> 00:40:41,550
+para as quais o modelo foi treinado.
+
+647
+00:40:42,550 --> 00:40:43,550
+Isso é um data drift.
+
+648
+00:40:44,550 --> 00:40:45,550
+Ou seja, o modelo vai passar a operar
+
+649
+00:40:46,550 --> 00:40:47,550
+em valores de entrada completamente diferentes
+
+650
+00:40:48,550 --> 00:40:49,550
+e, provisivelmente, ele vai produzir
+
+651
+00:40:50,550 --> 00:40:51,550
+valores de Y completamente diferentes.
+
+652
+00:40:52,550 --> 00:40:53,550
+Certo?
+
+653
+00:40:54,550 --> 00:40:55,550
+A alteração que houve
+
+654
+00:40:56,550 --> 00:40:58,550
+não afeta ali aquilo.
+
+655
+00:40:59,550 --> 00:41:00,550
+Um conceito de drift
+
+656
+00:41:01,550 --> 00:41:02,550
+é, por exemplo,
+
+657
+00:41:03,550 --> 00:41:06,550
+vocês terem um dado cilindro
+
+658
+00:41:07,550 --> 00:41:08,550
+que estão a monitorizar
+
+659
+00:41:09,550 --> 00:41:11,550
+e, de repente, mudam para o outro cilindro,
+
+660
+00:41:12,550 --> 00:41:13,550
+mantém as pressões da entrada,
+
+661
+00:41:15,550 --> 00:41:16,550
+os X são os mesmos,
+
+662
+00:41:17,550 --> 00:41:18,550
+mas, por exemplo,
+
+663
+00:41:19,550 --> 00:41:20,550
+a defleção que ele mede na saída
+
+664
+00:41:21,550 --> 00:41:22,550
+é completamente diferente.
+
+665
+00:41:22,550 --> 00:41:23,550
+O sistema vai,
+
+666
+00:41:24,550 --> 00:41:25,550
+passa-se, porque, basicamente,
+
+667
+00:41:26,550 --> 00:41:28,550
+ele está à espera para cada zonas de X,
+
+668
+00:41:29,550 --> 00:41:30,550
+que as respostas sejam umas
+
+669
+00:41:31,550 --> 00:41:32,550
+e passam a ser outras.
+
+670
+00:41:34,900 --> 00:41:35,900
+Não sei se este exemplo
+
+671
+00:41:36,900 --> 00:41:37,900
+torna isto um bocadinho mais grande.
+
+672
+00:41:38,900 --> 00:41:39,900
+E essa agora é o conceito de drift?
+
+673
+00:41:40,900 --> 00:41:41,900
+Este é o conceito de drift.
+
+674
+00:41:42,900 --> 00:41:45,900
+Mas antes tinha o data set shift,
+
+675
+00:41:46,900 --> 00:41:47,900
+que é a sua.
+
+676
+00:41:48,900 --> 00:41:49,900
+O data...
+
+677
+00:41:50,900 --> 00:41:51,900
+Isto são os mesmos que ele arrasou.
+
+678
+00:41:51,900 --> 00:41:53,900
+Não, mas fazem bem problema.
+
+679
+00:41:54,900 --> 00:41:55,900
+Data...
+
+680
+00:41:56,900 --> 00:41:58,900
+O data drift tem intuitivamente, ok,
+
+681
+00:41:59,900 --> 00:42:01,900
+o data set shift é que eu não consigo perceber.
+
+682
+00:42:02,900 --> 00:42:03,900
+O data set shift,
+
+683
+00:42:04,900 --> 00:42:05,900
+eu posso poder abrir aqui o paper,
+
+684
+00:42:06,900 --> 00:42:07,900
+mas o data set shift
+
+685
+00:42:08,900 --> 00:42:09,900
+é essencialmente o conceito de drift,
+
+686
+00:42:10,900 --> 00:42:11,900
+certeza.
+
+687
+00:42:12,900 --> 00:42:13,900
+É o conceito de drift.
+
+688
+00:42:14,900 --> 00:42:15,900
+Se sentirem mais confortáveis,
+
+689
+00:42:16,900 --> 00:42:18,900
+eu posso editar e por aqui conceito de drift.
+
+690
+00:42:18,900 --> 00:42:21,900
+Não costa nada,
+
+691
+00:42:22,900 --> 00:42:23,900
+faça aqui, por que não costa nada.
+
+692
+00:42:24,900 --> 00:42:25,900
+Ok, mas podemos assumir que é o conceito de drift, né?
+
+693
+00:42:26,900 --> 00:42:27,900
+Sim, claro.
+
+694
+00:42:28,900 --> 00:42:30,900
+Basicamente é o drift da variável de saída, não é?
+
+695
+00:42:31,900 --> 00:42:32,900
+Isso é.
+
+696
+00:42:33,900 --> 00:42:34,900
+Depois, como nós meio que somos realimentados
+
+697
+00:42:35,900 --> 00:42:36,900
+pela saída,
+
+698
+00:42:37,900 --> 00:42:38,900
+vai fazer aquilo perder-se tudo.
+
+699
+00:42:40,900 --> 00:42:42,900
+É no anterior, é neste aqui, não é?
+
+700
+00:42:45,880 --> 00:42:46,880
+Acho que era no segundo seleito, acho.
+
+701
+00:42:47,880 --> 00:42:48,880
+Aqui neste, aqui neste.
+
+702
+00:42:48,880 --> 00:42:50,880
+Ah, o conceito de drift.
+
+703
+00:42:58,860 --> 00:43:04,960
+Ah, deixa-me-me já agora confirmar aqui uma coisa
+
+704
+00:43:05,960 --> 00:43:06,960
+para eu ter certeza, mas não é, certeza.
+
+705
+00:43:07,960 --> 00:43:11,530
+Também não espero de nada em certificar-me,
+
+706
+00:43:12,530 --> 00:43:31,850
+é isso, é o, é o, é o coisa.
+
+707
+00:43:32,850 --> 00:43:33,850
+Eu abrir aqui o topro,
+
+708
+00:43:34,850 --> 00:43:35,850
+é isto, é o conceito de drift.
+
+709
+00:43:36,850 --> 00:43:37,850
+Mas vamos deixar estar que é o que é,
+
+710
+00:43:38,850 --> 00:43:41,850
+mas é isto, é o conceito de drift.
+
+711
+00:43:42,850 --> 00:43:44,850
+Pronto, voltando aqui à questão,
+
+712
+00:43:44,850 --> 00:43:51,290
+questão. Eu estava a explicar por aqui, não é? Isto já foi o que eu falei da outra
+
+713
+00:43:51,290 --> 00:43:56,130
+vez, na outra aula, indiretamente, não pus estas imagens que eu acho que ficam mais
+
+714
+00:43:56,130 --> 00:44:02,490
+interessantes para eu explicar. E isto vem aqui à nossa aula, por causa da detecção
+
+715
+00:44:02,490 --> 00:44:08,650
+e dos métodos de detecção. A gente só voltou atrás para mostrar uma coisinha. Isto aqui
+
+716
+00:44:08,650 --> 00:44:21,490
+já estava na greve seminal para o artigo e tal. Este aqui fala de coisas que o professor
+
+717
+00:44:21,490 --> 00:44:30,290
+Tiago os falou que são interessantes. Esta questão do P95, das latências, isto tem
+
+718
+00:44:30,290 --> 00:44:37,130
+a ver com a monitorização, portanto, dos tempos de discussão. Se vocês começam a
+
+719
+00:44:37,130 --> 00:44:43,010
+esticar muito e a ter muitos atras em latência, é um bom indicador que algo está a passar,
+
+720
+00:44:43,010 --> 00:44:49,130
+que ele está a ter dificuldades e, portanto, este pode, perfeitamente, ser um indicador
+
+721
+00:44:49,130 --> 00:44:53,890
+de que há problemas. A utilização de memória também fizeram um trabalho sobre isso. E
+
+722
+00:44:53,890 --> 00:45:00,970
+havia, por acaso, acho que nunca aconteceu neste trabalho, mas o overtake de memória
+
+723
+00:45:00,970 --> 00:45:07,250
+pela... no single board computer também é um bom indicador, podemos estar a ter problemas.
+
+724
+00:45:07,250 --> 00:45:14,650
+É assim, nós nem sempre vamos ter... nós não vamos ter uma visa dizer, olha, o modelo
+
+725
+00:45:14,650 --> 00:45:21,050
+passou-se. Portanto, nós temos que ter indicadores dicas que algo se passa. Portanto, era a memória,
+
+726
+00:45:21,050 --> 00:45:25,410
+era o espaço em disco, mas o espaço em disco também é uma coisa que é possível acontecer.
+
+727
+00:45:25,410 --> 00:45:32,730
+Era a memória, era a temperatura, o... a temperatura e o... o termo alfrófrim, que normalmente se faz
+
+728
+00:45:32,730 --> 00:45:37,650
+a partir da temperatura. E outra coisa que eu não sei se falamos em alguma... em alguma
+
+729
+00:45:37,650 --> 00:45:44,290
+das aulas, a monitorização da tensão da alimentação. Já... já tinha sido visto em alguma aula.
+
+730
+00:45:44,290 --> 00:45:53,390
+Eu acho que alguém tinha falado de tensão, mas era para estabelecer as linhas do IdoEXC.
+
+731
+00:45:54,350 --> 00:46:00,590
+É, é a mesma coisa. Tem que se monitorizar este teste, porque é essencialmente quando temos
+
+732
+00:46:00,590 --> 00:46:09,630
+dispositivos alimentares da bateria. Pronto, se o dispositivo for bem feito, tem uma bateria
+
+733
+00:46:09,630 --> 00:46:14,430
+com uma margem suficiente para depois ter um regulador de tensão, e o próprio sistema
+
+734
+00:46:14,430 --> 00:46:20,590
+da alimentação deve ter uma comunicação a alguns ou microcontrollador ou microprocedor,
+
+735
+00:46:20,670 --> 00:46:27,310
+indicando o Lovetri, ou seja, fazendo essa indicação. Isso até deve ser feito com uma certa margem
+
+736
+00:46:27,310 --> 00:46:34,430
+para dar... para fazer um... um chatão organizado. Isso, sendo eu a área de eleprónica, acho que era o que
+
+737
+00:46:34,430 --> 00:46:41,230
+se deve fazer. É ser sinalizado e até a tempo de, por exemplo, pedir uma intervenção, a
+
+738
+00:46:41,230 --> 00:46:49,310
+substituição da bateria ou a recarga, antes que aquilo ente em alucinação no sentido de quando
+
+739
+00:46:49,310 --> 00:46:53,710
+as tensões vão abaixo de um determinado trecho ou dos dispositivos correm a riscos de começar a
+
+740
+00:46:53,710 --> 00:47:00,830
+funcionar mal. Isso ser totalmente organizado. É o equivalente a um computador com uma OPS,
+
+741
+00:47:00,830 --> 00:47:06,110
+quando falha a eletricidade. Muitas vezes o OPS não é para se soster à operação contínua do
+
+742
+00:47:06,110 --> 00:47:11,470
+computador, mas é para permitir que seja feito um shutdown de forma estruturada e organizada,
+
+743
+00:47:11,470 --> 00:47:16,510
+ou seja, seja tudo gravado, tudo posto na base de dados, todos os serviços salvaguardados,
+
+744
+00:47:16,510 --> 00:47:22,030
+os sistemas colocados todos em modos estáveis e depois há um chatão devidamente organizado
+
+745
+00:47:22,030 --> 00:47:28,670
+e sinalizar a situação e desliga. É um bocadinho isso que acontece. Eu acho que hoje em dia,
+
+746
+00:47:28,670 --> 00:47:35,550
+não sei, vocês podem falar das empresas onde trabalham, onde colaboram. Às vezes já há um
+
+747
+00:47:35,550 --> 00:47:39,630
+bocadinho a cena de manter os computadores a funcionar, mas não era inicialmente isso.
+
+748
+00:47:39,710 --> 00:47:47,950
+Era, essencialmente, garantir uma operação estruturada e sem quebras abruptas. Tira-nos
+
+749
+00:47:47,950 --> 00:47:52,110
+como utilizadores que se ligamos com nosso computador funcionado a força e, típicamente,
+
+750
+00:47:52,110 --> 00:47:54,990
+aquilo corre bem, que é o melhor, o bom lado e o pior, o burroro.
+
+751
+00:47:56,510 --> 00:48:03,150
+Tém, relativamente, diga-me. Estou aqui com o bom que ele voltava. No outro slide,
+
+752
+00:48:04,430 --> 00:48:08,830
+estas questões já é mais para monitorizar se os nossos sensores estão bem, porque se nós
+
+753
+00:48:08,830 --> 00:48:14,350
+tivermos a correr... Isto também é uma pergunta, estou a dizer o que estou a ver. Se nós tivermos
+
+754
+00:48:14,350 --> 00:48:21,470
+a correr uma neural network, qualquer classificação vai te levar ao mesmo tempo de computação,
+
+755
+00:48:21,470 --> 00:48:31,070
+certo? Ou estou errado? Densabuê dos neurones, há assim alguma... Qual é a variações, mas,
+
+756
+00:48:31,070 --> 00:48:35,550
+títicamente, como é a quantidade de parâmetros é mais ou menos fixa, passa por todas as camadas,
+
+757
+00:48:36,190 --> 00:48:43,070
+tendo a haver alguma estabilidade, sim. Depois, ou seja, lá está, por isso, eu imagino que só
+
+758
+00:48:43,070 --> 00:48:51,550
+ver-se permultrotlink teria de ser por outras razões que não o meu modelo está a ser afetado,
+
+759
+00:48:51,550 --> 00:48:57,230
+não é? Ou seja, mesmo hardware, só. Nós falamos disso no avião de sábado,
+
+760
+00:48:58,430 --> 00:49:03,870
+eram dos comentários que lá tinha, é que há dificuldade às vezes em tomar essa...
+
+761
+00:49:03,870 --> 00:49:08,510
+Por exemplo, este que está a dar é um bom exemplo. Nós fazemos isso, ou seja, nós esperamos
+
+762
+00:49:08,510 --> 00:49:17,710
+uma operação relativamente regular dentro de uma certa média, com um certo desvio padrão,
+
+763
+00:49:18,350 --> 00:49:22,750
+e mais ou menos, por exemplo, pegando no tempo de inferência que foi o exemplo que deu, nós
+
+764
+00:49:22,750 --> 00:49:27,150
+vamos contar que aquilo dá a cima média, mais ou menos um desvio padrão, ou dois desvios padrões,
+
+765
+00:49:27,150 --> 00:49:32,350
+se quisermos dar a cima mais, é maior, e basicamente nós podemos pôr como guardrails,
+
+766
+00:49:32,510 --> 00:49:37,150
+ele tem que trabalhar dentro daquela intervalo, ele para baixo não irá muito, para cima é que
+
+767
+00:49:37,150 --> 00:49:42,270
+poderá em casos de atraso, mas vamos ali. Ok, dentro destas linhas de comboio, ele tem que bater
+
+768
+00:49:42,270 --> 00:49:48,590
+dentro deste intervalo. Se ele sair, usamos isso como um indicador, mas como está a dizer, é verdade,
+
+769
+00:49:48,590 --> 00:49:53,950
+nós nunca sabemos se isto acontece porque foi o nosso modelo que teve um problema, ou provavelmente
+
+770
+00:49:53,950 --> 00:49:58,990
+se entrou um qualquer outro processo no single board computer e que nos está a prejudicar,
+
+771
+00:49:59,070 --> 00:50:04,750
+em todo caso, quando a latência aumenta significativamente, é algo que devemos dar atenção,
+
+772
+00:50:04,750 --> 00:50:10,030
+ou seja, e devemos perceber o que está a acontecer no nosso computador, porque para todos os efeitos,
+
+773
+00:50:10,030 --> 00:50:15,470
+a capacidade de inferência em termos de requisitos temporais já está comprometida,
+
+774
+00:50:16,670 --> 00:50:23,070
+e portanto, pronto, este é um indicador que faz sentido, outro o thermal throttling,
+
+775
+00:50:23,790 --> 00:50:30,350
+também, pronto, pode acontecer por outras coisas, pode não ser o nosso modelo,
+
+776
+00:50:30,350 --> 00:50:36,030
+vamos que no Raspberry Pi, nós esquecemos de desligar um qualquer serviço, e um dia há um
+
+777
+00:50:36,030 --> 00:50:40,910
+apedeito ao serviço, há uma coisa qualquer, e calha daqueles ser uma cena extremamente pesada,
+
+778
+00:50:40,910 --> 00:50:46,190
+o nosso dispositivo está a fazer inferência e de repente começava a agradar a performance
+
+779
+00:50:46,190 --> 00:50:52,030
+brutalmente, nós podemos achar que até é uma questão de porque aqueceu muito, e é porque há um
+
+780
+00:50:52,030 --> 00:50:58,990
+tempo que qualquer quebra em ação e não temos uma restrição à quantidade de recursos que ele
+
+781
+00:50:58,990 --> 00:51:04,510
+pode utilizar, que é outra coisa que se faz na computação, mas atualmente não se liga tanto a
+
+782
+00:51:04,510 --> 00:51:09,550
+isso, mas nos sistemas operativos temporarial isso era possível de fazer, uma coisa que se faz
+
+783
+00:51:09,550 --> 00:51:14,990
+às vezes nestes nós é em inferência não haver nenhum tipo de update, nem mudanças de nada,
+
+784
+00:51:14,990 --> 00:51:20,110
+os firmueiros podem ser atualizados, mas esse processo pode ser expolutado sempre para um humano,
+
+785
+00:51:20,110 --> 00:51:25,150
+que é para evitar, precisamente que isso aconteça em tempos de inferência e que cria
+
+786
+00:51:25,150 --> 00:51:31,390
+problemas, nós temos aí um slide à frente que fala de update afirmueiros, e por exemplo eu
+
+787
+00:51:31,390 --> 00:51:38,030
+trabalhei em uma empresa que era FASEC, não existe, e isso era uma coisa que fazíamos nos controlos
+
+788
+00:51:38,030 --> 00:51:43,070
+de máquinas, nós tínhamos isso em sinal de uma zona de automação, uma zona de informática e uma
+
+789
+00:51:43,070 --> 00:51:48,270
+zona de projeto mecânico, e em informática tenhamos como todos os bloqueados, nós trabalhámos com
+
+790
+00:51:48,350 --> 00:51:54,830
+um operativo que era o Unix e também com Windows, e os updates estavam todos desligadinhos, e na
+
+791
+00:51:54,830 --> 00:52:02,350
+altura os updates eram feitos por desquetes e por CVS, na altura nem apenas havia, não havia
+
+792
+00:52:02,350 --> 00:52:11,230
+internet, mas havia VBS, ou seja nós já tínhamos as nossas instalações ligadas por VBS, ou seja
+
+793
+00:52:11,230 --> 00:52:18,190
+por uma espécie de internet a redes privadas, diretamente a FASEC, mas tinha uma coisa boa,
+
+794
+00:52:18,270 --> 00:52:25,470
+os computadores que faziam o controlo das atualizações dos firmware, dessas instalações nunca
+
+795
+00:52:25,470 --> 00:52:30,030
+estavam ligadas a internet, porque nós tínhamos medo que houvessem filgrações de ir aos nossos
+
+796
+00:52:30,030 --> 00:52:34,430
+computadores, e tínhamos lá uma estreia do quadro de computadores, onde os nossos técnicos
+
+797
+00:52:34,430 --> 00:52:40,190
+engenheiros faziam as mantensões, mas nunca estavam ligados, está bem? Hoje em dia, em termos
+
+798
+00:52:40,190 --> 00:52:43,150
+de severos seguranças, ou que vocês tiveram uma cadeira de severos seguranças que posta o
+
+799
+00:52:43,150 --> 00:52:50,750
+queira, a cena é muito mais bruta, porque vocês hoje temos tudo ligado à internet,
+
+800
+00:52:50,750 --> 00:52:57,230
+e temos que ter todas aquelas políticas que eles falou, como imenso cuidado, controlo dos
+
+801
+00:52:57,230 --> 00:53:04,430
+logos, uma firewall com proteção ativa, e tem que ser monitorizado sempre para evitar-nos,
+
+802
+00:53:04,430 --> 00:53:11,230
+porque isto é, agora que caímos um bocado na indústria e na internet das coisas, está
+
+803
+00:53:11,310 --> 00:53:16,510
+ligado à internet, enquanto a severos seguranças hoje é uma cena super importante, porque se
+
+804
+00:53:16,510 --> 00:53:24,350
+assim não for, vamos, esqueçam, é tudo coisa, e ainda assim eu tenho uma teoria. Isto, a severos
+
+805
+00:53:24,350 --> 00:53:32,750
+seguranças é muito relativo, porque, como eu já disse em uma aula anterior, eu acho que
+
+806
+00:53:32,750 --> 00:53:38,430
+a severos seguranças informática é sempre um bem relativo, ou seja, para nós utilizadores
+
+807
+00:53:38,670 --> 00:53:43,790
+estamos duros, controlamos uns aos outros, mas a níveis superiores é preciso muito cuidar,
+
+808
+00:53:43,790 --> 00:53:51,230
+que as coisas não são assim. Pronto, como todos ligados à internet é preciso muito cuidar,
+
+809
+00:53:51,230 --> 00:53:58,430
+muita monitorização ativa, administradores de sistemas extremamente cautelosos, porque eu
+
+810
+00:53:58,430 --> 00:54:03,950
+dava um exemplo com o nosso coordenador, personal Miguel Pinho, era das poucas pessoas que eu conheci
+
+811
+00:54:03,950 --> 00:54:11,150
+na minha vida, que tinha cuidado de inspecionar as firewalls com muita regularidade, e é uma coisa,
+
+812
+00:54:11,150 --> 00:54:16,830
+por exemplo, eu não faço, não tenho a sábio, nada vez por outra posso olhar, mas não tenho a
+
+813
+00:54:16,830 --> 00:54:21,150
+sábio, lembro-me que era uma coisa que quando já trabalhamos há muitos anos, ele fazia com
+
+814
+00:54:21,150 --> 00:54:25,710
+uma regularidade, lembro que inspecionava, olhava para aquilo um bocado, estava a ver, e é um hábito
+
+815
+00:54:25,710 --> 00:54:32,190
+incrível de segurança, vermos que tipo de, que tráfica é que nos chega, se há lhe tendências,
+
+816
+00:54:32,190 --> 00:54:36,110
+se não há, pronto, o que é que nós podemos fazer hoje? Dado que não temos este hábito,
+
+817
+00:54:36,110 --> 00:54:41,550
+podemos adquirir firewalls com controles por inteligência artificial, que são treinados
+
+818
+00:54:41,550 --> 00:54:48,430
+precisamente para até estar padrões de ataques significativos, e as próprias firewalls ignoram
+
+819
+00:54:48,430 --> 00:54:53,630
+tudo, que não é relevante, quase como se fizessem clusters de tráfico, e quando há
+
+820
+00:54:54,510 --> 00:55:00,750
+conjuntos de tráfico combinados, podem configurar uma espécie de um ataque, ele avisa-nos e pode-nos
+
+821
+00:55:00,750 --> 00:55:07,150
+dizer, ok, mas eu já estou a derivar muito, era falar disso, o aluno que me colocou a dúvida,
+
+822
+00:55:07,150 --> 00:55:15,310
+eu respondi à sua dúvida. Sim, sim, obrigada. Bom, vocês me interrompam sempre, porque eu também
+
+823
+00:55:15,310 --> 00:55:21,150
+sou distraído e ando com muita coisa na cabeça, agrade-se, pode-me passar, e, bom, é fazer-me
+
+824
+00:55:21,150 --> 00:55:27,550
+chamar a atenção. Latent spikes, e por um pouco de drops, without code changes, pronto, era o que
+
+825
+00:55:27,630 --> 00:55:32,430
+eu vos falei, não é? Podemos ter isto. Isto aqui, gente, isto foi só um dashboard gerado aqui no
+
+826
+00:55:32,430 --> 00:55:37,470
+Gemini, para ver um bocadinho, vocês viram que na prática nós nem acostumamos a trabalhar muito
+
+827
+00:55:37,470 --> 00:55:45,470
+assim, temos mais estas monitorizações, no Linux teremos mais, há umas aplicações do Linux
+
+828
+00:55:45,470 --> 00:55:50,590
+que são interessantes, que permitem fazer esta monitorização até no terminal, e aquilo até fica
+
+829
+00:55:50,590 --> 00:56:00,110
+bem bonito. Tenho ali uma espécie de dashboard de modo texto, com os terminais em cores até fica bem
+
+830
+00:56:00,110 --> 00:56:05,470
+interessante. Bom, eu posto isto aqui, mas isto mostrará propriamente a realidade. Quer dizer,
+
+831
+00:56:05,470 --> 00:56:09,950
+será num projeto em que temos um bocadinho mais de capacidade financeira e podemos fazer isto.
+
+832
+00:56:10,510 --> 00:56:16,750
+Novamente, voltando a dar o exemplo de Fasec, já me trabalho lá há 26 anos, mas tenho alunos
+
+833
+00:56:16,830 --> 00:56:21,710
+que trabalham lá e eles já fazem isto, Power BI's e outras coisas, e vão buscar este tipo de
+
+834
+00:56:21,710 --> 00:56:29,150
+coisas, e é super difícil ter salas de operação e controlo, e ter lá estas coisas todas
+
+835
+00:56:31,630 --> 00:56:37,550
+para fazer esta monitorização. Pronto, acho que aqui está, não vale a pena assintarmos aqui,
+
+836
+00:56:37,550 --> 00:56:43,790
+porque acho que aqui já mais ou menos está. Aqui era o concept drift, o data drift e o concept
+
+837
+00:56:43,790 --> 00:56:49,550
+drift, o que é importante, perceberem aqui há um bocado, o que colocaram numa dúvida super
+
+838
+00:56:49,550 --> 00:57:01,470
+importante aqui, data drift, shift, input, distribution, pdx, ou seja, reparem, se pegamos,
+
+839
+00:57:01,470 --> 00:57:07,540
+por exemplo, nestas duas questões que estão aqui, não conseguem ver o meu rato, ou não, ou conseguem
+
+840
+00:57:07,620 --> 00:57:14,900
+ver o rato. Não seguem, não conseguem, não precisam por um ponteiro. Imagine que tínhamos uma
+
+841
+00:57:14,900 --> 00:57:19,940
+distribuição que seria esta, e de repente os dados da entrada começam a seguir outra distribuição
+
+842
+00:57:19,940 --> 00:57:26,340
+que é esta aqui. Pronto, isto é um shift no x, ou seja, o conjunto das amostras tinha uma certa
+
+843
+00:57:26,340 --> 00:57:33,620
+distribuição e começam a deslocar-se, e aí nós vamos ter obviamente alterações nas classificações.
+
+844
+00:57:35,840 --> 00:57:43,920
+Um outro é diferente, é o x y terem diferentes, e que vem, que é facilmente visto, não é mais
+
+845
+00:57:43,920 --> 00:57:50,000
+facilmente visto, foi mais em assistir, porque faz o x y e bom, está aqui dois diferentes.
+
+846
+00:57:51,200 --> 00:57:57,280
+Pronto, o que é que temos aqui? Aliás, aqui até é diferente, eu estava olhando só para estes dois,
+
+847
+00:57:57,280 --> 00:58:02,560
+porque é o exemplo básico de orangeia, aqui tem uma coisa, imagine o conjunto de testes,
+
+848
+00:58:02,560 --> 00:58:08,480
+este era este baseline, nós tínhamos aqui a média dos dados e este desbio padrão, e vocês,
+
+849
+00:58:08,480 --> 00:58:16,000
+por exemplo, tenham este territo no x, e a nova média saltava para aqui, portanto, há aqui várias
+
+850
+00:58:16,000 --> 00:58:22,720
+coisas, há um shift de média, pode haver um shift até no desbio padrão, isto pode aumentar ou diminuir
+
+851
+00:58:22,720 --> 00:58:29,840
+isto, e a própria formato da curva pode alterar, é o que ela aqui está a mostrar. Vocês podem ver
+
+852
+00:58:29,840 --> 00:58:38,240
+que isto está interessante, eu pensava que isto estava no exemplo, estava na compactagem.
+
+853
+00:58:38,240 --> 00:58:48,240
+Pronto, e é isto? Depois, esta questão do x, y dados x, y dados x, basicamente é de ver que
+
+854
+00:58:48,240 --> 00:58:58,080
+nós mesmos x passamos a ter y com ligeiras ou significativas, estão diferentes. Agora,
+
+855
+00:58:58,080 --> 00:59:06,640
+para fazer assim, fatiga, um exemplo, fatiga mecânica, alterando o nome of baseline vibration,
+
+856
+00:59:06,640 --> 00:59:14,640
+olha, este é um exemplo muito interessante. Imaginem, acontece com carros, acontece com máquinas,
+
+857
+00:59:14,640 --> 00:59:23,920
+imaginem que temos uma máquina que está a trabalhar, desculpe lá, além de só aqui um intervalo,
+
+858
+00:59:23,920 --> 01:00:07,490
+eu percebi que uma mensagem que me está a preocupar, tem só dois minutos, vou desligar as notificações
+
+859
+01:00:07,490 --> 01:00:25,630
+do WhatsApp, que isto não é nada bom. Pronto, conseguem ouvir-me? Acho que sim, está ali o microfone.
+
+860
+01:00:25,630 --> 01:00:36,160
+Sim. Pronto, complito lá qualquer um, não sei o que, este não é relevante, este é o último, não interessa.
+
+861
+01:00:36,240 --> 01:00:44,240
+Ok, uns supervise a brief and anomaly detection. O que é que, qual é o problema que temos? Nós conseguimos,
+
+862
+01:00:44,240 --> 01:00:51,760
+em computadores normais e em frames ou cloud, conseguimos fazer coisas mais poderosas, mas aqui temos sempre a questão do recurso.
+
+863
+01:00:51,760 --> 01:01:01,760
+Então, eu pus-vos aqui alguns métodos que são utilizados, que são estes, este call-mogler-off-semeronoff para sinais contínuos,
+
+864
+01:01:01,840 --> 01:01:15,920
+este o call-vac-labler para histogramas ou dados discretos, e depois aquela coisa que já tenhamos falado, auto-off-distribution, tenhamos falado.
+
+865
+01:01:15,920 --> 01:01:24,640
+Pronto, essencialmente o que estamos aqui a falar é detecção de drift, seja ele em data drift, o conceito de drift é isto.
+
+866
+01:01:24,720 --> 01:01:31,200
+Pronto, este é super interessante, o que é que se faz para este, este é um que se usa, se tivemos dados contínuos.
+
+867
+01:01:31,200 --> 01:01:39,440
+Basicamente ele faz a distribuição cumulativa, que é uma distribuição que vai entre 0 e 1, e basicamente diz, com mais depressa,
+
+868
+01:01:39,440 --> 01:01:46,960
+isto vai convergindo até à probabilidade de acontecer sempre ou não acontecer. Aquelas curvas que temos na imagem anterior, isto,
+
+869
+01:01:46,960 --> 01:01:51,840
+são ver ou semelhanças, isto não são probabilidades, são ver ou semelhanças.
+
+870
+01:01:51,840 --> 01:01:56,160
+Isto aqui é que são probabilidades, porque são as somas cumulativas das probabilidades.
+
+871
+01:01:56,160 --> 01:02:01,760
+Isto é uma coisa que normalmente a auto passa na estatística e não vê, e é uma distinção importante.
+
+872
+01:02:01,760 --> 01:02:09,120
+Então essencialmente temos aqui duas amostas diferentes, duas CFDs, que são as tais cumulativas, e ele vai procurar a maior distância,
+
+873
+01:02:09,200 --> 01:02:18,240
+e através dela, portanto, isto basicamente ele faz os dois gráficos, e teta a maior distância, tenho aqui um método de altimização para tetar esta distância,
+
+874
+01:02:18,240 --> 01:02:23,440
+e a partir dela ele fica a saber se temos diferenças significativas entre elas.
+
+875
+01:02:23,440 --> 01:02:33,440
+Reparem, não é nada muito detalhado, não é porque eu podia inclusive ver qual era a semelhança entre as duas curvas,
+
+876
+01:02:33,520 --> 01:02:38,880
+a sua proximidade, ou por exemplo fazer todas as diferenças e fazer uma espécie de método de mínimos quadrados,
+
+877
+01:02:38,880 --> 01:02:45,840
+com determinados tep aqui, e portanto, desta forma conseguia até fazer uma medida muito exata disto, mas lá está.
+
+878
+01:02:45,840 --> 01:02:50,480
+Como temos dispositivos com alguns requisitos temporais, isto é uma forma muito simples,
+
+879
+01:02:50,480 --> 01:02:57,520
+e portanto, teta a maior distância, e a partir da maior distância diz logo se elas são muito próximas ou são muito grande a distância.
+
+880
+01:02:57,760 --> 01:03:04,080
+Se quiserem uma coisa mais evoluída, já, é fazer, por exemplo, esta questão de aplicar uma coisa parecida,
+
+881
+01:03:04,080 --> 01:03:08,080
+eu não sei como é que se chama o método, mas é uma espécie de mínimos quadrados, com determinados tep,
+
+882
+01:03:08,080 --> 01:03:13,520
+e verifique isto tudo, e no fundo, todas as diferenças que existem são somadas de forma positiva,
+
+883
+01:03:13,520 --> 01:03:18,880
+e nós percebemos logo que grandes diferenças existem ou não entre as duas.
+
+884
+01:03:18,880 --> 01:03:24,480
+Deixem-me pensar aqui mais uma coisa, é aqui outro artigo sobre o óbio,
+
+885
+01:03:25,200 --> 01:03:33,120
+e depois aqui o Softmax, eu sempre o pidei, em máximo, probability drops, ok.
+
+886
+01:03:33,120 --> 01:03:37,680
+Isto aqui, eu não tenho nada sobre isto, mas isto também é importante falar-vos.
+
+887
+01:03:37,680 --> 01:03:40,480
+Então, é sim, eu não tenho nenhuma imagem para vos mostrar.
+
+888
+01:03:40,480 --> 01:03:45,040
+O Softmax são aquelas funções da ativação da redes normais,
+
+889
+01:03:45,040 --> 01:03:49,040
+e quando vocês têm classificadores ou modelos baseados em redes normais,
+
+890
+01:03:49,200 --> 01:03:56,800
+a Softmax é uma camada que costuma emitir a sua classificação com base num valor probabilista,
+
+891
+01:03:56,800 --> 01:04:00,000
+uma coisa em 101 ou 100% como quiserem ver.
+
+892
+01:04:00,000 --> 01:04:08,640
+Portanto, quando ele diz que aquilo é uma determinada classe com 99% de certeza, é muita confiança,
+
+893
+01:04:08,640 --> 01:04:14,960
+quando ele diz com 80 é outra confiança, quando ele diz com 50 é outra, quando ele diz com 30 é outro.
+
+894
+01:04:15,040 --> 01:04:20,240
+Reparem que, de um conjunto de classes, ele pode selecionar a maior de todas,
+
+895
+01:04:20,240 --> 01:04:24,960
+e a maior de todas pode ter uma confiança associada de 30 ou 40%.
+
+896
+01:04:24,960 --> 01:04:27,680
+E, portanto, uma coisa que nós podemos fazer dada,
+
+897
+01:04:27,680 --> 01:04:35,920
+que em muitos modelos nós temos esta questão de uma espécie de um grau de confiança associado à classificação,
+
+898
+01:04:35,920 --> 01:04:39,280
+é não só aceitar de segmentas classificações,
+
+899
+01:04:39,280 --> 01:04:43,280
+como também monitorizar os valores das classificações,
+
+900
+01:04:43,280 --> 01:04:48,240
+ver os valores médios da confiança que os modelos têm nessa classificação,
+
+901
+01:04:48,240 --> 01:04:51,440
+e se detectarmos que há uma alteração significativa,
+
+902
+01:04:51,440 --> 01:04:54,480
+e neste caso seria para baixo, porque estaríamos em valores altos,
+
+903
+01:04:54,480 --> 01:04:56,080
+devemos acionar.
+
+904
+01:04:56,080 --> 01:04:58,080
+Pronto, eu não estou a dizer o que devemos fazer,
+
+905
+01:04:58,080 --> 01:05:03,280
+essencialmente estou-vos a falar de mais uma forma de monitorizar problemas.
+
+906
+01:05:03,280 --> 01:05:08,640
+Mássimo probabilista e drops, é a mesma coisa, estamos a fazer isto e a trocurar isto.
+
+907
+01:05:08,640 --> 01:05:11,120
+Pronto, alguma dúvida aqui?
+
+908
+01:05:13,740 --> 01:05:17,260
+Acho que não, se ninguém se manifestou, é isto.
+
+909
+01:05:17,260 --> 01:05:21,340
+Pronto, agora aqui a questão da telemetria.
+
+910
+01:05:21,340 --> 01:05:28,300
+Eu referi-se no início, nós temos essencialmente algumas restrições na largoda de banda,
+
+911
+01:05:28,300 --> 01:05:30,300
+porque os dispositivos já são limitados,
+
+912
+01:05:30,300 --> 01:05:36,300
+e basicamente, se nós quiséssemos não ter esta restrição do dispositivo,
+
+913
+01:05:36,300 --> 01:05:40,300
+e quiséssemos uma forma de fazermos, era mandarmos os dados todos para a clave,
+
+914
+01:05:40,620 --> 01:05:42,300
+e eles eram todos processados,
+
+915
+01:05:42,300 --> 01:05:46,380
+mas reparem que isso era um contrassenso com a abordagem toda do curso,
+
+916
+01:05:46,380 --> 01:05:49,340
+que nós temos em beta, ads, devices.
+
+917
+01:05:49,340 --> 01:05:53,420
+E, portanto, a ideia é nós aproveitarmos essa periferia,
+
+918
+01:05:53,420 --> 01:05:57,740
+para pôrmos dispositivos com capacidade suficiente, para prestarem os dados.
+
+919
+01:05:57,740 --> 01:06:02,940
+Mandar todos os dados, não só ia desglutar muito do recurso do próprio dispositivo,
+
+920
+01:06:02,940 --> 01:06:06,140
+assim como vem da ligação da rede.
+
+921
+01:06:06,140 --> 01:06:10,140
+E, portanto, nós temos essa limitação,
+
+922
+01:06:10,140 --> 01:06:12,140
+que isto foi tudo para introduzir a limitação.
+
+923
+01:06:12,140 --> 01:06:15,100
+Então, o que é que nós podemos fazer para fugir a isto?
+
+924
+01:06:15,100 --> 01:06:18,620
+Este slide não está muito bonito, mas tem aquilo que me parece.
+
+925
+01:06:18,620 --> 01:06:22,300
+Esta questão do Selective Sampling Strategies,
+
+926
+01:06:22,300 --> 01:06:27,100
+ou seja, as estratégias da mostragem selectiva.
+
+927
+01:06:27,100 --> 01:06:32,540
+Uncerted Interior, ou seja, isto é designado o Active Learning,
+
+928
+01:06:32,700 --> 01:06:36,140
+Upload only samples with confidence abaixo de um valor,
+
+929
+01:06:36,140 --> 01:06:38,620
+tem que ir 60% abaixo de um valor.
+
+930
+01:06:38,620 --> 01:06:40,620
+Lá está, era o que eu gostava de dizer há um bocado.
+
+931
+01:06:40,620 --> 01:06:47,100
+Se a confiança baixar, podemos ter um threshold fixo, um hard limit,
+
+932
+01:06:47,100 --> 01:06:49,100
+neste caso está aí este 60%.
+
+933
+01:06:49,100 --> 01:06:52,940
+E, quando isto acontece, nós mandamos essas amostras
+
+934
+01:06:52,940 --> 01:06:55,420
+para serem analisadas por um humano,
+
+935
+01:06:55,420 --> 01:06:58,700
+ou por um algoritmo alternativo, o jurístico mais simples.
+
+936
+01:06:58,780 --> 01:07:03,180
+Lá está, isto é, guard rails, dizemos assim,
+
+937
+01:07:03,180 --> 01:07:06,540
+opa, se isto alterar e sair ali daquela nossa zona
+
+938
+01:07:06,540 --> 01:07:07,980
+que nós achamos que é de confiança,
+
+939
+01:07:07,980 --> 01:07:11,740
+e esta confiança tem a ver com os nossos testes ao dispositivo,
+
+940
+01:07:11,740 --> 01:07:14,620
+com os testes que fazemos em altura de comissionamento,
+
+941
+01:07:14,620 --> 01:07:16,380
+e vemos que isto funciona sempre assim,
+
+942
+01:07:16,380 --> 01:07:18,380
+nesses temas variáveis estão aqui,
+
+943
+01:07:18,380 --> 01:07:21,260
+e as nossas gamas são aqui dentro destas.
+
+944
+01:07:21,260 --> 01:07:23,020
+E, portanto, quando isto acontece,
+
+945
+01:07:23,020 --> 01:07:26,940
+nós pegamos e fazemos a pelo dessas plataformas,
+
+946
+01:07:26,940 --> 01:07:30,140
+ou temos um operador externo, local ou remoto,
+
+947
+01:07:30,140 --> 01:07:31,660
+que vai fazer isto.
+
+948
+01:07:31,660 --> 01:07:34,700
+E a segunda era o audit sampling, isto é um caso diferente,
+
+949
+01:07:34,700 --> 01:07:39,020
+nós não estamos preocupados com a qualidade ou a confiança na amostra,
+
+950
+01:07:39,020 --> 01:07:41,740
+nós literalmente selecionamos uma pequena,
+
+951
+01:07:41,740 --> 01:07:44,860
+uma muito pequena quantidade de dados de uma forma
+
+952
+01:07:44,860 --> 01:07:47,900
+que se pretende que tenha alguma leitoriedade,
+
+953
+01:07:47,900 --> 01:07:49,980
+e fazemos contra o qualidade necessidade,
+
+954
+01:07:49,980 --> 01:07:51,980
+isto também é uma estratégia muito feita.
+
+955
+01:07:51,980 --> 01:07:55,740
+Ou seja, imaginem, 0,1% dos dados
+
+956
+01:07:55,820 --> 01:08:00,460
+são mandados, são enviados pelo Aplink para o serviço central,
+
+957
+01:08:00,460 --> 01:08:04,060
+e depois literalmente, ou temos um algoritmo muito poderoso,
+
+958
+01:08:04,060 --> 01:08:07,420
+lá que faz isso, ou, tipicamente, até tenhamos pessoas.
+
+959
+01:08:07,420 --> 01:08:10,620
+Quando eu trabalhei na indústria, em uma das empresas onde trabalhei,
+
+960
+01:08:10,620 --> 01:08:12,780
+isto era feito, nós mandávamos dados para cima,
+
+961
+01:08:12,780 --> 01:08:15,180
+e havia uma pessoa que perdia meia hora,
+
+962
+01:08:15,180 --> 01:08:18,220
+sei lá, a cada 15 dias ou a cada três semanas,
+
+963
+01:08:18,220 --> 01:08:20,620
+inspecionava tudo, verificava tudo, se tivesse tudo,
+
+964
+01:08:20,620 --> 01:08:22,300
+fazia um cheque e dizia,
+
+965
+01:08:22,300 --> 01:08:25,100
+ok, podemos continuar a confiar, parece que está tudo bem.
+
+966
+01:08:25,500 --> 01:08:29,900
+Cada estratégia tem as vantagens que vocês conseguem perceber, obviamente.
+
+967
+01:08:29,900 --> 01:08:33,100
+Esta é muito simples, não tem monitorização nenhuma,
+
+968
+01:08:33,100 --> 01:08:35,340
+mas pode deixar passar coisas e não se nota.
+
+969
+01:08:35,340 --> 01:08:39,340
+Esta, e ainda assim, estas duas podem não ser suficientes para nada.
+
+970
+01:08:40,460 --> 01:08:45,020
+Outra coisa, Intermediate Embedding Vectors
+
+971
+01:08:45,020 --> 01:08:49,260
+instead of Raw Images Data, está aqui um aluno a chegar,
+
+972
+01:08:49,260 --> 01:08:52,140
+vamos fazer ele entrar, o que é que isto diz?
+
+973
+01:08:52,220 --> 01:08:54,940
+Quando, por exemplo, no Edge temos imagens,
+
+974
+01:08:54,940 --> 01:08:58,140
+transmitir imagens e vídeos, é super tudado.
+
+975
+01:08:58,140 --> 01:09:01,580
+Uma possibilidade é pegar estes embeddings no fundo, são as features.
+
+976
+01:09:01,580 --> 01:09:07,950
+Eu no início falei de que eram features, não falei.
+
+977
+01:09:07,950 --> 01:09:10,030
+Particularmente a imagem.
+
+978
+01:09:10,030 --> 01:09:15,780
+Alguém me sabe explicar o que é que é uma feature, uma imagem.
+
+979
+01:09:17,620 --> 01:09:19,940
+Pronto, então eu vou explicar para todos,
+
+980
+01:09:19,940 --> 01:09:27,170
+eu acho que falei nisto na primeira aula, mas isto também é tanta coisa.
+
+981
+01:09:27,170 --> 01:09:30,770
+Uma feature é essencialmente um descritor,
+
+982
+01:09:30,770 --> 01:09:35,570
+ou seja, imagina, é sempre se puser uma feature,
+
+983
+01:09:35,570 --> 01:09:39,090
+uma bandeira do porto, uma feature é azul.
+
+984
+01:09:39,970 --> 01:09:41,730
+Outra feature é branco.
+
+985
+01:09:41,730 --> 01:09:45,090
+Ou seja, isto é um descritor que é, por exemplo, uma cor dominante.
+
+986
+01:09:45,090 --> 01:09:48,370
+Cor dominante numa bandeira do porto será azul e branco.
+
+987
+01:09:48,370 --> 01:09:50,210
+Se for no BF, que é vermelho e branco.
+
+988
+01:09:52,050 --> 01:09:55,410
+E portanto, esta é uma feature, cor.
+
+989
+01:09:56,210 --> 01:09:58,850
+Pode ser a cor dominante.
+
+990
+01:09:58,930 --> 01:10:02,130
+Pode ser a lista de todas as cores como a imagem tem.
+
+991
+01:10:02,770 --> 01:10:05,810
+Pode ser os histogramas de distribuição de cada cor.
+
+992
+01:10:06,530 --> 01:10:14,210
+Pode ser o histograma da distribuição dos canais RGB, HSV, CILAV.
+
+993
+01:10:15,250 --> 01:10:18,450
+Podem ser, por exemplo, analisarmos a imagem
+
+994
+01:10:19,090 --> 01:10:22,370
+e vermos o tamanho das menchas de cada cor.
+
+995
+01:10:22,370 --> 01:10:26,130
+Podem ser questões de textura, analisar algoritmos,
+
+996
+01:10:26,210 --> 01:10:30,210
+analisar as texturas das imagens, na imagem toda.
+
+997
+01:10:30,210 --> 01:10:35,010
+Método ARALIC, por exemplo, os descritores da ARALIC, ou isto...
+
+998
+01:10:35,010 --> 01:10:38,450
+A gente, este exemplo, atenção, este exemplo de um dos nomes das features,
+
+999
+01:10:38,450 --> 01:10:41,650
+fiquem com eles, mas não se preocupem disto para o texto, ok?
+
+1000
+01:10:41,650 --> 01:10:43,650
+Só gostou de dar um exemplo para vos mostrar.
+
+1001
+01:10:43,650 --> 01:10:45,410
+E para aproveitar, para vos falar de uma coisa,
+
+1002
+01:10:45,410 --> 01:10:47,570
+que depois vai dar aos embeddings, agora dos LLMs,
+
+1003
+01:10:47,570 --> 01:10:52,690
+que vocês vão vir falar fora do contexto desta pós-graduação,
+
+1004
+01:10:52,690 --> 01:10:55,330
+e vão perguntar-vos o que é que são embeddings.
+
+1005
+01:10:55,410 --> 01:10:58,370
+Embeddings são features, são umas features diferentes,
+
+1006
+01:10:58,370 --> 01:11:01,810
+obtidas também para agora, para estes novos modelos,
+
+1007
+01:11:01,810 --> 01:11:04,290
+mas, essencialmente, são features, são descritores dos dados.
+
+1008
+01:11:05,090 --> 01:11:06,850
+Pronto, e o que é que eu quero chegar com isto?
+
+1009
+01:11:07,650 --> 01:11:12,770
+Falei-vos de um conjunto de features, as Swift, as Routras.
+
+1010
+01:11:12,770 --> 01:11:15,970
+Há imensas features robustas, almas do MP4,
+
+1011
+01:11:15,970 --> 01:11:18,690
+que também são incríveis e dão para imagens e vídeos, etc.
+
+1012
+01:11:19,410 --> 01:11:21,010
+Mas as features têm uma coisa interessante.
+
+1013
+01:11:21,650 --> 01:11:25,730
+Por vezes, extrair essas features é como fazer um zip da imagem.
+
+1014
+01:11:25,730 --> 01:11:30,690
+Ou seja, nós deixamos ter a imagem com aqueles centenas ou milhares de pixels,
+
+1015
+01:11:30,690 --> 01:11:35,090
+e passamos a ter um conjunto de 20, 30, 50, 100 descritores que descrevem a imagem.
+
+1016
+01:11:35,650 --> 01:11:38,370
+Ou seja, do ponto de vista da inteligência artificial,
+
+1017
+01:11:38,370 --> 01:11:42,050
+nós temos ali uma descrição da imagem que, para muitos problemas,
+
+1018
+01:11:42,050 --> 01:11:45,090
+é mais do que exata e permite tirar toda a informação
+
+1019
+01:11:45,090 --> 01:11:50,530
+que nós precisamos daquele algoritmo sem termos que ter toda a imagem.
+
+1020
+01:11:50,610 --> 01:11:54,130
+E isso tem muitas vantagens a muitos níveis.
+
+1021
+01:11:54,130 --> 01:11:58,130
+Neste caso, da telemetria e do controle de qualidade,
+
+1022
+01:11:58,130 --> 01:12:02,450
+uma das estratégias é nós temos as imagens, codificá-las,
+
+1023
+01:12:02,450 --> 01:12:04,690
+fazemos o embedding, ou seja, estraímos as features.
+
+1024
+01:12:06,210 --> 01:12:11,010
+E quando queremos fazer a nossa amostragem, o nosso controle de qualidade,
+
+1025
+01:12:11,010 --> 01:12:13,650
+nós transmitimos esses embeddings para lá.
+
+1026
+01:12:13,650 --> 01:12:18,770
+Ou seja, reduzimos às vezes a 90, a 99%, 95, 99%,
+
+1027
+01:12:18,850 --> 01:12:22,130
+a quantidade de dados transmitidos. O que é que isso nos permite?
+
+1028
+01:12:22,130 --> 01:12:26,050
+Permite, muitas vezes, quando temos os temas que têm mais tendência à falha,
+
+1029
+01:12:26,050 --> 01:12:30,370
+aumentarmos o controle de qualidade, pelo menos até começarmos a perceber
+
+1030
+01:12:30,370 --> 01:12:32,530
+onde é que o modelo falha e podemos controlar.
+
+1031
+01:12:32,530 --> 01:12:34,050
+Mas é uma estratégia super interessante.
+
+1032
+01:12:34,770 --> 01:12:39,250
+Já agora nos LLMs, isto é essencial, porque estamos a falar data sets
+
+1033
+01:12:39,250 --> 01:12:41,970
+de teras e teras e teras de informação.
+
+1034
+01:12:41,970 --> 01:12:46,530
+E uma das coisas que se faz é fazer o embedding daquilo,
+
+1035
+01:12:46,530 --> 01:12:49,090
+e depois aquilo é trabalhado com base nos embeddings.
+
+1036
+01:12:49,090 --> 01:12:51,170
+Está bem? Pronto, mas isso não é para cá,
+
+1037
+01:12:51,170 --> 01:12:53,490
+é só para ficarem sabendo. Embeddings são features.
+
+1038
+01:12:55,730 --> 01:12:56,530
+Que study?
+
+1039
+01:12:56,530 --> 01:12:58,930
+Predictivemente não, se não sei o que é da NASA.
+
+1040
+01:12:58,930 --> 01:13:00,930
+Olha, desculpem, eu não fui estudar isto.
+
+1041
+01:13:00,930 --> 01:13:02,770
+Tenho aqui um isíumpo, se quiserem podem.
+
+1042
+01:13:02,770 --> 01:13:07,170
+Eu coloquei-vos aqui referências, portanto links,
+
+1043
+01:13:08,210 --> 01:13:10,770
+que tentei que fossem assim, mais ou menos, homogênios.
+
+1044
+01:13:13,010 --> 01:13:14,690
+Já não é tão complicado que, antigamente,
+
+1045
+01:13:14,690 --> 01:13:17,890
+que agora a gente pode passar e pedir e ele faz isto é incrível.
+
+1046
+01:13:17,890 --> 01:13:21,650
+Só tipo que editar alguns, mas tenho aqui exemplos, se quiserem ver isto.
+
+1047
+01:13:21,650 --> 01:13:22,850
+Depois tem aqui esta imagem,
+
+1048
+01:13:22,850 --> 01:13:28,450
+mas essencialmente é exemplificação de isto que eu estive aqui a falar.
+
+1049
+01:13:28,450 --> 01:13:30,130
+Isto é mais para nos ajudar a estudar.
+
+1050
+01:13:32,610 --> 01:13:36,530
+Pronto, uma coisa super interessante que eu já referi,
+
+1051
+01:13:37,410 --> 01:13:40,290
+isto é por referência gente, nós não vamos fazer nada,
+
+1052
+01:13:40,290 --> 01:13:43,970
+não vamos nada disto, é para ficarem a conhecer.
+
+1053
+01:13:43,970 --> 01:13:47,490
+Outra coisa, em 90% dos sítios onde trabalhar,
+
+1054
+01:13:47,490 --> 01:13:51,570
+bom, podem trabalhar nesta área, não vão ter pessoas a fazer isto.
+
+1055
+01:13:52,930 --> 01:13:55,250
+É importante também dizer-vos para não criar uma expectativa,
+
+1056
+01:13:55,250 --> 01:13:56,930
+porque eu acho que isto usa-se pouco,
+
+1057
+01:13:56,930 --> 01:13:59,330
+pelo menos da minha experiência com empresas,
+
+1058
+01:13:59,330 --> 01:14:02,770
+aquelas empresas como que tenho trabalhado, eu não conheço assim muito.
+
+1059
+01:14:02,770 --> 01:14:05,810
+Acho que o MLflow, o hit, já é bastante utilizado,
+
+1060
+01:14:05,810 --> 01:14:09,730
+está super padronizado na indústria, software.
+
+1061
+01:14:09,730 --> 01:14:13,250
+Este MLflow parece-me que vai pegar forte,
+
+1062
+01:14:13,890 --> 01:14:16,050
+e o DVC vai pegar mais anos de hit certos,
+
+1063
+01:14:16,050 --> 01:14:19,170
+porque isto é uma cena no vermelhance.
+
+1064
+01:14:19,810 --> 01:14:21,330
+Muito bem, qual é a triadre?
+
+1065
+01:14:21,330 --> 01:14:24,610
+O que é que vocês devem pensar se quiserem ter uma política para isto?
+
+1066
+01:14:24,610 --> 01:14:27,650
+Dados, ou seja, data sete, cóbio, convite,
+
+1067
+01:14:27,650 --> 01:14:29,490
+e eu tenho aqui compiler binary,
+
+1068
+01:14:30,050 --> 01:14:33,250
+foi o que saiu, olhei várias vezes para esta coisa e deixei ficar,
+
+1069
+01:14:33,250 --> 01:14:36,930
+mas na realidade esta expressão de compiler binary
+
+1070
+01:14:36,930 --> 01:14:39,730
+são todos artefactos que temos, eu falei há um bocado.
+
+1071
+01:14:41,730 --> 01:14:44,690
+Metaparâmetros, parâmetros, arquiteturas,
+
+1072
+01:14:45,810 --> 01:14:48,610
+todos por nós de treino, toda a evolução de treino,
+
+1073
+01:14:48,610 --> 01:14:51,170
+todas as métricas, épocas, etc.
+
+1074
+01:14:51,170 --> 01:14:55,010
+Ou seja, toda aquela parafermalia de dados que acontecem ao longo do treino,
+
+1075
+01:14:55,570 --> 01:14:57,650
+nós agora temos uma espécie de um contentor
+
+1076
+01:14:57,650 --> 01:14:59,810
+onde podemos guardar isto de uma forma organizada.
+
+1077
+01:15:00,450 --> 01:15:02,930
+E reparem, como no início eu vos mostrei aquele pipeline,
+
+1078
+01:15:02,930 --> 01:15:05,890
+já mostrei no início, nós temos todo aquele pipeline,
+
+1079
+01:15:05,890 --> 01:15:09,010
+estamos sempre a iterar, estamos sempre a estar em fichas,
+
+1080
+01:15:09,010 --> 01:15:11,010
+a treinar o modelo e para fazer o deploy,
+
+1081
+01:15:11,010 --> 01:15:12,770
+depois a fazer o deploy no mundo real.
+
+1082
+01:15:13,330 --> 01:15:15,810
+E depois o mundo real diz que não, ou seja,
+
+1083
+01:15:15,810 --> 01:15:18,770
+até chegámos ao mundo real, já iterámos-lo há quantas vezes.
+
+1084
+01:15:18,770 --> 01:15:20,530
+Entretanto, fomos alterando.
+
+1085
+01:15:20,530 --> 01:15:23,090
+Depois chegámos ao mundo real e deu problema.
+
+1086
+01:15:23,090 --> 01:15:26,210
+E voltámos atrás e voltámos ao mundo real.
+
+1087
+01:15:26,210 --> 01:15:29,250
+E reparem, até aqui nós fazia, eu fiz isto,
+
+1088
+01:15:29,250 --> 01:15:31,090
+apanou o âmbito do meu doutoramento,
+
+1089
+01:15:31,090 --> 01:15:33,970
+eu guardei os dados todos super estruturadinhos,
+
+1090
+01:15:33,970 --> 01:15:35,810
+mas o que eu fazia era snapshots.
+
+1091
+01:15:35,810 --> 01:15:39,890
+Eu, a cada x, tentativas, atingia uma espécie do milestone
+
+1092
+01:15:39,890 --> 01:15:42,530
+e dizia assim, ok, aqui ficou o mesmo bem, isto já ficou melhor.
+
+1093
+01:15:42,530 --> 01:15:43,730
+Então, o que é que eu vou fazer?
+
+1094
+01:15:43,730 --> 01:15:45,650
+Eu pego no diretório e guardo.
+
+1095
+01:15:47,410 --> 01:15:53,010
+No meu caso era um fecheiro Mv, com todos os promenores de treino,
+
+1096
+01:15:53,010 --> 01:15:55,730
+mas atenção, aquele fecheiro Mv não era importável,
+
+1097
+01:15:55,730 --> 01:15:57,250
+no meu caso era matelado na altura,
+
+1098
+01:15:57,250 --> 01:15:58,850
+não era importável no matelado, ou seja,
+
+1099
+01:15:58,850 --> 01:16:01,490
+depois tinha que pegar naquele manualmente interlar
+
+1100
+01:16:01,490 --> 01:16:03,170
+para reproduzir a experiência.
+
+1101
+01:16:03,250 --> 01:16:04,850
+Porque é um princípio científico,
+
+1102
+01:16:04,850 --> 01:16:07,410
+nós podemos reproduzir uma experiência
+
+1103
+01:16:07,410 --> 01:16:08,690
+e fazias isso manualmente.
+
+1104
+01:16:08,690 --> 01:16:10,370
+Agora, temos estas ferramentas.
+
+1105
+01:16:11,010 --> 01:16:11,890
+O que é que eu acho?
+
+1106
+01:16:11,890 --> 01:16:14,050
+Uma parte dos problemas é uma seca
+
+1107
+01:16:14,050 --> 01:16:16,130
+e vai ser chato de fazer isto,
+
+1108
+01:16:16,130 --> 01:16:20,290
+mas a nível de uma empresa compensa apostar nisto,
+
+1109
+01:16:20,290 --> 01:16:21,890
+porque depois de estar automatizado,
+
+1110
+01:16:21,890 --> 01:16:23,890
+vocês estão a fazer a vossa experiência,
+
+1111
+01:16:23,890 --> 01:16:27,730
+alteram o data set, alteram os modelos e tal,
+
+1112
+01:16:27,730 --> 01:16:30,450
+e de repente quase que fazem uma espécie de um commit,
+
+1113
+01:16:30,450 --> 01:16:32,210
+que é uma operação geral de, ok,
+
+1114
+01:16:32,210 --> 01:16:33,890
+marca aí uma cena nova,
+
+1115
+01:16:33,890 --> 01:16:35,730
+e isto praticamente pode ao mesmo tempo
+
+1116
+01:16:35,730 --> 01:16:38,610
+guardar código e dados e artefactos todos,
+
+1117
+01:16:38,610 --> 01:16:40,290
+de uma só vez, está bem?
+
+1118
+01:16:40,290 --> 01:16:41,890
+Já estou exagerando isto.
+
+1119
+01:16:41,890 --> 01:16:44,210
+Então, o data version control,
+
+1120
+01:16:45,570 --> 01:16:46,850
+por acaso agora não sei,
+
+1121
+01:16:46,850 --> 01:16:48,930
+é data version control, o nome deste tipo,
+
+1122
+01:16:49,650 --> 01:16:51,570
+é um gui de paciência de dados,
+
+1123
+01:16:51,570 --> 01:16:53,810
+e essencialmente é para controlar
+
+1124
+01:16:53,810 --> 01:16:56,210
+grandes volumes de dados e modelos de massimulating,
+
+1125
+01:16:56,210 --> 01:16:57,890
+mas é essencialmente pós dados.
+
+1126
+01:16:57,890 --> 01:17:02,690
+Pronto, a nível de, posso postar assim,
+
+1127
+01:17:02,690 --> 01:17:06,690
+só uma dica, armazenamento control de postões de dados,
+
+1128
+01:17:06,690 --> 01:17:08,850
+armazenamento remoto, que é, por exemplo,
+
+1129
+01:17:08,850 --> 01:17:11,730
+para quem faz setoras em cloud,
+
+1130
+01:17:11,730 --> 01:17:12,930
+ter lá os dados todos,
+
+1131
+01:17:12,930 --> 01:17:14,610
+depois também lá está,
+
+1132
+01:17:14,610 --> 01:17:15,970
+as empresas adoram isto,
+
+1133
+01:17:15,970 --> 01:17:18,610
+e estas grandes que fazem os modelos,
+
+1134
+01:17:18,610 --> 01:17:20,770
+como o TensorFlow Lite, o TensorFlow,
+
+1135
+01:17:20,770 --> 01:17:22,050
+e o PyTorch, etc.
+
+1136
+01:17:22,050 --> 01:17:24,290
+Isto é uma pescadinha de rabo na boca,
+
+1137
+01:17:24,290 --> 01:17:26,850
+não é? Porque depois vocês vão inundar
+
+1138
+01:17:26,850 --> 01:17:28,610
+as claves deles, apagar-lhes,
+
+1139
+01:17:28,610 --> 01:17:30,210
+para fazer os setoras dos dados.
+
+1140
+01:17:30,210 --> 01:17:32,130
+Imaginem, a S3 da Amazon,
+
+1141
+01:17:32,850 --> 01:17:35,650
+e a Google tem a mesma coisa,
+
+1142
+01:17:35,650 --> 01:17:37,490
+tem uma série de microbasos de dados
+
+1143
+01:17:37,490 --> 01:17:39,170
+também impecáveis para este tipo de objetos,
+
+1144
+01:17:40,370 --> 01:17:41,890
+e também para isto,
+
+1145
+01:17:41,890 --> 01:17:44,130
+portanto, não é só para microobjetos,
+
+1146
+01:17:44,130 --> 01:17:46,530
+e portanto, isto é uma pescadinha de rabo na boca,
+
+1147
+01:17:46,530 --> 01:17:48,210
+em pouco eles eram estes fecheiros,
+
+1148
+01:17:49,330 --> 01:17:51,010
+e estas possibilidades,
+
+1149
+01:17:51,010 --> 01:17:52,930
+e nós depois alimentamos isto mais.
+
+1150
+01:17:53,650 --> 01:17:56,370
+Há quem diga que nós vivemos um tempo,
+
+1151
+01:17:56,370 --> 01:17:59,490
+e eu estou na outra pós-graduação com uma colega,
+
+1152
+01:17:59,490 --> 01:18:00,770
+ela é muito dessa opinião.
+
+1153
+01:18:02,210 --> 01:18:04,290
+A inteligência artificial está magnífica,
+
+1154
+01:18:04,290 --> 01:18:06,610
+e permite-nos fazer coisas de uma forma muito
+
+1155
+01:18:06,610 --> 01:18:08,450
+ao nível humano, não é que é espetacular,
+
+1156
+01:18:09,010 --> 01:18:11,570
+mas efetivamente nós usamos estas coisas
+
+1157
+01:18:11,570 --> 01:18:15,330
+para fazer soluções que se faziam
+
+1158
+01:18:15,330 --> 01:18:18,450
+numa coisa que fica em 50 megas,
+
+1159
+01:18:19,490 --> 01:18:21,410
+e só que a questão é comodidade.
+
+1160
+01:18:21,410 --> 01:18:23,090
+Pronto, o que é que vai acontecer?
+
+1161
+01:18:23,090 --> 01:18:24,290
+Nós vamos continuar a ter,
+
+1162
+01:18:24,370 --> 01:18:27,410
+e particularmente nos embedded devices,
+
+1163
+01:18:27,410 --> 01:18:28,530
+muita coisa otimizada,
+
+1164
+01:18:28,530 --> 01:18:29,490
+porque é o que nós queremos,
+
+1165
+01:18:29,490 --> 01:18:30,690
+e não temos alternativa,
+
+1166
+01:18:31,250 --> 01:18:34,450
+e onde tivermos liberdade computacional?
+
+1167
+01:18:34,450 --> 01:18:35,810
+Vamos continuar a alusar,
+
+1168
+01:18:36,210 --> 01:18:38,450
+porque a verdade é que eu podia ter feito
+
+1169
+01:18:38,450 --> 01:18:41,330
+a minha tese de alteramento num editor de texto,
+
+1170
+01:18:41,330 --> 01:18:43,330
+e fila no ordem, porque é muito mais fácil,
+
+1171
+01:18:43,970 --> 01:18:46,850
+não é mais fácil, é muito mais agradável e gerível,
+
+1172
+01:18:47,410 --> 01:18:49,970
+e portanto, isto vamos continuar a ter,
+
+1173
+01:18:49,970 --> 01:18:52,770
+como todas, expectávelmente mais co-derose,
+
+1174
+01:18:52,770 --> 01:18:53,650
+e por aqui, pronto.
+
+1175
+01:18:53,650 --> 01:18:55,650
+Era esta a teoria que eu queria falar,
+
+1176
+01:18:55,650 --> 01:18:56,530
+o MLflow,
+
+1177
+01:18:58,850 --> 01:19:00,450
+isto é exatamente a mesma coisa,
+
+1178
+01:19:01,730 --> 01:19:03,170
+são promenores do que é que se guarda,
+
+1179
+01:19:03,170 --> 01:19:04,610
+não é muito revolvante,
+
+1180
+01:19:05,250 --> 01:19:07,250
+deixem-me só ver se eu aqui embaixo tenho alguma coisa,
+
+1181
+01:19:09,090 --> 01:19:10,450
+é isso, o MLflow,
+
+1182
+01:19:11,890 --> 01:19:12,850
+não é, mas já lhes tudo,
+
+1183
+01:19:12,850 --> 01:19:14,770
+está aqui tudo, já estou a repetir,
+
+1184
+01:19:15,330 --> 01:19:16,130
+super repetir.
+
+1185
+01:19:17,090 --> 01:19:17,410
+Ok,
+
+1186
+01:19:18,210 --> 01:19:20,770
+uma coisa importante aqui nos updates,
+
+1187
+01:19:20,770 --> 01:19:22,530
+e a questão da resiliência,
+
+1188
+01:19:24,610 --> 01:19:26,370
+distribuição e utilização de modelos
+
+1189
+01:19:26,370 --> 01:19:28,130
+em frotas dispositivos no terreno,
+
+1190
+01:19:28,130 --> 01:19:32,130
+ou seja, se tivermos muito ar-doer pelo terreno,
+
+1191
+01:19:32,130 --> 01:19:37,650
+nós temos que atualizar os firmoeres,
+
+1192
+01:19:38,130 --> 01:19:42,130
+até para contrariarem as perdas de performance,
+
+1193
+01:19:42,130 --> 01:19:43,410
+ou porque há essa necessidade.
+
+1194
+01:19:44,210 --> 01:19:46,130
+Uma estratégia que é muito utilizada,
+
+1195
+01:19:46,130 --> 01:19:50,610
+é a substituição modular dos artefactos do Teflite,
+
+1196
+01:19:50,610 --> 01:19:52,610
+daquele fecherinho que a gente costuma mandar para lá,
+
+1197
+01:19:54,450 --> 01:19:57,010
+e depois ele põe aqui com compressão e defences binárias,
+
+1198
+01:19:57,010 --> 01:19:58,930
+em vez de atualizar todo o sistema operativo.
+
+1199
+01:19:59,490 --> 01:20:01,330
+Isto é um promenor muito grande,
+
+1200
+01:20:01,330 --> 01:20:04,050
+que vocês podem notar numa opçãozinha do update,
+
+1201
+01:20:05,090 --> 01:20:09,010
+que é ele divide o Teflite em várias partes,
+
+1202
+01:20:09,010 --> 01:20:10,770
+e vai fazendo uma de cada vez, pronto.
+
+1203
+01:20:10,770 --> 01:20:13,010
+E essencialmente a ideia que interessa guardar daqui,
+
+1204
+01:20:13,730 --> 01:20:16,610
+é que vocês tenham uma usanta-partição AV,
+
+1205
+01:20:16,610 --> 01:20:19,330
+uma EA, que é a principal que está ativa,
+
+1206
+01:20:19,330 --> 01:20:22,770
+e a V essencialmente ele carrega a segunda,
+
+1207
+01:20:23,330 --> 01:20:25,650
+e depois de certa altura faz a troca das duas,
+
+1208
+01:20:25,650 --> 01:20:27,410
+e garanta integridade,
+
+1209
+01:20:27,410 --> 01:20:30,050
+e tenta evitar que haja problemas,
+
+1210
+01:20:30,050 --> 01:20:31,890
+mesmo assim, as podem acontecer.
+
+1211
+01:20:31,890 --> 01:20:37,730
+Mas, como vocês sabem, o update do firmware de um dispositivo,
+
+1212
+01:20:37,730 --> 01:20:41,250
+é um ponto muito vulnerável no dispositivo,
+
+1213
+01:20:41,250 --> 01:20:44,930
+se não beijam os avisos que os vossos telefones Android e iOS fazem,
+
+1214
+01:20:45,490 --> 01:20:47,250
+quando vocês estão a fazer o update,
+
+1215
+01:20:47,250 --> 01:20:48,930
+porque essencialmente o que é que faz?
+
+1216
+01:20:48,930 --> 01:20:51,330
+Ele tem que gerir o espaço disponível,
+
+1217
+01:20:51,330 --> 01:20:53,730
+tem que carregar aquela imagem lá dentro,
+
+1218
+01:20:53,730 --> 01:20:56,610
+e depois tem que iniciar um processo que não pode ser interrompido,
+
+1219
+01:20:56,610 --> 01:20:59,730
+sobre a forma do próprio firmware não estar lá,
+
+1220
+01:20:59,730 --> 01:21:01,490
+e o dispositivo fica um desgolo.
+
+1221
+01:21:01,490 --> 01:21:05,090
+Obviamente que isso tem solução,
+
+1222
+01:21:05,090 --> 01:21:09,410
+mas a solução implica atirar o dispositivo do ambiente onde está inserido,
+
+1223
+01:21:09,410 --> 01:21:10,930
+e levar o ambiente controlado,
+
+1224
+01:21:10,930 --> 01:21:14,130
+onde nós essencialmente temos o mecanismo eletrônico
+
+1225
+01:21:14,130 --> 01:21:17,170
+de acesso direto à memória e dissipar o firmware lá outra vez,
+
+1226
+01:21:18,050 --> 01:21:20,050
+que é uma coisa que às vezes não se diz,
+
+1227
+01:21:20,050 --> 01:21:22,210
+mas um telemóvel bricado,
+
+1228
+01:21:22,210 --> 01:21:24,450
+não sei a um, mas é possível ser recuperado,
+
+1229
+01:21:25,250 --> 01:21:27,330
+quanto custa quem o faz, é que é outra questão.
+
+1230
+01:21:27,890 --> 01:21:30,530
+Se não soubesse aqui, nos comentários tem mais alguma coisa.
+
+1231
+01:21:32,370 --> 01:21:34,530
+A refera aqui o Watchdog,
+
+1232
+01:21:35,090 --> 01:21:39,970
+pronto, o Watchdog é essencialmente um mecanismo de espera ativa,
+
+1233
+01:21:39,970 --> 01:21:46,370
+em que se ao fim deste tempo o dispositivo não responder conforme esperado,
+
+1234
+01:21:46,370 --> 01:21:49,490
+ele despeleta um processo de reinicialização,
+
+1235
+01:21:49,570 --> 01:21:52,370
+que é uma garantia que se o firmware falhar,
+
+1236
+01:21:52,370 --> 01:21:54,850
+nós temos forma de coisar.
+
+1237
+01:21:54,850 --> 01:21:56,610
+Isto é uma coisa para quem é de eletrônica,
+
+1238
+01:21:56,610 --> 01:21:58,210
+que como temos aí um aluno,
+
+1239
+01:21:58,210 --> 01:21:59,970
+ele conhece isso dos microcontrolladores.
+
+1240
+01:22:00,930 --> 01:22:03,090
+O Watchdog força o regresso automático,
+
+1241
+01:22:03,090 --> 01:22:04,210
+a pressão estávela anterior,
+
+1242
+01:22:04,210 --> 01:22:06,370
+em caso de erros de memória, a falha de discussão.
+
+1243
+01:22:08,450 --> 01:22:16,050
+Pronto, e tem aqui uma referência com o software do Eclipse, que é o OCTIT.
+
+1244
+01:22:16,050 --> 01:22:21,970
+Mais coisas, isto aqui, isto aqui não tem mais interesse aqui.
+
+1245
+01:22:23,330 --> 01:22:27,170
+E finalmente, estou a chegar ao fim de Produção Deployment Patterns.
+
+1246
+01:22:28,850 --> 01:22:32,450
+Aqui vou apresentar as estratégias para mitigar o risco de operacionais
+
+1247
+01:22:32,450 --> 01:22:35,010
+durante a introdução aos modelos em ambientes industriais.
+
+1248
+01:22:38,050 --> 01:22:40,770
+Mas é isso aqui, esqueçam, isto aqui já não vale a pena.
+
+1249
+01:22:42,290 --> 01:22:43,090
+Isto aqui não...
+
+1250
+01:22:44,050 --> 01:22:49,010
+Isto aqui estámos a dar mais de pressão na outra cadeira.
+
+1251
+01:22:50,050 --> 01:22:51,410
+Em falar não sobre isto, não?
+
+1252
+01:22:51,410 --> 01:22:56,370
+Sim, falámos também de, por exemplo, que estou ali a ver o Canary Deployment,
+
+1253
+01:22:56,370 --> 01:22:58,450
+mas falámos também sobre isso, por exemplo.
+
+1254
+01:22:58,450 --> 01:23:02,770
+Pronto, então, Xavir, então explicam-lhe o que é o Canary Deployment.
+
+1255
+01:23:06,690 --> 01:23:09,570
+Portanto, o Canary Deployment, se não estou em erro,
+
+1256
+01:23:10,530 --> 01:23:15,890
+é, por exemplo, para fazer o Deployment fasiado em alguns pontos.
+
+1257
+01:23:17,090 --> 01:23:21,730
+Para não ser toda uma vez, para não pôr em risco o que está em produção,
+
+1258
+01:23:21,730 --> 01:23:27,010
+portanto, coloca-se para uma fase experimental de ainda assim.
+
+1259
+01:23:28,290 --> 01:23:31,330
+Pronto, e depois dá para ter alguns mecanismos,
+
+1260
+01:23:31,330 --> 01:23:35,010
+só haver mais erro, ou assim, durante alguma gela de tempo,
+
+1261
+01:23:35,010 --> 01:23:37,730
+e se só haver erro, fazer o rollback.
+
+1262
+01:23:38,690 --> 01:23:41,650
+Eu concordo consigo.
+
+1263
+01:23:41,650 --> 01:23:44,130
+O Canary Deployment, o exemplo melhor que eu tenho,
+
+1264
+01:23:44,130 --> 01:23:47,410
+é que normalmente entramos na água aqui no norte, na praia.
+
+1265
+01:23:48,450 --> 01:23:51,650
+Aqui vai tudo de vinho, depois vai pôr-me mais um bocadinho.
+
+1266
+01:23:51,650 --> 01:23:52,610
+Exato.
+
+1267
+01:23:52,610 --> 01:23:57,250
+É, o torno de zelo, passado um bocado, já está no joelho,
+
+1268
+01:23:57,250 --> 01:24:02,450
+e depois, a certa altura, há ali uma zona que diz, agora vai tudo, né?
+
+1269
+01:24:02,450 --> 01:24:03,650
+Via malta mergulha.
+
+1270
+01:24:03,650 --> 01:24:05,730
+Pronto, é com cuidado.
+
+1271
+01:24:06,130 --> 01:24:09,490
+É com cuidado. Desculpem às vezes os exemplos um bocado toscos,
+
+1272
+01:24:09,490 --> 01:24:14,290
+mas é o conceito aí, este é devagarinho, para evitar-nos riscos,
+
+1273
+01:24:14,290 --> 01:24:17,570
+porque reparem, é uma coisa que eu próprio me esqueço,
+
+1274
+01:24:17,570 --> 01:24:20,770
+porque eu penso muito à escala do isépia, aquilo que a gente faz,
+
+1275
+01:24:20,770 --> 01:24:28,050
+mas há coisas destas que podem ter milhares ou dezenas de milhares de dispositivos a trabalhar.
+
+1276
+01:24:28,050 --> 01:24:34,210
+Um exemplo disto que vai acontecer num futuro que não vai ser tão próximo,
+
+1277
+01:24:34,210 --> 01:24:36,610
+mas, por exemplo, eu tenho um colega meu que dá aulas no isépia,
+
+1278
+01:24:36,610 --> 01:24:40,770
+e ele tem uma empresa da área de eletronica, eletricidade, etc.,
+
+1279
+01:24:40,770 --> 01:24:48,130
+e ele está a desenvolver um grande dispositivo, está a desenvolver uma solução de domótica.
+
+1280
+01:24:48,130 --> 01:24:49,090
+Pronto.
+
+1281
+01:24:49,090 --> 01:24:55,340
+O vosso colega, que é de eledrotecnia, sabe exatamente o que eu estou a falar,
+
+1282
+01:24:55,340 --> 01:24:57,180
+que ele conhece o meu colega.
+
+1283
+01:24:58,700 --> 01:25:03,420
+No futuro, relativamente próximo, quando eles decidirem avançar com este produto,
+
+1284
+01:25:03,500 --> 01:25:06,140
+obviamente, eles vão em beber-lá a inteligência artificial.
+
+1285
+01:25:06,140 --> 01:25:10,460
+Portanto, pequenas coisas que vão correr no eds e vão ter lá isto.
+
+1286
+01:25:10,460 --> 01:25:14,620
+Agora, imaginei uma coisa, o dispositivo deles faz um monte de domótica,
+
+1287
+01:25:14,620 --> 01:25:17,820
+e numa ediva domótica faz monitorização e muita segurança.
+
+1288
+01:25:18,620 --> 01:25:21,420
+Agora, imaginei o que era, nós termos isto de operar,
+
+1289
+01:25:21,420 --> 01:25:27,900
+e eles têm uma política incrível de deixar isto tudo do lado do utilizador,
+
+1290
+01:25:28,540 --> 01:25:35,740
+ou todos os acessos à clave da empresa que eles têm são todos autorizados pelo proprietário.
+
+1291
+01:25:35,740 --> 01:25:40,940
+Portanto, eles não querem criar uma dependência forçada ao utilizador,
+
+1292
+01:25:40,940 --> 01:25:44,860
+de tal forma que o utilizador, quando quiser, tenha a empresa-mãe
+
+1293
+01:25:45,420 --> 01:25:48,300
+a futer a pedido de coisas e tal, mas não querem.
+
+1294
+01:25:48,300 --> 01:25:51,020
+Agora, imagine, o que era eles estarem a fazer um deployment
+
+1295
+01:25:51,020 --> 01:25:56,460
+e não terem o cuidado de irem testando gradualmente em diferentes tipos de instalação.
+
+1296
+01:25:56,540 --> 01:26:00,780
+Porque podem ser, por exemplo, casas, um segmento mais médio,
+
+1297
+01:26:00,780 --> 01:26:04,140
+um segmento médio alto, médio muito alto e segmento alto.
+
+1298
+01:26:05,180 --> 01:26:09,740
+E tu tens de setar todas estas casas, porque cada casa tem um determinado padrão
+
+1299
+01:26:09,740 --> 01:26:13,900
+de sensores, tem quantidades e volumes diferentes de dados.
+
+1300
+01:26:13,900 --> 01:26:19,500
+Portanto, é importante fazer isto, assim, neste modo de canária, assim, com muito cuidado.
+
+1301
+01:26:19,500 --> 01:26:23,900
+E, por exemplo, outra forma gradual de fazer isto.
+
+1302
+01:26:23,980 --> 01:26:27,340
+Fazer isto, primeiro, nas casas com baixos requesitos computacionais,
+
+1303
+01:26:27,340 --> 01:26:30,860
+ida largando e dar janelas temporais adequadas para testar isto.
+
+1304
+01:26:31,980 --> 01:26:35,660
+Chegar, se calhar, às casas mais altas, são, obviamente, termos requesitos
+
+1305
+01:26:35,660 --> 01:26:39,260
+mais elevados e mais sensores e mais dados ali a processar.
+
+1306
+01:26:39,900 --> 01:26:44,060
+E mais casos, eventualmente, de casos é custo, não é?
+
+1307
+01:26:44,060 --> 01:26:46,940
+E, portanto, quanto mais dinheiro a pessoa tem, mais coisas vai pôr.
+
+1308
+01:26:47,660 --> 01:26:52,700
+E, finalmente, por exemplo, ir para uma área que eles pensam ir no futuro,
+
+1309
+01:26:52,700 --> 01:26:54,780
+que é a gestão técnica de edifícios.
+
+1310
+01:26:54,780 --> 01:26:59,100
+E, então, até podem ser produtos diferentes, mas grande parte das coisas são partilhadas.
+
+1311
+01:26:59,100 --> 01:27:03,500
+E passar para a gestão técnica, aí, é um campeonato completamente diferente,
+
+1312
+01:27:03,500 --> 01:27:09,740
+porque é a monitorização de todas as variáveis, as condicionados, esgotos, bombas, etc.
+
+1313
+01:27:09,740 --> 01:27:13,820
+E, por exemplo, uma área incrivelmente poderosa, mas é uma área de muita responsabilidade.
+
+1314
+01:27:14,460 --> 01:27:18,220
+Pronto, este projeto que eu estou a falar é um projeto português muito ambicioso,
+
+1315
+01:27:18,220 --> 01:27:22,460
+muito, muito ambicioso, está com um elevado grau de sucesso,
+
+1316
+01:27:22,460 --> 01:27:29,020
+mas daqui até chegar ao modelo final, tem um caminho ainda grande a fazer.
+
+1317
+01:27:29,020 --> 01:27:33,900
+Tanto isto ainda vai andar muitos anos e espero que corra tudo bem e acho que vai correr.
+
+1318
+01:27:34,460 --> 01:27:38,620
+Só que, assim, estamos a falar de fazer frente a tecnologias como KPNX
+
+1319
+01:27:39,420 --> 01:27:42,620
+e outras, assim, que estão totalmente standardizadas no mercado.
+
+1320
+01:27:42,620 --> 01:27:46,220
+Inclusivamente, estão padronizadas enquanto normas.
+
+1321
+01:27:47,180 --> 01:27:51,180
+E, portanto, mas hoje o mercado está assim com estas coisas
+
+1322
+01:27:51,180 --> 01:27:57,580
+e a inovação é grande e os consumidores alinham-me isto.
+
+1323
+01:27:57,580 --> 01:27:59,740
+Vejam, por exemplo, as campainhas das casas.
+
+1324
+01:28:00,380 --> 01:28:05,100
+Aqui agora eu vou substituir aqui uma, ainda vou deixar estar,
+
+1325
+01:28:05,100 --> 01:28:07,900
+mas, portanto, casas e pequenos prédios, ninguém faz isso,
+
+1326
+01:28:07,900 --> 01:28:12,540
+só vai a China compra e monta direto e consegue comprar uma campainha.
+
+1327
+01:28:12,620 --> 01:28:16,300
+Já lá tenho um amigo meu, compro uma campainha para casa, deu-lhe 60 euros.
+
+1328
+01:28:16,300 --> 01:28:20,300
+O vídeo é oportuno, tudo, manda a vida à China, liga e está feito.
+
+1329
+01:28:20,300 --> 01:28:22,460
+E diz ele, olha, isto funciona que é uma boleda,
+
+1330
+01:28:22,460 --> 01:28:25,260
+eu ia dar 500 ou 600 euros por um ou mais,
+
+1331
+01:28:25,260 --> 01:28:29,580
+desde 60, daqui a 10 ou 15 anos isto a variar, eu compro o outro.
+
+1332
+01:28:30,700 --> 01:28:33,660
+E, portanto, é isto, é assim que estamos.
+
+1333
+01:28:33,660 --> 01:28:37,020
+Então, não vou inserir aqui com vocês este silencio novo
+
+1334
+01:28:37,980 --> 01:28:45,460
+e tenho aqui uma ML Ops de Ploy & Patton, se pronto.
+
+1335
+01:28:45,460 --> 01:28:47,620
+Tenho aqui uma dica para vocês irem ver-te.
+
+1336
+01:28:47,620 --> 01:28:49,620
+Acho que não vou inserir por aqui.
+
+1337
+01:28:50,980 --> 01:28:54,420
+Finalmente, estes dois eu sinceramente acho que não...
+
+1338
+01:28:55,460 --> 01:28:57,940
+Isto é, isto é, se já mais, não...
+
+1339
+01:28:57,940 --> 01:29:00,580
+Se falaram, falaram, mas aqui sinceramente
+
+1340
+01:29:00,580 --> 01:29:02,580
+estávamos a nos sacrar com isto, não mal até.
+
+1341
+01:29:03,140 --> 01:29:05,780
+Careíssimos, acho que este é o meu último fly,
+
+1342
+01:29:05,780 --> 01:29:07,780
+ainda tenho mais aqui o pareto,
+
+1343
+01:29:08,100 --> 01:29:10,100
+que falamos na última aula.
+
+1344
+01:29:10,100 --> 01:29:14,900
+O pareto que aqui é determinar os casos de limite de todos
+
+1345
+01:29:14,900 --> 01:29:18,100
+e vocês determinarem uma fronteira de pareto
+
+1346
+01:29:18,100 --> 01:29:24,260
+para perceberem quando estão a operar dentro daquilo que é confortável e estável
+
+1347
+01:29:24,260 --> 01:29:28,260
+e perceberem quais são as variáveis e os pontos de operação
+
+1348
+01:29:28,260 --> 01:29:30,260
+dos quais não podem passar.
+
+1349
+01:29:30,260 --> 01:29:34,260
+Quem aqui estudou Transistors sabe que é uma reta de funcionamento
+
+1350
+01:29:34,260 --> 01:29:36,260
+e o pareto é essencialmente isto.
+
+1351
+01:29:36,580 --> 01:29:39,060
+É testarmos vários legimos de funcionamento
+
+1352
+01:29:39,060 --> 01:29:43,540
+para nos mantermos ali dentro de uma latência e de uma acurácia que é interessante.
+
+1353
+01:29:43,540 --> 01:29:45,540
+Obviamente, o que é que nós queremos?
+
+1354
+01:29:45,540 --> 01:29:47,540
+Queremos maximizar a acurácia
+
+1355
+01:29:47,540 --> 01:29:51,540
+não aumentando ou mantendo a latência dentro de limites
+
+1356
+01:29:51,540 --> 01:29:55,540
+que são adequados, é isto.
+
+1357
+01:29:55,540 --> 01:30:00,580
+Curiosamente, a nossa aula de sábado demonstrou uma coisa interessante
+
+1358
+01:30:00,580 --> 01:30:06,980
+porque demonstrou que nem sempre ao aumento da complexidade do modelo
+
+1359
+01:30:06,980 --> 01:30:10,180
+aumenta a acurácia, a exatidão do nosso modelo
+
+1360
+01:30:10,180 --> 01:30:12,980
+e por acaso, no recurso, foi linear.
+
+1361
+01:30:12,980 --> 01:30:15,780
+Ou seja, quanto mais complexo o modelo, mais pesado era.
+
+1362
+01:30:15,780 --> 01:30:19,220
+Mas, curiosamente, a complexidade não deu melhores resultados
+
+1363
+01:30:19,220 --> 01:30:22,180
+e isso é uma coisa que acontece com alguma frequência
+
+1364
+01:30:22,180 --> 01:30:26,660
+e acontece particularmente quando não temos limitações de ar do efe.
+
+1365
+01:30:26,660 --> 01:30:29,300
+Ou seja, ali margem e, às vezes, no aciso.
+
+1366
+01:30:29,380 --> 01:30:32,180
+Não, ele começa a coisar e tudo está.
+
+1367
+01:30:32,180 --> 01:30:34,980
+Isto é que cometer um carro com 40 cavalos ou convivendo-nos.
+
+1368
+01:30:34,980 --> 01:30:37,300
+Um carro com 40 cavalos vai dar sempre problemas
+
+1369
+01:30:37,300 --> 01:30:40,580
+porque se a subida for inclinada, se não for menino,
+
+1370
+01:30:40,580 --> 01:30:44,820
+um panda anda tanto de monteiro lá que ele vai arruar e chega lá na mesma.
+
+1371
+01:30:44,820 --> 01:30:48,260
+Não adeia a mesma velocidade, mas faz a função.
+
+1372
+01:30:48,260 --> 01:30:49,860
+Pronto, Carlos, o que é para hoje é isto.
+
+1373
+01:30:49,860 --> 01:30:53,220
+Eu não vou insistir mais porque isto vai nos fazer confusão para o teste
+
+1374
+01:30:53,220 --> 01:30:56,500
+e esqueçam estes três slides finales,
+
+1375
+01:30:56,500 --> 01:30:59,220
+mesmo do cánara hipópificado fora.
+
+1376
+01:30:59,460 --> 01:31:02,500
+Dúvidas. Vou terminar esta apresentação.
+
+1377
+01:31:02,500 --> 01:31:04,580
+Dúvidas que eram colocar.
+
+1378
+01:31:04,580 --> 01:31:07,760
+Depois as potestes.
+
+1379
+01:31:07,760 --> 01:31:10,560
+Eu acho que na próxima aula, sinceramente, não vou estar a coisar.
+
+1380
+01:31:10,560 --> 01:31:11,760
+Eu fazia uma aula de dúvidas.
+
+1381
+01:31:11,760 --> 01:31:16,560
+Se vocês quiserem estudar e tirar dúvidas,
+
+1382
+01:31:16,560 --> 01:31:19,280
+eu tentarei esclarecer-vos as dúvidas que quiserem.
+
+1383
+01:31:19,280 --> 01:31:30,750
+Ninguém tem dúvidas? Estou a ver que não.
+
+1384
+01:31:30,750 --> 01:31:31,950
+Pronto, Carlos.
+
+1385
+01:31:31,950 --> 01:31:32,750
+Então...
+
+1386
+01:31:32,750 --> 01:31:36,510
+O professor vai disponibilizar, desculpe-me, que eu cheguei a trazar desta aula.
+
+1387
+01:31:36,510 --> 01:31:38,670
+Desculpe-me de usar o modelo teste.
+
+1388
+01:31:40,110 --> 01:31:41,550
+O modelo teste.
+
+1389
+01:31:41,550 --> 01:31:42,990
+Falei hoje com o posto de Thiago.
+
+1390
+01:31:42,990 --> 01:31:44,670
+Sim, estamos a pensar em fazê-lo.
+
+1391
+01:31:44,670 --> 01:31:47,150
+Ter um rastinho para vocês poderem olhar.
+
+1392
+01:31:47,150 --> 01:31:51,310
+Eu queria ver se costunhiste no máximo até quinta-feira.
+
+1393
+01:31:52,910 --> 01:31:54,910
+O Thiago deixe-me ver um bocado de nós falamos.
+
+1394
+01:31:54,910 --> 01:31:55,950
+E ele disse-me qualquer coisa.
+
+1395
+01:31:55,950 --> 01:31:57,710
+Diz-me o que é que ele me disse.
+
+1396
+01:31:58,910 --> 01:31:59,870
+Ah, é no time.
+
+1397
+01:31:59,870 --> 01:32:02,270
+É no próprio time que a gente fala.
+
+1398
+01:32:02,270 --> 01:32:12,300
+Me diga mais.
+
+1399
+01:32:12,300 --> 01:32:14,620
+Ah, ele disse que amanhã, à noite, vai começar isto.
+
+1400
+01:32:14,620 --> 01:32:17,260
+Pronto, durante o dia de quinta-feira,
+
+1401
+01:32:17,340 --> 01:32:18,700
+eu acho que será aspectável.
+
+1402
+01:32:18,700 --> 01:32:21,500
+Durante o dia de quinta-feira, vamos tentar pôr-nos aí qualquer coisa.
+
+1403
+01:32:22,700 --> 01:32:24,940
+Ó, gente, mas sinceramente, não stressem.
+
+1404
+01:32:24,940 --> 01:32:27,500
+Olha, há um bocado aqui, a meia-daula,
+
+1405
+01:32:27,500 --> 01:32:29,420
+num despensamento escutido dos vários,
+
+1406
+01:32:29,420 --> 01:32:32,620
+quando caíam aqui as mensagens do WhatsApp de vários assuntos,
+
+1407
+01:32:32,620 --> 01:32:33,500
+lembrem-me de uma coisa.
+
+1408
+01:32:33,500 --> 01:32:35,340
+O que é que eu sugiro para vocês trabalharem?
+
+1409
+01:32:35,340 --> 01:32:36,780
+Primeiro, estou bem à vossa maneira.
+
+1410
+01:32:36,780 --> 01:32:38,940
+Não sou eu que vou determinar como é que vocês vão estudar.
+
+1411
+01:32:39,500 --> 01:32:42,540
+Mas uma coisa que me tenham recordado,
+
+1412
+01:32:42,540 --> 01:32:44,540
+e que eu vou fazendo, mais ou menos,
+
+1413
+01:32:44,540 --> 01:32:48,380
+às vezes esqueço, às vezes não,
+
+1414
+01:32:48,380 --> 01:32:51,660
+eu uso muito uma ferramente que é o notebook alien.
+
+1415
+01:32:51,660 --> 01:32:52,860
+O que é que eu faria?
+
+1416
+01:32:52,860 --> 01:32:56,380
+Eu colocaria este PDF,
+
+1417
+01:32:56,380 --> 01:32:57,980
+a documentação que nós fomos dados,
+
+1418
+01:32:57,980 --> 01:33:00,700
+colocava aquilo no notebook alien ou no equivalente.
+
+1419
+01:33:00,700 --> 01:33:03,900
+E depois faria algo como este género.
+
+1420
+01:33:03,900 --> 01:33:07,100
+Olha, dá-me a linha geral deste curso,
+
+1421
+01:33:07,100 --> 01:33:08,140
+e ele vai explicar.
+
+1422
+01:33:08,140 --> 01:33:11,580
+Pronto, agora faz-me um plano de estudo, ou o que quiseres.
+
+1423
+01:33:11,580 --> 01:33:15,100
+E vão para ali fora, e pumba, pumba, pumba, pumba, a ver.
+
+1424
+01:33:15,980 --> 01:33:18,380
+Eu pessoalmente acho que é uma madeira incrível de estudar,
+
+1425
+01:33:19,020 --> 01:33:20,860
+mas atenção, isto depois não substitui,
+
+1426
+01:33:20,860 --> 01:33:23,980
+olhar para as coisas, ler e refletir um bocadinho sobre isto.
+
+1427
+01:33:23,980 --> 01:33:26,620
+Mas para iniciar, é espetacular.
+
+1428
+01:33:26,620 --> 01:33:29,020
+Eu digo como é que eu faço as minhas defesas de licenciatura,
+
+1429
+01:33:29,020 --> 01:33:29,580
+é mostrado.
+
+1430
+01:33:30,300 --> 01:33:33,740
+A primeira fase é nem ler o relatório no início,
+
+1431
+01:33:33,740 --> 01:33:36,220
+meto diretamente no notebook alien,
+
+1432
+01:33:36,220 --> 01:33:40,460
+e tenho agora, até tenho já uma query toda estruturada, com tudo.
+
+1433
+01:33:42,220 --> 01:33:45,260
+E primeiro leio toda aquela query estruturada,
+
+1434
+01:33:45,260 --> 01:33:48,220
+que faz qualidade de texto, dá-me um redono do trabalho,
+
+1435
+01:33:48,220 --> 01:33:51,980
+com todos os pontos elaborados no âmbito de trabalho,
+
+1436
+01:33:51,980 --> 01:33:53,660
+quantos são contribuições originais,
+
+1437
+01:33:53,660 --> 01:33:55,340
+uma série de coisas que eu peço,
+
+1438
+01:33:55,340 --> 01:33:57,660
+que para mim são sempre coisas que eu preciso, e dá ali.
+
+1439
+01:33:58,300 --> 01:34:01,740
+E depois faz um conjunto de cenas,
+
+1440
+01:34:01,740 --> 01:34:03,820
+era-me um lote de perguntas que eu quero,
+
+1441
+01:34:03,820 --> 01:34:05,740
+um conjunto de critérios e tal,
+
+1442
+01:34:05,740 --> 01:34:07,740
+e depois é que eu vou ler o trabalho.
+
+1443
+01:34:07,740 --> 01:34:09,260
+É muito mais fácil ler o trabalho.
+
+1444
+01:34:09,900 --> 01:34:12,300
+Qual é o prêmio que estas abordagens têm?
+
+1445
+01:34:12,300 --> 01:34:14,620
+É uma coisa que eu ando a forçar e tenho uma percebida.
+
+1446
+01:34:15,820 --> 01:34:18,220
+A IA também tem guias,
+
+1447
+01:34:18,220 --> 01:34:20,540
+ou seja, ele vê em uma certa direção,
+
+1448
+01:34:20,540 --> 01:34:21,980
+e às vezes tem alucinações,
+
+1449
+01:34:22,780 --> 01:34:24,620
+e já me aconteceu isso acontecer.
+
+1450
+01:34:24,620 --> 01:34:27,740
+Portanto, é sempre importante lerem as coisas originais,
+
+1451
+01:34:27,740 --> 01:34:30,060
+mas para começar, eu acho que é incrível.
+
+1452
+01:34:30,060 --> 01:34:31,420
+Por exemplo, sabem quem é que começar a ler,
+
+1453
+01:34:31,420 --> 01:34:33,820
+por exemplo, uma tese mostrada, uma documentação, um bom teste,
+
+1454
+01:34:34,380 --> 01:34:37,180
+e ele fazê logo toda a lista de matéria,
+
+1455
+01:34:37,260 --> 01:34:41,340
+ter tudo iritinho, poder nos avisar dos pontos que temos,
+
+1456
+01:34:41,340 --> 01:34:42,220
+e ter lois.
+
+1457
+01:34:42,220 --> 01:34:47,260
+Portanto, a gente gasta ali umas 7, 8 horas naquela parte,
+
+1458
+01:34:47,820 --> 01:34:53,500
+e depois passa para a cena séria, ler as coisas e tal fazer.
+
+1459
+01:34:54,060 --> 01:34:55,660
+Eu uso muito essa estratégia,
+
+1460
+01:34:55,660 --> 01:34:57,500
+estou andando a experimentar agora, pronto.
+
+1461
+01:34:58,060 --> 01:35:01,900
+Às vezes também me posso confessar que não compensa nada.
+
+1462
+01:35:01,900 --> 01:35:03,820
+Às vezes uma pessoa mete-se na IA,
+
+1463
+01:35:03,820 --> 01:35:05,740
+embrulha-se para ali, anda ali todo feliz,
+
+1464
+01:35:06,380 --> 01:35:08,460
+e aquilo é uma quinta para não fazer nada.
+
+1465
+01:35:08,460 --> 01:35:10,860
+Ou seja, anda-se ali, entretenho, já me aconteceu.
+
+1466
+01:35:11,580 --> 01:35:14,060
+Andar ali todo feliz, explorar e acusar,
+
+1467
+01:35:14,060 --> 01:35:16,140
+e de repente ele tem alucinações
+
+1468
+01:35:16,700 --> 01:35:19,420
+e faz coisas que não podem sentir.
+
+1469
+01:35:19,420 --> 01:35:22,140
+Portanto, é uma ferramenta, gente.
+
+1470
+01:35:22,140 --> 01:35:23,820
+É uma ferramenta que mais é decidável,
+
+1471
+01:35:23,820 --> 01:35:26,620
+ligado à ficha incrível e a loja é um problema.
+
+1472
+01:35:27,420 --> 01:35:29,740
+Mas deixe-se esta dica se quiserem experimentar.
+
+1473
+01:35:30,380 --> 01:35:32,460
+Caste-os organizados tudo inicialmente.
+
+1474
+01:35:33,180 --> 01:35:35,340
+Se alguém tiver alguma sugestão,
+
+1475
+01:35:35,340 --> 01:35:38,620
+fiz-se de um método de estudo que funcione,
+
+1476
+01:35:38,620 --> 01:35:40,220
+vivem porque eu estou sempre a aprender.
+
+1477
+01:35:40,220 --> 01:35:46,530
+Graças a Deus.
+
+1478
+01:35:46,530 --> 01:35:47,570
+Graças a Deus.
+
+1479
+01:35:47,570 --> 01:35:48,210
+Obrigado.
+
+1480
+01:35:48,210 --> 01:35:49,170
+Pronto.
+
+1481
+01:35:49,170 --> 01:35:50,850
+Caríssimos, se não há mais dúvidas,
+
+1482
+01:35:50,850 --> 01:35:53,810
+então eu termino a sessão e desejo-vos uma boa noite.
+
+1483
+01:35:53,810 --> 01:35:55,570
+Encontramos na quinta-feira.
+
+1484
+01:35:55,570 --> 01:35:57,010
+Olha, na quinta-feira,
+
+1485
+01:35:57,010 --> 01:36:00,290
+lamento, mas eu ia dar aula para ver já as 9h40
+
+1486
+01:36:00,290 --> 01:36:03,170
+e digo-vos porquê, porque eu tenho um dia superpreensível
+
+1487
+01:36:03,170 --> 01:36:05,650
+de Moisés e para estar aqui às 7h
+
+1488
+01:36:05,650 --> 01:36:07,570
+posso ter dificuldades.
+
+1489
+01:36:07,570 --> 01:36:09,090
+Então, por esse motivo, não boto.
+
+1490
+01:36:09,090 --> 01:36:10,450
+Desculpe-me lá que eu sei que eu vou dar uma jeito
+
+1491
+01:36:10,450 --> 01:36:11,810
+de se eu pudesse devaluir.
+
+1492
+01:36:12,930 --> 01:36:15,490
+O que eu vos posso fazer é se...
+
+1493
+01:36:15,490 --> 01:36:16,610
+Mas lá está.
+
+1494
+01:36:16,610 --> 01:36:18,290
+É se vocês concordarem.
+
+1495
+01:36:18,290 --> 01:36:20,690
+Se vocês quiserem...
+
+1496
+01:36:20,690 --> 01:36:22,690
+Aí, para isso, lá até às 6h,
+
+1497
+01:36:22,690 --> 01:36:23,970
+se eu vi que já estou despachado
+
+1498
+01:36:23,970 --> 01:36:26,210
+e consigo estar em casa antes das 7h,
+
+1499
+01:36:28,690 --> 01:36:30,690
+posso-vos mandar uma mensagem via Teams
+
+1500
+01:36:30,690 --> 01:36:32,290
+e vocês, se quiserem, entram às 7h
+
+1501
+01:36:32,290 --> 01:36:33,570
+e damos aula das 7h às 9h.
+
+1502
+01:36:34,210 --> 01:36:35,730
+Mas é se ninguém se importar com isto.
+
+1503
+01:36:40,510 --> 01:36:41,550
+É, por muito bem.
+
+1504
+01:36:42,430 --> 01:36:44,590
+Pronto, então eu mando a mensagem,
+
+1505
+01:36:44,590 --> 01:36:46,590
+fazemos assim, eu mando a mensagem
+
+1506
+01:36:46,590 --> 01:36:48,750
+e depois só inicio a aula, se sei lá,
+
+1507
+01:36:48,750 --> 01:36:50,670
+se a maioria dos alunos me confirmarem,
+
+1508
+01:36:50,670 --> 01:36:52,590
+está tudo, vamos entrar e tal, está bem?
+
+1509
+01:36:54,030 --> 01:36:55,870
+Aliás, eu estou a dizer isto,
+
+1510
+01:36:55,870 --> 01:36:57,630
+mas nós não temos um grupo no Teams,
+
+1511
+01:36:57,630 --> 01:37:00,430
+ou não, porque eu e o postateado
+
+1512
+01:37:00,430 --> 01:37:01,710
+nós criamos um grupo,
+
+1513
+01:37:01,710 --> 01:37:04,190
+pois é, olha, deixem a estápica
+
+1514
+01:37:04,190 --> 01:37:06,110
+às 9h40 para estar a gênera.
+
+1515
+01:37:06,110 --> 01:37:08,270
+Pois, eu ia meter-vos aqui no Teams,
+
+1516
+01:37:08,270 --> 01:37:11,790
+só que nós já queríamos equipar uns meses
+
+1517
+01:37:11,790 --> 01:37:13,870
+e já tínhamos tantos comentários no geral,
+
+1518
+01:37:13,870 --> 01:37:15,950
+que não queríamos um canal para vocês,
+
+1519
+01:37:15,950 --> 01:37:18,670
+que depois tínhamos amaziados por nós no geral
+
+1520
+01:37:18,670 --> 01:37:19,950
+e vocês iam sempre ver.
+
+1521
+01:37:20,590 --> 01:37:21,710
+E nem queríamos equipar,
+
+1522
+01:37:21,710 --> 01:37:23,630
+portanto, deixem a estápica às 9h40,
+
+1523
+01:37:23,630 --> 01:37:26,110
+desculpem lá e damos a última,
+
+1524
+01:37:26,110 --> 01:37:27,390
+também a última aula, está bem?
+
+1525
+01:37:29,310 --> 01:37:30,190
+Ok, eu percebo.
+
+1526
+01:37:30,190 --> 01:37:30,990
+Ok, eu percebo.
+
+1527
+01:37:30,990 --> 01:37:32,110
+Boa noite para todos.
+
+1528
+01:37:32,910 --> 01:37:33,470
+Boa noite.
+
+1529
+01:37:33,470 --> 01:37:34,110
+Boa noite.
+
+1530
+01:37:34,110 --> 01:37:34,510
+Boa noite.
+
+1531
+01:37:34,510 --> 01:37:35,070
+Boa noite.
+
+1532
+01:37:35,070 --> 01:37:35,470
+Boa noite.
+
+1533
+01:37:36,350 --> 01:37:36,910
+Boa noite.
+
+1534
+01:37:36,910 --> 01:37:37,630
+Boa noite.
+

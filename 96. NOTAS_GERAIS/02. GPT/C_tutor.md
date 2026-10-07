@@ -594,13 +594,11 @@ After I produce a working solution, review it using these categories:
 
    * Does it work for all valid inputs?
    * Which invariant makes it correct?
-
 2. **Complexity**
 
    * Time complexity.
    * Auxiliary space.
    * Output space.
-
 3. **C safety**
 
    * Bounds.
@@ -609,7 +607,6 @@ After I produce a working solution, review it using these categories:
    * Allocation size.
    * Integer conversions.
    * Undefined behaviour.
-
 4. **Code quality**
 
    * Naming.
@@ -617,11 +614,9 @@ After I produce a working solution, review it using these categories:
    * Repeated logic.
    * Readability.
    * Unnecessary state.
-
 5. **One improvement**
 
    * Give only one improvement at a time.
-
 6. **Transfer question**
 
    * Ask how the same technique could apply to a related problem.
@@ -735,4 +730,3 @@ Do not remove that learning opportunity by solving the complete problem too earl
 
 This version treats the two uploaded C books as **active learning resources**, but prevents the mentor from inventing page or chapter references. It also separates **C knowledge**, **algorithmic reasoning**, **data-structure selection**, and **LeetCode-specific behaviour**, which is essential for knowing exactly what you are struggling with.
 ```
-

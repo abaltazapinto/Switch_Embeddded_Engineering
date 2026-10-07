@@ -1,0 +1,9072 @@
+1
+00:05:10,740 --> 00:05:12,740
+Olá, bom dia.
+
+2
+00:05:12,740 --> 00:05:14,740
+Boa noite.
+
+3
+00:05:14,740 --> 00:05:44,830
+Boa noite, professor.
+
+4
+00:05:44,830 --> 00:05:56,830
+Hoje vamos falar de protocolos de unicação mais orientadas para o IOT, mais concretamente o MKTT.
+
+5
+00:05:56,830 --> 00:06:01,830
+Sei que vocês já trabalharam com o MKTT previamente.
+
+6
+00:06:01,830 --> 00:06:09,830
+Creio que também no sábado já começaram a usar o MKTT para comunicar com o...
+
+7
+00:06:09,830 --> 00:06:13,830
+com o MKTT do Azur, se não me engano.
+
+8
+00:06:13,830 --> 00:06:18,370
+Ou era da AWS, era do Azur.
+
+9
+00:06:18,370 --> 00:06:21,370
+Mas ainda não conseguimos implementar isso, por si.
+
+10
+00:06:21,370 --> 00:06:23,370
+Ok, pronto. Mas já estão a trabalhar?
+
+11
+00:06:23,370 --> 00:06:26,370
+Aliás, eu acho que...
+
+12
+00:06:26,370 --> 00:06:29,370
+Eu tive a bater com a cabeça de duas horas por anis.
+
+13
+00:06:29,370 --> 00:06:34,370
+Para chegar à conclusão que, se calhar, não vamos conseguir fazer isso, porque...
+
+14
+00:06:34,370 --> 00:06:43,370
+a conta gratuita da Lume da Azur não permite as regiões necessárias para o IOT.
+
+15
+00:06:43,370 --> 00:06:46,680
+Vale.
+
+16
+00:06:46,680 --> 00:06:49,680
+Portanto, eu não sei se vai ser possível se querem implementar isso.
+
+17
+00:06:49,680 --> 00:06:57,680
+Ok, então se calhar, a alternativa é utilizar mesmo um MKTT privável.
+
+18
+00:06:57,680 --> 00:06:59,680
+Sim, sim.
+
+19
+00:06:59,680 --> 00:07:01,680
+É pá, é uma pena. Mas pronto.
+
+20
+00:07:01,680 --> 00:07:04,680
+Os gais lá sabem da vida deles, não é?
+
+21
+00:07:04,680 --> 00:07:07,680
+E do negócio que querem fazer.
+
+22
+00:07:07,680 --> 00:07:09,680
+Ok.
+
+23
+00:07:09,680 --> 00:07:12,680
+Muito bem. De qualquer das maneiras.
+
+24
+00:07:12,680 --> 00:07:14,680
+Vamos a isto.
+
+25
+00:07:14,680 --> 00:07:15,680
+Pode ser.
+
+26
+00:07:15,680 --> 00:07:17,680
+Então, tá que se...
+
+27
+00:07:17,680 --> 00:07:19,680
+Pá.
+
+28
+00:07:19,680 --> 00:07:27,680
+Quando nós falamos em comunicações, a necessidade é sempre fazer transportar dados de...
+
+29
+00:07:27,680 --> 00:07:30,680
+uma máquina para outra máquina.
+
+30
+00:07:30,680 --> 00:07:36,180
+Desculpem lá, vocês estão a ver aqui meu gato.
+
+31
+00:07:36,180 --> 00:07:40,180
+Eu comecei a falar e depois está a minha frente, mesmo aqui, virado para mim.
+
+32
+00:07:40,180 --> 00:07:42,180
+Teas mássustas, Guate.
+
+33
+00:07:42,180 --> 00:07:47,180
+Esta é uma distância socialmente inaceitável.
+
+34
+00:07:47,180 --> 00:07:50,180
+Mas fala aí, fala aí.
+
+35
+00:07:50,180 --> 00:07:53,180
+Pá, teas mássustas.
+
+36
+00:07:53,180 --> 00:07:55,180
+Ora bem, pronto.
+
+37
+00:07:55,180 --> 00:08:09,180
+Quando nós começamos a pensar em ambientes em que temos muitos dispositivos espalhados,
+
+38
+00:08:09,180 --> 00:08:13,180
+ok, na internet of things, o que é que acontece?
+
+39
+00:08:13,180 --> 00:08:20,180
+Nós vamos ter vários dispositivos que normalmente têm sistemas computacionais,
+
+40
+00:08:20,180 --> 00:08:22,180
+desculpem lá Guate.
+
+41
+00:08:22,180 --> 00:08:24,180
+A sério, eu estava quietinho.
+
+42
+00:08:24,180 --> 00:08:26,180
+Eu comecei a falar e aconteceu-me isto.
+
+43
+00:08:26,180 --> 00:08:29,180
+Somente ao jogo.
+
+44
+00:08:29,180 --> 00:08:31,180
+Não há festa agora.
+
+45
+00:08:31,180 --> 00:08:34,180
+Estou a falar mas não é para ti.
+
+46
+00:08:34,180 --> 00:08:38,180
+Temos plataformas...
+
+47
+00:08:38,180 --> 00:08:40,180
+Não lá.
+
+48
+00:08:40,180 --> 00:08:44,780
+Ora.
+
+49
+00:08:44,780 --> 00:08:46,780
+Ah não é.
+
+50
+00:08:46,780 --> 00:08:49,780
+Desculpem lá Pá, tenho que desconcentrar.
+
+51
+00:08:49,780 --> 00:08:55,780
+Temos plataformas que têm recursos limitados, como por exemplo RAM,
+
+52
+00:08:55,780 --> 00:09:01,780
+ou seja, não podem ter grandes programas,
+
+53
+00:09:01,780 --> 00:09:06,780
+nem espaço para armazenar grandes quantidades de dados.
+
+54
+00:09:06,780 --> 00:09:12,780
+O próprio CPU também é limitado e também a energia.
+
+55
+00:09:12,780 --> 00:09:16,780
+A energia, se formos a pensar neste tipo de plataformas,
+
+56
+00:09:16,780 --> 00:09:24,780
+há dois centros de custos que são grandes responsáveis pelo consumo de energia.
+
+57
+00:09:24,780 --> 00:09:32,780
+Um deles é o CPU, quanto mais processamento vocês fizerem, mais energia irão gastar,
+
+58
+00:09:32,780 --> 00:09:35,780
+e o outro é o rádio.
+
+59
+00:09:35,780 --> 00:09:40,780
+Se vocês tiverem comunicações por rádio, as comunicações de transmissão por rádio
+
+60
+00:09:40,780 --> 00:09:44,780
+também costumam consumir bastante energia.
+
+61
+00:09:44,780 --> 00:09:55,780
+Portanto, se vocês tiverem plataformas em que o uso de energia ou autonomia seja um problema,
+
+62
+00:09:55,780 --> 00:09:58,780
+ou seja, praticamente vão querer poupar energia,
+
+63
+00:09:58,780 --> 00:10:04,780
+quer em CPU, quer em processador, quer também em comunicações rádio.
+
+64
+00:10:04,780 --> 00:10:10,780
+Depois vão querer transmitir o menor número de bytes possível,
+
+65
+00:10:10,780 --> 00:10:14,780
+mas obviamente vocês querem enviar os bytes que têm de enviar,
+
+66
+00:10:14,780 --> 00:10:17,780
+e se houver critérios de segurança, não é?
+
+67
+00:10:17,780 --> 00:10:22,780
+Também vão querer se cifrar esses dados, logo, sempre que vocês cifram dados,
+
+68
+00:10:22,780 --> 00:10:28,780
+o tamanho dos dados que vão enviar pelo meio também é multiplicado,
+
+69
+00:10:28,780 --> 00:10:36,310
+pelo tamanho das chaves e pelo processo de cifragem.
+
+70
+00:10:36,310 --> 00:10:41,310
+Serámos também para o lado da rede ou do meio de transmissão,
+
+71
+00:10:41,310 --> 00:10:45,310
+também nesses casos os meios são agrestes.
+
+72
+00:10:45,310 --> 00:10:50,310
+Primeiro, largura de banda que pode ser estreita.
+
+73
+00:10:50,310 --> 00:10:55,310
+Portanto, temos uma largura de banda que não é larga.
+
+74
+00:10:55,310 --> 00:11:00,310
+Segundo, se vocês não têm uma largura de banda bastante ampla,
+
+75
+00:11:00,310 --> 00:11:07,310
+vocês não vão conseguir enviar tantos símbolos por segundo,
+
+76
+00:11:07,310 --> 00:11:11,310
+porque não conseguem usar...
+
+77
+00:11:11,310 --> 00:11:19,310
+Normalmente existe uma relação entre a quantidade de espectro eletromagnético disponível
+
+78
+00:11:19,310 --> 00:11:23,310
+e a quantidade de sinais que nós conseguimos enviar por segundo.
+
+79
+00:11:23,310 --> 00:11:27,310
+Isso quer dizer que nós vamos demorar algum tempo,
+
+80
+00:11:27,310 --> 00:11:32,310
+porque é daí o high latency, nós vamos demorar mais tempo
+
+81
+00:11:32,310 --> 00:11:40,660
+a enviar dados do que se, por exemplo, tivéssemos uma ligação de autodérito.
+
+82
+00:11:40,660 --> 00:11:47,660
+Outra coisa que também acontece é que o meio também sendo agreste
+
+83
+00:11:47,660 --> 00:11:56,660
+vai colocar problemas nem sempre estáveis à transmissão de dados.
+
+84
+00:11:56,660 --> 00:12:02,660
+Por exemplo, pode haver obstáculos que passem na linha de transmissão
+
+85
+00:12:02,660 --> 00:12:09,660
+e isso faça com que a propagação do sinal do emissor para o transmissor
+
+86
+00:12:09,660 --> 00:12:14,660
+não tenha sempre a mesma qualidade.
+
+87
+00:12:14,660 --> 00:12:23,660
+Até, quando era miúvoa, era engraçado que se estavam a ouvir rádio, o FM,
+
+88
+00:12:23,660 --> 00:12:33,640
+isso passava uma motorizada daquelas há dois tempos na minha rua.
+
+89
+00:12:33,640 --> 00:12:44,500
+A interferência eletromagnética que era gerada pela vela no motor da motorizada
+
+90
+00:12:44,500 --> 00:12:49,500
+era suficiente para interferir com o rádio, com a recepção do FM,
+
+91
+00:12:49,500 --> 00:12:57,500
+aquilo era impressionante, portanto, num ambiente que não é controlado,
+
+92
+00:12:57,500 --> 00:13:04,500
+a qualidade da comunicação não é algo que estávamos.
+
+93
+00:13:04,500 --> 00:13:11,500
+E até pode acontecer que, com alguma frequência,
+
+94
+00:13:11,500 --> 00:13:14,500
+sepere com dados que são transmitidos.
+
+95
+00:13:14,500 --> 00:13:17,500
+Portanto, aquilo é uma autenticação.
+
+96
+00:13:17,500 --> 00:13:23,970
+Também, se estivermos a pensar no domínio do IOT, o que é que acontece?
+
+97
+00:13:23,970 --> 00:13:28,970
+O número de dispositivos que vão ser lançados no ambiente
+
+98
+00:13:28,970 --> 00:13:34,970
+pode aumentar e aumentar e aumentar e aumentar.
+
+99
+00:13:34,970 --> 00:13:39,970
+E a estrutura, a infraestrutura, sobre todo de comunicações,
+
+100
+00:13:39,970 --> 00:13:47,970
+deve conseguir acompanhar esse aumento de dispositivos comunicantes.
+
+101
+00:13:47,970 --> 00:13:56,970
+Se fomos olhar para protocolos que foram feitos ou planeados para redes,
+
+102
+00:13:56,970 --> 00:14:05,970
+não quero dizer previsíveis, mas redes mais bem comportadas, como, por exemplo, o HTTP.
+
+103
+00:14:05,970 --> 00:14:14,970
+Se nós olhamos para o HTTP, nós vamos ver que os custos dos overage,
+
+104
+00:14:14,970 --> 00:14:21,970
+ou seja, toda a informação que é enviada num pedido,
+
+105
+00:14:21,970 --> 00:14:28,970
+ou numa resposta, só para caracterizar o pedido ou a resposta,
+
+106
+00:14:29,970 --> 00:14:35,970
+ou seja, não é carga útil aquilo que nós queremos efetivamente transportar.
+
+107
+00:14:35,970 --> 00:14:46,970
+No caso do HTTP, nós conseguimos ter esses metadados e esses cabeçalhos na casa das centenas de bytes.
+
+108
+00:14:46,970 --> 00:14:52,970
+Até pode acontecer que uma pessoa quer enviar uma carga de 50 bytes
+
+109
+00:14:52,970 --> 00:15:00,970
+e estamos a gastar mais em overage do que na própria carga, na payload.
+
+110
+00:15:00,970 --> 00:15:06,970
+Depois também existem formas de comunicação que, por si só,
+
+111
+00:15:06,970 --> 00:15:13,970
+também não são conservadoras em relação à energia.
+
+112
+00:15:13,970 --> 00:15:19,970
+Por exemplo, se nós tivermos um protocolo e que está constantemente a questionar,
+
+113
+00:15:19,970 --> 00:15:21,970
+então, o que temos?
+
+114
+00:15:21,970 --> 00:15:26,970
+Nós podemos estar a gastar energia quando não havia necessidade.
+
+115
+00:15:26,970 --> 00:15:32,970
+Eventualmente, quando houver um evento, é a altura de comunicar que aconteceu alguma coisa
+
+116
+00:15:32,970 --> 00:15:38,970
+e não estamos constantemente a se questionar se aconteceu alguma coisa ou se aconteceu alguma coisa.
+
+117
+00:15:38,970 --> 00:15:50,860
+E é o que diz aqui embaixo.
+
+118
+00:15:50,860 --> 00:16:01,860
+O HTTP, por exemplo, é uma arquitetura que foi pensada para ser orientada a petitos.
+
+119
+00:16:01,860 --> 00:16:06,860
+Um cliente faz um pedido, o servidor responde toque, certo?
+
+120
+00:16:06,860 --> 00:16:16,860
+Não é propriamente orientado para quando existem dados.
+
+121
+00:16:16,860 --> 00:16:21,860
+A telemetria é orientada por eventos.
+
+122
+00:16:21,860 --> 00:16:29,860
+Por exemplo, acontece alguma coisa e nós lançamos uma notificação de que algo aconteceu.
+
+123
+00:16:29,860 --> 00:16:32,860
+Igualmente, o HTTP até pode ser feito ao contrário.
+
+124
+00:16:32,860 --> 00:16:44,260
+Ou seja, colocar o servidor do lado, como é que eu ia dizer?
+
+125
+00:16:44,260 --> 00:16:56,260
+Quem gera a informação vai ser o cliente e vai enviar a notificação por HTTP para o servidor.
+
+126
+00:16:56,260 --> 00:17:00,260
+Mesmo assim, o HTTP, por exemplo, tem sempre este problema,
+
+127
+00:17:00,260 --> 00:17:07,260
+que é ter custos de cabeçalhos bastante altos.
+
+128
+00:17:07,260 --> 00:17:15,260
+Por quê? Porque ele foi feito no CERN em computadores que usavam rede cableado.
+
+129
+00:17:15,260 --> 00:17:20,260
+Não havia grandes problemas e computadores que estavam todos ligados à tomada.
+
+130
+00:17:20,260 --> 00:17:27,260
+Portanto, não havia grandes problemas ou preocupações com energia.
+
+131
+00:17:27,260 --> 00:17:36,260
+O uso de banda, transmitir mais ou menos sinais, uma pessoa até poder dizer
+
+132
+00:17:36,260 --> 00:17:40,260
+que a Eternet naquela altura era muito limitada.
+
+133
+00:17:40,260 --> 00:17:43,260
+Não tínhamos a Gigavit e a Eternet como temos agora.
+
+134
+00:17:43,260 --> 00:17:50,260
+Mas mesmo assim, não era tão crítico como em dispositivos EOTA.
+
+135
+00:17:50,260 --> 00:17:54,260
+Ok, Protocols EOTA.
+
+136
+00:17:54,260 --> 00:17:58,260
+Existem, sobretudo, dois paradigmas principais.
+
+137
+00:17:58,260 --> 00:18:04,260
+O Publish Subscribe e o Request Response.
+
+138
+00:18:04,260 --> 00:18:12,260
+No Request Response, até vou começar por aí, o cliente envia um pedido para um servidor.
+
+139
+00:18:12,260 --> 00:18:21,260
+O servidor recebe esse pedido, realiza algum processamento e envia a resposta de volta para o cliente.
+
+140
+00:18:21,260 --> 00:18:32,260
+Ok? Este modelo é síncrono, ou seja, o cliente envia um pedido ao servidor
+
+141
+00:18:32,260 --> 00:18:35,260
+e aguarda pela resposta do servidor.
+
+142
+00:18:35,260 --> 00:18:41,260
+Ok? E ele fica suspenso até obter a resposta do servidor.
+
+143
+00:18:41,260 --> 00:18:43,260
+Não progredo.
+
+144
+00:18:43,260 --> 00:18:52,260
+Existe um forte acupulamento, ou seja, uma parte das vezes o cliente tem de saber
+
+145
+00:18:52,260 --> 00:18:56,260
+quem é o servidor que quer, com quem quer comunicar.
+
+146
+00:18:56,260 --> 00:18:57,260
+Ok?
+
+147
+00:18:57,260 --> 00:19:02,260
+Tanto, é um modelo que é muito dirigido.
+
+148
+00:19:02,260 --> 00:19:04,260
+Ok?
+
+149
+00:19:04,260 --> 00:19:11,260
+No entanto, assenta bem com o modelo Rest.
+
+150
+00:19:11,260 --> 00:19:22,260
+Por exemplo, bate certo com as ordens do estilo HTTP, como Get para ir buscar um estado,
+
+151
+00:19:22,260 --> 00:19:30,260
+Post para enviar informação e alterar o estado que está a ser guardado.
+
+152
+00:19:30,260 --> 00:19:37,260
+Atenção, aqui quando eu digo estado, não estou a dizer state da comunicação.
+
+153
+00:19:37,260 --> 00:19:43,260
+Estou a dizer é, o servidor normalmente guarda informação
+
+154
+00:19:43,260 --> 00:19:47,260
+e podemos considerar como essa informação um estado.
+
+155
+00:19:47,260 --> 00:19:50,260
+Não é o estado da comunicação.
+
+156
+00:19:50,260 --> 00:19:58,260
+Não é uma sessão, porque nós quando falamos em Rest,
+
+157
+00:19:58,260 --> 00:20:03,260
+só se estiver a causar dúvidas, não é colocar dúvidas.
+
+158
+00:20:03,260 --> 00:20:08,260
+Se estiver a causar dúvidas, se chama em má atenção.
+
+159
+00:20:08,260 --> 00:20:17,260
+Normalmente, quando nós falamos em Rest, no modelo Rest, não existe um estado da comunicação.
+
+160
+00:20:17,260 --> 00:20:18,260
+Ok?
+
+161
+00:20:18,260 --> 00:20:23,260
+Portanto, o cliente e o servidor não guardam, sobretudo o servidor,
+
+162
+00:20:23,260 --> 00:20:29,260
+não guarda um estado da evolução da sessão com o cliente.
+
+163
+00:20:29,260 --> 00:20:33,260
+É, cada pedevo é atendido e esquece.
+
+164
+00:20:33,260 --> 00:20:39,260
+Mais um novo pedevo, o servidor atende esse pedevo e esquece.
+
+165
+00:20:39,260 --> 00:20:43,260
+Obviamente que os pedidos, se for por exemplo um post,
+
+166
+00:20:43,260 --> 00:20:50,260
+um post permite-nos alterar valores que são guardados pelo servidor.
+
+167
+00:20:50,260 --> 00:20:51,260
+Ok?
+
+168
+00:20:51,260 --> 00:20:56,260
+Quando eu falo em estado, é o estado dos valores que estão no servidor,
+
+169
+00:20:56,260 --> 00:21:00,260
+que estão a ser curados pelo servidor.
+
+170
+00:21:00,260 --> 00:21:01,260
+Ok?
+
+171
+00:21:01,260 --> 00:21:05,260
+Bem, não estou a falar no estado de ligação,
+
+172
+00:21:05,260 --> 00:21:14,670
+memorizar a evolução da ligação.
+
+173
+00:21:14,670 --> 00:21:21,830
+Ficou claro agora ou nem por isso?
+
+174
+00:21:21,830 --> 00:21:22,830
+Ok, pronto.
+
+175
+00:21:22,830 --> 00:21:33,070
+Aplicado ao IOT, o HTTP não é uma boa escolha,
+
+176
+00:21:33,070 --> 00:21:39,070
+porque precisamente por causa dos custos, dos cabeçalhos de toda aquela informação extra
+
+177
+00:21:39,070 --> 00:21:42,070
+que vai no pedevo para caracterizar o pedevo.
+
+178
+00:21:42,070 --> 00:21:49,070
+O call-up foi desenhado a olhar para o HTTP,
+
+179
+00:21:49,070 --> 00:21:57,070
+mas logicamente a tirar todo o peso extra, todo o lastro que o HTTP tinha
+
+180
+00:21:57,070 --> 00:22:04,070
+para diminuir ao máximo, ou diminuir ao mínimo, diminuir para o mínimo,
+
+181
+00:22:04,070 --> 00:22:10,070
+e esses custos que os cabeçalhos dos pedidos HTTP apresentam.
+
+182
+00:22:10,070 --> 00:22:11,070
+Ok?
+
+183
+00:22:11,070 --> 00:22:18,990
+Curiosamente, o call-up é, como é que eu diria?
+
+184
+00:22:18,990 --> 00:22:22,990
+Consegue coexistir ao melhor, não é?
+
+185
+00:22:22,990 --> 00:22:23,990
+Exato.
+
+186
+00:22:23,990 --> 00:22:26,990
+O call-up consegue coexistir com o HTTP,
+
+187
+00:22:26,990 --> 00:22:28,990
+o contrário é que já não dá.
+
+188
+00:22:28,990 --> 00:22:32,990
+Ou seja, nós conseguimos encaixar o call-up no HTTP.
+
+189
+00:22:32,990 --> 00:22:36,990
+Não conseguimos encaixar o HTTP num servidor call-up,
+
+190
+00:22:36,990 --> 00:22:42,990
+porque o servidor call-up é minimalista e não consegue colocar algo tão grande,
+
+191
+00:22:42,990 --> 00:22:46,990
+ou volumoso, como o HTTP no call-up.
+
+192
+00:22:46,990 --> 00:22:52,990
+Quais são os casos em que este paradigma é útil ou adapta-se bem?
+
+193
+00:22:52,990 --> 00:22:58,990
+É bom quando temos situações em que queremos enviar comandos.
+
+194
+00:22:58,990 --> 00:23:12,170
+Por exemplo, eu faço enquanto cliente um pedido a um servidor e diga ao servidor para fazer isto,
+
+195
+00:23:12,170 --> 00:23:18,170
+ou para mudar um determinado valor de uma variável para outro valor,
+
+196
+00:23:18,170 --> 00:23:23,170
+por exemplo, uma regulação de temperatura, regular temperatura para 37.
+
+197
+00:23:23,170 --> 00:23:26,170
+O que acontece aqui neste caso?
+
+198
+00:23:26,170 --> 00:23:33,170
+Aqui, neste caso, nós invertemos o papel tradicional do servidor e do cliente.
+
+199
+00:23:33,170 --> 00:23:39,170
+Boa parte das vezes nós imaginamos um servidor HTTP como uma máquina poderosa,
+
+200
+00:23:39,170 --> 00:23:45,170
+e os clientes HTTP como máquinas que estão basicamente a correr um brosa.
+
+201
+00:23:45,170 --> 00:23:51,170
+Agora, aqui, com call-up, muitas das vezes inverte-se esse papel.
+
+202
+00:23:51,170 --> 00:24:03,170
+Nós colocamos um servidor call-up num dispositivo pequeno que vai receber pedidos que serão ordens.
+
+203
+00:24:03,170 --> 00:24:09,170
+E nós teremos um cliente que estará aprofávelmente numa máquina mais poderosa,
+
+204
+00:24:09,170 --> 00:24:20,170
+mas que envia ordens para esse dispositivo que está a correr um servidor call-up.
+
+205
+00:24:21,170 --> 00:24:28,170
+Portanto, acaba por se inverter um pouco os papéis tradicionais do HTTP.
+
+206
+00:24:28,170 --> 00:24:32,170
+Nós colocamos ao servidor remotamente.
+
+207
+00:24:32,170 --> 00:24:41,170
+Não só diz que é sempre, mas é uma das formas de resolver esse problema.
+
+208
+00:24:41,170 --> 00:24:45,170
+Por outro lado, pode-lhe subscribe.
+
+209
+00:24:45,170 --> 00:24:47,170
+O que acontece aqui?
+
+210
+00:24:47,170 --> 00:24:57,170
+Neste modelo existe um forte desacupelamento entre quem produza os dados e quem os recebe.
+
+211
+00:24:57,170 --> 00:25:07,170
+E este desacupelamento, muitas das vezes, é realizado através de um ou mais brokers
+
+212
+00:25:07,170 --> 00:25:12,170
+que ficam entre quem produza os dados e quem os recebe.
+
+213
+00:25:12,170 --> 00:25:20,170
+Neste caso, nós temos quem produz os dados, que é o publicador, o publisher,
+
+214
+00:25:20,170 --> 00:25:29,170
+e quem produz os dados vai identificar qual é que é o contexto do dado que foi produzido.
+
+215
+00:25:29,170 --> 00:25:38,170
+Habitualmente os dados são produzidos quando há um evento que acontece.
+
+216
+00:25:38,170 --> 00:25:41,170
+Verifica-se um evento.
+
+217
+00:25:41,170 --> 00:25:52,170
+Há um dado que resulta desse evento e os dados desse evento são publicados numa notificação.
+
+218
+00:25:52,170 --> 00:26:02,310
+O publicador, o publisher, tem o dever de classificar os dados,
+
+219
+00:26:02,310 --> 00:26:11,310
+dizer que estes dados pretensam este contexto e envia para um broker.
+
+220
+00:26:11,310 --> 00:26:20,310
+Um broker é uma peça central que recebe publicações ou notificações,
+
+221
+00:26:20,310 --> 00:26:33,310
+olha para o contexto dessa classificação e entra agora a terceira parte, que são os subscritores.
+
+222
+00:26:33,310 --> 00:26:40,310
+E ele vai enviar essa notificação, ou réplicas dessa notificação,
+
+223
+00:26:40,310 --> 00:26:46,310
+para todos os subscritores que estejam interessados naquele contexto ou naquele tópico.
+
+224
+00:26:47,310 --> 00:26:50,310
+A palavra correta é tópica.
+
+225
+00:26:50,310 --> 00:26:53,310
+Contexto.
+
+226
+00:26:53,310 --> 00:27:03,310
+Estes dados foram produzidos neste contexto, mas referem-se, são classificados por tópicos.
+
+227
+00:27:03,310 --> 00:27:14,310
+Como é que o broker sabe para quem tem de redirecionar essas notificações de um determinado tópico?
+
+228
+00:27:14,310 --> 00:27:18,310
+Os subscritores subscrevem tópicos.
+
+229
+00:27:18,310 --> 00:27:26,310
+Quando um programa está interessado em receber notificações de um determinado tópico,
+
+230
+00:27:26,310 --> 00:27:34,310
+ele dirige só o broker e regista-se a dizer, eu quero receber notificações deste tópico.
+
+231
+00:27:34,310 --> 00:27:40,310
+E o broker elagora uma lista de destinatários para cada tópico.
+
+232
+00:27:40,310 --> 00:27:53,310
+Sempre que recebe uma notificação deste tópico, ele vai enviar uma cópia dessa notificação para cada um dos programas,
+
+233
+00:27:53,310 --> 00:27:58,310
+para cada um dos clientes que subscreveram este tópico.
+
+234
+00:27:59,310 --> 00:28:10,550
+Neste caso, os produtores e os subscritores estão totalmente desacupelados.
+
+235
+00:28:10,550 --> 00:28:16,550
+A única acupelamento que tem entre eles é o broker,
+
+236
+00:28:16,550 --> 00:28:28,550
+mas ao contrário do request response em que o cliente tem de saber que existe um servidor para enviar para vivo e receber a resposta,
+
+237
+00:28:28,550 --> 00:28:41,550
+neste caso, o publicador não tem a mínima ideia de se há alguém que está interessado no tópico,
+
+238
+00:28:41,550 --> 00:28:48,550
+ele simplesmente há dados deste tópico porque houve um evento que produziram dados, então é o público.
+
+239
+00:28:48,550 --> 00:28:57,550
+E, por outro lado, os subscritores não têm de saber quem é que está a gerar notificações daquele tópico.
+
+240
+00:28:57,550 --> 00:29:03,550
+Eles simplesmente estão interessados naquele tópico e, se houver notificações daquele tópico, eles recebem-nos.
+
+241
+00:29:03,550 --> 00:29:06,550
+Quem é que está a enviar não faça mínima ideia.
+
+242
+00:29:06,550 --> 00:29:07,550
+Ok?
+
+243
+00:29:07,550 --> 00:29:16,550
+Isto é ótimo porque nem os publicadores precisam de saber quantos subscritores existem e quem são,
+
+244
+00:29:16,550 --> 00:29:24,550
+bem como também os subscritores não têm de saber quantos publicadores daquele tópico existem nem quem são.
+
+245
+00:29:24,550 --> 00:29:25,550
+Ok?
+
+246
+00:29:25,550 --> 00:29:31,550
+É aqui que nós dizemos que há um desacupamento forte entre os publicadores e os subscritores.
+
+247
+00:29:31,550 --> 00:29:32,550
+Tá bom?
+
+248
+00:29:32,550 --> 00:29:34,550
+Tipos de protocolos.
+
+249
+00:29:34,550 --> 00:29:41,550
+Temos a MKTT, temos a MKP, bolas, e temos o VDS.
+
+250
+00:29:41,550 --> 00:29:47,550
+O MKTT é mesmo peso leve, lightweight, ok?
+
+251
+00:29:47,550 --> 00:30:02,550
+Foi desenhado de raiz para ter a maior eficiência possível, ou seja, utilizar o menor número de bytes acessórios para enviar dados.
+
+252
+00:30:02,550 --> 00:30:03,550
+Ok?
+
+253
+00:30:03,550 --> 00:30:09,550
+O MKTT, o MKP, bolas, eu embrulho-me sempre a dizer MKP.
+
+254
+00:30:09,550 --> 00:30:19,550
+O MKP também é baseado no public subscribe, mas é mais complexo, ok?
+
+255
+00:30:19,550 --> 00:30:35,550
+Os pacotes de MKP são maiores e trazem mais informação no cabeçalho que permite realizar operações mais complexas.
+
+256
+00:30:35,550 --> 00:30:43,550
+O VDS é um public subscribe sem broker.
+
+257
+00:30:43,550 --> 00:30:52,550
+E o VDS foi originalmente desenhado, projetado para o ROS, o Robot Operating System.
+
+258
+00:30:52,550 --> 00:31:00,550
+O VDS é ligeiramente diferente do MKTT, porque elimina por completo os brokers.
+
+259
+00:31:00,550 --> 00:31:06,550
+Só existem quem publica e quem subscreve, ok?
+
+260
+00:31:06,550 --> 00:31:14,550
+Só que para isso funcionar tem de existir um serviço de procura e descoberta.
+
+261
+00:31:15,550 --> 00:31:24,550
+Ou seja, quem publica vai saber quem é que está interessado em receber o que ele publicou.
+
+262
+00:31:24,550 --> 00:31:27,550
+E a comunicação é feita diretamente.
+
+263
+00:31:27,550 --> 00:31:34,980
+Vocês podem me dizer, mas aí isso aumenta o acoplamento.
+
+264
+00:31:34,980 --> 00:31:38,980
+Eu vou-vos responder. Sim, aumentou o acoplamento.
+
+265
+00:31:38,980 --> 00:31:47,980
+Mas resolve um problema que o pessoal do ROS queria resolver, que era diminuir a latência, ok?
+
+266
+00:31:47,980 --> 00:31:56,980
+Quando eu sei para quem quero, eu sei quem é que está interessado em receber aquilo que eu acabei de produzir,
+
+267
+00:31:57,980 --> 00:32:07,980
+e comunico diretamente essa notificação para quem está interessado, a latência diminui de sobremaneira, ok?
+
+268
+00:32:07,980 --> 00:32:14,980
+Deixamos ter aquela pessoa no meio, aquela intermediária, ok?
+
+269
+00:32:14,980 --> 00:32:15,980
+Pronto.
+
+270
+00:32:15,980 --> 00:32:20,980
+Em casos de uso, é que o public subscribe se adapta melhor.
+
+271
+00:32:20,980 --> 00:32:25,980
+Em situações em que os dados são gerados por eventos.
+
+272
+00:32:25,980 --> 00:32:28,980
+Por exemplo, telemetria.
+
+273
+00:32:28,980 --> 00:32:38,980
+Quem está na fonte dos dados sabe quando é que os dados são gerados e transmitem as status, ok?
+
+274
+00:32:38,980 --> 00:32:40,980
+À medida que isto tem.
+
+275
+00:32:40,980 --> 00:32:46,980
+Para quem? Para quem estiver interessado, ok?
+
+276
+00:32:46,980 --> 00:32:49,980
+Duvidas até agora.
+
+277
+00:32:49,980 --> 00:32:57,400
+Não há? Estou mesmo aí, certo?
+
+278
+00:32:57,400 --> 00:32:59,400
+Pronto. Obrigado.
+
+279
+00:33:00,400 --> 00:33:06,400
+Comparação destes protocolos.
+
+280
+00:33:06,400 --> 00:33:14,400
+Temos aqui, qual é que é o protocolo de nível 4 que é utilizado para transportar,
+
+281
+00:33:14,400 --> 00:33:21,400
+para transporte nestes quatro protocolos.
+
+282
+00:33:21,400 --> 00:33:28,680
+Quase todos eles utilizam o TCP, o MQTT e o NKP utilizam o TCP.
+
+283
+00:33:28,680 --> 00:33:34,680
+Portanto, há ligações que são criadas, ou ligações connection.
+
+284
+00:33:34,680 --> 00:33:37,680
+Há ligações que são criadas e são mantidas.
+
+285
+00:33:37,680 --> 00:33:46,680
+Mas, por exemplo, no caso do co-app, em que se tenta ser o mais eficiente e expedito possível,
+
+286
+00:33:46,680 --> 00:33:49,680
+aí não há ligações.
+
+287
+00:33:49,680 --> 00:33:51,680
+É por o VAP.
+
+288
+00:33:51,680 --> 00:33:55,680
+Também, há uma característica de co-app.
+
+289
+00:33:55,680 --> 00:34:04,680
+Os dados ou os pedidos que nós queremos enviar para o servidor são regras geral curtinhos.
+
+290
+00:34:04,680 --> 00:34:09,680
+São suficientes para enviar numa notificação ou enviar um comando, ok?
+
+291
+00:34:09,680 --> 00:34:15,680
+Normalmente, não há necessidade de enviar um pedido em mais de um pacote.
+
+292
+00:34:15,680 --> 00:34:19,680
+Nem a resposta vem em mais de um pacote, ok?
+
+293
+00:34:19,680 --> 00:34:22,680
+É por design.
+
+294
+00:34:22,680 --> 00:34:29,680
+Mas, aí, nesse caso, nós não temos a garantia que, neste caso, as mensagens são entregues,
+
+295
+00:34:29,680 --> 00:34:31,680
+não é sendo o DAP?
+
+296
+00:34:31,680 --> 00:34:36,860
+É como se fosse streaming, digamos?
+
+297
+00:34:36,860 --> 00:34:39,860
+Sim e não.
+
+298
+00:34:39,860 --> 00:34:44,860
+Ou seja, não há garantias...
+
+299
+00:34:44,860 --> 00:34:53,860
+É o seguinte, se o pedido coberne um pacote e a resposta coberne um pacote,
+
+300
+00:34:53,860 --> 00:34:55,860
+o que é que pode acontecer?
+
+301
+00:34:55,860 --> 00:35:02,860
+Primeiro, não vai haver pacotes de um pedido que vão chegar fora da ordem, certo?
+
+302
+00:35:02,860 --> 00:35:04,860
+Ou chega ou não chega?
+
+303
+00:35:04,860 --> 00:35:09,860
+Pronto, é o maior problema ou o único problema que pode existir?
+
+304
+00:35:09,860 --> 00:35:12,860
+Oh, gato, estás doido, meu irmão?
+
+305
+00:35:12,860 --> 00:35:15,860
+Eu vou ter que ter por lá fora.
+
+306
+00:35:15,860 --> 00:35:16,860
+Eu até estou...
+
+307
+00:35:16,860 --> 00:35:21,860
+Pai, eu não queria pôr lá fora que este é o beijinho, já tem 18 anos,
+
+308
+00:35:21,860 --> 00:35:24,860
+e ele muitas das vezes está ali refastelado a dormir,
+
+309
+00:35:24,860 --> 00:35:28,860
+e eu agora até estava aqui a fazer-me companhia, mas estava a dormir.
+
+310
+00:35:28,860 --> 00:35:33,860
+Antes de eu pôr a falar, ele estava aqui vinhetadinho, na mesa, ao meu lado.
+
+311
+00:35:33,860 --> 00:35:35,860
+Eu comecei a falar e ele agora...
+
+312
+00:35:35,860 --> 00:35:38,860
+Ah, bichano, acalma, meu.
+
+313
+00:35:38,860 --> 00:35:40,860
+Escança, relaxa.
+
+314
+00:35:40,860 --> 00:35:43,860
+Ah, uma mensagem aqui, queres relaxar?
+
+315
+00:35:43,860 --> 00:35:46,860
+Agora, voltando ao DAP, pronto.
+
+316
+00:35:46,860 --> 00:35:50,860
+Quando nós temos comunicações longas,
+
+317
+00:35:50,860 --> 00:35:54,860
+ou extensas, o TCP é o útil porquê?
+
+318
+00:35:54,860 --> 00:36:00,860
+Porque se eu tiver que receber algo que vem dividido em vários pacotes,
+
+319
+00:36:00,860 --> 00:36:09,860
+eu primeiro quero ter a certeza que os pacotes vão chegar em ordem.
+
+320
+00:36:09,860 --> 00:36:14,860
+Mesmo que não cheguem em ordem, eu quero ter a ilusão que eles chegam em ordem,
+
+321
+00:36:14,860 --> 00:36:19,860
+porque quando vou buscar-los do nível 4 para cima,
+
+322
+00:36:19,860 --> 00:36:22,860
+eu quero que a informação me venha ordenada.
+
+323
+00:36:22,860 --> 00:36:27,860
+Imagine que vocês nem vou falar num vídeo, mas falar numa imagem.
+
+324
+00:36:27,860 --> 00:36:30,860
+Vocês se pediram para receber uma imagem,
+
+325
+00:36:30,860 --> 00:36:33,860
+vocês querem receber a imagem direita, certo?
+
+326
+00:36:33,860 --> 00:36:35,860
+E não rompida.
+
+327
+00:36:35,860 --> 00:36:40,860
+Para receber a imagem direita, isso foi uma imagem, por exemplo, de 3 megas.
+
+328
+00:36:40,860 --> 00:36:44,860
+Opa, acreditem, aquilo vai ocupar muitos pacotes.
+
+329
+00:36:44,860 --> 00:36:47,860
+Vai ser viver, viver muitos pacotes e vamos receber muitos pacotes.
+
+330
+00:36:47,860 --> 00:36:49,860
+O que é que acontece?
+
+331
+00:36:49,860 --> 00:36:51,860
+Se vier primeiro pacote número 1, ok?
+
+332
+00:36:51,860 --> 00:36:54,860
+Depois o pacote número 2, fantástico.
+
+333
+00:36:54,860 --> 00:36:57,860
+Depois chega o pacote número 4, pronto, isso já não é muito bom.
+
+334
+00:36:57,860 --> 00:37:01,860
+Vem o pacote número 5 e depois vem o pacote número 3.
+
+335
+00:37:01,860 --> 00:37:07,230
+Caramba, tenho aqui os pacotes fora de ordem.
+
+336
+00:37:07,230 --> 00:37:13,230
+O TCP tem lá embaixo, na casa das máquinas, nível 4,
+
+337
+00:37:13,230 --> 00:37:23,230
+um processo em que os pacotes podem chegar ao nosso computador fora de ordem,
+
+338
+00:37:23,230 --> 00:37:29,230
+mas só são passados para cima quando estiverem em ordem.
+
+339
+00:37:29,230 --> 00:37:33,230
+E ele, se receber o 3 depois do 4 e do 5,
+
+340
+00:37:33,230 --> 00:37:39,230
+ele vai colocar o 3 antes do 4 e o 4 antes do 5
+
+341
+00:37:39,230 --> 00:37:43,230
+e quando passar para cima, passa tudo direitinho, ok?
+
+342
+00:37:43,230 --> 00:37:45,230
+Com o dp, nós não temos isso.
+
+343
+00:37:45,230 --> 00:37:49,230
+Com o dp, é a medida que chega, temos.
+
+344
+00:37:49,230 --> 00:37:52,230
+E é conforme estava a dizer, parece um streaming.
+
+345
+00:37:52,230 --> 00:37:58,230
+Sim, pode ser um streaming em que o fora de ordem resulta,
+
+346
+00:37:58,230 --> 00:38:01,230
+vamos a pensar em vídeo, nos quadrados verdes,
+
+347
+00:38:01,230 --> 00:38:05,230
+se calhar no som, certo?
+
+348
+00:38:05,230 --> 00:38:11,230
+Uns glitches no som, mas pronto, aceitamos isso.
+
+349
+00:38:11,230 --> 00:38:18,230
+Eu até estava a pensar mais na ótica de automação,
+
+350
+00:38:18,230 --> 00:38:21,230
+por exemplo, só ligar e desligar uma luz.
+
+351
+00:38:21,230 --> 00:38:22,230
+Ok.
+
+352
+00:38:22,230 --> 00:38:25,230
+Embiabiliza um bocado a utilização desse protocolo,
+
+353
+00:38:25,230 --> 00:38:29,230
+nós temos que garantir, porque não é MQTT, nós temos o que é OS,
+
+354
+00:38:29,230 --> 00:38:33,230
+que é só entrar, por exemplo, só uma mensagem,
+
+355
+00:38:33,230 --> 00:38:35,230
+significa ligar a luz.
+
+356
+00:38:35,230 --> 00:38:36,230
+Ok.
+
+357
+00:38:36,230 --> 00:38:39,230
+Neste caso, nunca poderemos usar este protocolo.
+
+358
+00:38:39,230 --> 00:38:43,230
+Obrigado pelo exemplo, porque eu agora ia passar precisamente
+
+359
+00:38:43,230 --> 00:38:46,230
+para o caso em que co-app é efetivamente utilizado,
+
+360
+00:38:46,230 --> 00:38:52,230
+e esse exemplo é fantástico, que é, agora eu tenho o dp.
+
+361
+00:38:52,230 --> 00:38:57,230
+Em o dp, se o meu comando coberna um pacote,
+
+362
+00:38:57,230 --> 00:39:01,230
+e a minha resposta coberna um pacote,
+
+363
+00:39:01,230 --> 00:39:04,230
+qual é a pior coisa que me pode acontecer?
+
+364
+00:39:04,230 --> 00:39:06,230
+É eu perder o pacote, certo?
+
+365
+00:39:06,230 --> 00:39:10,230
+Eu enviei um pacote e o pacote não chega lá, certo?
+
+366
+00:39:10,230 --> 00:39:11,230
+Certo.
+
+367
+00:39:11,230 --> 00:39:16,230
+Suponha que eu sou o cliente e quero garantir
+
+368
+00:39:16,230 --> 00:39:20,230
+que um dispositivo que está no meio do mato acenda a luz,
+
+369
+00:39:20,230 --> 00:39:22,230
+foi isso que me disse, não é?
+
+370
+00:39:22,230 --> 00:39:24,230
+Acender a luz ou apagar a luz?
+
+371
+00:39:24,230 --> 00:39:25,230
+Sim, por exemplo.
+
+372
+00:39:25,230 --> 00:39:28,230
+Então, eu mando um pacote co-app a dizer
+
+373
+00:39:28,230 --> 00:39:31,230
+ao Lâmpada, acenda a luz.
+
+374
+00:39:31,230 --> 00:39:34,480
+E o que é que acontece?
+
+375
+00:39:34,480 --> 00:39:37,480
+Eu fico à espera que o Lâmpada me diga,
+
+376
+00:39:37,480 --> 00:39:42,240
+já está acioso, certo?
+
+377
+00:39:42,240 --> 00:39:44,240
+Passados cinco segundos,
+
+378
+00:39:44,240 --> 00:39:47,240
+eu ainda não recebi a confirmação da Lâmpada
+
+379
+00:39:47,240 --> 00:39:51,240
+é ter a luz acesa.
+
+380
+00:39:51,240 --> 00:39:53,240
+Vamos supor que temos um time-out,
+
+381
+00:39:53,240 --> 00:39:57,240
+um time-out de paciência de cinco segundos, ok?
+
+382
+00:39:57,240 --> 00:39:59,240
+Das duas, uma.
+
+383
+00:39:59,240 --> 00:40:02,240
+Ou o pacote que me enviei com a ordem se perdeu
+
+384
+00:40:02,240 --> 00:40:04,240
+e não chegou à Lâmpada,
+
+385
+00:40:04,240 --> 00:40:08,240
+ou então a resposta da Lâmpada foi enviada,
+
+386
+00:40:08,240 --> 00:40:11,240
+mas perdeu-se e eu não recebi.
+
+387
+00:40:11,240 --> 00:40:18,520
+O que é que eu posso fazer?
+
+388
+00:40:18,520 --> 00:40:21,520
+É assim, não acompanho já novamente para ligar a luz, não é?
+
+389
+00:40:21,520 --> 00:40:24,520
+Porque não sabe se, efectivamente, ela está ligada ou não.
+
+390
+00:40:24,520 --> 00:40:27,990
+Qual é o problema?
+
+391
+00:40:27,990 --> 00:40:30,990
+Já tentou acender uma luz acesa?
+
+392
+00:40:30,990 --> 00:40:32,990
+Pelo menos nenhum.
+
+393
+00:40:32,990 --> 00:40:35,990
+Lá está, usa mais tráfego, não é?
+
+394
+00:40:35,990 --> 00:40:39,850
+Tem que enviar duas vezes a mesma coisa.
+
+395
+00:40:39,850 --> 00:40:40,850
+Exato.
+
+396
+00:40:40,850 --> 00:40:43,850
+Mas se olharmos numa escala maior,
+
+397
+00:40:43,850 --> 00:40:45,850
+em que temos mil luzes,
+
+398
+00:40:45,850 --> 00:40:47,850
+temos coisas sempre isso.
+
+399
+00:40:47,850 --> 00:40:50,850
+Podem ser um plano de toga.
+
+400
+00:40:50,850 --> 00:40:53,850
+Atenção, não vamos complicar,
+
+401
+00:40:53,850 --> 00:40:55,850
+não vamos complicar.
+
+402
+00:40:55,850 --> 00:40:57,850
+Aqui não é nenhum switch.
+
+403
+00:40:57,850 --> 00:40:59,850
+Se for não é um toggle,
+
+404
+00:40:59,850 --> 00:41:01,850
+é para isso que complica tudo.
+
+405
+00:41:01,850 --> 00:41:04,850
+Naturalmente que numa situação dessas
+
+406
+00:41:04,850 --> 00:41:09,850
+nós íamos ter um comando on e um comando off, ok?
+
+407
+00:41:09,850 --> 00:41:12,850
+Não é um comando toggle.
+
+408
+00:41:12,850 --> 00:41:14,850
+O comando toggle é tramado.
+
+409
+00:41:14,850 --> 00:41:20,850
+Mas, neste caso, o que é que eu faço?
+
+410
+00:41:20,850 --> 00:41:22,850
+Não tenho a confirmação.
+
+411
+00:41:22,850 --> 00:41:25,850
+Eu envio a mensagem.
+
+412
+00:41:25,850 --> 00:41:27,850
+Acende.
+
+413
+00:41:27,850 --> 00:41:29,850
+Se ela já está acesa,
+
+414
+00:41:29,850 --> 00:41:31,850
+ela vai continuar acesa.
+
+415
+00:41:31,850 --> 00:41:33,850
+E eu vou, possivelmente,
+
+416
+00:41:33,850 --> 00:41:35,850
+se agora as coisas correram bem,
+
+417
+00:41:35,850 --> 00:41:36,850
+correrem bem,
+
+418
+00:41:36,850 --> 00:41:38,850
+eu vou receber uma resposta a dizer,
+
+419
+00:41:38,850 --> 00:41:40,850
+está aceso, é ótimo.
+
+420
+00:41:40,850 --> 00:41:41,850
+Certo?
+
+421
+00:41:41,850 --> 00:41:42,850
+Se não correu bem,
+
+422
+00:41:42,850 --> 00:41:44,850
+eu volto a fazer o pedido.
+
+423
+00:41:44,850 --> 00:41:47,850
+E eu agora vou pô-la a pensar no seguinte,
+
+424
+00:41:47,850 --> 00:41:49,850
+e se eu tiver STCP?
+
+425
+00:41:49,850 --> 00:41:53,290
+Se eu tiver STCP,
+
+426
+00:41:53,290 --> 00:41:55,290
+fazer um write,
+
+427
+00:41:55,290 --> 00:41:57,290
+não é?
+
+428
+00:41:57,290 --> 00:42:00,290
+No STCP nós sabíamos que foi entregue, não é?
+
+429
+00:42:00,290 --> 00:42:02,290
+Tu tínhamos o acrolado já ou não?
+
+430
+00:42:02,290 --> 00:42:03,290
+E como é que sabe?
+
+431
+00:42:03,290 --> 00:42:06,460
+Sabe.
+
+432
+00:42:06,460 --> 00:42:08,460
+Eu estou a dizer que sabe, ok?
+
+433
+00:42:08,460 --> 00:42:10,460
+Agora estou a perguntar, Jai,
+
+434
+00:42:10,460 --> 00:42:13,460
+e mecânicamente, se vamos lá,
+
+435
+00:42:13,460 --> 00:42:16,460
+abrir o capoe e começarmos a espereitar para dentro da rede,
+
+436
+00:42:16,460 --> 00:42:18,460
+como é que sabe?
+
+437
+00:42:18,460 --> 00:42:20,460
+Tenho que receber uma mensagem de volta
+
+438
+00:42:20,460 --> 00:42:24,460
+de para quem eu enviei o comando,
+
+439
+00:42:24,460 --> 00:42:27,460
+a dizer que efetivamente recebeu o comando.
+
+440
+00:42:27,460 --> 00:42:28,460
+Sim.
+
+441
+00:42:28,460 --> 00:42:30,460
+E se não receber a mensagem de volta,
+
+442
+00:42:30,460 --> 00:42:32,460
+o acknowledge,
+
+443
+00:42:32,460 --> 00:42:34,460
+no final do time out,
+
+444
+00:42:34,460 --> 00:42:39,630
+o que é que vai acontecer?
+
+445
+00:42:39,630 --> 00:42:41,630
+É um caso similar, não é?
+
+446
+00:42:41,630 --> 00:42:44,630
+É igual, vai repetir,
+
+447
+00:42:44,630 --> 00:42:46,630
+e vai ficar à espera,
+
+448
+00:42:46,630 --> 00:42:48,630
+e vai continuar a repetir,
+
+449
+00:42:48,630 --> 00:42:51,630
+até que finalmente tenham acknowledge.
+
+450
+00:42:51,630 --> 00:42:53,630
+O TCP,
+
+451
+00:42:53,630 --> 00:42:55,630
+vamos lá ver agora aqui um,
+
+452
+00:42:55,630 --> 00:42:58,630
+desmistificar um bocado do TCP e o UDP.
+
+453
+00:42:58,630 --> 00:43:00,630
+Mas, ou seja,
+
+454
+00:43:00,630 --> 00:43:04,630
+no MKTT também temos o quality of service,
+
+455
+00:43:04,630 --> 00:43:05,630
+acho que é assim que se diz, não é?
+
+456
+00:43:05,630 --> 00:43:07,630
+Sim, sim, sim.
+
+457
+00:43:07,630 --> 00:43:09,630
+Que também nos garante
+
+458
+00:43:09,630 --> 00:43:13,630
+que a mensagem é enviada a uma e só uma vez.
+
+459
+00:43:13,630 --> 00:43:16,630
+É outro mecanismo de segurança para este caso,
+
+460
+00:43:16,630 --> 00:43:17,630
+por exemplo, dá-me a lembrar.
+
+461
+00:43:17,630 --> 00:43:20,630
+Temos três qualidades de serviço.
+
+462
+00:43:20,630 --> 00:43:22,630
+Não há qualidade de serviço,
+
+463
+00:43:22,630 --> 00:43:26,630
+a qualidade de serviço e a super qualidade de serviço.
+
+464
+00:43:26,630 --> 00:43:28,630
+E vamos ver isso.
+
+465
+00:43:28,630 --> 00:43:30,630
+Eu tenho uns slides aí mais à frente,
+
+466
+00:43:30,630 --> 00:43:32,630
+em que vamos falar sobre as qualidades de serviço.
+
+467
+00:43:32,630 --> 00:43:36,630
+Mas, vamos desmistificar o TCP.
+
+468
+00:43:36,630 --> 00:43:45,140
+O TCP assenta em cima do UDP.
+
+469
+00:43:45,140 --> 00:43:49,140
+A única diferença entre o UDP e o TCP,
+
+470
+00:43:49,140 --> 00:43:55,140
+é que no TCP nós já temos código na pilha protocolar,
+
+471
+00:43:55,140 --> 00:43:59,140
+que nos faz o ordenamento de pacotes
+
+472
+00:43:59,140 --> 00:44:05,470
+e também faz o retrai automático.
+
+473
+00:44:05,470 --> 00:44:10,470
+Eu, com o UDP, não tenho isso,
+
+474
+00:44:10,470 --> 00:44:20,420
+mas posso construí-lo, certo?
+
+475
+00:44:20,420 --> 00:44:26,420
+O TCP é um UDP com alguns mecanismos extra
+
+476
+00:44:26,420 --> 00:44:29,420
+para o meu benefício,
+
+477
+00:44:29,420 --> 00:44:33,890
+mas ambos correm em cima do IP.
+
+478
+00:44:33,890 --> 00:44:37,970
+A única diferença,
+
+479
+00:44:37,970 --> 00:44:47,080
+é que eu posso tornar isto mais claro.
+
+480
+00:44:47,080 --> 00:44:53,080
+Nós quando falamos que o UDP é mais despachado do que o TCP,
+
+481
+00:44:53,080 --> 00:45:01,080
+é porque o UDP permite-me utilizar a rede de uma forma bruta.
+
+482
+00:45:01,080 --> 00:45:07,080
+Certo, ele só envia, não quer saber se você chegou ou se não chegou.
+
+483
+00:45:07,080 --> 00:45:14,080
+Mas o TCP também usa a rede da mesma forma bruta.
+
+484
+00:45:14,080 --> 00:45:16,080
+A única coisa que tem,
+
+485
+00:45:16,080 --> 00:45:22,080
+é adicionalmente mecanismos que eu não preciso implementar
+
+486
+00:45:22,080 --> 00:45:30,080
+para manter o conceito virtual de chamada de uma ligação.
+
+487
+00:45:31,080 --> 00:45:37,080
+E ver tudo que entra em sequência por aquele socket,
+
+488
+00:45:37,080 --> 00:45:39,080
+vai sair do outro lado,
+
+489
+00:45:39,080 --> 00:45:41,080
+também exatamente pela mesma sequência.
+
+490
+00:45:41,080 --> 00:45:45,080
+Mas, se formos olhar para dentro do TCP,
+
+491
+00:45:45,080 --> 00:45:50,080
+o TCP tem essas funcionalidades em cima do UDP,
+
+492
+00:45:50,080 --> 00:45:55,650
+por iduro, ok?
+
+493
+00:45:55,650 --> 00:45:58,650
+O TCP, a única coisa que me dá a mim,
+
+494
+00:45:58,650 --> 00:46:01,650
+é eu não ter que reescrever esse código,
+
+495
+00:46:01,650 --> 00:46:05,650
+de garantir a reordenamento de pacotes,
+
+496
+00:46:05,650 --> 00:46:08,650
+e sempre que me faltam pacotes, já esgotou o tempo,
+
+497
+00:46:08,650 --> 00:46:09,650
+tenho que o pedir,
+
+498
+00:46:09,650 --> 00:46:12,650
+para depois, quando receber, colocar no sítio certo.
+
+499
+00:46:12,650 --> 00:46:15,650
+O que é fantástico, eu adoro o TCP.
+
+500
+00:46:15,650 --> 00:46:16,650
+Certo?
+
+501
+00:46:16,650 --> 00:46:18,650
+Eu adoro o TCP.
+
+502
+00:46:18,650 --> 00:46:20,650
+Mas o TCP,
+
+503
+00:46:20,650 --> 00:46:24,310
+como é que eu dizer?
+
+504
+00:46:24,310 --> 00:46:26,310
+O TCP é mais demorado,
+
+505
+00:46:26,310 --> 00:46:28,310
+precisamente porque está sujeito,
+
+506
+00:46:28,310 --> 00:46:30,310
+a ter esses pedidos,
+
+507
+00:46:30,310 --> 00:46:32,310
+de volta-me a enviar, porque eu não recebi,
+
+508
+00:46:32,310 --> 00:46:34,310
+e já passou o tempo.
+
+509
+00:46:34,310 --> 00:46:36,310
+E depois, até posso receber 2 vezes o mesmo pacote,
+
+510
+00:46:36,310 --> 00:46:38,310
+aquele que se atrasou,
+
+511
+00:46:38,310 --> 00:46:40,310
+e o segundo, que voltei a pedir,
+
+512
+00:46:40,310 --> 00:46:43,310
+porque nunca mais tinha o primeiro, certo?
+
+513
+00:46:43,310 --> 00:46:45,310
+E o gajo, quando recebe 2,
+
+514
+00:46:45,310 --> 00:46:48,310
+ok, eu já tenho este aqui na minha grelha,
+
+515
+00:46:48,310 --> 00:46:50,310
+portanto já posso descartar esse.
+
+516
+00:46:50,310 --> 00:46:51,310
+Certo?
+
+517
+00:46:51,310 --> 00:46:53,310
+Enquanto que com o UDP,
+
+518
+00:46:53,310 --> 00:46:54,310
+eu não tenho nada disso.
+
+519
+00:46:54,310 --> 00:46:56,310
+Aquilo é quase como comprar um carro,
+
+520
+00:46:56,310 --> 00:46:58,310
+arrancar os estofos todas das portas,
+
+521
+00:46:58,310 --> 00:47:01,310
+arrancar os bancos de trase e o volado,
+
+522
+00:47:01,310 --> 00:47:04,310
+meter-me a roubar e lá vou a pro Rally.
+
+523
+00:47:04,310 --> 00:47:06,310
+Porque o carro está mais lévia na mais depressa.
+
+524
+00:47:06,310 --> 00:47:10,260
+Ok.
+
+525
+00:47:10,260 --> 00:47:13,260
+Não sei se vos conseguiu vender a ideia,
+
+526
+00:47:13,260 --> 00:47:15,260
+ao convencer.
+
+527
+00:47:15,260 --> 00:47:18,260
+Sim, eu só estava a pensar na aplicabilidade do co-op,
+
+528
+00:47:18,260 --> 00:47:21,260
+num ambiente mais, digamos, industrial,
+
+529
+00:47:21,260 --> 00:47:23,260
+em treinamento do MKTT.
+
+530
+00:47:23,260 --> 00:47:25,260
+É o seguinte.
+
+531
+00:47:25,260 --> 00:47:28,260
+Para tornar isso mais viável,
+
+532
+00:47:28,260 --> 00:47:31,260
+teríamos de transformar a camada de transporte
+
+533
+00:47:31,260 --> 00:47:33,260
+para TCEP, basicamente.
+
+534
+00:47:33,260 --> 00:47:35,260
+Sim, sim.
+
+535
+00:47:35,260 --> 00:47:37,260
+O co-op tem,
+
+536
+00:47:37,260 --> 00:47:40,260
+de vantar,
+
+537
+00:47:40,260 --> 00:47:43,260
+o co-op estabeleçamos bastante
+
+538
+00:47:43,260 --> 00:47:47,260
+o paralelo entre o co-op e o Http.
+
+539
+00:47:47,260 --> 00:47:49,260
+Porque o co-op,
+
+540
+00:47:49,260 --> 00:47:51,260
+a forma como eu vejo o co-op,
+
+541
+00:47:51,260 --> 00:47:53,260
+é uma Http
+
+542
+00:47:53,260 --> 00:47:55,260
+sem lastes.
+
+543
+00:47:55,260 --> 00:47:57,260
+É aquilo que acabei de falar agora dos carros,
+
+544
+00:47:57,260 --> 00:47:59,260
+de tirar os estofos todos e os bancos e o carancas,
+
+545
+00:47:59,260 --> 00:48:01,260
+tudo que é peso extra,
+
+546
+00:48:01,260 --> 00:48:03,260
+e não é necessário arrancar aquilo fora,
+
+547
+00:48:03,260 --> 00:48:05,260
+que é para ter ali um carro,
+
+548
+00:48:05,260 --> 00:48:07,260
+que é horrível,
+
+549
+00:48:07,260 --> 00:48:09,260
+não dá para levar a família, não é?
+
+550
+00:48:09,260 --> 00:48:11,260
+Não é nada confortável,
+
+551
+00:48:11,260 --> 00:48:13,260
+mas se for para andar depressa, é aquele o carro.
+
+552
+00:48:13,260 --> 00:48:15,260
+Porque eu arranquei tudo o que era peso extra.
+
+553
+00:48:15,260 --> 00:48:17,260
+Certo?
+
+554
+00:48:17,260 --> 00:48:20,260
+E o co-op
+
+555
+00:48:20,260 --> 00:48:22,260
+é orientado
+
+556
+00:48:22,260 --> 00:48:24,260
+para enviar
+
+557
+00:48:24,260 --> 00:48:26,260
+pedidos e respostas
+
+558
+00:48:26,260 --> 00:48:28,260
+que em si são curtos,
+
+559
+00:48:28,260 --> 00:48:30,260
+cabem num
+
+560
+00:48:30,260 --> 00:48:32,260
+um pacote IP.
+
+561
+00:48:32,260 --> 00:48:34,260
+Certo?
+
+562
+00:48:34,260 --> 00:48:36,260
+Porque se for
+
+563
+00:48:36,260 --> 00:48:38,260
+para enviar pedidos
+
+564
+00:48:38,260 --> 00:48:40,260
+que ocupam mais
+
+565
+00:48:40,260 --> 00:48:42,260
+do que um pacote IP,
+
+566
+00:48:42,260 --> 00:48:44,260
+ou respostas que ocupam mais
+
+567
+00:48:44,260 --> 00:48:46,260
+do que um pacote IP,
+
+568
+00:48:46,260 --> 00:48:48,260
+o co-op não é a melhor coisa.
+
+569
+00:48:48,260 --> 00:48:50,260
+Só que para a telemetria,
+
+570
+00:48:50,260 --> 00:48:52,260
+por exemplo,
+
+571
+00:48:52,260 --> 00:48:54,260
+enviar os dados
+
+572
+00:48:54,260 --> 00:48:56,260
+de dois valores ou três valores,
+
+573
+00:48:56,260 --> 00:48:58,260
+e tentar,
+
+574
+00:48:58,260 --> 00:49:00,260
+e mesmo que seja por exemplo,
+
+575
+00:49:00,260 --> 00:49:02,260
+de telemetria derrajada,
+
+576
+00:49:02,260 --> 00:49:04,260
+em que eu quero enviar vários,
+
+577
+00:49:04,260 --> 00:49:06,260
+uma espécie de streaming,
+
+578
+00:49:06,260 --> 00:49:08,260
+não há melhor de co-op.
+
+579
+00:49:08,260 --> 00:49:10,260
+Agora,
+
+580
+00:49:10,260 --> 00:49:12,260
+se se perder alguma coisa,
+
+581
+00:49:12,260 --> 00:49:14,260
+agora também depende da aplicação.
+
+582
+00:49:14,260 --> 00:49:16,260
+Se eu não me importar de perder um ou outro,
+
+583
+00:49:16,260 --> 00:49:18,260
+de vez em quando,
+
+584
+00:49:18,260 --> 00:49:20,260
+desde que continuo a receber os seguintes,
+
+585
+00:49:20,260 --> 00:49:22,260
+ou então se me chegarem fora da ordem,
+
+586
+00:49:22,260 --> 00:49:24,260
+e se eu quero sempre o último,
+
+587
+00:49:24,260 --> 00:49:26,260
+se chegar um que já se atrasou
+
+588
+00:49:26,260 --> 00:49:28,260
+e já tem um outro mais recente,
+
+589
+00:49:28,260 --> 00:49:30,260
+opa, deita fora, o que se atrasou,
+
+590
+00:49:30,260 --> 00:49:32,260
+nessas situações,
+
+591
+00:49:32,260 --> 00:49:34,260
+o co-op é fantástico.
+
+592
+00:49:34,260 --> 00:49:36,260
+E também,
+
+593
+00:49:36,260 --> 00:49:38,260
+em aplicações,
+
+594
+00:49:38,260 --> 00:49:40,260
+industriais, em que eu quero garantir,
+
+595
+00:49:40,260 --> 00:49:42,260
+o co-op é mais rápido,
+
+596
+00:49:42,260 --> 00:49:44,260
+porque eu mando um pedido
+
+597
+00:49:44,260 --> 00:49:46,260
+e um único pacote.
+
+598
+00:49:46,260 --> 00:49:48,260
+Não preciso ter uma ligação.
+
+599
+00:49:48,260 --> 00:49:50,260
+Não preciso de estabelecer uma ligação.
+
+600
+00:49:50,260 --> 00:49:52,260
+E atenção,
+
+601
+00:49:52,260 --> 00:49:54,260
+que estabelecer uma ligação.
+
+602
+00:49:54,260 --> 00:49:56,260
+Mesmo que eu faço,
+
+603
+00:49:56,260 --> 00:49:58,260
+ah, eu faço o connect
+
+604
+00:49:58,260 --> 00:50:00,260
+e depois faço o close,
+
+605
+00:50:00,260 --> 00:50:02,260
+e sempre que preciso, faço um connect e um close.
+
+606
+00:50:02,260 --> 00:50:04,260
+Fazer o connect
+
+607
+00:50:04,260 --> 00:50:06,260
+demora tempo,
+
+608
+00:50:06,260 --> 00:50:08,260
+porque para estabelecer uma ligação,
+
+609
+00:50:08,260 --> 00:50:10,260
+tem que existir ali uma comunicação
+
+610
+00:50:10,260 --> 00:50:12,260
+protocolar,
+
+611
+00:50:12,260 --> 00:50:14,260
+para estabelecer a ligação.
+
+612
+00:50:14,260 --> 00:50:16,260
+Ok?
+
+613
+00:50:16,260 --> 00:50:18,260
+Pega lá,
+
+614
+00:50:18,260 --> 00:50:20,260
+está feito.
+
+615
+00:50:20,260 --> 00:50:22,260
+E agora, espero pela resposta.
+
+616
+00:50:22,260 --> 00:50:24,260
+Se eu quiser garantir, eu tenho que esperar pela resposta.
+
+617
+00:50:26,260 --> 00:50:28,260
+Se não receber a resposta,
+
+618
+00:50:28,260 --> 00:50:30,260
+dentro de um time-out,
+
+619
+00:50:30,260 --> 00:50:32,260
+eu volto a lançar o pedido.
+
+620
+00:50:32,260 --> 00:50:34,260
+Certo? Se, por exemplo, se for para comandar,
+
+621
+00:50:34,260 --> 00:50:36,260
+isso pode acontecer
+
+622
+00:50:36,260 --> 00:50:38,260
+com maior ou menor
+
+623
+00:50:38,260 --> 00:50:40,260
+frequência com o seu ambiente.
+
+624
+00:50:40,260 --> 00:50:42,260
+Lembre-se que, nestes casos,
+
+625
+00:50:42,260 --> 00:50:44,260
+o ambiente
+
+626
+00:50:44,260 --> 00:50:46,260
+não é
+
+627
+00:50:46,260 --> 00:50:48,260
+previsível
+
+628
+00:50:48,260 --> 00:50:50,260
+e muitas das vezes não é meio.
+
+629
+00:50:50,260 --> 00:50:52,260
+Ou seja,
+
+630
+00:50:52,260 --> 00:50:54,260
+há pacotes
+
+631
+00:50:54,260 --> 00:50:56,260
+que se podem perder com alguma frequência.
+
+632
+00:50:56,260 --> 00:50:58,260
+Mas,
+
+633
+00:50:58,260 --> 00:51:00,260
+o que eu ganho
+
+634
+00:51:00,260 --> 00:51:02,260
+com a forma expedita
+
+635
+00:51:02,260 --> 00:51:04,260
+com que o co-app
+
+636
+00:51:04,260 --> 00:51:07,570
+me permita enviar comandos,
+
+637
+00:51:07,570 --> 00:51:09,570
+para, eu ganho.
+
+638
+00:51:09,570 --> 00:51:11,570
+É um jogo
+
+639
+00:51:11,570 --> 00:51:13,570
+de equilíbrio.
+
+640
+00:51:13,570 --> 00:51:15,570
+Eu consigo fazer-lhes coisas como menor latência,
+
+641
+00:51:15,570 --> 00:51:17,570
+boa parte das vezes.
+
+642
+00:51:17,570 --> 00:51:19,570
+E, nas outras vezes,
+
+643
+00:51:19,570 --> 00:51:21,570
+em que eu tenho que voltar a pedir,
+
+644
+00:51:21,570 --> 00:51:23,570
+o TCP também não me ganhava
+
+645
+00:51:23,570 --> 00:51:30,050
+porque fazia o mesmo.
+
+646
+00:51:30,050 --> 00:51:32,050
+Não tem aquele conforto que o TCP não dá.
+
+647
+00:51:32,050 --> 00:51:34,050
+Que é eu simplesmente
+
+648
+00:51:34,050 --> 00:51:36,050
+fazer um write
+
+649
+00:51:36,050 --> 00:51:38,050
+e depois fazer um read da resposta.
+
+650
+00:51:38,050 --> 00:51:40,050
+E a coisa mais cheia
+
+651
+00:51:40,050 --> 00:51:42,050
+da mais tarde a descompor,
+
+652
+00:51:42,050 --> 00:51:44,050
+porque, naquele nível 4,
+
+653
+00:51:44,050 --> 00:51:46,050
+há software
+
+654
+00:51:46,050 --> 00:51:48,050
+que faz a organização e faz os pabitos
+
+655
+00:51:48,050 --> 00:51:50,050
+quando há time-outs
+
+656
+00:51:50,050 --> 00:51:52,050
+e que me organiza os pacotes
+
+657
+00:51:52,050 --> 00:51:54,050
+quando eles vêm fora de ordem ou repetidos.
+
+658
+00:51:54,050 --> 00:51:57,330
+Ok?
+
+659
+00:51:57,330 --> 00:51:59,330
+Reparem,
+
+660
+00:51:59,330 --> 00:52:01,330
+que o tamanho do cabeçalho
+
+661
+00:52:01,330 --> 00:52:03,330
+de um pacote co-app
+
+662
+00:52:03,330 --> 00:52:05,330
+anda a volta dos 4 bytes.
+
+663
+00:52:05,330 --> 00:52:09,280
+Aliás,
+
+664
+00:52:09,280 --> 00:52:11,280
+eu não sei se o tamanho mínimo
+
+665
+00:52:11,280 --> 00:52:13,280
+de um cabeçalho co-app
+
+666
+00:52:13,280 --> 00:52:15,280
+são 2 bytes.
+
+667
+00:52:15,280 --> 00:52:17,280
+O menor cabeçalho
+
+668
+00:52:17,280 --> 00:52:19,280
+co-app, acho que são 2 bytes.
+
+669
+00:52:19,280 --> 00:52:23,300
+Ok?
+
+670
+00:52:23,300 --> 00:52:25,300
+Nesse protocol era bom,
+
+671
+00:52:25,300 --> 00:52:27,300
+por exemplo, estava a pensar
+
+672
+00:52:27,300 --> 00:52:29,300
+em algo concreto, seria
+
+673
+00:52:29,300 --> 00:52:31,300
+se nós téssemos a treinar um modelo
+
+674
+00:52:31,300 --> 00:52:33,300
+qualquer de machine learning,
+
+675
+00:52:33,300 --> 00:52:35,300
+em que temos um streaming de dados
+
+676
+00:52:35,300 --> 00:52:37,300
+constantes, como a sua temperatura,
+
+677
+00:52:37,300 --> 00:52:39,300
+a enviar para algum lado
+
+678
+00:52:39,300 --> 00:52:41,300
+para treinar esse modelo.
+
+679
+00:52:41,300 --> 00:52:43,300
+Nessa questão,
+
+680
+00:52:43,300 --> 00:52:45,300
+era bastante melhor, porque
+
+681
+00:52:45,300 --> 00:52:47,300
+era mais eficiente.
+
+682
+00:52:47,300 --> 00:52:49,300
+Mas muito se falha uma temperatura
+
+683
+00:52:49,300 --> 00:52:51,300
+ou outra.
+
+684
+00:52:51,300 --> 00:52:53,300
+Portanto, estava tudo bem.
+
+685
+00:52:53,300 --> 00:52:55,300
+Sim, particularmente sim.
+
+686
+00:52:55,300 --> 00:52:57,300
+Até se pensarmos que
+
+687
+00:52:57,300 --> 00:52:59,300
+a temperatura também
+
+688
+00:52:59,300 --> 00:53:01,300
+é um processo por si,
+
+689
+00:53:01,300 --> 00:53:03,300
+a variação da temperatura
+
+690
+00:53:03,300 --> 00:53:05,300
+é um processo por si, muito lento
+
+691
+00:53:05,300 --> 00:53:07,300
+quando comparado com os computadores.
+
+692
+00:53:09,300 --> 00:53:11,300
+Ok, pronto.
+
+693
+00:53:11,300 --> 00:53:13,300
+Estou a pensar a temperatura
+
+694
+00:53:13,300 --> 00:53:15,300
+de um gás, não é?
+
+695
+00:53:15,300 --> 00:53:17,300
+Se for aquecer um fluido,
+
+696
+00:53:17,300 --> 00:53:19,300
+se for aquecer
+
+697
+00:53:19,300 --> 00:53:21,300
+um processador para aquele
+
+698
+00:53:21,300 --> 00:53:23,300
+em alguns sites, aquece-se no instante
+
+699
+00:53:23,300 --> 00:53:25,300
+em determinados sites,
+
+700
+00:53:25,300 --> 00:53:27,300
+devido a
+
+701
+00:53:27,300 --> 00:53:29,300
+a concentração de potência
+
+702
+00:53:29,300 --> 00:53:31,300
+a ser pela alta.
+
+703
+00:53:31,300 --> 00:53:33,300
+Mas sim, poderia ser.
+
+704
+00:53:33,300 --> 00:53:35,300
+Opa!
+
+705
+00:53:35,300 --> 00:53:37,300
+O que é que nós devemos levar
+
+706
+00:53:37,300 --> 00:53:39,300
+daqui?
+
+707
+00:53:39,300 --> 00:53:41,300
+Nós temos um catálogo
+
+708
+00:53:41,300 --> 00:53:43,300
+com vários protocolos
+
+709
+00:53:43,300 --> 00:53:45,300
+à nossa disposição.
+
+710
+00:53:45,300 --> 00:53:47,300
+E nós podemos pegar
+
+711
+00:53:47,300 --> 00:53:49,300
+no protocolo para determinada situação
+
+712
+00:53:49,300 --> 00:53:51,300
+aquele que melhor se adapta.
+
+713
+00:53:51,300 --> 00:53:53,300
+Ok?
+
+714
+00:53:53,300 --> 00:53:55,300
+Também podemos escolher aquele que não se adapta tão bem,
+
+715
+00:53:55,300 --> 00:53:57,300
+mas que
+
+716
+00:53:57,300 --> 00:53:59,300
+no geral
+
+717
+00:53:59,300 --> 00:54:01,300
+pode ser mais útil.
+
+718
+00:54:01,300 --> 00:54:03,300
+Agora, por exemplo,
+
+719
+00:54:03,300 --> 00:54:05,300
+eu para mim
+
+720
+00:54:05,300 --> 00:54:07,300
+para comandos.
+
+721
+00:54:07,300 --> 00:54:09,300
+Por exemplo, para ver a um
+
+722
+00:54:09,300 --> 00:54:11,300
+dispositivo para
+
+723
+00:54:11,300 --> 00:54:13,300
+uma nova regulação de um determinado valor.
+
+724
+00:54:13,300 --> 00:54:15,300
+O co-app é ótimo.
+
+725
+00:54:15,300 --> 00:54:17,300
+Tutuque.
+
+726
+00:54:17,300 --> 00:54:19,300
+No entanto, se for
+
+727
+00:54:19,300 --> 00:54:21,300
+para regular vários dispositivos
+
+728
+00:54:21,300 --> 00:54:23,300
+com
+
+729
+00:54:23,300 --> 00:54:25,300
+uma nova temperatura, por exemplo,
+
+730
+00:54:25,300 --> 00:54:27,300
+o MQTT
+
+731
+00:54:27,300 --> 00:54:29,300
+em certa medida
+
+732
+00:54:29,300 --> 00:54:31,300
+é fantástico.
+
+733
+00:54:31,300 --> 00:54:33,300
+De que forma?
+
+734
+00:54:33,300 --> 00:54:35,300
+Suponho que vocês tenham,
+
+735
+00:54:35,300 --> 00:54:37,300
+sei lá,
+
+736
+00:54:37,300 --> 00:54:39,300
+num piso
+
+737
+00:54:39,300 --> 00:54:41,300
+de 20 unidades
+
+738
+00:54:41,300 --> 00:54:43,300
+à condicionada.
+
+739
+00:54:43,300 --> 00:54:45,300
+Ok?
+
+740
+00:54:45,300 --> 00:54:47,300
+Vocês com o co-app
+
+741
+00:54:47,300 --> 00:54:49,300
+têm que comandar
+
+742
+00:54:49,300 --> 00:54:51,300
+cada uma delas para dizer
+
+743
+00:54:51,300 --> 00:54:53,300
+agora é mais de 23, agora é mais de 23,
+
+744
+00:54:53,300 --> 00:54:55,300
+agora é mais de 23, agora é mais de 23.
+
+745
+00:54:55,300 --> 00:54:57,300
+E têm de conhecer todas elas.
+
+746
+00:54:57,300 --> 00:54:59,300
+Com o MQTT
+
+747
+00:54:59,300 --> 00:55:01,300
+vocês podem ter as várias unidades a dizer
+
+748
+00:55:01,300 --> 00:55:03,300
+eu subscrevo
+
+749
+00:55:03,300 --> 00:55:05,300
+o canal regular
+
+750
+00:55:05,300 --> 00:55:07,300
+temperatura
+
+751
+00:55:07,300 --> 00:55:09,300
+piso 2
+
+752
+00:55:09,300 --> 00:55:11,300
+e depois alguém
+
+753
+00:55:11,300 --> 00:55:13,300
+manda uma publicação
+
+754
+00:55:13,300 --> 00:55:15,300
+a dizer
+
+755
+00:55:15,300 --> 00:55:17,300
+piso 2
+
+756
+00:55:17,300 --> 00:55:19,300
+edifício, barra, piso 2
+
+757
+00:55:19,300 --> 00:55:21,300
+é para regular
+
+758
+00:55:21,300 --> 00:55:23,300
+a regulação agora é 21 graus
+
+759
+00:55:23,300 --> 00:55:25,300
+e todos eles vão receber
+
+760
+00:55:25,300 --> 00:55:29,820
+aquele pacote e vão regular.
+
+761
+00:55:29,820 --> 00:55:31,820
+Tá bem?
+
+762
+00:55:31,820 --> 00:55:33,820
+Sim, consegui enviar logo para todos
+
+763
+00:55:33,820 --> 00:55:35,820
+os dispositivos
+
+764
+00:55:35,820 --> 00:55:37,820
+uma vez.
+
+765
+00:55:37,820 --> 00:55:39,820
+Mas porque eu trabalho
+
+766
+00:55:39,820 --> 00:55:41,820
+em uma área racional com o NWC4.0
+
+767
+00:55:41,820 --> 00:55:43,820
+e utilizo bastante o MQTT
+
+768
+00:55:43,820 --> 00:55:45,820
+e estava a perceber aqui onde é que
+
+769
+00:55:45,820 --> 00:55:47,820
+poderia encaixar o co-app
+
+770
+00:55:47,820 --> 00:55:49,820
+neste aspecto.
+
+771
+00:55:49,820 --> 00:55:51,820
+Era mais por aí.
+
+772
+00:55:51,820 --> 00:55:53,820
+É como os catálogos
+
+773
+00:55:53,820 --> 00:55:55,820
+de parafusos.
+
+774
+00:55:55,820 --> 00:55:57,820
+Uma pessoa olha para parafusos e pensa
+
+775
+00:55:57,820 --> 00:55:59,820
+por que é que há tantos parafusos?
+
+776
+00:55:59,820 --> 00:56:01,820
+Mas depois uma pessoa pensa
+
+777
+00:56:01,820 --> 00:56:03,820
+há estes parafusos que são bons para madeira
+
+778
+00:56:03,820 --> 00:56:05,820
+porque têm aquele chamo
+
+779
+00:56:05,820 --> 00:56:07,820
+para se
+
+780
+00:56:07,820 --> 00:56:09,820
+fixar a madeira
+
+781
+00:56:09,820 --> 00:56:11,820
+há estes que têm
+
+782
+00:56:11,820 --> 00:56:13,820
+uma cabeça
+
+783
+00:56:13,820 --> 00:56:15,820
+cilíndrica
+
+784
+00:56:15,820 --> 00:56:17,820
+e podem entrar
+
+785
+00:56:17,820 --> 00:56:19,820
+num
+
+786
+00:56:19,820 --> 00:56:21,820
+encavador
+
+787
+00:56:21,820 --> 00:56:23,820
+metal e ficam ali
+
+788
+00:56:23,820 --> 00:56:25,820
+e não
+
+789
+00:56:25,820 --> 00:56:27,820
+sobressarem a relação a superfície.
+
+790
+00:56:29,820 --> 00:56:31,820
+Uma pessoa tem de ver
+
+791
+00:56:31,820 --> 00:56:33,820
+o que é que se adapta melhor
+
+792
+00:56:33,820 --> 00:56:35,820
+neste caso
+
+793
+00:56:35,820 --> 00:56:37,820
+e muitas vezes até.
+
+794
+00:56:37,820 --> 00:56:39,820
+Este é o que se adapta melhor
+
+795
+00:56:39,820 --> 00:56:43,100
+mas não é o que dá mais jeito.
+
+796
+00:56:43,100 --> 00:56:45,100
+Se tivermos a pensar holisticamente
+
+797
+00:56:45,100 --> 00:56:47,100
+poderá não ser
+
+798
+00:56:47,100 --> 00:56:49,100
+este melhor.
+
+799
+00:56:49,100 --> 00:56:51,100
+Melhor.
+
+800
+00:56:51,100 --> 00:56:53,100
+É conhecermos bastante
+
+801
+00:56:53,100 --> 00:56:55,100
+e sabemos o que é que podemos
+
+802
+00:56:55,100 --> 00:56:57,100
+o que é que temos à disposição
+
+803
+00:56:57,100 --> 00:56:59,100
+e numa determinada situação
+
+804
+00:56:59,100 --> 00:57:01,100
+pesares para os encontras e escolher.
+
+805
+00:57:01,100 --> 00:57:03,100
+Por exemplo
+
+806
+00:57:03,100 --> 00:57:05,100
+no MQT
+
+807
+00:57:05,100 --> 00:57:07,100
+se observarmos a relação
+
+808
+00:57:07,100 --> 00:57:09,100
+MQTT
+
+809
+00:57:09,100 --> 00:57:11,100
+e ela tem
+
+810
+00:57:11,100 --> 00:57:13,100
+mais garantias
+
+811
+00:57:13,100 --> 00:57:15,100
+o problema
+
+812
+00:57:15,100 --> 00:57:17,100
+é que ela é pesada
+
+813
+00:57:17,100 --> 00:57:19,100
+reparem aqui no
+
+814
+00:57:19,100 --> 00:57:21,100
+tamanho do cabeçalho.
+
+815
+00:57:21,100 --> 00:57:23,100
+MQTT
+
+816
+00:57:23,100 --> 00:57:25,100
+é aproximadamente dois baites
+
+817
+00:57:25,100 --> 00:57:27,100
+ou seja, cabeçalhos muito leves.
+
+818
+00:57:27,100 --> 00:57:29,100
+No MQT
+
+819
+00:57:29,100 --> 00:57:31,100
+no MQP
+
+820
+00:57:31,100 --> 00:57:33,100
+é difícil.
+
+821
+00:57:33,100 --> 00:57:35,100
+Ele tem cabeçalhos
+
+822
+00:57:35,100 --> 00:57:37,100
+maiores.
+
+823
+00:57:37,100 --> 00:57:39,100
+Por que? Porque permite
+
+824
+00:57:39,100 --> 00:57:41,100
+operações mais complexas
+
+825
+00:57:41,100 --> 00:57:43,100
+de
+
+826
+00:57:43,100 --> 00:57:45,100
+fazer o reencaminhamento.
+
+827
+00:57:45,100 --> 00:57:48,610
+Portanto
+
+828
+00:57:48,610 --> 00:57:50,610
+ele tem um custo
+
+829
+00:57:50,610 --> 00:57:52,610
+extra
+
+830
+00:57:52,610 --> 00:57:54,610
+para além da carga
+
+831
+00:57:54,610 --> 00:57:57,860
+bastante maior do que o MQTT.
+
+832
+00:57:57,860 --> 00:58:01,620
+Certo?
+
+833
+00:58:01,620 --> 00:58:03,620
+O VDS também tem um custo
+
+834
+00:58:03,620 --> 00:58:05,620
+no MQTT
+
+835
+00:58:05,620 --> 00:58:07,620
+em relação
+
+836
+00:58:07,620 --> 00:58:09,620
+aos dados que não fazem parte
+
+837
+00:58:09,620 --> 00:58:11,620
+da carga.
+
+838
+00:58:11,620 --> 00:58:13,620
+Só que se fomos ver a Latiância
+
+839
+00:58:13,620 --> 00:58:15,620
+tem muito
+
+840
+00:58:15,620 --> 00:58:17,620
+menos Latiância
+
+841
+00:58:17,620 --> 00:58:19,620
+do que o MQTT.
+
+842
+00:58:19,620 --> 00:58:21,620
+Por que? Porque ilumina
+
+843
+00:58:21,620 --> 00:58:23,620
+o intermediário
+
+844
+00:58:23,620 --> 00:58:25,620
+não usa broker.
+
+845
+00:58:25,620 --> 00:58:27,620
+Obviamente que para não usar broker
+
+846
+00:58:27,620 --> 00:58:29,620
+o que é que tem de existir?
+
+847
+00:58:29,620 --> 00:58:31,620
+Tem de existir um mecanismo de procura
+
+848
+00:58:31,620 --> 00:58:36,240
+e
+
+849
+00:58:36,240 --> 00:58:38,240
+andar por causa disso.
+
+850
+00:58:38,240 --> 00:58:40,240
+Mas
+
+851
+00:58:40,240 --> 00:58:42,240
+de procurar
+
+852
+00:58:42,240 --> 00:58:44,240
+e reconhecer, não é?
+
+853
+00:58:44,240 --> 00:58:46,240
+Isso quer dizer que
+
+854
+00:58:46,240 --> 00:58:48,240
+cada um
+
+855
+00:58:48,240 --> 00:58:50,240
+vai ter a lista
+
+856
+00:58:50,240 --> 00:58:52,240
+dos seus interessados.
+
+857
+00:58:52,240 --> 00:58:54,240
+Para ele
+
+858
+00:58:54,240 --> 00:58:56,240
+poder atirar diretamente
+
+859
+00:58:56,240 --> 00:58:58,240
+a cada um desses
+
+860
+00:58:58,240 --> 00:59:00,240
+interessados.
+
+861
+00:59:00,240 --> 00:59:02,240
+É como tudo.
+
+862
+00:59:02,240 --> 00:59:04,240
+O que eu vou
+
+863
+00:59:04,240 --> 00:59:06,240
+priorizar
+
+864
+00:59:06,240 --> 00:59:08,240
+é esta característica
+
+865
+00:59:08,240 --> 00:59:10,240
+ou aquela característica
+
+866
+00:59:10,240 --> 00:59:12,240
+de acordo com aquilo que estiver
+
+867
+00:59:12,240 --> 00:59:14,240
+mais interessado
+
+868
+00:59:14,240 --> 00:59:16,240
+e, por exemplo, no caso dos robôs
+
+869
+00:59:16,240 --> 00:59:18,240
+a Latiância é muito crítica.
+
+870
+00:59:18,240 --> 00:59:20,240
+Se calhar
+
+871
+00:59:20,240 --> 00:59:22,240
+MQTT não é a melhor coisa para robôs.
+
+872
+00:59:22,240 --> 00:59:24,240
+A não ser que sejam, por exemplo, robôs muito lentes.
+
+873
+00:59:24,240 --> 00:59:26,240
+Em que
+
+874
+00:59:26,240 --> 00:59:28,240
+sei lá, 200 ms
+
+875
+00:59:28,240 --> 00:59:30,240
+ou 800 ms
+
+876
+00:59:30,240 --> 00:59:32,240
+é praticamente o mesmo.
+
+877
+00:59:32,240 --> 00:59:34,240
+Não há grande diferença
+
+878
+00:59:34,240 --> 00:59:36,240
+prática, não é?
+
+879
+00:59:36,240 --> 00:59:41,630
+Dobras.
+
+880
+00:59:41,630 --> 00:59:45,650
+Não há?
+
+881
+00:59:45,650 --> 00:59:47,650
+Mas, oh, por favor,
+
+882
+00:59:47,650 --> 00:59:49,650
+isto aqui, por exemplo,
+
+883
+00:59:49,650 --> 00:59:51,650
+se nós tivéssemos um sistema MQTT
+
+884
+00:59:51,650 --> 00:59:53,650
+temos
+
+885
+00:59:53,650 --> 00:59:55,650
+uma bordo qualquer.
+
+886
+00:59:55,650 --> 00:59:57,650
+E ela tinha lá
+
+887
+00:59:57,650 --> 00:59:59,650
+vários containers
+
+888
+00:59:59,650 --> 01:00:01,650
+a correr lá dentro.
+
+889
+01:00:01,650 --> 01:00:03,650
+Sim.
+
+890
+01:00:03,650 --> 01:00:05,650
+Para eles comunicarem entre eles
+
+891
+01:00:05,650 --> 01:00:07,650
+usaríamos alguma coisa destes.
+
+892
+01:00:07,650 --> 01:00:09,650
+Ou seja, qual é que era o
+
+893
+01:00:09,650 --> 01:00:11,650
+fico a essa dúvida?
+
+894
+01:00:11,650 --> 01:00:13,650
+Óbvio.
+
+895
+01:00:13,650 --> 01:00:15,650
+O MQTT
+
+896
+01:00:15,650 --> 01:00:17,650
+é fantástico
+
+897
+01:00:17,650 --> 01:00:19,650
+para retirar complexidade
+
+898
+01:00:19,650 --> 01:00:21,650
+das bordes
+
+899
+01:00:21,650 --> 01:00:23,650
+mais
+
+900
+01:00:23,650 --> 01:00:25,650
+movestas
+
+901
+01:00:25,650 --> 01:00:27,650
+se forem elas que geram
+
+902
+01:00:27,650 --> 01:00:31,760
+os dados.
+
+903
+01:00:31,760 --> 01:00:33,760
+Por quê?
+
+904
+01:00:33,760 --> 01:00:35,760
+A complexidade
+
+905
+01:00:37,760 --> 01:00:39,760
+o trabalho complexo
+
+906
+01:00:39,760 --> 01:00:41,760
+e que exige
+
+907
+01:00:41,760 --> 01:00:43,760
+mais potência,
+
+908
+01:00:43,760 --> 01:00:45,760
+mais arcabois,
+
+909
+01:00:45,760 --> 01:00:47,760
+é o do broker.
+
+910
+01:00:47,760 --> 01:00:49,760
+O broker é que tem de estar a
+
+911
+01:00:49,760 --> 01:00:51,760
+receber notificações
+
+912
+01:00:51,760 --> 01:00:59,970
+e distribuí-las
+
+913
+01:00:59,970 --> 01:01:01,970
+a um publicador.
+
+914
+01:01:01,970 --> 01:01:03,970
+A única coisa que tem de fazer é
+
+915
+01:01:03,970 --> 01:01:05,970
+quando há um determinado valor
+
+916
+01:01:05,970 --> 01:01:07,970
+ou um evento
+
+917
+01:01:07,970 --> 01:01:09,970
+de publicar
+
+918
+01:01:09,970 --> 01:01:11,970
+simplesmente publicá-la
+
+919
+01:01:11,970 --> 01:01:13,970
+para o broker.
+
+920
+01:01:13,970 --> 01:01:15,970
+Isso aí não requer muita
+
+921
+01:01:15,970 --> 01:01:17,970
+inteligência.
+
+922
+01:01:17,970 --> 01:01:19,970
+Mas no caso
+
+923
+01:01:19,970 --> 01:01:21,970
+de uma bordo
+
+924
+01:01:21,970 --> 01:01:23,970
+estamos só aqui a falar
+
+925
+01:01:23,970 --> 01:01:25,970
+do ponto de vista da aplicação
+
+926
+01:01:25,970 --> 01:01:27,970
+disto, depois
+
+927
+01:01:27,970 --> 01:01:29,970
+num caso prático.
+
+928
+01:01:29,970 --> 01:01:31,970
+Por exemplo, nesse caso aí dos
+
+929
+01:01:31,970 --> 01:01:33,970
+containers não seria melhor o que
+
+930
+01:01:33,970 --> 01:01:35,970
+tem para achar latência.
+
+931
+01:01:35,970 --> 01:01:37,970
+Agora escolha,
+
+932
+01:01:39,970 --> 01:01:41,970
+ou simplesmente isso dependa
+
+933
+01:01:41,970 --> 01:01:43,970
+só da periodicidade como queremos os
+
+934
+01:01:43,970 --> 01:01:45,970
+dados.
+
+935
+01:01:45,970 --> 01:01:47,970
+Agora não percebi.
+
+936
+01:01:47,970 --> 01:01:49,970
+Por exemplo,
+
+937
+01:01:49,970 --> 01:01:51,970
+dar-me um contexto,
+
+938
+01:01:51,970 --> 01:01:53,970
+por exemplo.
+
+939
+01:01:53,970 --> 01:01:55,970
+Tenho várias tarefas a fazer
+
+940
+01:01:55,970 --> 01:01:57,970
+numa Raspberry, por exemplo.
+
+941
+01:01:57,970 --> 01:01:59,970
+E eu quero que
+
+942
+01:01:59,970 --> 01:02:01,970
+essas tarefas estão isoladas entre
+
+943
+01:02:01,970 --> 01:02:03,970
+elas por containers.
+
+944
+01:02:03,970 --> 01:02:05,970
+Estamos a falar de um sistema
+
+945
+01:02:05,970 --> 01:02:07,970
+que está a correr todo numa plataforma.
+
+946
+01:02:07,970 --> 01:02:09,970
+Exatamente. Não comuniquem com mais ninguém.
+
+947
+01:02:11,970 --> 01:02:13,970
+Para este exemplo, não comuniquem com mais ninguém.
+
+948
+01:02:13,970 --> 01:02:15,970
+Para este exemplo, não comuniquem com mais ninguém.
+
+949
+01:02:15,970 --> 01:02:17,970
+Ok, eu quero que os dois containers
+
+950
+01:02:17,970 --> 01:02:19,970
+comuniquem entre eles.
+
+951
+01:02:19,970 --> 01:02:21,970
+A maneira
+
+952
+01:02:21,970 --> 01:02:23,970
+aqui melhor para fazer isto
+
+953
+01:02:23,970 --> 01:02:25,970
+era, ou seja,
+
+954
+01:02:25,970 --> 01:02:27,970
+o MQTT, ou o DDS.
+
+955
+01:02:27,970 --> 01:02:31,790
+Tipo,
+
+956
+01:02:31,790 --> 01:02:33,790
+essa escolha só iria depender dos dados. Por exemplo, sua
+
+957
+01:02:33,790 --> 01:02:35,790
+temperatura, como o exemplo que o professor deu,
+
+958
+01:02:35,790 --> 01:02:37,790
+se quisesse partilhar a temperatura
+
+959
+01:02:37,790 --> 01:02:39,790
+de um para outro, provavelmente não teve, não faz
+
+960
+01:02:39,790 --> 01:02:41,790
+ideia, escolheu MQTT
+
+961
+01:02:41,790 --> 01:02:43,790
+ou como é dentro
+
+962
+01:02:43,790 --> 01:02:45,790
+do mesmo sistema e aquilo
+
+963
+01:02:45,790 --> 01:02:47,790
+à partida.
+
+964
+01:02:47,790 --> 01:02:49,790
+Eu vou dizer, Franco, se eu tivesse
+
+965
+01:02:49,790 --> 01:02:51,790
+a garantia que era
+
+966
+01:02:51,790 --> 01:02:53,790
+entre dois
+
+967
+01:02:53,790 --> 01:02:55,790
+contentores
+
+968
+01:02:55,790 --> 01:02:57,790
+e nunca iria passar dos dois contentores
+
+969
+01:02:57,790 --> 01:02:59,790
+eventualmente
+
+970
+01:02:59,790 --> 01:03:01,790
+ou utilizaria o DDS
+
+971
+01:03:01,790 --> 01:03:03,790
+se estivéssemos a correr um ros
+
+972
+01:03:03,790 --> 01:03:05,790
+porque o DDS
+
+973
+01:03:05,790 --> 01:03:07,790
+sinceramente, fora do ros
+
+974
+01:03:07,790 --> 01:03:09,790
+acho que existem implementações.
+
+975
+01:03:09,790 --> 01:03:11,790
+Tem um colega meu
+
+976
+01:03:11,790 --> 01:03:13,790
+que trabalha com isso,
+
+977
+01:03:13,790 --> 01:03:15,790
+que é o Ricardo Sabrinho. Vocês já tiveram
+
+978
+01:03:15,790 --> 01:03:19,040
+formação com o Ricardo Sabrinho, certo?
+
+979
+01:03:19,040 --> 01:03:21,040
+Ou não? Não chegaram a ter o Ricardo Sabrinho.
+
+980
+01:03:21,040 --> 01:03:23,040
+Eu acho que tivemos uma aula.
+
+981
+01:03:25,040 --> 01:03:28,770
+Tiveram?
+
+982
+01:03:28,770 --> 01:03:30,770
+Eu não percebi bem o que eu disse, André.
+
+983
+01:03:30,770 --> 01:03:32,770
+Eu acho que tivemos uma aula,
+
+984
+01:03:32,770 --> 01:03:34,770
+depois o pessoal foi substituído.
+
+985
+01:03:34,770 --> 01:03:36,770
+Ah, ok.
+
+986
+01:03:36,770 --> 01:03:38,770
+Foi numa altura
+
+987
+01:03:38,770 --> 01:03:40,770
+em que ele teve um problema
+
+988
+01:03:40,770 --> 01:03:42,770
+e com certeza
+
+989
+01:03:44,770 --> 01:03:46,770
+ali pelo segundo
+
+990
+01:03:46,770 --> 01:03:48,770
+semestre do ano passado.
+
+991
+01:03:48,770 --> 01:03:50,770
+Se calhar ali por
+
+992
+01:03:50,770 --> 01:03:52,770
+maio.
+
+993
+01:03:52,770 --> 01:03:54,770
+Houve ali uma altura em que
+
+994
+01:03:54,770 --> 01:03:56,770
+teve um problema
+
+995
+01:03:56,770 --> 01:03:58,770
+pessoal e
+
+996
+01:03:58,770 --> 01:04:00,770
+ele teve que
+
+997
+01:04:00,770 --> 01:04:02,770
+haver pela vida dele, não é?
+
+998
+01:04:02,770 --> 01:04:04,770
+Naquela altura, felizmente
+
+999
+01:04:04,770 --> 01:04:06,770
+depois resolveu-se tudo
+
+1000
+01:04:06,770 --> 01:04:08,770
+mas ele teve ali um susto
+
+1001
+01:04:08,770 --> 01:04:10,770
+e ele ficou
+
+1002
+01:04:10,770 --> 01:04:12,770
+ok. Mas, pronto,
+
+1003
+01:04:12,770 --> 01:04:14,770
+o professor Ricardo Sabrinho
+
+1004
+01:04:14,770 --> 01:04:16,770
+percebe bastante o DDS
+
+1005
+01:04:16,770 --> 01:04:18,770
+porque ele brinca muito
+
+1006
+01:04:18,770 --> 01:04:20,770
+com isto, com o DDS.
+
+1007
+01:04:20,770 --> 01:04:22,770
+Mas vamos lá ver.
+
+1008
+01:04:26,270 --> 01:04:28,270
+Se for só comunicar entre
+
+1009
+01:04:28,270 --> 01:04:30,270
+dois
+
+1010
+01:04:30,270 --> 01:04:32,270
+cantores que ainda por cima estão dentro
+
+1011
+01:04:32,270 --> 01:04:34,270
+da mesma máquina
+
+1012
+01:04:34,270 --> 01:04:36,270
+também não há assim...
+
+1013
+01:04:36,270 --> 01:04:38,270
+O ambiente não é muito agressivo.
+
+1014
+01:04:38,270 --> 01:04:40,270
+Porquê?
+
+1015
+01:04:40,270 --> 01:04:42,270
+Dovido que vai haver
+
+1016
+01:04:42,270 --> 01:04:44,270
+máquinas
+
+1017
+01:04:44,270 --> 01:04:46,270
+que apareçam pelo meio
+
+1018
+01:04:46,270 --> 01:04:48,270
+e que façam interferência
+
+1019
+01:04:48,270 --> 01:04:50,270
+eletromagnética
+
+1020
+01:04:50,270 --> 01:04:52,270
+para
+
+1021
+01:04:54,270 --> 01:04:56,270
+problemas de ruívo.
+
+1022
+01:04:56,270 --> 01:04:58,270
+Ou seja, se estiver dentro
+
+1023
+01:04:58,270 --> 01:05:00,270
+da placa
+
+1024
+01:05:00,270 --> 01:05:02,270
+não há ali nada
+
+1025
+01:05:02,270 --> 01:05:04,270
+que
+
+1026
+01:05:04,270 --> 01:05:06,270
+dificulta a comunicação.
+
+1027
+01:05:06,270 --> 01:05:08,270
+Não sei se me estou a fazer entender.
+
+1028
+01:05:08,270 --> 01:05:10,270
+Sim.
+
+1029
+01:05:10,270 --> 01:05:12,270
+Ou seja,
+
+1030
+01:05:12,270 --> 01:05:14,270
+vai estar tudo ali
+
+1031
+01:05:14,270 --> 01:05:16,270
+dentro daquela rede
+
+1032
+01:05:16,270 --> 01:05:18,270
+rede virtual
+
+1033
+01:05:18,270 --> 01:05:22,030
+do Docker.
+
+1034
+01:05:22,030 --> 01:05:24,030
+Nesse caso, basicamente
+
+1035
+01:05:24,030 --> 01:05:26,030
+quase pode escolher qualquer um
+
+1036
+01:05:26,030 --> 01:05:30,850
+e a coisa vai coer bem.
+
+1037
+01:05:30,850 --> 01:05:32,850
+O problema muda de figura
+
+1038
+01:05:32,850 --> 01:05:34,850
+quando nós temos dispositivos
+
+1039
+01:05:34,850 --> 01:05:36,850
+distintos que estão a comunicar
+
+1040
+01:05:36,850 --> 01:05:38,850
+através de um ambiente agressivo.
+
+1041
+01:05:38,850 --> 01:05:47,440
+Ou seja,
+
+1042
+01:05:47,440 --> 01:05:49,440
+ter um contentor que está
+
+1043
+01:05:49,440 --> 01:05:51,440
+numa máquina e ter outro contentor
+
+1044
+01:05:51,440 --> 01:05:53,440
+que está na outra máquina
+
+1045
+01:05:53,440 --> 01:05:55,440
+e ele se tem de comunicar
+
+1046
+01:05:55,440 --> 01:06:00,420
+eventualmente por rádio.
+
+1047
+01:06:00,420 --> 01:06:02,420
+Certo?
+
+1048
+01:06:02,420 --> 01:06:04,420
+E agora eu não sei se lhe responde à pergunta.
+
+1049
+01:06:04,420 --> 01:06:06,420
+Sim.
+
+1050
+01:06:06,420 --> 01:06:08,420
+Se lhe responde de parte
+
+1051
+01:06:08,420 --> 01:06:10,420
+ou seja,
+
+1052
+01:06:10,420 --> 01:06:12,420
+pode-me fazer a pergunta
+
+1053
+01:06:12,420 --> 01:06:14,420
+para responder o que falta respondendo.
+
+1054
+01:06:14,420 --> 01:06:16,420
+Ficou eslacido.
+
+1055
+01:06:16,420 --> 01:06:18,420
+Obrigado.
+
+1056
+01:06:18,420 --> 01:06:20,420
+Ok, pronto.
+
+1057
+01:06:20,420 --> 01:06:22,420
+E é engraçado que ainda estava no
+
+1058
+01:06:22,420 --> 01:06:24,420
+slide 5.
+
+1059
+01:06:24,420 --> 01:06:26,420
+Eu pensava que hoje eu tinha
+
+1060
+01:06:26,420 --> 01:06:28,420
+uns poucos slides, até estava aqui com medo.
+
+1061
+01:06:28,420 --> 01:06:30,420
+Estou mesmo com poucos slides hoje.
+
+1062
+01:06:30,420 --> 01:06:32,420
+Estou hoje
+
+1063
+01:06:32,420 --> 01:06:34,420
+para avançar.
+
+1064
+01:06:34,420 --> 01:06:36,420
+Em relação aos custos
+
+1065
+01:06:36,420 --> 01:06:38,420
+e o desempenho
+
+1066
+01:06:38,420 --> 01:06:40,420
+para o co-app
+
+1067
+01:06:40,420 --> 01:06:42,420
+por em cima do WP,
+
+1068
+01:06:42,420 --> 01:06:44,420
+portanto, ilumina
+
+1069
+01:06:44,420 --> 01:06:46,420
+toda aquela atrapalhada
+
+1070
+01:06:46,420 --> 01:06:48,420
+de criar uma ligação
+
+1071
+01:06:48,420 --> 01:06:50,420
+e manter essa ligação, ok?
+
+1072
+01:06:50,420 --> 01:06:52,420
+É ótimo
+
+1073
+01:06:52,420 --> 01:06:54,420
+para enviar
+
+1074
+01:06:54,420 --> 01:06:56,420
+com multadata gramas,
+
+1075
+01:06:56,420 --> 01:06:58,420
+portanto é ótimo para aquelas situações
+
+1076
+01:06:58,420 --> 01:07:00,420
+em que a comutação de data gramas
+
+1077
+01:07:00,420 --> 01:07:02,420
+pode ser para stream
+
+1078
+01:07:02,420 --> 01:07:04,420
+como o avicado, o vosso colega vê-se
+
+1079
+01:07:04,420 --> 01:07:06,420
+e também pode ser para aquelas situações
+
+1080
+01:07:06,420 --> 01:07:08,420
+em que simplesmente vamos lá
+
+1081
+01:07:08,420 --> 01:07:10,420
+com uma vara de vez em quando
+
+1082
+01:07:10,420 --> 01:07:12,420
+e espetamos a vara nas costas
+
+1083
+01:07:12,420 --> 01:07:14,420
+do bicho para o bicho se incomodar
+
+1084
+01:07:14,420 --> 01:07:16,420
+e voltar a dormir.
+
+1085
+01:07:16,420 --> 01:07:18,420
+Ok?
+
+1086
+01:07:18,420 --> 01:07:20,420
+O ANKTT
+
+1087
+01:07:20,420 --> 01:07:22,420
+já é, pelo contrário,
+
+1088
+01:07:22,420 --> 01:07:24,420
+requer uma ligação de TCP
+
+1089
+01:07:24,420 --> 01:07:26,420
+persistente, ok?
+
+1090
+01:07:26,420 --> 01:07:28,420
+No entanto, após
+
+1091
+01:07:28,420 --> 01:07:30,420
+a ligação estar feita, após o end shake
+
+1092
+01:07:30,420 --> 01:07:32,420
+todo, terceiro feito
+
+1093
+01:07:32,420 --> 01:07:34,420
+os pacotes que são
+
+1094
+01:07:34,420 --> 01:07:36,420
+transportados
+
+1095
+01:07:36,420 --> 01:07:38,420
+nesses canais virtuais
+
+1096
+01:07:38,420 --> 01:07:40,420
+têm pouco
+
+1097
+01:07:40,420 --> 01:07:42,420
+custo, ou seja
+
+1098
+01:07:42,420 --> 01:07:44,420
+têm pouco peso
+
+1099
+01:07:44,420 --> 01:07:46,420
+que não
+
+1100
+01:07:46,420 --> 01:07:48,420
+na carga que não
+
+1101
+01:07:48,420 --> 01:07:50,420
+há caramba
+
+1102
+01:07:50,420 --> 01:07:52,420
+têm pouca carga
+
+1103
+01:07:52,420 --> 01:07:54,420
+inútil, ou seja,
+
+1104
+01:07:54,420 --> 01:07:56,420
+há carga útil, que é os dados
+
+1105
+01:07:56,420 --> 01:07:58,420
+que nós, efectivamente, queremos transportar
+
+1106
+01:07:58,420 --> 01:08:00,420
+e depois há o acessório
+
+1107
+01:08:00,420 --> 01:08:02,420
+que nos permite
+
+1108
+01:08:02,420 --> 01:08:04,420
+transportar do ponto A ao ponto B
+
+1109
+01:08:04,420 --> 01:08:06,420
+e esse custo é baixo.
+
+1110
+01:08:06,420 --> 01:08:08,420
+O ANKTT
+
+1111
+01:08:08,420 --> 01:08:10,420
+para situações
+
+1112
+01:08:10,420 --> 01:08:12,420
+de dispositivos, de baixo
+
+1113
+01:08:12,420 --> 01:08:14,420
+de baixo recursos
+
+1114
+01:08:14,420 --> 01:08:16,420
+não é
+
+1115
+01:08:16,420 --> 01:08:18,420
+assim tão interessante.
+
+1116
+01:08:18,420 --> 01:08:20,420
+E o DDS
+
+1117
+01:08:20,420 --> 01:08:22,420
+é
+
+1118
+01:08:22,420 --> 01:08:24,420
+espetacular, se nós quisermos ter
+
+1119
+01:08:24,420 --> 01:08:26,420
+latência, se tudo para ir baixa
+
+1120
+01:08:26,420 --> 01:08:28,420
+ok?
+
+1121
+01:08:28,420 --> 01:08:30,420
+Porque retiramos
+
+1122
+01:08:30,420 --> 01:08:34,910
+o broker do MEI
+
+1123
+01:08:34,910 --> 01:08:36,910
+só que
+
+1124
+01:08:36,910 --> 01:08:38,910
+isto é como naqueles filmes de fantasia
+
+1125
+01:08:38,910 --> 01:08:40,910
+quando uma pessoa utiliza a magia
+
+1126
+01:08:40,910 --> 01:08:42,910
+sempre que utiliza a magia
+
+1127
+01:08:42,910 --> 01:08:44,910
+há um preço a pagar
+
+1128
+01:08:44,910 --> 01:08:46,910
+e o preço a pagar é que
+
+1129
+01:08:46,910 --> 01:08:48,910
+há um método de descoberta
+
+1130
+01:08:48,910 --> 01:08:50,910
+procura e descoberta
+
+1131
+01:08:50,910 --> 01:08:52,910
+que implica
+
+1132
+01:08:52,910 --> 01:08:54,910
+transmissões
+
+1133
+01:08:54,910 --> 01:08:56,910
+e receições, ou seja
+
+1134
+01:08:56,910 --> 01:08:58,910
+a carga
+
+1135
+01:09:00,910 --> 01:09:02,910
+dos cabeçalhos é menor
+
+1136
+01:09:02,910 --> 01:09:04,910
+mas a carga
+
+1137
+01:09:04,910 --> 01:09:06,910
+de comunicações extra
+
+1138
+01:09:06,910 --> 01:09:08,910
+para esta descoberta
+
+1139
+01:09:08,910 --> 01:09:10,910
+é maior.
+
+1140
+01:09:10,910 --> 01:09:12,910
+Ok?
+
+1141
+01:09:12,910 --> 01:09:16,190
+Pronto
+
+1142
+01:09:16,190 --> 01:09:19,700
+tipo de implementações
+
+1143
+01:09:19,700 --> 01:09:21,700
+aqui há para estes protocolos
+
+1144
+01:09:21,700 --> 01:09:23,700
+isto aqui vocês já devem
+
+1145
+01:09:23,700 --> 01:09:25,700
+de conhecer
+
+1146
+01:09:25,700 --> 01:09:27,700
+o ANKTT, existe o mosquito
+
+1147
+01:09:27,700 --> 01:09:29,700
+que é o mais conhecido
+
+1148
+01:09:29,700 --> 01:09:31,700
+pelo pessoal que começa a fazer brincadeiras
+
+1149
+01:09:31,700 --> 01:09:33,700
+e o mosquito
+
+1150
+01:09:33,700 --> 01:09:35,700
+tem a vantagem de ser muito leve
+
+1151
+01:09:35,700 --> 01:09:37,700
+para pôr em máquinas
+
+1152
+01:09:37,700 --> 01:09:39,700
+netes, porque consomem poucos recursos
+
+1153
+01:09:39,700 --> 01:09:41,700
+mas depois também tem
+
+1154
+01:09:41,700 --> 01:09:43,700
+aquelas
+
+1155
+01:09:43,700 --> 01:09:45,700
+implementações para clusters
+
+1156
+01:09:45,700 --> 01:09:47,700
+e para máquinas mais poderosas
+
+1157
+01:09:47,700 --> 01:09:49,700
+como o MQX
+
+1158
+01:09:49,700 --> 01:09:51,700
+o Hive MQ
+
+1159
+01:09:51,700 --> 01:09:53,700
+e por exemplo
+
+1160
+01:09:53,700 --> 01:09:55,700
+na cloud
+
+1161
+01:09:55,700 --> 01:09:57,700
+o AWS Autoacord
+
+1162
+01:09:57,700 --> 01:09:59,700
+não foi isto que vocês usaram
+
+1163
+01:09:59,700 --> 01:10:01,700
+vocês estavam usando o Azure
+
+1164
+01:10:01,700 --> 01:10:03,700
+o Azure IoT
+
+1165
+01:10:03,700 --> 01:10:05,700
+do ANK
+
+1166
+01:10:05,700 --> 01:10:07,700
+a MQP
+
+1167
+01:10:07,700 --> 01:10:09,700
+vocês têm o Rabbit MQ
+
+1168
+01:10:09,700 --> 01:10:11,700
+que também é muito conhecido
+
+1169
+01:10:11,700 --> 01:10:13,700
+o Rabbit MQ é engraçado porque
+
+1170
+01:10:13,700 --> 01:10:15,700
+aqui ele tem um
+
+1171
+01:10:15,700 --> 01:10:17,700
+um plugin
+
+1172
+01:10:17,700 --> 01:10:19,700
+que permite transformar
+
+1173
+01:10:19,700 --> 01:10:21,700
+transformar
+
+1174
+01:10:21,700 --> 01:10:23,700
+notificações MQTT
+
+1175
+01:10:23,700 --> 01:10:25,700
+para a representação interna
+
+1176
+01:10:25,700 --> 01:10:27,700
+do Rabbit MQ
+
+1177
+01:10:27,700 --> 01:10:29,700
+e vice-versa
+
+1178
+01:10:29,700 --> 01:10:31,700
+distriguir notificações
+
+1179
+01:10:31,700 --> 01:10:33,700
+que vão ter a um Rabbit MQ
+
+1180
+01:10:33,700 --> 01:10:35,700
+para clientes
+
+1181
+01:10:35,700 --> 01:10:37,700
+MQTT
+
+1182
+01:10:37,700 --> 01:10:39,700
+o que não é estranhar
+
+1183
+01:10:39,700 --> 01:10:41,700
+é quase como
+
+1184
+01:10:41,700 --> 01:10:43,700
+o HTTP do AWS
+
+1185
+01:10:43,700 --> 01:10:45,700
+o ANKTT
+
+1186
+01:10:45,700 --> 01:10:47,700
+como o ANKTT
+
+1187
+01:10:47,700 --> 01:10:49,700
+maior do que o MQTT
+
+1188
+01:10:49,700 --> 01:10:51,700
+consegue fazer esta transformação
+
+1189
+01:10:51,700 --> 01:10:53,700
+e incluir o MQTT no NKP
+
+1190
+01:10:53,700 --> 01:10:55,700
+o call-up
+
+1191
+01:10:55,700 --> 01:10:57,700
+não existe broker
+
+1192
+01:10:57,700 --> 01:10:59,700
+mas nesse caso
+
+1193
+01:10:59,700 --> 01:11:01,700
+vocês têm que colocar servidores call-up
+
+1194
+01:11:01,700 --> 01:11:03,700
+nas máquinas
+
+1195
+01:11:03,700 --> 01:11:05,700
+que vão estar a receber pedidos
+
+1196
+01:11:05,700 --> 01:11:07,700
+e vocês têm o eclipse californium
+
+1197
+01:11:07,700 --> 01:11:09,700
+por exemplo
+
+1198
+01:11:09,700 --> 01:11:11,700
+é o que eu conheço mais
+
+1199
+01:11:11,700 --> 01:11:13,700
+e o
+
+1200
+01:11:13,700 --> 01:11:15,700
+com Tiki
+
+1201
+01:11:15,700 --> 01:11:17,700
+NG
+
+1202
+01:11:17,700 --> 01:11:19,700
+sinceramente
+
+1203
+01:11:19,700 --> 01:11:21,700
+eu nunca brinquei com o call-up
+
+1204
+01:11:21,700 --> 01:11:23,700
+mas o professor
+
+1205
+01:11:23,700 --> 01:11:25,700
+Carlos Severino
+
+1206
+01:11:25,700 --> 01:11:27,700
+vai ficar famoso a partir de hoje
+
+1207
+01:11:27,700 --> 01:11:29,700
+também já brincou
+
+1208
+01:11:29,700 --> 01:11:31,700
+e brinca bastante com o call-up
+
+1209
+01:11:31,700 --> 01:11:33,700
+é a área mais dele
+
+1210
+01:11:33,700 --> 01:11:35,700
+a trabalhar com estes protocolos
+
+1211
+01:11:35,700 --> 01:11:37,700
+o ANKTT, o call-up
+
+1212
+01:11:37,700 --> 01:11:39,700
+e com o DDS
+
+1213
+01:11:39,700 --> 01:11:41,700
+o DDS é peer-to-peer
+
+1214
+01:11:41,700 --> 01:11:43,700
+o que quer dizer que
+
+1215
+01:11:43,700 --> 01:11:45,700
+ilumina a necessidade de um broker
+
+1216
+01:11:45,700 --> 01:11:47,700
+e aplicações
+
+1217
+01:11:47,700 --> 01:11:49,700
+do DDS
+
+1218
+01:11:49,700 --> 01:11:51,700
+a que
+
+1219
+01:11:51,700 --> 01:11:53,700
+ou FII
+
+1220
+01:11:53,700 --> 01:11:55,700
+e ali mais documentação é o open DDS
+
+1221
+01:11:55,700 --> 01:11:57,700
+ok
+
+1222
+01:11:57,700 --> 01:11:59,700
+mas há várias
+
+1223
+01:11:59,700 --> 01:12:01,700
+sinceramente
+
+1224
+01:12:01,700 --> 01:12:03,700
+nem sei se há que alguma
+
+1225
+01:12:03,700 --> 01:12:05,700
+que seja proprietário que seja pago
+
+1226
+01:12:05,700 --> 01:12:07,700
+ou open DDS, não é a verdade
+
+1227
+01:12:07,700 --> 01:12:09,700
+pronto, ok
+
+1228
+01:12:09,700 --> 01:12:11,700
+MQTT
+
+1229
+01:12:11,700 --> 01:12:13,700
+hoje a aula termina a que horas?
+
+1230
+01:12:13,700 --> 01:12:15,700
+é às 1h30?
+
+1231
+01:12:15,700 --> 01:12:17,700
+vamos lá então
+
+1232
+01:12:17,700 --> 01:12:19,700
+acelerar
+
+1233
+01:12:19,700 --> 01:12:21,700
+o MQTT
+
+1234
+01:12:21,700 --> 01:12:23,700
+está assento
+
+1235
+01:12:23,700 --> 01:12:25,700
+ali está assento
+
+1236
+01:12:25,700 --> 01:12:27,700
+porque o MQTT estabeleceu
+
+1237
+01:12:27,700 --> 01:12:29,700
+o standard OASIS
+
+1238
+01:12:29,700 --> 01:12:31,700
+foi começado pela EVE
+
+1239
+01:12:31,700 --> 01:12:33,700
+e pela RECOM
+
+1240
+01:12:33,700 --> 01:12:35,700
+em 1999
+
+1241
+01:12:35,700 --> 01:12:37,700
+eu nessa altura nem fazia ideia
+
+1242
+01:12:37,700 --> 01:12:39,700
+que andava a trabalhar no MQTT
+
+1243
+01:12:39,700 --> 01:12:41,700
+se comecei a ouvir o falar do MQTT
+
+1244
+01:12:41,700 --> 01:12:43,700
+anos mais tarde
+
+1245
+01:12:43,700 --> 01:12:45,700
+e neste momento
+
+1246
+01:12:45,700 --> 01:12:47,700
+é a norma de facto
+
+1247
+01:12:47,700 --> 01:12:49,700
+para a telemetria
+
+1248
+01:12:49,700 --> 01:12:51,700
+para a telemetria
+
+1249
+01:12:51,700 --> 01:12:53,700
+com baixos cursos
+
+1250
+01:12:53,700 --> 01:12:55,700
+com maior eficiência
+
+1251
+01:12:55,700 --> 01:12:57,700
+características
+
+1252
+01:12:57,700 --> 01:12:59,700
+isto é algo que vocês já sabem
+
+1253
+01:12:59,700 --> 01:13:01,700
+é agnóstico
+
+1254
+01:13:01,700 --> 01:13:03,700
+binary agnóstico
+
+1255
+01:13:03,700 --> 01:13:05,700
+como eu posso dizer isto em português
+
+1256
+01:13:05,700 --> 01:13:07,700
+é agnóstico ou binária
+
+1257
+01:13:07,700 --> 01:13:09,700
+vocês já previamente
+
+1258
+01:13:09,700 --> 01:13:11,700
+no outro movo
+
+1259
+01:13:11,700 --> 01:13:13,700
+vocês enviaram
+
+1260
+01:13:13,700 --> 01:13:15,700
+dados cifrados por MQTT
+
+1261
+01:13:15,700 --> 01:13:17,700
+e aquilo
+
+1262
+01:13:17,700 --> 01:13:19,700
+carga
+
+1263
+01:13:19,700 --> 01:13:21,700
+para o MQTT carga e carga
+
+1264
+01:13:21,700 --> 01:13:23,700
+é para enviar isto
+
+1265
+01:13:23,700 --> 01:13:25,700
+com este
+
+1266
+01:13:25,700 --> 01:13:27,700
+categorizado
+
+1267
+01:13:27,700 --> 01:13:29,700
+com este tópico
+
+1268
+01:13:29,700 --> 01:13:31,700
+e lá vai
+
+1269
+01:13:31,700 --> 01:13:33,700
+a carga
+
+1270
+01:13:33,700 --> 01:13:35,700
+para o MQTT
+
+1271
+01:13:35,700 --> 01:13:37,700
+é algo
+
+1272
+01:13:37,700 --> 01:13:39,700
+opaco
+
+1273
+01:13:39,700 --> 01:13:41,700
+o que acaba por ser transparente
+
+1274
+01:13:41,700 --> 01:13:43,700
+o que quer escolher
+
+1275
+01:13:43,700 --> 01:13:45,700
+mas
+
+1276
+01:13:45,700 --> 01:13:47,700
+ele transporta qualquer coisa
+
+1277
+01:13:47,700 --> 01:13:49,700
+sem qualquer ligação a carga
+
+1278
+01:13:49,700 --> 01:13:51,700
+transporta simplesmente
+
+1279
+01:13:51,700 --> 01:13:53,700
+é ótimo para mandar
+
+1280
+01:13:53,700 --> 01:13:55,700
+por exemplo
+
+1281
+01:13:55,700 --> 01:13:57,700
+dados em jayser
+
+1282
+01:13:57,700 --> 01:13:59,700
+muitas vezes
+
+1283
+01:13:59,700 --> 01:14:01,700
+o MQTT as notificações legam carga jayser
+
+1284
+01:14:03,700 --> 01:14:05,700
+mas
+
+1285
+01:14:05,700 --> 01:14:07,700
+não é exclusivo disso
+
+1286
+01:14:07,700 --> 01:14:09,700
+pode mandar, binário
+
+1287
+01:14:09,700 --> 01:14:11,700
+qualquer coisa cifrada
+
+1288
+01:14:11,700 --> 01:14:13,700
+vai ali o
+
+1289
+01:14:13,700 --> 01:14:15,700
+bytes todos mastigados
+
+1290
+01:14:15,700 --> 01:14:17,700
+para ninguém conseguir compreender
+
+1291
+01:14:17,700 --> 01:14:19,700
+que vai lá escondido
+
+1292
+01:14:19,700 --> 01:14:21,700
+e para o MQTT é igual
+
+1293
+01:14:21,700 --> 01:14:23,700
+sessões
+
+1294
+01:14:23,700 --> 01:14:25,700
+com o estado
+
+1295
+01:14:25,700 --> 01:14:27,700
+ok
+
+1296
+01:14:27,700 --> 01:14:29,700
+o MQTT mantém o estado
+
+1297
+01:14:29,700 --> 01:14:31,700
+das ligações
+
+1298
+01:14:31,700 --> 01:14:33,700
+ou seja o broker
+
+1299
+01:14:33,700 --> 01:14:35,700
+conhece qual é o estado
+
+1300
+01:14:35,700 --> 01:14:37,700
+da ligação dos clientes
+
+1301
+01:14:37,700 --> 01:14:39,700
+queridos publicadores
+
+1302
+01:14:39,700 --> 01:14:41,700
+subscritores
+
+1303
+01:14:41,700 --> 01:14:43,700
+qualquer cliente
+
+1304
+01:14:43,700 --> 01:14:45,700
+seja em papel for
+
+1305
+01:14:45,700 --> 01:14:47,700
+e um cliente pode estar
+
+1306
+01:14:47,700 --> 01:14:49,700
+simultaneamente a termos dois papéis
+
+1307
+01:14:49,700 --> 01:14:51,700
+ser subscritor de alguns tópicos
+
+1308
+01:14:51,700 --> 01:14:53,700
+e ser publicador de outros tópicos
+
+1309
+01:14:53,700 --> 01:14:55,700
+ok
+
+1310
+01:14:55,700 --> 01:14:57,700
+há ali
+
+1311
+01:14:57,700 --> 01:14:59,700
+um processo em que ele se identifica
+
+1312
+01:14:59,700 --> 01:15:01,700
+em que ele se registra e diz eu estou aqui
+
+1313
+01:15:01,700 --> 01:15:03,700
+estou interessado nisto
+
+1314
+01:15:03,700 --> 01:15:05,700
+ou eu estou aqui
+
+1315
+01:15:05,700 --> 01:15:07,700
+e irei publicar sobre isto
+
+1316
+01:15:07,700 --> 01:15:09,700
+e há ali um mecanismo
+
+1317
+01:15:09,700 --> 01:15:11,700
+de verificar
+
+1318
+01:15:11,700 --> 01:15:13,700
+periodicamente se os clientes
+
+1319
+01:15:13,700 --> 01:15:15,700
+ainda estão vivos
+
+1320
+01:15:15,700 --> 01:15:17,700
+ok, portanto
+
+1321
+01:15:17,700 --> 01:15:19,700
+e ele sabe
+
+1322
+01:15:19,700 --> 01:15:21,700
+com alguma
+
+1323
+01:15:21,700 --> 01:15:23,700
+com possível atraso
+
+1324
+01:15:23,700 --> 01:15:25,700
+quais são os clientes que estão ativos
+
+1325
+01:15:25,700 --> 01:15:27,700
+e quais são os clientes que já não respondem
+
+1326
+01:15:27,700 --> 01:15:31,420
+há algum tempo
+
+1327
+01:15:31,420 --> 01:15:36,430
+ok
+
+1328
+01:15:36,430 --> 01:15:38,430
+e isso
+
+1329
+01:15:38,430 --> 01:15:40,430
+ok, faz-te ficar por aqui
+
+1330
+01:15:40,430 --> 01:15:42,430
+Connection Keep Alive
+
+1331
+01:15:44,430 --> 01:15:47,840
+o MQTT
+
+1332
+01:15:47,840 --> 01:15:49,840
+pronto, já disse
+
+1333
+01:15:49,840 --> 01:15:51,840
+é capaz de perceber
+
+1334
+01:15:51,840 --> 01:15:53,840
+qual é que é o estado
+
+1335
+01:15:53,840 --> 01:15:55,840
+da ligação
+
+1336
+01:15:55,840 --> 01:15:57,840
+de um determinado cliente
+
+1337
+01:15:57,840 --> 01:15:59,840
+eles utilizam pings
+
+1338
+01:15:59,840 --> 01:16:01,840
+o ping request, o ping response
+
+1339
+01:16:01,840 --> 01:16:03,840
+periodicamente para verificar
+
+1340
+01:16:03,840 --> 01:16:05,840
+se o cliente
+
+1341
+01:16:05,840 --> 01:16:07,840
+do outro lado
+
+1342
+01:16:07,840 --> 01:16:09,840
+está acessível
+
+1343
+01:16:09,840 --> 01:16:11,840
+ok
+
+1344
+01:16:11,840 --> 01:16:13,840
+pronto, e Flexible Transport
+
+1345
+01:16:13,840 --> 01:16:15,840
+opera nativamente
+
+1346
+01:16:15,840 --> 01:16:17,840
+sobre sockets
+
+1347
+01:16:17,840 --> 01:16:19,840
+TCP e P
+
+1348
+01:16:19,840 --> 01:16:21,840
+e também
+
+1349
+01:16:21,840 --> 01:16:23,840
+nível mais acima
+
+1350
+01:16:23,840 --> 01:16:25,840
+TLS
+
+1351
+01:16:25,840 --> 01:16:27,840
+já não me lembro de 100 ou 506
+
+1352
+01:16:27,840 --> 01:16:29,840
+mas permite ligações
+
+1353
+01:16:29,840 --> 01:16:31,840
+cifradas por TLS
+
+1354
+01:16:31,840 --> 01:16:33,840
+se vocês quiserem
+
+1355
+01:16:33,840 --> 01:16:35,840
+enviar dados cifrados
+
+1356
+01:16:35,840 --> 01:16:37,840
+ok, portanto
+
+1357
+01:16:37,840 --> 01:16:39,840
+com alguma segurança
+
+1358
+01:16:39,840 --> 01:16:41,840
+esta aqui é a arquitetura básica
+
+1359
+01:16:41,840 --> 01:16:43,840
+do MQTT
+
+1360
+01:16:43,840 --> 01:16:45,840
+tenho
+
+1361
+01:16:45,840 --> 01:16:47,840
+publicadores
+
+1362
+01:16:47,840 --> 01:16:49,840
+que publicam
+
+1363
+01:16:49,840 --> 01:16:51,840
+mensagens no broker
+
+1364
+01:16:51,840 --> 01:16:53,840
+cada mensagem
+
+1365
+01:16:53,840 --> 01:16:55,840
+tem de ser identificada
+
+1366
+01:16:55,840 --> 01:16:57,840
+com tópico
+
+1367
+01:16:57,840 --> 01:16:59,840
+e depois o broker
+
+1368
+01:16:59,840 --> 01:17:01,840
+olha para o tópico
+
+1369
+01:17:01,840 --> 01:17:03,840
+e vai distribuí-lo para
+
+1370
+01:17:03,840 --> 01:17:05,840
+os clientes
+
+1371
+01:17:05,840 --> 01:17:07,840
+ou seja, o broker
+
+1372
+01:17:07,840 --> 01:17:09,840
+tem uma lista
+
+1373
+01:17:09,840 --> 01:17:11,840
+de subscritores
+
+1374
+01:17:11,840 --> 01:17:13,840
+para cada tópico
+
+1375
+01:17:13,840 --> 01:17:15,840
+notem que
+
+1376
+01:17:15,840 --> 01:17:17,840
+a tarefa do broker
+
+1377
+01:17:17,840 --> 01:17:19,840
+não é uma tarefa
+
+1378
+01:17:19,840 --> 01:17:21,840
+fácil
+
+1379
+01:17:21,840 --> 01:17:23,840
+há uma tarefa que é pesada
+
+1380
+01:17:23,840 --> 01:17:25,840
+tem que estar a receber notificações
+
+1381
+01:17:25,840 --> 01:17:27,840
+e depois
+
+1382
+01:17:27,840 --> 01:17:29,840
+olhar para a notificação
+
+1383
+01:17:29,840 --> 01:17:31,840
+ver qual é o tópico
+
+1384
+01:17:31,840 --> 01:17:33,840
+e reenviar essa notificação
+
+1385
+01:17:33,840 --> 01:17:35,840
+para todos os subscritores
+
+1386
+01:17:35,840 --> 01:17:37,840
+para todos os clientes
+
+1387
+01:17:37,840 --> 01:17:39,840
+que subscreveram esse tópico
+
+1388
+01:17:39,840 --> 01:17:41,840
+no entanto
+
+1389
+01:17:41,840 --> 01:17:43,840
+todo trabalho pesado
+
+1390
+01:17:43,840 --> 01:17:45,840
+é removido do publisher
+
+1391
+01:17:45,840 --> 01:17:47,840
+e é removido dos subscribers
+
+1392
+01:17:47,840 --> 01:17:49,840
+portanto os clientes
+
+1393
+01:17:49,840 --> 01:17:58,660
+são muito levezinhos
+
+1394
+01:17:58,660 --> 01:18:00,660
+do ponto de vista de protocolo
+
+1395
+01:18:00,660 --> 01:18:02,660
+vai sentido?
+
+1396
+01:18:02,660 --> 01:18:04,660
+este aspecto é bom
+
+1397
+01:18:04,660 --> 01:18:06,660
+porque eu posso ter
+
+1398
+01:18:06,660 --> 01:18:08,660
+clientes
+
+1399
+01:18:08,660 --> 01:18:10,660
+e colocar brokers
+
+1400
+01:18:10,660 --> 01:18:12,660
+com maior capacidade
+
+1401
+01:18:12,660 --> 01:18:19,740
+certo?
+
+1402
+01:18:19,740 --> 01:18:21,740
+não há dúvidas? ok
+
+1403
+01:18:21,740 --> 01:18:25,470
+agora
+
+1404
+01:18:25,470 --> 01:18:27,470
+implementações de brokers
+
+1405
+01:18:27,470 --> 01:18:29,470
+nós podemos ter
+
+1406
+01:18:29,470 --> 01:18:31,470
+brokers
+
+1407
+01:18:31,470 --> 01:18:33,470
+pels leve
+
+1408
+01:18:33,470 --> 01:18:35,470
+para dispositivos
+
+1409
+01:18:35,470 --> 01:18:37,470
+com poucos recursos
+
+1410
+01:18:37,470 --> 01:18:39,470
+até brokers distribuídos
+
+1411
+01:18:39,470 --> 01:18:41,470
+que operam
+
+1412
+01:18:41,470 --> 01:18:43,470
+de uma forma distribuída
+
+1413
+01:18:43,470 --> 01:18:45,470
+em clusters
+
+1414
+01:18:45,470 --> 01:18:47,470
+ou pode ser na cloud
+
+1415
+01:18:47,470 --> 01:18:49,470
+lightweight temos um mosquito
+
+1416
+01:18:49,470 --> 01:18:51,470
+aquilo que nós normalmente colocamos
+
+1417
+01:18:51,470 --> 01:18:53,470
+a correr em fast fairy pies
+
+1418
+01:18:53,470 --> 01:18:55,470
+e coisas assim pequenas
+
+1419
+01:18:55,470 --> 01:18:57,470
+tem uma
+
+1420
+01:18:57,470 --> 01:18:59,470
+implementação muito eficiente
+
+1421
+01:18:59,470 --> 01:19:01,470
+em C
+
+1422
+01:19:01,470 --> 01:19:03,470
+portanto não há máquinas virtuais
+
+1423
+01:19:03,470 --> 01:19:05,470
+nem nada disso
+
+1424
+01:19:05,470 --> 01:19:07,470
+aquilo corre direitamente
+
+1425
+01:19:07,470 --> 01:19:09,470
+em cima da plataforma
+
+1426
+01:19:09,470 --> 01:19:11,470
+em cima da plataforma
+
+1427
+01:19:11,470 --> 01:19:13,470
+eventualmente a fazer
+
+1428
+01:19:13,470 --> 01:19:15,470
+chamadas ao sistema operativo
+
+1429
+01:19:15,470 --> 01:19:17,470
+que está na plataforma
+
+1430
+01:19:17,470 --> 01:19:19,470
+mas é
+
+1431
+01:19:19,470 --> 01:19:22,850
+super eficiente
+
+1432
+01:19:22,850 --> 01:19:24,850
+podemos também ter
+
+1433
+01:19:24,850 --> 01:19:26,850
+implementações para a cloud
+
+1434
+01:19:26,850 --> 01:19:28,850
+como por exemplo a AWS
+
+1435
+01:19:28,850 --> 01:19:30,850
+IoT Core e o Azure IoT Hub
+
+1436
+01:19:30,850 --> 01:19:32,850
+é isto que vocês estavam a tentar utilizar
+
+1437
+01:19:32,850 --> 01:19:34,850
+certo?
+
+1438
+01:19:34,850 --> 01:19:36,850
+mas infelizmente
+
+1439
+01:19:36,850 --> 01:19:40,350
+sem créditos
+
+1440
+01:19:40,350 --> 01:19:42,350
+se não me engano
+
+1441
+01:19:42,350 --> 01:19:44,350
+e depois também tem brokers
+
+1442
+01:19:44,350 --> 01:19:46,350
+distribuídos
+
+1443
+01:19:46,350 --> 01:19:48,350
+o que é querer ser distribuídos
+
+1444
+01:19:48,350 --> 01:19:50,350
+quer dizer que nós podemos
+
+1445
+01:19:50,350 --> 01:19:52,350
+ter mais do que um broker
+
+1446
+01:19:52,350 --> 01:19:54,350
+uma instância do broker
+
+1447
+01:19:54,350 --> 01:19:56,350
+nós podemos ter várias instâncias do broker
+
+1448
+01:19:56,350 --> 01:19:58,350
+a trabalhar em vários computadores
+
+1449
+01:19:58,350 --> 01:20:00,350
+ou máquinas virtuais
+
+1450
+01:20:00,350 --> 01:20:02,350
+não interessa mas
+
+1451
+01:20:02,350 --> 01:20:04,350
+e elas cooperam entre
+
+1452
+01:20:04,350 --> 01:20:06,350
+eles
+
+1453
+01:20:06,350 --> 01:20:08,350
+para
+
+1454
+01:20:08,350 --> 01:20:10,350
+para atender caras grandes
+
+1455
+01:20:10,350 --> 01:20:12,350
+se houver
+
+1456
+01:20:12,350 --> 01:20:14,350
+um grande luxo
+
+1457
+01:20:14,350 --> 01:20:16,350
+de notificações
+
+1458
+01:20:16,350 --> 01:20:18,350
+que são produzidas
+
+1459
+01:20:18,350 --> 01:20:20,350
+e recebidas pelos brokers
+
+1460
+01:20:20,350 --> 01:20:22,350
+é necessário haver uma grande capacidade
+
+1461
+01:20:22,350 --> 01:20:24,350
+para distribuir
+
+1462
+01:20:24,350 --> 01:20:26,350
+também para os clientes
+
+1463
+01:20:26,350 --> 01:20:28,350
+estas
+
+1464
+01:20:28,350 --> 01:20:30,350
+implementações distribuídas
+
+1465
+01:20:30,350 --> 01:20:32,350
+precisamente permitem
+
+1466
+01:20:32,350 --> 01:20:34,350
+colocar
+
+1467
+01:20:34,350 --> 01:20:36,350
+mais de uma instância do broker
+
+1468
+01:20:36,350 --> 01:20:38,350
+a suportar a carga
+
+1469
+01:20:40,350 --> 01:20:42,350
+o mosquito
+
+1470
+01:20:42,350 --> 01:20:44,350
+é um mosquito pequenito
+
+1471
+01:20:44,350 --> 01:20:46,350
+portanto
+
+1472
+01:20:46,350 --> 01:20:48,350
+é bom para aguentar cargas simpáticas
+
+1473
+01:20:48,350 --> 01:20:50,350
+mas se vocês atirarem
+
+1474
+01:20:50,350 --> 01:20:52,350
+com milhões de notificações por segundo
+
+1475
+01:20:52,350 --> 01:20:54,350
+e la minha
+
+1476
+01:20:54,350 --> 01:20:56,350
+numa raça peripai por exemplo
+
+1477
+01:20:56,350 --> 01:20:58,350
+que ele não aguenta
+
+1478
+01:20:58,350 --> 01:21:00,350
+tudo que é distribuído
+
+1479
+01:21:00,350 --> 01:21:02,350
+obviamente precisa de protocolos
+
+1480
+01:21:02,350 --> 01:21:04,350
+para haver alguma coerência
+
+1481
+01:21:04,350 --> 01:21:06,350
+de distribuição de carga
+
+1482
+01:21:06,350 --> 01:21:08,350
+e evitar que haja duplicações
+
+1483
+01:21:08,350 --> 01:21:10,350
+de retransmissões
+
+1484
+01:21:10,350 --> 01:21:12,350
+e coisas assim como é que isso é feito
+
+1485
+01:21:12,350 --> 01:21:14,350
+e estes gestos profissionais
+
+1486
+01:21:14,350 --> 01:21:16,350
+que estaram muito tempo de dinheiro
+
+1487
+01:21:16,350 --> 01:21:18,350
+a precariar os produtos que são vendidos
+
+1488
+01:21:18,350 --> 01:21:20,350
+mas eles existem
+
+1489
+01:21:20,350 --> 01:21:22,350
+para clusters
+
+1490
+01:21:22,350 --> 01:21:24,350
+para soluções distribuídas
+
+1491
+01:21:26,350 --> 01:21:28,350
+ok, agora
+
+1492
+01:21:28,350 --> 01:21:30,350
+os tópicos, pronto
+
+1493
+01:21:30,350 --> 01:21:32,350
+um tópico que aqui é
+
+1494
+01:21:32,350 --> 01:21:34,350
+um
+
+1495
+01:21:34,350 --> 01:21:36,350
+uma string portanto
+
+1496
+01:21:36,350 --> 01:21:38,350
+um texto
+
+1497
+01:21:38,350 --> 01:21:40,350
+que exprime
+
+1498
+01:21:40,350 --> 01:21:42,350
+uma hierarquia
+
+1499
+01:21:42,350 --> 01:21:44,350
+e é uma hierarquia
+
+1500
+01:21:44,350 --> 01:21:46,350
+que vai desde o maior
+
+1501
+01:21:46,350 --> 01:21:48,350
+do mais genérico
+
+1502
+01:21:48,350 --> 01:21:50,350
+até ao mais específico
+
+1503
+01:21:50,350 --> 01:21:52,350
+temos aqui um exemplo
+
+1504
+01:21:52,350 --> 01:21:54,350
+por exemplo, temos um mais genérico
+
+1505
+01:21:54,350 --> 01:21:56,350
+que é a fábrica
+
+1506
+01:21:56,350 --> 01:21:58,350
+ok, dentro da fábrica
+
+1507
+01:21:58,350 --> 01:22:00,350
+podemos
+
+1508
+01:22:00,350 --> 01:22:02,350
+ver a divisão
+
+1509
+01:22:02,350 --> 01:22:04,350
+em edifícios
+
+1510
+01:22:04,350 --> 01:22:06,350
+e aqui estamos a falar no edifício 1
+
+1511
+01:22:06,350 --> 01:22:08,350
+dentro do edifício 1
+
+1512
+01:22:08,350 --> 01:22:10,350
+eu posso dividi-la ainda mais
+
+1513
+01:22:10,350 --> 01:22:12,350
+e tenho aqui a secção A
+
+1514
+01:22:12,350 --> 01:22:14,350
+ok, e dentro da secção A
+
+1515
+01:22:14,350 --> 01:22:16,350
+eu posso ter um tópico
+
+1516
+01:22:16,350 --> 01:22:18,350
+que é a temperatura
+
+1517
+01:22:18,350 --> 01:22:20,350
+até posso ter
+
+1518
+01:22:20,350 --> 01:22:22,350
+mais tópicos
+
+1519
+01:22:22,350 --> 01:22:24,350
+dentro da secção A
+
+1520
+01:22:24,350 --> 01:22:26,350
+ok, mas reparem
+
+1521
+01:22:26,350 --> 01:22:28,350
+isto é muito parecido com a árvore
+
+1522
+01:22:28,350 --> 01:22:30,350
+de um sistema fechejo
+
+1523
+01:22:30,350 --> 01:22:32,350
+certo?
+
+1524
+01:22:32,350 --> 01:22:34,350
+não estou a dizer nada de estranho
+
+1525
+01:22:34,350 --> 01:22:36,350
+pois não
+
+1526
+01:22:36,350 --> 01:22:38,350
+já toda a gente aqui trabalhou
+
+1527
+01:22:38,350 --> 01:22:40,350
+com linha de comando
+
+1528
+01:22:40,350 --> 01:22:42,350
+e com um sistema fechejo
+
+1529
+01:22:42,350 --> 01:22:44,350
+e num sistema fechejo nós quando temos
+
+1530
+01:22:44,350 --> 01:22:46,350
+uma árvore também
+
+1531
+01:22:46,350 --> 01:22:48,350
+à medida que descemos da árvore
+
+1532
+01:22:48,350 --> 01:22:50,350
+basicamente estamos a ir de um ponto
+
+1533
+01:22:50,350 --> 01:22:52,350
+mais
+
+1534
+01:22:52,350 --> 01:22:54,350
+de alto nível
+
+1535
+01:22:54,350 --> 01:22:56,350
+central, ou genérico
+
+1536
+01:22:56,350 --> 01:22:58,350
+e depois vamos descendo
+
+1537
+01:22:58,350 --> 01:23:00,350
+na árvore até
+
+1538
+01:23:00,350 --> 01:23:02,350
+subdiretores
+
+1539
+01:23:02,350 --> 01:23:04,350
+podemos considerá-los mais específicos
+
+1540
+01:23:04,350 --> 01:23:06,350
+dúvidas em relação a isto, não há?
+
+1541
+01:23:06,350 --> 01:23:10,370
+aqui também convém
+
+1542
+01:23:10,370 --> 01:23:12,370
+ter isto numa espécie
+
+1543
+01:23:12,370 --> 01:23:14,370
+de árvore, ou de árvores
+
+1544
+01:23:14,370 --> 01:23:16,370
+não arrangem
+
+1545
+01:23:16,370 --> 01:23:18,370
+caminhos circulares
+
+1546
+01:23:18,370 --> 01:23:20,370
+para chegar a um determinado
+
+1547
+01:23:20,370 --> 01:23:22,370
+ao mesmo tópico
+
+1548
+01:23:22,370 --> 01:23:24,370
+ok, criem
+
+1549
+01:23:24,370 --> 01:23:26,370
+tópicos na forma de
+
+1550
+01:23:26,370 --> 01:23:28,370
+árvores
+
+1551
+01:23:28,370 --> 01:23:30,370
+porque se vocês criarem tópicos
+
+1552
+01:23:30,370 --> 01:23:32,370
+em formas de árvores também podem utilizar
+
+1553
+01:23:32,370 --> 01:23:34,370
+os wildcards
+
+1554
+01:23:34,370 --> 01:23:36,370
+vocês têm um
+
+1555
+01:23:36,370 --> 01:23:38,370
+símbolo mais
+
+1556
+01:23:38,370 --> 01:23:40,370
+que funciona como um wildcard
+
+1557
+01:23:40,370 --> 01:23:42,370
+de um nível
+
+1558
+01:23:42,370 --> 01:23:44,370
+por exemplo
+
+1559
+01:23:44,370 --> 01:23:46,370
+olhando para este exemplo que está aqui
+
+1560
+01:23:46,370 --> 01:23:48,370
+eu substituir
+
+1561
+01:23:48,370 --> 01:23:50,370
+building one
+
+1562
+01:23:50,370 --> 01:23:52,370
+por mais
+
+1563
+01:23:52,370 --> 01:23:54,370
+aqui o que acontece, o que é que estou a referir
+
+1564
+01:23:54,370 --> 01:23:56,370
+querendo tentar adivinhar
+
+1565
+01:23:56,370 --> 01:23:58,370
+neste exemplo
+
+1566
+01:23:58,370 --> 01:24:06,450
+ninguém quer arriscar
+
+1567
+01:24:06,450 --> 01:24:08,450
+em diferente nome
+
+1568
+01:24:08,450 --> 01:24:10,450
+mas só há mais uma
+
+1569
+01:24:10,450 --> 01:24:13,700
+seção, não sei
+
+1570
+01:24:13,700 --> 01:24:15,700
+mais ou menos
+
+1571
+01:24:15,700 --> 01:24:17,700
+eu aqui o que é que estou a dizer
+
+1572
+01:24:17,700 --> 01:24:22,800
+eu estou interessado em que
+
+1573
+01:24:22,800 --> 01:24:24,800
+se eu subscrever-se
+
+1574
+01:24:24,800 --> 01:24:26,800
+o factory mais
+
+1575
+01:24:26,800 --> 01:24:28,800
+seccional temperature
+
+1576
+01:24:28,800 --> 01:24:30,800
+o que é que eu estava a exprimir
+
+1577
+01:24:30,800 --> 01:24:32,800
+eu estou interessado em conhecer o que
+
+1578
+01:24:32,800 --> 01:24:34,800
+a temperatura da seção A
+
+1579
+01:24:34,800 --> 01:24:36,800
+em qualquer building
+
+1580
+01:24:36,800 --> 01:24:38,800
+exatamente
+
+1581
+01:24:38,800 --> 01:24:40,800
+eu estou interessado em receber notificações de temperatura
+
+1582
+01:24:40,800 --> 01:24:42,800
+da seção A
+
+1583
+01:24:42,800 --> 01:24:44,800
+de
+
+1584
+01:24:44,800 --> 01:24:46,800
+qualquer edifício da fábrica
+
+1585
+01:24:46,800 --> 01:24:48,800
+certo?
+
+1586
+01:24:48,800 --> 01:24:50,800
+portanto eu
+
+1587
+01:24:50,800 --> 01:24:52,800
+gosto muito de seções Aspa
+
+1588
+01:24:52,800 --> 01:24:54,800
+e gosto de saber se está
+
+1589
+01:24:54,800 --> 01:24:56,800
+uma temperatura agradável ou não
+
+1590
+01:24:56,800 --> 01:24:58,800
+agora em que edifício, não interessa
+
+1591
+01:24:58,800 --> 01:25:00,800
+podem pensar que a seção A
+
+1592
+01:25:00,800 --> 01:25:02,800
+é por exemplo onde estão
+
+1593
+01:25:02,800 --> 01:25:04,800
+a fermentar cerveja
+
+1594
+01:25:04,800 --> 01:25:06,800
+e vocês podem ter
+
+1595
+01:25:06,800 --> 01:25:08,800
+vários edifícios
+
+1596
+01:25:08,800 --> 01:25:10,800
+da fábrica
+
+1597
+01:25:10,800 --> 01:25:12,800
+e nos vários edifícios
+
+1598
+01:25:12,800 --> 01:25:14,800
+vocês sabem que nas seções As
+
+1599
+01:25:14,800 --> 01:25:16,800
+é as seções onde se fermentar cervejas
+
+1600
+01:25:16,800 --> 01:25:18,800
+opa e eu quero saber
+
+1601
+01:25:18,800 --> 01:25:20,800
+quais são as temperaturas
+
+1602
+01:25:20,800 --> 01:25:22,800
+nos vários edifícios
+
+1603
+01:25:22,800 --> 01:25:24,800
+nas seções em que se fermentar cerveja
+
+1604
+01:25:24,800 --> 01:25:26,800
+certo?
+
+1605
+01:25:26,800 --> 01:25:28,800
+desta forma eu não subscrevo
+
+1606
+01:25:28,800 --> 01:25:30,800
+um ou edifício dois
+
+1607
+01:25:30,800 --> 01:25:32,800
+especificamente subscrevo
+
+1608
+01:25:32,800 --> 01:25:34,800
+qualquer edifício
+
+1609
+01:25:34,800 --> 01:25:36,800
+certo?
+
+1610
+01:25:36,800 --> 01:25:41,360
+ficou claro?
+
+1611
+01:25:41,360 --> 01:25:43,360
+temos depois também o outro multilevel
+
+1612
+01:25:43,360 --> 01:25:45,360
+wildcard que é aqui o cardinal
+
+1613
+01:25:45,360 --> 01:25:47,360
+em que
+
+1614
+01:25:47,360 --> 01:25:49,360
+este só se utiliza no final
+
+1615
+01:25:49,360 --> 01:25:51,360
+e o que é que significa?
+
+1616
+01:25:51,360 --> 01:25:53,360
+o asterisco é
+
+1617
+01:25:53,360 --> 01:25:55,360
+qualquer coisa
+
+1618
+01:25:55,360 --> 01:25:57,360
+dali para frente
+
+1619
+01:25:57,360 --> 01:26:02,210
+ok?
+
+1620
+01:26:02,210 --> 01:26:04,210
+qualquer tópico
+
+1621
+01:26:04,210 --> 01:26:06,210
+que pretensa
+
+1622
+01:26:06,210 --> 01:26:08,210
+a este grupo
+
+1623
+01:26:08,210 --> 01:26:10,210
+de alto nível
+
+1624
+01:26:10,210 --> 01:26:12,210
+neste caso
+
+1625
+01:26:12,210 --> 01:26:14,210
+o que que eu estou a dizer?
+
+1626
+01:26:14,210 --> 01:26:16,210
+eu estou interessado em tudo o que acontece
+
+1627
+01:26:16,210 --> 01:26:18,210
+no edifício um
+
+1628
+01:26:18,210 --> 01:26:22,060
+da fábrica
+
+1629
+01:26:22,060 --> 01:26:24,060
+independentemente da seção
+
+1630
+01:26:24,060 --> 01:26:26,060
+independentemente da natureza
+
+1631
+01:26:26,060 --> 01:26:28,060
+do valor que vier
+
+1632
+01:26:28,060 --> 01:26:30,060
+eu estou interessado em saber tudo
+
+1633
+01:26:30,060 --> 01:26:32,060
+que se passa na fábrica
+
+1634
+01:26:32,060 --> 01:26:36,020
+no edifício um
+
+1635
+01:26:36,020 --> 01:26:38,020
+ok?
+
+1636
+01:26:38,020 --> 01:26:40,020
+neste caso o cardinal
+
+1637
+01:26:40,020 --> 01:26:42,020
+aparece sempre no final
+
+1638
+01:26:42,020 --> 01:26:44,020
+que é a partir
+
+1639
+01:26:44,020 --> 01:26:47,490
+deste nível
+
+1640
+01:26:47,490 --> 01:26:49,490
+eu quero saber
+
+1641
+01:26:49,490 --> 01:26:53,250
+tudo e qualquer coisa
+
+1642
+01:26:53,250 --> 01:26:55,250
+ok? dúvidas
+
+1643
+01:26:55,250 --> 01:27:00,350
+vocês já sabiam isto?
+
+1644
+01:27:00,350 --> 01:27:02,350
+quando vocês subscrevem?
+
+1645
+01:27:02,350 --> 01:27:04,350
+sim? ok
+
+1646
+01:27:04,350 --> 01:27:06,350
+pronto
+
+1647
+01:27:06,350 --> 01:27:08,350
+agora a qualidade de serviço
+
+1648
+01:27:08,350 --> 01:27:10,350
+a qualidade de serviço
+
+1649
+01:27:10,350 --> 01:27:12,350
+em NKTT
+
+1650
+01:27:12,350 --> 01:27:14,350
+nós temos
+
+1651
+01:27:14,350 --> 01:27:16,350
+três níveis de garantias
+
+1652
+01:27:16,350 --> 01:27:18,350
+ok? o zero
+
+1653
+01:27:18,350 --> 01:27:20,350
+que é nenhuma garantia
+
+1654
+01:27:20,350 --> 01:27:22,350
+o um em que
+
+1655
+01:27:22,350 --> 01:27:24,350
+há garantia
+
+1656
+01:27:24,350 --> 01:27:26,350
+certo? do que pelo menos
+
+1657
+01:27:26,350 --> 01:27:28,350
+alguém ouve
+
+1658
+01:27:28,350 --> 01:27:30,350
+e a
+
+1659
+01:27:30,350 --> 01:27:32,350
+qualidade de serviço 2
+
+1660
+01:27:32,350 --> 01:27:34,350
+é
+
+1661
+01:27:34,350 --> 01:27:36,350
+eles vão ouvir
+
+1662
+01:27:36,350 --> 01:27:38,350
+uma vez portanto não há repetições
+
+1663
+01:27:40,350 --> 01:27:42,350
+ok?
+
+1664
+01:27:42,350 --> 01:27:44,350
+o zero
+
+1665
+01:27:44,350 --> 01:27:46,350
+é super barato
+
+1666
+01:27:48,560 --> 01:27:50,560
+mas é péssimo
+
+1667
+01:27:50,560 --> 01:27:52,560
+se eu quiser
+
+1668
+01:27:52,560 --> 01:27:54,560
+garantir que
+
+1669
+01:27:54,560 --> 01:27:56,560
+se recebeu
+
+1670
+01:27:56,560 --> 01:27:58,560
+ok?
+
+1671
+01:27:58,560 --> 01:28:00,560
+o 2 é
+
+1672
+01:28:00,560 --> 01:28:02,560
+fantástico
+
+1673
+01:28:02,560 --> 01:28:04,560
+fica caro
+
+1674
+01:28:04,560 --> 01:28:06,560
+o um é o melhor de dois mundos
+
+1675
+01:28:06,560 --> 01:28:08,560
+o outro é caro
+
+1676
+01:28:08,560 --> 01:28:10,560
+ou seja nem é muito caro
+
+1677
+01:28:10,560 --> 01:28:12,560
+mas também garantimos
+
+1678
+01:28:12,560 --> 01:28:14,560
+que não se perde nada
+
+1679
+01:28:14,560 --> 01:28:16,560
+agora podemos ter repetições
+
+1680
+01:28:16,560 --> 01:28:18,560
+pronto
+
+1681
+01:28:18,560 --> 01:28:20,560
+desde que não seja grande a moestia
+
+1682
+01:28:20,560 --> 01:28:22,560
+certo?
+
+1683
+01:28:22,560 --> 01:28:24,560
+como é que cada um funciona?
+
+1684
+01:28:24,560 --> 01:28:26,560
+por exemplo
+
+1685
+01:28:26,560 --> 01:28:28,560
+a qualidade de serviço zero
+
+1686
+01:28:28,560 --> 01:28:30,560
+não tem nada a saber
+
+1687
+01:28:30,560 --> 01:28:32,560
+o publicador
+
+1688
+01:28:32,560 --> 01:28:34,560
+publica
+
+1689
+01:28:34,560 --> 01:28:36,560
+e
+
+1690
+01:28:36,560 --> 01:28:40,190
+aquilo que ele publicou
+
+1691
+01:28:40,190 --> 01:28:42,190
+há de ir ter
+
+1692
+01:28:42,190 --> 01:28:44,190
+ao receptor
+
+1693
+01:28:44,190 --> 01:28:46,190
+ok?
+
+1694
+01:28:46,190 --> 01:28:48,190
+pronto
+
+1695
+01:28:48,190 --> 01:28:50,190
+na melhor das hipóteses
+
+1696
+01:28:50,190 --> 01:28:52,190
+pode acontecer
+
+1697
+01:28:52,190 --> 01:28:54,190
+que
+
+1698
+01:28:54,190 --> 01:28:56,190
+isto se perca pelo caminho
+
+1699
+01:28:56,190 --> 01:28:58,190
+se perder pelo caminho
+
+1700
+01:28:58,190 --> 01:29:00,190
+olha alguém ficou sem receber a notificação
+
+1701
+01:29:00,190 --> 01:29:02,190
+mas pode não ser grave
+
+1702
+01:29:02,190 --> 01:29:04,190
+ok?
+
+1703
+01:29:04,190 --> 01:29:10,800
+nunca sabe
+
+1704
+01:29:10,800 --> 01:29:12,800
+a informação pode ser barata
+
+1705
+01:29:12,800 --> 01:29:14,800
+e se perder pronto
+
+1706
+01:29:14,800 --> 01:29:18,850
+não vem nenhum mal ao mundo
+
+1707
+01:29:18,850 --> 01:29:20,850
+é como tudo
+
+1708
+01:29:20,850 --> 01:29:22,850
+há mais coisas no céu e na terra
+
+1709
+01:29:22,850 --> 01:29:24,850
+orácio do que sonha a tua vanfilosofia
+
+1710
+01:29:24,850 --> 01:29:26,850
+já escreveu
+
+1711
+01:29:26,850 --> 01:29:28,850
+o Shakespeare
+
+1712
+01:29:28,850 --> 01:29:33,630
+era no amlet
+
+1713
+01:29:33,630 --> 01:29:35,630
+não me lembro
+
+1714
+01:29:35,630 --> 01:29:37,630
+mas lembro perfeitamente
+
+1715
+01:29:37,630 --> 01:29:39,630
+esta situação
+
+1716
+01:29:39,630 --> 01:29:41,630
+há mais coisas
+
+1717
+01:29:41,630 --> 01:29:43,630
+não me lembro
+
+1718
+01:29:43,630 --> 01:29:45,630
+orácio do que sonha a tua vanfilosofia
+
+1719
+01:29:45,630 --> 01:29:47,630
+algo assim
+
+1720
+01:29:49,630 --> 01:29:51,630
+agora
+
+1721
+01:29:51,630 --> 01:29:53,630
+qualidade de serviço um
+
+1722
+01:29:53,630 --> 01:29:55,630
+aqui
+
+1723
+01:29:55,630 --> 01:29:57,630
+tem de existir um acknowledge
+
+1724
+01:29:57,630 --> 01:29:59,630
+é enviado
+
+1725
+01:29:59,630 --> 01:30:01,630
+a notificação
+
+1726
+01:30:01,630 --> 01:30:03,630
+do
+
+1727
+01:30:03,630 --> 01:30:05,630
+de quem envia para o receptor
+
+1728
+01:30:05,630 --> 01:30:07,630
+e o receptor
+
+1729
+01:30:07,630 --> 01:30:09,630
+tem de enviar um acknowledge
+
+1730
+01:30:09,630 --> 01:30:11,630
+se o sender
+
+1731
+01:30:11,630 --> 01:30:13,630
+enquanto o sender não receber
+
+1732
+01:30:13,630 --> 01:30:15,630
+um acknowledge
+
+1733
+01:30:15,630 --> 01:30:17,630
+ele irá repetir o publish
+
+1734
+01:30:17,630 --> 01:30:19,630
+a publicação
+
+1735
+01:30:19,630 --> 01:30:25,860
+ok?
+
+1736
+01:30:25,860 --> 01:30:27,860
+o que que acontece sobre um acknowledge
+
+1737
+01:30:27,860 --> 01:30:29,860
+que vem atrasado
+
+1738
+01:30:29,860 --> 01:30:31,860
+opai, ele pode ter enviado
+
+1739
+01:30:31,860 --> 01:30:33,860
+duas ou três vezes
+
+1740
+01:30:33,860 --> 01:30:35,860
+mas como
+
+1741
+01:30:35,860 --> 01:30:37,860
+o pacote
+
+1742
+01:30:37,860 --> 01:30:39,860
+mantém sempre
+
+1743
+01:30:39,860 --> 01:30:41,860
+a mesma identificação
+
+1744
+01:30:41,860 --> 01:30:43,860
+o receptor tem forma
+
+1745
+01:30:43,860 --> 01:30:45,860
+de saber que
+
+1746
+01:30:45,860 --> 01:30:47,860
+este pacote que acabou de receber
+
+1747
+01:30:47,860 --> 01:30:49,860
+é uma repetição de outro
+
+1748
+01:30:49,860 --> 01:30:51,860
+que já recebeu atrás
+
+1749
+01:30:51,860 --> 01:30:53,860
+ok?
+
+1750
+01:30:53,860 --> 01:30:55,860
+não vai ficar ali deslumbrada a pensar
+
+1751
+01:30:55,860 --> 01:30:57,860
+ah, este é novo
+
+1752
+01:30:57,860 --> 01:30:59,860
+e ele tem
+
+1753
+01:30:59,860 --> 01:31:01,860
+forma de saber
+
+1754
+01:31:01,860 --> 01:31:05,390
+que este pacote é repetido
+
+1755
+01:31:05,390 --> 01:31:07,390
+ok?
+
+1756
+01:31:07,390 --> 01:31:12,690
+dúvidas, não há?
+
+1757
+01:31:12,690 --> 01:31:14,690
+por fim, temos a qualidade de serviço dois
+
+1758
+01:31:14,690 --> 01:31:16,690
+é um pouco mais complexa
+
+1759
+01:31:16,690 --> 01:31:18,690
+até
+
+1760
+01:31:18,690 --> 01:31:20,690
+é complexa
+
+1761
+01:31:20,690 --> 01:31:22,690
+que eu as vezes fico a pensar
+
+1762
+01:31:22,690 --> 01:31:24,690
+mas como é que ele garante
+
+1763
+01:31:24,690 --> 01:31:26,690
+que vai
+
+1764
+01:31:26,690 --> 01:31:28,690
+só um
+
+1765
+01:31:28,690 --> 01:31:32,190
+então, ele publica
+
+1766
+01:31:32,190 --> 01:31:34,190
+e fica à espera de
+
+1767
+01:31:34,190 --> 01:31:36,190
+receber uma confirmação
+
+1768
+01:31:36,190 --> 01:31:38,190
+o publish receive
+
+1769
+01:31:38,190 --> 01:31:40,190
+do receptor
+
+1770
+01:31:40,190 --> 01:31:42,190
+ok?
+
+1771
+01:31:42,190 --> 01:31:44,190
+quando o receptor
+
+1772
+01:31:44,190 --> 01:31:46,190
+envia o publish receive
+
+1773
+01:31:48,190 --> 01:31:50,190
+indica
+
+1774
+01:31:50,190 --> 01:31:52,190
+que já não é preciso
+
+1775
+01:31:52,190 --> 01:31:54,190
+enviar mais
+
+1776
+01:31:54,190 --> 01:31:56,190
+é pá, e é aqui
+
+1777
+01:31:56,190 --> 01:31:58,190
+que eu fico a pensar
+
+1778
+01:31:58,190 --> 01:32:00,190
+se calhar, eu devia de ver algum vídeo
+
+1779
+01:32:00,190 --> 01:32:02,190
+no youtube
+
+1780
+01:32:02,190 --> 01:32:04,190
+para ver uma animação
+
+1781
+01:32:04,190 --> 01:32:06,190
+por quê? porque
+
+1782
+01:32:08,190 --> 01:32:10,190
+é aqui que eu não sei como as coisas funcionam
+
+1783
+01:32:10,190 --> 01:32:12,190
+se ele não receber um publish
+
+1784
+01:32:12,190 --> 01:32:14,190
+receive
+
+1785
+01:32:14,190 --> 01:32:16,190
+dentro de algum tempo
+
+1786
+01:32:16,190 --> 01:32:18,190
+eventualmente
+
+1787
+01:32:18,190 --> 01:32:20,190
+ele irá repetir
+
+1788
+01:32:20,190 --> 01:32:22,190
+ou ele não repete
+
+1789
+01:32:22,190 --> 01:32:24,190
+essa é parte de que eu não percebo
+
+1790
+01:32:24,190 --> 01:32:26,190
+como é que isto funcionam
+
+1791
+01:32:28,190 --> 01:32:30,190
+eu acho que repete
+
+1792
+01:32:30,190 --> 01:32:32,190
+professor, nós já falamos
+
+1793
+01:32:32,190 --> 01:32:34,190
+deste conceito em redes
+
+1794
+01:32:34,190 --> 01:32:36,190
+eu acho que ele repete
+
+1795
+01:32:36,190 --> 01:32:38,190
+para não haver duplicação
+
+1796
+01:32:38,190 --> 01:32:40,190
+lá está, tem a tal identificador
+
+1797
+01:32:40,190 --> 01:32:42,190
+se o receiver saber
+
+1798
+01:32:42,190 --> 01:32:44,190
+que já recebeu
+
+1799
+01:32:44,190 --> 01:32:46,190
+e não vai mandar um segundo
+
+1800
+01:32:46,190 --> 01:32:48,190
+o acknowledge
+
+1801
+01:32:48,190 --> 01:32:50,190
+exatamente
+
+1802
+01:32:50,190 --> 01:32:52,190
+é isso, ele não manda
+
+1803
+01:32:52,190 --> 01:32:54,190
+ou seja, se falhou
+
+1804
+01:32:54,190 --> 01:32:56,190
+o acknowledge
+
+1805
+01:32:56,190 --> 01:32:58,190
+ele não vai mandar um segundo
+
+1806
+01:32:58,190 --> 01:33:00,190
+porque eu não sei o que é
+
+1807
+01:33:00,190 --> 01:33:02,190
+e recebeu o primeiro pacote
+
+1808
+01:33:02,190 --> 01:33:04,190
+e eu acho que ele não recebe
+
+1809
+01:33:04,190 --> 01:33:06,190
+é pá, e a ideia
+
+1810
+01:33:06,190 --> 01:33:08,190
+que tenho visto
+
+1811
+01:33:08,190 --> 01:33:10,190
+é muito como aquele pessoal
+
+1812
+01:33:10,190 --> 01:33:12,190
+que vai desligar o telefonema
+
+1813
+01:33:12,190 --> 01:33:14,190
+ok, pronto
+
+1814
+01:33:14,190 --> 01:33:16,190
+então olha, desliga
+
+1815
+01:33:16,190 --> 01:33:18,190
+ah, não desliga tu, tá bem
+
+1816
+01:33:18,190 --> 01:33:20,190
+então eu vou desligar
+
+1817
+01:33:20,190 --> 01:33:22,190
+pronto, então desliga
+
+1818
+01:33:22,190 --> 01:33:24,190
+há aqui uma dupla confirmação
+
+1819
+01:33:24,190 --> 01:33:26,190
+por quê? porque
+
+1820
+01:33:26,190 --> 01:33:28,190
+assim que o emissor
+
+1821
+01:33:28,190 --> 01:33:30,190
+recebe o publish receive
+
+1822
+01:33:30,190 --> 01:33:32,190
+a confirmação de que
+
+1823
+01:33:32,190 --> 01:33:34,190
+o pacote
+
+1824
+01:33:34,190 --> 01:33:36,190
+foi recebido
+
+1825
+01:33:36,190 --> 01:33:38,190
+e ele vai enviar uma notificação
+
+1826
+01:33:38,190 --> 01:33:40,190
+a dizer release
+
+1827
+01:33:40,190 --> 01:33:42,190
+ou seja, a transação
+
+1828
+01:33:42,190 --> 01:33:44,190
+vai terminar, eu vou libertar
+
+1829
+01:33:44,190 --> 01:33:46,190
+-te desta transação
+
+1830
+01:33:46,190 --> 01:33:48,190
+e
+
+1831
+01:33:48,190 --> 01:33:50,190
+o receiver
+
+1832
+01:33:50,190 --> 01:33:52,190
+manda uma confirmação de
+
+1833
+01:33:52,190 --> 01:33:54,190
+publish completo, a dizer ok
+
+1834
+01:33:54,190 --> 01:33:56,190
+terminamos por aqui
+
+1835
+01:33:56,190 --> 01:33:58,190
+certo?
+
+1836
+01:33:58,190 --> 01:34:00,190
+o exactly once
+
+1837
+01:34:00,190 --> 01:34:02,190
+eu acho que o nome
+
+1838
+01:34:02,190 --> 01:34:04,190
+engana, porque precisamente
+
+1839
+01:34:04,190 --> 01:34:06,190
+do ponto de vista
+
+1840
+01:34:06,190 --> 01:34:08,190
+mais alto nível
+
+1841
+01:34:08,190 --> 01:34:10,190
+parece que ele só recebeu um
+
+1842
+01:34:10,190 --> 01:34:12,190
+mas eventualmente, ele pode ter que enviar
+
+1843
+01:34:12,190 --> 01:34:14,190
+mais de que uma vez para efetivamente
+
+1844
+01:34:14,190 --> 01:34:16,190
+receber
+
+1845
+01:34:16,190 --> 01:34:18,190
+se houver péradas, porque não há nada
+
+1846
+01:34:18,190 --> 01:34:20,190
+que não garanta que não haja péradas
+
+1847
+01:34:20,190 --> 01:34:22,190
+de pacotes no meio, sobretudo
+
+1848
+01:34:22,190 --> 01:34:24,190
+se for um meio agressivo
+
+1849
+01:34:24,190 --> 01:34:26,190
+certo? portanto, esta é aquela
+
+1850
+01:34:26,190 --> 01:34:28,190
+parte para que o nome
+
+1851
+01:34:28,190 --> 01:34:30,190
+eu não gosto nada do nome
+
+1852
+01:34:30,190 --> 01:34:32,190
+mas parece algo forte
+
+1853
+01:34:32,190 --> 01:34:34,190
+mas eu acho que
+
+1854
+01:34:34,190 --> 01:34:36,190
+acontece que
+
+1855
+01:34:36,190 --> 01:34:38,190
+há uma confirmação
+
+1856
+01:34:38,190 --> 01:34:40,190
+do lado
+
+1857
+01:34:40,190 --> 01:34:42,190
+o receiver recebe uma confirmação
+
+1858
+01:34:42,190 --> 01:34:44,190
+do sender
+
+1859
+01:34:44,190 --> 01:34:46,190
+de que a primeira
+
+1860
+01:34:46,190 --> 01:34:50,500
+confirmação foi recebido
+
+1861
+01:34:50,500 --> 01:34:52,500
+ou seja, é
+
+1862
+01:34:52,500 --> 01:34:54,500
+uma forma segura
+
+1863
+01:34:54,500 --> 01:34:56,500
+de terminar
+
+1864
+01:34:56,500 --> 01:34:58,500
+porque aqui
+
+1865
+01:34:58,500 --> 01:35:00,500
+o que é que acontece?
+
+1866
+01:35:00,500 --> 01:35:02,500
+olha, pega lá isto
+
+1867
+01:35:02,500 --> 01:35:04,500
+ele manda pronto, recebi
+
+1868
+01:35:04,500 --> 01:35:06,500
+certo?
+
+1869
+01:35:06,500 --> 01:35:08,500
+manda o public
+
+1870
+01:35:08,500 --> 01:35:10,500
+acknowledge, ele diz
+
+1871
+01:35:10,500 --> 01:35:12,500
+eu já mandei
+
+1872
+01:35:12,500 --> 01:35:14,500
+mas será que ele recebeu o acknowledge
+
+1873
+01:35:14,500 --> 01:35:16,500
+e pode ficar na dúvida
+
+1874
+01:35:16,500 --> 01:35:18,500
+não é?
+
+1875
+01:35:18,500 --> 01:35:20,500
+neste caso, garantidamente
+
+1876
+01:35:20,500 --> 01:35:22,500
+não fica na dúvida, porque ele diz
+
+1877
+01:35:22,500 --> 01:35:24,500
+ok, eu recebi
+
+1878
+01:35:24,500 --> 01:35:26,500
+e este diz
+
+1879
+01:35:26,500 --> 01:35:28,500
+eu recebi que tu recebeste
+
+1880
+01:35:28,500 --> 01:35:30,500
+e o receiver fica a saber
+
+1881
+01:35:30,500 --> 01:35:32,500
+que o outro já sabe
+
+1882
+01:35:32,500 --> 01:35:34,500
+e possivelmente não vai aviar mais
+
+1883
+01:35:34,500 --> 01:35:38,640
+deve-se a por aí
+
+1884
+01:35:38,640 --> 01:35:40,640
+o exactly once
+
+1885
+01:35:40,640 --> 01:35:42,640
+que não é
+
+1886
+01:35:42,640 --> 01:35:44,640
+exatamente exactly once
+
+1887
+01:35:44,640 --> 01:35:46,640
+ok?
+
+1888
+01:35:46,640 --> 01:35:50,750
+já perdi comigo
+
+1889
+01:35:50,750 --> 01:35:54,260
+a minha dúvida existencial
+
+1890
+01:35:54,260 --> 01:35:56,260
+mas deve-se a por aí
+
+1891
+01:35:56,260 --> 01:35:58,260
+é o receiver
+
+1892
+01:35:58,260 --> 01:36:00,260
+garante
+
+1893
+01:36:00,260 --> 01:36:02,260
+que
+
+1894
+01:36:02,260 --> 01:36:04,260
+o sender recebeu
+
+1895
+01:36:04,260 --> 01:36:06,260
+recebeu
+
+1896
+01:36:06,260 --> 01:36:10,980
+a confirmação
+
+1897
+01:36:10,980 --> 01:36:14,450
+já agora
+
+1898
+01:36:14,450 --> 01:36:16,450
+aqui no final
+
+1899
+01:36:16,450 --> 01:36:18,450
+o sender
+
+1900
+01:36:18,450 --> 01:36:20,450
+possivelmente
+
+1901
+01:36:20,450 --> 01:36:22,450
+esta última meu, é sempre pouco
+
+1902
+01:36:22,450 --> 01:36:24,450
+aqui
+
+1903
+01:36:24,450 --> 01:36:26,450
+o sender se receber
+
+1904
+01:36:26,450 --> 01:36:28,450
+este pacote fica a saber
+
+1905
+01:36:28,450 --> 01:36:30,450
+que o receiver sabe, que ele sabe
+
+1906
+01:36:30,450 --> 01:36:32,450
+que recebeu
+
+1907
+01:36:32,450 --> 01:36:34,450
+já quase parece o outro
+
+1908
+01:36:34,450 --> 01:36:36,450
+quando era ministro
+
+1909
+01:36:36,450 --> 01:36:38,450
+e
+
+1910
+01:36:38,450 --> 01:36:40,450
+eu sei que vocês sabem
+
+1911
+01:36:40,450 --> 01:36:42,450
+que eu sei
+
+1912
+01:36:42,450 --> 01:36:44,450
+o que vocês estão a pensar
+
+1913
+01:36:44,450 --> 01:36:46,450
+era algo assim, não era?
+
+1914
+01:36:46,450 --> 01:36:48,450
+eu sei que vocês sabem que eu sei o que vocês estão a pensar
+
+1915
+01:36:48,450 --> 01:36:50,450
+era algo assim
+
+1916
+01:36:50,450 --> 01:36:52,450
+foi o Paulo Portas, não me engano
+
+1917
+01:36:52,450 --> 01:36:54,450
+ok
+
+1918
+01:36:54,450 --> 01:36:56,450
+vamos lá, quantos
+
+1919
+01:36:56,450 --> 01:36:58,450
+slides é que...
+
+1920
+01:36:58,450 --> 01:37:00,450
+opa
+
+1921
+01:37:00,450 --> 01:37:02,450
+impressionante
+
+1922
+01:37:02,450 --> 01:37:04,450
+mensagens
+
+1923
+01:37:04,450 --> 01:37:06,450
+retivas
+
+1924
+01:37:06,450 --> 01:37:08,450
+estado inicial
+
+1925
+01:37:08,450 --> 01:37:10,450
+qual é o problema?
+
+1926
+01:37:10,450 --> 01:37:12,450
+é o novo cliente
+
+1927
+01:37:12,450 --> 01:37:14,450
+liga-se e subscreve um tópico
+
+1928
+01:37:14,450 --> 01:37:16,450
+ok
+
+1929
+01:37:16,450 --> 01:37:18,450
+e agora eu suponho que esse tópico não é assim muito ativo
+
+1930
+01:37:20,450 --> 01:37:22,450
+esse cliente
+
+1931
+01:37:22,450 --> 01:37:24,450
+vai ficar sem receber um estado
+
+1932
+01:37:24,450 --> 01:37:26,450
+inicial
+
+1933
+01:37:26,450 --> 01:37:28,450
+enquanto não houver a próxima publicação
+
+1934
+01:37:28,450 --> 01:37:30,450
+desse tópico
+
+1935
+01:37:30,450 --> 01:37:32,450
+ok
+
+1936
+01:37:32,450 --> 01:37:34,450
+em algumas situações
+
+1937
+01:37:34,450 --> 01:37:36,450
+não saber qual é que é
+
+1938
+01:37:36,450 --> 01:37:38,450
+o estado mais recente
+
+1939
+01:37:38,450 --> 01:37:40,450
+de um tópico
+
+1940
+01:37:40,450 --> 01:37:42,450
+pode ser problemático
+
+1941
+01:37:42,450 --> 01:37:44,450
+ok
+
+1942
+01:37:44,450 --> 01:37:46,450
+e então nessas situações interessa-me saber
+
+1943
+01:37:46,450 --> 01:37:48,450
+ok
+
+1944
+01:37:48,450 --> 01:37:50,450
+eu quero saber o que se passa neste tópico
+
+1945
+01:37:50,450 --> 01:37:52,450
+mas gostaria de ser informado
+
+1946
+01:37:52,450 --> 01:37:54,450
+sobre em que estado
+
+1947
+01:37:54,450 --> 01:37:56,450
+este tópico está
+
+1948
+01:37:56,450 --> 01:37:58,450
+ok
+
+1949
+01:37:58,450 --> 01:38:00,450
+nesse caso
+
+1950
+01:38:00,450 --> 01:38:02,450
+eu vou mandar uma mensagem
+
+1951
+01:38:02,450 --> 01:38:04,450
+e dizer para reter
+
+1952
+01:38:04,450 --> 01:38:06,450
+essa mensagem
+
+1953
+01:38:06,450 --> 01:38:08,450
+e se alguém se ligar
+
+1954
+01:38:08,450 --> 01:38:10,450
+depois dessa mensagem já ter sido publicada
+
+1955
+01:38:10,450 --> 01:38:12,450
+ok
+
+1956
+01:38:12,450 --> 01:38:14,450
+esse alguém vai receber
+
+1957
+01:38:14,450 --> 01:38:16,450
+essa última mensagem
+
+1958
+01:38:16,450 --> 01:38:22,990
+do tópico
+
+1959
+01:38:22,990 --> 01:38:24,990
+ok
+
+1960
+01:38:24,990 --> 01:38:26,990
+fui claro
+
+1961
+01:38:26,990 --> 01:38:28,990
+ou slide é claro
+
+1962
+01:38:28,990 --> 01:38:34,130
+coisas a reter
+
+1963
+01:38:34,130 --> 01:38:36,130
+só se retém
+
+1964
+01:38:36,130 --> 01:38:38,130
+a última mensagem para cada tópico
+
+1965
+01:38:38,130 --> 01:38:40,130
+porque
+
+1966
+01:38:40,130 --> 01:38:42,130
+o broker não tem interesse em manter uma história
+
+1967
+01:38:42,130 --> 01:38:44,130
+ok
+
+1968
+01:38:44,130 --> 01:38:46,130
+mantém um contexto
+
+1969
+01:38:46,130 --> 01:38:48,130
+e o contexto é
+
+1970
+01:38:48,130 --> 01:38:50,130
+o estado mais
+
+1971
+01:38:50,130 --> 01:38:53,600
+atual
+
+1972
+01:38:53,600 --> 01:38:55,600
+dos tópicos que está a gerir
+
+1973
+01:38:55,600 --> 01:38:57,600
+ok
+
+1974
+01:38:57,600 --> 01:38:59,600
+e o estado mais atual
+
+1975
+01:38:59,600 --> 01:39:01,600
+é qual é que foi a última mensagem
+
+1976
+01:39:01,600 --> 01:39:03,600
+a última atualização
+
+1977
+01:39:03,600 --> 01:39:05,600
+deste tópico
+
+1978
+01:39:05,600 --> 01:39:07,600
+se ele mantiver
+
+1979
+01:39:07,600 --> 01:39:09,600
+a última atualização de cada tópico
+
+1980
+01:39:09,600 --> 01:39:11,600
+se alguém se juntar
+
+1981
+01:39:11,600 --> 01:39:13,600
+e subscrever esse tópico
+
+1982
+01:39:13,600 --> 01:39:15,600
+ele pode enviar
+
+1983
+01:39:15,600 --> 01:39:17,600
+essa última atualização
+
+1984
+01:39:17,600 --> 01:39:19,600
+mesmo que essa última atualização
+
+1985
+01:39:19,600 --> 01:39:21,600
+tenha duas horas
+
+1986
+01:39:21,600 --> 01:39:23,600
+mas pelo menos
+
+1987
+01:39:23,600 --> 01:39:25,600
+o novo cliente
+
+1988
+01:39:25,600 --> 01:39:27,600
+o novo subscrito
+
+1989
+01:39:27,600 --> 01:39:29,600
+não tem de ficar à espera
+
+1990
+01:39:29,600 --> 01:39:31,600
+que alguém se lembre de publicar
+
+1991
+01:39:31,600 --> 01:39:33,600
+nesse tópico que ele
+
+1992
+01:39:33,600 --> 01:39:35,600
+subscreveu
+
+1993
+01:39:35,600 --> 01:39:37,600
+ok
+
+1994
+01:39:37,600 --> 01:39:39,600
+e se eu quiser iluminar
+
+1995
+01:39:39,600 --> 01:39:41,600
+uma mensagem
+
+1996
+01:39:41,600 --> 01:39:43,600
+de um tópico
+
+1997
+01:39:43,600 --> 01:39:45,600
+em vez de uma mensagem
+
+1998
+01:39:45,600 --> 01:39:47,600
+razia
+
+1999
+01:39:47,600 --> 01:39:49,600
+anti payload
+
+2000
+01:39:49,600 --> 01:39:51,600
+com return true
+
+2001
+01:39:51,600 --> 01:39:53,600
+e nesse caso
+
+2002
+01:39:53,600 --> 01:39:55,600
+ele memoriza esta última
+
+2003
+01:39:55,600 --> 01:39:57,600
+notificação
+
+2004
+01:39:57,600 --> 01:39:59,600
+que é uma notificação nula
+
+2005
+01:39:59,600 --> 01:40:01,600
+e acabou por apagar
+
+2006
+01:40:01,600 --> 01:40:03,600
+o estado mais atual
+
+2007
+01:40:03,600 --> 01:40:05,600
+qual é o estado mais atual
+
+2008
+01:40:05,600 --> 01:40:07,600
+é indefinido
+
+2009
+01:40:07,600 --> 01:40:09,600
+porque o estado mais atual
+
+2010
+01:40:09,600 --> 01:40:11,600
+era uma notificação nula
+
+2011
+01:40:11,600 --> 01:40:13,600
+ok
+
+2012
+01:40:13,600 --> 01:40:18,350
+dúvidas
+
+2013
+01:40:18,350 --> 01:40:20,350
+um exemplo de prática
+
+2014
+01:40:20,350 --> 01:40:22,350
+suponho que por exemplo
+
+2015
+01:40:24,350 --> 01:40:26,350
+é uma unidade
+
+2016
+01:40:26,350 --> 01:40:28,350
+de ar-condicionado
+
+2017
+01:40:28,350 --> 01:40:30,350
+e a unidade de ar-condicionado
+
+2018
+01:40:30,350 --> 01:40:32,350
+acabou de arrancar
+
+2019
+01:40:32,350 --> 01:40:34,350
+e precisa de saber qual é
+
+2020
+01:40:34,350 --> 01:40:36,350
+a regulação de temperatura
+
+2021
+01:40:36,350 --> 01:40:38,350
+que deve te colocar
+
+2022
+01:40:38,350 --> 01:40:40,350
+para operar
+
+2023
+01:40:40,350 --> 01:40:42,350
+e
+
+2024
+01:40:42,350 --> 01:40:44,350
+a última regulação de temperatura
+
+2025
+01:40:44,350 --> 01:40:46,350
+foi realizada há
+
+2026
+01:40:46,350 --> 01:40:48,350
+três semanas atrás
+
+2027
+01:40:48,350 --> 01:40:50,350
+certo?
+
+2028
+01:40:50,350 --> 01:40:52,350
+normalmente não anda sempre a mudar a temperatura
+
+2029
+01:40:52,350 --> 01:40:54,350
+da regulação
+
+2030
+01:40:54,350 --> 01:40:56,350
+dos ar-condicionados
+
+2031
+01:40:56,350 --> 01:40:58,350
+ou da ventilação de um prédio
+
+2032
+01:40:58,350 --> 01:41:00,350
+então regularam aqueles já há três semanas atrás
+
+2033
+01:41:00,350 --> 01:41:02,350
+e se calhar só vão voltar a mudar
+
+2034
+01:41:02,350 --> 01:41:04,350
+aqui a três meses
+
+2035
+01:41:04,350 --> 01:41:06,350
+nem estou exagerar
+
+2036
+01:41:06,350 --> 01:41:08,350
+se calhar é mesmo assim
+
+2037
+01:41:08,350 --> 01:41:10,350
+o que acontece?
+
+2038
+01:41:10,350 --> 01:41:12,350
+aquela unidade quando arranca
+
+2039
+01:41:12,350 --> 01:41:14,350
+e se subscreve
+
+2040
+01:41:14,350 --> 01:41:16,350
+o tópico
+
+2041
+01:41:16,350 --> 01:41:18,350
+regular
+
+2042
+01:41:18,350 --> 01:41:20,350
+temperatura
+
+2043
+01:41:20,350 --> 01:41:22,350
+na secção A
+
+2044
+01:41:22,350 --> 01:41:24,350
+ele vai ficar ali três meses a espera
+
+2045
+01:41:24,350 --> 01:41:26,350
+para saber qual é a temperatura
+
+2046
+01:41:26,350 --> 01:41:28,350
+para começar a operar
+
+2047
+01:41:28,350 --> 01:41:30,350
+a última regulação
+
+2048
+01:41:30,350 --> 01:41:32,350
+que foi publicada
+
+2049
+01:41:32,350 --> 01:41:34,350
+nesse tópico
+
+2050
+01:41:34,350 --> 01:41:36,350
+e está feito
+
+2051
+01:41:36,350 --> 01:41:38,350
+dúvidas?
+
+2052
+01:41:38,350 --> 01:41:43,580
+fácil? como é que uma pessoa pode fazer?
+
+2053
+01:41:43,580 --> 01:41:45,580
+podemos publicar
+
+2054
+01:41:45,580 --> 01:41:47,580
+para este tópico
+
+2055
+01:41:49,580 --> 01:41:51,580
+este valor
+
+2056
+01:41:51,580 --> 01:41:53,580
+qualidade de serviço 1
+
+2057
+01:41:53,580 --> 01:41:55,580
+e aqui está
+
+2058
+01:41:55,580 --> 01:41:57,580
+retain true
+
+2059
+01:41:57,580 --> 01:41:59,580
+este é um certo código
+
+2060
+01:41:59,580 --> 01:42:01,580
+em python
+
+2061
+01:42:01,580 --> 01:42:03,580
+já agora
+
+2062
+01:42:03,580 --> 01:42:05,580
+vocês utilizam
+
+2063
+01:42:05,580 --> 01:42:07,580
+scripts em python para enviar pacotes
+
+2064
+01:42:07,580 --> 01:42:12,300
+mktt
+
+2065
+01:42:12,300 --> 01:42:14,300
+dizem que é a forma mais fácil
+
+2066
+01:42:14,300 --> 01:42:16,300
+descrever programas
+
+2067
+01:42:16,300 --> 01:42:18,300
+que se ligam a brokers
+
+2068
+01:42:18,300 --> 01:42:20,300
+e que publicam
+
+2069
+01:42:20,300 --> 01:42:22,300
+e que subscrevem
+
+2070
+01:42:26,380 --> 01:42:28,380
+é isso que vocês têm feito?
+
+2071
+01:42:28,380 --> 01:42:30,380
+ter utilizado scripts
+
+2072
+01:42:30,380 --> 01:42:32,380
+era só para ter a certeza
+
+2073
+01:42:32,380 --> 01:42:34,380
+que vocês estão a fazer aquilo
+
+2074
+01:42:34,380 --> 01:42:36,380
+que regra geral o pessoal também faz
+
+2075
+01:42:36,380 --> 01:42:38,380
+quando está a experimentar
+
+2076
+01:42:38,380 --> 01:42:40,380
+mktt
+
+2077
+01:42:40,380 --> 01:42:42,380
+é a forma mais fácil
+
+2078
+01:42:42,380 --> 01:42:44,380
+de fazer programas que publicam
+
+2079
+01:42:44,380 --> 01:42:46,380
+ou que subscrevem
+
+2080
+01:42:46,380 --> 01:42:48,380
+tópicos com mktt
+
+2081
+01:42:48,380 --> 01:42:50,380
+ok
+
+2082
+01:42:52,380 --> 01:42:54,380
+estado do cliente
+
+2083
+01:42:54,380 --> 01:42:56,380
+estado do broker
+
+2084
+01:42:56,380 --> 01:42:58,380
+cada sessão
+
+2085
+01:42:58,380 --> 01:43:00,380
+mktt
+
+2086
+01:43:00,380 --> 01:43:02,380
+está ligada
+
+2087
+01:43:02,380 --> 01:43:04,380
+a um identificador de cliente
+
+2088
+01:43:04,380 --> 01:43:06,380
+todos os clientes têm um identificador
+
+2089
+01:43:06,380 --> 01:43:08,380
+que os identificam
+
+2090
+01:43:08,380 --> 01:43:10,380
+unificamente, que não há dois clientes
+
+2091
+01:43:10,380 --> 01:43:12,380
+como as me dê
+
+2092
+01:43:12,380 --> 01:43:14,380
+o broker
+
+2093
+01:43:14,380 --> 01:43:16,380
+mantém o estado
+
+2094
+01:43:16,380 --> 01:43:18,380
+da ligação
+
+2095
+01:43:18,380 --> 01:43:20,380
+para cada cliente
+
+2096
+01:43:20,380 --> 01:43:22,380
+ok
+
+2097
+01:43:22,380 --> 01:43:24,380
+o que constitui um estado
+
+2098
+01:43:24,380 --> 01:43:26,380
+de uma sessão mktt?
+
+2099
+01:43:26,380 --> 01:43:28,380
+as subscrições
+
+2100
+01:43:28,380 --> 01:43:30,380
+quais são os tópicos
+
+2101
+01:43:30,380 --> 01:43:32,380
+que foram subscritos pelo cliente
+
+2102
+01:43:32,380 --> 01:43:36,820
+ok
+
+2103
+01:43:36,820 --> 01:43:38,820
+mensagens
+
+2104
+01:43:38,820 --> 01:43:40,820
+que ainda não foram
+
+2105
+01:43:40,820 --> 01:43:42,820
+recebidas
+
+2106
+01:43:42,820 --> 01:43:44,820
+ou confirmadas
+
+2107
+01:43:44,820 --> 01:43:46,820
+pelo cliente
+
+2108
+01:43:46,820 --> 01:43:48,820
+mensagens que existem com firmação
+
+2109
+01:43:48,820 --> 01:43:50,820
+que é o s1 e que é o s2
+
+2110
+01:43:50,820 --> 01:43:52,820
+se ele ainda não confirmou
+
+2111
+01:43:52,820 --> 01:43:54,820
+que recebeu
+
+2112
+01:43:54,820 --> 01:43:56,820
+uma mensagem
+
+2113
+01:43:56,820 --> 01:43:58,820
+qualidade de serviço 1
+
+2114
+01:43:58,820 --> 01:44:00,820
+o mktt
+
+2115
+01:44:00,820 --> 01:44:02,820
+mantenhas e não desiste
+
+2116
+01:44:02,820 --> 01:44:04,820
+só vai desistir
+
+2117
+01:44:04,820 --> 01:44:06,820
+depois de ter a certeza que ele aceitou
+
+2118
+01:44:06,820 --> 01:44:08,820
+ou então quando tiver a certeza
+
+2119
+01:44:08,820 --> 01:44:10,820
+que ele morreu e nunca mais volta
+
+2120
+01:44:10,820 --> 01:44:12,820
+ok
+
+2121
+01:44:12,820 --> 01:44:14,820
+e também tem uma fila de mensagens
+
+2122
+01:44:14,820 --> 01:44:16,820
+em que tem todas estas mensagens
+
+2123
+01:44:16,820 --> 01:44:18,820
+que ainda não foram entregues
+
+2124
+01:44:18,820 --> 01:44:20,820
+porque o cliente
+
+2125
+01:44:20,820 --> 01:44:22,820
+não estava
+
+2126
+01:44:22,820 --> 01:44:24,820
+ativo do ponto de vista da rede
+
+2127
+01:44:24,820 --> 01:44:26,820
+portanto, neste caso
+
+2128
+01:44:26,820 --> 01:44:28,820
+são mensagens que ainda nem sequer seguirem
+
+2129
+01:44:28,820 --> 01:44:30,820
+seguiram
+
+2130
+01:44:30,820 --> 01:44:32,820
+ele sabe que
+
+2131
+01:44:32,820 --> 01:44:34,820
+tinha enviado pings
+
+2132
+01:44:34,820 --> 01:44:36,820
+e não recebeu respostas
+
+2133
+01:44:36,820 --> 01:44:38,820
+do ping
+
+2134
+01:44:38,820 --> 01:44:40,820
+a ligação vir atualmente não está ativa
+
+2135
+01:44:40,820 --> 01:44:45,980
+portanto, eu nem sequer enviei
+
+2136
+01:44:45,980 --> 01:44:47,980
+ok
+
+2137
+01:44:47,980 --> 01:44:51,580
+vamos avançar aqui um bocadinho
+
+2138
+01:44:51,580 --> 01:44:53,580
+sessões persistentes
+
+2139
+01:44:53,580 --> 01:44:55,580
+entre uma sessão
+
+2140
+01:44:55,580 --> 01:44:57,580
+limpa
+
+2141
+01:44:57,580 --> 01:44:59,580
+e uma sessão persistente
+
+2142
+01:44:59,580 --> 01:45:01,580
+em que o cliente sessão é igual a falso
+
+2143
+01:45:01,580 --> 01:45:03,580
+para
+
+2144
+01:45:03,580 --> 01:45:05,580
+quando você tem uma sessão
+
+2145
+01:45:05,580 --> 01:45:15,940
+simples
+
+2146
+01:45:15,940 --> 01:45:20,910
+estava só a ver aqui
+
+2147
+01:45:20,910 --> 01:45:22,910
+este leite realmente tão bocado
+
+2148
+01:45:22,910 --> 01:45:24,910
+ou leve-me mais
+
+2149
+01:45:24,910 --> 01:45:26,910
+mas
+
+2150
+01:45:26,910 --> 01:45:28,910
+numa sessão limpa
+
+2151
+01:45:28,910 --> 01:45:30,910
+o que é que acontece
+
+2152
+01:45:30,910 --> 01:45:32,910
+se haver uma desligação
+
+2153
+01:45:32,910 --> 01:45:34,910
+se o cliente
+
+2154
+01:45:34,910 --> 01:45:36,910
+se desligar
+
+2155
+01:45:36,910 --> 01:45:38,910
+ou se a ligação
+
+2156
+01:45:38,910 --> 01:45:40,910
+de cair
+
+2157
+01:45:40,910 --> 01:45:42,910
+a sessão
+
+2158
+01:45:42,910 --> 01:45:44,910
+é destruída
+
+2159
+01:45:44,910 --> 01:45:46,910
+o que é que acontece
+
+2160
+01:45:46,910 --> 01:45:48,910
+quando ele voltar a ligar se cria-se
+
+2161
+01:45:48,910 --> 01:45:50,910
+uma sessão não
+
+2162
+01:45:50,910 --> 01:45:52,910
+no caso termos
+
+2163
+01:45:52,910 --> 01:45:54,910
+uma sessão persistente
+
+2164
+01:45:54,910 --> 01:45:56,910
+e isto é aquilo que é muito utilizado
+
+2165
+01:45:56,910 --> 01:45:58,910
+quando nós temos dispositivos
+
+2166
+01:45:58,910 --> 01:46:00,910
+que estão em meios agressivos
+
+2167
+01:46:00,910 --> 01:46:02,910
+em que
+
+2168
+01:46:02,910 --> 01:46:04,910
+a ligação por vezes tem dificuldades
+
+2169
+01:46:04,910 --> 01:46:06,910
+e nós não conseguimos comunicar
+
+2170
+01:46:06,910 --> 01:46:08,910
+mas mais tarde
+
+2171
+01:46:08,910 --> 01:46:10,910
+já conseguimos comunicar
+
+2172
+01:46:10,910 --> 01:46:12,910
+aquilo que nós
+
+2173
+01:46:12,910 --> 01:46:14,910
+com os telemóveis dizemos
+
+2174
+01:46:14,910 --> 01:46:16,910
+ao pai neste momento que não tem rede
+
+2175
+01:46:16,910 --> 01:46:18,910
+mas passado algum tempo
+
+2176
+01:46:18,910 --> 01:46:20,910
+mudamos de sítio e já temos rede
+
+2177
+01:46:20,910 --> 01:46:22,910
+e a chamada continua
+
+2178
+01:46:22,910 --> 01:46:24,910
+já continuamos a ouvir o nosso interlocutor
+
+2179
+01:46:24,910 --> 01:46:26,910
+nesse caso
+
+2180
+01:46:26,910 --> 01:46:28,910
+em que temos uma sessão persistente
+
+2181
+01:46:28,910 --> 01:46:30,910
+quando
+
+2182
+01:46:30,910 --> 01:46:32,910
+a ligação
+
+2183
+01:46:32,910 --> 01:46:34,910
+ou
+
+2184
+01:46:34,910 --> 01:46:40,110
+quando a ligação
+
+2185
+01:46:40,110 --> 01:46:42,110
+se perde
+
+2186
+01:46:42,110 --> 01:46:44,110
+mas depois volta
+
+2187
+01:46:44,110 --> 01:46:46,110
+nós mantemos a sessão
+
+2188
+01:46:46,110 --> 01:46:48,110
+ok
+
+2189
+01:46:48,110 --> 01:46:50,110
+nesse caso
+
+2190
+01:46:50,110 --> 01:46:52,110
+tudo o que eu tinha subscrito
+
+2191
+01:46:52,110 --> 01:46:54,110
+mantém subscrito
+
+2192
+01:46:54,110 --> 01:46:56,110
+e as mensagens
+
+2193
+01:46:56,110 --> 01:46:58,110
+que ainda não foram enviadas
+
+2194
+01:46:58,110 --> 01:47:00,110
+são
+
+2195
+01:47:00,110 --> 01:47:02,110
+enviadas nesse momento
+
+2196
+01:47:02,110 --> 01:47:06,190
+ok
+
+2197
+01:47:06,190 --> 01:47:08,190
+por outro lado a clean session
+
+2198
+01:47:08,190 --> 01:47:10,190
+a nossa ligação cair
+
+2199
+01:47:10,190 --> 01:47:12,190
+o que é que acontece
+
+2200
+01:47:12,190 --> 01:47:14,190
+termina
+
+2201
+01:47:14,190 --> 01:47:16,190
+eu desisto daquele cliente
+
+2202
+01:47:16,190 --> 01:47:19,630
+se eu tiver mensagens
+
+2203
+01:47:19,630 --> 01:47:21,630
+que ainda não tinham sido enviadas
+
+2204
+01:47:21,630 --> 01:47:23,630
+essas mensagens
+
+2205
+01:47:23,630 --> 01:47:25,630
+são descartadas
+
+2206
+01:47:25,630 --> 01:47:27,630
+no futuro
+
+2207
+01:47:27,630 --> 01:47:29,630
+se aquele mesmo cliente se voltar a ligar
+
+2208
+01:47:29,630 --> 01:47:31,630
+voltamos a ter uma nova ligação
+
+2209
+01:47:31,630 --> 01:47:33,630
+em que ele tem que indicar quais são as suas subscrições
+
+2210
+01:47:33,630 --> 01:47:35,630
+e tudo aquilo
+
+2211
+01:47:35,630 --> 01:47:37,630
+que
+
+2212
+01:47:37,630 --> 01:47:39,630
+aconteceu enquanto ele se teve desligado
+
+2213
+01:47:39,630 --> 01:47:41,630
+para ele perder-se
+
+2214
+01:47:41,630 --> 01:47:45,100
+ok
+
+2215
+01:47:45,100 --> 01:47:47,100
+asções persistentes são ótimas
+
+2216
+01:47:47,100 --> 01:47:49,100
+para que?
+
+2217
+01:47:49,100 --> 01:47:51,100
+para aqueles aparelhos que andam
+
+2218
+01:47:51,100 --> 01:47:53,100
+na selva
+
+2219
+01:47:53,100 --> 01:47:55,100
+ok
+
+2220
+01:47:55,100 --> 01:47:57,100
+em que as ligações não são estáveis
+
+2221
+01:47:57,100 --> 01:47:59,100
+e pode haver
+
+2222
+01:47:59,100 --> 01:48:01,100
+cortes no serviço
+
+2223
+01:48:01,100 --> 01:48:03,100
+mas depois quando ele voltar
+
+2224
+01:48:03,100 --> 01:48:05,100
+ele quer receber tudo aquilo que aconteceu
+
+2225
+01:48:05,100 --> 01:48:07,100
+todas as informações que aconteceram
+
+2226
+01:48:07,100 --> 01:48:09,100
+enquanto ele não esteve acessível
+
+2227
+01:48:09,100 --> 01:48:13,920
+as sessões
+
+2228
+01:48:13,920 --> 01:48:15,920
+limpas
+
+2229
+01:48:15,920 --> 01:48:17,920
+são ótimas para aqueles casos
+
+2230
+01:48:17,920 --> 01:48:19,920
+em que por exemplo estamos
+
+2231
+01:48:19,920 --> 01:48:21,920
+temos as das esportes
+
+2232
+01:48:21,920 --> 01:48:23,920
+em que pode haver uma falha
+
+2233
+01:48:23,920 --> 01:48:25,920
+ok, só haver uma falha
+
+2234
+01:48:25,920 --> 01:48:27,920
+então volta ao ligar
+
+2235
+01:48:27,920 --> 01:48:29,920
+e quando ligar
+
+2236
+01:48:29,920 --> 01:48:31,920
+nós passamos a ter
+
+2237
+01:48:31,920 --> 01:48:33,920
+observar ou a ter a telemetria
+
+2238
+01:48:33,920 --> 01:48:35,920
+a partir do momento em que temos outra vez a ligação
+
+2239
+01:48:35,920 --> 01:48:37,920
+ok
+
+2240
+01:48:37,920 --> 01:48:42,830
+dúvidas, não há?
+
+2241
+01:48:42,830 --> 01:48:46,560
+já são
+
+2242
+01:48:46,560 --> 01:48:48,560
+já são 11 e meia
+
+2243
+01:48:48,560 --> 01:48:50,560
+pessoal, podem ler agora
+
+2244
+01:48:50,560 --> 01:48:52,560
+este
+
+2245
+01:48:52,560 --> 01:48:54,560
+este slide está horrível
+
+2246
+01:48:54,560 --> 01:48:56,560
+mas eu não consegui encurtá-lo mais
+
+2247
+01:48:56,560 --> 01:48:58,560
+se calhar este tivesse tirado aqui
+
+2248
+01:48:58,560 --> 01:49:00,560
+por acaso estou a ver, posso tirar isto aqui
+
+2249
+01:49:00,560 --> 01:49:02,560
+isto fica mais organizadinho
+
+2250
+01:49:02,560 --> 01:49:04,560
+e se calhar consegui ainda puxar mais para cima
+
+2251
+01:49:04,560 --> 01:49:06,560
+mas pronto
+
+2252
+01:49:06,560 --> 01:49:08,560
+este aqui vocês leiam
+
+2253
+01:49:08,560 --> 01:49:10,560
+não é difícil ok
+
+2254
+01:49:10,560 --> 01:49:12,560
+já são 11 e meia
+
+2255
+01:49:12,560 --> 01:49:14,560
+está na orinha
+
+2256
+01:49:14,560 --> 01:49:16,560
+amanhã também é dia de trabalho e vocês têm de descansar
+
+2257
+01:49:16,560 --> 01:49:18,560
+se houver alguma questão
+
+2258
+01:49:18,560 --> 01:49:20,560
+quinta-feira podemos trabalhar isso
+
+2259
+01:49:20,560 --> 01:49:22,560
+também
+
+2260
+01:49:22,560 --> 01:49:24,560
+ok
+
+2261
+01:49:24,560 --> 01:49:26,560
+combinado
+
+2262
+01:49:26,560 --> 01:49:28,560
+pessoal
+
+2263
+01:49:28,560 --> 01:49:30,560
+obrigado
+
+2264
+01:49:30,560 --> 01:49:32,560
+obrigado pela paciência
+
+2265
+01:49:32,560 --> 01:49:34,560
+e uma boa noite de descanso
+
+2266
+01:49:34,560 --> 01:49:36,560
+e até quinta-feira
+
+2267
+01:49:36,560 --> 01:49:38,560
+boa noite
+
+2268
+01:49:38,560 --> 01:49:40,560
+oi
+

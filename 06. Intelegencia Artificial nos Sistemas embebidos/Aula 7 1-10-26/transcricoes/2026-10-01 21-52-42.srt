@@ -1,0 +1,6760 @@
+1
+00:00:00,000 --> 00:00:06,920
+até foi recolhido por nós, de um determinado tamanho, que não tem um conjunto de instâncias
+
+2
+00:00:06,920 --> 00:00:12,000
+caracterizadas por um conjunto de features, tem documentados tabulados ou até dados também
+
+3
+00:00:12,000 --> 00:00:18,600
+com imagens, sons ou queferos, ou até dados multimobiles, ou seja, com múltiplas mobilidades
+
+4
+00:00:18,600 --> 00:00:26,240
+de dados. E qual é, basicamente, o que nós assumimos? É que esses dados representam
+
+5
+00:00:26,240 --> 00:00:31,720
+o mundo e na realidade, esses dados são uma amostra do mundo. Ou seja, para o nosso modelo,
+
+6
+00:00:31,720 --> 00:00:38,920
+para a gente entrar aqui, alguém, para o nosso modelo, aqueles dados são todo o conhecimento
+
+7
+00:00:38,920 --> 00:00:44,320
+que ele tem e, portanto, ele vai aprender daqueles dados. E se os dados forem de boa
+
+8
+00:00:44,320 --> 00:00:49,560
+qualidade e, acima de tudo, forem representativos daquilo que é revelado, daquilo fenômeno,
+
+9
+00:00:49,560 --> 00:00:54,520
+e, por fenômeno, às vezes são coisas bastante complexas, então, provavelmente o nosso modelo
+
+10
+00:00:54,520 --> 00:01:02,160
+tem uma elevada probabilidade de poder aprender bem os conceitos que se relacionam. Por
+
+11
+00:01:02,160 --> 00:01:07,600
+vezes nem sempre acontece e vocês já se, acho que vão percebendo aos bocadinhos que
+
+12
+00:01:07,600 --> 00:01:16,000
+recolhados é caro. Tratar dados de qualidade é muito mais caro e, portanto, uma coisa
+
+13
+00:01:16,000 --> 00:01:21,560
+que nós enquanto humanos fazemos é baldarmos um bocadinho na recolha de dados achando
+
+14
+00:01:21,560 --> 00:01:29,760
+o que estamos bem, porque aquilo é um processo caro, desgastante, inteligente. Eu, ao fim
+
+15
+00:01:29,760 --> 00:01:35,880
+desses anos todos, já tenho muito claramente a certeza disso. Já tem projetos de imagens,
+
+16
+00:01:35,880 --> 00:01:43,000
+já tem projetos de recolha de dados pros senhores, até com arduinos, ali, a registrar tudo.
+
+17
+00:01:43,000 --> 00:01:48,040
+E a questão é que nós temos que ter cuidado a registrar muitos conceitos, estar em muitas
+
+18
+00:01:48,120 --> 00:01:52,880
+cenárias diferentes, e não está. A gente faz aqui no laboratório, onde é mais controlado,
+
+19
+00:01:52,880 --> 00:01:57,920
+não estamos, quer sermos variáveis como o tempo, quer sermos variáveis como períodos
+
+20
+00:01:57,920 --> 00:02:05,280
+de ônibus de noturnos, diferentes condições climatéricas, variáveis que até desconhecemos
+
+21
+00:02:05,280 --> 00:02:12,280
+que possam afetar o desempenho do nosso modelo ainda aqui, indiretamente, porque são, que
+
+22
+00:02:12,360 --> 00:02:18,560
+influenciam, e nós nem sabemos, influenciam variáveis que estamos a monitorizar através
+
+23
+00:02:18,560 --> 00:02:24,120
+de sensores do nosso modelo, e portanto, há muitos aspectos que nós não vemos. Dito
+
+24
+00:02:24,120 --> 00:02:28,840
+isto, isto parece que eu estou a assustar, não estou. Isto é uma espécie de um organizador
+
+25
+00:02:28,840 --> 00:02:35,040
+prévio, só para vos salientarem coisas que acontecem no mundo real, e que nós temos
+
+26
+00:02:35,040 --> 00:02:39,000
+que ter abertura, e nem sempre temos. Já me aconteceu não ter e andar ali a rasca
+
+27
+00:02:39,000 --> 00:02:42,120
+e não perceber. Já tive problemas que tive que desistir, que não sabia o que é que
+
+28
+00:02:42,120 --> 00:02:48,120
+ali se passava. E portanto, não é ideal, mas não é feio, porque acontece às vezes,
+
+29
+00:02:48,120 --> 00:02:52,040
+e portanto, temos que ter alguma abertura de espírita no sentido de tentar perceber
+
+30
+00:02:52,040 --> 00:02:57,000
+o que é que ali se passa. Pronto, e agora estou a dar foco nesta questão de termos
+
+31
+00:02:57,000 --> 00:03:01,720
+um data sete, e depois, quando vamos para a realidade, eles colapso, como eu tenho aqui
+
+32
+00:03:01,720 --> 00:03:06,600
+modelos otimizados para distribuições estáticas e controladas, colapso um pranse entropiados
+
+33
+00:03:06,600 --> 00:03:12,240
+do ambiente real, entropia é confusão, é mundo real, é coisas a acontecer. O conceito
+
+34
+00:03:12,240 --> 00:03:18,000
+que eu queria introduzir aqui é designado pelo data sete shift, ou seja, são mudanças
+
+35
+00:03:18,000 --> 00:03:24,040
+nos dados. Para resolvermos este problema, temos primeiro
+
+36
+00:03:24,040 --> 00:03:29,040
+de o conselho de diagnosticar, categorizar matematicamente, e vamos então agora passar
+
+37
+00:03:29,040 --> 00:03:34,640
+ao data sete shift, que são desvios nos conjuntos de dados, para vos fazer isto em
+
+38
+00:03:35,080 --> 00:03:40,600
+importante. Então é assim, há um pressuposto nesta questão que isto vem da estatística,
+
+39
+00:03:40,600 --> 00:03:45,720
+que é nós assumimos que os dados de treino e de teste são essencialmente independentes
+
+40
+00:03:45,720 --> 00:03:51,360
+e identificamente distribuídos, ou seja, são independentes, porque eles não dependem
+
+41
+00:03:51,360 --> 00:03:56,360
+um do outro, mas na realidade, se nós quisermos a distribuição estatística dos dados,
+
+42
+00:03:56,360 --> 00:04:01,840
+elas são muito próximas. Reparem que aqui, aqui eu vou pôr o lever para vocês verem,
+
+43
+00:04:02,760 --> 00:04:07,600
+pessoal, vocês estão muito calavinhos, só verá uma coisa dígama, por favor, eu falo aqui
+
+44
+00:04:07,600 --> 00:04:11,840
+de estatística, atenciono que não seja nada complicado, mas só alguma coisa
+
+45
+00:04:11,840 --> 00:04:17,080
+houver, até onde eu vos consigo explicar, eu tentarei ajudar. Reparem, isto é o aproximadamente igual.
+
+46
+00:04:17,080 --> 00:04:20,800
+Eles não são exatamente iguais, se não havia diferença de ponto de vista estatístico,
+
+47
+00:04:20,800 --> 00:04:24,880
+e até na aprendizagem, isto gerava nos problemas, porque ele fazia overfitting,
+
+48
+00:04:24,880 --> 00:04:29,760
+porque os dados de teste é igual aos de treino, e portanto ele decorava aos de treino e sabia
+
+49
+00:04:29,760 --> 00:04:35,080
+o teste. E o que nós queremos acontece também com os nossos estudantes, vocês vêm os testes
+
+50
+00:04:35,080 --> 00:04:39,720
+dos anos anteriores, e é espectável que nós façamos um teste que seja que tenha uma
+
+51
+00:04:39,720 --> 00:04:46,440
+diferença, ou com alguma significância dos anteriores, para vos criar aqui alguma dissonância
+
+52
+00:04:46,440 --> 00:04:52,760
+e testar até que ponto o vosso conhecimento é mais sólido, portanto, aqui acontece igual.
+
+53
+00:04:53,520 --> 00:04:59,920
+E este pressuposto de independência, identificamente distribuídos, é o que nós assumimos sempre.
+
+54
+00:04:59,920 --> 00:05:07,880
+Quando há a quebra do pressuposto, acontece aquilo que é o data set shift, e ocorre quando a distribuição
+
+55
+00:05:07,880 --> 00:05:14,320
+conjunta differe no ambiente de inferência, em medida, ou seja, a distribuição dos dados que nós
+
+56
+00:05:14,320 --> 00:05:21,200
+usamos em treino, passa a ter uma distribuição que é significativamente diferente daquela que
+
+57
+00:05:21,200 --> 00:05:27,600
+é a distribuição real dos dados no ambiente laboratorial, ou no ambiente de teste, em ambiente
+
+58
+00:05:27,600 --> 00:05:33,600
+real, que fizemos o teste laboratório. Isto é uma coisa que acontece, é uma coisa que nunca nos
+
+59
+00:05:33,600 --> 00:05:39,400
+acontece a nós dentro da academia que nós fazemos aqui, e portanto é muito importante depois fazermos
+
+60
+00:05:39,400 --> 00:05:46,000
+o diplói dos nossos modelos na realidade, e fazermos aquilo que eu pus mais abaixo de uma das aulas
+
+61
+00:05:46,000 --> 00:05:51,000
+que vemos no passado, que é fazermos todo aquele ciclo de um machine learning que no diplói
+
+62
+00:05:51,000 --> 00:05:57,600
+continuamos a medir a qualidade do modelo, e com essa qualidade continuamos a oferir, se o modelo
+
+63
+00:05:57,600 --> 00:06:02,320
+continua válido ou não, e eu nessa aula disse-vos de certeza, ainda que se calhar de uma forma
+
+64
+00:06:02,320 --> 00:06:08,160
+curta, quando o modelo começa a ter uma degradação de performance, nós temos que retrainar o modelo.
+
+65
+00:06:08,160 --> 00:06:13,400
+Pronto, e esse retreno pode acontecer de várias maneiras. Se for o modelo de aprendizagem offline,
+
+66
+00:06:13,400 --> 00:06:18,200
+naquele Batch Learning que os falei, que juntamos os dados todos, queremos um data set estático,
+
+67
+00:06:18,200 --> 00:06:24,400
+e retrainamos o modelo juntando novos dados. Eventualmente, se tivemos essa informação,
+
+68
+00:06:24,400 --> 00:06:29,880
+até podemos tirar dados de coisas que já não estão a fazer parte desse modelo, e o modelo
+
+69
+00:06:29,880 --> 00:06:34,600
+excluso da prendê-las. Isto que eu estou a dizer é super difícil de acontecer, mas pode
+
+70
+00:06:34,600 --> 00:06:39,520
+acontecer em algum caso, e se assim for, podemos retirar. Para não estarmos a fazer um overload
+
+71
+00:06:39,520 --> 00:06:47,240
+de aprendizagem do modelo, e eu acho que é sempre uma coisa que estou a pensar. Ou podemos
+
+72
+00:06:47,240 --> 00:06:52,560
+fazer a tal aprendizagem online que os falei, mas que é super interessante e, na minha opinião,
+
+73
+00:06:52,560 --> 00:06:58,760
+será o futuro disto tudo. Nós temos que gerir também o processo de aprendizagem online,
+
+74
+00:06:58,760 --> 00:07:04,000
+como os disse na altura, também, que tenha suas complexidades. Isto é a quebra do poste-poste,
+
+75
+00:07:04,000 --> 00:07:11,080
+como vamos passar, para três casos diferentes de mudanças no data set. O Coverage Shift,
+
+76
+00:07:11,080 --> 00:07:17,320
+o Prior Shift e o Concept Shift. Então, é sim, o Coverage Shift, este é o caso mais comum,
+
+77
+00:07:17,320 --> 00:07:24,160
+e acontece quando a distribuição dos inputs mudam. Ou seja, a relação conceiva não soltera,
+
+78
+00:07:24,160 --> 00:07:29,880
+o modelo continua a fazer bem, mas na realidade, o que acontece é que a nossa entrada muda
+
+79
+00:07:29,880 --> 00:07:35,240
+completamente. Quando é que isto acontece? Trenamos o modelo para detectar defeitos de dia,
+
+80
+00:07:35,240 --> 00:07:45,720
+e, por exemplo, ele opera à noite. Trenamos o modelo para estar, imaginem, um robo, um veículo
+
+81
+00:07:45,720 --> 00:07:51,640
+operado remotamente, marinha. Então, eu não sei com o Coverage que trabalha nessa área, e o robo
+
+82
+00:07:51,640 --> 00:07:57,280
+treina em Portugal. E, de repente, vamos fazer o deploy ali no mundo de terranho. Imaginem que a
+
+83
+00:07:57,480 --> 00:08:04,720
+área é significativa, um momento diferente. Imaginem que, por exemplo, o nível de salinidade
+
+84
+00:08:04,720 --> 00:08:10,600
+é diferente, e em outras condições que agora nem estou a conseguir imaginar, mas são diferentes.
+
+85
+00:08:10,600 --> 00:08:16,480
+E aqui há um Shift no data set. Ou seja, as leituras dos sensores vão mudar significativamente. O
+
+86
+00:08:16,480 --> 00:08:21,080
+modelo continua a funcionar, mas ele tem uma relação completamente diferente. E aqui há logo
+
+87
+00:08:21,080 --> 00:08:26,600
+uma mudança total. O modelo está habituado a uma gama de valores das entradas, de todas,
+
+88
+00:08:26,600 --> 00:08:33,760
+de algumas entradas, e, de repente, ele sofre com isto brutalmente e atrapalha-se. Isto é um exemplo.
+
+89
+00:08:33,760 --> 00:08:39,640
+Depois, o Prior Shift. O Prior Shift é o Level Shifting. O que é que isso significa de uma forma
+
+90
+00:08:39,640 --> 00:08:46,480
+muito simples? O Prior Shifting é, exatamente, quando vocês têm uma mudança no PDIPS em porquê?
+
+91
+00:08:46,480 --> 00:08:53,800
+A proporção de classes no nosso laboratório, tínhamos, imagina, 50 a 50. Imaginem o problema de
+
+92
+00:08:53,800 --> 00:08:58,760
+ação binária, e nós tínhamos metade das peças. Eram boas e metade eram mais. Mas o que é que
+
+93
+00:08:58,760 --> 00:09:05,000
+acontece? O modelo treinou e habituou-se a esta distribuição. E quando chegamos ao laboratório,
+
+94
+00:09:05,000 --> 00:09:12,920
+ao mundo real, na realidade, podemos ter uma fábrica, uma coisa qualquer, e nós temos 99,99%
+
+95
+00:09:12,920 --> 00:09:18,360
+de coisas boas, que é o que é que estábamos a produzir produtos com qualidade, temos poucos defeitos e
+
+96
+00:09:18,360 --> 00:09:23,280
+temos poucos custos associados a esse defeito. E, portanto, quando lá chegamos, e não precisa ser um
+
+97
+00:09:23,440 --> 00:09:29,640
+alto, basta ser 80% que já pode ser um problema. Porque como o modelo está à espera disto, e depois
+
+98
+00:09:29,640 --> 00:09:36,280
+a dá uma forma, também percebe imensas coisas, imensos padrões nos dados, mas também percebe este
+
+99
+00:09:36,280 --> 00:09:42,440
+tipo de coisas. Normalmente, isto é um pão lá de outro, pode não ser seguido, mas é. Lembram-se que eu
+
+100
+00:09:42,440 --> 00:09:47,800
+falei na primeira aula, do caso da saúde e das doenças, que, felizmente, não são tão raras as
+
+101
+00:09:47,800 --> 00:09:54,120
+graves como o Cancro, que dava 99% da queura-se e que tínhamos uma métrica que era a sensibilidade e
+
+102
+00:09:54,120 --> 00:10:01,160
+também a especificidade para fazermos no fundo isso por classes e vencermos isso. Vamos falar disto
+
+103
+00:10:01,160 --> 00:10:06,040
+outra vez e conseguimos fazer isto aqui usando precisamente essas métricas. Eu tinha aí uma
+
+104
+00:10:06,040 --> 00:10:13,720
+explicação para vos fazer com estatística e fila no Gemini, que é uma animação incrível,
+
+105
+00:10:13,800 --> 00:10:21,240
+espetacular, mas não há grande interesse em estar a fazer isso, porque até vos posso mostrar,
+
+106
+00:10:21,240 --> 00:10:24,760
+mas não há grande interesse, porque a sensibilidade e a especificidade são de
+
+107
+00:10:24,760 --> 00:10:29,080
+as medidas super simples e que nos olhem a esse problema, que nos dão a sensibilidade,
+
+108
+00:10:29,080 --> 00:10:34,680
+ao qual rea o impacto que a coisa tem lá. Isto é o Level Shift, e eu estou já, desculpem,
+
+109
+00:10:34,680 --> 00:10:38,760
+avar já uma solução para isto, que não devia estar a fazer agora, só devia estar a falar do problema.
+
+110
+00:10:39,000 --> 00:10:44,520
+Pronto, finalmente o Concept Shift é um processo que me interessa mais a mim,
+
+111
+00:10:44,520 --> 00:10:50,040
+o âmbito do meu doutoramento foi uma das coisas com que trabalhei, o desvio de conceito ou deriva
+
+112
+00:10:50,040 --> 00:10:56,360
+de conceito, o que é que acontece? O conceito muda mesmo nos dados, ou seja, o problema tinha um
+
+113
+00:10:56,360 --> 00:11:01,800
+tipo de conceitos associados e de repente passa a ter outros. Imagina alguma coisa, imagina que nós
+
+114
+00:11:01,800 --> 00:11:08,440
+estamos, de alguma forma, temos acesso a dados de doenças mentais de pessoas e nós estamos a
+
+115
+00:11:08,440 --> 00:11:15,160
+trabalhar com pessoas, por exemplo, com surtos psicóticos e de repente começamos a ser expostos
+
+116
+00:11:15,160 --> 00:11:21,000
+a dados de sujeitos com esquizofremia ou com outras doenças do foro psiquiátrico, ou seja,
+
+117
+00:11:21,000 --> 00:11:26,120
+é óbvio que os indicadores que temos vão ser brutalmente diferentes e o modelo vai,
+
+118
+00:11:27,080 --> 00:11:32,600
+desculpem, eu disse uma coisa à mão, eu pensei em uma coisa e disse outra. Se eu fizer isto,
+
+119
+00:11:32,600 --> 00:11:37,640
+o que eu estou a fazer é um Covered Shift, porque eu estou a mudar completamente as entradas e aqui
+
+120
+00:11:37,640 --> 00:11:46,040
+não é isto, é, o processo é que mudem-se, os dados passam a ser completamente diferentes,
+
+121
+00:11:46,040 --> 00:11:52,200
+uma coisa é mudar os inputs, outra coisa é isto mudar completamente de coisa, então vamos lá,
+
+122
+00:11:52,280 --> 00:11:58,600
+o canto será considerado normal para a solução de vida, uma nova segurança ou desgaste mecânico,
+
+123
+00:11:58,600 --> 00:12:06,440
+há uma alteração total da forma de isto funcionar. Pronto, depois eu tenho aqui uma coisa que não
+
+124
+00:12:06,440 --> 00:12:15,610
+interessa e tenho aqui mais uma coisa que eu queria falar, ah, foi o que eu vos falei há um bocado,
+
+125
+00:12:15,610 --> 00:12:20,890
+se vocês tiverem um teste com 99% de precisão e forma de encerrar, já falei disto, né,
+
+126
+00:12:21,130 --> 00:12:28,650
+afeta uma cada 100 pessoas e, portanto, basicamente nós tínhamos aquelas, a accuracy vai ser de 99,
+
+127
+00:12:28,650 --> 00:12:34,970
+se ele disser que é tudo sovável, ele acerta 99, falha um e, portanto, tem uma métrica incrível,
+
+128
+00:12:34,970 --> 00:12:41,530
+já está super alto, na realidade ele está a falhar 100% das pessoas doentes, for o caso, né,
+
+129
+00:12:43,210 --> 00:12:48,490
+porque se ele falha, se ele tem uma pessoa doente a cada 100, se ele diz que todas estão boas,
+
+130
+00:12:48,490 --> 00:12:52,810
+ele só falha aquela pessoa. Então, o que é que nós podemos fazer? Usar a sensibilidade,
+
+131
+00:12:52,810 --> 00:12:57,850
+que é uma medida dos casos positivos, é uma accuracy dos casos positivos, e então neste caso,
+
+132
+00:12:57,850 --> 00:13:03,690
+a accuracy neste caso, que só temos uma pessoa, ou é zero, ou é 100, ou seja, ela acerta tudo ou
+
+133
+00:13:03,690 --> 00:13:08,650
+falha tudo, o que é que temos de fazer? Aumentar os dados, que é uma das coisas que eu também
+
+134
+00:13:08,650 --> 00:13:12,330
+disse na outra aula, que é muito importante ter data certos, também dos significativos,
+
+135
+00:13:12,490 --> 00:13:17,530
+por causa destas coisas, ter casos de interesse das classes, quando existem classes
+
+136
+00:13:18,330 --> 00:13:22,970
+menos representadas, ter casos suficientes para podermos ter as métricas, para elas não serem
+
+137
+00:13:22,970 --> 00:13:31,130
+muito gradativas, imagina em quatro casos, é 0, 25, 50, 75 e 100, e portanto, temos que ter essa
+
+138
+00:13:32,330 --> 00:13:37,690
+atenção, e temos que estar sempre atentos a isso, na definição da nossa experiência,
+
+139
+00:13:37,690 --> 00:13:41,530
+na analisadades, que eu já vou te mostrar outra vez.
+
+140
+00:13:41,530 --> 00:13:48,090
+Para bem, fontes de variabilidade em ambientes invadidos. Há mais, mas três causas típicas
+
+141
+00:13:48,090 --> 00:13:58,410
+são de gradação de sensores, se for o caso, uma câmara que o sensor começa ao longo dos anos
+
+142
+00:13:58,410 --> 00:14:07,210
+a ficar com pequenas poeiras, começa a acumular ali alguns litritos, os próprios são pixels,
+
+143
+00:14:07,290 --> 00:14:13,690
+mas os próprios, onde os do sensor começam a ficar desvastados com a imagem, isto hoje é
+
+144
+00:14:13,690 --> 00:14:17,370
+um bocadinho menos comum no passado, até que um dia das câmaras era outro, isto acontecia,
+
+145
+00:14:17,370 --> 00:14:23,450
+ganhava pequenas menchas na imagem, e tudo isto vai formar imagens diferentes de uma realidade
+
+146
+00:14:23,450 --> 00:14:33,050
+que é a mesma, e portanto, altera os dados. Outra coisa, lentes, fornas lentes, sensores que
+
+147
+00:14:33,850 --> 00:14:40,170
+sofrem de gradação ao longo do tempo, sensores, sei lá, ultra-sónicos, sensores de temperatura,
+
+148
+00:14:40,170 --> 00:14:46,810
+uma PT-100, o que é que for, o tempo sofre a indriva térmica, começam a prever e a invídecer
+
+149
+00:14:46,810 --> 00:14:54,970
+puramente, portanto, tudo isto afeta. Reparem, medir hoje um sinal com o sensor, e daqui a
+
+150
+00:14:54,970 --> 00:15:01,130
+mil dias não é a mesma coisa, o sensor obviamente é um sistema físico e vai evoluir com o tempo.
+
+151
+00:15:01,770 --> 00:15:08,010
+Isto são coisas que acontecem e depois vamos mitigar estas coisas. Segundo, condições ambientais,
+
+152
+00:15:08,010 --> 00:15:13,850
+já vos falei, está a pocada, treinar um laboratório, isto ser o diplóis será
+
+153
+00:15:13,850 --> 00:15:18,730
+num armazém completamente diferente, uma estrutura de, como a iluminação,
+
+154
+00:15:18,730 --> 00:15:23,130
+uma estrutura de iluminação completamente diferente, com temperaturas diferentes, com
+
+155
+00:15:23,210 --> 00:15:30,570
+tudo, tudo diferente. Depois, já vos falei, isto não vale a pena estar a falar, alteramos
+
+156
+00:15:30,570 --> 00:15:36,010
+completamente os dados e isto tem um impacto de forma. Terceiro, interferência mecânica,
+
+157
+00:15:36,010 --> 00:15:42,170
+eletromagnética, muito comum em são de fábrica, que injeta ruído aleatório no sinal, ou seja,
+
+158
+00:15:42,170 --> 00:15:48,330
+nós passamos a ter os nossos dados e estes dados têm por cima um conjunto de ruído que nós
+
+159
+00:15:48,330 --> 00:15:57,370
+não temos formas fáceis de estimar e, portanto, temos agora o nosso sinal sumado,
+
+160
+00:15:57,370 --> 00:16:03,770
+o sinal com um caráter completamente imprevisível e temos que extrair informação, ou seja,
+
+161
+00:16:03,770 --> 00:16:09,770
+classificar ou tirar, fazer inferências sobre dados que estão perturbados com ruído. A coisa boa,
+
+162
+00:16:09,770 --> 00:16:13,530
+que agora não se está a falar tanto, mas para sinais físicos em inteligência artificial
+
+163
+00:16:13,530 --> 00:16:19,450
+aplicada, existem técnicas até algumas bastante antigas, também se usa muita coisa com IA,
+
+164
+00:16:19,450 --> 00:16:24,330
+mas há coisas antigas muito interessantes para a estimação de ruído. E, portanto,
+
+165
+00:16:24,330 --> 00:16:29,450
+é importante que não se esqueçamos que existissem, apesar de que hoje em dia te faz quase tudo com
+
+166
+00:16:29,450 --> 00:16:34,490
+IA, porque é muito mais prático, porque nós tínhamos, com estatística, estimar os níveis de
+
+167
+00:16:34,490 --> 00:16:40,170
+ruído e subtraí-lo e posso-vos dizer que já há coisas a funcionar fantásticas que funcionam muito
+
+168
+00:16:40,410 --> 00:16:45,690
+a um método particular que é o Retinex, que é uma coisa incrível, que não é propriamente para
+
+169
+00:16:45,690 --> 00:16:52,810
+ruído, mas é para inomósmeidade e iluminação e funciona lindamente. Pronto, mas hoje em dia é
+
+170
+00:16:52,810 --> 00:16:58,330
+muito a IA pela facilidade de expor-mos os dados e tendo dados de qualidade, e eles vão buscar, no
+
+171
+00:16:58,330 --> 00:17:04,010
+fundo, quais são as funções de ruído e conseguem retirá-los no final e fazer recuperações
+
+172
+00:17:04,010 --> 00:17:09,610
+incríveis e vocês conseguem ver isso até num LLM, vocês podem por uma imagem com imenso de ruído
+
+173
+00:17:09,690 --> 00:17:15,130
+e ele no meio, aquele tudo que lá vem dentro, ele consegue estimar aquele ruído e retirá-lo e
+
+174
+00:17:15,130 --> 00:17:21,130
+recuperar imagens super danificadas, no fundo tendo lá um conjunto de modelos mais além dos,
+
+175
+00:17:21,130 --> 00:17:26,970
+como é que eu ia dizer, genéricos que depois determinam o tipo de ruído, aplicam aquele
+
+176
+00:17:26,970 --> 00:17:33,210
+modelo, que ali vão fotografias antigas, altamente gravadas, com inomósmeidade de iluminação
+
+177
+00:17:33,210 --> 00:17:38,490
+e por aí fora. Pronto, acho que aqui era essencialmente isso. Eu acho que estou a falar muito
+
+178
+00:17:38,490 --> 00:17:44,730
+para essa, mas isso que estamos a falar, no fundo, é completamente fora da distribuição,
+
+179
+00:17:44,730 --> 00:17:53,450
+ou seja, os nossos dados, no fundo mudam completamente, mas mudam significativamente
+
+180
+00:17:53,450 --> 00:17:59,290
+isto de grada a performance do nosso modelo. Então, assim, o cenário que vinte, exposição,
+
+181
+00:17:59,450 --> 00:18:03,450
+demonstra estatísticamente distantes nos treinos, é tudo isso que estou a falar,
+
+182
+00:18:03,450 --> 00:18:09,210
+e depois aqui entra aqui na segunda parte que eu já disse, mas as falhas silenciosas, ou seja,
+
+183
+00:18:09,210 --> 00:18:14,490
+termos previsões catastroficamente erradas, mas que nós não nos apercebemos e assumimos
+
+184
+00:18:14,490 --> 00:18:20,490
+um elevado grau de confiança a erros. Isto é um problema grave. A terceira coisa,
+
+185
+00:18:20,490 --> 00:18:26,010
+são métricas compromotivas, ou seja, colapso das taxas de precisão, assumidas na validação
+
+186
+00:18:26,010 --> 00:18:32,010
+ou seja, isto é o que eu disse, quando vamos para um ambiente novo, isto de grada brutalmente.
+
+187
+00:18:32,010 --> 00:18:37,210
+Depois temos os tipos de falhas que eu aqui falso, são as silenciosas, mas temos um outro tipo de
+
+188
+00:18:37,210 --> 00:18:40,890
+falha que também é interessante. A gente vê o que é que eu escrevi aqui. O cenário mais crítico
+
+189
+00:18:40,890 --> 00:18:46,090
+derivado desses problemas é quando o modelo se depara com dados fora da distribuição, ou seja,
+
+190
+00:18:46,090 --> 00:18:51,050
+dados que ele não pôs quais não fazerem nada, quando o modelo é forçado a classificar algo que
+
+191
+00:18:51,050 --> 00:18:57,770
+ele viu, ele não levanta a mão para pedir ajuda em vez disso, só fora de falhas silenciosas,
+
+192
+00:18:57,770 --> 00:19:04,410
+emite uma previsão completamente errada, mas falo assumindo e às vezes assegurando o nível de
+
+193
+00:19:04,410 --> 00:19:12,010
+confiança, estatística ilgadíssima. Isto é o peso e o período de automação deste tipo de processos.
+
+194
+00:19:12,970 --> 00:19:22,410
+Já agora, para voltar aqui, este é o ciclo de Machine Learning e de Inteligencia Artificial.
+
+195
+00:19:22,410 --> 00:19:28,730
+Eu voltei com o Piedro do slide outra vez, que é definir aquele Business Acumen que vos falei,
+
+196
+00:19:28,730 --> 00:19:34,090
+definir o vosso problema, conhecer bem o problema de base onde estamos a trabalhar, falar com as pessoas
+
+197
+00:19:34,090 --> 00:19:41,050
+que têm experiência e definir, isto é um bocadinho aqui antes, e depois aqui definir bem o problema sobre
+
+198
+00:19:41,050 --> 00:19:44,890
+a trabalhar, do ponto de vista de Inteligencia Artificial, quais são as nossas entradas, quais
+
+199
+00:19:44,890 --> 00:19:50,650
+são as nossas saídas, o que é que nós queremos atingir com isto e, portanto, pensar bem no tipo
+
+200
+00:19:50,650 --> 00:19:55,850
+de modelos que queremos utilizar para atingir isto, são modelos de imagem para imagem, são modelos,
+
+201
+00:19:55,850 --> 00:20:00,970
+neste caso, são modelos de imagem para uma classificação qualquer, que até são de objetos,
+
+202
+00:20:00,970 --> 00:20:06,250
+pensar muito bem no modelo, nos dados, o modelo dados e tudo que queremos, depois começar a fazer
+
+203
+00:20:06,330 --> 00:20:11,210
+a decolha de dados, data collection, depois de termos isto mais ou menos tudo pronto, passando
+
+204
+00:20:11,210 --> 00:20:19,850
+pela data pre-processing, que é, como eu disse na altura, é retirar outliers, remover ruído
+
+205
+00:20:19,850 --> 00:20:26,410
+dos sinais, tornar mais homogênios os valores e fazer uma coisa que é normalização de dados,
+
+206
+00:20:26,410 --> 00:20:32,410
+que já é uma técnica que combate isto, porque se deixarmos os dados nas ramas originais,
+
+207
+00:20:33,370 --> 00:20:38,490
+não quer dizer que normalizar os dados também não possam sofrer, mas é interessante normalizar,
+
+208
+00:20:38,490 --> 00:20:42,730
+por exemplo, entre máximos e mínimos, e pelo menos mantermos ali, portanto, embora esta questão
+
+209
+00:20:42,730 --> 00:20:48,090
+da normalização seja objetivamente muito mais interessante para o treino do modelo, porque as
+
+210
+00:20:48,090 --> 00:20:54,170
+gamas ficam entre valores e facilitam muitas contas, porque depois, se houver ali médias mais
+
+211
+00:20:54,170 --> 00:21:00,010
+extremadas, no fundo vai comprimir aos outros lugares o resto dos dados ali, como a gama de
+
+212
+00:21:00,010 --> 00:21:06,730
+valores muito pequenina, e isso também às vezes pode ser um problema, ou seja, imagina que uma variável
+
+213
+00:21:06,730 --> 00:21:13,450
+anda ali até de 0 ao 100 a maior parte do tempo, ou seja, normaliza um 0 a 1 e de repente há um modo
+
+214
+00:21:13,450 --> 00:21:17,930
+de operação, que aquilo vai para um milhão e anda ali perto de um milhão, não sei o que mais, o que vai
+
+215
+00:21:17,930 --> 00:21:22,810
+acontecer é que aquela zona de operação toda de 0 ao 100 vai ser comprimida para valores muito
+
+216
+00:21:22,810 --> 00:21:28,010
+próximos de 0 e que obviamente vão ter uma significância muito baixa, como eu lhe disse aqui,
+
+217
+00:21:28,330 --> 00:21:35,290
+mas uma coisa é certa, se também o fizerem na dimensão grande, a relação é mesma, isso vai ser
+
+218
+00:21:35,290 --> 00:21:39,810
+um problema, e normalizados os dados são mais fáceis de trabalhar, considera-se um exemplo por
+
+219
+00:21:39,810 --> 00:21:45,530
+aproximadamente dados, análise puratória de dados é olharmos faz variáveis, conhecermos o que elas
+
+220
+00:21:45,530 --> 00:21:52,850
+são, fazemos gráficos delas, fazemos correlações, médias, percebemos quais são as gamas das variáveis,
+
+221
+00:21:52,850 --> 00:21:58,850
+distribuições, correlações com a variável de saída, fazermos gráficos disto e tentamos
+
+222
+00:21:58,850 --> 00:22:03,970
+começar a perceber um bocadinho os dados. Atenção a este passo, com alguma frequência, é passada
+
+223
+00:22:03,970 --> 00:22:10,610
+à frente, ok? É passada à frente por grande parte das pessoas, e quando há dinheiro, é que se faz isto.
+
+224
+00:22:10,610 --> 00:22:16,450
+Depois do desenvolvimento de modelo, que já falamos, treino de testes de validação, ou seja, agora já sabem
+
+225
+00:22:16,450 --> 00:22:21,010
+bem isso, treino de testes de validação, e depois temos aqui o model de deployment, a maintenance,
+
+226
+00:22:21,010 --> 00:22:25,730
+eu vos falei, pois outra vez, o deployment é o ambiente real, é onde estamos a trabalhar,
+
+227
+00:22:25,730 --> 00:22:33,290
+e a manutenção aqui é manter o modelo com qualidade, e a funcionar, e há apetital, mas acima de tudo,
+
+228
+00:22:33,290 --> 00:22:40,970
+também ter bastante atenção a não haver a designada quebra, que eu estou a falar desde a instala,
+
+229
+00:22:40,970 --> 00:22:46,970
+a quebra de desempenho na prática, e se ela ocorrer, nós temos essencialmente quebrar aqui uma volta
+
+230
+00:22:47,130 --> 00:22:54,450
+e voltar ao urge aqui. E nesta definição de problema, já não será tanto só como é que o nosso problema é,
+
+231
+00:22:54,450 --> 00:23:00,290
+mas é um bocado, ok? Esta degradação deve-se aqui, o que é que eu tenho que fazer aqui, e agora,
+
+232
+00:23:00,290 --> 00:23:05,450
+que eu vou passar para aqui, para aqui, para aqui, para aqui, para que no final eu tenha novamente um modelo que,
+
+233
+00:23:05,450 --> 00:23:11,770
+depois de ser o divisamento de validade e de estado, em ambiente laboratorial, vem, eu vou novamente
+
+234
+00:23:12,050 --> 00:23:18,450
+mandar para o mundo real, e ele é mais opressionado. Pronto, eu já estava tentado a dizer de aqui uma ou duas coisas,
+
+235
+00:23:18,450 --> 00:23:23,930
+mas vou tentar morder a língua, para dizer-la na altura certa e na apresentação.
+
+236
+00:23:24,930 --> 00:23:29,050
+Sabeem que as representações que eu faço, eu já acho que fiz muitas vezes, esta não,
+
+237
+00:23:29,050 --> 00:23:34,490
+então estou sempre com pressa de os dizer só um bocadinho, spoiler alert, que é mal.
+
+238
+00:23:35,050 --> 00:23:41,730
+Pronto, análise de confiança. Sabendo que os modelos vão errar, a nossa prioridade vai ser,
+
+239
+00:23:42,730 --> 00:23:48,410
+vamos tentar acertar sempre, para saber quando não sabemos. Então, vamos ver agora, então,
+
+240
+00:23:48,410 --> 00:23:56,650
+a questão da calibração, já na pomiaduia. O modelo vem calibrado, já agora, o calibrado é isto,
+
+241
+00:23:56,650 --> 00:24:04,730
+é isto estar bem e depois aquilo continuar bem, está bem? O modelo vem calibrado, em ambiente laboratório,
+
+242
+00:24:04,730 --> 00:24:11,090
+temos uma aprovisão monarquia de 70%, e chegando para o laboratório, e temos efetivamente 7 em 10 casos
+
+243
+00:24:11,090 --> 00:24:19,650
+do acerto, ou 700 em mil, ou por 8 for, ou seja, a razão do acerto que mantém-se. Isto é um modelo
+
+244
+00:24:19,650 --> 00:24:26,450
+que os dados estão a ser representativos, os novos dados da realidade, de alguma forma, são muito
+
+245
+00:24:26,450 --> 00:24:31,570
+próximos daquilo em que foi treinado, e ele mantém o desempenho bem. Não é só isso, ele também
+
+246
+00:24:31,570 --> 00:24:36,130
+tem que, o modelo tem que ter competência, mas essencialmente é isso que é manter-se apoiado,
+
+247
+00:24:36,130 --> 00:24:42,650
+porque há que ir com uma auxiliaridade, onde é mal calibrado. Ele poderá ter previsões até
+
+248
+00:24:42,650 --> 00:24:49,970
+muito acima destes 70%, mas na realidade ele de repente começa a asnear na realidade. Duas
+
+249
+00:24:49,970 --> 00:24:56,050
+coisas aqui, uma referência e uma coisa que não está bem. Redesionais profundas tentem gerar
+
+250
+00:24:56,050 --> 00:25:02,250
+probabilidades extremamente altas artificialmente, ou baixas, mas normalmente as pessoas foquem-se nas
+
+251
+00:25:02,250 --> 00:25:09,570
+redes, e nós enquanto practitioners desta área, temos muito apelo pelo resultado dos altos, e a
+
+252
+00:25:09,570 --> 00:25:16,970
+necessidade, nas redes normais, um truque que se faz com muita frequência é usar a probabilidade
+
+253
+00:25:16,970 --> 00:25:24,210
+de validação como sendo uma probabilidade deste. E esse é um duplo erro, porque na realidade, eu
+
+254
+00:25:24,210 --> 00:25:31,770
+também já o fiz, mas, entretanto, se jomei e corrigi aquilo, porque é um duplo erro, porque não
+
+255
+00:25:31,770 --> 00:25:37,490
+estamos, nós não estamos a usar o ambiente real, laboratorial, para testar o nosso modelo, como
+
+256
+00:25:37,490 --> 00:25:44,730
+ainda assim assumimos que aquilo que nos sai da validação do modelo em treino, que são dados
+
+257
+00:25:44,730 --> 00:25:49,810
+que ele não vê no treino, mas está ver repetidamente para se afinar, e portanto são dados que viam muito
+
+258
+00:25:49,810 --> 00:25:56,530
+diretamente à aprendizagem. M vezes durante um treino, e repetidas vezes durante o treino, aqueles
+
+259
+00:25:56,530 --> 00:26:01,250
+dados não são vistos, mas na realidade estão a guiar a aprendizagem brutalmente. E portanto,
+
+260
+00:26:01,250 --> 00:26:07,530
+é um duplo erro, mas vocês vão ver, vão ver se seguirem esta área, vão ver que isto se faz,
+
+261
+00:26:07,530 --> 00:26:14,690
+é pá, e tenham só esta noção, e não vale a pena estar ali achateado. Ninguém, porque quem quiser
+
+262
+00:26:14,690 --> 00:26:20,250
+aprender aprende, é importante. Todos nós temos direito a errar de vez em quando, se quiser.
+
+263
+00:26:22,250 --> 00:26:29,330
+Está a temperatura do scaling. Pronto, é isto, tem aqui uns apontamentos, mas acho que não é
+
+264
+00:26:30,330 --> 00:26:38,570
+muito certo. Muito bem, anatomia de erros práticos. A anatomia de erros práticos. Pronto, aqui vou
+
+265
+00:26:38,570 --> 00:26:45,090
+salientar a vários tipos de erros, mas eu destaquei aqui dois. O falso positivo e o falso negativo.
+
+266
+00:26:45,090 --> 00:26:50,690
+Isto pode ser um bocado, isto é um bocado aplica-se a tudo, e há outros erros que tenham
+
+267
+00:26:50,690 --> 00:26:56,170
+das interpretações, mas num curso de este que é um bocadinho introduitorio, é importante olhar para
+
+268
+00:26:56,170 --> 00:27:02,850
+que eu confesso na minha prática, naquilo que eu tenho prática visto, é para isto que eu olho particularmente.
+
+269
+00:27:02,850 --> 00:27:07,450
+Já tenho casos em que tenho que olhar para outras coisas, mas isto é o que interessa. O falso positivo
+
+270
+00:27:07,450 --> 00:27:14,010
+é um falso alarme, ou seja, vocês detectam uma coisa, o evento de interesse, ou lá o que é de
+
+271
+00:27:14,010 --> 00:27:21,330
+interesse, um cangro, um alarme, o que for, e na realidade, vocês dizem que há essa situação,
+
+272
+00:27:21,330 --> 00:27:28,450
+ela não existe. Pronto, o que é que isto tem de chato? É anóim, que há uma coisa chata,
+
+273
+00:27:28,450 --> 00:27:33,330
+não é? Ou seja, tenham conveniência a isto. Há uma atuação, eu tenho aqui há uma atuação
+
+274
+00:27:33,330 --> 00:27:39,610
+indivídua sobre o acionamento de uma coisa qualquer para o diabetes de gasto mecânico, e eventualmente
+
+275
+00:27:39,610 --> 00:27:48,650
+disputar a paragem da produção numa empresa, no caso de um diagnóstico médico. Há um susto
+
+276
+00:27:48,650 --> 00:27:56,410
+que diz ao Paulo, olha, tens uma doença e vais fazer agora, quer-se por uma questão de confiança,
+
+277
+00:27:56,410 --> 00:28:01,850
+vamos então dar seguimento ao tratamento da tua doença. E quando se dá seguimento ao tratamento
+
+278
+00:28:01,850 --> 00:28:07,530
+da emergência, daquilo que foi causado, seja doença, seja uma emergência num ambiente de produção,
+
+279
+00:28:07,530 --> 00:28:15,850
+começa a ler e a fazer leituras que não são concordantes com isto e eventualmente, expectávelmente,
+
+280
+00:28:15,930 --> 00:28:20,330
+a certa altura diz-se, olha, aqui cóvido, a senão está bem, vamos repetir o teste uma ou duas vezes
+
+281
+00:28:20,330 --> 00:28:24,530
+e chegamos à conclusão que ali não havia um problema. Isto é o que acontece nos cancos.
+
+282
+00:28:24,530 --> 00:28:31,810
+Os cancos são diagnosticados, radiagnosticados e certificam-se que está tudo e se der negativo uma ou duas
+
+283
+00:28:31,810 --> 00:28:37,770
+vezes, afinal, foi só um falso positivo e está tudo bem. O doente vai-se embora, coitado para a noite,
+
+284
+00:28:37,770 --> 00:28:43,170
+diz-se, ah, mas aquele deu positivo e tal, mas é o que é. Bom, e a estatística, aqui entra muito,
+
+285
+00:28:43,170 --> 00:28:49,330
+os médicos são craques nisto. Pronto, a estatística, isto, os falso positivos não são os erros que
+
+286
+00:28:49,330 --> 00:28:54,970
+modem particularmente, porque são coisas que, ou seja, que nós vamos sempre errar e, portanto,
+
+287
+00:28:54,970 --> 00:29:00,450
+eu prefiro de longe o falso positivo ou eu recuo falar assim que é o falso negativo, que é a omissão
+
+288
+00:29:00,450 --> 00:29:07,730
+crítica. O falso negativo é quando ocorre o evento de interesse, o perigo, a doença, tudo que nós
+
+289
+00:29:07,730 --> 00:29:12,770
+queremos determinar e ele simplesmente diz, não está tudo bem, pode ir embora, que o senhor não tem
+
+290
+00:29:13,410 --> 00:29:18,970
+imaginem, pegando no canco foi uma coisa que eu trabalhei já há alguns anos, imaginem o que é
+
+291
+00:29:18,970 --> 00:29:25,450
+vocês terem, vocês, vamos por aí, mas uma pessoa ter um canco e ir fazer um exame no momento crítico
+
+292
+00:29:25,450 --> 00:29:30,770
+daquilo e um sistema de inteligência artificial ou outro, qualquer, dizem, não, então não tens canco,
+
+293
+00:29:30,770 --> 00:29:36,450
+a pessoa vai-se embora e volta daqui a um ano. Ainda recentemente, tive acesso a um colega, uma pessoa,
+
+294
+00:29:36,530 --> 00:29:43,450
+quem me deu bem, que teve a mesma situação, fez um exame e ia fazer passava, não sei, passava um ano,
+
+295
+00:29:43,450 --> 00:29:49,450
+só que entretanto o hospital, mas se fez no privado, porque o público tinha se atrasado, não sei o que é,
+
+296
+00:29:49,450 --> 00:29:55,450
+e depois o público acabou quatro meses depois, mandou fazer um exame e o exame, quatro meses depois,
+
+297
+00:29:55,450 --> 00:30:02,450
+já detectou um carcinoma na pessoa. Aí, portanto, a pessoa diz, olha qual é a minha sorte, que paguei no privado
+
+298
+00:30:02,450 --> 00:30:07,450
+para fazer o exame, e quatro meses vem aquilo, e o pã não dá com a boca na botija que tinha evitado o privado,
+
+299
+00:30:07,450 --> 00:30:13,450
+fiz de conta que não tinha ido, fui lá e detectaram de aquilo, e imaginar a sorte que é, iam passar mais
+
+300
+00:30:13,450 --> 00:30:18,450
+oito meses até fazer o exame e não sabe o que é que poderia acontecer. Pronto, o que acontece?
+
+301
+00:30:18,450 --> 00:30:24,450
+O falso negativo é gravíssimo e é uma coisa que tem que se ter atenção, preste segurança e inércia
+
+302
+00:30:24,450 --> 00:30:28,450
+do sistema, danos catastróficos, deixem ver o que é que eu estou usando aqui nos meus espicranados,
+
+303
+00:30:28,450 --> 00:30:32,450
+não se tem bem bebido nem todos os dedos têm o mesmo peso.
+
+304
+00:30:32,450 --> 00:30:42,460
+Isto é do bom, se não em mim, deixe-me só ver uma coisa, porque é que eu estou...
+
+305
+00:30:42,460 --> 00:30:46,460
+Ah, pois, está bem, afinal está tudo bem. Não se tem bem bebido, nem todos os dedos têm o mesmo peso.
+
+306
+00:30:46,460 --> 00:30:52,460
+Um falso positivo, dizer que é um problema quando não há, é um falso alarme.
+
+307
+00:30:52,460 --> 00:30:58,460
+Isto para uma linha, portanto, é de certo, já desiste. Por um falso negativo, é que resulta na ativação...
+
+308
+00:30:58,460 --> 00:31:02,460
+não a ativação de um travão de emergência usando casadados catastróficos.
+
+309
+00:31:02,460 --> 00:31:04,460
+É que é mesmo uma coisa que me precisava de ver isto.
+
+310
+00:31:04,460 --> 00:31:10,460
+Ok, este slide, o título eu não concordo muito com ele, matrizes de confusão.
+
+311
+00:31:10,460 --> 00:31:15,460
+Matrizes de confusão no sentido em que estes verdadeiros positivos, falsos negativos, falsos positivos
+
+312
+00:31:15,460 --> 00:31:20,460
+e falsos negativos são os elementos da matriz de confusão, mas na realidade, são os tipos de erros.
+
+313
+00:31:20,460 --> 00:31:27,460
+Os erros, obviamente, são diferentes e há uma assinutria de custos na tomada de decisão a nível dos erros.
+
+314
+00:31:27,460 --> 00:31:33,460
+Ou seja, se eu perver com a normalidade, o estado normal será um verdadeiro negativo,
+
+315
+00:31:33,460 --> 00:31:39,460
+uma coisa que não nos custa muito, e o estado de anomal pior, é o falso negativo que tenho costumácido.
+
+316
+00:31:39,460 --> 00:31:41,460
+Estamos indo dizer num erro catastrófico.
+
+317
+00:31:41,460 --> 00:31:48,460
+Se eu perver uma anomalia, então, o pior que pode acontecer é ele dar um falso positivo
+
+318
+00:31:48,460 --> 00:31:51,460
+e o estado de anomal é o verdadeiro positivo.
+
+319
+00:31:51,460 --> 00:31:53,460
+Como é que é isto?
+
+320
+00:31:53,460 --> 00:32:00,460
+Perver anomalia, o falso positivo é um erro concúrpico, concúrpico com um erro moderado,
+
+321
+00:32:00,460 --> 00:32:06,460
+sempre como é que é um grave, e agora o anomal será o verdadeiro positivo.
+
+322
+00:32:06,460 --> 00:32:17,290
+Aqui é que eu não sou a gostar dessa coisa, o verdadeiro positivo, portanto.
+
+323
+00:32:17,290 --> 00:32:25,820
+Bem, eu se me lembrar disto, isto aqui, este estado de anomal ser o verdadeiro positivo, não sou a...
+
+324
+00:32:25,820 --> 00:32:30,820
+Eu acho que isso quer dizer, professor, que na realidade era uma anomalia e ele perveu que era uma anomalia, por isso.
+
+325
+00:32:30,820 --> 00:32:35,280
+Está certo?
+
+326
+00:32:35,280 --> 00:32:41,280
+Agora eu te pergunto, agora diga lá, e ele é uma anomalia, ele perveu que é uma anomalia e ele é mesmo uma anomalia?
+
+327
+00:32:41,280 --> 00:32:44,280
+Isso, exatamente.
+
+328
+00:32:44,280 --> 00:32:53,280
+Ou seja, quem me diz anomalia, se peguei mais fácil de interpretar como se fosse uma doença, um verdadeiro positivo.
+
+329
+00:32:53,280 --> 00:32:59,280
+Mas vamos lá, se é uma anomalia e foi tentado uma anomalia, é sempre um verdadeiro positivo.
+
+330
+00:32:59,280 --> 00:33:01,280
+Está certo, sim, é isso.
+
+331
+00:33:01,280 --> 00:33:07,280
+Mas a questão é, ele diz que o estado normal é o falso positivo, agora eu troquei-me aqui todo.
+
+332
+00:33:07,280 --> 00:33:16,440
+Não, o estado normal, mas ele perveu a anomalia, é falso positivo.
+
+333
+00:33:16,440 --> 00:33:21,440
+Esqueçam que eu vou ter aqui um momento, tipo António Guterres, e isto estava aqui para fazer aqui uma confusão.
+
+334
+00:33:21,440 --> 00:33:25,440
+Eu abocado-lhe para isto e se fazia do sentido, mas aqui isto estava acuesado.
+
+335
+00:33:25,440 --> 00:33:32,440
+Vamos saber que eu, para não estar aqui a deambular nisto, a cimetria de custos, clavatório da custos.
+
+336
+00:33:32,440 --> 00:33:34,440
+Ah, isto é muito importante para os dizer.
+
+337
+00:33:34,440 --> 00:33:40,440
+A cimetria de custos, uma abratória, a métrica, a cura, se trata, isto já dissemos de outras maneiras,
+
+338
+00:33:40,440 --> 00:33:44,440
+mas no fundo, quando estamos aqui nos sistemas inovidos, isto acontece por uma frequência.
+
+339
+00:33:44,440 --> 00:33:48,440
+Ou seja, nós tratamos com a cura, se todos os outros são iguais, não é?
+
+340
+00:33:48,440 --> 00:33:55,440
+Ou seja, a tal história de os erros da classe que nos interessa, se ela for menos representada, são todos por igual.
+
+341
+00:33:55,440 --> 00:33:57,440
+Mas depois lá está.
+
+342
+00:33:57,440 --> 00:34:02,440
+Numa classe, nós temos muito interesse em apanhar os erros por classe.
+
+343
+00:34:02,440 --> 00:34:05,440
+Depois é aquela história da sensibilidade e da especificidade.
+
+344
+00:34:05,440 --> 00:34:08,440
+Se vocês quiserem, tiverem curiosidade, eu posso voltar.
+
+345
+00:34:08,440 --> 00:34:14,440
+Aliás, não preciso que vocês tenham os slides, eu posto um PDF dos slides e vocês tenham lá a sensibilidade e a especificidade.
+
+346
+00:34:14,440 --> 00:34:19,440
+Que é, até são dos casos positivos e dos negativos, e há cura-se dentro disso.
+
+347
+00:34:19,440 --> 00:34:24,440
+Depois, quando eu estava a preparar isto, ele foi uma coisa que eu também já vi.
+
+348
+00:34:24,440 --> 00:34:35,440
+Super complexas, entrar com toda a análise de a probabilidade de ser positivo quando há o evento, que pode ser doença, o que for.
+
+349
+00:34:35,440 --> 00:34:40,440
+Sinceramente, eu não acho aquilo nada importante.
+
+350
+00:34:40,440 --> 00:34:46,440
+É superfiz, para pôr em artigos, para fazermos todo esse flex estatístico.
+
+351
+00:34:46,440 --> 00:34:55,440
+No todo visto industrial, o que interessa-nos é ter uma noção, qual é o impacto global na exativão do nosso sistema, a cura-se do sistema.
+
+352
+00:34:55,440 --> 00:35:03,440
+E se tivermos classes com distribuições, com distribuições de ocorrência diferentes, fazemos a sensibilidade e a especificidade.
+
+353
+00:35:03,440 --> 00:35:07,440
+E com isso, vocês conseguem ter, e podem fazer para N-class, não é só duas.
+
+354
+00:35:07,440 --> 00:35:10,440
+E vocês conseguem ter qual é a real a cura-se dentro aqui.
+
+355
+00:35:10,440 --> 00:35:13,440
+O que é que vocês precisam? É ter dados dentro de cada classe.
+
+356
+00:35:13,440 --> 00:35:17,440
+Se os tiverem, estão bem, porque têm capacidade de fazer isto.
+
+357
+00:35:17,440 --> 00:35:27,440
+E se não tiverem, não adianta fazer truques de ninja muito evoluídos com esta estatística, com estas previções, quase de probabilidades condicionadas.
+
+358
+00:35:27,440 --> 00:35:32,440
+Porque, na realidade, se vocês têm poucos dados aqui, também vai dar pouca, é muito integral.
+
+359
+00:35:32,440 --> 00:35:34,440
+E, portanto, não adianta muito.
+
+360
+00:35:34,440 --> 00:35:36,440
+E por aí vamos.
+
+361
+00:35:36,440 --> 00:35:39,440
+Ora bem, vamos passar à frente, que isto já está.
+
+362
+00:35:39,440 --> 00:35:47,440
+Lá se problemáticas, o fernomo do Long Tail, escassez de dados, paranomalias, é, é, basta.
+
+363
+00:35:47,440 --> 00:35:49,440
+Nós acabamos depois de andar um bocadinho em forno disto.
+
+364
+00:35:49,440 --> 00:35:52,440
+Diga uma coisa, o Pessoa Tiago já falou destas coisas.
+
+365
+00:35:52,440 --> 00:36:01,770
+Estão a ouvir-me.
+
+366
+00:36:01,770 --> 00:36:10,910
+Pelo dame, a triste função foi ligado, foi ligado a vete a sete do Ministre.
+
+367
+00:36:10,910 --> 00:36:14,910
+O Ministre, o Ministre é o dos caracteres, não é?
+
+368
+00:36:15,910 --> 00:36:17,910
+Aí é que ele derroube e ele mostrou-me.
+
+369
+00:36:17,910 --> 00:36:20,910
+Nós temos aí uma coisa que, por isso, eu acho que vamos voltar a utilizá-lo.
+
+370
+00:36:20,910 --> 00:36:25,910
+É aquele famoso, que depois um gajo não sabe se tem que ir uma camisa de uma...
+
+371
+00:36:25,910 --> 00:36:26,910
+É isso.
+
+372
+00:36:26,910 --> 00:36:27,910
+...fuete, não é?
+
+373
+00:36:27,910 --> 00:36:28,910
+Exatamente.
+
+374
+00:36:28,910 --> 00:36:29,910
+É pá, também digo uma coisa.
+
+375
+00:36:29,910 --> 00:36:32,910
+Nós tiramos aqui um jeito, escolhi o dado da sete.
+
+376
+00:36:32,910 --> 00:36:34,910
+Eu já trabalhei por grande.
+
+377
+00:36:34,910 --> 00:36:38,910
+E aqui, opa, a certa altura, eu estava às vezes olhando para o dado da sete.
+
+378
+00:36:38,910 --> 00:36:40,910
+Isto é uma camisa, isto é uma coisa que eu pensava.
+
+379
+00:36:40,910 --> 00:36:41,910
+Eu sei lá se isto é uma camisa.
+
+380
+00:36:41,910 --> 00:36:43,910
+Isto é tudo quase igual.
+
+381
+00:36:43,910 --> 00:36:46,910
+Às vezes eu vejo assim uma coisinha das botões.
+
+382
+00:36:46,910 --> 00:36:47,910
+Mas é o que há.
+
+383
+00:36:47,910 --> 00:36:49,910
+É pá, mas também tem uma coisa boa.
+
+384
+00:36:49,910 --> 00:36:51,910
+Fomos nós que escolhemos o dado da sete.
+
+385
+00:36:51,910 --> 00:36:53,910
+Portanto, não nos podemos queixar.
+
+386
+00:36:53,910 --> 00:36:54,910
+Mas uma coisa é certa.
+
+387
+00:36:54,910 --> 00:36:56,910
+Todos os dados da sete forem reais.
+
+388
+00:36:56,910 --> 00:36:58,910
+Vão ter desafios deste.
+
+389
+00:36:58,910 --> 00:37:01,910
+E a realidade, às vezes, é tramada e batei mais.
+
+390
+00:37:01,910 --> 00:37:02,910
+Portanto, dinamétrica.
+
+391
+00:37:02,910 --> 00:37:03,910
+Ora bem.
+
+392
+00:37:03,910 --> 00:37:04,910
+Então, classes problemáticas.
+
+393
+00:37:04,910 --> 00:37:06,910
+Estes nomes bonitos são engraçados.
+
+394
+00:37:06,910 --> 00:37:07,910
+Este long-term.
+
+395
+00:37:07,910 --> 00:37:09,910
+Isto é equilíbrio estrutural.
+
+396
+00:37:09,910 --> 00:37:11,910
+Eventos de falha são, por definição,
+
+397
+00:37:11,910 --> 00:37:14,910
+estatísticas tecnicamente raras, na recolha, trem, cancro.
+
+398
+00:37:14,910 --> 00:37:16,910
+Falhas industriais.
+
+399
+00:37:16,910 --> 00:37:18,910
+Queremos que assim seja.
+
+400
+00:37:18,910 --> 00:37:19,910
+Trabalhamos numa empresa.
+
+401
+00:37:19,910 --> 00:37:22,910
+E, ah pá, tenho lá um problema gravíssimo,
+
+402
+00:37:22,910 --> 00:37:25,910
+porque fiz um sistema de machine learning
+
+403
+00:37:25,910 --> 00:37:27,910
+para detectar um problema numa máquina.
+
+404
+00:37:27,910 --> 00:37:28,910
+É pá.
+
+405
+00:37:28,910 --> 00:37:31,910
+E tenho muito poucos dados da classe de Eropa.
+
+406
+00:37:31,910 --> 00:37:32,910
+É uma chatice.
+
+407
+00:37:32,910 --> 00:37:33,910
+É sério.
+
+408
+00:37:33,910 --> 00:37:34,910
+Olha.
+
+409
+00:37:34,910 --> 00:37:36,910
+Ser bem-vindo ao mundo real.
+
+410
+00:37:36,910 --> 00:37:38,910
+E os problemas graves que tu tens.
+
+411
+00:37:38,910 --> 00:37:41,910
+Ou seja, tu trabalhas num sito onde há poucos erros.
+
+412
+00:37:41,910 --> 00:37:44,910
+Está-se a fazer um esforço por ainda assim modular esses erros
+
+413
+00:37:44,910 --> 00:37:48,910
+e tentar um sistema que prevê o que trava esses, esses coisas.
+
+414
+00:37:48,910 --> 00:37:51,910
+E já agora, desculpem a brincadeira, mas já agora,
+
+415
+00:37:51,910 --> 00:37:53,910
+junta-te ao mundo das pessoas.
+
+416
+00:37:53,910 --> 00:37:55,910
+Trabalha e recolha dados em quantidade.
+
+417
+00:37:55,910 --> 00:37:57,910
+Anote esses dados com qualidade,
+
+418
+00:37:57,910 --> 00:37:58,910
+durante meses ou anos,
+
+419
+00:37:58,910 --> 00:38:00,910
+para que no final tenhas um data sete
+
+420
+00:38:00,910 --> 00:38:02,910
+que possa ser representativo.
+
+421
+00:38:02,910 --> 00:38:04,910
+E possas, então, tentar inferir
+
+422
+00:38:04,910 --> 00:38:07,910
+essa classe muito mal representada.
+
+423
+00:38:07,910 --> 00:38:10,910
+Felizmente, porque tens uma empresa que está a trabalhar muito bem
+
+424
+00:38:10,910 --> 00:38:11,910
+e tens que fazer.
+
+425
+00:38:11,910 --> 00:38:12,910
+Isto é o que acontece nos cânculos.
+
+426
+00:38:12,910 --> 00:38:14,910
+É tramada a recolher data sets.
+
+427
+00:38:14,910 --> 00:38:17,910
+É tramado do ponto de vista do machinilamento.
+
+428
+00:38:17,910 --> 00:38:19,910
+Mas eu obrigava-me a ser para pensar.
+
+429
+00:38:19,910 --> 00:38:22,910
+É ótimo, porque somos menos pessoas a morrer na.
+
+430
+00:38:22,910 --> 00:38:24,910
+É uma coisa brutal.
+
+431
+00:38:24,910 --> 00:38:26,910
+Trabalhei com um cânculo de um destino delgado,
+
+432
+00:38:26,910 --> 00:38:29,910
+ainda por cima é um cânculo que é mais raro.
+
+433
+00:38:29,910 --> 00:38:31,910
+E às vezes, a mal-taseza se conhece.
+
+434
+00:38:31,910 --> 00:38:32,910
+É pá, poça.
+
+435
+00:38:32,910 --> 00:38:34,910
+Temos tão poucos casos de cânculo.
+
+436
+00:38:34,910 --> 00:38:35,910
+E uma vez uma colega disse,
+
+437
+00:38:35,910 --> 00:38:37,910
+é pena termos tão poucos casos.
+
+438
+00:38:37,910 --> 00:38:39,910
+Eu disse ao papo, mais ou menos,
+
+439
+00:38:39,910 --> 00:38:41,910
+se tu fôs o doente já não é.
+
+440
+00:38:41,910 --> 00:38:43,910
+Isto acontece e nós temos que aceitar isso.
+
+441
+00:38:43,910 --> 00:38:46,910
+O viés do optimizador, a função de perda,
+
+442
+00:38:46,910 --> 00:38:48,910
+prioriza a classe majoritária,
+
+443
+00:38:48,910 --> 00:38:51,910
+estado normal e do londarando.
+
+444
+00:38:51,910 --> 00:38:53,910
+As edes classes são as tais as longoteles
+
+445
+00:38:53,910 --> 00:38:55,910
+onde estamos sobre-representados.
+
+446
+00:38:55,910 --> 00:38:57,910
+Imaginem, uma distribuição normal.
+
+447
+00:38:57,910 --> 00:38:59,910
+E aquilo, aquela classe cai lá na pontinha,
+
+448
+00:38:59,910 --> 00:39:01,910
+muito longe de tudo.
+
+449
+00:39:01,910 --> 00:39:03,910
+E é isto que acontece.
+
+450
+00:39:03,910 --> 00:39:05,910
+Isto acontece pelo optimizador essencialmente
+
+451
+00:39:05,910 --> 00:39:07,910
+da inteligência, da otimiza.
+
+452
+00:39:07,910 --> 00:39:08,910
+E, portanto, se ele diz assim,
+
+453
+00:39:08,910 --> 00:39:10,910
+opa, 99 em 100 são de uma classe.
+
+454
+00:39:10,910 --> 00:39:13,910
+Deixa-me pensar o que é que eu posso fazer para acertar.
+
+455
+00:39:13,910 --> 00:39:15,910
+Dizer que tudo é a classe maior,
+
+456
+00:39:15,910 --> 00:39:18,910
+a classe que tem mais dados e que ela acerta.
+
+457
+00:39:18,910 --> 00:39:21,910
+Portanto, se nós fazemos isto num teste
+
+458
+00:39:21,910 --> 00:39:25,910
+de resposta para o escolha múltipla a todos,
+
+459
+00:39:25,910 --> 00:39:27,910
+e dizemos, opa, eu não sei,
+
+460
+00:39:27,910 --> 00:39:29,910
+mas estão todas a ser falsas,
+
+461
+00:39:29,910 --> 00:39:30,910
+portanto, vou pôr falso.
+
+462
+00:39:30,910 --> 00:39:32,910
+Porque é que o modelo não há poder fazer, não é?
+
+463
+00:39:32,910 --> 00:39:34,910
+Depois, limitações da acura-se
+
+464
+00:39:34,910 --> 00:39:37,910
+é a métrica, porque a métrica vê
+
+465
+00:39:37,910 --> 00:39:39,910
+os certos no total de casos.
+
+466
+00:39:39,910 --> 00:39:42,910
+E se nós temos esta má distribuição de casos,
+
+467
+00:39:42,910 --> 00:39:45,910
+então a métrica acura-se não é normal.
+
+468
+00:39:45,910 --> 00:39:47,910
+Já me estou a repetir forte e feio.
+
+469
+00:39:47,910 --> 00:39:49,910
+Vocês já sabem que eu estou a dizer de cerveza.
+
+470
+00:39:49,910 --> 00:39:51,910
+Papá, papá, papá.
+
+471
+00:39:51,910 --> 00:39:53,910
+Vocês têm que otimiza-se a sua treino,
+
+472
+00:39:53,910 --> 00:39:54,910
+o ADAM ou a SCD.
+
+473
+00:39:54,910 --> 00:39:55,910
+Bem, vamos lá.
+
+474
+00:39:55,910 --> 00:39:56,910
+Eu não sei o quê.
+
+475
+00:39:56,910 --> 00:39:57,910
+A LOS, o modelo A.
+
+476
+00:39:57,910 --> 00:39:59,910
+Esta parte, por acaso, aqui,
+
+477
+00:39:59,910 --> 00:40:01,910
+o Gemini, deu aqui um conselho bom.
+
+478
+00:40:01,910 --> 00:40:04,910
+O otimizador de treino, como o ADAM ou o SCD,
+
+479
+00:40:04,910 --> 00:40:08,910
+que são algoritmos matemáticos de otimização,
+
+480
+00:40:08,910 --> 00:40:11,910
+vai, naturalmente, ignorar estas classes minoritárias
+
+481
+00:40:11,910 --> 00:40:13,910
+para minimizar a LOS, a LOS total.
+
+482
+00:40:13,910 --> 00:40:15,910
+Ou seja, pronto, está a explicar um bocadinho mais.
+
+483
+00:40:15,910 --> 00:40:17,910
+Ele minimiza a LOS
+
+484
+00:40:17,910 --> 00:40:20,910
+e a maneira mais barata de minimizar a LOS
+
+485
+00:40:20,910 --> 00:40:22,910
+é acertar o máximo de casos.
+
+486
+00:40:22,910 --> 00:40:24,910
+E, portanto, eu não quero saber
+
+487
+00:40:24,910 --> 00:40:26,910
+qual é a classe que ele está a otimizar com a REBA.
+
+488
+00:40:26,910 --> 00:40:28,910
+Ele não liga nada, ok?
+
+489
+00:40:28,910 --> 00:40:30,910
+Estratégias de mitigação.
+
+490
+00:40:30,910 --> 00:40:32,910
+Eu estou aqui a ferver para chegar aqui.
+
+491
+00:40:32,910 --> 00:40:40,450
+Como é que vamos tentar tornar isto um bocadinho mais robusto?
+
+492
+00:40:40,450 --> 00:40:44,450
+O outro número um, data-augmentation.
+
+493
+00:40:44,450 --> 00:40:48,450
+Eu já falei ativar-e às vezes na necessidade de termos dados.
+
+494
+00:40:48,450 --> 00:40:50,450
+Idealmente, vamos aos dados.
+
+495
+00:40:50,450 --> 00:40:52,450
+É super importante termos dados.
+
+496
+00:40:52,450 --> 00:40:56,450
+Nem sempre é passível de termos dados.
+
+497
+00:40:56,450 --> 00:40:58,450
+Ou seja, não temos menos dados.
+
+498
+00:40:58,450 --> 00:41:02,450
+Não temos capacidade para os recolher.
+
+499
+00:41:02,450 --> 00:41:05,450
+É caro.
+
+500
+00:41:05,450 --> 00:41:08,450
+Estamos com preguiça.
+
+501
+00:41:08,450 --> 00:41:11,450
+E acreditem, este é um fator
+
+502
+00:41:11,450 --> 00:41:13,450
+que acaba por ser bom.
+
+503
+00:41:13,450 --> 00:41:16,450
+Às vezes nós temos preguiça de recolher dados.
+
+504
+00:41:16,450 --> 00:41:18,450
+Eu tive um aluno
+
+505
+00:41:18,450 --> 00:41:20,450
+que estávamos a fazer um sistema de desabitecção roda biária,
+
+506
+00:41:20,450 --> 00:41:24,450
+que na altura usava cimento, usava sagiolo e tal.
+
+507
+00:41:24,450 --> 00:41:26,450
+Mas, portanto, queríamos treinar,
+
+508
+00:41:26,450 --> 00:41:28,450
+tentar uma série de coisas, matrículas,
+
+509
+00:41:28,450 --> 00:41:30,450
+extrairados de matrículas,
+
+510
+00:41:30,450 --> 00:41:32,450
+fazer inferências de velocidades e tal.
+
+511
+00:41:32,450 --> 00:41:34,450
+Queríamos fazer isto no porto.
+
+512
+00:41:34,450 --> 00:41:35,450
+Era o aluno.
+
+513
+00:41:35,450 --> 00:41:36,450
+Andamos a empurrar um pouco.
+
+514
+00:41:36,450 --> 00:41:37,450
+Nunca fomos.
+
+515
+00:41:37,450 --> 00:41:39,450
+Nunca fizemos ligar à GNR,
+
+516
+00:41:39,450 --> 00:41:41,450
+à abrigada de trânsito,
+
+517
+00:41:41,450 --> 00:41:43,450
+a perguntar se podíamos recolher imagens na via pública.
+
+518
+00:41:43,450 --> 00:41:45,450
+Andamos e andamos e passou-se um ano.
+
+519
+00:41:45,450 --> 00:41:47,450
+Ela acabou até a semestrada.
+
+520
+00:41:47,450 --> 00:41:49,450
+E ele fez um data set com,
+
+521
+00:41:49,450 --> 00:41:51,450
+para lá, nem sem carros.
+
+522
+00:41:51,450 --> 00:41:53,450
+E acabou por ser o trabalho dele.
+
+523
+00:41:53,450 --> 00:41:55,450
+No dia das fezes eu estava todo contento.
+
+524
+00:41:55,450 --> 00:41:57,450
+Tevam resultados incríveis.
+
+525
+00:41:57,450 --> 00:41:59,450
+As imagens tinham muita qualidade.
+
+526
+00:41:59,450 --> 00:42:01,450
+E, na realidade, eu estava muito triste,
+
+527
+00:42:01,450 --> 00:42:03,450
+porque dizia para a Valdeiro,
+
+528
+00:42:03,450 --> 00:42:05,450
+portanto, atenção que a nossa,
+
+529
+00:42:05,450 --> 00:42:07,450
+o esforço humano cansa.
+
+530
+00:42:07,450 --> 00:42:09,450
+E eu acho que agora, neste tempo, ainda mais.
+
+531
+00:42:09,450 --> 00:42:11,450
+Nós vamos começar a ser muito mais.
+
+532
+00:42:11,450 --> 00:42:13,450
+Ah, mas vou fazer isto com a Iá.
+
+533
+00:42:13,450 --> 00:42:14,450
+Vou estimar com a Iá.
+
+534
+00:42:14,450 --> 00:42:16,450
+Eu dou comigo a fazer isto com frequência.
+
+535
+00:42:16,450 --> 00:42:18,450
+A geração de data setes sintéticos, aqui,
+
+536
+00:42:18,450 --> 00:42:20,450
+são para fazer umas experiências,
+
+537
+00:42:20,450 --> 00:42:22,450
+mas depois alguém, em algum momento,
+
+538
+00:42:22,450 --> 00:42:24,450
+vai ter que ir, desculpem a brincadeira,
+
+539
+00:42:24,450 --> 00:42:26,450
+minerar cenas para a África.
+
+540
+00:42:26,450 --> 00:42:28,450
+Ou seja, estou a brincar.
+
+541
+00:42:28,450 --> 00:42:29,450
+Era minerar ouro.
+
+542
+00:42:29,450 --> 00:42:30,450
+Neste caso, é minerar.
+
+543
+00:42:30,450 --> 00:42:32,450
+Dados a sério, é trabalhar-os
+
+544
+00:42:32,450 --> 00:42:35,450
+e buscar-os, medir-os e processá-los todos.
+
+545
+00:42:35,450 --> 00:42:37,450
+Que é caro.
+
+546
+00:42:37,450 --> 00:42:39,450
+Vejam o que está a acontecer com a
+
+547
+00:42:39,450 --> 00:42:41,450
+Estados Unidos e a China, que estão a gastar
+
+548
+00:42:41,450 --> 00:42:43,450
+muitos de dinheiro.
+
+549
+00:42:43,450 --> 00:42:45,450
+Outro dia, vi um vídeo de uma senhora no Brasil
+
+550
+00:42:45,450 --> 00:42:47,450
+a fazer as tarefas domésticas,
+
+551
+00:42:47,450 --> 00:42:49,450
+domésticas como os 50 action camps
+
+552
+00:42:49,450 --> 00:42:51,450
+associadas ao corpo.
+
+553
+00:42:51,450 --> 00:42:53,450
+E eu disse, ah, paga-me tanto para fazer isto.
+
+554
+00:42:53,450 --> 00:42:55,450
+Isto é até engraçado e não sei o quê.
+
+555
+00:42:55,450 --> 00:42:57,450
+Ela está a ser treinada para treinar o robôs
+
+556
+00:42:57,450 --> 00:42:59,450
+que venhei agora a seguir.
+
+557
+00:42:59,450 --> 00:43:01,450
+Tanto a gravar aquilo tudo, para a seguir
+
+558
+00:43:01,450 --> 00:43:03,450
+anotarem aquelas data setes todas
+
+559
+00:43:03,450 --> 00:43:05,450
+e treinarem aquela robótica toda.
+
+560
+00:43:05,450 --> 00:43:07,450
+No teste, era uma.
+
+561
+00:43:07,450 --> 00:43:09,450
+Há uns tempos, também, vi umas coisas na China
+
+562
+00:43:09,450 --> 00:43:11,450
+que estavam a tudo. Andava lá os gajos de câmaras
+
+563
+00:43:11,450 --> 00:43:13,450
+em tudo a gravar. E o que estamos a fazer
+
+564
+00:43:13,450 --> 00:43:15,450
+é caríssimo pagar as pessoas
+
+565
+00:43:15,450 --> 00:43:17,450
+para dar a recolhida.
+
+566
+00:43:17,450 --> 00:43:19,450
+Data augmentation é uma maneira simples.
+
+567
+00:43:19,450 --> 00:43:22,450
+Ou seja, são técnicas de repetição
+
+568
+00:43:22,450 --> 00:43:24,450
+e, por acaso, não pôs aqui nenhuma imagem.
+
+569
+00:43:24,450 --> 00:43:26,450
+Mas o data augmentation
+
+570
+00:43:26,450 --> 00:43:28,450
+são dados sintéticos.
+
+571
+00:43:28,450 --> 00:43:30,450
+Ou seja, nós fazemos a partir de dados reais.
+
+572
+00:43:30,450 --> 00:43:32,450
+Nós introduzimos pequenas variações.
+
+573
+00:43:32,450 --> 00:43:34,450
+Imaginem, se forem dados tabulares de sensores,
+
+574
+00:43:34,450 --> 00:43:36,450
+nós podemos introduzir
+
+575
+00:43:36,450 --> 00:43:38,450
+um offset nos dados
+
+576
+00:43:38,450 --> 00:43:40,450
+numa variável.
+
+577
+00:43:40,450 --> 00:43:42,450
+Offsets, por exemplo,
+
+578
+00:43:42,450 --> 00:43:44,450
+um positivo, outro negativo,
+
+579
+00:43:44,450 --> 00:43:46,450
+outra variável.
+
+580
+00:43:46,450 --> 00:43:48,450
+Podemos introduzir até um bocadinho
+
+581
+00:43:48,450 --> 00:43:50,450
+de um certo tipo de recolhida.
+
+582
+00:43:50,450 --> 00:43:52,450
+Podemos fazer
+
+583
+00:43:52,450 --> 00:43:54,450
+zumbos
+
+584
+00:43:54,450 --> 00:43:56,450
+para dentro e zumbos para fora
+
+585
+00:43:56,450 --> 00:43:58,450
+na imagem e usar essa imagem.
+
+586
+00:43:58,450 --> 00:44:00,450
+Podemos fazer translações,
+
+587
+00:44:00,450 --> 00:44:02,450
+rotações da imagem.
+
+588
+00:44:02,450 --> 00:44:04,450
+Podemos somar offset
+
+589
+00:44:04,450 --> 00:44:06,450
+às imagens e remover.
+
+590
+00:44:06,450 --> 00:44:08,450
+Podemos até por alguns offsets
+
+591
+00:44:08,450 --> 00:44:10,450
+mais ou menos linear sobre as imagens.
+
+592
+00:44:10,450 --> 00:44:12,450
+Ou seja, essencialmente nós
+
+593
+00:44:12,450 --> 00:44:14,450
+criamos derivações da imagem original
+
+594
+00:44:14,450 --> 00:44:16,450
+para
+
+595
+00:44:16,450 --> 00:44:18,450
+termos mais imagens.
+
+596
+00:44:18,450 --> 00:44:20,450
+Podemos fazer isso sobre um data set
+
+597
+00:44:20,450 --> 00:44:22,450
+todo. Podemos fazer
+
+598
+00:44:22,450 --> 00:44:24,450
+maioritariamente sobre uma classe.
+
+599
+00:44:24,450 --> 00:44:26,450
+Entretanto, quanto a uma classe
+
+600
+00:44:26,450 --> 00:44:28,450
+sobre-representada, normalmente
+
+601
+00:44:28,450 --> 00:44:30,450
+tendemos a fazer mais data augmentation
+
+602
+00:44:30,450 --> 00:44:32,450
+sobre a classe
+
+603
+00:44:32,450 --> 00:44:34,450
+que está sobre-representada.
+
+604
+00:44:34,450 --> 00:44:36,450
+Eu tenho dois sentimentos sobre isso,
+
+605
+00:44:36,450 --> 00:44:38,450
+daquilo que é a minha experiência,
+
+606
+00:44:38,450 --> 00:44:40,450
+que também não é super grande,
+
+607
+00:44:40,450 --> 00:44:42,450
+mas é assim, o data augmentation funciona,
+
+608
+00:44:42,450 --> 00:44:44,450
+porque o mundo provou que ele funciona.
+
+609
+00:44:44,450 --> 00:44:46,450
+Eu, pessoalmente, não acho assim a coisa
+
+610
+00:44:46,450 --> 00:44:48,450
+de um mundo. Por quê? Porque nós estamos a falciar.
+
+611
+00:44:48,450 --> 00:44:50,450
+Estamos a gerar
+
+612
+00:44:50,450 --> 00:44:52,450
+variações nas imagens
+
+613
+00:44:52,450 --> 00:44:54,450
+que, maioritariamente, são irrelevantes.
+
+614
+00:44:54,450 --> 00:44:56,450
+Porque a realidade
+
+615
+00:44:56,450 --> 00:44:58,450
+da imagem é uma coisa que nós não sabemos
+
+616
+00:44:58,450 --> 00:45:00,450
+a função. Que soubesse
+
+617
+00:45:00,450 --> 00:45:02,450
+não precisávamos do classificador,
+
+618
+00:45:02,450 --> 00:45:04,450
+mas eu estou a dizer isto
+
+619
+00:45:04,450 --> 00:45:06,450
+a minha experiência de, sei lá, umas 10
+
+620
+00:45:06,450 --> 00:45:08,450
+ou 20 experiências que fiscam isto.
+
+621
+00:45:08,450 --> 00:45:10,450
+Não foram nada extraordinárias,
+
+622
+00:45:10,450 --> 00:45:12,450
+tirando um aluno nosso
+
+623
+00:45:12,450 --> 00:45:14,450
+que fez para lá, andou a testar, não sei quantas,
+
+624
+00:45:14,450 --> 00:45:16,450
+e abriu uma catéria fixe,
+
+625
+00:45:16,450 --> 00:45:18,450
+para aquilo que o relacionava a alguma coisa lá que está-se,
+
+626
+00:45:18,450 --> 00:45:20,450
+e era interessante.
+
+627
+00:45:20,450 --> 00:45:22,450
+Mas, de resto, não foi. Mas o mundo prova contrário.
+
+628
+00:45:22,450 --> 00:45:24,450
+Há vários trabalhos com o data augmentation
+
+629
+00:45:24,450 --> 00:45:26,450
+que funcionaram bem, e há problemas
+
+630
+00:45:26,450 --> 00:45:28,450
+que foram desblovidos por isso.
+
+631
+00:45:28,450 --> 00:45:30,450
+Portanto, considera-se sempre o data augmentation.
+
+632
+00:45:30,450 --> 00:45:32,450
+Já agora, desde Scikit-Lug, até
+
+633
+00:45:32,450 --> 00:45:34,450
+PyTorch, TensorFlow
+
+634
+00:45:34,450 --> 00:45:36,450
+e o
+
+635
+00:45:36,450 --> 00:45:38,450
+TensorFlow Lite, que agora é o
+
+636
+00:45:38,450 --> 00:45:40,450
+R, vou ver como é que ele se chama,
+
+637
+00:45:40,450 --> 00:45:43,920
+é o
+
+638
+00:45:43,920 --> 00:45:45,920
+LITRD.
+
+639
+00:45:45,920 --> 00:45:47,920
+LITRD, exatamente.
+
+640
+00:45:47,920 --> 00:45:49,920
+O LITRD
+
+641
+00:45:49,920 --> 00:45:51,920
+todos têm. Eu não fui confirmar no LITRD,
+
+642
+00:45:51,920 --> 00:45:53,920
+mas tenho certeza
+
+643
+00:45:53,920 --> 00:45:55,920
+que o data augmentation, se não tiveram,
+
+644
+00:45:55,920 --> 00:45:57,920
+outros fazem o data augmentation
+
+645
+00:45:57,920 --> 00:45:59,920
+e trazem os dados para isto outra vez e fazem.
+
+646
+00:45:59,920 --> 00:46:01,920
+Depois, a regularização.
+
+647
+00:46:01,920 --> 00:46:03,920
+A regularização é uma penalização matemática explícita
+
+648
+00:46:03,920 --> 00:46:05,920
+contra a certeza
+
+649
+00:46:05,920 --> 00:46:07,920
+excessiva nas previsões.
+
+650
+00:46:07,920 --> 00:46:09,920
+Ou seja,
+
+651
+00:46:09,920 --> 00:46:11,920
+são técnicas que penalizam ativamente
+
+652
+00:46:11,920 --> 00:46:13,920
+um demasiado nos seus óculos,
+
+653
+00:46:13,920 --> 00:46:15,920
+que é um bocadinho forçar
+
+654
+00:46:15,920 --> 00:46:17,920
+a rede a pensar,
+
+655
+00:46:17,920 --> 00:46:19,920
+é dificultar. Uma das coisas interessantes
+
+656
+00:46:19,920 --> 00:46:21,920
+de fazer, que é dificultar
+
+657
+00:46:21,920 --> 00:46:23,920
+o treino.
+
+658
+00:46:23,920 --> 00:46:25,920
+Aumentar
+
+659
+00:46:25,920 --> 00:46:27,920
+o número de épocas,
+
+660
+00:46:27,920 --> 00:46:29,920
+introduzir alguns ruídos nos dados,
+
+661
+00:46:29,920 --> 00:46:31,920
+também é uma coisa que se faz.
+
+662
+00:46:31,920 --> 00:46:33,920
+Difficultar o treino e a regularização
+
+663
+00:46:33,920 --> 00:46:35,920
+é uma das formas de o fazer.
+
+664
+00:46:35,920 --> 00:46:37,920
+Em qualquer caso, podia ter traduzido mais coisas sobre a regularização.
+
+665
+00:46:37,920 --> 00:46:39,920
+Mas
+
+666
+00:46:39,920 --> 00:46:41,920
+coisas que existem.
+
+667
+00:46:41,920 --> 00:46:43,920
+Uma coisa que é ótima
+
+668
+00:46:43,920 --> 00:46:45,920
+e é fácil perceber, é o treino contínuo.
+
+669
+00:46:45,920 --> 00:46:47,920
+Ou seja, vamos adaptando
+
+670
+00:46:47,920 --> 00:46:49,920
+os pedos,
+
+671
+00:46:49,920 --> 00:46:51,920
+à medida que acontecem os desvios.
+
+672
+00:46:51,920 --> 00:46:53,920
+Ou seja, vamos pegando em novos dados,
+
+673
+00:46:53,920 --> 00:46:55,920
+à medida que o sistema vai
+
+674
+00:46:55,920 --> 00:46:57,920
+produzindo novos dados, vamos tratando
+
+675
+00:46:57,920 --> 00:46:59,920
+esses dados para os otimizar,
+
+676
+00:46:59,920 --> 00:47:01,920
+vamos juntando ao nosso data sete
+
+677
+00:47:01,920 --> 00:47:03,920
+e vamos retrenar. Qual é o problema?
+
+678
+00:47:03,920 --> 00:47:05,920
+Se nós temos uma aprendizagem em offline,
+
+679
+00:47:05,920 --> 00:47:07,920
+nós vamos ter que retrenar
+
+680
+00:47:07,920 --> 00:47:09,920
+o modelo que um data sete cada vez maior,
+
+681
+00:47:09,920 --> 00:47:11,920
+cada vez com mais conceitos
+
+682
+00:47:11,920 --> 00:47:13,920
+e,
+
+683
+00:47:13,920 --> 00:47:15,920
+se isso é válido para um computador
+
+684
+00:47:15,920 --> 00:47:17,920
+doeda poderoso, já pode não ser tão
+
+685
+00:47:17,920 --> 00:47:19,920
+válido para
+
+686
+00:47:19,920 --> 00:47:21,920
+um Raspberry Pi, porque a certa altura
+
+687
+00:47:21,920 --> 00:47:23,920
+o modelo de inferência começa a ficar
+
+688
+00:47:23,920 --> 00:47:25,920
+maior e mais completo.
+
+689
+00:47:25,920 --> 00:47:27,920
+O número de parâmetros é o mesmo,
+
+690
+00:47:27,920 --> 00:47:29,920
+mas a certa altura,
+
+691
+00:47:29,920 --> 00:47:31,920
+a quantidade de parâmetros que o modelo tem
+
+692
+00:47:31,920 --> 00:47:33,920
+pode já não ser suficiente.
+
+693
+00:47:33,920 --> 00:47:35,920
+Ele pode, ele pode,
+
+694
+00:47:35,920 --> 00:47:37,920
+ele pode começar a degradar
+
+695
+00:47:37,920 --> 00:47:39,920
+e nós podemos começar a perceber
+
+696
+00:47:39,920 --> 00:47:41,920
+que, se calhar para
+
+697
+00:47:41,920 --> 00:47:43,920
+a dimensão do data sete e tudo que ela
+
+698
+00:47:43,920 --> 00:47:45,920
+tem dentro, se calhar a solução
+
+699
+00:47:45,920 --> 00:47:47,920
+melhor é aumentar a complexidade
+
+700
+00:47:47,920 --> 00:47:49,920
+da rede, aumentando o número de parâmetros
+
+701
+00:47:49,920 --> 00:47:51,920
+e, dessa maneira, ele começa a melhorar
+
+702
+00:47:51,920 --> 00:47:53,920
+só que o problema é que, aumentando
+
+703
+00:47:53,920 --> 00:47:55,920
+o número de parâmetros,
+
+704
+00:47:55,920 --> 00:47:57,920
+aumentamos a complexidade do treino,
+
+705
+00:47:57,920 --> 00:47:59,920
+que não é problemática, pode não ser
+
+706
+00:47:59,920 --> 00:48:01,920
+feita no dispositivo embedded,
+
+707
+00:48:01,920 --> 00:48:03,920
+mas, depois em inferência,
+
+708
+00:48:03,920 --> 00:48:05,920
+começa assim, pode começar a ficar
+
+709
+00:48:05,920 --> 00:48:07,920
+pesada.
+
+710
+00:48:07,920 --> 00:48:09,920
+Já agora, na experiência que fizeram
+
+711
+00:48:09,920 --> 00:48:11,920
+no laboratório, conseguiram
+
+712
+00:48:11,920 --> 00:48:13,920
+verificar, assim, algum termo opróclin,
+
+713
+00:48:13,920 --> 00:48:15,920
+ou seja, aquilo começar a
+
+714
+00:48:15,920 --> 00:48:17,920
+emferência a ficar pesada e as
+
+715
+00:48:17,920 --> 00:48:19,920
+temperaturas subirem e ele cortar
+
+716
+00:48:19,920 --> 00:48:21,920
+a frequência da operação do Raspberry.
+
+717
+00:48:21,920 --> 00:48:23,920
+Não.
+
+718
+00:48:23,920 --> 00:48:25,920
+Não. Isso era
+
+719
+00:48:25,920 --> 00:48:27,920
+o resultado mais espectável para
+
+720
+00:48:27,920 --> 00:48:29,920
+nós, porque assim, era o que a gente
+
+721
+00:48:29,920 --> 00:48:31,920
+desejava, mas nós teríamos
+
+722
+00:48:31,920 --> 00:48:33,920
+agora, ir para cada Raspberry e nós temos
+
+723
+00:48:33,920 --> 00:48:35,920
+quatro e cinco, encontrar
+
+724
+00:48:35,920 --> 00:48:37,920
+um problema que estivesse no limite
+
+725
+00:48:37,920 --> 00:48:39,920
+da computação daquela máquina.
+
+726
+00:48:39,920 --> 00:48:41,920
+Podemos fazê-lo por memória e, se calhar
+
+727
+00:48:41,920 --> 00:48:43,920
+numa edição futura, até podemos tentar fazer.
+
+728
+00:48:43,920 --> 00:48:45,920
+Ou seja, vamos
+
+729
+00:48:45,920 --> 00:48:47,920
+aumentando a quantidade de Vata-7
+
+730
+00:48:47,920 --> 00:48:49,920
+para estourar com memória daquilo,
+
+731
+00:48:49,920 --> 00:48:51,920
+ou vamos dimensionando
+
+732
+00:48:51,920 --> 00:48:53,920
+modelos que vão aumentando de uma maneira
+
+733
+00:48:53,920 --> 00:48:55,920
+que, a certa altura,
+
+734
+00:48:55,920 --> 00:48:57,920
+em algum momento daquilo,
+
+735
+00:48:57,920 --> 00:48:59,920
+ele vai estourar com CPU e vai
+
+736
+00:48:59,920 --> 00:49:01,920
+ver exatamente, porque não tem mal,
+
+737
+00:49:01,920 --> 00:49:03,920
+porque o Raspberry tem proteções,
+
+738
+00:49:03,920 --> 00:49:05,920
+e o Linux também tem, e, portanto, não vamos
+
+739
+00:49:05,920 --> 00:49:07,920
+queimar nada, se ele vamos aquecer
+
+740
+00:49:07,920 --> 00:49:09,920
+fortemente, e ele tem enferma
+
+741
+00:49:09,920 --> 00:49:11,920
+ao trotlinho e corta a frequência
+
+742
+00:49:11,920 --> 00:49:13,920
+para se proteger.
+
+743
+00:49:13,920 --> 00:49:15,920
+Isso é o que a gente quer ver,
+
+744
+00:49:15,920 --> 00:49:17,920
+quer dizer, o que a gente quer ver aqui
+
+745
+00:49:17,920 --> 00:49:19,920
+na prática, não quer nada.
+
+746
+00:49:19,920 --> 00:49:21,920
+Pronto, o retraino.
+
+747
+00:49:21,920 --> 00:49:23,920
+Ah, para terminar, aqui mais uma coisa,
+
+748
+00:49:23,920 --> 00:49:25,920
+aqui eu não reforio, mas isto é
+
+749
+00:49:25,920 --> 00:49:27,920
+sempre interessante.
+
+750
+00:49:27,920 --> 00:49:29,920
+É muito interessante, em modos online,
+
+751
+00:49:29,920 --> 00:49:31,920
+se vocês têm
+
+752
+00:49:31,920 --> 00:49:33,920
+xifres de paradigma,
+
+753
+00:49:33,920 --> 00:49:35,920
+se vocês estão a ter
+
+754
+00:49:35,920 --> 00:49:37,920
+de gravação, etc.
+
+755
+00:49:37,920 --> 00:49:39,920
+Pronto, se forem poucos dados podem fazer
+
+756
+00:49:39,920 --> 00:49:41,920
+aumentados, de forma sintética,
+
+757
+00:49:41,920 --> 00:49:43,920
+estas técnicas de regularização
+
+758
+00:49:43,920 --> 00:49:45,920
+também se fazem, podem explorar isto.
+
+759
+00:49:45,920 --> 00:49:47,920
+O retraino, se tivermos
+
+760
+00:49:47,920 --> 00:49:49,920
+algoritmos da aprendizagem online,
+
+761
+00:49:49,920 --> 00:49:51,920
+são super interessantes, porque,
+
+762
+00:49:51,920 --> 00:49:53,920
+como o modelo já tem, nem guarda os dados,
+
+763
+00:49:53,920 --> 00:49:55,920
+à medida que os dados chegam
+
+764
+00:49:55,920 --> 00:49:57,920
+neste tipo de dispositivos de aprendizagem
+
+765
+00:49:57,920 --> 00:49:59,920
+online é fantástica,
+
+766
+00:49:59,920 --> 00:50:01,920
+mas é preciso procurar modelos que funcionem,
+
+767
+00:50:01,920 --> 00:50:03,920
+porque, e procurar
+
+768
+00:50:03,920 --> 00:50:05,920
+modelos que performem bem a este nível,
+
+769
+00:50:05,920 --> 00:50:07,920
+porque, que as vão estar a perceber,
+
+770
+00:50:07,920 --> 00:50:09,920
+estão a se retrainar e já,
+
+771
+00:50:09,920 --> 00:50:11,920
+também a fazer inferência,
+
+772
+00:50:11,920 --> 00:50:13,920
+e é importante
+
+773
+00:50:13,920 --> 00:50:15,920
+manter o que se faz no outro,
+
+774
+00:50:15,920 --> 00:50:17,920
+porque a monitorização
+
+775
+00:50:17,920 --> 00:50:19,920
+de performance do modelo
+
+776
+00:50:19,920 --> 00:50:21,920
+faça os dados que está a receber,
+
+777
+00:50:21,920 --> 00:50:23,920
+porque uma coisa que anima,
+
+778
+00:50:23,920 --> 00:50:25,920
+se eu com frequência, é alma natural
+
+779
+00:50:25,920 --> 00:50:27,920
+de gradação disto, por vários
+
+780
+00:50:27,920 --> 00:50:29,920
+motivos. Já agora isto não é para aqui,
+
+781
+00:50:29,920 --> 00:50:31,920
+mas vocês também ouvirem estes termos
+
+782
+00:50:31,920 --> 00:50:33,920
+de catastrófimo forgetting,
+
+783
+00:50:33,920 --> 00:50:35,920
+ou seja, perder conceitos,
+
+784
+00:50:35,920 --> 00:50:37,920
+com esta aprendizagem online, eu perdo
+
+785
+00:50:37,920 --> 00:50:39,920
+conceitos de uma forma directa.
+
+786
+00:50:39,920 --> 00:50:41,920
+Às vezes, eu não consigo aprender
+
+787
+00:50:41,920 --> 00:50:43,920
+novos conceitos,
+
+788
+00:50:43,920 --> 00:50:45,920
+e às vezes,
+
+789
+00:50:45,920 --> 00:50:47,920
+começa a se misturar lá no meio, portanto,
+
+790
+00:50:47,920 --> 00:50:49,920
+há uma série de coisas que podem acontecer,
+
+791
+00:50:49,920 --> 00:50:51,920
+eu confesso, desde 2020, nunca mais
+
+792
+00:50:51,920 --> 00:50:53,920
+cheguei para a aprendizagem online,
+
+793
+00:50:53,920 --> 00:50:55,920
+parei um bocado com isso,
+
+794
+00:50:55,920 --> 00:50:57,920
+mas era uma coisa muito
+
+795
+00:50:57,920 --> 00:50:59,920
+promissora, mas ainda tinha algoritmos
+
+796
+00:50:59,920 --> 00:51:01,920
+a precisar de melhorias, mas já há
+
+797
+00:51:01,920 --> 00:51:03,920
+certamente coisas boas, e agora, os LLMs
+
+798
+00:51:03,920 --> 00:51:05,920
+trouxeram muita coisa, porque os LLMs já fazem
+
+799
+00:51:05,920 --> 00:51:07,920
+muito bem contigo, quer seja,
+
+800
+00:51:07,920 --> 00:51:09,920
+por integração da RAC, nós nos vemos novos
+
+801
+00:51:09,920 --> 00:51:11,920
+conhecimentos, ele consegue expedir muito
+
+802
+00:51:11,920 --> 00:51:13,920
+com isso, quer ser por outras técnicas
+
+803
+00:51:13,920 --> 00:51:15,920
+que eu agora não conheço, mas sei que há
+
+804
+00:51:15,920 --> 00:51:17,920
+coisas que são, e eles têm muita capacidade,
+
+805
+00:51:17,920 --> 00:51:19,920
+até há uma IOLO, que acho que
+
+806
+00:51:19,920 --> 00:51:21,920
+é o IOLOE, que se chama,
+
+807
+00:51:21,920 --> 00:51:23,920
+ela já usa a parte do LLM
+
+808
+00:51:23,920 --> 00:51:25,920
+para gerar nós, ou seja,
+
+809
+00:51:25,920 --> 00:51:27,920
+para as descrições textuais que nós temos,
+
+810
+00:51:27,920 --> 00:51:29,920
+a rede consegue
+
+811
+00:51:29,920 --> 00:51:31,920
+detectar novos
+
+812
+00:51:31,920 --> 00:51:33,920
+objetos, ainda não gostei,
+
+813
+00:51:33,920 --> 00:51:35,920
+tenho um trabalho com isso, que foi terminado,
+
+814
+00:51:35,920 --> 00:51:37,920
+mas o aluno, ao final, mudou,
+
+815
+00:51:37,920 --> 00:51:39,920
+e ainda tenho que perceber como é que aqui funciona,
+
+816
+00:51:39,920 --> 00:51:41,920
+porque ele consegue realmente novos.
+
+817
+00:51:41,920 --> 00:51:43,920
+Curiosamente,
+
+818
+00:51:43,920 --> 00:51:45,920
+o problema do aluno na empresa
+
+819
+00:51:45,920 --> 00:51:47,920
+era um problema de milhares e milhares
+
+820
+00:51:47,920 --> 00:51:49,920
+de produtos, dezenas de milhares de produtos,
+
+821
+00:51:49,920 --> 00:51:51,920
+na ordem, claro, das centenas de milhares,
+
+822
+00:51:51,920 --> 00:51:53,920
+eram supermercados, para vos dizer
+
+823
+00:51:53,920 --> 00:51:55,920
+que eram supermercados, e eram todos
+
+824
+00:51:55,920 --> 00:51:57,920
+produtos supermercados,
+
+825
+00:51:57,920 --> 00:51:59,920
+e vocês fazem as contas, é fácil,
+
+826
+00:51:59,920 --> 00:52:01,920
+são estas queixas automáticas,
+
+827
+00:52:01,920 --> 00:52:03,920
+em que nós vamos lá pesar,
+
+828
+00:52:03,920 --> 00:52:05,920
+tem aquelas balanças e as câmeras,
+
+829
+00:52:05,920 --> 00:52:07,920
+e o que está a fazer
+
+830
+00:52:07,920 --> 00:52:09,920
+é procurar
+
+831
+00:52:09,920 --> 00:52:11,920
+um algoritmo
+
+832
+00:52:11,920 --> 00:52:13,920
+que seja capaz de incorporar
+
+833
+00:52:13,920 --> 00:52:15,920
+todos aqueles produtos, de uma forma
+
+834
+00:52:15,920 --> 00:52:17,920
+que seja pragmático, e sem termos
+
+835
+00:52:17,920 --> 00:52:19,920
+que estar a fazer parênteses estudensivos,
+
+836
+00:52:19,920 --> 00:52:21,920
+e uma rede tipo IOLOE,
+
+837
+00:52:21,920 --> 00:52:23,920
+que tem a questão do LLM,
+
+838
+00:52:23,920 --> 00:52:25,920
+a metido, mas não funcionou,
+
+839
+00:52:25,920 --> 00:52:27,920
+então depois fez uma coisa diferente,
+
+840
+00:52:27,920 --> 00:52:29,920
+foi um trabalho engraçado,
+
+841
+00:52:29,920 --> 00:52:31,920
+mas ainda estamos bons de resolver
+
+842
+00:52:31,920 --> 00:52:33,920
+tantos, quer dizer, eu sou só orientador
+
+843
+00:52:33,920 --> 00:52:35,920
+do IZEP,
+
+844
+00:52:35,920 --> 00:52:37,920
+mas a empresa ainda está longe de resolver isso,
+
+845
+00:52:37,920 --> 00:52:39,920
+mas o paio é gigante, porque se eles conseguirem fazer isso,
+
+846
+00:52:39,920 --> 00:52:41,920
+quem tiver essa implosência,
+
+847
+00:52:41,920 --> 00:52:43,920
+o ar do air já está dominado,
+
+848
+00:52:43,920 --> 00:52:45,920
+há várias empresas a fazê-lo,
+
+849
+00:52:45,920 --> 00:52:47,920
+mas o primeiro a ter isso,
+
+850
+00:52:47,920 --> 00:52:49,920
+vai ter todos os panmarcares à procura dele,
+
+851
+00:52:49,920 --> 00:52:51,920
+porque imaginem o que é, vocês terem uma caixa automática,
+
+852
+00:52:51,920 --> 00:52:53,920
+que detecta todos os produtos,
+
+853
+00:52:53,920 --> 00:52:55,920
+que confronta tudo com validados,
+
+854
+00:52:55,920 --> 00:52:57,920
+que cruda todos os
+
+855
+00:52:57,920 --> 00:52:59,920
+pesos navazedados,
+
+856
+00:52:59,920 --> 00:53:01,920
+que verifica
+
+857
+00:53:01,920 --> 00:53:03,920
+tem duas ou mais câmeras,
+
+858
+00:53:03,920 --> 00:53:05,920
+neste momento está a dar de ser duas,
+
+859
+00:53:05,920 --> 00:53:07,920
+e verifica todos
+
+860
+00:53:07,920 --> 00:53:09,920
+os gestos na pessoa,
+
+861
+00:53:09,920 --> 00:53:11,920
+verifica inclusive
+
+862
+00:53:11,920 --> 00:53:13,920
+realmente a pessoa,
+
+863
+00:53:13,920 --> 00:53:15,920
+se por acaso tem volumes que possam indicar roubos,
+
+864
+00:53:15,920 --> 00:53:17,920
+etc, etc,
+
+865
+00:53:17,920 --> 00:53:19,920
+quando isso estiver resolvido,
+
+866
+00:53:19,920 --> 00:53:21,920
+isso é um mercado eterno,
+
+867
+00:53:21,920 --> 00:53:23,920
+entretanto, não é eterno, porque
+
+868
+00:53:23,920 --> 00:53:25,920
+se calhar depois o modelo de uma vossa muda completamente,
+
+869
+00:53:25,920 --> 00:53:27,920
+e aqui é o
+
+870
+00:53:27,920 --> 00:53:29,920
+automata de checkout,
+
+871
+00:53:29,920 --> 00:53:31,920
+deixa de coisar,
+
+872
+00:53:31,920 --> 00:53:33,920
+desculpem que já estou a
+
+873
+00:53:33,920 --> 00:53:35,920
+derivar em excesso,
+
+874
+00:53:35,920 --> 00:53:37,920
+pronto, duas coisas,
+
+875
+00:53:37,920 --> 00:53:39,920
+devem haver mais coisas,
+
+876
+00:53:39,920 --> 00:53:41,920
+eu acho que são coisas que se podem fazer.
+
+877
+00:53:43,920 --> 00:53:45,920
+Quando nós temos a possibilidade
+
+878
+00:53:45,920 --> 00:53:47,920
+de termos de gravação em sistemas físicos,
+
+879
+00:53:47,920 --> 00:53:49,920
+eu posto aqui propositivamente um quadro eléctrico,
+
+880
+00:53:49,920 --> 00:53:51,920
+com um PLC, com variadores,
+
+881
+00:53:51,920 --> 00:53:53,920
+não variadores,
+
+882
+00:53:53,920 --> 00:53:55,920
+eu tenho uma extensão, o variador não está aqui,
+
+883
+00:53:55,920 --> 00:53:57,920
+mas pronto, temos aqui um quadro eléctrico,
+
+884
+00:53:57,920 --> 00:53:59,920
+devemos,
+
+885
+00:53:59,920 --> 00:54:01,920
+e temos sistemas que são de alguma forma
+
+886
+00:54:01,920 --> 00:54:03,920
+críticos ou muito importantes,
+
+887
+00:54:03,920 --> 00:54:05,920
+temos que fazer duas coisas,
+
+888
+00:54:05,920 --> 00:54:07,920
+safety guard,
+
+889
+00:54:07,920 --> 00:54:09,920
+ou seja,
+
+890
+00:54:09,920 --> 00:54:11,920
+nós temos a nossa IA funcionar,
+
+891
+00:54:11,920 --> 00:54:13,920
+mas estamos sempre a ver
+
+892
+00:54:13,920 --> 00:54:15,920
+como é que isto se está a comportar,
+
+893
+00:54:15,920 --> 00:54:17,920
+se ela começar a asnear,
+
+894
+00:54:17,920 --> 00:54:19,920
+nós temos que agir,
+
+895
+00:54:19,920 --> 00:54:21,920
+pronto, tudo o que é
+
+896
+00:54:21,920 --> 00:54:23,920
+IA em sistemas ciberfísicos,
+
+897
+00:54:23,920 --> 00:54:25,920
+ou não só também,
+
+898
+00:54:25,920 --> 00:54:27,920
+a inteligência produtiva,
+
+899
+00:54:27,920 --> 00:54:29,920
+nunca deve atuar diretamente sem supervisão,
+
+900
+00:54:29,920 --> 00:54:31,920
+temos que construir modelos
+
+901
+00:54:31,920 --> 00:54:33,920
+encastrados em safety guard,
+
+902
+00:54:33,920 --> 00:54:35,920
+que é o que eu falo aqui,
+
+903
+00:54:35,920 --> 00:54:37,920
+com programados,
+
+904
+00:54:37,920 --> 00:54:39,920
+com o código determinista,
+
+905
+00:54:39,920 --> 00:54:41,920
+FIFS, ELSES, AIRES, etc.,
+
+906
+00:54:41,920 --> 00:54:43,920
+ou com PLCs, como eu tenho aqui,
+
+907
+00:54:43,920 --> 00:54:45,920
+isto é super importante,
+
+908
+00:54:45,920 --> 00:54:47,920
+porque nós não podemos ter um transilvador,
+
+909
+00:54:47,920 --> 00:54:49,920
+uma máquina
+
+910
+00:54:49,920 --> 00:54:51,920
+a atuar um robo a atuar
+
+911
+00:54:51,920 --> 00:54:53,920
+e a tomar decisões em tempo real,
+
+912
+00:54:53,920 --> 00:54:55,920
+com operadores da CAIT,
+
+913
+00:54:55,920 --> 00:54:57,920
+dentro da jaula,
+
+914
+00:54:57,920 --> 00:54:59,920
+porque de repente ele toma uma decisão completamente
+
+915
+00:54:59,920 --> 00:55:01,920
+fora daquilo que é esperado,
+
+916
+00:55:01,920 --> 00:55:03,920
+e podemos ter
+
+917
+00:55:03,920 --> 00:55:05,920
+um problema grave,
+
+918
+00:55:05,920 --> 00:55:07,920
+de ferir de uma pessoa ou matar uma pessoa.
+
+919
+00:55:07,920 --> 00:55:09,920
+Eu trabalhei numa obra
+
+920
+00:55:09,920 --> 00:55:11,920
+onde tinha morrido um senhor há muitos anos,
+
+921
+00:55:11,920 --> 00:55:13,920
+porque entrou numa gaiola
+
+922
+00:55:13,920 --> 00:55:15,920
+de um robô,
+
+923
+00:55:15,920 --> 00:55:17,920
+e ele fazia sempre o mesmo tipo
+
+924
+00:55:17,920 --> 00:55:19,920
+de operação,
+
+925
+00:55:19,920 --> 00:55:21,920
+e na realidade o que aconteceu
+
+926
+00:55:21,920 --> 00:55:23,920
+é que quando ele abriu a gaiola,
+
+927
+00:55:23,920 --> 00:55:25,920
+o robô estava programado
+
+928
+00:55:25,920 --> 00:55:27,920
+para fazer um retorno mais lento,
+
+929
+00:55:27,920 --> 00:55:29,920
+e ele foi por ali, nunca tinha visto aquela coisa,
+
+930
+00:55:29,920 --> 00:55:31,920
+e levou o robô aqui para na cena brutal,
+
+931
+00:55:31,920 --> 00:55:33,920
+tinha morrido passado umas horas,
+
+932
+00:55:33,920 --> 00:55:35,920
+e, portanto, muito cuidado
+
+933
+00:55:35,920 --> 00:55:37,920
+com estas coisas.
+
+934
+00:55:37,920 --> 00:55:39,920
+E a atenção, ali era programação determinística,
+
+935
+00:55:39,920 --> 00:55:41,920
+mas com e a, isto pode acontecer.
+
+936
+00:55:41,920 --> 00:55:43,920
+Depois, além disso,
+
+937
+00:55:43,920 --> 00:55:45,920
+implementamos a degradação graciosa
+
+938
+00:55:45,920 --> 00:55:47,920
+que é o que? Sem certeza do modelo
+
+939
+00:55:47,920 --> 00:55:49,920
+subir acima de um terto liminar
+
+940
+00:55:49,920 --> 00:55:51,920
+ou se a sua performance
+
+941
+00:55:51,920 --> 00:55:53,920
+vai achar abaixo de algo,
+
+942
+00:55:53,920 --> 00:55:55,920
+porque ela, se no fundo, está a trabalhar
+
+943
+00:55:55,920 --> 00:55:57,920
+com um problema ou com dados que estão
+
+944
+00:55:57,920 --> 00:55:59,920
+fora daquilo que era
+
+945
+00:55:59,920 --> 00:56:01,920
+a distribuição normal da coisa,
+
+946
+00:56:01,920 --> 00:56:03,920
+o sistema desliga,
+
+947
+00:56:03,920 --> 00:56:05,920
+aia e devolve um controle, um sistema
+
+948
+00:56:05,920 --> 00:56:07,920
+heurista de qualquer básico, e avisa a atenção
+
+949
+00:56:07,920 --> 00:56:09,920
+que nós estamos a operar num sistema diferente
+
+950
+00:56:09,920 --> 00:56:11,920
+ou, se possível,
+
+951
+00:56:11,920 --> 00:56:13,920
+regressa a modo manual.
+
+952
+00:56:13,920 --> 00:56:15,920
+Para o modo manual daqui a uns tempos, acho que vai ser possível
+
+953
+00:56:15,920 --> 00:56:17,920
+o que nós não vamos ter pessoas
+
+954
+00:56:17,920 --> 00:56:19,920
+aqui a fazer estas coisas.
+
+955
+00:56:19,920 --> 00:56:21,920
+Ninguém vai ter a média operar as pessoas lá,
+
+956
+00:56:21,920 --> 00:56:23,920
+quer dizer, não sei,
+
+957
+00:56:23,920 --> 00:56:25,920
+ou se houver um nível de falhas que seja suficiente,
+
+958
+00:56:25,920 --> 00:56:27,920
+se calhar a competência pelas pessoas,
+
+959
+00:56:27,920 --> 00:56:29,920
+se calhar aqui, portanto,
+
+960
+00:56:29,920 --> 00:56:31,920
+se eu fico igual, não deixar aí a
+
+961
+00:56:31,920 --> 00:56:33,920
+estar a trabalhar à vontade X
+
+962
+00:56:33,920 --> 00:56:35,920
+e poder fazer as negras e continuar para ali fora
+
+963
+00:56:35,920 --> 00:56:37,920
+e, sobre uma degradação,
+
+964
+00:56:37,920 --> 00:56:39,920
+a gente forma gracioso
+
+965
+00:56:39,920 --> 00:56:41,920
+para tirar-lhe o controle
+
+966
+00:56:41,920 --> 00:56:43,920
+e ir retoma a coisa.
+
+967
+00:56:43,920 --> 00:56:45,920
+É o que temos que fazer para agora.
+
+968
+00:56:45,920 --> 00:56:47,920
+Querem ver um exemplo
+
+969
+00:56:47,920 --> 00:56:49,920
+de, ou menos,
+
+970
+00:56:49,920 --> 00:56:51,920
+temos que fazer muito trabalho
+
+971
+00:56:51,920 --> 00:56:53,920
+pilotar um avião de forma automática.
+
+972
+00:56:53,920 --> 00:56:55,920
+Qualquer um de nós
+
+973
+00:56:55,920 --> 00:56:57,920
+não vai querer entrar num avião
+
+974
+00:56:57,920 --> 00:56:59,920
+e saber
+
+975
+00:56:59,920 --> 00:57:01,920
+que aquilo que estão lá, meio dos aerobotadores,
+
+976
+00:57:01,920 --> 00:57:03,920
+a controlar aquilo,
+
+977
+00:57:03,920 --> 00:57:05,920
+temos que ter muita confiança naquilo
+
+978
+00:57:05,920 --> 00:57:07,920
+para até
+
+979
+00:57:07,920 --> 00:57:09,920
+e ainda assim,
+
+980
+00:57:09,920 --> 00:57:11,920
+de certeza, que vai haver sistemas
+
+981
+00:57:11,920 --> 00:57:13,920
+de degradação graciosa,
+
+982
+00:57:13,920 --> 00:57:15,920
+nem que seja por ter operação do avião,
+
+983
+00:57:15,920 --> 00:57:17,920
+ou seja, ter câmeras e tal.
+
+984
+00:57:17,920 --> 00:57:19,920
+Mas, na minha vida,
+
+985
+00:57:19,920 --> 00:57:21,920
+garantidamente, como vai ser,
+
+986
+00:57:21,920 --> 00:57:23,920
+eu, acho que, enquanto for vivo,
+
+987
+00:57:23,920 --> 00:57:25,920
+perguntei pelo outro dentro dos aviões,
+
+988
+00:57:25,920 --> 00:57:27,920
+porque o pessoal tem tanto medo
+
+989
+00:57:27,920 --> 00:57:29,920
+que isso não vai acontecer.
+
+990
+00:57:29,920 --> 00:57:31,920
+Pronto.
+
+991
+00:57:31,920 --> 00:57:33,920
+Coisas aqui.
+
+992
+00:57:33,920 --> 00:57:35,920
+Acho que isso também é o que vocês já ouviram falar.
+
+993
+00:57:35,920 --> 00:57:37,920
+A mudança para,
+
+994
+00:57:37,920 --> 00:57:39,920
+ou seja,
+
+995
+00:57:39,920 --> 00:57:41,920
+dentro do dispositivo,
+
+996
+00:57:41,920 --> 00:57:43,920
+a nível do EDS e a computação local,
+
+997
+00:57:43,920 --> 00:57:45,920
+o que é que nós temos? Temos privacidade automática,
+
+998
+00:57:45,920 --> 00:57:47,920
+não é se os dados não saem do nosso dispositivo
+
+999
+00:57:47,920 --> 00:57:49,920
+e ficam lá.
+
+1000
+00:57:49,920 --> 00:57:51,920
+Há retenção, os dados não são expostos a nada
+
+1001
+00:57:51,920 --> 00:57:53,920
+e, portanto, não saem dali
+
+1002
+00:57:53,920 --> 00:57:55,920
+à partida,
+
+1003
+00:57:55,920 --> 00:57:57,920
+não vamos ter problema.
+
+1004
+00:57:57,920 --> 00:57:59,920
+Eu diga à partida, porque ainda pode haver
+
+1005
+00:57:59,920 --> 00:58:01,920
+uma infiltração no dispositivo
+
+1006
+00:58:01,920 --> 00:58:03,920
+e errou os dados.
+
+1007
+00:58:03,920 --> 00:58:05,920
+Isso é outra questão. Mas à partida,
+
+1008
+00:58:05,920 --> 00:58:07,920
+quando nós temos soberanias nos nossos dados
+
+1009
+00:58:07,920 --> 00:58:09,920
+e nós mantemos dentro das nossas instalações,
+
+1010
+00:58:09,920 --> 00:58:11,920
+estamos, mais ou menos,
+
+1011
+00:58:11,920 --> 00:58:13,920
+salvavordados.
+
+1012
+00:58:13,920 --> 00:58:15,920
+Depois, temos alguma garantia de latência.
+
+1013
+00:58:15,920 --> 00:58:17,920
+Isto,
+
+1014
+00:58:17,920 --> 00:58:19,920
+eu já minei depois de isto aqui
+
+1015
+00:58:19,920 --> 00:58:21,920
+a garantia de latência,
+
+1016
+00:58:21,920 --> 00:58:23,920
+mas, por acaso,
+
+1017
+00:58:23,920 --> 00:58:25,920
+estéssemos muito adinquestionados
+
+1018
+00:58:25,920 --> 00:58:27,920
+pelo peso das variadas, fiquem assim,
+
+1019
+00:58:27,920 --> 00:58:29,920
+garantia de latência.
+
+1020
+00:58:29,920 --> 00:58:31,920
+Sim, mas tem.
+
+1021
+00:58:31,920 --> 00:58:33,920
+Portanto, mesmo que seja um Raspberry Pi,
+
+1022
+00:58:33,920 --> 00:58:35,920
+um USB-C com alguma potência,
+
+1023
+00:58:35,920 --> 00:58:37,920
+faz as contas, nós sabemos, mais ou menos,
+
+1024
+00:58:37,920 --> 00:58:39,920
+qual é a capacidade de inferência
+
+1025
+00:58:39,920 --> 00:58:41,920
+e sabemos que, ao dentro daquilo,
+
+1026
+00:58:41,920 --> 00:58:43,920
+ele vai responder com uma determinada
+
+1027
+00:58:43,920 --> 00:58:45,920
+um máximo de latência.
+
+1028
+00:58:45,920 --> 00:58:47,920
+A internet é mais perigosa,
+
+1029
+00:58:47,920 --> 00:58:49,920
+quebra-nos no Wi-Fi, podemos ter,
+
+1030
+00:58:49,920 --> 00:58:51,920
+de uma rede, sei lá, 5G ou 4G ou 3G,
+
+1031
+00:58:51,920 --> 00:58:53,920
+e podemos ter variações
+
+1032
+00:58:53,920 --> 00:58:55,920
+e, portanto, aí, não temos tanto controle
+
+1033
+00:58:55,920 --> 00:58:57,920
+da latência e aqui temos mais controle.
+
+1034
+00:58:57,920 --> 00:58:59,920
+Acho que faz sentido, mas
+
+1035
+00:58:59,920 --> 00:59:01,920
+é curioso só porque o dispositivo
+
+1036
+00:59:01,920 --> 00:59:03,920
+é limitável e nós nunca vamos ter
+
+1037
+00:59:03,920 --> 00:59:05,920
+as velocidades que tínhamos
+
+1038
+00:59:05,920 --> 00:59:07,920
+noutros dispositivos, nomeadamente de cloud,
+
+1039
+00:59:07,920 --> 00:59:09,920
+que podemos ter, o que temos
+
+1040
+00:59:09,920 --> 00:59:11,920
+é menos dependência das comunicações,
+
+1041
+00:59:11,920 --> 00:59:13,920
+mas, pronto, se a latência
+
+1042
+00:59:13,920 --> 00:59:15,920
+que o dispositivo tenha dentro daquilo
+
+1043
+00:59:15,920 --> 00:59:17,920
+o que temos, então, temos isso.
+
+1044
+00:59:17,920 --> 00:59:19,920
+Depois, autonomia operacional
+
+1045
+00:59:19,920 --> 00:59:21,920
+é de estar tudo na nossa mão
+
+1046
+00:59:21,920 --> 00:59:23,920
+e, portanto, não temos que
+
+1047
+00:59:23,920 --> 00:59:25,920
+ter medo de falhas
+
+1048
+00:59:25,920 --> 00:59:27,920
+prolongadas de conectividade,
+
+1049
+00:59:27,920 --> 00:59:29,920
+que era o que eu já estava a dizer.
+
+1050
+00:59:29,920 --> 00:59:31,920
+Finalmente,
+
+1051
+00:59:31,920 --> 00:59:33,920
+eu acho que isso já está quase no fim,
+
+1052
+00:59:33,920 --> 00:59:35,920
+gestão de compromisso e trade-offs,
+
+1053
+00:59:35,920 --> 00:59:37,920
+foi aquilo que vocês tiveram
+
+1054
+00:59:37,920 --> 00:59:39,920
+a fazer outro dia no Raspberry.
+
+1055
+00:59:39,920 --> 00:59:41,920
+O modelo
+
+1056
+00:59:41,920 --> 00:59:43,920
+é um modelo tipicamente grande,
+
+1057
+00:59:43,920 --> 00:59:45,920
+temos que quantizar, temos que
+
+1058
+00:59:45,920 --> 00:59:47,920
+ver logo qual é a quantidade
+
+1059
+00:59:47,920 --> 00:59:49,920
+de operações, vou vos dizer
+
+1060
+00:59:49,920 --> 00:59:51,920
+o que este modelo ocupa em memória
+
+1061
+00:59:51,920 --> 00:59:53,920
+para reduzir
+
+1062
+00:59:53,920 --> 00:59:55,920
+para tamanhos
+
+1063
+00:59:55,920 --> 00:59:57,920
+mais pequenos em memória,
+
+1064
+00:59:57,920 --> 00:59:59,920
+passar 32 bit, 8 bit,
+
+1065
+00:59:59,920 --> 01:00:01,920
+o que for uma imensa memória, logo
+
+1066
+01:00:01,920 --> 01:00:03,920
+com um quarto e, depois,
+
+1067
+01:00:03,920 --> 01:00:05,920
+falar que em perúneno estrutural. O perúneno
+
+1068
+01:00:05,920 --> 01:00:07,920
+não é para todos os modelos, mas, por exemplo,
+
+1069
+01:00:07,920 --> 01:00:09,920
+nas artes de decisão, o perúneno é uma coisa que se faz
+
+1070
+01:00:09,920 --> 01:00:11,920
+e reduzimos significativamente
+
+1071
+01:00:11,920 --> 01:00:13,920
+o tamanho do modelo, que embora
+
+1072
+01:00:13,920 --> 01:00:15,920
+controlemos durante o processo de perúneno,
+
+1073
+01:00:15,920 --> 01:00:17,920
+qual é a perda
+
+1074
+01:00:17,920 --> 01:00:19,920
+de desempenho que ele tem, e a nível
+
+1075
+01:00:19,920 --> 01:00:21,920
+da ESVC, isto é
+
+1076
+01:00:21,920 --> 01:00:23,920
+super interessante. O perúneno,
+
+1077
+01:00:23,920 --> 01:00:25,920
+para uma rede de, para uma
+
+1078
+01:00:25,920 --> 01:00:27,920
+artes de decisão, para um
+
+1079
+01:00:27,920 --> 01:00:29,920
+Raspberry Pi, não é muito significativo,
+
+1080
+01:00:29,920 --> 01:00:31,920
+não acho que seja um caso que seja muito
+
+1081
+01:00:31,920 --> 01:00:33,920
+preciso, já se for um bug em
+
+1082
+01:00:33,920 --> 01:00:35,920
+com 200 ou 300 ou 500 anos a artes de decisão,
+
+1083
+01:00:35,920 --> 01:00:37,920
+já pode fazer a diferença.
+
+1084
+01:00:37,920 --> 01:00:39,920
+Portanto, me desculpe
+
+1085
+01:00:39,920 --> 01:00:41,920
+um bug em um Random Forest. Um
+
+1086
+01:00:41,920 --> 01:00:43,920
+Random Forest é um bug em
+
+1087
+01:00:43,920 --> 01:00:45,920
+de decision trees. Eu não estava a dizer
+
+1088
+01:00:45,920 --> 01:00:47,920
+mal, só que estava ao termo incorreto. Um bug
+
+1089
+01:00:47,920 --> 01:00:49,920
+em de decision trees é um
+
+1090
+01:00:49,920 --> 01:00:51,920
+Random Forest.
+
+1091
+01:00:51,920 --> 01:00:53,920
+E, portanto, é um modelo
+
+1092
+01:00:53,920 --> 01:00:55,920
+que é muito mais robusto, muito mais
+
+1093
+01:00:55,920 --> 01:00:57,920
+imuna, ruídos e, tipicamente,
+
+1094
+01:00:57,920 --> 01:00:59,920
+até com desempenhos melhores
+
+1095
+01:00:59,920 --> 01:01:01,920
+e usar o perúneno é interessante.
+
+1096
+01:01:01,920 --> 01:01:03,920
+Mas, aí, pode ter mais agora o marmo
+
+1097
+01:01:03,920 --> 01:01:05,920
+só, não é grave, porque o marmo são eficiances.
+
+1098
+01:01:05,920 --> 01:01:07,920
+Não é difícil.
+
+1099
+01:01:07,920 --> 01:01:09,920
+É o sinalamento da latência, o limite
+
+1100
+01:01:09,920 --> 01:01:11,920
+mais aceitável de ciclos de relógio para
+
+1101
+01:01:11,920 --> 01:01:13,920
+garantir segurança na atuação.
+
+1102
+01:01:13,920 --> 01:01:15,920
+Ou seja, é, no fundo, nós termos
+
+1103
+01:01:15,920 --> 01:01:17,920
+uma noção do peso do modelo
+
+1104
+01:01:17,920 --> 01:01:19,920
+e, mais ou menos,
+
+1105
+01:01:19,920 --> 01:01:21,920
+quanto o modelo demora
+
+1106
+01:01:21,920 --> 01:01:23,920
+a correr.
+
+1107
+01:01:23,920 --> 01:01:25,920
+Portanto, podemos compreender aquilo em
+
+1108
+01:01:25,920 --> 01:01:27,920
+ciclos de relógio e termos
+
+1109
+01:01:27,920 --> 01:01:29,920
+uma estimativa de tempos médios e
+
+1110
+01:01:29,920 --> 01:01:31,920
+tempos máximos.
+
+1111
+01:01:31,920 --> 01:01:33,920
+Isto são coisas muito queridas
+
+1112
+01:01:33,920 --> 01:01:35,920
+às pessoas do grupo com que trabalhamos,
+
+1113
+01:01:35,920 --> 01:01:37,920
+de muitos anos.
+
+1114
+01:01:37,920 --> 01:01:39,920
+Estimação de, se passem mais operativos
+
+1115
+01:01:39,920 --> 01:01:41,920
+tempo real e estas questões.
+
+1116
+01:01:41,920 --> 01:01:43,920
+Portanto, o orçamento de latência é uma coisa
+
+1117
+01:01:43,920 --> 01:01:45,920
+super interessante quando nós temos,
+
+1118
+01:01:45,920 --> 01:01:47,920
+queremos dar garantias
+
+1119
+01:01:47,920 --> 01:01:49,920
+de comprimento
+
+1120
+01:01:49,920 --> 01:01:51,920
+dos turquesitos, ou seja, que respostas
+
+1121
+01:01:51,920 --> 01:01:53,920
+são dadas num determinado tempo.
+
+1122
+01:01:53,920 --> 01:01:55,920
+E fazemos tempos médios e podemos tomar
+
+1123
+01:01:55,920 --> 01:01:57,920
+até os tempos máximos, que é o que se faz no real time.
+
+1124
+01:01:57,920 --> 01:01:59,920
+É perceber quanto é que aquilo demora
+
+1125
+01:01:59,920 --> 01:02:01,920
+nos limites e dizer, nós isto conseguimos
+
+1126
+01:02:01,920 --> 01:02:03,920
+garantir.
+
+1127
+01:02:03,920 --> 01:02:05,920
+Realmente, é o consumo energético porque
+
+1128
+01:02:05,920 --> 01:02:07,920
+temos single volt computers
+
+1129
+01:02:07,920 --> 01:02:09,920
+e se tivermos a bateria,
+
+1130
+01:02:09,920 --> 01:02:11,920
+enormes modos, sobra alimentado não é grave,
+
+1131
+01:02:11,920 --> 01:02:13,920
+é mais o CPU que
+
+1132
+01:02:13,920 --> 01:02:15,920
+limita, mas quando é bateria
+
+1133
+01:02:15,920 --> 01:02:17,920
+também temos de ter cuidado qual
+
+1134
+01:02:17,920 --> 01:02:19,920
+é o nível de calor que vamos
+
+1135
+01:02:19,920 --> 01:02:21,920
+ao CPU, o que precisamos
+
+1136
+01:02:21,920 --> 01:02:23,920
+no CPU, ou seja, o nível de energia
+
+1137
+01:02:23,920 --> 01:02:25,920
+que precisamos no CPU, porque basicamente
+
+1138
+01:02:25,920 --> 01:02:27,920
+quanto mais calor pedimos, mais
+
+1139
+01:02:27,920 --> 01:02:29,920
+juízo temos atirado a bateria
+
+1140
+01:02:29,920 --> 01:02:31,920
+e mais gastante.
+
+1141
+01:02:31,920 --> 01:02:33,920
+Acho que é praticamente isto.
+
+1142
+01:02:33,920 --> 01:02:35,920
+Análise de falhas
+
+1143
+01:02:35,920 --> 01:02:37,920
+no Raspberry Pi.
+
+1144
+01:02:37,920 --> 01:02:39,920
+Já fizeram, é o estrangulamento
+
+1145
+01:02:39,920 --> 01:02:41,920
+térmico, se puxarem muito por ele
+
+1146
+01:02:41,920 --> 01:02:43,920
+é exaustão da memória, eu também já falei
+
+1147
+01:02:43,920 --> 01:02:45,920
+e a corrupção de O.
+
+1148
+01:02:45,920 --> 01:02:47,920
+Eu não tenho visto isto acontecer, mas é
+
+1149
+01:02:47,920 --> 01:02:49,920
+muito referido na literatura.
+
+1150
+01:02:49,920 --> 01:02:51,920
+Quebra as adutas na voltagem,
+
+1151
+01:02:51,920 --> 01:02:53,920
+rebutando em leituras corrompidas
+
+1152
+01:02:53,920 --> 01:02:55,920
+do orramento do EC, ou seja, o stress
+
+1153
+01:02:55,920 --> 01:02:57,920
+violento sobre o dispositivo,
+
+1154
+01:02:57,920 --> 01:02:59,920
+a stress ao nível tal que
+
+1155
+01:02:59,920 --> 01:03:01,920
+a tensão cai, deixe-me só ver aqui
+
+1156
+01:03:01,920 --> 01:03:03,920
+as coisas que eu puxo.
+
+1157
+01:03:08,670 --> 01:03:10,670
+A gestão de engenharia e vivida
+
+1158
+01:03:10,670 --> 01:03:12,670
+é a arte da gestão dos peridórios, tenho
+
+1159
+01:03:12,670 --> 01:03:14,670
+certeza que o professor Diago
+
+1160
+01:03:14,670 --> 01:03:16,670
+os falou extensivamente sobre isso,
+
+1161
+01:03:16,670 --> 01:03:18,670
+certeza, estamos severamente
+
+1162
+01:03:18,670 --> 01:03:20,670
+limitados por memória.
+
+1163
+01:03:20,670 --> 01:03:22,670
+Quer dizer, severamente hoje já
+
+1164
+01:03:22,670 --> 01:03:24,670
+não é comum no meu tempo, que severamente
+
+1165
+01:03:24,670 --> 01:03:26,670
+hoje um Raspberry Pi já tem memórias
+
+1166
+01:03:26,670 --> 01:03:28,670
+ali de memória, bem bom, mas pronto,
+
+1167
+01:03:28,670 --> 01:03:30,670
+mas estamos, faço um computador
+
+1168
+01:03:30,670 --> 01:03:32,670
+e estando-nos.
+
+1169
+01:03:32,670 --> 01:03:34,670
+Um orçamento grígido de latência,
+
+1170
+01:03:34,670 --> 01:03:36,670
+temos de ter cuidado e com supino a gente.
+
+1171
+01:03:36,670 --> 01:03:38,670
+Agora, neste slide
+
+1172
+01:03:38,670 --> 01:03:40,670
+aqui, o que é que temos
+
+1173
+01:03:40,670 --> 01:03:44,110
+para ver?
+
+1174
+01:03:44,110 --> 01:03:46,110
+Temos que ver que tem um...
+
+1175
+01:03:46,110 --> 01:03:48,110
+Dá o exemplo
+
+1176
+01:03:48,110 --> 01:03:50,110
+da inferência
+
+1177
+01:03:50,110 --> 01:03:52,110
+computacional.
+
+1178
+01:03:52,110 --> 01:03:54,110
+Imaginem que é uma coisa que se faz muito
+
+1179
+01:03:54,110 --> 01:03:56,110
+curiosamente, quando está
+
+1180
+01:03:56,110 --> 01:03:58,110
+a começar com isto, a gente põe
+
+1181
+01:03:58,110 --> 01:04:00,110
+a visão computacional nisto
+
+1182
+01:04:00,110 --> 01:04:02,110
+e põe-nos isto a correr a 30 ou 60
+
+1183
+01:04:02,110 --> 01:04:04,110
+frames por segundo.
+
+1184
+01:04:04,110 --> 01:04:06,110
+Lá está, estes são casos que dão
+
+1185
+01:04:06,110 --> 01:04:08,110
+bottleneck nisto e já tem dado.
+
+1186
+01:04:08,110 --> 01:04:10,110
+A 30 ou 60 frames por segundo
+
+1187
+01:04:10,110 --> 01:04:12,110
+ele não aguenta, e isto olha
+
+1188
+01:04:12,110 --> 01:04:14,110
+até um bom exemplo para o que eu falei ao
+
+1189
+01:04:14,110 --> 01:04:16,110
+Cado, é um bom exemplo para estrandular
+
+1190
+01:04:16,110 --> 01:04:18,110
+o CPU,
+
+1191
+01:04:18,110 --> 01:04:20,110
+melhoramente, por CPU, porque aumentamos
+
+1192
+01:04:20,110 --> 01:04:22,110
+a inferência, por exemplo, para 60 frames
+
+1193
+01:04:22,110 --> 01:04:24,110
+e ele vai ter o CPU a derroteir.
+
+1194
+01:04:24,110 --> 01:04:26,110
+Quando esta caixinha for um bocadinho
+
+1195
+01:04:26,110 --> 01:04:28,110
+mais fechada e tal, e as ventoinhas
+
+1196
+01:04:28,110 --> 01:04:30,110
+que os 5 ventoinhas não forem tão boas,
+
+1197
+01:04:30,110 --> 01:04:32,110
+ele entra em thermal throttling
+
+1198
+01:04:32,110 --> 01:04:34,110
+e vocês vão ver que ele passa de 100
+
+1199
+01:04:34,110 --> 01:04:36,110
+e começa a baixar.
+
+1200
+01:04:36,110 --> 01:04:38,110
+Eu tive isto no presente com um aluno
+
+1201
+01:04:38,110 --> 01:04:40,110
+que era um Enrico, e ele tinha
+
+1202
+01:04:40,110 --> 01:04:42,110
+thermal throttling, precisamente no
+
+1203
+01:04:42,110 --> 01:04:44,110
+Vasperi Pie, foi aquilo que eu falei
+
+1204
+01:04:44,110 --> 01:04:46,110
+até de mostrar, depois de fazer aquele trabalho
+
+1205
+01:04:46,110 --> 01:04:48,110
+incrível nos carros, e o primeiro já era
+
+1206
+01:04:48,110 --> 01:04:50,110
+sobre carros, mas era em Vasperis
+
+1207
+01:04:50,110 --> 01:04:52,110
+e era brutal.
+
+1208
+01:04:52,110 --> 01:04:54,110
+Ele não aguentava
+
+1209
+01:04:54,110 --> 01:04:56,110
+e baixava a inferência, mas baixava
+
+1210
+01:04:56,110 --> 01:04:58,110
+ao nível brutal, tipo, duas imagens
+
+1211
+01:04:58,110 --> 01:05:00,110
+por segundo
+
+1212
+01:05:00,110 --> 01:05:02,110
+e não conseguia fazer
+
+1213
+01:05:02,110 --> 01:05:04,110
+caríssimos.
+
+1214
+01:05:04,110 --> 01:05:06,110
+E para hoje é isto
+
+1215
+01:05:06,110 --> 01:05:08,110
+dúvidas sobre isto.
+
+1216
+01:05:08,110 --> 01:05:22,080
+Ninguém quer perguntar nada hoje.
+
+1217
+01:05:22,080 --> 01:05:29,680
+Alguém ouvi.
+
+1218
+01:05:29,680 --> 01:05:31,680
+Muita coisa.
+
+1219
+01:05:31,680 --> 01:05:33,680
+Muita coisa.
+
+1220
+01:05:33,680 --> 01:05:35,680
+Só não concordo na
+
+1221
+01:05:35,680 --> 01:05:37,680
+aquela parte que falou
+
+1222
+01:05:37,680 --> 01:05:39,680
+de
+
+1223
+01:05:39,680 --> 01:05:41,680
+no futuro não haver
+
+1224
+01:05:41,680 --> 01:05:43,680
+as suas não confiarem nos pilotos
+
+1225
+01:05:43,680 --> 01:05:45,680
+para pilotar
+
+1226
+01:05:45,680 --> 01:05:47,680
+aliás, não confiarem nos aviões
+
+1227
+01:05:47,680 --> 01:05:49,680
+sem pilotos.
+
+1228
+01:05:49,680 --> 01:05:51,680
+Mesmo que o último acidente
+
+1229
+01:05:51,680 --> 01:05:53,680
+ou o incidente que eu
+
+1230
+01:05:53,680 --> 01:05:56,930
+olha, me desculpe.
+
+1231
+01:05:56,930 --> 01:05:58,930
+O que é que aconteceu?
+
+1232
+01:05:58,930 --> 01:06:00,930
+Que eu vi qualquer coisa e percebi que eu
+
+1233
+01:06:00,930 --> 01:06:02,930
+veio um tipo que fez qualquer coisa no avião
+
+1234
+01:06:02,930 --> 01:06:04,930
+e não sei o que é que aconteceu.
+
+1235
+01:06:04,930 --> 01:06:06,930
+Tanto é que eu acho que foi um avião
+
+1236
+01:06:06,930 --> 01:06:08,930
+que ia para o Dubai
+
+1237
+01:06:08,930 --> 01:06:10,930
+ou de uma companhia do Dubai
+
+1238
+01:06:10,930 --> 01:06:12,930
+e que
+
+1239
+01:06:12,930 --> 01:06:14,930
+é que ele foi
+
+1240
+01:06:14,930 --> 01:06:16,930
+entre pilotos, agora bem
+
+1241
+01:06:16,930 --> 01:06:18,930
+um dos pilotos
+
+1242
+01:06:18,930 --> 01:06:20,930
+acho que era o co-pilota
+
+1243
+01:06:20,930 --> 01:06:22,930
+atacou o capitão.
+
+1244
+01:06:22,930 --> 01:06:24,930
+Isso não fosse
+
+1245
+01:06:24,930 --> 01:06:26,930
+a intervenção dos tripulantes
+
+1246
+01:06:26,930 --> 01:06:28,930
+dos
+
+1247
+01:06:28,930 --> 01:06:30,930
+passageiros.
+
+1248
+01:06:30,930 --> 01:06:32,930
+Pronto,
+
+1249
+01:06:32,930 --> 01:06:34,930
+aquele do Brianna não está confirmado
+
+1250
+01:06:34,930 --> 01:06:36,930
+mas poderia ser um ataque terrorista
+
+1251
+01:06:36,930 --> 01:06:38,930
+ou suicida.
+
+1252
+01:06:38,930 --> 01:06:40,930
+Nem não operaram isso.
+
+1253
+01:06:40,930 --> 01:06:42,930
+Portanto,
+
+1254
+01:06:42,930 --> 01:06:44,930
+foi muita componente humana também.
+
+1255
+01:06:44,930 --> 01:06:46,930
+Olha,
+
+1256
+01:06:46,930 --> 01:06:48,930
+eu vou dizer uma coisa
+
+1257
+01:06:48,930 --> 01:06:50,930
+engraçada acontecer isto.
+
+1258
+01:06:50,930 --> 01:06:52,930
+Este é um exemplo
+
+1259
+01:06:52,930 --> 01:06:54,930
+para vocês manifestem a vossa opinião,
+
+1260
+01:06:54,930 --> 01:06:56,930
+mas engraçado, eu falo muito e também
+
+1261
+01:06:56,930 --> 01:06:58,930
+eu gosto de ouvir.
+
+1262
+01:06:58,930 --> 01:07:00,930
+Porque assim, a falar eu próprio,
+
+1263
+01:07:00,930 --> 01:07:02,930
+eu não aprendo nada de novo, mais ou menos digo
+
+1264
+01:07:02,930 --> 01:07:04,930
+que eu já sei.
+
+1265
+01:07:04,930 --> 01:07:06,930
+E assim,
+
+1266
+01:07:06,930 --> 01:07:08,930
+por acaso engraçado e por acaso para fazer isto,
+
+1267
+01:07:08,930 --> 01:07:10,930
+é super interessante, porque
+
+1268
+01:07:10,930 --> 01:07:12,930
+este tipo de incidentes
+
+1269
+01:07:12,930 --> 01:07:14,930
+são raros. Portanto, são coisas que
+
+1270
+01:07:14,930 --> 01:07:16,930
+felizmente são raros. Há muitos anos,
+
+1271
+01:07:16,930 --> 01:07:18,930
+de algum caso, numa companhia que eu voei,
+
+1272
+01:07:18,930 --> 01:07:20,930
+que era a German Wings.
+
+1273
+01:07:20,930 --> 01:07:22,930
+Na altura eu voava às vezes para a Alemanha,
+
+1274
+01:07:22,930 --> 01:07:24,930
+que tinha lá amigos, e a na German Wings
+
+1275
+01:07:24,930 --> 01:07:26,930
+ia para Lisboa, Davião,
+
+1276
+01:07:26,930 --> 01:07:28,930
+da Auto Car, nome de Davião da Auto Car,
+
+1277
+01:07:28,930 --> 01:07:30,930
+que era mais barato,
+
+1278
+01:07:30,930 --> 01:07:32,930
+e depois apanhava por 20 euros
+
+1279
+01:07:32,930 --> 01:07:34,930
+e ia vir a Alemanha. E aquilo era porém.
+
+1280
+01:07:34,930 --> 01:07:36,930
+E então os amigos e tal.
+
+1281
+01:07:36,930 --> 01:07:38,930
+Por 20 paus, passavam uns anos,
+
+1282
+01:07:38,930 --> 01:07:40,930
+houve um acidente na German Wings, foi um miúdo
+
+1283
+01:07:40,930 --> 01:07:42,930
+relativamente novo, que era piloto,
+
+1284
+01:07:42,930 --> 01:07:44,930
+foi contratado, o gajo era
+
+1285
+01:07:44,930 --> 01:07:46,930
+tipo alemão, ali daquela zona.
+
+1286
+01:07:46,930 --> 01:07:48,930
+Um miúdo com um bom aspecto,
+
+1287
+01:07:48,930 --> 01:07:50,930
+com aparentemente tudo bem,
+
+1288
+01:07:50,930 --> 01:07:52,930
+tinha a vida super estruturada, era piloto,
+
+1289
+01:07:52,930 --> 01:07:54,930
+estava bem.
+
+1290
+01:07:54,930 --> 01:07:56,930
+Davi uma cena na cabeça, e o gajo
+
+1291
+01:07:56,930 --> 01:07:58,930
+uma altura apanhou lá, o capitão
+
+1292
+01:07:58,930 --> 01:08:00,930
+saiu por um bocado, ou teve uma casa de
+
+1293
+01:08:00,930 --> 01:08:02,930
+banho, não sei o que mais, o gajo
+
+1294
+01:08:02,930 --> 01:08:04,930
+arrancou a porta e enfiou o avião
+
+1295
+01:08:04,930 --> 01:08:06,930
+numa montanha. Pá, matou aquela gente toda.
+
+1296
+01:08:06,930 --> 01:08:08,930
+Ah, isto é uma cena que
+
+1297
+01:08:08,930 --> 01:08:10,930
+muito tipo fica diz,
+
+1298
+01:08:10,930 --> 01:08:12,930
+eu confesso que as duas ou três vezes
+
+1299
+01:08:12,930 --> 01:08:14,930
+que andei com o avião a seguir, eu fiquei
+
+1300
+01:08:14,930 --> 01:08:16,930
+aí, e será que temos aqui
+
+1301
+01:08:16,930 --> 01:08:18,930
+um gajo destes? E tal. Isto cruzado
+
+1302
+01:08:18,930 --> 01:08:20,930
+com a história. E eu não
+
+1303
+01:08:20,930 --> 01:08:22,930
+disse a coisa porque eu queria salientar
+
+1304
+01:08:22,930 --> 01:08:24,930
+o receio que nós temos destas
+
+1305
+01:08:24,930 --> 01:08:26,930
+de graduações de performance,
+
+1306
+01:08:26,930 --> 01:08:28,930
+mas eu também tenho uma teoria que é
+
+1307
+01:08:28,930 --> 01:08:30,930
+contrária, portanto, eu vou me contrariar
+
+1308
+01:08:30,930 --> 01:08:32,930
+na aula, no que toca a condição
+
+1309
+01:08:32,930 --> 01:08:34,930
+autónoma, em carros.
+
+1310
+01:08:34,930 --> 01:08:36,930
+Nós estávamos no 2, 3 doadas,
+
+1311
+01:08:36,930 --> 01:08:38,930
+eu por acaso falo nisso na minha cadeira
+
+1312
+01:08:38,930 --> 01:08:40,930
+mas agora não sei, mas acho que era.
+
+1313
+01:08:40,930 --> 01:08:42,930
+Os carros todos são, os nível de
+
+1314
+01:08:42,930 --> 01:08:44,930
+acessência são 4 ou 5,
+
+1315
+01:08:44,930 --> 01:08:46,930
+estava mal da toda nos dois, e só
+
+1316
+01:08:46,930 --> 01:08:48,930
+agora, há um ano ou dois,
+
+1317
+01:08:48,930 --> 01:08:50,930
+a Mercedes tinha um carro
+
+1318
+01:08:50,930 --> 01:08:52,930
+e outra marca tinha um carro, era
+
+1319
+01:08:52,930 --> 01:08:54,930
+aquele OQES, ou não sei o que é,
+
+1320
+01:08:54,930 --> 01:08:56,930
+aquele mais caro da Mercedes, era o
+
+1321
+01:08:56,930 --> 01:08:58,930
+único, estava no nível 3, e aqui
+
+1322
+01:08:58,930 --> 01:09:00,930
+na Europa não será para nada, porque nós
+
+1323
+01:09:00,930 --> 01:09:02,930
+não temos as estradas para isso.
+
+1324
+01:09:02,930 --> 01:09:04,930
+E estava no nível 3, que é muito mais
+
+1325
+01:09:04,930 --> 01:09:06,930
+autónomo, e depois acho que há o nível 4,
+
+1326
+01:09:06,930 --> 01:09:08,930
+essa não é qualquer coisa desse jeito.
+
+1327
+01:09:08,930 --> 01:09:10,930
+E a questão é, os Tesla já estão
+
+1328
+01:09:10,930 --> 01:09:12,930
+no nível de fiabilidade, super
+
+1329
+01:09:12,930 --> 01:09:14,930
+interessante, embora nós vamos continuar
+
+1330
+01:09:14,930 --> 01:09:16,930
+a ver acidentes perfeitamente
+
+1331
+01:09:16,930 --> 01:09:18,930
+estúpidos, não é? E que vão chocar,
+
+1332
+01:09:18,930 --> 01:09:20,930
+tipo aquela imagem, o vídeo da China
+
+1333
+01:09:20,930 --> 01:09:22,930
+em que o Tesla passou, se começou
+
+1334
+01:09:22,930 --> 01:09:24,930
+a acelerar numa velocidade low e tal,
+
+1335
+01:09:24,930 --> 01:09:26,930
+mas o que eu acho é que, a médio prazo,
+
+1336
+01:09:26,930 --> 01:09:28,930
+especialmente, a condição vai ser
+
+1337
+01:09:28,930 --> 01:09:30,930
+muito mais segura, por inteligência
+
+1338
+01:09:30,930 --> 01:09:32,930
+artificial, do burco de pessoas, porque
+
+1339
+01:09:32,930 --> 01:09:34,930
+efetivamente, às vezes, vai haver
+
+1340
+01:09:34,930 --> 01:09:36,930
+acidentes desse género, completamente
+
+1341
+01:09:36,930 --> 01:09:38,930
+horrorosos, documentados com vídeos,
+
+1342
+01:09:38,930 --> 01:09:40,930
+e as pessoas vão ficar chocadíssimas,
+
+1343
+01:09:40,930 --> 01:09:42,930
+mas os números vão esmagar a realidade,
+
+1344
+01:09:42,930 --> 01:09:44,930
+porque é? Porque nós temos uma guerra
+
+1345
+01:09:44,930 --> 01:09:46,930
+que se deu nas estradas, a nível mundial,
+
+1346
+01:09:46,930 --> 01:09:48,930
+morrem dezenas, de milhares de pessoas
+
+1347
+01:09:48,930 --> 01:09:50,930
+todo ano, na estrada, aliás, morrem
+
+1348
+01:09:50,930 --> 01:09:52,930
+muito menos pessoas, hoje eu estou a dizer isto
+
+1349
+01:09:52,930 --> 01:09:54,930
+do ar, mas de certeza isto é verdade, morrem
+
+1350
+01:09:54,930 --> 01:09:56,930
+menos pessoas, hoje, em guerras,
+
+1351
+01:09:56,930 --> 01:09:58,930
+quer dizer, agora com as guerras da Síria
+
+1352
+01:09:58,930 --> 01:10:00,930
+e da Ucrânia, se calhar isto já não é bem verdade,
+
+1353
+01:10:00,930 --> 01:10:02,930
+mas há uns anos isto era verdade, morriam
+
+1354
+01:10:02,930 --> 01:10:04,930
+menos pessoas em guerras do que morriam
+
+1355
+01:10:04,930 --> 01:10:06,930
+em acidentes na estrada, em certos acidentes,
+
+1356
+01:10:06,930 --> 01:10:08,930
+e portanto, eu acho que isto,
+
+1357
+01:10:08,930 --> 01:10:10,930
+para o futuro, vai acontecer,
+
+1358
+01:10:10,930 --> 01:10:12,930
+e sou levado a concordar consigo
+
+1359
+01:10:12,930 --> 01:10:14,930
+si isto evoluir e
+
+1360
+01:10:14,930 --> 01:10:16,930
+a estatística nos demonstrar,
+
+1361
+01:10:16,930 --> 01:10:18,930
+que é, a certa altura,
+
+1362
+01:10:18,930 --> 01:10:20,930
+um tipo como eu, que já fiz 50 anos, vou
+
+1363
+01:10:20,930 --> 01:10:22,930
+dizer, tá bem, mas olha,
+
+1364
+01:10:22,930 --> 01:10:24,930
+eu pago mais um X e prefiro ali na tab,
+
+1365
+01:10:24,930 --> 01:10:26,930
+que ainda tem ali o senhor Joaquim
+
+1366
+01:10:26,930 --> 01:10:28,930
+a levar o senhor Viríssimo, e nós já
+
+1367
+01:10:28,930 --> 01:10:30,930
+voltávamos,
+
+1368
+01:10:30,930 --> 01:10:32,930
+sendo que é um viesco cognitivo da minha
+
+1369
+01:10:32,930 --> 01:10:34,930
+parte, não é que o estatísticamente
+
+1370
+01:10:34,930 --> 01:10:36,930
+se calhar a decormar riscos, mas se calhar
+
+1371
+01:10:36,930 --> 01:10:38,930
+a vossa geração já não vai ser, porque
+
+1372
+01:10:38,930 --> 01:10:40,930
+eu acho que vai acontecer isto,
+
+1373
+01:10:40,930 --> 01:10:42,930
+que eu diga uma coisa.
+
+1374
+01:10:42,930 --> 01:10:44,930
+Nível cultural, não é? Pronto,
+
+1375
+01:10:44,930 --> 01:10:46,930
+tenho a ver também com as gerações,
+
+1376
+01:10:46,930 --> 01:10:48,930
+mas acredito que
+
+1377
+01:10:48,930 --> 01:10:50,930
+nos carros, se calhar, vai ser
+
+1378
+01:10:50,930 --> 01:10:52,930
+normal isto, não é?
+
+1379
+01:10:52,930 --> 01:10:54,930
+Porque agora
+
+1380
+01:10:54,930 --> 01:10:56,930
+na Europa está a começar a abrir
+
+1381
+01:10:56,930 --> 01:10:58,930
+agora os testes, acho que da Tesla,
+
+1382
+01:10:58,930 --> 01:11:00,930
+acho que em Portugal
+
+1383
+01:11:00,930 --> 01:11:02,930
+vai entrar, e é interessante.
+
+1384
+01:11:02,930 --> 01:11:04,930
+Então, lá está a
+
+1385
+01:11:04,930 --> 01:11:06,930
+uma realidade,
+
+1386
+01:11:06,930 --> 01:11:08,930
+e se calhar nos aviões, por exemplo,
+
+1387
+01:11:08,930 --> 01:11:10,930
+esse caso da German Wings,
+
+1388
+01:11:10,930 --> 01:11:12,930
+eu lembro, não vou ouvir isso
+
+1389
+01:11:12,930 --> 01:11:14,930
+na altura, foi no Zal, por exato,
+
+1390
+01:11:14,930 --> 01:11:16,930
+e
+
+1391
+01:11:16,930 --> 01:11:18,930
+aquilo foi que ela, acho que se encorralou
+
+1392
+01:11:18,930 --> 01:11:20,930
+no cockpit, não foi.
+
+1393
+01:11:20,930 --> 01:11:22,930
+Então, se ninguém de fora
+
+1394
+01:11:22,930 --> 01:11:24,930
+conseguia abrir,
+
+1395
+01:11:24,930 --> 01:11:26,930
+como canismos é que podia, pois
+
+1396
+01:11:26,930 --> 01:11:28,930
+começar a entrar na complicação,
+
+1397
+01:11:28,930 --> 01:11:30,930
+como canismos é que podia ser,
+
+1398
+01:11:30,930 --> 01:11:32,930
+controlar a partir de ir remotamente,
+
+1399
+01:11:32,930 --> 01:11:34,930
+se calhar até era uma hipótese, não sei.
+
+1400
+01:11:34,930 --> 01:11:36,930
+Lá está, olha, isso era um guardra
+
+1401
+01:11:36,930 --> 01:11:38,930
+dele que podia nos ter,
+
+1402
+01:11:38,930 --> 01:11:40,930
+no caso de uma emergência destas,
+
+1403
+01:11:40,930 --> 01:11:42,930
+poder fazer isso.
+
+1404
+01:11:42,930 --> 01:11:44,930
+Mas está isto,
+
+1405
+01:11:44,930 --> 01:11:46,930
+ter ideias é uma cena complicada,
+
+1406
+01:11:46,930 --> 01:11:48,930
+isto são casos do que sim.
+
+1407
+01:11:48,930 --> 01:11:50,930
+Eu acho que as pessoas trabalham para casos
+
+1408
+01:11:50,930 --> 01:11:52,930
+que acontecem. Estes casos são tão raros,
+
+1409
+01:11:52,930 --> 01:11:54,930
+que, ou seja,
+
+1410
+01:11:54,930 --> 01:11:56,930
+nós temos que ter bom
+
+1411
+01:11:56,930 --> 01:11:58,930
+senso, e isto é super importante
+
+1412
+01:11:58,930 --> 01:12:00,930
+estarmos a referir isto.
+
+1413
+01:12:00,930 --> 01:12:02,930
+E depois, não é isso, é nós.
+
+1414
+01:12:02,930 --> 01:12:04,930
+Estas coisas têm um impacto gigantesco,
+
+1415
+01:12:04,930 --> 01:12:06,930
+é como tipo um gajo para o tom de braço,
+
+1416
+01:12:06,930 --> 01:12:08,930
+e sai um osso, para aquilo choquei
+
+1417
+01:12:08,930 --> 01:12:10,930
+mesmo, mas é que são casos raros, aquilo
+
+1418
+01:12:10,930 --> 01:12:12,930
+acontece multemente em todo lado,
+
+1419
+01:12:12,930 --> 01:12:14,930
+e não choca. No entanto, se calhar morra
+
+1420
+01:12:14,930 --> 01:12:16,930
+mais pessoas, por mortes, por mosquitos,
+
+1421
+01:12:16,930 --> 01:12:18,930
+e isso é importante resolver,
+
+1422
+01:12:18,930 --> 01:12:20,930
+mas quando um gajo salta um osso do
+
+1423
+01:12:20,930 --> 01:12:22,930
+corpo, as pessoas ficam em choque,
+
+1424
+01:12:22,930 --> 01:12:24,930
+é o impacto que têm em nós mais
+
+1425
+01:12:24,930 --> 01:12:26,930
+do que propriamente a coisa.
+
+1426
+01:12:26,930 --> 01:12:28,930
+E quando as pessoas estão a olhar
+
+1427
+01:12:28,930 --> 01:12:30,930
+para isso, são mais frias, ou seja,
+
+1428
+01:12:30,930 --> 01:12:32,930
+este é um problema ou não é?
+
+1429
+01:12:32,930 --> 01:12:34,930
+Há alguma coisa desagradável ou é um problema?
+
+1430
+01:12:34,930 --> 01:12:36,930
+E, efetivamente, este tipo de coisas não
+
+1431
+01:12:36,930 --> 01:12:38,930
+são problemas, são cenas horrorosas
+
+1432
+01:12:38,930 --> 01:12:40,930
+que acontecem, mas morrem,
+
+1433
+01:12:40,930 --> 01:12:42,930
+morrem de tantas pessoas num avião.
+
+1434
+01:12:42,930 --> 01:12:44,930
+É que voaram 200 milhões de pessoas,
+
+1435
+01:12:44,930 --> 01:12:46,930
+e morreu um porque
+
+1436
+01:12:46,930 --> 01:12:48,930
+falhou um pneu, morreu outro
+
+1437
+01:12:48,930 --> 01:12:50,930
+com um gajo passou-se da cabeça,
+
+1438
+01:12:50,930 --> 01:12:52,930
+e acontece isso. Eu não sei,
+
+1439
+01:12:52,930 --> 01:12:54,930
+eu também estou a especular, confesso
+
+1440
+01:12:54,930 --> 01:12:56,930
+que isto é uma opinião, não é
+
+1441
+01:12:56,930 --> 01:12:58,930
+provavelmente uma coisa fundamentada,
+
+1442
+01:12:58,930 --> 01:13:00,930
+mas eu tenho muita expectativa na nossa
+
+1443
+01:13:00,930 --> 01:13:02,930
+confiança, na IA. Só este bocadinho que
+
+1444
+01:13:02,930 --> 01:13:04,930
+nós estamos a ter, e describem que isto é
+
+1445
+01:13:04,930 --> 01:13:06,930
+mais a nível de sistemas indivíduos,
+
+1446
+01:13:06,930 --> 01:13:08,930
+portanto, muito mais aplicado,
+
+1447
+01:13:08,930 --> 01:13:10,930
+sempre com métricas e tal, mas nos
+
+1448
+01:13:10,930 --> 01:13:12,930
+ainda são super
+
+1449
+01:13:12,930 --> 01:13:14,930
+embrionários, e já estão com resultados
+
+1450
+01:13:14,930 --> 01:13:16,930
+que, sinceramente, eu nunca esperei que viessem.
+
+1451
+01:13:16,930 --> 01:13:18,930
+E nós estamos com muita confiança,
+
+1452
+01:13:18,930 --> 01:13:20,930
+mas há muito mais para fazer, muito,
+
+1453
+01:13:20,930 --> 01:13:22,930
+muito. E eu acho que temos tanto
+
+1454
+01:13:22,930 --> 01:13:24,930
+para evoluir que o futuro vai ser
+
+1455
+01:13:24,930 --> 01:13:26,930
+no mínimo estranho. Hoje, de manhã, tivemos a aula,
+
+1456
+01:13:26,930 --> 01:13:28,930
+os alunos, por acaso, começaram a falar de umas coisas,
+
+1457
+01:13:28,930 --> 01:13:30,930
+e nós, no final da aula, tivemos assim um bocadinho
+
+1458
+01:13:30,930 --> 01:13:32,930
+a falar, e eu acho que o mundo
+
+1459
+01:13:32,930 --> 01:13:34,930
+vai ser, vamos entrar num mundo
+
+1460
+01:13:34,930 --> 01:13:36,930
+competencial para ser um bocadinho bistópico,
+
+1461
+01:13:36,930 --> 01:13:38,930
+coisas muito diferentes, a produtividade
+
+1462
+01:13:38,930 --> 01:13:40,930
+pode aumentar brutalmente,
+
+1463
+01:13:40,930 --> 01:13:42,930
+o nosso papel nas coisas
+
+1464
+01:13:42,930 --> 01:13:44,930
+não sabemos o que é que vai ser,
+
+1465
+01:13:44,930 --> 01:13:46,930
+e portanto, vamos ver como reencontrar,
+
+1466
+01:13:46,930 --> 01:13:48,930
+e espero que façamos isto
+
+1467
+01:13:48,930 --> 01:13:50,930
+de uma forma equilibrada,
+
+1468
+01:13:50,930 --> 01:13:52,930
+enquanto profissionais e enquanto seres humanos,
+
+1469
+01:13:52,930 --> 01:13:54,930
+por exemplo, agora.
+
+1470
+01:13:54,930 --> 01:13:56,930
+Já vi aquela analogia, por exemplo,
+
+1471
+01:13:56,930 --> 01:13:58,930
+de como fazer a revolução industrial,
+
+1472
+01:13:58,930 --> 01:14:00,930
+não é?
+
+1473
+01:14:00,930 --> 01:14:02,930
+De qualquer forma, ser uma revolução
+
+1474
+01:14:02,930 --> 01:14:04,930
+também,
+
+1475
+01:14:04,930 --> 01:14:06,930
+de qualquer forma,
+
+1476
+01:14:06,930 --> 01:14:08,930
+não digo parecido, mas...
+
+1477
+01:14:10,930 --> 01:14:12,930
+Uma surta é
+
+1478
+01:14:12,930 --> 01:14:14,930
+coisas que eu lido à revolução industrial
+
+1479
+01:14:14,930 --> 01:14:16,930
+à jeneira,
+
+1480
+01:14:16,930 --> 01:14:18,930
+à jeneira total, mesmo esta
+
+1481
+01:14:18,930 --> 01:14:20,930
+assunção, a desta guerra que está a haver,
+
+1482
+01:14:20,930 --> 01:14:22,930
+a disputa é normal,
+
+1483
+01:14:22,930 --> 01:14:24,930
+mas outro dia, de qualquer coisa agora,
+
+1484
+01:14:24,930 --> 01:14:26,930
+mas de qualquer coisa, numa posição
+
+1485
+01:14:26,930 --> 01:14:28,930
+que se tomou, eu disse,
+
+1486
+01:14:28,930 --> 01:14:30,930
+há aqui muita assunção,
+
+1487
+01:14:30,930 --> 01:14:32,930
+que isto já vai correr e que vai
+
+1488
+01:14:32,930 --> 01:14:34,930
+esdominar a cena, porque o que eu acho
+
+1489
+01:14:34,930 --> 01:14:36,930
+é ter uma disputa enorme
+
+1490
+01:14:36,930 --> 01:14:38,930
+pela supremacia, na inteligência artificial.
+
+1491
+01:14:38,930 --> 01:14:40,930
+E...
+
+1492
+01:14:40,930 --> 01:14:42,930
+Não sei se estou correto,
+
+1493
+01:14:42,930 --> 01:14:44,930
+e acho que, no fundo, essa supremacia
+
+1494
+01:14:44,930 --> 01:14:46,930
+também está relacionada
+
+1495
+01:14:46,930 --> 01:14:48,930
+com a supremacia na computação,
+
+1496
+01:14:48,930 --> 01:14:50,930
+porque estamos aí com a computação quântica,
+
+1497
+01:14:50,930 --> 01:14:52,930
+e isso vai ser muito significativo.
+
+1498
+01:14:52,930 --> 01:14:54,930
+O treino das redes
+
+1499
+01:14:54,930 --> 01:14:56,930
+vai ser ultra acelerado.
+
+1500
+01:14:56,930 --> 01:14:58,930
+Portanto, os modelos que temos neste momento
+
+1501
+01:14:58,930 --> 01:15:00,930
+vão ser amostras
+
+1502
+01:15:00,930 --> 01:15:02,930
+dos modelos que temos no futuro.
+
+1503
+01:15:02,930 --> 01:15:04,930
+A malta da Bitcoin andava aí doida
+
+1504
+01:15:04,930 --> 01:15:06,930
+se a computação quântica
+
+1505
+01:15:06,930 --> 01:15:08,930
+vai quebrar as chaves privadas,
+
+1506
+01:15:08,930 --> 01:15:10,930
+ou não.
+
+1507
+01:15:10,930 --> 01:15:12,930
+Eu sei que está a ser feito de trabalho
+
+1508
+01:15:12,930 --> 01:15:14,930
+nessa área, e julgo que até
+
+1509
+01:15:14,930 --> 01:15:16,930
+estamos relativamente avançados.
+
+1510
+01:15:16,930 --> 01:15:18,930
+Acho que não temos a solução,
+
+1511
+01:15:18,930 --> 01:15:20,930
+mas eu tenho visto algumas coisas
+
+1512
+01:15:20,930 --> 01:15:22,930
+que dizem que as coisas estão avançadas.
+
+1513
+01:15:22,930 --> 01:15:24,930
+Mas a questão é,
+
+1514
+01:15:24,930 --> 01:15:26,930
+a inteligência artificial e a computação
+
+1515
+01:15:26,930 --> 01:15:28,930
+quântica, ou seja, logo for que acelera
+
+1516
+01:15:28,930 --> 01:15:30,930
+a computação de uma forma brutal,
+
+1517
+01:15:30,930 --> 01:15:32,930
+são uma parelha
+
+1518
+01:15:32,930 --> 01:15:34,930
+incrível, porque
+
+1519
+01:15:34,930 --> 01:15:36,930
+tu aumentas a capacidade
+
+1520
+01:15:36,930 --> 01:15:38,930
+da inteligência artificial,
+
+1521
+01:15:38,930 --> 01:15:40,930
+e esta capacidade
+
+1522
+01:15:40,930 --> 01:15:42,930
+pode te ajudar a desenvolver a computação quântica.
+
+1523
+01:15:42,930 --> 01:15:44,930
+E é o aumento
+
+1524
+01:15:44,930 --> 01:15:46,930
+na capacidade de computação
+
+1525
+01:15:46,930 --> 01:15:48,930
+ajuda-te a treinar modelos
+
+1526
+01:15:48,930 --> 01:15:50,930
+mais poderosos.
+
+1527
+01:15:50,930 --> 01:15:52,930
+Isto é um feedback positivo
+
+1528
+01:15:52,930 --> 01:15:54,930
+que vai determinar
+
+1529
+01:15:54,930 --> 01:15:56,930
+alguém numa coisa incrível.
+
+1530
+01:15:56,930 --> 01:15:58,930
+E o que eu acho que
+
+1531
+01:15:58,930 --> 01:16:00,930
+as coisas que poderá mover
+
+1532
+01:16:00,930 --> 01:16:02,930
+este movimento, também na perspectiva
+
+1533
+01:16:02,930 --> 01:16:04,930
+que sou aqui um bocado ligado à engenharia
+
+1534
+01:16:04,930 --> 01:16:06,930
+é que eles estão numa corrida louca
+
+1535
+01:16:06,930 --> 01:16:08,930
+com uns e outros,
+
+1536
+01:16:08,930 --> 01:16:10,930
+eles querem meter.
+
+1537
+01:16:10,930 --> 01:16:12,930
+Uma coisa que eu estranho é como
+
+1538
+01:16:12,930 --> 01:16:14,930
+que as bolsas americanas
+
+1539
+01:16:14,930 --> 01:16:16,930
+estão num hype imenso,
+
+1540
+01:16:16,930 --> 01:16:18,930
+as empresas não têm
+
+1541
+01:16:18,930 --> 01:16:20,930
+fundamentais que justifiquem
+
+1542
+01:16:20,930 --> 01:16:22,930
+os valores que têm.
+
+1543
+01:16:22,930 --> 01:16:24,930
+As pessoas estão a esperar 30, 40,
+
+1544
+01:16:24,930 --> 01:16:26,930
+quase 50 anos,
+
+1545
+01:16:26,930 --> 01:16:28,930
+os lucros de 50 anos
+
+1546
+01:16:28,930 --> 01:16:30,930
+para dar o retorno que as pessoas têm
+
+1547
+01:16:30,930 --> 01:16:32,930
+e as bolsas não caem.
+
+1548
+01:16:32,930 --> 01:16:34,930
+E no entanto, eu
+
+1549
+01:16:34,930 --> 01:16:36,930
+sou uma pessoa que não em visto, mas antes de ir no passado,
+
+1550
+01:16:36,930 --> 01:16:38,930
+às vezes comunico um bocadinho com algumas pessoas
+
+1551
+01:16:38,930 --> 01:16:40,930
+que ainda investem.
+
+1552
+01:16:40,930 --> 01:16:42,930
+E muita gente se manifesta dizendo
+
+1553
+01:16:42,930 --> 01:16:44,930
+é pá, eu não entendo
+
+1554
+01:16:44,930 --> 01:16:46,930
+porque eu estou cheio de medo.
+
+1555
+01:16:46,930 --> 01:16:48,930
+Eu por um lado tenho esperança, mas por outro lado
+
+1556
+01:16:48,930 --> 01:16:50,930
+estou medo, tenho medo e portanto
+
+1557
+01:16:50,930 --> 01:16:52,930
+nós estamos a viver um tempo que eu acho que
+
+1558
+01:16:52,930 --> 01:16:54,930
+é um bocadinho de fora da
+
+1559
+01:16:54,930 --> 01:16:56,930
+quilo que era o histórico.
+
+1560
+01:16:56,930 --> 01:16:58,930
+E portanto, a brincar é por dizer uma coisa,
+
+1561
+01:16:58,930 --> 01:17:00,930
+nós estamos a ter
+
+1562
+01:17:00,930 --> 01:17:02,930
+uma certa deriva de conceito no data sete.
+
+1563
+01:17:02,930 --> 01:17:04,930
+E portanto,
+
+1564
+01:17:04,930 --> 01:17:06,930
+é preciso dar algum cuidado,
+
+1565
+01:17:06,930 --> 01:17:08,930
+a malta que investe,
+
+1566
+01:17:08,930 --> 01:17:10,930
+está a se ganhar imenso dinheiro,
+
+1567
+01:17:10,930 --> 01:17:12,930
+mas é preciso dar algum cuidado
+
+1568
+01:17:12,930 --> 01:17:14,930
+porque não sei, para mim está a esquecer.
+
+1569
+01:17:14,930 --> 01:17:16,930
+Mas também tenho em consideração
+
+1570
+01:17:16,930 --> 01:17:18,930
+que eu fiz 50 anos este ano,
+
+1571
+01:17:18,930 --> 01:17:20,930
+e portanto, uma pessoa com a qualidade
+
+1572
+01:17:20,930 --> 01:17:22,930
+começa a ficar mais cagareta, com mais medo.
+
+1573
+01:17:22,930 --> 01:17:24,930
+Eu também já ouvi
+
+1574
+01:17:24,930 --> 01:17:26,930
+que mesmo
+
+1575
+01:17:26,930 --> 01:17:28,930
+para um pequeno investe
+
+1576
+01:17:28,930 --> 01:17:30,930
+se,
+
+1577
+01:17:30,930 --> 01:17:32,930
+como a pessoa está a dizer, é que
+
+1578
+01:17:32,930 --> 01:17:34,930
+pode ser uma bolha, há o risco de ser uma bolha,
+
+1579
+01:17:34,930 --> 01:17:36,930
+para se correr mal.
+
+1580
+01:17:36,930 --> 01:17:38,930
+E
+
+1581
+01:17:38,930 --> 01:17:40,930
+é importante.
+
+1582
+01:17:40,930 --> 01:17:42,930
+Mas também vou dizer, estou a achar isto
+
+1583
+01:17:42,930 --> 01:17:44,930
+uma bolha desde 2017, portanto, eu estou errado.
+
+1584
+01:17:46,930 --> 01:17:48,930
+Eu estou errado porque eu acompanho
+
+1585
+01:17:48,930 --> 01:17:50,930
+per curiosidade, e eu estou errado
+
+1586
+01:17:50,930 --> 01:17:52,930
+porque desde 2017, que tu as pera de uma bolha
+
+1587
+01:17:52,930 --> 01:17:54,930
+e este é, se foi sempre a ganhar dinheiro,
+
+1588
+01:17:54,930 --> 01:17:56,930
+portanto, esqueçam.
+
+1589
+01:17:56,930 --> 01:17:58,930
+Eu não sou uma pessoa,
+
+1590
+01:17:58,930 --> 01:18:00,930
+o meu score é negativíssimo.
+
+1591
+01:18:04,930 --> 01:18:06,930
+E os meus alunos da leque
+
+1592
+01:18:06,930 --> 01:18:08,930
+têm um track record
+
+1593
+01:18:08,930 --> 01:18:10,930
+ultra acima do meu, porque
+
+1594
+01:18:10,930 --> 01:18:12,930
+compram bitcoin,
+
+1595
+01:18:12,930 --> 01:18:14,930
+vendem bitcoin, compram criptomoedas
+
+1596
+01:18:14,930 --> 01:18:16,930
+que eu às vezes até me assusto
+
+1597
+01:18:16,930 --> 01:18:18,930
+só de eles zerem os nomes,
+
+1598
+01:18:18,930 --> 01:18:20,930
+e às vezes em conversa percebo que ganharam
+
+1599
+01:18:20,930 --> 01:18:22,930
+uma pipa de massa, portanto,
+
+1600
+01:18:22,930 --> 01:18:24,930
+fica imensamente contente, mas eu pessoalmente
+
+1601
+01:18:24,930 --> 01:18:26,930
+tenho mais medo.
+
+1602
+01:18:26,930 --> 01:18:28,930
+Mas isso é
+
+1603
+01:18:28,930 --> 01:18:30,930
+mesmo aquele mercado
+
+1604
+01:18:30,930 --> 01:18:32,930
+muito
+
+1605
+01:18:32,930 --> 01:18:34,930
+espreculativo, não é?
+
+1606
+01:18:34,930 --> 01:18:36,930
+O problema é só ver mesmo
+
+1607
+01:18:36,930 --> 01:18:38,930
+uma bolha
+
+1608
+01:18:38,930 --> 01:18:40,930
+no mercado bolosista,
+
+1609
+01:18:40,930 --> 01:18:42,930
+porque
+
+1610
+01:18:42,930 --> 01:18:44,930
+as principais
+
+1611
+01:18:44,930 --> 01:18:46,930
+empresas
+
+1612
+01:18:46,930 --> 01:18:48,930
+que duram, por exemplo, um mercado americano
+
+1613
+01:18:48,930 --> 01:18:50,930
+estão a apostar
+
+1614
+01:18:50,930 --> 01:18:52,930
+tudo,
+
+1615
+01:18:52,930 --> 01:18:54,930
+não é?
+
+1616
+01:18:54,930 --> 01:18:56,930
+Com a EA.
+
+1617
+01:18:56,930 --> 01:18:58,930
+O que eu acho impressionante é nada a cair.
+
+1618
+01:18:58,930 --> 01:19:00,930
+Ou seja, as pessoas têm uma fé
+
+1619
+01:19:00,930 --> 01:19:02,930
+no mercado incrível, e está a funcionar.
+
+1620
+01:19:02,930 --> 01:19:04,930
+Tanto a minha susta mesmo, porque eu diga assim,
+
+1621
+01:19:04,930 --> 01:19:06,930
+eu olho um bocadinho posse fundamentais
+
+1622
+01:19:06,930 --> 01:19:08,930
+e acho que está tudo em um tocar.
+
+1623
+01:19:08,930 --> 01:19:10,930
+Eu nunca, na minha vida,
+
+1624
+01:19:10,930 --> 01:19:12,930
+vi uma alavancagem
+
+1625
+01:19:12,930 --> 01:19:14,930
+desta natureza, e nós passamos por...
+
+1626
+01:19:14,930 --> 01:19:16,930
+Eu, caravamente, passei por 2008.
+
+1627
+01:19:16,930 --> 01:19:18,930
+7, 8,
+
+1628
+01:19:18,930 --> 01:19:20,930
+e lembro-me perfeitamente dessa altura.
+
+1629
+01:19:20,930 --> 01:19:22,930
+Basta, tenho uma memória
+
+1630
+01:19:22,930 --> 01:19:24,930
+que, se calhar, vocês eram muito mais jovens,
+
+1631
+01:19:24,930 --> 01:19:26,930
+e para vocês foi uma coisa que se falou, sentiram isso
+
+1632
+01:19:26,930 --> 01:19:28,930
+de uma forma ainda mais jovem.
+
+1633
+01:19:28,930 --> 01:19:30,930
+2008 foi uma cena bruta,
+
+1634
+01:19:30,930 --> 01:19:32,930
+meu mercado caiu muito.
+
+1635
+01:19:32,930 --> 01:19:34,930
+E foi...
+
+1636
+01:19:34,930 --> 01:19:36,930
+Eu vi pessoas a perder muito dinheiro
+
+1637
+01:19:36,930 --> 01:19:38,930
+na altura, não era eu, porque eu investia muito menos
+
+1638
+01:19:38,930 --> 01:19:40,930
+nessa altura.
+
+1639
+01:19:40,930 --> 01:19:42,930
+E é impressionante,
+
+1640
+01:19:42,930 --> 01:19:44,930
+porque foi brutal.
+
+1641
+01:19:44,930 --> 01:19:46,930
+Eu exigente a perder mesmo muito dinheiro,
+
+1642
+01:19:46,930 --> 01:19:48,930
+porque eu participava em grupos,
+
+1643
+01:19:48,930 --> 01:19:50,930
+as pessoas tentavam não falar muito,
+
+1644
+01:19:50,930 --> 01:19:52,930
+mas, às vezes, acabavam por se chamar um bocadinho,
+
+1645
+01:19:52,930 --> 01:19:54,930
+e eu montava para perder 50%
+
+1646
+01:19:54,930 --> 01:19:56,930
+de carteiras grandes,
+
+1647
+01:19:56,930 --> 01:19:58,930
+às vezes, carteiras que
+
+1648
+01:19:58,930 --> 01:20:00,930
+não conhecia ninguém alavancado,
+
+1649
+01:20:00,930 --> 01:20:02,930
+mas conheci pessoas que tinham
+
+1650
+01:20:02,930 --> 01:20:04,930
+grande parte das poupanças ali,
+
+1651
+01:20:04,930 --> 01:20:06,930
+uma queda de 50%, mas uma coisa é certa.
+
+1652
+01:20:06,930 --> 01:20:08,930
+Quem fizesse aquilo que se diz
+
+1653
+01:20:08,930 --> 01:20:10,930
+que se deve fazer é
+
+1654
+01:20:10,930 --> 01:20:12,930
+menos no início, ou a doente
+
+1655
+01:20:12,930 --> 01:20:14,930
+que as esperas anos até recuperar,
+
+1656
+01:20:14,930 --> 01:20:16,930
+ou os dizer, recuperou-se tudo, tudo,
+
+1657
+01:20:16,930 --> 01:20:18,930
+em 2020 já estávamos
+
+1658
+01:20:18,930 --> 01:20:20,930
+muito acima de tudo, porque de quem
+
+1659
+01:20:20,930 --> 01:20:22,930
+não vendeu, se a fosse.
+
+1660
+01:20:22,930 --> 01:20:24,930
+Bom, isto não é um...
+
+1661
+01:20:24,930 --> 01:20:26,930
+De forma alguma estou a dar conselhos.
+
+1662
+01:20:26,930 --> 01:20:28,930
+Outra coisa,
+
+1663
+01:20:28,930 --> 01:20:30,930
+eu entrei aqui em discurso com o aluno,
+
+1664
+01:20:30,930 --> 01:20:32,930
+a aula já terminou,
+
+1665
+01:20:32,930 --> 01:20:34,930
+porque, pronto,
+
+1666
+01:20:34,930 --> 01:20:36,930
+falamos da matéria, se alguém quiser
+
+1667
+01:20:36,930 --> 01:20:38,930
+dizer alguma coisa, esteja à vontade,
+
+1668
+01:20:38,930 --> 01:20:40,930
+se não, estão à vontade
+
+1669
+01:20:40,930 --> 01:20:42,930
+para sair, já estão a ser
+
+1670
+01:20:42,930 --> 01:20:44,930
+algumas pessoas e bem, porque a aula já terminou.
+
+1671
+01:20:44,930 --> 01:20:46,930
+Se sim, então,
+
+1672
+01:20:46,930 --> 01:20:48,930
+entramos aqui um bocado em discussão.
+
+1673
+01:20:48,930 --> 01:20:50,930
+Mas é isso.
+
+1674
+01:20:50,930 --> 01:20:52,930
+Pronto, mas alguém quer dizer
+
+1675
+01:20:52,930 --> 01:20:54,930
+alguma coisa, alguma dúvida que irão colocar?
+
+1676
+01:20:54,930 --> 01:21:01,820
+Acho que não. Pronto, então, caríssimos.
+
+1677
+01:21:01,820 --> 01:21:03,820
+Vou-me despedir de vocês.
+
+1678
+01:21:03,820 --> 01:21:05,820
+Sábado estamos lá no laboratório
+
+1679
+01:21:05,820 --> 01:21:07,820
+para fazer mais um Trabalho Línguos
+
+1680
+01:21:07,820 --> 01:21:09,820
+de Raspberries, e eu vou acabar de ensaiar
+
+1681
+01:21:09,820 --> 01:21:11,820
+ali umas coisas, e sábado estamos lá,
+
+1682
+01:21:11,820 --> 01:21:13,820
+e desenjo uma ótima noite para todos,
+
+1683
+01:21:13,820 --> 01:21:15,820
+que já são horas de irmos descansar,
+
+1684
+01:21:15,820 --> 01:21:19,260
+está bem?
+
+1685
+01:21:19,260 --> 01:21:21,260
+Obrigado, boa noite.
+
+1686
+01:21:21,260 --> 01:21:23,260
+Foi um gosto.
+
+1687
+01:21:23,260 --> 01:21:25,260
+Se tiverem alguma dúvida,
+
+1688
+01:21:25,260 --> 01:21:27,260
+podem contactar por e-mail ou por time,
+
+1689
+01:21:27,260 --> 01:21:29,260
+está bem?
+
+1690
+01:21:29,260 --> 01:21:31,260
+Obrigado.
+
