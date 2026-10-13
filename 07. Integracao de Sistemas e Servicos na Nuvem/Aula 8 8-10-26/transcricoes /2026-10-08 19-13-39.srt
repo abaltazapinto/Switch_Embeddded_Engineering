@@ -1,0 +1,4224 @@
+1
+00:00:58,000 --> 00:01:04,120
+Hora bons dias, boas-noites, olá, que sei lá, sei lá, sei lá.
+
+2
+00:01:08,120 --> 00:01:11,440
+Lá já é sempre para aquele dia crítico par-se, em que eu dei
+
+3
+00:01:11,440 --> 00:01:16,120
+montes aulas durante o dia e me dei a ver uma, eu venho sempre
+
+4
+00:01:16,120 --> 00:01:21,880
+lançado com os outros temas da outra disciplina, das outras aulas
+
+5
+00:01:21,880 --> 00:01:26,480
+que eu dei uma quantidade delas iguais, ah, espero que não corra mal,
+
+6
+00:01:26,920 --> 00:01:29,280
+vai correr bem, vai correr bem.
+
+7
+00:01:29,280 --> 00:01:33,080
+Agora deixe-me cá, procurar um slide.
+
+8
+00:01:43,860 --> 00:01:46,460
+Engraçado que eu lá ficar tinha a ver-te, mas,
+
+9
+00:01:46,460 --> 00:01:48,780
+pois, fechei quando fui dar outra aula,
+
+10
+00:01:50,420 --> 00:01:53,900
+por acidente, mas agora já abri.
+
+11
+00:01:53,900 --> 00:02:26,660
+Ok, vocês aqui da minha garrafinha, é tramável,
+
+12
+00:02:26,660 --> 00:02:32,420
+porque eu no outro dia tropecei numa das transcrições
+
+13
+00:02:32,420 --> 00:02:38,740
+de uma sessão e aquilo transcreve exatamente tudo aquilo que eu digo,
+
+14
+00:02:38,740 --> 00:02:44,640
+mesmo quando preciso dizer buscar a garrafinha para ver algo,
+
+15
+00:02:44,640 --> 00:02:48,200
+lá estou na transcrição, é um bocado perigoso.
+
+16
+00:02:48,200 --> 00:02:59,800
+Hora, vamos começar a abordar um tema que é aquilo que vocês vão
+
+17
+00:02:59,800 --> 00:03:07,040
+trabalhar na próxima parte do trabalho, que é um broker de contexto,
+
+18
+00:03:08,680 --> 00:03:15,160
+ou seja, um middleware que agrega dados e mantém uma imagem do contexto
+
+19
+00:03:15,160 --> 00:03:20,600
+para que aplicações possam consumir, possam fazer perguntas e consumir
+
+20
+00:03:20,600 --> 00:03:28,720
+desse contexto e também uma aplicação de visualização que é o garrafano.
+
+21
+00:03:29,240 --> 00:03:34,720
+Ok, portanto, hoje vamos abrir as bases para o firewall e para o garrafano.
+
+22
+00:03:36,800 --> 00:03:44,770
+Eu, aquilo que li no vosso guião, eu penso que a vossa utilização do firewall
+
+23
+00:03:44,770 --> 00:03:51,570
+vai ser mais na base de cliente, como alguém que consome,
+
+24
+00:03:53,370 --> 00:03:57,450
+posso estar em enate, mas parece-me que vocês vão utilizar ou vão consumir dados,
+
+25
+00:03:57,530 --> 00:04:01,210
+vão interagir com o firewall da porto-cidade digital,
+
+26
+00:04:02,290 --> 00:04:04,530
+portanto, não vão mesmo instalar um firewall,
+
+27
+00:04:05,090 --> 00:04:09,890
+mas também não é difícil instalar o firewall e importante é,
+
+28
+00:04:09,890 --> 00:04:13,690
+se vocês alguma vez necessitarem de um broker de contexto,
+
+29
+00:04:14,050 --> 00:04:23,650
+compreenderem como é que o firewall trata os dados e disponibiliza os dados
+
+30
+00:04:23,650 --> 00:04:26,210
+para poder ser utilizados por aplicações.
+
+31
+00:04:27,050 --> 00:04:29,650
+Ok, depois o resto é só instalação,
+
+32
+00:04:31,250 --> 00:04:36,970
+colocar as coisas a correr, ligar tudo direitinho e essa não é a parte que é difícil,
+
+33
+00:04:36,970 --> 00:04:39,570
+os conceitos é que são primordiais.
+
+34
+00:04:40,130 --> 00:04:48,490
+Então, ok, desafios na integração Edge Cloud, ok?
+
+35
+00:04:49,450 --> 00:04:52,450
+Pronto, então, se nós olhamos para o lado
+
+36
+00:04:53,450 --> 00:04:56,450
+da Edge, o que nós vamos encontrar?
+
+37
+00:04:56,450 --> 00:05:02,050
+Muita heterogenidade, vocês vão ter diversos equipamentos,
+
+38
+00:05:02,050 --> 00:05:06,050
+até diversas naturezas, vocês podem ter, sei lá,
+
+39
+00:05:06,050 --> 00:05:12,890
+eu gosto de sempre pensar nos sensores de dados atmosféricos,
+
+40
+00:05:12,890 --> 00:05:16,770
+porque são aqueles que eventualmente são mais fáceis de imaginar.
+
+41
+00:05:16,770 --> 00:05:19,530
+Por exemplo, vocês podem ter várias sensores de temperatura,
+
+42
+00:05:19,970 --> 00:05:23,810
+vários sensores de umidade, mesmo nos sensores de temperatura,
+
+43
+00:05:23,810 --> 00:05:27,850
+nós podemos ter sensores de temperatura diferentes fabricantes
+
+44
+00:05:27,850 --> 00:05:33,450
+que comuniquem utilizando diferentes protocolos,
+
+45
+00:05:33,450 --> 00:05:36,690
+ou mesmo utilizando o mesmo protocolo,
+
+46
+00:05:36,690 --> 00:05:38,810
+a forma como os dados são enviados,
+
+47
+00:05:38,810 --> 00:05:42,410
+podem vir em formatos diferentes, ok?
+
+48
+00:05:43,050 --> 00:05:48,930
+Portanto, do lado da Edge, do lado do mundo real,
+
+49
+00:05:48,970 --> 00:05:51,570
+há muita heterogenidade, ok?
+
+50
+00:05:52,370 --> 00:05:53,890
+E o que acontece?
+
+51
+00:05:53,890 --> 00:05:59,410
+Não há normas que uniformizem tudo,
+
+52
+00:05:59,410 --> 00:06:02,730
+até porque, se vamos imaginar, por exemplo,
+
+53
+00:06:02,730 --> 00:06:04,890
+os protocolos de comunicações,
+
+54
+00:06:04,890 --> 00:06:08,370
+mesmo os de mais baixo nível, as tecnologias de comunicação,
+
+55
+00:06:08,370 --> 00:06:10,770
+não vale a pena existir uma tecnologia,
+
+56
+00:06:10,770 --> 00:06:14,530
+porque não há uma tecnologia que seja ótima para todos os casos.
+
+57
+00:06:14,530 --> 00:06:18,050
+Há tecnologias que são ótimas para curtas distâncias,
+
+58
+00:06:19,010 --> 00:06:21,570
+e são péssimas para longas distâncias.
+
+59
+00:06:21,570 --> 00:06:24,730
+Há outras que são boas para longas distâncias,
+
+60
+00:06:24,730 --> 00:06:27,610
+mas apresentam débitos menores.
+
+61
+00:06:27,610 --> 00:06:33,730
+Portanto, não há aqui uma solução que seja determinativa,
+
+62
+00:06:33,730 --> 00:06:35,890
+ótima para todos os casos.
+
+63
+00:06:35,890 --> 00:06:41,050
+É por isso que, do lado do mundo real, existe tanta heterogenidade.
+
+64
+00:06:41,050 --> 00:06:43,010
+Já nem falo da quantidade de fabricantes,
+
+65
+00:06:43,010 --> 00:06:45,770
+porque os fabricantes houvessem uma normalização,
+
+66
+00:06:45,770 --> 00:06:47,930
+eles poderiam aderir essa normalização,
+
+67
+00:06:47,970 --> 00:06:50,890
+mas essa normalização não existe precisamente
+
+68
+00:06:50,890 --> 00:06:53,570
+porque há diferentes requisitos,
+
+69
+00:06:53,570 --> 00:06:58,330
+diferentes restrições e diversas adversidades,
+
+70
+00:06:58,330 --> 00:07:01,850
+e há soluções para diferentes casos.
+
+71
+00:07:09,490 --> 00:07:14,730
+Agora, a State versus Historical Data Disconnect.
+
+72
+00:07:14,730 --> 00:07:20,360
+Há também duas perspectivas de olhar para os dados.
+
+73
+00:07:20,360 --> 00:07:22,960
+Se eu estiver a olhar para sistemas
+
+74
+00:07:22,960 --> 00:07:27,760
+que estão a operar sobre outros sistemas,
+
+75
+00:07:27,760 --> 00:07:30,800
+normalmente eles precisam de dados mais atuais.
+
+76
+00:07:32,160 --> 00:07:34,760
+Isso é óbvio, por exemplo, no Embedder.
+
+77
+00:07:34,760 --> 00:07:39,040
+No Embedder, os dados de há três minutos atrás
+
+78
+00:07:39,040 --> 00:07:40,600
+podem geralmente estar para nada.
+
+79
+00:07:40,600 --> 00:07:42,920
+A minha interesse é mais sempre o lado mais recente
+
+80
+00:07:42,920 --> 00:07:46,320
+para calcular a atuação seguinte, certo?
+
+81
+00:07:47,600 --> 00:07:50,200
+Se for para causa-lançar alertas,
+
+82
+00:07:50,200 --> 00:07:54,640
+muitas das vezes os alertas de situações anómolas
+
+83
+00:07:54,640 --> 00:07:58,480
+vêm da observação de um valor anómolo, ok?
+
+84
+00:07:58,480 --> 00:08:02,600
+Também pode acontecer que uma sequência,
+
+85
+00:08:02,600 --> 00:08:06,200
+um comportamento possa ser anómolo
+
+86
+00:08:06,200 --> 00:08:09,000
+e seja necessário reagir.
+
+87
+00:08:09,000 --> 00:08:13,560
+Mas, por parte das vezes, o que interessa é este instante.
+
+88
+00:08:13,560 --> 00:08:17,080
+Qual é a reação que eu tenho de calcular
+
+89
+00:08:17,480 --> 00:08:21,120
+na imagem que eu estou a ver neste instante, certo?
+
+90
+00:08:21,120 --> 00:08:26,720
+Por outro lado, nós temos as ferramentas de análise
+
+91
+00:08:26,720 --> 00:08:30,200
+que, a quem muitas das vezes interessa,
+
+92
+00:08:30,200 --> 00:08:34,760
+são as sequências de dados, são as séries temporais, ok?
+
+93
+00:08:34,760 --> 00:08:40,600
+Portanto, também existe aqui duas perspectivas de observar
+
+94
+00:08:40,600 --> 00:08:45,680
+e o que é que é relevante do mundo físico, certo?
+
+95
+00:08:49,270 --> 00:08:57,220
+Outro problema, outro desafio é separar ou desacupilar
+
+96
+00:08:57,220 --> 00:09:02,140
+os equipamentos que estão no mundo real, ok?
+
+97
+00:09:02,140 --> 00:09:05,100
+das aplicações que utilizam os dados
+
+98
+00:09:05,100 --> 00:09:09,900
+que são produzidos por esses equipamentos, ok?
+
+99
+00:09:09,900 --> 00:09:13,580
+Se eu escrever uma aplicação
+
+100
+00:09:13,580 --> 00:09:20,500
+que comunica diretamente com um determinado equipamento,
+
+101
+00:09:20,780 --> 00:09:24,540
+de um determinado fabricante,
+
+102
+00:09:24,540 --> 00:09:30,300
+esta minha aplicação está fortemente acupilada a este tipo de equipamentos.
+
+103
+00:09:30,300 --> 00:09:38,700
+Se eu tiver ou adicionar outros equipamentos de outro fabricante,
+
+104
+00:09:38,700 --> 00:09:42,460
+a minha aplicação tem que ser adaptada
+
+105
+00:09:42,460 --> 00:09:51,550
+para depois também poder integrar-se com esses novos equipamentos.
+
+106
+00:09:51,670 --> 00:09:56,150
+Isto causa problemas no desenvolvimento das aplicações.
+
+107
+00:09:56,150 --> 00:09:59,310
+É muito mais interessante, ou seria muito mais interessante,
+
+108
+00:09:59,310 --> 00:10:02,430
+se eu pudesse escrever uma aplicação
+
+109
+00:10:02,430 --> 00:10:07,830
+que consome dados independentemente
+
+110
+00:10:07,830 --> 00:10:13,270
+dos equipamentos que estão a produzir esses dados, ok?
+
+111
+00:10:13,270 --> 00:10:20,750
+Era a abordagem em que há algo no meio
+
+112
+00:10:20,790 --> 00:10:25,390
+que me fornece os dados já em pacotadinhos,
+
+113
+00:10:26,390 --> 00:10:32,710
+é mais favorável para o desenvolvimento rápido das aplicações, ok?
+
+114
+00:10:32,710 --> 00:10:36,230
+Aplicações que não estão diretamente acupilados
+
+115
+00:10:36,230 --> 00:10:43,040
+ao outro extremo, ao outro extremo que está no mundo físico, ok?
+
+116
+00:10:44,000 --> 00:10:54,910
+Então, soluções existem para estes desafios.
+
+117
+00:10:54,910 --> 00:11:04,870
+Uma abordagem é abstrair os equipamentos que estão no mundo físico, ok?
+
+118
+00:11:04,870 --> 00:11:11,590
+Há diferentes protocolos, há diferentes formatos de dados, muito bem.
+
+119
+00:11:12,150 --> 00:11:18,550
+Eu recebo diferentes protocolos de diferentes dados,
+
+120
+00:11:18,550 --> 00:11:32,550
+mas depois vou normalizar todos esses dados para um formato uniforme, ok?
+
+121
+00:11:33,430 --> 00:11:38,750
+Dessa forma, eu suponho que estamos aqui neste nível.
+
+122
+00:11:38,750 --> 00:11:40,430
+Deste nível para baixo,
+
+123
+00:11:40,430 --> 00:11:43,670
+onde estão os equipamentos no mundo físico,
+
+124
+00:11:43,670 --> 00:11:52,390
+eu preciso de ter adaptadores que adaptem a comunicação com estes dispositivos.
+
+125
+00:11:52,390 --> 00:11:56,150
+Mas depois eu traduz tudo para uma língua franca,
+
+126
+00:11:56,150 --> 00:12:06,060
+uma língua em que aqui por cima parece tudo igual, ok?
+
+127
+00:12:06,060 --> 00:12:17,540
+Para senter, um broker de central, conteste.
+
+128
+00:12:17,580 --> 00:12:21,460
+Um broker central ocupa este lugar
+
+129
+00:12:21,460 --> 00:12:29,180
+entre a diversidade ou a heterogeneidade que se encontra junto ao mundo físico
+
+130
+00:12:29,180 --> 00:12:35,660
+e as aplicações por cima que querem ver tudo uniforme, ok?
+
+131
+00:12:35,660 --> 00:12:43,380
+Este broker que fica aqui neste lugar central funciona como uma fonte de verdade única
+
+132
+00:12:43,380 --> 00:12:55,540
+de todos os ativos que estão em baixo, em baixo ou também se encontra na literatura do lado sul, ok?
+
+133
+00:12:55,540 --> 00:12:58,420
+O lado sul é próximo do mundo físico,
+
+134
+00:12:58,420 --> 00:13:07,620
+o lado norte é próximo da abstração da cloud, ok?
+
+135
+00:13:07,620 --> 00:13:17,210
+Por fim, se este broker guarda em cada instante
+
+136
+00:13:17,250 --> 00:13:25,130
+a imagem mais atual do panorama que está a ser observado no mundo físico, ok?
+
+137
+00:13:25,130 --> 00:13:28,050
+É isso, chama-se o contexto.
+
+138
+00:13:28,050 --> 00:13:35,730
+É a imagem mais atual daquilo que é observado, tá bom?
+
+139
+00:13:35,730 --> 00:13:45,450
+Agora, e se eu quiser guardar uma imagem, não uma imagem, mas uma sequência de imagens,
+
+140
+00:13:45,450 --> 00:13:50,290
+ou seja, uma série temporal.
+
+141
+00:13:50,290 --> 00:13:55,570
+Estão interessados em uma fotografia, estão interessados em um filme.
+
+142
+00:13:55,570 --> 00:14:04,890
+Nesse caso, a sequência de contextos que vão existindo ao longo do tempo
+
+143
+00:14:04,890 --> 00:14:15,410
+podem ser guardados em um componente que guarda precisamente essa sequência de contextos, ok?
+
+144
+00:14:16,410 --> 00:14:20,650
+Um depósito de uma série temporal.
+
+145
+00:14:20,650 --> 00:14:29,850
+Normalmente são bases de dados, especializadas em guardar séries temporais de dados, ok?
+
+146
+00:14:29,850 --> 00:14:38,790
+Survidas, até agora, não há?
+
+147
+00:14:38,790 --> 00:14:41,790
+Então, sim, sim.
+
+148
+00:14:41,790 --> 00:14:48,670
+Isso implica que tenhamos diversas gateways para fazer a compressão dos protocolos todos, não é?
+
+149
+00:14:49,110 --> 00:14:51,670
+O nível de campo.
+
+150
+00:14:51,670 --> 00:14:52,670
+Sim.
+
+151
+00:14:52,670 --> 00:14:55,230
+Para que possamos uniformizar.
+
+152
+00:14:55,230 --> 00:14:56,990
+Sim, ok.
+
+153
+00:14:56,990 --> 00:15:01,550
+Bom, a sua pergunta é boa por quê?
+
+154
+00:15:01,550 --> 00:15:06,910
+Porque nós temos, obviamente, que fazer esse trabalho da adaptação.
+
+155
+00:15:06,910 --> 00:15:10,430
+E quanto mais heterogéneo existir no campo,
+
+156
+00:15:10,430 --> 00:15:15,230
+quanto mais heterogéneo for o panorama do lado do mundo físico no campo, não é?
+
+157
+00:15:15,230 --> 00:15:16,310
+O que acontece?
+
+158
+00:15:16,310 --> 00:15:19,030
+Mais adaptação nós vamos ter que realizar.
+
+159
+00:15:19,030 --> 00:15:24,070
+Portanto, vamos eventualmente necessitar de vários adaptadores.
+
+160
+00:15:24,070 --> 00:15:33,830
+Mas repare, se eu fizer essa adaptação e aqui neste meu ponto central tiver um broker
+
+161
+00:15:33,830 --> 00:15:44,970
+que guarda um contexto, uma forma, uniforme, qualquer aplicação que eu desenvolvo
+
+162
+00:15:44,970 --> 00:15:52,290
+e que comunique com este broker, só precisa de comunicar de uma forma.
+
+163
+00:15:52,290 --> 00:16:00,200
+Está totalmente desacupulado de toda heterogeneidade que está em baixo.
+
+164
+00:16:00,200 --> 00:16:05,440
+Ou seja, a uniformização é converter para MQTT?
+
+165
+00:16:05,440 --> 00:16:07,640
+Será isso?
+
+166
+00:16:07,640 --> 00:16:09,160
+Não, não.
+
+167
+00:16:09,160 --> 00:16:15,520
+É converter mesmo para uma imagem ou uma representação.
+
+168
+00:16:15,560 --> 00:16:18,920
+Se calhar mais à frente é mais fácil de perceber.
+
+169
+00:16:18,920 --> 00:16:25,960
+Mas o MQTT, por exemplo, é um mecanismo de comunicação.
+
+170
+00:16:25,960 --> 00:16:30,680
+Eu posso ter equipamentos que comuniquem por MQTT.
+
+171
+00:16:30,680 --> 00:16:38,360
+E vamos até esquecer o formato de informação que vai dentro dos pacotimos de MQTT, certo?
+
+172
+00:16:38,360 --> 00:16:45,040
+Vamos imaginar que uma pessoa recebe o e-texto e consegue mais ou menos compreender o e-texto.
+
+173
+00:16:45,040 --> 00:16:50,560
+Nem que atire aquilo para o chat de MQTT e o vejo faz ali um esforço por tentar compreender
+
+174
+00:16:50,560 --> 00:16:52,320
+o que é que veio ali dentro do pacote.
+
+175
+00:16:52,320 --> 00:17:00,400
+Mas pronto, MQTT pode ter outro equipamento que, em vez de utilizar MQTT, utilize outros protocolos.
+
+176
+00:17:00,400 --> 00:17:03,780
+Por exemplo, call-up.
+
+177
+00:17:03,780 --> 00:17:09,820
+Mas aí já não vamos ter uma imagem uniforme a norte dos dispositivos, não é?
+
+178
+00:17:09,820 --> 00:17:12,140
+O objetivo era que fosse tudo uniforme.
+
+179
+00:17:12,140 --> 00:17:13,340
+Ah, ok, pronto.
+
+180
+00:17:13,340 --> 00:17:17,260
+Estamos a ver os dispositivos a norte.
+
+181
+00:17:17,260 --> 00:17:18,260
+O que acontece?
+
+182
+00:17:18,260 --> 00:17:26,380
+Os dispositivos comuniquem com adaptadores e os adaptadores vão receber os dados dos
+
+183
+00:17:26,380 --> 00:17:34,020
+dispositivos, de acordo com o protocolo dos dispositivos utilizarem, mas depois vão transformar
+
+184
+00:17:34,020 --> 00:17:37,940
+os dados que recebem num formato que é uniforme.
+
+185
+00:17:37,940 --> 00:17:38,940
+Certo.
+
+186
+00:17:38,940 --> 00:17:50,700
+E o broker vai fazer uma coleção de dados nesse formato uniforme.
+
+187
+00:17:50,700 --> 00:17:56,700
+Qualquer aplicação que pergunte ao broker, qualquer coisa, já sabe que vai receber a
+
+188
+00:17:56,700 --> 00:17:58,700
+resposta nesse formato uniforme.
+
+189
+00:17:58,700 --> 00:18:02,190
+Deixe cá ver.
+
+190
+00:18:02,190 --> 00:18:09,190
+Está a ver ali, já que começou a ter muitos anos, mas lembra-se de que é Rádio Estronos?
+
+191
+00:18:09,190 --> 00:18:10,190
+Sim.
+
+192
+00:18:11,190 --> 00:18:12,190
+Pronto.
+
+193
+00:18:12,190 --> 00:18:16,350
+Na guerra de Estronos, havia lá um senhor assim muito gordinho e careca, que eu já não
+
+194
+00:18:16,350 --> 00:18:23,150
+me lembro agora do nome, e também já não me estou a lembrar do nome da alcunha que
+
+195
+00:18:23,150 --> 00:18:30,510
+ele tinha, não sei se era o Verna ou qualquer coisa assim, que era basicamente o chefe dos
+
+196
+00:18:30,510 --> 00:18:35,620
+serviços secretos do rei.
+
+197
+00:18:35,620 --> 00:18:37,340
+O que é que o vejo fazia?
+
+198
+00:18:37,340 --> 00:18:41,860
+Ele tinha muitas crianças a trabalhar para ele, e ele pagava-lhes.
+
+199
+00:18:41,860 --> 00:18:48,060
+E as crianças andavam lá pela cidade e ouviam tudo o que se passava e iam ir contar.
+
+200
+00:18:48,060 --> 00:18:49,060
+Ok?
+
+201
+00:18:49,060 --> 00:18:56,900
+Agora vamos imaginar, vamos adicionar diversidade às crianças.
+
+202
+00:18:56,900 --> 00:19:02,540
+Havia crianças que falavam de prensa, havia outras crianças que falavam de vagar, algumas
+
+203
+00:19:02,540 --> 00:19:13,620
+crianças tinham um peito de fala, sei lá, eram feinhosas, haviam outras que eram gagas,
+
+204
+00:19:13,620 --> 00:19:22,820
+outras eram mudas e falavam por sinais, por linguagens gestual, estamos a ver a heterogeneidade.
+
+205
+00:19:22,820 --> 00:19:25,820
+E o que é que acontece?
+
+206
+00:19:25,820 --> 00:19:33,220
+Ele recebia informação, podia receber informação em diferentes formatos e através de diferentes
+
+207
+00:19:33,220 --> 00:19:34,220
+protocolos.
+
+208
+00:19:34,220 --> 00:19:36,100
+Mas o que é que ele fazia?
+
+209
+00:19:36,100 --> 00:19:43,900
+Ele ia uniformizar a informação e em cada instante ele tinha uma ideia de como é que
+
+210
+00:19:43,900 --> 00:19:46,780
+as coisas estavam na cidade.
+
+211
+00:19:46,780 --> 00:19:57,020
+Quando o rei fizesse uma pergunta, ele não ia responder ao rei de uma forma feinhosa,
+
+212
+00:19:57,020 --> 00:20:00,660
+se a informação tinha vindo de um miúdo feinhoso.
+
+213
+00:20:00,660 --> 00:20:06,060
+Nem ia gaguejar se a informação não tivesse vindo de um miúdo feinhoso, certo?
+
+214
+00:20:06,060 --> 00:20:15,260
+Ele respondia ao rei sempre utilizando o mesmo formato e é isso que o broker faz.
+
+215
+00:20:15,260 --> 00:20:22,260
+Ele pode receber dados de diferentes formas e em diferentes formatos ou através de diferentes
+
+216
+00:20:22,260 --> 00:20:28,220
+protocolos e em diferentes formatos, mas ele uniformiza tudo e depois das aplicações
+
+217
+00:20:28,220 --> 00:20:33,060
+quando eles fazem perguntas, já sabem como é que os dados vêm, aliás, até já sabem
+
+218
+00:20:33,060 --> 00:20:35,060
+como é que devem de fazer a pergunta.
+
+219
+00:20:35,060 --> 00:20:36,060
+Ok?
+
+220
+00:20:36,060 --> 00:20:41,940
+Esta analogia resultou?
+
+221
+00:20:41,940 --> 00:20:50,920
+Sim, sim, eu percebi, mas ainda que quero ver mais detalhes, não é?
+
+222
+00:20:50,920 --> 00:20:59,920
+Não, o broker neste caso e ele não uniformiza os protocolos, quem faz isso seria...
+
+223
+00:20:59,920 --> 00:21:00,920
+São os adaptadores.
+
+224
+00:21:00,920 --> 00:21:01,920
+Os adaptadores, certo?
+
+225
+00:21:01,920 --> 00:21:02,920
+Eu...
+
+226
+00:21:02,920 --> 00:21:03,920
+Peraí...
+
+227
+00:21:03,920 --> 00:21:04,920
+É...
+
+228
+00:21:04,920 --> 00:21:05,920
+Ele...
+
+229
+00:21:05,920 --> 00:21:10,920
+Já me fez avançar aqui uma porrada de slides.
+
+230
+00:21:10,920 --> 00:21:13,920
+Olha, tenho aqui o broker.
+
+231
+00:21:13,920 --> 00:21:14,920
+Ok?
+
+232
+00:21:14,920 --> 00:21:17,460
+E...
+
+233
+00:21:17,460 --> 00:21:26,460
+Ah pá, eu este aqui, por acaso, este slide, este diagrama, eu pedi ao Gemini para me fazer,
+
+234
+00:21:26,460 --> 00:21:31,740
+pá, porque isto aqui é feito em TicoZer e eu simplesmente não estava com paciência
+
+235
+00:21:31,740 --> 00:21:37,860
+para estar, como há 15 anos atrás, em que visia, tenho-nos aqui o nó, o que tem este
+
+236
+00:21:37,860 --> 00:21:42,620
+texto, tenho-nos este nó, o que tem este texto, agora ligo a uma seca deste nó para este
+
+237
+00:21:42,620 --> 00:21:45,740
+nó, e eu pedi ao Gueste para fazer isso.
+
+238
+00:21:45,740 --> 00:21:53,020
+Só que depois me estou ao contrário, eu gosto de ver esta parte em baixo do lado sul e esta
+
+239
+00:21:53,020 --> 00:21:58,740
+parte em cima do lado norte, onde estão as aplicações, só que o Gueste organizou-me
+
+240
+00:21:58,740 --> 00:22:03,460
+isto a fazer o pino em relação àquilo que ele goste, porquê?
+
+241
+00:22:03,460 --> 00:22:09,020
+Porque ele pôs a sequência de informação, pôs-me o fluxo de informação e não...
+
+242
+00:22:09,020 --> 00:22:12,060
+Pá, fica-me assim um bocado ao contrário, mas o que é que acontece aqui?
+
+243
+00:22:12,060 --> 00:22:13,060
+Este é o broker.
+
+244
+00:22:13,060 --> 00:22:14,060
+Ok?
+
+245
+00:22:14,060 --> 00:22:17,500
+Portanto, neste caso, o norte está para baixo e o sul está para cima.
+
+246
+00:22:17,500 --> 00:22:25,140
+E aí que tem os equipamentos que estão no mundo físico, ok?
+
+247
+00:22:25,140 --> 00:22:30,860
+Os equipamentos podem comunicar com diferentes formatos e com diferentes protocolos, certo?
+
+248
+00:22:30,860 --> 00:22:33,060
+O que é que acontece?
+
+249
+00:22:33,060 --> 00:22:42,980
+Para cada formato protocolo, digamos assim, tem um agente da adaptação.
+
+250
+00:22:42,980 --> 00:22:45,540
+E essa agente da adaptação, o que é que faz?
+
+251
+00:22:45,540 --> 00:22:51,340
+Sabe como comunicar com o equipamento que está no câmbio?
+
+252
+00:22:51,340 --> 00:22:58,340
+Sabe como é enqueada desembrulhar os dados que são enviados, ok?
+
+253
+00:22:58,340 --> 00:23:08,420
+Só que depois traduz esses dados para um formato standard, que é o NGSI, que é um formato
+
+254
+00:23:08,420 --> 00:23:26,940
+standard de como descrever grandezas ou objetos ou classes, é uma norma de descrição, ok?
+
+255
+00:23:26,940 --> 00:23:37,640
+E esses dados, já normalizados, são empurrados para dentro do broker e o broker faz uma
+
+256
+00:23:37,640 --> 00:23:41,380
+coleção desses dados normalizados.
+
+257
+00:23:41,380 --> 00:23:48,460
+Ele sabe que existem entidades que têm valores de grandezas e ele guarda isso tudo na forma
+
+258
+00:23:48,460 --> 00:23:52,340
+uniforme.
+
+259
+00:23:52,340 --> 00:24:00,260
+Depois eu posso ter aplicações que precisam de consultar os dados, por acaso aqui os
+
+260
+00:24:00,260 --> 00:24:06,300
+dashboard do Graphana não é uma boa ideia, mas posso ter aplicações que precisam de
+
+261
+00:24:06,300 --> 00:24:16,280
+saber algo sobre o contexto, por exemplo, qual é o autocarro da linha 5001 que está
+
+262
+00:24:16,280 --> 00:24:20,960
+mais próximo desta paragem, ok?
+
+263
+00:24:20,960 --> 00:24:29,640
+E essa pergunta é colocada ao broker e o broker vai olhar para o contexto, escolha
+
+264
+00:24:29,640 --> 00:24:36,780
+a resposta apropriada e devolve a resposta num formato que é sempre uniforme, que é
+
+265
+00:24:36,780 --> 00:24:54,200
+este NGSI, New Generation, ora bolas, já não me lembro, New Generation Systems Interchange,
+
+266
+00:24:54,200 --> 00:25:01,080
+agora o S.I. não sei, mas vocês podem procurar aí no Google que ele dá os locos, o NGSI,
+
+267
+00:25:01,080 --> 00:25:08,750
+o NGL lembro, não me sai da cabeça, a New Generation, mas está com esta imagem, ficou
+
+268
+00:25:08,750 --> 00:25:09,750
+mais compreendido?
+
+269
+00:25:09,750 --> 00:25:13,600
+Sim, sim.
+
+270
+00:25:13,600 --> 00:25:16,600
+Não está muito convencido.
+
+271
+00:25:16,600 --> 00:25:29,240
+O broker é como se fosse o estado atual de um sítio, qualquer, numa fábrica, e o anterior
+
+272
+00:25:29,240 --> 00:25:34,440
+é a tradução para uma linguagem universal, e se eu me quis saber o estado atual de alguma
+
+273
+00:25:34,460 --> 00:25:37,860
+coisa, acho, para o broker.
+
+274
+00:25:37,860 --> 00:25:47,820
+Exatamente, e a vantagem é que o broker mantém sempre os dados mais atuais sobre aquilo
+
+275
+00:25:47,820 --> 00:25:54,300
+que é observado, sobre o volume de observação, ele guarda sempre a imagem mais atual, ou
+
+276
+00:25:54,300 --> 00:26:01,580
+seja, os últimos valores que recebeu, os últimos valores de que foi informado, e se nós fizemos
+
+277
+00:26:01,600 --> 00:26:07,280
+uma pergunta, nós já sabemos como é que devemos fazer a pergunta e recebemos os dados
+
+278
+00:26:07,280 --> 00:26:17,240
+no formato que já conhecemos, ou seja, ficamos totalmente livres das especificidades de quem
+
+279
+00:26:17,240 --> 00:26:20,240
+produz os dados.
+
+280
+00:26:20,240 --> 00:26:24,920
+Não queremos saber qual é o protocolo que ele usa, não queremos saber qual é que é
+
+281
+00:26:24,920 --> 00:26:30,720
+o formato que ele usa para os dados, não me interessa nada disso, porque o broker tem
+
+282
+00:26:30,720 --> 00:26:36,940
+tudo prontinho para eu consumir, é quase como chegar ao supermercado e pegar-me nas
+
+283
+00:26:36,940 --> 00:26:42,700
+covete que já tem lá tudo embaladinho, e as coxas de frango já estão partidinhas,
+
+284
+00:26:42,700 --> 00:26:48,940
+e o salmão já está cortado aos filetes, eu não tenho que fazer nada, é só pegar,
+
+285
+00:26:48,940 --> 00:26:54,180
+já sei como é que aquilo vem e consumir, certo?
+
+286
+00:26:54,180 --> 00:27:02,720
+Não preciso ver a caça do salmão num rio com umas galochas e um arpão, ou saber
+
+287
+00:27:02,720 --> 00:27:12,600
+que tem que ir à caça do salmão, ali na piscicultura, com uma rede e com um bot,
+
+288
+00:27:12,600 --> 00:27:14,720
+ou qualquer coisa assim, não é?
+
+289
+00:27:14,720 --> 00:27:21,360
+Já não preciso de conhecer essas especificidades, está tudo embalado, prontinho para consumir.
+
+290
+00:27:21,360 --> 00:27:32,340
+Ok, então, o FIWARE, o FIWARE nasceu com um projeto suportado pela União Europeia,
+
+291
+00:27:32,340 --> 00:27:38,260
+e depois quando o projeto terminou, a União Europeia viu o que aquilo tinha para esperar
+
+292
+00:27:38,260 --> 00:27:43,700
+andar e começou a financiar outros projetos que avançassem mais com o FIWARE, ou então
+
+293
+00:27:43,700 --> 00:27:49,660
+que utilizassem o FIWARE, e aquilo acabou por crescer, ah pá, não posso dizer que seja
+
+294
+00:27:49,660 --> 00:27:59,280
+o top dos tops, mas é uma coisa funcional, livre e resolve, resolve mesmo, ok?
+
+295
+00:27:59,280 --> 00:28:09,440
+Então, nós, para termos uma aplicação FIWARE, há uma coisa que é obrigatória, é utilizarmos
+
+296
+00:28:09,440 --> 00:28:15,680
+o context broker do FIWARE, que é o Orion, ok?
+
+297
+00:28:15,700 --> 00:28:23,230
+Essa é a peça central de qualquer sistema FIWARE, ok?
+
+298
+00:28:23,230 --> 00:28:29,270
+É o Orion context broker, eu creio que eles também têm outros que é o Scorpion, mas
+
+299
+00:28:29,270 --> 00:28:42,830
+o Orion é o mais utilizado, é aquele que mantém o contexto do ilumínio que é observado
+
+300
+00:28:42,850 --> 00:28:49,490
+em qualquer sistema que uma pessoa utiliza o Orion, ok?
+
+301
+00:28:49,490 --> 00:29:02,830
+Também, podemos adicionar agentes FIWARE, tem muitos componentes que nós podemos adicionar
+
+302
+00:29:02,830 --> 00:29:11,990
+ao nosso sistema, existem, por exemplo, agentes para comunicar com dispositivos que comuniquem
+
+303
+00:29:12,010 --> 00:29:17,970
+com problema que é TT, existe uma série de agentes já prontos a funcionar que nós
+
+304
+00:29:17,970 --> 00:29:20,170
+podemos anexar, ok?
+
+305
+00:29:20,170 --> 00:29:26,090
+Mas esta é a peça central, e depois também tem outros componentes para, por exemplo, guardar
+
+306
+00:29:26,090 --> 00:29:35,570
+séries temporais, como o SIGNUS, mas também podemos utilizar outras bases de dados para
+
+307
+00:29:36,150 --> 00:29:43,710
+séries temporais, então aquilo é muito aberto e é muito fácil, a partir do Orion context
+
+308
+00:29:43,710 --> 00:29:50,270
+broker, expandir, quer para a Sul, para o lado do mundo físico, quer para a Norte,
+
+309
+00:29:50,270 --> 00:29:52,470
+que é o lado das aplicações, ok?
+
+310
+00:29:52,470 --> 00:29:56,990
+Quais são os benefícios de utilizar um middleware destes?
+
+311
+00:29:56,990 --> 00:30:06,610
+Primeiro, a interoperabilidade, se nós temos algo que me embala tudo sempre com o mesmo
+
+312
+00:30:06,610 --> 00:30:19,970
+formato, eu deixo de ficar preso a algo particular do lado do mundo físico, os equipamentos que
+
+313
+00:30:19,970 --> 00:30:22,810
+estão do mundo físico, ok?
+
+314
+00:30:22,810 --> 00:30:30,230
+Eu posso utilizar diversos equipamentos, de diversos fabricantes, utilizam diversos protocolos
+
+315
+00:30:30,230 --> 00:30:38,550
+e formatos, desde que eu consiga traduzir aquilo que eles produzem para o formato NGSI,
+
+316
+00:30:38,550 --> 00:30:44,550
+ah que, deixa de existir esse problema, ok?
+
+317
+00:30:44,550 --> 00:30:48,830
+Obviamente que é necessário fazer o trabalho da adaptação, mas fazendo o trabalho da
+
+318
+00:30:48,830 --> 00:30:57,290
+adaptação para um sensor, se tivemos 50 mil sensores do mesmo modelo, o trabalho
+
+319
+00:30:57,290 --> 00:31:03,410
+está feito, faz-se para um, já se fez para todos, ok?
+
+320
+00:31:03,410 --> 00:31:13,530
+Também, tenho um benefício da modularidade, nós podemos construir, à volta deste Orion
+
+321
+00:31:13,530 --> 00:31:18,870
+Broker, o Orion Context Broker, desculpem, nós podemos construir, à volta deste Orion
+
+322
+00:31:18,870 --> 00:31:25,630
+Context Broker, sem necessariamente, temos que estar a modificar qualquer coisa que seja
+
+323
+00:31:25,630 --> 00:31:37,880
+do simples que o do isso, nós, o Context Broker, isolamos a parte norte da parte sul,
+
+324
+00:31:37,880 --> 00:31:49,650
+como duas áreas estancas, pois, ainda por cima, também existe a outra eficiência
+
+325
+00:31:49,650 --> 00:31:59,370
+optada ao evento, porque sempre que há algo que aconteça e alguém manifestou interesse,
+
+326
+00:31:59,370 --> 00:32:09,090
+então o Orion Context Broker toma a iniciativa de avisar que aquele evento ocorreu, ok?
+
+327
+00:32:09,090 --> 00:32:16,590
+Quando nós temos um sistema, ou uma parte do sistema que é orientada a eventos, é muito
+
+328
+00:32:16,590 --> 00:32:26,150
+mais econômico informar quando o evento acontece do que estamos constantemente a perguntar
+
+329
+00:32:26,150 --> 00:32:33,950
+se aconteceu, por exemplo, imagine aquelas câmeras de vigilância, aquelas que são utilizadas
+
+330
+00:32:33,950 --> 00:32:36,790
+para alarme, ok?
+
+331
+00:32:36,790 --> 00:32:42,650
+Se vocês forem para noites, de minuto a minuto, vão espreitar a imagem para ver se alguém
+
+332
+00:32:42,650 --> 00:32:46,570
+está a assaltar a sua casa, certo?
+
+333
+00:32:46,570 --> 00:32:52,930
+Mas, se vocês quiserem ir ao cinema, se vocês forem para noites e estiverem todos os minutos
+
+334
+00:32:52,930 --> 00:32:58,690
+a espreitar para ver se está alguém a roubar a sua casa, vocês nem vêem o filme, gastam
+
+335
+00:32:58,690 --> 00:33:05,950
+muita energia, é muito melhor vocês estarem descansados e na eventualidade de alguém
+
+336
+00:33:05,970 --> 00:33:14,570
+entrar em vossa casa, a câmera de teta, movimentos e dançamos uma notificação, certo?
+
+337
+00:33:14,570 --> 00:33:15,570
+Acordam comigo?
+
+338
+00:33:15,570 --> 00:33:27,640
+O que não quero dizer, que uma pessoa também não possa ser paranoico e apesar daquilo ter
+
+339
+00:33:27,640 --> 00:33:33,080
+um notificador de eventos, uma pessoa gosta de andar lá todos os minutos a ver como é
+
+340
+00:33:33,080 --> 00:33:34,080
+que está a nossa casa.
+
+341
+00:33:34,820 --> 00:33:39,780
+Ou se os gatos andam lá a palarra, um com o outro, ou...
+
+342
+00:33:39,780 --> 00:33:43,600
+Certo?
+
+343
+00:33:43,600 --> 00:33:44,600
+Ok.
+
+344
+00:33:44,600 --> 00:33:45,600
+Pronto.
+
+345
+00:33:45,600 --> 00:33:54,790
+Olhando agora para o cenário completo, que isto é a descrição deste fomeco.
+
+346
+00:33:54,790 --> 00:34:05,310
+Nós, do lado do mundo físico, temos sensores, temos atuadores, temos eventualmente queituais
+
+347
+00:34:05,310 --> 00:34:15,090
+locais, para fazer a agregação dos dados dos sensores e tal, depois, para fazermos
+
+348
+00:34:15,090 --> 00:34:24,450
+a tradução dos dados que vem de uma forma metrogênia para um modelo uniforme, temos
+
+349
+00:34:24,450 --> 00:34:28,210
+uma camada ou agentes de adaptação, ok?
+
+350
+00:34:28,210 --> 00:34:35,050
+Fazem a adaptação de qualquer formato para o formato NGSI, já agora é para.
+
+351
+00:34:35,050 --> 00:34:42,790
+Eu estou aqui com a pulga atrás da orelha, deixem-me saber o que é que quer dizer NGSI.
+
+352
+00:34:42,790 --> 00:34:43,790
+New generation...
+
+353
+00:34:43,790 --> 00:34:56,120
+E querendo ver que o Google não me dá logo a resposta.
+
+354
+00:34:56,120 --> 00:34:59,320
+Next generation service interface.
+
+355
+00:34:59,320 --> 00:35:01,320
+Service interface, exatamente.
+
+356
+00:35:01,320 --> 00:35:06,320
+Eu abocado estes sistemas interchanges, mas...
+
+357
+00:35:06,320 --> 00:35:08,320
+Ei, service interface.
+
+358
+00:35:08,320 --> 00:35:09,320
+Obrigado.
+
+359
+00:35:09,320 --> 00:35:10,320
+Exatamente.
+
+360
+00:35:10,320 --> 00:35:20,260
+Uma forma de permitir que sistemas possam comunicar dados de uma forma única, com uma
+
+361
+00:35:20,260 --> 00:35:23,320
+linguagem franca, ok?
+
+362
+00:35:23,320 --> 00:35:26,820
+De forma que todos compreendam tudo.
+
+363
+00:35:26,820 --> 00:35:27,820
+Ok.
+
+364
+00:35:27,820 --> 00:35:28,820
+Obrigado.
+
+365
+00:35:28,820 --> 00:35:34,960
+Chegou lá antes de mim, é que eu vou ser franco, ainda não tinha encontrado, mas
+
+366
+00:35:34,960 --> 00:35:40,960
+vou olhar aqui para a página, para a representação da Wikipedia e ainda não tinha chegado lá.
+
+367
+00:35:40,960 --> 00:35:41,960
+Ok.
+
+368
+00:35:41,960 --> 00:35:52,880
+Então, depois temos a parte do context broker, a parte que faz a gestão do contexto, manter
+
+369
+00:35:52,880 --> 00:36:03,620
+sempre a imagem mais atual daquilo do domínio que está a ser observado, podemos adicionar
+
+370
+00:36:03,620 --> 00:36:11,940
+uma camada para guardar a história, ou seja, guardar a sequência de contextos, isso é
+
+371
+00:36:11,940 --> 00:36:19,500
+algo que o context broker não guarda, o context broker é, se eu receber uma atualização
+
+372
+00:36:19,500 --> 00:36:28,900
+de uma determinada entidade, ele esquece o anterior e fica apenas com o atual, ok?
+
+373
+00:36:28,900 --> 00:36:36,540
+Se nós quisermos manter um registro histórico, precisamos adicionar mecanismos que guardem
+
+374
+00:36:36,540 --> 00:36:39,540
+essas séries temporais de dados.
+
+375
+00:36:39,540 --> 00:36:45,340
+E depois temos a camada de aplicações.
+
+376
+00:36:45,340 --> 00:36:54,260
+O grafana é apenas uma ferramenta que nós temos disponível para facilmente fazer lashboards
+
+377
+00:36:54,260 --> 00:37:01,980
+a partir de séries temporais, mas o grafana vai ser apenas uma aplicação que vocês vão
+
+378
+00:37:01,980 --> 00:37:04,180
+utilizar para experimentar.
+
+379
+00:37:04,180 --> 00:37:13,300
+A parte da camada da aplicação não se cinja o grafana, é qualquer aplicação que consuma
+
+380
+00:37:13,300 --> 00:37:18,500
+os dados entra aqui nesta camada, ok?
+
+381
+00:37:18,500 --> 00:37:20,500
+Professor, então...
+
+382
+00:37:20,500 --> 00:37:25,340
+Eu agora a ver este live estava a pensar que isto aqui aparece grafana e tal, grafana
+
+383
+00:37:25,340 --> 00:37:29,580
+é apenas um que vocês vão utilizar, sim, diga.
+
+384
+00:37:29,580 --> 00:37:36,740
+Eu sei que isto é cláudio, mas isto também pode ser feito tudo local, ou seja, eu posso
+
+385
+00:37:36,740 --> 00:37:42,860
+ter isto tudo em um computador local a correr em vez dos hora cláudio ou não?
+
+386
+00:37:42,860 --> 00:37:43,860
+Pode.
+
+387
+00:37:43,860 --> 00:37:44,860
+Ok.
+
+388
+00:37:44,860 --> 00:37:45,860
+Pode sim.
+
+389
+00:37:45,860 --> 00:37:46,860
+Por exemplo.
+
+390
+00:37:46,860 --> 00:38:01,300
+Eu em testes, agora recentemente voltei a usar o FIWARE, eu ponho FIWARE a correr
+
+391
+00:38:01,300 --> 00:38:09,940
+num contentor, normalmente para ter o ORION Context Broker, tenho um contentor com o ORION
+
+392
+00:38:09,940 --> 00:38:16,700
+Context Broker e tenho um contentor com o MongoDB, porque o contexto é guardado na base
+
+393
+00:38:16,700 --> 00:38:18,700
+de dados de MongoDB.
+
+394
+00:38:18,700 --> 00:38:19,700
+Ok?
+
+395
+00:38:19,700 --> 00:38:26,700
+Portanto, tenho dois contentores, um para o Context Broker e outro para o MongoDB para
+
+396
+00:38:26,700 --> 00:38:32,140
+guardar o contexto.
+
+397
+00:38:32,140 --> 00:38:38,060
+Nesse mesmo computador, eu também posso colocar uma aplicação baseada em grafana que vai
+
+398
+00:38:38,060 --> 00:38:45,980
+estar a consumir, ou pode estar, se for por exemplo, só para estar a mostrar o contexto
+
+399
+00:38:45,980 --> 00:38:52,500
+atual, pode estar a consumir diretamente o ORION Context Broker, mas também posso adicionar
+
+400
+00:38:52,500 --> 00:39:04,220
+um terceiro contentor com uma base de dados e o Context Broker, sempre que há uma atualização
+
+401
+00:39:04,220 --> 00:39:09,700
+envia essa ou injeta essa atualização na base de dados, insere, injetar num gosto em
+
+402
+00:39:09,700 --> 00:39:16,980
+base de dados é inserir, insere essa atualização na base de dados e o grafana pode ser uma
+
+403
+00:39:16,980 --> 00:39:23,740
+aplicação que vai consumir, querido o Context Broker, para ter os dados mais atuais ou pode
+
+404
+00:39:23,740 --> 00:39:30,980
+ir consumir ao contentor que tenha base de dados para ir buscar uma série temporal, portanto
+
+405
+00:39:30,980 --> 00:39:35,980
+pode ter tudo dentro de uma máquina, sim.
+
+406
+00:39:35,980 --> 00:39:44,300
+Ok, aqui a parte do agente isto é software, certo, não é ser nada físico.
+
+407
+00:39:44,300 --> 00:39:55,220
+Ok, pronto, software, depende, quando é software, sim software, porque eu faço software, mas
+
+408
+00:39:55,220 --> 00:40:02,740
+imagine que, por exemplo, no mundo físico tem alguns equipamentos que comuniquem por
+
+409
+00:40:02,740 --> 00:40:13,660
+Lora One, ok, o comuniquem por rádio com a tecnologia Lora One, obviamente que nesse
+
+410
+00:40:13,660 --> 00:40:25,400
+caso vai ter que ter um equipamento que seja um equipamento rádio que comunique por Lora
+
+411
+00:40:25,400 --> 00:40:38,480
+One, One não é do um, é One, W-A-N, the Wide Area Network, ok, portanto, opa, depende,
+
+412
+00:40:38,480 --> 00:40:43,560
+se comunicarem por Wi-Fi, o seu computador já tem lá o Wi-Fi, não é?
+
+413
+00:40:43,560 --> 00:40:49,640
+Wi-Fi com MQTT, é pá, pronto, aí não precisa de mais nada, só precisa de software, porque
+
+414
+00:40:49,640 --> 00:40:52,560
+o hardware já está incluído na sua caixinha.
+
+415
+00:40:52,560 --> 00:41:00,680
+Agora, se comunicarem por tecnologias que não estão dentro da sua caixinha e só obrigam
+
+416
+00:41:00,680 --> 00:41:11,880
+a comprar também hardware, pode ligar o equipamento rádio Lora One para o USB, ok, ao seu computador.
+
+417
+00:41:11,880 --> 00:41:19,520
+E depois aí, obviamente, o agente de tradução, não é, vai ser software, mas precisa do
+
+418
+00:41:19,520 --> 00:41:22,340
+hardware.
+
+419
+00:41:22,340 --> 00:41:28,820
+Ok, eu pensei que as gateways eram feitas via software, ou seja, nós tínhamos aqui
+
+420
+00:41:28,820 --> 00:41:35,020
+LEDs, que eram os sensores, por exemplo, que comunicaram por modo base, e era feito
+
+421
+00:41:35,020 --> 00:41:37,940
+esta conversão a nível de software.
+
+422
+00:41:37,940 --> 00:41:41,620
+Opa, o que é que eu posso dizer?
+
+423
+00:41:41,620 --> 00:41:50,620
+É que o que eu posso dizer é que o mundo é muito vasto, e por exemplo, eventualmente
+
+424
+00:41:50,620 --> 00:41:57,020
+em algumas situações, como a pessoa quer experimentar em contexto de formação, nós
+
+425
+00:41:57,020 --> 00:42:03,260
+usamos as tecnologias que temos à mão, ok?
+
+426
+00:42:03,260 --> 00:42:14,160
+Agora, há muitas outras situações, pode ter perfeitamente uma gateway que faz a tradução
+
+427
+00:42:14,160 --> 00:42:24,480
+de, vou voltar agora a ter na tecla do Lora One, para uma rea, dar um link wi-fi, para
+
+428
+00:42:24,480 --> 00:42:35,200
+uma rea da internet e passar os dados por mkttn, certo, ou seja, a gateway, já vi gateway
+
+429
+00:42:35,200 --> 00:42:44,030
+que tinha as antenas, é uma caixinha e tem as antenas, e tem software a correr, certo,
+
+430
+00:42:44,030 --> 00:42:52,030
+uma gateway, basicamente o que faz é transformar algo de uma tecnologia para outra tecnologia.
+
+431
+00:42:52,030 --> 00:42:56,230
+Certo, deixa de ser software na mesma, não é?
+
+432
+00:42:56,230 --> 00:43:02,870
+Obviamente que o software é que faz o trabalho, mas precisa ter o hardware para estabelecer
+
+433
+00:43:02,870 --> 00:43:07,910
+a ligação à física, certo?
+
+434
+00:43:07,910 --> 00:43:18,790
+Muitas vezes nós trabalhamos com wi-fi e esquecemos que no nosso computador nós temos
+
+435
+00:43:18,790 --> 00:43:27,790
+equipamento rádio para wi-fi, ou seja, o wi-fi já está tão naturalizado, está tão normalizado,
+
+436
+00:43:27,790 --> 00:43:38,470
+mas nós até não esquecemos que temos equipamento wi-fi, o meu primeiro computador a ter wi-fi,
+
+437
+00:43:38,470 --> 00:43:50,420
+eu comprei em 2002, antes disso, nem sequer isso tinha wi-fi, portanto, eu bem tinha,
+
+438
+00:43:50,420 --> 00:44:01,420
+e agora até, eu estou a pensar, era um portátil HP, e ele tinha o socket, portanto,
+
+439
+00:44:01,420 --> 00:44:10,420
+tinha tomada Ethernet, e eu usava a rede Ethernet, e agora estou a pensar se aquilo tinha wi-fi,
+
+440
+00:44:10,420 --> 00:44:18,620
+também já deixei de utilizar em 2004, já foi há muito tempo, e eu estou a pensar se
+
+441
+00:44:18,620 --> 00:44:27,140
+ele tinha wi-fi ou não tinha wi-fi, sei que o meu PowerBook, meu Mac PowerBook, que comprei
+
+442
+00:44:27,140 --> 00:44:37,260
+em 2004, tinha wi-fi, e eu sei porque ainda hoje ele funciona, agora é a HP a pá, sinceramente
+
+443
+00:44:37,260 --> 00:44:47,100
+já nem sei se tinha wi-fi, ou seja, há coisas que nós tomamos como garantido, mas esquecemos
+
+444
+00:44:47,100 --> 00:44:57,990
+que existe equipamento lá dentro, a hardware, para suportar aquilo, não sei se esclareci,
+
+445
+00:44:57,990 --> 00:45:05,950
+agora também, e eu acho que quando o gajo começa a falar em um computador que comprou em 2001,
+
+446
+00:45:05,950 --> 00:45:12,770
+e eu ainda nem sequer tinha nascido nessa altura, é fantástico como é que se lembra, era muito bonito,
+
+447
+00:45:12,770 --> 00:45:23,450
+era assim cinzento, mas tinha uns apontamentos de borracha as lados, e depois tinha um defeito,
+
+448
+00:45:23,450 --> 00:45:39,570
+que era o cabo que ligava o computador ao ecrã para ter com facilidade. A dobra, não é?
+
+449
+00:45:39,570 --> 00:45:46,570
+O cabo passava pela... Pai, tu mas esqueceu do raio do nome, não é ilharga, mas aquilo
+
+450
+00:45:46,570 --> 00:45:53,890
+que faz o abrir e fechar, a dobra-viça, ou seja, o pai, aquilo avariou e depois mandei
+
+451
+00:45:53,890 --> 00:46:00,850
+vir uma peça, substituição, já nem me lembro onde é que comprei aquilo, mas aquilo veio
+
+452
+00:46:00,850 --> 00:46:05,890
+pelo correio, não sei se foi da América ou que era essas, era em segunda mão, eu coloquei
+
+453
+00:46:05,890 --> 00:46:11,850
+aquilo, passado mais um bocado de tempo, voltou também, começaram a partir os fios, aquilo
+
+454
+00:46:11,850 --> 00:46:16,650
+era problema, partiam os fios, eu perdi a cor, então perdi a iluminação, e eu chatei
+
+455
+00:46:16,650 --> 00:46:23,450
+e me disse, não, vou comprar outro computador, e comprei um... Fui o início desta história
+
+456
+00:46:23,450 --> 00:46:30,690
+de andar sempre a comprar apples agora. Não sei se havia mais uma questão, eu não sei
+
+457
+00:46:30,690 --> 00:46:35,850
+se... Eu creio que vi uma mão a abrir, a passar, mas não sei se era uma mão ou se
+
+458
+00:46:35,850 --> 00:46:43,410
+era um pulgar. Não há alguma questão? E eu preocupava, estava a fazer poucos slides
+
+459
+00:46:43,410 --> 00:46:49,770
+hoje. Pronto, por aqui já passamos, o que é que acontece? Temos aqui os produtores
+
+460
+00:46:49,770 --> 00:46:55,770
+dados, que também podem ser atuadores, temos aqui o agente que faz a tradução entre
+
+461
+00:46:55,850 --> 00:47:05,850
+o protocolo e o formato que estes equipamentos utilizam para um formato normalizado, o NGSE,
+
+462
+00:47:05,850 --> 00:47:15,850
+ok? E esse formato injetado aqui no context broker e context broker mantém esse contexto
+
+463
+00:47:15,850 --> 00:47:22,850
+numa... num formato uniforme, pronto a ser utilizado, ok? Já agora, estes agentes também
+
+464
+00:47:22,850 --> 00:47:28,050
+fazem a coisa ao contrário. Por quê? Porque eu posso ter sensores a produzir dados, mas
+
+465
+00:47:28,050 --> 00:47:33,210
+também posso querer comandá-los, se forem atuadores, ok? Portanto, ordens que venham
+
+466
+00:47:33,210 --> 00:47:42,690
+daqui de cima, num formato também uniforme, são depois traduzidos para a linguagem nativa
+
+467
+00:47:42,690 --> 00:47:49,050
+do equipamento que está no mundo físico, ok? Portanto, estes agentes normalmente fazem
+
+468
+00:47:49,050 --> 00:47:58,490
+a adaptação bidireccional, ok? Aqui no context broker, sempre que há atualizações, ou
+
+469
+00:47:58,490 --> 00:48:05,370
+seja, mudanças de contexto, essas mudanças de contexto são registadas numa camada de
+
+470
+00:48:05,370 --> 00:48:11,970
+persistência que vai guardar uma série temporal, se for necessário, atenção, e depois por
+
+471
+00:48:11,970 --> 00:48:17,730
+cima temos a aplicação, a camada da aplicação, esta camada da aplicação até poder estar
+
+472
+00:48:17,730 --> 00:48:24,050
+assim meio do lado e meio por cima. Por quê? Porque eu posso ter aplicações que simplesmente
+
+473
+00:48:24,050 --> 00:48:31,770
+consomem o contexto e posso ter aplicações que consomem o histórico e os dois também,
+
+474
+00:48:31,770 --> 00:48:37,370
+o histórico e o contexto atual. Esta aqui até poderia colocar assim meio do lado. Uma
+
+475
+00:48:37,370 --> 00:48:42,930
+coisa é certa, agradável muito mais ver isto, a fazer o pino, ter isto no polo norte e
+
+476
+00:48:42,930 --> 00:48:51,090
+ter isto no polo sul. Mas pronto. Não quis estar a mudar, porque se eu tivesse que
+
+477
+00:48:51,090 --> 00:49:00,010
+mudar o diagrama que o German e fez, eu terei que estar basicamente estar a fazer o diagrama
+
+478
+00:49:00,010 --> 00:49:03,650
+todo. Só não tinha que estar a escrever o que estava dentro dos retemosinhos. Tinha
+
+479
+00:49:03,650 --> 00:49:07,090
+que estar a mudar tudo, dizer, afinal, este está em cima daquele e aquele está em cima
+
+480
+00:49:07,090 --> 00:49:16,370
+daquele. Ok, pronto. Separação arquitetural das responsabilidades. Na AIDS temos processamento
+
+481
+00:49:16,370 --> 00:49:23,810
+local e o processamento local é fantástico para aquelas situações em que a Latência
+
+482
+00:49:23,810 --> 00:49:35,450
+tem que ser controlada, não podemos ter ali grandes derivas na Latência. Na AIDS
+
+483
+00:49:35,450 --> 00:49:44,770
+também fazemos a filtragem, a agregação e o pré-processamento dos dados que são
+
+484
+00:49:44,770 --> 00:49:50,650
+gerados. Muitas das vezes há dados que são gerados, mas não interessa estar a passar
+
+485
+00:49:50,650 --> 00:49:59,170
+para cima, para que eu estou, por exemplo, a imaginar um stream de vídeo em que não
+
+486
+00:49:59,170 --> 00:50:05,410
+interessa estar a enviar o stream de vídeo. Pode ser interessante a enviar eventos
+
+487
+00:50:05,530 --> 00:50:14,210
+que ocorrem ocasionalmente no stream de vídeo. Por exemplo, houve movimento na cena.
+
+488
+00:50:14,210 --> 00:50:17,570
+Então, vocês dizem, então, nesta cena estão duas pessoas.
+
+489
+00:50:28,040 --> 00:50:37,050
+A gestão do Estado, feito pelo contact broker, qual é o Estado atual daquilo que está a
+
+490
+00:50:37,170 --> 00:50:51,150
+observar? Ele realiza operações em memória para, o que que eu queria dizer com isto?
+
+491
+00:50:51,150 --> 00:51:06,420
+Ok, e agora até estou a pensar no MongoDB. O MongoDB eventualmente guarda a informação
+
+492
+00:51:06,420 --> 00:51:15,990
+na memória, e é por isso que ele é tão rápido. Eventualmente também mantém memória
+
+493
+00:51:15,990 --> 00:51:24,780
+aquilo que tem sido mais recentemente utilizado, e era isso que eu queria dizer quando fizeste
+
+494
+00:51:24,780 --> 00:51:34,300
+slide, apesar de estar um pouco exumido. Mas pronto, o contact broker faz ali a gestão
+
+495
+00:51:34,300 --> 00:51:42,300
+da imagem e de poder responder rapidamente a perguntas sobre a imagem, ou então também
+
+496
+00:51:42,300 --> 00:51:47,340
+notificar se houver eventos que alguém tenha manifestado interesse em serem informados.
+
+497
+00:51:47,340 --> 00:51:55,500
+E também temos o armazenamento histórico. Isso aí passamos para as bases de dados de
+
+498
+00:51:55,500 --> 00:52:04,870
+séries temporais. Príncipes fundamentais da gestão de contexto.
+
+499
+00:52:06,890 --> 00:52:16,570
+Importante, o contexto é a representação do Estado físico ou lógico, de entidades,
+
+500
+00:52:16,570 --> 00:52:22,810
+num determinado instante. O contexto evolui ao longo do tempo, mas em cada instante o
+
+501
+00:52:22,810 --> 00:52:30,290
+contexto é o mais atual naquilo instante. Ok, portanto temos sempre os últimos dados
+
+502
+00:52:30,290 --> 00:52:39,170
+que foram recebidos sobre o domínio que está a ser observado. Ok, e o domínio que está a ser
+
+503
+00:52:39,170 --> 00:52:47,970
+observado é representado na forma de entidades que têm propriedades. Ok, por exemplo, um autocar,
+
+504
+00:52:47,970 --> 00:52:56,290
+se tivermos a pensar em smart cities, há um autocar que tem um identificador, que tem uma
+
+505
+00:52:56,290 --> 00:53:09,200
+velocidade e que tem, por exemplo, uma velocidade, certo? Ok, vai além dos valores dos sensores,
+
+506
+00:53:09,200 --> 00:53:16,880
+incluindo meta-dados. Por exemplo, dizem que a velocidade é 50, não me diz muito, como
+
+507
+00:53:16,880 --> 00:53:23,200
+vêm saber quais são as unidades. Se nós tivermos aqui, pode ser quilômetros por hora, quase
+
+508
+00:53:23,200 --> 00:53:29,200
+a coisa, não é? Se estivermos nos Estados Unidos da América, eventualmente em ilhas por hora,
+
+509
+00:53:29,200 --> 00:53:41,200
+se estivermos na Inglaterra, já não sei, se não me disserem desplicitamente que é quilômetros
+
+510
+00:53:41,200 --> 00:53:48,200
+por hora ou milhas por hora, eu fico na dúvida, porque os ingleses andam ali a abraçar sistema
+
+511
+00:53:48,200 --> 00:53:56,200
+científico com alguma relutância, não é? Portanto, convém não só ter os valores, mas também ter
+
+512
+00:53:56,200 --> 00:54:06,200
+informação sobre os valores. Tá bom? Parabéns com a comunicação. Temos o polling,
+
+513
+00:54:06,200 --> 00:54:11,200
+que é aquilo que está constantemente a perguntar, então como é que está? Então como é que está?
+
+514
+00:54:11,200 --> 00:54:22,200
+Opa, do ponto de vista de sistemas orientados a eventos é eficiente, mas pode haver aplicações
+
+515
+00:54:22,200 --> 00:54:36,200
+em que isso seja necessário. O public subscribe é puro e duro para arquiteturas baseadas em eventos,
+
+516
+00:54:36,200 --> 00:54:45,200
+sempre que há qualquer evento que seja detectado, informa-se quem mostrou o interesse desse evento.
+
+517
+00:54:45,200 --> 00:54:57,440
+Esta parte já falamos, o context broker no firewall é o orion, é a parte central, é obrigatório
+
+518
+00:54:57,440 --> 00:55:03,440
+em qualquer sistema que uma pessoa diga que tem tecnologia firewall, tem que ter o context broker
+
+519
+00:55:03,440 --> 00:55:14,440
+e, basicamente, ele é mesmo central e separa, logicamente, tudo que está a sul de tudo que está a
+
+520
+00:55:14,440 --> 00:55:28,880
+norte. Ok? Pronto. O next generation, systems interface. Acertei, certo? Já me estava esquecido
+
+521
+00:55:28,880 --> 00:55:38,880
+através do SC. Não, não é systems, é service interface. Service interface. Como é que eles representam
+
+522
+00:55:38,880 --> 00:55:48,880
+os dados? Pá, isto aqui é importante. Nós temos a entidade que representa algo do mundo físico,
+
+523
+00:55:49,880 --> 00:55:59,880
+ok? Temos para cada instância de uma entidade, um identificador, se nós pudermos ter uma entidade
+
+524
+00:55:59,880 --> 00:56:05,880
+que é um autocarro, mas se nós tivermos dois autocarros físicos, não é reais, cada um deles
+
+525
+00:56:05,880 --> 00:56:14,880
+tem um identificador diferente, que é para identificá-nos univocamente cada uma das instâncias,
+
+526
+00:56:14,880 --> 00:56:26,420
+ok? Também temos qual é que é o tipo, diz-nos, basicamente, esta entidade pertence a esta
+
+527
+00:56:26,420 --> 00:56:39,210
+classe de, esta classe de objetos, de entidades, pá, eu não queria estar a repetir a entidade,
+
+528
+00:56:39,210 --> 00:56:48,210
+esta classe de entidades e depois cada instância tem atributos em que eles são representados
+
+529
+00:56:48,210 --> 00:57:02,490
+através de um par, chave, valor, tipo, velocidade, 25, ok? Temperatura, 18. E temos também metadados
+
+530
+00:57:02,490 --> 00:57:10,490
+que caracterizam as propriedades dos atributos. Pode ser, por exemplo, em que instante, qual
+
+531
+00:57:10,490 --> 00:57:19,490
+é que é a unidade, ok? Qual é que é o tipo de valor, se é um inteiro, ou seja, por exemplo,
+
+532
+00:57:19,490 --> 00:57:28,490
+um número real, podemos caracterizar os valores, ok, os atributos, podemos caracterizá-los
+
+533
+00:57:28,490 --> 00:57:35,490
+com suante as propriedades do próprio atributo. Vamos cá ver um exemplo. Gosto sempre de
+
+534
+00:57:35,490 --> 00:57:50,600
+os exemplos. Temos aqui uma representação de uma entidade. Essa entidade tem um identificador
+
+535
+00:57:50,600 --> 00:58:05,600
+que é o R&N NGSI LD Industrial Sensor 001, ok? O pessoal do NGSI não é, como é que
+
+536
+00:58:05,600 --> 00:58:14,600
+dizer, super radical, vocês podem dar ideias conforme queiram, mas eles recomendam muito
+
+537
+00:58:14,600 --> 00:58:29,840
+fortemente utilizar esta sequência. Começa por o R&N Uniform Resource, o R&N, agora o
+
+538
+00:58:29,840 --> 00:58:45,140
+N tem que significar Uniform Resource, procurei no Google informe depois, o R&N, dois pontos.
+
+539
+00:58:45,140 --> 00:58:57,140
+Isto aqui forma uma espécie de um caminho lógico, ok? Dos R&Ns, pretença a classe NGSI LD,
+
+540
+00:58:57,140 --> 00:59:14,140
+ou seja, é um identificador uniforme, universal que segue a norma NGSI, ok? Ponto. Aqui, qual
+
+541
+00:59:14,140 --> 00:59:21,140
+é que é o tipo de entidade, e aqui estamos a dizer que é uma entidade sensor industrial,
+
+542
+00:59:21,140 --> 00:59:30,140
+dois pontos e depois, finalmente, qual é que é o identificador que o distingue de todos os outros
+
+543
+00:59:30,140 --> 00:59:40,950
+sensores industriais, ok? A seguir, tipo, qual é que é a natureza, qual é que é a classe
+
+544
+00:59:40,950 --> 00:59:50,950
+desta entidade? É um sensor industrial, ok? Quando estou a criar uma instância, algo, uma entidade,
+
+545
+00:59:50,950 --> 01:00:02,230
+estes dois, o ID e o type são obrigatórios e vem logo à cabeça, ok? O ID identifica
+
+546
+01:00:02,230 --> 01:00:10,230
+unificamente uma entidade, uma instância e essa entidade também nós temos de saber
+
+547
+01:00:10,230 --> 01:00:17,230
+qual é que é o tipo de entidade, qual é a sua classe. Portanto, estes dois são obrigatórios,
+
+548
+01:00:17,230 --> 01:00:25,230
+tá bom? A partir daqui, coloco outros atributos e atenção que o ID e o type são atributos,
+
+549
+01:00:25,230 --> 01:00:33,230
+são atributos é obrigatórios. Agora, aqui tem o atributo de temperatura, ok? Isto está
+
+550
+01:00:33,230 --> 01:00:46,230
+informado, Jason. O atributo de temperatura tem o valor 24.5, ok? Poder ficar por aí. Mas
+
+551
+01:00:46,230 --> 01:00:55,230
+agora eu posso caracterizar para além do valor. Eu posso dizer que o tipo de valor
+
+552
+01:00:55,230 --> 01:01:07,310
+é um float. Este serve para quê? Serve para quem receber esta informação, poder, se
+
+553
+01:01:07,310 --> 01:01:16,310
+quiser, inferir qual é que é o tipo de valor que está ali. E ainda tenho mais dados adicionais.
+
+554
+01:01:17,310 --> 01:01:24,310
+Nos dados adicionais, eu posso dizer que o código de unidades, seguindo a norma is
+
+555
+01:01:24,310 --> 01:01:34,310
+ou qualquer coisa, ou isc, qualquer coisa, tipo, texto, valor, selo. Opa, já não me lembro
+
+556
+01:01:34,310 --> 01:01:42,310
+qual é que é a norma, mas há uma norma que utiliza três letras para indicar qual é
+
+557
+01:01:42,310 --> 01:01:49,310
+que é o tipo de unidade. E aqui, neste caso, é centígrados, graus centígrados, celsius,
+
+558
+01:01:49,310 --> 01:02:01,100
+ok? A temperatura começa aqui e termina aqui, a classificação da temperatura, e
+
+559
+01:02:01,100 --> 01:02:06,100
+depois, por fim, temos outro atributo que é o estado, ok? O estado, qual é que é o valor,
+
+560
+01:02:06,100 --> 01:02:18,100
+ok? E que tipo de valor está aqui? É um texto, ok? Ok, só uma parte. Por que aqui
+
+561
+01:02:18,100 --> 01:02:25,100
+temos float e por que aqui temos text? Para, nós aqui temos um float, porque isto,
+
+562
+01:02:25,100 --> 01:02:35,100
+este JSON, é um texto, ok? Se eu quiser importar isto para um programa que tem representações
+
+563
+01:02:35,100 --> 01:02:43,100
+binárias de valores, eu aqui estou a dizer como é que este texto, que é um 2, um 4,
+
+564
+01:02:43,100 --> 01:02:49,100
+um ponto e um 5, pode ser transformado para uma representação interna num programa.
+
+565
+01:02:49,100 --> 01:02:56,100
+Eu olho para ali, float, ok? Então, eu vou pegar neste texto e vou transformá-lo numa
+
+566
+01:02:56,100 --> 01:03:09,880
+representação de um número real dentro do meu programa, ok? Dovidas. Isto é um bocado
+
+567
+01:03:09,880 --> 01:03:17,880
+venço, poderia ser pior se fosse xml, era bem pior, ok? Mas isto é um bocado venço. Mas
+
+568
+01:03:17,880 --> 01:03:24,880
+tal como xml, e atenção, eu aprendi xml quando xml aprendeu e eu achava aquilo maravilhoso.
+
+569
+01:03:24,880 --> 01:03:31,880
+Passava um anos, já achava aquilo horrível, porque xml expandiu-se tal maneira que eu deixei
+
+570
+01:03:31,880 --> 01:03:42,480
+de conseguir ler xml. Mas, o xml era para quem? Era para mim? Era para ler? Não, é para os
+
+571
+01:03:42,480 --> 01:03:48,480
+computadores ler. E os computadores mastigavam aquilo que era uma maravilha. O JSON mastiga
+
+572
+01:03:48,480 --> 01:03:53,480
+um bastante melhor, porque tem menos carga extra, não é? Portanto, o JSON ele consegue
+
+573
+01:03:53,480 --> 01:04:00,480
+mastigar melhor. Mas isto aqui, eu consigo ler, é fantástico, mas quem vai processar
+
+574
+01:04:00,480 --> 01:04:11,380
+coisas destas milhares de vezes por segundo são os computadores, não sou eu. Ok? Estão
+
+575
+01:04:11,380 --> 01:04:24,100
+menos assustados agora? Ok. O NGSI, pá, sofreu uma evolução. Ele foi pelo mesmo proposto
+
+576
+01:04:24,100 --> 01:04:31,100
+pelo projeto FireWare, se não me engano. E depois sofreu uma evolução. Inicialmente,
+
+577
+01:04:31,100 --> 01:04:38,100
+quando comecei a trabalhar com o NGSI, era o NGSI ver a versão 2, basicamente era um
+
+578
+01:04:38,100 --> 01:04:46,100
+JSON e era um JSON que era mesmo par valor, par valor, par valor. Isto lia-se muito facilmente,
+
+579
+01:04:46,100 --> 01:04:54,100
+era, e ver dois pontos, isto type, dois pontos isto, temperatura de dois pontos, 24,5, e
+
+580
+01:04:54,100 --> 01:05:00,100
+eventualmente depois poderia pôr metadades, e era setados, dois pontos, ok? Ok? Era super
+
+581
+01:05:00,100 --> 01:05:09,100
+fácil de ler, era um JSON muito leve. No entanto, a coisa evoluiu para o JSON LD,
+
+582
+01:05:09,100 --> 01:05:16,100
+do link de data, que nos permite fazer o que? Ligações entre entidades. Nós podemos
+
+583
+01:05:16,100 --> 01:05:26,100
+dizer, enquanto que o NGSI, versão 2, tinha uma estrutura plana do tipo, se há uma entidade
+
+584
+01:05:26,100 --> 01:05:34,100
+que contém outra entidade, eu tinha que escrever essa entidade que está incluída no mesmo
+
+585
+01:05:34,100 --> 01:05:45,100
+JSON da entidade que incluía, ok? Portanto, havia entidades cuja descrição era enorme
+
+586
+01:05:45,100 --> 01:05:52,100
+porque eu incluía todas as entidades incluídas e então, as entidades incluídas incluíssem
+
+587
+01:05:52,100 --> 01:06:01,100
+outras entidades, ficava tudo no mesmo JSON, ok? Quando o NGSI link de data, nós podemos
+
+588
+01:06:01,100 --> 01:06:13,100
+dizer que esta propriedade é referenciada para outra entidade. Ou seja, eu digo no
+
+589
+01:06:13,100 --> 01:06:21,100
+meu JSON que esta propriedade, se é que quiseres saber qual é, utilizei esta ideia e
+
+590
+01:06:21,100 --> 01:06:30,100
+pédio e vais saber o que está aqui nesta minha propriedade, ok? Resultado, apesar de
+
+591
+01:06:30,100 --> 01:06:40,100
+parecer que os JSONs gerados por NGSI LD são mais pesados, na realidade permitem retirar
+
+592
+01:06:40,100 --> 01:06:48,100
+muita carga. Tudo o que não fizer necessariamente parte desta entidade pode simplesmente ser
+
+593
+01:06:48,100 --> 01:06:59,100
+referenciada. Estava agora aqui a tentar pensar num caso, por exemplo, vocês têm
+
+594
+01:06:59,100 --> 01:07:12,100
+um automóvel e o automóvel tem quatro rodas com quatro pneus, certo? Aqui na versão NGSI
+
+595
+01:07:12,100 --> 01:07:23,100
+versão 2, a descrição do automóvel contém a descrição de cada uma das rodas, ok? Aqui
+
+596
+01:07:23,100 --> 01:07:31,100
+eu posso ter a descrição de cada uma das rodas, uma descrição independente e depois posso ter o
+
+597
+01:07:31,100 --> 01:07:40,100
+JSON do automóvel e digo que a roda da frente esquerda refere-se a esta entidade, a roda da
+
+598
+01:07:40,100 --> 01:07:46,100
+frente direita refere-se a outra entidade. E se eu quiser saber o que está na roda da frente
+
+599
+01:07:46,100 --> 01:07:58,780
+direita, eu pego no identificador que está no refere-se a e peço, ok? Por acaso estou agora a pensar.
+
+600
+01:07:58,780 --> 01:08:03,780
+Poder ter colocado aqui um slide com um exemplo desses das referências mas eu passei à frente.
+
+601
+01:08:03,780 --> 01:08:10,780
+O tempo está a passar e eu estou a dançar muito devagar. Ainda estão acordados, mas já
+
+602
+01:08:10,780 --> 01:08:27,100
+eu vos consegui adormecer, ok? Próximo. Agora, continuamos. Já falámos que há heterogeneidade
+
+603
+01:08:27,100 --> 01:08:37,100
+perto do mundo físico e falámos nos agentes IOT. Os agentes IOT o que fazem é iluminar
+
+604
+01:08:37,100 --> 01:08:45,100
+heterogeneidade fazendo a tradução daquilo que existe no mundo físico, o próximo mundo físico
+
+605
+01:08:45,100 --> 01:08:59,420
+para uma linguagem comum, ok? Olhando para o ponto de vista do agente, ele para baixo, para o lado
+
+606
+01:08:59,420 --> 01:09:06,420
+dos equipamentos que estão no mundo físico, ele tem que olhar ou ouvir ou comunicar através dos
+
+607
+01:09:06,420 --> 01:09:17,420
+protocolos que estão a ser utilizados, ok? E conhecer os formatos com que os dados são transmitidos
+
+608
+01:09:17,420 --> 01:09:25,420
+como dados. Para a parte de cima, o que é que acontece? Ele pega nos dados e transforma no formato
+
+609
+01:09:25,420 --> 01:09:35,420
+ngsi e é isso que é enviado para o Orion. Também, agora ao contrário, se o Orion vier um comando,
+
+610
+01:09:35,420 --> 01:09:45,420
+esse comando vem formado ngsi e ele vai transformar esse comando na linguagem própria de quem vai
+
+611
+01:09:45,420 --> 01:09:54,420
+receber o actuador que vai receber esse comando, ok? Acaba de parecer algo assim com isto. Tenho aqui
+
+612
+01:09:54,420 --> 01:10:07,420
+ContextBroker, tenho aqui um agente IOT, ok? E aqui ele pega neste trafo deste lado com as
+
+613
+01:10:07,420 --> 01:10:20,420
+características que este lado tiver e transforma em ngsi e comunica por rest com o
+
+614
+01:10:20,420 --> 01:10:32,420
+Orion Broker. Daqui nesta zona, não há heterogenidade nenhuma. É comunicar através de pedidos rest
+
+615
+01:10:32,420 --> 01:10:45,420
+por HTTP com ContextBroker, dados como impactados neste formato ngsi. Aqui, aqui é a selva e pronto.
+
+616
+01:10:45,420 --> 01:10:54,420
+E depois é o que é. Até podemos ter end devices que fazem os próprios também a ligação a outros
+
+617
+01:10:54,420 --> 01:11:00,420
+equipamentos menos poderosos e comunicam de uma determinada maneira com o agente.
+
+618
+01:11:01,420 --> 01:11:11,420
+Duvidas até agora, não há? Ah, ok. E este agente onde é que está? Normalmente eu tenho visto das
+
+619
+01:11:11,420 --> 01:11:18,420
+vezes em que utilizei agentes IOT, os agentes IOT estavam na mesma máquina que tenho ContextBroker,
+
+620
+01:11:18,420 --> 01:11:25,420
+ok? Portanto, tudo que estava no mato contactava com o agente que estava na máquina que tinha o
+
+621
+01:11:25,420 --> 01:11:32,420
+ContextBroker, mas não tem de ser assim. Lá está. É daquelas coisas. Uma pessoa para experimentar tem
+
+622
+01:11:32,420 --> 01:11:41,700
+um computador e meio de tudo o mesmo computador, ok? Vamos lá ver se acelere aqui um bocadinho.
+
+623
+01:11:44,700 --> 01:11:54,700
+Esta parte é interessante em que associa um dispositivo físico com a sua entidade ngsi correspondente,
+
+624
+01:11:54,700 --> 01:12:02,700
+portanto, isto se vem deste dispositivo é representado pela entidade com o identificador tal,
+
+625
+01:12:02,700 --> 01:12:10,700
+ok? E defino como é que o dispositivo é estabilado através do seu protocolo IOT específico, ok?
+
+626
+01:12:10,700 --> 01:12:19,700
+Faz a tradução dos dados, por exemplo, imagine que o dispositivo vem de T igual a 25, ok?
+
+627
+01:12:19,700 --> 01:12:29,700
+Papal Parbytes. O gás recebe T igual a 25, mas depois transforma num pacote ngsi e coloca lá
+
+628
+01:12:29,700 --> 01:12:38,700
+temperatura igual a 25, ou então temperatura 2 pontos, value igual a 25 para fora, tá bem?
+
+629
+01:12:38,700 --> 01:12:44,700
+E eles experimentem comunicações bidereccionais como já tinha dito anos. Eu posso do dispositivo,
+
+630
+01:12:44,700 --> 01:12:52,700
+o dispositivo gera dados, o IOT, o agente traduz esses dados e envia para o context broker,
+
+631
+01:12:52,700 --> 01:12:58,700
+mas também o context broker pode fazer passar em comando e esse comando é traduzido pelo IOT
+
+632
+01:12:58,700 --> 01:13:06,970
+agent que é passado para o device, para o dispositivo, para ele realizar, ok?
+
+633
+01:13:06,970 --> 01:13:13,970
+Ok, e agora, como é que eu faço operações com o context broker?
+
+634
+01:13:13,970 --> 01:13:23,970
+O context broker, o IOT, está aberto através do API REST, ok? Portanto, nós fazemos pedidos
+
+635
+01:13:23,970 --> 01:13:34,970
+HTTP para modificar a realidade que é mantida pelo, o contexto que é mantido pelo IOT, context broker, ok?
+
+636
+01:13:34,970 --> 01:13:45,310
+Nós, se quisermos criar uma nova entidade, existe o Endpoint V2 entities,
+
+637
+01:13:45,310 --> 01:13:52,310
+imagine que vocês estão a correr na máquina, o meuoreone.pt, ok?
+
+638
+01:13:52,310 --> 01:14:04,310
+Nessa máquina, o meuoreone.pt, barra, V2, barra entities, vocês têm lá a escuta, o context broker,
+
+639
+01:14:04,310 --> 01:14:12,310
+e se vocês fizerem um post para este endpoint a dizer para criar uma entidade com o identificador
+
+640
+01:14:12,310 --> 01:14:20,310
+tal, do tipo tal e que tem estas propriedades, o context broker vai criar uma nova entidade, ok?
+
+641
+01:14:20,310 --> 01:14:29,310
+Se eu quiser modificar uma entidade que já está criada, mas modificar apenas um,
+
+642
+01:14:29,310 --> 01:14:40,310
+ou algumas propriedades, eu posso enviar um pedido patch para o V2 entities e agora,
+
+643
+01:14:40,310 --> 01:14:48,310
+aqui o identificador da entidade que eu quero atualizar, ok? Portanto, isso se identifica
+
+644
+01:14:48,310 --> 01:14:57,310
+especificamente qual é a entidade que eu quero atualizar e ainda atributos,
+
+645
+01:14:57,310 --> 01:15:04,310
+ou seja, eu quero fazer uma atualização dos atributos daquela entidade.
+
+646
+01:15:04,310 --> 01:15:11,310
+Eu quero patch, modificar os atributos desta entidade.
+
+647
+01:15:11,310 --> 01:15:18,310
+Quando vocês criam entidades com este post, quando fazem um post aqui para o endpoint entities,
+
+648
+01:15:18,310 --> 01:15:30,310
+automaticamente é criado um endpoint V2 entities com o identificador dessa nova entidade, ok?
+
+649
+01:15:30,310 --> 01:15:37,660
+E se apagarem essa entidade, este endpoint desaparece, está bom?
+
+650
+01:15:37,660 --> 01:15:46,800
+dúvidas, não há? Eu fiz isto um bocado acelerado e estou a demorar muito tempo.
+
+651
+01:15:46,800 --> 01:15:53,800
+Estamos praticamente a meio dos slides e já falta a maior, eu sei que hoje termina as nobornas.
+
+652
+01:15:53,800 --> 01:15:59,800
+Se eu quiser pedir qual é que é o estado de uma determinada entidade, eu faço um pedido get
+
+653
+01:15:59,800 --> 01:16:05,800
+e vou a V2 entities e o identificador da entidade, ok?
+
+654
+01:16:05,800 --> 01:16:14,800
+O que acontece? Se eu fizer o get, testem entidade, identificado para o identificador,
+
+655
+01:16:14,800 --> 01:16:33,150
+eu recebo um JSON com todas as propriedades daquela entidade, todas as propriedades mais atuais, ok?
+
+656
+01:16:33,150 --> 01:16:42,460
+dúvidas, não há? Se vocês forem à página do FIWARE, lá a parte da documentação,
+
+657
+01:16:42,460 --> 01:16:46,460
+eles explicam isto e ainda mais em prognore.
+
+658
+01:16:46,460 --> 01:16:57,260
+Mas para compreenderem o que é que o Context Broker faz, preciso adicionar uma nova entidade, post,
+
+659
+01:16:57,260 --> 01:17:04,260
+com o identificador e type no mínimo, ok? Esses são os dois atributos que são mesmo obrigatórios.
+
+660
+01:17:04,260 --> 01:17:12,260
+Depois, quero recuperar o Context de uma entidade, get, V2 entities e o identificador da essa entidade.
+
+661
+01:17:12,260 --> 01:17:22,020
+Pau, recebo logo um JSON com toda a informação mais atual daquela entidade, tá bom?
+
+662
+01:17:22,020 --> 01:17:25,020
+Subscrições no Orion.
+
+663
+01:17:25,020 --> 01:17:37,020
+Do lado das aplicações, eu posso colocar, manifestar o meu interesse em ser informado a cerca de determinados eventos, ok?
+
+664
+01:17:37,020 --> 01:17:45,020
+Peça de forma, se o evento acontecer, o Orion vai me enviar uma notificação, ok?
+
+665
+01:17:45,020 --> 01:17:54,020
+Como é que essa notificação é realizada? É também realizada através de um pedido HTTP, mas para quem manifestou o interesse?
+
+666
+01:17:54,020 --> 01:18:01,020
+Vocês estão agora a pensar, pô, isto é public subscribe e é por HTTP, não é por MQTTF.
+
+667
+01:18:01,020 --> 01:18:12,380
+E a verdade é sim, é por HTTP, ao contrário, o cliente é como é estar a correr servidor.
+
+668
+01:18:12,380 --> 01:18:20,380
+Ou seja, quem manifesta o interesse, tem um servidor que é para, quando acontecer alguma coisa, informarem,
+
+669
+01:18:20,380 --> 01:18:30,080
+através de um pedido que é enviado para o servidor de quem está à espera, ok?
+
+670
+01:18:30,080 --> 01:18:43,080
+Nós temos aqui o context broker e nós informamos o context broker de que queremos subscrever algo, um tipo de eventos, ok?
+
+671
+01:18:43,080 --> 01:18:56,080
+Quando acontece um evento de interesse, o context broker vai à lista de interessados, olha, alguém está interessado neste evento,
+
+672
+01:18:56,080 --> 01:19:07,080
+e notifica quem manifestou e envia a notificação a quem manifestou o interesse, ok?
+
+673
+01:19:07,080 --> 01:19:15,080
+Ou seja, os subscritores não precisam de estar ali à espera, à espera não, não precisam de estar constantemente a perguntar se mudou, se mudou.
+
+674
+01:19:15,080 --> 01:19:22,080
+Vais-se a estar descansados sobre a notificação, sobre o evento, eles são notificados.
+
+675
+01:19:22,080 --> 01:19:26,080
+Como é que nós criamos uma notificação?
+
+676
+01:19:26,080 --> 01:19:36,080
+Mandamos um pedido post para o endpoint v2 subscriptions, ok?
+
+677
+01:19:36,080 --> 01:19:40,080
+Já vamos ver, o próximo slide tem um formato de uma subscrição.
+
+678
+01:19:40,080 --> 01:20:00,080
+Nós subscrevemos um determinado evento, o Orion guarda essa subscrição, quando houver um evento que o responda a algo que foi subscrito,
+
+679
+01:20:00,080 --> 01:20:09,080
+o Orion context broker envia um pedido da Http, uma notificação Http, para quem manifestou esse pedido.
+
+680
+01:20:09,080 --> 01:20:12,080
+Um exemplo de um pedido, um pedido.
+
+681
+01:20:12,080 --> 01:20:13,080
+Professor?
+
+682
+01:20:13,080 --> 01:20:14,080
+Sim.
+
+683
+01:20:14,080 --> 01:20:17,080
+Desculpe, só uma dúvida só vai ter um...
+
+684
+01:20:17,080 --> 01:20:18,080
+Sim, sim.
+
+685
+01:20:18,080 --> 01:20:24,080
+Neste contexto para o Http, eu não estou a ver como é que pode haver mais do que um subscritor,
+
+686
+01:20:24,080 --> 01:20:30,080
+porque ok, enviar um post request a partir do cliente para o servidor para avisar que alguma coisa aconteceu,
+
+687
+01:20:30,080 --> 01:20:34,080
+até nem quanto que o subscritor é o servidor, é o preceu.
+
+688
+01:20:34,080 --> 01:20:38,080
+Mas como é que eu posso ter dois subscritores?
+
+689
+01:20:38,080 --> 01:20:42,080
+O cliente manda um post request a vários servidores, é isso?
+
+690
+01:20:42,080 --> 01:20:43,080
+Sim.
+
+691
+01:20:43,080 --> 01:20:45,360
+Ok.
+
+692
+01:20:45,360 --> 01:20:47,360
+É o que acontece com o MQTT também?
+
+693
+01:20:47,360 --> 01:20:48,360
+Com o MQTT?
+
+694
+01:20:48,360 --> 01:20:52,360
+Mas o MQTT é por sockets, ou seja, é bidirecional.
+
+695
+01:20:53,360 --> 01:20:56,360
+É bidirecional?
+
+696
+01:20:56,360 --> 01:21:00,700
+Neste caso não é.
+
+697
+01:21:00,700 --> 01:21:03,700
+Neste caso é só cliente de servidor.
+
+698
+01:21:03,700 --> 01:21:11,230
+Então, o Http também é TCP, também é por sockets.
+
+699
+01:21:11,230 --> 01:21:17,230
+Se nós formos olhar lá para baixo, também é TCP.
+
+700
+01:21:18,230 --> 01:21:28,230
+Sempre que é feito um pedido Http, é feito um connect a quem está à espera de um listen.
+
+701
+01:21:28,230 --> 01:21:36,230
+Quando se faz o connect, quem está em listen, faz um accept e depois é tratado através de um canal TCP,
+
+702
+01:21:36,230 --> 01:21:38,230
+um circuito virtual.
+
+703
+01:21:38,230 --> 01:21:51,740
+A diferença é que no MQTT os circuitos virtuais, não é ligação, é mantida aberta.
+
+704
+01:21:51,740 --> 01:22:00,740
+Em Http as ligações são temporárias, é só pelo tempo necessário para receber o pedido.
+
+705
+01:22:00,740 --> 01:22:05,740
+Aliás, não é receber o pedido, é o pedido e enviar a resposta.
+
+706
+01:22:05,740 --> 01:22:07,740
+Depois fecha essa ligação.
+
+707
+01:22:07,740 --> 01:22:12,740
+Mas em Http o servidor nunca pode enviar para o cliente e o cliente pedir.
+
+708
+01:22:12,740 --> 01:22:16,500
+Daí o unidirecional.
+
+709
+01:22:16,500 --> 01:22:29,500
+Sim, e é por isso que eu estou a dizer que, ok, eventualmente eu queria chamar a atenção e confundir-vos.
+
+710
+01:22:29,500 --> 01:22:36,500
+É o seguinte, conforme isso e muito bem, quando temos um modelo cliente de servidor,
+
+711
+01:22:36,500 --> 01:22:39,500
+é o cliente que toma a iniciativa.
+
+712
+01:22:39,500 --> 01:22:43,500
+O servidor está à escuta, à espera, certo?
+
+713
+01:22:43,500 --> 01:22:51,500
+O cliente é que tem a iniciativa de comunicar com o servidor e depois o servidor atende o pedido, certo?
+
+714
+01:22:51,500 --> 01:22:53,500
+Sim.
+
+715
+01:22:53,500 --> 01:22:59,500
+No MQTT nós temos o broker e temos os subscritores.
+
+716
+01:22:59,500 --> 01:23:05,500
+Nem sequer temos as palavras servidor e cliente, certo?
+
+717
+01:23:05,500 --> 01:23:10,500
+Apesar de que temos o broker e temos os clientes.
+
+718
+01:23:10,500 --> 01:23:15,500
+Os clientes podem ser os publicadores e os subscritores.
+
+719
+01:23:15,500 --> 01:23:18,500
+Isso faz parte da linguagem do MQTT.
+
+720
+01:23:18,500 --> 01:23:23,500
+Um publicador, um publisher e um subscriber são clientes.
+
+721
+01:23:23,500 --> 01:23:31,500
+E um cliente em MQTT pode ser publisher como pode ser subscriber, ok?
+
+722
+01:23:32,500 --> 01:23:42,500
+Mas, na realidade, o broker é um servidor e os clientes são clientes.
+
+723
+01:23:42,500 --> 01:23:43,500
+Por quê?
+
+724
+01:23:43,500 --> 01:23:53,500
+Porque é um cliente que toma a iniciativa de se ligar ao broker e depois usem essa ligação para
+
+725
+01:23:53,500 --> 01:23:59,500
+ou enviar publicações ou receber notificações, certo?
+
+726
+01:23:59,500 --> 01:24:01,500
+Portanto, é um modelo um pouco diferente.
+
+727
+01:24:01,500 --> 01:24:06,500
+O cliente servidor é um modelo mais, como é que dizer?
+
+728
+01:24:06,500 --> 01:24:08,500
+Stateless.
+
+729
+01:24:08,500 --> 01:24:09,500
+É mais bruto.
+
+730
+01:24:09,500 --> 01:24:14,500
+É, quando é preciso, abre a ligação, deixa de ser preciso, cai a ligação.
+
+731
+01:24:14,500 --> 01:24:24,940
+E ele aqui, o que disse é que quem manifesta uma subscrição acaba por ser o cliente.
+
+732
+01:24:24,940 --> 01:24:28,940
+Porque é ele que vai contactar o contacto de broker, certo?
+
+733
+01:24:29,940 --> 01:24:34,940
+É ele que toma uma iniciativa de, olha, o contacto de broker, já que estás aí,
+
+734
+01:24:34,940 --> 01:24:38,940
+eu tinha interesse em receber notificações disto.
+
+735
+01:24:38,940 --> 01:24:41,940
+É nesse aspecto que eu digo que ele funciona como um cliente.
+
+736
+01:24:41,940 --> 01:24:46,940
+É ele que toma a iniciativa de contactar o contacto de broker.
+
+737
+01:24:46,940 --> 01:24:57,310
+Mas, depois, esse cliente tenha que correr nele um servidor web.
+
+738
+01:24:57,310 --> 01:24:58,310
+O que é?
+
+739
+01:24:58,310 --> 01:25:03,310
+Para receber as notificações, porque as notificações são enviadas pelo resto.
+
+740
+01:25:03,310 --> 01:25:04,310
+Ok.
+
+741
+01:25:04,310 --> 01:25:05,310
+Ok?
+
+742
+01:25:05,310 --> 01:25:11,310
+Eu quando disse que o cliente tinha o servidor, eu estava a dizer, neste caso,
+
+743
+01:25:11,310 --> 01:25:15,310
+ele funciona como cliente, ponto de vista do modelo, cliente servidor,
+
+744
+01:25:15,310 --> 01:25:19,310
+é ele que toma a iniciativa de contactar, ok?
+
+745
+01:25:19,310 --> 01:25:23,310
+Mas depois de ter feito esse contacto e ter feito essa subscrição,
+
+746
+01:25:23,310 --> 01:25:29,310
+ele tem de ter um programinha que, na prática, é um servidor web,
+
+747
+01:25:29,310 --> 01:25:30,310
+para quê?
+
+748
+01:25:30,310 --> 01:25:32,310
+Para poder ser modificado.
+
+749
+01:25:32,310 --> 01:25:33,310
+Ok.
+
+750
+01:25:33,310 --> 01:25:35,310
+Agora foi o que mais sentido isso?
+
+751
+01:25:35,310 --> 01:25:36,310
+Ok, pronto.
+
+752
+01:25:36,310 --> 01:25:41,310
+Agora, eu também há bocado quando falei e eu vi-se muito rápido.
+
+753
+01:25:41,310 --> 01:25:44,310
+E pronto, na minha cabeça estava claro.
+
+754
+01:25:44,310 --> 01:25:48,310
+Mas, obviamente, a forma que não me exprimi não foi clara, certo?
+
+755
+01:25:48,310 --> 01:25:50,310
+Mas agora está entendido.
+
+756
+01:25:50,310 --> 01:25:51,310
+Ótimo.
+
+757
+01:25:51,310 --> 01:25:52,310
+Sim.
+
+758
+01:25:52,310 --> 01:25:53,310
+Obrigado.
+
+759
+01:25:53,310 --> 01:25:54,310
+Nada, nada.
+
+760
+01:25:54,310 --> 01:25:55,310
+Ora é essa.
+
+761
+01:25:55,310 --> 01:25:58,310
+Eu não quero que vocês saiam daqui com confusões, pá.
+
+762
+01:25:58,310 --> 01:26:03,310
+Se eu não deram slides todos, pá, depois vocês leiam slides.
+
+763
+01:26:03,310 --> 01:26:06,310
+Estes aqui, por acaso, eu vou ser frango.
+
+764
+01:26:06,310 --> 01:26:10,310
+Estou um bocado resumidos, que eu estava com menos tempo.
+
+765
+01:26:10,310 --> 01:26:14,310
+E eu, agora, já na altura, quando estava a fazer, estava a pensar,
+
+766
+01:26:14,310 --> 01:26:16,310
+Ê, pá, eu podia expandir mais isto.
+
+767
+01:26:16,310 --> 01:26:20,310
+Mas agora, quando estou a apresentar, Ê, pá, realmente falta-me aqui mais qualquer
+
+768
+01:26:20,310 --> 01:26:23,310
+coisinha, um bocadinho mais de sumo.
+
+769
+01:26:23,310 --> 01:26:26,310
+Mas, também, às vezes, se posar-se mais sumo nos slides,
+
+770
+01:26:26,310 --> 01:26:29,310
+eu deveria estar a escrever um livro.
+
+771
+01:26:29,310 --> 01:26:30,310
+Ora vai.
+
+772
+01:26:30,310 --> 01:26:32,310
+Vamos, então, aqui.
+
+773
+01:26:32,310 --> 01:26:38,310
+Está aqui o corpo de um pedido post lá para o V2 Subscription, ok?
+
+774
+01:26:38,310 --> 01:26:45,310
+E, aqui, estou a dizer descrição, notificar Time Series Database Persistor.
+
+775
+01:26:45,310 --> 01:26:51,560
+E, agora, assunto da minha subscrição.
+
+776
+01:26:51,560 --> 01:26:53,560
+Entities.
+
+777
+01:26:53,560 --> 01:26:55,560
+Qualquer coisa.
+
+778
+01:26:55,560 --> 01:26:56,560
+Certo?
+
+779
+01:26:56,560 --> 01:26:58,560
+Isto aqui, o Idea Pattern.
+
+780
+01:26:58,560 --> 01:27:03,560
+O asterisco funciona como um alt-card, também, da Shell.
+
+781
+01:27:03,560 --> 01:27:05,560
+É, qualquer coisa, qualquer nome.
+
+782
+01:27:05,560 --> 01:27:12,560
+Portanto, uma entidade que tenha qualquer nome.
+
+783
+01:27:12,560 --> 01:27:13,560
+Temos aqui a Idea Pattern.
+
+784
+01:27:13,560 --> 01:27:18,560
+Portanto, cujo identificador está a seja qualquer.
+
+785
+01:27:18,560 --> 01:27:20,560
+De que tipo?
+
+786
+01:27:20,560 --> 01:27:25,560
+Entidades que sejam do tipo ou da classe Industrial Sensor.
+
+787
+01:27:25,560 --> 01:27:27,560
+Ok?
+
+788
+01:27:27,560 --> 01:27:28,560
+Pronto.
+
+789
+01:27:28,560 --> 01:27:30,560
+Já definimos as entidades.
+
+790
+01:27:30,560 --> 01:27:31,560
+Temos interesse.
+
+791
+01:27:31,560 --> 01:27:36,560
+Agora, vamos definir o que nos interessa.
+
+792
+01:27:36,560 --> 01:27:38,560
+Quais são os eventos que nos interessem?
+
+793
+01:27:38,560 --> 01:27:42,560
+Se houver uma atualização do atributo de temperatura.
+
+794
+01:27:42,560 --> 01:27:43,560
+Ok?
+
+795
+01:27:43,560 --> 01:27:45,560
+Neste caso, só temos aqui temperatura.
+
+796
+01:27:45,560 --> 01:27:47,560
+Podemos colocar mais.
+
+797
+01:27:47,560 --> 01:27:48,560
+Isto é uma lista.
+
+798
+01:27:48,560 --> 01:27:51,560
+Quando temos aqui para grandes retos, significa que é uma lista.
+
+799
+01:27:51,560 --> 01:27:52,560
+É como o vector.
+
+800
+01:27:52,560 --> 01:27:57,560
+E se nós quiséssemos colocar aqui mais valores, colocávamos os valores separados por vírgulas.
+
+801
+01:27:57,560 --> 01:28:05,560
+Por exemplo, aspas Temperature, vírgula, aspas Humidity, aspas, ok?
+
+802
+01:28:05,560 --> 01:28:16,850
+Aspas em cada nome do atributo e as vírgulas a separar os atributos.
+
+803
+01:28:16,850 --> 01:28:22,850
+Está a definir o assunto que me interessa.
+
+804
+01:28:22,850 --> 01:28:26,850
+Agora, qual é que é a, como é que é a notificação?
+
+805
+01:28:26,850 --> 01:28:36,850
+E a notificação implica e dizer faz-me um pedido HTTP para este endereço.
+
+806
+01:28:36,850 --> 01:28:42,850
+E é quando acontece, é enviado um post para este endereço.
+
+807
+01:28:42,850 --> 01:28:44,850
+Ok?
+
+808
+01:28:44,850 --> 01:28:50,850
+E aqui até dizemos o que é o que é para enviar exclusivamente a temperatura.
+
+809
+01:28:50,850 --> 01:28:55,850
+Dos atributos que eu vou receber, mandamos os atributos.
+
+810
+01:28:55,850 --> 01:28:56,850
+Desculpe.
+
+811
+01:28:56,850 --> 01:29:01,850
+Dos atributos desta entidade, enviamos apenas a temperatura.
+
+812
+01:29:01,850 --> 01:29:02,850
+Ok?
+
+813
+01:29:02,850 --> 01:29:07,570
+Tenho aqui a explicação.
+
+814
+01:29:08,570 --> 01:29:17,570
+Se um sensor industrial devir a sua temperatura ser atualizada,
+
+815
+01:29:17,570 --> 01:29:23,570
+então há uma notificação HTTP que é enviada para este endpoint.
+
+816
+01:29:23,570 --> 01:29:27,640
+Ok?
+
+817
+01:29:27,640 --> 01:29:40,490
+Mais uma vez, eu olho para isto, imagino vocês pela primeira vez que estão a olhar para isto.
+
+818
+01:29:40,490 --> 01:29:48,490
+E dizem, bolas, isto é um bocado horrível, porque é muito, como dizem em inglês, verbals,
+
+819
+01:29:48,490 --> 01:29:51,490
+tem muitas palavras.
+
+820
+01:29:51,490 --> 01:29:55,020
+E é verdade.
+
+821
+01:29:55,020 --> 01:29:57,020
+Mas depois uma pessoa acaba até prestabituar.
+
+822
+01:29:57,020 --> 01:30:06,270
+E outra coisa porreira, isto até permite, pois, termos uma interface gráfica e girar este texto
+
+823
+01:30:06,270 --> 01:30:09,270
+automaticamente baseado nos valores da interface gráfica.
+
+824
+01:30:09,270 --> 01:30:11,270
+Muito mais simpático.
+
+825
+01:30:11,270 --> 01:30:17,270
+Mas sempre que temos o texto e queremos escrever configurações, o texto é fantástico.
+
+826
+01:30:17,270 --> 01:30:31,420
+E, obviamente, este texto depois é para ser enviado no corpo de um post para aqui.
+
+827
+01:30:31,420 --> 01:30:34,420
+E eu estou sempre a falar em post, pá.
+
+828
+01:30:34,420 --> 01:30:43,420
+Aquilo que já me lembrei, e lembrei-me agora aqui outra vez, era eu poder ter colocado aqui um slide
+
+829
+01:30:43,420 --> 01:30:51,420
+com o exemplo de um curl a mandar precisamente esse pedido HTTP para um determinado endereço.
+
+830
+01:30:51,420 --> 01:30:55,420
+E veem como é que a coisa vai mesmo por baixo do capô.
+
+831
+01:30:55,420 --> 01:30:58,420
+Agora já vou a estar.
+
+832
+01:30:58,420 --> 01:31:01,890
+Dovida, sem relação a isto.
+
+833
+01:31:01,890 --> 01:31:02,890
+Não há?
+
+834
+01:31:02,890 --> 01:31:03,890
+Pronto.
+
+835
+01:31:03,890 --> 01:31:05,890
+Então, continuar em frente.
+
+836
+01:31:05,890 --> 01:31:17,890
+E agora, se eu quiser persistir uma série temporal, em vez de exclusivamente manter o contexto atual,
+
+837
+01:31:17,890 --> 01:31:24,890
+eu quero guardar o filme da evolução do contexto.
+
+838
+01:31:24,890 --> 01:31:26,890
+Pá.
+
+839
+01:31:26,890 --> 01:31:28,890
+O que é que nós fazemos?
+
+840
+01:31:28,890 --> 01:31:42,890
+Continuamos a ter o context, o orient context broker a manter o contexto, mas vamos ter uma base de dados
+
+841
+01:31:42,890 --> 01:31:49,890
+que vai subscrever atualizações daquilo que interesse registar.
+
+842
+01:31:49,890 --> 01:31:51,890
+Ok?
+
+843
+01:31:51,890 --> 01:32:04,890
+E se tem porque houver uma atualização daquilo que na base de dados que nós fizemos a base de dados subscrever,
+
+844
+01:32:04,890 --> 01:32:15,890
+vai-se receber um pedido post e esse pedido post vai injetar ou inserir essa notificação na base de dados.
+
+845
+01:32:15,890 --> 01:32:17,890
+Ok?
+
+846
+01:32:17,890 --> 01:32:24,220
+Como é que se faz isso? Depende também da base de dados que nós tivemos a utilizar.
+
+847
+01:32:24,220 --> 01:32:26,220
+Tá?
+
+848
+01:32:26,220 --> 01:32:36,220
+E aí, a documentação do Fireware também explica como é que se faz para diferentes bases de dados.
+
+849
+01:32:36,220 --> 01:32:50,220
+Opções. Existe o STH Comet, especializado em armazenar e procurar informação histórica do contexto.
+
+850
+01:32:50,220 --> 01:33:03,220
+Existe o SIGMOS, o SIGMOS é mesmo um componente desenvolvido dentro do Fireware, que é um tanque de contexto genérico
+
+851
+01:33:03,220 --> 01:33:11,220
+para suportar diversas tecnologias de persistência, ou seja, o liga na realidade a várias bases de dados,
+
+852
+01:33:11,220 --> 01:33:14,220
+diferentes tipos de bases de dados. Ok?
+
+853
+01:33:14,220 --> 01:33:22,220
+E depois também podem criar conectores personalizados para aplicações específicas.
+
+854
+01:33:22,220 --> 01:33:34,220
+Por exemplo, não é para utilizar uma base de dados, é para enviar para uma determinada aplicação que eu desenvolvi
+
+855
+01:33:34,220 --> 01:33:43,220
+porque eu não quero utilizar. Posso dizer personalizar um conector para operar com a API dessa aplicação.
+
+856
+01:33:43,220 --> 01:33:45,220
+E aí, isso é o que faço. Ok?
+
+857
+01:33:45,220 --> 01:33:48,220
+Há coisas que já estão feitas, há outras coisas que não estão feitas.
+
+858
+01:33:48,220 --> 01:33:51,220
+É aquilo que não está feito. É aquilo que não está feito.
+
+859
+01:33:51,220 --> 01:33:59,220
+Eu posso criar um conector personalizado para receber as notificações e depois utilizam da API da aplicação.
+
+860
+01:34:00,220 --> 01:34:02,220
+E já está para lá. Ok?
+
+861
+01:34:02,220 --> 01:34:06,020
+Duvidas até agora, não há?
+
+862
+01:34:06,020 --> 01:34:08,020
+Eu estava parto.
+
+863
+01:34:08,020 --> 01:34:14,020
+Foi assim um bocado pela rama, porque esta semana eu não sei até onde é que vocês vão chegar
+
+864
+01:34:14,020 --> 01:34:25,020
+e também quais são as tecnologias que vocês vão utilizar para guardarem as séries temporais.
+
+865
+01:34:25,020 --> 01:34:30,020
+Eu já gostei o Dockers Form, depois vocês utilizaram em cavernetes
+
+866
+01:34:30,020 --> 01:34:36,020
+e isso não estava para criar aqui slides para uma tecnologia, mas vocês estão a utilizar outras.
+
+867
+01:34:36,020 --> 01:34:39,020
+Portanto, eu aqui fiquei mais pelos conceitos.
+
+868
+01:34:39,020 --> 01:34:46,020
+Existem bases de dados que são especializadas em guardar séries temporais.
+
+869
+01:34:46,020 --> 01:34:50,020
+Basicamente, uma série temporal, o que é que tem?
+
+870
+01:34:50,020 --> 01:34:59,020
+Em cada registro, vocês têm a marca temporal, o timestamp, e depois, para além do timestamp,
+
+871
+01:34:59,020 --> 01:35:06,020
+têm os dados que querem registar. Ok?
+
+872
+01:35:06,020 --> 01:35:18,130
+Mas algo que caracteriza uma série temporal é sempre o timestamp, o instante em que aquilo ocorreu.
+
+873
+01:35:18,130 --> 01:35:24,130
+Vocês podem pensar, já viram os fecheiros de log, certo?
+
+874
+01:35:24,130 --> 01:35:31,130
+Um fecheiro de log é um fecheiro que guarda uma série temporal de eventos.
+
+875
+01:35:31,130 --> 01:35:46,340
+Todas as entradas no fecheiro de log começam pela indicação da data e hora do evento que está registado, certo?
+
+876
+01:35:46,340 --> 01:35:50,340
+No entanto, as bases de dados que são especializadas...
+
+877
+01:35:50,340 --> 01:35:56,340
+E agora, qualquer base de dados pode guardar uma série temporal, ok?
+
+878
+01:35:56,340 --> 01:36:05,340
+Oracle, PostgreSQL, MySQL, qualquer base de dados pode guardar séries temporais.
+
+879
+01:36:05,340 --> 01:36:14,340
+No entanto, há algumas bases de dados que são especialistas depois em recuperar séries temporais.
+
+880
+01:36:14,340 --> 01:36:23,340
+Ok? E aí, é que pode variar a nossa escolha, se eu quero alguma que seja mais especialista
+
+881
+01:36:23,340 --> 01:36:28,340
+em determinadas operações relacionadas com séries temporais.
+
+882
+01:36:28,340 --> 01:36:35,340
+Por exemplo, vocês têm o TimeScaleDB e o InfoxDB.
+
+883
+01:36:35,340 --> 01:36:43,340
+Ok? O TimeScaleDB para quem está habituado ao SQL é fantástico,
+
+884
+01:36:43,340 --> 01:36:47,340
+porque vocês não precisam de aprender nada de novo, ok?
+
+885
+01:36:47,340 --> 01:36:57,340
+Se estão habituados a fazer perguntas a base de dados relacionais com SQL, pode utilizar.
+
+886
+01:36:57,340 --> 01:37:09,190
+O InfoxDB utiliza uma API própria, ok?
+
+887
+01:37:09,190 --> 01:37:18,190
+Ambos permitem guardar de forma persistente sequências temporais, ok?
+
+888
+01:37:18,190 --> 01:37:24,190
+Não são os únicos, mas são dois exemplos paradigmáticos.
+
+889
+01:37:24,190 --> 01:37:39,200
+Como é que fica o cenário? Se eu quiser guardar sequências séries temporais
+
+890
+01:37:39,200 --> 01:37:48,200
+e depois quiser, por exemplo, utilizar o Grafana para mostrar essas sequências, visualizar essas sequências temporais.
+
+891
+01:37:48,200 --> 01:37:53,200
+Até agora, nós já tínhamos visto isto, ok?
+
+892
+01:37:53,200 --> 01:38:01,200
+Temos aqui os dispositivos no mundo físico, agentes de tradução e o context broker.
+
+893
+01:38:01,200 --> 01:38:08,200
+E agora, eu vou subscrever eventos ao context broker.
+
+894
+01:38:08,200 --> 01:38:15,200
+E este meu conector de persistência, sempre que receber uma notificação,
+
+895
+01:38:15,200 --> 01:38:35,200
+vai inserir essa notificação em uma base de dados temporal, sequências temporais, ok?
+
+896
+01:38:35,200 --> 01:38:43,200
+Sempre que existe uma atualização, eu insiro essa notificação nesta base de dados
+
+897
+01:38:43,200 --> 01:38:49,200
+e estas bases de dados acabam por guardar um log, certo?
+
+898
+01:38:49,200 --> 01:39:00,200
+Não é em formato de texto, é em formato próprio da base de dados.
+
+899
+01:39:00,200 --> 01:39:07,200
+Agora, aqui tenho o Grafana Dashboard, mas pode ser outra aplicação, qualquer que fizesse, por exemplo,
+
+900
+01:39:07,200 --> 01:39:10,200
+análise dos dados temporais.
+
+901
+01:39:10,200 --> 01:39:18,200
+Esta Grafana Dashboard pode inquirir o context broker sobre o contexto atual,
+
+902
+01:39:18,200 --> 01:39:21,200
+desculpe, o contexto atual, ok?
+
+903
+01:39:21,200 --> 01:39:27,200
+E tem a imagem atual, mais atual possível do domínio,
+
+904
+01:39:27,200 --> 01:39:36,200
+mas também pode pedir à base de dados para lidar o histórico dentro dos parâmetros
+
+905
+01:39:36,200 --> 01:39:44,200
+que este Dashboard pretende para apresentar, ok?
+
+906
+01:39:44,200 --> 01:39:51,200
+Notem que isto, estamos sempre a juntar peças, quase como se fossem leitos, ok?
+
+907
+01:39:51,200 --> 01:40:02,200
+E reparem que este Dashboard, Grafana, não faz a mínima ideia do que está aqui nesta ponte.
+
+908
+01:40:03,200 --> 01:40:06,200
+Isto aqui até quase que poderia estar esticado numa linha,
+
+909
+01:40:06,200 --> 01:40:12,200
+e vemos que esta aplicação está num extremo, num extremo aqui,
+
+910
+01:40:12,200 --> 01:40:17,200
+e estes dispositivos estão no outro extremo, ao posto.
+
+911
+01:40:17,200 --> 01:40:27,510
+E o context broker isola esta região, desta região.
+
+912
+01:40:27,510 --> 01:40:35,510
+E tudo aquilo que eu posso fazer aqui, eu faço orientado para a especificação
+
+913
+01:40:35,510 --> 01:40:43,510
+e a interface do orient context broker, e não como a especificação e a interface
+
+914
+01:40:43,510 --> 01:40:49,510
+dos múltiplos dispositivos que estão aqui no campo, ok?
+
+915
+01:40:49,510 --> 01:40:53,510
+Isto permite-me acelerar o desenvolvimento de aplicações.
+
+916
+01:40:53,510 --> 01:41:09,110
+Eu concordo comigo. Obrigado.
+
+917
+01:41:09,110 --> 01:41:15,110
+É como se pudéssemos dividir o desenvolvimento em duas partes, basicamente, né?
+
+918
+01:41:15,110 --> 01:41:22,110
+Podemos focar-nos na parte do agente e dos sensores e do broker,
+
+919
+01:41:22,110 --> 01:41:27,110
+e outra pessoa, por exemplo, pode focar-se na parte de base de dados
+
+920
+01:41:27,110 --> 01:41:30,110
+e Grafana e o conector persistente.
+
+921
+01:41:30,110 --> 01:41:33,110
+Você está um bocado nesse aspecto.
+
+922
+01:41:33,110 --> 01:41:38,110
+Sim. Até vamos passar para uma escala superior.
+
+923
+01:41:38,110 --> 01:41:43,110
+Vocês, quando vão de carro e querem ter ali um GPS,
+
+924
+01:41:43,110 --> 01:41:50,110
+vocês utilizam o Google Maps, o Waze, alguma aplicação desse tipo, certo?
+
+925
+01:41:50,110 --> 01:41:51,110
+Sim.
+
+926
+01:41:51,110 --> 01:41:56,110
+Ok, vamos imaginar, por exemplo, o Google Maps.
+
+927
+01:41:56,110 --> 01:42:02,110
+Vocês acham que a Google tem satélites a ver como é que está o tráfego
+
+928
+01:42:02,110 --> 01:42:10,110
+ali naquela rua, na avenida do comendador, em Santa Soma Merinfesta?
+
+929
+01:42:10,110 --> 01:42:15,900
+Não, eu acho que eles é pelos dispositivos, né?
+
+930
+01:42:15,900 --> 01:42:17,900
+Pela aplicação, eles já vem...
+
+931
+01:42:17,900 --> 01:42:19,900
+Também, também.
+
+932
+01:42:19,900 --> 01:42:25,900
+Mas, por exemplo, vocês saem às 5 da manhã e encontram uma rua que vai começar em obras.
+
+933
+01:42:25,900 --> 01:42:29,900
+E lá o Google até já dizia que aquela rua está em obras.
+
+934
+01:42:29,900 --> 01:42:31,900
+Não foi ninguém que avisou.
+
+935
+01:42:31,900 --> 01:42:43,020
+Eles recuperaram essa informação pelo sistema geográfico da Câmara Municipal.
+
+936
+01:42:43,020 --> 01:42:52,020
+Ou então, pode determinar quais são os sentidos de uma determinada via,
+
+937
+01:42:52,020 --> 01:42:56,020
+por exemplo, se há sentido único ou se tem os dois sentidos.
+
+938
+01:42:57,020 --> 01:43:03,550
+Para, as Câmaras Municipais podem mudar isso de um momento para o outro
+
+939
+01:43:03,550 --> 01:43:07,550
+e eles não vão informar a Google, garantidamente.
+
+940
+01:43:07,550 --> 01:43:08,550
+O que é que eles fazem?
+
+941
+01:43:08,550 --> 01:43:13,550
+Colocam essa informação num sistema de informação geográfica.
+
+942
+01:43:13,550 --> 01:43:15,550
+E o que é que acontece?
+
+943
+01:43:15,550 --> 01:43:21,550
+A Google, o que faz é que têm eventualmente adaptadores
+
+944
+01:43:21,550 --> 01:43:27,550
+para colher essa informação dos diversos sistemas de informações geográficos.
+
+945
+01:43:27,550 --> 01:43:30,550
+Eventualmente, os sistemas de informações geográficos
+
+946
+01:43:30,550 --> 01:43:34,550
+até podem seguir só a meia dúzia de normas, como o CatoSort.
+
+947
+01:43:34,550 --> 01:43:38,550
+E a Google nem precisa de criar muitos adaptadores,
+
+948
+01:43:38,550 --> 01:43:46,050
+mas vai colher os dados dessas fontes.
+
+949
+01:43:46,050 --> 01:43:56,050
+A vossa aplicação que está aqui a visualizar o estado da liba VCI, por exemplo,
+
+950
+01:43:56,050 --> 01:44:02,050
+não faz a mínima ideia de onde é que fieram os dados que estão a ser apresentados,
+
+951
+01:44:02,050 --> 01:44:09,780
+o ecrã do telemóvel, podem ter vindo de outros conductores,
+
+952
+01:44:09,780 --> 01:44:15,780
+que uns podem ter telemóveis Android, Huawei, sei lá,
+
+953
+01:44:15,780 --> 01:44:24,780
+e outros podem ter iPhones, tudo a comunicar eventualmente por 5G ou 4G,
+
+954
+01:44:24,780 --> 01:44:28,780
+mas também a informação que pode ter vindo do sistema de informação geográfica
+
+955
+01:44:28,780 --> 01:44:36,660
+da Câmara Municipal, lá onde vocês estão a circular, no caso da VCI de Porto.
+
+956
+01:44:36,660 --> 01:44:39,660
+A vossa aplicação importa-se com a fontes dados?
+
+957
+01:44:39,660 --> 01:44:40,660
+Não.
+
+958
+01:44:40,660 --> 01:44:43,660
+O que é que acontece?
+
+959
+01:44:43,660 --> 01:44:51,660
+A Google tem um sistema que uniformiza os dados que vêm de diferentes fontes
+
+960
+01:44:51,660 --> 01:45:00,660
+e cria um contexto que é distribuído para as aplicações de forma uniforme.
+
+961
+01:45:00,660 --> 01:45:05,660
+Ele até disponibiliza uma API e vocês podem escrever também aplicações
+
+962
+01:45:05,660 --> 01:45:13,660
+que, usando essa API, podem perguntar a Google como está o estado do trânsito naquele sítio.
+
+963
+01:45:13,660 --> 01:45:22,960
+O uso de, o uso não, os estabelecimentos interfaces é fantástico para nos permitir
+
+964
+01:45:22,960 --> 01:45:30,740
+construir aplicações que acentam em cima daquele sistema.
+
+965
+01:45:30,740 --> 01:45:36,740
+E o uso das interfaces uniformiza duas coisas.
+
+966
+01:45:36,740 --> 01:45:45,180
+Primeiro, uniformiza a forma como-se, para realizar uma tarefa.
+
+967
+01:45:45,180 --> 01:45:49,180
+E uniformiza a forma como se comunica.
+
+968
+01:45:49,180 --> 01:45:54,180
+Como é que nós damos os dados para realizar essa tarefa?
+
+969
+01:45:54,180 --> 01:46:02,500
+Ou como é que nós interpretamos os dados que nos foram devolvidos como resultado essa tarefa?
+
+970
+01:46:03,500 --> 01:46:11,500
+Esse trabalho de uniformização de interfaces é aquilo que nos permite desenvolver aplicações
+
+971
+01:46:11,500 --> 01:46:15,500
+que consomem esse sistema com maior facilidade.
+
+972
+01:46:15,500 --> 01:46:26,840
+Acho sentido?
+
+973
+01:46:26,840 --> 01:46:27,840
+Ok, pronto.
+
+974
+01:46:27,840 --> 01:46:29,840
+Então, já são nove horas.
+
+975
+01:46:29,840 --> 01:46:34,840
+A pá, faltam estes slides, mas estes slides vocês podem ler.
+
+976
+01:46:34,840 --> 01:46:36,840
+Tiverem dúvidas?
+
+977
+01:46:36,840 --> 01:46:38,840
+Já sabemos, terça-feira estamos cá.
+
+978
+01:46:38,840 --> 01:46:40,840
+Pode ser, pessoal?
+
+979
+01:46:40,840 --> 01:46:41,840
+Ok.
+
+980
+01:46:41,840 --> 01:46:42,840
+Vale a pena estar aqui.
+
+981
+01:46:42,840 --> 01:46:46,840
+São só três slides, três slides são 40 minutos de calhar.
+
+982
+01:46:46,840 --> 01:46:48,840
+Nunca se sabe.
+
+983
+01:46:48,840 --> 01:46:51,840
+Nós demorámos 40 minutos nos sete primeiros slides.
+
+984
+01:46:51,840 --> 01:46:54,840
+Eu estava atento, ok?
+
+985
+01:46:54,840 --> 01:46:56,840
+Fiquem bem, bom fim de semana.
+
+986
+01:46:56,840 --> 01:46:59,840
+Mas já agora, só uma pergunta rápida.
+
+987
+01:46:59,840 --> 01:47:07,840
+Para a semana a aula deve estar marcada, deve estar marcada para os nove e quarenta, não é?
+
+988
+01:47:07,840 --> 01:47:09,840
+Sim, terça-feira, sim.
+
+989
+01:47:09,840 --> 01:47:15,840
+Mas nós já vamos ter esta aula, por isso será que, se toda a gente concordasse, será que podia passar para os sete?
+
+990
+01:47:15,840 --> 01:47:17,840
+Ou se a gente precisava acabar tão tarde?
+
+991
+01:47:21,250 --> 01:47:25,250
+Ok, deixe-me cá ver.
+
+992
+01:47:25,250 --> 01:47:31,250
+Pois é, porque vocês para a semana já não têm o outro modo, termina uma semana mais cheira, não é?
+
+993
+01:47:31,250 --> 01:47:32,250
+Exatamente.
+
+994
+01:47:32,250 --> 01:47:36,250
+Por causa da deuterneidade com Covid, toda arrumada.
+
+995
+01:47:36,250 --> 01:47:41,250
+Opa, por acaso, para mim também se calhar era bom.
+
+996
+01:47:41,250 --> 01:47:55,060
+Deixem-me saber se eu não tenho aqui nada marcado para a semana já começam provas demonstradas, era só para ver.
+
+997
+01:47:55,060 --> 01:47:59,060
+As provas demonstradas saem fora do horário regular, não é?
+
+998
+01:47:59,060 --> 01:48:06,060
+E era só para ver se eu não tinha aqui nada marcado para a terça-feira, ao final da tarde.
+
+999
+01:48:06,060 --> 01:48:08,060
+Mas não tenho.
+
+1000
+01:48:08,060 --> 01:48:11,060
+Estando de dia treze, pá, para mim pode ser.
+
+1001
+01:48:11,060 --> 01:48:15,060
+Vou por aqui, então, às 17.
+
+1002
+01:48:15,060 --> 01:48:16,060
+Ok.
+
+1003
+01:48:16,060 --> 01:48:17,060
+Certo?
+
+1004
+01:48:17,060 --> 01:48:18,060
+Obrigado.
+
+1005
+01:48:18,060 --> 01:48:20,060
+17 e 10.
+
+1006
+01:48:20,060 --> 01:48:22,060
+19 e 10.
+
+1007
+01:48:22,060 --> 01:48:24,060
+19 e 10.
+
+1008
+01:48:24,060 --> 01:48:29,060
+Cala, pessoal, não apareçam às cinco da tarde, às sete e vez, ok?
+
+1009
+01:48:29,060 --> 01:48:31,060
+Por onde está combinado, pode ser.
+
+1010
+01:48:31,060 --> 01:48:32,060
+Obrigado.
+
+1011
+01:48:32,060 --> 01:48:33,060
+Tá bom?
+
+1012
+01:48:33,060 --> 01:48:34,060
+Ok, obrigado.
+
+1013
+01:48:34,060 --> 01:48:35,060
+Só.
+
+1014
+01:48:35,060 --> 01:48:36,060
+Obrigado.
+
+1015
+01:48:36,060 --> 01:48:37,060
+Já, Eduardo.
+
+1016
+01:48:37,060 --> 01:48:40,060
+Eu sou rápido, rápido.
+
+1017
+01:48:40,060 --> 01:48:45,060
+Eu já coloquei dois questionários relativamente às duas primeiras semanas.
+
+1018
+01:48:45,060 --> 01:48:50,060
+Não consegui fazer isso no fim de semana, mas eu durante esta semana fui-me entretendo,
+
+1019
+01:48:50,060 --> 01:48:56,060
+até para ver ao Jemani para me criar umas perguntas e depois estava a ver.
+
+1020
+01:48:56,060 --> 01:48:59,060
+Vi um bocado na diagonal, o segundo vou ser franco.
+
+1021
+01:48:59,060 --> 01:49:02,060
+Vi um bocado na diagonal, mas aquilo parecia-me bem.
+
+1022
+01:49:02,060 --> 01:49:10,060
+Se é aquilo, se vocês acharem que está mal, avisem-me, pá, porque o segundo, eu garanto-vos,
+
+1023
+01:49:10,060 --> 01:49:11,060
+eu vi assim na diagonal.
+
+1024
+01:49:11,060 --> 01:49:14,060
+Primeiro ainda estava com mais alguma disponibilidade e tal.
+
+1025
+01:49:14,060 --> 01:49:16,060
+Tive a ver o que é que ele tinha sugerido.
+
+1026
+01:49:16,060 --> 01:49:18,060
+O segundo foi muito rápido.
+
+1027
+01:49:18,060 --> 01:49:21,060
+Pá, mas pronto, já tem ali algumas revisões.
+
+1028
+01:49:21,060 --> 01:49:28,060
+Para a próxima semana, se calhar, aproveitava a quinta-feira para-vos lançar o tal questionário
+
+1029
+01:49:28,060 --> 01:49:34,060
+online, pelo model, e fazíamos assim o teste.
+
+1030
+01:49:34,060 --> 01:49:45,060
+Nós temos que fazer o teste, a parte teórica, vai lá, durante um período de aula, apesar
+
+1031
+01:49:45,060 --> 01:49:49,060
+de não estarmos juntos, acho que não faz sentido estar a dizer, ah, então vocês no fim
+
+1032
+01:49:49,060 --> 01:49:50,060
+de semana façam isto.
+
+1033
+01:49:50,060 --> 01:49:55,060
+Acho que faz mais sentido ser, olha, neste período de aula vamos fazer o teste, e vocês
+
+1034
+01:49:55,060 --> 01:49:56,060
+respondem.
+
+1035
+01:49:56,060 --> 01:49:59,060
+Parece-vos bem na quinta-feira?
+
+1036
+01:49:59,060 --> 01:50:00,060
+Sim?
+
+1037
+01:50:00,060 --> 01:50:01,060
+Ok.
+
+1038
+01:50:01,060 --> 01:50:13,060
+Temos na mesma, eu fico arrempa pelo teams, a sessão, veigo muito bom dia, vamos então
+
+1039
+01:50:13,060 --> 01:50:18,060
+fazer o teste, e eu fico aqui disponível, se tiverem alguma dúvida, podem contactar-me
+
+1040
+01:50:18,060 --> 01:50:21,060
+por teams, para eu esclarecer a dúvida.
+
+1041
+01:50:21,060 --> 01:50:22,060
+Ok?
+
+1042
+01:50:22,060 --> 01:50:28,060
+Portanto, fico aqui disponível para vocês, apesar de não estarmos numa sala física,
+
+1043
+01:50:28,060 --> 01:50:29,060
+não é?
+
+1044
+01:50:29,060 --> 01:50:30,060
+Pronto?
+
+1045
+01:50:30,060 --> 01:50:33,060
+Estou aqui para vocês.
+
+1046
+01:50:33,060 --> 01:50:34,060
+Combinado?
+
+1047
+01:50:34,060 --> 01:50:35,060
+Parece bem?
+
+1048
+01:50:35,060 --> 01:50:36,060
+Ok.
+
+1049
+01:50:36,060 --> 01:50:38,060
+Só, agora não fecharei mais.
+
+1050
+01:50:38,060 --> 01:50:45,060
+Bom jantar, boa noite, um bom fim de semana, e no sábado um trabalho laboratório, tá
+
+1051
+01:50:45,060 --> 01:50:46,060
+bem?
+
+1052
+01:50:46,060 --> 01:50:47,060
+Fiquem bem?
+
+1053
+01:50:47,060 --> 01:50:48,060
+Obrigado.
+
+1054
+01:50:48,060 --> 01:50:49,060
+Obrigado.
+
+1055
+01:50:49,060 --> 01:50:50,060
+Obrigado.
+
+1056
+01:50:50,060 --> 01:50:50,660
+Tchau, boa noite.
+
