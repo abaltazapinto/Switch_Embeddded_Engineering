@@ -1,0 +1,2560 @@
+1
+00:02:56,180 --> 00:02:59,520
+Olá, boa noite.
+
+2
+00:02:59,520 --> 00:03:01,520
+Boa noite.
+
+3
+00:03:01,520 --> 00:03:04,520
+Já estava a pensar que eu me tinha esquecido da hora, não era?
+
+4
+00:03:04,520 --> 00:03:07,520
+E a começar às nove e meia, digam-la a verdade.
+
+5
+00:03:11,520 --> 00:03:16,520
+A verdade é que eu queria colocar a apresentação do hoje ainda no mobile
+
+6
+00:03:16,520 --> 00:03:26,080
+e queria ver se conseguia fazer mesmo isso, mas também...
+
+7
+00:03:26,080 --> 00:03:28,080
+Já vai, também é lançado.
+
+8
+00:03:28,080 --> 00:03:31,080
+Hoje é que espero mesmo ficar bem dentro do tempo,
+
+9
+00:03:31,080 --> 00:03:37,080
+porque a apresentação de hoje eu fila para ser bem curta.
+
+10
+00:03:37,080 --> 00:03:42,080
+Isto ainda vai demorar um bocadinho colocar aqui a semana cinco.
+
+11
+00:03:42,080 --> 00:03:45,080
+Se calhar, podemos começar já.
+
+12
+00:03:47,080 --> 00:03:51,080
+Ou preferem ter já acesso aos slides.
+
+13
+00:03:52,080 --> 00:03:57,080
+Por exemplo, o Lance, uma vez disse que preferia ter com antecedência acesso aos slides.
+
+14
+00:03:57,080 --> 00:04:02,080
+Eu estou sempre a queimar porque às vezes antecedência já depois da sessão.
+
+15
+00:04:02,080 --> 00:04:07,080
+Como é que se diz o contrário de antecedência e a posse de antecedência?
+
+16
+00:04:07,080 --> 00:04:09,080
+Para mim é igual.
+
+17
+00:04:09,080 --> 00:04:15,080
+É igual, então vamos começar já e depois minimizar aqui o browser.
+
+18
+00:04:15,080 --> 00:04:18,080
+Mais browser.
+
+19
+00:04:18,080 --> 00:04:21,080
+Estou com isso desfino, janelas.
+
+20
+00:04:21,080 --> 00:04:24,080
+Só para se fechar um minuto que é para ir mudar-me de sítio,
+
+21
+00:04:24,080 --> 00:04:32,080
+porque eu estou aqui no meu escritório para tarde, que é como quem diz a cozinha.
+
+22
+00:04:32,080 --> 00:04:36,360
+Isto é assim, uma pessoa é ligada para a cozinha,
+
+23
+00:04:36,360 --> 00:04:39,360
+para já não há homens como antigamente.
+
+24
+00:04:42,360 --> 00:04:48,360
+Só problema é que daqui a pouco a cozinha vai estar ocupada e ele tem que sair daqui.
+
+25
+00:04:48,360 --> 00:04:50,360
+Só um minuto, sim?
+
+26
+00:04:57,250 --> 00:06:37,010
+Agora cá estou de novo.
+
+27
+00:06:39,010 --> 00:06:47,010
+Acho que a arranjar isto de uma maneira que eu consigo reconhecer.
+
+28
+00:06:49,010 --> 00:06:52,010
+Estarem aí na sala de espera, depois não.
+
+29
+00:06:52,010 --> 00:07:01,410
+Ok, pronto.
+
+30
+00:07:01,410 --> 00:07:07,410
+Então a apresentação que eu preparei para hoje é simplesmente uma conclusão.
+
+31
+00:07:07,410 --> 00:07:14,410
+Vamos então integrar tudo aquilo que vimos sobretudo na semana passada.
+
+32
+00:07:14,410 --> 00:07:17,410
+Como é que eu posso montar um esquema em que tenho?
+
+33
+00:07:17,410 --> 00:07:24,410
+Vem me parecer que havia um diagrama que eu queria pedir ao Gemini para me fazer.
+
+34
+00:07:24,410 --> 00:07:26,410
+É não um diagrama com a pipeline.
+
+35
+00:07:26,410 --> 00:07:28,410
+Quem é que nós temos?
+
+36
+00:07:28,410 --> 00:07:31,410
+Imaginem, um motor.
+
+37
+00:07:31,410 --> 00:07:40,410
+É que é um cenário da indústria 4.0 e manutenção preventiva.
+
+38
+00:07:43,410 --> 00:07:54,410
+Temos uma máquina e a máquina é analisada ou monitorizada com parâmetros
+
+39
+00:07:54,410 --> 00:08:02,410
+que habitualmente são utilizados para determinar se prevê uma varia
+
+40
+00:08:02,410 --> 00:08:07,410
+e é necessário realizar manutenção antes da varia acontecer.
+
+41
+00:08:07,410 --> 00:08:12,410
+Dois parâmetros muito simples, temperatura e vibração.
+
+42
+00:08:12,410 --> 00:08:14,410
+Temos a máquina.
+
+43
+00:08:14,410 --> 00:08:19,410
+A máquina tem sensores e os sensores geram dados.
+
+44
+00:08:20,410 --> 00:08:23,410
+O que é que vamos ter?
+
+45
+00:08:23,410 --> 00:08:34,410
+Vamos ter os dados a serem produzidos e publicados em MQTT.
+
+46
+00:08:34,410 --> 00:08:42,410
+Vamos ter ali um mosquito a receber dados e a publicá-los.
+
+47
+00:08:42,410 --> 00:08:50,410
+Vamos ter o agente IOT que vai fazer a tradução do MQTT para o FIWARE.
+
+48
+00:08:50,410 --> 00:08:58,220
+E obviamente, se temos o FIWARE e o Context Broker Orion,
+
+49
+00:08:58,220 --> 00:09:05,220
+vai estar responsável por receber as últimas atualizações do contexto
+
+50
+00:09:05,220 --> 00:09:16,220
+e preservar, não manter a imagem mais atualizada do domínio que está a ser observado.
+
+51
+00:09:16,220 --> 00:09:25,220
+Temos também um conector de persistência para criar uma série temporal,
+
+52
+00:09:25,220 --> 00:09:33,220
+um registro temporal destes contextos, neste caso concreto,
+
+53
+00:09:33,220 --> 00:09:41,220
+guardar o registro temporal, a série temporal da temperatura e da vibração da máquina.
+
+54
+00:09:41,220 --> 00:09:52,220
+Por fim, o Grafana para apresentar os dados numa dashboard.
+
+55
+00:09:52,220 --> 00:09:56,220
+Por acaso, eu lembro que tinha olhado para isto e disse,
+
+56
+00:09:56,220 --> 00:10:03,220
+tenho que fazer um diagrama com o pipeline e esqueci-me.
+
+57
+00:10:03,220 --> 00:10:07,540
+Pronto.
+
+58
+00:10:07,540 --> 00:10:12,540
+Nesta parte, eu tive um bocado de ajuda da Ingligencia Artificial
+
+59
+00:10:12,540 --> 00:10:18,540
+para me ajudar a fazer aqui mais rapidamente e tentar não esquecer de nada.
+
+60
+00:10:18,540 --> 00:10:24,540
+Como é que é a estrutura típica para um projeto de testes?
+
+61
+00:10:24,540 --> 00:10:28,540
+Eu tenho ali o Docker Compose com o fecheiro de Docker Compose,
+
+62
+00:10:28,540 --> 00:10:36,540
+com a definição dos componentes que preciso ter para montar aqui o sistema.
+
+63
+00:10:36,540 --> 00:10:43,540
+Um mosquito, IoT Agents e eventualmente telescripts para fazer a simulação da telematria.
+
+64
+00:10:43,540 --> 00:10:47,540
+Tenho ali um simulate telematory, um script a shell,
+
+65
+00:10:47,540 --> 00:10:55,540
+mas poderiam fazer scripts com outra linguagem de programação.
+
+66
+00:10:55,540 --> 00:11:02,540
+A shell é uma linguagem de programação, não é uma linguagem de programação, mas pronto.
+
+67
+00:11:02,540 --> 00:11:06,540
+Mas teria ali algum script que permita simular a telemetria.
+
+68
+00:11:06,540 --> 00:11:12,540
+Ou isso, ou compra uma máquina e sensores e instala uma máquina e os sensores, fica menos caro.
+
+69
+00:11:12,540 --> 00:11:16,170
+Fica menos barato.
+
+70
+00:11:16,170 --> 00:11:21,170
+Mas pronto, isso seria uma árvore habitual para um sistema destes.
+
+71
+00:11:21,170 --> 00:11:30,450
+Tudo bem, Dockerfile, vamos então especificar quais são os contentores
+
+72
+00:11:30,450 --> 00:11:33,450
+com as aplicações que temos que ter a correr.
+
+73
+00:11:33,450 --> 00:11:38,450
+O Dockerfile fica um bocado comprido, eu tive que partir isto em alguns slides.
+
+74
+00:11:38,450 --> 00:11:46,450
+Mas isto seria um Dockerfile, um Dockerfile, um único fecheiro.
+
+75
+00:11:46,450 --> 00:11:49,450
+Então, primeira parte, serviços.
+
+76
+00:11:49,450 --> 00:11:55,450
+Orian Context Broker, o primeiro serviço que eu quero colocar aqui.
+
+77
+00:11:55,450 --> 00:12:00,450
+O Orian vai estar à escuta na porta 1026.
+
+78
+00:12:01,450 --> 00:12:11,450
+E pronto, podemos a porta 1026 do host da máquina fitreão amapiar para o port 1026 do contentor
+
+79
+00:12:11,450 --> 00:12:15,450
+que vais ter a correr o Fireware, o Orian.
+
+80
+00:12:15,450 --> 00:12:21,160
+Duvidas, não há?
+
+81
+00:12:21,160 --> 00:12:23,160
+Parece fácil, não é?
+
+82
+00:12:23,160 --> 00:12:25,160
+Não é difícil.
+
+83
+00:12:25,160 --> 00:12:33,160
+Agora, o IoT Agent.
+
+84
+00:12:33,160 --> 00:12:39,160
+O IoT Agent, vamos por aqui, o IoT Agent do Fireware a correr.
+
+85
+00:12:39,160 --> 00:12:44,160
+Ele vai estar à escuta no port 4041.
+
+86
+00:12:44,160 --> 00:12:54,950
+O host vai ter também o port 4041 a ser amapiado no 4041 deste contentor.
+
+87
+00:12:54,950 --> 00:13:01,950
+Temos aqui como definições que o host é o mosquito, o host mktt é o mosquito.
+
+88
+00:13:01,950 --> 00:13:07,950
+O mosquito vai estar à escuta no 1883.
+
+89
+00:13:07,950 --> 00:13:16,950
+E o Context Broker é o Orian que está à escuta no 1026.
+
+90
+00:13:16,950 --> 00:13:23,950
+Lembro que o IoT Agent funciona como um tradutor de protocolos.
+
+91
+00:13:23,950 --> 00:13:31,950
+Portanto, ele vai estar à escuta ou vai se inscrever logo, vai receber pacotes de mktt
+
+92
+00:13:31,950 --> 00:13:42,950
+através do port 1883 e depois vai comunicar através de pedidos REST para o port 1026 do Orian.
+
+93
+00:13:42,950 --> 00:13:47,950
+E agora eu, ao ler isto, estou a me lembrar mesmo.
+
+94
+00:13:47,950 --> 00:13:53,950
+É pá, tenho que fazer um slide e pedir para colocar estas indicações dos portos
+
+95
+00:13:53,950 --> 00:13:58,950
+que estão a estabelecer as comunicações neste pipeline.
+
+96
+00:13:58,950 --> 00:14:01,950
+Dovidas?
+
+97
+00:14:01,950 --> 00:14:07,290
+Não há? Muito bem.
+
+98
+00:14:07,290 --> 00:14:11,290
+Agora, vamos para o mosquito.
+
+99
+00:14:11,290 --> 00:14:17,290
+Também queremos por a correr o pacote mosquito, o contentor mosquito.
+
+100
+00:14:17,290 --> 00:14:27,290
+Vamos estabelecer que para o porto das subscrições utiliza-se o 1883
+
+101
+00:14:27,290 --> 00:14:35,290
+e para o porto das publicações é o 9001.
+
+102
+00:14:35,290 --> 00:14:38,290
+Se não me engano.
+
+103
+00:14:38,290 --> 00:14:44,290
+Este é a subscrição e este é a publicação.
+
+104
+00:14:44,290 --> 00:14:46,290
+Sim, acho que é.
+
+105
+00:14:46,290 --> 00:14:59,570
+E pronto, também passamos os cheios mosquito configuration.
+
+106
+00:14:59,570 --> 00:15:02,570
+Esta parte foi automática.
+
+107
+00:15:02,570 --> 00:15:08,150
+A parte dos volumes.
+
+108
+00:15:08,150 --> 00:15:17,970
+Temos aqui duas configurações no mosquito mosquito e no mosquito config.
+
+109
+00:15:17,970 --> 00:15:21,970
+Por acaso, já há algum tempo que não utiliza um mosquito no contentor
+
+110
+00:15:21,970 --> 00:15:29,210
+e aqui confirmo um bocado na inteligência artificial
+
+111
+00:15:29,210 --> 00:15:32,210
+porque, se calhar, ela tem mais memória do que eu.
+
+112
+00:15:32,210 --> 00:15:37,210
+Sim, é preciso só configurar um listener, provavelmente.
+
+113
+00:15:37,210 --> 00:15:38,210
+Se ainda deve ser.
+
+114
+00:15:38,210 --> 00:15:41,210
+Depende do que tiver aí, mas é preciso do config.
+
+115
+00:15:41,210 --> 00:15:42,210
+Pois.
+
+116
+00:15:42,210 --> 00:15:46,210
+Pois, a configuração é através dos fecheios config.
+
+117
+00:15:46,210 --> 00:15:48,210
+Agora, por que que tenho ali dois, meu?
+
+118
+00:15:48,210 --> 00:15:54,210
+Ah não, é o mapa, o primeiro é o do PC e o segundo é o passe dentro do container.
+
+119
+00:15:54,210 --> 00:15:56,210
+Ok, obrigado, então.
+
+120
+00:15:56,210 --> 00:16:00,210
+O traje é o que está dentro do PC?
+
+121
+00:16:00,210 --> 00:16:06,210
+O original e depois a imagem dentro do contentor, é isso mesmo.
+
+122
+00:16:06,210 --> 00:16:10,210
+É isso mesmo, é o mapamento de fora para dentro.
+
+123
+00:16:10,210 --> 00:16:11,210
+Obrigado.
+
+124
+00:16:11,210 --> 00:16:14,210
+E agora olha para aqui, pai, e fica assim...
+
+125
+00:16:14,210 --> 00:16:17,210
+Mas obrigado, é isso mesmo.
+
+126
+00:16:17,210 --> 00:16:20,210
+Pronto.
+
+127
+00:16:20,210 --> 00:16:26,210
+Mas temos agora a base de dados para guardarmos o histórico temporal.
+
+128
+00:16:26,210 --> 00:16:32,210
+Ok, time scale database.
+
+129
+00:16:32,210 --> 00:16:39,210
+Vai estar a escuta no porto 5, 4, 3, 2.
+
+130
+00:16:39,210 --> 00:16:48,210
+O host também vai estar a mapear o 5, 4, 3, 2 para o 5, 4, 3, 2 dentro do contentor.
+
+131
+00:16:48,210 --> 00:16:53,210
+Ok?
+
+132
+00:16:53,210 --> 00:16:56,210
+E desculpe lá, pai.
+
+133
+00:16:56,210 --> 00:16:58,210
+Tu que agregante da seca.
+
+134
+00:16:58,210 --> 00:17:03,210
+Hoje falei muito de manhã nas minhas aulas.
+
+135
+00:17:03,210 --> 00:17:10,210
+E pronto, esta é aquela parte que é sempre assim um bocado, como é que eu ia dizer,
+
+136
+00:17:10,210 --> 00:17:17,210
+disputível, mas a palavra passe do postgresql, é secret.
+
+137
+00:17:17,210 --> 00:17:20,210
+Está aqui, está aqui exposta.
+
+138
+00:17:20,210 --> 00:17:23,210
+Eu agora estou a lembrar-me de uma coisa.
+
+139
+00:17:23,210 --> 00:17:36,160
+Eu não sei se aqui também não deveríamos de definir o nome do utilizador.
+
+140
+00:17:36,160 --> 00:17:47,410
+Pois é, eu aqui confio um bocado na inteligência artificial para dizer, faz-me um Docker Compose
+
+141
+00:17:47,410 --> 00:17:49,410
+para ter estes componentes.
+
+142
+00:17:49,410 --> 00:17:51,410
+Pau, pau, pau, montou aquilo.
+
+143
+00:17:51,410 --> 00:17:57,410
+Depois eu tive a escutar já o Dockerfile para colocar aqui nos slides.
+
+144
+00:17:57,410 --> 00:18:05,410
+Mas olhando agora para aqui, com uma atenção mais crítica, não é com aquela atenção de estar a montar os slides.
+
+145
+00:18:05,410 --> 00:18:14,410
+Eu estou a pensar-se aqui também não deveríamos indicar qual era o utilizador padrão para utilizar o postgresql.
+
+146
+00:18:14,410 --> 00:18:21,410
+Se for, eu também, pronto, conforme eu disse, eu coloco estes slides já a seguir.
+
+147
+00:18:21,410 --> 00:18:24,410
+Mas depois também vou investigar isso.
+
+148
+00:18:24,410 --> 00:18:30,410
+E se for necessário, eu depois corrigo e atualizo-nos e corrigindo e atualizando.
+
+149
+00:18:30,410 --> 00:18:35,410
+Depois também vos informo que houve mudanças ali naquela, neste slide, está bom?
+
+150
+00:18:35,410 --> 00:18:57,020
+Este é o página 8, slide 8, deverá especificar o user do postgresql.
+
+151
+00:18:57,020 --> 00:19:03,020
+Vamos investigar isso e depois se necessário corrigir.
+
+152
+00:19:03,020 --> 00:19:08,020
+Ou então, se vocês já praticaram, também podem dizer já.
+
+153
+00:19:08,020 --> 00:19:15,020
+Se vocês eventualmente já estiveram a trabalhar neste no sábado, podem ter mais lembrança, ter a memória mais viva do que eu.
+
+154
+00:19:15,020 --> 00:19:19,800
+Ninguém arrisca.
+
+155
+00:19:19,800 --> 00:19:21,800
+Ok, então vamos continuar.
+
+156
+00:19:21,800 --> 00:19:22,800
+Este também é um exemplo.
+
+157
+00:19:22,800 --> 00:19:32,800
+Obviamente que um exemplo é uma base e depois tudo que for necessário personalizar ou corrigir é o vosso trabalho.
+
+158
+00:19:33,800 --> 00:19:39,800
+Por fim, temos o Grafana para a apresentação em Dashboards, não é?
+
+159
+00:19:39,800 --> 00:19:48,800
+Tanto, incluir mais um contentor com o Grafana e o Grafana vai ter o porto 30.00 aberto.
+
+160
+00:19:48,800 --> 00:19:51,800
+E o meu Dockerfile terminava por aqui.
+
+161
+00:19:52,800 --> 00:20:04,800
+Portanto, só para relembrar, temos o contextbroker, temos o IOT agent, temos o mosquito, temos a base de data de timescale dv e temos o Grafana.
+
+162
+00:20:04,800 --> 00:20:06,800
+Este é o nosso pipeline.
+
+163
+00:20:06,800 --> 00:20:12,800
+Bastante alinhado com um diagrama que nós tínhamos nos slides da semana passada.
+
+164
+00:20:12,800 --> 00:20:24,800
+Para arrancar com isto tudo, Docker compose config, Docker compose up, em background e Docker compose ps para ver se está tudo a funcionar direitinho.
+
+165
+00:20:24,800 --> 00:20:36,800
+A minha experiência diz-me, para eu fazer sempre o Docker compose ps, para ter a certeza que está tudo up, está tudo up.
+
+166
+00:20:36,800 --> 00:20:50,800
+Sobretudo, a primeira vez que uma pessoa arranca com um Docker compose, convém verificar se ficou tudo ok ou se é necessário corrigir alguma coisa por algum contentor não arrancar.
+
+167
+00:20:50,800 --> 00:20:55,800
+Este é a minha recomendação e é uma recomendação baseada na experiência.
+
+168
+00:20:55,800 --> 00:21:03,800
+Já fiz Docker compose, em que a coisa corria bem à primeira, já fiz outros Docker compose em que não arrancava.
+
+169
+00:21:04,800 --> 00:21:19,800
+E pensando bem, a última vez que uma aconteceu isso, eu tinha pedido ao Gemini para fazer o Docker compose para incluir quatro aplicações e acho que era logo na segunda que aquilo falhava.
+
+170
+00:21:19,800 --> 00:21:27,800
+E havia uma incompatibilidade com uma versão e então não podia ser a última, tinha que ser uma versão anterior.
+
+171
+00:21:27,800 --> 00:21:34,800
+Foi uma coisa que não quer ir, mas o Docker compose parecia bonito quando arrancou, não arrancaram os contentores todos.
+
+172
+00:21:34,800 --> 00:21:43,800
+Foi uma desgracia, se uma pessoa ficasse ali a acreditar que tinha funcionado, depois ainda batíamos com a cabeça a pensar, mas por que isto não estava a funcionar nesta ponte?
+
+173
+00:21:43,800 --> 00:21:47,800
+E era um contentor lá no meio do pipeline que não estava a funcionar.
+
+174
+00:21:48,800 --> 00:21:58,800
+Ora bem, aqui não há dúvidas nenhuma, certo? Estão apenas comandos para arrancar com contentores, certo? E verificar.
+
+175
+00:21:58,800 --> 00:22:15,800
+Sim, um bom aliado é isso, seria as hora por tênis, para saber o que está a levar, então todo mundo se destacou assim.
+
+176
+00:22:15,800 --> 00:22:17,800
+Até o professor...
+
+177
+00:22:19,800 --> 00:22:20,800
+O professor Várcio Oliveira?
+
+178
+00:22:20,800 --> 00:22:23,800
+Sim, sim, ele também nos comandou.
+
+179
+00:22:24,800 --> 00:22:32,800
+Ótimo, eu vou dizer uma coisa, o professor Várcio Oliveira tem mais experiência a correr contentores do que eu.
+
+180
+00:22:32,800 --> 00:22:39,800
+A minha experiência é com o Docker, eu nunca utilizei o Portainer, ou ser franco.
+
+181
+00:22:39,800 --> 00:22:47,800
+Aliás, se calhar, eu também deveria ter ido às aulas de sábado com você, que era para aprender que o professor Zé Carlos...
+
+182
+00:22:47,800 --> 00:22:55,800
+O professor Zé Carlos, pá, porque vocês neste momento têm mais experiência do que eu com o Portainer.
+
+183
+00:22:55,800 --> 00:22:59,800
+Aliás, eu não tenho experiência, a minha experiência é com o Docker.
+
+184
+00:22:59,800 --> 00:23:06,800
+Mas com o Portainer, se vocês quiserem elaborar um bocado, por eu também aprender com voz, eu não me importo.
+
+185
+00:23:06,800 --> 00:23:15,800
+Basicamente também dá para fazer lá o Docker Compose diretamente, no próprio serviço.
+
+186
+00:23:16,800 --> 00:23:19,800
+Tólico, ótimo, o professor disse aqui.
+
+187
+00:23:19,800 --> 00:23:20,800
+Ok, ok.
+
+188
+00:23:20,800 --> 00:23:27,800
+Opa, eu vou ser franco, eu vi os guiões, não é?
+
+189
+00:23:27,800 --> 00:23:36,800
+Os problemas que o professor Várcio Oliveira vos instigou a cumprir, não é?
+
+190
+00:23:37,800 --> 00:23:40,800
+Opa, e pronto, eu gostava de ter experimentado.
+
+191
+00:23:40,800 --> 00:23:46,800
+O problema é que vocês tinham a sorte no sábado de manhã ter já lá o hardware preparado.
+
+192
+00:23:46,800 --> 00:23:50,800
+Os guéis de Electro, por acaso, nisso são muito bons.
+
+193
+00:23:50,800 --> 00:23:56,800
+Tem lá computadores amontados no laboratório para esse tipo de atividades.
+
+194
+00:23:58,800 --> 00:24:01,800
+E o meu computador, que está aqui a reventar pelas costuras...
+
+195
+00:24:01,800 --> 00:24:05,800
+Pai, eu se penso, aí, vou agora instalar aquilo, o que é?
+
+196
+00:24:05,800 --> 00:24:13,800
+Estou sempre a esperar do desastre que vai acontecer, depois de eu fazer alguma mudança crítica neste computador.
+
+197
+00:24:15,800 --> 00:24:21,800
+Eu acho que vou comprar um computador Z8 só para fazer experiências.
+
+198
+00:24:21,800 --> 00:24:27,800
+Uma socata, só para levar costas e fazer estas experiências.
+
+199
+00:24:27,800 --> 00:24:37,800
+Porque, de certa maneira, eu estou um bocado amarrado, porque estou só com este computador e tenho medo de instalar de alguma maneira.
+
+200
+00:24:37,800 --> 00:24:50,140
+Pronto, já houve aqui os dois minutos em que vocês funcionaram como psicólogos, em que eu falei, patos, mas problemas, e vocês.
+
+201
+00:24:50,140 --> 00:24:58,140
+Mas sinceramente, há coisas que eu, efetivamente, tenho que experimentar.
+
+202
+00:24:58,140 --> 00:25:02,140
+E há coisas que uma pessoa aprende hands-on.
+
+203
+00:25:02,140 --> 00:25:05,140
+É ok, eu leio, mas agora vamos experimentar.
+
+204
+00:25:05,140 --> 00:25:09,140
+E experimentar é que se aprende mesmo bem.
+
+205
+00:25:10,140 --> 00:25:24,140
+Ok, agora, registar a entidade motor e mapear os atributos MQTT através da linha de comando.
+
+206
+00:25:24,140 --> 00:25:37,950
+Nós vamos enviar um pedido resto ao IOT agent, ok?
+
+207
+00:25:38,950 --> 00:25:47,830
+Paz, quantos de vocês é que tem o Postmaster?
+
+208
+00:25:47,830 --> 00:25:50,830
+É Postmaster, não é?
+
+209
+00:25:50,830 --> 00:25:52,830
+Post, Post.
+
+210
+00:25:52,830 --> 00:25:58,830
+É aquele programa que permite lançar pedidos HTT.
+
+211
+00:25:58,830 --> 00:26:00,830
+Postmaster, mano.
+
+212
+00:26:00,830 --> 00:26:04,830
+Eu estava dizendo Postmaster, mas aquele Master não estava a bater bem.
+
+213
+00:26:04,830 --> 00:26:06,830
+Eu sabia que era M qualquer coisa.
+
+214
+00:26:06,830 --> 00:26:08,830
+Postmaster, exatamente.
+
+215
+00:26:08,830 --> 00:26:12,830
+Paz, se vocês tiveram Postmaster, é muito mais confortável de utilizar o Carol.
+
+216
+00:26:12,830 --> 00:26:16,830
+Isso e ouvos, eu sei, ok?
+
+217
+00:26:16,830 --> 00:26:20,830
+Quem tiver o Postmaster, é muito mais agradável ter uma interface gráfica,
+
+218
+00:26:20,830 --> 00:26:27,830
+em que vocês experimentem os campos, coloquem o lito direitinho, carregam no botão, veem a resposta, certo?
+
+219
+00:26:27,830 --> 00:26:31,830
+Eu não tenho Postmaster, e quando preciso fazer essas coisas, faço-me cada gruta.
+
+220
+00:26:31,830 --> 00:26:34,830
+É utilizando o Carol, ok?
+
+221
+00:26:34,830 --> 00:26:36,830
+Antigamente, ainda era mais complicado.
+
+222
+00:26:36,830 --> 00:26:40,830
+Agora, felizmente, a inteligência artificial.
+
+223
+00:26:40,830 --> 00:26:43,830
+E eu peço, ela acerta em quase tudo.
+
+224
+00:26:43,830 --> 00:26:46,830
+Às vezes tem que ser, quedamos toquesitos.
+
+225
+00:26:46,830 --> 00:26:54,830
+Mas aqui, voltando ao Jurássico, que é o meu caso.
+
+226
+00:26:54,830 --> 00:27:01,830
+Se fossemos no Jurássico, nem era o Carol, era o WGATE.
+
+227
+00:27:01,830 --> 00:27:06,830
+Há bastantes anos atrás, eu utilizava o WGATE.
+
+228
+00:27:06,830 --> 00:27:09,830
+Entretanto, apareceu o Carol e eu passei a utilizar o Carol.
+
+229
+00:27:09,830 --> 00:27:12,830
+É mais avançado do que o WGATE.
+
+230
+00:27:12,830 --> 00:27:15,830
+Mas o Postmaster é bem mais confortável.
+
+231
+00:27:15,830 --> 00:27:17,830
+E eu garanto.
+
+232
+00:27:17,830 --> 00:27:23,670
+Só um momento.
+
+233
+00:27:23,670 --> 00:28:16,580
+Só um momento, eu vim já.
+
+234
+00:28:16,580 --> 00:28:21,580
+Desculpem lá para uma emergência familiar, que se rolou facilmente,
+
+235
+00:28:21,580 --> 00:28:25,580
+mas tive que ir ali atender uma chamada.
+
+236
+00:28:25,580 --> 00:28:36,580
+Então, vamos fazer o Carol para o IoT Agent, para o Endpoint IoT Devices.
+
+237
+00:28:36,580 --> 00:28:38,580
+E o que é que nós vamos enviar para lá?
+
+238
+00:28:38,580 --> 00:28:41,580
+Vamos registar um novo dispositivo.
+
+239
+00:28:41,580 --> 00:28:46,580
+É o dispositivo que tem o identificador Motor001.
+
+240
+00:28:46,580 --> 00:28:53,580
+O nome descritivo desta nova entidade é máquina001.
+
+241
+00:28:53,580 --> 00:28:55,580
+De que tipo é que é?
+
+242
+00:28:55,580 --> 00:28:57,580
+É uma industrial machine.
+
+243
+00:28:57,580 --> 00:29:02,580
+Qual é que é o protocol IoT Agent JSON?
+
+244
+00:29:02,580 --> 00:29:05,580
+E qual é que é o protocol transporte, o MQTT?
+
+245
+00:29:05,580 --> 00:29:11,580
+E quais são os atributos desta entidade?
+
+246
+00:29:11,580 --> 00:29:15,580
+Temos a temperatura.
+
+247
+00:29:15,580 --> 00:29:19,580
+O identificador é T, mas a descrição é temperatura.
+
+248
+00:29:19,580 --> 00:29:20,580
+De que tipo?
+
+249
+00:29:20,580 --> 00:29:22,580
+Há um número.
+
+250
+00:29:22,580 --> 00:29:30,580
+E também temos o V descritivo de vibração e o tipo número.
+
+251
+00:29:30,580 --> 00:29:37,580
+Temos uma nova entidade, Machines 001, que é uma industrial machine,
+
+252
+00:29:37,580 --> 00:29:40,580
+e tem duas propriedades.
+
+253
+00:29:40,580 --> 00:29:43,580
+A temperatura e a vibração.
+
+254
+00:29:43,580 --> 00:29:47,580
+Ambas as entidades são numéricas e uma identificada com o identificador T
+
+255
+00:29:47,580 --> 00:29:54,950
+e outra é identificada com o identificador V.
+
+256
+00:29:54,950 --> 00:29:57,950
+Fazemos isto e o que acontece?
+
+257
+00:29:57,950 --> 00:30:05,950
+IoT Agent passa a conhecer esta nova entidade.
+
+258
+00:30:05,950 --> 00:30:07,950
+Duvidas.
+
+259
+00:30:07,950 --> 00:30:08,950
+Até agora.
+
+260
+00:30:08,950 --> 00:30:09,950
+Não há?
+
+261
+00:30:09,950 --> 00:30:12,950
+Parece fácil?
+
+262
+00:30:12,950 --> 00:30:15,950
+Não é difícil, então.
+
+263
+00:30:15,950 --> 00:30:16,950
+Muito bem.
+
+264
+00:30:16,950 --> 00:30:26,950
+Agora, se eu quiser publicar ou simular a publicação de dados da telemetria,
+
+265
+00:30:26,950 --> 00:30:30,950
+eu posso utilizar um mosquito pub,
+
+266
+00:30:30,950 --> 00:30:48,090
+para enviar para o mosquito, para o tópico.
+
+267
+00:30:48,090 --> 00:30:49,090
+Tópico.
+
+268
+00:30:49,090 --> 00:31:09,270
+Jason, este 1-2-3-4 é uma chave que está associada a este tópico.
+
+269
+00:31:09,270 --> 00:31:23,140
+Estou aqui a pensar, estou aqui a pensar a inteligência artificial,
+
+270
+00:31:23,140 --> 00:31:30,140
+disse que aqui estaria a chave associada ao motor,
+
+271
+00:31:30,140 --> 00:31:33,140
+depois é colocar a chave que for arbitrariamente escolhida,
+
+272
+00:31:33,140 --> 00:31:37,140
+e ele arbitrariamente escolheu um 2-3-4.
+
+273
+00:31:37,140 --> 00:31:41,140
+Vamos ao motor, atributos.
+
+274
+00:31:41,140 --> 00:31:57,140
+E nos atributos do motor 1, vamos colocar lá temperatura 72,5 e vibrações 3,8.
+
+275
+00:31:57,140 --> 00:31:59,140
+Estou a estar metodo em que mudar.
+
+276
+00:31:59,140 --> 00:32:13,990
+Desculpe lá, é só um colega meu do IZEP, deixe-me cá ver o que é que ele quer.
+
+277
+00:32:13,990 --> 00:32:16,990
+Eu já trato disto.
+
+278
+00:32:16,990 --> 00:32:22,990
+Não posso esquecer, ficou ali a notificação e aberto, porque é para não esquecer.
+
+279
+00:32:22,990 --> 00:32:29,990
+Se eu quiser, por exemplo, enviar uns dados em que haja muita vibração,
+
+280
+00:32:29,990 --> 00:32:34,990
+mais vibração e mais temperatura, é enviar também para o mesmo tópico,
+
+281
+00:32:34,990 --> 00:32:39,990
+mas com valores diferentes, valores mais altos de temperatura e de vibração.
+
+282
+00:32:39,990 --> 00:32:47,990
+Nós já fazemos isto, utilizamos um mosquito publisher para enviar dados para o MQTT,
+
+283
+00:32:47,990 --> 00:32:58,990
+para um mosquito, e depois isto aqui será enviado para o subscritor, que é o IOT agent.
+
+284
+00:32:58,990 --> 00:33:13,160
+Se quisermos ver o estado da máquina, perguntar ao Orion qual é o estado da máquina,
+
+285
+00:33:13,160 --> 00:33:20,160
+enviamos um pedido de rest para entities Machine 001, ok?
+
+286
+00:33:20,160 --> 00:33:36,760
+E aqui o Gemini sugeriu pegar na saída e enviar para o Jason Tool, que é...
+
+287
+00:33:36,760 --> 00:33:45,280
+Basicamente para serializar isso em Jason, não é?
+
+288
+00:33:45,280 --> 00:33:53,280
+É um parcer do Jason que torna o Jason mais bonito, ou seja, fica humanamente mais legível.
+
+289
+00:33:53,280 --> 00:34:02,280
+É isso, eu estava aqui a pensar em uma palavra, pársar's lance, desculpe lá o meu inglês,
+
+290
+00:34:02,280 --> 00:34:11,280
+mas normalmente quando nós falamos de uma aplicação que peguei em texto e mastiga o texto para depois colocá-lo de uma forma mais inteligível,
+
+291
+00:34:11,280 --> 00:34:14,280
+normalmente fizemos pársar.
+
+292
+00:34:14,280 --> 00:34:21,280
+Não sei se é a melhor palavra, pár, se não é, mas nós também aprendemos isto na literatura americana,
+
+293
+00:34:21,280 --> 00:34:28,390
+portanto se não for a melhor palavra, a culpa é vossa, não é nossa.
+
+294
+00:34:28,390 --> 00:34:31,390
+Eu acho que ele não está percebendo, não é?
+
+295
+00:34:31,390 --> 00:34:39,390
+É isso que eu ia dizer, o lance está a ignorar-me, Pau, então está a evitar-o com o Fronto.
+
+296
+00:34:39,390 --> 00:34:44,390
+Ok, dúvidas até agora, não há?
+
+297
+00:34:44,390 --> 00:34:48,390
+Pronto, isto aqui era o que nós já tínhamos visto também antes, é fazer o pedido,
+
+298
+00:34:48,390 --> 00:35:06,390
+se fizermos o pedido deste entidade ao context broker, aquilo dá-nos um JSON com o estado atual daquela entidade,
+
+299
+00:35:06,390 --> 00:35:08,390
+o contexto daquela entidade.
+
+300
+00:35:08,390 --> 00:35:14,390
+Ok, agora, depois vamos agora então para a fase seguinte no pipeline,
+
+301
+00:35:14,390 --> 00:35:24,390
+é criar uma base de dados para guardar o registro histórico da série de valores, ok?
+
+302
+00:35:24,390 --> 00:35:34,390
+Então, nós, por isso, vamos ter o time scale database e no time scale database nós temos que criar uma tabela,
+
+303
+00:35:34,390 --> 00:35:41,390
+pelo menos uma tabela, para depois guardarmos os dados.
+
+304
+00:35:41,390 --> 00:35:49,390
+Para criar a tabela, em SQL, create table, nome da tabela, ok?
+
+305
+00:35:49,390 --> 00:35:51,390
+E depois os campos da tabela.
+
+306
+00:35:51,390 --> 00:35:53,390
+Neste caso, o que é que nós temos?
+
+307
+00:35:53,390 --> 00:35:57,390
+Se é uma série temporal, temos sempre o timestamp, ok?
+
+308
+00:35:58,390 --> 00:36:05,390
+Quando é que o instante é que estes dados se reportam?
+
+309
+00:36:05,390 --> 00:36:07,390
+Portanto, normalmente temos sempre.
+
+310
+00:36:07,390 --> 00:36:14,390
+A primeira, o primeiro campo é o instante temporal, a marca temporal, timestamp, ok?
+
+311
+00:36:14,390 --> 00:36:24,390
+E então, temos aí o atributo, o campo time, tipo timestamp, Z de zulo e não pode ser nulo,
+
+312
+00:36:24,390 --> 00:36:27,390
+portanto, tem que ser sempre preenchido, ok?
+
+313
+00:36:27,390 --> 00:36:29,390
+Temos a seguir o que?
+
+314
+00:36:29,390 --> 00:36:30,390
+O que é que nós temos?
+
+315
+00:36:30,390 --> 00:36:35,390
+Temos uma máquina com identificador, temos a temperatura e temos a vibração.
+
+316
+00:36:35,390 --> 00:36:45,390
+Então, como estes são os campos que nos interessam, vamos também criar campos na tabela para guardar o identificador da máquina.
+
+317
+00:36:46,390 --> 00:36:54,390
+O identificador da máquina é um texto, machine 001, ou motor 01, se não me lembro bem,
+
+318
+00:36:54,390 --> 00:36:59,390
+tanto um texto e também não pode ser nulo, not nulo, ok?
+
+319
+00:36:59,390 --> 00:37:05,390
+Temperatura é um número, vibration é também um número.
+
+320
+00:37:05,390 --> 00:37:15,390
+Nós tínhamos a temperatura, 78,5 e a vibração de 3,6, pá, não são inteiros, são números reais
+
+321
+00:37:15,390 --> 00:37:24,390
+e aqui estamos a utilizar a double precision, que é para utilizar a maior precisão possível para representar.
+
+322
+00:37:24,390 --> 00:37:31,390
+Double precision são números em 64 bits, vírgula flutuante, 64 bits, ok?
+
+323
+00:37:31,390 --> 00:37:43,390
+Pronto, estas tabelas de férias temporais são muito simples, basicamente é tempo e o que é que queremos guardar?
+
+324
+00:37:43,390 --> 00:37:50,390
+Neste caso, a temperatura e a vibração não está como not nulo, o que quer dizer que podemos ter, por exemplo,
+
+325
+00:37:50,390 --> 00:37:56,390
+máquinas em que apenas tentamos a temperatura e não tentamos a vibração,
+
+326
+00:37:56,390 --> 00:38:05,390
+não vamos inviabilizar as séries temporais para essas máquinas só porque falta um dos parâmetros, ok?
+
+327
+00:38:05,390 --> 00:38:11,390
+Agora, obrigatório, tempo e identificador, está certo?
+
+328
+00:38:11,390 --> 00:38:19,390
+É o racional por trás deste esquema da tabela, ok?
+
+329
+00:38:19,390 --> 00:38:22,390
+Duvidas até agora, não há?
+
+330
+00:38:22,390 --> 00:38:38,390
+Por fim, também temos que transformar a tabela típica PostgreSQL para uma tabela otimizada para guardar séries temporais.
+
+331
+00:38:38,390 --> 00:38:55,760
+Então, fazemos um select, create a table, a partir, vamos criar uma hiper tabela chamada machine telemetry,
+
+332
+00:38:55,760 --> 00:39:03,100
+e isto é otimizado através do campo time, ok?
+
+333
+00:39:03,100 --> 00:39:17,100
+Esta função automaticamente parte a data em blocos temporais, permitindo pesquisas históricas de alto desempenho,
+
+334
+00:39:17,100 --> 00:39:26,100
+o que acaba a ser um bocado o problema das bases de dados convencionais,
+
+335
+00:39:26,100 --> 00:39:40,100
+as tabelas de dados convencionais são otimizadas para procurar determinados números, mas números iguais,
+
+336
+00:39:41,100 --> 00:39:57,100
+as tais chaves primárias, e aqui o que se faz é arranjar as formas, as tabelas de forma a facilitar as pesquisas através do time stamp,
+
+337
+00:39:58,420 --> 00:40:04,420
+o que é algo ligeiramente diferente em relação àquilo das bases de dados convencionais.
+
+338
+00:40:04,420 --> 00:40:13,420
+Como é que os gais fazem isso? Opa, sinceramente, eu não sei, sei é que funciona assim.
+
+339
+00:40:13,420 --> 00:40:22,420
+Isto aqui é daqueles campos em que já há muita especialização. Opa, como é que é feito?
+
+340
+00:40:22,420 --> 00:40:29,420
+Não sei, nunca me viquei a saber isso, isto é daqueles coisas que eu uso, quando tenho que utilizar,
+
+341
+00:40:29,420 --> 00:40:33,420
+como é que se faz assim? Ok, pronto.
+
+342
+00:40:33,420 --> 00:40:43,420
+Tenho amigos meus que da minha idade, que sempre trabalharam em bases de dados, o que eles chamam em bases de dados,
+
+343
+00:40:43,420 --> 00:40:54,340
+é lá com eles, é muita prática, eu não tenho prática, o meu campo não é base de dados.
+
+344
+00:40:55,340 --> 00:41:08,480
+Por fim, isto está muito bonito, create table, select create hyper table e tal, mas como é que eu insiro isto?
+
+345
+00:41:08,480 --> 00:41:12,480
+Se a minha base de dados está a correr dentro de um contentor,
+
+346
+00:41:12,480 --> 00:41:22,480
+uma hipote é, através da linha de comando, enviar estes comandos para dentro do contentor.
+
+347
+00:41:22,480 --> 00:41:35,980
+Então, eu vou ao Docker e peço para executar o comando onde? No contentor timescale database.
+
+348
+00:41:35,980 --> 00:41:44,980
+Aqui, esta parte, eu acredito que seja a língua de comando, é o pskl,
+
+349
+00:41:44,980 --> 00:41:55,960
+e estamos a dizer que dentro deste contentor, o nosso utilizador é o postgres.
+
+350
+00:41:55,960 --> 00:42:05,960
+E agora é que realmente eu estou a fazer a ligação àquela dúvida do slide 8,
+
+351
+00:42:05,960 --> 00:42:13,960
+é que muitas vezes e até por segurança, e creio que nós chegámos a falar nisso numa das questões,
+
+352
+00:42:13,960 --> 00:42:17,960
+dentro dos contentores nós definimos o utilizador,
+
+353
+00:42:17,960 --> 00:42:25,960
+que é para evitar que um utilizador que esteja a correr dentro do contentor consiga saltar cá para fora como root.
+
+354
+00:42:25,960 --> 00:42:33,960
+Lembram-se que ter falado que num contentor o utilizador pré-defenido é o root,
+
+355
+00:42:33,960 --> 00:42:43,960
+e por questões de segurança nós devemos criar um utilizador para evitar que o root dentro do contentor,
+
+356
+00:42:43,960 --> 00:42:48,960
+por alguma maneira, possa funcionar como root fora do contentor.
+
+357
+00:42:48,960 --> 00:42:51,960
+E aqui estamos a dizer que é o utilizador postgresql.
+
+358
+00:42:51,960 --> 00:42:58,960
+Eu tenho que verificar-se no slide 8, não deveria também indicar qual é que é o criar o utilizador postgres.
+
+359
+00:42:59,960 --> 00:43:02,960
+E agora, então, qual é que é o comando?
+
+360
+00:43:02,960 --> 00:43:09,960
+O comando é abrir aspas e colocamos aqui os comandos SQL.
+
+361
+00:43:09,960 --> 00:43:12,960
+Create table, exatamente os mesmos comandos que tínhamos antes.
+
+362
+00:43:16,960 --> 00:43:27,960
+Fecha aspas, carrega em enter e estes dois comandos são passados pelo Docker para dentro.
+
+363
+00:43:27,960 --> 00:43:35,960
+Deste contentor e são escutados pelo time scale.
+
+364
+00:43:39,960 --> 00:43:40,960
+Dovidas.
+
+365
+00:43:40,960 --> 00:43:52,510
+Alternativa, para quem gosta de interfaces gráficas e eu cumpriendo perfeitamente quem gosta de interfaces gráficas,
+
+366
+00:43:52,510 --> 00:43:58,510
+podem utilizar um cliente gráfico SQL.
+
+367
+00:43:58,510 --> 00:44:05,510
+A inteligência artificial falou-me no data de a beaver e no PGA admin.
+
+368
+00:44:05,510 --> 00:44:10,510
+Sinceramente, eu não conheço estas aplicações.
+
+369
+00:44:10,510 --> 00:44:17,700
+Estou a pensar.
+
+370
+00:44:17,700 --> 00:44:27,700
+Da última vez que utilizei um cliente de interface gráfica para os dados,
+
+371
+00:44:27,700 --> 00:44:30,700
+era o cliente do postgresql.
+
+372
+00:44:30,700 --> 00:44:36,700
+Postgresql tinha mesmo um cliente em que nós podíamos arrancar em Linux
+
+373
+00:44:36,700 --> 00:44:48,700
+e tínhamos uma aplicação gráfica para administrar e também para consultar uma base de dados postgresql.
+
+374
+00:44:49,700 --> 00:45:02,140
+Mas foi a minha última experiência, se calhar já perto de 20 anos.
+
+375
+00:45:02,140 --> 00:45:04,140
+Se calhar já perto de 20 anos.
+
+376
+00:45:04,140 --> 00:45:10,140
+E sinceramente, é fácil de perceber porque eu não uso.
+
+377
+00:45:10,140 --> 00:45:12,140
+Primeiro, eu não uso muito base de dados.
+
+378
+00:45:12,140 --> 00:45:18,140
+E segundo, quando eu utilizo base de dados, estou a fazer um programa que usa uma base de dados.
+
+379
+00:45:18,140 --> 00:45:28,220
+Portanto, eu não uso programas interfaces gráficas para base de dados.
+
+380
+00:45:28,220 --> 00:45:33,220
+Normalmente, eu utilizo programas que trabalham com base de dados
+
+381
+00:45:33,220 --> 00:45:38,220
+e eu não preciso estar a ver a base de dados com estas aplicações.
+
+382
+00:45:38,220 --> 00:45:40,220
+Basa em inteligência artificial.
+
+383
+00:45:40,220 --> 00:45:46,220
+Prontes, já para ver 5 minutos, vamos se massacrar só porque eu não conheço estes programas.
+
+384
+00:45:46,220 --> 00:45:58,220
+Mas basta se ligarem-se ao porto 5432 com estes programas e enviam os comandos e aqui eu mostro a resposta.
+
+385
+00:45:58,220 --> 00:46:02,220
+É parecido de Polsonon, mas para base de dados.
+
+386
+00:46:04,220 --> 00:46:06,220
+Duvidas até agora, não há?
+
+387
+00:46:06,220 --> 00:46:09,220
+Eu estou com a sessão que estou a ser super rápido.
+
+388
+00:46:09,220 --> 00:46:13,460
+E vocês, boa, hoje vamos jantar cedo.
+
+389
+00:46:13,460 --> 00:46:22,460
+Por fim, agora que já temos a base de dados montada, podemos começar a enviar atualizações de contexto
+
+390
+00:46:22,460 --> 00:46:27,780
+para este nosso repositório temporal.
+
+391
+00:46:27,780 --> 00:46:28,780
+Só um momento.
+
+392
+00:46:28,780 --> 00:46:30,780
+Eu não acredito, hoje já acontecem todos.
+
+393
+00:46:30,780 --> 00:47:01,260
+Agora cá estou de novo.
+
+394
+00:47:02,260 --> 00:47:06,260
+Mais uma vez as minhas desculpas para que estou a estar atribuado.
+
+395
+00:47:06,260 --> 00:47:19,260
+Agora, então, estava a dizer que agora que temos a base de dados com a tabela montada e já com tudo otimizado para as séries temporais,
+
+396
+00:47:19,260 --> 00:47:21,260
+o que é que temos de fazer?
+
+397
+00:47:21,260 --> 00:47:32,260
+Temos que configurar as atualizações de contexto, serem automaticamente enviadas na forma de notificação para a base de dados.
+
+398
+00:47:32,260 --> 00:47:34,260
+Como é que nós fazemos isso?
+
+399
+00:47:34,260 --> 00:47:41,260
+Através do endpoint subscriptions do context broker.
+
+400
+00:47:41,260 --> 00:47:54,260
+E mandamos para lá a informação de que atualizações a machine 001 devem ser enviadas
+
+401
+00:47:55,260 --> 00:47:58,260
+pelo
+
+402
+00:48:00,260 --> 00:48:07,260
+devem ser enviadas para o telemetriconector que está à escuta no 8080 e notificado.
+
+403
+00:48:07,260 --> 00:48:09,260
+E o que é que nós queremos enviar?
+
+404
+00:48:09,260 --> 00:48:11,260
+Temperature e vibration.
+
+405
+00:48:11,260 --> 00:48:14,260
+Ok, portanto, enviar os dois atributos.
+
+406
+00:48:14,260 --> 00:48:28,580
+E agora estou a pensar no seguinte.
+
+407
+00:48:28,580 --> 00:48:41,480
+Ele deveria ter definido o telemetriconector no Dockerfile.
+
+408
+00:48:41,480 --> 00:48:46,950
+E passou-me a tomar aqui mais uma nota.
+
+409
+00:48:46,950 --> 00:49:16,770
+Pois, eu acho que deveria ter também adicionado o telemetriconector no Dockerfile, tenho que analisar isso.
+
+410
+00:49:16,770 --> 00:49:25,770
+Mas, conforme vimos na semana passada, sempre que existe uma atualização,
+
+411
+00:49:25,770 --> 00:49:32,770
+o context broker vai enviar um pedido REST a este telemetriconector.
+
+412
+00:49:32,770 --> 00:49:39,770
+E o telemetriconector, o que faz é pegar os dados que vem no pedido REST que vem do Orion
+
+413
+00:49:39,770 --> 00:49:43,770
+e vai inserir-los na tabela da base de dados.
+
+414
+00:49:43,770 --> 00:49:45,770
+Ok?
+
+415
+00:49:45,770 --> 00:49:49,770
+Até eu me lembro perfeitamente de ter a vida confusão de dizer
+
+416
+00:49:49,770 --> 00:49:58,770
+que este telemetriconector é quem vai fazer o pedido de subscrição ao context broker,
+
+417
+00:49:58,770 --> 00:50:04,770
+mas é este telemetriconector que tem de ter o servidor web para depois receber as notificações,
+
+418
+00:50:04,770 --> 00:50:11,770
+porque as notificações vem na forma de pedidos HTTP.
+
+419
+00:50:11,770 --> 00:50:14,770
+Lembram-se de ter falado nisso?
+
+420
+00:50:14,770 --> 00:50:17,460
+Ok.
+
+421
+00:50:17,460 --> 00:50:23,460
+Por fim, temos aquela parte que vocês são mesmo mais prós do que eu.
+
+422
+00:50:23,460 --> 00:50:26,460
+Quero utilizar o grafana.
+
+423
+00:50:26,460 --> 00:50:35,460
+Não sei porquê, mas desde ter enredado as interfaces gráficas e os interfaces do utilizador,
+
+424
+00:50:35,460 --> 00:50:37,460
+nunca me foram apelativas.
+
+425
+00:50:37,460 --> 00:50:42,460
+E os dashboards, eu tenho aspiada a ver dashboards e coisas assim,
+
+426
+00:50:42,460 --> 00:50:47,460
+mas nunca foi uma coisa que eu quisesse fazer.
+
+427
+00:50:47,460 --> 00:50:49,460
+Ok?
+
+428
+00:50:49,460 --> 00:50:58,280
+E se me disserem, pá, queres fazer um front-end, um dashboard, eu digo sempre, não,
+
+429
+00:50:58,280 --> 00:51:04,280
+prefiro ir para a casa das máquinas, prefiro fazer o software que está por trás a funcionar.
+
+430
+00:51:04,280 --> 00:51:07,280
+Mas aqui, com o grafana, o que tem de acontecer?
+
+431
+00:51:07,280 --> 00:51:17,280
+Com o grafana, vocês constroem dashboards e os dashboards têm que consumir dados de onde?
+
+432
+00:51:17,280 --> 00:51:26,280
+Ou consumir dados da base de dados, ou então também consumir os dados atuais do contexto de Warren Contacts Broker.
+
+433
+00:51:26,280 --> 00:51:28,280
+Ok?
+
+434
+00:51:28,280 --> 00:51:40,990
+Então, o que é que é sugerido?
+
+435
+00:51:40,990 --> 00:51:42,990
+O que é que é sugerido?
+
+436
+00:51:42,990 --> 00:51:53,990
+Configurar painéis para a temperatura, a série temporal, a tendência da vibração também ao longo do tempo
+
+437
+00:51:53,990 --> 00:52:02,880
+e os valores mais atuais dos parâmetros, ok?
+
+438
+00:52:02,880 --> 00:52:08,880
+Também é importante nos dashboards, aliás, é a parte que se calhar é mais importante,
+
+439
+00:52:08,880 --> 00:52:14,880
+é a parte dos alertas, sempre que há algum valor, ou combinação de valores,
+
+440
+00:52:14,880 --> 00:52:21,880
+que representem um estado crítico para lançar uma alerta visual, acústico, qualquer coisa assim,
+
+441
+00:52:21,880 --> 00:52:31,350
+mas uma alerta que identifique bem a situação que está a causar essa alerta, ok?
+
+442
+00:52:31,350 --> 00:52:35,050
+Pronto.
+
+443
+00:52:35,050 --> 00:52:49,550
+Vamos aqui ligar a ligação do grafana a base de dados e configurar os painéis utilizando os filtros temporais nativos.
+
+444
+00:52:49,550 --> 00:52:58,550
+Por exemplo, para a temperatura ao longo do tempo, podemos selecionar o tempo como o tempo
+
+445
+00:52:58,550 --> 00:53:03,550
+e a temperatura como a temperatura em graus Celsius.
+
+446
+00:53:03,550 --> 00:53:13,550
+Portanto, esses aqui são os nomes dos campos e aqui são os nomes que irão aparecer no dashboard.
+
+447
+00:53:13,550 --> 00:53:18,550
+Mas conforme digo, possivelmente você já tem mais experiência com isto que eu.
+
+448
+00:53:18,550 --> 00:53:31,440
+Então, é que vamos sacar isto da telemetria da máquina, ok?
+
+449
+00:53:31,440 --> 00:53:39,440
+Vamos filtrar por tempo e, pelo identificador da máquina, motor 001, ok?
+
+450
+00:53:39,440 --> 00:53:50,360
+Portanto, toda a telemetria que está naquela base de dados, eu quero ver apenas os dados do motor 001.
+
+451
+00:53:50,360 --> 00:53:54,360
+E vamos ordenar por tempo, ok?
+
+452
+00:53:54,360 --> 00:53:59,360
+A esquerda para a direita, do mais antigo para o mais recente.
+
+453
+00:53:59,360 --> 00:54:07,360
+Temos, por exemplo, também o painel 3, que é para mostrar os valores mais atuais, ok?
+
+454
+00:54:07,360 --> 00:54:19,360
+Vamos selecionar tempo, temperatura e vibração da machine telemetry, em que a máquina é o motor 01,
+
+455
+00:54:19,360 --> 00:54:23,360
+ordenar por tempo de crescente, ok?
+
+456
+00:54:23,360 --> 00:54:29,360
+Portanto, colocar o mais atual à frente e o mais antigo atrás.
+
+457
+00:54:29,360 --> 00:54:33,360
+E agora, coloque aqui um limite para ter apenas um valor.
+
+458
+00:54:33,360 --> 00:54:42,360
+Se vou limitar apenas a um valor e estou a fazer a ordenação por tempo de crescente,
+
+459
+00:54:42,360 --> 00:54:46,360
+eu vou selecionar o valor mais recente de todos.
+
+460
+00:54:46,360 --> 00:54:57,180
+Paz sentido? Paz sentido, pessoal, ok?
+
+461
+00:54:57,180 --> 00:55:11,180
+Pá, isto está sempre um bocado feio, porque eu aqui, neste sequel, eu preferia ter esta distinção por cores,
+
+462
+00:55:11,180 --> 00:55:18,180
+porque eu tenho a ideia de que se tivesse feito sempre por aquele fundo preto e letras verdes,
+
+463
+00:55:18,180 --> 00:55:30,180
+como tenho nos outros casos, a leitura destes frases sequel não era tão fácil.
+
+464
+00:55:30,180 --> 00:55:34,180
+Desta forma, as cores ajudam a evidenciar.
+
+465
+00:55:34,180 --> 00:55:38,180
+O problema é que isto fica um bocado feio, este slide está horrível.
+
+466
+00:55:38,180 --> 00:55:48,730
+Eu posso tentar diminuir o tamanho da letra, mas sim para esta definição está horrível.
+
+467
+00:55:48,730 --> 00:55:58,730
+Está bem em relatórios, em livros, esta definição de listagem, mas em slides é mesmo feio.
+
+468
+00:55:58,730 --> 00:56:03,730
+Tenho que dar um toque nisto para ficar mais bonito.
+
+469
+00:56:03,730 --> 00:56:08,730
+Ok, mas dúvidas em relação a isto? No ar? Já vi aí uns dedos no ar.
+
+470
+00:56:08,730 --> 00:56:15,730
+Ok, como é que poderia ficar?
+
+471
+00:56:15,730 --> 00:56:32,730
+Eu pedi aqui a inteligência artificial para, olha, faz-me aí uma simulação daquilo que poderá ser o resultado de uma query,
+
+472
+00:56:33,730 --> 00:56:38,730
+e pôe-me isso em formato de texto para sair bem no slide,
+
+473
+00:56:38,730 --> 00:56:45,730
+senão ele ainda tentava por criar uma imagem, fabricar uma imagem daquilo que poderia aparecer no grafã,
+
+474
+00:56:45,730 --> 00:56:50,730
+não querás, não. Mostra-me aí os valores do pedido.
+
+475
+00:56:50,730 --> 00:56:52,730
+E temos aqui uma série de valores.
+
+476
+00:56:52,730 --> 00:57:00,730
+Como aquilo foi filtrado para o motor 01, temos aqui que é tudo referente ao motor 01,
+
+477
+00:57:00,730 --> 00:57:07,730
+e vemos que ao longo do tempo, aquelas 5 segundos, a temperatura vai variando,
+
+478
+00:57:07,730 --> 00:57:13,730
+está a aquecer bastante, ok, e as vibrações também estão a aumentar,
+
+479
+00:57:13,730 --> 00:57:21,730
+se calhar como a temperatura aumenta, os corpos também, os corpos do motor vão expandindo,
+
+480
+00:57:21,730 --> 00:57:29,730
+pode criar mais fricções e aumentar as vibrações, não sei.
+
+481
+00:57:29,730 --> 00:57:33,730
+Isto aqui era uma situação perfeitamente normal, aqui também seria normal,
+
+482
+00:57:33,730 --> 00:57:40,730
+mas aqui já estamos numa situação em que a temperatura está a ser alta e está a haver bastantes vibrações,
+
+483
+00:57:40,730 --> 00:57:50,830
+praticamente o dobro da primeira, e aqui isto já está mesmo muito mal.
+
+484
+00:57:50,830 --> 00:57:58,830
+Isto aqui, básica, ah, esta frase foi sugerida pela inteligência artificial,
+
+485
+00:57:58,830 --> 00:58:04,830
+dizer que se nós fizermos alta, uma monitorização de alta frequência,
+
+486
+00:58:04,830 --> 00:58:10,830
+conseguimos acompanhar a degradação mecânica ao longo do tempo.
+
+487
+00:58:10,830 --> 00:58:21,200
+Agora, como voem falar com os especialistas do Rumínio,
+
+488
+00:58:21,200 --> 00:58:26,200
+para perceber de quanto em quanto tempo é que nós efetivamente temos de fazer essa monitorização.
+
+489
+00:58:26,200 --> 00:58:31,200
+Monitorização de alta frequência implica maiores custos para o sistema,
+
+490
+00:58:31,200 --> 00:58:37,200
+porque o sistema vai, como é que eu dizer, interferir mais vezes,
+
+491
+00:58:37,200 --> 00:58:47,200
+também uma alta frequência pode gerar mais dados e esses mais dados poderão ser demasiado dados,
+
+492
+00:58:47,200 --> 00:58:54,200
+portanto, como voem sempre, numa situação real, conversar com os especialistas do Rumínio
+
+493
+00:58:54,200 --> 00:59:04,200
+e perguntar, então, qual é a frequência de amostragem que é útil para este efeito,
+
+494
+00:59:04,200 --> 00:59:09,200
+e os gajos vão dizer, pá, o melhor é mostrar a cada um segundo,
+
+495
+00:59:09,200 --> 00:59:15,200
+ou mostrar a cada um minuto, ou até pode ser, sei lá, mostrar a cada cinco minutos.
+
+496
+00:59:15,200 --> 00:59:19,200
+Se tivamos a pensar em processos excelentes, por exemplo, a fermentação da cerveja,
+
+497
+00:59:19,200 --> 00:59:23,200
+se calhar não vale a pena estar ali a medir a temperatura de todos os segundos.
+
+498
+00:59:23,200 --> 00:59:27,200
+A temperatura numa coba de cerveja não aumenta assim tão rapidamente quanto isso,
+
+499
+00:59:27,200 --> 00:59:34,200
+porque aquilo é grande, é volumoso, tem muito líquido, e o líquido tem alguma capacidade térmica mástica,
+
+500
+00:59:34,200 --> 00:59:37,200
+portanto, as coisas não evoluem assim tão rapidamente.
+
+501
+00:59:37,200 --> 00:59:41,830
+Perguntei-se aos especialistas.
+
+502
+00:59:42,830 --> 00:59:51,830
+Mas, para aplicar estes alertas, quando há situações que também os especialistas do Rumínio
+
+503
+00:59:51,830 --> 00:59:57,830
+vos dirão, a partir deste valor, é uma situação que não é normal, portanto, nós queremos ser avidados,
+
+504
+00:59:57,830 --> 01:00:10,140
+vocês também podem criar para esses componentes SQL Statements,
+
+505
+01:00:10,140 --> 01:00:22,140
+comandos SQL para alertarem quando os dados estiverem de acordo com determinadas situações.
+
+506
+01:00:22,140 --> 01:00:29,140
+Vamos, por exemplo, definir para o limite de sobreaquecimento,
+
+507
+01:00:29,140 --> 01:00:37,620
+tem que ser lançado um alerta sempre que a temperatura ultrapassos de 90 graus, ok?
+
+508
+01:00:37,620 --> 01:00:50,620
+E uma anomalia de vibração deve lançar um alerta quando a vibração excede os 8.0, ok?
+
+509
+01:00:51,620 --> 01:00:56,620
+Então, neste caso, para lançar, temos aqui um caso de um alerta combinado,
+
+510
+01:00:56,620 --> 01:01:07,620
+selecionar caso quando a temperatura seja maior do que 90.0 ou a vibração ser maior do que 8.0,
+
+511
+01:01:07,620 --> 01:01:20,620
+então, um, verdade, senão, zero, falso, e termina como um alerte de status, ok?
+
+512
+01:01:20,620 --> 01:01:27,620
+Neste caso, nós temos um alerta que é combinado, estamos a combinar a temperatura ou a vibração.
+
+513
+01:01:27,620 --> 01:01:31,620
+Se fosse a temperatura e a vibração, aqui teríamos o ande,
+
+514
+01:01:31,620 --> 01:01:39,620
+se nós quiséssemos ter dois alertas separados, então, teríamos um select para a temperatura
+
+515
+01:01:39,620 --> 01:01:44,620
+e teríamos outro select para a vibração.
+
+516
+01:01:44,620 --> 01:01:55,560
+Fiz-me entender, este aqui é quase utilizar uma lâmpada vermelha para duas situações distintas.
+
+517
+01:01:55,560 --> 01:02:01,560
+Mas, se tivéssemos duas lâmpadas vermelhas, então, eu teria que ter um select para uma lâmpada vermelha 1
+
+518
+01:02:01,560 --> 01:02:08,060
+e um select para uma lâmpada vermelha 2, faz sentido?
+
+519
+01:02:08,060 --> 01:02:15,060
+Mais uma vez, só para completar, vamos buscar a machine telemetry.
+
+520
+01:02:15,060 --> 01:02:25,060
+Estou interessado apenas na máquina motor 001 e, para eu ter o alerta baseado no dado mais crescente,
+
+521
+01:02:25,060 --> 01:02:34,060
+eu ordeno o tempo por forma crescente e límito a primeira ao primeiro resultado.
+
+522
+01:02:34,060 --> 01:02:45,370
+Como está ordenado por tempo crescente, tenho apenas a última medida, a medida mais crescente.
+
+523
+01:02:45,370 --> 01:03:01,760
+Faz sentido? Dovidas, pessoal? Não há? Fantástico!
+
+524
+01:03:01,760 --> 01:03:18,070
+Pronto, só para concluir, então, existe um desacuplamento efetivo entre o que está no extremo, entre as máquinas e os sensores que adquirem dados.
+
+525
+01:03:18,070 --> 01:03:26,070
+Neste caso, temos apenas sensores, não temos atuadores e todo o resto da cadeia.
+
+526
+01:03:26,070 --> 01:03:38,070
+O que é que faz esse desacuplamento? Temos o broker MQTT e, depois, temos o context broker Orion.
+
+527
+01:03:38,070 --> 01:03:51,070
+Isto faz, sobretudo, context broker. Tudo que está, agora verendo assim, a sul está desacupelado, logicamente, do que está a norte.
+
+528
+01:03:51,070 --> 01:04:02,070
+Quem está para cima não precisa conhecer como é que eu comunico com os sensores que fazem a monitorização.
+
+529
+01:04:02,070 --> 01:04:06,070
+Apenas precisam de saber comunicar com o context broker.
+
+530
+01:04:06,070 --> 01:04:13,070
+O próprio context broker não tem de saber como comunicar com os sensores que estão na máquina,
+
+531
+01:04:13,070 --> 01:04:26,070
+porque quem faz isso é o IoT agent, que faz a adaptação entre o context broker, que é algo que fala uma língua franca e os sensores que estão embaixo,
+
+532
+01:04:26,070 --> 01:04:39,070
+que falam uma linguagem específica. Portanto, o IoT broker, o IoT agent faz a tradução de linguagem específica para uma linguagem franca,
+
+533
+01:04:39,070 --> 01:04:45,070
+conhecida e entendida pelo context broker.
+
+534
+01:04:45,070 --> 01:05:02,070
+E também existe uma separação entre quem mantém o contexto, o context broker, o contexto é a imagem mais atual do domínio que está a ser observado,
+
+535
+01:05:02,070 --> 01:05:16,070
+e quem mantém o histórico da evolução do sistema observado, que é a base de dados de séries temporais.
+
+536
+01:05:17,070 --> 01:05:33,610
+A base de dados temporal é alimentada por notificações de alterações de estado que são subscritas ao context broker.
+
+537
+01:05:37,490 --> 01:05:40,490
+Duvidas. Não há?
+
+538
+01:05:40,490 --> 01:05:44,490
+E se não me engano, este é o último slide.
+
+539
+01:05:44,490 --> 01:05:54,470
+Exatamente. Este é o último slide de hoje. Duvidas, pessoal? Duvidas ou comentários?
+
+540
+01:05:54,470 --> 01:05:59,940
+Eu vou já curtir. Sim, sim.
+
+541
+01:05:59,940 --> 01:06:10,940
+Em relação ao exame de quinta-feira, vai ser semelhante ao que foi na última cadeira que fizemos, pelo Moodle?
+
+542
+01:06:10,940 --> 01:06:21,940
+Sim, sim. Eu, por acaso, não sei se... Eu informei-vos, por meio, não informei, a dizer que estava a colocar aqueles questionários semanais,
+
+543
+01:06:21,940 --> 01:06:23,940
+já que o álbum está atrás.
+
+544
+01:06:23,940 --> 01:06:25,940
+Sim.
+
+545
+01:06:25,940 --> 01:06:36,940
+É que eu envia isso, só que depois vi que houve mais participação em programação avançada do que agora.
+
+546
+01:06:36,940 --> 01:06:46,940
+Mas também, pronto, cada um organiza o tempo conforme pode, e eu sei que o slide, aquelas questões, aquelas questionários não saíram na altura de vida, não é?
+
+547
+01:06:46,940 --> 01:06:52,940
+Portanto, apesar de eu ter colocado quase em lote, vocês não têm que responder aquilo quase em lote.
+
+548
+01:06:53,940 --> 01:07:04,940
+Mas, da mesma maneira que houve esses questionários, também em programação avançada, também vai ver um questionário e o teste teórico, não é?
+
+549
+01:07:04,940 --> 01:07:06,940
+Vai funcionar nos mesmos modos.
+
+550
+01:07:06,940 --> 01:07:16,940
+É também um questionário de escolha múltiple, e na quinta-feira, abre-se o questionário.
+
+551
+01:07:16,940 --> 01:07:24,940
+No questionário, vocês terão algum tempo para realizar, possivelmente uma hora, se calhar uma hora até demais, dependendo um bocado do número de perguntas.
+
+552
+01:07:24,940 --> 01:07:33,940
+O número de perguntas estava a pensar originalmente em quarenta, se calhar quarenta, como vai dar uma hora para isso?
+
+553
+01:07:33,940 --> 01:07:39,940
+Dá um minuto e meio, se não me engano, para cada pergunta.
+
+554
+01:07:42,940 --> 01:07:44,940
+Não sei se quarenta são demais.
+
+555
+01:07:45,940 --> 01:07:54,940
+Eu tenho que ver quantas perguntas é que coloquei no módulo de programação avançada.
+
+556
+01:07:54,940 --> 01:07:55,940
+Vocês não se lembram, pois não.
+
+557
+01:07:55,940 --> 01:07:58,940
+Poderam ter ficado traumatizados e o número ficaram na cabeça.
+
+558
+01:07:58,940 --> 01:08:00,940
+Eu não lembro.
+
+559
+01:08:00,940 --> 01:08:02,940
+Eu também vou verificar.
+
+560
+01:08:02,940 --> 01:08:05,940
+Mas, pronto, se calhar uma hora é suficiente.
+
+561
+01:08:05,940 --> 01:08:11,940
+Também, se não for suficiente, vocês avisam-me, e eu estendo um bocado no tempo, não é por aí.
+
+562
+01:08:11,940 --> 01:08:12,940
+Ok.
+
+563
+01:08:12,940 --> 01:08:19,940
+Mas, da outra vez, nós estávamos juntos no sábado, agora não estávamos juntos na quinta-feira.
+
+564
+01:08:19,940 --> 01:08:23,940
+Portanto, a hora marcada encontramos.
+
+565
+01:08:23,940 --> 01:08:31,940
+Eu digo, pessoal, então podem começar, já está aberto, têm até as tantas horas para concluir.
+
+566
+01:08:31,940 --> 01:08:32,940
+Boa sorte.
+
+567
+01:08:32,940 --> 01:08:37,940
+Se tiverem dúvidas, podem entrar em contacto comigo aqui pelo Teams.
+
+568
+01:08:37,940 --> 01:08:40,940
+Porque eu vou estar aqui junto ao Teams, certo?
+
+569
+01:08:40,940 --> 01:08:47,940
+Até pode ser por mensagem direta e não por mensagem pela sessão, por chat pela sessão.
+
+570
+01:08:47,940 --> 01:08:51,940
+Não sei, por acaso, nem sei o que é melhor.
+
+571
+01:08:51,940 --> 01:08:53,940
+Nós vamos ter a sessão, não é mesmo?
+
+572
+01:08:53,940 --> 01:09:02,850
+Mas se calhar uma linha direta, comunicarem comigo direitamente o que é que vocês acham, que seria melhor.
+
+573
+01:09:02,850 --> 01:09:09,850
+Por chat da sessão, ou então por mensagem direta a Teams.
+
+574
+01:09:09,850 --> 01:09:14,850
+Vocês podem ir ao Teams e enviar, como é que é aquilo?
+
+575
+01:09:14,850 --> 01:09:19,850
+Tenho aqui, onde é que eu tenho a janela do Teams?
+
+576
+01:09:19,850 --> 01:09:22,850
+Eu vou parar a partilha também.
+
+577
+01:09:22,850 --> 01:09:23,850
+Ok.
+
+578
+01:09:23,850 --> 01:09:24,850
+Pronto.
+
+579
+01:09:24,850 --> 01:09:29,850
+É que se não tinha sempre ali aquela janela do PDF sempre aparecerá à frente.
+
+580
+01:09:29,850 --> 01:09:32,850
+A mim é igual, é como quiser.
+
+581
+01:09:32,850 --> 01:09:33,850
+Ok.
+
+582
+01:09:33,850 --> 01:09:34,850
+Pronto.
+
+583
+01:09:34,850 --> 01:09:36,850
+Eu também fico disponível a partir dos dois canais.
+
+584
+01:09:36,850 --> 01:09:47,850
+Tenho a conversa da sessão e tenho a conversa direta e vocês vão ler a conversa, metem o meu endereço,
+
+585
+01:09:47,850 --> 01:09:53,850
+nova mensagem, metem o meu endereço e eu repenho, se eu comunico logo por aí.
+
+586
+01:09:53,850 --> 01:09:58,850
+Mas eu também tenho a sistéria que vocês nem vão ter grandes dúvidas e resolvem aquilo.
+
+587
+01:09:58,850 --> 01:09:59,850
+Tá bom?
+
+588
+01:09:59,850 --> 01:10:00,850
+Mas os moldes são os mesmos.
+
+589
+01:10:00,850 --> 01:10:03,850
+A única diferença é que cada um vai estar em casa,
+
+590
+01:10:03,850 --> 01:10:08,850
+em vez de estarmos naquela sala como estivemos da outra vez.
+
+591
+01:10:08,850 --> 01:10:09,850
+Ok.
+
+592
+01:10:09,850 --> 01:10:11,850
+Não sei se há mais alguma questão.
+
+593
+01:10:11,850 --> 01:10:12,850
+Ok.
+
+594
+01:10:12,850 --> 01:10:20,850
+Também é o seguinte, como na quinta-feira vamos primeiro abrir a sessão, se houver alguma
+
+595
+01:10:20,850 --> 01:10:24,850
+questão, podem colocá-la antes de começarem com a comatividade.
+
+596
+01:10:24,850 --> 01:10:25,850
+Certo?
+
+597
+01:10:25,850 --> 01:10:33,160
+Eu vou sempre fazer o olá, bom dia, então tudo bem?
+
+598
+01:10:33,160 --> 01:10:36,160
+Vamos lá então fazer o teste, alguma questão antes de começar?
+
+599
+01:10:36,160 --> 01:10:39,160
+Se tiverem, falamos logo e depois, pronto.
+
+600
+01:10:39,160 --> 01:10:41,160
+Então, vamos lá, podem começar.
+
+601
+01:10:41,160 --> 01:10:45,160
+Abre o teste e vocês fazem.
+
+602
+01:10:45,160 --> 01:10:47,160
+Parece bem?
+
+603
+01:10:47,160 --> 01:10:48,160
+Sim.
+
+604
+01:10:48,160 --> 01:10:50,160
+Eu não sei, desculpe.
+
+605
+01:10:50,160 --> 01:10:51,160
+Sim, sim.
+
+606
+01:10:51,160 --> 01:10:52,160
+Conseguem ouvir-me?
+
+607
+01:10:52,160 --> 01:10:53,160
+Sim, sim, muito bem.
+
+608
+01:10:53,160 --> 01:10:58,160
+Ah, eu não sei se vou conseguir juntar-me mais sete e dez, porque eu estou na humana
+
+609
+01:10:58,160 --> 01:11:01,160
+e nós temos que estar bastante a essa hora.
+
+610
+01:11:01,160 --> 01:11:02,160
+Ok.
+
+611
+01:11:02,160 --> 01:11:13,160
+Pronto, fazemos o seguinte, Vimeas, se por acaso não conseguiu juntar-se a essa hora, manda-me
+
+612
+01:11:13,160 --> 01:11:19,160
+depois uma mensagem e arranjamos outra forma de resolver a questão, mas faz o teste
+
+613
+01:11:19,160 --> 01:11:20,160
+na mesma.
+
+614
+01:11:20,160 --> 01:11:21,160
+Não sabe.
+
+615
+01:11:21,160 --> 01:11:22,160
+Ok, obrigado.
+
+616
+01:11:22,160 --> 01:11:24,160
+Sim, também vou tentar, mas...
+
+617
+01:11:24,160 --> 01:11:26,160
+Pronto, mas é o seguinte.
+
+618
+01:11:26,160 --> 01:11:31,160
+Se não conseguir, depois falo comigo e nós já vejamos uma solução.
+
+619
+01:11:31,160 --> 01:11:33,160
+Vai ser castigada na mesma.
+
+620
+01:11:33,160 --> 01:11:34,160
+Ok.
+
+621
+01:11:34,160 --> 01:11:35,160
+Não sabe fazer questão.
+
+622
+01:11:35,160 --> 01:11:36,160
+Ok, obrigado.
+
+623
+01:11:36,160 --> 01:11:38,570
+Tá bom?
+
+624
+01:11:38,570 --> 01:11:39,570
+Pronto.
+
+625
+01:11:39,570 --> 01:11:47,570
+Também, se houver algum imprevisto, já sabem, podem falar comigo e uma pessoa tenta
+
+626
+01:11:47,570 --> 01:11:49,570
+resolver da melhor forma.
+
+627
+01:11:49,570 --> 01:11:50,570
+Tá bom?
+
+628
+01:11:50,570 --> 01:11:55,570
+Não estamos aqui para chumbar ninguém que tenha trabalhado e aprendido.
+
+629
+01:11:55,570 --> 01:11:56,570
+Certo?
+
+630
+01:11:56,570 --> 01:12:14,430
+Ora bem, então, se não houver mais nenhuma questão, mas senhores, hoje sim, termino
+
+631
+01:12:14,430 --> 01:12:20,430
+dentro da hora, bem dentro da hora, um bom jantar, fiquem bem e quinta-feira encontramos.
+
+632
+01:12:20,430 --> 01:12:21,430
+Tá bom?
+
+633
+01:12:21,430 --> 01:12:22,430
+Bem, obrigado.
+
+634
+01:12:22,430 --> 01:12:23,430
+Obrigado.
+
+635
+01:12:23,430 --> 01:12:24,430
+Até quinta.
+
+636
+01:12:24,430 --> 01:12:25,430
+Até quinta.
+
+637
+01:12:25,430 --> 01:12:26,430
+Até quinta.
+
+638
+01:12:26,430 --> 01:12:27,430
+Até quinta.
+
+639
+01:12:27,430 --> 01:12:28,430
+Até quinta.
+
+640
+01:12:28,430 --> 01:12:29,430
+Até quinta.
+
